@@ -1,0 +1,272 @@
+html {
+	color: black;
+	background: white;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: white;
+	color: black;
+}
+
+p.author {
+	text-align: right;
+}
+
+div.main a:hover {
+	background: #ffefa1;
+}
+
+h2:first-child {
+	margin-top: 1em;
+}
+
+h2 {
+	margin-top: 4em;
+	border-bottom: 1px dashed #88f;
+}
+
+p.q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.note {
+	border: 1px solid black;
+	color: black;
+	background: #eee;
+	padding: .2cm;
+	text-align: center;
+	margin: 2px 4em 2px 4em;
+}
+
+p.note {
+	font-size: smaller;
+	padding-left: 1cm;
+	padding-right: 1cm;
+}
+
+div.note h3 {
+	text-align: center;
+}
+
+div.stop h3 {
+	text-align: center;
+}
+
+div.stop {
+	background: #fbb;
+	color: black;
+	border: 1px solid black;
+	padding: .2cm;
+	text-align: center;
+	margin: 2px 4em 2px 4em;
+}
+
+pre {
+	background: #ddd;
+	color: black;
+	padding: 0.2cm;
+}
+
+div.heading img {
+	margin: .3em;
+}
+
+img {
+	border: none;
+}
+
+p.zero {
+	border-left: 2px solid #888;
+	margin-left: 2em;
+	padding-left: 2em;
+}
+
+tt {
+	font-weight: bold;
+}
+
+dt {
+	font-weight: bold;
+}
+
+div.heading p.thanks {
+	text-align: center;
+	font-size: small;
+	color: #836d52;
+}
+
+table    {
+	border-collapse: collapse;
+}
+*#col1         { border-right: 3px solid #888; }
+table.split td { padding: 1em; }
+table.split th {
+	border-bottom: 1px solid #888;
+	vertical-align: top;
+	width: 50%;
+	padding: 1em;
+}
+
+table.frontpage *#col1 { border-right: 4px dashed #aaa; }
+table.frontpage th { border-bottom: 4px dashed #aaa; }
+
+table.matrix {
+	border: 1px solid black;
+}
+
+table.matrix th {
+	border: 1px solid black;
+	padding: .3em;
+	background: #ff8;
+}
+
+table.matrix td {
+	border: 1px solid #888;
+	padding: .3em;
+	background: #ffc;
+}
+
+table.matrix td.yes {
+	background: #8f8;
+}
+
+table.matrix td.no {
+	background: #f88;
+}
+
+th {
+	white-space: nowrap;
+}
+
+h1 {
+	padding: .2em;
+	margin: 0;
+	text-align: center;
+	background: #def;
+}
+
+td.sidebar h2 {
+	font-size: small;
+	padding-right: 1em;
+}
+
+td.sidebar {
+	vertical-align: top;
+	background: #def;
+	padding: 0;
+	margin: 0;
+	padding-left: 15px;	/* For expanders */
+}
+
+td.main {
+	vertical-align: top;
+	border-top: 1px solid #88f;
+	border-left: 1px solid #88f;
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+td.sidebar ul {
+	padding: 0;
+	list-style: none;
+	margin-left: 1em;
+	font-size: smaller;
+}
+
+td.sidebar li {
+	margin: 0;
+	padding: 0;
+	padding-right: .1em;
+}
+
+td.sidebar li.leaf {
+	list-style-image: url(navicons/square.png);
+}
+
+td.sidebar li.open {
+	list-style-image: url(navicons/open.png);
+}
+
+td.sidebar li.closed {
+	list-style-image: url(navicons/closed.png);
+}
+
+td.sidebar a {
+	text-decoration: none;
+	padding: 0;
+	color: #008;
+	white-space: nowrap;
+}
+
+td.sidebar a.selected {
+	background: #88f;
+	color: white;
+}
+
+td.sidebar a:hover {
+	background: #88f;
+	color: white;
+}
+
+div.footer {
+	font-size: smaller;
+	text-align: center;
+	color: #222;
+	margin: 8em 2em 1em 2em;
+	clear: both;
+}
+
+dl dt {
+	margin-top: .5em;
+}
+
+dl dd {
+	margin-top: .1em;
+}
+
+dl.spaced {
+	margin: 2em;
+}
+
+dl.spaced dt {
+	margin-top: 1em;
+}
+
+dl.spaced dd {
+	margin-top: .2em;
+}
+
+div.figure {
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+div.figure img {
+	padding: 1em 1em 0.5em 1em;
+}
+
+div.figure p {
+	font-weight: bold;
+	padding: 0;
+	margin: 0 1em 0.5em 1em;
+}
+
+span.note {
+	border: 1px solid black;
+	background: #ffefa1;
+	padding: .5em;
+}
+
+ul.spaced li {
+	padding-bottom: 1em;
+}
+
+span.comment {
+	color: blue;
+}

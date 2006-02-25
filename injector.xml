@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>The Injector</h2>
+
+<p>
+A running process is created by combining many different libraries (and other components).
+In the Zero Install world, we have all versions of each library available at
+all times. The problem then is how to choose which versions to use.
+</p>
+
+<p>
+The injector solves this problem by selecting components to meet a program's requirements,
+according to a policy you give it. The injector finds out which versions are available,
+and downloads and runs the ones you choose.
+</p>
+
+<h2>Packages</h2>
+
+<dl>
+  <dt>RPMs</dt>
+<dd>
+<ul>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.noarch.rpm?download'>zeroinstall-injector-0.17-1fc.noarch.rpm download page</a> (Fedora Core 4; Python 2.4) (contributed by Juan Carlos Jimenez Garcia)</li>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1mdk.noarch.rpm?download'>zeroinstall-injector-0.17-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1suse.noarch.rpm?download'>zeroinstall-injector-0.17-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella)</li>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.src.rpm?download'>Source RPM</a> [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
+</ul>
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1171'>Problems with RPMs</a> ]
+</dd>
+
+<dt>Debs</dt>
+<dd>
+<ul>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.18-1_all.deb?download'>zeroinstall-injector_0.18-1_all.deb download page</a> (Debian package; Python 2.3)</li>
+  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.17-1_all_ubuntu.deb?download'>zeroinstall-injector_0.17-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
+  <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
+</ul>
+</dd>
+
+<dt>Other</dt>
+<dd>
+<ul>
+  <li><a href="http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-noarch-1slackware.tgz?download">zeroinstall-injector-0.17-noarch-1slackware.tgz download page</a> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
+  <li>Other (follow instructions below)</li>
+</ul>
+</dd>
+</dl>
+
+<p>
+If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
+Otherwise, follow the instructions below to install using the generic tarball.
+</p>
+
+<h2>Installing from tarball</h2>
+
+<p>
+To use the injector, you will need:
+</p>
+
+<ul>
+<li><a href="http://python.org">Python</a> (version 2.3 or later, <i>including</i> any <b>-dev</b> package).</li>
+<li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
+<li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.0 or later</a> (only needed for the GUI).</li>
+<li><a href="http://0install.net/public_key.gpg">My GPG key</a>. You can download and import
+it with this command (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</a>):
+<pre>
+$ <b>gpg --recv-key --keyserver www.keyserver.net 59A53CC1</b>
+</pre>
+</li>
+</ul>
+
+<p>
+Note that the injector works without needing the Zero Install filesystem to be
+installed (you can think of it as the next version of Zero Install).
+</p>
+
+<p>
+Download the injector from <a
+href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id=146899">the
+download page</a>, or using wget:
+</p>
+<pre>
+$ <b>wget http://osdn.dl.sf.net/sourceforge/zero-install/zeroinstall-injector-0.18.tar.gz.gpg</b>
+</pre>
+
+<p>
+Check that the signature is correct using GPG. This also ensures that you have my key installed, which
+you will need later!
+</p>
+
+<pre>
+$ <b>gpg zeroinstall-injector-0.18.tar.gz.gpg</b>
+gpg: Signature made Sat 04 Feb 2006 20:21:06 GMT using DSA key ID 59A53CC1
+gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 9242 9807 C985 3C07 44A6  8B9A AE07 8280 59A5 3CC1
+</pre>
+
+<p>
+The warning is just to tell you that you haven't yet established that the key really
+belongs to me (ultra-paranoid users will now cross-check the finger-print using
+some other source of information).
+</p>
+
+<p>
+You should now extract the archive, and change directory inside it:
+</p>
+<pre>
+$ <b>tar xzf zeroinstall-injector-0.18.tar.gz</b>
+$ <b>cd zeroinstall-injector-0.18</b>
+</pre>
+
+<table class='split'>
+ <col id="col1"/>
+ <tr><th>Installing normally</th><th>Installing without root access</th></tr>
+ <tr>
+  <td>
+  <p>For a normal install, su to root, install, and exit from root:</p>
+<pre>$ <b>su</b>
+[ enter root password ]
+# <b>python setup.py install</b>
+# <b>exit</b>
+</pre>
+ </td><td>
+<p>
+If you don't have the root password, use this command.
+You'll need to make sure that ~/bin is in $PATH, and
+~/lib/python is in $PYTHONPATH in this case.
+</p>
+<pre>$ <b>python setup.py install --home ~</b>
+$ <b>export PATH=$HOME/bin:$PATH</b>
+$ <b>export PYTHONPATH=$HOME/lib/python</b>
+</pre>
+  </td>
+ </tr>
+</table>
+
+<dl>
+<dt>error: invalid Python installation: unable to open /usr/lib/python2.3/config/Makefile</dt>
+<dd>You need to install the <i>python-dev</i> package, not just <i>python</i>.</dd>
+</dl>
+
+<p>
+You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
+<b>0alias</b>, which lets you use short names instead of URLs.
+</p>
+
+<p>
+Now it's time to <a href='injector-using.html'>try using it...</a>
+</p>
+
+</html>

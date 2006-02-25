@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/tests/badsig"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   main='main'>
+  <name>BADsig</name>
+  <summary>message tampered with</summary>
+  <description>For testing only!</description>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCqyqcrgeCgFmlPMERAuh1AJ4y071G7L9NOvLKmhvP861GlzBiFACgk37L
+95SVhlLm/bzjiK1Od2VMqks=
+=2Dtj
+-----END PGP SIGNATURE-----

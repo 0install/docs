@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Contents</h2>
+
+<toc level='h2'/>
+
+<h2>Trying it out the injector</h2>
+
+<p>
+Now that you've <a href='injector.html'>installed the injector</a>, let's try using it to
+get more software.
+</p>
+
+<!--
+<div class='note'>
+<strong>2005-10-30</strong> It seems that <a href='http://news.bbc.co.uk/1/hi/england/hampshire/4390048.stm'>our
+university department has burned down</a>. This probably explains why DNS isn't working. Therefore, please
+add this line to your <b>/etc/hosts</b> file:
+<pre>
+66.35.250.210   0install.net
+</pre>
+</div>
+-->
+
+<h3>Example: Running Edit with the injector</h3>
+
+<p>
+Run <b>0launch</b> (as a normal user, <b>not</b> as root!), giving it the URL
+for the program you want to run:
+</p>
+
+<pre>
+$ <b>0launch http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<ul>
+<li>If you get an error running this command, jump to
+<a href='injector-trouble.html'>the trouble-shooting section</a>.</li>
+</ul>
+
+<p style='text-align: center'>
+<img width="575" height="327" src="confirm-tal.png"
+     alt="Confirming Thomas Leonard's GPG key" />
+</p>
+
+<p>
+So what happened?
+</p>
+
+<ol>
+<li>The injector realised that it needed to download some files to run Edit, so
+it switched to graphical mode (use <b>--console</b> to disable this).</li>
+<li>First, it checks for updates to the graphical user interface (GUI) itself.
+It downloaded the GUI's interface file, which tells it which versions are
+available.</li>
+<li>The injector prompts you to confirm that you will accept software signed with my key.</li>
+<li>If a newer version of the GUI was found, you would be prompted to download it (or choose
+a different version) at this point.</li>
+</ol>
+
+<p>Having got a copy of the GUI that everyone is happy with, the injector proceeds to
+run Edit in the same way:
+</p>
+
+<ol>
+<li>It downloads Edit's interface file.</li>
+<li>Edit is also signed with my key, so you don't have to confirm a second time.</li>
+<li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's interface too. This is
+also signed with my key.</li>
+<li>It selects suitable versions of Edit and ROX-Lib and prompts you to accept them:</li>
+</ol>
+
+<p style='text-align: center'>
+<img width="545" height="325" src="edit-injector.png"
+     alt="Running Edit with the injector" />
+</p>
+
+<p>
+The main part of the window contains a list of all the components needed to run Edit.
+At the top is Edit itself, and shown below is ROX-Lib, which Edit needs in order to function.
+If you are happy with the selected versions, click on <b>Execute</b> to run the
+program.
+</p>
+
+<p>
+When you click on <b>Execute</b>, the injector will start downloading the two chosen
+versions:
+</p>
+
+<p style='text-align: center'>
+<img width="327" height="144" src="injector-downloading.png"
+     alt="Downloading Edit and ROX-Lib" />
+</p>
+
+<p>
+The downloaded archives are unpacked into temporary directories and their contents
+checked against the digests in the interface files. If correct, the extracted directories
+are placed in a cache to save having to download them again next time you run Edit. The injector
+does not put files anywhere except in the cache, and uses a separate sub-directory for each
+archive it downloads. Each sub-directory is named after the digest of its contents, which allows
+downloads to be shared safely between users.
+</p>
+
+<div class='note'>TODO: Archives are currently cached in
+<b>~/.cache/0install.net/implementations</b>. In future, they will go in
+<b>/var/cache/0install.net/implementations</b>, using a setuid helper (which will
+check the cryptographic digest of the contents matches the directory name
+first, of course).</div>
+
+<p>When the downloads are complete, Edit itself runs:</p>
+
+<p style='text-align: center'>
+<img width="395" height="230" src="edit-running.png"
+     alt="Edit running" />
+</p>
+
+<p>
+By default, the GUI confirmation box is only shown if the injector needs to download something.
+If you run the command again once <b>Edit</b> has been cached, Edit will run immediately. To get back to
+the dialog box, use the <b>--gui</b> option:
+</p>
+
+<pre>
+$ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<h2>Creating an alias</h2>
+
+<p>
+It's annoying to have to keep typing in the full URL for Edit. The <b>0alias</b> command
+can be used to create little shell scripts to start programs easily:
+</p>
+
+<pre>
+$ <b>0alias rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
+Created script '/home/talex/bin/rox-edit'.
+To edit policy: rox-edit --versions
+(note: some shells require you to type 'rehash' now)
+</pre>
+
+<p>
+The command puts the script in the first directory in your $PATH, which must therefore be
+writable. You can now run edit like this:
+</p>
+
+<pre>
+$ <b>rox-edit</b>
+</pre>
+
+<p>
+To get back to the policy box (so you can change which versions of Edit and
+ROX-Lib you want used), run it like this:
+</p>
+
+<pre>
+$ <b>rox-edit --versions</b>
+</pre>
+
+<p>
+Of course, if you don't normally use the shell for running applications then you should use some other
+utility to make new programs easy to run. For example, users of the <a href="http://rox.sf.net">ROX desktop</a>
+would run <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> to create a ROX application
+directory launcher.
+</p>
+
+<h2>Policy settings</h2>
+
+<p>
+You can affect which versions are chosen by changing your policy. Three aspects
+of your policy are shown in the main window: <b>Network use</b>, <b>Freshness</b>
+and <b>Help test new versions</b>. Click on <b>Help test new versions</b>, and
+you may see the version numbers increase, as the injector chooses newer, less
+well tested, versions. Note however that you may not see any change at all,
+since there may not be new testing versions available when you try it.
+</p>
+
+<p style='text-align: center'>
+<img width="569" height="364" src="inject.png"
+     alt="The injector selects versions according to the user's policy" />
+</p>
+
+<p>
+To get the injector to notice that a new version is available, click on the <b>Refresh all now</b>
+button (which fetches a fresh copy of each listed interface). You can also set the freshness
+policy; the injector will automatically check for updates to interfaces that haven't been
+checked within the allowed time.
+</p>
+
+<p>
+These are not the only policy settings. The rest are per-component, and are
+accessed by double-clicking on a line in the list. This is described in the following sections.
+</p>
+
+<p>Note that all changes to your policy are saved as soon as you make them.
+Clicking on <b>Cancel</b> will close the window without running the program,
+but any changes made to the policy are not reversed.
+</p>
+
+
+<h3>Choosing different versions</h3>
+
+<p>
+The interface URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>) is
+used to get the default list of implementations. You can see the information
+about an interface by double-clicking on it in the list of interfaces. For
+example, double-clicking on <b>Edit</b> displays this dialog box:
+</p>
+
+<p style='text-align: center'>
+  <img width="756" height="442" src="edit-properties.png"
+  	alt="Properties of the Edit interface" />
+</p>
+
+<p>
+The information displayed is fetched from the interface file, which you can view in
+a web browser if you're interested:
+<a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit's interface</a>. This is
+a plain-text GPG-signed file. The injector stores the downloaded interface files
+locally (in <b>~/.cache/0install.net/interfaces</b>).
+</p>
+
+<h3>Stability</h3>
+
+<p>
+The interface file also gives a stability rating for each implementation. The following
+levels are allowed:
+</p>
+
+<ul>
+<li>Stable</li>
+<li>Testing</li>
+<li>Developer</li>
+<li>Buggy</li>
+<li>Insecure</li>
+</ul>
+
+<p>
+Stability ratings are kept independently of the implementations, and are expected to change over
+time. When any new release is made, its stability is initially set to <b>Testing</b>. If you
+have selected <b>Help test new versions</b> then you will then start using it.
+Otherwise, you will continue with the previous stable release. After a while
+(days, weeks or months, depending on the project) with no serious problems
+found, the author will change the implementation's stability to <b>Stable</b> so that
+everyone will use it.
+</p>
+
+<p>
+If problems are found, it will instead be marked as <b>Buggy</b>, or <b>Insecure</b>. The injector
+won't select either by default, but it is useful to see the reason (you might opt to
+continue using a buggy version if it works for you, but should never use an insecure
+one). <b>Developer</b> is like a more extreme version of <b>Testing</b>, where the program is
+expected to have bugs.
+</p>
+
+<p>
+You can use the <b>Preferred Stability</b> setting in the interface dialog to choose which
+versions to use. You can also change the stability rating of any implementation by clicking on it
+and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
+</p>
+
+<p>
+As you make changes to the policy and ratings, the order of the implementations in the list
+will change. The version at the top is the one that the injector will actually use. In addition
+to the ratings above, you can set the rating to <b>Preferred</b>. Such versions always come first,
+unless they're not cached and you are in Off-line mode.
+</p>
+
+<p>
+Note: If you want to use the second item on the list because the first is
+buggy, for example, then it is better to mark the first version as buggy than to mark the
+second as preferred. This is because when a new version is available, you will want that to
+become the version at the top of the list, whereas a preferred version will always be first.
+</p>
+
+<h2>List of Zero Install software</h2>
+
+<p>
+See the <a href='injector-feeds.html'>packages</a> page for a list of software currently available
+through the injector. See the <a href='injector-packagers.html'>packaging guide</a> for instructions
+on how to provide software yourself.
+</p>
+
+<h2>Further reading</h2>
+
+<ul>
+<li><a href="injector-packagers.html">The Injector: Packaging Guide</a> is for people who
+want to make software available to others through the injector.</li>
+<li><a href="injector-design.html">The Injector: Design</a> explains the design of the injector
+itself.</li>
+<li><a href="http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/803">Release notes and future plans</a>.</li>
+</ul>
+ 
+</html>

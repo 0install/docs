@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2 id="study1">Case study #1: packaging Contacts for Zero Install</h2>
+
+<p>This tutorial / case-study covers the following topics:</p>
+
+<ul>
+  <li>Setting up a new Zero Install site.</li>
+  <li>Building the archives to export with 0build.</li>
+  <li>Uploading the archives to a web-server.</li>
+  <li>Testing the site with Zero Install.</li>
+  <li>Making updates to the site.</li>
+</ul>
+
+<p><a href="http://roxos.sunsite.dk/dev-contrib/guido/Contacts/">Contacts</a>
+is simple address-book application. In this case study, we go though the
+process of making it available via Zero Install step-by-step. Contacts is
+a very easy program to start with because:
+</p>
+<ul>
+<li>It's written in Python, and so is platform independent.</li>
+<li>It doesn't have any hard-coded paths (doesn't expect to be in /usr, etc).</li>
+<li>It uses ROX-Lib, which is already in Zero Install.</li>
+</ul>
+
+<p>
+The packages will be hosted on <tt>roxos.sunsite.dk</tt>, so we'll create
+a directory on our local machine to contain everything about this project (any
+name can be used). Inside, we'll make a directory for our working copy of the
+site (<tt>site</tt>), and a directory for the tar archives that get copied to
+the webserver (<tt>export</tt>).
+Inside <tt>site</tt> we create the directory structure that the user will see
+when they visit our site.
+We make an <tt>apps</tt> directory for all the applications on this site
+(we might later want <tt>lib</tt> and <tt>docs</tt> directories too, for
+example).
+</p>
+
+<pre>
+$ mkdir roxos.sunsite.dk
+$ mkdir roxos.sunsite.dk/site
+$ mkdir roxos.sunsite.dk/site/apps
+$ mkdir roxos.sunsite.dk/export
+</pre>
+
+<p>
+We now create an <tt>apps/Contacts</tt> subdirectory for our application,
+and extract Contacts into it, renaming it to the correct version:
+</p>
+
+<pre>
+$ cd roxos.sunsite.dk/site/apps
+$ mkdir Contacts
+$ cd Contacts
+$ tar xjf /path/to/Contacts.tar.bz2
+$ mv Contacts Contacts-0.6.1
+</pre>
+
+<div class='note' style='text-align: left'>
+<p>
+Note: the upstream version didn't actually run successfully. I upgraded
+findrox.py to the latest version, and changed the import findrox line in AppRun
+to this:
+</p>
+<pre>
+import pygtk; pygtk.require('2.0')
+import findrox; findrox.version(1, 9, 6)
+import rox
+</pre>
+<p>These issues aren't directly related to packaging for Zero Install, but
+were required to run it in any case.</p>
+</div>
+
+<p>
+Now that we've set up the structure we want users to see, we'll run 0build
+to export it to the <tt>export</tt> directory:
+</p>
+
+<pre>
+$ alias 0build=/uri/0install/zero-install.sourceforge.net/bin/0build
+$ cd roxos.sunsite.dk/site
+$ 0build ../export roxos.sunsite.dk
+</pre>
+
+<p id='gpg'>
+You'll now be prompted to create a GPG key for the site. When you make updates
+to the site, you'll sign it with your key. When people refresh the site,
+Zero Install will check that the key is the same as the first time they
+accessed the site. You <i>must</i> create a key with exactly the name and
+email address 0build displays. GPG will also prompt for some other values; you
+may accept the defaults offered. In this case, the important values are:
+</p>
+
+<pre>
+Real name: Zero Install
+Email address: 0install@roxos.sunsite.dk
+Comment: (leave blank)
+</pre>
+
+<p>
+You only have to create the key once. After this is done, 0build will create
+some (hidden) files in the export directory. We now need to upload them to our
+web-server. We'll create a script to make this easier, which we'll save as
+<tt>roxos.sunsite.dk/0push</tt>:
+</p>
+
+<pre>
+#!/bin/bash
+alias 0build=/uri/0install/zero-install.sourceforge.net/bin/0build
+cd `dirname "$0"`
+(cd site &amp;&amp; 0build) || exit 1
+rsync -av --delete --rsh="ssh -l <b>fred</b>" export/.0inst-{archives,index.tgz,index.tar.bz2} <b>roxos.sunsite.dk</b>:<b>/path/to/htdocs/</b>
+</pre>
+
+<p>
+Of course, you'll have to modify this for your setup. Change <tt>fred</tt> to
+your login name on the web-server, <tt>roxos.sunsite.dk</tt> to your site's
+name, and <tt>/path/to/htdocs/</tt> to the root directory which your web-server
+exports. Then, run <tt>0push</tt> to upload the files and try accessing your
+new site:
+</p>
+
+<pre>
+$ chmod a+x 0push
+$ ./0push
+$ cd /uri/0install/roxos.sunsite.dk
+</pre>
+
+<p>
+You should find that you see a copy of your <tt>site</tt> directory here, and
+you can run Contacts directly from it.
+</p>
+
+<p>
+To make changes to your site, edit the <tt>site</tt> directory. We'll start by
+making it easier to run the current version. At the moment,
+<tt>apps/Contacts</tt> appears as a normal directory containing all the
+versions. Users often just want to run the latest version without having to
+change all their links on each upgrade. We'll create a <tt>latest</tt> symlink
+for this, and make <tt>apps/Contacts</tt> a wrapper application that runs
+latest:
+</p>
+
+<pre>
+$ cd roxos.sunsite.dk/site/apps/Contacts
+$ ln -s Contacts-0.6.1 latest
+$ ln -s latest/AppRun AppRun
+$ ln -s latest/.DirIcon .DirIcon
+$ ln -s latest/AppInfo.xml AppInfo.xml
+$ ln -s latest/Help Help
+</pre>
+
+<p>
+Now <tt>Contacts</tt> appears as an application (to ROX-Filer users at least),
+which runs the latest version by default. Rerun <tt>0push</tt> to send the
+updates to your webserver (you should keep the <tt>export</tt> directory around
+so that <tt>0build</tt> can work out which archives actually need to be
+updated, rather than recreating everything), and use <tt>0refresh</tt> to
+update your cache:
+</p>
+
+<pre>
+$ cd roxos.sunsite.dk
+$ ./0push
+$ cd /uri/0install/roxos.sunsite.dk
+$ 0refresh
+</pre>
+
+</html>

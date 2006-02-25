@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<h2>Similar systems</h2>
+
+<dl class='spaced'>
+<dt>Java Web Start</dt>
+<dd>
+It appears the Sun have developed a similar system to Zero Install,
+<a href="http://java.sun.com/products/javawebstart">Java Web Start</a>,
+although this only works for Java applications.
+</dd>
+
+<dt>Konvalo</dt>
+<dd>
+<a href="http://www.konvalo.org/">Konvalo</a> is a very similar idea
+to Zero Install, implemented using CODA.
+</dd>
+
+<dt>Maven</dt>
+
+<dd>
+<a href='http://maven.apache.org/'>Maven</a> is a build tool (like make or ant)
+for Java programs. Although not an installation system, it is similar to
+the injector in that each product has a <b>project.xml</b> file with a list of
+dependencies. When building a product, maven downloads the specified version of
+each dependency and stores it in a cache directory. Some differences between
+maven 1.0 (I have not yet tested version 2.0) and the injector:
+<ul>
+<li>Only exact versions of dependencies are given. Maven cannot select the
+best version from a set. In an installation system, this would lead to a lot
+of extra downloads as programs used different library versions
+unnecessarily. It also makes it harder to get security fixes.</li>
+<li>
+Dependencies are not fetched recursively. If A requires B, and B requires C,
+then maven will not fetch C unless A requests it explicitly. 
+</li>
+<li>
+The <b>project.xml</b> files are not signed, as they are not fetched by
+maven. Only implementations are downloaded.
+</li>
+<li>
+There is no digest of the downloads in the project file, so no security checks
+are performed to confirm that the download is OK, and downloads cannot be
+shared safely between users.
+</li>
+<li>
+Only Java is supported (everything is added to CLASSPATH, nowhere else).
+</li>
+<li>
+Dependencies are named using a simple two-layer system (e.g., axis/axis-jaxrpc).
+Therefore, a central repository is required to avoid naming conflicts.
+</li>
+</ul>
+</dd>
+
+<dt>Autopackage</dt>
+<dd>
+Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
+let users install software and to make software distribution decentralised.
+The work done by the Autopackage developers to make packages relocatable is 
+necessary for the Zero Install injector too. Some differences between this and
+Zero Install:
+<ul>
+<li>A script inside each package installs the files, making sandboxing
+difficult. It also <a href='http://www.kitenet.net/~joey/blog/entry/autopackage_designed_by_monkeys-2005-03-28-14-20.html'>makes conversion to other
+packaging formats troublesome</a>.</li>
+<li>Security features such as GPG signatures have not been implemented. Given
+that packages are executable files, the design doesn't seem to allow this to be fixed.</li>
+<li>Downloads cannot be safely shared between users.</li>
+<li>No checking for updates or support for multiple versions.</li>
+<li>Being closer to traditional installation, it's easier to package existing
+applications with Autopackage.</li>
+</ul>
+</dd>
+
+</dl>
+
+<p>
+See the <a href='matrix.html'>matrix</a> for a comparison of Zero Install's features with
+those of other installation systems.
+</p>
+
+<h2>Articles about Zero Install</h2>
+<p>Here are some discussions about Zero Install I've found on the web (Google, emails, etc). Let me
+know if you find any more!</p>
+<ul>
+<li><a href="http://www.pro-linux.de/news/2005/8310.html">Neue Zero Install-Implementation</a> article on pro-linux.de (in German)</li>
+<li><a href="ZeroInstall-Ottawa-2004.sxi">My slides from the 2004 Desktop Developers' Conference</a> (in Ottawa, Canada, July 19-20, 2004; these slides include the questions asked during the talk)</li>
+<li><a href="http://diariored.com/blog/000753.php">Zero Install System: instalar programas se va a acabar</a> (in Spanish)</li>
+<li><a href="http://www.golem.de/0404/30666.html">Zero Install: Software-Installation der Zukunft?</a> (in German)</li>
+<li><a href="http://www.linuxfrench.net/article.php?id_article=1268">Zero Install : si t’installes, t’es un Zéro!</a> (in French)</li>
+<li><a href="http://osnews.com/comment.php?news_id=6596">Introduction to the Zero Install System</a> (OSnews article and comments)</li>
+<li><a href="http://slashdot.org/article.pl?sid=04/04/03/174249&amp;mode=nested&amp;tid=106&amp;tid=185">Zero Install: The Future of Linux on the Desktop?</a> (Slashdot article)</li>
+<li><a href="http://freshmeat.net/articles/view/1049/">Zero Install and the Web of Software</a> (my freshmeat editorial and comments)</li>
+<li><a href="http://osnews.com/comment.php?news_id=5394">Zero Install and the Web of Software</a> (OSnews article and comments)</li>
+<li><a href="http://slashdot.org/~Sanity/journal/47655">Package Management in the ultimate operating system</a></li>
+<li><a href="http://ed.puddingbowl.org/archives/001198.html">Ed Heil's Weblog</a></li>
+<li><a href="http://www.varlinux.org/vl/html/modules/newbb/viewtopic.php?topic_id=201&amp;forum=8">Blue Sky Platform discussion</a></li>
+<li><a href="http://forums.gentoo.org/viewtopic.php?t=114652">Gentoo forums discussion</a></li>
+<li><a href="http://freedesktop.org/pipermail/xdg/2004-March/003461.html">Using Zero Install for sandboxing</a></li>
+</ul>
+
+<p>
+<a href="http://www.w3.org/DesignIssues/Installation.html">Tim Berners-Lee's "Installation, Catalogs, and Caches"</a> (DRAFT version) mentions Zero Install, too! (though the comment about needing a constant connection is wrong)
+</p>
+
+</html>

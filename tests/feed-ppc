@@ -1,0 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/tests/feed-ppc"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Feed-PPC</name>
+  <summary>PPC feed for master</summary>
+  <description>This interface can be used as a feed for the master interface,
+  but only on PPC machines.
+</description>
+  <implementation id='sha1=456' version='1.1'/>
+  <feed-for interface='http://0install.net/tests/master'/>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDUjyIAWhfEWB7ssURAtlAAKCjR4IzAoQoX1JExtWPLUkWNUSM+wCfZtwC
+Tk5Uckf+YUIxGApT/wW972E=
+=wcK0
+-----END PGP SIGNATURE-----

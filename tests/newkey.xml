@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/tests/newkey"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   main='main'>
+  <name>NewKey</name>
+  <summary>signed with a different key</summary>
+  <description>For testing only!</description>
+</interface>

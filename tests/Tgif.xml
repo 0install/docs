@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+
+<interface uri="http://0install.net/tests/Tgif.xml"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Tgif</name>
+  <summary>interactive 2-D drawing tool</summary>
+  <description>
+Tgif is an interactive drawing tool that allows the user to draw and
+manipulate objects in the X Window System.
+</description>
+
+  <icon href='http://0install.net/tests/Tgif.png' type='image/png'/>
+
+  <group main='usr/X11R6/bin/tgif'>
+    <implementation id="sha1=daae8cac59589b6cfe1ada6de977b79b24e78ee1" version="4.1.44" released='2005-01-14'>
+      <archive href='ftp://bourbon.usc.edu/pub/tgif/bin/linux-glibc/4.1.44/tgif-4.1.44-1.i386.rpm' size='1042608'/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBD04vBAWhfEWB7ssURAicqAKDHNKMrxN3pI7QtrBiF4Fq0/t4CcACgw2lUfhYucMcOna9E
+Piatl6/BovM=
+
+-->

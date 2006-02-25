@@ -1,0 +1,624 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<h2>Zero Install security overview: Filesystem implementation</h2>
+
+<div class='note'>
+This document describes the <strong>old</strong> filesystem implementation
+of Zero Install. This has been replaced by <a href='injector.html'>the injector</a>.
+New users should read <a href='injector-security.html'>the Injector's Security Model</a>
+instead of this.
+</div>
+
+<p>
+This page discusses some of the security issues relating to Zero Install.
+</p>
+
+<h3>System security key points</h3>
+
+<p>These points are about the risk to the security of your system from
+running Zero Install on it. Risks to users actually running software through
+Zero Install are covered below; this is about the effect it has on users
+who don't use it, and on the core system itself.
+</p>
+
+<ul>
+<li>No downloaded software is ever run as root, or as any user except the one
+who asked to run it.</li>
+
+<li>Software installed through Zero Install poses no more risk to the system
+than that installed by users into their home directories.
+With traditional (non-zero-install) systems, every application, library and
+documentation package is given root-level access to the system.</li>
+
+<li>Users are at risk only from the software they run, not all software
+installed on the machine.</li>
+
+<li>Zero Install does not listen for incoming connections, so any attack
+must be initiated by a local user, intentionally or otherwise.</li>
+
+<li>Zero Install contains a very small kernel module, which is the only
+new vector for a possible root-compromise.</li>
+
+<li>A small helper runs as a special user. If compromised, it would
+allow trojaning of software run via Zero Install.</li>
+</ul>
+
+<h3>User security key points</h3>
+
+<p>These points are for users who are on a system running Zero Install,
+detailing the risks from making use of it.
+</p>
+
+<ul>
+<li>You can run any software you please, just as you could anyway by
+installing to your home directory, but Zero Install makes it easier,
+faster, and more efficient.</li>
+
+<li>If you run a malicious program you can still lose your own data,
+get a virus, etc, unless you use additional sandboxing.
+</li>
+
+<li>Just as the software you use doesn't get access to other users' files
+(at install time), so the software they use doesn't get given access to yours.
+</li>
+
+<li>Zero Install performs checks to try to detect when a remote server has
+been compromised. This only works when upgrading software, not when using it
+for the first time.
+</li>
+
+</ul>
+
+<h3>Common security questions mini-FAQ</h3>
+<dl>
+<dt>What's the point in securing the system, when all my data is stored as a
+user?</dt>
+<dd>There are several advantages. If more than one person uses the machine,
+one person can cache/install some software without risking the other users'
+data. If a single person uses the machine, they can still create multiple users
+for themselves ('accounts', 'games', etc) and get similar benefits. It takes
+much more work to restore a root-compromised machine (reinstall everything)
+than a user compromise (backup data files and wipe home directory). You
+also don't need to redownload all your software, since the Zero Install cache
+can't be modified by a user compromise.</dd>
+<dt>But isn't this a step backwards from Java sandboxes, etc?</dt>
+<dd>If your application is written in Java or can otherwise be easily
+sandboxed then you should use that sandbox whether you also use Zero Install
+or not (Zero Install still lets you share code between users, etc). For other
+applications (the majority) Zero Install is an improvement.</dd>
+<dt>What if one user causes a virus to be cached? It could infect everyone!</dt>
+<dd>Simply having a virus in the cache isn't dangerous; other users must
+explicitly run it, just as if it wasn't cached.</dd>
+<dt>Doesn't this make it easier for users to run dodgy software?</dt>
+<dd>In so far as it makes installing everything easier, then yes that might
+include undesirable programs. However, there's nothing a user can do with Zero
+Install that they couldn't do without it; Zero Install just makes it more
+efficient. Trojans and virus don't normally have difficult installers anyway
+;-)</dd>
+</dl>
+
+<h2>Other opinions</h2>
+
+<dl>
+<dt><a href='http://www.licquia.org/archives/2004/07/21/zero-install-and-snake-oil'>The Licquia Blog » Blog Archive » Zero Install and Snake Oil</a></dt>
+<dd>
+<p>
+<i>
+"I don’t care about meaningless distinctions between “user” and “system”
+security (as if user security was less important, or as if there haven’t been
+scads of privilege escalation vulnerabilities). When you say “the only risk is
+right here; there is no risk there”, you are selling snake oil. That you are
+selling snake oil to yourself as well makes it no less dangerous."
+</i>
+</p>
+Jeff, a developer of Debian's APT system, provides a critique of the Zero Install
+documentation.
+<p>
+
+</p>
+</dd>
+
+<dt><a href='http://www.interact-sw.co.uk/iangblog/2004/04/07/roxzeroinstall'>Ian Griffiths' weblog: Making Authenticode Look Good</a></dt>
+<dd>
+<p>
+<i>"What amazed me (and not in a good way) about ROX Zero Install was the 'security' [...]
+Comforting though it is that my [root] system cannot be compromised, it's still
+distinctly troubling that the code runs using my user account with no
+additional restrictions applied. That means that it can do anything I can - if
+it wants to delete all my files it can."</i>
+</p>
+<p>
+This is a comparison of running non-ZeroInstall sandboxed Java programs with
+ZeroInstall non-sandboxed ROX applications. The sandboxed applets are indeed
+more secure. Still, this is due to the sandboxing rather than to the caching
+and dependency handling (the Zero Install part). A sandboxed Java applet run
+through Zero Install should be just as secure as a sandboxed Java applet run
+not through Zero Install.
+</p>
+
+<p>
+Running ROX through Zero Install (user-level risk) falls somewhere between
+installing ROX with APT (root-level risk) and running an applet in your
+web-browser. Of course, a Java applet that can't delete files wouldn't make for
+a very good file manager.
+</p>
+<p>
+In summary: Using Zero Install instead of APT should gain you more security. Replacing
+sandboxed web applets with similar non-sandboxed programs will lead to a decrease in security.
+Use Zero Install for what it's intended for; things you would otherwise have installed as root.
+</p>
+</dd>
+</dl>
+
+<h2>Introduction</h2>
+
+<p>
+The goal of security is to allow you control over what access others have
+to your data and resources. For example, you should be able to prevent other
+people from reading your email, deleting your files, seeing your credit card
+number, and so on.
+</p>
+
+<p>
+The problem is that it is impossible to look at a every piece of software and
+verify that it will only do what you want. Thus, we must sandbox programs so
+that their actions are restricted. Then, risks come only from the software
+enforcing the sandbox. Because a single sandbox can be used to restrict any
+number of programs, there is much less code (just the sandbox itself) to check
+for security problems.
+</p>
+
+<p>
+Linux (like most other modern operating systems) creates a separate sandbox
+environment for each user of the system. This means that users are only at high
+risk from software they run, not from software other users run (except due to
+bugs in Linux, which are rare and quickly fixed). Users can, in turn, create
+more restrictive sandboxes within their own sandbox, so that a Java applet they
+run in a webpage cannot delete their files, for example.
+</p>
+
+<p>
+However, there is a problem with this model: software installation. When
+installing a program for users (such as a word processor), that program is
+first run as 'root' (not in any sandbox). Every application, library and
+documentation package installed on a Linux system is given complete access
+to everything. The more software you install, the more at risk you are. If
+several people use the same machine, then each is at risk from <i>all</i>
+the software installed, not just from the software they actually use.
+</p>
+
+<p>
+Further, users gain little by running installed software in sub-sandboxes,
+since the software has already been executed with full access. Previously,
+the only solution was for users to perform the installation step itself
+within their sandbox (installing to their home directory). This is much
+more secure, but also very inefficient (as applications can no longer be
+shared between users) and often more difficult to do. Zero Install makes
+software installation as safe as having users installing to their home
+directories, but is even quicker and easier than installing as root with
+a traditional package manager.
+</p>
+
+
+<h2>Security on Unix-type systems</h2>
+
+<p>
+On Unix-type systems, such as Linux, each piece of software runs with a
+particular 'user ID' (UID). The kernel ensures that a piece of software running
+with one UID cannot interfere with another piece of software running with a
+different one. Typically, each person who uses the computer has a
+corresponding UID, and each system process (such as booting or serving web
+pages) has its own one too. Thus, I can't accidentally delete someone else's
+files, or prevent the computer from booting in future, since running as
+a different UID requires a password.
+</p>
+
+<p style='text-align: center'>
+<img src="Users.png" width='475' height='421' alt='Linux protects users from each other'/>
+</p>
+
+<p>
+In fact, UID 0 ('root') is special. Programs running as root can do anything
+they like, including messing with other user's files and programs and even
+changing Linux itself. Therefore, we try to run as little software
+as possible as root.
+</p>
+
+<h2>Zero Install security in detail</h2>
+
+<h3>Installing as different users</h3>
+
+<p>
+Debian's approach to security (which is typical) is to only allow you to
+install their 'trusted' packages. Each package contains an installer program
+which is run as 'root' when the package is installed, uninstalled or upgraded.
+Clearly, Debian cannot allow users to install arbitrary packages while using
+this system; the user could install a package with a malicious install program.
+Once packages are installed, however, the programs they contain are run only as
+normal users. Tarballs and RPMs are typically installed in a similar fashion.
+</p>
+
+<p>
+Zero Install separates installation from trust: only the (small) Zero Install
+system itself must be audited for correctness and security. When a package
+is 'installed' using Zero Install, none of the code within the package is
+run at all, it is simply copied from the remote machine to a local disk cache
+(for speed reasons).
+If Zero Install (and Linux, etc) is secure, any other software may be installed
+and upgraded using it without risking the system. Trust in the software is only
+needed when the software is run, and only the user running the software needs
+to trust it.
+</p>
+
+<p>
+For example, if Mary (in the picture above) wanted to install KWord on a Debian
+system, she would need to ask the system administrator for permission, because
+a bug or exploit in KWord's installer could delete John's files. This is
+both inconvenient (having to find the administrator) and still a risk (bugs
+may still slip through).
+</p>
+
+<p>
+Mary could install KWord herself, without running it as root, but then only
+she could use it. If John decided to run KWord too, he would have to
+download a second copy, wasting time and disk space. Of course, he could
+use Mary's copy, but this has two problems:
+</p>
+
+<ul>
+<li><p>John has to know that Mary (or some other user) has installed it, and
+she has to have made it accessible to him.</p>
+</li>
+
+<li><p>
+John has to trust not only Mary herself, but any program she runs now or
+in the future. Any program running with Mary's UID can modify her copy of
+KWord, which John is also using. Thus, by running Mary's copy of KWord, John
+is giving Mary access to all his files (and, by extension, to all the files
+of everyone who trusts software John has installed, and so on).</p>
+</li>
+</ul>
+
+<p>
+The Zero Install system has its own UID. It acts like a very trust-worthy
+version of Mary, downloading software for other people, but never actually
+<i>running</i> anything. Since none of the downloaded software runs with
+the Zero Install UID, the software can't be changed.
+</p>
+
+<h3>Trusting software on the web</h3>
+
+<p>
+So Zero Install moves the issue of trust on to individual users. Instead of
+the Debian model, where the administrator only installs trusted software and
+all users trust the administrator's judgement, any piece of software can be
+'installed', but users must decide whether they want to run it.
+</p>
+
+<p>
+Zero Install can do this because users specify some software to run by its URL
+(Internet address). There is no question of a user asking to run 'gimp' and
+having to decide which program named 'gimp' they mean; they explicitly ask for
+<b>gimp.org/gimp-1.2</b> (though, as explained elsewhere, the user
+interface may not present it quite like this).
+</p>
+
+<p>
+This brings up two questions:
+</p>
+
+<ul>
+<li>How does a user know what sources of software on the Internet are
+trust-worthy?</li>
+<li>How does Zero Install know that the software came from where it says
+it does?</li>
+</ul>
+
+<p>
+The answer to the first question is that you still need some kind of
+recommendation system. In Debian's case, this is tied up with the installer:
+what Debian recommend can be installed; what they don't, can't. In Zero
+Install, sites such as <a href="http://freshmeat.net">freshmeat.net</a>,
+or distributions, take on this responsibility. A user of Zero Install may
+choose, for example, to only run programs listed on Debian's web-site.
+However, they may also choose to trust a magazine, a friend or some other
+source.
+</p>
+
+<p>
+The second question is more technical. Since software is named by its
+Internet address, Zero Install simply fetches it from that, just as a web
+browser does with a named web page. However, there are some issues with this:
+</p>
+
+<ul>
+<li><p>To speed things up, we may choose to get the software from a mirror
+(a computer with a copy of the program which happens to be closer to us).
+Can we trust the mirror to provide a faithful copy of the original?</p></li>
+
+<li><p>The computer serving the software could have been broken into, and the
+software replaced with a trojaned version.</p></li>
+
+<li><p>How can we be sure that replies from <b>gimp.org</b> actually come
+from that machine, and not from another machine that intercepted the message on
+its way?</p>
+</li>
+
+</ul>
+
+<p>
+To solve the mirror problem, Zero Install creates index files which list
+every file available from the site, alternative download locations for the
+files, and checksums for each group of files. The (small) index file comes from
+the master site, but the data can come from anywhere. When the data arrives,
+the checksum (MD5) is calculated and compared to the one in the index. If they
+differ, the download is refused. So, it is only necessary to ensure that the
+index files are authentic. (MD5 is a popular checksum algorithm designed for
+exactly this purpose; it is infeasible to find a way of changing the archive
+while preserving the checksum)
+</p>
+
+<p>
+For the index files themselves, we use a different system. Zero Install
+actually downloads three files: the index, the site's public key, and
+the index's digital signature. It confirms that the signature was created
+using the private key corresponding to the downloaded public key, and that
+the signature is a checksum of the index file (see the
+<a href="http://www.gnupg.org/">GNU Privacy Guard</a> homepage for an
+explanation of how all this is possible).
+</p>
+
+<p>
+This may not seem to buy us anything (an attacker could change all three files
+at once), but the advantage is that when we <i>upgrade</i> the software
+(by fetching an updated index file) we check the new index and signature
+using the <i>original</i> key. Thus, if an attacker does change the files
+on the server, the next person to try to update will be shown a big scary
+message telling them to warn the site owner, and the problem can be fixed
+quickly.
+</p>
+
+<p>
+In other words, Zero Install doesn't check that the software is written by
+who it says it is, and it doesn't check that they're trust-worthy, but it
+<i>can</i> tell you that an upgrade for a piece of software you've found to be
+trust-worthy in the past is from the same people as before.
+</p>
+
+<p>
+In the future, Zero Install may be able to use <a href="http://www.onlamp.com/pub/a/onlamp/2004/10/14/dnssec.html?page=2">DNSSEC</a> to get the initial
+trusted key. Here, your computer starts with the keys of the root DNS
+servers and a chain of trust is established from DNS server to DNS server,
+and from the final DNS server to the host's public key.
+</p>
+
+<h3>Extra security from distributions</h3>
+
+<p>
+Distributions or other groups can provide extra security by distributing
+sites' public keys themselves. The RedHat installer might pre-install the file
+<tt>/var/cache/zero-inst/gimp.org/.0inst-meta/trusted_key</tt>, even
+if they didn't supply the Gimp itself. Other groups can provide a similar
+service; since the system will only work if both the key provider and the
+software provider use the same key, the worst that malicious key providers can
+do is to prevent genuine software from installing (but can't install malicious
+software themselves).
+</p>
+
+<h3>Web-of-trust and pathname hashes</h3>
+
+<p>
+When you run a program that uses a library on another site which hasn't been
+seen before, Zero Install trusts that site. Security is only checked when
+upgrading a known site, not when accessing it for the first time. It would be
+possible for the linking site to check that an otherwise-unknown site is
+correctly signed.
+</p>
+
+<p>
+There are several ways to do this. One suggestion is to include the site's
+key's fingerprint in its name. So instead of accessing
+<tt>/uri/0install/gimp.org/gimp</tt>, you run
+<tt>/uri/0install/gimp.org,fb33hZzj/gimp</tt>. Zero Install will refuse to
+allow this access unless the site is signed with a key whose fingerprint is
+"fb33hZzj".
+</p>
+
+<p>
+There are two big problems with this approach:
+</p>
+
+<ol>
+<li>It makes the current maintainer's current key part of the library's
+interface. If the key changes (due to it expiring, a new maintainer
+taking over, or an actual compromise of the key) then every site linking to
+it must be updated. Thus all GTK software would stop working after a key
+compromise, even if the break-in was detected and fixed very quickly. This
+would affect all links, including those in older versions of software and
+software from CDs, etc. It would be a lot of work to fix this.
+</li>
+<li>It makes the interface look more confusing to users. Zero Install is
+actually a very simple system, which is accessed in much the same way
+as web-sites are by users. Having to explain to users what the funny
+characters in the file names are about will likely confuse them and scare
+them away. If users are prevented from even using the simple site name,
+the problem becomes even worse.</li>
+</ol>
+
+<p>
+So, in exchange for an increase in security, this system will lead to false
+positives (<i>This site may have been broken in to. Or the key may have just
+been updated. Trust it anyway?</i> Users will always click <i>Yes</i>).
+This is quite a big problem, and must be balanced against the fact that
+this technique is unlikely to lead to a significant increase in security.
+After all, very few sites get broken in to as it is (most free software sites
+don't use GPG keys at all), site breakins are detected very fast (due to other
+users upgrading), keyservers (see previous section) can provide the same
+increase in security without affecting the interface, and you still have the
+problem of trusting the authors of the software, even if you really know it was
+written by them.
+</p>
+
+<h3>Protecting users from themselves</h3>
+
+<p>
+What if a user wants to try some software, but doesn't fully trust it? Zero
+Install will protect the rest of the system from that user, but not the user
+from himself. However, users have a number of options independent of Zero
+Install for running software in safety.
+</p>
+
+<p>
+First, there are tools such as <a
+href="http://subterfugue.org/">Subterfugue</a>, which can intercept all system
+calls made by a process and block or change destructive ones. For example, Mary
+could run a program but only allow it to write to her <tt>~/Testing</tt>
+directory. (note that proper security requires more restrictions than just this)
+</p>
+
+<p>
+Secondly, <a href="http://user-mode-linux.sf.net">User Mode Linux</a> allows
+any user to run a whole Linux system within Linux. Normally, this rather
+restricts the amount of software available, but with Zero Install they can
+mount <tt>/uri</tt> within the virtual machine as a hostfs type mount of the real
+machine's <tt>/uri</tt> directly, thus sharing all downloads between both the real
+and virtual machines. Any changes made will only affect the virtual machine.
+</p>
+
+<p>
+Thirdly, and perhaps simplest, the system administrator can create a 'sandbox'
+UID for testing software. Any user can log in as 'testing' and try programs
+out, safe in the knowledge that no important data is saved as that UID.
+</p>
+
+<h3>Trusting Zero Install itself</h3>
+
+<p>
+As we have seen, the security of the whole computer system only depends on the
+security of Zero Install itself, which is fairly small and comparatively easily
+audited.  In this section, we consider what attacks are possible due to bugs
+here.
+</p>
+
+<p>
+The first and most important point to understand is that <strong>Zero Install
+is experimental software</strong>. Since it is still rapidly changing, it has
+not yet been carefully checked for correctness, and should not be used anywhere
+where that could cause problems.
+</p>
+
+<p>
+Systems which offer a service (such as a serving web pages) to the outside
+world may allow remote exploits if buggy. You could set up a web server, go on
+holiday for a week, and return to find the machine compromised. Zero Install
+does <i>not</i> listen for incoming connections, so this kind of attack
+is not possible. Zero Install only talks to other machines at the request of a
+user on the computer itself.
+</p>
+
+<p>
+Therefore, there are three ways in which a buggy Zero Install could be
+exploited:
+</p>
+
+<ol>
+<li>A local user of the machine attacks it.</li>
+<li>A local user is tricked into running software from a dodgy site, and this
+software exploits a bug in Zero Install to get access to the rest of the system.</li>
+<li>A local user accesses a trusted site which has been broken in to.</li>
+</ol>
+
+<p>Point 3 is the same as point 2, except that Zero Install can detect the
+problem if the site has been accessed in the past (due to the use of digital
+signatures described above).</p>
+
+<p>
+Before anyone gets too paranoid, please remember that existing systems require
+you to trust <strong>all</strong> downloaded programs (hundreds or thousands
+of them), whereas Zero Install is just one program.
+</p>
+
+<p>
+Since Zero Install runs with its own UID, even if compromised it should not
+stop the system from booting or interfere with core system services. It would,
+however, allow the attacker to trojan all software available via Zero Install.
+If both the Zero Install program <strong>and</strong> the kernel module
+contained exploits, the attacker could get control of the whole machine.
+However, this would require an extremely skillful attacker, and three
+separate vulnerabilities (tricking a local user, getting past the downloader
+program, and getting past the kernel module).
+</p>
+
+<p>
+However, since Zero Install is small and will be infrequently changing, any
+bugs found can be quickly corrected and new bugs should be very rare. After
+the 1.0 release, hopefully many programmers will help us check it.
+</p>
+
+<h3>Future security possibilities</h3>
+
+<p>
+Zero Install moves security threats from system-wide to per-user; a big
+step forward. However, it may also make possible future security improvements,
+too. We can imagine that when running a program it should not get write
+access to the filesystem at all (even as the user who ran it). Dragging a
+private file to a word processor could give it permission to read it, and
+dragging the file back to the filer could grant it write permission to save
+it.
+</p>
+
+<p>
+This would finally allow users to run random email attachments and other
+untrusted programs they find lying around in safety. However, there is the
+problem of preferences. OpenOffice should be able to save user preferences
+and a list of recently edited documents without having to ask the user
+for permission. Zero Install makes this easy; when the user runs
+<tt>/uri/0install/openoffice.org/writer</tt> in the filer, the filer could
+automatically grant it write permission on <tt>~/.config/openoffice.org</tt>,
+without any risk that it could mess up another application's preferences.
+</p>
+
+<h2>Conclusions</h2>
+
+<p>
+We have seen that Zero Install can provide a much more secure environment
+that traditional systems. Because every resource a program may ever require
+is already at a fixed location in the file system, there is no need for
+installers to move things around and update index files recording what is
+available on the system. By removing the need for complex installers, we remove
+the need to run untrusted code with system-level privileges. In this safer
+environment, we can allow users to run whatever software they require,
+allowing us to create a system that is both simpler and safer.
+</p>
+
+<p>
+This creates a system where only individual user accounts can be compromised.
+We can now create a `guest' user to safely test out new software, or a
+`backup' UID to keep copies (regular off-site backups are still required to
+guard against hardware failures, of course).
+</p>
+
+<p>
+By separating installation from trust, we allow better recommendation services
+to appear. By automatically checking GPG signatures as software is upgraded,
+we are able to perform better security checking than the majority of users
+currently do, with no extra effort.
+</p>
+
+<p>
+Having a URI-based naming scheme, shared by all platforms and distributions,
+we can share a single Zero Install downloader among any number of virtual
+machines, making running `sand-boxed' applications much easier. By referring
+to each application by it's full URI, we can grant an application write access
+to it's own private configuration area with no additional user interaction.
+</p>
+
+<p>
+Although the Zero Install system is not finished, and still requires auditing
+itself, this document has hopefully served to suggest that the final system
+will be a considerable improvement on current systems, not just in
+user-friendliness, but in security too.
+</p>
+
+</html>

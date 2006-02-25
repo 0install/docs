@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<p style='text-align: center; padding: 0.5em'>
+  <span class='note'>
+  <strong>Quick start:</strong> <a href='injector.html'>Install 0launch now!</a>
+  </span>
+</p>
+
+<p>
+The Zero Install system aims to provide a better way of installing software than traditional systems (tarballs, apt-get,
+bundles, setup.exe, etc). Here are some of our goals:
+</p>
+
+<dl class='spaced'>
+ <dt>Anyone can install software</dt>
+ <dd>You don't have to be root just to install a word-processor.</dd>
+
+ <dt>Anyone can distribute software</dt>
+ <dd>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install.</dd>
+
+ <dt>It doesn't matter whether software is installed or not</dt>
+ <dd>You just run it. Zero Install handles the rest (downloading and caching as needed).</dd>
+
+ <dt>Downloads are shared</dt>
+ <dd>If one user installs a 20 Mb application, another user can run it without downloading it again.</dd>
+
+ <dt>Users don't need to trust each other</dt>
+ <dd>If one user downloads a malicious program, other users aren't affected.</dd>
+</dl>
+
+<p>[ <a href='doc.html'>Read more...</a> ]</p>
+
+<h2>Two implementations</h2>
+
+<p>
+We are experimenting with two different implementations of the above goals. Our first is the
+<a href='filesystem.html'>Zero Install Filesystem</a>, which uses a Linux kernel module to provide
+a virtual filesystem containing all software, fetched on demand. For example, you can run ROX-Filer
+with this command:
+</p>
+
+<pre>
+$ /uri/0install/rox.sourceforge.net/rox
+</pre>
+
+<div class='figure'>
+  <img width="443" height="199" src="apps.png"
+       alt='ROX-Filer window showing Memo application on the remote machine' />
+  <p>Running Memo via the filesystem</p>
+</div>
+
+<p>
+The first time you do this, Zero Install downloads ROX-Filer, saves it in the disk cache, and runs it. Running the command
+again will start the filer instantly (no network access required).
+</p>
+
+<p>
+The filesystem worked very well, and most of the ROX desktop is now available
+this way. The problem was the need for the kernel module. Linux modules are
+difficult to install, can't be distributed as binaries, only work on Linux,
+need to be recompiled whenever the kernel is upgraded, and are a security risk
+if buggy (sysadmins are reluctant to install them).
+</p>
+
+<p>
+We addressed these issues by creating the <a href='injector.html'>Zero Install
+Injector</a>, which is pure Python and doesn't even need root access to
+install.
+</p>
+
+<div class='figure'>
+  <img width="545" height="325" src="edit-injector.png"
+     alt="Running Edit with the injector" />
+  <p>Running Edit with the injector</p>
+</div>
+
+</html>

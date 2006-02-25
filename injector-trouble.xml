@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Trouble-shooting</h2>
+
+<dl>
+<dt>ImportError: No module named pygtk</dt>
+<dd>You need to install the <i>python-gtk2</i> package (the name may vary on different
+distributions; <i>python-gnome2</i> is another possibility.</dd>
+</dl>
+
+<p>
+If the injector isn't doing what you expect, run it with logging turned up
+using either <b>-v</b> (verbose) or <b>-vv</b> (very verbose!). Use <b>-c</b>
+to prevent it switching to GUI mode too. Eg:
+</p>
+
+<pre>
+$ <b>0launch -vvc http://rox.sourceforge.net/2005/interfaces/Edit</b>
+DEBUG:root:Location of 'implementation-dirs' config file being used: 'None'
+DEBUG:root:Added system store '/var/cache/0install.net/implementations'
+DEBUG:root:Supported systems: '{None: 2, 'Linux': 1}'
+DEBUG:root:Supported processors: '{None: 4, 'i386': 3, 'i586': 1, 'i486': 2, 'i686': 0}'
+DEBUG:root:Recalculate! root = http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;
+	from /home/talex/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 120.23 hours
+DEBUG:root:Processing feed &lt;Feed from /home/talex/Projects/Edit/Edit.xml&gt;
+DEBUG:root:Initialising new interface object for /home/talex/Projects/Edit/Edit.xml
+DEBUG:root:Loading local interface file '/home/talex/Projects/Edit/Edit.xml'
+DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;),
+	with feeds: [&lt;Feed from /home/talex/Projects/Edit/Edit.xml&gt;]
+DEBUG:root:Will use implementation /home/talex/Projects (version 2.0.0)
+DEBUG:root:Considering dependency &lt;Dependency on http://rox.sourceforge.net/2005/interfaces/ROX-Lib;
+	bindings: 1 [&lt;environ PYTHONPATH += ROX-Lib2/python&gt;]&gt;
+DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;
+	from /home/talex/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
+DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 20.95 hours
+DEBUG:root:Processing feed &lt;Feed from /home/talex/Projects/ROX-Lib2/ROX-Lib.xml&gt;
+DEBUG:root:Initialising new interface object for /home/talex/Projects/ROX-Lib2/ROX-Lib.xml
+DEBUG:root:Loading local interface file '/home/talex/Projects/ROX-Lib2/ROX-Lib.xml'
+DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;),
+	with feeds: [&lt;Feed from /home/talex/Projects/ROX-Lib2/ROX-Lib.xml&gt;]
+DEBUG:root:Will use implementation /home/talex/Projects (version 2.0.2.0)
+DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 120.23 hours
+DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 20.95 hours
+INFO:root:PYTHONPATH=/home/talex/Projects/ROX-Lib2/python:/home/talex/Projects/ROX-Lib2/python
+INFO:root:Executing: /home/talex/Projects/Edit/AppRun
+</pre>
+
+<p>
+In the example above, the injector ends up using my local CVS copies of both Edit and ROX-Lib. Here
+are some known problems, and their solutions:
+</p>
+
+<ul>
+ <li><a href="http://news.gmane.org/find-root.php?message_id=%3c437318D8.1050604%40antplc.com%3e">Forbidden: header 'Content-Type' value denied</a> (firewall mis-configuration)</li>
+ <li><a href="http://news.gmane.org/find-root.php?message_id=%3c43775ABB.8060601%40hayber.us%3e">Failed to extract archive; exit code 512</a> (incorrect environment setting)</li>
+ <li><a href="http://news.gmane.org/find-root.php?message_id=%3c76ebe6440511150110t3eb4f4e5p98c59f96b1c8ae5e%40mail.gmail.com%3e">TypeError: iterable argument required</a> (badly formed http_proxy setting)</li>
+</ul>
+
+<p>
+If you get other download errors, try fetching the failing URL using wget, e.g.:
+</p>
+
+<pre>
+$ <b>0launch http://...</b>
+Error downloading 'http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.16.tgz':
+HTTP Error 403: Forbidden: header 'Content-Type' value denied
+$ <b>wget http://...</b>
+</pre>
+
+<p>
+If wget also fails, try opening the URL in your web browser. If one of these works, but 0launch
+doesn't, it may be that you are using an HTTP proxy. Your web browser is configured to use it,
+but your <b>http_proxy</b> environment variable is not set. Check your browser configuration
+and ensure that <b>http_proxy</b> is set correctly, e.g.:
+</p>
+
+<pre>
+$ <b>export http_proxy=http://myproxy.server:444</b>
+$ <b>0launch http://...</b>
+</pre>
+
+<p>
+If you still have problems, please <a href='support.html'>write to the mailing
+list</a>, and send the output of the commands above.
+</p>
+ 
+</html>

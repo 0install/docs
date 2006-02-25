@@ -1,0 +1,74 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version='1.0'?>
+<interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
+	   uri='http://0install.net/2005/interfaces/injector-gui'
+	   main='0launch-gui'>
+  <name>Injector-GUI</name>
+  <summary>graphical interface for the injector</summary>
+  <description>
+    The injector GUI displays a window showing which versions of various components will be used when running a program, and allows you to alter various policy settings to affect the selection process. You can use this to mark particular versions of libraries as preferred, bugggy, etc.
+  </description>
+  
+  <group>
+    <requires interface='http://0install.net/2005/interfaces/injector'>
+      <environment name='PYTHONPATH' insert='zeroinstall/injector'/>
+    </requires>
+    <implementation version='0.2' id='sha1=efec372a590c092d40c3d8503e5dc3db94f25225' stability='testing'>
+      <archive size='9939' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.2.tgz' extract='injector-gui-0.2'/>
+    </implementation>
+    <implementation version='0.3' id='sha1=2bd2c2766a45257527116eccf1a298117c4a91e3' stability='testing'>
+      <archive size='10833' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.3.tgz' extract='injector-gui-0.3'/>
+    </implementation>
+    <implementation version='0.4' id='sha1=8d05b57c9f3467f860ae8f4dd50c60dbe09f8f6d' stability='testing'>
+      <archive size='10826' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.4.tgz' extract='injector-gui-0.4'/>
+    </implementation>
+  </group>
+
+  <group>
+    <implementation version='0.5' id='sha1=19ac8dea7d359b00a12c380ec43f989a35790abc' stability='stable'>
+      <archive size='20914' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.5.tgz' extract='injector-gui-0.5'/>
+    </implementation>
+    <implementation version='0.6' id='sha1=f58ce8d285c317fe050f823e84ead0a0f3662dd0' stability='stable'>
+      <archive size='21920' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.6.tgz' extract='injector-gui-0.6'/>
+    </implementation>
+    <implementation version='0.7' id='sha1=2b9a9c71e4785504fedba386bbb5bd96881e6e6d' stability='stable'>
+      <archive size='22139' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.7.tgz' extract='injector-gui-0.7'/>
+    </implementation>
+    <implementation version='0.8' id='sha1=a0c48942f864e4b850ca6206cf963bee0c239d0b' stability='stable'>
+      <archive size='23429' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.8.tgz' extract='injector-gui-0.8'/>
+    </implementation>
+    <implementation version='0.9' id='sha1=c67a1ad1691c482f89b2337ce4fefc4930e62342' stability='testing'>
+      <archive size='24431' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.9.tgz' extract='injector-gui-0.9'/>
+    </implementation>
+    <implementation version='0.10' id='sha1=46ebb5472999136e5b2c3404122dc9bb8daeab69' stability='testing'>
+      <archive size='24760' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.10.tgz' extract='injector-gui-0.10'/>
+    </implementation>
+    <implementation version='0.11' id='sha1=fa074a9d168bcbafc6b893c1c01b6e6d3b588923' stability='stable'>
+      <archive size='24925' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.11.tgz' extract='injector-gui-0.11'/>
+    </implementation>
+    <implementation version='0.12' id='sha1=3368b8fb0bad50ccfd575e4bcf716e622167519b' stability='stable' released='2005-08-25'>
+      <archive size='25725' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.12.tgz' extract='injector-gui-0.12'/>
+    </implementation>
+    <implementation version='0.13' id='sha1=d328057ab0a8f3e6ed571c2fe8574d709b437204' stability='stable' released='2005-09-09'>
+      <archive size='26622' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.13.tgz' extract='injector-gui-0.13'/>
+    </implementation>
+    <implementation version='0.14' id='sha1=2a7a02bb4d9714ffe0da4b6bfabdd62110f9f0ea' stability='stable' released='2005-09-18'>
+      <archive size='27466' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.14.tgz' extract='injector-gui-0.14'/>
+    </implementation>
+    <implementation version='0.15' id='sha1=fb594c0fb72fe15c0046975532119f0b5016bbe6' stability='stable' released='2005-10-15'>
+      <archive size='27781' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.15.tgz' extract='injector-gui-0.15'/>
+    </implementation>
+    <implementation version='0.16' id='sha1=ffb6f0d649020819c8d04f90b5fe6b3ff6030fe7' stability='stable' released='2005-10-16'>
+      <archive size='27793' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.16.tgz' extract='injector-gui-0.16'/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDV97YrgeCgFmlPMERApQYAJ43HJl6/GMQD9pKMXTAdORV87wQVACgqREO
+HSDcbJObJLzIROmmlH1Iz3w=
+=2clZ
+-----END PGP SIGNATURE-----

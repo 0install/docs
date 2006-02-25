@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet href="http://0install.net/2006/stylesheets/interface.xsl" type='text/xsl'?>
+<interface main="Edit/AppRun" uri="http://0install.net/tests/xmlsig.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Edit</name>
+  <summary>simple text editor</summary>
+  <description>
+    Edit is a simple text editor, with a ROX-style user interface. It has drag-and-drop saving, search-and-replace and multi-level undo.
+  </description>
+  <icon type='image/png' href='http://rox.sourceforge.net/Icons/Edit.png'/>
+  
+  <group>
+    <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
+      <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
+    </requires>
+    <implementation id="sha1=2faec01972dc8a4553ff0af90f93061ac66176eb" stability="stable" version="1.9.6">
+      <archive extract="edit-1.9.6" href="http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.6.tgz" size="38916"/>
+    </implementation>
+    <implementation id="sha1=c86d09f1113041f5eaaa8c3d1416fcf4dad8e2e0" stability="stable" version="1.9.7">
+      <archive extract="edit-1.9.7" href="http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.7.tgz" size="44646"/>
+    </implementation>
+    <implementation id="sha1=329e6c0191f65ef2996b49837d04c4cfe6934758" stability="stable" version="2.0" released='2005-09-21'>
+      <archive extract="edit-2.0" href="http://osdn.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/>
+    </implementation>
+  </group>
+</interface>
+
+<!-- Base64 Signature
+iD8DBQBDuRDpAWhfEWB7ssURAv0OAJ95IUH/L6N7diFcY2JbvJdpPYIwqACfU6k5in8u51QbbmAY
+x7Nh/s/FeOo=
+
+-->

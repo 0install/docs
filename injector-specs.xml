@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>The Injector: Specifications</h2>
+
+<p>
+This document is a formal description of the two injector file formats: the interface XML file
+format and the manifest file format.
+</p>
+
+<toc level='h2'/>
+
+<h2>Interfaces</h2>
+
+<p>
+Interface files are introduced in the <a href='injector-packagers.html'>packager's guide</a>.
+They have the following syntax (? follows optional items, * means zero-or-more, order of elements
+is not important, and extension elements can appear anywhere as long as they use a different
+namespace):
+</p>
+
+<pre>
+&lt;?xml version='1.0'?&gt;
+&lt;interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
+	   uri='...' ?
+	   main='...' ?&gt;
+  &lt;name&gt;...&lt;/name&gt;
+  &lt;summary&gt;...&lt;/summary&gt;
+  &lt;description&gt;...&lt;/description&gt;
+
+  &lt;icon type='...' href='...'/&gt; *
+  &lt;feed src='...' arch='...'/&gt; *
+  &lt;feed-for interface='...'/&gt; *
+
+  [group] *
+  [implementation] *
+
+&lt;/interface&gt;
+</pre>
+
+<h3>Group</h3>
+
+<p>
+A group has this syntax:
+</p>
+
+<pre>
+  &lt;group version='...' ?
+       	  released='...' ?
+	  main='...' ?
+          stability='...' ?
+          arch='...' ? &gt;
+    [requires] *
+    [group] *
+    [implementation] *
+  &lt;/group&gt;
+</pre>
+
+<h3>Implementation</h3>
+
+<p>
+An implementation has this syntax (an unspecified argument is inherited from
+the closest ancestor &lt;group&gt; which defines it):
+</p>
+
+<pre>
+  &lt;implementation
+	id='...'
+  	version='...' ?
+	main='...' ?
+  	released='...' ?
+	stability='...' ?
+	arch='...' ? &gt;
+    &lt;archive
+      href='...'
+      size='...'
+      extract='...' ? /&gt; *
+  &lt;/implementation&gt;
+</pre>
+
+<h3>Requires</h3>
+
+<p>
+A &lt;requires&gt; element means that every implementation within the same group (including nested
+sub-groups) requires an implementation of the specified interface when run. The injector will choose a
+suiteable implementation, downloading one if required.
+</p>
+
+<p>
+The location of the chosen implementation is passed to the program by setting environment variables,
+as specified by the &lt;environment&gt; elements (typically, there will be exactly one of these in each
+&lt;requires&gt; element). Each environment element gives the name of the variable and the relative path
+of the item within the implementation to insert into the variable's value. The absolute path of the
+item is prepended to the current value of the variable, separated by a colon character. If the
+environment variable is not currently set then the path is prepended to the
+value of the default attribute. If no default value is given either then the
+environment variable's value is set to the absolute path directly.
+</p>
+
+<pre>
+  &lt;requires
+	interface='...'&gt;
+    &lt;environment
+	  name='...'
+	  insert='...'
+	  default='...' ? /&gt; *
+  &lt;/requires&gt;
+</pre>
+
+<p>
+For example, &lt;environment name='PATH' insert='bin'/&gt; would perform something similar to the
+bash shell statement <b>export PATH=/path/to/impl/bin:$PATH</b>.
+</p>
+
+<h3>Metadata</h3>
+
+<p>
+All elements can contain extension elements, provided they are not in the Zero
+Install namespace used by the elements defined here. The injector does not
+currently make use of these elements itself, but other programs may find them
+useful. In future, some of these may be used (for example, the GUI may display
+the license terms).
+</p>
+
+<p>
+The use of <a href='http://dublincore.org'>Dublin Core</a> is suggested for the following concepts, which
+have the following meanings when found as a direct child of a &lt;group&gt; or &lt;implementation&gt; element:
+</p>
+
+<dl>
+<dt>dc:creator</dt>
+<dd>The primary author of the program.</dd>
+
+<dt>dc:publisher</dt>
+<dd>The person who created this implementation. For a binary, this is the person who
+compiled it.</dd>
+
+<dt>dc:license</dt>
+<dd>License terms (a URI for the license is suggested).</dd>
+
+</dl>
+
+<p>
+Other Dublin Core terms that may be useful include contributor,
+dateCopyrighted, language, rights and rightsHolder.
+</p>
+
+<p>
+These terms are not required as they are duplicated by the core Zero Install terms: identifier (id),
+available (released) and requires (requires).
+</p>
+
+<p>
+The source element may be used in future to record the source interface used to build this implementation.
+</p>
+
+
+<h2>Manifest files</h2>
+
+<p>
+Implementations are identified by an algorithm name (e.g., "SHA1"), and digest
+of their contents calculated using that algorithm. Adding, deleting, renaming
+or modifying any file in a tree will change its digest. It should be unfeasibly
+difficult to generate a new tree with the same digest as a given tree. Thus, if you
+know the digest of the implementation you want, and someone gives you a tree with
+that digest, you can trust that it is the implementation you want.
+</p>
+
+<p>
+Currently, "SHA1" is the only supported algorithm. The are known to be some weaknesses in
+SHA1 which may allow an attacker to generate two different trees with the same digest, but
+the attacker <i>must</i> get to generate both trees, so this not believed to be a security
+risk at present. However, support for other algorithms may be added in the future (probably
+when Python comes with support for them).
+</p>
+
+<p>
+When checking a new tree (e.g., that has just been downloaded from the net and
+unpacked), the injector generates a 'manifest' file. The manifest lists every
+file, directory and symlink in the tree, and gives the SHA1 digest of each
+file's content. Here is a sample manifest file for a tree containing two files
+(<b>README</b> and <b>src/main.c</b>):
+</p>
+
+<pre>
+F 0a4d55a8d778e5022fab701977c5d840bbc486d0 1132502750 11 README
+D 1132502769 /src
+F 83832457b29a423c8e6daf05c6dbcba17d0514dd 1132502769 17 main.c
+</pre>
+
+<p>
+If you generate a manifest file for a directory tree and find that it is identical
+to the manifest file you want, then you can feel confident that you have the tree you
+want. This is convenient, because the manifest file is much smaller than the packaged tree.
+To save even more space, we can simply compare the SHA1 digests of the manifest files, rather
+than comparing the files themselves.  The top-level directory is renamed to this final digest
+(so the <b>main.c</b> above would be stored as
+<b>.../sha1=b848561cd89be1b806ee00008a503c63eb4ad56e/src/main.c</b>, for example).
+</p>
+
+<p>
+After checking, the generated manifest file is stored in a file called
+<b>.manifest</b> in the top-level of the tree. This is not strictly necessary, but if the tree
+is modified later somehow it can show you exactly which files were changed (rather than just letting
+you know that the tree has changed in some unknown way).
+</p>
+
+<p>
+This description of the manifest file is based on Joachim's 12 Oct 2005 post to
+the zero-install-devel list:
+</p>
+
+<p>
+The manifest file lists, line by line, all nodes in a directory 
+identified as "/", without "/" itself.  All relevant numbers are coded 
+as decimal numbers without leading zeros (unless 0 is to be coded, which 
+is coded as "0"). Times are represented as the number of seconds since 
+the epoch. Nodes are of one of their possible types: 'D', 'F', 'X', and 
+'S'. Names must not contain newline characters (the tree will be rejected if they
+do).
+</p>
+
+<h3>Directories</h3>
+
+<p>
+'D' nodes correspond to directories, and their line format is:
+</p>
+
+<pre>"D", space, mtime, space, full path name, newline</pre>
+
+<p>
+So, top level directories, for example, would have a "full path name" 
+that matches the regular expression <b>^/[^/\n]+$</b>.
+</p>
+
+<h3>Files</h3>
+
+<p>
+'F' and 'X' nodes correspond to files and executable files, respectively, and
+their line formats are:
+</p>
+
+<pre>"F", space, hash, space, mtime, space, size, space, file name, newline
+"X", space, hash, space, mtime, space, size, space, file name, newline</pre>
+
+<p>
+As opposed to directories, no full path names are given. Hence, file 
+names match <b>^[^/\n]+$</b> . The hash is the 40-byte hexadecimal representation of
+the SHA-1 sum of the contents of the respective file. Hexadecimal digits a
+through f are used (rather than A through F).
+</p>
+
+<h3>Symlinks</h3>
+
+<p>
+'S' nodes correspond to symbolic links, and their line format is:
+</p>
+
+<pre>"S", space, hash, size, space, symlink name, newline</pre>
+
+<p>
+The symlink name is given analogously to file names in 'F' and 'X' 
+nodes.  The size of a symlink is the number of bytes in its target 
+(name).  The hash sum, similarly to that of files, is the SHA-1 sum of 
+the target (name) of the respective symlink.
+</p>
+
+<h3>Other files types</h3>
+
+<p>
+It is an error for a tree to contain other types of object (such as device files).
+Such trees are rejected.
+</p>
+
+<h3>Ordering</h3>
+
+<p>
+These lines appear in the order of a depth-first search where siblings 
+in the directory tree are ordered lexicographically by their name, i.e., 
+they appear in the order that "LC_ALL=C sort" would produce.
+</p>
+
+<p>
+Implementations have to abide by these rules by the letter because such 
+a file is to be generated automatically and this process absolutely must 
+generate the same file that the directory tree packager had computed.
+</p>
+
+</html>

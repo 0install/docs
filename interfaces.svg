@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   width="210mm"
+   height="297mm"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.40"
+   sodipodi:docbase="/home/talex"
+   sodipodi:docname="interfaces.svg">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient1753">
+      <stop
+         style="stop-color:#00ccff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop1754" />
+      <stop
+         style="stop-color:#477376;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop1755" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1714">
+      <stop
+         style="stop-color:#ffbc00;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop1715" />
+      <stop
+         style="stop-color:#ece1b3;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop1716" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1698">
+      <stop
+         style="stop-color:#ff3887;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop1699" />
+      <stop
+         style="stop-color:#ff9bd0;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop1700" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1687">
+      <stop
+         style="stop-color:#bbff82;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop1688" />
+      <stop
+         style="stop-color:#66ba51;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop1689" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1753"
+       id="linearGradient1686"
+       gradientTransform="matrix(0.826346,0.000000,0.000000,1.063253,66.13926,42.43743)"
+       x1="370.19345"
+       y1="162.89934"
+       x2="370.19345"
+       y2="757.90027"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1698"
+       id="linearGradient1697"
+       gradientTransform="matrix(1.157489,0.000000,0.000000,0.863939,63.97993,2.842171e-14)"
+       x1="69.991653"
+       y1="523.25769"
+       x2="462.31116"
+       y2="523.25769"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1698"
+       id="linearGradient1705"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.157489,0.000000,0.000000,0.508329,63.97989,480.4669)"
+       x1="69.991653"
+       y1="523.25769"
+       x2="462.31116"
+       y2="523.25769" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1714"
+       id="linearGradient1713"
+       gradientTransform="matrix(1.830308,0.000000,0.000000,0.546356,68.29864,2.842171e-14)"
+       x1="63.925709"
+       y1="753.63824"
+       x2="267.98413"
+       y2="753.63824"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1714"
+       id="linearGradient1724"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.830308,0.000000,0.000000,0.546356,68.29862,126.6819)"
+       x1="63.925709"
+       y1="753.63824"
+       x2="267.98413"
+       y2="753.63824" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1714"
+       id="linearGradient1729"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.830308,0.000000,0.000000,0.546356,68.29863,349.8147)"
+       x1="63.925709"
+       y1="753.63824"
+       x2="267.98413"
+       y2="753.63824" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1734"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-521.1232)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1742"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-445.5460)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1747"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.315193,0.000000,0.000000,0.555951,97.81560,216.6548)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1757"
+       gradientTransform="matrix(1.815018,0.000000,0.000000,0.550959,76.93603,2.842171e-14)"
+       x1="124.68900"
+       y1="779.00159"
+       x2="199.93353"
+       y2="779.00159"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1768"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-521.1232)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1769"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-445.5460)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1781"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-521.1232)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1687"
+       id="linearGradient1782"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.798718,0.000000,0.000000,0.555951,158.9913,-445.5460)"
+       x1="73.852013"
+       y1="1000.8634"
+       x2="163.04543"
+       y2="1000.8634" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.86831672"
+     inkscape:cx="305.25956"
+     inkscape:cy="417.84947"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1592"
+     inkscape:window-height="1113"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient1686);fill-opacity:1.0000000;stroke:#000000;stroke-width:4.6498194;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1061"
+       width="522.56281"
+       height="672.88684"
+       x="110.76584"
+       y="195.51532"
+       rx="50.809406"
+       ry="56.567673" />
+    <text
+       xml:space="preserve"
+       style="font-size:40.000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="92.132278"
+       y="236.12776"
+       id="text1690"
+       sodipodi:linespacing="100%"
+       transform="translate(131.3896,17.27480)"><tspan
+         sodipodi:role="line"
+         id="tspan1691"
+         x="92.132278"
+         y="236.12776">Web browser</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1697);fill-opacity:1.0000000;stroke:#000000;stroke-width:4.9606299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1693"
+       width="449.14487"
+       height="333.97952"
+       x="147.47481"
+       y="285.07303"
+       rx="36.413734"
+       ry="36.413734" />
+    <text
+       xml:space="preserve"
+       style="font-size:36.000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="190.02283"
+       y="323.94135"
+       id="text1701"
+       sodipodi:linespacing="100%"
+       transform="translate(109.2334,2.879134)"><tspan
+         sodipodi:role="line"
+         id="tspan1702"
+         x="190.02283"
+         y="323.94135">Firefox</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1705);fill-opacity:1.0000000;stroke:#000000;stroke-width:3.8051152;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1704"
+       width="449.14487"
+       height="196.50870"
+       x="147.47481"
+       y="648.19983"
+       rx="32.095036"
+       ry="33.534603" />
+    <text
+       xml:space="preserve"
+       style="font-size:36.000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="190.02283"
+       y="323.94135"
+       id="text1706"
+       sodipodi:linespacing="100%"
+       transform="translate(112.0283,361.7961)"><tspan
+         sodipodi:role="line"
+         id="tspan1707"
+         x="190.02283"
+         y="323.94135">Galeon</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1713);fill-opacity:1.0000000;stroke:#000000;stroke-width:4.9606299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1709"
+       width="368.52911"
+       height="106.52795"
+       x="187.78268"
+       y="358.49094"
+       rx="20.578499"
+       ry="20.578499" />
+    <text
+       xml:space="preserve"
+       style="font-size:28.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="158.35236"
+       y="378.64487"
+       id="text1717"
+       transform="translate(139.6207,10.07697)"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan1718"
+         x="158.35236"
+         y="378.64487">Firefox-0.9</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1724);fill-opacity:1.0000000;stroke:#000000;stroke-width:4.9606299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1720"
+       width="368.52911"
+       height="106.52795"
+       x="187.78268"
+       y="485.17282"
+       rx="23.457634"
+       ry="19.138933" />
+    <text
+       xml:space="preserve"
+       style="font-size:28.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="158.35236"
+       y="378.64487"
+       id="text1721"
+       transform="translate(139.5660,138.1984)"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan1722"
+         x="158.35236"
+         y="378.64487">Firefox-1.0</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1729);fill-opacity:1.0000000;stroke:#000000;stroke-width:4.9606299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1725"
+       width="368.52911"
+       height="106.52795"
+       x="187.78268"
+       y="708.30566"
+       rx="24.897200"
+       ry="30.655468" />
+    <text
+       xml:space="preserve"
+       style="font-size:28.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="158.35236"
+       y="378.64487"
+       id="text1726"
+       transform="translate(123.7476,359.8917)"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan1727"
+         x="158.35236"
+         y="378.64487">Galeon-2.0.0</tspan></text>
+    <g
+       id="g1770"
+       transform="translate(89.97294,27.35177)">
+      <g
+         id="g1763"
+         transform="translate(-179.9459,490.8729)">
+        <rect
+           style="fill:url(#linearGradient1781);fill-opacity:1.0000000;stroke:#000000;stroke-width:3.6875000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+           id="rect1730"
+           width="155.47322"
+           height="44.626575"
+           x="294.31064"
+           y="12.994889"
+           rx="0.0000000"
+           ry="0.0000000" />
+        <text
+           xml:space="preserve"
+           style="font-size:20.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+           x="172.74803"
+           y="557.15118"
+           id="text1735"
+           transform="translate(136.4672,-515.3649)"><tspan
+             sodipodi:role="line"
+             id="tspan1736"
+             x="172.74803"
+             y="557.15118">Debian's 1.0</tspan></text>
+      </g>
+      <g
+         id="g1758"
+         transform="translate(0.000000,415.2957)">
+        <rect
+           style="fill:url(#linearGradient1782);fill-opacity:1.0000000;stroke:#000000;stroke-width:3.6875000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+           id="rect1738"
+           width="155.47322"
+           height="44.626575"
+           x="294.31064"
+           y="88.572144"
+           rx="0.0000000"
+           ry="0.0000000" />
+        <text
+           xml:space="preserve"
+           style="font-size:20.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+           x="172.74803"
+           y="557.15118"
+           id="text1739"
+           transform="translate(136.5062,-439.7877)"><tspan
+             sodipodi:role="line"
+             id="tspan1740"
+             x="172.74803"
+             y="557.15118">Redhat's 1.0</tspan></text>
+      </g>
+    </g>
+    <rect
+       style="fill:url(#linearGradient1747);fill-opacity:1.0000000;stroke:#000000;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1743"
+       width="200.11499"
+       height="44.626575"
+       x="271.98975"
+       y="750.77295"
+       rx="0.0000000"
+       ry="0.0000000" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="172.74803"
+       y="557.15118"
+       id="text1744"
+       transform="translate(113.7279,222.4130)"><tspan
+         sodipodi:role="line"
+         id="tspan1745"
+         x="172.74803"
+         y="557.15118">Upstream's 2.0.0</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1757);fill-opacity:1.0000000;stroke:#000000;stroke-width:3.6875000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       id="rect1748"
+       width="155.47322"
+       height="44.626575"
+       x="294.31064"
+       y="408.15598"
+       rx="0.0000000"
+       ry="0.0000000" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr"
+       x="172.74803"
+       y="557.15118"
+       id="text1749"
+       transform="translate(136.5062,-120.2038)"><tspan
+         sodipodi:role="line"
+         id="tspan1750"
+         x="172.74803"
+         y="557.15118">Debian's 0.9</tspan></text>
+  </g>
+</svg>

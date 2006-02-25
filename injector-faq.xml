@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Injector FAQ</h2>
+
+<p>
+For questions about Zero Install in general, see the
+<a href='faq.html'>general FAQ</a>.
+</p>
+
+<toc level='h3'/>
+
+<h3>I haven't tried it yet, but it sounds really complicated</h3>
+<p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
+
+<h3>How do I provide software using Zero Install?</h3>
+
+<p>You need to be able to upload some static files to a web server.</p>
+
+<p>See the <i> <a href='injector-packagers.html'>Injector Packaging Guide</a></i>
+for details.</p>
+
+<h3>Doesn't it require a fast Internet connection?</h3>
+
+<p>
+No more than downloading programs from the Internet normally. However, it can
+still save you some time, since it might only download the documentation for
+a package when you click on Help, for example. With traditional systems, all the
+extras have to get installed with the main program because users can't install
+anything themselves later if they find they need it.
+</p>
+
+<p>
+When you consider that users always need the <i>ability</i> to read a program's
+documentation, use a particular export filter, etc, but rarely do so for any given
+version of any particular program, you can see that the savings can be quite large.
+</p>
+
+<h3>What about people without Internet connections?</h3>
+
+<p>
+The injector provides the <b>0store</b> command for this purpose
+(<b>man 0store</b> for details). This allows you to import a large program
+into the cache from a CD.
+</p>
+
+<p>
+If you have no network connection at all, you'll need to import the interface too,
+using <b>0launch --import interface.xml</b>.
+</p>
+
+<h3>Isn't is really hard to find applications if you always have to
+type URIs for them?</h3>
+
+<p>Yes. As with the web, that works but it's not the intended way to
+do it. Like the web, you have links to the URIs, and you use the links
+normally.</p>
+<p>
+For example, you can run <b>0alias</b> to let you run programs quickly
+from the shell, or
+<a href="http://rox.sourceforge.net/phpwiki/index.php/AddApp">AddApp</a>
+to create graphical launchers, for example.
+</p><p>
+You could put a shortcut on the pinboard, set a keyboard shortcut, or add it
+to your Start menu.
+</p>
+
+<h3>What about when resources move?</h3>
+<p>Everything you've already accessed at least once will continue to
+work. Users trying software for the first time will find that it
+doesn't work due to broken links. This is not new, either. The download
+instructions for ROX-Filer tell users that they need to get GTK from
+www.gtk.org and libxml from www.xmlsoft.org. If those sites change
+their names, the download instructions will be broken. It really
+doesn't make any difference.
+As with the regular web, people can leave redirections to the new
+site.</p>
+
+<p>
+The <b>0launch --import</b> command lets you import the interface from the
+new location, and <b>0store</b> allows adding any archive to the cache (provided
+its message digest matches).
+</p>
+
+<h3>How secure is this?</h3>
+<p>About as secure as any system which ultimately involves running
+software written by people you don't know who live in far away
+countries. However, since the downloading is automatic, there are more
+chances for automatic checking (eg, verifying GPG signatures, etc).
+</p>
+
+<p style='text-align: center'>
+<img width="576" height="363" src="trustbox.png"
+     alt='You are asked to confirm each new key'/>
+</p>
+
+<p>
+To be more precise, it has all the advantages of application
+directories (no install step, so no chance for anything to run as
+root). In addition, if two users try to run the same application, they
+both automatically get the same cached copy, whereas without this each
+would have to install a separate copy to their home directory, or one
+user has to trust the other user not to have modified his copy, and
+use that.
+</p>
+<p>
+See the <a href='injector-security.html'>injector security issues</a> document
+for more information.
+</p>
+
+<h3>What if something gets automatically removed from the cache while
+I'm up a mountain with my laptop?</h3>
+
+<p>Currently, nothing is ever automatically removed from the cache.
+Users can choose the purging scheme that suits them. For users with
+broadband, that might mean removing anything that hasn't been accessed
+for a year. For users with dial-up and 80Gb disks, that probably means
+never ever removing anything.
+</p>
+
+<h3>How can I run my own version of something, instead of downloading a released version?</h3>
+
+<p>
+Let's say you want to run a CVS (developer) version of Edit. Start by checking out the latest
+version from CVS, as normal (just press Return when asked for a password):
+</p>
+
+<pre>
+$ cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/rox login
+$ cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/rox co -P Edit
+</pre>
+
+<p>
+Now, if you try to run it directly, it will probably complain that it can't find ROX-Lib (a library
+it needs). The required libraries are listed in the <b>Edit.xml</b> file, and you can run that
+using <b>0launch</b>:
+</p>
+
+<pre>
+$ cd Edit
+$ ./AppRun
+*** This program needs ROX-Lib2 (version 1.19.14) to run.
+$ 0launch Edit.xml
+[ edit runs ]
+</pre>
+
+<p>
+Of course, you could do <b>0alias edit-cvs Edit.xml</b> to make a command that runs this version
+easily.
+</p>
+
+<h3>How can I register my own version under the original's URI?</h3>
+
+<p>
+The answer to the last question showed how to run a local version of a program directly, using 0launch
+to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal
+URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>), your version won't show up. To add it,
+use <b>--feed</b> (<b>--add-feed</b> on older versions):
+</p>
+
+<pre>
+$ <b>cd Edit</b>
+$ <b>0launch --feed Edit.xml</b>
+Feed 'Edit.xml':
+
+1) Add as feed for 'http://rox.sourceforge.net/2005/interfaces/Edit'
+
+Enter a number, or CTRL-C to cancel [1]: 
+
+Feed list for interface 'Edit' is now:
+- /home/talex/Projects/Edit/Edit.xml
+
+$ <b>0launch -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<p>
+When the GUI opens, you should see your local copy listed (versions ending in .0
+conventionally indicate snapshot versions).
+</p>
+
+<p style='text-align: center'>
+<img width="754" height="302" src="edit-cvs.png"
+     alt='The injector GUI showing the Snapshot version of Edit' />
+</p>
+
+<p>
+This is particularly useful for libraries, since they are always used by other programs rather
+than run directly.
+</p>
+
+</html>

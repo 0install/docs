@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Technical information and project status</h2>
+
+<h3>Many users, one cache</h3>
+
+<p>Each user has their own customised setup (represented here by Start menus),
+which are lists of applications and their corresponding URIs. The cache
+is shared by all users.
+</p>
+
+<p style='text-align:center'>
+<img src="StartMenus.png" width="626" height="404" alt="Start menus and the cache"/>
+</p>
+
+<h3>Design and implementation details</h3>
+
+<p>
+The diagram below shows the components of a Zero Install system. The shaded
+parts are only needed when fetching software from the Internet; once software
+has been fetched, it can still be used without them.
+</p>
+
+<p style='text-align:center'>
+<img src="ZeroInstall.png" width="523" height="411" alt="Architecture diagram"/>
+</p>
+
+<p>
+Applications access resources under the <tt>/uri/0install</tt> directory
+using the normal POSIX filesystem interface (open, read, close, etc). The
+kernel passes these requests to the LazyFS module, which serves them directly
+from the disk cache, if possible.
+</p>
+
+<p>
+When accessing a resource not in the cache, LazyFS sends a message to the
+zero-install program, which fetches it over the Internet and places it in
+the cache. Once the software is cached, the application which tried to
+access it is woken up, and continues normally.
+</p>
+
+<p>
+LazyFS and the simple protocol used to communicate with zero-install are
+documented in the
+<a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/zero-install/zero-inst/Technical?rev=HEAD&amp;content-type=text/plain">Technical</a> file
+in CVS.
+</p>
+
+<p>
+The user can also communicate with the zero-install program directly. This
+is done by programs such as 0refresh (to request the cache be updated) and
+ZeroProgress (to tell the user what is currently being fetched). These messages
+are in the DBUS format (but no DBUS daemon is used; only the protocol).
+</p>
+
+<h3>The index files and mirrors</h3>
+
+<p>
+When you access a remote site, zero-install downloads three files from the
+remote machine (in one archive): the site's GPG key, the mirrors list, and the
+site index's signature. See the <a href="security.html">security page</a> for
+information about the key and signature.
+</p>
+
+<p>
+The mirrors file gives a list of possible download locations. The index list is
+then fetched from one of these locations.
+This means that only a very small amount of data has to be fetched from the
+master server, with web caches, peer-to-peer systems and similar being used for
+the (larger) index file.
+</p>
+
+<p>
+The index lists every file on the site along with its size and mtime. This
+allows zero-install to present the complete filesystem to the user with only
+the index. The index also organises the files into groups, and gives the name
+of an archive containing each group's files along with the archive's MD5 sum.
+Because MD5 sums for all the archives are provided in the index, group
+archives can be safely downloaded using peer-to-peer systems for greater speed
+and reliability.
+</p>
+
+<h3>Tasks list</h3>
+
+There is a list of current TODO items on the <a
+href="http://sourceforge.net/pm/?group_id=76468">Task List</a>. Please 
+<a href="support.html">let us know</a> if you want to help out with any of
+these.
+
+<h3>Libraries</h3>
+
+<p>
+As an example, the glib library has been packaged for Zero Install.
+Programs using it compile using the pkg-config .pc files under /uri and get
+the headers from there too. So you don't need glib installed to compile them,
+and you don't need it installed to run them :-)
+</p>
+
+<p>
+The changes required were:
+</p>
+
+<ul>
+<li>Configure glib with --prefix=/uri/.../glib/2.2.1/Linux-i386</li>
+<li>Set PKG_CONFIG_PATH to /uri/.../lib/pkgconfig directory containing .pc
+files in Makefile.</li>
+<li>Pass --rpath option to linker, giving /uri/.../lib directory.</li>
+</ul>
+
+<div class='note'>
+<p>
+For a better approach than using --rpath, see the
+<tt>/uri/0install/zero-install.sourceforge.net/libs/libhello-1.0</tt>
+example library, which changes the soname to an absolute path.
+</p>
+<p>
+See <a href="http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/682">this thread</a> for more information.</p>
+</div>
+
+</html>

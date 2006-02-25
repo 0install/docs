@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2 id="study1">Case study #2: packaging scons for Zero Install</h2>
+
+<p>This tutorial / case-study shows how scons (a make/autoconf replacement) can be made
+available through Zero Install. It is assumed that you have already read
+<a href="packagers-cs-1.html">Case Study #1</a>. We will not go over the same steps in
+detail here.</p>
+
+<p>
+We begin by creating a directory structure on our local machine, as before:
+</p>
+
+<pre>
+$ mkdir scons.org
+$ mkdir scons.org/site
+$ mkdir scons.org/export
+</pre>
+
+<p>
+We fetch the release we want to make available and unpack it into a temporary directory. This
+is because, unlike Contacts in the previous study, scons needs an explicit install step, which
+copies files from the unpacked archive to their final locations on the system.
+</p>
+
+<pre>
+$ tar xzf scons-0.96.1.tar.gz
+$ ls
+scons.org
+scons-0.96.1
+</pre>
+
+<p>
+We will now tell scons to install to our site directory, using the
+<b>--prefix</b> option. We include the version number so that we can make
+multiple versions of scons available. We don't need a separate directory for
+each platform, because scons is pure Python code.
+</p>
+
+<pre>
+$ cd scons-0.96.1
+$ python setup.py install --prefix=../scons.org/site/0.96.1
+[...]
+Installed SCons script into ../scons.org/site/0.96.1/bin
+</pre>
+
+<p>
+Note that some software will include hard-coded paths to the <b>site</b>
+directory if you do this, but Python's distutils uses the prefix we give it
+only to decide where to put the files, not to affect the build itself. When
+packaging software which actually stores the prefix inside the created program,
+more care must be taken.
+</p>
+
+<p>
+Now we create a symlink for the latest version. We also make a symlink for the
+main program to let people run the latest version easily:
+</p>
+
+<pre>
+$ cd ../scons.org/site
+$ ln -s 0.96.1 latest-1
+$ ln -s latest-1/bin/scons scons-1
+</pre>
+
+<p>
+The <b>-1</b> after <b>latest</b> means the latest version compatible with the
+scons v1 syntax. If, one day, a version of scons comes out which is not
+backwards compatible we can use a symlink named <b>latest-2</b>. Then software that
+needs scons v1 to build will still work in a Zero Install system (though not in
+traditional systems).
+</p>
+
+<p>
+Now we run <b>0build</b> to build the archives, as before:
+</p>
+
+<pre>
+$ alias 0build=/uri/0install/zero-install.sourceforge.net/bin/0build
+$ cd scons.org/site
+$ 0build ../export scons.org
+</pre>
+
+<p>
+After creating a new GPG key for the site (as <a href="packagers-cs-1.html#gpg">before</a>), <b>0build</b> populates
+the <b>export</b> directory. Again, we create a <b>0push</b> script to rsync the
+archives to the remote web server, and run that:
+</p>
+
+<pre>
+$ cd scons.org
+$ ./0push
+</pre>
+
+<p>
+Now it's time to test it (ideally from another machine). At this point it's a
+good idea to try renaming our site directory to make sure that scons isn't
+running anything from there (i.e., it is getting everything though Zero Install):
+</p>
+
+<pre>
+$ mv scons.org scons.org.renamed
+$ cd /uri/0install/scons.org
+$ ls
+0.96.1  latest-1  scons-1
+$ ./scons-1 -v
+SCons by Steven Knight et al.:
+        script: v0.96.1.D001, 2004/08/23 09:55:29, by knight on casablanca
+        engine: v0.96.1.D001, 2004/08/23 09:55:29, by knight on casablanca
+Copyright (c) 2001, 2002, 2003, 2004 The SCons Foundation
+</pre>
+
+<p>
+We're done! To make new releases, we:
+</p>
+
+<ol>
+  <li>Run the setup program again with the new version number in the prefix.</li>
+  <li>Run <b>0push</b> to copy the new version across.</li>
+  <li>Run <b>0refresh</b> on our test machine and run <b>bin/scons</b> for the new version
+directly (not using the <b>latest-1</b> symlink, which still runs the old version).</li>
+  <li>Once we're confident that the new version works well, we update the symlink to point to it
+and run <b>0push</b> again, making this the default version.</li>
+</ol>
+
+<h2>Using scons through Zero Install</h2>
+
+<p>
+People who want to use scons can 'install' it into their PATH in the usual way, eg:
+</p>
+
+<pre>
+# ln -s /uri/0install/scons.org/scons-1 /usr/local/bin/scons
+# scons
+</pre>
+
+<p>
+However, we can write our build scripts so that users don't have to do this. Eg, our
+project might have a <b>build</b> script containing:
+</p>
+
+<pre>
+#!/bin/sh
+if scons -v > /dev/null 2>&amp;1; then
+	scons
+elif [ -d /uri/0install/scons.org ]; then
+	0run "scons.org/scons-1 2004-11-10"
+else
+	echo "You need scons (or Zero Install) to build this program."
+	echo "You can get scons from http://www.scons.org"
+fi
+</pre>
+
+<p>
+This script will run a local version of scons if available. If not, it tests whether the user
+has Zero Install, and tries to run it though that if so.
+</p>
+
+</html>

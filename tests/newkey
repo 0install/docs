@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/tests/newkey"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   main='main'>
+  <name>NewKey</name>
+  <summary>signed with a different key</summary>
+  <description>For testing only!</description>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCqyiZmx9df5ch2pARAjlUAJ9YVbYvVST9YCcnaR/58GGMY8pQXQCgg+H+
+pD2Z3b3Zv/u1Ied5Jmg6GNA=
+=Vuc8
+-----END PGP SIGNATURE-----
