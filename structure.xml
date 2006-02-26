@@ -6,6 +6,7 @@
     <item base='injector-using' label='Tutorial'/>
     <item base='injector-feeds' label='Packages'/>
     <item base='injector-packagers' label='Developers'>
+      <item base='0publish' label='0publish'/>
       <item base='injector-specs' label='Specifications'/>
       <item base='injector-design' label='Design'/>
       <item base='injector-tests' label='Tests'/>
@@ -15,20 +16,6 @@
     <item base='injector-security' label='Security'/>
   </item>
 
-  <item base="filesystem" label="Filesystem">
-    <item base="docs" label="Documentation">
-      <item base="install" label="Installation"/>
-      <item base="compare" label="Debian"/>
-      <item base="security" label="Security"/>
-      <item base="technical" label="Technical"/>
-    </item>
-    <item base="packagers" label="Packagers">
-      <item base='packagers-cs-1' label='Case Study #1'/>
-      <item base='packagers-cs-2' label='Case Study #2'/>
-    </item>
-    <item base="fs-faq" label="FAQ"/>
-  </item>
-
   <item base="doc" label="Documentation">
     <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
@@ -36,4 +23,21 @@
   </item>
 
   <item base="support" label="Support"/>
+
+  <item base='filesystem' label='Old stuff'>
+    <item base="filesystem" label="Filesystem">
+      <item base="docs" label="Documentation">
+        <item base="install" label="Installation"/>
+        <item base="compare" label="Debian"/>
+        <item base="security" label="Security"/>
+        <item base="technical" label="Technical"/>
+      </item>
+      <item base="packagers" label="Packagers">
+        <item base='packagers-cs-1' label='Case Study #1'/>
+        <item base='packagers-cs-2' label='Case Study #2'/>
+      </item>
+      <item base="fs-faq" label="FAQ"/>
+    </item>
+  </item>
+
 </layout>

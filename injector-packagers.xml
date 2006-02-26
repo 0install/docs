@@ -10,6 +10,13 @@ utility for searching for files.
 </p>
 
 <p>
+Note that the <a href='0publish.html'>0publish</a> command can be used to automate many of these steps.
+Scripting the release process will make it quicker, more reliable and more consistent. However, it's
+probably best to go through the process manually first, as in this document, so that you understand each
+step.
+</p>
+
+<p>
 You should already be familiar with the general operation of the injector. In not, start by reading
 the <a href='injector-using.html'>user tutorial</a> and the <a href='injector-design.html'>design overview</a>.
 </p>
@@ -437,6 +444,14 @@ $ tar czf archive.tgz deeply/nested/path
 <p>
 When tar extracts the archive, it restores the original mtime of 'path', but creates 'deeply' and 'nested' with the current
 time. This is what causes the digest to change. Solution: only list top-level directories when creating archives!
+</p>
+
+<h2>Scripting the release process</h2>
+
+<p>
+Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
+as much as possible of it. The <a href='0publish.html'>0publish</a> command provides a set of useful transformations
+for interface files which you can integrate into your release scripts.
 </p>
 
 </html>
