@@ -23,15 +23,18 @@ Hash: SHA1
   </description>
 
   <group main="0publish">
-    <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" version="0.1">
+    <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" version="0.1" stability="stable">
       <archive extract="0publish-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
+    </implementation>
+    <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" version="0.2">
+      <archive extract="0publish-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEAGP0rgeCgFmlPMERAhDUAJ9yYKR1zYmKkgu3lILnvDI1v1IA4gCfUcZF
-AmQmYLJPQEC1FfcDHi5m4Xs=
-=mCc2
+iD8DBQFEC0WqrgeCgFmlPMERAsV5AJwNSco9ZEg1vneGTZk/LJ76RxxsiACguEB8
+9FfAWfQY4J66NKiC5qkTA04=
+=qRcN
 -----END PGP SIGNATURE-----
