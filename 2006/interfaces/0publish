@@ -3,9 +3,7 @@ Hash: SHA1
 
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
-	   uri="http://0install.net/2006/interfaces/0publish">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 
   <name>0publish</name>
   <summary>utility to make creating injector interfaces easier</summary>
@@ -23,10 +21,10 @@ Hash: SHA1
   </description>
 
   <group main="0publish">
-    <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" version="0.1" stability="stable">
+    <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" stability="stable" version="0.1">
       <archive extract="0publish-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
     </implementation>
-    <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" version="0.2">
+    <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" stability="stable" version="0.2">
       <archive extract="0publish-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
     </implementation>
   </group>
@@ -34,7 +32,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFEC0WqrgeCgFmlPMERAsV5AJwNSco9ZEg1vneGTZk/LJ76RxxsiACguEB8
-9FfAWfQY4J66NKiC5qkTA04=
-=qRcN
+iD8DBQFEDf2wrgeCgFmlPMERAh3/AJ9vTnW7EciC9oqZOFxndREoWTI2NgCeL38O
+B3CSmrJGz8FTwdC0rx5gC0k=
+=fNNK
 -----END PGP SIGNATURE-----
