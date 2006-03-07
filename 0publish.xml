@@ -171,7 +171,7 @@ $ <b>0launch --feed http://example.com/2006/0launch/ROX-Filer-ppc</b>
 
 <p>
 You should now tell the maintainer of the master feed about this one, so that they can
-add a &lt;feed&gt; element to the master copy to save from having to add the feed manually.
+add a &lt;feed&gt; element to the master copy to save users from having to add the feed manually.
 </p>
 
 <h2>0publish reference</h2>
