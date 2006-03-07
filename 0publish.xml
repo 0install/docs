@@ -62,13 +62,13 @@ $ <b>./ROX-Filer/AppRun --compile</b>
 $ <b>rm -r ROX-Filer/{ROX-Filer.dbg,build,src}</b>
 </pre>
 </li>
-<li>Set the release date:
+<li>Set the release date and architecture:
 <pre>
 $ <b>0publish --set-released 2006-02-26 ROX-Filer.xml</b>
+$ <b>0publish --set-arch Linux-ppc64 ROX-Filer.xml</b>
 </pre>
 </li>
-<li>Edit <b>ROX-Filer.xml</b> to set the architecture (the version and feed-for
-values should already be correct). You can also change the name to show what this interface is for:
+<li>Edit <b>ROX-Filer.xml</b> to change the name and description if you want. The file should now look like this:
 <pre><![CDATA[
 <?xml version='1.0'?>
 <interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'>
@@ -81,11 +81,10 @@ values should already be correct). You can also change the name to show what thi
   </description>
   <feed-for interface='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'/>
   <group main='ROX-Filer/AppRun'>
-    <implementation id="." version="2.4.1" released='2006-02-26' ]]><b>arch='Linux-ppc64'</b><![CDATA[/>
+    <implementation id="." version="2.4.1" ]]><b>released='2006-02-26' arch='Linux-ppc64'</b><![CDATA[/>
   </group>
 </interface>
 ]]></pre>
-<p>TODO: 0publish should have a <b>--set-arch</b> option!</p>
 </li>
 <li>Add the architecture to the directory name and tar it all up:
 <pre>
@@ -199,7 +198,7 @@ add a &lt;feed&gt; element to the master copy to save from having to add the fee
   Typically used as <b>0publish --set-released `date +%F` interface</b>, which sets today's date.</dd>
   <dt>--set-stability=STABILITY</dt><dd>Set the stability rating.</dd>
   <dt>--set-version=VERSION</dt><dd>Set the version number (used when making a release from CVS).</dd>
-  <dt>-s, --stable</dt><dd>Mark testing version stable (short-cut for <b>--set-released=stable</b>).</dd>
+  <dt>-s, --stable</dt><dd>Mark the current testing version as stable.</dd>
   <dt>-x, --xmlsign</dt><dd>Add an XML signature block. This is the new signature format, but is not
   widely supported yet, so stick with <b>--gpgsign</b> for now.</dd>
   <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
