@@ -10,7 +10,7 @@ Hash: SHA1
   <description>
     The injector GUI displays a window showing which versions of various components will be used when running a program, and allows you to alter various policy settings to affect the selection process. You can use this to mark particular versions of libraries as preferred, bugggy, etc.
   </description>
-  
+
   <group>
     <requires interface='http://0install.net/2005/interfaces/injector'>
       <environment name='PYTHONPATH' insert='zeroinstall/injector'/>
@@ -63,12 +63,15 @@ Hash: SHA1
     <implementation version='0.16' id='sha1=ffb6f0d649020819c8d04f90b5fe6b3ff6030fe7' stability='stable' released='2005-10-16'>
       <archive size='27793' href='http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.16.tgz' extract='injector-gui-0.16'/>
     </implementation>
+    <implementation id="sha1=e5bdfa736e116c75f280d4cc6b1f43235e9b424b" released="2006-03-11" stability="testing" version="0.18.1">
+      <archive extract="injector-gui-0.18.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.18.1.tar.bz2" size="24429"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDV97YrgeCgFmlPMERApQYAJ43HJl6/GMQD9pKMXTAdORV87wQVACgqREO
-HSDcbJObJLzIROmmlH1Iz3w=
-=2clZ
+iD8DBQFEErU7rgeCgFmlPMERAlbMAJ93nLmoOX27CZZ1NFrdKifhxC9oiQCgnRpN
+cNP3iJMb0UvtpV9UuDAjFeY=
+=egoN
 -----END PGP SIGNATURE-----
