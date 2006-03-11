@@ -159,9 +159,11 @@ $ <b>rox-edit --versions</b>
 
 <p>
 Of course, if you don't normally use the shell for running applications then you should use some other
-utility to make new programs easy to run. For example, users of the <a href="http://rox.sf.net">ROX desktop</a>
-would run <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> to create a ROX application
-directory launcher.
+utility to make new programs easy to run. For example, users of the <a href='http://www.xfce.org'>Xfce desktop</a>
+can <a href='http://rox.sourceforge.net/desktop/node/269'>drag the URI to the
+panel's launcher dialog</a>, while users of the <a href="http://rox.sf.net">ROX
+desktop</a> can drag it to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> to create a ROX
+application directory launcher.
 </p>
 
 <h2>Policy settings</h2>
