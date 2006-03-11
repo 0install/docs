@@ -21,7 +21,7 @@ and downloads and runs the ones you choose.
   <dt>RPMs</dt>
 <dd>
 <ul>
-  <li><a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=181801'>zeroinstall-injector-0.18-1 approved for Fedora Extras</a> (thanks to Michel Alexandre Salim)</li>
+  <li><a href='http://fedoraproject.org/extras/4/i386/repodata/repoview/zeroinstall-injector-0-0.18-4.fc4.html'>zeroinstall-injector-0.18-1 in Fedora Extras</a> (thanks to Michel Alexandre Salim)</li>
   <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.noarch.rpm?download'>zeroinstall-injector-0.17-1fc.noarch.rpm download page</a> (Fedora Core 4; Python 2.4) (contributed by Juan Carlos Jimenez Garcia)</li>
   <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1mdk.noarch.rpm?download'>zeroinstall-injector-0.17-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
   <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1suse.noarch.rpm?download'>zeroinstall-injector-0.17-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella)</li>
