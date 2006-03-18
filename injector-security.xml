@@ -79,11 +79,13 @@ applications with Java's sandboxing turned on.
 
 <p>
 However, good per-user sandboxing is still more of a long-term goal for Linux
-than a practical solution for many programs at the moment. Also, some programs
-really do need full access to the user's files. For example, a file manager
-needs to be able to delete the user's files, and an email client needs to be
-able to read the user's emails and send new ones, so making sure that software
-is not malicious in the first place is very important.
+than a practical solution for many programs at the moment (but see
+<a href='http://plash.beasts.org/'>Plash</a> for a good example of where
+things are heading). Also, some programs really do need full access to the
+user's files. For example, a file manager needs to be able to delete the user's
+files, and an email client needs to be able to read the user's emails and send
+new ones, so making sure that software is not malicious in the first place is
+very important.
 </p>
 
 <p>
