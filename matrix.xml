@@ -98,7 +98,7 @@ be a 'pass') but it should give the general idea.
  access to the cache, and then again in offline mode with read-only access to actually run the program. To control
  access, you can use a program such as <a href='http://plash.beasts.org/'>Plash</a>, e.g.:
  <pre>plash$ <b>!!0launch --download-only 'http://0install.net/2006/interfaces/0publish'</b>
-plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.cache</b></pre>
+plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.cache ~/.config</b></pre>
  This downloads and runs the <a href='0publish.html'>0publish</a> program
  (which will display its help message) without granting it write access to
  anything. Even if it contained a bug which made it try to delete all your
