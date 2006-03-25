@@ -283,6 +283,18 @@ through the injector. See the <a href='injector-packagers.html'>packaging guide<
 on how to provide software yourself.
 </p>
 
+<h2>How to I uninstall things?</h2>
+
+<p>
+Click on the <b>Cache</b> button in the main window to get the cache
+explorer. Select the versions you don't need anymore and click on <b>Delete</b>.
+</p>
+
+<p style='text-align: center'>
+  <img width="812" height="334" src="injector-cache.png"
+  	alt='Uninstalling programs with the injector'/>
+</p>
+
 <h2>Further reading</h2>
 
 <ul>
