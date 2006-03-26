@@ -6,26 +6,43 @@
 <dl class='spaced'>
 <dt>Java Web Start</dt>
 <dd>
-It appears the Sun have developed a similar system to Zero Install,
+<p>
+Sun have developed a similar system to Zero Install,
 <a href="http://java.sun.com/products/javawebstart">Java Web Start</a>,
 although this only works for Java applications.
+</p>
 </dd>
 
 <dt>Konvalo</dt>
 <dd>
+<p>
 <a href="http://www.konvalo.org/">Konvalo</a> is a very similar idea
-to Zero Install, implemented using CODA.
+to the old Zero Install filesystem, but implemented using CODA rather than with
+a custom kernel module. We propose to concentrate on the newer
+<a href='injector.html'>injector</a> implementation of Zero Install. People who
+want a filesystem implementation can use Konvalo instead of our old version.
+Konvalo and the injector also work well together (keep all your launcher
+scripts in Konvalo, and have them run the injector).
+</p>
+
+<p>
+One disadvantage of Konvalo is that you need to run a public CODA server
+to distribute software, whereas both Zero Install implementations only require
+a web-server serving static pages.
+</p>
 </dd>
 
 <dt>Maven</dt>
 
 <dd>
+<p>
 <a href='http://maven.apache.org/'>Maven</a> is a build tool (like make or ant)
 for Java programs. Although not an installation system, it is similar to
 the injector in that each product has a <b>project.xml</b> file with a list of
 dependencies. When building a product, maven downloads the specified version of
 each dependency and stores it in a cache directory. Some differences between
 maven 1.0 (I have not yet tested version 2.0) and the injector:
+</p>
 <ul>
 <li>Only exact versions of dependencies are given. Maven cannot select the
 best version from a set. In an installation system, this would lead to a lot
@@ -56,11 +73,13 @@ Therefore, a central repository is required to avoid naming conflicts.
 
 <dt>Autopackage</dt>
 <dd>
+<p>
 Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
 let users install software and to make software distribution decentralised.
 The work done by the Autopackage developers to make packages relocatable is 
 necessary for the Zero Install injector too. Some differences between this and
 Zero Install:
+</p>
 <ul>
 <li>A script inside each package installs the files, making sandboxing
 difficult. It also <a href='http://www.kitenet.net/~joey/blog/entry/autopackage_designed_by_monkeys-2005-03-28-14-20.html'>makes conversion to other
@@ -72,6 +91,17 @@ that packages are executable files, the design doesn't seem to allow this to be 
 <li>Being closer to traditional installation, it's easier to package existing
 applications with Autopackage.</li>
 </ul>
+</dd>
+
+<dt>EDOS</dt>
+
+<dd>
+<p>
+The <a href='http://www.edos-project.org/xwiki/bin/Main/'>EDOS</a> (<i>Environment
+for the development and Distribution of Open Source software</i>) project is a research
+project looking at dependency management, QA, and efficient distribution of
+large software systems.
+</p>
 </dd>
 
 </dl>
