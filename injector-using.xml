@@ -275,14 +275,6 @@ second as preferred. This is because when a new version is available, you will w
 become the version at the top of the list, whereas a preferred version will always be first.
 </p>
 
-<h2>List of Zero Install software</h2>
-
-<p>
-See the <a href='injector-feeds.html'>packages</a> page for a list of software currently available
-through the injector. See the <a href='injector-packagers.html'>packaging guide</a> for instructions
-on how to provide software yourself.
-</p>
-
 <h2>How to I uninstall things?</h2>
 
 <p>
@@ -293,6 +285,14 @@ explorer. Select the versions you don't need anymore and click on <b>Delete</b>.
 <p style='text-align: center'>
   <img width="812" height="334" src="injector-cache.png"
   	alt='Uninstalling programs with the injector'/>
+</p>
+
+<h2>List of Zero Install software</h2>
+
+<p>
+See the <a href='injector-feeds.html'>packages</a> page for a list of software currently available
+through the injector. See the <a href='injector-packagers.html'>packaging guide</a> for instructions
+on how to provide software yourself.
 </p>
 
 <h2>Further reading</h2>
