@@ -1,0 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://0install.net/tests/gtk-dev"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gtk-dev</name>
+  <summary>headers for compiling GTK applications</summary>
+  <description>
+    These are the GTK header files. They are required when compiling
+    applications that use the GTK+ library.
+  </description>
+
+  <group>
+    <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" version="2.4.14">
+    
+      <archive extract="gtk-headers-2.4.14" href="http://0install.net/tests/gtk-headers-2.4.14.tar.bz2" size="157933"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFELqJIrgeCgFmlPMERAoQ5AJ95xN0UfxGk4Ui5lomQJ5B/dUHx8QCcDkVU
+1V2K5nA5GPoep93mENdTAcQ=
+=PPNC
+-----END PGP SIGNATURE-----
