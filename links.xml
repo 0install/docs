@@ -69,6 +69,13 @@ Dependencies are named using a simple two-layer system (e.g., axis/axis-jaxrpc).
 Therefore, a central repository is required to avoid naming conflicts.
 </li>
 </ul>
+
+<p>
+Note that you can use Zero Install in a maven-like way for compiling programs.
+See <a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a>
+for an example of using Zero Install to compile a C program against an older version
+of a library's header files to ensure greater compatibility.
+</p>
 </dd>
 
 <dt>Autopackage</dt>
