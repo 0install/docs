@@ -270,3 +270,30 @@ ul.spaced li {
 span.comment {
 	color: blue;
 }
+
+table.picturebullets {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.picturebullets td {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+table.picturebullets h3 {
+	padding: 0;
+	margin: 0;
+}
+
+table.picturebullets p {
+	padding: 0.2em;
+	margin: 0;
+	margin-left: 1em;
+	font-style: italic;
+}
+
+table.picturebullets td.image {
+	text-align: center;
+}

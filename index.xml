@@ -12,22 +12,38 @@ The Zero Install system aims to provide a better way of installing software than
 bundles, setup.exe, etc). Here are some of our goals:
 </p>
 
-<dl class='spaced'>
- <dt>Anyone can install software</dt>
- <dd>You don't have to be root just to install a word-processor.</dd>
-
- <dt>Anyone can distribute software</dt>
- <dd>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install.</dd>
-
- <dt>It doesn't matter whether software is installed or not</dt>
- <dd>You just run it. Zero Install handles the rest (downloading and caching as needed).</dd>
-
- <dt>Downloads are shared</dt>
- <dd>If one user installs a 20 Mb application, another user can run it without downloading it again.</dd>
-
- <dt>Users don't need to trust each other</dt>
- <dd>If one user downloads a malicious program, other users aren't affected.</dd>
-</dl>
+<table class='picturebullets'>
+ <tr>
+  <td class='image'><img src='tango/package-x-generic.png' alt=''/></td>
+  <td><h3>Anyone can install software</h3>
+      <p>You don't have to be root just to install a word-processor.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/applications-internet.png' alt=''/></td>
+  <td><h3>Anyone can distribute software</h3>
+      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/system-software-update.png' alt=''/></td>
+  <td><h3>It doesn't matter whether software is installed or not</h3>
+      <p>You just run it. Zero Install handles the rest (downloading and caching as needed).</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/share.png' alt=''/></td>
+  <td><h3>Downloads are shared</h3>
+      <p>If one user installs a 20 Mb application, another user can run it without downloading it again.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/secure.png' alt=''/></td>
+  <td><h3>Users don't need to trust each other</h3>
+      <p>If one user downloads a malicious program, other users aren't affected.</p>
+  </td>
+ </tr>
+</table>
 
 <p>[ <a href='doc.html'>Read more...</a> ]</p>
 

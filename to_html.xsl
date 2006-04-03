@@ -83,7 +83,9 @@
 	    Permission is granted to use the site (excluding the software,
 	    which is licensed separately)<br/>in accordance with the terms of the
 	    <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative
-	    Commons Attribution-ShareAlike 2.5 license</a>.
+	    Commons Attribution-ShareAlike 2.5 license</a>.<br/>
+	    Some of the icons are from (or based on icons from) the
+	    <a href='http://tango-project.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
 	  </p>
 	 <p>
 	   <a href="http://creativecommons.org/licenses/by-sa/2.5/">
