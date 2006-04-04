@@ -15,10 +15,6 @@ p.author {
 	text-align: right;
 }
 
-div.main a:hover {
-	background: #ffefa1;
-}
-
 h2:first-child {
 	margin-top: 1em;
 }
@@ -168,6 +164,7 @@ td.main {
 	border-left: 1px solid #88f;
 	padding-right: 2em;
 	padding-left: 2em;
+	width: 100%;
 }
 
 td.sidebar ul {
@@ -296,4 +293,29 @@ table.picturebullets p {
 
 table.picturebullets td.image {
 	text-align: center;
+}
+
+table.quicklinks {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+	border-spacing: 1em;
+	border-collapse: separate;
+}
+
+table.quicklinks td p {
+	padding: 0;
+	margin: 0;
+}
+
+table.quicklinks td a {
+	text-decoration: none;
+}
+
+table.quicklinks td {
+	font-weight: bold;
+	text-align: center;
+	padding: 1em;
+	background: #def;
+	-moz-border-radius: 1em 1em 1em 1em;
 }
