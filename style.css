@@ -318,4 +318,5 @@ table.quicklinks td {
 	padding: 1em;
 	background: #def;
 	-moz-border-radius: 1em 1em 1em 1em;
+	width: 25%;
 }

@@ -5,30 +5,14 @@
 
 <p>
 The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
-it the program's full name (a web address):
-</p>
-
-<ol>
-<li>The injector downloads information about the program from the given address.</li>
-<li>It checks that the information is signed using a GPG key you trust, confirming first if not.</li>
-<li>It downloads information about any libraries the program needs in the same way. Libraries are also
-named by web addresses, and may be written by different people and be on different sites.</li>
-<li>It choose a sensible version of the program and of each required library, and prompts you to confirm or
-change them.</li>
-<li>It downloads an archive of the chosen version of each one.</li>
-<li>Each archive is unpacked and its digest verified. If correct, it is stored in your cache directory. Each
-archive is stored in a different subdirectory in the cache, so no two versions can conflict.</li>
-<li>It runs the program, setting any required environment variables to let it find its libraries.</li>
-</ol>
-
-<p>
-The injector does <b>not</b> need to be installed or run as root. It does
-<b>not</b> write to any shared directories (like <b>/usr/bin</b> or
-<b>/usr/lib</b>).
+it the program's full name (a web address). The injector does <b>not</b> need
+to be installed or run as root. It does <b>not</b> write to any shared
+directories (like <b>/usr/bin</b> or <b>/usr/lib</b>).
 </p>
 
 <p>
-The injector can be run manually, but it is normally invoked by another program. Some examples include:
+The injector can be run manually, but it is normally invoked by another
+program. Some examples include:
 </p>
 
 <ul>
@@ -37,7 +21,17 @@ The injector can be run manually, but it is normally invoked by another program.
  <li>When a shell user runs the <b>0alias</b> command, it creates a shell short-cut that runs the injector.</li>
 </ul>
 
-<h2>Packages</h2>
+<table class='quicklinks'>
+ <tr>
+  <td><a href='#packages'><img src='tango/go-down.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
+  <td><a href='doc.html'><img src='tango/book.png' alt='' width='48' height='48'/> <br/>Read more</a></td>
+  <td><a href='injector-packagers.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
+  <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
+ </tr>
+</table>
+
+
+<h2><a name='packages'/>Packages</h2>
 
 <dl>
   <dt>RPMs</dt>

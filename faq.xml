@@ -3,12 +3,6 @@
 
 <h2>FAQ</h2>
 
-<p>
-This FAQ is about Zero Install in general. If you're looking for information
-about one of the implementations, try either <a href='injector-faq.html'>the
-injector FAQ</a> or <a href='fs-faq.html'>the filesystem FAQ</a>.
-</p>
-
 <toc level='h3'/>
 
 <h2>General questions</h2>
@@ -23,6 +17,11 @@ This is easier (<i>install and run</i> becomes just <i>run</i>) and safer
 
 <h3>I haven't tried it yet, but it sounds really complicated</h3>
 <p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
+
+<h3>Doesn't Zero Install require a kernel module?</h3>
+<p>
+Not any more. That was <a href='fs-faq.html'>the old version</a>.
+</p>
 
 <h3>Isn't is really hard to run applications if you always have to
 type URIs for them?</h3>

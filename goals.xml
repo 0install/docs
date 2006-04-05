@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<h2>Goals</h2>
+
+<div class='figure' style='float: right'>
+  <img width="610" height="331" src="debian-help.png"
+     alt="A Debian user asks for help" />
+  <p>A Debian user tries to read the OpenOffice documentation.<br/>
+  Zero Install would have offered to download it instead.</p>
+</div>
+
+<p>
+Let's expand a little on the goals set out on the <a href='index.html'>title page</a>:
+</p>
+
+<dl class='spaced'>
+ <dt>Anyone can install software</dt>
+
+ <dd>
+ <p>
+ You don't have to be root just to install a word-processor, or its
+ documentation. Most packaging systems only allow the root user to install
+ software.
+ </p>
+ 
+ <p>
+ Traditionally, if a user needs a package that isn't installed, they just get an
+ error message. In the screenshot, the system administrator must install the
+ openoffice.org-help package before the user can read the documentation, or
+ the user must install from source and handle any dependencies themselves.
+ On a Zero Install system, Zero Install would have offered to download the
+ documentation when the user selected <b>Help</b>.
+ </p>
+
+ <p>
+ Of course, Debian could fix this particular problem by making the OpenOffice package
+ depend on the documentation package. But then, installing OpenOffice would require far
+ more disk space if you didn't need the documentation (and most of the time, for most
+ versions of most software packages, you <i>don't</i> need the documentation... but an
+ administrator can't know ahead of time what will be needed by their users). Also, users
+ still wouldn't be able to install OpenOffice itself in the first place.
+ </p>
+ 
+ </dd>
+
+ <dt style='clear: both'>Anyone can distribute software</dt>
+ <dd>
+ <p>
+ One of the more frustrating aspects of open source software is finding a
+ program you want, only to discover that there is no package available for your
+ distribution. Eg, on Debian (I'm not picking on Debian, it's just I've got a
+ Debian system here!):
+ </p>
+
+<pre># apt-get install rox-session
+E: Couldn't find package rox-session</pre>
+ 
+ <p>
+ You don't need to be blessed by a distribution (or anyone else)
+ to be part of Zero Install; all you need is a web page. Software is named
+ by URL:
+ </p>
+
+ <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
+ 
+ </dd>
+
+ <dt>It doesn't matter whether software is installed or not</dt>
+ <dd>Traditional systems make running software a two-step process: first you
+ install it, then you run it.  In a Zero Install system, you just run it and
+ the system handles the rest (downloading and caching as needed). You can delete
+ the downloaded programs later to save space, and they will be fetched again
+ automatically if they are needed in the future.</dd>
+
+ <dt>Downloads are shared</dt>
+ <dd>If one user installs a 20 Mb application, another user can run it without downloading it again.
+ Most packaging systems solve this problem by only allowing root to install software. The systems which
+ don't have this limitation (eg, <a href='http://autopackage.org'>autopackage</a>) typically end up downloading
+ and storing multiple copies of a program; one for each user. Zero Install
+ shares downloads (safely) between users.
+ </dd>
+
+ <dt>Users don't need to trust each other</dt>
+ <dd>In traditional systems, installing a program also puts files into shared directories like <b>/usr/bin</b>
+ and <b>/usr/lib</b> under short names. So if one user installs the Gimp from <b>http://evil.com</b> then it
+ might save the executable as <b>/usr/bin/gimp</b>. Another user might run this, thinking it was from
+ <a href='http://gimp.org'>http://gimp.org</a>. In a Zero Install system, users specify the full URI of
+ the program they want to run, and the system only shares the copy if they really are the same. The short-cuts
+ are per-user rather than the programs.</dd>
+</dl>
+
+
+</html>

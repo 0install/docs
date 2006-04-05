@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-  <item base="index" label="Overview"/>
-
-  <item base="injector" label="Injector">
+  <item base="index" label="Overview">
+    <item base="injector" label="Install"/>
     <item base='injector-using' label='Tutorial'/>
-    <item base='injector-feeds' label='Packages'/>
-    <item base='injector-packagers' label='Developers'>
-      <item base='0publish' label='0publish'/>
-      <item base='injector-specs' label='Specifications'/>
-      <item base='injector-design' label='Design'/>
-      <item base='injector-tests' label='Tests'/>
-    </item>
+    <item base='injector-feeds' label='Software index'/>
     <item base='injector-trouble' label='Problems'/>
-    <item base='injector-security' label='Security'/>
   </item>
 
   <item base="doc" label="Documentation">
+    <item base="goals" label="Goals"/>
+    <item base="howitworks" label="How it works"/>
     <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
+    <item base='injector-security' label='Security'/>
     <item base="links" label="Links"/>
+  </item>
+
+  <item base='injector-packagers' label='Developers'>
+    <item base='0publish' label='0publish'/>
+    <item base='injector-specs' label='Specifications'/>
+    <item base='injector-design' label='Design'/>
+    <item base='injector-tests' label='Tests'/>
   </item>
 
   <item base="support" label="Support"/>

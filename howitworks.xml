@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>The Zero Install Injector</h2>
+
+<p>
+The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
+it the program's full name (a web address):
+</p>
+
+<ol>
+<li>The injector downloads information about the program from the given address.</li>
+<li>It checks that the information is signed using a GPG key you trust, confirming first if not.</li>
+<li>It downloads information about any libraries the program needs in the same way. Libraries are also
+named by web addresses, and may be written by different people and be on different sites.</li>
+<li>It choose a sensible version of the program and of each required library, and prompts you to confirm or
+change them.</li>
+<li>It downloads an archive of the chosen version of each one.</li>
+<li>Each archive is unpacked and its digest verified. If correct, it is stored in your cache directory. Each
+archive is stored in a different subdirectory in the cache, so no two versions can conflict.</li>
+<li>It runs the program, setting any required environment variables to let it find its libraries.</li>
+</ol>
+
+<p>
+The injector does <b>not</b> need to be installed or run as root. It does
+<b>not</b> write to any shared directories (like <b>/usr/bin</b> or
+<b>/usr/lib</b>).
+</p>
+
+<p>
+The injector can be run manually, but it is normally invoked by another program. Some examples include:
+</p>
+
+<ul>
+ <li>When a ROX desktop user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a launcher application that uses the injector.</li>
+ <li>When an Xfce user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a launcher button that uses the injector.</li>
+ <li>When a shell user runs the <b>0alias</b> command, it creates a shell short-cut that runs the injector.</li>
+</ul>
+
+</html>

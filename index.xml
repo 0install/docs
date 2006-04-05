@@ -43,8 +43,6 @@ bundles, setup.exe, etc). Here are some of our goals:
  <tr>
   <td><a href='injector.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
   <td><a href='doc.html'><img src='tango/book.png' alt='' width='48' height='48'/> <br/>Read more</a></td>
- </tr>
- <tr>
   <td><a href='injector-packagers.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
   <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
  </tr>
