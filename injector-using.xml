@@ -50,7 +50,7 @@ So what happened?
 
 <ol>
 <li>The injector realised that it needed to download some files to run Edit, so
-it switched to graphical mode (use <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1189/focus=1190'>--console</a> to disable this).</li>
+it switched to graphical mode (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1189/focus=1190'>use --console to disable this</a>).</li>
 <li>First, it checks for updates to the graphical user interface (GUI) itself.
 It downloaded the GUI's interface file, which tells it which versions are
 available.</li>
