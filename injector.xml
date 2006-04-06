@@ -25,7 +25,7 @@ program. Some examples include:
  <tr>
   <td><a href='#packages'><img src='tango/go-down.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
   <td><a href='doc.html'><img src='tango/book.png' alt='' width='48' height='48'/> <br/>Read more</a></td>
-  <td><a href='injector-packagers.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
+  <td><a href='dev.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
   <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
  </tr>
 </table>

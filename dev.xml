@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<h2>Developers</h2>
+
+<p>
+ This section is for both people distributing software using Zero Install, and for
+ people working on the Zero Install system itself.
+</p>
+
+<dl>
+ <dt><a href='injector-packagers.html'>Packaging guide</a></dt>
+ <dd>
+  This guide takes you throught the steps involved in making a package available
+  through Zero Install. You will need to be able to upload (static) files to a
+  web-server.
+ </dd>
+
+ <dt><a href='0publish.html'>0publish</a></dt>
+ <dd>
+  <b>0publish</b> makes it easy to automate the process of making new releases.
+  This tutorial shows how to use it, taking the example of creating binary releases
+  of ROX-Filer for a new platform.
+ </dd>
+
+ <dt><a href='injector-specs.html'>Specifications</a></dt>
+ <dd>
+  Formal specifications for the file formats used by the injector.
+ </dd>
+
+ <dt><a href='injector-design.html'>Design</a></dt>
+ <dd>
+  A more detailed description of the design of Zero Install.
+ </dd>
+
+ <dt><a href='injector-tests.html'>Tests</a></dt>
+ <dd>
+  A set of test interfaces to check that the injector is working
+  correctly.
+ </dd>
+</dl>
+
+<h2>Off-site documentation</h2>
+
+<dl>
+ <dt><a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a></dt>
+
+ <dd>
+  <p>This blog article shows how to use Zero Install to compile your program against older
+ versions of library headers than are the default on your system. Binaries created this way
+ work on a wider range of systems (all systems with a GTK version newer than the headers). Also,
+ since they download the required headers automatically, users don't need to have the headers
+ already on their system in order to compile your program.</p>
+ <p>
+ The binaries produced this way do not depend on Zero Install, so you can use Zero Install as
+ part of your build process even if you don't distribute the resulting binaries that way.
+ </p>
+ </dd>
+
+ <dt><a href='http://www.brucalipto.org/docs/injector_en.html'>brucalipto.org's packaging guide</a></dt>
+ <dd>
+  <p>
+  Piero shows how to package software for Zero Install, using subversion as an example.
+  </p>
+ </dd>
+</dl>
+
+<p>
+If you're looking for information about the <b>old</b> filesystem-based
+version of Zero Install, see <a href='filesystem.html'>The /uri/0install
+filesystem</a>.
+</p>
+
+</html>

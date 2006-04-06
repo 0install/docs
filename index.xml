@@ -7,34 +7,36 @@ bundles, setup.exe, etc). Here are some of our goals:
 </p>
 
 <table class='picturebullets'>
- <tr>
+ <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can install software</h3>
       <p>You don't have to be root just to install a word-processor.</p>
   </td>
  </tr>
- <tr>
+ <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
       <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install.</p>
   </td>
  </tr>
- <tr>
+ <tr class='summary'>
   <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
   <td><h3>It doesn't matter whether software is installed or not</h3>
       <p>You just run it. Zero Install handles the rest (downloading and caching as needed).</p>
   </td>
  </tr>
- <tr>
+ <tr class='summary'>
   <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
   <td><h3>Downloads are shared</h3>
       <p>If one user installs a 20 Mb application, another user can run it without downloading it again.</p>
   </td>
  </tr>
- <tr>
+ <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
-  <td><h3>Users don't need to trust each other</h3>
-      <p>If one user downloads a malicious program, other users aren't affected.</p>
+  <td><h3>The system must provide good security</h3>
+      <p>If one user downloads a malicious program, other users aren't affected.<br/>
+      Installation does not execute any downloaded code as root.<br/>
+      Digital signatures are always checked before software is run.</p>
   </td>
  </tr>
 </table>
@@ -43,7 +45,7 @@ bundles, setup.exe, etc). Here are some of our goals:
  <tr>
   <td><a href='injector.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
   <td><a href='doc.html'><img src='tango/book.png' alt='' width='48' height='48'/> <br/>Read more</a></td>
-  <td><a href='injector-packagers.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
+  <td><a href='dev.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
   <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
  </tr>
 </table>

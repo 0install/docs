@@ -3,6 +3,14 @@
 
 <h2>Goals</h2>
 
+<p>
+Let's expand a little on the goals set out on the <a href='index.html'>title page</a>:
+</p>
+
+<table class='picturebullets'>
+ <tr>
+  <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
+  <td><h3>Anyone can install software</h3>
 <div class='figure' style='float: right'>
   <img width="610" height="331" src="debian-help.png"
      alt="A Debian user asks for help" />
@@ -10,14 +18,6 @@
   Zero Install would have offered to download it instead.</p>
 </div>
 
-<p>
-Let's expand a little on the goals set out on the <a href='index.html'>title page</a>:
-</p>
-
-<dl class='spaced'>
- <dt>Anyone can install software</dt>
-
- <dd>
  <p>
  You don't have to be root just to install a word-processor, or its
  documentation. Most packaging systems only allow the root user to install
@@ -41,11 +41,11 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
  administrator can't know ahead of time what will be needed by their users). Also, users
  still wouldn't be able to install OpenOffice itself in the first place.
  </p>
- 
- </dd>
-
- <dt style='clear: both'>Anyone can distribute software</dt>
- <dd>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
+  <td><h3>Anyone can distribute software</h3>
  <p>
  One of the more frustrating aspects of open source software is finding a
  program you want, only to discover that there is no package available for your
@@ -64,31 +64,43 @@ E: Couldn't find package rox-session</pre>
 
  <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
  
- </dd>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
+  <td><h3>It doesn't matter whether software is installed or not</h3>
 
- <dt>It doesn't matter whether software is installed or not</dt>
- <dd>Traditional systems make running software a two-step process: first you
+ <p>Traditional systems make running software a two-step process: first you
  install it, then you run it.  In a Zero Install system, you just run it and
  the system handles the rest (downloading and caching as needed). You can delete
  the downloaded programs later to save space, and they will be fetched again
- automatically if they are needed in the future.</dd>
-
- <dt>Downloads are shared</dt>
- <dd>If one user installs a 20 Mb application, another user can run it without downloading it again.
+ automatically if they are needed in the future.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
+  <td><h3>Downloads are shared</h3>
+ <p>If one user installs a 20 Mb application, another user can run it without downloading it again.
  Most packaging systems solve this problem by only allowing root to install software. The systems which
  don't have this limitation (eg, <a href='http://autopackage.org'>autopackage</a>) typically end up downloading
  and storing multiple copies of a program; one for each user. Zero Install
  shares downloads (safely) between users.
- </dd>
-
- <dt>Users don't need to trust each other</dt>
- <dd>In traditional systems, installing a program also puts files into shared directories like <b>/usr/bin</b>
- and <b>/usr/lib</b> under short names. So if one user installs the Gimp from <b>http://evil.com</b> then it
- might save the executable as <b>/usr/bin/gimp</b>. Another user might run this, thinking it was from
- <a href='http://gimp.org'>http://gimp.org</a>. In a Zero Install system, users specify the full URI of
- the program they want to run, and the system only shares the copy if they really are the same. The short-cuts
- are per-user rather than the programs.</dd>
-</dl>
+ </p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
+  <td><h3>The system must provide good security</h3>
+  <p>If one user downloads a malicious program, other users aren't affected.<br/>
+  Installation does not execute any downloaded code as root.<br/>
+  Digital signatures are always checked before software is run.</p>
+  <p>
+   See the <a href='injector-security.html'>Injector security</a> page for more information about Zero Install's
+   security features.
+  </p>
+  </td>
+ </tr>
+</table>
 
 
 </html>

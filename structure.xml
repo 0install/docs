@@ -16,7 +16,8 @@
     <item base="links" label="Links"/>
   </item>
 
-  <item base='injector-packagers' label='Developers'>
+  <item base='dev' label='Developers'>
+    <item base='injector-packagers' label='Packaging guide'/>
     <item base='0publish' label='0publish'/>
     <item base='injector-specs' label='Specifications'/>
     <item base='injector-design' label='Design'/>

@@ -44,6 +44,39 @@ someone to provide reliable software, and how do we know that a particular
 program really came from them?
 </p>
 
+<p>
+Some key points about Zero Install's security model:
+</p>
+
+<dl class='spaced'>
+ <dt>If one user downloads a malicious program, other users aren't affected</dt>
+ <dd>
+ In traditional systems, installing a program also puts files into shared directories like <b>/usr/bin</b>
+ and <b>/usr/lib</b> under short names. So if one user installs the Gimp from <b>http://evil.com</b> then it
+ might save the executable as <b>/usr/bin/gimp</b>. Another user might run this, thinking it was from
+ <a href='http://gimp.org'>http://gimp.org</a>. In a Zero Install system, users specify the full URI of
+ the program they want to run, and the system only shares the copy if they really are the same. The short-cuts
+ (e.g., that <b>"Run gimp"</b> means <b>"Run http://gimp.org/gimp"</b>) are
+ per-user, but the programs themselves are shared.
+ </dd>
+
+ <dt>Installation does not execute any downloaded code as root</dt>
+ <dd>
+ Most installation systems run code in the downloaded package as part of the installation process. Typically,
+ these scripts are run as root and can do anything they like to the machine. Zero Install merely fetches
+ files into the cache during installation; nothing downloaded is executed and files from different packages
+ cannot conflict (because they each go in their own directory).
+ </dd>
+
+ <dt>Digital signatures are always checked before software is run</dt>
+ <dd>
+ To protect against the possibility of attackers breaking into a web-server and replacing the real
+ software with modified versions, or redirecting network traffic to the real web-server to their own,
+ Zero Install only runs code that is signed by a GPG key you have said you trust.
+ </dd>
+</dl>
+
+
 <h2>The Injector's trust model</h2>
 
 <p>
