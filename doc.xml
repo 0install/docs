@@ -3,30 +3,37 @@
 
 <h2>Documentation layout</h2>
 
-<p>
-This section describes Zero Install in general rather than giving details specific to either of the implementations.
-If you want help using one of them, jump to that section instead:
-</p>
-
 <dl>
+    <dt><a href='goals.html'>Goals</a></dt><dd>Sets out the problems that Zero Install aims to solve
+    in more detail than on the front page.</dd>
 
-<dt><a href='injector.html'>The Injector</a></dt>
-<dd>The injector is a pure Python implementation of Zero Install. It provides the <b>0launch</b> command, and
-can be installed by anyone.
-</dd>
+    <dt><a href='howitworks.html'>How it works</a></dt><dd>What actually happens when you use software
+    this way?</dd>
 
-<dt><a href='filesystem.html'>The /uri/0install filesystem</a></dt>
-<dd>
-The filesystem uses a kernel module to provide the <b>/uri/0install</b> filesystem. This only works on Linux, and
-you need to be root to install it (but once installed other software can be fetched by non-root users).
-</dd>
+    <dt><a href='matrix.html'>Comparison</a></dt><dd>A table of features and installation systems to
+    show how they differ.</dd>
+
+    <dt><a href='faq.html'>FAQ</a></dt><dd>Common questions answered.</dd>
+
+    <dt><a href='injector-security.html'>Security</a></dt><dd>Describes Zero Install's security model and explains
+    why it should be more secure than traditional installation methods.</dd>
+
+    <dt><a href='links.html'>Links</a></dt><dd>Links to related software.</dd>
 </dl>
 
 <p>
-You should also click on one of the two links above if you're looking for <b>screenshots</b>. There is also
-a <a href='matrix.html'>matrix comparing various different installation systems</a> for a quick overview of
-how Zero Install compares with other systems.
+If you're looking for information about the <b>old</b> filesystem-based
+version of Zero Install, see <a href='filesystem.html'>The /uri/0install
+filesystem</a>.
 </p>
 
+<table class='quicklinks'>
+ <tr>
+  <td><a href='injector.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
+  <td><a href='injector-security.html'><img src='tango/secure.png' alt='' width='39' height='48'/> <br/>Security</a></td>
+  <td><a href='injector-packagers.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
+  <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
+ </tr>
+</table>
 
 </html>
