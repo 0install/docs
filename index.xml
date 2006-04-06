@@ -36,7 +36,7 @@ bundles, setup.exe, etc). Here are some of our goals:
   <td><h3>The system must provide good security</h3>
       <p>If one user downloads a malicious program, other users aren't affected.<br/>
       Installation does not execute any downloaded code as root.<br/>
-      Digital signatures are always checked before software is run.</p>
+      Digital signatures are always checked before new software is run.</p>
   </td>
  </tr>
 </table>
