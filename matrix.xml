@@ -15,24 +15,23 @@ be a 'pass') but it should give the general idea.
  													<th><a href='http://autopackage.org'>Autopackage</a></th>
 															<th><a href='http://klik.atekon.de/'>Klik</a></th>
 																		<th><a href='http://java.sun.com/products/javawebstart/'>Java WS</a></th>
-																					<th><a href="http://www.konvalo.org">Konvalo</a></th>
-																								<th>Zero Install<br/><a href='filesystem.html'>Filesystem</a></th>
-																										<th>Zero Install<br/><a href='injector.html'>Injector</a></th></tr>
+																					<th>Zero Install<br/><a href='filesystem.html'>Filesystem</a></th>
+																							<th>Zero Install<br/><a href='injector.html'>Injector</a></th></tr>
 
- <tr><th>Users can install software</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<yes/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<no/>			<yes/>			<yes/>			<no>Planned</no></tr>
- <tr><th>Multiple versions coexist</th>			<yes/>			<no/>			<no/>		<yes/>			<no/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Uninstall</th>					<td>Sometimes</td>	<yes/>			<yes/>		<yes/>			<yes>(cache)</yes>	<yes>(cache)</yes>	<yes>(cache)</yes>	<yes>(cache)</yes></tr>
- <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<no/>			<td>Only one</td>	<td>In theory</td>	<td>Only upgrades</td>	<yes/></tr>
- <tr><th>Conflict-free</th>				<no/>			<no/>			<no/>		<yes/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Decentralised</th>				<yes/>			<no/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<no/>			<yes/>			<no/>			<no/>			<yes/></tr>
- <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<yes/>			<no>Only Java</no>	<yes/>			<yes/>			<yes/></tr>
- <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<no/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Users can install software</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<no/>			<yes/>			<no>Planned</no></tr>
+ <tr><th>Multiple versions coexist</th>			<yes/>			<no/>			<no/>		<yes/>			<no/>			<yes/>			<yes/></tr>
+ <tr><th>Uninstall</th>					<td>Sometimes</td>	<yes/>			<yes/>		<yes/>			<yes>(cache)</yes>	<yes>(cache)</yes>	<yes>(cache)</yes></tr>
+ <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<no/>			<td>Only one</td>	<td>Only upgrades</td>	<yes/></tr>
+ <tr><th>Conflict-free</th>				<no/>			<no/>			<no/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Decentralised</th>				<yes/>			<no/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<no/>			<yes/>			<no/>			<yes/></tr>
+ <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<yes/>			<no>Only Java</no>	<yes/>			<yes/></tr>
+ <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<no/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
 
 </table>
 
@@ -70,9 +69,8 @@ be a 'pass') but it should give the general idea.
  Notes: The Zero Install filesystem remembers the signing key when software is
  first accessed, and checks that it hasn't changed when upgrading. The injector
  prompts the user even on the first access. Java Web-Start requires all
- components to be signed with the same key. Konvalo can use CODA's underlying
- security mechanisms to do this, but the currently available realm doesn't
- support this.</dd>
+ components to be signed with the same key.
+ </dd>
  
  <dt>Conflict-free</dt>
  <dd>If program A requires an old version of a library, and program B requires a new version, A and B can both be installed and

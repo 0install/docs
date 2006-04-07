@@ -16,19 +16,19 @@ although this only works for Java applications.
 <dt>Konvalo</dt>
 <dd>
 <p>
-<a href="http://www.konvalo.org/">Konvalo</a> is a very similar idea
-to the old Zero Install filesystem, but implemented using CODA rather than with
-a custom kernel module. We propose to concentrate on the newer
-<a href='injector.html'>injector</a> implementation of Zero Install. People who
-want a filesystem implementation can use Konvalo instead of our old version.
-Konvalo and the injector also work well together (keep all your launcher
-scripts in Konvalo, and have them run the injector).
+Konvalo was a very similar idea to the old Zero Install filesystem, but
+implemented using CODA rather than with a custom kernel module.</p>
+
+<p>
+One disadvantage of Konvalo was that you needed to run a public CODA server
+to distribute software, whereas both Zero Install implementations only require
+a web-server serving static pages.
 </p>
 
 <p>
-One disadvantage of Konvalo is that you need to run a public CODA server
-to distribute software, whereas both Zero Install implementations only require
-a web-server serving static pages.
+The project did not attract support from the community and the author
+abandoned the effort in April 2006, asking for links to it from this site
+to be removed.
 </p>
 </dd>
 
