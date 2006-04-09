@@ -19,7 +19,7 @@ be a 'pass') but it should give the general idea.
 																							<th>Zero Install<br/><a href='injector.html'>Injector</a></th></tr>
 
  <tr><th>Users can install software</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<no/>			<yes/>			<no>Planned</no></tr>
