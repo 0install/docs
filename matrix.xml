@@ -113,6 +113,7 @@ plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.
 <h2>See also</h2>
 
 <ul>
+<li><a href='http://klik.atekon.de/wiki/index.php/Comparison'>Klik Comparison</a> (similar to this page, but from Klik's perspective)</li>
 <li><a href='http://www.kitenet.net/~joey/pkg-comp/'>Comparing Linux/UNIX Binary Package Formats</a>
 (by Joey Hess, author of <a href='http://kitenet.net/programs/alien/'>Alien</a>)</li>
 </ul>
