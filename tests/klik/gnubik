@@ -1,0 +1,51 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gnubik</name>
+  <summary>3D Rubik's cube game</summary>
+  <description>
+    GNUbik is an interactive, graphical, single player puzzle. This free program renders an image of a cube, like that invented by Erno Rubik. You have to manipulate the cube using the mouse. When each face shows only one colour, the game is solved.
+
+    It uses Gtk+ and/or X11 and Mesa / OpenGL.
+
+    Homepage: http://www.gnu.org/software/gnubik/
+  </description>
+
+  <!-- Optionally, uncomment this to specify an icon: -->
+  <icon href='http://0install.net/tests/klik/gnubik.png' type='image/png'/>
+
+  <!-- Optionally, uncomment this to give the address of
+       the signed master interface: -->
+  <!-- <feed-for interface='http://site/interface'/> -->
+
+  <!-- Set 'main' to the relative path of your default
+        executable within the implementation's directory.
+	E.g.: "myprog" or "bin/myprog" -->
+  <group main="myprog">
+    <!-- List any libraries your program needs here -->
+    <!--
+    <requires interface="http://site/library">
+      <environment insert="python" name="PYTHONPATH"/>
+    </requires>
+    -->
+
+    <!-- List all implementations here.
+         For local interfaces, '.' is a relative path from this
+	 interface file to the directory containing the program.
+	 Usually, you can just leave it as '.'.
+    -->
+    <implementation id="sha1=d7fc276e5ec955df722a641ba4c9fd60e848d715" main="wrapper" released="Snapshot" version="2.2">
+      <archive extract="gnubik" href="http://0install.net/tests/klik/gnubik.tar.bz2" size="1729445"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEPA3200Ga+YIlqrYRAtMDAJ4+CK4YYijqfqT6DSneOUdpDTqotACfZQgB
+WFL5ppXUVuiunDAIw8rbP0U=
+=CPBN
+-----END PGP SIGNATURE-----
