@@ -3,7 +3,8 @@ Hash: SHA1
 
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   uri='http://0install.net/tests/klik/gnubik'>
   <name>gnubik</name>
   <summary>3D Rubik's cube game</summary>
   <description>
@@ -45,7 +46,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPA3200Ga+YIlqrYRAtMDAJ4+CK4YYijqfqT6DSneOUdpDTqotACfZQgB
-WFL5ppXUVuiunDAIw8rbP0U=
-=CPBN
+iD8DBQFEPA7I00Ga+YIlqrYRAsKzAJ9miapksiMT1oKfHOCjNWULd9P/iACeJTLO
+v/+DXQNs7g//cCcnx2vhryY=
+=CNgU
 -----END PGP SIGNATURE-----
