@@ -40,14 +40,14 @@ Hash: SHA1
 	 Usually, you can just leave it as '.'.
     -->
     <implementation id="sha1=0529523951fdb082f0a60c89791046323a78ad78" released="Snapshot" version="1.8.5">
-      <archive extract="cuyo" href="http://0install.net/tests/klik/cuyo/cuyo.tar.bz2" size="928651"/>
+      <archive extract="cuyo" href="http://0install.net/tests/klik/cuyo.tar.bz2" size="928651"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEPAOZ00Ga+YIlqrYRAo8bAKCW3dlQRZ4nqdULMDZkgz5XE8qEdwCgi8Ud
-H5IM1pETN8pdc1jXxtKmze4=
-=s+Fr
+iD8DBQFEPAym00Ga+YIlqrYRAgDsAJwMQr4gY7PYZpM5aamUmstvttd8OwCfSZbg
+FEkPmPQ+FDg61/jx4Y8ceUo=
+=N7i5
 -----END PGP SIGNATURE-----
