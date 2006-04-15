@@ -63,6 +63,11 @@ E: Couldn't find package rox-session</pre>
  </p>
 
  <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
+
+ <p>
+  See the <a href='dev.html'>developer documentation</a> for information on
+  distributing software using Zero Install.
+ </p>
  
   </td>
  </tr>
@@ -75,6 +80,8 @@ E: Couldn't find package rox-session</pre>
  the system handles the rest (downloading and caching as needed). You can delete
  the downloaded programs later to save space, and they will be fetched again
  automatically if they are needed in the future.</p>
+ <p>The <a href='injector-using.html'>user guide</a> has a tutorial showing how
+ software is run this way.</p>
   </td>
  </tr>
  <tr id='safesharing'>
@@ -85,6 +92,13 @@ E: Couldn't find package rox-session</pre>
  don't have this limitation (eg, <a href='http://autopackage.org'>autopackage</a>) typically end up downloading
  and storing multiple copies of a program; one for each user. Zero Install
  shares downloads (safely) between users.
+ </p>
+ <p>
+  With Zero Install, each user downloads a small <i>interface file</i> which gives the cryptographic
+  digest of the full package. The digest can be used to check that a package already on the computer
+  (downloaded by another user) hasn't been tampered with. Most simply, each user can make a copy of the
+  original download this way (which shares the download but not the disk space). With a special SetUID helper,
+  even the disk copies can be safely shared.
  </p>
   </td>
  </tr>
