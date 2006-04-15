@@ -8,7 +8,7 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
 </p>
 
 <table class='picturebullets'>
- <tr>
+ <tr id='anyoneinstall'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can install software</h3>
 <div class='figure' style='float: right'>
@@ -43,7 +43,7 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
  </p>
   </td>
  </tr>
- <tr>
+ <tr id='anyonedistrib'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
  <p>
@@ -66,7 +66,7 @@ E: Couldn't find package rox-session</pre>
  
   </td>
  </tr>
- <tr>
+ <tr id='cache'>
   <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
   <td><h3>It doesn't matter whether software is installed or not</h3>
 
@@ -77,7 +77,7 @@ E: Couldn't find package rox-session</pre>
  automatically if they are needed in the future.</p>
   </td>
  </tr>
- <tr>
+ <tr id='safesharing'>
   <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
   <td><h3>Downloads are shared</h3>
  <p>If one user installs a 20 Mb application, another user can run it without downloading it again.
@@ -90,7 +90,7 @@ E: Couldn't find package rox-session</pre>
  </tr>
  <tr>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
-  <td><h3>The system must provide good security</h3>
+  <td><h3>The system provides good security</h3>
   <p>If one user downloads a malicious program, other users aren't affected.<br/>
   Installation does not execute any downloaded code as root.<br/>
   Digital signatures are always checked before software is run.</p>

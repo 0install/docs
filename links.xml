@@ -32,6 +32,29 @@ to be removed.
 </p>
 </dd>
 
+<dt>Klik</dt>
+
+<dd>
+<p>
+<a href='http://klik.atekon.de'>Klik</a> allows users to install software by clicking on 
+links in web-pages (or even just by looking at a web page). Like Zero Install, it stores
+each package in its own directory and sets environment variables to let it run.
+There is a central server which sends shell scripts to clients; executing the
+script causes the software to be downloaded and installed. This process is
+started automatically by your web browser.
+</p>
+<p>
+Klik is mainly focussed on having a large selection of packages working now,
+but pays little attention to security. Klik does not handle dependencies
+automatically and cannot check for updates to installed software.
+There are no digital signatures or server authentication, and no checksums or
+digests. Downloads cannot be shared safely between users. Klik packages can be
+automatically converted to Zero Install ones. See my <a
+href='http://rox.sourceforge.net/desktop/node/290'>article about Zero Install
+and Klik</a> for more details.
+</p>
+</dd>
+
 <dt>Maven</dt>
 
 <dd>
