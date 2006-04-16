@@ -15,15 +15,15 @@ Hash: SHA1
 
   <group>
     <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" version="2.4.14">
-    
-      <archive extract="gtk-headers-2.4.14" href="http://0install.net/tests/gtk-headers-2.4.14.tar.bz2" size="157933"/>
+
+      <archive extract="gtk-headers-2.4.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.tar.bz2" size="157933"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFELqJIrgeCgFmlPMERAoQ5AJ95xN0UfxGk4Ui5lomQJ5B/dUHx8QCcDkVU
-1V2K5nA5GPoep93mENdTAcQ=
-=PPNC
+iD8DBQFEQhiorgeCgFmlPMERArkFAJ4v5uYtZvzXcsL+KSZoa3U48oFN5gCgo9+/
+IldG+W8IlTEat0pB80KGwTk=
+=vqVa
 -----END PGP SIGNATURE-----

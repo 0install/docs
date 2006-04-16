@@ -13,15 +13,15 @@ Hash: SHA1
 
   <group>
     <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" version="2.4.8" released='2006-04-02'>
-    
-      <archive extract="glib-headers-2.4.8" href="http://0install.net/tests/glib-headers-2.4.8.tar.bz2" size="67471"/>
+
+      <archive extract="glib-headers-2.4.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEL8YPrgeCgFmlPMERAqHqAJ9xIjBULjUqbr5IIr+9QGuST2rsFACeNp9H
-1bz6KbqXI8PCBr83rkm+eu0=
-=r7Wc
+iD8DBQFEQhiBrgeCgFmlPMERAmigAKDX+aIrE3VfZ6gqWRvSoBCB2EHVcQCbBDkN
+ObHbqvwWWd3xMYeW5dhB9KQ=
+=hnB3
 -----END PGP SIGNATURE-----
