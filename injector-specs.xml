@@ -22,6 +22,7 @@ namespace):
 <pre>
 &lt;?xml version='1.0'?&gt;
 &lt;interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
+	   min-injector-version='...' ?
 	   uri='...' ?
 	   main='...' ?&gt;
   &lt;name&gt;...&lt;/name&gt;
@@ -37,6 +38,22 @@ namespace):
 
 &lt;/interface&gt;
 </pre>
+
+<p>
+The <b>min-injector-version</b> attribute gives the oldest version of the injector that can read this file. Older versions will
+tell the user to upgrade if they are asked to read the file. Versions prior to 0.20 do not perform this check, however.
+If the attribute is not present, the file can be read by all versions.
+</p>
+
+<p>
+The <b>uri</b> attribute is only needed for remote interfaces (fetched via HTTP). The value must exactly match the expected
+URL, to prevent an attacker replacing one correctly-signed interface with another (e.g., returning the interface for the
+<b>shred</b> program when the user asked for the <b>backup</b> program).
+</p>
+
+<p>
+Use of the <b>main</b> attribute here is deprecated; it should appear on the <b>group</b> element instead.
+</p>
 
 <h3>Group</h3>
 
