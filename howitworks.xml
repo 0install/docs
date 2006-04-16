@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>The Zero Install Injector</h2>
+<h2>Screenshots</h2>
 
 <p>
-The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
+<a href='injector.html'>The injector</a> (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
 it the program's full name (a web address). The injector does <b>not</b> need
 to be installed or run as root. It does <b>not</b> write to any shared
 directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a cache directory
@@ -25,9 +25,9 @@ so that you don't need to download anything twice, and programs can still be use
       invoked by another program. Some examples include:
       </p>
 <ul>
- <li>When a ROX desktop user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a launcher application that uses the injector.</li>
- <li>When an Xfce user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a launcher button that uses the injector.</li>
- <li>When a shell user runs the <b>0alias</b> command, it creates a shell short-cut that runs the injector.</li>
+ <li>ROX users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses the injector.</li>
+ <li>Xfce users will drag the link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, creating a launcher button that uses the injector.</li>
+ <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut that runs the injector.</li>
 </ul>
   </td>
  </tr>
@@ -43,7 +43,7 @@ so that you don't need to download anything twice, and programs can still be use
   <td class='image'><img src='screens/find-libraries.png' alt='' width='256' height='127'/></td>
   <td><h3>Finding libraries</h3>
   <p>The downloaded file says that <b>FooBillard</b> requires various libraries (libpng, SDL, and SDL-mixer).
-Each library is identified by a web address (URL) in the same way that the main FooBillard program was.
+Each library is identified by a web address (URL) in the same way that the main <b>FooBillard</b> program was.
 The injector downloads information about them in the same way. Since they may
 be written by different people and be on different sites, you may be asked to confirm more keys. The injector
 displays a dialog box showing the program and all required libraries.</p>
@@ -122,5 +122,13 @@ that no two downloads can conflict with each other.
  </tr>
 </table>
 
+<table class='quicklinks'>
+ <tr>
+  <td><a href='injector.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
+  <td><a href='injector-security.html'><img src='tango/secure.png' alt='' width='39' height='48'/> <br/>Security</a></td>
+  <td><a href='dev.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
+  <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
+ </tr>
+</table>
 
 </html>
