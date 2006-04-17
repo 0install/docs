@@ -28,6 +28,7 @@ namespace):
   &lt;name&gt;...&lt;/name&gt;
   &lt;summary&gt;...&lt;/summary&gt;
   &lt;description&gt;...&lt;/description&gt;
+  &lt;homepage&gt;...&lt;/homepage&gt;
 
   &lt;icon type='...' href='...'/&gt; *
   &lt;feed src='...' arch='...'/&gt; *
@@ -39,21 +40,31 @@ namespace):
 &lt;/interface&gt;
 </pre>
 
-<p>
-The <b>min-injector-version</b> attribute gives the oldest version of the injector that can read this file. Older versions will
+<dl>
+
+<dt>min-injector-version</dt>
+<dd>This attribute gives the oldest version of the injector that can read this file. Older versions will
 tell the user to upgrade if they are asked to read the file. Versions prior to 0.20 do not perform this check, however.
 If the attribute is not present, the file can be read by all versions.
-</p>
+</dd>
 
-<p>
-The <b>uri</b> attribute is only needed for remote interfaces (fetched via HTTP). The value must exactly match the expected
+<dt>uri</dt>
+<dd>This attribute is only needed for remote interfaces (fetched via HTTP). The value must exactly match the expected
 URL, to prevent an attacker replacing one correctly-signed interface with another (e.g., returning the interface for the
 <b>shred</b> program when the user asked for the <b>backup</b> program).
-</p>
+</dd>
 
-<p>
+<dt>main</dt>
+<dd>
 Use of the <b>main</b> attribute here is deprecated; it should appear on the <b>group</b> element instead.
-</p>
+</dd>
+
+<dt>homepage</dt>
+<dd>
+This element gives the URL of a web-page describing this interface in more detail.
+</dd>
+
+</dl>
 
 <h3>Group</h3>
 
