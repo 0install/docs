@@ -13,31 +13,7 @@ If you're not sure how to run these programs, consult the <a href='injector.html
 installation instructions</a>.
 </p>
 
-<ul class='spaced'>
- <li><a href='http://0install.net/injector.html'>0install.net</a> provides the injector GUI
- (<a href="http://0install.net/2005/interfaces/">http://0install.net/2005/interfaces/</a>).</li>
-
- <li><a href='http://rox.sf.net'>rox.sf.net</a> provides AddApp, Archive, Edit,
- MIME-Editor, Memo, OroboROX, ROX-Filer, ROX-Lib, ROX-Session, Resolution, and
- Wallpaper
- (<a href="http://rox.sourceforge.net/desktop/ZeroInstall">http://rox.sourceforge.net/desktop/ZeroInstall</a>).</li>
-
- <li><a href='http://www.kerofin.demon.co.uk'>kerofin.demon.co.uk</a> provides 
-Album, Depend, Desktop2App, DownloadManager, Fetch, Launch, Mail, NetStat, Thumbs, and VideoThumbnail
- (<a href="http://www.kerofin.demon.co.uk/2005/interfaces">http://www.kerofin.demon.co.uk/2005/interfaces</a>).</li>
-
- <li><a href='http://www.hayber.us/'>hayber.us</a> provides Find, Menu, MusicBox, Ripper and Volume
- (<a href="http://www.hayber.us/0install/">http://hayber.us/0install/</a>).</li>
-
- <li><a href='http://www.brucalipto.org/docs/injector_en.html'>www.brucalipto.org</a> provides Subversion and svnadmin
- (<a href="http://www.brucalipto.org/injector/">http://www.brucalipto.org/injector/</a>).</li>
-
- <li><a href="http://lgames.sourceforge.net/">lgames.sourceforge.net</a> provides a selection of classic games,
-including Barrage, LBreakout, LGeneral, LMarbles, Lpairs and Ltris.</li>
-
- <li><a href="http://user.cs.tu-berlin.de/~karlb/penguin-command/">user.cs.tu-berlin.de</a> provides the
- Penguin-Command game (<a href='http://people.freenet.de/LinuxCNC/0install/penguin-command'>hosted on people.freenet.de</a>).</li>
-</ul>
+<feeds/>
 
 <p>
 If you want to make additional programs available this way, please read the

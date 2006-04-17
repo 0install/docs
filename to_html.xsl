@@ -149,6 +149,29 @@
     </ol>
   </xsl:template>
 
+  <xsl:template match='*[name() = "feeds"]'>
+    <table class='picturebullets'>
+     <xsl:for-each select='document("all-feeds.xml")/*/feed'>
+     <xsl:sort select="@name"/>
+      <tr>
+       <td class='image'>
+        <xsl:choose>
+	  <xsl:when test='@icon'><img src='{@icon}' alt=''/></xsl:when>
+	  <xsl:otherwise><img src='tango/applications-system.png' alt=''/></xsl:otherwise>
+	</xsl:choose>
+       </td>
+       <td><strong><xsl:value-of select='@name'/></strong> &#8212; <i>
+        <xsl:value-of select='@summary'/></i><br/>
+	<xsl:if test='@homepage'>
+          <a href='{@homepage}'>Home page</a> | 
+	</xsl:if>
+	<a href='{@uri}'>Zero Install feed</a>
+       </td>
+      </tr>
+     </xsl:for-each>
+    </table>
+  </xsl:template>
+
   <xsl:template match='*[name() = "h3" or name() = "h2"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>

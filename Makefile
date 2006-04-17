@@ -6,5 +6,8 @@ all: ${HTML}
 	xsltproc -o $@ --stringparam file "$@" to_html.xsl "$<"
 	xmllint --noout --valid $@
 
+rox-feeds.xml:
+	wget 'http://rox.sourceforge.net/desktop/rox/zero-install-feeds' -O rox-feeds.xml
+
 linklint:
 	linklint -error -warn -xref -forward -http -host 0install.net /@
