@@ -19,6 +19,7 @@ Hash: SHA1
     A tutorial on 0publish can be found at
     http://0install.net/injector-packagers.html.
   </description>
+  <homepage>http://0install.net/injector-packagers.html</homepage>
 
   <group main="0publish">
     <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" stability="stable" version="0.1">
@@ -30,9 +31,9 @@ Hash: SHA1
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEDf2wrgeCgFmlPMERAh3/AJ9vTnW7EciC9oqZOFxndREoWTI2NgCeL38O
-B3CSmrJGz8FTwdC0rx5gC0k=
-=fNNK
+iD8DBQFEQ47drgeCgFmlPMERAjBeAJ9bZ2v+4XreWuY440Obq2gUiGYnDQCfZJUg
++vOJxdZk8/2W7QIuOl80/gg=
+=ZHzm
 -----END PGP SIGNATURE-----
