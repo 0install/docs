@@ -115,6 +115,11 @@ suiteable implementation, downloading one if required.
 </p>
 
 <p>
+The <b>min-version</b> and <b>max-version</b> attributes specify the range of allowable versions.
+Currently, the injector ignores these restrictions.
+</p>
+
+<p>
 The location of the chosen implementation is passed to the program by setting environment variables,
 as specified by the &lt;environment&gt; elements (typically, there will be exactly one of these in each
 &lt;requires&gt; element). Each environment element gives the name of the variable and the relative path
@@ -127,7 +132,9 @@ environment variable's value is set to the absolute path directly.
 
 <pre>
   &lt;requires
-	interface='...'&gt;
+	interface='...'
+	min-version='...' ?
+	max-version='...' ?  &gt;
     &lt;environment
 	  name='...'
 	  insert='...'
