@@ -69,6 +69,7 @@ on the result line(s) to open the file at that point.
 Configuration options are available to customize the search command and the editor with which to
 open the files.
   </description>
+  <homepage>http://www.hayber.us/rox/Find</homepage>
   <icon type='image/png' href='http://www.hayber.us/0install/Find.png'/>
 
   <group>
@@ -91,6 +92,7 @@ The <b>xmlns</b> attribute gives the XML namespace for all the elements (don't c
 <dt>&lt;summary&gt;</dt> <dd>a short one-line description (note that the first word should
 not be upper-case unless it is a proper noun)</dd>
 <dt>&lt;description&gt;</dt> <dd>a full description, which can be several paragraphs long</dd>
+<dt>&lt;homepage&gt;</dt> <dd>the URL of the homepage</dd>
 <dt>&lt;icon&gt;</dt> <dd>an icon to use for the program; this is used by programs such as
 <a href="http://rox.sourceforge.net/phpwiki/index.php/AddApp">AddApp</a>.</dd>
 </dl>
