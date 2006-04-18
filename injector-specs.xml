@@ -84,6 +84,12 @@ A group has this syntax:
   &lt;/group&gt;
 </pre>
 
+<p>
+All attributes of the group are inherited by any child groups and implementations as defaults, but
+can be overridden there. All dependencies ("requires") are inherited (sub-groups may add more
+dependencies to the list, but cannot remove anything).
+</p>
+
 <h3>Implementation</h3>
 
 <p>
@@ -111,13 +117,61 @@ the closest ancestor &lt;group&gt; which defines it):
 <p>
 A &lt;requires&gt; element means that every implementation within the same group (including nested
 sub-groups) requires an implementation of the specified interface when run. The injector will choose a
-suiteable implementation, downloading one if required.
+suitable implementation, downloading one if required.
+</p>
+
+<pre>
+  &lt;requires
+	interface='...' &gt;
+    [ contraints ] *
+    [ bindings ] *
+  &lt;/requires&gt;
+</pre>
+
+<p>
+The constraint elements (if any) limit the set of acceptable versions. The bindings specify how
+the injector should make its choice known (typically, by setting environment variables).
+</p>
+
+<h3>Constraints</h3>
+
+<p>
+Contraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which the
+injector may choose an implementation.
+</p>
+
+<pre>
+    &lt;version
+	not-before='...' ?
+	before='...' ? &gt;
+</pre>
+
+<dl>
+<dt>not-before</dt>
+<dd>This is the lowest-numbered version that can be chosen.</dd>
+
+<dt>before</dt>
+<dd>This version and all later versions are unsuitable.</dd>
+</dl>
+
+<p>For example, <b>&lt;version not-before='2.4' before='2.6'&gt;</b> allows any of these
+versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
 </p>
 
 <p>
-The <b>min-version</b> and <b>max-version</b> attributes specify the range of allowable versions.
-Currently, the injector ignores these restrictions.
+Note: to specify the highest <i>suitable</i> version, just add ".0" to the end:
+<b>before='2.4.3.0'</b> will allow any version up to <i>and including</i> 2.4.3
+to be selected.
 </p>
+
+<h3>Bindings</h3>
+
+<pre>
+    &lt;environment
+	  name='...'
+	  insert='...'
+	  default='...' ? /&gt; *
+</pre>
 
 <p>
 The location of the chosen implementation is passed to the program by setting environment variables,
@@ -129,18 +183,6 @@ environment variable is not currently set then the path is prepended to the
 value of the default attribute. If no default value is given either then the
 environment variable's value is set to the absolute path directly.
 </p>
-
-<pre>
-  &lt;requires
-	interface='...'
-	min-version='...' ?
-	max-version='...' ?  &gt;
-    &lt;environment
-	  name='...'
-	  insert='...'
-	  default='...' ? /&gt; *
-  &lt;/requires&gt;
-</pre>
 
 <p>
 For example, &lt;environment name='PATH' insert='bin'/&gt; would perform something similar to the
