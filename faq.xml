@@ -61,6 +61,23 @@ software; rather, the 'installed' software is what the user has put on
 the menu.
 </p>
 
+<h3>Will Zero Install conflict with my existing package manager?</h3>
+
+<p>
+No. Zero Install only writes to its own cache directory. It is completely
+independent of your existing packaging system. If you install the same program
+using both systems, you'll get two copies on your system, but they will be kept
+separate. You can use this to test a newer version of a program without messing
+up your existing installation.
+</p>
+
+<p>
+Note: while installation won't cause problems, actually running a program might
+change something (for example, a newer version may automatically upgrade a
+configuration file to a format that the older version can't read). This is the same
+as if you downgrade a package using your normal package manager.
+</p>
+
 <h3>What if something gets automatically removed from the cache while
 I'm up a mountain with my laptop?</h3>
 
