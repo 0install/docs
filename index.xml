@@ -9,34 +9,34 @@ bundles, setup.exe, etc). Here are some of our goals:
 <table class='picturebullets'>
  <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
-  <td><h3><a href='goals.html#anyoneinstall'>Anyone can install software</a></h3>
-      <p>You don't have to be root just to install a word-processor.</p>
+  <td><h3>Anyone can install software</h3>
+      <p>You don't have to be root just to install a word-processor [ <a href='goals.html#anyoneinstall'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
-  <td><h3><a href='goals.html#anyonedistrib'>Anyone can distribute software</a></h3>
-      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install.</p>
+  <td><h3>Anyone can distribute software</h3>
+      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install [ <a href='goals.html#anyonedistrib'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
-  <td><h3><a href='goals.html#cache'>It doesn't matter whether software is installed or not</a></h3>
-      <p>You just run it. Zero Install handles the rest (downloading and caching as needed).</p>
+  <td><h3>It doesn't matter whether software is installed or not</h3>
+      <p>You just run it. Zero Install handles the rest (downloading and caching as needed) [ <a href='goals.html#cache'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
-  <td><h3><a href='goals.html#safesharing'>Downloads are shared</a></h3>
-      <p>If one user installs a 20 Mb application, another user can run it without downloading it again.</p>
+  <td><h3>Downloads are shared</h3>
+      <p>If one user installs a 20 Mb application, another user can run it without downloading it again [ <a href='goals.html#safesharing'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
-  <td><h3><a href='injector-security.html'>The system provides good security</a></h3>
-      <p>If one user downloads a malicious program, other users aren't affected.<br/>
-      Installation does not execute any downloaded code as root.<br/>
-      Digital signatures are always checked before new software is run.</p>
+  <td><h3>The system provides good security</h3>
+      <p>If one user downloads a malicious program, other users aren't affected;<br/>
+      Installation does not execute any downloaded code as root;<br/>
+      Digital signatures are always checked before new software is run [ <a href='injector-security.html'>more</a> ]</p>
   </td>
  </tr>
 </table>
