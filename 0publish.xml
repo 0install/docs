@@ -62,13 +62,13 @@ $ <b>./ROX-Filer/AppRun --compile</b>
 $ <b>rm -r ROX-Filer/{ROX-Filer.dbg,build,src}</b>
 </pre>
 </li>
-<li>Set the release date and architecture:
+<li>The ROX-Filer source download includes a <i>local interface</i> file called <b>ROX-Filer.xml</b>.
+This allows people to register local versions using <b>0launch --feed</b>. Set the release date and architecture in it:
 <pre>
 $ <b>0publish --set-released 2006-02-26 ROX-Filer.xml</b>
 $ <b>0publish --set-arch Linux-ppc64 ROX-Filer.xml</b>
 </pre>
-</li>
-<li>Edit <b>ROX-Filer.xml</b> to change the name and description if you want. The file should now look like this:
+<p>You can also edit it to change the name and description if you want. The file should now look like this:</p>
 <pre><![CDATA[
 <?xml version='1.0'?>
 <interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'>
@@ -86,7 +86,9 @@ $ <b>0publish --set-arch Linux-ppc64 ROX-Filer.xml</b>
 </interface>
 ]]></pre>
 </li>
-<li>Add the architecture to the directory name and tar it all up:
+<li>Add the architecture to the directory name and tar it all up
+(we include the architecture in the directory and archive names for clarity
+only; you can name them whatever you like):
 <pre>
 $ <b>cd ..</b>
 $ <b>mv rox{,-linux-ppc64}-2.4.1</b>
@@ -113,8 +115,9 @@ $ <b>0publish ROX-Filer-ppc64 \
     --archive-file rox-linux-ppc64-2.4.1.tgz \
     --archive-extract rox-linux-ppc64-2.4.1</b>
 </pre>
-The local file is used by <b>0publish</b> to get the size and manifest digest. The extract
-value is used as the &lt;archive&gt;'s extract attribute (see the packaging guide for details).
+The local .tgz file is used by <b>0publish</b> to get the size and manifest digest. The extract
+value is used as the &lt;archive&gt;'s extract attribute and must match the name of the
+top-level directory in the archive.
 </li>
 
 </ol>
@@ -172,6 +175,8 @@ $ <b>0launch --feed http://example.com/2006/0launch/ROX-Filer-ppc</b>
 <p>
 You should now tell the maintainer of the master feed about this one, so that they can
 add a &lt;feed&gt; element to the master copy to save users from having to add the feed manually.
+For an example of a master interface with feeds for different architectures, take a look at the
+<b>&lt;feed&gt;</b> elements in <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'>the real ROX-Filer interface</a>.
 </p>
 
 <h2>0publish reference</h2>
