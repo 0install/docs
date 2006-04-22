@@ -12,6 +12,7 @@ Hash: SHA1
     These are the GTK header files. They are required when compiling
     applications that use the GTK+ library.
   </description>
+  <icon type='image/png' href='http://0install.net/2006/icons/gtk-logo.png'/>
 
   <group>
     <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" version="2.4.14">
@@ -23,7 +24,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERLB3rgeCgFmlPMERAlf4AJ9bv9CVJzPV68++zMPx2DlZLaIWAACcCkaU
-53ScDdqRs87/r1icYx8k974=
-=eccP
+iD8DBQFESntWrgeCgFmlPMERAmt9AJ9xdYd1n2havzfylrexDaC5yLOZmACg162/
+DDP6vySoYzk4N+xxiVqIcLM=
+=OwvZ
 -----END PGP SIGNATURE-----
