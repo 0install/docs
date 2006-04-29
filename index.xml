@@ -26,15 +26,10 @@ bundles, setup.exe, etc). Here are some of our goals:
   </td>
  </tr>
  <tr class='summary'>
-  <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
-  <td><h3>Shared downloads</h3>
-      <p>If one user installs a 20 Mb application, another user can run it without downloading it again [ <a href='goals.html#safesharing'>more</a> ]</p>
-  </td>
- </tr>
- <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
   <td><h3>Good security</h3>
       <p>If one user downloads a malicious program, other users aren't affected;<br/>
+      Users can share downloads without having to trust each other;<br/>
       Installation does not execute any downloaded code as root;<br/>
       Digital signatures are always checked before new software is run [ <a href='injector-security.html'>more</a> ]</p>
   </td>
