@@ -105,12 +105,66 @@ the closest ancestor &lt;group&gt; which defines it):
   	released='...' ?
 	stability='...' ?
 	arch='...' ? &gt;
+    [ retrieval-method ] *
+  &lt;/implementation&gt;
+</pre>
+
+<dl>
+ <dt>id</dt>
+ <dd>The digest of the implementation's manifest, in the form <b>alg=value</b>. See below for details about
+ manifests. If the interface file is a local file (the interface 'uri' starts with <b>/</b>) then the <b>id</b>
+ <i>may</i> instead contain the pathname of a local directory.</dd>
+
+ <dt>version</dt>
+ <dd>A list of one or more decimal integers, separated by dots, giving the version number.</dd>
+
+ <dt>main</dt>
+ <dd>The relative path of an executable inside the implementation that should be executed by default
+ when the interface is run. If an implementation has no <b>main</b> setting, then it cannot be executed
+ without specifying one manually (with <b>0launch --main=MAIN</b>). This typically means that the interface
+ is for a library.</dd>
+
+ <dt>released</dt>
+ <dd>The date this implementation was made available, in the format YYYY-MM-DD. For developer snapshots (e.g., a
+ CVS checkout) this is typically set to <b>Snapshot</b>.</dd>
+
+ <dt>stability</dt>
+ <dd>The default stability rating for this implementation. If not present, <b>testing</b> is used.</dd>
+
+ <dt>arch</dt>
+ <dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <b>os-cpu</b>.
+ The injector knows that certain platforms are backwards-compatible with others, so binaries with <b>arch="Linux-i486"</b>
+ will still be available on <i>Linux-i686</i> machines, for example. Either the <i>os</i> or <i>cpu</i> part may be <b>*</b>,
+ which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>.</dd>
+</dl>
+
+<h3>Retrieval methods</h3>
+
+<p>
+Each non-local &lt;implementation&gt; contains one or more methods of getting
+the implementation. Non-local means that the <b>id</b> is a digest rather than a
+local pathname. The simplest retrieval method is the &lt;archive&gt; element:
+</p>
+
+<pre>
     &lt;archive
       href='...'
       size='...'
-      extract='...' ? /&gt; *
-  &lt;/implementation&gt;
+      extract='...' ? /&gt;
 </pre>
+
+<p>
+This states that an archive may be downloaded from the address given in the <b>href</b> attribute. The archive must
+have the given <b>size</b> or it will be rejected. When unpacked (either the subdirectory named in the <b>extract</b>
+attribute, or the whole archive if it is not present), the resulting tree will generate a manifest with the secure hash
+value given as the implementation's <b>id</b>.
+</p>
+
+<p>
+Unrecognised elements inside an implementation are ignored. Currently, the injector always chooses the first of the
+methods it understands, but in future it may use other strategies (such as choosing the closest mirror, or letting the
+user select one manually).
+</p>
 
 <h3>Requires</h3>
 
