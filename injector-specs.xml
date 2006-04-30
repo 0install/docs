@@ -8,6 +8,16 @@ This document is a formal description of the two injector file formats: the inte
 format and the manifest file format.
 </p>
 
+<p>
+Changes to this document (and to the rest of the web-site) are tracked using subversion. To view
+the change log:
+</p>
+
+<pre>
+$ svn log https://svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/injector-specs.xml
+</pre>
+
+<h3>Contents</h3>
 <toc level='h2'/>
 
 <h2>Interfaces</h2>
@@ -138,12 +148,25 @@ the closest ancestor &lt;group&gt; which defines it):
  which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>.</dd>
 </dl>
 
+<p>
+For non-local implementations (those where the <b>id</b> doesn't start with
+<b>/</b>), the element contains a set of <i>retrieval methods</i>, each of
+which gives a different way of getting the implementation (i.e., of getting a
+directory structure whose digest matches the one in the <b>id</b>).
+</p>
+
+<p>
+Unrecognised elements inside an implementation are ignored. Currently, the
+injector always chooses the first of the methods it understands, but in future
+it may use other strategies (such as choosing the closest mirror, or letting
+the user select one manually). It may also use other methods which aren't listed,
+such as searching for the implementation on a peer-to-peer network.
+</p>
+
 <h3>Retrieval methods</h3>
 
 <p>
-Each non-local &lt;implementation&gt; contains one or more methods of getting
-the implementation. Non-local means that the <b>id</b> is a digest rather than a
-local pathname. The simplest retrieval method is the &lt;archive&gt; element:
+A retrieval method is a way of getting an implementation. The simplest retrieval method is the &lt;archive&gt; element:
 </p>
 
 <pre>
@@ -161,9 +184,33 @@ value given as the implementation's <b>id</b>.
 </p>
 
 <p>
-Unrecognised elements inside an implementation are ignored. Currently, the injector always chooses the first of the
-methods it understands, but in future it may use other strategies (such as choosing the closest mirror, or letting the
-user select one manually).
+An implementation can also be created by following a &lt;recipe&gt;:
+</p>
+
+<pre>
+  &lt;recipe&gt;
+    &lt;archive ...&gt; +
+  &lt;/recipe&gt;
+</pre>
+
+<p>
+In this case, each child element of the recipe represents a step. To get an implementation by following a recipe,
+a new empty directory is created and then all of the steps are performed in sequence. The resulting directory
+must have the digest given in the implementation's <b>id</b>. A recipe containing only a single archive is equivalent
+to just specifying the archive on its own (except that recipes aren't supported prior to version 0.20 of the injector).
+If a recipe contains an unrecognised element then the whole recipe must be ignored.
+</p>
+
+<p>
+The only type of step supported is an &lt;archive&gt;, which causes the named
+archive to be fetched and unpacked over the top of whatever is currently in the temporary directory.
+</p>
+
+<p>
+Note: A recipe is generally only useful for patching existing archives without having to host the complete result
+yourself. Normally, if your program requires files from several different packages then it is better to use the
+&lt;requires&gt; element instead. This allows libraries to be shared between different programs, and lets the user
+choose the version and upgrade them individually.
 </p>
 
 <h3>Requires</h3>
