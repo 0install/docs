@@ -96,7 +96,13 @@ injector version 0.18 or later).
 <dt><a href='http://0install.net/tests/Tgif.xml'>http://0install.net/tests/Tgif.xml</a></dt>
 <dd>
 The archive is in RPM format (so you can install directly from the version on bourbon.usc.edu).
-It requires injector version 0.18 or later (now <a href='http://sourceforge.net/svn/?group_id=76468'>available through subversion</a>).
+It requires injector version 0.18 or later.
+</dd>
+
+<dt><a href='http://0install.net/tests/pysol.xml'>http://0install.net/tests/pysol.xml</a></dt>
+<dd>
+The version downloads a binary in Deb format and then applies a small patch using the
+<b>recipe</b> element. It requires injector version 0.20 or later.
 </dd>
 
 </dl>
