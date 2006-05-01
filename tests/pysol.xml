@@ -2,7 +2,8 @@
 <?xml-stylesheet type='text/xsl'
      href='http://0install.net/2006/stylesheets/interface.xsl'?>
 
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   uri='http://0install.net/tests/pysol.xml'>
   <name>PySol</name>
   <summary>a collection of more than 200 solitaire card games</summary>
   <description>
@@ -34,7 +35,7 @@ PySol is written in 100% pure Python
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEViDxAWhfEWB7ssURApmaAKDOdc/f2o6bCXYSr3OuAj9TKi34VQCg7MnCE47eslks3wiG
-rxaEOY1MPvM=
+iD8DBQBEViHNAWhfEWB7ssURAuSHAJ9szjhu87aNxsL4POwLPmBn2aJKaACg21DZJ2pYaagnRpK+
+g8qSDJUYuF8=
 
 -->
