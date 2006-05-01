@@ -210,7 +210,7 @@ archive to be fetched and unpacked over the top of whatever is currently in the 
 Note: A recipe is generally only useful for patching existing archives without having to host the complete result
 yourself. Normally, if your program requires files from several different packages then it is better to use the
 &lt;requires&gt; element instead. This allows libraries to be shared between different programs, and lets the user
-choose the version and upgrade them individually.
+choose the versions and upgrade them individually.
 </p>
 
 <h3>Requires</h3>
@@ -332,11 +332,23 @@ available (released) and requires (requires).
 The source element may be used in future to record the source interface used to build this implementation.
 </p>
 
+<h3>Future plans</h3>
+
+<ul>
+ <li>In addition to &lt;version&gt;, it should be possible to specifically exclude certain versions or ranges
+ of versions so you can say, for example: "2.0 &lt;= version &lt; 3 and version != 2.57".</li>
+ <li>Additional &lt;recipe&gt; step types should be supported, such as &lt;apply-patch&gt;.</li>
+ <li>It should be possible to state that a &lt;requires&gt; is actually optional (on only needed if
+ some local library isn't available).</li>
+ <li>It should be possible to give a delta (binary patch) against a previous version, to make upgrading
+ quicker.</li>
+</ul>
+
 
 <h2>Manifest files</h2>
 
 <p>
-Implementations are identified by an algorithm name (e.g., "SHA1"), and digest
+Implementations are identified by an algorithm name (e.g., "sha1"), and digest
 of their contents calculated using that algorithm. Adding, deleting, renaming
 or modifying any file in a tree will change its digest. It should be unfeasibly
 difficult to generate a new tree with the same digest as a given tree. Thus, if you
@@ -345,19 +357,25 @@ that digest, you can trust that it is the implementation you want.
 </p>
 
 <p>
-Currently, "SHA1" is the only supported algorithm. The are known to be some weaknesses in
-SHA1 which may allow an attacker to generate two different trees with the same digest, but
-the attacker <i>must</i> get to generate both trees, so this not believed to be a security
-risk at present. However, support for other algorithms may be added in the future (probably
-when Python comes with support for them).
+The currently supported algorithms are:
 </p>
+
+<dl>
+<dt>sha1</dt><dd>This is supported by all versions of the injector. Its
+manifest format is slightly different to the format used with the other algorithms as it
+is older.</dd>
+<dt>sha1new</dt><dd>Supported from version 0.20. This is the same hash as <b>sha1</b> but with
+the new manifest format.</dd>
+<dt>sha256</dt><dd>Supported from version 0.20 and also requires the <b>hashlib</b> Python module
+to be installed. This should be the most secure.</dd>
+</dl>
 
 <p>
 When checking a new tree (e.g., that has just been downloaded from the net and
 unpacked), the injector generates a 'manifest' file. The manifest lists every
-file, directory and symlink in the tree, and gives the SHA1 digest of each
-file's content. Here is a sample manifest file for a tree containing two files
-(<b>README</b> and <b>src/main.c</b>):
+file, directory and symlink in the tree, and gives the digest of each file's
+content. Here is a sample manifest file for a tree containing two files
+(<b>README</b> and <b>src/main.c</b>) and using the <b>sha1</b> algorithm:
 </p>
 
 <pre>
@@ -370,10 +388,14 @@ F 83832457b29a423c8e6daf05c6dbcba17d0514dd 1132502769 17 main.c
 If you generate a manifest file for a directory tree and find that it is identical
 to the manifest file you want, then you can feel confident that you have the tree you
 want. This is convenient, because the manifest file is much smaller than the packaged tree.
-To save even more space, we can simply compare the SHA1 digests of the manifest files, rather
-than comparing the files themselves.  The top-level directory is renamed to this final digest
-(so the <b>main.c</b> above would be stored as
-<b>.../sha1=b848561cd89be1b806ee00008a503c63eb4ad56e/src/main.c</b>, for example).
+</p>
+
+<p>
+To save even more space, we can simply compare the <i>digests</i> of the manifest
+files, rather than comparing the files themselves. The top-level
+directory is renamed to this final digest (so the <b>main.c</b> above would be
+stored as <b>.../sha1=b848561cd89be1b806ee00008a503c63eb4ad56e/src/main.c</b>,
+for example).
 </p>
 
 <p>
@@ -404,11 +426,17 @@ do).
 'D' nodes correspond to directories, and their line format is:
 </p>
 
-<pre>"D", space, mtime, space, full path name, newline</pre>
+<pre>"D", space, [mtime, space,] full path name, newline</pre>
 
 <p>
 So, top level directories, for example, would have a "full path name" 
 that matches the regular expression <b>^/[^/\n]+$</b>.
+</p>
+
+<p>
+The modification time is only included when using the original <b>sha1</b>
+algorithm, as it was not found to be useful and caused problems with many
+archives.
 </p>
 
 <h3>Files</h3>
@@ -453,9 +481,16 @@ Such trees are rejected.
 <h3>Ordering</h3>
 
 <p>
-These lines appear in the order of a depth-first search where siblings 
-in the directory tree are ordered lexicographically by their name, i.e., 
-they appear in the order that "LC_ALL=C sort" would produce.
+These lines appear in the order of a depth-first search. Within a directory,
+regular files and symlinks come first (ordered lexicographically by their name, i.e., 
+they appear in the order that "LC_ALL=C sort" would produce), and then each subdirectory
+(again sorted in the same way).
+</p>
+
+<p>
+For the original <b>sha1</b> algorithm the sort order is slightly different:
+sub-directories, regular files and symlinks are all sorted together rather than
+the subdirectories always coming after other types.
 </p>
 
 <p>
