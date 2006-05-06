@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://0install.net/tests/SCons.xml"
+	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>SCons</name>
+  <summary>a software construction tool</summary>
+  <description>
+SCons is a software construction tool (build tool substitute for Make)
+implemented in Python. It features a modular build engine that can be
+embedded in other software. SCons configuration files are Python scripts
+that call the build engine API.
+
+It can scan files to detect dependencies automatically and maintain a global
+view of all dependencies in a build tree, and uses MD5 signatures to detect
+changed file contents reliably. Timestamps can be used if you prefer. SCons
+also supports parallel builds and is easily extensible through user-defined
+builder and scanner objects.
+  </description>
+
+  <homepage>http://www.scons.org/</homepage>
+
+  <icon href="http://0install.net/tests/scons-logo.png" type="image/png"/>
+
+  <group main="scons.py">
+    <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" version="0.96.92">
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBEXI1fAWhfEWB7ssURAm30AKDP4OvvyOOBO/RC2dYP+N49AGL3vQCg4mPtXTJNLsjs2Py6
+X6BmskFOmV8=
+
+-->
