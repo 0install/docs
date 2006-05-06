@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/ATK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ATK-dev</name>
+  <summary>headers for compiling ATK applications</summary>
+  <description>
+    These are the ATK header files. They are required when compiling
+    applications that use the ATK library. ATK is an Accessibility Toolkit.
+  </description>
+
+  <group>
+    <implementation id="sha1=6e6dd1f47a5393b7a6dc2af04d755cb6ee1bcb6a" released="2006-05-06" version="1.8.0">
+      <archive extract="atk-headers-1.8.0" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.tar.bz2" size="18208"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEXKErrgeCgFmlPMERAmM9AKC6b9j+rzT6IeL4e9/Yvjt7tH8wbwCeNfN+
+ydVc943RA6uvJJbRhnB0JMo=
+=o+Ql
+-----END PGP SIGNATURE-----
