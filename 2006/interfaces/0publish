@@ -28,12 +28,15 @@ Hash: SHA1
     <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" stability="stable" version="0.2">
       <archive extract="0publish-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
     </implementation>
+    <implementation id="sha1=afc14e8f19d40178fbb5e879d3b3b14510d8dc2e" released="2006-05-06" version="0.3">
+      <archive extract="0publish-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEQ47drgeCgFmlPMERAjBeAJ9bZ2v+4XreWuY440Obq2gUiGYnDQCfZJUg
-+vOJxdZk8/2W7QIuOl80/gg=
-=ZHzm
+iD8DBQFEXQeirgeCgFmlPMERAmhIAKCXiGe0CROezsbesgjPBDLu3gLPTwCcDnHn
+OzJXh53KU2l7xnl4AmD/I9w=
+=Qk5o
 -----END PGP SIGNATURE-----
