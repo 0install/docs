@@ -15,12 +15,15 @@ Hash: SHA1
     <implementation id="sha1=6e6dd1f47a5393b7a6dc2af04d755cb6ee1bcb6a" released="2006-05-06" version="1.8.0">
       <archive extract="atk-headers-1.8.0" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.tar.bz2" size="18208"/>
     </implementation>
+    <implementation id="sha1=4ccf2ed4da6ec5052de7ca4b548e36bd7fc16be4" version="1.8.0.1">
+      <archive extract="atk-headers-1.8.0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.1.tar.bz2" size="18256"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEXKErrgeCgFmlPMERAmM9AKC6b9j+rzT6IeL4e9/Yvjt7tH8wbwCeNfN+
-ydVc943RA6uvJJbRhnB0JMo=
-=o+Ql
+iD8DBQFEXc8XrgeCgFmlPMERAqHJAKCFzB2wpTQhXeX+CvlHEGePrspaVACgtHrZ
+BGOi0nvLGgBsh16J2UGDV/8=
+=AWXx
 -----END PGP SIGNATURE-----

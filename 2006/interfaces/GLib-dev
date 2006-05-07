@@ -3,8 +3,7 @@ Hash: SHA1
 
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GLib-dev</name>
   <summary>headers for compiling GLib applications</summary>
   <description>
@@ -13,16 +12,19 @@ Hash: SHA1
   </description>
 
   <group>
-    <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" version="2.4.8" released='2006-04-02'>
+    <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" version="2.4.8">
 
       <archive extract="glib-headers-2.4.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
+    </implementation>
+    <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" version="2.4.8.1">
+      <archive extract="glib-headers-2.4.8.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFERLCTrgeCgFmlPMERAiOHAKCkR2HrDr1pidMGshsfyKx+S3bQ+QCfaLW8
-ApSUIFFml1YAR0/gsDJ6fF8=
-=Bk3k
+iD8DBQFEXc88rgeCgFmlPMERAmzNAJ4uDLV2mi71jrhSiBRtnz6asYK5pACgjZ4M
+u492Gvn0aX9+qvsPjRq5O+E=
+=mBY1
 -----END PGP SIGNATURE-----

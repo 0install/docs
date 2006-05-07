@@ -3,28 +3,29 @@ Hash: SHA1
 
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/GTK-dev"
-	   xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GTK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GTK-dev</name>
   <summary>headers for compiling GTK applications</summary>
   <description>
     These are the GTK header files. They are required when compiling
     applications that use the GTK+ library.
   </description>
-  <icon type='image/png' href='http://0install.net/2006/icons/gtk-logo.png'/>
+  <icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/>
 
   <group>
     <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" version="2.4.14">
 
       <archive extract="gtk-headers-2.4.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.tar.bz2" size="157933"/>
     </implementation>
+    <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" version="2.4.14.1">
+      <archive extract="gtk-headers-2.4.14.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.1.tar.bz2" size="157929"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFESntWrgeCgFmlPMERAmt9AJ9xdYd1n2havzfylrexDaC5yLOZmACg162/
-DDP6vySoYzk4N+xxiVqIcLM=
-=OwvZ
+iD8DBQFEXc5trgeCgFmlPMERAgaxAJ9fjUA6GQVjrp91ERNfjio3Ov0lmQCeKArA
+eoRZJau9CCUFFRTw9JrT4NY=
+=RCrr
 -----END PGP SIGNATURE-----
