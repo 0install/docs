@@ -151,7 +151,8 @@ $ <b>0launch ./ROX-Filer-ppc64</b>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
 	   ]]><b>uri='http://example.com/2006/0launch/ROX-Filer-ppc'</b><![CDATA[>
 ]]></pre>
-<p>TODO: 0publish should have a working <b>--local</b> option!</p>
+<p>TODO: 0publish should have a working <b>--local</b> option! (note: from
+version 0.3, 0publish does support --local in this case, when creating a new interface)</p>
 </li>
 
 <li>Sign and upload the interface (see the <a href='injector-packagers.html'>packaging guide</a>

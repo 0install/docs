@@ -101,7 +101,7 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a>, or using wget:
 </p>
 <pre>
-$ <b>wget http://osdn.dl.sf.net/sourceforge/zero-install/zeroinstall-injector-0.20.tar.gz.gpg</b>
+$ <b>wget http://kent.dl.sf.net/sourceforge/zero-install/zeroinstall-injector-0.20.tar.gz.gpg</b>
 </pre>
 
 <p>
