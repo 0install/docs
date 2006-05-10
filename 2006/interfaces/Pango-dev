@@ -15,17 +15,17 @@ Hash: SHA1
   <group>
     <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" version="1.4.1">
 
-      <archive extract="pango-headers-1.4.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
+      <archive extract="pango-headers-1.4.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
     </implementation>
     <implementation id="sha1=bb06cc5a9c9d15fe29581d2d8a5545657f324e73" version="1.4.1.1">
-      <archive extract="pango-headers-1.4.1.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.1.tar.bz2" size="19062"/>
+      <archive extract="pango-headers-1.4.1.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.1.tar.bz2" size="19062"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEXc+YrgeCgFmlPMERAkemAJ98tSjK/1pOlAeivpCLSDTCR6ZetQCffUB6
-4883ELaoqbHm0gjeUb0dEwg=
-=jRYw
+iD8DBQFEYmkWrgeCgFmlPMERAk//AJ4qGrhSplpVgqyz7d02CG5uHr9M4ACeMk/q
+hLhofN6tBtBhXqvjN94RKPQ=
+=X/r5
 -----END PGP SIGNATURE-----

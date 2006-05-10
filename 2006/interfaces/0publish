@@ -23,20 +23,20 @@ Hash: SHA1
 
   <group main="0publish">
     <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" stability="stable" version="0.1">
-      <archive extract="0publish-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
+      <archive extract="0publish-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
     </implementation>
     <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" stability="stable" version="0.2">
-      <archive extract="0publish-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
+      <archive extract="0publish-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
     </implementation>
     <implementation id="sha1=afc14e8f19d40178fbb5e879d3b3b14510d8dc2e" released="2006-05-06" version="0.3">
-      <archive extract="0publish-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
+      <archive extract="0publish-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEXQeirgeCgFmlPMERAmhIAKCXiGe0CROezsbesgjPBDLu3gLPTwCcDnHn
-OzJXh53KU2l7xnl4AmD/I9w=
-=Qk5o
+iD8DBQFEYmkSrgeCgFmlPMERAk1sAKCb5d0GpfTyRLcH691Tu9sl0DiUwgCeP5XK
+7OCR8nybwCUAamdDs7ZrYPc=
+=EUhi
 -----END PGP SIGNATURE-----
