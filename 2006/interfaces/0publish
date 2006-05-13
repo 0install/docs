@@ -32,14 +32,14 @@ Hash: SHA1
       <archive extract="0publish-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
     </implementation>
     <implementation id="sha1=a5e1c4934c89602a481db2cc318c7796c7df2cba" version="0.4">
-      <archive href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620"/>
+      <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEZb96rgeCgFmlPMERArCbAKCeu4Nhl1RRPUkVqOEryvZTgHeykACgjA+h
-oBwZAkw4z0ncXDgLufQ0Zi4=
-=0QhE
+iD8DBQFEZcAYrgeCgFmlPMERAqg2AJ9QHmDdYJzJmphTmscngzp9wG5gBwCg1yBi
+58damLqzkpYZH9HwmhzJWxU=
+=Ciae
 -----END PGP SIGNATURE-----
