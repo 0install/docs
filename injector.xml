@@ -51,7 +51,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li>Debian <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.20-1_all.deb?download'>zeroinstall-injector_0.20-1_all.deb download page</a> (Debian package; Python 2.3)</li>
-  <li>Ubuntu <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.17-1_all_ubuntu.deb?download'>zeroinstall-injector_0.17-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
+  <li>Ubuntu <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.20-1_all_ubuntu.deb?download'>zeroinstall-injector_0.20-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
   <li>Nokia 770 <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
   <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
 </ul>
