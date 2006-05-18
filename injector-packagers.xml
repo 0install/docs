@@ -207,7 +207,7 @@ $ <b>0launch ./SCons.xml --version</b>
 </pre>
 
 <p style='text-align: center'>
- <img width="512" height="257" src="screens/scons-download.png" alt='Downloading SCons with Zero Install' />
+ <img width="518" height="257" src="screens/scons-download.png" alt='Downloading SCons with Zero Install' />
 </p>
 
 <p>
