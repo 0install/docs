@@ -17,7 +17,9 @@
   </item>
 
   <item base='dev' label='Developers'>
-    <item base='injector-packagers' label='Packaging guide'/>
+    <item base='injector-packagers' label='Packaging guide'>
+      <item base='injector-find' label='Example: Find'/>
+    </item>
     <item base='0publish' label='0publish'/>
     <item base='injector-specs' label='Specifications'/>
     <item base='injector-design' label='Design'/>

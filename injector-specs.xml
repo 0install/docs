@@ -169,7 +169,7 @@ such as searching for the implementation on a peer-to-peer network.
 A retrieval method is a way of getting an implementation. The simplest retrieval method is the &lt;archive&gt; element:
 </p>
 
-<pre>
+<pre id='retrievalmethods'>
     &lt;archive
       href='...'
       size='...'
