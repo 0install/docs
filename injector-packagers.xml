@@ -288,6 +288,11 @@ $ <b>0launch http://0install.net/tests/SCons.xml --version</b>
 SCons by Steven Knight et al.:
 </pre>
 
+<p>
+If this is your first interface, the injector should now ask you to confirm
+that you trust the new key for signing software.
+</p>
+
 <h2>Marking as stable</h2>
 
 <p>
