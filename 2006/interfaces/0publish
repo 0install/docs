@@ -34,12 +34,15 @@ Hash: SHA1
     <implementation id="sha1=ae2c7a24f2da67d05cdaf1b263451a315ce485ef" released="2006-05-13" version="0.4">
       <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620" stability='stable'/>
     </implementation>
+    <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" version="0.5">
+      <archive extract="0publish-0.5" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.5.tar.bz2" size="16895"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEbN/frgeCgFmlPMERAtEHAJ9nmam0K0B9RCgsLfWSkocx644EPQCg343Q
-QKLULNKKz7xsT4HAgJ+cO6s=
-=V889
+iD8DBQFEbOKErgeCgFmlPMERAvCtAKDO8gDq41BDgpUMvKx4yYRRO/J+hgCfZ0np
+TOqufTa00yof0djqTq/qAUM=
+=QXje
 -----END PGP SIGNATURE-----
