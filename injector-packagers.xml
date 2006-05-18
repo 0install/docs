@@ -59,7 +59,7 @@ typing it's full URI each time you run it, create an alias now:
 <pre>
 $ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
 $ <b>0publish --version</b>
-0publish (zero-install) 0.4
+0publish (zero-install) 0.5
 </pre>
 
 <p>See also:</p>
