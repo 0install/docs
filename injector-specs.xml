@@ -126,7 +126,8 @@ the closest ancestor &lt;group&gt; which defines it):
  <i>may</i> instead contain the pathname of a local directory.</dd>
 
  <dt>version</dt>
- <dd>A list of one or more decimal integers, separated by dots, giving the version number.</dd>
+ <dd>A list of one or more decimal integers, separated by dots, giving the version number. See the
+ <a href='#versions'>version numbers</a> section for more details.</dd>
 
  <dt>main</dt>
  <dd>The relative path of an executable inside the implementation that should be executed by default
@@ -289,6 +290,89 @@ environment variable's value is set to the absolute path directly.
 For example, &lt;environment name='PATH' insert='bin'/&gt; would perform something similar to the
 bash shell statement <b>export PATH=/path/to/impl/bin:$PATH</b>.
 </p>
+
+<h3 id='versions'>Versions</h3>
+
+<p>
+A version is a dot-separated list of integers. Eg "1.2.3". It can be just a
+single number ("1") or a sequence of any number of components ("1.4.2.3").
+Versions are ordered like this:
+</p>
+
+<ul>
+<li>0.1</li>
+<li>1</li>
+<li>1.1</li>
+<li>1.2</li>
+<li>1.2.1</li>
+<li>1.2.1.4</li>
+<li>1.2.2</li>
+<li>1.2.10</li>
+<li>3</li>
+</ul>
+
+<p>
+The injector doesn't care about anything other than the sort order (ie, whether
+one version comes before or after another). It is assumed that an
+implementation can be safely replaced by one with a later version number, but
+not with an earlier one. So, if you ask for "1.2.1" then you might get "1.2.2"
+or "1.3" or even "5.7", but not "1.2.0". This is a little different to some
+other systems, where numbers in different places have different meanings.
+</p>
+
+<p>
+Incompatible changes (where a newer version cannot be used in place of an older
+version) to an interface should be handled by creating a new interface. Eg:
+</p>
+
+<ul>
+<li>http://gtk.org/2005/interfaces/GTK-1.2 (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
+<li>http://gtk.org/2005/interfaces/GTK-2.0 (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
+</ul>
+
+<h3 id='stability'>Stability</h3>
+
+<p>
+The interface file also gives a stability rating for each implementation. The following
+levels are allowed (must be lowercase in the interface files):
+</p>
+
+<ul>
+<li>stable</li>
+<li>testing</li>
+<li>developer</li>
+<li>buggy</li>
+<li>insecure</li>
+</ul>
+
+<p>
+Stability ratings are kept independently of the implementations, and are expected to change over
+time. When any new release is made, its stability should be set to <b>testing</b>. Users who
+have selected <b>Help test new versions</b> will then start using it. Other users will continue
+with the previous stable release. After a while (days, weeks or months, depending on the project)
+with no serious problems found, the implementation's stability can be changed to <b>stable</b>
+so that everyone will use it.
+</p>
+
+<p>
+If problems are found, it can instead be marked as <b>buggy</b>, or <b>insecure</b>. The injector
+won't select either by default, but it is useful to users to see the reason (users may opt to
+continue using a buggy version if it seems to work for them, but they should never use an insecure
+one). <b>developer</b> is like a more extreme version of <b>testing</b>, where the program is
+expected to have bugs.
+</p>
+
+<h4>When to use 'buggy'</h4>
+
+<p>
+Don't mark old releases as <b>buggy</b> every time you do a new release, just
+because a few bugs have been fixed.  People who have selected <b>Network
+use: Full</b> will automatically upgrade to the new version anyway, so marking an older
+version as buggy only affects people who have explicitly stated that they <b>don't</b>
+want to use the latest version, but would prefer to use an older release to
+save network use.
+</p>
+
 
 <h3>Metadata</h3>
 

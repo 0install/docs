@@ -411,4 +411,28 @@ has <i>some</i> bugs). Normally, just releasing a newer (fixed) version is
 sufficient, since the injector will offer to upgrade the version anyway.
 </p>
 
+<h2>Further reading</h2>
+
+<dl>
+ <dt><a href='injector-find.html'>Example: Find</a></dt>
+ <dd>Find is a Python program with a dependency on a Python library. This example shows how to depend on
+ other components.</dd>
+
+ <dt><a href='package-rox.html'>Example: ROX-Filer</a></dt>
+ <dd>ROX-Filer is a C program, which requires different binaries for different platforms. These binaries
+ are built and published in interface files maintained by different people. Using the injector's feed
+ mechanism, users only need to use the main ROX-Filer interface and will automatically get a binary for
+ their platform, from the maintainer of that binary.</dd>
+
+ <dt><a href='0publish.html'>0publish</a></dt>
+ <dd>A command reference for the <b>0publish</b> command.</dd>
+
+ <dt><a href='http://rox.sourceforge.net/desktop/node/300'>Compiling with SCons and GTK</a></dt>
+ <dd>
+  Now that we've made SCons available through Zero Install, we can use it in our build scripts. This
+  example shows how to build a GTK application written in C using Zero Install to get the build tool
+  and the header files automatically.
+ </dd>
+</dl>
+
 </html>
