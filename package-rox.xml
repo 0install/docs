@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Example: Creating a binary for ROX-Filer</h2>
+
+<p>
+This guide shows some more advanced features of Zero Install:
+</p>
+
+<ul>
+ <li>Creating platform-specific binaries (ROX-Filer is written in C).</li>
+ <li>Local interfaces in source releases.</li>
+ <li>Adding extra feeds (the maintainer of the PPC and ix86 interfaces are
+different people, but users get the right binary automatically).</li>
+</ul>
+
+<p>
+This guide assumes you've already read <a href='injector-packagers.html'>the packaging guide</a>, which
+explains how to create and publish interface files. We won't explain all the concepts in detail again, we'll
+just show how to script the steps.
+</p>
+
+<toc level='h2'/>
+
+<h2>General operation</h2>
+
+<p>
+<b>0publish</b> edits interface files in place. It loads the file, transforms it in some way (such as
+setting the release date, or adding a new implementation) and then writes it back out again. If the input
+file was signed, it will resign it when saving with the same key by default. You can also use it to add a
+signature, or to change the signing key.
+</p>
+
+<p>You can create an alias for <b>0publish</b> in the usual way, to save typing:</p>
+<pre>
+$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+</pre>
+
+<h2>Creating a binary of ROX-Filer</h2>
+
+<p>
+For this example we'll compile a binary of ROX-Filer for our platform (we'll assume there isn't
+one already) and make a feed for other people with the same platform (I'll use ppc64 for the examples).
+Start by creating an archive as normal:
+</p>
+
+<ol>
+<li>Download the ROX-Filer source release (and detached signature):
+<pre>
+$ <b>wget http://heanet.dl.sourceforge.net/sourceforge/rox/rox-2.4.1.tgz</b>
+$ <b>wget http://heanet.dl.sourceforge.net/sourceforge/rox/rox-2.4.1.tgz.sig</b>
+$ <b>gpg rox-2.4.1.tgz.sig</b>
+gpg: Signature made Fri 30 Dec 2005 17:32:53 GMT using DSA key ID 59A53CC1
+gpg: Good signature from "Thomas Leonard &lt;...&gt;"
+</pre>
+</li>
+
+<li>Build as normal:
+<pre>
+$ <b>tar xzf rox-2.4.1.tgz</b>
+$ <b>cd rox-2.4.1</b>
+$ <b>./ROX-Filer/AppRun --compile</b>
+</pre>
+</li>
+<li>Delete the debugging symbols and the <b>build</b> and <b>src</b> directories to save space:
+<pre>
+$ <b>rm -r ROX-Filer/{ROX-Filer.dbg,build,src}</b>
+</pre>
+</li>
+<li>The ROX-Filer source download includes a <i>local interface</i> file called <b>ROX-Filer.xml</b>.
+This allows people to register local versions using <b>0launch --feed</b>. Set the release date and architecture in it:
+<pre>
+$ <b>0publish --set-released 2006-02-26 ROX-Filer.xml</b>
+$ <b>0publish --set-arch Linux-ppc64 ROX-Filer.xml</b>
+</pre>
+<p>You can also edit it to change the name and description if you want. The file should now look like this:</p>
+<pre><![CDATA[
+<?xml version='1.0'?>
+<interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'>
+  <name>ROX-Filer-ppc64</name>
+  <summary>PPC64 binaries for ROX-Filer</summary>
+  <description>
+    ROX-Filer is a fast and powerful graphical file manager. It has full drag-and-drop support
+    and background file operations, and is highly configurable. It can also act as a pinboard,
+    allowing you to pin frequently used files to the desktop background.
+  </description>
+  <feed-for interface='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'/>
+  <group main='ROX-Filer/AppRun'>
+    <implementation id="." version="2.4.1" ]]><b>released='2006-02-26' arch='Linux-ppc64'</b><![CDATA[/>
+  </group>
+</interface>
+]]></pre>
+</li>
+<li>Add the architecture to the directory name and tar it all up
+(we include the architecture in the directory and archive names for clarity
+only; you can name them whatever you like):
+<pre>
+$ <b>cd ..</b>
+$ <b>mv rox{,-linux-ppc64}-2.4.1</b>
+$ <b>tar czf rox-linux-ppc64-2.4.1{.tgz,}</b>
+</pre>
+</li>
+<li>Upload it somewhere. I'll assume <b>http://example.org/rox-linux-ppc64-2.4.1.tgz</b> in
+the following examples.</li>
+</ol>
+
+<h2>Adding the archive to the interface</h2>
+
+<p>
+To make our new binary available through Zero Install:
+</p>
+
+<ol id='archive'>
+<li>Take a copy of the local interface from the archive. We'll use <b>0publish</b> to change
+the <b>id</b> from '<b>.</b>' to the archive's digest and to add an &lt;archive&gt; element:
+<pre>
+$ <b>cp rox-linux-ppc64-2.4.1/ROX-Filer.xml ROX-Filer-ppc64</b>
+$ <b>0publish ROX-Filer-ppc64 \
+    --archive-url http://example.org/rox-linux-ppc64-2.4.1.tgz  \
+    --archive-file rox-linux-ppc64-2.4.1.tgz \
+    --archive-extract rox-linux-ppc64-2.4.1</b>
+</pre>
+The local .tgz file is used by <b>0publish</b> to get the size and manifest digest. The extract
+value is used as the &lt;archive&gt;'s extract attribute and must match the name of the
+top-level directory in the archive.
+</li>
+
+</ol>
+
+<p>
+If you now view the <b>ROX-Filer-ppc64</b> file, you should see that <b>0publish</b> has
+converted the old &lt;implementation&gt; to give the digest and download location:
+</p>
+
+<pre><![CDATA[
+  <group main="ROX-Filer/AppRun">
+    <implementation arch="Linux-ppc64" id="sha1=2bce88f31415898760373fff900890a8719ab1e6" released="2006-02-26" version="2.4.1">
+      <archive extract="rox-linux-ppc64-2.4.1" href="http://example.org/rox-linux-ppc64-2.4.1.tgz" size="1375566"/>
+    </implementation>
+  </group>
+]]></pre>
+
+<p>
+You should be able to download and test your binary with this command:
+</p>
+<pre>
+$ <b>0launch ./ROX-Filer-ppc64</b>
+</pre>
+
+<h2>Publishing the interface with Zero Install</h2>
+
+<ol>
+<li>Set the uri at the top of the file to whereever you're going to upload it:
+<pre><![CDATA[
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   ]]><b>uri='http://example.com/2006/0launch/ROX-Filer-ppc'</b><![CDATA[>
+]]></pre>
+<p>TODO: 0publish should have a working <b>--local</b> option! (note: from
+version 0.3, 0publish does support --local in this case, when creating a new interface)</p>
+</li>
+
+<li>Sign and upload the interface (see the <a href='injector-packagers.html'>packaging guide</a>
+for information about creating, exporting and uploading your GPG key):
+<pre>
+$ <b>0publish --gpgsign ROX-Filer-ppc64</b>
+$ <b>mv ROX-Filer-ppc64 /var/www/...</b>
+</pre>
+</li>
+</ol>
+
+<p>
+Other users of ppc64 machines can now either run this directly, or add it as a feed (so it will
+be used by other programs trying to run ROX-Filer):
+</p>
+
+<pre>
+$ <b>0launch --feed http://example.com/2006/0launch/ROX-Filer-ppc</b>
+</pre>
+
+<p>
+You should now tell the maintainer of the master feed about this one, so that they can
+add a &lt;feed&gt; element to the master copy to save users from having to add the feed manually.
+For an example of a master interface with feeds for different architectures, take a look at the
+<b>&lt;feed&gt;</b> elements in <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'>the real ROX-Filer interface</a>.
+</p>
+
+</html>
