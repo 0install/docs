@@ -127,7 +127,7 @@ the closest ancestor &lt;group&gt; which defines it):
 
  <dt>version</dt>
  <dd>A list of one or more decimal integers, separated by dots, giving the version number. See the
- <a href='#versions'>version numbers</a> section for more details.</dd>
+ version numbers section below for more details.</dd>
 
  <dt>main</dt>
  <dd>The relative path of an executable inside the implementation that should be executed by default
@@ -140,7 +140,8 @@ the closest ancestor &lt;group&gt; which defines it):
  CVS checkout) this is typically set to <b>Snapshot</b>.</dd>
 
  <dt>stability</dt>
- <dd>The default stability rating for this implementation. If not present, <b>testing</b> is used.</dd>
+ <dd>The default stability rating for this implementation. If not present, <b>testing</b> is used.
+ See the stability section below for more details.</dd>
 
  <dt>arch</dt>
  <dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <b>os-cpu</b>.
