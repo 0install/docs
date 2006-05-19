@@ -272,7 +272,7 @@ need to enter the passphrase you set when you created the key above:
 </p>
 
 <pre>
-$ <b>0publish SCons.xml --gpgsign</b>
+$ <b>0publish SCons.xml --xmlsign</b>
 Enter passphrase:
 Exported public key as 'AE07828059A53CC1.gpg'
 </pre>
