@@ -177,7 +177,9 @@ A retrieval method is a way of getting an implementation. The simplest retrieval
     &lt;archive
       href='...'
       size='...'
-      extract='...' ? /&gt;
+      extract='...' ?
+      type='...' ?
+      start-offset='...' ? /&gt;
 </pre>
 
 <p>
@@ -185,6 +187,28 @@ This states that an archive may be downloaded from the address given in the <b>h
 have the given <b>size</b> or it will be rejected. When unpacked (either the subdirectory named in the <b>extract</b>
 attribute, or the whole archive if it is not present), the resulting tree will generate a manifest with the secure hash
 value given as the implementation's <b>id</b>.
+</p>
+
+<p>
+The type of the archive is given as a MIME type in the <b>type</b> attribute
+(since <b>0launch</b> version 0.21). If missing, the type is guessed from the extension on the
+<b>href</b> attribute (all versions). Known types and extensions (case insensitive) are:
+</p>
+
+<ul>
+ <li>application/x-rpm (.rpm)</li>
+ <li>application/x-deb (.deb)</li>
+ <li>application/x-bzip-compressed-tar (.tar.bz2)</li>
+ <li>application/x-compressed-tar (.tar.gz or .tgz)</li>
+ <li>application/zip (.zip)</li>
+</ul>
+
+<p>
+The <b>start-offset</b> attribute (since version 0.21) gives the number of
+bytes at the beginning of the file which should be ignored. This is useful for
+some self-extracting archives which are made up of a shell script followed by a
+normal archive in a single file. If missing, it defaults to 0. The value in the
+<b>size</b> attribute does not include the skipped bytes.
 </p>
 
 <p>
