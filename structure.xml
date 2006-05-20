@@ -21,8 +21,11 @@
       <item base='injector-find' label='Example: Find'/>
       <item base='package-rox' label='Example: ROX-Filer'/>
     </item>
+    <item base='injector-specs' label='Specifications'>
+      <item base='interface-spec' label='Interface files'/>
+      <item base='manifest-spec' label='Manifests'/>
+    </item>
     <item base='0publish' label='0publish'/>
-    <item base='injector-specs' label='Specifications'/>
     <item base='injector-design' label='Design'/>
     <item base='injector-tests' label='Tests'/>
   </item>
