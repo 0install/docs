@@ -34,15 +34,15 @@ Hash: SHA1
     <implementation id="sha1=ae2c7a24f2da67d05cdaf1b263451a315ce485ef" released="2006-05-13" version="0.4">
       <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620" stability='stable'/>
     </implementation>
-    <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" version="0.5">
-      <archive extract="0publish-0.5" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.5.tar.bz2" size="16895" stability='stable'/>
+    <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" version="0.5" stability='stable'>
+      <archive extract="0publish-0.5" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.5.tar.bz2" size="16895"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEcE8XrgeCgFmlPMERAn3TAJ0YIL+Jmmc3mM68g4dFxt8sQFsmBACg2Eaz
-rCkCdoWgQhxIXT76BZB+OYM=
-=Zsms
+iD8DBQFEcE9jrgeCgFmlPMERAtvFAJ9vP6sW+mHDUYnDetPbyDqohifdmACcD0bX
+Vgxefttcu1aiuxQU2V+lcYw=
+=b4G7
 -----END PGP SIGNATURE-----
