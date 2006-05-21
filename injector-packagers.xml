@@ -418,6 +418,11 @@ sufficient, since the injector will offer to upgrade the version anyway.
  <dd>Find is a Python program with a dependency on a Python library. This example shows how to depend on
  other components.</dd>
 
+ <dt><a href='package-inkscape.html'>Example: Inkscape</a></dt>
+ <dd>Inkscape is distributed as a binary RPM (among other formats). This guide shows how to publish these
+ RPMs so that they can be run using Zero Install (by users without root access or on Debian systems, for
+ example).</dd>
+
  <dt><a href='package-rox.html'>Example: ROX-Filer</a></dt>
  <dd>ROX-Filer is a C program, which requires different binaries for different platforms. These binaries
  are built and published in interface files maintained by different people. Using the injector's feed
