@@ -2,7 +2,7 @@
 from zeroinstall.injector.iface_cache import iface_cache
 from zeroinstall.injector.namespaces import XMLNS_IFACE
 
-import sys, os
+import sys, os, codecs
 import xml.sax.saxutils
 from xml.dom import minidom
 
@@ -16,19 +16,17 @@ def quoteattr(x):
 		return xml.sax.saxutils.quoteattr(x)
 	return "''"
 
-print '<?xml version="1.0" encoding="utf-8"?>'
-print '<list>'
-for uri in file('known-interfaces'):
-	uri = uri.strip()
+known = [line.strip() for line in file('known-interfaces')]
+known.sort()
 
-	if uri.startswith('/'):
-		continue
-	if uri.startswith('http://0install.net/tests/'):
-		continue
-	if uri.startswith('http://localhost'):
-		continue
+result = codecs.open('all-feeds.xml', 'w', encoding = 'utf-8')
 
+result.write('<?xml version="1.0" encoding="utf-8"?>\n')
+result.write('<list>\n')
+for uri in known:
 	assert uri.startswith('http://')
+	assert not uri.startswith('http://0install.net/tests/')
+	assert not uri.startswith('http://localhost')
 
 	iface = iface_cache.get_interface(uri)
 
@@ -46,11 +44,31 @@ for uri in file('known-interfaces'):
 		if icon_elem.getAttribute('type') == 'image/png':
 			icon = icon_elem.getAttribute('href')
 
-	print "<feed uri=%s name=%s summary=%s icon=%s" \
-		% tuple(map(quoteattr, (uri, iface.name, iface.summary, icon)))
+	result.write("<feed uri=%s name=%s summary=%s icon=%s" \
+		% tuple(map(quoteattr, (uri, iface.name, iface.summary, icon))))
 	
 	if homepage:
-		print ' homepage=%s' % quoteattr(homepage)
-	print '/>\n'
+		result.write(' homepage=%s' % quoteattr(homepage))
+	result.write('/>\n\n')
 
-print "</list>"
+result.write("</list>\n")
+
+unknown = []
+for uri in os.popen('0launch --list'):
+	uri = uri.strip()
+	if uri.startswith('/'):
+		continue
+	if uri.endswith('.new'):
+		continue
+	if uri.startswith('http://0install.net/tests/'):
+		continue
+	if uri.startswith('http://localhost'):
+		continue
+	if uri.startswith('http://www.ecs.soton.ac.uk/~tal'):
+		continue
+	if uri not in known:
+		unknown.append(uri)
+if unknown:
+	print >>sys.stderr, "Not in known list:"
+	for uri in unknown:
+		print >>sys.stderr, uri

@@ -1,225 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
-<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png"
-/>
+<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png"/>
 
-<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png"
-/>
+<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"
-/>
+<feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="headers for compiling ATK applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="http://people.freenet.de/LinuxCNC/0install/foobillard.png"
-/>
+<feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="headers for compiling GLib applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lbreakout" name="LBreakout" summary="The classical Breakout game improved a lot" icon="http://people.freenet.de/LinuxCNC/0install/lbreakout.png"
-/>
+<feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="http://0install.net/2006/icons/gtk-logo.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="http://people.freenet.de/LinuxCNC/0install/lgeneral.png"
-/>
+<feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="http://people.freenet.de/LinuxCNC/0install/mikmod.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="http://people.freenet.de/LinuxCNC/0install/libpng.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="http://people.freenet.de/LinuxCNC/0install/foobillard.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="http://people.freenet.de/LinuxCNC/0install/lmarbles.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lbreakout" name="LBreakout" summary="The classical Breakout game improved a lot" icon="http://people.freenet.de/LinuxCNC/0install/lbreakout.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="http://people.freenet.de/LinuxCNC/0install/lpairs.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="http://people.freenet.de/LinuxCNC/0install/lgeneral.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="http://people.freenet.de/LinuxCNC/0install/penguin-command.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="http://people.freenet.de/LinuxCNC/0install/mikmod.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="http://people.freenet.de/LinuxCNC/0install/libpng.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="http://people.freenet.de/LinuxCNC/0install/lmarbles.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="http://people.freenet.de/LinuxCNC/0install/lpairs.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="http://rox.sourceforge.net/Icons/AddApp.png"
- homepage="http://rox.sourceforge.net/desktop/AddApp"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="http://people.freenet.de/LinuxCNC/0install/penguin-command.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="http://rox.sourceforge.net/Icons/Archive.png"
- homepage="http://rox.sourceforge.net/desktop/Archive"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="simple text editor" icon="http://rox.sourceforge.net/Icons/Edit.png"
- homepage="http://rox.sourceforge.net/desktop/Edit"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="set the gamma correction for your screen" icon="http://rox.sourceforge.net/Icons/Gamma.png"
- homepage="http://rox.sourceforge.net/desktop/Gamma"
-/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="http://rox.sourceforge.net/Icons/Keyboard.png"
- homepage="http://rox.sourceforge.net/desktop/Keyboard"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="http://rox.sourceforge.net/Icons/AddApp.png" homepage="http://rox.sourceforge.net/desktop/AddApp"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="http://rox.sourceforge.net/Icons/MIME-Editor.png"
- homepage="http://rox.sourceforge.net/desktop/MIME-Editor"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="http://rox.sourceforge.net/Icons/Archive.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="http://rox.sourceforge.net/Icons/Memo.png"
- homepage="http://rox.sourceforge.net/desktop/Memo"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="simple text editor" icon="http://rox.sourceforge.net/Icons/Edit.png" homepage="http://rox.sourceforge.net/desktop/Edit"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Mouse" name="Mouse" summary="mouse configuration applet" icon="http://rox.sourceforge.net/Icons/Mouse.png"
- homepage="http://rox.sourceforge.net/desktop/Mouse"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="set the gamma correction for your screen" icon="http://rox.sourceforge.net/Icons/Gamma.png" homepage="http://rox.sourceforge.net/desktop/Gamma"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="http://rox.sourceforge.net/Icons/OroboROX.png"
- homepage="http://rox.sourceforge.net/desktop/OroboROX"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="http://rox.sourceforge.net/Icons/Keyboard.png" homepage="http://rox.sourceforge.net/desktop/Keyboard"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="http://rox.sourceforge.net/Icons/Pager.png"
- homepage="http://rox.sourceforge.net/desktop/Pager"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="http://rox.sourceforge.net/Icons/MIME-Editor.png" homepage="http://rox.sourceforge.net/desktop/MIME-Editor"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="http://rox.sourceforge.net/Icons/Memo.png" homepage="http://rox.sourceforge.net/desktop/Memo"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" name="ROX-Filer" summary="fast and powerful file manager" icon="http://rox.sourceforge.net/Icons/ROX-Filer.png"
- homepage="http://rox.sourceforge.net/desktop/ROX-Filer"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Mouse" name="Mouse" summary="mouse configuration applet" icon="http://rox.sourceforge.net/Icons/Mouse.png" homepage="http://rox.sourceforge.net/desktop/Mouse"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="library for ROX applications" icon="http://rox.sourceforge.net/Icons/ROX-Lib.png"
- homepage="http://rox.sourceforge.net/desktop/ROX-Lib"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="http://rox.sourceforge.net/Icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="sets up a ROX desktop session" icon="http://rox.sourceforge.net/Icons/ROX-Session.png"
- homepage="http://rox.sourceforge.net/desktop/ROX-Session"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="http://rox.sourceforge.net/Icons/Pager.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="http://rox.sourceforge.net/Icons/Resolution.png"
- homepage="http://rox.sourceforge.net/desktop/Resolution"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="http://rox.sourceforge.net/Icons/Wallpaper.png"
- homepage="http://rox.sourceforge.net/desktop/Wallpaper"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" name="ROX-Filer" summary="fast and powerful file manager" icon="http://rox.sourceforge.net/Icons/ROX-Filer.png" homepage="http://rox.sourceforge.net/desktop/ROX-Filer"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="library for ROX applications" icon="http://rox.sourceforge.net/Icons/ROX-Lib.png" homepage="http://rox.sourceforge.net/desktop/ROX-Lib"/>
 
-<feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png"
- homepage="http://rox.sourceforge.net/desktop/System"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="sets up a ROX desktop session" icon="http://rox.sourceforge.net/Icons/ROX-Session.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
-<feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="http://web.telia.com/~u86012345/0install/Contacts.png"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="http://rox.sourceforge.net/Icons/Resolution.png" homepage="http://rox.sourceforge.net/desktop/Resolution"/>
 
-<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="http://www.brucalipto.org/injector/subversion.png"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="http://rox.sourceforge.net/Icons/Wallpaper.png" homepage="http://rox.sourceforge.net/desktop/Wallpaper"/>
 
-<feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="http://www.brucalipto.org/injector/subversion.png"
-/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png"/>
 
-<feed uri="http://www.hayber.us/0install/Find" name="Find" summary="a find-in-files utility" icon="http://www.hayber.us/rox/Find/icon.png"
- homepage="http://rox.sourceforge.net/desktop/node/19"
-/>
+<feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
-<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="http://www.hayber.us/rox/Lithium/lithium.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Lithium"
-/>
+<feed uri="http://rox4debian.berlios.de/0install/MiniClock" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
 
-<feed uri="http://www.hayber.us/0install/Menu" name="Menu" summary="a very simple menu applet for the ROX desktop." icon="http://www.hayber.us/rox/Menu/menu.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Menu"
-/>
+<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png"/>
 
-<feed uri="http://www.hayber.us/0install/MusicBox" name="MusicBox" summary="a music player for the ROX desktop." icon="http://www.hayber.us/rox/MusicBox/icon.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/MusicBox"
-/>
+<feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="http://web.telia.com/~u86012345/0install/Contacts.png"/>
 
-<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="http://www.hayber.us/rox/Postal/postal.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Postal"
-/>
+<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="http://www.brucalipto.org/injector/subversion.png"/>
 
-<feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="http://www.hayber.us/rox/Ripper/icon.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"
-/>
+<feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="http://www.brucalipto.org/injector/subversion.png"/>
 
-<feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="http://www.hayber.us/rox/Volume/icon.png"
- homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"
-/>
+<feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli-data" name="epeli-data" summary="Data for epeli" icon="tango/applications-system.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Album.png"
- homepage="http://rox.sourceforge.net/desktop/node/24"
-/>
+<feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc" name="Epeli" summary="Elämäpeli" icon="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="construct AppDir wrappers for applications." icon="http://www.kerofin.demon.co.uk/icons/AppFactory.png"
- homepage="http://rox.sourceforge.net/desktop/node/30"
-/>
+<feed uri="http://www.hayber.us/0install/Find" name="Find" summary="a find-in-files utility" icon="http://www.hayber.us/rox/Find/icon.png" homepage="http://rox.sourceforge.net/desktop/node/19"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="clock panel applet" icon="http://www.kerofin.demon.co.uk/icons/Clock.png"
- homepage="http://rox.sourceforge.net/desktop/node/27"
-/>
+<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="http://www.hayber.us/rox/Lithium/lithium.png" homepage="http://rox.sourceforge.net/desktop/Software/Lithium"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Depend.png"
-/>
+<feed uri="http://www.hayber.us/0install/Menu" name="Menu" summary="a very simple menu applet for the ROX desktop." icon="http://www.hayber.us/rox/Menu/menu.png" homepage="http://rox.sourceforge.net/desktop/Software/Menu"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App.png"
-/>
+<feed uri="http://www.hayber.us/0install/MusicBox" name="MusicBox" summary="a music player for the ROX desktop." icon="http://www.hayber.us/rox/MusicBox/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/MusicBox"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="display the difference between two text files." icon="http://www.kerofin.demon.co.uk/icons/Diff.png"
- homepage="http://rox.sourceforge.net/desktop/node/31"
-/>
+<feed uri="http://www.hayber.us/0install/PanelClock" name="PanelClock" summary="a simpel panel clock applet." icon="http://www.hayber.us/rox/misc/panelclock.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager.png"
- homepage="http://rox.sourceforge.net/desktop/DownloadManager"
-/>
+<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="http://www.hayber.us/rox/Postal/postal.png" homepage="http://rox.sourceforge.net/desktop/Software/Postal"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch.png"
- homepage="http://rox.sourceforge.net/desktop/Fetch"
-/>
+<feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="http://www.hayber.us/rox/Ripper/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="display usage of a file system." icon="http://www.kerofin.demon.co.uk/icons/FreeFS.png"
- homepage="http://rox.sourceforge.net/desktop/node/28"
-/>
+<feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="http://www.hayber.us/rox/Volume/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Launch.png"
- homepage="http://rox.sourceforge.net/desktop/node/36"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Album.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="display the system load." icon="http://www.kerofin.demon.co.uk/icons/Load.png"
- homepage="http://rox.sourceforge.net/desktop/node/32"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="construct AppDir wrappers for applications." icon="http://www.kerofin.demon.co.uk/icons/AppFactory.png" homepage="http://rox.sourceforge.net/desktop/node/30"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Mail.png"
- homepage="http://rox.sourceforge.net/desktop/node/33"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="clock panel applet" icon="http://www.kerofin.demon.co.uk/icons/Clock.png" homepage="http://rox.sourceforge.net/desktop/node/27"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="http://www.kerofin.demon.co.uk/icons/Mem.png"
- homepage="http://rox.sourceforge.net/desktop/node/34"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Depend.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat.png"
- homepage="http://rox.sourceforge.net/desktop/node/35"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="http://www.kerofin.demon.co.uk/icons/ROX-CLib.png"
- homepage="http://rox.sourceforge.net/desktop/ROX-CLib"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="display the difference between two text files." icon="http://www.kerofin.demon.co.uk/icons/Diff.png" homepage="http://rox.sourceforge.net/desktop/node/31"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="http://www.kerofin.demon.co.uk/icons/Tail.png"
- homepage="http://rox.sourceforge.net/desktop/node/29"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager.png" homepage="http://rox.sourceforge.net/desktop/DownloadManager"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="http://www.kerofin.demon.co.uk/icons/Thumbs.png"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch.png" homepage="http://rox.sourceforge.net/desktop/Fetch"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail.png"
- homepage="http://rox.sourceforge.net/desktop/node/26"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="display usage of a file system." icon="http://www.kerofin.demon.co.uk/icons/FreeFS.png" homepage="http://rox.sourceforge.net/desktop/node/28"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="http://www.kerofin.demon.co.uk/icons/SystemTrayN.png"
- homepage="http://rox.sourceforge.net/desktop/node/214"
-/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Launch.png" homepage="http://rox.sourceforge.net/desktop/node/36"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="display the system load." icon="http://www.kerofin.demon.co.uk/icons/Load.png" homepage="http://rox.sourceforge.net/desktop/node/32"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Mail.png" homepage="http://rox.sourceforge.net/desktop/node/33"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="http://www.kerofin.demon.co.uk/icons/Mem.png" homepage="http://rox.sourceforge.net/desktop/node/34"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="http://www.kerofin.demon.co.uk/icons/ROX-CLib.png" homepage="http://rox.sourceforge.net/desktop/ROX-CLib"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="http://www.kerofin.demon.co.uk/icons/Tail.png" homepage="http://rox.sourceforge.net/desktop/node/29"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="http://www.kerofin.demon.co.uk/icons/Thumbs.png"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="http://www.kerofin.demon.co.uk/icons/SystemTrayN.png" homepage="http://rox.sourceforge.net/desktop/node/214"/>
 
 </list>
