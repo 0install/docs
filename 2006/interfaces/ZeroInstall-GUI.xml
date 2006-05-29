@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
-	   uri='http://0install.net/2006/interfaces/ZeroInstall-GUI'>
+	   uri='http://0install.net/2006/interfaces/ZeroInstall-GUI.xml'>
   <name>ZeroInstall-GUI</name>
   <summary>graphical interface for the Zero Install injector</summary>
   <description>
@@ -12,7 +12,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEesxNrgeCgFmlPMERAjLaAJ4uxmbGj36mIKtHdxTh8shOLvFjFACgpadF5NtbdUyLNsNx
-MOGvhV0s2ZA=
+iD8DBQBEesynrgeCgFmlPMERAn/BAJ9uyTmRj1ff7JBtTu2h1/XbJAzFtQCfVarNRp5SVM4vgb57
+f/04XWfGfEk=
 
 -->
