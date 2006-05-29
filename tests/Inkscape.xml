@@ -20,7 +20,7 @@ user and developer community by using open, community-oriented development.
 
   <homepage>http://inkscape.org/</homepage>
 
-  <icon href='http://0install.net/tests/Inkscape.png' type='image/png'/>
+  <icon href="http://0install.net/tests/Inkscape.png" type="image/png"/>
 
   <group main="usr/bin/inkscape">
     <!-- List any libraries your program needs here -->
@@ -33,10 +33,14 @@ user and developer community by using open, community-oriented development.
     <implementation arch="Linux-i486" id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" version="0.43">
       <archive href="http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm" size="9424664"/>
     </implementation>
+
+    <implementation arch="Linux-i486" id="sha1=846b755916d7e2c59fa21a3e3ac3d256ac054001" released="2006-05-29" stability="developer" version="0.43.99.0">
+      <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.43+0.44pre0-0.i386.rpm" size="10794551"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEcE3OrgeCgFmlPMERAh/4AJ0YjPje4B2P89aILAk47WocYxCZBgCgiefLtQkcou12a/2J
-xd7ZpgIMY9w=
+iD8DBQBEesYXrgeCgFmlPMERAknTAJ4jmsaXRueMHyvNRxvsof/wm6KLswCfXUFNpCyOM9HCWc7Y
+UH5g+faysKg=
 
 -->
