@@ -106,6 +106,13 @@ The version downloads a binary in Deb format and then applies a small patch usin
 systems like SuSE.
 </dd>
 
+<dt><a href='http://0install.net/tests/Visual-ldd.xml'>http://0install.net/tests/Visual-ldd.xml</a></dt>
+<dd>
+Running this interface downloads a binary in Autopackage format. It requires
+injector version 0.21 or later. It does not install or require any autopackage
+components.
+</dd>
+
 </dl>
 
 </html>
