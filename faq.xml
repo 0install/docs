@@ -309,7 +309,25 @@ If your kernel is insecure, you have a problem with or without Zero Install.
 
 <h3>How do I provide software using Zero Install?</h3>
 
-<p>You need to be able to upload some static files to a web server.</p>
+<p>
+The main requirement is that the program doesn't use hard-coded paths. It should
+get resources from its own package relative to its own location (e.g. a shell script
+would use <b>`dirname $0`/mydata</b> rather than <b>/usr/share/myprog/mydata</b>). Resources
+in other packages should be found using environment variables (<b>$GAME_DATA/level1</b> rather
+than <b>/usr/share/gamedata/level1</b>). Many programs do this already.
+</p>
+
+<p>
+Once you have suitable binary, upload an archive of it onto your web-site in the normal
+manner. The most widely understood format is <b>.tar.gz</b>, but Zero Install can also extract
+from <b>.tar.bz2</b> archives, <b>.zip</b> files, and <b>.rpm</b>, <b>.deb</b> and <b>.autopackage</b> packages if the
+appropriate extraction program is available (<b>unzip</b>, <b>rpm2cpio</b>, etc). Often, you
+don't need to do anything special for Zero Install and can just use your existing binary release.
+</p>
+
+<p>Finally, you need to write a short XML file describing your program, the versions of it that
+are available, how to get them, and what libraries they require.
+</p>
 
 <p>See the <i> <a href='injector-packagers.html'>Injector Packaging Guide</a></i>
 for details.</p>

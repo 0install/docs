@@ -63,8 +63,9 @@ happy, click on <b>Execute</b>.
  <tr>
   <td class='image'><img src='screens/download-foo.png' alt='' width='256' height='133'/></td>
   <td><h3>Downloading</h3>
-  <p>The injector now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip and
-RPM). It unpacks each one into its own directory and checks its contents against the <i>cryptographic digest</i>
+  <p>The injector now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
+RPM, deb and autopackage). It unpacks each one into its own directory and
+checks its contents against the <i>cryptographic digest</i>
 given in the (signed) interface file. If the archive has been changed since the interface file was signed,
 the download will be rejected. If the archive hasn't been tampered with, it is stored in your cache directory
 (<b>~/.cache/0install.net/implementations</b>) in its own subdirectory, named after the digest. This ensures

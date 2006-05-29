@@ -27,7 +27,7 @@ bundles, setup.exe, etc). Here are some of our goals:
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
-  <td><h3>Good security</h3>
+  <td><h3>Security</h3>
       <p>If one user downloads a malicious program, other users aren't affected;<br/>
       Users can share downloads without having to trust each other;<br/>
       Installation does not execute any downloaded code as root;<br/>
