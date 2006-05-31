@@ -72,3 +72,6 @@ http://0install.net/2006/interfaces/Pango-dev
 http://0install.net/2006/interfaces/GLib-dev
 http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc
 http://rox4debian.berlios.de/0install/MiniClock
+http://0install.net/2006/interfaces/ZeroInstall-GUI.xml
+http://rox4debian.berlios.de/0install/Libwnck18.xml
+http://rox4debian.berlios.de/0install/Media.xml

@@ -12,6 +12,8 @@
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png"/>
+
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="http://people.freenet.de/LinuxCNC/0install/foobillard.png"/>
@@ -71,6 +73,10 @@
 <feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png"/>
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Media.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/MiniClock" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
 
