@@ -38,9 +38,9 @@ program. Some examples include:
   <dt>RPMs</dt>
 <dd>
 <ul>
-  <li>Fedora <a href='http://fedoraproject.org/extras/4/i386/repodata/repoview/zeroinstall-injector-0-0.18-4.fc4.html'>zeroinstall-injector-0.18-1 in Fedora Extras</a> (thanks to Michel Alexandre Salim)</li>
-  <li>Mandriva <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1mdk.noarch.rpm?download'>zeroinstall-injector-0.19-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
-  <li>SuSE <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.21-1suse.noarch.rpm?download'>zeroinstall-injector-0.21-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1suse.spec?download'>.spec file</a> ]</li>
+  <li><b>Fedora</b> <a href='http://fedoraproject.org/extras/4/i386/repodata/repoview/zeroinstall-injector-0-0.18-4.fc4.html'>zeroinstall-injector-0.18-1 in Fedora Extras</a> (thanks to Michel Alexandre Salim)</li>
+  <li><b>Mandriva</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1mdk.noarch.rpm?download'>zeroinstall-injector-0.19-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
+  <li><b>SuSE</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.21-1suse.noarch.rpm?download'>zeroinstall-injector-0.21-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1suse.spec?download'>.spec file</a> ]</li>
   <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.src.rpm?download'>Source RPM</a> [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
 </ul>
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1171'>Problems with RPMs</a> ]
@@ -49,9 +49,10 @@ program. Some examples include:
 <dt>Debs</dt>
 <dd>
 <ul>
-  <li>Debian <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all.deb?download'>zeroinstall-injector_0.21-1_all.deb download page</a> (Debian package; Python 2.3)</li>
-  <li>Ubuntu <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all_ubuntu.deb?download'>zeroinstall-injector_0.21-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
-  <li>Nokia 770 <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
+  <li><b>Debian</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all.deb?download'>zeroinstall-injector_0.21-1_all.deb download page</a> (Debian package; Python 2.3)</li>
+  <li><b>Ubuntu</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all_ubuntu.deb?download'>zeroinstall-injector_0.21-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
+  <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
+  <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
   <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
 </ul>
 </dd>
@@ -59,7 +60,7 @@ program. Some examples include:
 <dt>Other</dt>
 <dd>
 <ul>
-  <li>Slackware <a href="http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-noarch-1slackware.tgz?download">zeroinstall-injector-0.17-noarch-1slackware.tgz download page</a> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><b>Slackware</b> <a href="http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-noarch-1slackware.tgz?download">zeroinstall-injector-0.17-noarch-1slackware.tgz download page</a> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
   <li>Other (follow instructions below)</li>
 </ul>
