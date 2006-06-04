@@ -20,12 +20,15 @@ Hash: SHA1
     <implementation id="sha1=bb06cc5a9c9d15fe29581d2d8a5545657f324e73" version="1.4.1.1">
       <archive extract="pango-headers-1.4.1.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.1.tar.bz2" size="19062"/>
     </implementation>
+    <implementation id="sha1=260687eb207dc87811043d35570fb3779071a575" version="1.4.1.2" released='2006-06-04'>
+      <archive extract="pango-headers-1.4.1.2" href="http://easynews.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.2.tar.bz2" size="19078"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEYmkWrgeCgFmlPMERAk//AJ4qGrhSplpVgqyz7d02CG5uHr9M4ACeMk/q
-hLhofN6tBtBhXqvjN94RKPQ=
-=X/r5
+iD8DBQFEgygbrgeCgFmlPMERAmmPAKCpNDH5VKXKFkc14YDa4jAK1jzp+QCfT9Fe
+BaAPcvAthQ1Rgc/VhZf8qkQ=
+=UY+g
 -----END PGP SIGNATURE-----
