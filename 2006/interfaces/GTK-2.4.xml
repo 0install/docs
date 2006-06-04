@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GTK-2.4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GTK-2.4</name>
+  <summary>set up a GTK 2.4 build environment</summary>
+  <description>
+    This program runs a command in an environment with PKG_CONFIG_PATH
+    set to include the location of the GTK 2.4 and related library headers.
+    By default, it runs /bin/sh to give you a shell.
+
+    Typical usage is to run this and then configure and build your program
+    from the new shell. The resulting binary should work on all systems with
+    GTK 2.4 and later.
+
+    Note: if you build your program using Zero Install then it's easier to
+    just add the GTK dependencies to the source interface file.
+  </description>
+
+  <homepage>http://0install.net</homepage>
+
+  <icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/>
+
+  <group main="gtk-2.4">
+    <requires interface="http://0install.net/2006/interfaces/GTK-dev">
+      <version before="2.5" not-before="2.4"/>
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+      <version before="2.5" not-before="2.4"/>
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/ATK-dev">
+      <version before="1.9"/>
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/Pango-dev">
+      <version before="1.5"/>
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+
+    <implementation id="sha1=f6b0e789dbb241500a223b3ad52667670203fde1" released="2006-06-03" version="0.1">
+    
+      <archive extract="gtk2.4-0.1" href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.1.tgz" size="1261"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBEgb6xrgeCgFmlPMERAqIjAKCbLYd75nr28l4YVcJtUIGVhiAb9QCfWsg44B+OjGalHlHi
+rsFI07z47L4=
+
+-->
