@@ -16,7 +16,8 @@ bundles, setup.exe, etc). Here are some of our goals:
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
-      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install [ <a href='goals.html#anyonedistrib'>more</a> ]</p>
+      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install;<br/>
+      The system is completely decentralised [ <a href='goals.html#anyonedistrib'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
