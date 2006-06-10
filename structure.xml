@@ -9,9 +9,8 @@
 
   <item base="doc" label="Documentation">
     <item base="goals" label="Goals"/>
-    <item base="howitworks" label="Screenshots">
-      <item base="flash-de" label="Flash (German)"/>
-    </item>
+    <item base="howitworks" label="Screenshots"/>
+    <item base="flash" label="Flash demos"/>
     <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
