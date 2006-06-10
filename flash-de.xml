@@ -8,8 +8,8 @@ This demo, from Thomas Formella, shows the Penguin Command game being run using 
 interface to Zero Install.
 </p>
 
-<object type="application/x-shockwave-flash" data="flash/0install.swf" width="1280" height="965">
- <param name="movie" value="flash/0install.swf" />
+<object type="application/x-shockwave-flash" data="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0install.swf" width="1280" height="965">
+ <param name="movie" value="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0install.swf" />
 </object>
 
 </html>
