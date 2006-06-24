@@ -30,12 +30,8 @@ user and developer community by using open, community-oriented development.
     </requires>
     -->
 
-    <implementation arch="Linux-i486" id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" version="0.43">
+    <implementation arch="Linux-i486" stability="stable" id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" version="0.43">
       <archive href="http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm" size="9424664"/>
-    </implementation>
-
-    <implementation arch="Linux-i486" id="sha1=846b755916d7e2c59fa21a3e3ac3d256ac054001" released="2006-05-29" stability="developer" version="0.43.99.0">
-      <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.43+0.44pre0-0.i386.rpm" size="10794551"/>
     </implementation>
 
     <implementation arch="Linux-i486" id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
@@ -43,8 +39,3 @@ user and developer community by using open, community-oriented development.
     </implementation>
   </group>
 </interface>
-<!-- Base64 Signature
-iD8DBQBEnRsQrgeCgFmlPMERAhV1AKCR73AKmEOy33jYlbmFKmAj+NLjIwCZAcgrOhqP3ZuH7cRe
-6IifOLwOlPg=
-
--->
