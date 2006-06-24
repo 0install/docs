@@ -29,8 +29,12 @@
 	command:</p>
 	<pre>$ 0launch <xsl:value-of select='/zi:interface/@uri'/></pre>
 	<p>
+	The <b>0alias</b> command can be used to create a short-cut to run it again later.
+	</p>
+	<p>
 	Users of graphical environments can drag <a href='{/zi:interface/@uri}'>the feed's URL</a> to
-	an installer such as <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>.
+	an installer such as <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>
+	or <a href='http://rox.sourceforge.net/desktop/node/269'>the Xfce 4.4 panel</a>.
 	</p>
 	<p>
 	If you don't have the <b>0launch</b> command, download it from
@@ -41,6 +45,9 @@
 	  <xsl:apply-templates mode='dl' select='*|@*'/>
 	</dl>
 	<h2>Available versions</h2>
+	<p>The list below is just for information; Zero Install will automatically download one of
+	these versions for you.
+	</p>
         <xsl:apply-templates select='zi:group|zi:requires|zi:implementation'/>
       </body>
     </html>
@@ -48,6 +55,10 @@
   
   <xsl:template mode='dl' match='/zi:interface/@uri'>
     <dt>Full name</dt><dd><a href='{.}'><xsl:value-of select="."/></a></dd>
+  </xsl:template>
+
+  <xsl:template mode='dl' match='zi:homepage'>
+    <dt>Homepage</dt><dd><a href='{.}'><xsl:value-of select="."/></a></dd>
   </xsl:template>
 
   <xsl:template mode='dl' match='zi:description'>
