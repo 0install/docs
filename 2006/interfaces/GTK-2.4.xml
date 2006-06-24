@@ -42,14 +42,29 @@
       <archive extract="gtk2.4-0.1" href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.1.tgz" size="1261"/>
     </implementation>
 
-    <implementation id="sha1=4b4a4b26d15533020ce81979607d563202677118" released="2006-06-04" version="0.2">
+    <implementation id="sha1=4b4a4b26d15533020ce81979607d563202677118" released="2006-06-04" version="0.2" stability='stable'>
       <archive extract="gtk2.4-0.2" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.2.tgz" size="1923"/>
     </implementation>
+
+    <group>
+      <!-- Include C++ headers -->
+      <requires interface="http://0install.net/2006/interfaces/GLibmm-dev.xml">
+        <version before="2.5"/>
+        <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+      </requires>
+      <requires interface="http://0install.net/2006/interfaces/GTKmm-dev.xml">
+        <version before="2.5"/>
+        <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+      </requires>
+      <implementation id="sha1=994d703b1faede1bfa2e97f063b80c15016c114c" released="2006-06-24" version="0.3">
+        <archive extract="gtk2.4-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.3.tar.bz2" size="2153"/>
+      </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBEgy8crgeCgFmlPMERAkeGAJ93+oA+PWXX7YM+vjfbevN0gTjx5ACg0L5YAuoro0p4qUDK
-E9yi18Lnl3w=
+iD8DBQBEnXDMrgeCgFmlPMERAjPaAJ9+GTpCEEysJk7AEY9xwltaBWXJ/wCgrIgTjHbwMsMnwS2M
+UfBXkbL4tIY=
 
 -->
