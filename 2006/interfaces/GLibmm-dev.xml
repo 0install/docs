@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GLibmm-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GLibmm-dev</name>
   <summary>headers for compiling C++ GLib applications</summary>
   <description>
@@ -15,7 +15,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEnVqTrgeCgFmlPMERAqplAKDSBXyf9vm67xpge2SDlwgz3+hcqQCePNJ3FNmrc1emUqnE
-b6WKX7r7tXg=
+iD8DBQBEnVq8rgeCgFmlPMERAiKPAJ960l87AkSdms5p0d7J8MPOK507SgCfecjzyXSLeCTWOZOa
+sh/aVAWHB7s=
 
 -->
