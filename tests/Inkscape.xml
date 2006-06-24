@@ -37,10 +37,14 @@ user and developer community by using open, community-oriented development.
     <implementation arch="Linux-i486" id="sha1=846b755916d7e2c59fa21a3e3ac3d256ac054001" released="2006-05-29" stability="developer" version="0.43.99.0">
       <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.43+0.44pre0-0.i386.rpm" size="10794551"/>
     </implementation>
+
+    <implementation arch="Linux-i486" id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
+      <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.44-0.i386.rpm" size="11409999"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEesYXrgeCgFmlPMERAknTAJ4jmsaXRueMHyvNRxvsof/wm6KLswCfXUFNpCyOM9HCWc7Y
-UH5g+faysKg=
+iD8DBQBEnRsQrgeCgFmlPMERAhV1AKCR73AKmEOy33jYlbmFKmAj+NLjIwCZAcgrOhqP3ZuH7cRe
+6IifOLwOlPg=
 
 -->

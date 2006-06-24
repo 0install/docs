@@ -174,7 +174,7 @@ When a new static binary RPM is released, add the new version to the XML as foll
  <li>Download the new RPM (if you're not the person who made it).</li>
  <li>Add it to the XML (note use of <b>add-version</b> rather than <b>set-version</b> here):
  <pre>
-$ <b>0publish Inkscape.xml
+$ <b>0publish Inkscape.xml \
   --add-version=0.44 \
   --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.44-0.i386.rpm \
   --set-released=today \
