@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GTKmm-dev</name>
+  <summary>headers for compiling C++ GTK applications</summary>
+  <description>
+    These are the glibmm header files. They are required when compiling
+    C++ applications that use the GTK, ATK or Pango libraries..
+  </description>
+
+  <group>
+    <implementation id="sha1=02b1ddcdcc54cff44bc48951249609df5d0afe9f" released="2006-06-24" version="2.4.11">
+    
+      <archive extract="gtkmm-headers-2.4.11" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/gtkmm-headers-2.4.11.tar.bz2" size="292375"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBEnWuPrgeCgFmlPMERAkDpAKC/qqBrML5ahAGqsexCoiGRhtKvWQCdHa5pQ6DpVbczRdu6
+usp4AmvuTIo=
+
+-->
