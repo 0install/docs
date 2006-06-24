@@ -8,6 +8,8 @@
 
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="headers for compiling GLib applications" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="http://0install.net/2006/icons/gtk-logo.png"/>
+
 <feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="http://0install.net/2006/icons/gtk-logo.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
@@ -145,5 +147,7 @@
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="http://www.kerofin.demon.co.uk/icons/SystemTrayN.png" homepage="http://rox.sourceforge.net/desktop/node/214"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="http://www.kerofin.demon.co.uk/rox/XPlanet.png"/>
 
 </list>

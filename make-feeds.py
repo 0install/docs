@@ -19,6 +19,8 @@ def quoteattr(x):
 known = [line.strip() for line in file('known-interfaces')]
 known.sort()
 
+known_feeds = {}
+
 result = codecs.open('all-feeds.xml', 'w', encoding = 'utf-8')
 
 result.write('<?xml version="1.0" encoding="utf-8"?>\n')
@@ -37,6 +39,9 @@ for uri in known:
 
 	if iface.feed_for:
 		continue
+	
+	for f in iface.feeds:
+		known_feeds[f.uri] = True
 
 	homepage = homepages.get(uri, None)
 	icon = 'tango/applications-system.png'
@@ -65,6 +70,8 @@ for uri in os.popen('0launch --list'):
 	if uri.startswith('http://localhost'):
 		continue
 	if uri.startswith('http://www.ecs.soton.ac.uk/~tal'):
+		continue
+	if uri in known_feeds:
 		continue
 	if uri not in known:
 		unknown.append(uri)
