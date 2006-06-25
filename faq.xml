@@ -379,7 +379,7 @@ $ 0launch Edit.xml
 </pre>
 
 <p>
-Of course, you could do <b>0alias edit-cvs Edit.xml</b> to make a command that runs this version
+Of course, you could do <b>0alias edit-svn Edit.xml</b> to make a command that runs this version
 easily.
 </p>
 
@@ -413,7 +413,7 @@ conventionally indicate snapshot versions).
 </p>
 
 <p style='text-align: center'>
-<img width="754" height="302" src="edit-cvs.png"
+<img width="754" height="244" src="edit-cvs.png"
      alt='The injector GUI showing the Snapshot version of Edit' />
 </p>
 
