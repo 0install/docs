@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/tests/Inkscape.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/tests/Inkscape-ap.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Inkscape</name>
   <summary>an SVG-based vector drawing application</summary>
   <description>
@@ -37,7 +37,7 @@ user and developer community by using open, community-oriented development.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEoCBgrgeCgFmlPMERAopgAKDHISRzWlUV/iv/o76eLafk36Yo7QCfYrEJiT1/nvyTz0Ne
-TC0FS/4wug0=
+iD8DBQBEoCCQrgeCgFmlPMERAm5bAKC/zzUa53cMsBgOcnH1D2xDV+LZwwCgx6WET1HzocwQUyP8
+Iia6zZPta+A=
 
 -->
