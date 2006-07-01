@@ -50,7 +50,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li><b>Debian</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all.deb?download'>zeroinstall-injector_0.21-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
-  <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://mentors.debian.net/cgi-bin/sponsor-pkglist?action=details;package=zeroinstall-injector'>needs a sponsor!</a></li>
+  <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all_ubuntu.deb?download'>zeroinstall-injector_0.21-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
