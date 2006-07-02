@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
+<toc level='h2'/>
+
 <h2>The Injector: Design</h2>
 
 <p>
@@ -361,7 +363,26 @@ injector. You can therefore edit the policy for the GUI using the GUI:
 </p>
 
 <pre>
-$ 0launch -dg http://0install.net/2005/interfaces/injector-gui
+$ 0launch -dg http://0install.net/2006/interfaces/ZeroInstall-GUI.xml
 </pre>
+
+<p>
+(in fact, as a short-cut, you can just do <b>0launch -g</b>)
+</p>
+
+<h2>Future plans</h2>
+
+<p>
+Some things we're intending to add at some point:
+</p>
+
+<ul>
+ <li>Better support for mirrors (interfaces and implementations).</li>
+ <li>Ability to use the <a href='http://www.coralcdn.org/'>Coral cache</a>, etc.</li>
+ <li>Support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1262/focus=1262'>downloads of implementations using peer-to-peer systems</a>.</li>
+ <li>A setuid helper to allow automatic safe sharing between users.</li>
+ <li>A system to suggest good candidates for removal from the cache (e.g.,
+ the new versions works, so you probably want to delete the old one).</li>
+</ul>
 
 </html>
