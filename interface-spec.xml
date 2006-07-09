@@ -357,11 +357,21 @@ Versions are ordered like this:
 
 <p>
 The injector doesn't care about anything other than the sort order (i.e., whether
-one version comes before or after another). It is assumed that an
+one version comes before or after another). It is expected that an
 implementation can be safely replaced by one with a later version number, but
-not with an earlier one. So, if you ask for "1.2.1" then you might get "1.2.2"
-or "1.3" or even "5.7", but not "1.2.0". This is a little different to some
-other systems, where numbers in different places have different meanings.
+not necessarily with an earlier one. So, if an application works with version
+"1.2.1" of a library then it should also work with version "1.2.2" or "1.3" or
+even "5.7", but not "1.2.0". This is a little different to some other systems,
+where numbers in different places have different meanings.
+</p>
+
+<p>
+For example, if the latest version of a library you use is version 5.1, then
+you shouldn't add the restriction <b>before='5.2'</b>, because when 5.2 comes
+out it should still work with your program. Of course, this might not always work,
+and hopefully the problem will be reported while the new library version is marked
+as testing (before most users hit the problem). Once you know that 5.2 is a problem,
+you can add the <b>before='5.2'</b> restriction to the interface then.
 </p>
 
 <p>
@@ -490,7 +500,7 @@ the file that would be created by using <b>gpg --detach-sign</b> on the original
 The signature block must start on a new line, may not contain anything except valid base64
 characters, and nothing may follow the signature block. XML signature blocks are supported
 from version 0.18 of the injector and may be generated easily using the <b>0publish</b> command.
-The have the advantage that the result is still valid XML and can therefore be processed and
+They have the advantage that the result is still valid XML and can therefore be processed and
 styled using standard tools.
 </p>
 
@@ -506,7 +516,7 @@ will be ignored as a normal comment.
  <li>In addition to &lt;version&gt;, it should be possible to specifically exclude certain versions or ranges
  of versions so you can say, for example: "2.0 &lt;= version &lt; 3 and version != 2.57".</li>
  <li>Additional &lt;recipe&gt; step types should be supported, such as &lt;apply-patch&gt;.</li>
- <li>It should be possible to state that a &lt;requires&gt; is actually optional (on only needed if
+ <li>It should be possible to state that a &lt;requires&gt; is actually optional (or only needed if
  some local library isn't available).</li>
  <li>It should be possible to give a delta (binary patch) against a previous version, to make upgrading
  quicker.</li>

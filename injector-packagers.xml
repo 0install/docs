@@ -241,7 +241,7 @@ that people can check that it's really from us.
 </p>
 
 <p>
-If you do not already have a GPG key, create one now. You can accept the
+If you do not already have a GPG key-pair, create one now. You can accept the
 defaults for most fields; just enter your name and email address:
 </p>
 
@@ -278,9 +278,10 @@ Exported public key as 'AE07828059A53CC1.gpg'
 </pre>
 
 <p>
-This command adds a digital signature to the XML file. It also exports a copy of your GPG key, which people will need in
-order to check the signature. Upload both files to the same directory on your web-server. You should now be able to run
-your interface with its full URI:
+This command adds a digital signature to the XML file. It also exports a copy
+of your GPG public key, which people will need in order to check the signature.
+Upload both files to the same directory on your web-server. You should now be
+able to run your interface with its full URI:
 </p>
 
 <pre>
