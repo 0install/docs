@@ -94,11 +94,6 @@ $ <b>gpg --recv-key --keyserver www.keyserver.net 59A53CC1</b>
 </ul>
 
 <p>
-Note that the injector works without needing the Zero Install filesystem to be
-installed (you can think of it as the next version of Zero Install).
-</p>
-
-<p>
 Download the injector from <a
 href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id=146899">the
 download page</a>, or using wget:
