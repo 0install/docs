@@ -38,7 +38,9 @@ program. Some examples include:
   <dt>RPMs</dt>
 <dd>
 <ul>
-  <li><b>Fedora</b> <a href='http://fedoraproject.org/extras/4/i386/repodata/repoview/zeroinstall-injector-0-0.18-4.fc4.html'>zeroinstall-injector-0.18-1 in Fedora Extras</a> (thanks to Michel Alexandre Salim)</li>
+  <li><b>Fedora</b> - a package is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
+  <pre># <b>yum install zeroinstall-injector</b></pre>
+  </li>
   <li><b>Mandriva</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1mdk.noarch.rpm?download'>zeroinstall-injector-0.19-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
   <li><b>SuSE</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.21-1suse.noarch.rpm?download'>zeroinstall-injector-0.21-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1suse.spec?download'>.spec file</a> ]</li>
   <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.src.rpm?download'>Source RPM</a> [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
