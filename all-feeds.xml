@@ -8,9 +8,13 @@
 
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="headers for compiling GLib applications" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="headers for compiling C++ GLib applications" icon="tango/applications-system.png"/>
+
 <feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="http://0install.net/2006/icons/gtk-logo.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="http://0install.net/2006/icons/gtk-logo.png"/>
+
+<feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="headers for compiling C++ GTK applications" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
@@ -82,7 +86,13 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/MiniClock" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
 
+<feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/TaskTray.png"/>
+
 <feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Weather.png"/>
 
 <feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="http://web.telia.com/~u86012345/0install/Contacts.png"/>
 
