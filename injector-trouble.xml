@@ -59,6 +59,7 @@ are some known problems, and their solutions:
  <li><a href="http://news.gmane.org/find-root.php?message_id=%3c437318D8.1050604%40antplc.com%3e">Forbidden: header 'Content-Type' value denied</a> (firewall mis-configuration)</li>
  <li><a href="http://news.gmane.org/find-root.php?message_id=%3c43775ABB.8060601%40hayber.us%3e">Failed to extract archive; exit code 512</a> (incorrect environment setting)</li>
  <li><a href="http://news.gmane.org/find-root.php?message_id=%3c76ebe6440511150110t3eb4f4e5p98c59f96b1c8ae5e%40mail.gmail.com%3e">TypeError: iterable argument required</a> (badly formed http_proxy setting)</li>
+ <li><a href="http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1279/focus=1279">gpg: no valid OpenPGP data found</a> (check proxy configuration and 0launch version)</li>
 </ul>
 
 <p>
