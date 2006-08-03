@@ -88,8 +88,6 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Media.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/MiniClock" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
-
 <feed uri="http://rox4debian.berlios.de/0install/MiniClock.xml" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
