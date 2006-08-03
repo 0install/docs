@@ -80,11 +80,17 @@
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
+<feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="adds icons for devices/volumes to the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/DeviceHandler.png"/>
+
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Media.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/MiniClock" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/MiniClock.xml" name="MiniClock" summary="Clock applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/MiniClock.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
 
@@ -157,6 +163,8 @@
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="http://www.kerofin.demon.co.uk/icons/SystemTrayN.png" homepage="http://rox.sourceforge.net/desktop/node/214"/>
+
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="view and edit extended attributes" icon="http://www.kerofin.demon.co.uk/icons/XAttr.png"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="http://www.kerofin.demon.co.uk/rox/XPlanet.png"/>
 
