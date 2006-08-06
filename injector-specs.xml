@@ -17,7 +17,7 @@ they depend on.
 Zero Install implementations are directory trees identified by an
 algorithm name (e.g., "sha1"), and digest of their contents calculated using
 that algorithm. Adding, deleting, renaming or modifying any file in a tree will
-change its digest. It should be unfeasibly difficult to generate a new tree
+change its digest. It should be infeasibly difficult to generate a new tree
 with the same digest as a given tree. Thus, if you know the digest of the
 implementation you want, and someone gives you a tree with that digest, you can
 trust that it is the implementation you want. This document describes how a
