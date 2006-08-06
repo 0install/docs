@@ -169,7 +169,7 @@ through F).
 'S' nodes correspond to symbolic links, and their line format is:
 </p>
 
-<pre>"S", space, hash, size, space, symlink name, newline</pre>
+<pre>"S", space, hash, space, size, space, symlink name, newline</pre>
 
 <p>
 The symlink name is given analogously to file names in 'F' and 'X' 
