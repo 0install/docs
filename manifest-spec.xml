@@ -12,7 +12,7 @@
 Zero Install <i>implementations</i> are directory trees identified by an
 algorithm name (e.g., "sha1"), and digest of their contents calculated using
 that algorithm. Adding, deleting, renaming or modifying any file in a tree will
-change its digest. It should be unfeasibly difficult to generate a new tree
+change its digest. It should be infeasibly difficult to generate a new tree
 with the same digest as a given tree. Thus, if you know the digest of the
 implementation you want, and someone gives you a tree with that digest, you can
 trust that it is the implementation you want.
@@ -81,9 +81,7 @@ want. This is convenient, because the manifest file is much smaller than the pac
 
 <p>
 After checking, the generated manifest file is stored in a file called
-<b>.manifest</b> in the top-level of the tree. This is not strictly necessary, but if the tree
-is modified later somehow it can show you exactly which files were changed (rather than just letting
-you know that the tree has changed in some unknown way).
+<b>.manifest</b> in the top-level of the tree.
 </p>
 
 <p>
@@ -102,6 +100,13 @@ When the injector adds a new archive to the cache, the top-level
 directory is renamed to this final digest (so the <b>main.c</b> above would be
 stored as <b>.../sha1=b848561cd89be1b806ee00008a503c63eb4ad56e/src/main.c</b>,
 for example).
+</p>
+
+<p>
+Because only the digest of the manifest is needed, it is not strictly necessary
+to store the <b>.manifest</b> file at all. However, if the tree is modified later
+somehow it can show you exactly which files were changed (rather than just
+letting you know that the tree has changed in some unknown way).
 </p>
 
 <h2>Manifest file format</h2>
@@ -152,9 +157,10 @@ their line formats are:
 
 <p>
 As opposed to directories, no full path names are given. Hence, file 
-names match <b>^[^/\n]+$</b> . The hash is the 40-byte hexadecimal representation of
-the SHA-1 sum of the contents of the respective file. Hexadecimal digits a
-through f are used (rather than A through F).
+names match <b>^[^/\n]+$</b> . The hash is the hexadecimal representation of
+the digest of the contents of the respective file, using the same digest algorithm as
+the manifest file itself. Hexadecimal digits a through f are used (rather than A
+through F).
 </p>
 
 <h3>Symlinks</h3>
@@ -168,7 +174,7 @@ through f are used (rather than A through F).
 <p>
 The symlink name is given analogously to file names in 'F' and 'X' 
 nodes.  The size of a symlink is the number of bytes in its target 
-(name).  The hash sum, similarly to that of files, is the SHA-1 sum of 
+(name).  The hash sum, similarly to that of files, is the digest of 
 the target (name) of the respective symlink.
 </p>
 
@@ -195,7 +201,7 @@ the subdirectories always coming after other types.
 </p>
 
 <p>
-Implementations have to abide by these rules by the letter because such 
+Implementations have to abide by these rules to the letter because such 
 a file is to be generated automatically and this process absolutely must 
 generate the same file that the directory tree packager had computed.
 </p>
