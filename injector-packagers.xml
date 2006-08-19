@@ -349,9 +349,10 @@ into the current directory when you extract it. Most archives would have just a
 single top-level directory named after the archive (e.g.
 <b>scons-local-0.96.92</b>) and put all the files in that. While you could cope with that
 by setting the <b>main</b> attribute to be <b>scons-local-VVV/scons.py</b> for each version,
-it's better to use the <a href='injector-specs.html#retrievalmethods'>extract</a> attribute on the <b>archive</b>
+it's better to use the <a href='interface-spec.html#retrievalmethods'>extract</a> attribute on the <b>archive</b>
 element so that all versions have the same structure. This is especially important for libraries,
-where the <b>main</b> attribute isn't used.
+where the <b>main</b> attribute isn't used. Use the <b>--archive-extract=DIR</b> argument to <b>0publish</b>
+for this.
 </p>
 
 <h3>Supported Archive formats</h3>

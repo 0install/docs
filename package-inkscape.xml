@@ -16,7 +16,7 @@ has a few limitations for users:
 </ul>
 
 <p>
-These problems can be fixed by creating a Zero Install interface file for it. This guide goes over
+These limitations can be avoided by creating a Zero Install interface file for it. This guide goes over
 the steps quite quickly. For more details see <a href='injector-packagers.html'>the
 packaging main guide</a>.
 </p>
