@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/tests/XaraXtreme.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Xara Xtreme</name>
   <summary>cross-platform vector artwork and photocomposition package</summary>
   <description>
@@ -33,7 +33,7 @@ easy-to-use and easy-to-learn approach.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBE70nUmx9df5ch2pARAjJGAKC89LYvWGoLcrhHdDSK2Sbmg4HVaQCgsobBy8jPHrEWaTaw
-vcR09vFWlyg=
+iD8DBQBE70oUmx9df5ch2pARAoI2AKDOgTDg1hB4kFl2lK13n/jliEIt7wCgnPR9o3mjjpIlOzKJ
+Cw4Izu0JZz8=
 
 -->
