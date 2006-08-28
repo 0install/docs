@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
-<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png" homepage="http://0install.net/injector-using.html"/>
 
-<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/injector-packagers.html"/>
 
 <feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="headers for compiling ATK applications" icon="tango/applications-system.png"/>
 
@@ -10,7 +10,7 @@
 
 <feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="headers for compiling C++ GLib applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="http://0install.net/2006/icons/gtk-logo.png"/>
+<feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="http://0install.net/2006/icons/gtk-logo.png" homepage="http://0install.net"/>
 
 <feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="http://0install.net/2006/icons/gtk-logo.png"/>
 
@@ -18,7 +18,7 @@
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
 
@@ -64,7 +64,7 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="http://rox.sourceforge.net/Icons/Pager.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" name="ROX-Filer" summary="fast and powerful file manager" icon="http://rox.sourceforge.net/Icons/ROX-Filer.png" homepage="http://rox.sourceforge.net/desktop/ROX-Filer"/>
 
@@ -76,15 +76,15 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="http://rox.sourceforge.net/Icons/Wallpaper.png" homepage="http://rox.sourceforge.net/desktop/Wallpaper"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png" homepage="http://gnome.org/"/>
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" homepage="http://cddb-py.sourceforge.net/"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="adds icons for devices/volumes to the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/DeviceHandler.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Media.png"/>
 
@@ -94,7 +94,7 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/TaskTray.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Weather.png"/>
 
@@ -123,6 +123,8 @@
 <feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="http://www.hayber.us/rox/Ripper/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"/>
 
 <feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="http://www.hayber.us/rox/Volume/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
+
+<feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="a wireless network quality monitor." icon="http://www.hayber.us/rox/misc/wifi.png"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/Album.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
 

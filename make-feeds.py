@@ -43,7 +43,12 @@ for uri in known:
 	for f in iface.feeds:
 		known_feeds[f.uri] = True
 
-	homepage = homepages.get(uri, None)
+	homepage = None
+	for elem in iface.get_metadata(XMLNS_IFACE, 'homepage'):
+		homepage = elem.content
+		break
+	if homepage is None:
+		homepage = homepages.get(uri, None)
 	icon = 'tango/applications-system.png'
 	for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
 		if icon_elem.getAttribute('type') == 'image/png':
