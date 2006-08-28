@@ -54,9 +54,10 @@ be a 'pass') but it should give the general idea.
  
  <dt>Downloads shared between users</dt>		
  <dd>If two users install/use the same program, it is only downloaded once and stored once.<br/>
- Notes: It's quite easy to share downloads from the injector; the administrator takes a copy of the user's download,
- verifies that its name matches its digest (<b>0store verify</b>) and puts it in the shared cache if so. In future,
- a setuid helper will be provided to make this automatic.</dd>
+ Notes: It's quite easy to share downloads from the injector; the administrator copies a user's download
+ into the shared chache (<b>/var/cache/0install.net/implementations/</b>) using
+ the <b>0store copy</b> command, which only performs the copy if the contents match the digest in the
+ directory's name. One day, a setuid helper will be provided to make this automatic.</dd>
  
  <dt>Multiple versions coexist</dt>
  <dd>Two versions of a program or library can be installed at the same time, and the user can choose which one to run.</dd>

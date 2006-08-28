@@ -55,9 +55,9 @@ program. Some examples include:
 <dt>Debs</dt>
 <dd>
 <ul>
-  <li><b>Debian</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all.deb?download'>zeroinstall-injector_0.21-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
+  <li><b>Debian</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all.deb?download'>zeroinstall-injector_0.22-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
-  <li><b>Ubuntu</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.21-1_all_ubuntu.deb?download'>zeroinstall-injector_0.21-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
+  <li><b>Ubuntu</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all_ubuntu.deb?download'>zeroinstall-injector_0.22-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
   <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
@@ -105,7 +105,7 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a>, or using wget:
 </p>
 <pre>
-$ <b>wget http://easynews.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.21.tar.gz.gpg</b>
+$ <b>wget http://easynews.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.22.tar.gz.gpg</b>
 </pre>
 
 <p>
@@ -114,8 +114,8 @@ you will need later!
 </p>
 
 <pre>
-$ <b>gpg zeroinstall-injector-0.21.tar.gz.gpg</b>
-gpg: Signature made Mon May 29 13:17:46 2006 UTC using DSA key ID 59A53CC1
+$ <b>gpg zeroinstall-injector-0.22.tar.gz.gpg</b>
+gpg: Signature made Sun 27 Aug 2006 17:17:30 BST using DSA key ID 59A53CC1
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
@@ -132,8 +132,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xzf zeroinstall-injector-0.21.tar.gz</b>
-$ <b>cd zeroinstall-injector-0.21</b>
+$ <b>tar xzf zeroinstall-injector-0.22.tar.gz</b>
+$ <b>cd zeroinstall-injector-0.22</b>
 </pre>
 
 <table class='split'>
