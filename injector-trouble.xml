@@ -7,6 +7,9 @@
 <dt>ImportError: No module named pygtk</dt>
 <dd>You need to install the <i>python-gtk2</i> package (the name may vary on different
 distributions; <i>python-gnome2</i> is another possibility.</dd>
+<dt>ImportError: cannot import name cli</dt>
+<dd>You've probably just upgraded your system from Python 2.3 to Python 2.4 (or similar). Simply
+<a href='injector.html'>install the injector</a> again to fix it.</dd>
 </dl>
 
 <p>
