@@ -15,6 +15,7 @@
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
     <item base="links" label="Links"/>
+    <item base="roadmap" label="Roadmap"/>
   </item>
 
   <item base='dev' label='Developers'>

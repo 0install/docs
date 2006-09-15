@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Roadmap</h2>
+
+<p>
+This document explains what we've done and where we're going with future versions.
+</p>
+
+<p>
+Despite its pre-1.0 version number, Zero Install is currently used by a large
+number of people, as it is the preferred method of installation for <a
+href='http://rox.sourceforge.net'>ROX</a>, and is generally quite robust.
+</p>
+
+<h3>File format stability</h3>
+
+<p>
+Although we have not reached the 1.0 release, the injector has a very good
+record of backwards compatibility. In fact, you can run Edit with the XML
+interface file used to demonstrate version 0.2 of the injector (released
+2005-03-14) on the very latest (0.22) version of the injector. The only
+incompatible change was between versions 0.1 and 0.2!  Of course, it doesn't
+work the other way; interfaces designed to work with later versions of the
+injector will use features not available on older versions.
+</p>
+
+<h3>Completed features</h3>
+
+<p>
+This is a quick overview of the major features added to the injector. See the
+<a href='http://www.gnomefiles.org/version.php?soft_id=921'>release notes</a> for a much more detailed
+list.
+</p>
+
+<ul>
+<li>Dependencies, graphical interface, user-set policies (since 0.1)</li>
+<li>Updating over HTTP, GPG signatures (since 0.2)</li>
+<li>Pass options to programs (since 0.5)</li>
+<li>Create alias scripts (since 0.7)</li>
+<li>Automatic public key fetching (since 0.8)</li>
+<li>Allow symlinks (since 0.10)</li>
+<li>RPM packages of the injector (since 0.13)</li>
+<li>Local interfaces and adding additional remote feeds (since 0.14)</li>
+<li>Support for architecture-dependant binaries (since 0.15)</li>
+<li>Additional feeds in interfaces (since 0.17)</li>
+<li>Support FTP downloads of archives, XML signatures and extracting from RPMs (since 0.18)</li>
+<li>Icons for interfaces, graphical cache explorer, and 0publish command to help with creating interface files (since 0.19)</li>
+<li>Recipes (combine several archives to create a single version), restrictions on suitable versions of dependencies, extracting from Debian packages, and support for other secure hashes (since 0.20)</li>
+<li>Support for extracting from Autopackage and zip archives (since 0.21)</li>
+<li>Secure local copy (checking digest) (since 0.22)</li>
+</ul>
+
+<h3>Features planned for 1.0</h3>
+
+<dl>
+<dt>Compile a binary from source</dt>
+<dd>If a binary doesn't exist for your platform, the injector should be able to compile one from source for
+you. This should include downloading any necessary compilers, headers and build tools using Zero Install. The
+resulting binary should come with an automatically-generated interface file, ready for publishing the binary
+on the web. The archive should also include a provenance file listing the exact versions of dependencies used
+to build it, allowing it to be recompiled in the same environment later.</dd>
+
+<dt>Automatic secure sharing of downloads</dt>
+<dd>Make a SetUID helper that uses <b>0store copy</b> to copy downloads to a central cache. This allows
+downloads to be shared without the intervention of the system administrator, while still preventing a
+malicious (or virus-infected) user from compromising other user accounts. Need to think about how things
+get removed from the cache when no longer needed!</dd>
+
+<dt>Mirrors for archives</dt>
+<dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
+systems, coral cache, etc. May need to show sponsor logos during the download.</dd>
+
+<dt>Automatic cache cleaning</dt>
+<dd>
+The injector can keep all versions of all libraries on disk at once. This is useful, but there should be a way
+to clean out ones that aren't needed any more to free up disk space. Individual versions can be removed easily
+enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
+</dd>
+</dl>
+
+<h3>Other possible features</h3>
+
+<dl>
+<dt>Mirrors for interfaces</dt>
+<dd>More difficult than mirrors for archives, since a malicious mirror could do a reply attack (giving an
+older, but correctly signed, release that is known to be insecure) and users who don't check the signing
+keys may be more at risk.</dd>
+
+<dt>More meta-data</dt>
+<dd>License terms (and warn about incompatible licenses?), mailing list address, where to send
+bug reports, etc.</dd>
+
+<dt>Bug reporting</dt>
+<dd>Generate useful information for bug-reports, since we know exactly which version of each library
+was being used.</dd>
+
+<dt>Peer-to-peer downloads</dt>
+<dd>The tricky bit about P2P is normally the free-text searching, but we already know the secure hash
+of the manifest we want, and when we get it we have the hash of every file we need, so this should be easy!
+The idea is that if someone on your local network has already downloaded a program, you can get it from them
+automatically.
+</dd>
+
+<dt>Binary patches</dt>
+<dd>
+We have the secure hash of the currently-cached versions, so we can check that they're unmodified. In that case,
+we could just download a delta to the next version rather than getting everything again. 0publish should create
+these deltas automatically.
+</dd>
+
+<dt>Kiosk mode</dt>
+<dd>System administrator can restrict what software users can install using Zero Install (whitelist interface
+URIs or trusted public keys).</dd>
+
+<dt>Third-party sign-off</dt>
+<dd>A distribution can sign an upstream release ("Certified for use with SuSE 10.2", etc). Users can set a policy
+to run only approved versions by default.</dd>
+
+</dl>
+
+</html>
