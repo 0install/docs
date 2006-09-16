@@ -59,7 +59,9 @@ list.
 you. This should include downloading any necessary compilers, headers and build tools using Zero Install. The
 resulting binary should come with an automatically-generated interface file, ready for publishing the binary
 on the web. The archive should also include a provenance file listing the exact versions of dependencies used
-to build it, allowing it to be recompiled in the same environment later.</dd>
+to build it, allowing it to be recompiled in the same environment later.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1196/focus=1199'>Discussion</a> ]
+</dd>
 
 <dt>Automatic secure sharing of downloads</dt>
 <dd>Make a SetUID helper that uses <b>0store copy</b> to copy downloads to a central cache. This allows
@@ -77,6 +79,29 @@ The injector can keep all versions of all libraries on disk at once. This is use
 to clean out ones that aren't needed any more to free up disk space. Individual versions can be removed easily
 enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
 </dd>
+
+<dt>Native package manager integration</dt>
+<dd>
+If a Zero Install package requires a library, and the user already has a suitable version installed with another
+system (APT, RPM, etc) then the injector should be able to use that version. This would save unnecessarily downloading
+and storing a second copy of the library. The user should still have the option to get the library through Zero Install
+if they want though (e.g., if they want to try a newer version). Should we check for the presence of files or packages,
+though?
+</dd>
+
+<dt>Optional dependencies</dt>
+<dd>
+The interface file format only allows 'required' dependencies at present. It should also support the
+'recommended' (optional and selected by default) and 'suggested' (optional and unselected by default)
+relationships.
+</dd>
+
+<dt>Display release notes</dt>
+<dd>
+The injector tells you that a new version is available, but it doesn't say what changed! At the very least, it
+should provide a link to the program's release notes on the web.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
+</dd>
 </dl>
 
 <h3>Other possible features</h3>
@@ -86,6 +111,15 @@ enough via the cache explorer, but it should be more automatic, a bit like "apt-
 <dd>More difficult than mirrors for archives, since a malicious mirror could do a reply attack (giving an
 older, but correctly signed, release that is known to be insecure) and users who don't check the signing
 keys may be more at risk.</dd>
+
+<dt>Plug-ins</dt>
+<dd>
+It should be possible to add additional interfaces to a program's dependencies list. For example, you could add
+the interface for a French dictionary to a word processor to let you spell-check French documents.
+This would usually require some support from the application itself. A plug-in is a more general type of
+optional dependency; one which isn't listed in the main interface file at all.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1072/focus=1073'>Discussion</a> ]
+</dd>
 
 <dt>More meta-data</dt>
 <dd>License terms (and warn about incompatible licenses?), mailing list address, where to send
@@ -100,22 +134,41 @@ was being used.</dd>
 of the manifest we want, and when we get it we have the hash of every file we need, so this should be easy!
 The idea is that if someone on your local network has already downloaded a program, you can get it from them
 automatically.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1262/focus=1266'>Discussion</a> ]
 </dd>
 
 <dt>Binary patches</dt>
 <dd>
 We have the secure hash of the currently-cached versions, so we can check that they're unmodified. In that case,
 we could just download a delta to the next version rather than getting everything again. 0publish should create
-these deltas automatically.
+these deltas automatically. Rsync may also be an option for some sites.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1214/focus=1214'>Discussion</a> ]
 </dd>
 
 <dt>Kiosk mode</dt>
-<dd>System administrator can restrict what software users can install using Zero Install (whitelist interface
+<dd>The system administrator can restrict what software users can install using Zero Install (white-list interface
 URIs or trusted public keys).</dd>
 
 <dt>Third-party sign-off</dt>
 <dd>A distribution can sign an upstream release ("Certified for use with SuSE 10.2", etc). Users can set a policy
-to run only approved versions by default.</dd>
+to run only approved versions by default. Or, a third-party could provide additional into to the hints box
+(the injector's GUI contains a built-in "Unreliable hints database", but a commercial organisation could offer
+a real service).
+</dd>
+
+<dt>More flexible version numbering</dt>
+<dd>
+The injector only supports a list of dot-separated integers at present. It would be useful to support some common
+modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-patch2".
+</dd>
+
+<dt>Sandboxing</dt>
+<dd>
+Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. It should be
+possible to trust keys only in a limited way, so that such software must run in a sandbox. Sandboxed software must still
+be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Discussion</a> ]
+</dd>
 
 </dl>
 
