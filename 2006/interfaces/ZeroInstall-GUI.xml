@@ -9,10 +9,13 @@
   <homepage>http://0install.net/injector.html</homepage>
 
   <group main='0launch-gui'>
+    <implementation id="sha1=9cd66d454ff3055002c2106ad74f470b1b2c1996" released="2006-09-16" stability="testing" version="0.22.1">
+      <archive extract="zeroinstall-gui-0.22.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.22.1.tar.bz2" size="30000"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEesynrgeCgFmlPMERAn/BAJ9uyTmRj1ff7JBtTu2h1/XbJAzFtQCfVarNRp5SVM4vgb57
-f/04XWfGfEk=
+iD8DBQBFDAOArgeCgFmlPMERAuiwAKCS3Fso4SYilJtivNVUYeXTov/+1wCghXFEDYsSgBERtm9X
+xlZSPlxUH5M=
 
 -->
