@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>0compile</h2>
+
+<p>
+Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile
+a new binary from a source package. This is useful if:
+</p>
+
+<ul>
+ <li>no binary is available for your platform;</li>
+ <li>you wish to build using different library versions; or</li>
+ <li>you wish to make changes to a program or library.</li>
+</ul>
+
+<toc level='h2'/>
+
+<h2>Creating the build environment</h2>
+
+<p>
+To get started, run <b>0compile setup</b> with the URL of the program you want
+to build. In this example, we'll use <a
+href='http://www.gnu.org/software/hello/'>GNU-Hello</a>, a simple program
+written by the FSF to demonstrate use of the popular GNU build tools:
+</p>
+
+<pre>
+$ <b>0compile setup http://0install.net/tests/GNU-Hello.xml GNU-Hello</b>
+</pre>
+
+<p>
+<b>0compile</b> will run <b>0launch --source</b> to select a
+suitable version of the source code and download it. It will also locate and
+download any dependencies (e.g. build tools or header files) the source may
+have, although the <b>GNU-Hello</b> example interface doesn't list any.  </p>
+
+<p>
+The final argument names a directory for the build environment. If omitted, it defaults
+to the last component of the URI, without the ".xml" extension (so we could
+have just left it off in this case). <b>0compile</b> will create this directory
+in the current directory.
+</p>
+
+<p>
+All further <b>0compile</b> commands are run from inside this new directory,
+which is currently empty except for a <b>0compile-env.xml</b> file recording
+the version of GNU-Hello selected. If you want to change the selected
+version(s) later, do:
+</p>
+
+<pre>
+$ <b>cd GNU-Hello</b>
+$ <b>0compile setup</b>
+</pre>
+
+<h2>Building</h2>
+
+<p>
+To compile the program, use the <b>build</b> command (from inside the <b>GNU-Hello</b> directory):
+</p>
+
+<pre>
+$ <b>0compile build</b>
+</pre>
+
+<p>
+<b>0compile</b> starts by creating two sub-directories: <b>dist</b> for the
+final result, and <b>build</b> for any temporary files. The source interface
+states that this program uses the standard GNU build system, so <b>0compile</b>
+does the familiar <b>configure &amp;&amp; make &amp;&amp; make install</b> sequence, except that instead of
+installing into <b>/usr/local</b>, it passes options to <b>configure</b> to
+install into the new <b>dist</b> directory.
+</p>
+
+<p>
+Assuming the build is successful, <b>dist</b> will contain the final result,
+including a handy <b>dist/GNU-Hello.xml</b> local feed file, which you can use to
+run the new binary:
+</p>
+
+<pre>
+$ <b>0launch dist/GNU-Hello.xml</b>
+Hello, world!
+</pre>
+
+<p>
+In fact, since <b>GNU-Hello</b> doesn't list any dependencies, we could have just run
+the <b>dist/hello</b> binary directory in this case. For more complex programs,
+the interface file will be useful. You can also pass it to <b>0launch
+--feed</b> to register the new binary under the program's normal URL:
+</p>
+
+<pre>
+$ <b>0launch --feed dist/GNU-Hello.xml</b>
+</pre>
+
+<p>
+If everything worked, you can now delete the <b>build</b> directory to save
+space. However, if you're planning to modify the source and rebuild (described
+in the next section) then you'll want to leave it there, as it will make
+rebuilding faster.
+</p>
+
+<p>
+For future reference, there is also a <b>dist/build-environment.xml</b>  file. This is a copy
+of the <b>0compile.xml</b> used for the build, but with a few extra details of the build added,
+including the hostname of the machine used for the build, a timestamp and your username. This file
+is written before the build starts, so the build process may add to it (or move it, or even delete
+it if you don't want it).
+</p>
+
+<h2>Modifying the source</h2>
+
+<p>
+By default, <b>0compile</b> keeps the source code in the (read-only) Zero Install cache, so if you
+want to make changes, the first step is to make a copy of it:
+</p>
+
+<pre>
+$ <b>0compile copy-src</b>
+$ <b>cd src</b>
+</pre>
+
+<p>
+Edit the source as needed. Recompile with <b>0compile</b> in the main <b>GNU-Hello</b> directory
+as before:
+</p>
+
+<pre>
+$ <b>cd ..</b>
+$ <b>0compile build</b>
+</pre>
+
+<p>
+If you compare the new <b>dist</b> directory with the old one, you'll discover a couple of differences (besides
+any changes you actually made):
+</p>
+
+<ul>
+ <li>The version number in the local feed has <b>-patched</b> appended, to indicate that this version has been modified.</li>
+ <li>A new file is present, <b>dist/from-VERSION.patch</b>, containing a diff between the original sources and
+ your modified ones.</li>
+</ul>
+
+<p>
+These two features make it very easy to keep track of what you changed, which may well come in useful later!
+</p>
+
+<h2>Publishing the binary</h2>
+
+<p>
+To share our new binary with other people, we just need to archive up the
+<b>dist</b> directory and upload it to an FTP or HTTP server somewhere.
+Pass the URL of the remote directory to <b>0compile</b> and upload the
+resulting binary:
+</p>
+
+<pre>
+$ <b>0compile publish http://mysite/downloads</b>
+$ <b>scp GNU-Hello-VERSION.tar.bz2 mysite:/var/www/downloads/</b>
+</pre>
+
+<p>
+As well as the <b>.tar.bz2</b> file, you will also get a
+<b>GNU-Hello-VERSION.xml</b> file in the main <b>GNU-Hello</b> directory.
+You can use this new XML file to download the archive and run the program:</p>
+
+<pre>
+$ <b>0launch GNU-Hello-VERSION.xml</b>
+</pre>
+
+<p>
+You can either ask the maintainer of the program to add the implementation in this file to the
+master interface, or you can create your own feed (and ask them to add that).
+See the <a href='0publish.html'>0publish page</a> for full details, but as a quick summary
+you can create a new signed feed like this:
+</p>
+
+<pre>
+$ <b>0publish .../GNU-Hello.xml \
+  --xmlsign \
+  --set-interface-uri=http://mysite/interfaces/GNU-Hello.xml \
+  --local=GNU-Hello-VERSION.xml</b>
+</pre>
+
+<p>
+Then upload the signed <b>.../GNU-Hello.xml</b> file and the exported GPG key to your webserver.
+</p>
+
+<h2>Making source available</h2>
+<p>
+If you wish to make source code available for others to use (as described above) then you need to add source
+implementations to the program's interface file. This is almost exactly the same as adding binaries, except that
+you give <b>src</b> as the machine type to <b>0publish</b>:
+</p>
+
+<pre>
+$ <b>0publish /var/www/interfaces/MyProg.xml \
+  --add-version=5 \
+  --archive-url=http://mysite/downloads/myprog-5-src.tar.bz2 \
+  --set-released=today \
+  --set-arch=*-src</b>
+</pre>
+
+<p><b>TODO</b> need to tell 0compile <i>how</i> to build it</p>
+
+<p>
+Often people keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
+the main interface, e.g.:
+</p>
+
+<pre>
+  &lt;feed src='http://mysite/interfaces/MyProg<b>-src</b>.xml' <b>arch='*-src'</b>/&gt;
+</pre>
+
+<p>
+The <b>arch</b> attribute lets the injector know that it doesn't need to fetch this file unless
+it's looking for source code.
+</p>
+
+</html>
