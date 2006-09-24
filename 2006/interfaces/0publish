@@ -3,7 +3,8 @@ Hash: SHA1
 
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 
   <name>0publish</name>
   <summary>utility to make creating injector interfaces easier</summary>
@@ -31,13 +32,13 @@ Hash: SHA1
     <implementation id="sha1=afc14e8f19d40178fbb5e879d3b3b14510d8dc2e" released="2006-05-06" version="0.3">
       <archive extract="0publish-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
     </implementation>
-    <implementation id="sha1=ae2c7a24f2da67d05cdaf1b263451a315ce485ef" released="2006-05-13" version="0.4">
-      <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620" stability='stable'/>
+    <implementation id="sha1=ae2c7a24f2da67d05cdaf1b263451a315ce485ef" released="2006-05-13" stability="stable" version="0.4">
+      <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620"/>
     </implementation>
-    <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" version="0.5" stability='stable'>
+    <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" stability="stable" version="0.5">
       <archive extract="0publish-0.5" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.5.tar.bz2" size="16895"/>
     </implementation>
-    <implementation id="sha1=40ad36b30b1cdafa0fe086c48b592c8d45dc0867" released="2006-06-24" version="0.6">
+    <implementation id="sha1=40ad36b30b1cdafa0fe086c48b592c8d45dc0867" released="2006-06-24" stability="stable" version="0.6">
       <archive extract="0publish-0.6" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0publish-0.6.tar.bz2" size="17123"/>
     </implementation>
   </group>
@@ -45,7 +46,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE8tanrgeCgFmlPMERAiEvAKCGIE06N60u83m6I1hoofyYi4a9dwCfbHEn
-Qhj5hDi8N9O2DFlAbcGQUKA=
-=vkfK
+iD4DBQFFFm3xrgeCgFmlPMERAr7wAJ9VpFeBZKOD5oHgtyxxlyadCu13lACXYbXN
+RQo2nUcPBlnG9/KZ/9A2ig==
+=+gAi
 -----END PGP SIGNATURE-----
