@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://0install.net/tests/GNU-Hello.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>GNU Hello</name>
+  <summary>produces a familiar, friendly greeting</summary>
+  <description>
+The GNU Hello program produces a familiar, friendly greeting.
+
+Yes, this is another implementation of the classic program that prints &quot;Hello,
+world!&quot; when you run it. Unlike the elementary version often seen, GNU Hello
+processes its argument list to modify its behavior, supports greetings in many
+languages, and so on. Of course, the primary purpose of this program is to
+demonstrate how to write other programs that do these things; it serves as a
+model for all of the GNU coding standards and other recommended practices.
+
+The primary purpose of this Zero Install interface is to demonstrate
+how to compile binary packages from sources that follow the GNU automake
+system.
+  </description>
+  <homepage>http://www.gnu.org/software/hello/</homepage>
+
+  <group arch="*-src" compile:binary-main="bin/hello" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install">
+    <implementation id="sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7" version="1.3">
+      <archive extract="hello-1.3" href="http://ftp.gnu.org/gnu/hello/hello-1.3.tar.gz" size="87942"/>
+    </implementation>
+    <!--
+    <group>
+      <requires interface="http://0install.net/2006/interfaces/Help2man.xml">
+        <environment insert="." name="PATH"/>
+      </requires>
+      <implementation id="sha1=1d53a96ee896dfae8d84a2e02fceae2dfac54896" version="2.1.1">
+        <archive extract="hello-2.1.1" href="http://ftp.gnu.org/gnu/hello/hello-2.1.1.tar.gz" size="389363"/>
+      </implementation>
+    </group>
+    -->
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFFpgmmx9df5ch2pARAqJ6AJsGh6At2ujcWM16WHGjGLXgNEge9gCbBGFFdrFaIQz1Ugdr
+EDgTUeLoIrA=
+
+-->
