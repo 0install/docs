@@ -14,6 +14,17 @@ a new binary from a source package. This is useful if:
  <li>you wish to make changes to a program or library.</li>
 </ul>
 
+<p>
+This tutorial shows how to use <b>0compile</b> for these purposes. It is
+assumed that you have already installed <a href='injector.html'>the Zero
+Install injector</a> (0launch) and know how to run programs using it. To
+get <b>0compile</b> itself, use:
+</p>
+
+<pre>
+$ <b>0alias 0compile http://0install.net/2006/interfaces/0compile.xml</b>
+</pre>
+
 <toc level='h2'/>
 
 <h2>Creating the build environment</h2>
@@ -62,37 +73,48 @@ To compile the program, use the <b>build</b> command (from inside the <b>GNU-Hel
 
 <pre>
 $ <b>0compile build</b>
+Executing: "$SRCDIR/configure" --prefix="$DISTDIR" &amp;&amp; make install
+...
 </pre>
 
 <p>
-<b>0compile</b> starts by creating two sub-directories: <b>dist</b> for the
-final result, and <b>build</b> for any temporary files. The source interface
-states that this program uses the standard GNU build system, so <b>0compile</b>
-does the familiar <b>configure &amp;&amp; make &amp;&amp; make install</b> sequence, except that instead of
-installing into <b>/usr/local</b>, it passes options to <b>configure</b> to
-install into the new <b>dist</b> directory.
+<b>0compile</b> starts by creating two sub-directories: <b>gnu-hello-1.3</b> for the
+final result, and <b>build</b> for any temporary files. It then executes a command
+specified in the source interface, which actually builds the software (using the
+standard GNU build system in this case). Note that the command installs to the
+<b>gnu-hello-1.3</b> directory rather than to the usual <b>/usr/local</b>. In fact, if you have
+<a href='http://plash.beasts.org/'>plash</a> installed, the command is run in a
+sandbox with very limited write permissions.
 </p>
 
 <p>
-Assuming the build is successful, <b>dist</b> will contain the final result,
-including a handy <b>dist/GNU-Hello.xml</b> local feed file, which you can use to
+Assuming the build is successful, <b>gnu-hello-1.3</b> will contain the final result,
+including a handy <b>gnu-hello-1.3/0install/GNU-Hello.xml</b> local feed file, which you can use to
 run the new binary:
 </p>
 
 <pre>
-$ <b>0launch dist/GNU-Hello.xml</b>
+$ <b>0launch gnu-hello-1.3/0install/GNU-Hello.xml</b>
 Hello, world!
 </pre>
 
 <p>
 In fact, since <b>GNU-Hello</b> doesn't list any dependencies, we could have just run
-the <b>dist/hello</b> binary directory in this case. For more complex programs,
+the <b>gnu-hello-1.3/bin/hello</b> binary directly in this case. For more complex programs,
 the interface file will be useful. You can also pass it to <b>0launch
 --feed</b> to register the new binary under the program's normal URL:
 </p>
 
 <pre>
-$ <b>0launch --feed dist/GNU-Hello.xml</b>
+$ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
+Can't find all required implementations:
+- &lt;Interface http://0install.net/tests/GNU-Hello.xml> -> None
+
+$ <b>0launch --feed gnu-hello-1.3/0install/GNU-Hello.xml</b>
+1) Add as feed for 'http://0install.net/tests/GNU-Hello.xml'
+
+$ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
+Hello, world!
 </pre>
 
 <p>
@@ -103,11 +125,11 @@ rebuilding faster.
 </p>
 
 <p>
-For future reference, there is also a <b>dist/build-environment.xml</b>  file. This is a copy
-of the <b>0compile.xml</b> used for the build, but with a few extra details of the build added,
+For future reference, there is also a <b>gnu-hello-1.3/0install/build-environment.xml</b>  file. This is a copy
+of the <b>0compile-env.xml</b> used for the build, but with a few extra details of the build added,
 including the hostname of the machine used for the build, a timestamp and your username. This file
 is written before the build starts, so the build process may add to it (or move it, or even delete
-it if you don't want it).
+it).
 </p>
 
 <h2>Modifying the source</h2>
@@ -119,39 +141,51 @@ want to make changes, the first step is to make a copy of it:
 
 <pre>
 $ <b>0compile copy-src</b>
-$ <b>cd src</b>
+Copied as '/home/me/GNU-Hello/src'
 </pre>
 
 <p>
-Edit the source as needed. Recompile with <b>0compile</b> in the main <b>GNU-Hello</b> directory
-as before:
+Edit the source as needed with the text editor of your choice. For example, we can change the
+message (using <a href='http://www.gnu.org/fun/jokes/ed.msg.html'>ed, the standard text editor</a>).
 </p>
 
 <pre>
-$ <b>cd ..</b>
+$ <b>ed src/hello.c</b>
+5207
+<b>%s/Hello, world!/Goodbye, world!/
+wq</b>
+5209
+</pre>
+
+<p>Recompile with <b>0compile build</b> as before:</p>
+
+<pre>
 $ <b>0compile build</b>
+$ <b>0launch gnu-hello-1.3/0install/GNU-Hello.xml</b>
+Goodbye, world!
 </pre>
 
 <p>
-If you compare the new <b>dist</b> directory with the old one, you'll discover a couple of differences (besides
-any changes you actually made):
+If you compare the new <b>gnu-hello-1.3/0install</b> directory with the old one, you'll discover a couple of differences:
 </p>
 
 <ul>
- <li>The version number in the local feed has <b>-patched</b> appended, to indicate that this version has been modified.</li>
- <li>A new file is present, <b>dist/from-VERSION.patch</b>, containing a diff between the original sources and
- your modified ones.</li>
+ <li>A new file is present, <b>gnu-hello-1.3/0install/from-VERSION.patch</b>, containing a diff between the original sources and
+ your modified ones (to display this without rebuilding, use <b>0compile diff-src</b>).</li>
+ <li><strong>(TODO) </strong> The version number in the local feed has <b>-patched</b> appended, to indicate that this version has been modified.</li>
 </ul>
 
 <p>
-These two features make it very easy to keep track of what you changed, which may well come in useful later!
+These two features make it very easy to keep track of what you changed, which may well come in useful later! However, if
+you are making larger changes to the code then you will want to use a proper version control system (such as
+<a href='http://subversion.tigris.org/'>subversion</a> or <a href='http://git.or.cz/'>git</a>).
 </p>
 
 <h2>Publishing the binary</h2>
 
 <p>
 To share our new binary with other people, we just need to archive up the
-<b>dist</b> directory and upload it to an FTP or HTTP server somewhere.
+<b>gnu-hello-1.3</b> directory and upload it to an FTP or HTTP server somewhere.
 Pass the URL of the remote directory to <b>0compile</b> and upload the
 resulting binary:
 </p>
@@ -163,11 +197,11 @@ $ <b>scp GNU-Hello-VERSION.tar.bz2 mysite:/var/www/downloads/</b>
 
 <p>
 As well as the <b>.tar.bz2</b> file, you will also get a
-<b>GNU-Hello-VERSION.xml</b> file in the main <b>GNU-Hello</b> directory.
+<b>GNU-Hello-1.3.xml</b> file in the main <b>GNU-Hello</b> directory.
 You can use this new XML file to download the archive and run the program:</p>
 
 <pre>
-$ <b>0launch GNU-Hello-VERSION.xml</b>
+$ <b>0launch GNU-Hello-1.3.xml</b>
 </pre>
 
 <p>
@@ -203,10 +237,30 @@ $ <b>0publish /var/www/interfaces/MyProg.xml \
   --set-arch=*-src</b>
 </pre>
 
-<p><b>TODO</b> need to tell 0compile <i>how</i> to build it</p>
+<p>
+There are also some extra attributes you should add to the <b>implementation</b> element:
+</p>
+
+<dl>
+ <dt>compile:command</dt>
+ <dd>This must be present. Its value is a shell command, executed inside the <b>build</b> directory. It must compile the source
+ in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>. If this command starts to get complicated,
+ you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute
+ to the command to run the script.</dd>
+
+ <dt>compile:binary-main</dt>
+ <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary interface that is created. If it is not given, then
+ the binary created cannot be executed (e.g., it is a library).</dd>
+</dl>
 
 <p>
-Often people keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
+The <b>compile</b> prefix must be bound to <b>0compile</b>'s namespace somewhere, e.g.:
+</p>
+
+<pre>xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"</pre>
+
+<p>
+Note: You can keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
 the main interface, e.g.:
 </p>
 
