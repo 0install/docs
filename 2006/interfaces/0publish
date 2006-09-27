@@ -41,12 +41,15 @@ Hash: SHA1
     <implementation id="sha1=40ad36b30b1cdafa0fe086c48b592c8d45dc0867" released="2006-06-24" stability="stable" version="0.6">
       <archive extract="0publish-0.6" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0publish-0.6.tar.bz2" size="17123"/>
     </implementation>
+    <implementation id="sha1=c83bc2c4f44b326f2aa3e11425c26b46da5c1a4a" released="2006-09-27" version="0.7">
+      <archive extract="0publish-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.7.tar.bz2" size="17720"/>
+    </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD4DBQFFFm3xrgeCgFmlPMERAr7wAJ9VpFeBZKOD5oHgtyxxlyadCu13lACXYbXN
-RQo2nUcPBlnG9/KZ/9A2ig==
-=+gAi
+iD8DBQFFGmUbrgeCgFmlPMERAhkHAJ9e5JmFhasmDTfYGiRDAGP2dmdQngCfdu+P
+xB/mWnu4XmYQAhZLKAv/KrU=
+=V4of
 -----END PGP SIGNATURE-----
