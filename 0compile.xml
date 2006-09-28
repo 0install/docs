@@ -78,6 +78,11 @@ Executing: "$SRCDIR/configure" --prefix="$DISTDIR" &amp;&amp; make install
 </pre>
 
 <p>
+Note: GNU-Hello does not use Zero Install to get the C compiler (<b>gcc</b>) or the standard library
+header files (<b>libc-dev</b>), so you should install these yourself. They come with most distributions.
+</p>
+
+<p>
 <b>0compile</b> starts by creating two sub-directories: <b>gnu-hello-1.3</b> for the
 final result, and <b>build</b> for any temporary files. It then executes a command
 specified in the source interface, which actually builds the software (using the
@@ -170,8 +175,8 @@ If you compare the new <b>gnu-hello-1.3/0install</b> directory with the old one,
 </p>
 
 <ul>
- <li>A new file is present, <b>gnu-hello-1.3/0install/from-VERSION.patch</b>, containing a diff between the original sources and
- your modified ones (to display this without rebuilding, use <b>0compile diff-src</b>).</li>
+ <li>A new file is present, <b>gnu-hello-1.3/0install/from-1.3.patch</b>, containing a diff between the original sources and
+ your modified ones (to display this without rebuilding, use <b>0compile diff</b>).</li>
  <li><strong>(TODO) </strong> The version number in the local feed has <b>-patched</b> appended, to indicate that this version has been modified.</li>
 </ul>
 
@@ -192,7 +197,7 @@ resulting binary:
 
 <pre>
 $ <b>0compile publish http://mysite/downloads</b>
-$ <b>scp GNU-Hello-VERSION.tar.bz2 mysite:/var/www/downloads/</b>
+$ <b>scp GNU-Hello-1.3.tar.bz2 mysite:/var/www/downloads/</b>
 </pre>
 
 <p>
@@ -215,7 +220,7 @@ you can create a new signed feed like this:
 $ <b>0publish .../GNU-Hello.xml \
   --xmlsign \
   --set-interface-uri=http://mysite/interfaces/GNU-Hello.xml \
-  --local=GNU-Hello-VERSION.xml</b>
+  --local=GNU-Hello-1.3.xml</b>
 </pre>
 
 <p>

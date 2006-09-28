@@ -56,7 +56,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li><b>Debian/stable</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all.deb?download'>zeroinstall-injector_0.22-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
-  <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-2_all.deb?download'>zeroinstall-injector_0.22-2_all.deb download page</a> (Debian/testing package; python-central)<br/>
+  <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.23-1_all.deb?download'>zeroinstall-injector_0.23-1_all.deb download page</a> (Debian/testing package; python-central)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all_ubuntu.deb?download'>zeroinstall-injector_0.22-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)</li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
@@ -106,7 +106,7 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a>, or using wget:
 </p>
 <pre>
-$ <b>wget http://easynews.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.22.tar.gz.gpg</b>
+$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.23.tar.gz.gpg</b>
 </pre>
 
 <p>
@@ -115,8 +115,8 @@ you will need later!
 </p>
 
 <pre>
-$ <b>gpg zeroinstall-injector-0.22.tar.gz.gpg</b>
-gpg: Signature made Sun 27 Aug 2006 17:17:30 BST using DSA key ID 59A53CC1
+$ <b>gpg zeroinstall-injector-0.23.tar.gz.gpg</b>
+gpg: Signature made Thu Sep 28 09:17:51 2006 UTC using DSA key ID 59A53CC1
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
@@ -133,8 +133,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xzf zeroinstall-injector-0.22.tar.gz</b>
-$ <b>cd zeroinstall-injector-0.22</b>
+$ <b>tar xzf zeroinstall-injector-0.23.tar.gz</b>
+$ <b>cd zeroinstall-injector-0.23</b>
 </pre>
 
 <table class='split'>

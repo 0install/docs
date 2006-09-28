@@ -23,6 +23,15 @@
   of ROX-Filer for a new platform.
  </dd>
 
+ <dt><a href='0compile.html'>0compile</a></dt>
+ <dd>
+  <b>0compile</b> creates binaries from source code, either for your own use or ready
+for publishing on the web through Zero Install. It can use Zero Install to
+download any build dependencies (compilers, header files, build tools, etc).
+This is useful if there is no binary for your platform, or if you wish to
+modify the program in some way.
+ </dd>
+
  <dt><a href='injector-specs.html'>Specifications</a></dt>
  <dd>
   Formal specifications for the file formats used by the injector.
