@@ -37,6 +37,7 @@ To build, change into the new directory and use the build command:
 <pre>
 $ <b>cd Hello-scons</b>
 $ <b>0compile build</b>
+Executing: "$SCONS/scons.py" -C "$SRCDIR" builddir="$BUILDDIR" "$DISTDIR"
 </pre>
 
 <p>
