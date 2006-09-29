@@ -29,7 +29,9 @@
       <item base='manifest-spec' label='Manifests'/>
     </item>
     <item base='0publish' label='0publish'/>
-    <item base='0compile' label='0compile'/>
+    <item base='0compile' label='0compile'>
+      <item base='0compile-scons' label='Example: SCons'/>
+    </item>
     <item base='injector-design' label='Design'/>
     <item base='injector-tests' label='Tests'/>
   </item>
