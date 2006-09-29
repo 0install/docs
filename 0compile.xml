@@ -281,7 +281,7 @@ it's looking for source code.
 <h2>Further reading</h2>
 
 <dl>
- <dt>Example: SCons</dt>
+ <dt><a href='0compile-scons.html'>Example: SCons</a></dt>
  <dd>This example shows how to compile a simple "Hello world" program using
  the SCons build system. Both the source and SCons are fetched using Zero
  Install.</dd>
