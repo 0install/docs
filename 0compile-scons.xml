@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Example: 0compile and SCons</h2>
+
+<p>
+<b>Hello-scons</b> is a simple "Hello world" program written in C. It is built using SCons.
+</p>
+
+<p>
+Its purpose is to demonstrate the use of 0compile to fetch build dependencies;
+you do not need to install SCons manually on your system in order to build it.
+</p>
+
+<p>
+This example assumes that you have already read
+<a href='0compile.html'>the main 0compile tutorial</a>.
+</p>
+
+<p>
+You can try it out by using the <b>setup</b> command as usual:
+</p>
+
+<pre>
+$ <b>0compile setup http://0install.net/tests/Hello-scons.xml Hello-scons</b>
+</pre>
+
+<p>
+<b>0compile</b> will create a 'Hello-scons' directory for the build.
+You will be prompted to choose the versions of Hello-scons and SCons.
+</p>
+
+<p>
+To build, change into the new directory and use the build command:
+</p>
+
+<pre>
+$ <b>cd Hello-scons</b>
+$ <b>0compile build</b>
+</pre>
+
+<p>
+This creates a 'hello-scons-1.0' directory ready for use and/or distribution,
+and a 'build' directory with some temporary files, such as 'hello.o'. This is
+used only to speed up later rebuilds.
+</p>
+
+<p>
+To run:
+</p>
+
+<pre>
+$ <b>0launch hello-scons-1.0/0install/Hello-scons.xml</b>
+Hello world!
+</pre>
+
+<p>
+To see (or modify) a copy of the source:
+</p>
+
+<pre>
+$ <b>0compile copy-src</b>
+Copied as '/home/me/Hello-scons/src'
+</pre>
+
+<p>
+The main issues with using SCons with 0compile are that:
+</p>
+
+<ul>
+<li><p>SCons defaults to saving build files in the source directory. <b>0compile</b>
+requires that the source directory is assumed to be read-only (and if
+plash is installed, this is enforced). Therefore, you must set the build
+and signature database directories to the build directory.</p></li>
+
+<li><p>By default, SCons resets all environment variables. This means that
+instead of compiling against the library versions you chose, it will
+build against whatever happens to be the default on the system today.
+This also breaks plash, which requires certain variables to be set.</p></li>
+</ul>
+
+<p>
+The <b>src/SConstruct</b> file shows how to fix these problems.
+</p>
+
+<p>
+For more information (including how to publish the binary using Zero Install),
+see <a href='0compile.html'>the main 0compile tutorial</a>.
+</p>
+
+
+</html>
