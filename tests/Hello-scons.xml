@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://0install.net/tests/Hello-scons" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>Hello-scons</name>
+  <summary>example of building with scons</summary>
+  <description>
+This package shows how to compile a simple C program, using Zero Install to
+fetch the source and the build system (scons).
+  </description>
+
+  <homepage>http://0install.net/0compile.html</homepage>
+
+  <group arch="*-src" compile:binary-main="hello" compile:command="&quot;$SCONS/scons.py&quot; -C &quot;$SRCDIR&quot; builddir=&quot;$BUILDDIR&quot; &quot;$DISTDIR&quot;">
+    <requires interface="http://0install.net/tests/SCons.xml">
+      <environment insert="" name="SCONS"/>
+    </requires>
+
+    <implementation id="sha1=c78be9eba9ed3dc56fd3326d16aba9fa3a7628b5" released="2006-09-29" version="1.0">
+      <archive extract="hello-scons-1.0" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/hello-scons-1.0.tar.bz2" size="2233"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBFHRHprgeCgFmlPMERAq9iAJ925+2F4V9FvtsUVBZNjNqAUy4XPwCfdVwb+Q//0NGPALKs
+Kl+khZ+2S60=
+
+-->
