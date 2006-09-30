@@ -110,6 +110,7 @@ the closest ancestor &lt;group&gt; which defines it):
   &lt;implementation
 	id='...'
   	version='...' ?
+  	version-modifier='...' ?
 	main='...' ?
   	released='...' ?
 	stability='...' ?
@@ -128,8 +129,12 @@ the closest ancestor &lt;group&gt; which defines it):
  to the directory containing the interface file).</dd>
 
  <dt>version</dt>
- <dd>A list of one or more decimal integers, separated by dots, giving the version number. See the
- version numbers section below for more details.</dd>
+ <dd>The version number. See the version numbers section below for more details.</dd>
+
+ <dt>version-modifier</dt>
+ <dd>A string to be appended to the version. The purpose of this is to allow complex version numbers (such as
+ "1.0-rc2") without breaking older versions of the injector (before 0.24), which only support dot-separated
+ lists of integers.</dd>
 
  <dt>main</dt>
  <dd>The relative path of an executable inside the implementation that should be executed by default
@@ -337,9 +342,18 @@ needed with them:
 <h2 id='versions'>Versions</h2>
 
 <p>
-A version is a dot-separated list of integers. Eg "1.2.3". It can be just a
-single number ("1") or a sequence of any number of components ("1.4.2.3").
-Versions are ordered like this:
+A version number string has the following form:
+</p>
+
+<pre>
+Version := DottedList ("-" Modifier? DottedList?)*
+DottedList := (Integer ("." Integer)*)
+Modifier := "pre" | "rc" | "post"
+</pre>
+
+<p>
+Numerically, the modifiers come in the order "-pre" (pre-release), "-rc" (release candidate),
+"-" (no modifier name), "-post" (post-release or patch level). Versions are ordered like this:
 </p>
 
 <ul>
@@ -347,8 +361,15 @@ Versions are ordered like this:
 <li>1</li>
 <li>1.0</li>
 <li>1.1</li>
+<li>1.2-pre</li>
+<li>1.2-pre1</li>
+<li>1.2-rc1</li>
 <li>1.2</li>
-<li>1.2.1</li>
+<li>1.2-0</li>
+<li>1.2-post</li>
+<li>1.2-post1-pre</li>
+<li>1.2-post1</li>
+<li>1.2.1-pre</li>
 <li>1.2.1.4</li>
 <li>1.2.2</li>
 <li>1.2.10</li>
@@ -383,6 +404,13 @@ version) to an interface should be handled by creating a new interface. Eg:
 <li>http://gtk.org/2005/interfaces/GTK-1.2.x (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
 <li>http://gtk.org/2005/interfaces/GTK-2.x (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
 </ul>
+
+<p>
+Note that version numbers containing dash characters are no supported before version 0.24 of the
+injector. To create interfaces that still work with older versions, you can use the
+<b>version-modifier</b> attribute. E.g., use <b>version='1' version-modifier='-pre'</b> instead
+of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
+</p>
 
 <h2 id='stability'>Stability</h2>
 

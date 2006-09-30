@@ -33,36 +33,82 @@ This is a quick overview of the major features added to the injector. See the
 list.
 </p>
 
-<ul>
-<li>Dependencies, graphical interface, user-set policies (since 0.1)</li>
-<li>Updating over HTTP, GPG signatures (since 0.2)</li>
-<li>Pass options to programs (since 0.5)</li>
-<li>Create alias scripts (since 0.7)</li>
-<li>Automatic public key fetching (since 0.8)</li>
-<li>Allow symlinks (since 0.10)</li>
-<li>RPM packages of the injector (since 0.13)</li>
-<li>Local interfaces and adding additional remote feeds (since 0.14)</li>
-<li>Support for architecture-dependant binaries (since 0.15)</li>
-<li>Additional feeds in interfaces (since 0.17)</li>
-<li>Support FTP downloads of archives, XML signatures and extracting from RPMs (since 0.18)</li>
-<li>Icons for interfaces, graphical cache explorer, and 0publish command to help with creating interface files (since 0.19)</li>
-<li>Recipes (combine several archives to create a single version), restrictions on suitable versions of dependencies, extracting from Debian packages, and support for other secure hashes (since 0.20)</li>
-<li>Support for extracting from Autopackage and zip archives (since 0.21)</li>
-<li>Secure local copy (checking digest) (since 0.22)</li>
-</ul>
-
-<h3>Features planned for 1.0</h3>
-
 <dl>
+<dt>Dependencies, graphical interface, user-set policies</dt>
+<dd>Since 0.1</dd>
+
+<dt>Updating over HTTP, GPG signatures</dt>
+<dd>Since 0.2</dd>
+
+<dt>Pass options to programs</dt>
+<dd>Since 0.5</dd>
+
+<dt>Create alias scripts</dt>
+<dd>Since 0.7</dd>
+
+<dt>Automatic public key fetching</dt>
+<dd>Since 0.8</dd>
+
+<dt>Allow symlinks</dt>
+<dd>Since 0.10</dd>
+
+<dt>RPM packages of the injector</dt>
+<dd>Since 0.13</dd>
+
+<dt>Local interfaces and adding additional remote feeds</dt>
+<dd>Since 0.14</dd>
+
+<dt>Support for architecture-dependant binaries</dt>
+<dd>Since 0.15</dd>
+
+<dt>Additional feeds in interfaces</dt>
+<dd>Since 0.17</dd>
+
+<dt>Support FTP downloads of archives, XML signatures and extracting from RPMs</dt>
+<dd>Since 0.18</dd>
+
+<dt>Icons for interfaces, graphical cache explorer, and 0publish command to help with creating interface files</dt>
+<dd>Since 0.19</dd>
+
+<dt>Recipes</dt>
+<dd>Combine several archives to create a single version.
+Since 0.20</dd>
+
+<dt>Restrictions on suitable versions of dependencies</dt>
+<dd>Since 0.20</dd>
+
+<dt>Extracting from Debian packages</dt>
+<dd>Since 0.20</dd>
+
+<dt>Support for other secure hashes</dt>
+<dd>Since 0.20</dd>
+
+<dt>Support for extracting from Autopackage and zip archives</dt>
+<dd>Since 0.21</dd>
+
+<dt>Secure local copy (checking the digest)</dt>
+<dd>Since 0.22</dd>
+
 <dt>Compile a binary from source</dt>
 <dd>If a binary doesn't exist for your platform, the injector should be able to compile one from source for
 you. This should include downloading any necessary compilers, headers and build tools using Zero Install. The
 resulting binary should come with an automatically-generated interface file, ready for publishing the binary
 on the web. The archive should also include a provenance file listing the exact versions of dependencies used
 to build it, allowing it to be recompiled in the same environment later.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1196/focus=1199'>Discussion</a> ]
+Supported since version 0.23.
 </dd>
 
+<dt>More flexible version numbering</dt>
+<dd>
+The injector only supports a list of dot-separated integers. It would be useful to support some common
+modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-post2". Since 0.24.
+</dd>
+
+</dl>
+
+<h3>Features planned for 1.0</h3>
+
+<dl>
 <dt>Automatic secure sharing of downloads</dt>
 <dd>Make a SetUID helper that uses <b>0store copy</b> to copy downloads to a central cache. This allows
 downloads to be shared without the intervention of the system administrator, while still preventing a
@@ -154,12 +200,6 @@ URIs or trusted public keys).</dd>
 to run only approved versions by default. Or, a third-party could provide additional into to the hints box
 (the injector's GUI contains a built-in "Unreliable hints database", but a commercial organisation could offer
 a real service).
-</dd>
-
-<dt>More flexible version numbering</dt>
-<dd>
-The injector only supports a list of dot-separated integers at present. It would be useful to support some common
-modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-patch2".
 </dd>
 
 <dt>Sandboxing</dt>
