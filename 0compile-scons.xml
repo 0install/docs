@@ -27,7 +27,12 @@ $ <b>0compile setup http://0install.net/tests/Hello-scons.xml Hello-scons</b>
 
 <p>
 <b>0compile</b> will create a 'Hello-scons' directory for the build.
-You will be prompted to choose the versions of Hello-scons and SCons.
+You will be prompted to choose the versions of Hello-scons and SCons:
+</p>
+
+<p style='text-align: center'>
+<img width="555" height="268" src="screens/hello-scons.png"
+     alt="Choosing versions" />
 </p>
 
 <p>
