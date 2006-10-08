@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.injector.run</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
+        Module&nbsp;run
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.run-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="zeroinstall.injector.run-module.html">Module zeroinstall.injector.run</a></h1>
+<pre class="py-src">
+<span class="py-lineno"> 1</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno"> 2</span>  <span class="py-line"><span class="py-docstring">Executes a set of implementations as a program.</span> </span>
+<span class="py-lineno"> 3</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno"> 4</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 5</span>  <span class="py-line"><span class="py-comment"># Copyright (C) 2006, Thomas Leonard</span> </span>
+<span class="py-lineno"> 6</span>  <span class="py-line"><span class="py-comment"></span><span class="py-comment"># See the README file for details, or visit http://0install.net.</span> </span>
+<span class="py-lineno"> 7</span>  <span class="py-line"><span class="py-comment"></span> </span>
+<span class="py-lineno"> 8</span>  <span class="py-line"><span class="py-keyword">import</span> <span class="py-name">os</span><span class="py-op">,</span> <span class="py-name">sys</span> </span>
+<span class="py-lineno"> 9</span>  <span class="py-line"><span class="py-keyword">from</span> <span class="py-name">logging</span> <span class="py-keyword">import</span> <span class="py-name">debug</span><span class="py-op">,</span> <span class="py-name">info</span> </span>
+<span class="py-lineno">10</span>  <span class="py-line"> </span>
+<span class="py-lineno">11</span>  <span class="py-line"><span class="py-keyword">from</span> <span id="link-0" class="py-name"><a title="zeroinstall.injector.model" class="py-name" href="#" onclick="doclink('link-0', 'model', 'Module zeroinstall.injector.model=zeroinstall.injector.model-module.html'); return false;">model</a></span></span> <span class="py-keyword">import</span> <span id="link-1" class="py-name"><a title="zeroinstall.injector.model.Interface" class="py-name" href="#" onclick="doclink('link-1', 'Interface', 'Class zeroinstall.injector.model.Interface=zeroinstall.injector.model.Interface-class.html'); return false;">Interface</a></span></span><span class="py-op">,</span> <span id="link-2" class="py-name"><a title="zeroinstall.SafeException" class="py-name" href="#" onclick="doclink('link-2', 'SafeException', 'Class zeroinstall.SafeException=zeroinstall.SafeException-class.html'); return false;">SafeException</a></span></span><span class="py-op">,</span> <span id="link-3" class="py-name"><a title="zeroinstall.injector.model.EnvironmentBinding" class="py-name" href="#" onclick="doclink('link-3', 'EnvironmentBinding', 'Class zeroinstall.injector.model.EnvironmentBinding=zeroinstall.injector.model.EnvironmentBinding-class.html'); return false;">EnvironmentBinding</a></span></span> </span>
+<span class="py-lineno">12</span>  <span class="py-line"> </span>
+<a name="do_env_binding"></a><div id="do_env_binding-def"><span class="py-lineno">13</span> <a class="py-toggle" href="#" id="do_env_binding-toggle" onclick="toggle('do_env_binding'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.injector.run-module.html#do_env_binding">do_env_binding</a><span class="py-op">(</span><span class="py-param">binding</span><span class="py-op">,</span> <span class="py-param">path</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="do_env_binding-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="do_env_binding-expanded"><span class="py-lineno">14</span>  <span class="py-line">        <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">environ</span><span class="py-op">[</span><span class="py-name">binding</span><span class="py-op">.</span><span class="py-name">name</span><span class="py-op">]</span> <span class="py-op">=</span> <span class="py-name">binding</span><span class="py-op">.</span><span id="link-4" class="py-name"><a title="zeroinstall.injector.model.EnvironmentBinding.get_value" class="py-name" href="#" onclick="doclink('link-4', 'get_value', 'Method zeroinstall.injector.model.EnvironmentBinding.get_value()=zeroinstall.injector.model.EnvironmentBinding-class.html#get_value'); return false;">get_value</a></span></span><span class="py-op">(</span><span class="py-name">path</span><span class="py-op">,</span> </span>
+<span class="py-lineno">15</span>  <span class="py-line">                                        <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">environ</span><span class="py-op">.</span><span class="py-name">get</span><span class="py-op">(</span><span class="py-name">binding</span><span class="py-op">.</span><span class="py-name">name</span><span class="py-op">,</span> <span class="py-name">None</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">16</span>  <span class="py-line">        <span class="py-name">info</span><span class="py-op">(</span><span class="py-string">"%s=%s"</span><span class="py-op">,</span> <span class="py-name">binding</span><span class="py-op">.</span><span class="py-name">name</span><span class="py-op">,</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">environ</span><span class="py-op">[</span><span class="py-name">binding</span><span class="py-op">.</span><span class="py-name">name</span><span class="py-op">]</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno">17</span>  <span class="py-line"> </span>
+<a name="execute"></a><div id="execute-def"><span class="py-lineno">18</span> <a class="py-toggle" href="#" id="execute-toggle" onclick="toggle('execute'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.injector.run-module.html#execute">execute</a><span class="py-op">(</span><span class="py-param">policy</span><span class="py-op">,</span> <span class="py-param">prog_args</span><span class="py-op">,</span> <span class="py-param">dry_run</span> <span class="py-op">=</span> <span class="py-name">False</span><span class="py-op">,</span> <span class="py-param">main</span> <span class="py-op">=</span> <span class="py-name">None</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="execute-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="execute-expanded"><span class="py-lineno">19</span>  <span class="py-line">        <span class="py-docstring">"""Execute program. On success, doesn't return. On failure, raises an Exception.</span> </span>
+<span class="py-lineno">20</span>  <span class="py-line"><span class="py-docstring">        Returns normally only for a successful dry run.</span> </span>
+<span class="py-lineno">21</span>  <span class="py-line"><span class="py-docstring">        </span> </span>
+<span class="py-lineno">22</span>  <span class="py-line"><span class="py-docstring">        @precondition: C{policy.ready and policy.get_uncached_implementations() == []}</span> </span>
+<span class="py-lineno">23</span>  <span class="py-line"><span class="py-docstring">        """</span> </span>
+<span class="py-lineno">24</span>  <span class="py-line">        <span class="py-name">iface</span> <span class="py-op">=</span> <span id="link-5" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-5', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-6" class="py-name"><a title="zeroinstall.injector.iface_cache.IfaceCache.get_interface
+zeroinstall.injector.policy.Policy.get_interface
+zeroinstall.injector.policy.Policy.get_interface" class="py-name" href="#" onclick="doclink('link-6', 'get_interface', 'Method zeroinstall.injector.iface_cache.IfaceCache.get_interface()=zeroinstall.injector.iface_cache.IfaceCache-class.html#get_interface,Method zeroinstall.injector.policy.Policy.get_interface()=zeroinstall.injector.policy.Policy-class.html#get_interface,Method zeroinstall.injector.policy.Policy.get_interface()=zeroinstall.injector.policy.Policy-class.html#get_interface'); return false;">get_interface</a></span></span><span class="py-op">(</span><span id="link-7" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-7', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span class="py-name">root</span><span class="py-op">)</span> </span>
+<span class="py-lineno">25</span>  <span class="py-line">                 </span>
+<span class="py-lineno">26</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">needed_iface</span> <span class="py-keyword">in</span> <span id="link-8" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-8', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span class="py-name">implementation</span><span class="py-op">:</span> </span>
+<span class="py-lineno">27</span>  <span class="py-line">                <span class="py-name">impl</span> <span class="py-op">=</span> <span id="link-9" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-9', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span class="py-name">implementation</span><span class="py-op">[</span><span class="py-name">needed_iface</span><span class="py-op">]</span> </span>
+<span class="py-lineno">28</span>  <span class="py-line">                <span class="py-keyword">assert</span> <span class="py-name">impl</span> </span>
+<span class="py-lineno">29</span>  <span class="py-line">                <span class="py-keyword">for</span> <span class="py-name">dep</span> <span class="py-keyword">in</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">dependencies</span><span class="py-op">.</span><span class="py-name">values</span><span class="py-op">(</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno">30</span>  <span class="py-line">                        <span class="py-name">dep_iface</span> <span class="py-op">=</span> <span id="link-10" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-10', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-11" class="py-name"><a title="zeroinstall.injector.iface_cache.IfaceCache.get_interface
+zeroinstall.injector.policy.Policy.get_interface
+zeroinstall.injector.policy.Policy.get_interface" class="py-name" href="#" onclick="doclink('link-11', 'get_interface', 'Method zeroinstall.injector.iface_cache.IfaceCache.get_interface()=zeroinstall.injector.iface_cache.IfaceCache-class.html#get_interface,Method zeroinstall.injector.policy.Policy.get_interface()=zeroinstall.injector.policy.Policy-class.html#get_interface,Method zeroinstall.injector.policy.Policy.get_interface()=zeroinstall.injector.policy.Policy-class.html#get_interface'); return false;">get_interface</a></span></span><span class="py-op">(</span><span class="py-name">dep</span><span class="py-op">.</span><span class="py-name">interface</span><span class="py-op">)</span> </span>
+<span class="py-lineno">31</span>  <span class="py-line">                        <span class="py-keyword">for</span> <span class="py-name">b</span> <span class="py-keyword">in</span> <span class="py-name">dep</span><span class="py-op">.</span><span class="py-name">bindings</span><span class="py-op">:</span> </span>
+<span class="py-lineno">32</span>  <span class="py-line">                                <span class="py-keyword">if</span> <span class="py-name">isinstance</span><span class="py-op">(</span><span class="py-name">b</span><span class="py-op">,</span> <span id="link-12" class="py-name"><a title="zeroinstall.injector.model.EnvironmentBinding" class="py-name" href="#" onclick="doclink('link-12', 'EnvironmentBinding', 'Class zeroinstall.injector.model.EnvironmentBinding=zeroinstall.injector.model.EnvironmentBinding-class.html'); return false;">EnvironmentBinding</a></span></span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno">33</span>  <span class="py-line">                                        <span class="py-name">dep_impl</span> <span class="py-op">=</span> <span id="link-13" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-13', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-14" class="py-name"><a title="zeroinstall.injector.policy.Policy.get_implementation
+zeroinstall.injector.policy.Policy.get_implementation" class="py-name" href="#" onclick="doclink('link-14', 'get_implementation', 'Method zeroinstall.injector.policy.Policy.get_implementation()=zeroinstall.injector.policy.Policy-class.html#get_implementation,Method zeroinstall.injector.policy.Policy.get_implementation()=zeroinstall.injector.policy.Policy-class.html#get_implementation'); return false;">get_implementation</a></span></span><span class="py-op">(</span><span class="py-name">dep_iface</span><span class="py-op">)</span> </span>
+<span class="py-lineno">34</span>  <span class="py-line">                                        <span id="link-15" class="py-name"><a title="zeroinstall.injector.run.do_env_binding" class="py-name" href="#" onclick="doclink('link-15', 'do_env_binding', 'Function zeroinstall.injector.run.do_env_binding()=zeroinstall.injector.run-module.html#do_env_binding'); return false;">do_env_binding</a></span></span><span class="py-op">(</span><span class="py-name">b</span><span class="py-op">,</span> <span id="link-16" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-16', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-17" class="py-name"><a title="zeroinstall.injector.policy.Policy.get_implementation_path
+zeroinstall.injector.policy.Policy.get_implementation_path" class="py-name" href="#" onclick="doclink('link-17', 'get_implementation_path', 'Method zeroinstall.injector.policy.Policy.get_implementation_path()=zeroinstall.injector.policy.Policy-class.html#get_implementation_path,Method zeroinstall.injector.policy.Policy.get_implementation_path()=zeroinstall.injector.policy.Policy-class.html#get_implementation_path'); return false;">get_implementation_path</a></span></span><span class="py-op">(</span><span class="py-name">dep_impl</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">35</span>  <span class="py-line">         </span>
+<span class="py-lineno">36</span>  <span class="py-line">        <span class="py-name">root_impl</span> <span class="py-op">=</span> <span id="link-18" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-18', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-19" class="py-name"><a title="zeroinstall.injector.policy.Policy.get_implementation
+zeroinstall.injector.policy.Policy.get_implementation" class="py-name" href="#" onclick="doclink('link-19', 'get_implementation', 'Method zeroinstall.injector.policy.Policy.get_implementation()=zeroinstall.injector.policy.Policy-class.html#get_implementation,Method zeroinstall.injector.policy.Policy.get_implementation()=zeroinstall.injector.policy.Policy-class.html#get_implementation'); return false;">get_implementation</a></span></span><span class="py-op">(</span><span class="py-name">iface</span><span class="py-op">)</span> </span>
+<span class="py-lineno">37</span>  <span class="py-line">        <span class="py-keyword">if</span> <span id="link-20" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-20', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> <span class="py-keyword">is</span> <span class="py-name">None</span><span class="py-op">:</span> </span>
+<span class="py-lineno">38</span>  <span class="py-line">                <span id="link-21" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-21', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> <span class="py-op">=</span> <span class="py-name">root_impl</span><span class="py-op">.</span><span id="link-22" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-22', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> </span>
+<span class="py-lineno">39</span>  <span class="py-line">        <span class="py-keyword">elif</span> <span id="link-23" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-23', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">.</span><span class="py-name">startswith</span><span class="py-op">(</span><span class="py-string">'/'</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno">40</span>  <span class="py-line">                <span id="link-24" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-24', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> <span class="py-op">=</span> <span id="link-25" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-25', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">[</span><span class="py-number">1</span><span class="py-op">:</span><span class="py-op">]</span> </span>
+<span class="py-lineno">41</span>  <span class="py-line">        <span class="py-keyword">elif</span> <span class="py-name">root_impl</span><span class="py-op">.</span><span id="link-26" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-26', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">:</span> </span>
+<span class="py-lineno">42</span>  <span class="py-line">                <span id="link-27" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-27', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">dirname</span><span class="py-op">(</span><span class="py-name">root_impl</span><span class="py-op">.</span><span id="link-28" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-28', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">)</span><span class="py-op">,</span> <span id="link-29" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-29', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">43</span>  <span class="py-line"> </span>
+<span class="py-lineno">44</span>  <span class="py-line">        <span class="py-keyword">if</span> <span id="link-30" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-30', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span> <span class="py-keyword">is</span> <span class="py-name">None</span><span class="py-op">:</span> </span>
+<span class="py-lineno">45</span>  <span class="py-line">                <span class="py-keyword">raise</span> <span id="link-31" class="py-name"><a title="zeroinstall.SafeException" class="py-name" href="#" onclick="doclink('link-31', 'SafeException', 'Class zeroinstall.SafeException=zeroinstall.SafeException-class.html'); return false;">SafeException</a></span></span><span class="py-op">(</span><span class="py-string">"Implementation '%s' cannot be executed directly; it is just a library "</span> </span>
+<span class="py-lineno">46</span>  <span class="py-line">                                    <span class="py-string">"to be used by other programs (or missing 'main' attribute)"</span> <span class="py-op">%</span> </span>
+<span class="py-lineno">47</span>  <span class="py-line">                                    <span class="py-name">root_impl</span><span class="py-op">)</span> </span>
+<span class="py-lineno">48</span>  <span class="py-line"> </span>
+<span class="py-lineno">49</span>  <span class="py-line">        <span class="py-name">prog_path</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span id="link-32" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-32', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span id="link-33" class="py-name"><a title="zeroinstall.injector.policy.Policy.get_implementation_path
+zeroinstall.injector.policy.Policy.get_implementation_path" class="py-name" href="#" onclick="doclink('link-33', 'get_implementation_path', 'Method zeroinstall.injector.policy.Policy.get_implementation_path()=zeroinstall.injector.policy.Policy-class.html#get_implementation_path,Method zeroinstall.injector.policy.Policy.get_implementation_path()=zeroinstall.injector.policy.Policy-class.html#get_implementation_path'); return false;">get_implementation_path</a></span></span><span class="py-op">(</span><span class="py-name">root_impl</span><span class="py-op">)</span><span class="py-op">,</span> <span id="link-34" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-34', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">50</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">exists</span><span class="py-op">(</span><span class="py-name">prog_path</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno">51</span>  <span class="py-line">                <span class="py-keyword">raise</span> <span id="link-35" class="py-name"><a title="zeroinstall.SafeException" class="py-name" href="#" onclick="doclink('link-35', 'SafeException', 'Class zeroinstall.SafeException=zeroinstall.SafeException-class.html'); return false;">SafeException</a></span></span><span class="py-op">(</span><span class="py-string">"File '%s' does not exist.\n"</span> </span>
+<span class="py-lineno">52</span>  <span class="py-line">                                <span class="py-string">"(implementation '%s' + program '%s')"</span> <span class="py-op">%</span> </span>
+<span class="py-lineno">53</span>  <span class="py-line">                                <span class="py-op">(</span><span class="py-name">prog_path</span><span class="py-op">,</span> <span id="link-36" class="py-name"><a title="zeroinstall.injector.policy" class="py-name" href="#" onclick="doclink('link-36', 'policy', 'Module zeroinstall.injector.policy=zeroinstall.injector.policy-module.html'); return false;">policy</a></span></span><span class="py-op">.</span><span class="py-name">implementation</span><span class="py-op">[</span><span class="py-name">iface</span><span class="py-op">]</span><span class="py-op">.</span><span class="py-name">id</span><span class="py-op">,</span> <span id="link-37" class="py-name"><a title="zeroinstall.injector.cli.main" class="py-name" href="#" onclick="doclink('link-37', 'main', 'Function zeroinstall.injector.cli.main()=zeroinstall.injector.cli-module.html#main'); return false;">main</a></span></span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">54</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-name">dry_run</span><span class="py-op">:</span> </span>
+<span class="py-lineno">55</span>  <span class="py-line">                <span class="py-keyword">print</span> <span class="py-string">"Would execute:"</span><span class="py-op">,</span> <span class="py-name">prog_path</span> </span>
+<span class="py-lineno">56</span>  <span class="py-line">        <span class="py-keyword">else</span><span class="py-op">:</span> </span>
+<span class="py-lineno">57</span>  <span class="py-line">                <span class="py-name">info</span><span class="py-op">(</span><span class="py-string">"Executing: %s"</span><span class="py-op">,</span> <span class="py-name">prog_path</span><span class="py-op">)</span> </span>
+<span class="py-lineno">58</span>  <span class="py-line">                <span class="py-name">sys</span><span class="py-op">.</span><span class="py-name">stdout</span><span class="py-op">.</span><span class="py-name">flush</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">59</span>  <span class="py-line">                <span class="py-name">sys</span><span class="py-op">.</span><span class="py-name">stderr</span><span class="py-op">.</span><span class="py-name">flush</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">60</span>  <span class="py-line">                <span class="py-keyword">try</span><span class="py-op">:</span> </span>
+<span class="py-lineno">61</span>  <span class="py-line">                        <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">execl</span><span class="py-op">(</span><span class="py-name">prog_path</span><span class="py-op">,</span> <span class="py-name">prog_path</span><span class="py-op">,</span> <span class="py-op">*</span><span class="py-name">prog_args</span><span class="py-op">)</span> </span>
+<span class="py-lineno">62</span>  <span class="py-line">                <span class="py-keyword">except</span> <span class="py-name">OSError</span><span class="py-op">,</span> <span class="py-name">ex</span><span class="py-op">:</span> </span>
+<span class="py-lineno">63</span>  <span class="py-line">                        <span class="py-keyword">raise</span> <span id="link-38" class="py-name"><a title="zeroinstall.SafeException" class="py-name" href="#" onclick="doclink('link-38', 'SafeException', 'Class zeroinstall.SafeException=zeroinstall.SafeException-class.html'); return false;">SafeException</a></span></span><span class="py-op">(</span><span class="py-string">"Failed to run '%s': %s"</span> <span class="py-op">%</span> <span class="py-op">(</span><span class="py-name">prog_path</span><span class="py-op">,</span> <span class="py-name">str</span><span class="py-op">(</span><span class="py-name">ex</span><span class="py-op">)</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno">64</span>  <span class="py-line"> </span><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">Generated by Epydoc
+        3.0alpha3 on Sun Oct  8 13:16:43 2006</td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

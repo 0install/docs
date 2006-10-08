@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink">exceptions.Exception</strong>:
+      <em class="summary">Common base class for all exceptions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.SafeException-class.html">zeroinstall.SafeException</a></strong>:
+      <em class="summary">An exception that can be reported to the user without a stack 
+        trace.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.NeedDownload-class.html">zeroinstall.NeedDownload</a></strong>:
+      <em class="summary">Thrown by <a 
+        href="zeroinstall.injector.autopolicy.AutoPolicy-class.html" 
+        class="link">injector.autopolicy.AutoPolicy</a> if we tried to 
+        start a download and downloading is disabled.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
+      <em class="summary">An exception that can be reported to the user without a stack 
+        trace.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.cli.UsageError-class.html">zeroinstall.zerostore.cli.UsageError</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NotStored-class.html">zeroinstall.zerostore.NotStored</a></strong>:
+      <em class="summary">Throws if a requested implementation isn't in the cache.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.reader.InvalidInterface-class.html">zeroinstall.injector.reader.InvalidInterface</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.BadDigest-class.html">zeroinstall.zerostore.BadDigest</a></strong>:
+      <em class="summary">Thrown if a digest is invalid (either syntactically or 
+        cryptographically).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.DownloadError-class.html">zeroinstall.injector.download.DownloadError</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Interface-class.html">zeroinstall.injector.model.Interface</a></strong>:
+      <em class="summary">An Interface represents some contract of behaviour.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.Stores-class.html">zeroinstall.zerostore.Stores</a></strong>:
+      <em class="summary">A list of <a href="zeroinstall.zerostore.Store-class.html" 
+        class="link">Store</a>s.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Restriction-class.html">zeroinstall.injector.model.Restriction</a></strong>:
+      <em class="summary">A Restriction limits the allowed implementations of an 
+        Interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Feed-class.html">zeroinstall.injector.model.Feed</a></strong>:
+      <em class="summary">An interface's feeds are other interfaces whose implementations 
+        can also be used as implementations of this interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.Download-class.html">zeroinstall.injector.download.Download</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Binding-class.html">zeroinstall.injector.model.Binding</a></strong>:
+      <em class="summary">Information about how the choice of a Dependency is made known 
+        to the application being run.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.EnvironmentBinding-class.html">zeroinstall.injector.model.EnvironmentBinding</a></strong>:
+      <em class="summary">Indicate the chosen implementation using an environment 
+        variable.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.RetrievalMethod-class.html">zeroinstall.injector.model.RetrievalMethod</a></strong>:
+      <em class="summary">A RetrievalMethod provides a way to fetch an implementation.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Recipe-class.html">zeroinstall.injector.model.Recipe</a></strong>:
+      <em class="summary">Get an implementation by following a series of steps.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.DownloadSource-class.html">zeroinstall.injector.model.DownloadSource</a></strong>:
+      <em class="summary">A DownloadSource provides a way to fetch an implementation.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.Element-class.html">zeroinstall.injector.qdom.Element</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Dependency-class.html">zeroinstall.injector.model.Dependency</a></strong>:
+      <em class="summary">A Dependency indicates that an Implementation requires some 
+        additional code to function, specified by another Interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Stability-class.html">zeroinstall.injector.model.Stability</a></strong>:
+      <em class="summary">A stability rating.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Implementation-class.html">zeroinstall.injector.model.Implementation</a></strong>:
+      <em class="summary">An Implementation is a package which implements an 
+        Interface.</em>
+    </li>
+    <li> <strong class="uidlink">zeroinstall.injector.policy.Policy</strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html">zeroinstall.injector.autopolicy.AutoPolicy</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.Signature-class.html">zeroinstall.injector.gpg.Signature</a></strong>:
+      <em class="summary">Abstract base class for signature check results.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.BadSig-class.html">zeroinstall.injector.gpg.BadSig</a></strong>:
+      <em class="summary">A bad signature (doesn't match the message).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.ErrSig-class.html">zeroinstall.injector.gpg.ErrSig</a></strong>:
+      <em class="summary">Error while checking a signature.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.ValidSig-class.html">zeroinstall.injector.gpg.ValidSig</a></strong>:
+      <em class="summary">A valid signature check result.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.QSAXhandler-class.html">zeroinstall.injector.qdom.QSAXhandler</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.Store-class.html">zeroinstall.zerostore.Store</a></strong>:
+      <em class="summary">A directory for storing implementations.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.manifest.Algorithm-class.html">zeroinstall.zerostore.manifest.Algorithm</a></strong>:
+      <em class="summary">Abstract base class for algorithms.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.manifest.HashLibAlgorithm-class.html">zeroinstall.zerostore.manifest.HashLibAlgorithm</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.manifest.OldSHA1-class.html">zeroinstall.zerostore.manifest.OldSHA1</a></strong>:
+      <em class="summary">&nbsp;</em>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">Generated by Epydoc
+        3.0alpha3 on Sun Oct  8 13:16:41 2006</td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

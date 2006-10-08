@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.injector.arch</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
+        Module&nbsp;arch
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.arch-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="zeroinstall.injector.arch-module.html">Module zeroinstall.injector.arch</a></h1>
+<pre class="py-src">
+<span class="py-lineno"> 1</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno"> 2</span>  <span class="py-line"><span class="py-docstring">Information about the current system's architecture.</span> </span>
+<span class="py-lineno"> 3</span>  <span class="py-line"><span class="py-docstring"></span> </span>
+<span class="py-lineno"> 4</span>  <span class="py-line"><span class="py-docstring">This module provides information about the current system. It is used to determine</span> </span>
+<span class="py-lineno"> 5</span>  <span class="py-line"><span class="py-docstring">whether an implementation is suitable for this machine, and to compare different implementations.</span> </span>
+<span class="py-lineno"> 6</span>  <span class="py-line"><span class="py-docstring"></span> </span>
+<span class="py-lineno"> 7</span>  <span class="py-line"><span class="py-docstring">For example, it will indicate that:</span> </span>
+<span class="py-lineno"> 8</span>  <span class="py-line"><span class="py-docstring"></span> </span>
+<span class="py-lineno"> 9</span>  <span class="py-line"><span class="py-docstring"> - An i486 machine cannot run an i686 binary.</span> </span>
+<span class="py-lineno">10</span>  <span class="py-line"><span class="py-docstring"> - An i686 machine can run an i486 binary, but would prefer an i586 one.</span> </span>
+<span class="py-lineno">11</span>  <span class="py-line"><span class="py-docstring"> - A Windows binary cannot run on a Linux machine.</span> </span>
+<span class="py-lineno">12</span>  <span class="py-line"><span class="py-docstring"></span> </span>
+<span class="py-lineno">13</span>  <span class="py-line"><span class="py-docstring">Each dictionary maps from a supported architecture type to a preference level. Lower numbers are</span> </span>
+<span class="py-lineno">14</span>  <span class="py-line"><span class="py-docstring">better, Unsupported architectures are not listed at all.</span> </span>
+<span class="py-lineno">15</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno">16</span>  <span class="py-line"> </span>
+<span class="py-lineno">17</span>  <span class="py-line"><span class="py-comment"># Copyright (C) 2006, Thomas Leonard</span> </span>
+<span class="py-lineno">18</span>  <span class="py-line"><span class="py-comment"></span><span class="py-comment"># See the README file for details, or visit http://0install.net.</span> </span>
+<span class="py-lineno">19</span>  <span class="py-line"><span class="py-comment"></span> </span>
+<span class="py-lineno">20</span>  <span class="py-line"><span class="py-keyword">import</span> <span class="py-name">os</span> </span>
+<span class="py-lineno">21</span>  <span class="py-line"> </span>
+<span class="py-lineno">22</span>  <span class="py-line"><span class="py-comment"># os_ranks and mapping are mappings from names to how good they are.</span> </span>
+<span class="py-lineno">23</span>  <span class="py-line"><span class="py-comment"></span><span class="py-comment"># 1 =&gt; Native (best)</span> </span>
+<span class="py-lineno">24</span>  <span class="py-line"><span class="py-comment"></span><span class="py-comment"># Higher numbers are worse but usable.</span> </span>
+<span class="py-lineno">25</span>  <span class="py-line"><span class="py-comment"></span><span id="link-0" class="py-name"><a title="zeroinstall.injector.arch._uname" class="py-name" href="#" onclick="doclink('link-0', '_uname', 'Variable zeroinstall.injector.arch._uname=zeroinstall.injector.arch-module.html#_uname'); return false;">_uname</a></span></span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">uname</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">26</span>  <span class="py-line"> </span>
+<span class="py-lineno">27</span>  <span class="py-line"><span id="link-1" class="py-name"><a title="zeroinstall.injector.arch.os_ranks" class="py-name" href="#" onclick="doclink('link-1', 'os_ranks', 'Variable zeroinstall.injector.arch.os_ranks=zeroinstall.injector.arch-module.html#os_ranks'); return false;">os_ranks</a></span></span> <span class="py-op">=</span> <span class="py-op">{</span> </span>
+<span class="py-lineno">28</span>  <span class="py-line"><span class="py-comment">#       'Linux' : 3,            # Linux (lots of systems support emulation)</span> </span>
+<span class="py-lineno">29</span>  <span class="py-line">        <span class="py-name">None</span> <span class="py-op">:</span> <span class="py-number">2</span><span class="py-op">,</span>               <span class="py-comment"># Any OS</span> </span>
+<span class="py-lineno">30</span>  <span class="py-line">        <span id="link-2" class="py-name"><a title="zeroinstall.injector.arch._uname" class="py-name" href="#" onclick="doclink('link-2', '_uname', 'Variable zeroinstall.injector.arch._uname=zeroinstall.injector.arch-module.html#_uname'); return false;">_uname</a></span></span><span class="py-op">[</span><span class="py-number">0</span><span class="py-op">]</span> <span class="py-op">:</span> <span class="py-number">1</span><span class="py-op">,</span>          <span class="py-comment"># Current OS</span> </span>
+<span class="py-lineno">31</span>  <span class="py-line"><span class="py-op">}</span> </span>
+<span class="py-lineno">32</span>  <span class="py-line"> </span>
+<a name="_get_machine_ranks"></a><div id="_get_machine_ranks-def"><span class="py-lineno">33</span> <a class="py-toggle" href="#" id="_get_machine_ranks-toggle" onclick="toggle('_get_machine_ranks'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.injector.arch-module.html#_get_machine_ranks">_get_machine_ranks</a><span class="py-op">(</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="_get_machine_ranks-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="_get_machine_ranks-expanded"><span class="py-lineno">34</span>  <span class="py-line">        <span class="py-comment"># Binaries compiled for _this_machine are best...</span> </span>
+<span class="py-lineno">35</span>  <span class="py-line"><span class="py-comment"></span>        <span class="py-name">this_machine</span> <span class="py-op">=</span> <span id="link-3" class="py-name"><a title="zeroinstall.injector.arch._uname" class="py-name" href="#" onclick="doclink('link-3', '_uname', 'Variable zeroinstall.injector.arch._uname=zeroinstall.injector.arch-module.html#_uname'); return false;">_uname</a></span></span><span class="py-op">[</span><span class="py-op">-</span><span class="py-number">1</span><span class="py-op">]</span> </span>
+<span class="py-lineno">36</span>  <span class="py-line">        <span id="link-4" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-4', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span> <span class="py-op">=</span> <span class="py-op">{</span><span class="py-name">this_machine</span> <span class="py-op">:</span> <span class="py-number">0</span><span class="py-op">}</span> </span>
+<span class="py-lineno">37</span>  <span class="py-line"> </span>
+<span class="py-lineno">38</span>  <span class="py-line">        <span class="py-comment"># If this_machine appears in the first column of this table, all</span> </span>
+<span class="py-lineno">39</span>  <span class="py-line"><span class="py-comment"></span>        <span class="py-comment"># following machine types on the line will also run on this one</span> </span>
+<span class="py-lineno">40</span>  <span class="py-line"><span class="py-comment"></span>        <span class="py-comment"># (earlier ones preferred):</span> </span>
+<span class="py-lineno">41</span>  <span class="py-line"><span class="py-comment"></span>        <span class="py-name">_machine_matrix</span> <span class="py-op">=</span> <span class="py-op">{</span> </span>
+<span class="py-lineno">42</span>  <span class="py-line">                <span class="py-string">'i486'</span><span class="py-op">:</span> <span class="py-op">[</span><span class="py-string">'i386'</span><span class="py-op">]</span><span class="py-op">,</span> </span>
+<span class="py-lineno">43</span>  <span class="py-line">                <span class="py-string">'i586'</span><span class="py-op">:</span> <span class="py-op">[</span><span class="py-string">'i486'</span><span class="py-op">,</span> <span class="py-string">'i386'</span><span class="py-op">]</span><span class="py-op">,</span> </span>
+<span class="py-lineno">44</span>  <span class="py-line">                <span class="py-string">'i686'</span><span class="py-op">:</span> <span class="py-op">[</span><span class="py-string">'i586'</span><span class="py-op">,</span> <span class="py-string">'i486'</span><span class="py-op">,</span> <span class="py-string">'i386'</span><span class="py-op">]</span><span class="py-op">,</span> </span>
+<span class="py-lineno">45</span>  <span class="py-line">                <span class="py-string">'ppc64'</span><span class="py-op">:</span> <span class="py-op">[</span><span class="py-string">'ppc32'</span><span class="py-op">]</span><span class="py-op">,</span> </span>
+<span class="py-lineno">46</span>  <span class="py-line">        <span class="py-op">}</span> </span>
+<span class="py-lineno">47</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">supported</span> <span class="py-keyword">in</span> <span class="py-name">_machine_matrix</span><span class="py-op">.</span><span class="py-name">get</span><span class="py-op">(</span><span class="py-name">this_machine</span><span class="py-op">,</span> <span class="py-op">[</span><span class="py-op">]</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno">48</span>  <span class="py-line">                <span id="link-5" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-5', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span><span class="py-op">[</span><span class="py-name">supported</span><span class="py-op">]</span> <span class="py-op">=</span> <span class="py-name">len</span><span class="py-op">(</span><span id="link-6" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-6', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">49</span>  <span class="py-line"> </span>
+<span class="py-lineno">50</span>  <span class="py-line">        <span class="py-comment"># At the lowest priority, try a machine-independant implementation</span> </span>
+<span class="py-lineno">51</span>  <span class="py-line"><span class="py-comment"></span>        <span id="link-7" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-7', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span><span class="py-op">[</span><span class="py-name">None</span><span class="py-op">]</span> <span class="py-op">=</span> <span class="py-name">len</span><span class="py-op">(</span><span id="link-8" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-8', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">52</span>  <span class="py-line">        <span class="py-keyword">return</span> <span id="link-9" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-9', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span> </span>
+</div><span class="py-lineno">53</span>  <span class="py-line"> </span>
+<span class="py-lineno">54</span>  <span class="py-line"><span id="link-10" class="py-name"><a title="zeroinstall.injector.arch.machine_ranks" class="py-name" href="#" onclick="doclink('link-10', 'machine_ranks', 'Variable zeroinstall.injector.arch.machine_ranks=zeroinstall.injector.arch-module.html#machine_ranks'); return false;">machine_ranks</a></span></span> <span class="py-op">=</span> <span class="py-name">_get_machine_ranks</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">55</span>  <span class="py-line"><span class="py-comment">#print machine_ranks</span> </span>
+<span class="py-lineno">56</span>  <span class="py-line"><span class="py-comment"></span> </span><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">Generated by Epydoc
+        3.0alpha3 on Sun Oct  8 13:16:45 2006</td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.injector.writer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
+        Module&nbsp;writer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.writer-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="zeroinstall.injector.writer-module.html">Module zeroinstall.injector.writer</a></h1>
+<pre class="py-src">
+<span class="py-lineno"> 1</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno"> 2</span>  <span class="py-line"><span class="py-docstring">Save per-interface configuration information.</span> </span>
+<span class="py-lineno"> 3</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
+<span class="py-lineno"> 4</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 5</span>  <span class="py-line"><span class="py-comment"># Copyright (C) 2006, Thomas Leonard</span> </span>
+<span class="py-lineno"> 6</span>  <span class="py-line"><span class="py-comment"></span><span class="py-comment"># See the README file for details, or visit http://0install.net.</span> </span>
+<span class="py-lineno"> 7</span>  <span class="py-line"><span class="py-comment"></span> </span>
+<span class="py-lineno"> 8</span>  <span class="py-line"><span class="py-keyword">import</span> <span class="py-name">os</span> </span>
+<span class="py-lineno"> 9</span>  <span class="py-line"><span class="py-keyword">from</span> <span class="py-name">xml</span><span class="py-op">.</span><span class="py-name">dom</span> <span class="py-keyword">import</span> <span class="py-name">minidom</span><span class="py-op">,</span> <span class="py-name">XMLNS_NAMESPACE</span> </span>
+<span class="py-lineno">10</span>  <span class="py-line"> </span>
+<span class="py-lineno">11</span>  <span class="py-line"><span class="py-keyword">import</span> <span id="link-0" class="py-name"><a title="zeroinstall.injector.basedir" class="py-name" href="#" onclick="doclink('link-0', 'basedir', 'Module zeroinstall.injector.basedir=zeroinstall.injector.basedir-module.html'); return false;">basedir</a></span></span> </span>
+<span class="py-lineno">12</span>  <span class="py-line"> </span>
+<span class="py-lineno">13</span>  <span class="py-line"><span class="py-keyword">from</span> <span id="link-1" class="py-name"><a title="zeroinstall.injector.model" class="py-name" href="#" onclick="doclink('link-1', 'model', 'Module zeroinstall.injector.model=zeroinstall.injector.model-module.html'); return false;">model</a></span></span> <span class="py-keyword">import</span> <span class="py-op">*</span> </span>
+<span class="py-lineno">14</span>  <span class="py-line"> </span>
+<span class="py-lineno">15</span>  <span class="py-line"><span class="py-keyword">from</span> <span id="link-2" class="py-name"><a title="zeroinstall.injector.namespaces" class="py-name" href="#" onclick="doclink('link-2', 'namespaces', 'Module zeroinstall.injector.namespaces=zeroinstall.injector.namespaces-module.html'); return false;">namespaces</a></span></span> <span class="py-keyword">import</span> <span id="link-3" class="py-name"><a title="zeroinstall.injector.namespaces.config_site" class="py-name" href="#" onclick="doclink('link-3', 'config_site', 'Variable zeroinstall.injector.namespaces.config_site=zeroinstall.injector.namespaces-module.html#config_site'); return false;">config_site</a></span></span><span class="py-op">,</span> <span id="link-4" class="py-name"><a title="zeroinstall.injector.namespaces.config_prog" class="py-name" href="#" onclick="doclink('link-4', 'config_prog', 'Variable zeroinstall.injector.namespaces.config_prog=zeroinstall.injector.namespaces-module.html#config_prog'); return false;">config_prog</a></span></span><span class="py-op">,</span> <span id="link-5" class="py-name"><a title="zeroinstall.injector.namespaces.XMLNS_IFACE" class="py-name" href="#" onclick="doclink('link-5', 'XMLNS_IFACE', 'Variable zeroinstall.injector.namespaces.XMLNS_IFACE=zeroinstall.injector.namespaces-module.html#XMLNS_IFACE'); return false;">XMLNS_IFACE</a></span></span> </span>
+<span class="py-lineno">16</span>  <span class="py-line"> </span>
+<a name="_add_impl"></a><div id="_add_impl-def"><span class="py-lineno">17</span> <a class="py-toggle" href="#" id="_add_impl-toggle" onclick="toggle('_add_impl'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.injector.writer-module.html#_add_impl">_add_impl</a><span class="py-op">(</span><span class="py-param">parent</span><span class="py-op">,</span> <span class="py-param">impl</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="_add_impl-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="_add_impl-expanded"><span class="py-lineno">18</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">user_stability</span><span class="py-op">:</span> </span>
+<span class="py-lineno">19</span>  <span class="py-line">                <span class="py-name">doc</span> <span class="py-op">=</span> <span class="py-name">parent</span><span class="py-op">.</span><span class="py-name">ownerDocument</span> </span>
+<span class="py-lineno">20</span>  <span class="py-line">                <span class="py-name">node</span> <span class="py-op">=</span> <span class="py-name">doc</span><span class="py-op">.</span><span class="py-name">createElementNS</span><span class="py-op">(</span><span id="link-6" class="py-name"><a title="zeroinstall.injector.namespaces.XMLNS_IFACE" class="py-name" href="#" onclick="doclink('link-6', 'XMLNS_IFACE', 'Variable zeroinstall.injector.namespaces.XMLNS_IFACE=zeroinstall.injector.namespaces-module.html#XMLNS_IFACE'); return false;">XMLNS_IFACE</a></span></span><span class="py-op">,</span> <span class="py-string">'implementation'</span><span class="py-op">)</span> </span>
+<span class="py-lineno">21</span>  <span class="py-line">                <span class="py-name">parent</span><span class="py-op">.</span><span class="py-name">appendChild</span><span class="py-op">(</span><span class="py-name">node</span><span class="py-op">)</span> </span>
+<span class="py-lineno">22</span>  <span class="py-line">                <span class="py-name">node</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'user-stability'</span><span class="py-op">,</span> <span class="py-name">str</span><span class="py-op">(</span><span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">user_stability</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">23</span>  <span class="py-line">                <span class="py-name">node</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'id'</span><span class="py-op">,</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">id</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno">24</span>  <span class="py-line"> </span>
+<a name="save_interface"></a><div id="save_interface-def"><span class="py-lineno">25</span> <a class="py-toggle" href="#" id="save_interface-toggle" onclick="toggle('save_interface'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.injector.writer-module.html#save_interface">save_interface</a><span class="py-op">(</span><span class="py-param">interface</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="save_interface-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="save_interface-expanded"><span class="py-lineno">26</span>  <span class="py-line">        <span class="py-name">path</span> <span class="py-op">=</span> <span id="link-7" class="py-name"><a title="zeroinstall.injector.basedir" class="py-name" href="#" onclick="doclink('link-7', 'basedir', 'Module zeroinstall.injector.basedir=zeroinstall.injector.basedir-module.html'); return false;">basedir</a></span></span><span class="py-op">.</span><span id="link-8" class="py-name"><a title="zeroinstall.injector.basedir.save_config_path" class="py-name" href="#" onclick="doclink('link-8', 'save_config_path', 'Function zeroinstall.injector.basedir.save_config_path()=zeroinstall.injector.basedir-module.html#save_config_path'); return false;">save_config_path</a></span></span><span class="py-op">(</span><span id="link-9" class="py-name"><a title="zeroinstall.injector.namespaces.config_site" class="py-name" href="#" onclick="doclink('link-9', 'config_site', 'Variable zeroinstall.injector.namespaces.config_site=zeroinstall.injector.namespaces-module.html#config_site'); return false;">config_site</a></span></span><span class="py-op">,</span> <span id="link-10" class="py-name"><a title="zeroinstall.injector.namespaces.config_prog" class="py-name" href="#" onclick="doclink('link-10', 'config_prog', 'Variable zeroinstall.injector.namespaces.config_prog=zeroinstall.injector.namespaces-module.html#config_prog'); return false;">config_prog</a></span></span><span class="py-op">,</span> <span class="py-string">'user_overrides'</span><span class="py-op">)</span> </span>
+<span class="py-lineno">27</span>  <span class="py-line">        <span class="py-name">path</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">path</span><span class="py-op">,</span> <span id="link-11" class="py-name"><a title="zeroinstall.injector.model.escape" class="py-name" href="#" onclick="doclink('link-11', 'escape', 'Function zeroinstall.injector.model.escape()=zeroinstall.injector.model-module.html#escape'); return false;">escape</a></span></span><span class="py-op">(</span><span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">uri</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">28</span>  <span class="py-line">        <span class="py-comment">#print "Save to", path</span> </span>
+<span class="py-lineno">29</span>  <span class="py-line"><span class="py-comment"></span> </span>
+<span class="py-lineno">30</span>  <span class="py-line">        <span class="py-name">impl</span> <span class="py-op">=</span> <span class="py-name">minidom</span><span class="py-op">.</span><span class="py-name">getDOMImplementation</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">31</span>  <span class="py-line">        <span class="py-name">doc</span> <span class="py-op">=</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">createDocument</span><span class="py-op">(</span><span id="link-12" class="py-name"><a title="zeroinstall.injector.namespaces.XMLNS_IFACE" class="py-name" href="#" onclick="doclink('link-12', 'XMLNS_IFACE', 'Variable zeroinstall.injector.namespaces.XMLNS_IFACE=zeroinstall.injector.namespaces-module.html#XMLNS_IFACE'); return false;">XMLNS_IFACE</a></span></span><span class="py-op">,</span> <span class="py-string">'interface-preferences'</span><span class="py-op">,</span> <span class="py-name">None</span><span class="py-op">)</span> </span>
+<span class="py-lineno">32</span>  <span class="py-line"> </span>
+<span class="py-lineno">33</span>  <span class="py-line">        <span class="py-name">root</span> <span class="py-op">=</span> <span class="py-name">doc</span><span class="py-op">.</span><span class="py-name">documentElement</span> </span>
+<span class="py-lineno">34</span>  <span class="py-line">        <span class="py-name">root</span><span class="py-op">.</span><span class="py-name">setAttributeNS</span><span class="py-op">(</span><span class="py-name">XMLNS_NAMESPACE</span><span class="py-op">,</span> <span class="py-string">'xmlns'</span><span class="py-op">,</span> <span id="link-13" class="py-name"><a title="zeroinstall.injector.namespaces.XMLNS_IFACE" class="py-name" href="#" onclick="doclink('link-13', 'XMLNS_IFACE', 'Variable zeroinstall.injector.namespaces.XMLNS_IFACE=zeroinstall.injector.namespaces-module.html#XMLNS_IFACE'); return false;">XMLNS_IFACE</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">35</span>  <span class="py-line">        <span class="py-name">root</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'uri'</span><span class="py-op">,</span> <span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">uri</span><span class="py-op">)</span> </span>
+<span class="py-lineno">36</span>  <span class="py-line"> </span>
+<span class="py-lineno">37</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">stability_policy</span><span class="py-op">:</span> </span>
+<span class="py-lineno">38</span>  <span class="py-line">                <span class="py-name">root</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'stability-policy'</span><span class="py-op">,</span> <span class="py-name">str</span><span class="py-op">(</span><span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">stability_policy</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">39</span>  <span class="py-line"> </span>
+<span class="py-lineno">40</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">last_checked</span><span class="py-op">:</span> </span>
+<span class="py-lineno">41</span>  <span class="py-line">                <span class="py-name">root</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'last-checked'</span><span class="py-op">,</span> <span class="py-name">str</span><span class="py-op">(</span><span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">last_checked</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno">42</span>  <span class="py-line"> </span>
+<span class="py-lineno">43</span>  <span class="py-line">        <span class="py-name">impls</span> <span class="py-op">=</span> <span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">implementations</span><span class="py-op">.</span><span class="py-name">values</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">44</span>  <span class="py-line">        <span class="py-name">impls</span><span class="py-op">.</span><span class="py-name">sort</span><span class="py-op">(</span><span class="py-op">)</span> </span>
+<span class="py-lineno">45</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">impl</span> <span class="py-keyword">in</span> <span class="py-name">impls</span><span class="py-op">:</span> </span>
+<span class="py-lineno">46</span>  <span class="py-line">                <span class="py-name">_add_impl</span><span class="py-op">(</span><span class="py-name">root</span><span class="py-op">,</span> <span class="py-name">impl</span><span class="py-op">)</span> </span>
+<span class="py-lineno">47</span>  <span class="py-line">         </span>
+<span class="py-lineno">48</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">feed</span> <span class="py-keyword">in</span> <span class="py-name">interface</span><span class="py-op">.</span><span class="py-name">feeds</span><span class="py-op">:</span> </span>
+<span class="py-lineno">49</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-name">feed</span><span class="py-op">.</span><span class="py-name">user_override</span><span class="py-op">:</span> </span>
+<span class="py-lineno">50</span>  <span class="py-line">                        <span class="py-name">elem</span> <span class="py-op">=</span> <span class="py-name">doc</span><span class="py-op">.</span><span class="py-name">createElementNS</span><span class="py-op">(</span><span id="link-14" class="py-name"><a title="zeroinstall.injector.namespaces.XMLNS_IFACE" class="py-name" href="#" onclick="doclink('link-14', 'XMLNS_IFACE', 'Variable zeroinstall.injector.namespaces.XMLNS_IFACE=zeroinstall.injector.namespaces-module.html#XMLNS_IFACE'); return false;">XMLNS_IFACE</a></span></span><span class="py-op">,</span> <span class="py-string">'feed'</span><span class="py-op">)</span> </span>
+<span class="py-lineno">51</span>  <span class="py-line">                        <span class="py-name">root</span><span class="py-op">.</span><span class="py-name">appendChild</span><span class="py-op">(</span><span class="py-name">elem</span><span class="py-op">)</span> </span>
+<span class="py-lineno">52</span>  <span class="py-line">                        <span class="py-name">elem</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'src'</span><span class="py-op">,</span> <span class="py-name">feed</span><span class="py-op">.</span><span class="py-name">uri</span><span class="py-op">)</span> </span>
+<span class="py-lineno">53</span>  <span class="py-line">                        <span class="py-keyword">if</span> <span class="py-name">feed</span><span class="py-op">.</span><span id="link-15" class="py-name"><a title="zeroinstall.injector.arch
+zeroinstall.injector.model.Feed.arch
+zeroinstall.injector.model.Implementation.arch" class="py-name" href="#" onclick="doclink('link-15', 'arch', 'Module zeroinstall.injector.arch=zeroinstall.injector.arch-module.html,Variable zeroinstall.injector.model.Feed.arch=zeroinstall.injector.model.Feed-class.html#arch,Variable zeroinstall.injector.model.Implementation.arch=zeroinstall.injector.model.Implementation-class.html#arch'); return false;">arch</a></span></span><span class="py-op">:</span> </span>
+<span class="py-lineno">54</span>  <span class="py-line">                                <span class="py-name">elem</span><span class="py-op">.</span><span class="py-name">setAttribute</span><span class="py-op">(</span><span class="py-string">'arch'</span><span class="py-op">,</span> <span class="py-name">feed</span><span class="py-op">.</span><span id="link-16" class="py-name"><a title="zeroinstall.injector.arch
+zeroinstall.injector.model.Feed.arch
+zeroinstall.injector.model.Implementation.arch" class="py-name" href="#" onclick="doclink('link-16', 'arch', 'Module zeroinstall.injector.arch=zeroinstall.injector.arch-module.html,Variable zeroinstall.injector.model.Feed.arch=zeroinstall.injector.model.Feed-class.html#arch,Variable zeroinstall.injector.model.Implementation.arch=zeroinstall.injector.model.Implementation-class.html#arch'); return false;">arch</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno">55</span>  <span class="py-line"> </span>
+<span class="py-lineno">56</span>  <span class="py-line">        <span class="py-name">doc</span><span class="py-op">.</span><span class="py-name">writexml</span><span class="py-op">(</span><span class="py-name">file</span><span class="py-op">(</span><span class="py-name">path</span> <span class="py-op">+</span> <span class="py-string">'.new'</span><span class="py-op">,</span> <span class="py-string">'w'</span><span class="py-op">)</span><span class="py-op">,</span> <span class="py-name">addindent</span> <span class="py-op">=</span> <span class="py-string">" "</span><span class="py-op">,</span> <span class="py-name">newl</span> <span class="py-op">=</span> <span class="py-string">'\n'</span><span class="py-op">)</span> </span>
+<span class="py-lineno">57</span>  <span class="py-line">        <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">rename</span><span class="py-op">(</span><span class="py-name">path</span> <span class="py-op">+</span> <span class="py-string">'.new'</span><span class="py-op">,</span> <span class="py-name">path</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno">58</span>  <span class="py-line"> </span><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">Generated by Epydoc
+        3.0alpha3 on Sun Oct  8 13:16:43 2006</td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
