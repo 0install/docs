@@ -1,6 +1,6 @@
-<?xml version='1.0'?>
-<interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
-	   uri='http://0install.net/2006/interfaces/ZeroInstall-GUI.xml'>
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>ZeroInstall-GUI</name>
   <summary>graphical interface for the Zero Install injector</summary>
   <description>
@@ -8,14 +8,17 @@
   </description>
   <homepage>http://0install.net/injector.html</homepage>
 
-  <group main='0launch-gui'>
+  <group main="0launch-gui">
     <implementation id="sha1=9cd66d454ff3055002c2106ad74f470b1b2c1996" released="2006-09-16" stability="testing" version="0.22.1">
       <archive extract="zeroinstall-gui-0.22.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.22.1.tar.bz2" size="30000"/>
+    </implementation>
+    <implementation id="sha1=487c7127a729db69059d58a388a0d074e46decce" released="2006-10-08" stability="stable" version="0.23.1">
+      <archive extract="zeroinstall-gui-0.23.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.1.tar.bz2" size="32832"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFDAOArgeCgFmlPMERAuiwAKCS3Fso4SYilJtivNVUYeXTov/+1wCghXFEDYsSgBERtm9X
-xlZSPlxUH5M=
+iD8DBQBFKRDbrgeCgFmlPMERAgZGAJsELdASnlD7Yjb9QT/E9jrGU97gzQCePEnoVVN1IFjKmQsx
+bSz9aNm5ePo=
 
 -->
