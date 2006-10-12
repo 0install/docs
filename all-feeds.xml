@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
-<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png" homepage="http://0install.net/injector-using.html"/>
+<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2006/interfaces/0compile.xml" name="0compile" summary="create a binary release from source code" icon="tango/applications-system.png" homepage="http://0install.net/0compile.html"/>
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
 
@@ -19,6 +21,8 @@
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
+
+<feed uri="http://holizz.com/software/0install/firefox" name="Firefox" summary="Web browser" icon="http://holizz.com/software/icons/firefox.png" homepage="http://www.mozilla.com/firefox/"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
 
@@ -84,6 +88,8 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="adds icons for devices/volumes to the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/DeviceHandler.png"/>
 
+<feed uri="http://rox4debian.berlios.de/0install/Execute.xml" name="Execute" summary="run programs by command" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Execute.png"/>
+
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Media.png"/>
@@ -95,6 +101,8 @@
 <feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/TaskTray.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="sets time and date" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Time.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Weather.png"/>
 
@@ -108,6 +116,8 @@
 
 <feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc" name="Epeli" summary="Elämäpeli" icon="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.png"/>
 
+<feed uri="http://www.cye-tech.com/~lennon/Tide/Tide.xml" name="Tide" summary="a real-time text editor for the ROX desktop" icon="tango/applications-system.png"/>
+
 <feed uri="http://www.hayber.us/0install/Find" name="Find" summary="a find-in-files utility" icon="http://www.hayber.us/rox/Find/icon.png" homepage="http://rox.sourceforge.net/desktop/node/19"/>
 
 <feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="http://www.hayber.us/rox/Lithium/lithium.png" homepage="http://rox.sourceforge.net/desktop/Software/Lithium"/>
@@ -120,7 +130,7 @@
 
 <feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="http://www.hayber.us/rox/Postal/postal.png" homepage="http://rox.sourceforge.net/desktop/Software/Postal"/>
 
-<feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="http://www.hayber.us/rox/Ripper/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"/>
+<feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="http://www.hayber.us/rox/ripper/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"/>
 
 <feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="http://www.hayber.us/rox/Volume/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
 
