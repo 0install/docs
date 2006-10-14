@@ -2,8 +2,7 @@
 Hash: SHA1
 
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 
   <name>0publish</name>
@@ -41,7 +40,7 @@ Hash: SHA1
     <implementation id="sha1=40ad36b30b1cdafa0fe086c48b592c8d45dc0867" released="2006-06-24" stability="stable" version="0.6">
       <archive extract="0publish-0.6" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0publish-0.6.tar.bz2" size="17123"/>
     </implementation>
-    <implementation id="sha1=c83bc2c4f44b326f2aa3e11425c26b46da5c1a4a" released="2006-09-27" version="0.7">
+    <implementation id="sha1=c83bc2c4f44b326f2aa3e11425c26b46da5c1a4a" released="2006-09-27" stability="stable" version="0.7">
       <archive extract="0publish-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.7.tar.bz2" size="17720"/>
     </implementation>
   </group>
@@ -49,7 +48,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFGmUbrgeCgFmlPMERAhkHAJ9e5JmFhasmDTfYGiRDAGP2dmdQngCfdu+P
-xB/mWnu4XmYQAhZLKAv/KrU=
-=V4of
+iD8DBQFFMMZwrgeCgFmlPMERAlOqAJ9ly5InZyYVcMA9k86KBboqpXlFBgCeNbYx
+/HC55b8tvGmkeACpsRtq1b8=
+=VNZL
 -----END PGP SIGNATURE-----

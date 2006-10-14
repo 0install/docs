@@ -22,14 +22,14 @@ For a full tutorial, see 0compile's homepage.
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
       <archive extract="0compile-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.1.tar.bz2" size="15393"/>
     </implementation>
-    <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" version="0.2">
+    <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" stability="stable" version="0.2">
       <archive extract="0compile-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBFKRcmrgeCgFmlPMERAtP/AJ9udSyesbUIwY2iH6rg6B1FULZljwCferLd6hpoUuaD004H
-pQMGQoa/3mg=
+iD8DBQBFMMX5rgeCgFmlPMERAou9AKCeib56BPpmQp/PEctOtVpCWR9WlQCghXxj9eX3m+rZlqSS
+lasnIxSVj3M=
 
 -->
