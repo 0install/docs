@@ -32,6 +32,14 @@ This is useful if there is no binary for your platform, or if you wish to
 modify the program in some way.
  </dd>
 
+ <dt><a href='python-api/html/index.html'>Python API</a></dt>
+ <dd>
+  The <b>0launch</b> command-line interface to Zero Install is sufficient for most
+  purposes. However, sometimes you may want to use the Python library interface.
+  This is used by programs such as <b>0compile</b> and <b>0publish</b>, and is
+  also a useful reference for people wanting to modify the injector itself.
+ </dd>
+
  <dt><a href='injector-specs.html'>Specifications</a></dt>
  <dd>
   Formal specifications for the file formats used by the injector.
