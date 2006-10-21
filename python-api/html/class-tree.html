@@ -61,6 +61,25 @@
     <li> <strong class="uidlink">exceptions.Exception</strong>:
       <em class="summary">Common base class for all exceptions.</em>
     <ul>
+    <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
+      <em class="summary">An exception that can be reported to the user without a stack 
+        trace.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.reader.InvalidInterface-class.html">zeroinstall.injector.reader.InvalidInterface</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.BadDigest-class.html">zeroinstall.zerostore.BadDigest</a></strong>:
+      <em class="summary">Thrown if a digest is invalid (either syntactically or 
+        cryptographically).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NotStored-class.html">zeroinstall.zerostore.NotStored</a></strong>:
+      <em class="summary">Throws if a requested implementation isn't in the cache.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.cli.UsageError-class.html">zeroinstall.zerostore.cli.UsageError</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.DownloadError-class.html">zeroinstall.injector.download.DownloadError</a></strong>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.SafeException-class.html">zeroinstall.SafeException</a></strong>:
       <em class="summary">An exception that can be reported to the user without a stack 
         trace.</em>
@@ -73,32 +92,27 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
-      <em class="summary">An exception that can be reported to the user without a stack 
-        trace.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.cli.UsageError-class.html">zeroinstall.zerostore.cli.UsageError</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NotStored-class.html">zeroinstall.zerostore.NotStored</a></strong>:
-      <em class="summary">Throws if a requested implementation isn't in the cache.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.reader.InvalidInterface-class.html">zeroinstall.injector.reader.InvalidInterface</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.BadDigest-class.html">zeroinstall.zerostore.BadDigest</a></strong>:
-      <em class="summary">Thrown if a digest is invalid (either syntactically or 
-        cryptographically).</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.DownloadError-class.html">zeroinstall.injector.download.DownloadError</a></strong>
-    </li>
-    </ul>
-    </li>
     </ul>
     </li>
     <li> <strong class="uidlink">object</strong>:
       <em class="summary">The most base type</em>
     <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Interface-class.html">zeroinstall.injector.model.Interface</a></strong>:
-      <em class="summary">An Interface represents some contract of behaviour.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.Element-class.html">zeroinstall.injector.qdom.Element</a></strong>
+    </li>
+    <li> <strong class="uidlink">zeroinstall.injector.policy.Policy</strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html">zeroinstall.injector.autopolicy.AutoPolicy</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Dependency-class.html">zeroinstall.injector.model.Dependency</a></strong>:
+      <em class="summary">A Dependency indicates that an Implementation requires some 
+        additional code to function, specified by another Interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>:
+      <em class="summary">The interface cache stores downloaded and verified interfaces in
+        ~/.cache/0install.net/interfaces (by default).</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.zerostore.Stores-class.html">zeroinstall.zerostore.Stores</a></strong>:
       <em class="summary">A list of <a href="zeroinstall.zerostore.Store-class.html" 
@@ -112,9 +126,16 @@
       <em class="summary">An interface's feeds are other interfaces whose implementations 
         can also be used as implementations of this interface.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Interface-class.html">zeroinstall.injector.model.Interface</a></strong>:
+      <em class="summary">An Interface represents some contract of behaviour.</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.download.Download-class.html">zeroinstall.injector.download.Download</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Stability-class.html">zeroinstall.injector.model.Stability</a></strong>:
+      <em class="summary">A stability rating.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>:
+      <em class="summary">Integrates download callbacks with an external mainloop.</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Binding-class.html">zeroinstall.injector.model.Binding</a></strong>:
       <em class="summary">Information about how the choice of a Dependency is made known 
@@ -126,6 +147,13 @@
     </li>
     </ul>
     </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Implementation-class.html">zeroinstall.injector.model.Implementation</a></strong>:
+      <em class="summary">An Implementation is a package which implements an 
+        Interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.RetrievalMethod-class.html">zeroinstall.injector.model.RetrievalMethod</a></strong>:
       <em class="summary">A RetrievalMethod provides a way to fetch an implementation.</em>
     <ul>
@@ -136,30 +164,6 @@
       <em class="summary">A DownloadSource provides a way to fetch an implementation.</em>
     </li>
     </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.Element-class.html">zeroinstall.injector.qdom.Element</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Dependency-class.html">zeroinstall.injector.model.Dependency</a></strong>:
-      <em class="summary">A Dependency indicates that an Implementation requires some 
-        additional code to function, specified by another Interface.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Stability-class.html">zeroinstall.injector.model.Stability</a></strong>:
-      <em class="summary">A stability rating.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Implementation-class.html">zeroinstall.injector.model.Implementation</a></strong>:
-      <em class="summary">An Implementation is a package which implements an 
-        Interface.</em>
-    </li>
-    <li> <strong class="uidlink">zeroinstall.injector.policy.Policy</strong>
-    <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html">zeroinstall.injector.autopolicy.AutoPolicy</a></strong>
-    </li>
-    </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
-      <em class="summary">Chooses a set of implementations based on a policy.</em>
     </li>
     </ul>
     </li>
@@ -179,7 +183,8 @@
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.QSAXhandler-class.html">zeroinstall.injector.qdom.QSAXhandler</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>:
+      <em class="summary">A database of trusted keys.</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.zerostore.Store-class.html">zeroinstall.zerostore.Store</a></strong>:
       <em class="summary">A directory for storing implementations.</em>
@@ -226,7 +231,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sun Oct  8 13:16:41 2006</td>
+        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

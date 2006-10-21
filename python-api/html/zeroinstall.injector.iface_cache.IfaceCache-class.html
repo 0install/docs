@@ -68,6 +68,50 @@ object --+
 </pre>
 
 <hr />
+<p>The interface cache stores downloaded and verified interfaces in 
+  ~/.cache/0install.net/interfaces (by default).</p>
+  <p>There are methods to query the cache, add to it, check signatures, 
+  etc.</p>
+  When updating the cache, the normal sequence is as follows:
+  <ol start="1">
+    <li>
+      When the data arrives, <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
+      class="link">check_signed_data</a> is called.
+    </li>
+    <li>
+      This checks the signatures using <a 
+      href="zeroinstall.injector.gpg-module.html#check_stream" 
+      class="link">gpg.check_stream</a>.
+    </li>
+    <li>
+      If any required GPG keys are missing, <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#download_key"
+      class="link">download_key</a> is used to fetch them and the stream is
+      checked again.
+    </li>
+    <li>
+      Call <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
+      class="link">update_interface_if_trusted</a> to update the cache.
+    </li>
+    <li>
+      If that fails (because we don't trust the keys), use a <a 
+      href="zeroinstall.injector.handler-module.html" 
+      class="link">handler</a> to confirm with the user. When done, the 
+      handler calls <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
+      class="link">update_interface_if_trusted</a>.
+    </li>
+  </ol><br /><br />
+
+<hr />
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.iface_cache-module.html#iface_cache" 
+        class="link">iface_cache</a> - the singleton IfaceCache 
+        instance.
+      </p>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -99,7 +143,11 @@ object --+
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_watcher" class="summary-sig-name">add_watcher</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">w</span>)</span>
+        <span class="summary-sig-arg">w</span>)</span><br />
+      Call <code>w.interface_changed(iface)</code> each time <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+      class="link">update_interface_from_network</a> changes an interface 
+      in the cache.
   </td>
 </tr>
 <tr>
@@ -115,12 +163,16 @@ object --+
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">bool</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted" class="summary-sig-name">update_interface_if_trusted</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">sigs</span>,
-        <span class="summary-sig-arg">xml</span>)</span>
+        <span class="summary-sig-arg">xml</span>)</span><br />
+      Update a cached interface (using <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+      class="link">update_interface_from_network</a>) if we trust the 
+      signatures.
   </td>
 </tr>
 <tr>
@@ -129,7 +181,8 @@ object --+
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#download_key" class="summary-sig-name">download_key</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">key_id</span>)</span>
+        <span class="summary-sig-arg">key_id</span>)</span><br />
+      Download a GPG key.
   </td>
 </tr>
 <tr>
@@ -140,23 +193,13 @@ object --+
         <span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">new_xml</span>,
         <span class="summary-sig-arg">modified_time</span>)</span><br />
-      xml is the new XML (after the signature has been checked and 
-      removed).
+      Update a cached interface.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#import_new_interface" class="summary-sig-name">import_new_interface</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">new_xml</span>,
-        <span class="summary-sig-arg">modified_time</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type"><a href="zeroinstall.injector.model.Interface-class.html" 
+      class="link">model.Interface</a></code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_interface" class="summary-sig-name">get_interface</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">uri</span>)</span><br />
@@ -165,9 +208,10 @@ object --+
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">[str]</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#list_all_interfaces" class="summary-sig-name">list_all_interfaces</a>(<span class="summary-sig-arg">self</span>)</span>
+    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#list_all_interfaces" class="summary-sig-name">list_all_interfaces</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List all interfaces in the cache.
   </td>
 </tr>
 <tr>
@@ -176,17 +220,17 @@ object --+
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_to_cache" class="summary-sig-name">add_to_cache</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">source</span>,
-        <span class="summary-sig-arg">data</span>)</span>
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Add an implementation to the cache.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">str</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_icon_path" class="summary-sig-name">get_icon_path</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">iface</span>)</span><br />
-      Get the path of the cached icon for this interface, or None if not
-      cached.
+      Get the path of a cached icon for an interface.
   </td>
 </tr>
   <tr>
@@ -229,6 +273,34 @@ object --+
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#__slots__">__slots__</a> = <code title="['watchers', '_interfaces', 'stores']">['watchers', '_interfaces', 'stores']</code>
+  </td>
+</tr>
+</table>
+
+<br />
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#watchers">watchers</a><br />
+      objects requiring notification of cache changes.
   </td>
 </tr>
 </table>
@@ -319,7 +391,10 @@ object --+
     ></td>
   </table>
   
-  None
+  Call <code>w.interface_changed(iface)</code> each time <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+  class="link">update_interface_from_network</a> changes an interface in 
+  the cache.
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -342,9 +417,24 @@ object --+
   </table>
   
   Downloaded data is a GPG-signed message. Check that the signature is 
-  trusted and call self.update_interface_from_network() when done. Calls 
-  handler.confirm_trust_keys() if keys are not trusted.
+  trusted and call <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+  class="link">update_interface_from_network</a> when done. Calls 
+  <code>handler.confirm_trust_keys()</code> if keys are not trusted.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface being updated</li>
+        <li><strong class="pname"><code>signed_data</code></strong> (<code>stream</code>) - the downloaded data (not yet trusted)</li>
+        <li><strong class="pname"><code>handler</code></strong> (<code><a href="zeroinstall.injector.handler.Handler-class.html" 
+          class="link">handler.Handler</a></code>) - a handler for any user interaction required</li>
+    </ul>
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.handler.Handler-class.html#confirm_trust_keys"
+        class="link">handler.Handler.confirm_trust_keys</a>
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -365,8 +455,28 @@ object --+
     ></td>
   </table>
   
-  None
+  Update a cached interface (using <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+  class="link">update_interface_from_network</a>) if we trust the 
+  signatures. If we don't trust any of the signatures, do nothing.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface being updated</li>
+        <li><strong class="pname"><code>sigs</code></strong> (<code>[<a href="zeroinstall.injector.gpg.Signature-class.html" 
+          class="link">gpg.Signature</a>]</code>) - signatures from <a 
+          href="zeroinstall.injector.gpg-module.html#check_stream" 
+          class="link">gpg.check_stream</a></li>
+        <li><strong class="pname"><code>xml</code></strong> (<code>str</code>) - the downloaded replacement interface document</li>
+    </ul>
+    <dl><dt>Returns: <code>bool</code></dt>
+        <dd>True if the interface was updated</dd></dl>
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
+        class="link">check_signed_data</a>, which calls this.
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -386,8 +496,17 @@ object --+
     ></td>
   </table>
   
-  None
+  Download a GPG key. The location of the key is calculated from the uri
+  of the interface.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> - the interface which needs the key</li>
+        <li><strong class="pname"><code>key_id</code></strong> - the GPG long id of the key</li>
+    </ul>
+      <p><strong>To Do:</strong>
+        This method blocks. It should start a download and return.
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -408,31 +527,27 @@ object --+
     ></td>
   </table>
   
-  xml is the new XML (after the signature has been checked and removed).
-  modified_time will be set as an attribute on the root.
+  Update a cached interface. Called by <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
+  class="link">update_interface_if_trusted</a> if we trust this data. After
+  a successful update, <a href="zeroinstall.injector.writer-module.html" 
+  class="link">writer</a> is used to update the interface's last_checked 
+  time and then all the <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#watchers" 
+  class="link">watchers</a> are notified.
   <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="import_new_interface"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">import_new_interface</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">new_xml</span>,
-        <span class="sig-arg">modified_time</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.import_new_interface">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface being updated</li>
+        <li><strong class="pname"><code>xml</code></strong> (<code>str</code>) - the downloaded replacement interface document</li>
+        <li><strong class="pname"><code>modified_time</code></strong> (<code>long</code>) - the timestamp of the oldest trusted signature (used as an 
+          approximation to the interface's modification time)</li>
+    </ul>
+    <dl><dt>Raises:</dt></dl>
+    <ul class="nomargin">
+        <li><code><strong class='fraise'>SafeException</strong></code> - if modified_time is older than the currently cached time</li>
+    </ul>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -455,6 +570,12 @@ object --+
   interfaces are initialised from the disk cache, but not from the 
   network.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>uri</code></strong> - the URI of the interface to find</li>
+    </ul>
+    <dl><dt>Returns: <code><a href="zeroinstall.injector.model.Interface-class.html" 
+      class="link">model.Interface</a></code></dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -472,8 +593,9 @@ object --+
     ></td>
   </table>
   
-  None
+  List all interfaces in the cache.
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>[str]</code></dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -493,8 +615,19 @@ object --+
     ></td>
   </table>
   
-  None
+  Add an implementation to the cache.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>source</code></strong> (<code><a href="zeroinstall.injector.model.DownloadSource-class.html"
+          class="link">model.DownloadSource</a></code>) - information about the archive</li>
+        <li><strong class="pname"><code>data</code></strong> (<code>stream</code>) - the data stream</li>
+    </ul>
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.zerostore.Stores-class.html#add_archive_to_cache"
+        class="link">zerostore.Stores.add_archive_to_cache</a>
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -513,9 +646,14 @@ object --+
     ></td>
   </table>
   
-  Get the path of the cached icon for this interface, or None if not 
-  cached.
+  Get the path of a cached icon for an interface.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>iface</code></strong> - interface whose icon we want</li>
+    </ul>
+    <dl><dt>Returns: <code>str</code></dt>
+        <dd>the path of the cached icon, or None if not cached.</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -555,6 +693,36 @@ object --+
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="watchers"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">watchers</h3>
+  objects requiring notification of cache changes.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -586,7 +754,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sun Oct  8 13:16:42 2006</td>
+        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

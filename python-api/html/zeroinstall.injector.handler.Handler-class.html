@@ -68,6 +68,17 @@ object --+
 </pre>
 
 <hr />
+<p>Integrates download callbacks with an external mainloop. While things 
+  are being downloaded, Zero Install returns control to your program. Your 
+  mainloop is responsible for monitoring the state of the downloads and 
+  notifying Zero Install when they are complete.</p>
+  To do this, you supply a <a 
+  href="zeroinstall.injector.handler.Handler-class.html" 
+  class="link">Handler</a> to the <a 
+  href="zeroinstall.injector.policy-module.html" class="link">policy</a>. 
+  To integrate with your own mainloop, you can either subclass or replace 
+  this.<br /><br />
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -99,19 +110,24 @@ object --+
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#monitor_download" class="summary-sig-name">monitor_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">dl</span>)</span>
+        <span class="summary-sig-arg">dl</span>)</span><br />
+      Called when a new <a 
+      href="zeroinstall.injector.download-module.html" 
+      class="link">download</a> is started.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#wait_for_downloads" class="summary-sig-name">wait_for_downloads</a>(<span class="summary-sig-arg">self</span>)</span>
+    <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#wait_for_downloads" class="summary-sig-name">wait_for_downloads</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Monitor all downloads, waiting until they are complete.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type"><a href="zeroinstall.injector.download.Download-class.html" 
+      class="link">download.Download</a></code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#get_download" class="summary-sig-name">get_download</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">url</span>,
@@ -260,7 +276,15 @@ object --+
     ></td>
   </table>
   
-  None
+  Called when a new <a href="zeroinstall.injector.download-module.html" 
+  class="link">download</a> is started. Call <a 
+  href="zeroinstall.injector.download.Download-class.html#start" 
+  class="link">download.Download.start</a> to start the download and get 
+  the error stream, and then call <a 
+  href="zeroinstall.injector.download.Download-class.html#error_stream_data"
+  class="link">download.Download.error_stream_data</a> whenever you read 
+  any data from it, including nothing (end-of-file), which indicates that 
+  the download is finished.
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -279,7 +303,8 @@ object --+
     ></td>
   </table>
   
-  None
+  Monitor all downloads, waiting until they are complete. This is 
+  suitable for use by non-interactive programs.
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -305,6 +330,8 @@ object --+
   force is False, return it anyway. If force is True, abort any current or 
   failed download and start a new one.
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code><a href="zeroinstall.injector.download.Download-class.html" 
+      class="link">download.Download</a></code></dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -325,9 +352,20 @@ object --+
     ></td>
   </table>
   
-  We don't trust any of the signatures yet. Ask the user. When done, 
-  call update_interface_if_trusted().
+  We don't trust any of the signatures yet. Ask the user. When done 
+  update the <a href="zeroinstall.injector.trust-module.html" 
+  class="link">trust</a> database, and then call <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
+  class="link">iface_cache.IfaceCache.update_interface_if_trusted</a>.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> - the interface being updated</li>
+        <li><strong class="pname"><code>sigs</code></strong> - a list of signatures (from <a 
+          href="zeroinstall.injector.gpg-module.html#check_stream" 
+          class="link">gpg.check_stream</a>)</li>
+        <li><strong class="pname"><code>iface_xml</code></strong> - the downloaded data (not yet trusted)</li>
+    </ul>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -398,7 +436,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sun Oct  8 13:16:42 2006</td>
+        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>
