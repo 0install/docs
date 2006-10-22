@@ -15,10 +15,13 @@
     <implementation id="sha1=487c7127a729db69059d58a388a0d074e46decce" released="2006-10-08" stability="stable" version="0.23.1">
       <archive extract="zeroinstall-gui-0.23.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.1.tar.bz2" size="32832"/>
     </implementation>
+    <implementation id="sha1=86cf742000556e708097a9b362aee574ffc1e0bb" released="2006-10-22" stability="stable" version="0.23.2">
+      <archive extract="zeroinstall-gui-0.23.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.2.tar.bz2" size="33012"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFMMXtrgeCgFmlPMERAoMVAJ9/ZXSjlCuu9ohgVR6qG1qYdtvDngCgz8ZxvBIErZCWFbeS
-V5sx/We8/0U=
+iD8DBQBFO2VergeCgFmlPMERAmJcAJ9334B84qlFKPyxzmtPK20iYHu4fQCfa8EzKb+tmYfqWkUe
+bADtnhJi8NI=
 
 -->
