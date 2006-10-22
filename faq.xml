@@ -74,8 +74,9 @@ up your existing installation.
 <p>
 Note: while installation won't cause problems, actually running a program might
 change something (for example, a newer version may automatically upgrade a
-configuration file to a format that the older version can't read). This is the same
-as if you downgrade a package using your normal package manager.
+configuration file to a format that the older version can't read). This is
+essentially the same situation as when you downgrade a package to a previous
+version using your normal package manager.
 </p>
 
 <h3>How do I know you won't start charging for this service?</h3>
@@ -84,8 +85,9 @@ as if you downgrade a package using your normal package manager.
 I'm not providing a service. You distribute software by hosting some files on
 your own web server. The only centralised URL is the default place it checks for
 updates to the GUI, and you can change that easily enough (or just disable updating).
-The core software is all LGPL or GPL. Of course, you're welcome to send me
-money if you want ;-)
+The core software is all LGPL or GPL. Of course, you're welcome to
+<a href='http://sourceforge.net/developer/user_donations.php?user_id=40461'>send me
+money</a> if you want ;-)
 </p>
 
 <h3>What if something gets automatically removed from the cache while
