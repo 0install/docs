@@ -50,6 +50,16 @@
      <li class='leaf'><a href='http://sourceforge.net/svn/?group_id=76468'>Subversion access</a></li>
      <li class='leaf'><a href='http://sourceforge.net/project/showfiles.php?group_id=76468'>File releases</a></li>
     </ul>
+
+    <h2>Search</h2>
+    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse">
+     <p>
+      <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
+      <input name="q" type="text" size="18" />
+      <input type="submit" name="sa" value="Search" />
+      <input type="hidden" name="cof" value="FORID:0" />
+     </p>
+    </form>
   </xsl:template>
 
   <xsl:template match='/*'>
