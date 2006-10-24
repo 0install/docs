@@ -44,14 +44,7 @@
     <ul class='pages'>
       <xsl:apply-templates select='document("structure.xml")/layout/item'/>
     </ul>
-    <h2>SourceForge</h2>
-    <ul>
-     <li class='leaf'><a href='http://sourceforge.net/projects/zero-install'>Project page</a></li>
-     <li class='leaf'><a href='http://sourceforge.net/svn/?group_id=76468'>Subversion access</a></li>
-     <li class='leaf'><a href='http://sourceforge.net/project/showfiles.php?group_id=76468'>File releases</a></li>
-    </ul>
 
-    <h2>Search</h2>
     <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse">
      <p>
       <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
@@ -60,6 +53,13 @@
       <input type="hidden" name="cof" value="FORID:0" />
      </p>
     </form>
+
+    <h2>SourceForge</h2>
+    <ul>
+     <li class='leaf'><a href='http://sourceforge.net/projects/zero-install'>Project page</a></li>
+     <li class='leaf'><a href='http://sourceforge.net/svn/?group_id=76468'>Subversion access</a></li>
+     <li class='leaf'><a href='http://sourceforge.net/project/showfiles.php?group_id=76468'>File releases</a></li>
+    </ul>
   </xsl:template>
 
   <xsl:template match='/*'>
