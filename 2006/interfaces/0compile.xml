@@ -28,11 +28,14 @@ For a full tutorial, see 0compile's homepage.
     <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="developer" version="0.3">
       <archive extract="0compile-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
     </implementation>
+    <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="developer" version="0.4">
+      <archive extract="0compile-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBFP5HdrgeCgFmlPMERAjTiAKCXTOFtygIXHPrerOZttd+EmLV88gCfSeTy/zYhdo3kUOIu
-kxLBB8Uo3u4=
+iD8DBQBFQJ26rgeCgFmlPMERAixmAJ9HmzFxUqbLLsbTMWKCilucLevYpQCfU8SbCNGoYo8a5mlk
+v5IlExFSKFM=
 
 -->
