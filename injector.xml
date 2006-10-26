@@ -56,7 +56,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li><b>Debian/stable</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all.deb?download'>zeroinstall-injector_0.22-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
-  <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.23-1_all.deb?download'>zeroinstall-injector_0.23-1_all.deb download page</a> (Debian/testing package; python-central)<br/>
+  <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.24-1_all.deb?download'>zeroinstall-injector_0.24-1_all.deb download page</a> (Debian/testing package; python-central)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu (breezy/dapper)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all_ubuntu.deb?download'>zeroinstall-injector_0.22-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)<br/>
   <b>Ubuntu (edgy)</b> has <a href='http://packages.ubuntu.com/edgy/python/python-central'>python-central</a>, so you can use the Debian package unmodified. You can also install the python-central package manually on dapper and it should work.</li>
