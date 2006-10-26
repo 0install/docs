@@ -210,16 +210,29 @@ example, double-clicking on <b>Edit</b> displays this dialog box:
 </p>
 
 <p style='text-align: center'>
-  <img width="756" height="442" src="edit-properties.png"
+  <img width="585" height="459" src="screens/edit-properties.png"
   	alt="Properties of the Edit interface" />
 </p>
 
 <p>
-The information displayed is fetched from the interface file, which you can view in
-a web browser if you're interested:
+The list of feeds shows all the places where the injector looks for versions of Edit.
+By default, there is just one feed, whose URL is simply Edit's URI; you can
+view it in a web browser if you're interested:
 <a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit's interface</a>. This is
 a plain-text GPG-signed file. The injector stores the downloaded interface files
 locally (in <b>~/.cache/0install.net/interfaces</b>).
+</p>
+
+<p>
+The Versions tab shows all the versions found in all of the feeds:
+</p>
+
+<p style='text-align: center'>
+  <img width="557" height="321" src="screens/edit-versions.png"
+  	alt="Versions of the Edit" />
+</p>
+
+<p>
 </p>
 
 <h3>Stability</h3>
