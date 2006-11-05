@@ -16,6 +16,8 @@ people who do care about security, this document explains how the injector
 tries to improve the situation.
 </p>
 
+<toc level='h2'/>
+
 <h2>Overview</h2>
 
 <p>
@@ -25,23 +27,6 @@ against the possibility that the code we use is malicious. We need methods
 to help ensure that we don't allow malicious code to run, to limit the damage
 it can do if we do run it, and to discover and recover from compromises when
 they do happen.
-</p>
-
-<p>
-Sandboxing is used to restrict what code can do. Linux and similar systems come
-with a simple sandboxing system based on users. The system has a number of
-users, and each user can run whatever software they please. Ideally, it is
-not possible for malicious code executed by one user to damage the system or
-threaten the security of any other user. However, the code can do anything that
-the user running it is permitted to do (such as delete all that user's
-files, or log all the user's keystrokes and send them to another computer).
-</p>
-
-<p>
-A second approach is to ensure that only software written by trusted
-individuals is run. This presents two problems: how do we come to trust
-someone to provide reliable software, and how do we know that a particular
-program really came from them?
 </p>
 
 <p>
@@ -60,7 +45,7 @@ Some key points about Zero Install's security model:
  per-user, but the programs themselves are shared.
  </dd>
 
- <dt>Installation does not execute any downloaded code as root</dt>
+ <dt>Installation does not execute any downloaded code</dt>
  <dd>
  Most installation systems run code in the downloaded package as part of the installation process. Typically,
  these scripts are run as root and can do anything they like to the machine. Zero Install merely fetches
@@ -76,8 +61,107 @@ Some key points about Zero Install's security model:
  </dd>
 </dl>
 
+<h2>Security and Usability</h2>
+
+<p>
+Some people think of security and usability as a trade-off, with systems being
+either easy to use, or secure, but not both. But in fact, security is a
+necessary part of usability. Some examples:
+</p>
+
+<ul>
+<li><p>I used to program on a system which had no memory protection, allowing any
+process to overwrite any other process's memory. Linux prevents programs from
+doing this. This makes my life as a programmer easier, not harder, because
+when a program crashes I know that the problem is in that program and not in
+some other one.</p></li>
+
+<li><p>Sometimes, I forget where I saved a file. But, I never need to search /usr
+in case I accidentally saved my letter there; it can't be there, because my
+word processor doesn't have permission to save there.</p></li>
+
+<li><p>Windows users (so I hear) often find their computers are infected with spyware
+and adware, which slows them down, causes crashes, and redirects them to
+undesirable web sites. Such a system has poor usability.</p></li>
+
+<li><p>An artist may find a useful image processing filter on the web. If all
+this filter can do is read an input image and output a modified one then the
+artist is more likely to try it (and produce better work). If image filters can
+seriously damage the system then the artist may have to pass it over; the risk from
+a malicious filter is too great.</p></li>
+
+<li><p>Few programs are as easy to run in a restricted environment as the image
+filter example above; an accounting package needs access to my accounts, for
+example. Still, with good security we can evaluate lots of possible
+programs and then only weigh up the risk for the one we choose. Without good
+security we must evaluate fewer programs, and we are at risk from each one we
+try.
+</p></li>
+</ul>
+
+<p>
+Good security is therefore vital to a usable system. A usable system must be
+understandable and predictable; on a system where any action can have any
+consequence this is not possible.
+</p>
+
+<p>
+Consider traditional software installation on Linux or Windows. You download
+some package and execute a script inside it. Imagine that I give you a package
+in your favourite format (setup.exe, .deb, .rpm, source tarball, etc) and
+ask you to install it. Assume that your system is functioning correctly; what
+will happen as a result of installing this program?
+</p>
+
+<ul>
+<li>Will a new item appear on your Start menu (or equivalent)?</li>
+
+<li>Will some other program on your computer stop working as a result of a
+installing this one?</li>
+
+<li>Will a new service be added to your boot sequence?</li>
+
+<li>Will your browser's saved passwords be posted to an IRC server and your
+hard disk reformatted?</li>
+</ul>
+
+<p>
+The answer, for all the formats listed above, is "I don't know". With Zero
+Install, none of these things can happen without some extra action on your part.
+</p>
+
+<p>
+Now, Zero Install is <i>not</i> a complete solution to these problems. In
+particular, it does not stop programs from doing any of these things when
+<i>run</i>. That problem is for some other project to solve (and there are
+plenty of people working on this; see <a
+href='http://plash.beasts.org/'>Plash</a> or <a
+href='http://www.systrace.org/'>SysTrace</a> for example).
+But Zero Install already brings benefits without the use of these programs
+(the effects above which require root access will be blocked), and it is clearly a
+necessary base on which such technologies can be built. Running software in a sandbox
+is of limited benefit if you have to give it root access during installation.
+</p>
 
 <h2>The Injector's trust model</h2>
+
+<p>
+Sandboxing is used to restrict what code can do. Linux and similar systems come
+with a simple sandboxing system based on users. The system has a number of
+users, and each user can run whatever software they please. Ideally, it is
+not possible for malicious code executed by one user to damage the system or
+threaten the security of any other user. However, the code can do anything that
+the user running it is permitted to do (such as delete that user's
+files, or log the user's keystrokes and send them to another computer).
+</p>
+
+<p>
+A second approach is to ensure that only software written by trusted
+individuals is run. This presents two problems: how do we come to trust
+someone to provide reliable software, and how do we know that a particular
+program really came from them?
+</p>
+
 
 <p>
 The basis of the injector's model is the standard multi-user model used by
@@ -141,14 +225,14 @@ that they trust the holder of the key to provide software to them:
 </p>
 
 <p>
-Once trusted, the injector will accept any interface signed by that key.
-While it would be possible to restrict the key to only signing certain
-interfaces, this is unlikely to provide any real benefit.
+Once trusted, the injector will accept any interface signed by that key
+(while it would be possible to restrict the key to only signing certain
+interfaces, this is unlikely to provide any real benefit).
 </p>
 
 <p>
 The injector updates interfaces at the request of the user (clicking the
-'Refresh all now' button), or automatically (weekly, for example) if the
+'Refresh all now' button), or automatically (monthly, for example) if the
 user sets their freshness policy to request this. When updating an interface
 (even automatically) the injector displays a dialog box asking the user
 whether they want to download the new version.
@@ -163,10 +247,28 @@ control.
 <h2>Possible attacks</h2>
 
 <p>
-An attacker needs to replace a trusted interface file on a server with a
-compromised version. However, the new file must be signed, and the secret
-signing key should not be on the server. Therefore, the attacker has two
-options:
+To run malicious software on a user's machine, an attacker could:
+</p>
+
+<ul>
+ <li>Publish the software on their own web-page, and convince users to run it, or</li>
+ <li>Cause their software to be run when the user tries to run some other program.</li>
+</ul>
+
+<p>
+Guarding against the first requires educating users not to run untrusted software (this
+applies whether using Zero Install or not), sandboxing any software that is run if possible,
+and advising users that the software is unknown and/or known to be malicious.
+Organisations may wish to keep their own internal database of programs approved
+for use within the organisation, and to prevent users from installing programs
+not on this list.
+</p>
+
+<p>
+To perform the second attack, the attacker needs to replace a trusted interface
+file on a server with a compromised version. However, the new file must be
+signed, and the secret signing key should not be on the server. Therefore, the
+attacker has two options:
 </p>
 
 <ul>
@@ -179,15 +281,53 @@ author), and trick users into accepting it.</li>
 </ul>
 
 <p>
-The second option is probably easiest. More naive users may require some kind
-of system to only accept keys trusted by some third-party, rather than letting
-them accept keys themselves.
+The second option is probably easiest. Zero Install currently warns users if
+they run software signed with an unknown GPG key (we maintain a default
+database of known keys, but we do not have the resources to verify the owners
+of the keys). Note that even if a key is in the known keys database, users
+must still agree to trust that key. Again, organisations may wish to keep their
+own white-list of allowed keys.
 </p>
 
 <p>
 The first option can be made even harder if the developer has a second
 (non-networked) machine with the GPG key, although not all developers will
 have a spare machine for this purpose.
+</p>
+
+<h2>Conclusions</h2>
+
+<p>
+We have discussed the need for security and the differences between traditional
+software installation systems and Zero Install. While installing software with
+traditional systems can cause arbitrary changes to your system, Zero Install
+does not run any of the downloaded code during installation; it merely unpacks
+files to a new directory.
+</p>
+
+<p>
+Securing the installation process is not the whole story; software should also be
+<i>executed</i> in a restricted environment. Several other projects are
+developing suitable sandboxes. Even without such extra programs, the default
+security mechanisms built in to Linux provide improvements over traditional
+installation.
+</p>
+
+<p>
+Whether we have strong sandboxing or not, it is important to know where software
+has come from and to only accept digitally signed software. The injector maintains
+a list of trusted keys, and aids the user's decision of whether to trust a key
+using its database of known keys. The default database provides only low security;
+organisations may wish to provide their own database and perform real verification
+checks on authors. Organisations may also wish to prevent users from installing
+unapproved software at all.
+</p>
+
+<p>
+An attacker wishing to install malicious software must either trick users into
+trusting them, or steal a trusted developer's GPG key. This is considerably more
+secure than most other distribution systems, many of which contain no security at
+all.
 </p>
 
 </html>

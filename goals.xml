@@ -80,7 +80,7 @@ E: Couldn't find package rox-session</pre>
  the system handles the rest (downloading and caching as needed). You can delete
  the downloaded programs later to save space, and they will be fetched again
  automatically if they are needed in the future.</p>
- <p>The <a href='injector-using.html'>user guide</a> has a tutorial showing how
+ <p>The <a href='howitworks.html'>screenshots page</a> has an example showing how
  software is run this way.</p>
   </td>
  </tr>
