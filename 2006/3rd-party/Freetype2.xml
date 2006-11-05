@@ -1,8 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
-	   uri='http://0install.net/2006/3rd-party/Freetype2.xml'
-	   xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<interface uri="http://0install.net/2006/3rd-party/Freetype2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Freetype2</name>
   <summary>free, portable library for digital typography</summary>
   <description>
@@ -22,9 +20,14 @@ Windows FNT/FON.
   <!-- Optionally, uncomment this to specify an icon: -->
   <!-- <icon href='http://site/icon.png' type='image/png'/> -->
 
-  <group arch="*-src" compile:command='"$SRCDIR/configure" --prefix="$DISTDIR" LDFLAGS=-Wl,-rpath-link=/lib &amp;&amp; make install'>
+  <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; LDFLAGS=-Wl,-rpath-link=/lib &amp;&amp; make install" compile:min-version="0.6">
     <implementation id="sha1=9b2205347600b15c0092ceb19493f7ba63c6e35e" released="Snapshot" version="2.1.10">
       <archive extract="freetype-2.1.10" href="http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.10.tar.bz2" size="1037107"/>
     </implementation>
   </group>
 </interface>
+<!-- Base64 Signature
+iD8DBQBFTfwzrgeCgFmlPMERAlBhAJ9kPzkUMqQW9ctQmAoMZTgAmZH5oACgswsV4beCy31ovV1v
+T1a1zADzXlU=
+
+-->
