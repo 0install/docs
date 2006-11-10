@@ -391,7 +391,7 @@ easily.
 The answer to the last question showed how to run a local version of a program directly, using 0launch
 to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal
 URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>), your version won't show up. To add it,
-use <b>--feed</b> (<b>--add-feed</b> on older versions):
+use <b>--feed</b>:
 </p>
 
 <pre>
@@ -410,13 +410,23 @@ $ <b>0launch -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
 <p>
-When the GUI opens, you should see your local copy listed (versions ending in .0
-conventionally indicate snapshot versions).
+When the GUI opens, you should see your local feed listed:
 </p>
 
 <p style='text-align: center'>
-<img width="754" height="244" src="edit-cvs.png"
-     alt='The injector GUI showing the Snapshot version of Edit' />
+<img width="559" height="315" src="edit-cvs.png"
+     alt='The injector GUI showing the local feed for Edit' />
+</p>
+
+<p>
+The new version will appear in the list of available versions, and will be selected if it's
+the newest one (which a fresh subversion checkout should be - the version normally ends in
+<b>-post</b> to indicate that it is not a released version):
+</p>
+
+<p style='text-align: center'>
+<img width="472" height="277" src="screens/edit-local.png"
+     alt='The injector GUI showing Edit 2.0-post version selected' />
 </p>
 
 <p>

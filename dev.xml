@@ -18,9 +18,12 @@
 
  <dt><a href='0publish.html'>0publish</a></dt>
  <dd>
-  <b>0publish</b> makes it easy to automate the process of making new releases.
-  This tutorial shows how to use it, taking the example of creating binary releases
-  of ROX-Filer for a new platform.
+  <b>0publish</b> edits interface files in place. It loads the file, transforms
+  it in some way (such as setting the release date, or adding a new
+  implementation) and then writes it back out again. If the input file was
+  signed, it will resign it when saving with the same key by default. You can
+  also use it to add a signature, or to change the signing key. It is particularly
+  useful in release scripts.
  </dd>
 
  <dt><a href='0compile.html'>0compile</a></dt>

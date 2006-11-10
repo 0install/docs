@@ -156,7 +156,7 @@ should provide a link to the program's release notes on the web.
 
 <dl>
 <dt>Mirrors for interfaces</dt>
-<dd>More difficult than mirrors for archives, since a malicious mirror could do a reply attack (giving an
+<dd>More difficult than mirrors for archives, since a malicious mirror could do a replay attack (giving an
 older, but correctly signed, release that is known to be insecure) and users who don't check the signing
 keys may be more at risk.</dd>
 

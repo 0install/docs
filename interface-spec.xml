@@ -407,7 +407,7 @@ version) to an interface should be handled by creating a new interface. Eg:
 </ul>
 
 <p>
-Note that version numbers containing dash characters are no supported before version 0.24 of the
+Note that version numbers containing dash characters are not supported before version 0.24 of the
 injector. To create interfaces that still work with older versions, you can use the
 <b>version-modifier</b> attribute. E.g., use <b>version='1' version-modifier='-pre'</b> instead
 of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
