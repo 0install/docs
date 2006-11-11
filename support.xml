@@ -4,9 +4,14 @@
 <h2>Mailing lists</h2>
 
 <p>The project has a single mailing list, which can be used for sending
-bug reports, patches, suggestions, questions, etc. You can post without subscribing
-if you want to read the list via one of the web interfaces below rather
-than by getting emails.
+bug reports, patches, suggestions, questions, etc.
+</p>
+
+<p>
+Note: You cannot post without subscribing, due to the large amount of spam we
+were getting, but you can subscribe and then disable mail delivery if you
+prefer to read the list via one of the web interfaces below rather than by
+getting emails.
 </p>
 
 <ul>
