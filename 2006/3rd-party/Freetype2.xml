@@ -25,9 +25,14 @@ Windows FNT/FON.
       <archive extract="freetype-2.1.10" href="http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.10.tar.bz2" size="1037107"/>
     </implementation>
   </group>
+  <group arch="Linux-i486">
+    <implementation id="sha1=04a048c7eb79317a04602b1e906c301ce49ef1c1" released="2006-11-12" version="2.1.10">
+      <archive extract="freetype2-2.1.10" href="http://heanet.dl.sourceforge.net/sourceforge/zero-install/freetype2-2.1.10.tar.bz2" size="652612"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFVzotrgeCgFmlPMERAkwXAKCqkFabGf5u/rplOa/XNkwSG9tZ6gCgisPqPMhLttclm2wo
-FuCjp3JZZpo=
+iD8DBQBFVz18rgeCgFmlPMERAmYNAKDctU+duEOrRwd4NsPvdMYQaP8l6QCguw4S7UXCGtpgVkg8
+o4cm0G5MWaM=
 
 -->
