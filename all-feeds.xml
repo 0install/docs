@@ -2,6 +2,8 @@
 <list>
 <feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/3rd-party/Freetype2.xml" name="Freetype2" summary="free, portable library for digital typography" icon="tango/applications-system.png" homepage="http://www.freetype.org/"/>
+
 <feed uri="http://0install.net/2006/interfaces/0compile.xml" name="0compile" summary="create a binary release from source code" icon="tango/applications-system.png" homepage="http://0install.net/0compile.html"/>
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
@@ -25,6 +27,8 @@
 <feed uri="http://holizz.com/software/0install/firefox" name="Firefox" summary="Web browser" icon="http://holizz.com/software/icons/firefox.png" homepage="http://www.mozilla.com/firefox/"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
+
+<feed uri="http://people.freenet.de/LinuxCNC/0install/dxf2G.xml" name="dxf2G" summary="converts 2D .dxf files into G-Code" icon="tango/applications-system.png" homepage="http://pier.unirc.eu/"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="http://people.freenet.de/LinuxCNC/0install/foobillard.png"/>
 
