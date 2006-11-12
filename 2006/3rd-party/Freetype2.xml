@@ -20,14 +20,14 @@ Windows FNT/FON.
   <!-- Optionally, uncomment this to specify an icon: -->
   <!-- <icon href='http://site/icon.png' type='image/png'/> -->
 
-  <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; LDFLAGS=-Wl,-rpath-link=/lib &amp;&amp; make install" compile:min-version="0.6">
+  <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; LDFLAGS=-Wl,-rpath-link=/lib &amp;&amp; make install &amp;&amp; cd &quot;$DISTDIR&quot; &amp;&amp; rm -rf include bin share lib/pkgconfig" compile:min-version="0.6">
     <implementation id="sha1=9b2205347600b15c0092ceb19493f7ba63c6e35e" released="Snapshot" version="2.1.10">
       <archive extract="freetype-2.1.10" href="http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.10.tar.bz2" size="1037107"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFTfwzrgeCgFmlPMERAlBhAJ9kPzkUMqQW9ctQmAoMZTgAmZH5oACgswsV4beCy31ovV1v
-T1a1zADzXlU=
+iD8DBQBFVy6irgeCgFmlPMERAp8IAJsE2W4wXAEjIPU8lFhsrJZfDnIaywCeJo3j6goOyF1F4+zn
+gdX8RHz6keY=
 
 -->
