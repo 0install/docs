@@ -64,15 +64,19 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="http://rox.sourceforge.net/Icons/Keyboard.png" homepage="http://rox.sourceforge.net/desktop/Keyboard"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="http://rox.sourceforge.net/Icons/MIME-Editor.png" homepage="http://rox.sourceforge.net/desktop/MIME-Editor"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png" homepage="http://gnome.org/"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="http://rox.sourceforge.net/Icons/Memo.png" homepage="http://rox.sourceforge.net/desktop/Memo"/>
+
+<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="http://rox.sourceforge.net/Icons/MIME-Editor.png" homepage="http://rox.sourceforge.net/desktop/MIME-Editor"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Mouse" name="Mouse" summary="mouse configuration applet" icon="http://rox.sourceforge.net/Icons/Mouse.png" homepage="http://rox.sourceforge.net/desktop/Mouse"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="http://rox.sourceforge.net/Icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="http://rox.sourceforge.net/Icons/Pager.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
+
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="http://rox.sourceforge.net/Icons/Resolution.png" homepage="http://rox.sourceforge.net/desktop/Resolution"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
@@ -82,11 +86,7 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="sets up a ROX desktop session" icon="http://rox.sourceforge.net/Icons/ROX-Session.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="http://rox.sourceforge.net/Icons/Resolution.png" homepage="http://rox.sourceforge.net/desktop/Resolution"/>
-
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="http://rox.sourceforge.net/Icons/Wallpaper.png" homepage="http://rox.sourceforge.net/desktop/Wallpaper"/>
-
-<feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png" homepage="http://gnome.org/"/>
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="http://rox.sourceforge.net/Icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
@@ -104,9 +104,9 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/TaskTray.png"/>
-
 <feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Tasklist.png" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist"/>
+
+<feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/TaskTray.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="sets time and date" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Time.png"/>
 
@@ -114,9 +114,9 @@
 
 <feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="http://web.telia.com/~u86012345/0install/Contacts.png"/>
 
-<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="http://www.brucalipto.org/injector/subversion.png"/>
-
 <feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="http://www.brucalipto.org/injector/subversion.png"/>
+
+<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="http://www.brucalipto.org/injector/subversion.png"/>
 
 <feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli-data" name="epeli-data" summary="Data for epeli" icon="tango/applications-system.png"/>
 
