@@ -17,7 +17,7 @@ def quoteattr(x):
 	return "''"
 
 known = [line.strip() for line in file('known-interfaces')]
-known.sort(key = lambda s: s.lower())
+known.sort(key = lambda s: s.rsplit('/', 1)[1].lower())
 
 known_feeds = {}
 

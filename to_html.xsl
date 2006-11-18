@@ -162,7 +162,6 @@
   <xsl:template match='*[name() = "feeds"]'>
     <table class='picturebullets'>
      <xsl:for-each select='document("all-feeds.xml")/*/feed'>
-     <xsl:sort select="@name"/>
       <tr>
        <td class='image'>
         <xsl:choose>
