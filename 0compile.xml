@@ -25,6 +25,14 @@ get <b>0compile</b> itself, use:
 $ <b>0alias 0compile http://0install.net/2006/interfaces/0compile.xml</b>
 </pre>
 
+<p>
+Note: this page describes the command-line interface to <b>0compile</b>. There
+is also a graphical interface, which is used when you click on the <b>Compile</b>
+button in the injector. The graphical interface provides similar options, but is
+slightly more limited. Here are
+<a href='http://rox.sourceforge.net/desktop/node/360'>some screenshots</a>.
+</p>
+
 <toc level='h2'/>
 
 <h2>Creating the build environment</h2>
