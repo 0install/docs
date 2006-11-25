@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/3rd-party/GDC.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GDC</name>
+  <summary>D Compiler for GCC</summary>
+  <description>
+GDC is a D language front end for the GNU Compiler Collection. It supports a
+number of targets and nearly all features of Digital Mars D.
+
+D is a systems programming language. Its focus is on combining the power and
+high performance of C and C++ with the programmer productivity of modern
+languages like Ruby and Python. Special attention is given to the needs of
+quality assurance, documentation, management, portability and reliability.
+
+D is statically typed, and compiles direct to native code. It's multiparadigm:
+supporting imperative, object oriented, and template metaprogramming styles.
+It's a member of the C syntax family, and its look and feel is very close to
+C++'s. For a quick feature comparison, see this comparison of D with C, C++, C#
+and Java.
+  </description>
+
+  <!-- Optionally, uncomment this to specify the program's homepage: -->
+  <homepage>http://dgcc.sourceforge.net/</homepage> --&gt;
+
+  <!-- Optionally, uncomment this to specify an icon: -->
+  <!-- <icon href='http://site/icon.png' type='image/png'/> -->
+
+  <group main="bin/gdc">
+    <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="Snapshot" version="0.19">
+      <archive extract="gdc" href="http://belnet.dl.sourceforge.net/sourceforge/dgcc/gdc-0.19-linux-i386.tar.bz2" size="2595249"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFaKdtrgeCgFmlPMERAtx3AJ4tbyxEDxJLbKFlcgAydhA7KuBfDgCcCn3rIW8YYateziph
+kkTVOy4LCnc=
+
+-->
