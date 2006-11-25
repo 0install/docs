@@ -113,6 +113,15 @@ injector version 0.21 or later. It does not install or require any autopackage
 components.
 </dd>
 
+<dt><a href='http://0install.net/tests/GNU-Hello.xml'>http://0install.net/tests/GNU-Hello.xml</a></dt>
+<dd>
+This program just prints "Hello, world!", except that no binary is available for it, only source.
+Go to the interface properties and click on <b>Compile</b> to compile a binary (or you can run
+<a href='0compile.html'>0compile</a> on the interface directory if you don't want to use the GUI).
+The source code is downloaded directly from ftp.gnu.org and compiled. Once built and registered, you
+can run the program again using the URI above to print the greeting.
+</dd>
+
 </dl>
 
 </html>
