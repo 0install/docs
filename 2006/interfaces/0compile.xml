@@ -37,14 +37,17 @@ For a full tutorial, see 0compile's homepage.
     <implementation id="sha1=1930fefbbf3b92f119005bcb125dcea371cc74d0" released="2006-11-12" stability="stable" version="0.6">
       <archive extract="0compile-0.6" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.6.tar.bz2" size="17472"/>
     </implementation>
-    <implementation id="sha1=6e6d75b9956fedfe58bcd0be597e81a86182c764" released="2006-11-21" version="0.7">
+    <implementation id="sha1=6e6d75b9956fedfe58bcd0be597e81a86182c764" released="2006-11-21" stability="stable" version="0.7">
       <archive extract="0compile-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.7.tar.bz2" size="19966"/>
+    </implementation>
+    <implementation id="sha1=0d94fb422a93c7326e2fccbebd5d9eab052e2d18" released="2006-11-25" version="0.8">
+      <archive extract="0compile-0.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBFY26srgeCgFmlPMERAlHxAKCH/2VqYX4UpRJxpWmUo44niGhqVQCgtNpa8fXE6N9kiQE+
-jL6m1xEgj7o=
+iD8DBQBFaIuBrgeCgFmlPMERAklUAKC2ufUocf3iwwhxkD2tFeb0YFOIWwCfYsmlJ8d0cencz/UC
+9UrzCvd9HZA=
 
 -->
