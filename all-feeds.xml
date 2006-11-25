@@ -58,6 +58,8 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="set the gamma correction for your screen" icon="http://rox.sourceforge.net/Icons/Gamma.png" homepage="http://rox.sourceforge.net/desktop/Gamma"/>
 
+<feed uri="http://0install.net/2006/3rd-party/GDC.xml" name="GDC" summary="D Compiler for GCC" icon="tango/applications-system.png" homepage="http://dgcc.sourceforge.net/"/>
+
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="headers for compiling GLib applications" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="headers for compiling C++ GLib applications" icon="tango/applications-system.png"/>
