@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GTK-2.4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/GTK-2.4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GTK-2.4</name>
   <summary>set up a GTK 2.4 build environment</summary>
   <description>
@@ -42,7 +42,7 @@
       <archive extract="gtk2.4-0.1" href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.1.tgz" size="1261"/>
     </implementation>
 
-    <implementation id="sha1=4b4a4b26d15533020ce81979607d563202677118" released="2006-06-04" version="0.2" stability='stable'>
+    <implementation id="sha1=4b4a4b26d15533020ce81979607d563202677118" released="2006-06-04" stability="stable" version="0.2">
       <archive extract="gtk2.4-0.2" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.2.tgz" size="1923"/>
     </implementation>
 
@@ -56,15 +56,18 @@
         <version before="2.5"/>
         <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
       </requires>
-      <implementation id="sha1=994d703b1faede1bfa2e97f063b80c15016c114c" released="2006-06-24" version="0.3" stability='stable'>
+      <implementation id="sha1=994d703b1faede1bfa2e97f063b80c15016c114c" released="2006-06-24" stability="stable" version="0.3">
         <archive extract="gtk2.4-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.3.tar.bz2" size="2153"/>
+      </implementation>
+      <implementation id="sha1=710455966211e583a4400f923fc75ede576fe31e" released="2006-11-26" version="0.4">
+        <archive extract="gtk-2.4-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-2.4-0.4.tar.bz2" size="2333"/>
       </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBEoYWOrgeCgFmlPMERAg0OAKDMk/tZZhQRMJp6fmVl2tiRxwKTtACgumlM4kOvqs/T9jCb
-74vNaEcfUeU=
+iD8DBQBFabGArgeCgFmlPMERAgEWAKC+MWTauUjnOIO8R3GQ5EYQsqkUbwCdHvTTsuJ5kO6RE81q
+6XPYV2g5DtI=
 
 -->
