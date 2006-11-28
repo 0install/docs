@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/sear.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>sear</name>
+  <summary>Sear - a client for Worldforge</summary>
+  <description>Sear is a client for MMORPGs using the Worldforge system.</description>
+
+  <group main="bin/sear">
+    <implementation id="sha1new=1eb476efef2a17ab14efb77ae99ede2d998779b1" released="Snapshot" version="0.1">
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/worldforge/sear-0.6.2.x86.package" size="35616054" start-offset="14067" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFbKmIBSn9tx+xORARAgpiAJ9osCgfoUjKHIH91tivisVge4oVZwCfQxPZVNDOoIu41CFb
+7fTztmDY9OI=
+
+-->

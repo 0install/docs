@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/gtkdc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gtkdc</name>
+  <summary>GtkDC</summary>
+  <description>A client for the Direct Connect peer-to-peer network inspired by DC++.</description>
+
+  <group main="bin/gtkdc">
+    <implementation id="sha1new=890406973a3938e2f79be004a1690ccb18ccd258" released="Snapshot" version="0.1">
+      <archive href="http://www.gtkdc.org/gtkdc_files/client/0.2/gtkdc-0.2.1-svn20061113.x86.package" size="217789" start-offset="17656" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFbKmHBSn9tx+xORARAgBSAJ0Z1IEvib+aV8Ov0SB594gu9ZfhswCfUP2SGvR4Wb+ct/eE
+jgkTR+/4wck=
+
+-->
