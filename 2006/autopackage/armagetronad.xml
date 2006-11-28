@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/armagetronad.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>armagetronad</name>
+  <summary>Armagetron Advanced</summary>
+  <description>Armagetron Advanced is a light cycle game.</description>
+
+  <group main="bin/armagetronad">
+    <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="Snapshot" version="0.1">
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/armagetronad/armagetronad-0.2.8.2.1.i686-generic-linux-gnu.package" size="1810661" start-offset="16604" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFbLIjBSn9tx+xORARAr+nAJ9YzHnTR1GZ/zK8KdHCaiueflgvbwCdEDvVRGuDYNzB5ZC9
+oM8889ucNIY=
+
+-->
