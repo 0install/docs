@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/opencity.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>opencity</name>
+  <summary>OpenCity Simulation Game</summary>
+  <description>OpenCity is a 3D city simulator</description>
+
+  <group main="bin/opencity">
+    <implementation id="sha1new=e6b90b17e33288d39b221873b18afaf34355b5c3" released="Snapshot" version="0.1">
+      <archive href="http://ovh.dl.sourceforge.net/sourceforge/opencity/opencity-0.0.4stable.x86.package" size="6055633" start-offset="15196" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
