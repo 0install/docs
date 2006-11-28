@@ -178,6 +178,8 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="sets time and date" icon="ftp://ftp.berlios.de/pub/rox4debian/apps/Time.png"/>
 
+<feed uri="http://0install.net/2006/autopackage/vdrift.xml" name="vdrift" summary="VDrift" icon="tango/applications-system.png"/>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
 
 <feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="http://www.hayber.us/rox/Volume/icon.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
