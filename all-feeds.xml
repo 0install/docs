@@ -12,6 +12,8 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="http://rox.sourceforge.net/Icons/Archive.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
 
+<feed uri="http://0install.net/2006/autopackage/armagetronad.xml" name="armagetronad" summary="Armagetron Advanced" icon="tango/applications-system.png"/>
+
 <feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="headers for compiling ATK applications" icon="tango/applications-system.png"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="http://people.freenet.de/LinuxCNC/0install/barrage.png"/>
@@ -68,6 +70,8 @@
 
 <feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="http://0install.net/2006/icons/gtk-logo.png"/>
 
+<feed uri="http://0install.net/2006/autopackage/gtkdc.xml" name="gtkdc" summary="GtkDC" icon="tango/applications-system.png"/>
+
 <feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="headers for compiling C++ GTK applications" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
@@ -116,6 +120,8 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
 
+<feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="tango/applications-system.png"/>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="http://rox.sourceforge.net/Icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="http://rox.sourceforge.net/Icons/Pager.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
@@ -151,6 +157,8 @@
 <feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="http://people.freenet.de/LinuxCNC/0install/sdl.png"/>
+
+<feed uri="http://0install.net/2006/autopackage/sear.xml" name="sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png"/>
 
 <feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="http://www.brucalipto.org/injector/subversion.png"/>
 
