@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/vdrift.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>vdrift</name>
+  <summary>VDrift</summary>
+  <description>VDrift is a realistic racing simulation with drifting in mind</description>
+
+  <group main="usr/share/games/vdrift/bin/vdrift">
+    <implementation id="sha1new=b9cf8cd1031b8edc0e1d98b52288473263864449" released="Snapshot" version="0.1">
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/vdrift/vdrift-2006-10-06-full.x86.package" size="148221077" start-offset="15475" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFbLZaBSn9tx+xORARAn3qAJ45X0I+iKSxf57aTPsWTfhh84CcrACdFnAlZmfaD7A/Y/WD
+9Qea1qa+1co=
+
+-->
