@@ -69,7 +69,7 @@ Hash: SHA1
     <implementation id="sha1=00505a072d2eb0d7323054a608a29006ed8e78bd" released="2006-03-25" stability="stable" version="0.18.2">
       <archive extract="0launch-gui-0.18.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0launch-gui-0.18.2.tar.bz2" size="28043"/>
     </implementation>
-    <implementation id="sha1=597b55d55391b5c4bbdad46b11e3872e46f07e2b" released="2006-10-29" stability="testing" version="0.18.3">
+    <implementation id="sha1=597b55d55391b5c4bbdad46b11e3872e46f07e2b" released="2006-10-29" stability="stable" version="0.18.3">
       <archive extract="0launch-gui-0.18.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0launch-gui-0.18.3.tar.bz2" size="28141"/>
     </implementation>
   </group>
@@ -77,7 +77,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFRIuXrgeCgFmlPMERAhGiAJ9d8eCfGTiLIma+7Le6/SJQ6uT1DACfV2P3
-MW41zBxgLyBVdKOStGLtVsM=
-=equ6
+iD8DBQFFcW7crgeCgFmlPMERAviXAJ49/HLpkMJWnlmdPxefmibULITcjACfUTIB
+qnOcqxRp14q2s+wKpX3sD7g=
+=3l/y
 -----END PGP SIGNATURE-----
