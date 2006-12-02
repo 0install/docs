@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2006/autopackage/OpenEuclide.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>openeuclide</name>
+  <name>OpenEuclide</name>
   <summary>2D geometry software</summary>
   <description>
 OpenEuclide is a 2D geometry software: figures are defined dynamically by
@@ -18,7 +18,7 @@ free and multi-platform (up to now, GNU and windows).
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbupBSn9tx+xORARAhFhAJ92dYX9rBp1OCWRtqKF054PiGSRcACfcwMpxyrtUGWUPx1E
-xgqZOVJ2X4M=
+iD8DBQBFcbv2BSn9tx+xORARAu4dAJ9vDf17G+zg6UzAQmJw9zspwGRIIACdHabr2pzJVBf+LnGT
+oh8e91QsVoQ=
 
 -->
