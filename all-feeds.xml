@@ -4,61 +4,61 @@
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/AddApp"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="icons/AddApp.png" homepage="http://rox.sourceforge.net/desktop/AddApp"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="icons/Album.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="construct AppDir wrappers for applications." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/30"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="construct AppDir wrappers for applications." icon="icons/AppFactory.png" homepage="http://rox.sourceforge.net/desktop/node/30"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="icons/Archive.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
 
 <feed uri="http://0install.net/2006/autopackage/armagetronad.xml" name="armagetronad" summary="Armagetron Advanced" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="headers for compiling ATK applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="icons/barrage.png"/>
 
-<feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="tango/applications-system.png"/>
+<feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="icons/bdb.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" homepage="http://cddb-py.sourceforge.net/"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="clock panel applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/27"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="clock panel applet" icon="icons/Clock.png" homepage="http://rox.sourceforge.net/desktop/node/27"/>
 
-<feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="tango/applications-system.png"/>
+<feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="icons/Contacts.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="tango/applications-system.png"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="icons/Depend.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="tango/applications-system.png"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="icons/Desktop2App.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="adds icons for devices/volumes to the panel" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="adds icons for devices/volumes to the panel" icon="icons/DeviceHandler.xml.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="display the difference between two text files." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/31"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="display the difference between two text files." icon="icons/Diff.png" homepage="http://rox.sourceforge.net/desktop/node/31"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/DownloadManager"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="icons/DownloadManager.png" homepage="http://rox.sourceforge.net/desktop/DownloadManager"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/dxf2G.xml" name="dxf2G" summary="converts 2D .dxf files into G-Code" icon="tango/applications-system.png" homepage="http://pier.unirc.eu/"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="simple text editor" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Edit"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="simple text editor" icon="icons/Edit.png" homepage="http://rox.sourceforge.net/desktop/Edit"/>
 
 <feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli-data" name="epeli-data" summary="Data for epeli" icon="tango/applications-system.png"/>
 
-<feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc" name="Epeli" summary="Elämäpeli" icon="tango/applications-system.png"/>
+<feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc" name="Epeli" summary="Elämäpeli" icon="icons/epeli.xml.asc.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Execute.xml" name="Execute" summary="run programs by command" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Execute.xml" name="Execute" summary="run programs by command" icon="icons/Execute.xml.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Fetch"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="icons/Fetch.png" homepage="http://rox.sourceforge.net/desktop/Fetch"/>
 
-<feed uri="http://www.hayber.us/0install/Find" name="Find" summary="a find-in-files utility" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/19"/>
+<feed uri="http://www.hayber.us/0install/Find" name="Find" summary="a find-in-files utility" icon="icons/Find.png" homepage="http://rox.sourceforge.net/desktop/node/19"/>
 
-<feed uri="http://holizz.com/software/0install/firefox" name="Firefox" summary="Web browser" icon="tango/applications-system.png" homepage="http://www.mozilla.com/firefox/"/>
+<feed uri="http://holizz.com/software/0install/firefox" name="Firefox" summary="Web browser" icon="icons/firefox.png" homepage="http://www.mozilla.com/firefox/"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="icons/foobillard.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="display usage of a file system." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/28"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="display usage of a file system." icon="icons/FreeFS.png" homepage="http://rox.sourceforge.net/desktop/node/28"/>
 
 <feed uri="http://0install.net/2006/3rd-party/Freetype2.xml" name="Freetype2" summary="free, portable library for digital typography" icon="tango/applications-system.png" homepage="http://www.freetype.org/"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="set the gamma correction for your screen" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Gamma"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="set the gamma correction for your screen" icon="icons/Gamma.png" homepage="http://rox.sourceforge.net/desktop/Gamma"/>
 
 <feed uri="http://0install.net/2006/3rd-party/GDC.xml" name="GDC" summary="D Compiler for GCC" icon="tango/applications-system.png" homepage="http://dgcc.sourceforge.net/"/>
 
@@ -66,9 +66,9 @@
 
 <feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="headers for compiling C++ GLib applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="tango/applications-system.png" homepage="http://0install.net"/>
+<feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="set up a GTK 2.4 build environment" icon="icons/GTK-2.4.xml.png" homepage="http://0install.net"/>
 
-<feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="headers for compiling GTK applications" icon="icons/GTK-dev.png"/>
 
 <feed uri="http://0install.net/2006/autopackage/gtkdc.xml" name="gtkdc" summary="GtkDC" icon="tango/applications-system.png"/>
 
@@ -76,123 +76,123 @@
 
 <feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Keyboard"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="icons/Keyboard.png" homepage="http://rox.sourceforge.net/desktop/Keyboard"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/36"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="icons/Launch.png" homepage="http://rox.sourceforge.net/desktop/node/36"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lbreakout" name="LBreakout" summary="The classical Breakout game improved a lot" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lbreakout" name="LBreakout" summary="The classical Breakout game improved a lot" icon="icons/lbreakout.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="icons/lgeneral.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="icons/libmikmod.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="icons/libpng.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png" homepage="http://gnome.org/"/>
 
-<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Software/Lithium"/>
+<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="icons/Lithium.png" homepage="http://rox.sourceforge.net/desktop/Software/Lithium"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="icons/lmarbles.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="display the system load." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/32"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="display the system load." icon="icons/Load.png" homepage="http://rox.sourceforge.net/desktop/node/32"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="icons/lpairs.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/33"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="icons/Mail.png" homepage="http://rox.sourceforge.net/desktop/node/33"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="icons/Media.xml.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/34"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="icons/Mem.png" homepage="http://rox.sourceforge.net/desktop/node/34"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Memo"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="icons/Memo.png" homepage="http://rox.sourceforge.net/desktop/Memo"/>
 
-<feed uri="http://www.hayber.us/0install/Menu" name="Menu" summary="a very simple menu applet for the ROX desktop." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Software/Menu"/>
+<feed uri="http://www.hayber.us/0install/Menu" name="Menu" summary="a very simple menu applet for the ROX desktop." icon="icons/Menu.png" homepage="http://rox.sourceforge.net/desktop/Software/Menu"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/MIME-Editor"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/MIME-Editor" name="MIME-Editor" summary="edit the file type database" icon="icons/MIME-Editor.png" homepage="http://rox.sourceforge.net/desktop/MIME-Editor"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/MiniClock.xml" name="MiniClock" summary="Clock applet" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/MiniClock.xml" name="MiniClock" summary="Clock applet" icon="icons/MiniClock.xml.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Mouse" name="Mouse" summary="mouse configuration applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Mouse"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Mouse" name="Mouse" summary="mouse configuration applet" icon="icons/Mouse.png" homepage="http://rox.sourceforge.net/desktop/Mouse"/>
 
-<feed uri="http://www.hayber.us/0install/MusicBox" name="MusicBox" summary="a music player for the ROX desktop." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/MusicBox"/>
+<feed uri="http://www.hayber.us/0install/MusicBox" name="MusicBox" summary="a music player for the ROX desktop." icon="icons/MusicBox.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/MusicBox"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="icons/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
 
 <feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="pager applet" icon="icons/Pager.png" homepage="http://rox.sourceforge.net/desktop/Pager"/>
 
-<feed uri="http://www.hayber.us/0install/PanelClock" name="PanelClock" summary="a simpel panel clock applet." icon="tango/applications-system.png"/>
+<feed uri="http://www.hayber.us/0install/PanelClock" name="PanelClock" summary="a simpel panel clock applet." icon="icons/PanelClock.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="headers for compiling Pango applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="icons/penguin-command.png"/>
 
-<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Software/Postal"/>
+<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="icons/Postal.png" homepage="http://rox.sourceforge.net/desktop/Software/Postal"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Resolution"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="icons/Resolution.png" homepage="http://rox.sourceforge.net/desktop/Resolution"/>
 
 <feed uri="http://www.hayber.us/0install/Ripper" name="Ripper" summary="a CD ripper and encoder for the ROX desktop." icon="icons/Ripper.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Ripper"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-CLib"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="icons/ROX-CLib.png" homepage="http://rox.sourceforge.net/desktop/ROX-CLib"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="a default configuration for ROX" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" name="ROX-Filer" summary="fast and powerful file manager" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Filer"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" name="ROX-Filer" summary="fast and powerful file manager" icon="icons/ROX-Filer.png" homepage="http://rox.sourceforge.net/desktop/ROX-Filer"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="library for ROX applications" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Lib"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="library for ROX applications" icon="icons/ROX-Lib.png" homepage="http://rox.sourceforge.net/desktop/ROX-Lib"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="sets up a ROX desktop session" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="sets up a ROX desktop session" icon="icons/ROX-Session.png" homepage="http://rox.sourceforge.net/desktop/ROX-Session"/>
 
-<feed uri="http://0install.net/2006/3rd-party/SCons.xml" name="SCons" summary="a software construction tool" icon="tango/applications-system.png" homepage="http://www.scons.org/"/>
+<feed uri="http://0install.net/2006/3rd-party/SCons.xml" name="SCons" summary="a software construction tool" icon="icons/SCons.xml.png" homepage="http://www.scons.org/"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="icons/sdl.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="icons/sdl-mixer.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="tango/applications-system.png"/>
+<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="icons/sdl-mixer-libmikmod.png"/>
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png"/>
 
-<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="tango/applications-system.png"/>
+<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="icons/Subversion.png"/>
 
-<feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/System"/>
+<feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/214"/>
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="notification area panel applet" icon="icons/SystemTrayN.png" homepage="http://rox.sourceforge.net/desktop/node/214"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/29"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="icons/Tail.png" homepage="http://rox.sourceforge.net/desktop/node/29"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist"/>
+<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="icons/Tasklist.png" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="icons/TaskTray.xml.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="tango/applications-system.png"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="icons/Thumbs.png"/>
 
 <feed uri="http://www.cye-tech.com/~lennon/Tide/Tide.xml" name="Tide" summary="a real-time text editor for the ROX desktop" icon="tango/applications-system.png"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="sets time and date" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="sets time and date" icon="icons/Time.xml.png"/>
 
 <feed uri="http://0install.net/2006/autopackage/vdrift.xml" name="vdrift" summary="VDrift" icon="tango/applications-system.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="generate thumbnail images from video files" icon="icons/VideoThumbnail.png" homepage="http://rox.sourceforge.net/desktop/node/26"/>
 
-<feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
+<feed uri="http://www.hayber.us/0install/Volume" name="Volume" summary="a volume control applet and mixer for the ROX desktop." icon="icons/Volume.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/Volume"/>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="tango/applications-system.png" homepage="http://rox.sourceforge.net/desktop/Wallpaper"/>
+<feed uri="http://rox.sourceforge.net/2005/interfaces/Wallpaper" name="Wallpaper" summary="set the desktop background image" icon="icons/Wallpaper.png" homepage="http://rox.sourceforge.net/desktop/Wallpaper"/>
 
-<feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="tango/applications-system.png"/>
+<feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="icons/Weather.xml.png"/>
 
-<feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="a wireless network quality monitor." icon="tango/applications-system.png"/>
+<feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="a wireless network quality monitor." icon="icons/WiFi.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="view and edit extended attributes" icon="tango/applications-system.png"/>
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="view and edit extended attributes" icon="icons/XAttr.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="tango/applications-system.png"/>
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="icons/XPlanet.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
 

@@ -52,7 +52,9 @@ for uri in known:
 
 	have_icon = False
 	icon_path = 'icons/%s.png' % uri.split('/')[-1]
-	if not os.path.isfile(icon_path):
+	if os.path.isfile(icon_path):
+		have_icon = True
+	else:
 		for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
 			if icon_elem.getAttribute('type') == 'image/png':
 				icon_href = icon_elem.getAttribute('href')
