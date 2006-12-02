@@ -12,7 +12,7 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="feed_icons/Archive.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
 
-<feed uri="http://0install.net/2006/autopackage/armagetronad.xml" name="armagetronad" summary="Armagetron Advanced" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/autopackage/armagetronad.xml" name="armagetronad" summary="a Tron clone in 3D" icon="feed_icons/armagetronad.png" homepage="http://www.armagetronad.net/"/>
 
 <feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="headers for compiling ATK applications" icon="tango/applications-system.png"/>
 
@@ -120,7 +120,7 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="feed_icons/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
 
-<feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="feed_icons/opencity.png" homepage="http://www.opencity.info/"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="feed_icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 

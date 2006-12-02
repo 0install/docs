@@ -54,7 +54,13 @@ for uri in known:
 	icon_path = 'feed_icons/%s.png' % uri.split('/')[-1]
 	if os.path.isfile(icon_path):
 		have_icon = True
-	else:
+	elif uri.endswith('.xml'):
+	     icon_path = 'feed_icons/%s.png' % uri.split('/')[-1][:-4]
+	     if os.path.isfile(icon_path):
+		     have_icon = True
+
+	if not have_icon:
+		# Download one then...
 		for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
 			if icon_elem.getAttribute('type') == 'image/png':
 				icon_href = icon_elem.getAttribute('href')
