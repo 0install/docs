@@ -2,7 +2,7 @@
 from zeroinstall.injector.iface_cache import iface_cache
 from zeroinstall.injector.namespaces import XMLNS_IFACE
 
-import sys, os, codecs
+import sys, os, codecs, urllib
 import xml.sax.saxutils
 from xml.dom import minidom
 
@@ -49,13 +49,22 @@ for uri in known:
 		break
 	if homepage is None:
 		homepage = homepages.get(uri, None)
-	icon = 'tango/applications-system.png'
-	for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
-		if icon_elem.getAttribute('type') == 'image/png':
-			icon = icon_elem.getAttribute('href')
+
+	have_icon = False
+	icon_path = 'icons/%s.png' % uri.split('/')[-1]
+	if not os.path.isfile(icon_path):
+		for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
+			if icon_elem.getAttribute('type') == 'image/png':
+				icon_href = icon_elem.getAttribute('href')
+				urllib.urlretrieve(icon_href, icon_path)
+				have_icon = True
+				os.system("svn add '%s'" % icon_path)
+				break
+	if not have_icon:
+		icon_path = 'tango/applications-system.png'
 
 	result.write("<feed uri=%s name=%s summary=%s icon=%s" \
-		% tuple(map(quoteattr, (uri, iface.name, iface.summary, icon))))
+		% tuple(map(quoteattr, (uri, iface.name, iface.summary, icon_path))))
 	
 	if homepage:
 		result.write(' homepage=%s' % quoteattr(homepage))
