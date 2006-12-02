@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/OpenEuclide.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>openeuclide</name>
+  <summary>2D geometry software</summary>
+  <description>
+OpenEuclide is a 2D geometry software: figures are defined dynamically by
+describing formal geometrical constraints. This project is a basic tool for
+educational or modeling purpose. It is distributed under the GNU GPL licence,
+free and multi-platform (up to now, GNU and windows).
+  </description>
+  <homepage>http://coulon.publi.free.fr/openeuclide</homepage>
+
+  <group main="bin/openeuclide">
+    <implementation id="sha1new=6247534f842d585e589c0b946d6a19654fe6dc34" released="Snapshot" version="0.1">
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/openeuclide/openeuclide-0.5.x86.package" size="122443" start-offset="17485" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

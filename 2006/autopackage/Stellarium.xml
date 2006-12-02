@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/Stellarium.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>stellarium</name>
+  <summary>Stellarium Astronomy Software</summary>
+  <description>Stellarium is a beautiful night sky simulator</description>
+
+  <group main="bin/stellarium">
+    <implementation id="sha1new=bca0db4dd29e89a5b695686e4657cda70017dd5b" released="Snapshot" version="0.1">
+      <archive href="http://bylands.dur.ac.uk/~mh/stellarium-0.6.2.x86.package" size="8972783" start-offset="15400" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFca7eBSn9tx+xORARAl8rAKCLvcf8u/7a1K7vwhAlKSApWnHLbgCfewjM+rAgzt82aCBf
+llzOL1OiOEI=
+
+-->

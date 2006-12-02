@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/Lincity.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Lincity</name>
+  <summary>city simulation game</summary>
+  <description>
+Lincity is a city simulation game. You are required to build and maintain a
+city. You must feed, house, provide jobs and goods for your residents. You can
+build a sustainable economy with the help of renewable energy and recycling, or
+you can go for broke and build rockets to escape from a pollution ridden and
+resource starved planet, it's up to you.
+  </description>
+  <homepage>http://lincity.sourceforge.net/</homepage>
+
+  <group main="bin/xlincity">
+    <implementation id="sha1new=55826888c6a24c6b728063ad3b765788cf105646" released="Snapshot" version="0.1">
+      <archive href="http://mesh.dl.sourceforge.net/sourceforge/lincity/lincity-1.13.1.x86.package" size="573942" start-offset="14942" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

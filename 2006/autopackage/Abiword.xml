@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/Abiword.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>abiword</name>
+  <summary>AbiWord Word Processor</summary>
+  <description>AbiWord is a lightweight word processing application.</description>
+
+  <group main="bin/abiword">
+    <implementation id="sha1new=ed47b2e3271ea9620a47a57534d6ea35e0753017" released="Snapshot" version="0.1">
+      <archive href="http://www.abisource.org/downloads/abiword/2.4.5/Linux/Autopackage/abiword-2.4.5.x86.package" size="3672982" start-offset="17709" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

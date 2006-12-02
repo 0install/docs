@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/autopackage/Solfege.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>solfege</name>
+  <summary>smarten your ears</summary>
+  <description>
+Solfege is free music education software. Use it to train your rhythm,
+interval, scale and chord skills. Solfege - Smarten your ears!
+  </description>
+  <homepage>http://www.solfege.org</homepage>
+
+  <group main="bin/solfege">
+    <implementation id="sha1new=e546b9e0f87150c7e97ebfad91b72a12a39745ce" released="Snapshot" version="0.1">
+      <archive href="http://easynews.dl.sourceforge.net/sourceforge/solfege/solfege-3.6.3.x86.package" size="1000930" start-offset="15060" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFcbtWBSn9tx+xORARAtwuAJ41WxomBiTOQPFn7NLB9i5Btgp01wCeN1AuIEJEP7+p9OjC
+ICfOQ2qA13Q=
+
+-->
