@@ -3,7 +3,15 @@
 <interface uri="http://0install.net/2006/autopackage/opencity.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>opencity</name>
   <summary>OpenCity Simulation Game</summary>
-  <description>OpenCity is a 3D city simulator</description>
+  <description>
+  OpenCity is a full 3D city simulator game project. It is written in standard
+  C++ with OpenGL and SDL from scratch. It is not intended to be a clone of any
+  famous city simulator from Max*s. So, if you are looking to download a free
+  SimCity 4 like, please forget OpenCity. I work on it at my spare time, I
+  really meant it &quot;my spare time&quot;!
+  </description>
+  <homepage>http://www.opencity.info/</homepage>
+  <icon href="http://0install.net/feed_icons/opencity.png" type="image/png"/>
 
   <group main="bin/opencity">
     <implementation id="sha1new=e6b90b17e33288d39b221873b18afaf34355b5c3" released="Snapshot" version="0.1">
@@ -12,7 +20,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFbLIlBSn9tx+xORARAnAgAKCayzTAvQBKF86LAx36uBfdesA5vwCeOkxa/7QDwfmvXF0l
-1dIRllqtqEM=
+iD8DBQBFcXNqBSn9tx+xORARAtkJAJ9TMK2PTCX6MDxnSRTyK4awZEPFVwCgnSEN6TiqMuhYb8/H
+d1YBTVb78zA=
 
 -->
