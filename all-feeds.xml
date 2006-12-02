@@ -4,6 +4,8 @@
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
 
+<feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="abiword" summary="AbiWord Word Processor" icon="tango/applications-system.png"/>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="feed_icons/AddApp.png" homepage="http://rox.sourceforge.net/desktop/AddApp"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="feed_icons/Album.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
@@ -92,6 +94,8 @@
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/libwnck4" name="Libwnck" summary="pager library" icon="tango/applications-system.png" homepage="http://gnome.org/"/>
 
+<feed uri="http://0install.net/2006/autopackage/Lincity.xml" name="Lincity" summary="city simulation game" icon="tango/applications-system.png" homepage="http://lincity.sourceforge.net/"/>
+
 <feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="a Battery status monitor." icon="feed_icons/Lithium.png" homepage="http://rox.sourceforge.net/desktop/Software/Lithium"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="feed_icons/lmarbles.png"/>
@@ -121,6 +125,8 @@
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="feed_icons/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
 
 <feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="feed_icons/opencity.png" homepage="http://www.opencity.info/"/>
+
+<feed uri="http://0install.net/2006/autopackage/OpenEuclide.xml" name="OpenEuclide" summary="2D geometry software" icon="tango/applications-system.png" homepage="http://coulon.publi.free.fr/openeuclide"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="window manager for the ROX Desktop" icon="feed_icons/OroboROX.png" homepage="http://rox.sourceforge.net/desktop/OroboROX"/>
 
@@ -152,6 +158,8 @@
 
 <feed uri="http://0install.net/2006/3rd-party/SCons.xml" name="SCons" summary="a software construction tool" icon="feed_icons/SCons.xml.png" homepage="http://www.scons.org/"/>
 
+<feed uri="http://0install.net/2006/autopackage/SCOURGE.xml" name="S.C.O.U.R.G.E." summary="rogue-like game in the tradition of NetHack and Moria" icon="tango/applications-system.png" homepage="http://scourge.sourceforge.net/"/>
+
 <feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="feed_icons/sdl.png"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="feed_icons/sdl-mixer.png"/>
@@ -160,7 +168,13 @@
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/autopackage/Solfege.xml" name="solfege" summary="smarten your ears" icon="tango/applications-system.png" homepage="http://www.solfege.org"/>
+
+<feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="stellarium" summary="Stellarium Astronomy Software" icon="tango/applications-system.png"/>
+
 <feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="feed_icons/Subversion.png"/>
+
+<feed uri="http://0install.net/2006/autopackage/Supertux.xml" name="Supertux" summary="2D jump'n run sidescroller game" icon="tango/applications-system.png" homepage="http://supertux.berlios.de/"/>
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/System" name="System" summary="process and disk monitor" icon="feed_icons/System.png" homepage="http://rox.sourceforge.net/desktop/System"/>
 
