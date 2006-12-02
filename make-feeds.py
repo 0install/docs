@@ -51,7 +51,7 @@ for uri in known:
 		homepage = homepages.get(uri, None)
 
 	have_icon = False
-	icon_path = 'icons/%s.png' % uri.split('/')[-1]
+	icon_path = 'feed_icons/%s.png' % uri.split('/')[-1]
 	if os.path.isfile(icon_path):
 		have_icon = True
 	else:
