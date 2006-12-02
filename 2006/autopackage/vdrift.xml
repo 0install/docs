@@ -6,13 +6,13 @@
   <description>VDrift is a realistic racing simulation with drifting in mind</description>
 
   <group main="usr/share/games/vdrift/bin/vdrift">
-    <implementation id="sha1new=b9cf8cd1031b8edc0e1d98b52288473263864449" released="Snapshot" version="0.1">
+    <implementation id="sha1new=b9cf8cd1031b8edc0e1d98b52288473263864449" released="2006-12-02" version="2006.10.06">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/vdrift/vdrift-2006-10-06-full.x86.package" size="148221077" start-offset="15475" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFbLZaBSn9tx+xORARAn3qAJ45X0I+iKSxf57aTPsWTfhh84CcrACdFnAlZmfaD7A/Y/WD
-9Qea1qa+1co=
+iD8DBQBFcbzdBSn9tx+xORARAqpeAJ4wtBjkFKJ1fH3zg0cd+6zIZTtpBQCeL6AeW9Xk9f/2F6v/
+cwgx2rPM47E=
 
 -->

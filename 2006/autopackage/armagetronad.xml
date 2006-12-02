@@ -22,13 +22,13 @@ a 3D environment.
   <icon href="http://0install.net/feed_icons/armagetronad.png" type="image/png"/>
 
   <group main="bin/armagetronad">
-    <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="Snapshot" version="0.1">
+    <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="2006-12-02" version="0.2.8.2.1">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/armagetronad/armagetronad-0.2.8.2.1.i686-generic-linux-gnu.package" size="1810661" start-offset="16604" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcXMXBSn9tx+xORARAh7aAJ0dW25aJad2IqhxpRVf1+LlPNcqfgCeI1RKozo2aeqFDwn5
-uRjioxYrPiw=
+iD8DBQBFcbyGBSn9tx+xORARAn7VAKCMCRTIyicYeAc45w3Dyh4xydoXJwCcDsiGlsQ8MBMniDKQ
+CStZ/EoCv8Q=
 
 -->

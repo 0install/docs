@@ -10,13 +10,13 @@ interval, scale and chord skills. Solfege - Smarten your ears!
   <homepage>http://www.solfege.org</homepage>
 
   <group main="bin/solfege">
-    <implementation id="sha1new=e546b9e0f87150c7e97ebfad91b72a12a39745ce" released="Snapshot" version="0.1">
+    <implementation id="sha1new=e546b9e0f87150c7e97ebfad91b72a12a39745ce" released="2006-12-02" version="3.6.3">
       <archive href="http://easynews.dl.sourceforge.net/sourceforge/solfege/solfege-3.6.3.x86.package" size="1000930" start-offset="15060" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbtWBSn9tx+xORARAtwuAJ41WxomBiTOQPFn7NLB9i5Btgp01wCeN1AuIEJEP7+p9OjC
-ICfOQ2qA13Q=
+iD8DBQBFcbyvBSn9tx+xORARAgYYAJ4rdqyneSWjFol6QRni6IaToYvHSACfUcigASdPisd0GSk9
+6u+/wiVhHk4=
 
 -->

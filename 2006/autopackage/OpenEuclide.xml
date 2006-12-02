@@ -12,13 +12,13 @@ free and multi-platform (up to now, GNU and windows).
   <homepage>http://coulon.publi.free.fr/openeuclide</homepage>
 
   <group main="bin/openeuclide">
-    <implementation id="sha1new=6247534f842d585e589c0b946d6a19654fe6dc34" released="Snapshot" version="0.1">
+    <implementation id="sha1new=6247534f842d585e589c0b946d6a19654fe6dc34" released="2006-12-02" version="0.5">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/openeuclide/openeuclide-0.5.x86.package" size="122443" start-offset="17485" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbv2BSn9tx+xORARAu4dAJ9vDf17G+zg6UzAQmJw9zspwGRIIACdHabr2pzJVBf+LnGT
-oh8e91QsVoQ=
+iD8DBQBFcbyhBSn9tx+xORARAmn6AKCg07Ue1SC0eO2nKW7k1Y2Z+nOPEQCeJXK7P6QjuBFNPWvS
+acniJo1zwRI=
 
 -->
