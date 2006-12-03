@@ -214,6 +214,8 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="feed_icons/XPlanet.png"/>
 
+<feed uri="http://rox.sourceforge.net/2006/interfaces/Zero2Bundle.xml" name="Zero2Bundle" summary="create ROX application bundles" icon="feed_icons/Zero2Bundle.png"/>
+
 <feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
 
 </list>
