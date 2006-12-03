@@ -78,6 +78,8 @@
 
 <feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2006/3rd-party/Inkscape.xml" name="Inkscape" summary="an SVG-based vector drawing application" icon="feed_icons/Inkscape.png" homepage="http://inkscape.org/"/>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="keyboard configuration applet" icon="feed_icons/Keyboard.png" homepage="http://rox.sourceforge.net/desktop/Keyboard"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="feed_icons/Launch.png" homepage="http://rox.sourceforge.net/desktop/node/36"/>
@@ -139,6 +141,8 @@
 <feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="feed_icons/penguin-command.png"/>
 
 <feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="an applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" homepage="http://rox.sourceforge.net/desktop/Software/Postal"/>
+
+<feed uri="http://0install.net/2006/3rd-party/PySol.xml" name="PySol" summary="a collection of more than 200 solitaire card games" icon="feed_icons/PySol.png" homepage="http://www.pysol.org/"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="python-bindings for the wnck-library" icon="tango/applications-system.png"/>
 
@@ -203,6 +207,8 @@
 <feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="shows the weather" icon="feed_icons/Weather.xml.png"/>
 
 <feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="a wireless network quality monitor." icon="feed_icons/WiFi.png"/>
+
+<feed uri="http://0install.net/2006/3rd-party/XaraXtreme.xml" name="Xara Xtreme" summary="cross-platform vector artwork and photocomposition package" icon="feed_icons/XaraXtreme.png" homepage="http://www.xaralx.org/"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="view and edit extended attributes" icon="feed_icons/XAttr.png"/>
 
