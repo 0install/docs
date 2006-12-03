@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2006/autopackage/Stellarium.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>stellarium</name>
+  <name>Stellarium</name>
   <summary>a beautiful night sky simulator</summary>
   <description>
 Stellarium is a free open source planetarium for your computer. It shows a
@@ -11,7 +11,7 @@ telescope.
 It is being used in planetarium projectors. Just set your coordinates and go.
   </description>
   <homepage>http://www.stellarium.org/</homepage>
-  <icon href="http://0install.net/feed_icons/stellarium.png" type="image/png"/>
+  <icon href="http://0install.net/feed_icons/Stellarium.png" type="image/png"/>
 
   <group main="bin/stellarium">
     <implementation id="sha1new=bca0db4dd29e89a5b695686e4657cda70017dd5b" released="2006-12-02" version="0.6.2">
@@ -20,7 +20,7 @@ It is being used in planetarium projectors. Just set your coordinates and go.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcsZ5BSn9tx+xORARAk8BAJ4m5Aw0iZlGG5kKycoXeuISrO3V4gCggTOXRGJt+43n765/
-3Ir2DuBrGmM=
+iD8DBQBFcsbMBSn9tx+xORARAmr3AJ9UY12YCPV0mXfQo1TS26xnz/dPgACdGUKs0QviNNxwCxZz
+Cg1wnIkVziQ=
 
 -->
