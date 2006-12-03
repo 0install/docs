@@ -174,7 +174,7 @@
 
 <feed uri="http://0install.net/2006/autopackage/Solfege.xml" name="solfege" summary="smarten your ears" icon="tango/applications-system.png" homepage="http://www.solfege.org"/>
 
-<feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="stellarium" summary="Stellarium Astronomy Software" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="Stellarium" summary="a beautiful night sky simulator" icon="feed_icons/Stellarium.png" homepage="http://www.stellarium.org/"/>
 
 <feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="feed_icons/Subversion.png"/>
 
