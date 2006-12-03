@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/3rd-party/PySol.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PySol</name>
+  <summary>a collection of more than 200 solitaire card games</summary>
+  <description>
+PySol is an exciting collection of more than 200 solitaire card games. Its
+features include support for lots of distinct games, very nice look and feel,
+multiple cardsets and table tiles, sound and background music, unlimited undo
+&amp; redo, load &amp; save games, player statistics and log files, hint system,
+demo games, support for user written plug-ins, integrated HTML help browser and
+lots of documentation.
+
+Among the supported games are classics like Aces Up, Baker's Game, Canfield, FreeCell, Forty Thieves, Golf, Klondike, Pyramid, Scorpion, Spider, Yukon, and many more...
+
+PySol is copyrighted OpenSource software distributed under the terms of the
+GNU General Public License.
+
+PySol is written in 100% pure Python
+  </description>
+
+  <homepage>http://www.pysol.org/</homepage>
+  <icon href="http://0install.net/tests/pysol.png" type="image/png"/>
+
+  <group main="usr/share/games/pysol/wrapper">
+    <implementation id="sha1new=d53155be13f152fc9af45ebcdffcae8f2be456ac" released="2004-06-18" version="4.82.1.2">
+      <recipe>
+        <archive href="http://debian.tu-bs.de/debian/pool/main/p/pysol/pysol_4.82.1-2_all.deb" size="1490082"/>
+        <archive href="http://0install.net/tests/pysol-patch.tgz" size="235"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFcqRBBSn9tx+xORARAsl5AKCGnXov+VQeEtUfZ/4X4DsU8o0KgQCeOfijB5XfHJ67uR0W
+MpraUXzMEDE=
+
+-->

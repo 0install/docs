@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/3rd-party/XaraXtreme.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Xara Xtreme</name>
+  <summary>cross-platform vector artwork and photocomposition package</summary>
+  <description>
+XaraLX is a vector graphics and photocomposition program. It is primarily a
+vector graphics program, but it also handles photos and drawings. It has an
+easy-to-use and easy-to-learn approach.
+  </description>
+
+  <homepage>http://www.xaralx.org/</homepage>
+
+  <icon href="http://0install.net/feed_icons/XaraXtreme.png" type="image/png"/>
+
+  <group main="bin/xaralx">
+    <implementation arch="Linux-i486" id="sha1=8b8e74af00a5e9a22376dcaf9765c81291a95685" released="2006-08-25" version="0.7.1692">
+      <archive extract="xaralx" href="http://downloads.xara.com/opensource/RecomXaraLX0.7_rev1692.tar.bz2" size="18532162"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFcqUgBSn9tx+xORARAiuuAJsFf/f6SpeV89iQ8IxaKKOP0OP6EgCgnqXWFmiv4L14/ZuD
+cS00gHn5JWU=
+
+-->
