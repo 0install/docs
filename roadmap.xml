@@ -200,7 +200,7 @@ URIs or trusted public keys).</dd>
 
 <dt>Third-party sign-off</dt>
 <dd>A distribution can sign an upstream release ("Certified for use with SuSE 10.2", etc). Users can set a policy
-to run only approved versions by default. Or, a third-party could provide additional into to the hints box
+to run only approved versions by default. Or, a third-party could provide additional input to the hints box
 (the injector's GUI contains a built-in "Unreliable hints database", but a commercial organisation could offer
 a real service).
 </dd>
