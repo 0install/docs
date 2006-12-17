@@ -121,6 +121,15 @@ that packages are executable files, the design doesn't seem to allow this to be 
 <li>Being closer to traditional installation, it's easier to package existing
 applications with Autopackage.</li>
 </ul>
+
+<p>
+Note that it is quite possible to list autopackages in a Zero Install feed, as
+described in <a href='http://thread.gmane.org/gmane.comp.autopackage.devel/5733/focus=5733'>this
+post on the Autopackage mailing list</a>. In this case, no scripts are run during
+installation (the package is treated as a normal archive), so not all packages will work,
+but many do.
+</p>
+
 </dd>
 
 <dt>EDOS</dt>
