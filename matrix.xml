@@ -28,7 +28,7 @@ be a 'pass') but it should give the general idea.
  <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<no/>			<td>Only one</td>	<td>Only upgrades</td>	<yes/></tr>
  <tr><th>Conflict-free</th>				<no/>			<no/>			<no/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Decentralised</th>				<yes/>			<no/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<no/>			<yes/>			<no/>			<yes/></tr>
+ <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/>			<no/>			<yes/></tr>
  <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<yes/>			<no>Only Java</no>	<yes/>			<yes/></tr>
  <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/>			<yes/></tr>
