@@ -59,7 +59,7 @@ program. Some examples include:
   <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.24-1_all.deb?download'>zeroinstall-injector_0.24-1_all.deb download page</a> (Debian/testing package; python-central)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu (breezy/dapper)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all_ubuntu.deb?download'>zeroinstall-injector_0.22-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)<br/>
-  <b>Ubuntu (edgy)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.24-1_all_ubuntu.deb?download'>zeroinstall-injector_0.24-1_all_ubuntu.deb download page</a> (now <a href='http://revu.tauware.de/details.py?upid=3360'>submitted to Universe</a>)</li>
+  <b>Ubuntu (edgy/feisty)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.24-1_all_ubuntu.deb?download'>zeroinstall-injector_0.24-1_all_ubuntu.deb download page</a> (now <a href='http://revu.tauware.de/details.py?upid=3360'>submitted to Universe</a>)</li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
   <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
