@@ -528,7 +528,8 @@ This block <b>must</b> go at the end of the file, and contains a Base64-encoded 
 the file that would be created by using <b>gpg --detach-sign</b> on the original interface.
 The signature block must start on a new line, may not contain anything except valid base64
 characters, and nothing may follow the signature block. XML signature blocks are supported
-from version 0.18 of the injector and may be generated easily using the <b>0publish</b> command.
+from version 0.18 of the injector and may be generated easily using the
+<a href='0publish.html'>0publish</a> command.
 They have the advantage that the result is still valid XML and can therefore be processed and
 styled using standard tools.
 </p>
