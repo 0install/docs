@@ -26,13 +26,16 @@ and Java.
   <!-- <icon href='http://site/icon.png' type='image/png'/> -->
 
   <group main="bin/gdc">
-    <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="Snapshot" version="0.19">
+    <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="2006-11-25" stability="stable" version="0.19">
       <archive extract="gdc" href="http://belnet.dl.sourceforge.net/sourceforge/dgcc/gdc-0.19-linux-i386.tar.bz2" size="2595249"/>
+    </implementation>
+    <implementation id="sha1=bcf1c1c492e8668b2ee31c2222b9e4af9dff2637" released="2007-01-03" version="0.21">
+      <archive extract="gdc" href="http://mesh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.21-i686-linux-gcc-4.0.3.tar.bz2" size="2702927"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFaKdtrgeCgFmlPMERAtx3AJ4tbyxEDxJLbKFlcgAydhA7KuBfDgCcCn3rIW8YYateziph
-kkTVOy4LCnc=
+iD8DBQBFm+6WrgeCgFmlPMERAtFTAJ419EXn+7fg5ZX4DzyRbvV7WsSImACfbfLgUI7ecPVTrh1K
+lkP5JtAM0vQ=
 
 -->
