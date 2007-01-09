@@ -106,6 +106,9 @@ modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-post2". Since 0.24.
 
 <dt>Extracting from Cabinet packages</dt>
 <dd>Since 0.24</dd>
+
+<dt>Extracting from .tar.lzma and .tar (uncompressed) archives</dt>
+<dd>Since 0.25</dd>
 </dl>
 
 <h3>Features planned for 1.0</h3>

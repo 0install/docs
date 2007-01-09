@@ -203,7 +203,9 @@ The type of the archive is given as a MIME type in the <b>type</b> attribute
 <ul>
  <li>application/x-rpm (.rpm)</li>
  <li>application/x-deb (.deb)</li>
+ <li>application/x-tar (.tar)</li>
  <li>application/x-bzip-compressed-tar (.tar.bz2)</li>
+ <li>application/x-lzma-compressed-tar (.tar.lzma)</li>
  <li>application/x-compressed-tar (.tar.gz or .tgz)</li>
  <li>application/zip (.zip)</li>
  <li>application/vnd.ms-cab-compressed (.cab)</li>
