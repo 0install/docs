@@ -185,7 +185,7 @@ If you compare the new <b>gnu-hello-1.3/0install</b> directory with the old one,
 <ul>
  <li>A new file is present, <b>gnu-hello-1.3/0install/from-1.3.patch</b>, containing a diff between the original sources and
  your modified ones (to display this without rebuilding, use <b>0compile diff</b>).</li>
- <li><strong>(TODO) </strong> The version number in the local feed has <b>-patched</b> appended, to indicate that this version has been modified.</li>
+ <li>The version number in the local feed has <b>-1</b> appended, to indicate that this version has been modified.</li>
 </ul>
 
 <p>
