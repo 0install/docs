@@ -97,7 +97,7 @@ specified in the source interface, which actually builds the software (using the
 standard GNU build system in this case). Note that the command installs to the
 <b>gnu-hello-1.3</b> directory rather than to the usual <b>/usr/local</b>. In fact, if you have
 <a href='http://plash.beasts.org/'>plash</a> installed, the command is run in a
-sandbox with very limited write permissions.
+sandbox with very limited write permissions. [ update: Plash support is temporarily disabled by default while a few issues are worked out; set $USE_PLASH_0COMPILE to turn it on again ]
 </p>
 
 <p>
