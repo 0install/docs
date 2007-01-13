@@ -196,7 +196,7 @@ run Blender with the command:
 
 <pre>$ <b>0launch http://0install.net/2007/3rd-party/Blender.xml</b></pre>
 
-<h2>Hints</h2>
+<h2>Groups and dependencies</h2>
 
 <p>
 If the software depends on something else (e.g. a library) then use the <b>Add Requires</b> button to
@@ -208,11 +208,47 @@ specify this. For example, <b>0publish-gui</b> depends on <b>ROX-Lib</b>, which 
 </p>
 
 <p>
+This ensures that <b>.../ROX-Lib2/python</b> is in <b>PYTHONPATH</b>. When
+<b>0publish-gui</b> does <b>import rox</b>, the import thus uses the directory
+<b>.../ROX-Lib2/python/rox</b>.
+</p>
+
+<p>
 When you want to add more versions, you should use the <b>Add Group</b> button to create a group.
 Make sure both versions are inside the new group (use drag-and-drop to move them). Then you only need
 to set the license, main, OS and CPU settings in one place. You can also share dependencies using groups.
 </p>
 
+<h2>Trouble-shooting</h2>
+
+<dl>
+ <dt>I can't find a generic binary for the program I want to package!</dt>
+ <dd>
+  <p>
+  Popular projects usually provide a "generic" binary tarball, which works on most Linux distributions. This
+  is the best archive to put in the feed. If there isn't one, it might mean that the developers couldn't get
+  a single binary to work on multiple distributions, or it might just mean they haven't tried.
+  </p>
+  <p>Often, a Red Hat RPM will work just fine on Debian (e.g. <a
+  href='http://0install.net/2007/3rd-party/LyX.xml'>the LyX feed</a>), or a
+  .deb will work on Red Hat, etc. If there are several options, pick the one for the distribution
+  which is furthest behind (e.g. Red Hat rather than Fedora). Packages for old systems often still
+  work with newer ones, but not the other way around.
+  </p>
+ </dd>
+
+ <dt>My program assumes it's running from /usr/games</dt>
+ <dd>
+  <p>
+   Games have an annoying habit of trying to <b>cd</b> to a hard-coded directory in their start-up
+   script. You could try asking the author to fix it (<b>cd "`dirname $0`"</b> would work just as
+   well). It's also possible to patch the download using a <b>recipe</b> element, but the GUI doesn't
+   provide an interface for this. See <a href='http://0install.net/2006/3rd-party/PySol.xml'>PySol's feed</a>
+   for an example. The trick here is getting the ID right; you need the digest of the directory structure
+   <i>after</i> the patch has been applied. <b>0store manifest</b> can help here.
+  </p>
+ </dd>
+</dl>
 
 <h2>Further reading</h2>
 
