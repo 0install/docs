@@ -4,6 +4,8 @@
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
 
+<feed uri="http://0install.net/2007/interfaces/0publish-gui.xml" name="0publish-gui" summary="GTK editor for Zero Install feeds" icon="tango/applications-system.png" homepage="http://0install.net/"/>
+
 <feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="abiword" summary="AbiWord Word Processor" icon="tango/applications-system.png"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="create ROX application launchers" icon="feed_icons/AddApp.png" homepage="http://rox.sourceforge.net/desktop/AddApp"/>
@@ -21,6 +23,8 @@
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="feed_icons/barrage.png"/>
 
 <feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="feed_icons/bdb.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/Blender.xml" name="Blender" summary="a versatile 3D animation creation suite" icon="tango/applications-system.png" homepage="http://www.blender.org"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" homepage="http://cddb-py.sourceforge.net/"/>
 
@@ -76,7 +80,7 @@
 
 <feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="headers for compiling C++ GTK applications" icon="tango/applications-system.png"/>
 
-<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png"/>
+<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="graphical interface for the injector" icon="tango/applications-system.png" homepage="http://0install.net/injector-using.html"/>
 
 <feed uri="http://0install.net/2006/3rd-party/Inkscape.xml" name="Inkscape" summary="an SVG-based vector drawing application" icon="feed_icons/Inkscape.png" homepage="http://inkscape.org/"/>
 
