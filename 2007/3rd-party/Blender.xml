@@ -13,12 +13,12 @@ simulator), rendering, node based compositing, and non linear video editing, as
 well as an integrated game engine for real-time interactive 3D, and game
 creation and playback with cross-platform compatibility.</description>
   <homepage>http://www.blender.org</homepage>
-  <implementation id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" license="OSI Approved :: GNU General Public License (GPL)" main="blender" released="2007-01-13" version="2.42">
+  <implementation arch="Linux-i386" id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" license="OSI Approved :: GNU General Public License (GPL)" main="blender" released="2007-01-13" version="2.42">
     <archive extract="blender-2.42a-linux-glibc232-py24-i386-static" href="http://video.blendertestbuilds.de/download.blender.org/release/Blender2.42/blender-2.42a-linux-glibc232-py24-i386-static.tar.bz2" size="11505773"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFqN8mBSn9tx+xORARAlYlAJ9J/LnmNmXv256XUitjqwb52JvI4ACgjER1ATBgeAdXzBRc
-JwvpfbuSwrI=
+iD8DBQBFqOVhBSn9tx+xORARAl4PAJ9mFnHIO2SkY8lf9IgQU2cuikAoRQCggI0jy6A1e97nP0Xa
+L4QaCM5k4iE=
 
 -->
