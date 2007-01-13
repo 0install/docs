@@ -24,7 +24,7 @@
 
 <feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="feed_icons/bdb.png"/>
 
-<feed uri="http://0install.net/2007/3rd-party/Blender.xml" name="Blender" summary="a versatile 3D animation creation suite" icon="tango/applications-system.png" homepage="http://www.blender.org"/>
+<feed uri="http://0install.net/2007/3rd-party/Blender.xml" name="Blender" summary="a versatile 3D animation creation suite" icon="feed_icons/Blender.png" homepage="http://www.blender.org"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" homepage="http://cddb-py.sourceforge.net/"/>
 

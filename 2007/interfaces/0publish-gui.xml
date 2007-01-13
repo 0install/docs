@@ -9,7 +9,7 @@ depend on.
 
 This program provides a simple graphical interface for creating and editing
 these feeds.</description>
-  <homepage>http://0install.net/</homepage>
+  <homepage>http://0install.net/injector-packagers.html</homepage>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="0publish-gui">
     <implementation id="sha1new=1e543d90e9a95951111e54bd17b230536aca6fd1" released="2007-01-13" version="0.1">
       <archive extract="0publish-gui-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.1.tar.bz2" size="26536"/>
@@ -20,7 +20,7 @@ these feeds.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFqMvgrgeCgFmlPMERAh9BAJ0d6YpDdv1EWgzVnMkmCZn3/Z9acwCfWG/ZldwvFC00j6Oj
-RPX3DpPfEu0=
+iD8DBQBFqPdnrgeCgFmlPMERAgxQAKCWohCXr/eJ52E3Z7v4xOaXFqenoQCguVHrySuACCEpNMk6
+/Eicdsa+rAs=
 
 -->
