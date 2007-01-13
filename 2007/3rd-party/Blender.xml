@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/Blender.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Blender</name>
+  <summary>a versatile 3D animation creation suite</summary>
+  <description>
+Blender is a fully integrated 3D animation suite for use in animation, still
+graphics, scientific and engineering visualization, and game content creation.
+
+It includes tools for modeling, texturing (node based materials or uv mapped),
+uv mapping, rigging and constraints, weight painting, particle systems,
+simulation (fluids, physics, and soft body dynamics and an external crowd
+simulator), rendering, node based compositing, and non linear video editing, as
+well as an integrated game engine for real-time interactive 3D, and game
+creation and playback with cross-platform compatibility.</description>
+  <homepage>http://www.blender.org</homepage>
+  <implementation id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" license="OSI Approved :: GNU General Public License (GPL)" main="blender" released="2007-01-13" version="2.42">
+    <archive extract="blender-2.42a-linux-glibc232-py24-i386-static" href="http://video.blendertestbuilds.de/download.blender.org/release/Blender2.42/blender-2.42a-linux-glibc232-py24-i386-static.tar.bz2" size="11505773"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFqN8mBSn9tx+xORARAlYlAJ9J/LnmNmXv256XUitjqwb52JvI4ACgjER1ATBgeAdXzBRc
+JwvpfbuSwrI=
+
+-->
