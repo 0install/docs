@@ -20,6 +20,7 @@
 
   <item base='dev' label='Developers'>
     <item base='injector-packagers' label='Packaging guide'>
+      <item base='package-scons' label='0publish tutorial'/>
       <item base='injector-find' label='Example: Find'/>
       <item base='package-inkscape' label='Example: Inkscape'/>
       <item base='package-rox' label='Example: ROX-Filer'/>

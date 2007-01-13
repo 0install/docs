@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>The Injector: Packaging Guide (non-graphical version)</h2>
+
+<p>
+This guide shows how to make software available through <a href="injector.html">the injector</a>, using
+the command-line <a href='0publish.html'>0publish</a> program. New users will probably prefer to start
+with the <a href='injector-packagers.html'>graphical GTK interface</a> instead, but this version is
+useful when writing scripts to automatically publish new versions, or if you can't run the graphical
+version for some reason.
+</p>
+
+<p>
+We will start by packaging SCons, a build system (a little like Make).
+</p>
+
+<p>
+You should already be familiar with the general operation of the injector. In not, start by reading
+the <a href='injector-using.html'>user tutorial</a>.
+</p>
+
+<toc level='h2'/>
+
+<h2>Introduction</h2>
+
+<p>
+SCons is particularly easy to package, because it is designed to be bundled with other applications
+and used in their build process, and can therefore be executed in place right after unpacking. To try
+it out, download the <b>scons-local</b> archive from their web-site, unpack it, and run it:
+</p>
+
+<pre>
+$ <b>mkdir scons</b>
+$ <b>cd scons</b>
+$ <b>wget http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz</b>
+$ <b>tar xzf scons-local-0.96.92.tar.gz</b>
+$ <b>./scons.py --version</b>
+SCons by Steven Knight et al.:
+        script: v0.96.92.D002, 2006/04/11 07:39:43, by knight on roxbury
+        engine: v0.96.92.D002, 2006/04/11 07:39:43, by knight on roxbury
+Copyright (c) 2001, 2002, 2003, 2004 The SCons Foundation
+</pre>
+
+<p>
+Programs that can be run in this way are the easiest to make available through Zero Install. To do this
+we need to create a small XML file stating:
+</p>
+
+<ul>
+ <li>Which versions are available.</li>
+ <li>Where each one can be downloaded from.</li>
+ <li>How each version can be run.</li>
+ <li>Any dependencies each version has on other packages.</li>
+</ul>
+
+<p>
+You can write this <i>interface file</i> with a text editor just by reading the
+<a href='injector-specs.html'>file format specification</a>, but it's easier to
+use the <b>0publish</b> command. <b>0publish</b> will create an initial
+template for you, check that the file is valid, and makes many operations
+easier. The command is, of course, available through Zero Install. To save
+typing it's full URI each time you run it, create an alias now:
+</p>
+
+<pre>
+$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+$ <b>0publish --version</b>
+0publish (zero-install) 0.5
+</pre>
+
+<p>See also:</p>
+<ul>
+ <li><a href='0publish.html'>0publish</a></li>
+ <li><a href='http://www.scons.org'>SCons homepage</a></li>
+</ul>
+
+<h2>Creating the interface file</h2>
+
+<p>
+<b>0publish</b> works by reading in an XML interface file, modifying it in some way,
+checking that it is still valid, and then writing it back out. If the file doesn't already
+exist it will offer to create it for you. Run <b>0publish</b> now to create a new file called
+<b>SCons.xml</b>:
+</p>
+
+<pre>
+$ <b>0publish SCons.xml</b>
+Interface file 'SCons.xml' does not exist. Create it? [Y/N] <b>Y</b>
+</pre>
+
+<p>
+<b>0publish</b> will create a new template and fire up an editor to let you
+change it. If you don't like the default, set your <b>EDITOR</b> environment
+variable to something better, or create an alias called <b>sensible-editor</b>. E.g.,
+to edit interfaces using Edit:
+</p>
+
+<pre>
+$ <b>0alias sensible-editor http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<p>
+Fill in the fields in the XML template. The comments should guide you, but these are the
+exact changes we will make now:
+</p>
+
+<ul>
+<li>Set the <b>summary</b> to a short description. Start with a lower-case letter (except for
+proper nouns) and don't include the name of the program. The summary is normally shown after a dash, e.g.
+<i>SCons - a software construction tool</i>.</li>
+<li>The <b>description</b> fields can be longer. Copying some text from the web page or from freshmeat
+often works well.</li>
+<li>Set the <b>homepage</b> to the program's main web-site (or to your own site if you have a page for it).
+This is where users will go if they want more information than is in the description. Don't forget to
+uncomment it by removing the <b>&lt;!--</b> and <b>--&gt;</b> markers around it.</li>
+<li>Set the <b>icon</b> to the URL of a small PNG format icon if you want.</li>
+<li>The main program (which we ran above) is called <b>scons.py</b>, so change the <b>main</b> attribute
+to that.</li>
+</ul>
+
+<p>
+You can leave the other elements alone for now. Save your file using the default name (it will be to a
+temporary file) and <b>0publish</b> will write it as <b>SCons.py</b> if it's valid. If you made a mistake,
+<b>0publish</b> will prompt you to fix it first.
+</p>
+
+<p>
+Your final version should look something like this:
+</p>
+
+<pre><![CDATA[<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl'
+     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>SCons</name>
+  <summary>a software construction tool</summary>
+  <description>
+SCons is a software construction tool (build tool substitute for Make)
+implemented in Python. It features a modular build engine that can be
+embedded in other software. SCons configuration files are Python scripts
+that call the build engine API.
+
+It can scan files to detect dependencies automatically and maintain a global
+view of all dependencies in a build tree, and uses MD5 signatures to detect
+changed file contents reliably. Timestamps can be used if you prefer. SCons
+also supports parallel builds and is easily extensible through user-defined
+builder and scanner objects.
+  </description>
+
+  <homepage>http://www.scons.org/</homepage>
+
+  <group main="scons.py">
+    <implementation id="." version="0.1" released='Snapshot'/>
+  </group>
+</interface>]]>
+</pre>
+
+<p>
+If you created the <b>SCons.xml</b> file in the same directory as you ran <b>./scons.py</b> above, then
+you can now execute it already, like this:
+</p>
+
+<pre>
+$ <b>0launch ./SCons.xml --version</b>
+SCons by Steven Knight et al.: ...
+</pre>
+
+<p>
+This type of XML file is known as a <i>local interface</i> because its name is a simple filename (normally,
+interfaces start with <b>http://</b> and need to be downloaded). Also, the single version (<i>implementation</i>)
+is a <i>local implementation</i>, because it is also identified by a pathname (the directory containing the XML
+file, <b>.</b>). In this case, the local interface isn't very useful on its own because we could have just run
+<b>./scons.py</b> directly. However, if we had listed any dependencies in the XML file then running it this way
+would have fetched them through Zero Install, so local interfaces can still be useful (especially for CVS checkouts
+of software, for example).
+</p>
+
+<p>See also:</p>
+<ul>
+ <li><a href='injector-specs.html'>Interface file format specification</a></li>
+</ul>
+
+
+<h2>Adding the archive</h2>
+
+<p>
+The next step is to change the implementation so that Zero Install will download the archive from the SCons web-site
+instead of requiring the user to have it locally. We should also change the version number and release date to their
+correct values. Adding the archive is a little tricky to do manually because we need to calculate the <i>secure hash</i>
+of the contents of the archive. This is needed when downloading from the web to check that the archive hasn't been
+tampered with.
+</p>
+
+<p>
+Luckily, <b>0publish</b> can make the necessary changes and add the required hash at the same time. Use this command
+(split on to multiple lines for clarity):
+</p>
+
+<pre>
+$ <b>0publish SCons.xml \
+  --set-version=0.96.92 \
+  --set-released=today \
+  --archive-url=http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz</b>
+</pre>
+
+<p>
+If you now run the program using <b>0launch</b> again, it will offer to download SCons for you:
+</p>
+
+<pre>
+$ <b>0launch ./SCons.xml --version</b>
+</pre>
+
+<p style='text-align: center'>
+ <img width="518" height="257" src="screens/scons-download.png" alt='Downloading SCons with Zero Install' />
+</p>
+
+<p>
+If you look in the <b>SCons.xml</b> file, you'll see that <b>0publish</b> changed the old <b>implementation</b> element
+to this:
+</p>
+
+<pre><![CDATA[<implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-18" version="0.96.92">
+  <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
+</implementation>]]></pre>
+
+<p>
+The <b>id</b> gives the secure hash of the contents of the package. If the archive is changed (e.g., by someone breaking
+into SCons's web-server) then the hash won't match and Zero Install will refuse the download. Inside the <b>implementation</b>
+element is a list of ways of getting it. In this case, we state that a directory with the given hash can be created by
+downloading the named archive and extracting it.
+</p>
+
+<p>See also:</p>
+<ul>
+ <li><a href='injector-specs.html'>Archives</a></li>
+</ul>
+
+<h2>Publishing the interface</h2>
+
+<p>
+You'll probably want to put your new interface up on the web, so that other people can get it easily. However, we can't just
+stick it up as it is because someone might be able to break into the web-server tamper with it, or intercept a user's network
+connection and insert their own version. We need to put our <i>digital signature</i> on it, using the <b>GnuPG</b> program, so
+that people can check that it's really from us.
+</p>
+
+<p>
+If you do not already have a GPG key-pair, create one now. You can accept the
+defaults for most fields; just enter your name and email address:
+</p>
+
+<pre>
+$ <b>gpg --gen-key</b>
+</pre>
+
+<p>
+We also need to decide on the URL people will use to download it. Since other programs that depend on this one will use the
+URL to find it, try to pick a URL that won't change. Here, we'll use <b>http://0install.net/tests/SCons.xml</b>, which isn't
+a very good URL, to discourage people from relying on this test example! Once you've picked a URL you need to add it to the
+XML file:
+</p>
+
+<pre>
+$ <b>0publish SCons.xml --set-interface-uri=http://0install.net/tests/SCons.xml</b>
+</pre>
+
+<p>
+The interface file now starts like this:
+</p>
+
+<pre>&lt;interface <b>uri="http://0install.net/tests/SCons.xml"</b> ...</pre>
+
+<p>
+Finally, we'll add the GPG signature (if you have more than one key, use <b>-k</b> to specify which one to use). You'll
+need to enter the passphrase you set when you created the key above:
+</p>
+
+<pre>
+$ <b>0publish SCons.xml --xmlsign</b>
+Enter passphrase:
+Exported public key as 'AE07828059A53CC1.gpg'
+</pre>
+
+<p>
+This command adds a digital signature to the XML file. It also exports a copy
+of your GPG public key, which people will need in order to check the signature.
+Upload both files to the same directory on your web-server. You should now be
+able to run your interface with its full URI:
+</p>
+
+<pre>
+$ <b>0launch http://0install.net/tests/SCons.xml --version</b>
+SCons by Steven Knight et al.:
+</pre>
+
+<p>
+If this is your first interface, the injector should now ask you to confirm
+that you trust the new key for signing software.
+</p>
+
+<h2>Marking as stable</h2>
+
+<p>
+Each implementation in an XML file has a <i>stability</i> setting. Typically, this is <b>testing</b> for a new
+release and <b>stable</b> for versions that have been around for a while. Normally, the injector will select the
+highest-numbered stable version by default. However, users who selected <b>Help test new versions</b> will get
+any newer testing version selected by default instead.
+</p>
+
+<p>
+By default, new releases are considered to have a stability rating of <b>testing</b>. After a week or so without
+major problems, set the stability of the testing version to <b>stable</b>:
+</p>
+
+<pre>
+$ <b>0publish SCons.xml --stable</b>
+</pre>
+
+<p>
+If the version turns out to have <i>serious</i> problems, set it to <b>buggy</b> or <b>insecure</b> instead. There's no
+automatic option for this, so use <b>-e</b> to edit the file (<b>0publish</b> will automatically resign it when you save):
+</p>
+
+<pre>
+$ <b>0publish SCons.xml --edit</b>
+</pre>
+
+<h2>Adding more versions</h2>
+
+<p>
+You can add more versions of SCons to your interface using <b>0publish</b>. The process is very similar to before, except that
+you use <b>--add-version</b> instead of <b>--set-version</b>. So, when version 1.0 is released, do this:
+</p>
+
+<pre>
+$ <b>0publish SCons.xml \
+  --add-version=1.0 \
+  --set-released=today \
+  --archive-url=http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-1.0.tar.gz</b>
+</pre>
+
+<p>
+You can also add earlier versions, which may be useful if some programs aren't compatible with the newest version.
+</p>
+
+<h2>Notes</h2>
+
+<h3>Archives with top-level directories</h3>
+
+<p>
+The SCons archive is a little unusual because it unpacks the files directly
+into the current directory when you extract it. Most archives would have just a
+single top-level directory named after the archive (e.g.
+<b>scons-local-0.96.92</b>) and put all the files in that. While you could cope with that
+by setting the <b>main</b> attribute to be <b>scons-local-VVV/scons.py</b> for each version,
+it's better to use the <a href='interface-spec.html#retrievalmethods'>extract</a> attribute on the <b>archive</b>
+element so that all versions have the same structure. This is especially important for libraries,
+where the <b>main</b> attribute isn't used. Use the <b>--archive-extract=DIR</b> argument to <b>0publish</b>
+for this.
+</p>
+
+<h3>Supported Archive formats</h3>
+
+<p>
+Archive formats are recognised by their file extensions. Supported formats are:
+</p>
+
+<ul>
+ <li>.tar.gz (all versions)</li>
+ <li>.tar.bz2 (since version 0.10)</li>
+ <li>.rpm (since version 0.18)</li>
+ <li>.deb (since version 0.20)</li>
+ <li>.zip (since version 0.21)</li>
+</ul>
+
+<h3>Dependencies</h3>
+
+<p>
+You can specify that your program depends on other programs using the <b>requires</b> element.
+See the <a href='injector-specs.html'>interface file format</a> document for details. See
+<a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a> for an
+example (building an application requires SCons and the GTK headers).
+</p>
+
+<p>
+The <a href='injector-find.html'>Packaging Find case study</a> gives an example of this.
+</p>
+
+<h3>Why do we need to put the URL in the XML?</h3>
+<p>
+This is a security feature to let <b>0launch</b> check that it downloaded the
+XML the user asked for. Without it, this could happen:
+</p>
+<ol>
+<li>I may trust the author of the <i>SecureDelete</i> program to supply software.</li>
+<li>I tell <b>0launch</b> to invoke a text editor on a precious document.</li>
+<li><b>0launch</b> tries to download the XML for the text editor from the web.</li>
+<li>An attacker returns the XML file for <i>SecureDelete</i>, correctly signed by the
+author of <i>SecureDelete</i> (possibly the same person who wrote the text editor).</li>
+<li>My file gets securely deleted!</li>
+</ol>
+
+<h3>XML signature format</h3>
+<p>
+There are two ways to sign interface files. The <b>--gpgsign</b> option creates signatures in a format that all
+versions of the injector can read but they don't look great if you view the interface using a web-browser. The <b>--xmlsign</b>
+option still uses <b>gpg</b> to sign it, but the result is still XML and can therefore be styled nicely. However, such
+interfaces require users to have version <b>0.18</b> or later of the injector.
+</p>
+
+<h3>When to use the 'buggy' rating</h3>
+
+<p>
+Only mark versions as <b>buggy</b> if there's a serious problem that means
+people really shouldn't use it (not just a few minor annoyances; all software
+has <i>some</i> bugs). Normally, just releasing a newer (fixed) version is
+sufficient, since the injector will offer to upgrade the version anyway.
+</p>
+
+<h2>Further reading</h2>
+
+<dl>
+ <dt><a href='injector-find.html'>Example: Find</a></dt>
+ <dd>Find is a Python program with a dependency on a Python library. This example shows how to depend on
+ other components.</dd>
+
+ <dt><a href='package-inkscape.html'>Example: Inkscape</a></dt>
+ <dd>Inkscape is distributed as a binary RPM (among other formats). This guide shows how to publish these
+ RPMs so that they can be run using Zero Install (by users without root access or on Debian systems, for
+ example).</dd>
+
+ <dt><a href='package-rox.html'>Example: ROX-Filer</a></dt>
+ <dd>ROX-Filer is a C program, which requires different binaries for different platforms. These binaries
+ are built and published in interface files maintained by different people. Using the injector's feed
+ mechanism, users only need to use the main ROX-Filer interface and will automatically get a binary for
+ their platform, from the maintainer of that binary.</dd>
+
+ <dt><a href='0publish.html'>0publish</a></dt>
+ <dd>A command reference for the <b>0publish</b> command.</dd>
+
+ <dt><a href='http://rox.sourceforge.net/desktop/node/300'>Compiling with SCons and GTK</a></dt>
+ <dd>
+  Now that we've made SCons available through Zero Install, we can use it in our build scripts. This
+  example shows how to build a GTK application written in C using Zero Install to get the build tool
+  and the header files automatically.
+ </dd>
+</dl>
+
+</html>
