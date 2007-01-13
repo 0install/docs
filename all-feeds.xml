@@ -110,6 +110,8 @@
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="feed_icons/lpairs.png"/>
 
+<feed uri="http://0install.net/2007/3rd-party/LyX.xml" name="LyX" summary="WYSIWYM(ean) document processor" icon="feed_icons/LyX.png" homepage="http://www.lyx.org"/>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" homepage="http://rox.sourceforge.net/desktop/node/33"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="feed_icons/Media.xml.png"/>
