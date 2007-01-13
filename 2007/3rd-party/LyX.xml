@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/LyX.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>LyX</name>
+  <summary>WYSIWYM(ean) document processor</summary>
+  <description>
+LyX is an advanced open source document processor running on many Unix and some
+non-Unix platforms. It is called a &quot;document processor&quot;, because unlike standard
+word processors, LyX encourages an approach to writing based on the structure of
+your documents, not their appearance. LyX lets you concentrate on writing,
+leaving details of visual layout to the software.
+
+LyX automates formatting according to predefined rule sets, yielding consistency
+throughout even the most complex documents. LyX produces high quality,
+professional output -- using LaTeX, an open source, industrial strength
+typesetting engine, in the background.
+
+With LyX, short notes or letters are a snap. LyX really shines, though, when
+composing complex documents like technical documentation, doctoral theses and
+conference proceedings.</description>
+  <homepage>http://www.lyx.org</homepage>
+  <icon href="http://0install.net/feed_icons/LyX.png" type="image/png"/>
+  <implementation arch="Linux-i586" id="sha1new=b20815af73f7d33911339eb6857ea9fd0d02b7a9" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/lyx" released="2007-01-13" version="1.4.3">
+    <archive href="ftp://ftp.lyx.org/pub/lyx/bin/1.4.3/lyx-1.4.3-1_qt_mdv2006.i586.rpm" size="6308610"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFqTY9BSn9tx+xORARApmQAJ9gw+WP+HIUIJBhpCnWCmr0vGSIdACfawIANLdj2kur9F9i
+b0QseUB6m8c=
+
+-->
