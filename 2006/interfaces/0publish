@@ -43,18 +43,21 @@ Hash: SHA1
     <implementation id="sha1=c83bc2c4f44b326f2aa3e11425c26b46da5c1a4a" released="2006-09-27" stability="stable" version="0.7">
       <archive extract="0publish-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.7.tar.bz2" size="17720"/>
     </implementation>
-    <implementation id="sha1=2fbddcd48727f0cf5e6537eb84fe4e324f020a79" released="2006-10-26" version="0.8">
+    <implementation id="sha1=2fbddcd48727f0cf5e6537eb84fe4e324f020a79" released="2006-10-26" stability="stable" version="0.8">
       <archive extract="0publish-0.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.8.tar.bz2" size="17789"/>
     </implementation>
-    <implementation id="sha1=b214b5b3662216f7fc0a2440d19f98954a4f320a" released="2006-10-28" version="0.9">
+    <implementation id="sha1=b214b5b3662216f7fc0a2440d19f98954a4f320a" released="2006-10-28" stability="stable" version="0.9">
       <archive extract="0publish-0.9" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.9.tar.bz2" size="17793"/>
+    </implementation>
+    <implementation id="sha1new=21d17e1f8412651d0a38e9eda3068e4768c6dc71" released="2007-01-14" version="0.10">
+      <archive extract="0publish-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.10.tar.bz2" size="17755"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
+Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFQ24argeCgFmlPMERAlhlAJsHK+oq7mtSe+BrMHDHvzoCBCo6qACfTwxy
-Tkzeb1pk+IyxYuxeRVnYwN4=
-=OlMZ
+iD8DBQFFqh+8rgeCgFmlPMERAjSpAJ9d5uWh9EIl9uzqLOip17KqGMT65QCgv8JC
+kKM3kCIlANfczds9zL4Yq3Y=
+=R5xc
 -----END PGP SIGNATURE-----
