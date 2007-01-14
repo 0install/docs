@@ -73,7 +73,7 @@ it in the <b>Local copy</b> section. Otherwise, click on <b>Download</b> to down
 </p>
 
 <p style='text-align: center'>
-<img width="366" height="333" src="screens/0publish-gui/download-archive.png" alt="Download an archive" />
+<img width="366" height="341" src="screens/0publish-gui/download-archive.png" alt="Download an archive" />
 </p>
 
 <p>
@@ -91,7 +91,7 @@ sub-directory, so just go with the default.
 </p>
 
 <p style='text-align: center'>
-<img width="366" height="333" src="screens/0publish-gui/extract.png" alt="Choose the sub-directory" />
+<img width="366" height="341" src="screens/0publish-gui/extract.png" alt="Choose the sub-directory" />
 </p>
 
 <p>
@@ -128,8 +128,9 @@ is how they know that they've downloaded exactly the same files as you have
 
 <p>
 You'll now see your new version shown in the list of versions, along with the
-single archive, which says where to get it. We can try out the interface by
-clicking on the <b>Save and Test</b> button:
+single archive, which says where to get it. The names in parenthesis show which
+attributes we set. We can try out the interface by clicking on the <b>Save and
+Test</b> button:
 </p>
 
 <p style='text-align: center'>
