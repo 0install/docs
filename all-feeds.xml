@@ -4,7 +4,7 @@
 
 <feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="utility to make creating injector interfaces easier" icon="tango/applications-system.png" homepage="http://0install.net/0publish.html"/>
 
-<feed uri="http://0install.net/2007/interfaces/0publish-gui.xml" name="0publish-gui" summary="GTK editor for Zero Install feeds" icon="tango/applications-system.png" homepage="http://0install.net/injector-packagers.html"/>
+<feed uri="http://0install.net/2007/interfaces/0publish-gui.xml" name="0publish-gui" summary="GTK editor for Zero Install feeds" icon="feed_icons/0publish-gui.png" homepage="http://0install.net/injector-packagers.html"/>
 
 <feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="abiword" summary="AbiWord Word Processor" icon="tango/applications-system.png"/>
 
