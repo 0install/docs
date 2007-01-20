@@ -16,10 +16,13 @@ access, xml parsing, and other useful functionality.</description>
     <requires interface="http://0install.net/2007/3rd-party/libdb4.4.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libpq4.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiV+BSn9tx+xORARAiRAAKCOYHqy6lwTro8IofKw4Nrd4C874gCghyZcnjuPt9JF6o+P
-rFN1Fd5x/4k=
+iD8DBQBFsicnBSn9tx+xORARAoE6AKCZwmXb4S5Xmo3WStmNQIUcvYgFCACeNE7VVMLe4LVcoCtv
+Cx1bRAx+61I=
 
 -->
