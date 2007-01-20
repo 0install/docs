@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/libkrb53.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libkrb53</name>
+  <summary>MIT Kerberos runtime libraries</summary>
+  <description>
+Kerberos is a system for authenticating users and services on a network.
+Kerberos is a trusted third-party service. That means that there is a third
+party (the kerberos server) that is trusted by all the entities on the network
+(users and services, usually called &quot;principals&quot;).
+
+This is the MIT reference implementation of Kerberos5.
+
+This package contains the runtime libraries used by applications and Kerberos
+clients.</description>
+  <implementation arch="Linux-i386" id="sha1new=46c174613415d5981def04485e296f671c5f5d60" released="2007-01-20" version="1.4.4" version-modifier="-6">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/k/krb5/libkrb53_1.4.4-6_i386.deb" size="407482" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFsiqhBSn9tx+xORARAjgfAJ0c+X5Ej4uG5RdABJ5Ufqi5KRDVIgCeO6EIpm8O2SR4uDzl
+EjuwemRhQn8=
+
+-->
