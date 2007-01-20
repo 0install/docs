@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/libpq4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libpq4</name>
+  <summary>PostgreSQL C client library</summary>
+  <description>
+libpq is a C library that enables user programs to communicate with the
+PostgreSQL database server. The server can be on another machine and accessed
+through TCP/IP. This version of libpq is compatible with servers from PostgreSQL
+7.3 to 8.1.
+
+This package contains the run-time library, needed by packages using libpq.
+
+PostgreSQL is an object-relational SQL database management system.</description>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFsiYWBSn9tx+xORARAshSAJsFqDQnPnQoMx2tmPc+zjEI0QRYTQCdF4/fJZDMNa6BZxdl
+XWsnxca0An4=
+
+-->
