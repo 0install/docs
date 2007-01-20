@@ -5,13 +5,13 @@
 
 <p>
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
-as much as possible of it. The <a href='0publish.html'>0publish</a> command provides a set of useful transformations
+as much as possible of it. The <b>0publish</b> command provides a set of useful transformations
 for interface files which you can integrate into your release scripts.
 </p>
 
 <p>
-This guide assumes you've already read <a href='injector-packagers.html'>the packaging guide</a>, which shows
-how to use <b>0publish</b> to create and manipulate interface files.
+If you're looking for a graphical environment instead, see <b>0publish-gui</b> in <a
+href='injector-packagers.html'>the packaging guide</a>.
 </p>
 
 <toc level='h2'/>
@@ -38,8 +38,8 @@ process.
 </p>
 
 <p>
-<a href='injector-packagers.html'>The packaging guide</a> shows many examples
-of using <b>0publish</b>.  For a full real-life example of a build script that
+<a href='package-scons.html'>SCons packaging tutorial</a> shows many examples
+of using <b>0publish</b>. For a full real-life example of a build script that
 uses <b>0publish</b>, look at <a href='http://svn.sourceforge.net/viewcvs.cgi/rox/trunk/rox-release/rox-release?view=markup'>rox-release</a>.
 </p>
 

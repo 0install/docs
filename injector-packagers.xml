@@ -116,7 +116,7 @@ have lots of versions, so you don't have to keep specifying the same information
 </p>
 
 <p>
-Finally, the shaded <b>ID</b> field display a cryptographic digest of the
+Finally, the shaded <b>ID</b> field displays a cryptographic digest of the
 archive's contents. When other people use this feed to get Blender 2.42, this
 is how they know that they've downloaded exactly the same files as you have
 (in case an attacker replaces the download with a modified version).
