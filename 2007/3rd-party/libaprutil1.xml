@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/libaprutil1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libaprutil1</name>
+  <summary>the Apache Portable Runtime Utility Library</summary>
+  <description>
+APR is Apache's Portable Runtime Library, designed to be a support library that
+provides a predictable and consistent interface to underlying platform-specific
+implementations.
+
+APR Util is a utilities library implemented on top of apr, providing database
+access, xml parsing, and other useful functionality.</description>
+  <implementation arch="Linux-i386" id="sha1new=cdfb82cbbee7c01671719ad7327c13a9f16054c0" released="2007-01-20" version="1.2.7">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.7+dfsg-2_i386.deb" size="68456" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFsiHKBSn9tx+xORARAisRAJ9FUdt5YU90x3IBV8Y28upsBuOSDQCfXJYtsWC4rs5MERfO
+IAyW6It22iU=
+
+-->
