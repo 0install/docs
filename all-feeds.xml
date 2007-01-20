@@ -194,6 +194,8 @@
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png"/>
 
+<feed uri="http://www3.telus.net/public/rodw/skype.xml" name="Skype" summary="instant messaging / VoIP application" icon="tango/applications-system.png" homepage="http://www.skype.com"/>
+
 <feed uri="http://0install.net/2006/autopackage/Solfege.xml" name="solfege" summary="smarten your ears" icon="tango/applications-system.png" homepage="http://www.solfege.org"/>
 
 <feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="Stellarium" summary="a beautiful night sky simulator" icon="feed_icons/Stellarium.png" homepage="http://www.stellarium.org/"/>
