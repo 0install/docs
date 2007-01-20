@@ -1,10 +1,16 @@
 <?xml version="1.0" ?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2007/3rd-party/libsvn1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libsvn1</name>
-  <summary>cures all ills</summary>
+  <summary>shared libraries used by Subversion</summary>
   <description>
-Enter a longer description of the program here.</description>
+This package includes shared libraries to manipulate Subversion (svn)
+repositories and working copies.</description>
   <implementation arch="Linux-i386" id="sha1new=6d8c6bcd9503ea2ee9665d6505957af9e80a3694" released="2007-01-20" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/libsvn1_1.4.2dfsg1-2_i386.deb" size="593108" type="application/x-deb"/>
   </implementation>
 </interface>
+<!-- Base64 Signature
+iD8DBQBFsiKgBSn9tx+xORARAhI3AKCGDi3EOb4/lhGzaw1hw8HgUb7SkgCdHb21QD8eu+yS37KV
+CQSsp0vIbJ4=
+
+-->
