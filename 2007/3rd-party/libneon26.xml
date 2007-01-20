@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libneon26.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libneon26</name>
   <summary>an HTTP and WebDAV client library</summary>
@@ -20,7 +21,7 @@ stuff.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsig8BSn9tx+xORARAkmqAJ0USKkq+judMI+w/LFQjipENrK6hgCdE2xOhkkprz2SwWKq
-eqFRlhGom+w=
+iD8DBQBFsktlBSn9tx+xORARAksQAJ99DhhhBoCFTXpzK1DuTGuQkd3ofgCgiQtVmrDcdeJcdDdZ
+U0iP/MPjnvk=
 
 -->

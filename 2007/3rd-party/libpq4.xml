@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libpq4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libpq4</name>
   <summary>PostgreSQL C client library</summary>
@@ -21,7 +22,7 @@ PostgreSQL is an object-relational SQL database management system.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsirVBSn9tx+xORARAk1NAJkBHlBlaxyT+w9pdlyXY8tEH7gWWwCfeH0P/wijHsZ7CrS2
-KGK03XziN2s=
+iD8DBQBFsktlBSn9tx+xORARAs7XAJ9ybNbdV8Lp3V9h3NmUYzHLQww0VgCggY4ZPTZhBX/qxDlH
+LtdMhqsuL+E=
 
 -->

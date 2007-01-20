@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libssl0.9.8</name>
   <summary>SSL shared libraries</summary>
@@ -12,7 +13,7 @@ It is part of the OpenSSL implementation of SSL.</description>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsifvBSn9tx+xORARAt67AJ49KJ+rBdFPxutebIG+uShFjHvfmQCgmSLEl655dkh5a3af
-5VwexRChayk=
+iD8DBQBFsktkBSn9tx+xORARAh+XAKCRgb6l4zICj7rl04bfXIJvLL6f0ACfevy9gWM4Lsl+IzRm
+ioBq9KcwCA0=
 
 -->

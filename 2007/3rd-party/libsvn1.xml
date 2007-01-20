@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libsvn1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libsvn1</name>
   <summary>shared libraries used by Subversion</summary>
@@ -21,7 +22,7 @@ repositories and working copies.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiNqBSn9tx+xORARAvpEAJ0dR7GNxN9jqEolfK2N1Y6NO6z1+QCeLOT+NAsq5O9HJezq
-N4ahbgxEGMU=
+iD8DBQBFsktjBSn9tx+xORARAntbAKCRKS4XkvECPnwVjPMziqtRu8ChUwCdFGgkkldBSNRVSw4D
+ypT7SxbYpKE=
 
 -->

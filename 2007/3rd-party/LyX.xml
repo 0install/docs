@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/LyX.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>LyX</name>
   <summary>WYSIWYM(ean) document processor</summary>
@@ -24,7 +25,7 @@ conference proceedings.</description>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFqTY9BSn9tx+xORARApmQAJ9gw+WP+HIUIJBhpCnWCmr0vGSIdACfawIANLdj2kur9F9i
-b0QseUB6m8c=
+iD8DBQBFsktiBSn9tx+xORARAkv5AJ9fqfThOL64i8dHXs0SXYLA9ixLBwCfZjxbB97hhD1IdIw0
+cfkTE3agPtM=
 
 -->

@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libkrb53.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libkrb53</name>
   <summary>MIT Kerberos runtime libraries</summary>
@@ -17,7 +18,7 @@ clients.</description>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiqhBSn9tx+xORARAjgfAJ0c+X5Ej4uG5RdABJ5Ufqi5KRDVIgCeO6EIpm8O2SR4uDzl
-EjuwemRhQn8=
+iD8DBQBFsktmBSn9tx+xORARAhjTAJ9QfD9YmBLywezbUicCfjEZm8lBLgCgjgFlu08bkiAIjIXJ
+RAYH+ZbUrHE=
 
 -->

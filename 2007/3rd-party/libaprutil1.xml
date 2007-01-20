@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libaprutil1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libaprutil1</name>
   <summary>the Apache Portable Runtime Utility Library</summary>
@@ -22,7 +23,7 @@ access, xml parsing, and other useful functionality.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsicnBSn9tx+xORARAoE6AKCZwmXb4S5Xmo3WStmNQIUcvYgFCACeNE7VVMLe4LVcoCtv
-Cx1bRAx+61I=
+iD8DBQBFsktoBSn9tx+xORARAsciAJ9lzFVS+QqEs6Tdl3kpj1BmXsAkAgCfcmcLZjADDcCHpXi7
+JDqLn95ekoc=
 
 -->

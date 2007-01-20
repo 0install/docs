@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/Subversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Subversion</name>
   <summary>advanced version control system</summary>
@@ -23,7 +24,7 @@ repository (svnadmin) and to make a repository available over a network
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiPbBSn9tx+xORARAu3MAJ0ca6Vdjz+oIkPGjJNYIrCzGp6w2wCgmCLKkxOvlKwDRngd
-cT/Q99Bm+MU=
+iD8DBQBFsktTBSn9tx+xORARAqrxAJ9a+bs3wv9G22sGfWrXlspjEK3IaQCeJxQ2ERQ9WH+sv6ug
+FkgzF2mS6gg=
 
 -->

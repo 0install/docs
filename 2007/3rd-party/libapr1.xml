@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libapr1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libapr1</name>
   <summary>the Apache Portable Runtime Library</summary>
@@ -11,7 +12,7 @@ implementations.</description>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiF8BSn9tx+xORARAh5sAJ9DW99KHvQ35OD/io7+MO9vgrdCFQCfXZ/98sbpoboTlryp
-7hYQylZGayA=
+iD8DBQBFsktpBSn9tx+xORARAlpdAKCC160smzmS1t85rVF6bYyc7Sm6jwCfQd7d8JJ3k+A5ymgp
+6HcUXBFaGHs=
 
 -->

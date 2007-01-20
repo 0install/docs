@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/Blender.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Blender</name>
   <summary>a versatile 3D animation creation suite</summary>
@@ -18,7 +19,7 @@ creation and playback with cross-platform compatibility.</description>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFqOVhBSn9tx+xORARAl4PAJ9mFnHIO2SkY8lf9IgQU2cuikAoRQCggI0jy6A1e97nP0Xa
-L4QaCM5k4iE=
+iD8DBQBFsktpBSn9tx+xORARAm7aAJ9yngN2SuqhlGXsYvNa+70lsoDmYwCeK3U1BFP3pUGkaMoC
+mx28Vuz86+U=
 
 -->
