@@ -11,12 +11,17 @@ through TCP/IP. This version of libpq is compatible with servers from PostgreSQL
 This package contains the run-time library, needed by packages using libpq.
 
 PostgreSQL is an object-relational SQL database management system.</description>
-  <implementation arch="Linux-i386" id="sha1new=b66f0a5be49a8ec168cf2f35819058d0e697690c" released="2007-01-20" version="8.1.5" version-modifier="-2">
+  <group>
+    <implementation arch="Linux-i386" id="sha1new=b66f0a5be49a8ec168cf2f35819058d0e697690c" released="2007-01-20" version="8.1.5" version-modifier="-2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/p/postgresql-8.1/libpq4_8.1.5-2_i386.deb" size="261814" type="application/x-deb"/>
   </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/libkrb53.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsia0BSn9tx+xORARArnOAJ9d32MQQhtFb3LZv5cDS0W+S5q+NACgiYbL0nIcNXQVzXfZ
-YfD8eBi8LLs=
+iD8DBQBFsirVBSn9tx+xORARAk1NAJkBHlBlaxyT+w9pdlyXY8tEH7gWWwCfeH0P/wijHsZ7CrS2
+KGK03XziN2s=
 
 -->
