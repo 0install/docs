@@ -25,12 +25,12 @@
       <archive extract="zeroinstall-gui-0.24.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.2.tar.bz2" size="33917"/>
     </implementation>
     <implementation id="sha1new=52145efb97dc729009454d7b0201e40f3f2e90d9" released="2007-01-20" stability="testing" version="0.24.3">
-      <archive extract="zeroinstall-gui-0.24.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.3.tar.bz2" size="34356"/>
+      <archive extract="zeroinstall-gui-0.24.3" href="http://heanet.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.3.tar.bz2" size="34356"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsgD4rgeCgFmlPMERAgAYAJ4+q8BSIRA3eKyxjfK8AvIrm/yY5ACfU6GfhlYseiaD4qDE
-uekWjw+Wt08=
+iD8DBQBFsgRgrgeCgFmlPMERAjOGAJ9WEgtf+JwCCDphCCCJe7jSNklM1QCghLk2T1G3jO+xnkcO
+swkT9O06npg=
 
 -->
