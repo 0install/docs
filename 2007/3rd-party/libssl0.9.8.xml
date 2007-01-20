@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<interface uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libssl0.9.8</name>
+  <summary>SSL shared libraries</summary>
+  <description>
+libssl and libcrypto shared libraries needed by programs like apache-ssl,
+telnet-ssl and openssh.
+
+It is part of the OpenSSL implementation of SSL.</description>
+  <implementation arch="Linux-i386" id="sha1new=6cd837dbcfc6e2efa912506c0ae72b12ef9f1bf8" released="2007-01-20" version="0.9.8">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8c-4_i386.deb" size="2716198" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBFsifvBSn9tx+xORARAt67AJ49KJ+rBdFPxutebIG+uShFjHvfmQCgmSLEl655dkh5a3af
+5VwexRChayk=
+
+-->
