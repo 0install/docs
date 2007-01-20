@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Subversion</name>
+  <summary>cures all ills</summary>
+  <description>
+Enter a longer description of the program here.</description>
+  <group>
+    <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" version="1.4.2">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/subversion_1.4.2dfsg1-2_i386.deb" size="1026576" type="application/x-deb"/>
+  </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/libsvn1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+  </group>
+</interface>

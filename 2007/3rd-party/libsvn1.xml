@@ -5,12 +5,23 @@
   <description>
 This package includes shared libraries to manipulate Subversion (svn)
 repositories and working copies.</description>
-  <implementation arch="Linux-i386" id="sha1new=6d8c6bcd9503ea2ee9665d6505957af9e80a3694" released="2007-01-20" version="1.4.2">
+  <group>
+    <implementation arch="Linux-i386" id="sha1new=6d8c6bcd9503ea2ee9665d6505957af9e80a3694" released="2007-01-20" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/libsvn1_1.4.2dfsg1-2_i386.deb" size="593108" type="application/x-deb"/>
   </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libaprutil1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libneon26.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsiKgBSn9tx+xORARAhI3AKCGDi3EOb4/lhGzaw1hw8HgUb7SkgCdHb21QD8eu+yS37KV
-CQSsp0vIbJ4=
+iD8DBQBFsiNqBSn9tx+xORARAvpEAJ0dR7GNxN9jqEolfK2N1Y6NO6z1+QCeLOT+NAsq5O9HJezq
+N4ahbgxEGMU=
 
 -->
