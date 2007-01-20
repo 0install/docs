@@ -92,9 +92,25 @@
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="feed_icons/lgeneral.png"/>
 
+<feed uri="http://0install.net/2007/3rd-party/libapr1.xml" name="libapr1" summary="the Apache Portable Runtime Library" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libaprutil1.xml" name="libaprutil1" summary="the Apache Portable Runtime Utility Library" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libdb4.4.xml" name="libdb4.4" summary="Berkeley v4.4 Database Libraries" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libkrb53.xml" name="libkrb53" summary="MIT Kerberos runtime libraries" icon="tango/applications-system.png"/>
+
 <feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="feed_icons/libmikmod.png"/>
 
+<feed uri="http://0install.net/2007/3rd-party/libneon26.xml" name="libneon26" summary="an HTTP and WebDAV client library" icon="tango/applications-system.png"/>
+
 <feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="feed_icons/libpng.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libpq4.xml" name="libpq4" summary="PostgreSQL C client library" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml" name="libssl0.9.8" summary="SSL shared libraries" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libsvn1.xml" name="libsvn1" summary="shared libraries used by Subversion" icon="tango/applications-system.png"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/"/>
 
@@ -183,6 +199,8 @@
 <feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="Stellarium" summary="a beautiful night sky simulator" icon="feed_icons/Stellarium.png" homepage="http://www.stellarium.org/"/>
 
 <feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="feed_icons/Subversion.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/Subversion.xml" name="Subversion" summary="advanced version control system" icon="feed_icons/Subversion.png" homepage="http://subversion.tigris.org"/>
 
 <feed uri="http://0install.net/2006/autopackage/Supertux.xml" name="Supertux" summary="2D jump'n run sidescroller game" icon="tango/applications-system.png" homepage="http://supertux.berlios.de/"/>
 
