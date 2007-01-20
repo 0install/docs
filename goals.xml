@@ -65,6 +65,11 @@ E: Couldn't find package rox-session</pre>
  <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
 
  <p>
+   See the "<a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems'>Decentralised
+   Installation Systems</a>" essay on OSNews for a more complete introduction to the subject.
+ </p>
+
+ <p>
   See the <a href='dev.html'>developer documentation</a> for information on
   distributing software using Zero Install.
  </p>
