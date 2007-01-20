@@ -1,9 +1,18 @@
 <?xml version="1.0" ?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2007/3rd-party/Subversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Subversion</name>
-  <summary>cures all ills</summary>
+  <summary>advanced version control system</summary>
   <description>
-Enter a longer description of the program here.</description>
+Subversion, also known as svn, is a version control system much like the
+Concurrent Versions System (CVS). Version control systems allow many individuals
+(who may be distributed geographically) to collaborate on a set of files
+(typically source code). Subversion has all the major features of CVS, plus
+certain new features that CVS users often wish they had.
+
+This package includes the Subversion client (svn), tools to create a Subversion
+repository (svnadmin) and to make a repository available over a network
+(svnserve).</description>
+  <homepage>http://subversion.tigris.org</homepage>
   <group>
     <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/subversion_1.4.2dfsg1-2_i386.deb" size="1026576" type="application/x-deb"/>
@@ -13,3 +22,8 @@ Enter a longer description of the program here.</description>
     </requires>
   </group>
 </interface>
+<!-- Base64 Signature
+iD8DBQBFsiPbBSn9tx+xORARAu3MAJ0ca6Vdjz+oIkPGjJNYIrCzGp6w2wCgmCLKkxOvlKwDRngd
+cT/Q99Bm+MU=
+
+-->
