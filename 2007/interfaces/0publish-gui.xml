@@ -19,13 +19,16 @@ these feeds.</description>
     <implementation id="sha1new=639e733caa7620e44053f5d3dc6e563e0b122e54" released="2007-01-14" stability="stable" version="0.2">
       <archive extract="0publish-gui-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.2.tar.bz2" size="27205"/>
     </implementation>
+    <implementation id="sha1new=d5fa690748d4e192e8041a7a7ec814c5f591a235" released="2007-01-21" version="0.3">
+      <archive extract="0publish-gui-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.3.tar.bz2" size="27252"/>
+    </implementation>
     <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
       <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
     </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFrqQ/rgeCgFmlPMERAiSsAKDfdmQHxdN8oSkolefpzg0rBi4VwQCfagiAMzO8J1VUjWjm
-Iy9eVbR6dBM=
+iD8DBQBFs0KdrgeCgFmlPMERAjYcAJ9oYUEAhghtkUuQ6D4N3SoHZ5wBOwCfei0FlgthQR92dCqF
+3zq/xNZqqfc=
 
 -->
