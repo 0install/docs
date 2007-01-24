@@ -72,19 +72,19 @@ also signed with my key.</li>
 </ol>
 
 <p style='text-align: center'>
-<img width="545" height="325" src="edit-injector.png"
+<img width="500" height="233" src="edit-injector.png"
      alt="Running Edit with the injector" />
 </p>
 
 <p>
 The main part of the window contains a list of all the components needed to run Edit.
 At the top is Edit itself, and shown below is ROX-Lib, which Edit needs in order to function.
-If you are happy with the selected versions, click on <b>Execute</b> to run the
+If you are happy with the selected versions, click on <b>Run</b> to run the
 program.
 </p>
 
 <p>
-When you click on <b>Execute</b>, the injector will start downloading the two chosen
+When you click on <b>Run</b>, the injector will start downloading the two chosen
 versions:
 </p>
 
@@ -210,7 +210,7 @@ example, double-clicking on <b>Edit</b> displays this dialog box:
 </p>
 
 <p style='text-align: center'>
-  <img width="585" height="459" src="screens/edit-properties.png"
+  <img width="566" height="420" src="screens/edit-properties.png"
   	alt="Properties of the Edit interface" />
 </p>
 
