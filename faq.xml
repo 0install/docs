@@ -18,6 +18,12 @@ This is easier (<i>install and run</i> becomes just <i>run</i>) and safer
 <h3>I haven't tried it yet, but it sounds really complicated</h3>
 <p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
 
+<h3>What are "decentralised" installation systems, and why are they important?</h3>
+<p>
+See my <a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems'>essay on OSNews</a> or,
+if you're in a hurry, just read <a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems/page7/'>the summary</a>.
+</p>
+
 <h3>Doesn't Zero Install require a kernel module?</h3>
 <p>
 Not any more. That was <a href='fs-faq.html'>the old version</a>.
@@ -362,7 +368,7 @@ Aside: If you don't have a subversion client, just use Zero Install to get one:
 </p>
 
 <pre>
-$ 0alias svn http://www.brucalipto.org/injector/Subversion
+$ 0alias svn http://0install.net/2007/3rd-party/Subversion.xml
 </pre>
 </div>
 
