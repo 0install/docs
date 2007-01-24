@@ -22,8 +22,6 @@
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="feed_icons/barrage.png"/>
 
-<feed uri="http://www.brucalipto.org/injector/bdb" name="Berkeley DB" summary="Opensource DB" icon="feed_icons/bdb.png"/>
-
 <feed uri="http://0install.net/2007/3rd-party/Blender.xml" name="Blender" summary="a versatile 3D animation creation suite" icon="feed_icons/Blender.png" homepage="http://www.blender.org"/>
 
 <feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" homepage="http://cddb-py.sourceforge.net/"/>
@@ -199,8 +197,6 @@
 <feed uri="http://0install.net/2006/autopackage/Solfege.xml" name="solfege" summary="smarten your ears" icon="tango/applications-system.png" homepage="http://www.solfege.org"/>
 
 <feed uri="http://0install.net/2006/autopackage/Stellarium.xml" name="Stellarium" summary="a beautiful night sky simulator" icon="feed_icons/Stellarium.png" homepage="http://www.stellarium.org/"/>
-
-<feed uri="http://www.brucalipto.org/injector/Subversion" name="Subversion" summary="A compelling replacement for CVS" icon="feed_icons/Subversion.png"/>
 
 <feed uri="http://0install.net/2007/3rd-party/Subversion.xml" name="Subversion" summary="advanced version control system" icon="feed_icons/Subversion.png" homepage="http://subversion.tigris.org"/>
 
