@@ -6,34 +6,36 @@
   <description>
 Inkscape is an Open Source vector graphics editor, with capabilities similar to
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
-Vector Graphics (SVG) file format. Supported SVG features include shapes,
-paths, text, markers, clones, alpha blending, transforms, gradients, patterns,
-and grouping. Inkscape also supports Creative Commons meta-data, node editing,
+Vector Graphics (SVG) file format. Supported SVG features include shapes, paths,
+text, markers, clones, alpha blending, transforms, gradients, patterns, and
+grouping. Inkscape also supports Creative Commons meta-data, node editing,
 layers, complex path operations, bitmap tracing, text-on-path, flowed text,
 direct XML editing, and more. It imports formats such as JPEG, PNG, TIFF, and
 others and exports PNG as well as multiple vector-based formats.
 
 Inkscape's main goal is to create a powerful and convenient drawing tool fully
 compliant with XML, SVG, and CSS standards. We also aim to maintain a thriving
-user and developer community by using open, community-oriented development.
-  </description>
+user and developer community by using open, community-oriented development.</description>
 
   <homepage>http://inkscape.org/</homepage>
 
   <icon href="http://0install.net/tests/Inkscape.png" type="image/png"/>
 
-  <group main="usr/bin/inkscape">
-    <implementation arch="Linux-i486" id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" stability="stable" version="0.43">
+  <group arch="Linux-i386" main="usr/bin/inkscape">
+    <implementation id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" stability="stable" version="0.43">
       <archive href="http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm" size="9424664"/>
     </implementation>
 
-    <implementation arch="Linux-i486" id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
+    <implementation id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
       <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.44-0.i386.rpm" size="11409999"/>
     </implementation>
+    <implementation id="sha1new=a52a05096e08fa14a2b4720713ff9a05b977f199" main="bin/inkscape" released="2007-02-04" version="0.45">
+    <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.x86.package" size="5746250" start-offset="30389" type="application/x-lzma-compressed-tar"/>
+  </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcqQsBSn9tx+xORARAq9nAKCHIerXSxH7xp1gyPg/iXGaB6W27gCfRErEnUhzIVXYROGA
-NWVhpts98fo=
+iD8DBQBFxbzPBSn9tx+xORARAm56AJ0bmIdSVfLaPVcYiSx37/+qIThXIwCdEnTmwi4guTr2r/SA
+dC0PPtcAsi8=
 
 -->
