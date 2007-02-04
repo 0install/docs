@@ -109,6 +109,11 @@ modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-post2". Since 0.24.
 
 <dt>Extracting from .tar.lzma and .tar (uncompressed) archives</dt>
 <dd>Since 0.25</dd>
+
+<dt>Background checking for updates</dt>
+<dd>
+Instead of making the user wait while we check for updates, start the program immediately and check in the
+background [ <a href='http://rox.sourceforge.net/desktop/node/384'>screenshot</a> ]. Since 0.26.</dd>
 </dl>
 
 <h3>Features planned for 1.0</h3>
