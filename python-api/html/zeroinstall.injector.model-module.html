@@ -202,15 +202,15 @@
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">str</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#unescape" class="summary-sig-name">unescape</a>(<span class="summary-sig-arg">uri</span>)</span><br />
-      Convert each %20 to a space, etc
+      Convert each %20 to a space, etc.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">str</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#escape" class="summary-sig-name">escape</a>(<span class="summary-sig-arg">uri</span>)</span><br />
       Convert each space to %20, etc
@@ -218,7 +218,7 @@
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">str</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#canonical_iface_uri" class="summary-sig-name">canonical_iface_uri</a>(<span class="summary-sig-arg">uri</span>)</span><br />
       If uri is a relative path, convert to an absolute one.
@@ -226,7 +226,7 @@
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">tuple (opaque)</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#parse_version" class="summary-sig-name">parse_version</a>(<span class="summary-sig-arg">version_string</span>)</span><br />
       Convert a version string to an internal representation.
@@ -234,7 +234,7 @@
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">str</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#format_version" class="summary-sig-name">format_version</a>(<span class="summary-sig-arg">version</span>)</span><br />
       Format a parsed version for display.
@@ -346,20 +346,6 @@
     <a href="zeroinstall.injector.model-module.html#preferred">preferred</a> = <code title="Stability(40, 'preferred', 'Best of all - must be set manually')">Stability(40, 'preferred', 'Best of all - must be se...</code>
   </td>
 </tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#version_mod_to_value">version_mod_to_value</a> = <code title="{'pre':-2, 'rc':-1, '': 0, 'post': 1,}">{'pre':-2, 'rc':-1, '': 0, 'post': 1,}</code>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#version_value_to_mod">version_value_to_mod</a> = <code title="{}">{}</code>
-  </td>
-</tr>
 </table>
 
 <br />
@@ -395,8 +381,9 @@
     ></td>
   </table>
   
-  Convert each %20 to a space, etc
+  Convert each %20 to a space, etc.
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>str</code></dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -416,6 +403,7 @@
   
   Convert each space to %20, etc
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>str</code></dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -436,6 +424,7 @@
   If uri is a relative path, convert to an absolute one. Otherwise, 
   return it unmodified.
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>str</code></dt></dl>
     <dl><dt>Raises:</dt></dl>
     <ul class="nomargin">
         <li><code><strong class='fraise'><a href="zeroinstall.SafeException-class.html">SafeException</a></strong></code> - if uri isn't valid</li>
@@ -468,6 +457,15 @@
     </li>
   </ul>
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>tuple (opaque)</code></dt></dl>
+    <dl><dt>Raises:</dt></dl>
+    <ul class="nomargin">
+        <li><code><strong class='fraise'><a href="zeroinstall.SafeException-class.html">SafeException</a></strong></code> - if the string isn't a valid version</li>
+    </ul>
+      <p><strong>Since:</strong>
+        0.24 (moved from <a href="zeroinstall.injector.reader-module.html" 
+    class="link">reader</a>, from where it is still available):
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -489,6 +487,7 @@
   href="zeroinstall.injector.model-module.html#parse_version" 
   class="link">parse_version</a>.
   <dl><dt></dt><dd>
+    <dl><dt>Returns: <code>str</code></dt></dl>
       <p><strong>See Also:</strong>
         <a 
         href="zeroinstall.injector.model.Implementation-class.html#get_version"
@@ -713,38 +712,6 @@ Stability(40, 'preferred', 'Best of all - must be set manually')
   </dd></dl>
 </td></tr></table>
 </div>
-<a name="version_mod_to_value"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">version_mod_to_value</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{'pre':-2, 'rc':-1, '': 0, 'post': 1,}                                 
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="version_value_to_mod"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">version_value_to_mod</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{}                                                                     
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -777,7 +744,7 @@ Stability(40, 'preferred', 'Best of all - must be set manually')
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
+        3.0alpha3 on Sat Feb 10 12:48:28 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

@@ -83,7 +83,8 @@ Parses an XML interface into a Python representation.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.reader.InvalidInterface-class.html">InvalidInterface</a>
+    <a href="zeroinstall.injector.reader.InvalidInterface-class.html">InvalidInterface</a><br />
+      Raised when parsing an invalid interface.
   </td>
 </tr>
 </table>
@@ -108,60 +109,27 @@ Parses an XML interface into a Python representation.<br /><br />
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#get_singleton_text" class="summary-sig-name">get_singleton_text</a>(<span class="summary-sig-arg">parent</span>,
-        <span class="summary-sig-arg">ns</span>,
-        <span class="summary-sig-arg">localName</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#process_depends" class="summary-sig-name">process_depends</a>(<span class="summary-sig-arg">dependency</span>,
-        <span class="summary-sig-arg">item</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">bool</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_from_cache" class="summary-sig-name">update_from_cache</a>(<span class="summary-sig-arg">interface</span>)</span><br />
-      True if cached version and user overrides loaded OK.
+      Read a cached interface and any user overrides.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_overrides" class="summary-sig-name">update_user_overrides</a>(<span class="summary-sig-arg">interface</span>)</span>
+    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_overrides" class="summary-sig-name">update_user_overrides</a>(<span class="summary-sig-arg">interface</span>)</span><br />
+      Update an interface with user-supplied information.
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">int</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#check_readable" class="summary-sig-name">check_readable</a>(<span class="summary-sig-arg">interface_uri</span>,
         <span class="summary-sig-arg">source</span>)</span><br />
-      Returns the modified time in 'source'.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#parse_time" class="summary-sig-name">parse_time</a>(<span class="summary-sig-arg">t</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#merge_attrs" class="summary-sig-name">merge_attrs</a>(<span class="summary-sig-arg">attrs</span>,
-        <span class="summary-sig-arg">item</span>)</span><br />
-      Add each attribute of item to a copy of attrs and return the 
-      copy.
+      Test whether an interface file is valid.
   </td>
 </tr>
 <tr>
@@ -171,8 +139,7 @@ Parses an XML interface into a Python representation.<br /><br />
     <span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update" class="summary-sig-name">update</a>(<span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">source</span>,
         <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>)</span><br />
-      local - use file mtime for last-modified, and uri attribute is 
-      ignored
+      Read in information about an interface.
   </td>
 </tr>
 </table>
@@ -196,47 +163,6 @@ Parses an XML interface into a Python representation.<br /><br />
   </td>
 </tr>
 </table>
-<a name="get_singleton_text"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_singleton_text</span>(<span class="sig-arg">parent</span>,
-        <span class="sig-arg">ns</span>,
-        <span class="sig-arg">localName</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#get_singleton_text">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="process_depends"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">process_depends</span>(<span class="sig-arg">dependency</span>,
-        <span class="sig-arg">item</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#process_depends">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
 <a name="update_from_cache"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -251,10 +177,18 @@ Parses an XML interface into a Python representation.<br /><br />
     ></td>
   </table>
   
-  True if cached version and user overrides loaded OK. False if upstream
-  not cached. Local interfaces (starting with /) are always considered to 
-  be cached, although they are not stored there.
+  Read a cached interface and any user overrides.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface object to update</li>
+    </ul>
+    <dl><dt>Returns: <code>bool</code></dt>
+        <dd>True if cached version and user overrides loaded OK. False if 
+          upstream not cached. Local interfaces (starting with /) are 
+          always considered to be cached, although they are not actually 
+          stored in the cache.</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -272,8 +206,13 @@ Parses an XML interface into a Python representation.<br /><br />
     ></td>
   </table>
   
-  None
+  Update an interface with user-supplied information.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface object to update</li>
+    </ul>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -292,48 +231,20 @@ Parses an XML interface into a Python representation.<br /><br />
     ></td>
   </table>
   
-  Returns the modified time in 'source'. If syntax is incorrect, throws 
-  an exception.
+  Test whether an interface file is valid.
   <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="parse_time"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">parse_time</span>(<span class="sig-arg">t</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#parse_time">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="merge_attrs"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">merge_attrs</span>(<span class="sig-arg">attrs</span>,
-        <span class="sig-arg">item</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#merge_attrs">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Add each attribute of item to a copy of attrs and return the copy.
-  <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface_uri</code></strong> (<code>str</code>) - the interface's URI</li>
+        <li><strong class="pname"><code>source</code></strong> (<code>str</code>) - the name of the file to test</li>
+    </ul>
+    <dl><dt>Returns: <code>int</code></dt>
+        <dd>the modification time in src (usually just the mtime of the 
+          file)</dd></dl>
+    <dl><dt>Raises:</dt></dl>
+    <ul class="nomargin">
+        <li><code><strong class='fraise'><a href="zeroinstall.injector.reader.InvalidInterface-class.html">InvalidInterface</a></strong></code> - If the source's syntax is incorrect,</li>
+    </ul>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -353,9 +264,25 @@ Parses an XML interface into a Python representation.<br /><br />
     ></td>
   </table>
   
-  local - use file mtime for last-modified, and uri attribute is 
-  ignored
+  Read in information about an interface.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a></code>) - the interface object to update</li>
+        <li><strong class="pname"><code>source</code></strong> (<code>str</code>) - the name of the file to read</li>
+        <li><strong class="pname"><code>local</code></strong> - use file's mtime for last-modified, and uri attribute is 
+          ignored</li>
+    </ul>
+    <dl><dt>Raises:</dt></dl>
+    <ul class="nomargin">
+        <li><code><strong class='fraise'><a href="zeroinstall.injector.reader.InvalidInterface-class.html">InvalidInterface</a></strong></code> - if the source's syntax is incorrect</li>
+    </ul>
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.reader-module.html#update_from_cache" 
+        class="link">update_from_cache</a>, which calls this
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -391,7 +318,7 @@ Parses an XML interface into a Python representation.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
+        3.0alpha3 on Sat Feb 10 12:48:28 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

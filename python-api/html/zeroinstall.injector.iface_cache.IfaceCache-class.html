@@ -76,34 +76,42 @@ object --+
   <ol start="1">
     <li>
       When the data arrives, <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
-      class="link">check_signed_data</a> is called.
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_pending"
+      class="link">add_pending</a> is called.
     </li>
     <li>
-      This checks the signatures using <a 
-      href="zeroinstall.injector.gpg-module.html#check_stream" 
-      class="link">gpg.check_stream</a>.
+      Later, <a 
+      href="zeroinstall.injector.policy.Policy-class.html#process_pending" 
+      class="link">policy.Policy.process_pending</a> notices the pending 
+      feed and starts processing it.
+    </li>
+    <li>
+      It checks the signatures using <a 
+      href="zeroinstall.injector.iface_cache.PendingFeed-class.html#sigs" 
+      class="link">PendingFeed.sigs</a>.
     </li>
     <li>
       If any required GPG keys are missing, <a 
       href="zeroinstall.injector.iface_cache.IfaceCache-class.html#download_key"
-      class="link">download_key</a> is used to fetch them and the stream is
-      checked again.
+      class="link">download_key</a> is used to fetch them first.
     </li>
     <li>
-      Call <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
-      class="link">update_interface_if_trusted</a> to update the cache.
+      If none of the keys are trusted, <a 
+      href="zeroinstall.injector.handler.Handler-class.html#confirm_trust_keys"
+      class="link">handler.Handler.confirm_trust_keys</a> is called.
     </li>
     <li>
-      If that fails (because we don't trust the keys), use a <a 
-      href="zeroinstall.injector.handler-module.html" 
-      class="link">handler</a> to confirm with the user. When done, the 
-      handler calls <a 
+      <a 
       href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
-      class="link">update_interface_if_trusted</a>.
+      class="link">update_interface_if_trusted</a> is called to update the 
+      cache.
     </li>
-  </ol><br /><br />
+  </ol>
+  Whenever something needs to be done before the feed can move from the 
+  pending state, the process is resumed after the required activity by 
+  calling <a 
+  href="zeroinstall.injector.policy.Policy-class.html#process_pending" 
+  class="link">policy.Policy.process_pending</a>.<br /><br />
 
 <hr />
       <p><strong>See Also:</strong>
@@ -154,11 +162,9 @@ object --+
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data" class="summary-sig-name">check_signed_data</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">signed_data</span>,
-        <span class="summary-sig-arg">handler</span>)</span><br />
-      Downloaded data is a GPG-signed message.
+    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_pending" class="summary-sig-name">add_pending</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pending</span>)</span><br />
+      Add a PendingFeed to the pending dict.
   </td>
 </tr>
 <tr>
@@ -172,7 +178,9 @@ object --+
       Update a cached interface (using <a 
       href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
       class="link">update_interface_from_network</a>) if we trust the 
-      signatures.
+      signatures, and remove it from <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#pending"
+      class="link">pending</a>.
   </td>
 </tr>
 <tr>
@@ -233,6 +241,16 @@ object --+
       Get the path of a cached icon for an interface.
   </td>
 </tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">[<a href="zeroinstall.injector.gpg.Signature-class.html" 
+      class="link">gpg.Signature</a>] or None</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_cached_signatures" class="summary-sig-name">get_cached_signatures</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">uri</span>)</span><br />
+      Verify the cached interface using GPG.
+  </td>
+</tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -272,7 +290,7 @@ object --+
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#__slots__">__slots__</a> = <code title="['watchers', '_interfaces', 'stores']">['watchers', '_interfaces', 'stores']</code>
+    <a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#__slots__">__slots__</a> = <code title="['watchers', '_interfaces', 'stores', 'pending']">['watchers', '_interfaces', 'stores', 'pending']</code>
   </td>
 </tr>
 </table>
@@ -293,6 +311,14 @@ object --+
          >hide private</a>]</span></td>
       </tr>
     </table>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">str -&gt; PendingFeed</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#pending">pending</a><br />
+      downloaded feeds which are not yet trusted
   </td>
 </tr>
 <tr>
@@ -399,41 +425,29 @@ object --+
   </dd></dl>
 </td></tr></table>
 </div>
-<a name="check_signed_data"></a>
+<a name="add_pending"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_signed_data</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">signed_data</span>,
-        <span class="sig-arg">handler</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_pending</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pending</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.check_signed_data">source&nbsp;code</a></span>&nbsp;</span
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.add_pending">source&nbsp;code</a></span>&nbsp;</span
     ></td>
   </table>
   
-  Downloaded data is a GPG-signed message. Check that the signature is 
-  trusted and call <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
-  class="link">update_interface_from_network</a> when done. Calls 
-  <code>handler.confirm_trust_keys()</code> if keys are not trusted.
+  Add a PendingFeed to the pending dict.
   <dl><dt></dt><dd>
     <dl><dt>Parameters:</dt></dl>
     <ul class="nomargin">
-        <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
-          class="link">model.Interface</a></code>) - the interface being updated</li>
-        <li><strong class="pname"><code>signed_data</code></strong> (<code>stream</code>) - the downloaded data (not yet trusted)</li>
-        <li><strong class="pname"><code>handler</code></strong> (<code><a href="zeroinstall.injector.handler.Handler-class.html" 
-          class="link">handler.Handler</a></code>) - a handler for any user interaction required</li>
+        <li><strong class="pname"><code>pending</code></strong> (<code>PendingFeed</code>) - the untrusted download to add</li>
     </ul>
-      <p><strong>See Also:</strong>
-        <a 
-        href="zeroinstall.injector.handler.Handler-class.html#confirm_trust_keys"
-        class="link">handler.Handler.confirm_trust_keys</a>
+      <p><strong>Since:</strong>
+        0.25
       </p>
   </dd></dl>
 </td></tr></table>
@@ -458,7 +472,10 @@ object --+
   Update a cached interface (using <a 
   href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
   class="link">update_interface_from_network</a>) if we trust the 
-  signatures. If we don't trust any of the signatures, do nothing.
+  signatures, and remove it from <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#pending" 
+  class="link">pending</a>. If we don't trust any of the signatures, do 
+  nothing.
   <dl><dt></dt><dd>
     <dl><dt>Parameters:</dt></dl>
     <ul class="nomargin">
@@ -472,10 +489,10 @@ object --+
     </ul>
     <dl><dt>Returns: <code>bool</code></dt>
         <dd>True if the interface was updated</dd></dl>
-      <p><strong>See Also:</strong>
-        <a 
-        href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
-        class="link">check_signed_data</a>, which calls this.
+      <p><strong>Precondition:</strong>
+        call <a 
+        href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_pending"
+        class="link">add_pending</a>
       </p>
   </dd></dl>
 </td></tr></table>
@@ -506,6 +523,9 @@ object --+
     </ul>
       <p><strong>To Do:</strong>
         This method blocks. It should start a download and return.
+      </p>
+      <p><strong>Deprecated:</strong>
+        see PendingFeed
       </p>
   </dd></dl>
 </td></tr></table>
@@ -540,7 +560,7 @@ object --+
     <ul class="nomargin">
         <li><strong class="pname"><code>interface</code></strong> (<code><a href="zeroinstall.injector.model.Interface-class.html" 
           class="link">model.Interface</a></code>) - the interface being updated</li>
-        <li><strong class="pname"><code>xml</code></strong> (<code>str</code>) - the downloaded replacement interface document</li>
+        <li><strong class="pname"><code>new_xml</code></strong> (<code>str</code>) - the downloaded replacement interface document</li>
         <li><strong class="pname"><code>modified_time</code></strong> (<code>long</code>) - the timestamp of the oldest trusted signature (used as an 
           approximation to the interface's modification time)</li>
     </ul>
@@ -657,6 +677,37 @@ object --+
   </dd></dl>
 </td></tr></table>
 </div>
+<a name="get_cached_signatures"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_cached_signatures</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">uri</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_cached_signatures">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Verify the cached interface using GPG. Only new-style XML-signed 
+  interfaces retain their signatures in the cache.
+  <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>uri</code></strong> (<code>str</code>) - the feed to check</li>
+    </ul>
+    <dl><dt>Returns: <code>[<a href="zeroinstall.injector.gpg.Signature-class.html" 
+      class="link">gpg.Signature</a>] or None</code></dt>
+        <dd>a list of signatures, or None</dd></dl>
+      <p><strong>Since:</strong>
+        0.25
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== CLASS VARIABLE DETAILS ==================== -->
 <a name="section-ClassVariableDetails"></a>
@@ -686,7 +737,7 @@ object --+
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['watchers', '_interfaces', 'stores']                                  
+['watchers', '_interfaces', 'stores', 'pending']                       
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -711,6 +762,19 @@ object --+
   </td>
 </tr>
 </table>
+<a name="pending"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pending</h3>
+  downloaded feeds which are not yet trusted
+  <dl><dt></dt><dd>
+    <dl><dt>Type:</dt>
+      <dd>str -&gt; PendingFeed</dd></dl>
+  </dd></dl>
+</td></tr></table>
+</div>
 <a name="watchers"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -754,7 +818,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Oct 21 19:18:38 2006</td>
+        3.0alpha3 on Sat Feb 10 12:48:29 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

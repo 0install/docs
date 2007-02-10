@@ -143,7 +143,18 @@ Chooses a set of implementations based on a policy. Typical use:
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#recalculate" class="summary-sig-name">recalculate</a>(<span class="summary-sig-arg">self</span>)</span><br />
+    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#process_pending" class="summary-sig-name">process_pending</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      For each pending feed, either import it fully (if we now trust one
+      of the signatures) or start performing whatever action is needed next
+      (either downloading a key or confirming a fingerprint).
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#recalculate" class="summary-sig-name">recalculate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fetch_stale_interfaces</span>=<span class="summary-sig-default">True</span>)</span><br />
       Try to choose a set of implementations.
   </td>
 </tr>
@@ -286,18 +297,6 @@ Chooses a set of implementations based on a policy. Typical use:
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#check_signed_data" class="summary-sig-name">check_signed_data</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">download</span>,
-        <span class="summary-sig-arg">signed_data</span>)</span><br />
-      Wrapper for <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
-      class="link">iface_cache.IfaceCache.check_signed_data</a>.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">bool</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_cached" class="summary-sig-name">get_cached</a>(<span class="summary-sig-arg">self</span>,
@@ -415,7 +414,7 @@ Chooses a set of implementations based on a policy. Typical use:
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#__slots__">__slots__</a> = <code title="['root', 'implementation', 'watchers', 'help_with_testing', 'network_use', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions', 'src', 'root_restrictions']">['root', 'implementation', 'watchers', 'help_with_te...</code>
+    <a href="zeroinstall.injector.policy.Policy-class.html#__slots__">__slots__</a> = <code title="['root', 'implementation', 'watchers', 'help_with_testing', 'network_use', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions', 'src', 'root_restrictions', 'stale_feeds']">['root', 'implementation', 'watchers', 'help_with_te...</code>
   </td>
 </tr>
 </table>
@@ -512,6 +511,15 @@ Chooses a set of implementations based on a policy. Typical use:
   </td><td class="summary">
     <a href="zeroinstall.injector.policy.Policy-class.html#src">src</a><br />
       whether we are looking for source code
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">set</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.policy.Policy-class.html#stale_feeds">stale_feeds</a><br />
+      set of feeds which are present but haven't been checked for a long
+      time
   </td>
 </tr>
 <tr>
@@ -643,6 +651,30 @@ Chooses a set of implementations based on a policy. Typical use:
   </dd></dl>
 </td></tr></table>
 </div>
+<a name="process_pending"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">process_pending</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.process_pending">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  For each pending feed, either import it fully (if we now trust one of 
+  the signatures) or start performing whatever action is needed next 
+  (either downloading a key or confirming a fingerprint).
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.25
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
 <a name="recalculate"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -650,7 +682,8 @@ Chooses a set of implementations based on a policy. Typical use:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">recalculate</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">recalculate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fetch_stale_interfaces</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.recalculate">source&nbsp;code</a></span>&nbsp;</span
@@ -660,6 +693,13 @@ Chooses a set of implementations based on a policy. Typical use:
   Try to choose a set of implementations. This may start downloading 
   more interfaces, but will return immediately.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>fetch_stale_interfaces</code></strong> (<code>bool</code>) - whether to begin downloading interfaces which are present but 
+          haven't been checked within the <a 
+          href="zeroinstall.injector.policy.Policy-class.html#freshness" 
+          class="link">freshness</a> period</li>
+    </ul>
       <p><strong>Postcondition:</strong>
         <a href="zeroinstall.injector.policy.Policy-class.html#ready" 
         class="link">ready</a> indicates whether a possible set of 
@@ -818,11 +858,18 @@ Chooses a set of implementations based on a policy. Typical use:
     ></td>
   </table>
   
-  Get an interface from the iface_cache. If it is missing or needs 
-  updating, start a new download.
+  Get an interface from the iface_cache. If it is missing start a new 
+  download. If it is present but stale, add it to <a 
+  href="zeroinstall.injector.policy.Policy-class.html#stale_feeds" 
+  class="link">stale_feeds</a>. This should only be called from <a 
+  href="zeroinstall.injector.policy.Policy-class.html#recalculate" 
+  class="link">recalculate</a>.
   <dl><dt></dt><dd>
     <dl><dt>Returns: <code><a href="zeroinstall.injector.model.Interface-class.html" 
       class="link">model.Interface</a></code></dt></dl>
+      <p><strong>See Also:</strong>
+        iface_cache.iface_cache.get_interface
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -1013,29 +1060,6 @@ Chooses a set of implementations based on a policy. Typical use:
     href="zeroinstall.injector.policy.Policy-class.html#implementation" 
     class="link">implementation</a> instead
       </p>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="check_signed_data"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_signed_data</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">download</span>,
-        <span class="sig-arg">signed_data</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.check_signed_data">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Wrapper for <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#check_signed_data"
-  class="link">iface_cache.IfaceCache.check_signed_data</a>.
-  <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -1255,7 +1279,7 @@ Chooses a set of implementations based on a policy. Typical use:
       <dd><table><tr><td><pre class="variable">
 ['root', 'implementation', 'watchers', 'help_with_testing', 'network_u<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
 se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-', 'src', 'root_restrictions']                                         
+', 'src', 'root_restrictions', 'stale_feeds']                          
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -1396,6 +1420,20 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
   </dd></dl>
 </td></tr></table>
 </div>
+<a name="stale_feeds"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">stale_feeds</h3>
+  set of feeds which are present but haven't been checked for a long 
+  time
+  <dl><dt></dt><dd>
+    <dl><dt>Type:</dt>
+      <dd>set</dd></dl>
+  </dd></dl>
+</td></tr></table>
+</div>
 <a name="watchers"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1439,7 +1477,7 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Oct 21 19:18:39 2006</td>
+        3.0alpha3 on Sat Feb 10 12:48:29 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>
