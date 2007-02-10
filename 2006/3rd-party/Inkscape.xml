@@ -29,13 +29,13 @@ user and developer community by using open, community-oriented development.</des
     <implementation id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
       <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.44-0.i386.rpm" size="11409999"/>
     </implementation>
-    <implementation id="sha1new=a52a05096e08fa14a2b4720713ff9a05b977f199" main="bin/inkscape" released="2007-02-04" version="0.45">
+    <implementation id="sha1new=a52a05096e08fa14a2b4720713ff9a05b977f199" main="bin/inkscape" released="2007-02-04" stability="stable" version="0.45">
     <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.x86.package" size="5746250" start-offset="30389" type="application/x-lzma-compressed-tar"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFxbzPBSn9tx+xORARAm56AJ0bmIdSVfLaPVcYiSx37/+qIThXIwCdEnTmwi4guTr2r/SA
-dC0PPtcAsi8=
+iD8DBQBFzdnpBSn9tx+xORARAuH9AJ4sV1K59RSWPFW7ZUDX/U+UHi19UACgj8vz+MXhWQ7aNVfx
+NdQBdPcjGdM=
 
 -->
