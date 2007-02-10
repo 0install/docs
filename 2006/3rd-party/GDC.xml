@@ -16,8 +16,7 @@ D is statically typed, and compiles direct to native code. It's multiparadigm:
 supporting imperative, object oriented, and template metaprogramming styles.
 It's a member of the C syntax family, and its look and feel is very close to
 C++'s. For a quick feature comparison, see this comparison of D with C, C++, C#
-and Java.
-  </description>
+and Java.</description>
 
   <!-- Optionally, uncomment this to specify the program's homepage: -->
   <homepage>http://dgcc.sourceforge.net/</homepage> --&gt;
@@ -29,13 +28,16 @@ and Java.
     <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="2006-11-25" stability="stable" version="0.19">
       <archive extract="gdc" href="http://belnet.dl.sourceforge.net/sourceforge/dgcc/gdc-0.19-linux-i386.tar.bz2" size="2595249"/>
     </implementation>
-    <implementation id="sha1=bcf1c1c492e8668b2ee31c2222b9e4af9dff2637" released="2007-01-03" version="0.21">
+    <implementation id="sha1=bcf1c1c492e8668b2ee31c2222b9e4af9dff2637" released="2007-01-03" stability="stable" version="0.21">
       <archive extract="gdc" href="http://mesh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.21-i686-linux-gcc-4.0.3.tar.bz2" size="2702927"/>
+    </implementation>
+    <implementation id="sha1new=bdc73b49b8534529b8c1de2d794a8305759b0baa" released="2007-02-10" version="0.22">
+      <archive extract="gdc" href="http://ovh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.22-i686-linux-gcc-4.1.1.tar.bz2" size="2802654" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFm+6WrgeCgFmlPMERAtFTAJ419EXn+7fg5ZX4DzyRbvV7WsSImACfbfLgUI7ecPVTrh1K
-lkP5JtAM0vQ=
+iD8DBQBFzcMdBSn9tx+xORARAixCAKCGRKtvK3ZFiHlEOrF2jwln8J3XLgCfVR3yDux83++53+rJ
+176zdBabsgA=
 
 -->
