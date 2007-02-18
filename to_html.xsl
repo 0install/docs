@@ -144,7 +144,7 @@
   <xsl:template match='*[name() = "yes"]'>
     <td class='yes'>
       <xsl:choose>
-        <xsl:when test='text()'><xsl:apply-templates select='@*|node()'/></xsl:when>
+        <xsl:when test='text()|*'><xsl:apply-templates select='@*|node()'/></xsl:when>
 	<xsl:otherwise>Yes</xsl:otherwise>
       </xsl:choose>
     </td>

@@ -105,6 +105,9 @@ E: Couldn't find package rox-session</pre>
   original download this way (which shares the download but not the disk space). With a special SetUID helper,
   even the disk copies can be safely shared.
  </p>
+ <p>
+   See the <a href='sharing.html'>Sharing</a> page for information about using this feature.
+  </p>
   </td>
  </tr>
  <tr>

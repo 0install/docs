@@ -22,7 +22,7 @@ be a 'pass') but it should give the general idea.
  <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<no/>			<yes/>			<yes/>			<yes/></tr>
  <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<no/>			<yes/>			<yes/>			<yes/></tr>
- <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<no/>			<yes/>			<no>Planned</no></tr>
+ <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<no/>			<yes/>			<yes><a href='sharing.html'>Yes</a></yes></tr>
  <tr><th>Multiple versions coexist</th>			<yes/>			<no/>			<no/>		<yes/>			<no/>			<yes/>			<yes/></tr>
  <tr><th>Uninstall</th>					<td>Sometimes</td>	<yes/>			<yes/>		<yes/>			<yes>(cache)</yes>	<yes>(cache)</yes>	<yes>(cache)</yes></tr>
  <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<no/>			<td>Only one</td>	<td>Only upgrades</td>	<yes/></tr>
