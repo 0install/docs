@@ -20,6 +20,11 @@
     <dt><a href='injector-security.html'>Security</a></dt><dd>Describes Zero Install's security model and explains
     why it should be more secure than traditional installation methods.</dd>
 
+    <dt><a href='sharing.html'>Sharing</a></dt><dd>How to configure Zero Install to share downloads automatically
+    and safely between users, without requiring them to have root access.</dd>
+
+    <dt><a href='roadmap.html'>Roadmap</a></dt><dd>Where we've been and where we're going.</dd>
+
     <dt><a href='links.html'>Links</a></dt><dd>Links to related software.</dd>
 </dl>
 
