@@ -1,0 +1,6 @@
+#!/bin/sh
+for x in index compare faq install technical support docs security packagers packagers-cs-1 packagers-cs-2 injector injector-packagers injector-design injector-security injector-using injector-tests filesystem doc links fs-faq matrix injector-feeds injector-specs injector-trouble 0publish howitworks goals dev injector-find package-rox interface-spec manifest-spec package-inkscape flash roadmap 0compile 0compile-scons package-scons sharing; do
+
+xsltproc -o $x.html --stringparam file $x.html to_html.xsl $x.xml
+done
+
