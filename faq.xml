@@ -67,6 +67,13 @@ software; rather, the 'installed' software is what the user has put on
 the menu.
 </p>
 
+<p><i>However</i>, there's nothing to stop you implementing a more
+'traditional' installation system on top of Zero Install. So, a GNOME user
+could drag Firefox to the GNOME installation system and have a .desktop file
+created for it automatically. The new menu item would still be independent of the
+program data though; removing the program from the cache wouldn't remove the menu
+item (clicking on it would simply offer to download the program again).</p>
+
 <h3>Will Zero Install conflict with my existing package manager?</h3>
 
 <p>
