@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libldap2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libldap2</name>
+  <summary>run-time libraries for the OpenLDAP servers and clients</summary>
+  <description>
+These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
+Protocol) servers and clients.</description>
+  <homepage>http://www.openldap.org/</homepage>
+  <implementation arch="Linux-i386" id="sha1new=51140c39056147bfe4a80a06e1292aa6302c6773" license="The OpenLDAP Public License" released="2007-02-24" version="2.1.30" version-modifier="-13.2">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/o/openldap2/libldap2_2.1.30-13.2_i386.deb" size="150584" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBF4HX5BSn9tx+xORARApLpAJ4mDfItbPh6tLCT6j/o1Wsw1KMziACeICQes3et16nJkrvI
+L7GQn/XfBNo=
+
+-->

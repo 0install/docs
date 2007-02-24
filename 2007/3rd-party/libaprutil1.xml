@@ -20,10 +20,13 @@ access, xml parsing, and other useful functionality.</description>
     <requires interface="http://0install.net/2007/3rd-party/libpq4.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libldap2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktoBSn9tx+xORARAsciAJ9lzFVS+QqEs6Tdl3kpj1BmXsAkAgCfcmcLZjADDcCHpXi7
-JDqLn95ekoc=
+iD8DBQBF4HZgBSn9tx+xORARAufPAJ4vFmyFHEEGYv7IRrhpHJXmltKweQCePxlhFb63LUrjrx/g
+pjVIyLFapt4=
 
 -->
