@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libgnutls13.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libgnutls13</name>
+  <summary>the GNU TLS library</summary>
+  <description>
+gnutls is a portable library which implements the Transport Layer Security (TLS)
+1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
+
+Currently gnutls implements:
+
+ - the TLS 1.0 and SSL 3.0 protocols, without any US-export controlled
+algorithms
+
+ - X509 Public Key Infrastructure (with several limitations).
+
+ - SRP for TLS authentication.
+
+ - TLS Extension mechanism
+
+This package contains the runtime libraries.</description>
+  <homepage>ftp://gnutls.hellug.gr/pub/gnutls</homepage>
+  <implementation arch="Linux-i386" id="sha1new=cd0ebf346deb951f8ed4eab53c9b486545af470b" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2007-02-24" version="1.4.4" version-modifier="-3">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/g/gnutls13/libgnutls13_1.4.4-3_i386.deb" size="281824" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBF4Hm6BSn9tx+xORARAorsAJwJFWnwxb7HmdLLCGCgPH3rJ4kk8ACfXQJynCkzcTqvB2gs
+lddT1IC3SIc=
+
+-->

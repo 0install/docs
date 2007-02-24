@@ -23,10 +23,13 @@ access, xml parsing, and other useful functionality.</description>
     <requires interface="http://0install.net/2007/3rd-party/libldap2.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libexpat1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBF4HZgBSn9tx+xORARAufPAJ4vFmyFHEEGYv7IRrhpHJXmltKweQCePxlhFb63LUrjrx/g
-pjVIyLFapt4=
+iD8DBQBF4HiHBSn9tx+xORARAhEYAKCRAHGx2KUoP3QCe6tNpn4UUK9sIwCfXunMZ2N3QH4q5HEG
+0k1j8NipmyI=
 
 -->

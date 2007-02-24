@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libexpat1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libexpat1</name>
+  <summary>XML parsing C library</summary>
+  <description>
+This package contains the runtime, shared library of expat, the C library for
+parsing XML.</description>
+  <homepage>http://expat.sourceforge.net</homepage>
+  <implementation arch="Linux-i386" id="sha1new=1b4b34591222bd9f698f7f027e1af022f143fc06" license="Freely Distributable" released="2007-02-24" version="1.95.8" version-modifier="-3.4">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/e/expat/libexpat1_1.95.8-3.4_i386.deb" size="62934" type="application/x-deb"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBF4HhoBSn9tx+xORARApQ0AKCZS3Y0Snqwr6ledmh9O1aeoVgtyACfVzuwPng/h9h+8BQO
+NGaPicd4q1Q=
+
+-->
