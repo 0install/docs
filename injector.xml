@@ -45,9 +45,9 @@ program. Some examples include:
   <li><b>Fedora</b> - a package is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   </li>
-  <li><b>Mandriva</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1mdk.noarch.rpm?download'>zeroinstall-injector-0.19-1mdk.noarch.rpm download page</a> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
-  <li><b>SuSE</b> <a href='http://downloads.sourceforge.net/zero-install/zeroinstall-injector-0.25-1suse.noarch.rpm'>zeroinstall-injector-0.25-1suse.noarch.rpm download page</a> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.19-1suse.spec?download'>.spec file</a> ]</li>
-  <li><a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.17-1fc.src.rpm?download'>Source RPM</a> [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
+  <li><b>Mandriva</b> <download name='zeroinstall-injector-0.19-1mdk.noarch.rpm'/> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
+  <li><b>SuSE</b> <download name='zeroinstall-injector-0.25-1suse.noarch.rpm'/> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
+  <li><download name='zeroinstall-injector-0.17-1fc.src.rpm'/> (Source RPM) [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
 </ul>
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1171'>Problems with RPMs</a> ]
 </dd>
@@ -55,12 +55,12 @@ program. Some examples include:
 <dt>Debs</dt>
 <dd>
 <ul>
-  <li><b>Debian/stable</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all.deb?download'>zeroinstall-injector_0.22-1_all.deb download page</a> (Debian package; Python 2.3)<br/>
-  <b>Debian/testing</b> (or unstable) <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.25-1_all.deb?download'>zeroinstall-injector_0.25-1_all.deb download page</a> (Debian/testing package; python-central)<br/>
+  <li><b>Debian/stable</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
+  <b>Debian/testing</b> (or unstable) <download name='zeroinstall-injector_0.25-1_all.deb'/> (Debian/testing package; python-central)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
-  <li><b>Ubuntu (breezy/dapper)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.22-1_all_ubuntu.deb?download'>zeroinstall-injector_0.22-1_all_ubuntu.deb download page</a> (Ubuntu package; Python 2.4)<br/>
-  <b>Ubuntu (edgy)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.24-1_all_ubuntu.deb?download'>zeroinstall-injector_0.24-1_all_ubuntu.deb download page</a><br/>
-  <b>Ubuntu (feisty)</b> <a href='http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector_0.25-0ubuntu1_all.deb?download'>zeroinstall-injector_0.25-0ubuntu1_all.deb download page</a> (now <a href='http://revu.tauware.de/details.py?upid=3360'>submitted to Universe</a>)</li>
+  <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
+  <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.24-1_all_ubuntu.deb'/><br/>
+  <b>Ubuntu (feisty)</b> <download name='zeroinstall-injector_0.25-0ubuntu1_all.deb'/> (now <a href='http://revu.tauware.de/details.py?upid=3360'>submitted to Universe</a>)</li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
   <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
@@ -70,7 +70,7 @@ program. Some examples include:
 <dt>Other</dt>
 <dd>
 <ul>
-  <li><b>Slackware</b> <a href="http://prdownloads.sourceforge.net/zero-install/zeroinstall-injector-0.22-noarch-1slackware.tgz?download">zeroinstall-injector-0.22-noarch-1slackware.tgz download page</a> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><b>Slackware</b> <download name="zeroinstall-injector-0.22-noarch-1slackware.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
   <li><b>MacOS X</b> should work (follow instructions below), but has not been tested. Please send a report to <a href='support.html'>the mailing list</a> to let us know either way!</li>
   <li><b>Microsoft Windows</b> is not currently supported, as it lacks the <i>fork</i> system call. This should be easy to work around, if any Windows developers want to volunteer.</li>
@@ -108,7 +108,7 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a>, or using wget:
 </p>
 <pre>
-$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.25.tar.gz.gpg</b>
+$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.26.tar.gz.gpg</b>
 </pre>
 
 <p>
@@ -117,8 +117,8 @@ you will need later!
 </p>
 
 <pre>
-$ <b>gpg zeroinstall-injector-0.25.tar.gz.gpg</b>
-gpg: Signature made Tue 23 Jan 2007 20:48:39 GMT using DSA key ID 59A53CC1
+$ <b>gpg zeroinstall-injector-0.26.tar.gz.gpg</b>
+gpg: Signature made Sun 25 Feb 2007 12:04:32 GMT using DSA key ID 59A53CC1
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -136,8 +136,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xzf zeroinstall-injector-0.25.tar.gz</b>
-$ <b>cd zeroinstall-injector-0.25</b>
+$ <b>tar xzf zeroinstall-injector-0.26.tar.gz</b>
+$ <b>cd zeroinstall-injector-0.26</b>
 </pre>
 
 <table class='split'>

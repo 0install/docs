@@ -102,11 +102,13 @@ archive it downloads. Each sub-directory is named after the digest of its conten
 downloads to be shared safely between users.
 </p>
 
-<div class='note'>TODO: Archives are currently cached in
-<b>~/.cache/0install.net/implementations</b>. In future, they will go in
-<b>/var/cache/0install.net/implementations</b>, using a setuid helper (which will
-check the cryptographic digest of the contents matches the directory name
-first, of course).</div>
+<div class='note' style='text-align: left'><h3>Note on sharing downloads</h3>
+<p>
+By default, archives are cached in <b>~/.cache/0install.net/implementations</b>, 
+so if multiple users try to run the same program it will download and save multiple copies.
+To allow automatic (and safe) sharing of downloads, see the <a href='sharing.html'>Sharing</a>
+page.</p>
+</div>
 
 <p>When the downloads are complete, Edit itself runs:</p>
 

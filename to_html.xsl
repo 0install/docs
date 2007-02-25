@@ -11,6 +11,10 @@
 
   <xsl:param name="file">unknown</xsl:param>
 
+  <xsl:template match='*[name() = "download"]'>
+    <a href='http://downloads.sourceforge.net/zero-install/{@name}'><xsl:value-of select='@name'/></a>
+  </xsl:template>
+
   <xsl:template match='item'>
     <li>
       <xsl:choose>

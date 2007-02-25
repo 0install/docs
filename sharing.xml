@@ -99,7 +99,7 @@ $ <b>sha1sum /bin/ls</b>
  </p>
 
  <ol>
-  <li>Install 0launch version 0.26 or later. At the time of writing, this means checking it out from svn.</li>
+  <li><a href='injector.html'>Install 0launch version 0.26</a> or later.</li>
   <li>Create a new system user called 'zeroinst' (this command is for Debian; other systems may need other commands):
 <pre>
 # adduser --system zeroinst
@@ -116,6 +116,7 @@ $ <b>sha1sum /bin/ls</b>
   <pre>
 #!/bin/sh
 cd "$2" || exit 1
+chmod -R a+rX .
 exec sudo -u zeroinst /usr/local/bin/0store-helper-priv "$1"
 </pre>
 </li>
@@ -126,6 +127,12 @@ exec sudo -u zeroinst /usr/local/bin/0store-helper-priv "$1"
 exec 0store add "$1" .
 </pre>
   </li>
+
+  <li>Make your new scripts executable:
+<pre>
+# chmod a+x /usr/local/bin/0store-helper
+# chmod a+x /usr/local/bin/0store-helper-priv
+</pre></li>
 
   <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
 <pre>
