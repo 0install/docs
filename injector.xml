@@ -46,7 +46,7 @@ program. Some examples include:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   </li>
   <li><b>Mandriva</b> <download name='zeroinstall-injector-0.19-1mdk.noarch.rpm'/> (Mandrake/Mandriva 10.1 RPM) (contributed by Piero Ottuzzi)</li>
-  <li><b>SuSE</b> <download name='zeroinstall-injector-0.25-1suse.noarch.rpm'/> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
+  <li><b>SuSE</b> <download name='zeroinstall-injector-0.26-1suse.noarch.rpm'/> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
   <li><download name='zeroinstall-injector-0.17-1fc.src.rpm'/> (Source RPM) [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
 </ul>
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1171'>Problems with RPMs</a> ]
