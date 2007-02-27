@@ -12,6 +12,8 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="feed_icons/Album.png" homepage="http://rox.sourceforge.net/desktop/node/24"/>
 
+<feed uri="http://rox4debian.berlios.de/0install/AlbumArt.xml" name="AlbumArt" summary="downloads album covers" icon="feed_icons/AlbumArt.png" homepage="http://louhi.kempele.fi/~skyostil/projects/albumart"/>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="construct AppDir wrappers for applications." icon="feed_icons/AppFactory.png" homepage="http://rox.sourceforge.net/desktop/node/30"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="create or read archive files" icon="feed_icons/Archive.png" homepage="http://rox.sourceforge.net/desktop/Archive"/>
@@ -96,7 +98,11 @@
 
 <feed uri="http://0install.net/2007/3rd-party/libdb4.4.xml" name="libdb4.4" summary="Berkeley v4.4 Database Libraries" icon="tango/applications-system.png"/>
 
+<feed uri="http://0install.net/2007/3rd-party/libgnutls13.xml" name="libgnutls13" summary="the GNU TLS library" icon="tango/applications-system.png" homepage="ftp://gnutls.hellug.gr/pub/gnutls"/>
+
 <feed uri="http://0install.net/2007/3rd-party/libkrb53.xml" name="libkrb53" summary="MIT Kerberos runtime libraries" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libldap2.xml" name="libldap2" summary="run-time libraries for the OpenLDAP servers and clients" icon="tango/applications-system.png" homepage="http://www.openldap.org/"/>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="libmikmod" summary="libmikmod is a portable sound library for Unix and other systems" icon="feed_icons/libmikmod.png"/>
 
@@ -105,6 +111,8 @@
 <feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="feed_icons/libpng.png"/>
 
 <feed uri="http://0install.net/2007/3rd-party/libpq4.xml" name="libpq4" summary="PostgreSQL C client library" icon="tango/applications-system.png"/>
+
+<feed uri="http://0install.net/2007/3rd-party/libqt-mt3.xml" name="libqt-mt3" summary="Qt GUI Library (threaded runtime version)" icon="tango/applications-system.png" homepage="http://www.trolltech.com"/>
 
 <feed uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml" name="libssl0.9.8" summary="SSL shared libraries" icon="tango/applications-system.png"/>
 
@@ -130,7 +138,7 @@
 
 <feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="automatically adds inserted media to panel" icon="feed_icons/Media.xml.png"/>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="feed_icons/Mem.png" homepage="http://rox.sourceforge.net/desktop/node/34"/>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="display memory usage." icon="feed_icons/Mem.png" homepage="http://rox.sourceforge.net/desktop/node/34"/>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="alarm clock and reminder list" icon="feed_icons/Memo.png" homepage="http://rox.sourceforge.net/desktop/Memo"/>
 
@@ -145,6 +153,8 @@
 <feed uri="http://www.hayber.us/0install/MusicBox" name="MusicBox" summary="a music player for the ROX desktop." icon="feed_icons/MusicBox.png" homepage="http://rox.sourceforge.net/desktop/Software/Audio_Video/MusicBox"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="display network status" icon="feed_icons/NetStat.png" homepage="http://rox.sourceforge.net/desktop/node/35"/>
+
+<feed uri="http://dist.opendocumentfellowship.org/odfviewer.xml" name="odfviewer" summary="Viewer for OpenDocument Files" icon="feed_icons/odfviewer.png" homepage="http://opendocumentfellowship.org/odfviewer"/>
 
 <feed uri="http://0install.net/2006/autopackage/opencity.xml" name="opencity" summary="OpenCity Simulation Game" icon="feed_icons/opencity.png" homepage="http://www.opencity.info/"/>
 
@@ -236,7 +246,9 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="feed_icons/XPlanet.png"/>
 
-<feed uri="http://rox.sourceforge.net/2006/interfaces/Zero2Bundle.xml" name="Zero2Bundle" summary="create ROX application bundles" icon="feed_icons/Zero2Bundle.png"/>
+<feed uri="http://dist.opendocumentfellowship.org/xulrunner.xml" name="xulrunner" summary="Mozilla runtime environment." icon="feed_icons/xulrunner.png" homepage="http://developer.mozilla.org/en/docs/XULRunner"/>
+
+<feed uri="http://rox.sourceforge.net/2006/interfaces/Zero2Bundle.xml" name="Zero2Bundle" summary="create ROX application bundles" icon="feed_icons/Zero2Bundle.png" homepage="http://rox.sourceforge.net/desktop/Zero2Bundle"/>
 
 <feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
 

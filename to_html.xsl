@@ -183,6 +183,9 @@
       </tr>
      </xsl:for-each>
     </table>
+    <p>
+      Number of feeds: <xsl:value-of select='count(document("all-feeds.xml")/*/feed)'/>
+    </p>
   </xsl:template>
 
   <xsl:template match='*[name() = "h3" or name() = "h2"]'>
