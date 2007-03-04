@@ -1,3 +1,7 @@
+http://freenet-homepage.de/LinuxCNC/0install/Foobillard/foobillard.xml
+http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml
+http://freenet-homepage.de/LinuxCNC/0install/SDL-mixer/sdl-mixer.xml
+http://freenet-homepage.de/LinuxCNC/0install/SDL/sdl.xml
 http://0install.net/2007/3rd-party/libgnutls13.xml
 http://0install.net/2007/3rd-party/libldap2.xml
 http://0install.net/2007/3rd-party/libqt-mt3.xml
@@ -38,16 +42,12 @@ http://0install.net/2006/3rd-party/SCons.xml
 http://0install.net/2005/interfaces/injector-gui
 http://0install.net/2006/interfaces/0publish
 http://people.freenet.de/LinuxCNC/0install/barrage
-http://people.freenet.de/LinuxCNC/0install/foobillard
 http://people.freenet.de/LinuxCNC/0install/lbreakout
 http://people.freenet.de/LinuxCNC/0install/lgeneral
 http://people.freenet.de/LinuxCNC/0install/libmikmod
-http://people.freenet.de/LinuxCNC/0install/libpng
 http://people.freenet.de/LinuxCNC/0install/lmarbles
 http://people.freenet.de/LinuxCNC/0install/lpairs
 http://people.freenet.de/LinuxCNC/0install/penguin-command
-http://people.freenet.de/LinuxCNC/0install/sdl
-http://people.freenet.de/LinuxCNC/0install/sdl-mixer
 http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod
 http://rox.sourceforge.net/2005/interfaces/AddApp
 http://rox.sourceforge.net/2005/interfaces/Archive

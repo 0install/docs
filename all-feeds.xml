@@ -58,7 +58,7 @@
 
 <feed uri="http://holizz.com/software/0install/firefox" name="Firefox" summary="Web browser" icon="feed_icons/firefox.png" homepage="http://www.mozilla.com/firefox/"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/foobillard" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="feed_icons/foobillard.png"/>
+<feed uri="http://freenet-homepage.de/LinuxCNC/0install/Foobillard/foobillard.xml" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="feed_icons/foobillard.png" homepage="http://foobillard.sunsite.dk/"/>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="display usage of a file system." icon="feed_icons/FreeFS.png" homepage="http://rox.sourceforge.net/desktop/node/28"/>
 
@@ -108,7 +108,7 @@
 
 <feed uri="http://0install.net/2007/3rd-party/libneon26.xml" name="libneon26" summary="an HTTP and WebDAV client library" icon="tango/applications-system.png"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libpng" name="libpng" summary="libpng is the official PNG reference library" icon="feed_icons/libpng.png"/>
+<feed uri="http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml" name="libpng" summary="libpng is the official PNG reference library" icon="feed_icons/libpng.png" homepage="http://libpng.sourceforge.net"/>
 
 <feed uri="http://0install.net/2007/3rd-party/libpq4.xml" name="libpq4" summary="PostgreSQL C client library" icon="tango/applications-system.png"/>
 
@@ -194,11 +194,11 @@
 
 <feed uri="http://0install.net/2006/autopackage/SCOURGE.xml" name="S.C.O.U.R.G.E." summary="rogue-like game in the tradition of NetHack and Moria" icon="tango/applications-system.png" homepage="http://scourge.sourceforge.net/"/>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl" name="SDL" summary="Simple DirectMedia Layer" icon="feed_icons/sdl.png"/>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="feed_icons/sdl-mixer.png"/>
-
 <feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="feed_icons/sdl-mixer-libmikmod.png"/>
+
+<feed uri="http://freenet-homepage.de/LinuxCNC/0install/SDL-mixer/sdl-mixer.xml" name="SDL-mixer" summary="simple multi-channel audio mixer" icon="feed_icons/sdl-mixer.png" homepage="http://www.libsdl.org/projects/SDL_mixer/"/>
+
+<feed uri="http://freenet-homepage.de/LinuxCNC/0install/SDL/sdl.xml" name="SDL" summary="Simple DirectMedia Layer" icon="feed_icons/sdl.png" homepage="http://www.libsdl.org/"/>
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png"/>
 
