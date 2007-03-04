@@ -1,17 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>GLib-dev</name>
   <summary>headers for compiling GLib applications</summary>
   <description>
-    These are the GLib header files. They are required when compiling
-    applications that use the GLib library.
-  </description>
+These are the GLib header files. They are required when compiling applications
+that use the GLib library.</description>
 
-  <group>
+  <group arch="Linux-i386">
     <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" version="2.4.8">
 
       <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
@@ -20,11 +16,17 @@ Hash: SHA1
       <archive extract="glib-headers-2.4.8.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
     </implementation>
   </group>
+  <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
+    <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" version="2.4.8">
+      <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <environment insert="make-headers.py" name="BUILD_COMMAND"/>
+    </requires>
+  </group>
 </interface>
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+<!-- Base64 Signature
+iD8DBQBF6uVKrgeCgFmlPMERAmvbAJ4qQ4p4DB9YaFZUoyF9WvBVba17VwCbBNBWldDXO3boTGK4
+UyJ7+o04zBg=
 
-iD8DBQFEYmkUrgeCgFmlPMERAkmMAKDQ7j/zZfVG2daC5Xoa/u04OCoEQgCfVSEm
-QK38HckL6ka3KJsGvC0L8PY=
-=jSTU
------END PGP SIGNATURE-----
+-->
