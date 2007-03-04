@@ -18,7 +18,7 @@ so that you don't need to download anything twice, and programs can still be use
   <td class='image'><img src='screens/find-url.png' alt='' width='256' height='171'/></td>
   <td><h3>Find a program you want to run on the web</h3>
       <p>If it's a Zero Install program, it will give the URL to use. In this
-      example, you would drag <a href='http://people.freenet.de/LinuxCNC/0install/foobillard'>this
+      example, you would drag <a href='http://freenet-homepage.de/LinuxCNC/0install/Foobillard/foobillard.xml'>this
       FooBillard link</a> to your installer.</p>
       <p>
       The injector can be run manually (<b>0launch URL</b>), but it is normally
