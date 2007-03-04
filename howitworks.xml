@@ -67,9 +67,10 @@ happy, click on <b>Execute</b>.
 RPM, deb and autopackage). It unpacks each one into its own directory and
 checks its contents against the <i>cryptographic digest</i>
 given in the (signed) interface file. If the archive has been changed since the interface file was signed,
-the download will be rejected. If the archive hasn't been tampered with, it is stored in your cache directory
-(<b>~/.cache/0install.net/implementations</b>) in its own subdirectory, named after the digest. This ensures
-that no two downloads can conflict with each other.
+the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory
+(see <a href='sharing.html'>sharing</a> for more information) in its own
+subdirectory, named after the digest. This ensures that no two downloads can
+conflict with each other.
   </p>
   </td>
  </tr>
