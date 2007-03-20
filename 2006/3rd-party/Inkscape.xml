@@ -32,10 +32,13 @@ user and developer community by using open, community-oriented development.</des
     <implementation id="sha1new=a52a05096e08fa14a2b4720713ff9a05b977f199" main="bin/inkscape" released="2007-02-04" stability="stable" version="0.45">
     <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.x86.package" size="5746250" start-offset="30389" type="application/x-lzma-compressed-tar"/>
   </implementation>
+    <implementation id="sha1new=97ee1b0b41832415ce76ba28150394e679f01854" main="bin/inkscape" released="2007-03-20" version="0.45.1">
+      <archive href="http://puzzle.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFzdnpBSn9tx+xORARAuH9AJ4sV1K59RSWPFW7ZUDX/U+UHi19UACgj8vz+MXhWQ7aNVfx
-NdQBdPcjGdM=
+iD8DBQBGADeeBSn9tx+xORARAgaMAKCGlfQGrurJHqdkGzTVKPE/7pLuSACfXQKwcCvkcMVytIXQ
+wEKvcYIH0p0=
 
 -->
