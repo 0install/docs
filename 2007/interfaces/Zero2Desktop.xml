@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2007/interfaces/Zero2Bundle.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2007/interfaces/Zero2Desktop.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Zero2Desktop</name>
   <summary>add Zero Install programs to your Applications menu</summary>
   <description>
@@ -21,7 +21,7 @@ to appear in the GNOME or KDE Applications menus.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGAvMPrgeCgFmlPMERAqgUAJ4pg2lCuifeh3Q0Oruy7SmRl71B3QCdGbe4bwfS6vQWIIR2
-/qHOcvT52J8=
+iD8DBQBGAvSMrgeCgFmlPMERArHlAKCp5kIczeyuMN+SFX4BjQQOQwCO1ACfQ1GDb3tesw0uWA59
+4If7ORqyyYE=
 
 -->
