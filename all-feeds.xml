@@ -244,11 +244,15 @@
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="view and edit extended attributes" icon="feed_icons/XAttr.png"/>
 
+<feed uri="http://0install.net/2007/3rd-party/XdgUtils.xml" name="XdgUtils" summary="cross-desktop integration tools" icon="tango/applications-system.png" homepage="http://portland.freedesktop.org"/>
+
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="show a planet" icon="feed_icons/XPlanet.png"/>
 
 <feed uri="http://dist.opendocumentfellowship.org/xulrunner.xml" name="xulrunner" summary="Mozilla runtime environment." icon="feed_icons/xulrunner.png" homepage="http://developer.mozilla.org/en/docs/XULRunner"/>
 
 <feed uri="http://rox.sourceforge.net/2006/interfaces/Zero2Bundle.xml" name="Zero2Bundle" summary="create ROX application bundles" icon="feed_icons/Zero2Bundle.png" homepage="http://rox.sourceforge.net/desktop/Zero2Bundle"/>
+
+<feed uri="http://0install.net/2007/interfaces/Zero2Desktop.xml" name="Zero2Desktop" summary="add Zero Install programs to your Applications menu" icon="tango/applications-system.png"/>
 
 <feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="graphical interface for the Zero Install injector" icon="tango/applications-system.png" homepage="http://0install.net/injector.html"/>
 
