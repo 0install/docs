@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/interfaces/Zero2Bundle.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zero2Desktop</name>
+  <summary>add Zero Install programs to your Applications menu</summary>
+  <description>
+Zero Install provides a way to download and run applications using a full URI to
+identify them. To make applications easier to run you'll want to create a short-
+cut in your desktop environment.
+
+This program creates a freedesktop.org &quot;.desktop&quot; file, which causes the program
+to appear in the GNOME or KDE Applications menus.</description>
+  <group license="OSI Approved :: GNU General Public License (GPL)" main="zero2desktop">
+    <implementation id="sha1new=1c4b6e286aefcfed5358effb05cccfc6584822ef" released="2007-03-22" version="0.1">
+      <archive extract="zero2desktop-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zero2desktop-0.1.tar.bz2" size="11316"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/XdgUtils.xml">
+      <environment insert="scripts" name="XDG_UTILS"/>
+    </requires>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBGAvMPrgeCgFmlPMERAqgUAJ4pg2lCuifeh3Q0Oruy7SmRl71B3QCdGbe4bwfS6vQWIIR2
+/qHOcvT52J8=
+
+-->
