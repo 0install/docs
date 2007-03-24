@@ -18,7 +18,7 @@
 
  <dt><a href='0publish.html'>0publish</a></dt>
  <dd>
-  <b>0publish</b> edits interface files in place. It loads the file, transforms
+  <b>0publish</b> edits feed files in place. It loads the file, transforms
   it in some way (such as setting the release date, or adding a new
   implementation) and then writes it back out again. If the input file was
   signed, it will resign it when saving with the same key by default. You can
