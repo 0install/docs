@@ -1,13 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>Interface file format specification</h2>
+<h2>Feed file format specification</h2>
 
 <p>
-This document is a formal description of the interface XML file format. An interface file describes a program,
-library or other component. It also provides a list of known implementations of the interface (versions of the program)
+This document is a formal description of the XML feed file format. An interface describes a program,
+library or other component. A feed provides a list of known implementations of the interface (versions of the program)
 and details about how to get them, how to check that they are authentic, how to run them and what other components
 they depend on.
+</p>
+
+<p>
+Note on terminology: originally the word 'interface' was used to mean both 'interface' and 'feed', so don't
+be confused if you see it used this way.
 </p>
 
 <p>
@@ -25,7 +30,7 @@ $ svn log https://svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/interfac
 <h2>Introduction</h2>
 
 <p>
-Interface files are introduced in the <a href='injector-packagers.html'>packager's guide</a>.
+Feed files are introduced in the <a href='injector-packagers.html'>packager's guide</a>.
 They have the following syntax (? follows optional items, * means zero-or-more, order of elements
 is not important, and extension elements can appear anywhere as long as they use a different
 namespace):
@@ -39,7 +44,8 @@ namespace):
   &lt;name&gt;...&lt;/name&gt;
   &lt;summary&gt;...&lt;/summary&gt;
   &lt;description&gt;...&lt;/description&gt;
-  &lt;homepage&gt;...&lt;/homepage&gt;
+  &lt;homepage&gt;...&lt;/homepage&gt; ?
+  &lt;category type='...' ? &gt;...&lt;/category&gt; *
 
   &lt;icon type='...' href='...'/&gt; *
   &lt;feed src='...' arch='...'/&gt; *
@@ -60,8 +66,8 @@ If the attribute is not present, the file can be read by all versions.
 </dd>
 
 <dt>uri</dt>
-<dd>This attribute is only needed for remote interfaces (fetched via HTTP). The value must exactly match the expected
-URL, to prevent an attacker replacing one correctly-signed interface with another (e.g., returning the interface for the
+<dd>This attribute is only needed for remote feeds (fetched via HTTP). The value must exactly match the expected
+URL, to prevent an attacker replacing one correctly-signed feed with another (e.g., returning a feed for the
 <b>shred</b> program when the user asked for the <b>backup</b> program).
 </dd>
 
@@ -70,6 +76,8 @@ URL, to prevent an attacker replacing one correctly-signed interface with anothe
 not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
 <dt>&lt;description&gt;</dt> <dd>a full description, which can be several paragraphs long</dd>
 <dt>&lt;homepage&gt;</dt> <dd>the URL of a web-page describing this interface in more detail</dd>
+<dt>&lt;category&gt;</dt> <dd>a classification for the interface. If no type is given, then the category is one of the
+'Main' categories defined by the <a href='http://standards.freedesktop.org/menu-spec/latest/apa.html'>freedesktop.org menu specification</a>. Otherwise, it is a URI giving the namespace for the category.</dd>
 <dt>&lt;icon&gt;</dt> <dd>an icon to use for the program; this is used by programs such as
 <a href="http://rox.sourceforge.net/desktop/AddApp">AddApp</a>.</dd>
 
@@ -85,6 +93,7 @@ A group has this syntax:
   &lt;group version='...' ?
        	  released='...' ?
 	  main='...' ?
+	  license='...' ?
           stability='...' ?
           arch='...' ? &gt;
     [requires] *
@@ -123,10 +132,10 @@ the closest ancestor &lt;group&gt; which defines it):
  <dt>id</dt>
  <dd>The digest of the implementation's manifest, in the form <b>alg=value</b>.
  See the <a href='manifest-spec.html'>manifest specification</a> for details
- about manifests. If the interface file is a local file (the interface 'uri'
+ about manifests. If the feed file is a local file (the interface 'uri'
  starts with <b>/</b>) then the <b>id</b> <i>may</i> instead contain the
  pathname of a local directory (either an absolute path or a path relative
- to the directory containing the interface file).</dd>
+ to the directory containing the feed file).</dd>
 
  <dt>version</dt>
  <dd>The version number. See the version numbers section below for more details.</dd>
@@ -155,6 +164,9 @@ the closest ancestor &lt;group&gt; which defines it):
  The injector knows that certain platforms are backwards-compatible with others, so binaries with <b>arch="Linux-i486"</b>
  will still be available on <i>Linux-i686</i> machines, for example. Either the <i>os</i> or <i>cpu</i> part may be <b>*</b>,
  which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>.</dd>
+
+ <dt>license</dt>
+ <dd>License terms (typically a Trove category, as used on <a href='http://freshmeat.net/browse/13/'>freshmeat.net</a>).</dd>
 </dl>
 
 <p>
@@ -395,12 +407,12 @@ you shouldn't add the restriction <b>before='5.2'</b>, because when 5.2 comes
 out it should still work with your program. Of course, this might not always work,
 and hopefully the problem will be reported while the new library version is marked
 as testing (before most users hit the problem). Once you know that 5.2 is a problem,
-you can add the <b>before='5.2'</b> restriction to the interface then.
+you can add the <b>before='5.2'</b> restriction to the implementation then.
 </p>
 
 <p>
 Incompatible changes (where a newer version cannot be used in place of an older
-version) to an interface should be handled by creating a new interface. Eg:
+version) to an interface should be handled by creating a new interface URI. Eg:
 </p>
 
 <ul>
@@ -410,7 +422,7 @@ version) to an interface should be handled by creating a new interface. Eg:
 
 <p>
 Note that version numbers containing dash characters are not supported before version 0.24 of the
-injector. To create interfaces that still work with older versions, you can use the
+injector. To create feeds that still work with older versions, you can use the
 <b>version-modifier</b> attribute. E.g., use <b>version='1' version-modifier='-pre'</b> instead
 of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
 </p>
@@ -418,8 +430,8 @@ of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
 <h2 id='stability'>Stability</h2>
 
 <p>
-The interface file also gives a stability rating for each implementation. The following
-levels are allowed (must be lowercase in the interface files):
+The feed file also gives a stability rating for each implementation. The following
+levels are allowed (must be lowercase in the feed files):
 </p>
 
 <ul>
@@ -483,9 +495,6 @@ have the following meanings when found as a direct child of a &lt;group&gt; or &
 <dd>The person who created this implementation. For a binary, this is the person who
 compiled it.</dd>
 
-<dt>dc:license</dt>
-<dd>License terms (a URI for the license is suggested).</dd>
-
 </dl>
 
 <p>
@@ -499,7 +508,7 @@ available (released) and requires (requires).
 </p>
 
 <p>
-The source element may be used in future to record the source interface used to build this implementation.
+The source element may be used in future to record the source used to build this implementation.
 </p>
 
 <h2>Digital signatures</h2>
