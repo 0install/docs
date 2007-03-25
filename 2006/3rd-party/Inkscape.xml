@@ -20,6 +20,7 @@ user and developer community by using open, community-oriented development.</des
   <homepage>http://inkscape.org/</homepage>
 
   <icon href="http://0install.net/tests/Inkscape.png" type="image/png"/>
+  <category>Graphics</category>
 
   <group arch="Linux-i386" main="usr/bin/inkscape">
     <implementation id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" stability="stable" version="0.43">
@@ -38,7 +39,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGADeeBSn9tx+xORARAgaMAKCGlfQGrurJHqdkGzTVKPE/7pLuSACfXQKwcCvkcMVytIXQ
-wEKvcYIH0p0=
+iD8DBQBGBkQyBSn9tx+xORARAqzjAJ9zgXZQY3tpGF8UEQyguYNGmzPkMQCeKHLky9aVf+h3kEXT
+bPxId7bXIlU=
 
 -->

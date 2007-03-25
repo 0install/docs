@@ -4,19 +4,19 @@
   <name>0compile</name>
   <summary>create a binary release from source code</summary>
   <description>
-0compile creates a binary from source code, either for your own use or ready
-for publishing on the web through Zero Install. It can use Zero Install to
-download any build dependencies (compilers, header files, build tools, etc).
+0compile creates a binary from source code, either for your own use or ready for
+publishing on the web through Zero Install. It can use Zero Install to download
+any build dependencies (compilers, header files, build tools, etc).
 
-This is useful if there is no binary for your platform, or if you wish to modify the
-program in some way.
+This is useful if there is no binary for your platform, or if you wish to modify
+the program in some way.
 
-If plash is installed, it is used to sandbox the build so that it can't accidentally
-modifiy any files outside of the build directory.
+If plash is installed, it is used to sandbox the build so that it can't
+accidentally modifiy any files outside of the build directory.
 
-For a full tutorial, see 0compile's homepage.
-  </description>
+For a full tutorial, see 0compile's homepage.</description>
   <homepage>http://0install.net/0compile.html</homepage>
+  <category>Development</category>
 
   <group main="0compile">
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
@@ -47,7 +47,7 @@ For a full tutorial, see 0compile's homepage.
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcW70rgeCgFmlPMERAvQ7AJ49dWx1S0470cLD63kXHixtpGQ2BQCgwU1h++VrcXY9IKDr
-dHXIOXT9leU=
+iD8DBQBGBkTJrgeCgFmlPMERAjWzAJ9HjyOI4Vk09yw1q29Eq1qJaj0h2ACcDEhVkqeVBuch0JfI
+3mhsJqmkIek=
 
 -->

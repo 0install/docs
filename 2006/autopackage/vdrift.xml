@@ -3,7 +3,9 @@
 <interface uri="http://0install.net/2006/autopackage/vdrift.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>vdrift</name>
   <summary>VDrift</summary>
-  <description>VDrift is a realistic racing simulation with drifting in mind</description>
+  <description>
+VDrift is a realistic racing simulation with drifting in mind</description>
+  <category>Game</category>
 
   <group main="usr/share/games/vdrift/bin/vdrift">
     <implementation id="sha1new=b9cf8cd1031b8edc0e1d98b52288473263864449" released="2006-12-02" version="2006.10.06">
@@ -12,7 +14,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbzdBSn9tx+xORARAqpeAJ4wtBjkFKJ1fH3zg0cd+6zIZTtpBQCeL6AeW9Xk9f/2F6v/
-cwgx2rPM47E=
+iD8DBQBGBkTDBSn9tx+xORARAsNVAKCCocC+I1QBW8jYS1sb0hr7DQHOowCfZJ/TIkj4z817ar+o
+3CGLnVIYLQw=
 
 -->

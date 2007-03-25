@@ -19,10 +19,8 @@ C++'s. For a quick feature comparison, see this comparison of D with C, C++, C#
 and Java.</description>
 
   <!-- Optionally, uncomment this to specify the program's homepage: -->
-  <homepage>http://dgcc.sourceforge.net/</homepage> --&gt;
-
-  <!-- Optionally, uncomment this to specify an icon: -->
-  <!-- <icon href='http://site/icon.png' type='image/png'/> -->
+  <homepage>http://dgcc.sourceforge.net/</homepage>
+  <category>Development</category>
 
   <group main="bin/gdc">
     <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="2006-11-25" stability="stable" version="0.19">
@@ -37,7 +35,7 @@ and Java.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFzcMdBSn9tx+xORARAixCAKCGRKtvK3ZFiHlEOrF2jwln8J3XLgCfVR3yDux83++53+rJ
-176zdBabsgA=
+iD8DBQBGBkVTBSn9tx+xORARAsHgAJwN6rKMEw6Pn8d2Yq2OU7CLwH/g9gCeO8uTtMpPdnJFE/CW
+oxqw2ZSe4r0=
 
 -->

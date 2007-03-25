@@ -4,10 +4,10 @@
   <name>solfege</name>
   <summary>smarten your ears</summary>
   <description>
-Solfege is free music education software. Use it to train your rhythm,
-interval, scale and chord skills. Solfege - Smarten your ears!
-  </description>
+Solfege is free music education software. Use it to train your rhythm, interval,
+scale and chord skills. Solfege - Smarten your ears!</description>
   <homepage>http://www.solfege.org</homepage>
+  <category>Audio</category>
 
   <group main="bin/solfege">
     <implementation id="sha1new=e546b9e0f87150c7e97ebfad91b72a12a39745ce" released="2006-12-02" version="3.6.3">
@@ -16,7 +16,7 @@ interval, scale and chord skills. Solfege - Smarten your ears!
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbyvBSn9tx+xORARAgYYAJ4rdqyneSWjFol6QRni6IaToYvHSACfUcigASdPisd0GSk9
-6u+/wiVhHk4=
+iD8DBQBGBkSEBSn9tx+xORARAuL8AJsHZ4ncDH6YM/gnOaO+X5TQmjTOoACfYTa7KIxBSeDMgJW9
+3iQ45evHmS0=
 
 -->

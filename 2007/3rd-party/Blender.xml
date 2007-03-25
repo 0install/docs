@@ -15,12 +15,13 @@ well as an integrated game engine for real-time interactive 3D, and game
 creation and playback with cross-platform compatibility.</description>
   <homepage>http://www.blender.org</homepage>
   <icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/>
+  <category>Video</category>
   <implementation arch="Linux-i386" id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" license="OSI Approved :: GNU General Public License (GPL)" main="blender" released="2007-01-13" version="2.42">
     <archive extract="blender-2.42a-linux-glibc232-py24-i386-static" href="http://video.blendertestbuilds.de/download.blender.org/release/Blender2.42/blender-2.42a-linux-glibc232-py24-i386-static.tar.bz2" size="11505773"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFzenlBSn9tx+xORARAn9NAJ9kwsBgHzxqmF7gAcokRA8L9ZTeBACfdNwC5P5Pcg0RpknN
-dmktwE3uLqk=
+iD8DBQBGBkPTBSn9tx+xORARAlyFAJ9lrBefZyirtrtx9fC/qB6cNx7xigCfWwE0nARoYAT32OYA
+oeyajZmMlH0=
 
 -->

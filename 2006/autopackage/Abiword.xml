@@ -3,7 +3,9 @@
 <interface uri="http://0install.net/2006/autopackage/Abiword.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>abiword</name>
   <summary>AbiWord Word Processor</summary>
-  <description>AbiWord is a lightweight word processing application.</description>
+  <description>
+AbiWord is a lightweight word processing application.</description>
+  <category>Office</category>
 
   <group main="bin/abiword">
     <implementation id="sha1new=ed47b2e3271ea9620a47a57534d6ea35e0753017" released="2006-12-02" version="2.4.5">
@@ -12,7 +14,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbx2BSn9tx+xORARAnP0AJ91YaSdOGK4NskiRaRvH0IdnH+lrgCeOZuaWzCS+eWQ6jOi
-es2ehNycpsE=
+iD8DBQBGBkRJBSn9tx+xORARApoWAJ4okjFTQ3ePaaf0ZFoigSael0mY9ACfaDxqLS18Ski2cqvv
+NHQz3tgOiNw=
 
 -->

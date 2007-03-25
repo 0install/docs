@@ -8,10 +8,10 @@ Stellarium is a free open source planetarium for your computer. It shows a
 realistic sky in 3D, just like what you see with the naked eye, binoculars or a
 telescope.
 
-It is being used in planetarium projectors. Just set your coordinates and go.
-  </description>
+It is being used in planetarium projectors. Just set your coordinates and go.</description>
   <homepage>http://www.stellarium.org/</homepage>
   <icon href="http://0install.net/feed_icons/Stellarium.png" type="image/png"/>
+  <category>Education</category>
 
   <group main="bin/stellarium">
     <implementation id="sha1new=bca0db4dd29e89a5b695686e4657cda70017dd5b" released="2006-12-02" version="0.6.2">
@@ -20,7 +20,7 @@ It is being used in planetarium projectors. Just set your coordinates and go.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcsbMBSn9tx+xORARAmr3AJ9UY12YCPV0mXfQo1TS26xnz/dPgACdGUKs0QviNNxwCxZz
-Cg1wnIkVziQ=
+iD8DBQBGBkS5BSn9tx+xORARAmqwAJ4mXN+rPpoRBNOBxA4yNB0hVBaTjgCeIoXezAG9X1iE6WJB
+sa2I5Fo4Sdw=
 
 -->

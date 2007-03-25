@@ -7,9 +7,9 @@
 OpenEuclide is a 2D geometry software: figures are defined dynamically by
 describing formal geometrical constraints. This project is a basic tool for
 educational or modeling purpose. It is distributed under the GNU GPL licence,
-free and multi-platform (up to now, GNU and windows).
-  </description>
+free and multi-platform (up to now, GNU and windows).</description>
   <homepage>http://coulon.publi.free.fr/openeuclide</homepage>
+  <category>Education</category>
 
   <group main="bin/openeuclide">
     <implementation id="sha1new=6247534f842d585e589c0b946d6a19654fe6dc34" released="2006-12-02" version="0.5">
@@ -18,7 +18,7 @@ free and multi-platform (up to now, GNU and windows).
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbyhBSn9tx+xORARAmn6AKCg07Ue1SC0eO2nKW7k1Y2Z+nOPEQCeJXK7P6QjuBFNPWvS
-acniJo1zwRI=
+iD8DBQBGBkRuBSn9tx+xORARAnKsAKCa77WweXSkBdFm9+6sNulqSE25UwCfSl+tJrON3FuIv/7E
+vSspYcyvMvg=
 
 -->

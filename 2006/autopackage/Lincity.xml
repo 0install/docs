@@ -8,9 +8,9 @@ Lincity is a city simulation game. You are required to build and maintain a
 city. You must feed, house, provide jobs and goods for your residents. You can
 build a sustainable economy with the help of renewable energy and recycling, or
 you can go for broke and build rockets to escape from a pollution ridden and
-resource starved planet, it's up to you.
-  </description>
+resource starved planet, it's up to you.</description>
   <homepage>http://lincity.sourceforge.net/</homepage>
+  <category>Game</category>
 
   <group main="bin/xlincity">
     <implementation id="sha1new=55826888c6a24c6b728063ad3b765788cf105646" released="2006-12-02" version="1.13.1">
@@ -19,7 +19,7 @@ resource starved planet, it's up to you.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbycBSn9tx+xORARApJ3AJsEGTeAwk5OLL0Ofyhqmcyb9ruOIQCfZCBRve4ewcNlMin7
-bB/E1MBHjqA=
+iD8DBQBGBkRcBSn9tx+xORARAl1hAJ9MqmjgMmzL09NWXuWjLd8wAMIyTgCffSO9/IrM9ZwG6rMJ
+fgkKIHgkRjY=
 
 -->

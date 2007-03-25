@@ -4,21 +4,21 @@
   <name>GTK-2.4</name>
   <summary>set up a GTK 2.4 build environment</summary>
   <description>
-    This program runs a command in an environment with PKG_CONFIG_PATH
-    set to include the location of the GTK 2.4 and related library headers.
-    By default, it runs /bin/sh to give you a shell.
+This program runs a command in an environment with PKG_CONFIG_PATH set to
+include the location of the GTK 2.4 and related library headers. By default, it
+runs /bin/sh to give you a shell.
 
-    Typical usage is to run this and then configure and build your program
-    from the new shell. The resulting binary should work on all systems with
-    GTK 2.4 and later.
+Typical usage is to run this and then configure and build your program from the
+new shell. The resulting binary should work on all systems with GTK 2.4 and
+later.
 
-    Note: if you build your program using Zero Install then it's easier to
-    just add the GTK dependencies to the source interface file.
-  </description>
+Note: if you build your program using Zero Install then it's easier to just add
+the GTK dependencies to the source interface file.</description>
 
   <homepage>http://0install.net</homepage>
 
   <icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/>
+  <category>Development</category>
 
   <group main="gtk-2.4">
     <requires interface="http://0install.net/2006/interfaces/GTK-dev">
@@ -67,7 +67,7 @@
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBFabGArgeCgFmlPMERAgEWAKC+MWTauUjnOIO8R3GQ5EYQsqkUbwCdHvTTsuJ5kO6RE81q
-6XPYV2g5DtI=
+iD8DBQBGBkTSrgeCgFmlPMERAsRoAJ44odcjuMB7DodsSldVAASvDcPnGwCdGG42HhZeWBv6LqnH
+6Ks7u0tCQUE=
 
 -->

@@ -3,7 +3,9 @@
 <interface uri="http://0install.net/2006/autopackage/sear.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>sear</name>
   <summary>Sear - a client for Worldforge</summary>
-  <description>Sear is a client for MMORPGs using the Worldforge system.</description>
+  <description>
+Sear is a client for MMORPGs using the Worldforge system.</description>
+  <category>Game</category>
 
   <group main="bin/sear">
     <implementation id="sha1new=1eb476efef2a17ab14efb77ae99ede2d998779b1" released="2006-12-02" version="0.6.2">
@@ -12,7 +14,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbypBSn9tx+xORARAh98AKCT3yp4BbhvNSweCmaHp8/E8ttPtwCfSnuAKDsLuEl5JCMH
-RD3spqiDyy8=
+iD8DBQBGBkR7BSn9tx+xORARAq3IAJwK/NaMtSKkCdvoReb7OyWKsHMk4ACfVKFJxUDF39ZNpOkM
+9jIFcU4ixDk=
 
 -->

@@ -3,23 +3,24 @@
 <interface uri="http://0install.net/2006/autopackage/armagetronad.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>armagetronad</name>
   <summary>a Tron clone in 3D</summary>
-  <description>&quot;A Tron clone in 3D&quot;.
+  <description>
+&quot;A Tron clone in 3D&quot;.
 
 This has been the tagline of Armagetron, since, well, a very long time, and is
-probably the shortest and most accurate description possible. Tron was an
-arcade game based on the movie of the same name, release by Disney in 1982. The
+probably the shortest and most accurate description possible. Tron was an arcade
+game based on the movie of the same name, release by Disney in 1982. The
 original game consisted of 4 sub-games, the only one of concern is the 'Light
 Cycles' one, in which the player uses a left/right joystick to control a 'Light
-Cycle' which leaves a wall behind it wherever the cycle it goes, turning only
-at 90 degree angles. The player must then get the AI to crash into their wall
-while avoiding hitting the AI's own wall themselves. Those were the humble
-beginnings of Armagetron Advanced's game play, which has now blossomed into 16
-player mayhem, with highly advanced AI, network game play, and of course all in
-a 3D environment.
-  </description>
+Cycle' which leaves a wall behind it wherever the cycle it goes, turning only at
+90 degree angles. The player must then get the AI to crash into their wall while
+avoiding hitting the AI's own wall themselves. Those were the humble beginnings
+of Armagetron Advanced's game play, which has now blossomed into 16 player
+mayhem, with highly advanced AI, network game play, and of course all in a 3D
+environment.</description>
 
   <homepage>http://www.armagetronad.net/</homepage>
   <icon href="http://0install.net/feed_icons/armagetronad.png" type="image/png"/>
+  <category>Game</category>
 
   <group main="bin/armagetronad">
     <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="2006-12-02" version="0.2.8.2.1">
@@ -28,7 +29,7 @@ a 3D environment.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbyGBSn9tx+xORARAn7VAKCMCRTIyicYeAc45w3Dyh4xydoXJwCcDsiGlsQ8MBMniDKQ
-CStZ/EoCv8Q=
+iD8DBQBGBkROBSn9tx+xORARAhnzAJ9Nn8M02IvVqkH3mESoUX+hSvvjPQCfTbX6DiFE9nwIwERC
+2wqBY3Bp3TM=
 
 -->

@@ -14,6 +14,7 @@ This package includes the Subversion client (svn), tools to create a Subversion
 repository (svnadmin) and to make a repository available over a network
 (svnserve).</description>
   <homepage>http://subversion.tigris.org</homepage>
+  <category>Development</category>
   <group>
     <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/subversion_1.4.2dfsg1-2_i386.deb" size="1026576" type="application/x-deb"/>
@@ -24,7 +25,7 @@ repository (svnadmin) and to make a repository available over a network
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktTBSn9tx+xORARAqrxAJ9a+bs3wv9G22sGfWrXlspjEK3IaQCeJxQ2ERQ9WH+sv6ug
-FkgzF2mS6gg=
+iD8DBQBGBkQGBSn9tx+xORARAqdNAJ4zmVQDC/BQ8aJEoM7kZ0OuuqeD3ACeLIeYQ2x+3OMEOfxs
+aliTW5Od0bA=
 
 -->

@@ -3,8 +3,10 @@
 <interface uri="http://0install.net/2006/autopackage/gtkdc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>gtkdc</name>
   <summary>client for the Direct Connect network</summary>
-  <description>A client for the Direct Connect peer-to-peer network inspired by DC++.</description>
+  <description>
+A client for the Direct Connect peer-to-peer network inspired by DC++.</description>
   <homepage>http://www.gtkdc.org/</homepage>
+  <category>Network</category>
 
   <group main="bin/gtkdc">
     <implementation id="sha1new=890406973a3938e2f79be004a1690ccb18ccd258" released="2006-12-02" version="0.2.1">
@@ -13,7 +15,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcbyUBSn9tx+xORARAh+kAJ9l9ijoG6NVIJ/HEQYRz2NF65yg+wCfZUEPQzeN1hsFsxYz
-i8HpyRwLPr4=
+iD8DBQBGBkRYBSn9tx+xORARApQ9AJ4gIcHDPagsHU/Ap3aNWuAGlPa/OgCfbjGlLl+PQiOtleNg
+fqJjxj0BDEo=
 
 -->
