@@ -164,25 +164,26 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "feeds"]'>
-    <table class='picturebullets'>
-     <xsl:for-each select='document("all-feeds.xml")/*/feed'>
-      <tr>
-       <td class='image'>
-        <xsl:choose>
-	  <xsl:when test='@icon'><img src='{@icon}' alt=''/></xsl:when>
-	  <xsl:otherwise><img src='tango/applications-system.png' alt=''/></xsl:otherwise>
-	</xsl:choose>
-       </td>
-       <td><strong><xsl:value-of select='@name'/></strong> &#8212; <i>
-        <xsl:value-of select='@summary'/></i><br/>
-	<xsl:if test='@homepage'>
-          <a href='{@homepage}'>Home page</a> | 
-	</xsl:if>
-	<a href='{@uri}'>Zero Install feed</a>
-       </td>
-      </tr>
+     <xsl:for-each select='document("all-feeds.xml")/*/category'>
+       <xsl:variable name='category'><xsl:value-of select='@name'/></xsl:variable>
+       <h3><xsl:value-of select='$category'/></h3>
+       <table class='picturebullets' style='margin-left: 2em'>
+        <xsl:for-each select='document("all-feeds.xml")/*/feed[@category=$category]'>
+         <tr>
+          <td class='image'>
+	   <img src='{@icon}' alt='' width='{@width}' height='{@height}'/>
+          </td>
+          <td><strong><xsl:value-of select='@name'/></strong> &#8212; <i>
+           <xsl:value-of select='@summary'/></i><br/>
+	   <xsl:if test='@homepage'>
+             <a href='{@homepage}'>Home page</a> | 
+	   </xsl:if>
+	   <a href='{@uri}'>Zero Install feed</a>
+          </td>
+         </tr>
+        </xsl:for-each>
+      </table>
      </xsl:for-each>
-    </table>
     <p>
       Number of feeds: <xsl:value-of select='count(document("all-feeds.xml")/*/feed)'/>
     </p>

@@ -12,6 +12,8 @@ for x in rox_homepages.documentElement.getElementsByTagName('feed'):
 	homepages[x.getAttribute('uri')] = x.getAttribute('homepage')
 
 def quoteattr(x):
+	if type(x) == int:
+		x = str(x)
 	if x:
 		return xml.sax.saxutils.quoteattr(x)
 	return "''"
@@ -22,6 +24,11 @@ known.sort(key = lambda s: s.rsplit('/', 1)[1].lower())
 known_feeds = {}
 
 result = codecs.open('all-feeds.xml', 'w', encoding = 'utf-8')
+
+max_icon_size = 64
+
+categories = set()
+pretty_name = {'Game' : 'Games'}
 
 result.write('<?xml version="1.0" encoding="utf-8"?>\n')
 result.write('<list>\n')
@@ -50,6 +57,12 @@ for uri in known:
 	if homepage is None:
 		homepage = homepages.get(uri, None)
 
+	for elem in iface.get_metadata(XMLNS_IFACE, 'category'):
+		category = pretty_name.get(elem.content, elem.content)
+		break
+	else:
+		category = 'Unknown'
+
 	have_icon = False
 	icon_path = 'feed_icons/%s.png' % uri.split('/')[-1]
 	if os.path.isfile(icon_path):
@@ -70,13 +83,33 @@ for uri in known:
 				break
 	if not have_icon:
 		icon_path = 'tango/applications-system.png'
-
-	result.write("<feed uri=%s name=%s summary=%s icon=%s" \
-		% tuple(map(quoteattr, (uri, iface.name, iface.summary, icon_path))))
 	
+	icon_meta = {}
+	for line in os.popen("pngmeta --all '%s'" % icon_path):
+		if ':' in line:
+			key, value = line.split(':', 1)
+			icon_meta[key] = value
+
+	width = int(icon_meta['image-width'])
+	height = int(icon_meta['image-height'])
+
+	if width > max_icon_size or height > max_icon_size:
+		scale = float(max_icon_size) / max(width, height)
+		width *= scale
+		height *= scale
+	width, height = map(int, (width, height))
+
+	result.write("<feed uri=%s name=%s summary=%s icon=%s width=%s height=%s" \
+		% tuple(map(quoteattr, (uri, iface.name[0].capitalize() + iface.name[1:], iface.summary, icon_path, width, height))))
+
 	if homepage:
 		result.write(' homepage=%s' % quoteattr(homepage))
+	result.write(' category=%s' % quoteattr(category))
+	categories.add(category)
 	result.write('/>\n\n')
+
+for c in sorted(categories - set(['Unknown'])) + ['Unknown']:
+	result.write('<category name=%s/>' % quoteattr(c))
 
 result.write("</list>\n")
 
