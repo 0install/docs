@@ -164,9 +164,16 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "feeds"]'>
+     <h2>Contents</h2>
+     <ol>
+       <xsl:for-each select='document("all-feeds.xml")/*/category'>
+         <li><a href='#cat-{@name}'><xsl:value-of select='@name'/></a></li>
+       </xsl:for-each>
+     </ol>
+
      <xsl:for-each select='document("all-feeds.xml")/*/category'>
        <xsl:variable name='category'><xsl:value-of select='@name'/></xsl:variable>
-       <h3><xsl:value-of select='$category'/></h3>
+       <h2 id='cat-{$category}'><xsl:value-of select='$category'/></h2>
        <table class='picturebullets' style='margin-left: 2em'>
         <xsl:for-each select='document("all-feeds.xml")/*/feed[@category=$category]'>
          <tr>
