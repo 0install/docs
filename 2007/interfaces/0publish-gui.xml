@@ -26,8 +26,11 @@ these feeds.</description>
     <implementation id="sha1new=aa75e953f4f83f1551a3ba3cea3137bd01dd1c20" released="2007-02-11" stability="stable" version="0.4">
       <archive extract="0publish-gui-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.4.tar.bz2" size="29267"/>
     </implementation>
-    <implementation id="sha1new=2a95d43799d51c3c947a6fdb46a36daa4c0eb183" released="2007-03-10" version="0.5">
+    <implementation id="sha1new=2a95d43799d51c3c947a6fdb46a36daa4c0eb183" released="2007-03-10" stability="stable" version="0.5">
       <archive extract="0publish-gui-0.5" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.5.tar.bz2" size="29310"/>
+    </implementation>
+    <implementation id="sha1new=e361f46d53de28f7779e25687c772ad4420f10ac" released="2007-03-25" version="0.6">
+      <archive extract="0publish-gui-0.6" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.6.tar.bz2" size="29658"/>
     </implementation>
     <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
       <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
@@ -35,7 +38,7 @@ these feeds.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkN9rgeCgFmlPMERAva3AKCTPeEzAmhTgkYllBJbNkuaYLmFjgCgkG2gifTqFzxBBWo1
-e05dhNcv0fU=
+iD8DBQBGBl8NrgeCgFmlPMERAlmfAJ99tYO1R2d0hVGgx3cbcXOXX44ybwCgtgIsDq5aImRDU8Wg
+TFHGu2oqfO8=
 
 -->
