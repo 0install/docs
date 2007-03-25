@@ -167,7 +167,8 @@
      <h2>Contents</h2>
      <ol>
        <xsl:for-each select='document("all-feeds.xml")/*/category'>
-         <li><a href='#cat-{@name}'><xsl:value-of select='@name'/></a></li>
+         <xsl:variable name='category'><xsl:value-of select='@name'/></xsl:variable>
+         <li><a href='#cat-{@name}'><xsl:value-of select='@name'/></a> <span class='count'>(<xsl:value-of select='count(document("all-feeds.xml")/*/feed[@category=$category])'/>)</span></li>
        </xsl:for-each>
      </ol>
 

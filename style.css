@@ -321,3 +321,8 @@ table.quicklinks td {
 	-moz-border-radius: 1em 1em 1em 1em;
 	width: 25%;
 }
+
+span.count {
+	color: #888;
+	padding-left: 1em;
+}

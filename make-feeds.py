@@ -61,7 +61,12 @@ for uri in known:
 		category = pretty_name.get(elem.content, elem.content)
 		break
 	else:
-		category = 'Unknown'
+		for x in iface.implementations.values():
+			if x.main:
+				category = 'Unknown'
+				break
+		else:
+			category = 'Library'
 
 	have_icon = False
 	icon_path = 'feed_icons/%s.png' % uri.split('/')[-1]
