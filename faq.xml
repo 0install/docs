@@ -272,7 +272,7 @@ chances for automatic checking (eg, verifying GPG signatures, etc):
 </p>
 
 <p style='text-align: center'>
-<img width="576" height="363" src="trustbox.png"
+<img width="432" height="382" src="screens/trust-domain.png"
      alt='You are asked to confirm each new key'/>
 </p>
 
