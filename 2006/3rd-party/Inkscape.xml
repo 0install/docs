@@ -34,12 +34,12 @@ user and developer community by using open, community-oriented development.</des
     <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.x86.package" size="5746250" start-offset="30389" type="application/x-lzma-compressed-tar"/>
   </implementation>
     <implementation id="sha1new=97ee1b0b41832415ce76ba28150394e679f01854" main="bin/inkscape" released="2007-03-20" version="0.45.1">
-      <archive href="http://puzzle.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
+      <archive href="http://mesh.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkQyBSn9tx+xORARAqzjAJ9zgXZQY3tpGF8UEQyguYNGmzPkMQCeKHLky9aVf+h3kEXT
-bPxId7bXIlU=
+iD8DBQBGDidHBSn9tx+xORARAtmvAJ9qNAkt+Sioazj4HoWhgKlRGZQSgACfa6uEUFSfUetKKhrE
+k7lv7IplAnA=
 
 -->
