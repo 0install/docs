@@ -3,8 +3,9 @@
 
 <h2>FAQ</h2>
 
-<toc level='h3'/>
+<toc level='h3' super-level='h2'/>
 
+<div>
 <h2>General questions</h2>
 
 <h3>What is it?</h3>
@@ -68,11 +69,13 @@ the menu.
 </p>
 
 <p><i>However</i>, there's nothing to stop you implementing a more
-'traditional' installation system on top of Zero Install. So, a GNOME user
-could drag Firefox to the GNOME installation system and have a .desktop file
-created for it automatically. The new menu item would still be independent of the
-program data though; removing the program from the cache wouldn't remove the menu
-item (clicking on it would simply offer to download the program again).</p>
+'traditional' installation system on top of Zero Install. 
+<a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a>
+adds a launcher to the GNOME or KDE Applications menu, by creating a
+freedesktop.org ".desktop" file for it. The new menu entry is independent of
+the program data though; removing the program from the cache doesn't remove the
+menu item (clicking on it would simply offer to download the program
+again).</p>
 
 <h3>Will Zero Install conflict with my existing package manager?</h3>
 
@@ -204,6 +207,9 @@ slashpackage</a> though, because I had never heard of them when I started the
 project.</p>
 
 
+</div>
+
+<div>
 <h2>Network questions</h2>
 
 
@@ -260,6 +266,9 @@ new location, and <b>0store</b> allows adding any archive to the cache (provided
 its message digest matches).
 </p>
 
+
+</div>
+<div>
 
 <h2>Security questions</h2>
 
@@ -328,6 +337,9 @@ without Zero Install (using wget, or just by typing the program in themselves).
 If your kernel is insecure, you have a problem with or without Zero Install.
 </p>
 
+
+</div>
+<div>
 
 <h2>Developers</h2>
 
@@ -460,5 +472,7 @@ more compatible binaries by compiling against older versions of header files; se
 <a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a>
 for an example.
 </p>
+
+</div>
 
 </html>

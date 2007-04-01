@@ -326,3 +326,18 @@ span.count {
 	color: #888;
 	padding-left: 1em;
 }
+
+ul.faqtoc {
+	list-style-type: none;
+	counter-reset: faqno;
+}
+
+ul.faqtoc li ol li:before {
+	content: counter(faqno, decimal) ". ";
+	counter-increment: faqno 1;
+}
+
+ul.faqtoc li ol {
+	padding-bottom: 0.5em;
+	list-style-type: none;
+}

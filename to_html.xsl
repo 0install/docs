@@ -156,11 +156,30 @@
 
   <xsl:template match='*[name() = "toc"]'>
     <xsl:variable name='level'><xsl:value-of select='@level'/></xsl:variable>
-    <ol>
-    <xsl:for-each select='following::*[name() = $level]'>
-      <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
-    </xsl:for-each>
-    </ol>
+
+    <xsl:choose>
+      <xsl:when test='@super-level'>
+	<xsl:variable name='superlevel'><xsl:value-of select='@super-level'/></xsl:variable>
+        <ul class='faqtoc'>
+          <xsl:for-each select='following::*[name() = $superlevel]'>
+            <li><xsl:value-of select='.'/>
+	      <ol>
+                <xsl:for-each select='../*[name() = $level]'>
+                  <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+                </xsl:for-each>
+	      </ol>
+	    </li>
+          </xsl:for-each>
+        </ul>
+      </xsl:when>
+      <xsl:otherwise>
+        <ol>
+        <xsl:for-each select='following::*[name() = $level]'>
+          <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+        </xsl:for-each>
+        </ol>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match='*[name() = "feeds"]'>
