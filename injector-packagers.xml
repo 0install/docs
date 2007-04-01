@@ -85,7 +85,7 @@ contains a single top-level directory called <b>blender-2.42a-linux-glibc232-py2
 
 <p>
 The reason this matters is because we need each version to have a similar structure. We don't want a
-directory name that's going to be different each time, so we select to just extract the contents of
+directory name that's going to be different each time, so we select to extract just the contents of
 this directory. 0publish-gui is pretty smart about guessing whether to extract everything or just a
 sub-directory, so just go with the default.
 </p>
@@ -155,8 +155,8 @@ to sign the feed so people can check that it's really from us. Go back to the
 </p>
 
 <p>
-When generating a key, you'll be asked a few difficult-looking questions; it's
-safest to just accept the defaults offered. Enter your name and e-mail address
+When generating a key, you'll be asked a few difficult-looking questions; if unsure,
+just accept the defaults offered. Enter your name and e-mail address
 when prompted, and choose a good passphrase to protect the key:
 </p>
 
