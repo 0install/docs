@@ -143,6 +143,57 @@ large software systems.
 </p>
 </dd>
 
+<dt>Nix</dt>
+
+<dd>
+<p>
+<a href='http://nix.cs.uu.nl/'>Nix</a> is another "purely functional" package
+manager. It is purely functional in the sense that each version of a package
+has its own directory. As with Zero Install, "upgrading" creates a new
+directory for the new version, rather than modifying the existing one. Unlike
+Zero Install, however, whether a package is installed affects the behaviour of the
+system. For example, running "firefox" when Firefox isn't installed produces an
+error in Nix, whereas in Zero Install it will install Firefox first if missing
+and then continue. In other words, installation has side-effects in Nix.
+</p>
+
+<p>
+Additional feeds (e.g. for pre-built binaries) can be registed using
+"nix-channel --add", which appears to work much like "0launch --feed", although
+each channel can contain binaries for multiple packages.
+</p>
+
+<p>
+Each version of a package has a digest, which includes all build dependencies
+(e.g. the version of the compiler used), just as it does in Zero Install (for
+packages built using 0compile, at least).
+</p>
+
+<p>
+One difference between Nix and Zero Install is that Nix treats configurations
+as packages. Changing your configuration is like "upgrading" your configuration
+package to a new version. Rolling back a change is like reverting to a previous
+version. Zero Install doesn't generally handle configuration settings,
+preferring to let the user use subversion for that, but it's an interesting idea.
+</p>
+
+<p>
+Building a Nix package involves creating a "Nix expression" in a (custom)
+functional language. The expression fills the same role as a Zero Install source
+feed (it says where to download the source, what its digest is, what the
+build dependencies are, and how to build it).
+</p>
+
+<p>
+While Zero Install is mainly targetted at adding additonal packages to an existing
+system, Nix aims to manage the whole system (although it installs cleanly alongside
+your existing package manager). Nix packages have short names (like "perl") not
+full URIs, and thus it appears to assume a centrally-controlled repository. Nix
+does not currently appear to sign the channel files.
+</p>
+
+</dd>
+
 </dl>
 
 <p>
