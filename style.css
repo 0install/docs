@@ -341,3 +341,7 @@ ul.faqtoc li ol {
 	padding-bottom: 0.5em;
 	list-style-type: none;
 }
+
+q {
+	font-style: italic;
+}

@@ -161,35 +161,60 @@ and then continue. In other words, installation has side-effects in Nix.
 Additional feeds (e.g. for pre-built binaries) can be registed using
 "nix-channel --add", which appears to work much like "0launch --feed", although
 each channel can contain binaries for multiple packages.
+The channel "MANIFEST" file doesn't appear to have a digital signature. Presumably this
+will be added at some point.
 </p>
 
 <p>
-Each version of a package has a digest, which includes all build dependencies
-(e.g. the version of the compiler used), just as it does in Zero Install (for
-packages built using 0compile, at least).
+Each version of a package has a digest (hash), which includes all build
+dependencies (e.g. the version of the compiler used), just as it does in Zero
+Install (for packages built using 0compile, at least).
 </p>
 
 <p>
-One difference between Nix and Zero Install is that Nix treats configurations
+An important difference between the two is that the Nix hash is a hash of the
+<i>inputs</i> used to build the package, whereas the Zero Install hash is a
+hash of the <i>resulting binary</i>.
+Nix does this to support with binaries that hard code
+their own paths, since the final hash needs to be known at compile time.
+For source (non-compiled)
+packages, the Nix hash is a hash of the contents, as with Zero Install.
+The Zero Install hash often happens to include the inputs, since it covers the
+"build-environment.xml" file which 0compile places in each binary package. Zero
+Install doesn't allow binaries to include hard-coded paths.
+</p>
+
+<p>
+Another difference between Nix and Zero Install is that Nix treats configurations
 as packages. Changing your configuration is like "upgrading" your configuration
 package to a new version. Rolling back a change is like reverting to a previous
 version. Zero Install doesn't generally handle configuration settings,
-preferring to let the user use subversion for that, but it's an interesting idea.
+preferring to let the user use subversion (or similar) for that, but it's an interesting idea.
 </p>
 
 <p>
 Building a Nix package involves creating a "Nix expression" in a (custom)
 functional language. The expression fills the same role as a Zero Install source
-feed (it says where to download the source, what its digest is, what the
-build dependencies are, and how to build it).
+feed: it says where to download the source, what its digest is, what the
+build dependencies are, and how to build it.
 </p>
 
 <p>
 While Zero Install is mainly targetted at adding additonal packages to an existing
 system, Nix aims to manage the whole system (although it installs cleanly alongside
 your existing package manager). Nix packages have short names (like "perl") not
-full URIs, and thus it appears to assume a centrally-controlled repository. Nix
-does not currently appear to sign the channel files.
+full URIs, and thus it appears to assume a centrally-controlled repository.
+</p>
+
+<p>
+In Nix, mutually untrusting users cannot share packages. The manual says <q>A setuid
+installation should only by used if the users in the Nix group are mutually
+trusted, since any user in that group has the ability to change anything in the
+Nix store</q>. Because the Nix hash is a hash of the inputs, it is not possible
+for the system to verify that a package is valid (it would have to download the
+sources and compile the program itself; Nix can share binaries in this case).
+Because Zero Install hashes are always hashes of the package contents, it does
+support <a href='sharing.html'>sharing</a>.
 </p>
 
 </dd>
