@@ -5,7 +5,7 @@
 
 <p>
 This guide shows how to make software available through <a href="injector.html">Zero Install</a>.
-We will start by packaging <a href='http://www.blender.org'>Blender</a>, an open source 3D modeling
+We will start by packaging <a href='http://www.blender.org'>Blender</a>, an open source 3D modelling
 and animation program.
 </p>
 

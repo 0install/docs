@@ -11,7 +11,7 @@
 <dl>
  <dt><a href='injector-packagers.html'>Packaging guide</a></dt>
  <dd>
-  This guide takes you throught the steps involved in making a package available
+  This guide takes you through the steps involved in making a package available
   through Zero Install. You will need to be able to upload (static) files to a
   web-server.
  </dd>

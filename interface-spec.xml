@@ -272,7 +272,7 @@ suitable implementation, downloading one if required.
 <pre>
   &lt;requires
 	interface='...' &gt;
-    [ contraints ] *
+    [ constraints ] *
     [ bindings ] *
   &lt;/requires&gt;
 </pre>
@@ -285,7 +285,7 @@ the injector should make its choice known (typically, by setting environment var
 <h2>Constraints</h2>
 
 <p>
-Contraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which the
+Constraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which the
 injector may choose an implementation.
 </p>
 

@@ -150,7 +150,7 @@ $ <b>0launch ./ROX-Filer-ppc64</b>
 <h2>Publishing the interface with Zero Install</h2>
 
 <ol>
-<li>Set the uri at the top of the file to whereever you're going to upload it:
+<li>Set the uri at the top of the file to where-ever you're going to upload it:
 <pre><![CDATA[
 <?xml version="1.0" ?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"

@@ -80,7 +80,7 @@ data. If a single person uses the machine, they can still create multiple users
 for themselves ('accounts', 'games', etc) and get similar benefits. It takes
 much more work to restore a root-compromised machine (reinstall everything)
 than a user compromise (backup data files and wipe home directory). You
-also don't need to redownload all your software, since the Zero Install cache
+also don't need to re-download all your software, since the Zero Install cache
 can't be modified by a user compromise.</dd>
 <dt>But isn't this a step backwards from Java sandboxes, etc?</dt>
 <dd>If your application is written in Java or can otherwise be easily
@@ -453,8 +453,8 @@ been updated. Trust it anyway?</i> Users will always click <i>Yes</i>).
 This is quite a big problem, and must be balanced against the fact that
 this technique is unlikely to lead to a significant increase in security.
 After all, very few sites get broken in to as it is (most free software sites
-don't use GPG keys at all), site breakins are detected very fast (due to other
-users upgrading), keyservers (see previous section) can provide the same
+don't use GPG keys at all), site break-ins are detected very fast (due to other
+users upgrading), key-servers (see previous section) can provide the same
 increase in security without affecting the interface, and you still have the
 problem of trusting the authors of the software, even if you really know it was
 written by them.

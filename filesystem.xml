@@ -148,7 +148,7 @@ Install system itself still requires some work to install. Please read this:
 <p>Pretty much. The main issue is how much software is distributed using this
 method. You can run Memo as shown above, and it will get ROX-Lib and pygtk via
 Zero Install. However, the other libraries are not yet in Zero Install, so you
-will need to install Gtk, etc, as normal for now.
+will need to install GTK, etc, as normal for now.
 </p>
 
 <p>

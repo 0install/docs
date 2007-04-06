@@ -55,7 +55,7 @@ Install filesystem, because Zero Install only downloads what you actually use.
 
 <p>
 When I tested it, installing the ROX-Filer CVS snapshot over a mobile
-phone GPRS link (approx 2.5 kb/sec) took 1m48s, with 265 K received, 13 K sent,
+phone GPRS link (approx 2.5 KB/sec) took 1m48s, with 265 K received, 13 K sent,
 although it may fetch more if you have less of the dependencies already (eg, an
 icon theme and the MIME database). The corresponding tarball is over 1Mb, using
 the same compression scheme.
