@@ -274,6 +274,8 @@ those of other installation systems.
 <p>Here are some discussions about Zero Install I've found on the web (Google, emails, etc). Let me
 know if you find any more!</p>
 <ul>
+<li><a href="http://www.linux.com/article.pl?sid=07/02/15/0724206">Zero Install: An executable critique of native package systems</a> linux.com review and interview</li>
+<li><a href="http://www.osnews.com/story.php/16956/Decentralised-Installation-Systems/">Decentralised Installation Systems</a> essay on OSNews.com</li>
 <li><a href="http://www.pro-linux.de/news/2005/8310.html">Neue Zero Install-Implementation</a> article on pro-linux.de (in German)</li>
 <li><a href="ZeroInstall-Ottawa-2004.sxi">My slides from the 2004 Desktop Developers' Conference</a> (in Ottawa, Canada, July 19-20, 2004; these slides include the questions asked during the talk)</li>
 <li><a href="http://diariored.com/blog/000753.php">Zero Install System: instalar programas se va a acabar</a> (in Spanish)</li>
