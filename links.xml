@@ -43,16 +43,60 @@ There is a central server which sends shell scripts to clients; executing the
 script causes the software to be downloaded and installed. This process is
 started automatically by your web browser.
 </p>
+
 <p>
-Klik is mainly focussed on having a large selection of packages working now,
-but pays little attention to security. Klik does not handle dependencies
-automatically and cannot check for updates to installed software.
-There are no digital signatures or server authentication, and no checksums or
-digests. Downloads cannot be shared safely between users. Klik packages can be
-automatically converted to Zero Install ones. See my <a
+Klik is mainly focused on having a large selection of packages working now,
+but pays little attention to security. Klik packages can be automatically
+converted to Zero Install ones. See my <a
 href='http://rox.sourceforge.net/desktop/node/290'>article about Zero Install
 and Klik</a> for more details.
 </p>
+
+<p>Differences between Klik and Zero Install include:</p>
+
+<ul>
+<li>The recipes Zero Install downloads are XML files, not shell scripts (this is similar
+to the difference between tar and shar files).</li>
+
+<li>Zero Install downloads are GPG signed.</li>
+
+<li>Zero Install is decentralised: you need permission from the Klik
+maintainers to distribute a Klik package. You don't need anyone's permission to
+distribute with Zero Install.</li>
+
+<li>Zero Install can check for updates automatically (by default once a month,
+but configurable). Klik requires you to check for updates yourself.</li>
+
+<li>Zero Install handles dynamic linking. This allows upgrading a library to
+benefit multiple applications, and saves space and bandwidth. It also lets you
+use a different version of a library if you want. Klik bundles all dependencies
+into the package (Zero Install also
+<a href='http://rox.sourceforge.net/desktop/Zero2Bundle'>supports</a> this mode
+of operation if desired).</li>
+
+<li>Zero Install can <a href='sharing.html'>share downloads</a> between users
+safely, using cryptographic digests.</li>
+
+<li>Zero Install supports compiling from source if you want, though not all
+packages support this yet.</li>
+
+<li>Zero Install lets you download older versions or programs or libraries.
+Klik only provides a single version for download, although you can keep using
+older versions once you've got them.</li>
+
+<li>Zero Install is fully <acronym title='Open Source Software'>OSS</acronym>. Only the Klik client is.</li>
+
+<li>Klik runs the 'intellipatch' script on downloads, which does a
+search-and-replace for filename paths in binaries (simple text matching) and
+changes them. This allows some programs which aren't built to be binary
+relocatable to work. Zero Install doesn't support this, and requires binaries
+to be relocatable in the first place.</li>
+
+<li>Klik has many more packages available right now.</li>
+
+<li>Zero Install is platform independent. Klik only runs on Linux.</li>
+</ul>
+
 </dd>
 
 <dt>Maven</dt>
@@ -158,7 +202,7 @@ and then continue. In other words, installation has side-effects in Nix.
 </p>
 
 <p>
-Additional feeds (e.g. for pre-built binaries) can be registed using
+Additional feeds (e.g. for pre-built binaries) can be registered using
 "nix-channel --add", which appears to work much like "0launch --feed", although
 each channel can contain binaries for multiple packages.
 The channel "MANIFEST" file doesn't appear to have a digital signature. Presumably this
@@ -200,7 +244,7 @@ build dependencies are, and how to build it.
 </p>
 
 <p>
-While Zero Install is mainly targetted at adding additonal packages to an existing
+While Zero Install is mainly targeted at adding additional packages to an existing
 system, Nix aims to manage the whole system (although it installs cleanly alongside
 your existing package manager). Nix packages have short names (like "perl") not
 full URIs, and thus it appears to assume a centrally-controlled repository.
