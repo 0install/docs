@@ -13,17 +13,20 @@ to appear in the GNOME or KDE Applications menus.</description>
   <category>Utility</category>
   <icon href="http://0install.net/feed_icons/Zero2Desktop.png" type="image/png"/>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="zero2desktop">
-    <implementation id="sha1new=1c4b6e286aefcfed5358effb05cccfc6584822ef" released="2007-03-22" version="0.1">
+    <implementation id="sha1new=1c4b6e286aefcfed5358effb05cccfc6584822ef" released="2007-03-22" stability="stable" version="0.1">
       <archive extract="zero2desktop-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zero2desktop-0.1.tar.bz2" size="11316"/>
     </implementation>
+    <implementation id="sha1new=a130c764ae8dba31cc83081a6bb39dec07b8e1ec" released="2007-04-08" version="0.2">
+      <archive extract="zero2desktop-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zero2desktop-0.2.tar.bz2" size="11618"/>
+    </implementation>
+
     <requires interface="http://0install.net/2007/3rd-party/XdgUtils.xml">
       <environment insert="scripts" name="XDG_UTILS"/>
     </requires>
   </group>
-
 </interface>
 <!-- Base64 Signature
-iD8DBQBGD7YtrgeCgFmlPMERAsroAJ9YzA1+B2hybDUQ90DoQYhFX/PwCACg2oZHcRXpxbF5OvN1
-cx7dh6HHkj4=
+iD8DBQBGGVIPrgeCgFmlPMERAtXxAJ9g771wmVm53fL3mcy2a3+izt9UKQCfRxesVUPIR3jC4abW
+t2Arh2zhLGo=
 
 -->
