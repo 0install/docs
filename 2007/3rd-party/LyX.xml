@@ -21,12 +21,17 @@ conference proceedings.</description>
   <homepage>http://www.lyx.org</homepage>
   <icon href="http://0install.net/feed_icons/LyX.png" type="image/png"/>
   <category>Office</category>
-  <implementation arch="Linux-i586" id="sha1new=b20815af73f7d33911339eb6857ea9fd0d02b7a9" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/lyx" released="2007-01-13" version="1.4.3">
+  <group>
+    <implementation arch="Linux-i586" id="sha1new=b20815af73f7d33911339eb6857ea9fd0d02b7a9" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/lyx" released="2007-01-13" version="1.4.3">
     <archive href="ftp://ftp.lyx.org/pub/lyx/bin/1.4.3/lyx-1.4.3-1_qt_mdv2006.i586.rpm" size="6308610"/>
   </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/XdgUtils.xml">
+      <environment insert="scripts" name="PATH"/>
+    </requires>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkP/BSn9tx+xORARAjZPAJ9sIYcg3XU9VvuIcjK62QaTaRTJIwCcDH9n1epyHb00mnFL
-5NtayUC9g2M=
+iD8DBQBGGlJ8BSn9tx+xORARAg2mAJ95nqluY+Tuyw7IAgu2qPZpgLLsvwCgn+eYO9BB0ojReO3e
+tU7Hfu9dsdw=
 
 -->
