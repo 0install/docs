@@ -345,3 +345,42 @@ ul.faqtoc li ol {
 q {
 	font-style: italic;
 }
+
+span.shaded {
+	color: #888;
+}
+
+tr.d0 td {
+	background: #eee;
+}
+
+td.keyinfo {
+	width: 25em;
+	vertical-align: top;
+}
+
+td.keyinfo a {
+	font-size: smaller;
+}
+
+td.keyinfo span.summary {
+	font-size: smaller;
+	font-style: italic;
+	color: #444;
+}
+
+td.teaser {
+	vertical-align: top;
+	color: #666;
+}
+
+td.teaser:hover {
+	color: #000;
+}
+
+td.teaser a {
+	display: block;
+	text-align: right;
+	float: right;
+	color: #66f;
+}

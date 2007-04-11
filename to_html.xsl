@@ -196,17 +196,20 @@
        <h2 id='cat-{$category}'><xsl:value-of select='$category'/></h2>
        <table class='picturebullets' style='margin-left: 2em'>
         <xsl:for-each select='document("all-feeds.xml")/*/feed[@category=$category]'>
-         <tr>
+         <tr class='d{position() mod 2}'>
           <td class='image'>
 	   <img src='{@icon}' alt='' width='{@width}' height='{@height}'/>
           </td>
-          <td><strong><xsl:value-of select='@name'/></strong> &#8212; <i>
-           <xsl:value-of select='@summary'/></i><br/>
-	   <xsl:if test='@homepage'>
-             <a href='{@homepage}'>Home page</a> | 
-	   </xsl:if>
+          <td class='keyinfo'><strong><xsl:value-of select='@name'/></strong><br/>
+           <span class='summary'><xsl:value-of select='@summary'/></span><br/>
 	   <a href='{@uri}'>Zero Install feed</a>
           </td>
+	  <td class='teaser'>
+	    <xsl:value-of select='.'/>
+	    <xsl:if test='@homepage'>
+              <a href='{@homepage}'>Home page</a>
+	    </xsl:if>
+	  </td>
          </tr>
         </xsl:for-each>
       </table>

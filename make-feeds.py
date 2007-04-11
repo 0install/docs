@@ -6,6 +6,8 @@ import sys, os, codecs, urllib
 import xml.sax.saxutils
 from xml.dom import minidom
 
+MAX_TEASER_LENGTH = 256
+
 rox_homepages = minidom.parse('rox-feeds.xml')
 homepages = {}
 for x in rox_homepages.documentElement.getElementsByTagName('feed'):
@@ -105,13 +107,18 @@ for uri in known:
 	width, height = map(int, (width, height))
 
 	result.write("<feed uri=%s name=%s summary=%s icon=%s width=%s height=%s" \
-		% tuple(map(quoteattr, (uri, iface.name[0].capitalize() + iface.name[1:], iface.summary, icon_path, width, height))))
+		% tuple(map(quoteattr, (uri, iface.name[0].capitalize() + iface.name[1:], iface.summary[0].capitalize() + iface.summary[1:], icon_path, width, height))))
 
 	if homepage:
 		result.write(' homepage=%s' % quoteattr(homepage))
 	result.write(' category=%s' % quoteattr(category))
 	categories.add(category)
-	result.write('/>\n\n')
+	description = iface.description
+	if len(description) > MAX_TEASER_LENGTH:
+		description = description[:MAX_TEASER_LENGTH - 3]
+		description = description[:description.rindex(' ')]
+		description += ' ...'
+	result.write('>' + xml.sax.saxutils.escape(description) + '</feed>\n\n')
 
 for c in sorted(categories - set(['Unknown'])) + ['Unknown']:
 	result.write('<category name=%s/>' % quoteattr(c))
