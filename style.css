@@ -38,6 +38,18 @@ div.note {
 	margin: 2px 4em 2px 4em;
 }
 
+div.security {
+	padding: .2cm;
+	border-left: 0.5em solid #ffa;
+	border-top: 0.5em solid #ffa;
+	border-bottom: 0.5em solid #ffa;
+}
+
+div.security h4 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
 p.note {
 	font-size: smaller;
 	padding-left: 1cm;

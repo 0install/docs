@@ -219,6 +219,13 @@
     </p>
   </xsl:template>
 
+  <xsl:template match='*[name() = "security"]'>
+    <div class='security'>
+      <h4>Security note:</h4>
+      <xsl:apply-templates select='node()'/>
+    </div>
+  </xsl:template>
+
   <xsl:template match='*[name() = "h3" or name() = "h2"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>
