@@ -140,6 +140,8 @@ Cmnd_Alias      ZEROINSTALL = /usr/local/bin/0store-helper-priv
 Defaults>zeroinst env_reset
 ALL     ALL=(zeroinst) NOPASSWD: ZEROINSTALL
 </pre>
+ <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
+ later entries.</p>
 </li>
  </ol>
 
