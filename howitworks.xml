@@ -25,6 +25,7 @@ so that you don't need to download anything twice, and programs can still be use
       invoked by another program. Some examples include:
       </p>
 <ul>
+ <li>GNOME and KDE users will drag the link to <a href='http://0install.net/2007/interfaces/Zero2Desktop.xml'>Zero2Desktop</a>, creating a launcher on their Applications menu that uses the injector.</li>
  <li>ROX users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses the injector.</li>
  <li>Xfce users will drag the link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, creating a launcher button that uses the injector.</li>
  <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut that runs the injector.</li>
@@ -126,6 +127,10 @@ conflict with each other.
 
 <p>
 You might also like to watch the <a href='flash.html'>Flash recordings</a>.
+</p>
+
+<p>
+For an explanation of what's happening behind the scenes, follow <a href='walkthrough.html'>the manual walk-through</a>.
 </p>
 
 <table class='quicklinks'>

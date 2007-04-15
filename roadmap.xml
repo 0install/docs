@@ -123,7 +123,7 @@ background [ <a href='http://rox.sourceforge.net/desktop/node/384'>screenshot</a
 <dd>Make a SetUID helper that uses <b>0store copy</b> to copy downloads to a central cache. This allows
 downloads to be shared without the intervention of the system administrator, while still preventing a
 malicious (or virus-infected) user from compromising other user accounts. Need to think about how things
-get removed from the cache when no longer needed!</dd>
+get removed from the cache when no longer needed! [ <a href='sharing.html'>working, except for removal</a> ]</dd>
 
 <dt>Mirrors for archives</dt>
 <dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror

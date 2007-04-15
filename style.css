@@ -372,7 +372,8 @@ td.keyinfo {
 }
 
 td.keyinfo a {
-	font-size: smaller;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 td.keyinfo span.summary {

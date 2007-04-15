@@ -200,9 +200,8 @@
           <td class='image'>
 	   <img src='{@icon}' alt='' width='{@width}' height='{@height}'/>
           </td>
-          <td class='keyinfo'><strong><xsl:value-of select='@name'/></strong><br/>
+          <td class='keyinfo'><a href='{@uri}'><xsl:value-of select='@name'/></a><br/>
            <span class='summary'><xsl:value-of select='@summary'/></span><br/>
-	   <a href='{@uri}'>Zero Install feed</a>
           </td>
 	  <td class='teaser'>
 	    <xsl:value-of select='.'/>
