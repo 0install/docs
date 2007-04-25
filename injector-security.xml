@@ -59,6 +59,16 @@ Some key points about Zero Install's security model:
  software with modified versions, or redirecting network traffic to the real web-server to their own,
  Zero Install only runs code that is signed by a GPG key you have said you trust.
  </dd>
+
+ <dt>Security when <i>running</i> programs is your problem</dt>
+ <dd>
+ Zero Install goes to great lengths to get software on to your machine without
+ letting it do anything dangerous, but what happens next is up to you. On a
+ normal Linux system this still brings some benefits (e.g. users can share
+ programs without also sharing viruses), but the real advantages come when
+ you combine this with some sandboxing technology to restrict what programs can
+ do when running.
+ </dd>
 </dl>
 
 <h2>Security and Usability</h2>
@@ -139,8 +149,9 @@ href='http://plash.beasts.org/'>Plash</a> or <a
 href='http://www.systrace.org/'>SysTrace</a> for example).
 But Zero Install already brings benefits without the use of these programs
 (the effects above which require root access will be blocked), and it is clearly a
-necessary base on which such technologies can be built. Running software in a sandbox
-is of limited benefit if you have to give it root access during installation.
+necessary base on which such technologies can be built. Being able to run
+software in a sandbox is of limited benefit if it requires full root access to
+install it first!
 </p>
 
 <h2>The Injector's trust model</h2>
