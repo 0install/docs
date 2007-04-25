@@ -124,7 +124,8 @@ A directory for storing implementations.<br /><br />
         <span class="summary-sig-arg">url</span>,
         <span class="summary-sig-arg">extract</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">type</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">start_offset</span>=<span class="summary-sig-default">0</span>)</span>
+        <span class="summary-sig-arg">start_offset</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">try_helper</span>=<span class="summary-sig-default">False</span>)</span>
   </td>
 </tr>
 <tr>
@@ -133,7 +134,8 @@ A directory for storing implementations.<br /><br />
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.zerostore.Store-class.html#add_dir_to_cache" class="summary-sig-name">add_dir_to_cache</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">required_digest</span>,
-        <span class="summary-sig-arg">path</span>)</span><br />
+        <span class="summary-sig-arg">path</span>,
+        <span class="summary-sig-arg">try_helper</span>=<span class="summary-sig-default">False</span>)</span><br />
       Copy the contents of path to the cache.
   </td>
 </tr>
@@ -144,7 +146,8 @@ A directory for storing implementations.<br /><br />
     <span class="summary-sig"><a href="zeroinstall.zerostore.Store-class.html#check_manifest_and_rename" class="summary-sig-name">check_manifest_and_rename</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">required_digest</span>,
         <span class="summary-sig-arg">tmp</span>,
-        <span class="summary-sig-arg">extract</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">extract</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">try_helper</span>=<span class="summary-sig-default">False</span>)</span><br />
       Check that tmp[/extract] has the required_digest.
   </td>
 </tr>
@@ -275,7 +278,8 @@ A directory for storing implementations.<br /><br />
         <span class="sig-arg">url</span>,
         <span class="sig-arg">extract</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">type</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">start_offset</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">start_offset</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">try_helper</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Store.add_archive_to_cache">source&nbsp;code</a></span>&nbsp;</span
@@ -296,7 +300,8 @@ A directory for storing implementations.<br /><br />
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">add_dir_to_cache</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">required_digest</span>,
-        <span class="sig-arg">path</span>)</span>
+        <span class="sig-arg">path</span>,
+        <span class="sig-arg">try_helper</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Store.add_dir_to_cache">source&nbsp;code</a></span>&nbsp;</span
@@ -309,6 +314,8 @@ A directory for storing implementations.<br /><br />
     <ul class="nomargin">
         <li><strong class="pname"><code>required_digest</code></strong> (<code>str</code>) - the expected digest</li>
         <li><strong class="pname"><code>path</code></strong> (<code>str</code>) - the root of the tree to copy</li>
+        <li><strong class="pname"><code>try_helper</code></strong> (<code>bool</code>) - attempt to use privileged helper before user cache (since 
+          0.26)</li>
     </ul>
     <dl><dt>Raises:</dt></dl>
     <ul class="nomargin">
@@ -327,7 +334,8 @@ A directory for storing implementations.<br /><br />
   <h3 class="epydoc"><span class="sig"><span class="sig-name">check_manifest_and_rename</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">required_digest</span>,
         <span class="sig-arg">tmp</span>,
-        <span class="sig-arg">extract</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">extract</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">try_helper</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Store.check_manifest_and_rename">source&nbsp;code</a></span>&nbsp;</span
@@ -338,6 +346,11 @@ A directory for storing implementations.<br /><br />
   the checked directory to the digest and, if self.public, make the whole 
   tree read-only.
   <dl><dt></dt><dd>
+    <dl><dt>Parameters:</dt></dl>
+    <ul class="nomargin">
+        <li><strong class="pname"><code>try_helper</code></strong> (<code>bool</code>) - attempt to use privileged helper to import to system cache 
+          first (since 0.26)</li>
+    </ul>
     <dl><dt>Raises:</dt></dl>
     <ul class="nomargin">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.BadDigest-class.html">BadDigest</a></strong></code> - if the input directory doesn't match the given digest</li>
@@ -377,7 +390,7 @@ A directory for storing implementations.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Feb 10 12:48:29 2007</td>
+        3.0alpha3 on Wed Apr 25 20:01:52 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

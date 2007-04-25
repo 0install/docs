@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.zerostore.optimise</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.zerostore-module.html">Package&nbsp;zerostore</a> ::
+        Module&nbsp;optimise
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.zerostore.optimise-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="zeroinstall.zerostore.optimise-module.html">Module zeroinstall.zerostore.optimise</a></h1>
+<pre class="py-src">
+<span class="py-lineno">  1</span>  <span class="py-line"><span class="py-docstring">"""Optimise the cache."""</span> </span>
+<span class="py-lineno">  2</span>  <span class="py-line"> </span>
+<span class="py-lineno">  3</span>  <span class="py-line"><span class="py-keyword">import</span> <span class="py-name">os</span> </span>
+<span class="py-lineno">  4</span>  <span class="py-line"><span class="py-keyword">from</span> <span class="py-name">logging</span> <span class="py-keyword">import</span> <span class="py-name">warn</span> </span>
+<span class="py-lineno">  5</span>  <span class="py-line"> </span>
+<a name="_already_linked"></a><div id="_already_linked-def"><span class="py-lineno">  6</span> <a class="py-toggle" href="#" id="_already_linked-toggle" onclick="toggle('_already_linked'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.zerostore.optimise-module.html#_already_linked">_already_linked</a><span class="py-op">(</span><span class="py-param">a</span><span class="py-op">,</span> <span class="py-param">b</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="_already_linked-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_already_linked-expanded"><span class="py-lineno">  7</span>  <span class="py-line">        <span class="py-name">ai</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">stat</span><span class="py-op">(</span><span class="py-name">a</span><span class="py-op">)</span> </span>
+<span class="py-lineno">  8</span>  <span class="py-line">        <span class="py-name">bi</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">stat</span><span class="py-op">(</span><span class="py-name">b</span><span class="py-op">)</span> </span>
+<span class="py-lineno">  9</span>  <span class="py-line">        <span class="py-keyword">return</span> <span class="py-op">(</span><span class="py-name">ai</span><span class="py-op">.</span><span class="py-name">st_dev</span><span class="py-op">,</span> <span class="py-name">ai</span><span class="py-op">.</span><span class="py-name">st_ino</span><span class="py-op">)</span> <span class="py-op">==</span> <span class="py-op">(</span><span class="py-name">bi</span><span class="py-op">.</span><span class="py-name">st_dev</span><span class="py-op">,</span> <span class="py-name">bi</span><span class="py-op">.</span><span class="py-name">st_ino</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno"> 10</span>  <span class="py-line"> </span>
+<a name="_byte_identical"></a><div id="_byte_identical-def"><span class="py-lineno"> 11</span> <a class="py-toggle" href="#" id="_byte_identical-toggle" onclick="toggle('_byte_identical'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.zerostore.optimise-module.html#_byte_identical">_byte_identical</a><span class="py-op">(</span><span class="py-param">a</span><span class="py-op">,</span> <span class="py-param">b</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="_byte_identical-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_byte_identical-expanded"><span class="py-lineno"> 12</span>  <span class="py-line">        <span class="py-name">af</span> <span class="py-op">=</span> <span class="py-name">file</span><span class="py-op">(</span><span class="py-name">a</span><span class="py-op">,</span> <span class="py-string">'rb'</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 13</span>  <span class="py-line">        <span class="py-name">bf</span> <span class="py-op">=</span> <span class="py-name">file</span><span class="py-op">(</span><span class="py-name">b</span><span class="py-op">,</span> <span class="py-string">'rb'</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 14</span>  <span class="py-line">        <span class="py-keyword">while</span> <span class="py-name">True</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 15</span>  <span class="py-line">                <span class="py-name">adata</span> <span class="py-op">=</span> <span class="py-name">af</span><span class="py-op">.</span><span class="py-name">read</span><span class="py-op">(</span><span class="py-number">100</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 16</span>  <span class="py-line">                <span class="py-name">bdata</span> <span class="py-op">=</span> <span class="py-name">bf</span><span class="py-op">.</span><span class="py-name">read</span><span class="py-op">(</span><span class="py-number">100</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 17</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-name">adata</span> <span class="py-op">!=</span> <span class="py-name">bdata</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 18</span>  <span class="py-line">                        <span class="py-keyword">return</span> <span class="py-name">False</span> </span>
+<span class="py-lineno"> 19</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-name">adata</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 20</span>  <span class="py-line">                        <span class="py-keyword">return</span> <span class="py-name">True</span> </span>
+</div><span class="py-lineno"> 21</span>  <span class="py-line"> </span>
+<a name="_link"></a><div id="_link-def"><span class="py-lineno"> 22</span> <a class="py-toggle" href="#" id="_link-toggle" onclick="toggle('_link'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.zerostore.optimise-module.html#_link">_link</a><span class="py-op">(</span><span class="py-param">a</span><span class="py-op">,</span> <span class="py-param">b</span><span class="py-op">,</span> <span class="py-param">tmpfile</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="_link-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_link-expanded"><span class="py-lineno"> 23</span>  <span class="py-line">        <span class="py-docstring">"""Keep 'a', delete 'b' and hard-link to 'a'"""</span> </span>
+<span class="py-lineno"> 24</span>  <span class="py-line">        <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-name">_byte_identical</span><span class="py-op">(</span><span class="py-name">a</span><span class="py-op">,</span> <span class="py-name">b</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 25</span>  <span class="py-line">                <span class="py-name">warn</span><span class="py-op">(</span><span class="py-string">"Files should be identical, but they're not!\n%s\n%s"</span><span class="py-op">,</span> <span class="py-name">a</span><span class="py-op">,</span> <span class="py-name">b</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 26</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 27</span>  <span class="py-line">        <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">link</span><span class="py-op">(</span><span class="py-name">a</span><span class="py-op">,</span> <span class="py-name">tmpfile</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 28</span>  <span class="py-line">        <span class="py-keyword">try</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 29</span>  <span class="py-line">                <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">rename</span><span class="py-op">(</span><span class="py-name">tmpfile</span><span class="py-op">,</span> <span class="py-name">b</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 30</span>  <span class="py-line">        <span class="py-keyword">except</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 31</span>  <span class="py-line">                <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">unlink</span><span class="py-op">(</span><span class="py-name">tmpfile</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 32</span>  <span class="py-line">                <span class="py-keyword">raise</span> </span>
+</div><span class="py-lineno"> 33</span>  <span class="py-line"> </span>
+<a name="optimise"></a><div id="optimise-def"><span class="py-lineno"> 34</span> <a class="py-toggle" href="#" id="optimise-toggle" onclick="toggle('optimise'); return false;">-</a><span class="py-line"><span class="py-keyword">def</span> <a class="py-def-name" href="zeroinstall.zerostore.optimise-module.html#optimise">optimise</a><span class="py-op">(</span><span class="py-param">impl_dir</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+</div><div id="optimise-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="optimise-expanded"><span class="py-lineno"> 35</span>  <span class="py-line">        <span class="py-docstring">"""Scan an implementation cache directory for duplicate files, and</span> </span>
+<span class="py-lineno"> 36</span>  <span class="py-line"><span class="py-docstring">        hard-link any duplicates together to save space.</span> </span>
+<span class="py-lineno"> 37</span>  <span class="py-line"><span class="py-docstring">        @param impl_dir: a $cache/0install.net/implementations directory</span> </span>
+<span class="py-lineno"> 38</span>  <span class="py-line"><span class="py-docstring">        @type impl_dir: str</span> </span>
+<span class="py-lineno"> 39</span>  <span class="py-line"><span class="py-docstring">        @param verbose: display progress messages</span> </span>
+<span class="py-lineno"> 40</span>  <span class="py-line"><span class="py-docstring">        @type verbose: bool</span> </span>
+<span class="py-lineno"> 41</span>  <span class="py-line"><span class="py-docstring">        @return: (unique bytes, duplicated bytes, already linked, manifest size)</span> </span>
+<span class="py-lineno"> 42</span>  <span class="py-line"><span class="py-docstring">        @rtype: (int, int, int, int)"""</span> </span>
+<span class="py-lineno"> 43</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 44</span>  <span class="py-line">        <span class="py-name">first_copy</span> <span class="py-op">=</span> <span class="py-op">{</span><span class="py-op">}</span>         <span class="py-comment"># TypeDigest -&gt; Path</span> </span>
+<span class="py-lineno"> 45</span>  <span class="py-line">        <span class="py-name">dup_size</span> <span class="py-op">=</span> <span class="py-name">uniq_size</span> <span class="py-op">=</span> <span class="py-name">already_linked</span> <span class="py-op">=</span> <span class="py-name">man_size</span> <span class="py-op">=</span> <span class="py-number">0</span> </span>
+<span class="py-lineno"> 46</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 47</span>  <span class="py-line">        <span class="py-keyword">import</span> <span class="py-name">random</span> </span>
+<span class="py-lineno"> 48</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 49</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">x</span> <span class="py-keyword">in</span> <span class="py-name">range</span><span class="py-op">(</span><span class="py-number">10</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 50</span>  <span class="py-line">                <span class="py-name">tmpfile</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">impl_dir</span><span class="py-op">,</span> <span class="py-string">'optimise-%d'</span> <span class="py-op">%</span> <span class="py-name">random</span><span class="py-op">.</span><span class="py-name">randint</span><span class="py-op">(</span><span class="py-number">0</span><span class="py-op">,</span> <span class="py-number">1000000</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 51</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">exists</span><span class="py-op">(</span><span class="py-name">tmpfile</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 52</span>  <span class="py-line">                        <span class="py-keyword">break</span> </span>
+<span class="py-lineno"> 53</span>  <span class="py-line">        <span class="py-keyword">else</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 54</span>  <span class="py-line">                <span class="py-keyword">raise</span> <span class="py-name">Exception</span><span class="py-op">(</span><span class="py-string">"Can't generate unused tempfile name!"</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 55</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 56</span>  <span class="py-line">        <span class="py-keyword">for</span> <span class="py-name">impl</span> <span class="py-keyword">in</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">listdir</span><span class="py-op">(</span><span class="py-name">impl_dir</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 57</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">startswith</span><span class="py-op">(</span><span class="py-string">'.'</span><span class="py-op">)</span> <span class="py-keyword">or</span> <span class="py-string">'='</span> <span class="py-keyword">not</span> <span class="py-keyword">in</span> <span class="py-name">impl</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 58</span>  <span class="py-line">                        <span class="py-name">warn</span><span class="py-op">(</span><span class="py-string">"Skipping non-implementation '%s'"</span><span class="py-op">,</span> <span class="py-name">impl</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 59</span>  <span class="py-line">                        <span class="py-keyword">continue</span> </span>
+<span class="py-lineno"> 60</span>  <span class="py-line">                <span class="py-name">manifest_path</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">impl_dir</span><span class="py-op">,</span> <span class="py-name">impl</span><span class="py-op">,</span> <span class="py-string">'.manifest'</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 61</span>  <span class="py-line">                <span class="py-keyword">try</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 62</span>  <span class="py-line">                        <span class="py-name">ms</span> <span class="py-op">=</span> <span class="py-name">file</span><span class="py-op">(</span><span class="py-name">manifest_path</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 63</span>  <span class="py-line">                <span class="py-keyword">except</span> <span class="py-name">OSError</span><span class="py-op">,</span> <span class="py-name">ex</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 64</span>  <span class="py-line">                        <span class="py-name">warn</span><span class="py-op">(</span><span class="py-string">"Failed to read manifest file '%s': %s"</span><span class="py-op">,</span> <span class="py-name">manifest_path</span><span class="py-op">,</span> <span class="py-name">str</span><span class="py-op">(</span><span class="py-name">ex</span><span class="py-op">)</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 65</span>  <span class="py-line">                        <span class="py-keyword">continue</span> </span>
+<span class="py-lineno"> 66</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 67</span>  <span class="py-line">                <span class="py-name">alg</span> <span class="py-op">=</span> <span class="py-name">impl</span><span class="py-op">.</span><span class="py-name">split</span><span class="py-op">(</span><span class="py-string">'='</span><span class="py-op">,</span> <span class="py-number">1</span><span class="py-op">)</span><span class="py-op">[</span><span class="py-number">0</span><span class="py-op">]</span> </span>
+<span class="py-lineno"> 68</span>  <span class="py-line">                <span class="py-keyword">if</span> <span class="py-name">alg</span> <span class="py-op">==</span> <span class="py-string">'sha1'</span><span class="py-op">:</span> <span class="py-keyword">continue</span> </span>
+<span class="py-lineno"> 69</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 70</span>  <span class="py-line">                <span class="py-name">man_size</span> <span class="py-op">+=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">getsize</span><span class="py-op">(</span><span class="py-name">manifest_path</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 71</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 72</span>  <span class="py-line">                <span class="py-name">dir</span> <span class="py-op">=</span> <span class="py-string">""</span> </span>
+<span class="py-lineno"> 73</span>  <span class="py-line">                <span class="py-keyword">for</span> <span class="py-name">line</span> <span class="py-keyword">in</span> <span class="py-name">ms</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 74</span>  <span class="py-line">                        <span class="py-keyword">if</span> <span class="py-name">line</span><span class="py-op">[</span><span class="py-number">0</span><span class="py-op">]</span> <span class="py-op">==</span> <span class="py-string">'D'</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 75</span>  <span class="py-line">                                <span class="py-name">type</span><span class="py-op">,</span> <span class="py-name">path</span> <span class="py-op">=</span> <span class="py-name">line</span><span class="py-op">.</span><span class="py-name">split</span><span class="py-op">(</span><span class="py-string">' '</span><span class="py-op">,</span> <span class="py-number">1</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 76</span>  <span class="py-line">                                <span class="py-keyword">assert</span> <span class="py-name">path</span><span class="py-op">.</span><span class="py-name">startswith</span><span class="py-op">(</span><span class="py-string">'/'</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 77</span>  <span class="py-line">                                <span class="py-name">dir</span> <span class="py-op">=</span> <span class="py-name">path</span><span class="py-op">[</span><span class="py-number">1</span><span class="py-op">:</span><span class="py-op">-</span><span class="py-number">1</span><span class="py-op">]</span>        <span class="py-comment"># Strip slash and newline</span> </span>
+<span class="py-lineno"> 78</span>  <span class="py-line">                                <span class="py-keyword">continue</span> </span>
+<span class="py-lineno"> 79</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 80</span>  <span class="py-line">                        <span class="py-keyword">if</span> <span class="py-name">line</span><span class="py-op">[</span><span class="py-number">0</span><span class="py-op">]</span> <span class="py-op">==</span> <span class="py-string">"S"</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 81</span>  <span class="py-line">                                <span class="py-name">type</span><span class="py-op">,</span> <span class="py-name">digest</span><span class="py-op">,</span> <span id="link-0" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-0', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span><span class="py-op">,</span> <span class="py-name">rest</span> <span class="py-op">=</span> <span class="py-name">line</span><span class="py-op">.</span><span class="py-name">split</span><span class="py-op">(</span><span class="py-string">' '</span><span class="py-op">,</span> <span class="py-number">3</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 82</span>  <span class="py-line">                                <span class="py-name">uniq_size</span> <span class="py-op">+=</span> <span class="py-name">long</span><span class="py-op">(</span><span id="link-1" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-1', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 83</span>  <span class="py-line">                                <span class="py-keyword">continue</span> </span>
+<span class="py-lineno"> 84</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 85</span>  <span class="py-line">                        <span class="py-keyword">assert</span> <span class="py-name">line</span><span class="py-op">[</span><span class="py-number">0</span><span class="py-op">]</span> <span class="py-keyword">in</span> <span class="py-string">"FX"</span> </span>
+<span class="py-lineno"> 86</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 87</span>  <span class="py-line">                        <span class="py-name">type</span><span class="py-op">,</span> <span class="py-name">digest</span><span class="py-op">,</span> <span class="py-name">mtime</span><span class="py-op">,</span> <span id="link-2" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-2', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span><span class="py-op">,</span> <span class="py-name">path</span> <span class="py-op">=</span> <span class="py-name">line</span><span class="py-op">.</span><span class="py-name">split</span><span class="py-op">(</span><span class="py-string">' '</span><span class="py-op">,</span> <span class="py-number">4</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 88</span>  <span class="py-line">                        <span class="py-name">path</span> <span class="py-op">=</span> <span class="py-name">path</span><span class="py-op">[</span><span class="py-op">:</span><span class="py-op">-</span><span class="py-number">1</span><span class="py-op">]</span>        <span class="py-comment"># Strip newline</span> </span>
+<span class="py-lineno"> 89</span>  <span class="py-line">                        <span id="link-3" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-3', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span> <span class="py-op">=</span> <span class="py-name">long</span><span class="py-op">(</span><span id="link-4" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-4', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 90</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 91</span>  <span class="py-line">                        <span class="py-name">key</span> <span class="py-op">=</span> <span class="py-op">(</span><span class="py-name">type</span><span class="py-op">,</span> <span class="py-name">digest</span><span class="py-op">,</span> <span class="py-name">mtime</span><span class="py-op">,</span> <span id="link-5" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-5', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 92</span>  <span class="py-line">                        <span class="py-name">loc_path</span> <span class="py-op">=</span> <span class="py-op">(</span><span class="py-name">impl</span><span class="py-op">,</span> <span class="py-name">dir</span><span class="py-op">,</span> <span class="py-name">path</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 93</span>  <span class="py-line"> </span>
+<span class="py-lineno"> 94</span>  <span class="py-line">                        <span class="py-name">first_loc</span> <span class="py-op">=</span> <span class="py-name">first_copy</span><span class="py-op">.</span><span class="py-name">get</span><span class="py-op">(</span><span class="py-name">key</span><span class="py-op">,</span> <span class="py-name">None</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 95</span>  <span class="py-line">                        <span class="py-keyword">if</span> <span class="py-name">first_loc</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 96</span>  <span class="py-line">                                <span class="py-name">first_full</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">impl_dir</span><span class="py-op">,</span> <span class="py-op">*</span><span class="py-name">first_loc</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 97</span>  <span class="py-line">                                <span class="py-name">new_full</span> <span class="py-op">=</span> <span class="py-name">os</span><span class="py-op">.</span><span class="py-name">path</span><span class="py-op">.</span><span class="py-name">join</span><span class="py-op">(</span><span class="py-name">impl_dir</span><span class="py-op">,</span> <span class="py-op">*</span><span class="py-name">loc_path</span><span class="py-op">)</span> </span>
+<span class="py-lineno"> 98</span>  <span class="py-line">                                <span class="py-keyword">if</span> <span class="py-name">_already_linked</span><span class="py-op">(</span><span class="py-name">first_full</span><span class="py-op">,</span> <span class="py-name">new_full</span><span class="py-op">)</span><span class="py-op">:</span> </span>
+<span class="py-lineno"> 99</span>  <span class="py-line">                                        <span class="py-name">already_linked</span> <span class="py-op">+=</span> <span id="link-6" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-6', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span> </span>
+<span class="py-lineno">100</span>  <span class="py-line">                                <span class="py-keyword">else</span><span class="py-op">:</span> </span>
+<span class="py-lineno">101</span>  <span class="py-line">                                        <span class="py-name">_link</span><span class="py-op">(</span><span class="py-name">first_full</span><span class="py-op">,</span> <span class="py-name">new_full</span><span class="py-op">,</span> <span class="py-name">tmpfile</span><span class="py-op">)</span> </span>
+<span class="py-lineno">102</span>  <span class="py-line">                                        <span class="py-name">dup_size</span> <span class="py-op">+=</span> <span id="link-7" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-7', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span> </span>
+<span class="py-lineno">103</span>  <span class="py-line">                        <span class="py-keyword">else</span><span class="py-op">:</span> </span>
+<span class="py-lineno">104</span>  <span class="py-line">                                <span class="py-name">first_copy</span><span class="py-op">[</span><span class="py-name">key</span><span class="py-op">]</span> <span class="py-op">=</span> <span class="py-name">loc_path</span> </span>
+<span class="py-lineno">105</span>  <span class="py-line">                                <span class="py-name">uniq_size</span> <span class="py-op">+=</span> <span id="link-8" class="py-name"><a title="zeroinstall.injector.model.Recipe.size" class="py-name" href="#" onclick="doclink('link-8', 'size', 'Variable zeroinstall.injector.model.Recipe.size=zeroinstall.injector.model.Recipe-class.html#size'); return false;">size</a></span></span> </span>
+<span class="py-lineno">106</span>  <span class="py-line">        <span class="py-keyword">return</span> <span class="py-op">(</span><span class="py-name">uniq_size</span><span class="py-op">,</span> <span class="py-name">dup_size</span><span class="py-op">,</span> <span class="py-name">already_linked</span><span class="py-op">,</span> <span class="py-name">man_size</span><span class="py-op">)</span> </span>
+</div><span class="py-lineno">107</span>  <span class="py-line"> </span><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">Generated by Epydoc
+        3.0alpha3 on Wed Apr 25 20:01:54 2007</td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

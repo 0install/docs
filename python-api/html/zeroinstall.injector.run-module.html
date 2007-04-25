@@ -94,8 +94,34 @@ Executes a set of implementations as a program.<br /><br />
     <span class="summary-sig"><a href="zeroinstall.injector.run-module.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">policy</span>,
         <span class="summary-sig-arg">prog_args</span>,
         <span class="summary-sig-arg">dry_run</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span><br />
       Execute program.
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.run-module.html#execute_selections" class="summary-sig-name">execute_selections</a>(<span class="summary-sig-arg">selections</span>,
+        <span class="summary-sig-arg">prog_args</span>,
+        <span class="summary-sig-arg">dry_run</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Execute program.
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.run-module.html#test_selections" class="summary-sig-name">test_selections</a>(<span class="summary-sig-arg">selections</span>,
+        <span class="summary-sig-arg">prog_args</span>,
+        <span class="summary-sig-arg">dry_run</span>,
+        <span class="summary-sig-arg">main</span>,
+        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Run the program in a child process, collecting stdout and 
+      stderr.
   </td>
 </tr>
 </table>
@@ -149,7 +175,8 @@ Executes a set of implementations as a program.<br /><br />
   <h3 class="epydoc"><span class="sig"><span class="sig-name">execute</span>(<span class="sig-arg">policy</span>,
         <span class="sig-arg">prog_args</span>,
         <span class="sig-arg">dry_run</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">main</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">main</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#execute">source&nbsp;code</a></span>&nbsp;</span
@@ -162,6 +189,64 @@ Executes a set of implementations as a program.<br /><br />
       <p><strong>Precondition:</strong>
         <code>policy.ready and policy.get_uncached_implementations() == 
         []</code>
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="execute_selections"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">execute_selections</span>(<span class="sig-arg">selections</span>,
+        <span class="sig-arg">prog_args</span>,
+        <span class="sig-arg">dry_run</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">main</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#execute_selections">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Execute program. On success, doesn't return. On failure, raises an 
+  Exception. Returns normally only for a successful dry run.
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.27
+      </p>
+      <p><strong>Precondition:</strong>
+        All implementations are in the cache.
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="test_selections"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">test_selections</span>(<span class="sig-arg">selections</span>,
+        <span class="sig-arg">prog_args</span>,
+        <span class="sig-arg">dry_run</span>,
+        <span class="sig-arg">main</span>,
+        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#test_selections">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Run the program in a child process, collecting stdout and stderr.
+  <dl><dt></dt><dd>
+    <dl><dt>Returns:</dt>
+        <dd>the output produced by the process</dd></dl>
+      <p><strong>Since:</strong>
+        0.27
       </p>
   </dd></dl>
 </td></tr></table>
@@ -198,7 +283,7 @@ Executes a set of implementations as a program.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Feb 10 12:48:28 2007</td>
+        3.0alpha3 on Wed Apr 25 20:01:51 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

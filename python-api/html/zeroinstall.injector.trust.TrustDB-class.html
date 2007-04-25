@@ -107,7 +107,26 @@ A database of trusted keys.<br /><br />
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.trust.TrustDB-class.html#is_trusted" class="summary-sig-name">is_trusted</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>)</span>
+        <span class="summary-sig-arg">fingerprint</span>,
+        <span class="summary-sig-arg">domain</span>=<span class="summary-sig-default">None</span>)</span>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.trust.TrustDB-class.html#get_trust_domains" class="summary-sig-name">get_trust_domains</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fingerprint</span>)</span><br />
+      Return the set of domains in which this key is trusted.
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.trust.TrustDB-class.html#get_keys_for_domain" class="summary-sig-name">get_keys_for_domain</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">domain</span>)</span><br />
+      Return the set of keys trusted for this domain.
   </td>
 </tr>
 <tr>
@@ -115,7 +134,8 @@ A database of trusted keys.<br /><br />
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.trust.TrustDB-class.html#trust_key" class="summary-sig-name">trust_key</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>)</span><br />
+        <span class="summary-sig-arg">fingerprint</span>,
+        <span class="summary-sig-arg">domain</span>=<span class="summary-sig-default">'*'</span>)</span><br />
       Add key to the list of trusted fingerprints.
   </td>
 </tr>
@@ -124,7 +144,8 @@ A database of trusted keys.<br /><br />
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.trust.TrustDB-class.html#untrust_key" class="summary-sig-name">untrust_key</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>)</span>
+        <span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">domain</span>=<span class="summary-sig-default">'*'</span>)</span>
   </td>
 </tr>
 <tr>
@@ -213,10 +234,10 @@ A database of trusted keys.<br /><br />
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
+    <code class="summary-type">{str: set(str)}</code>
   </td><td class="summary">
     <a href="zeroinstall.injector.trust.TrustDB-class.html#keys">keys</a><br />
-      a list of trusted key fingerprints
+      maps trusted key fingerprints to a list of domains
   </td>
 </tr>
 <tr>
@@ -310,7 +331,8 @@ A database of trusted keys.<br /><br />
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">is_trusted</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">key</span>)</span>
+        <span class="sig-arg">fingerprint</span>,
+        <span class="sig-arg">domain</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.trust-pysrc.html#TrustDB.is_trusted">source&nbsp;code</a></span>&nbsp;</span
@@ -322,6 +344,53 @@ A database of trusted keys.<br /><br />
   </dd></dl>
 </td></tr></table>
 </div>
+<a name="get_trust_domains"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_trust_domains</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fingerprint</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.trust-pysrc.html#TrustDB.get_trust_domains">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Return the set of domains in which this key is trusted. If the list 
+  includes '*' then the key is trusted everywhere.
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.27
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="get_keys_for_domain"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_keys_for_domain</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">domain</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.trust-pysrc.html#TrustDB.get_keys_for_domain">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Return the set of keys trusted for this domain.
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.27
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
 <a name="trust_key"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -330,7 +399,8 @@ A database of trusted keys.<br /><br />
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">trust_key</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">key</span>)</span>
+        <span class="sig-arg">fingerprint</span>,
+        <span class="sig-arg">domain</span>=<span class="sig-default">'*'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.trust-pysrc.html#TrustDB.trust_key">source&nbsp;code</a></span>&nbsp;</span
@@ -341,7 +411,8 @@ A database of trusted keys.<br /><br />
   <dl><dt></dt><dd>
     <dl><dt>Parameters:</dt></dl>
     <ul class="nomargin">
-        <li><strong class="pname"><code>key</code></strong> - base 16 fingerprint without any spaces</li>
+        <li><strong class="pname"><code>fingerprint</code></strong> (<code>str</code>) - base 16 fingerprint without any spaces</li>
+        <li><strong class="pname"><code>domain</code></strong> (<code>str</code>) - domain in which key is to be trusted</li>
     </ul>
       <p><strong>Note:</strong>
         call <a 
@@ -359,7 +430,8 @@ A database of trusted keys.<br /><br />
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">untrust_key</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">key</span>)</span>
+        <span class="sig-arg">key</span>,
+        <span class="sig-arg">domain</span>=<span class="sig-default">'*'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.trust-pysrc.html#TrustDB.untrust_key">source&nbsp;code</a></span>&nbsp;</span
@@ -404,8 +476,8 @@ A database of trusted keys.<br /><br />
     ></td>
   </table>
   
-  Call all watcher callbacks. This should be called after trusting one 
-  or more new keys.
+  Call all watcher callbacks. This should be called after trusting or 
+  untrusting one or more new keys.
   <dl><dt></dt><dd>
       <p><strong>Since:</strong>
         0.25
@@ -492,8 +564,10 @@ A database of trusted keys.<br /><br />
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">keys</h3>
-  a list of trusted key fingerprints
+  maps trusted key fingerprints to a list of domains
   <dl><dt></dt><dd>
+    <dl><dt>Type:</dt>
+      <dd>{str: set(str)}</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -542,7 +616,7 @@ A database of trusted keys.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Feb 10 12:48:29 2007</td>
+        3.0alpha3 on Wed Apr 25 20:01:52 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>
