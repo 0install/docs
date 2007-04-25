@@ -40,7 +40,7 @@ $ <b>0launch http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </ul>
 
 <p style='text-align: center'>
-<img width="575" height="327" src="confirm-tal.png"
+<img width="430" height="370" src="confirm-tal.png"
      alt="Confirming Thomas Leonard's GPG key" />
 </p>
 
@@ -65,9 +65,15 @@ run Edit in the same way:
 
 <ol>
 <li>It downloads Edit's interface file.</li>
-<li>Edit is also signed with my key, so you don't have to confirm a second time.</li>
+<li>Edit is also signed with my key, but you'll be asked to confirm again as Edit is from a different
+domain (<b>rox.sourceforge.net</b> rather than <b>0install.net</b>):
+<p style='text-align: center'>
+<img width="430" height="414" src="confirm-tal-rox.png"
+     alt="Confirming Thomas Leonard's GPG key again" />
+</p></li>
+
 <li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's interface too. This is
-also signed with my key.</li>
+also signed with my key and comes from the ROX domain, so you don't need to confirm again.</li>
 <li>It selects suitable versions of Edit and ROX-Lib and prompts you to accept them:</li>
 </ol>
 

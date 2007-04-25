@@ -220,14 +220,13 @@ that they trust the holder of the key to provide software to them:
 </p>
 
 <p style='text-align: center'>
-<img width="576" height="363" src="trustbox.png"
+<img width="428" height="400" src="trustbox.png"
      alt='You are asked to confirm each new key'/>
 </p>
 
 <p>
-Once trusted, the injector will accept any interface signed by that key
-(while it would be possible to restrict the key to only signing certain
-interfaces, this is unlikely to provide any real benefit).
+Once trusted, the injector will accept any interface from the same domain
+signed by that key.
 </p>
 
 <p>
