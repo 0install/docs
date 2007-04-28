@@ -67,10 +67,10 @@ graphics, scientific and engineering visualization, and game content creation.
 It includes tools for modeling, texturing (node based materials or uv mapped),
 uv mapping, ...</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" width="48" height="48" homepage="http://cddb-py.sourceforge.net/" category="Library">The dynamic duo of CDDB.py and DiscID.py, along with their side-kick C 
-module cdrommodule.so, provide an easy way for Python programs to fetch 
-information on audio CDs from CDDB (http://www.cddb.com/) -- a very 
-large online database of track ...</feed>
+<feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" width="48" height="48" homepage="http://cddb-py.sourceforge.net/" category="Library">The dynamic duo of CDDB.py and DiscID.py, along with their side-kick C module
+cdrommodule.so, provide an easy way for Python programs to fetch information on
+audio CDs from CDDB (http://www.cddb.com/) -- a very large online database of
+track listings ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="Clock panel applet" icon="feed_icons/Clock.png" width="47" height="46" homepage="http://rox.sourceforge.net/desktop/node/27" category="Unknown">This is a panel clock, with support for setting
 alarms.  It can also function in its own window.</feed>
@@ -355,8 +355,8 @@ features include support for lots of distinct games, very nice look and feel,
 multiple cardsets and table tiles, sound and background music, unlimited undo &amp;
 redo, load &amp; save ...</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck.
-Libwnck is a library used by pagers and tasklists.</feed>
+<feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck. Libwnck is a library used by
+pagers and tasklists.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="feed_icons/Resolution.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Resolution" category="Settings">This program allows you to change the screen resolution at any time. The change
 is not permanent. This is useful when connecting a laptop to an external monitor
@@ -458,6 +458,9 @@ This is based on the SystemTray applet, but updated.</feed>
 - in contrast to Tasklist - it only uses the minimum amount of space necessary
 for displaying all tasks.</feed>
 
+<feed uri="http://0install.net/2007/3rd-party/Tgif.xml" name="Tgif" summary="Interactive 2-D drawing tool" icon="feed_icons/Tgif.png" width="51" height="37" homepage="http://bourbon.usc.edu/tgif/" category="Graphics">Tgif is an interactive drawing tool that allows the user to draw and manipulate
+objects in the X Window System.</feed>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="feed_icons/Thumbs.png" width="31" height="36" category="Unknown">This program allows you to examine your thumbnail cache and purge it
 when required.</feed>
 
@@ -486,8 +489,8 @@ Supports OSS mixer devices.</feed>
 Note that ROX-Filer already allows you to set an image or plain colour for the
 backdrop. Wallpaper lets you ...</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="Shows the weather" icon="feed_icons/Weather.xml.png" width="64" height="64" category="Unknown">Weather is a panel-applet that shows the weather and shows a forecast 
-when clicked.</feed>
+<feed uri="http://rox4debian.berlios.de/0install/Weather.xml" name="Weather" summary="Shows the weather" icon="feed_icons/Weather.xml.png" width="64" height="64" category="Unknown">Weather is a panel applet that shows the weather and shows a forecast when
+clicked.</feed>
 
 <feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="A wireless network quality monitor." icon="feed_icons/WiFi.png" width="64" height="64" category="Unknown">A panel applet to monitor the quality of a Wireless network connection.</feed>
 
@@ -521,6 +524,9 @@ cut in your desktop environment.
 
 This program creates a freedesktop.org ".desktop" file, ...</feed>
 
-<feed uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Unknown">The Zero Install GUI displays a window showing which versions of various components will be used when running a program, and allows you to alter various policy settings to affect the selection process. You can use this to mark particular versions of ...</feed>
+<feed uri="http://0install.net/2007/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Library">The Zero Install GUI displays a window showing which versions of various
+components will be used when running a program, and allows you to alter various
+policy settings to affect the selection process. You can use this to mark
+particular versions of ...</feed>
 
 <category name="Audio"/><category name="Development"/><category name="Education"/><category name="Games"/><category name="Graphics"/><category name="Library"/><category name="Network"/><category name="Office"/><category name="Settings"/><category name="System"/><category name="Utility"/><category name="Video"/><category name="Unknown"/></list>
