@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/APBuild.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>APBuild</name>
+  <summary>a suite of portability tools for developers</summary>
+  <description>
+In the process of writing autopackage, we've also produced several standalone
+tools, the apbuild programs, that are designed to help Linux developers write
+better software that runs on a wider variety of distributions. They are
+independent of autopackage itself: you can use them even if you don't provide
+your software using the rest of our software.</description>
+  <homepage>http://autopackage.org/aptools.html</homepage>
+  <category>Development</category>
+  <icon href="http://autopackage.org/gnome-devel.png" type="image/png"/>
+  <group>
+    <implementation id="sha1new=ba6ff87b8f11f139656a72de73d03fe22649b310" released="2007-04-29" version="2.0.3">
+    <archive extract="apbuild-2.0.3" href="http://ftp.sunsite.dk/projects/autopackage/tools/apbuild-2.0.3.tar.gz" size="27960" type="application/x-compressed-tar"/>
+  </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGNHEDBSn9tx+xORARAmSnAKCcRBe5dthLCH4+ZNOGPRNSNW/7ZACfZJ8WPuvjSmOsHblO
+3bcGYaxe9X4=
+
+-->
