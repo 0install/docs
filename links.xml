@@ -219,7 +219,7 @@ Install (for packages built using 0compile, at least).
 An important difference between the two is that the Nix hash is a hash of the
 <i>inputs</i> used to build the package, whereas the Zero Install hash is a
 hash of the <i>resulting binary</i>.
-Nix does this to support with binaries that hard code
+Nix does this to support binaries that hard code
 their own paths, since the final hash needs to be known at compile time.
 For source (non-compiled)
 packages, the Nix hash is a hash of the contents, as with Zero Install.
@@ -227,6 +227,13 @@ The Zero Install hash often happens to include the inputs, since it covers the
 "build-environment.xml" file which 0compile places in each binary package. Zero
 Install doesn't allow binaries to include hard-coded paths.
 </p>
+
+<p>Update: Nix is planning to use binary hashes everywhere in future (zeroing out
+self-references for the purposes of calcuating the hashes). The same thing was proposed
+a few years ago for Zero Install (the
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/882/focus=882'>relocation table</a>).
+It relies on the cache directory being at a fixed location, whereas people often have Zero Install
+set up to use their home directory, but it's basically a good idea.</p>
 
 <p>
 Another difference between Nix and Zero Install is that Nix treats configurations
