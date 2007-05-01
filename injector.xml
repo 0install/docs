@@ -57,7 +57,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li><b>Debian/oldstable (sarge)</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
-  <b>Debian/stable (etch or later)</b> <download name='zeroinstall-injector_0.26-1_all.deb'/> (Debian package; python-central)<br/>
+  <b>Debian/stable (etch or later)</b> <download name='zeroinstall-injector_0.27-1_all.deb'/> (Debian package; python-central)<br/>
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
   <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.27-0ubuntu1_all.deb'/><br/>
