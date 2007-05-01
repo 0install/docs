@@ -61,9 +61,9 @@ program. Some examples include:
   <strong>Debian developers:</strong> To get into the main distribution, this package <a href='http://thread.gmane.org/gmane.linux.debian.devel.mentors/19359/focus=19359'>needs a sponsor!</a></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
   <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.27-0ubuntu1_all.deb'/><br/>
-  <b>Ubuntu (feisty)</b> Zero Install is now in Feisty (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
+  <b>Ubuntu (feisty/gutsy)</b> Zero Install is now in Feisty (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-  <p>However, the edgy deb is more up-to-date, so you may prefer to install that.</p>
+  <p>However, the edgy deb is more up-to-date than the version in feisty, so you may prefer to install that.</p>
   </li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
