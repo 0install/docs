@@ -397,3 +397,21 @@ td.teaser a {
 	float: right;
 	color: #66f;
 }
+
+div.program {
+	float: right;
+	border: 1px dashed #888;
+	margin: 0.5em;
+	padding: 0.5em;
+	background; #eee;
+	font-size: smaller;
+}
+
+div.program th:after {
+	content: ":";
+}
+
+div.program th {
+	text-align: right;
+	padding-right: 0.5em;
+}

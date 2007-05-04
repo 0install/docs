@@ -225,6 +225,19 @@
     </div>
   </xsl:template>
 
+  <xsl:template match='*[name() = "program"]'>
+    <div class='program'>
+      <table>
+        <tr><th>Name</th><td><xsl:value-of select='@name'/></td></tr>
+        <tr><th>Main author</th><td><xsl:value-of select='@author'/></td></tr>
+        <tr><th>License</th><td><xsl:value-of select='@license'/></td></tr>
+	<xsl:if test='@feed'>
+	  <tr><th>Install</th><td><a href='{@feed}'>Zero Install feed</a></td></tr>
+	</xsl:if>
+      </table>
+    </div>
+  </xsl:template>
+
   <xsl:template match='*[name() = "h3" or name() = "h2"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>

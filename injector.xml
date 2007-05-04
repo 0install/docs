@@ -3,6 +3,10 @@
 
 <h2>The Zero Install Injector</h2>
 
+<program name='Zero Install Injector'
+	 author='Thomas Leonard'
+	 license='GNU Lesser General Public License'/>
+
 <p>
 The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
 it the program's full name (a web address). The injector does <b>not</b> need

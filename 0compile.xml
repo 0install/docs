@@ -3,6 +3,10 @@
 
 <h2>0compile</h2>
 
+<program name='0compile'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2006/interfaces/0compile.xml'
+	 license='GNU Lesser General Public License'/>
 <p>
 Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile
 a new binary from a source package. This is useful if:

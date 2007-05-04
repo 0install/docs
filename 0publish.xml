@@ -3,6 +3,11 @@
 
 <h2>0publish: Scripting the release process</h2>
 
+<program name='0publish'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2006/interfaces/0publish'
+	 license='GNU Lesser General Public License'/>
+
 <p>
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
 as much as possible of it. The <b>0publish</b> command provides a set of useful transformations
