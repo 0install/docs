@@ -6,6 +6,7 @@
 <program name='0compile'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2006/interfaces/0compile.xml'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/0compile'
 	 license='GNU Lesser General Public License'/>
 <p>
 Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile

@@ -229,10 +229,13 @@
     <div class='program'>
       <table>
         <tr><th>Name</th><td><xsl:value-of select='@name'/></td></tr>
-        <tr><th>Main author</th><td><xsl:value-of select='@author'/></td></tr>
+        <tr><th>Maintainer</th><td><xsl:value-of select='@author'/></td></tr>
         <tr><th>License</th><td><xsl:value-of select='@license'/></td></tr>
 	<xsl:if test='@feed'>
-	  <tr><th>Install</th><td><a href='{@feed}'>Zero Install feed</a></td></tr>
+	  <tr><th>Run it</th><td><a href='{@feed}'>Zero Install feed</a></td></tr>
+	</xsl:if>
+	<xsl:if test='@svn'>
+	  <tr><th>Subversion</th><td><a href='{@svn}'>Trunk</a></td></tr>
 	</xsl:if>
       </table>
     </div>

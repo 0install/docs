@@ -5,6 +5,7 @@
 
 <program name='Zero Install Injector'
 	 author='Thomas Leonard'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/0launch'
 	 license='GNU Lesser General Public License'/>
 
 <p>

@@ -6,6 +6,7 @@
 <program name='0publish'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2006/interfaces/0publish'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/0publish'
 	 license='GNU Lesser General Public License'/>
 
 <p>
