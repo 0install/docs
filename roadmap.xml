@@ -127,7 +127,8 @@ get removed from the cache when no longer needed! [ <a href='sharing.html'>worki
 
 <dt>Mirrors for archives</dt>
 <dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
-systems, coral cache, etc. May need to show sponsor logos during the download.</dd>
+systems, coral cache, etc. May need to show sponsor logos during the download.
+See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
 
 <dt>Automatic cache cleaning</dt>
 <dd>
