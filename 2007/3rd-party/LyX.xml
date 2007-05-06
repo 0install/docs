@@ -28,10 +28,13 @@ conference proceedings.</description>
     <requires interface="http://0install.net/2007/3rd-party/XdgUtils.xml">
       <environment insert="scripts" name="PATH"/>
     </requires>
+    <requires interface="http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml">
+      <environment insert="" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGGlJ8BSn9tx+xORARAg2mAJ95nqluY+Tuyw7IAgu2qPZpgLLsvwCgn+eYO9BB0ojReO3e
-tU7Hfu9dsdw=
+iD8DBQBGPZpUBSn9tx+xORARAjnGAJ9gN8++AD0MS63qrrhiP+/aKXU+/QCdHcAazmrDv8LXvLET
+eNOOELG18DE=
 
 -->
