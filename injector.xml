@@ -121,8 +121,7 @@ $ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-in
 </pre>
 
 <p>
-Check that the signature is correct using GPG. This also ensures that you have my key installed, which
-you will need later!
+Check that the signature is correct using GPG (this also ensures that GPG is installed correctly):
 </p>
 
 <pre>

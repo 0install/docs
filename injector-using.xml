@@ -12,22 +12,11 @@ Now that you've <a href='injector.html'>installed the injector</a>, let's try us
 get more software.
 </p>
 
-<!--
-<div class='note'>
-<strong>2005-10-30</strong> It seems that <a href='http://news.bbc.co.uk/1/hi/england/hampshire/4390048.stm'>our
-university department has burned down</a>. This probably explains why DNS isn't working. Therefore, please
-add this line to your <b>/etc/hosts</b> file:
-<pre>
-66.35.250.210   0install.net
-</pre>
-</div>
--->
-
 <h3>Example: Running Edit with the injector</h3>
 
 <p>
 Run <b>0launch</b> (as a normal user, <b>not</b> as root!), giving it the URL
-for the program you want to run:
+for the program you want to run. For example:
 </p>
 
 <pre>
@@ -52,7 +41,7 @@ So what happened?
 <li>The injector realised that it needed to download some files to run Edit, so
 it switched to graphical mode (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1189/focus=1190'>use --console to disable this</a>).</li>
 <li>First, it checks for updates to the graphical user interface (GUI) itself.
-It downloaded the GUI's interface file, which tells it which versions are
+It downloaded the GUI's <i>feed</i> file, which tells it which versions are
 available.</li>
 <li>The injector prompts you to confirm that you will accept software signed with my key.</li>
 <li>If a newer version of the GUI was found, you would be prompted to download it (or choose
@@ -64,7 +53,7 @@ run Edit in the same way:
 </p>
 
 <ol>
-<li>It downloads Edit's interface file.</li>
+<li>It downloads Edit's feed file.</li>
 <li>Edit is also signed with my key, but you'll be asked to confirm again as Edit is from a different
 domain (<b>rox.sourceforge.net</b> rather than <b>0install.net</b>):
 <p style='text-align: center'>
@@ -72,7 +61,7 @@ domain (<b>rox.sourceforge.net</b> rather than <b>0install.net</b>):
      alt="Confirming Thomas Leonard's GPG key again" />
 </p></li>
 
-<li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's interface too. This is
+<li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's feed too. This is
 also signed with my key and comes from the ROX domain, so you don't need to confirm again.</li>
 <li>It selects suitable versions of Edit and ROX-Lib and prompts you to accept them:</li>
 </ol>
@@ -148,8 +137,8 @@ To edit policy: rox-edit --versions
 </pre>
 
 <p>
-The command puts the script in the first directory in your $PATH, which must therefore be
-writable. You can now run edit like this:
+The command puts the script in the first writable directory in your $PATH.
+You can now run Edit like this:
 </p>
 
 <pre>
@@ -192,8 +181,8 @@ since there may not be new testing versions available when you try it.
 
 <p>
 To get the injector to notice that a new version is available, click on the <b>Refresh all now</b>
-button (which fetches a fresh copy of each listed interface). You can also set the freshness
-policy; the injector will automatically check for updates to interfaces that haven't been
+button (which fetches a fresh copy of each feed). You can also set the freshness
+policy; the injector will automatically check for updates to feeds that haven't been
 checked within the allowed time.
 </p>
 
@@ -227,7 +216,7 @@ The list of feeds shows all the places where the injector looks for versions of 
 By default, there is just one feed, whose URL is simply Edit's URI; you can
 view it in a web browser if you're interested:
 <a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit's interface</a>. This is
-a plain-text GPG-signed file. The injector stores the downloaded interface files
+an XML file with a GPG signature at the end. The injector stores the downloaded feed files
 locally (in <b>~/.cache/0install.net/interfaces</b>).
 </p>
 
@@ -261,7 +250,7 @@ levels are allowed:
 <p>
 Stability ratings are kept independently of the implementations, and are expected to change over
 time. When any new release is made, its stability is initially set to <b>Testing</b>. If you
-have selected <b>Help test new versions</b> then you will then start using it.
+have selected <b>Help test new versions</b> in the Preferences dialog box then you will then start using it.
 Otherwise, you will continue with the previous stable release. After a while
 (days, weeks or months, depending on the project) with no serious problems
 found, the author will change the implementation's stability to <b>Stable</b> so that
