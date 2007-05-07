@@ -36,10 +36,11 @@ modify anything in there.
 </p>
 
 <p>
-In future, Zero Install will store downloaded implementations in <b>/var/cache/0install.net/</b>
-instead of in your home directory. This allows sharing between users. The use of cryptographic
-digests (described below) makes this safe; users don't need to trust each other not to put
-malicious code in the shared cache.
+If <a href='sharing.html'>sharing</a> is enabled, then Zero Install stores
+downloaded implementations in <b>/var/cache/0install.net/</b> instead of in
+your home directory. This allows sharing between users. The use of
+cryptographic digests (described below) makes this safe; users don't need to
+trust each other not to put malicious code in the shared cache.
 </p>
 
 
@@ -198,6 +199,9 @@ according to rules specified by the user:
 
 <dt>An implementation</dt>
 <dd>is something that does it (eg, Edit-1.9.6 or Edit-1.9.7).</dd>
+
+<dt>A feed file</dt>
+<dd>is a list of implementations of an interface.</dd>
 </dl>
 <p>
 In Zero Install, interfaces are named by globally unique URLs (like web pages). Some examples
@@ -229,18 +233,18 @@ chooses an implementation based on the your policy.
 </p>
 
 <p>
-The list of implementations of an interface is found by using the interface's name as a
-URL and downloading the XML file it names (click on one of the interfaces above to see
-what an interface file looks like).
+By default, the list of implementations of an interface is found by using the
+interface's name as a URL and downloading the XML feed file it names (click on
+one of the interfaces above to see what a feed file looks like). Additional feeds
+(local or remote) can be added manually by the user.
 </p>
 <h2>Versions</h2>
 
 <p>
 An implementation (in the Zero Install sense) is always some particular
-version. In future, we will identify implementations with a cryptographic hash
-of their contents in addition to their version number. Therefore, two releases
-with the same version number are still considered as separate implementations
-if they differ in any way.
+version. We identify implementations with a cryptographic hash of their
+contents. Therefore, two releases with the same version number are still
+considered as separate implementations if they differ in any way.
 </p>
 
 <p>
@@ -274,8 +278,8 @@ version) to an interface should be handled by creating a new interface. Eg:
 </p>
 
 <ul>
-<li>/uri/0install/gtk.org/gtk/gtk-1.2.xml  (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
-<li>/uri/0install/gtk.org/gtk/gtk-2.0.xml  (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
+<li>http://gtk.org/gtk-1.2.xml  (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
+<li>http://gtk.org/gtk-2.0.xml  (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
 </ul>
 
 <h2>Stability</h2>
@@ -363,7 +367,7 @@ injector. You can therefore edit the policy for the GUI using the GUI:
 </p>
 
 <pre>
-$ 0launch -dg http://0install.net/2006/interfaces/ZeroInstall-GUI.xml
+$ 0launch -dg http://0install.net/2007/interfaces/ZeroInstall-GUI.xml
 </pre>
 
 <p>
@@ -380,7 +384,6 @@ Some things we're intending to add at some point:
  <li>Better support for mirrors (interfaces and implementations).</li>
  <li>Ability to use the <a href='http://www.coralcdn.org/'>Coral cache</a>, etc.</li>
  <li>Support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1262/focus=1262'>downloads of implementations using peer-to-peer systems</a>.</li>
- <li>A setuid helper to allow automatic safe sharing between users.</li>
  <li>A system to suggest good candidates for removal from the cache (e.g.,
  the new versions works, so you probably want to delete the old one).</li>
 </ul>
