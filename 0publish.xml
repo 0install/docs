@@ -12,7 +12,7 @@
 <p>
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
 as much as possible of it. The <b>0publish</b> command provides a set of useful transformations
-for interface files which you can integrate into your release scripts.
+for feed files which you can integrate into your release scripts.
 </p>
 
 <p>
@@ -25,7 +25,7 @@ href='injector-packagers.html'>the packaging guide</a>.
 <h2>General operation</h2>
 
 <p>
-<b>0publish</b> edits interface files in place. It loads the file, transforms it in some way (such as
+<b>0publish</b> edits feed files in place. It loads the file, transforms it in some way (such as
 setting the release date, or adding a new implementation) and then writes it back out again. If the input
 file was signed, it will resign it when saving with the same key by default. You can also use it to add a
 signature, or to change the signing key.
@@ -37,10 +37,9 @@ $ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
 </pre>
 
 <p>
-In build scripts, you would use the full URI or create a local function or
-alias so that users don't need to have installed <b>0publish</b> in order to
-build your program (assuming you use <b>0publish</b> as part of the build
-process.
+In build scripts, you would use the full URI or create a local function
+so that users don't need to run 0alias first in order to build your
+program (assuming you use <b>0publish</b> as part of the build process).
 </p>
 
 <p>
@@ -55,7 +54,7 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
 
 <h2>0publish reference</h2>
 
-<b>Usage: 0publish [options] interface</b>
+<b>Usage: 0publish [options] feed.xml</b>
 
 <h3>Options</h3>
 
@@ -66,20 +65,19 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
   See <a href='#archive'>adding an archive</a> for an example.</dd>
   <dt>-e, --edit</dt><dd>Edit with $EDITOR. This is useful if the file is signed, since
   it removes the signature at the start and resigns at the end. It also checks that the
-  new interface is valid before overwriting the old copy.</dd>
-  <dt>-g, --gpgsign</dt><dd>Add a GPG signature block. All remote interfaces must be signed.</dd>
+  new feed is valid before overwriting the old copy.</dd>
+  <dt>-g, --gpgsign</dt><dd>Add a GPG signature block. Deprecated; use --xmlsign instead.</dd>
   <dt>-kKEY, --key=KEY</dt><dd>Key to use for signing (if you have more than one, or if you want to
   resign with a different key).</dd>
-  <dt>-lLOCAL, --local=LOCAL</dt><dd>Create or update a feed from local interface. Not yet implemented.</dd>
+  <dt>-lLOCAL, --local=LOCAL</dt><dd>Create or update a feed from another feed. Only partially implemented.</dd>
   <dt>--set-id=DIGEST</dt><dd>Set the implementation ID.
   Note: it's usually easier to use the <b>--archive-*</b> options.</dd>
   <dt>--set-released=DATE</dt><dd>Set the release date.
-  Typically used as <b>0publish --set-released `date +%F` interface</b>, which sets today's date.</dd>
+  Typically used as <b>0publish --set-released `date +%F` feed.xml</b>, which sets today's date.</dd>
   <dt>--set-stability=STABILITY</dt><dd>Set the stability rating.</dd>
   <dt>--set-version=VERSION</dt><dd>Set the version number (used when making a release from CVS).</dd>
   <dt>-s, --stable</dt><dd>Mark the current testing version as stable.</dd>
-  <dt>-x, --xmlsign</dt><dd>Add an XML signature block. This is the new signature format, but is not
-  widely supported yet, so stick with <b>--gpgsign</b> for now.</dd>
+  <dt>-x, --xmlsign</dt><dd>Add an XML signature block. All remote feeds must be signed.</dd>
   <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
   <dt>-V, --version</dt><dd>Display version information.</dd>
 </dl>
