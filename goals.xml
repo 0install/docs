@@ -19,25 +19,25 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
 </div>
 
  <p>
- You don't have to be root just to install a word-processor, or its
+ You don't have to be <k>root</k> just to install a <k>word-processor</k>, or its
  documentation. Most packaging systems only allow the root user to install
  software.
  </p>
  
  <p>
  Traditionally, if a user needs a package that isn't installed, they just get an
- error message. In the screenshot, the system administrator must install the
- openoffice.org-help package before the user can read the documentation, or
- the user must install from source and handle any dependencies themselves.
- On a Zero Install system, Zero Install would have offered to download the
+ <k>error message</k>. In the screenshot, the <k>system administrator</k> must install the
+ openoffice.org-help package before the <k>user</k> can read the documentation, or
+ the user must install from source and handle any <k>dependencies</k> themselves.
+ On a Zero Install system, Zero Install would have offered to <k>download</k> the
  documentation when the user selected <b>Help</b>.
  </p>
 
  <p>
  Of course, Debian could fix this particular problem by making the OpenOffice package
  depend on the documentation package. But then, installing OpenOffice would require far
- more disk space if you didn't need the documentation (and most of the time, for most
- versions of most software packages, you <i>don't</i> need the documentation... but an
+ more <k>disk space</k> if you didn't need the documentation (and most of the time, for <k>most
+ versions</k> of <k>most software packages</k>, you <i>don't</i> need the documentation... but an
  administrator can't know ahead of time what will be needed by their users). Also, users
  still wouldn't be able to install OpenOffice itself in the first place.
  </p>
@@ -48,8 +48,8 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
   <td><h3>Anyone can distribute software</h3>
  <p>
  One of the more frustrating aspects of open source software is finding a
- program you want, only to discover that there is no package available for your
- distribution. Eg, on Debian (I'm not picking on Debian, it's just I've got a
+ program you want, only to discover that there is <k>no package</k> available for your
+ <k>distribution</k>. Eg, on Debian (I'm not picking on Debian, it's just I've got a
  Debian system here!):
  </p>
 
@@ -57,9 +57,9 @@ Let's expand a little on the goals set out on the <a href='index.html'>title pag
 E: Couldn't find package rox-session</pre>
  
  <p>
- You don't need to be blessed by a distribution (or anyone else)
- to be part of Zero Install; all you need is a web page. Software is named
- by URL:
+ You don't need to be <k>blessed by a distribution</k> (or anyone else)
+ to be part of Zero Install; all you need is a <k>web page</k>. Software is <k>named
+ by URI</k>:
  </p>
 
  <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
@@ -80,10 +80,10 @@ E: Couldn't find package rox-session</pre>
   <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
   <td><h3>It doesn't matter whether software is installed or not</h3>
 
- <p>Traditional systems make running software a two-step process: first you
- install it, then you run it.  In a Zero Install system, you just run it and
- the system handles the rest (downloading and caching as needed). You can delete
- the downloaded programs later to save space, and they will be fetched again
+ <p>Traditional systems make running software a <k>two-step</k> process: first you
+ <k>install</k> it, then you <k>run</k> it.  In a Zero Install system, you just run it and
+ the system handles the rest (<k>downloading</k> and <k>caching</k> as needed). You can <k>delete</k>
+ the downloaded programs later to <k>save space</k>, and they will be <k>fetched again</k>
  automatically if they are needed in the future.</p>
  <p>The <a href='howitworks.html'>screenshots page</a> has an example showing how
  software is run this way.</p>
@@ -92,18 +92,18 @@ E: Couldn't find package rox-session</pre>
  <tr id='safesharing'>
   <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
   <td><h3>Shared downloads</h3>
- <p>If one user installs a 20 Mb application, another user can run it without downloading it again.
+ <p>If one user installs a 20 Mb application, <k>another user</k> can run it without downloading it again.
  Most packaging systems solve this problem by only allowing root to install software. The systems which
  don't have this limitation (eg, <a href='http://autopackage.org'>autopackage</a>) typically end up downloading
- and storing multiple copies of a program; one for each user. Zero Install
- shares downloads (safely) between users.
+ and storing <k>multiple copies</k> of a program; one for each user. Zero Install
+ <k>shares downloads</k> (safely) between users.
  </p>
  <p>
   With Zero Install, each user downloads a small <i>interface file</i> which gives the cryptographic
-  digest of the full package. The digest can be used to check that a package already on the computer
+  digest of the full package. The <k>digest</k> can be used to <k>check</k> that a package already on the computer
   (downloaded by another user) hasn't been tampered with. Most simply, each user can make a copy of the
-  original download this way (which shares the download but not the disk space). With a special SetUID helper,
-  even the disk copies can be safely shared.
+  original download this way (which shares the download but not the disk space). With a <k>special helper</k>,
+  even the <k>disk copies</k> can be <k>safely shared</k>.
  </p>
  <p>
    See the <a href='sharing.html'>Sharing</a> page for information about using this feature.
@@ -113,9 +113,9 @@ E: Couldn't find package rox-session</pre>
  <tr>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
   <td><h3>Good security</h3>
-  <p>If one user downloads a malicious program, other users aren't affected.<br/>
-  Installation does not execute any downloaded code as root.<br/>
-  Digital signatures are always checked before software is run.</p>
+  <p>If one user downloads a <k>malicious</k> program, <k>other users</k> aren't affected.<br/>
+  Installation does not <k>execute</k> any of the <k>downloaded code</k>.<br/>
+  <k>Digital signatures</k> are always checked before software is run.</p>
   <p>
    See the <a href='injector-security.html'>Injector security</a> page for more information about Zero Install's
    security features.

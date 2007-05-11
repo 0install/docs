@@ -419,3 +419,20 @@ div.program th {
 span.keyphrase {
 	color: #800;
 }
+
+span.more:hover {
+	color: #000;
+}
+
+span.more:hover a {
+	color: #00f;
+}
+
+span.more {
+	color: #666;
+	padding-left: 1em;
+}
+
+span.more a {
+	color: #66f;
+}

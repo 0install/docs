@@ -229,6 +229,10 @@
     <span class='keyphrase'><xsl:apply-templates select='node()'/></span>
   </xsl:template>
 
+  <xsl:template match='*[name() = "more"]'>
+    <span class='more'>[&#160;<a><xsl:apply-templates select='@*'/>more</a>&#160;]</span>
+  </xsl:template>
+
   <xsl:template match='*[name() = "program"]'>
     <div class='program'>
       <table>
