@@ -99,7 +99,7 @@ E: Couldn't find package rox-session</pre>
  <k>shares downloads</k> (safely) between users.
  </p>
  <p>
-  With Zero Install, each user downloads a small <i>interface file</i> which gives the cryptographic
+  With Zero Install, each user downloads a small <i>feed file</i> which gives the cryptographic
   digest of the full package. The <k>digest</k> can be used to <k>check</k> that a package already on the computer
   (downloaded by another user) hasn't been tampered with. Most simply, each user can make a copy of the
   original download this way (which shares the download but not the disk space). With a <k>special helper</k>,
