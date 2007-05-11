@@ -21,11 +21,11 @@ The injector can be run manually, but it is normally invoked by another
 program. Some examples include:
 </p>
 
-<ul>
- <li>When a GNOME or KDE user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a> program, it creates an entry on the Applications menu that uses the injector.</li>
- <li>When a ROX desktop user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a launcher application that uses the injector.</li>
- <li>When an Xfce user drags a link from a web-browser to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a launcher button that uses the injector.</li>
- <li>When a shell user runs the <b>0alias</b> command, it creates a shell short-cut that runs the injector.</li>
+<ul class='spaced'>
+ <li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a> program, it creates an entry on the <k>Applications menu</k> that uses the injector.</li>
+ <li>When a <k>ROX desktop</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses the injector.</li>
+ <li>When an <k>Xfce</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a <k>launcher button</k> that uses the injector.</li>
+ <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs the injector.</li>
 </ul>
 
 <table class='quicklinks'>

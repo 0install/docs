@@ -10,29 +10,29 @@ bundles, setup.exe, etc). Here are some of our goals:
  <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can install software</h3>
-      <p>You don't have to be the administrator (root) just to install a word-processor [ <a href='goals.html#anyoneinstall'>more</a> ]</p>
+      <p>You don't have to be the <k>administrator</k> (root) just to <k>install a word-processor</k> [ <a href='goals.html#anyoneinstall'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
-      <p>You don't need to be blessed by a distribution (or anyone else) to be part of Zero Install;<br/>
-      The system is completely decentralised [ <a href='goals.html#anyonedistrib'>more</a> ]</p>
+      <p>You don't need to be <k>blessed by a distribution</k> (or anyone else) to be part of Zero Install;<br/>
+      The system is <k>completely decentralised</k> [ <a href='goals.html#anyonedistrib'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/system-software-update.png' alt='' width='48' height='48'/></td>
   <td><h3>It doesn't matter whether software is installed or not</h3>
-      <p>You just run it. Zero Install handles the rest (downloading and caching as needed) [ <a href='goals.html#cache'>more</a> ]</p>
+      <p>You just run it. Zero Install handles the rest (<k>downloading</k> and <k>caching</k> as needed) [ <a href='goals.html#cache'>more</a> ]</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
   <td><h3>Security</h3>
-      <p>If one user downloads a malicious program, other users aren't affected;<br/>
-      Users can share downloads without having to trust each other;<br/>
-      Installation does not execute any downloaded code as root;<br/>
-      Digital signatures are always checked before new software is run [ <a href='injector-security.html'>more</a> ]</p>
+      <p>If one user downloads a <k>malicious</k> program, <k>other users</k> aren't affected;<br/>
+      Users can <k>share</k> downloads without having to <k>trust</k> each other;<br/>
+      Installation does not <k>execute</k> any of the downloaded code;<br/>
+      <k>Digital signatures</k> are always checked before new software is run [ <a href='injector-security.html'>more</a> ]</p>
   </td>
  </tr>
 </table>

@@ -415,3 +415,7 @@ div.program th {
 	text-align: right;
 	padding-right: 0.5em;
 }
+
+span.keyphrase {
+	color: #800;
+}
