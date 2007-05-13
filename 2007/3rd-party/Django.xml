@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/Django.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Django</name>
+  <summary>the Web framework for perfectionists with deadlines</summary>
+  <description>
+Django is a high-level Python Web framework that encourages rapid development
+and clean, pragmatic design.
+
+Developed and used over two years by a fast-moving online-news operation, Django
+was designed to handle two challenges: the intensive deadlines of a newsroom and
+the stringent requirements of the experienced Web developers who wrote it. It
+lets you build high-performing, elegant Web applications quickly.</description>
+  <homepage>http://www.djangoproject.com/</homepage>
+  <group license="OSI Approved :: BSD License (revised)">
+    <implementation id="sha1new=262c95b5a7cc34f525408b675106e4e4ae3494cc" released="2007-05-12" version="0.96">
+    <archive extract="Django-0.96" href="http://www.djangoproject.com/download/0.96/tarball/" size="1748745" type="application/x-compressed-tar"/>
+  </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/Django.xml">
+      <environment insert="" name="PYTHONPATH"/>
+    </requires>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGR1wfBSn9tx+xORARAil/AJsEbCJKANLGBWi0Zh/WIRtG5amTFQCfdgAfkbwNpSe+LpcD
+kSHXVruSmuI=
+
+-->
