@@ -466,7 +466,7 @@ distributions?</h3>
 There are some problems in this area generally (not just with Zero Install).
 The <a href="http://www.autopackage.org">Autopackage</a> project is working
 on these issues; see their FAQ for a detailed look at the problems faced.
-However, we have a binaries for ROX-Filer and many other programs that work on
+However, we have binaries for ROX-Filer and many other programs that work on
 all distributions, so it's certainly possible. Zero Install can help you create
 more compatible binaries by compiling against older versions of header files; see
 <a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a>

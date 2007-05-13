@@ -142,8 +142,8 @@ enough via the cache explorer, but it should be more automatic, a bit like "apt-
 If a Zero Install package requires a library, and the user already has a suitable version installed with another
 system (APT, RPM, etc) then the injector should be able to use that version. This would save unnecessarily downloading
 and storing a second copy of the library. The user should still have the option to get the library through Zero Install
-if they want though (e.g., if they want to try a newer version). Should we check for the presence of files or packages,
-though?
+if they want though (e.g., if they want to try a newer version).
+<more href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1621/focus=1633'/>
 </dd>
 
 <dt>Optional dependencies</dt>
