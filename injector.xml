@@ -80,6 +80,7 @@ program. Some examples include:
 <dd>
 <ul>
   <li><b>Slackware</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><b>Solaris</b> works (follow instructions below)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
   <li><b>MacOS X</b> should work (follow instructions below), but has not been tested. Please send a report to <a href='support.html'>the mailing list</a> to let us know either way!</li>
   <li><b>Microsoft Windows</b> is not currently supported, as it lacks the <i>fork</i> system call. This should be easy to work around, if any Windows developers want to volunteer.</li>
