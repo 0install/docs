@@ -77,6 +77,35 @@ the program data though; removing the program from the cache doesn't remove the
 menu item (clicking on it would simply offer to download the program
 again).</p>
 
+<h3>Wouldn't it be cool if you could install software just by clicking in a web page?</h3>
+<p>
+It's a bit of a security risk. If you set up your browser to do this, then the
+author of any random web-site can try to trick you into clicking on some
+harmless-looking link. They may even be able to trigger the process without any
+action from you at all. Zero Install's confirmation dialogs should prevent it
+from actually getting installed, but:
+</p>
+
+<ul class='spaced'>
+ <li>Even with confirmation boxes, web pages can still annoy users by opening thousands of
+ them. You'd need some kind of popup-blocker type technology to stop that.</li>
+ <li>The malicious web page gets to send arbitrary data of their choice to Zero Install.
+ For example, they might try to exploit a buffer-overflow in GnuPG by sending malformed
+ data. Zero Install <i>should</i> reject it, but it's safer if we don't even
+ allow the process to start.</li>
+ <li>If you do this, then your browser needs permission to run arbitrary programs,
+add items to your Start menu, etc. Given that the browser is one of the most at-risk
+components on your system, this doesn't sound like a good plan (although browsers are
+often configured this way at present).</li>
+</ul>
+
+<p>
+Therefore, we require you to drag the link to the installer to start the
+process. That way, if you weren't intending to install anything, then the
+process doesn't even start. As an added bonus, this lets you specify where
+on your desktop you want the launcher created.
+</p>
+
 <h3>Will Zero Install conflict with my existing package manager?</h3>
 
 <p>
