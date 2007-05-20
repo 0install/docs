@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/Gimp-native.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gimp-native</name>
+  <summary>test for distribution integration</summary>
+  <description>
+Starting with 0launch 0.28, you can use Zero Install to run programs installed
+using your distribution's package manager. Running this feed will run
+/usr/bin/gimp if you are on a Debian-type system and you have the 'gimp' package
+installed. Although this feed only includes Debian (and Ubuntu, etc) packages,
+the idea is that a single feed can support packages for multiple distributions,
+plus Zero Install downloads.</description>
+  <homepage>http://0install.net/injector-tests.html</homepage>
+  <group main="/usr/bin/gimp">
+    <package-implementation distribution="Debian" package="gimp"/>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGUDfamx9df5ch2pARAulQAJwLy5PSEdo+8qg8JDKr+6248cSRewCgpGn3SuacbitT9YVi
+plWnMJSQK1Y=
+
+-->
