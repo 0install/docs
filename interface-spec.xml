@@ -93,6 +93,7 @@ A group has this syntax:
   &lt;group version='...' ?
        	  released='...' ?
 	  main='...' ?
+	  doc-dir='...' ?
 	  license='...' ?
           stability='...' ?
           arch='...' ? &gt;
@@ -121,6 +122,7 @@ the closest ancestor &lt;group&gt; which defines it):
   	version='...' ?
   	version-modifier='...' ?
 	main='...' ?
+	doc-dir='...' ?
   	released='...' ?
 	stability='...' ?
 	arch='...' ? &gt;
@@ -150,6 +152,10 @@ the closest ancestor &lt;group&gt; which defines it):
  when the interface is run. If an implementation has no <b>main</b> setting, then it cannot be executed
  without specifying one manually (with <b>0launch --main=MAIN</b>). This typically means that the interface
  is for a library.</dd>
+
+ <dt>doc-dir</dt>
+ <dd>The relative path of a directory inside the implementation that contains the package's documentation.
+ This is the directory that would end up inside <b>/usr/share/doc</b> on a traditional Linux system.</dd>
 
  <dt>released</dt>
  <dd>The date this implementation was made available, in the format YYYY-MM-DD. For developer snapshots (e.g., a
