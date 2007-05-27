@@ -325,6 +325,7 @@ to be selected.
     &lt;environment
 	  name='...'
 	  insert='...'
+	  mode='prepend|append|replace' ?
 	  default='...' ? /&gt; *
 </pre>
 
@@ -336,12 +337,19 @@ of the item within the implementation to insert into the variable's value.
 </p>
 
 <p>
-The absolute path of the item is prepended to the current value of the
-variable, separated by a colon character. If the environment variable is not
-currently set then the path is prepended to the value of the default attribute.
-If no default value is given either then the default for that environment
-variable is used, or the environment variable's value is set to the absolute
-path directly if there is no default.
+If <b>mode</b> is <b>prepend</b> (or not set), then the absolute path of the
+item is prepended to the current value of the variable, separated by a colon
+character. If the environment variable is not currently set then the path is
+prepended to the value of the default attribute. If no default value is given
+either then the default for that environment variable is used, or the
+environment variable's value is set to the absolute path directly if there is
+no default.
+</p>
+
+<p>
+If <b>mode</b> is <b>append</b> then the same thing happens, except that the new
+value is added at the end instead of the beginning. If the mode is <b>replace</b> then
+the old value is overwritten, and the <b>default</b> attribute is ignored.
 </p>
 
 <p>
@@ -359,6 +367,11 @@ needed with them:
 <dt>XDG_CONFIG_DIRS</dt><dd>/etc/xdg</dd>
 <dt>XDG_DATA_DIRS</dt><dd>/usr/local/share:/usr/share</dd>
 </dl>
+
+<p>
+The <b>mode</b> argument is ignored by versions of the injector prior to 0.28, which act as if
+<b>prepend</b> was given.
+</p>
 
 <h2 id='versions'>Versions</h2>
 
