@@ -46,6 +46,7 @@ namespace):
   &lt;description&gt;...&lt;/description&gt;
   &lt;homepage&gt;...&lt;/homepage&gt; ?
   &lt;category type='...' ? &gt;...&lt;/category&gt; *
+  &lt;needs-terminal/&gt; ?
 
   &lt;icon type='...' href='...'/&gt; *
   &lt;feed src='...' arch='...'/&gt; *
@@ -78,6 +79,7 @@ not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
 <dt>&lt;homepage&gt;</dt> <dd>the URL of a web-page describing this interface in more detail</dd>
 <dt>&lt;category&gt;</dt> <dd>a classification for the interface. If no type is given, then the category is one of the
 'Main' categories defined by the <a href='http://standards.freedesktop.org/menu-spec/latest/apa.html'>freedesktop.org menu specification</a>. Otherwise, it is a URI giving the namespace for the category.</dd>
+<dt>&lt;needs-terminal&gt;</dt> <dd>if present, this element indicates that the program requires a terminal in order to run. Graphical launchers should therefore run this program in a suitable terminal emulator.</dd>
 <dt>&lt;icon&gt;</dt> <dd>an icon to use for the program; this is used by programs such as
 <a href="http://rox.sourceforge.net/desktop/AddApp">AddApp</a>.</dd>
 
