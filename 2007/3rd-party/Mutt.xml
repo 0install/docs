@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/Mutt.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Mutt</name>
+  <summary>text-based mail client</summary>
+  <description>
+utt is a sophisticated text-based Mail User Agent.</description>
+  <homepage>http://www.mutt.org/</homepage>
+  <category>Network</category>
+  <needs-terminal/>
+  <group doc-dir="usr/share/doc/mutt" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/mutt">
+    <implementation id="sha1new=09c3b3c133515a566a54feb5e5ea12a9edbdfbea" released="2007-05-28" version="1.5.13" version-modifier="-1.1">
+    <archive href="http://ftp.uk.debian.org/debian/pool/main/m/mutt/mutt_1.5.13-1.1_i386.deb" size="1810642" type="application/x-deb"/>
+  </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGWspPBSn9tx+xORARAhX1AJ9dZvosVR9hLkvcgXT51+LLROkUUQCdGgJcScTWs0C7CfQu
+hVVVPqC7lTQ=
+
+-->

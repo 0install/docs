@@ -16,7 +16,7 @@ repository (svnadmin) and to make a repository available over a network
   <homepage>http://subversion.tigris.org</homepage>
   <category>Development</category>
   <needs-terminal/>
-  <group doc-dir="usr/share/doc">
+  <group doc-dir="usr/share/doc/subversion">
     <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/subversion_1.4.2dfsg1-2_i386.deb" size="1026576" type="application/x-deb"/>
   </implementation>
@@ -26,7 +26,7 @@ repository (svnadmin) and to make a repository available over a network
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGWrR6BSn9tx+xORARAvX0AJ9qGsDtSmUHfS5pIB9XusWq0QfPtACePR7ZnSyz0LOUTLUz
-R4Yz/i/tdD4=
+iD8DBQBGWr5BBSn9tx+xORARAngQAKCGq66xBICmY9AbZWVQZFk3/sCTXQCeIhrM3XHplKcZ28kW
+2NMGKvT9njA=
 
 -->
