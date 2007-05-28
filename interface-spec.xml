@@ -102,6 +102,7 @@ A group has this syntax:
     [requires] *
     [group] *
     [implementation] *
+    [package-implementation] *
   &lt;/group&gt;
 </pre>
 
@@ -190,6 +191,44 @@ injector always chooses the first of the methods it understands, but in future
 it may use other strategies (such as choosing the closest mirror, or letting
 the user select one manually). It may also use other methods which aren't listed,
 such as searching for the implementation on a peer-to-peer network.
+</p>
+
+<h2>Package implementations</h2>
+
+<p>
+This element names a distribution-provided package which, if present, is a valid
+implementation of this interface. The syntax is:
+</p>
+
+<pre>
+  &lt;package-implementation
+    package='...'
+    main='...' ? &gt;
+</pre>
+
+<p>
+If the named package is available then it will be considered as a possible implementation
+of the interface. If <b>main</b> is given then it must be an absolute path.
+</p>
+
+<p>
+Note that, unlike a normal implementation, a distribution package does not resolve to a directory.
+Any bindings inside &lt;requires&gt; elements for the interface will be ignored; it is assumed that
+the requiring component knows how to use the packaged version without further help. Therefore, adding
+distribution packages to your interface considerably weakens the guarantees you are making about what
+the requestor may get.
+</p>
+
+<p>
+Package implementations still inherit attributes and dependencies from their parent group. The
+<b>doc-dir</b> and <b>license</b> attributes may be given, but <b>version</b> and <b>released</b>
+are read from the native packaging system.
+</p>
+
+<p>
+Support for distribution packages was added in version 0.28 of the injector. Earlier versions ignore
+this element. Future versions may provide a way to specify which distributions the element applies
+to.
 </p>
 
 <h2>Retrieval methods</h2>
