@@ -92,13 +92,14 @@ A group has this syntax:
 </p>
 
 <pre>
-  &lt;group version='...' ?
-       	  released='...' ?
-	  main='...' ?
-	  doc-dir='...' ?
-	  license='...' ?
-          stability='...' ?
-          arch='...' ? &gt;
+  &lt;group
+  	version='...' ?
+       	released='...' ?
+	main='...' ?
+	doc-dir='...' ?
+	license='...' ?
+        stability='...' ?
+        arch='...' ? &gt;
     [requires] *
     [group] *
     [implementation] *
@@ -129,6 +130,7 @@ the closest ancestor &lt;group&gt; which defines it):
   	released='...' ?
 	stability='...' ?
 	arch='...' ? &gt;
+    &lt;manifest-digest algorithm='...' value='...' /> *
     [ retrieval-method ] *
   &lt;/implementation&gt;
 </pre>
@@ -183,6 +185,13 @@ For non-local implementations (those where the <b>id</b> doesn't start with
 <b>/</b>), the element contains a set of <i>retrieval methods</i>, each of
 which gives a different way of getting the implementation (i.e., of getting a
 directory structure whose digest matches the one in the <b>id</b>).
+</p>
+
+<p>
+The <b>manifest-digest</b> element can be used to give the digest using other
+algorithms (in addition to the one used in the <b>id</b> attribute). It is
+currently ignored. This is to allow a smooth upgrade to newer digest algorithms
+without breaking old clients.
 </p>
 
 <p>
