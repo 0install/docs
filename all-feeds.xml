@@ -330,7 +330,7 @@ Features:
 * Shuffle play (with cache so you don't replay songs too frequently).
 * ...</feed>
 
-<feed uri="http://0install.net/2007/3rd-party/Mutt.xml" name="Mutt" summary="Text-based mail client" icon="feed_icons/Mutt.png" width="32" height="32" homepage="http://www.mutt.org/" category="Network">utt is a sophisticated text-based Mail User Agent.</feed>
+<feed uri="http://0install.net/2007/3rd-party/Mutt.xml" name="Mutt" summary="Text-based mail client" icon="feed_icons/Mutt.png" width="32" height="32" homepage="http://www.mutt.org/" category="Network">Mutt is a sophisticated text-based Mail User Agent.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/35" category="Unknown">This is a ROX applet to display network status and statistics.</feed>
 
