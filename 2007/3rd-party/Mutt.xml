@@ -4,7 +4,7 @@
   <name>Mutt</name>
   <summary>text-based mail client</summary>
   <description>
-utt is a sophisticated text-based Mail User Agent.</description>
+Mutt is a sophisticated text-based Mail User Agent.</description>
   <homepage>http://www.mutt.org/</homepage>
   <category>Network</category>
   <needs-terminal/>
@@ -16,7 +16,7 @@ utt is a sophisticated text-based Mail User Agent.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYZLMBSn9tx+xORARAuiXAJwLfXJUYbs4uyf17WacYOZnMHTvLgCfUmn6C0NXAqI3TUoy
-ONTrMmbni8U=
+iD8DBQBGYZS5BSn9tx+xORARAmvBAJsGWNl52zojXfrIUUu4zua+K5qs6gCfWeI9nI6K9CX8cFVI
+QNOg+6X12OM=
 
 -->
