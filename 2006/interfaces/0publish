@@ -49,15 +49,18 @@ Hash: SHA1
     <implementation id="sha1=b214b5b3662216f7fc0a2440d19f98954a4f320a" released="2006-10-28" stability="stable" version="0.9">
       <archive extract="0publish-0.9" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.9.tar.bz2" size="17793"/>
     </implementation>
-    <implementation id="sha1new=21d17e1f8412651d0a38e9eda3068e4768c6dc71" released="2007-01-14" version="0.10">
+    <implementation id="sha1new=21d17e1f8412651d0a38e9eda3068e4768c6dc71" released="2007-01-14" stability="stable" version="0.10">
       <archive extract="0publish-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.10.tar.bz2" size="17755"/>
+    </implementation>
+    <implementation id="sha1new=1efef7e4e5b69a8d7a1b5a55d716b1f7714d3674" released="2007-06-02" version="0.11">
+      <archive extract="0publish-0.11" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.11.tar.bz2" size="17854"/>
     </implementation>
   </group>
 </interface>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFFqh+8rgeCgFmlPMERAjSpAJ9d5uWh9EIl9uzqLOip17KqGMT65QCgv8JC
-kKM3kCIlANfczds9zL4Yq3Y=
-=R5xc
+iD8DBQFGYbyWrgeCgFmlPMERAsssAJ9kBN83o3N/Yk7ICUE5zkLoFP4w8wCfZ2lm
+EcDzL16D+dd7Z+ysIMuCLuQ=
+=77HK
 -----END PGP SIGNATURE-----
