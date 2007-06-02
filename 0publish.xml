@@ -60,24 +60,31 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
 
 <dl>
   <dt>-h, --help</dt><dd>Show help message and exit.</dd>
+  <dt>--add-version=VERSION</dt><dd>Add a new implementation (use with <b>--archive-url</b>, etc).</dd>
   <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
   <dd>Change a local implementation to one with a digest and an archive.
   See <a href='#archive'>adding an archive</a> for an example.</dd>
+  <dt>-c, --create</dt><dd>Create a new feed file (if non-existant) without prompting.</dd>
   <dt>-e, --edit</dt><dd>Edit with $EDITOR. This is useful if the file is signed, since
   it removes the signature at the start and resigns at the end. It also checks that the
   new feed is valid before overwriting the old copy.</dd>
   <dt>-g, --gpgsign</dt><dd>Add a GPG signature block. Deprecated; use --xmlsign instead.</dd>
   <dt>-kKEY, --key=KEY</dt><dd>Key to use for signing (if you have more than one, or if you want to
   resign with a different key).</dd>
-  <dt>-lLOCAL, --local=LOCAL</dt><dd>Create or update a feed from another feed. Only partially implemented.</dd>
+  <dt>-lLOCAL, --local=LOCAL</dt><dd>Create or update a feed from another feed. Only partially implemented (it can create a new feed, but
+  not update an existing one).</dd>
+  <dt>--manifest-algorithm=ALG</dt><dd>Select the algorithm to use for manifest digests.</dd>
   <dt>--set-id=DIGEST</dt><dd>Set the implementation ID.
-  Note: it's usually easier to use the <b>--archive-*</b> options.</dd>
+  Note: it's usually easier to use the <b>--archive-*</b> options, since they calculate the digest for you.</dd>
+  <dt>--set-main=EXEC</dt><dd>Set the main executable.</dd>
+  <dt>--set-arch=ARCH</dt><dd>Set the architecture.</dd>
   <dt>--set-released=DATE</dt><dd>Set the release date.
   Typically used as <b>0publish --set-released `date +%F` feed.xml</b>, which sets today's date.</dd>
   <dt>--set-stability=STABILITY</dt><dd>Set the stability rating.</dd>
   <dt>--set-version=VERSION</dt><dd>Set the version number (used when making a release from CVS).</dd>
   <dt>-s, --stable</dt><dd>Mark the current testing version as stable.</dd>
   <dt>-x, --xmlsign</dt><dd>Add an XML signature block. All remote feeds must be signed.</dd>
+  <dt>-u, --unsign</dt><dd>Remove any signature.</dd>
   <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
   <dt>-V, --version</dt><dd>Display version information.</dd>
 </dl>
