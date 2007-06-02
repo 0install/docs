@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>FeedLint: Check your feeds</h2>
+
+<program name='FeedLint'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2007/interfaces/FeedLint.xml'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/feedlint'
+	 license='GNU General Public License'/>
+
+<p>
+If you maintain a number of feeds, each with several versions of your programs, how do you
+know that all the download links are still OK? Run FeedLint on your feeds from time-to-time
+to check.
+</p>
+
+<p style='clear: both'>
+To use it, pass the URLs of the feeds to check as arguments, e.g.:
+</p>
+
+<pre>
+$ <b>0alias feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
+$ <b>feedlint http://my/feed.xml</b>
+</pre>
+
+<p>
+You can pass multiple feeds as arguments and it will check all of them. For each feed, it will:
+</p>
+
+<ul>
+ <li>Download the feed and check it can be read by 0launch.</li>
+ <li>Check that all signatures are correct and by keys on your keyring.</li>
+ <li>Check that each signature's GPG key can be downloaded.</li>
+ <li>Get the length of each implementation archive and check that it matches the length in the feed.</li>
+ <li>Recursively check any sub-feeds and dependencies listed in the feed.</li>
+</ul>
+
+<p>
+It does not currently check the icon and homepage links.
+</p>
+
+<p>Tip: to check all feeds in your domain (e.g. <b>example.com</b>):</p>
+
+<pre>
+$ <b>0launch --list example.com | xargs feedlint</b>
+</pre>
+
+<h2>Sample output</h2>
+
+<p>
+Here we ask it to check Edit's feed (and it also checks ROX-Lib, on which Edit depends):
+</p>
+
+<pre>
+$ <b>feedlint http://rox.sourceforge.net/2005/interfaces/Edit</b>
+Checking http://rox.sourceforge.net/2005/interfaces/Edit
+  Checking http://rox.sourceforge.net/2005/interfaces/AE07828059A53CC1.gpg
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.3.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.7.tgz
+  Checking archive http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.4.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.6.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/edit-1.9.5.tgz
+Checking http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+  Checking http://rox.sourceforge.net/2005/interfaces/AE07828059A53CC1.gpg
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.13.tgz
+  Checking archive http://kent.dl.sourceforge.net/sourceforge/rox/rox-lib-2.0.2.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-2.0.0.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.9.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.10.tgz
+  Checking archive http://kent.dl.sourceforge.net/sourceforge/rox/rox-lib-2.0.1.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.17.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.16.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.8.tgz
+  Checking archive http://kent.dl.sourceforge.net/sourceforge/rox/rox-lib2-2.0.3.tar.bz2
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.11.tgz
+  Checking archive http://belnet.dl.sourceforge.net/sourceforge/rox/rox-lib2-2.0.4.tar.bz2
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.15.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.14.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.12.tgz
+  Checking archive http://heanet.dl.sourceforge.net/sourceforge/rox/rox-lib-1.9.18.tgz
+OK
+</pre>
+
+</html>

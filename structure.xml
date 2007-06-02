@@ -35,6 +35,7 @@
     <item base='0compile' label='0compile'>
       <item base='0compile-scons' label='Example: SCons'/>
     </item>
+    <item base='feedlint' label='FeedLint'/>
     <item base='python-api/html/index' label='Python API'/>
     <item base='injector-design' label='Design'/>
     <item base='injector-tests' label='Tests'/>
