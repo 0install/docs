@@ -38,7 +38,7 @@ the GTK dependencies to the source interface file.</description>
       <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
     </requires>
 
-    <implementation id="sha1=f6b0e789dbb241500a223b3ad52667670203fde1" released="2006-06-03" version="0.1">
+    <implementation id="sha1=f6b0e789dbb241500a223b3ad52667670203fde1" released="2006-06-03" stability="stable" version="0.1">
       <archive extract="gtk2.4-0.1" href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.1.tgz" size="1261"/>
     </implementation>
 
@@ -59,7 +59,7 @@ the GTK dependencies to the source interface file.</description>
       <implementation id="sha1=994d703b1faede1bfa2e97f063b80c15016c114c" released="2006-06-24" stability="stable" version="0.3">
         <archive extract="gtk2.4-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.3.tar.bz2" size="2153"/>
       </implementation>
-      <implementation id="sha1=710455966211e583a4400f923fc75ede576fe31e" released="2006-11-26" version="0.4">
+      <implementation id="sha1=710455966211e583a4400f923fc75ede576fe31e" released="2006-11-26" stability="stable" version="0.4">
         <archive extract="gtk-2.4-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-2.4-0.4.tar.bz2" size="2333"/>
       </implementation>
     </group>
@@ -67,7 +67,7 @@ the GTK dependencies to the source interface file.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkTSrgeCgFmlPMERAsRoAJ44odcjuMB7DodsSldVAASvDcPnGwCdGG42HhZeWBv6LqnH
-6Ks7u0tCQUE=
+iD8DBQBGYqWRrgeCgFmlPMERAk/HAKCwjohAEps+lONYploBRiuuXrTaUwCgh40fdNFFIOcQWloV
+5igwp1dhZEo=
 
 -->

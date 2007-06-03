@@ -1,34 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/Pango-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/Pango-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Pango-dev</name>
   <summary>headers for compiling Pango applications</summary>
   <description>
-    These are the Pango header files. They are required when compiling
-    applications that use the Pango library. Pango is a library for laying out
-    and rendering of text, with an emphasis on internationalization.
-  </description>
+These are the Pango header files. They are required when compiling applications
+that use the Pango library. Pango is a library for laying out and rendering of
+text, with an emphasis on internationalization.</description>
 
   <group>
-    <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" version="1.4.1">
+    <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" stability="stable" version="1.4.1">
 
       <archive extract="pango-headers-1.4.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
     </implementation>
-    <implementation id="sha1=bb06cc5a9c9d15fe29581d2d8a5545657f324e73" version="1.4.1.1">
+    <implementation id="sha1=bb06cc5a9c9d15fe29581d2d8a5545657f324e73" stability="stable" version="1.4.1.1">
       <archive extract="pango-headers-1.4.1.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.1.tar.bz2" size="19062"/>
     </implementation>
-    <implementation id="sha1=260687eb207dc87811043d35570fb3779071a575" version="1.4.1.2" released='2006-06-04'>
+    <implementation id="sha1=260687eb207dc87811043d35570fb3779071a575" released="2006-06-04" stability="stable" version="1.4.1.2">
       <archive extract="pango-headers-1.4.1.2" href="http://easynews.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.2.tar.bz2" size="19078"/>
     </implementation>
   </group>
 </interface>
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+<!-- Base64 Signature
+iD8DBQBGYqT5rgeCgFmlPMERAqUrAJ9oexM2jcsK379wZ2mxZcbWiH8t2wCgzsxMlObac8KsVdyB
+nIz19tU9JfU=
 
-iD8DBQFEgygbrgeCgFmlPMERAmmPAKCpNDH5VKXKFkc14YDa4jAK1jzp+QCfT9Fe
-BaAPcvAthQ1Rgc/VhZf8qkQ=
-=UY+g
------END PGP SIGNATURE-----
+-->

@@ -1,31 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GTK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/GTK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GTK-dev</name>
   <summary>headers for compiling GTK applications</summary>
   <description>
-    These are the GTK header files. They are required when compiling
-    applications that use the GTK+ library.
-  </description>
+These are the GTK header files. They are required when compiling applications
+that use the GTK+ library.</description>
   <icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/>
 
   <group>
-    <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" version="2.4.14">
+    <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" stability="stable" version="2.4.14">
 
       <archive extract="gtk-headers-2.4.14" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.tar.bz2" size="157933"/>
     </implementation>
-    <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" version="2.4.14.1">
+    <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" stability="stable" version="2.4.14.1">
       <archive extract="gtk-headers-2.4.14.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.1.tar.bz2" size="157929"/>
     </implementation>
   </group>
 </interface>
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+<!-- Base64 Signature
+iD8DBQBGYqUWrgeCgFmlPMERAjBcAKC/XeorGazG02q95LSfEDD2VeK/xQCdFeduoRLxb21PIKiK
+2/rla4nedZA=
 
-iD8DBQFEYmkVrgeCgFmlPMERAplRAJ0beEfxWVPHKB79Ik4WjX+milAj3gCg1rYd
-0GiiaQSMQLVAL/2ZHecp3PU=
-=GtQD
------END PGP SIGNATURE-----
+-->

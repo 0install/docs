@@ -12,13 +12,13 @@ It also edits any pkg-config .pc files to use a relative path for the prefix.</d
   <homepage>http://0install.net</homepage>
   <category>Development</category>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="make-headers.py">
-    <implementation id="sha1new=e64b1263a6ea31faa0d52de0b995538d8e548154" released="2007-03-04" version="0.1">
+    <implementation id="sha1new=e64b1263a6ea31faa0d52de0b995538d8e548154" released="2007-03-04" stability="stable" version="0.1">
       <archive extract="make-headers-0.1" href="http://switch.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.1.tar.bz2" size="7574"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkO3rgeCgFmlPMERAkZQAKCNgFqtlSxRvowk9H0JLEkfpkxH9gCfWrUUqihZwPlfOdSE
-snI85Fxky6o=
+iD8DBQBGYqVgrgeCgFmlPMERAmrkAJ0bB5T/6m0j8SmmiEJVcDgCZQPmtACfUYpuGzi1HgwCljRX
+XlrcOOn9wNU=
 
 -->

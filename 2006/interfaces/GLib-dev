@@ -8,16 +8,16 @@ These are the GLib header files. They are required when compiling applications
 that use the GLib library.</description>
 
   <group arch="Linux-i386">
-    <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" version="2.4.8">
+    <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" stability="stable" version="2.4.8">
 
       <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
     </implementation>
-    <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" version="2.4.8.1">
+    <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8.1">
       <archive extract="glib-headers-2.4.8.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
     </implementation>
   </group>
   <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
-    <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" version="2.4.8">
+    <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8">
       <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -26,7 +26,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBF6uVKrgeCgFmlPMERAmvbAJ4qQ4p4DB9YaFZUoyF9WvBVba17VwCbBNBWldDXO3boTGK4
-UyJ7+o04zBg=
+iD8DBQBGYqVKrgeCgFmlPMERAgVjAJ9fYKEgAm+YSlOdInLjtS/CIbMsrQCZAfgdsB9x1A/50oV6
+YOR9LHPZBWw=
 
 -->

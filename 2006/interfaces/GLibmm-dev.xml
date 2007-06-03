@@ -1,21 +1,20 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GLibmm-dev</name>
   <summary>headers for compiling C++ GLib applications</summary>
   <description>
-    These are the glibmm header files. They are required when compiling
-    C++ applications that use the GLib library.
-  </description>
+These are the glibmm header files. They are required when compiling C++
+applications that use the GLib library.</description>
 
   <group>
-    <implementation id="sha1=715adfd8066b8c520c11bc924e3dcad29acf9edb" released="2006-06-24" version="2.4.8">
+    <implementation id="sha1=715adfd8066b8c520c11bc924e3dcad29acf9edb" released="2006-06-24" stability="stable" version="2.4.8">
       <archive extract="glibmm-headers-2.4.8" href="http://optusnet.dl.sourceforge.net/sourceforge/zero-install/glibmm-headers-2.4.8.tar.bz2" size="117261"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEnVq8rgeCgFmlPMERAiKPAJ960l87AkSdms5p0d7J8MPOK507SgCfecjzyXSLeCTWOZOa
-sh/aVAWHB7s=
+iD8DBQBGYqUorgeCgFmlPMERAqK1AKDLYYrMOThqhCNrwQ16i/AruSjSegCgoQsJwfp/qZZvs/oZ
+5AtTouOAtWA=
 
 -->
