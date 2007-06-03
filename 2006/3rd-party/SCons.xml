@@ -21,14 +21,14 @@ and scanner objects.</description>
   <category>Development</category>
 
   <group main="scons.py">
-    <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" version="0.96.92">
+    <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" stability="stable" version="0.96.92">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkQ9rgeCgFmlPMERAht9AKDa2CLYOPdEJ1GdI+1p53slK1TgugCfR5BoJu6fpliE7vIP
-C1evc8eB4SA=
+iD8DBQBGYrgUrgeCgFmlPMERAnS5AKDZKPfytF1NzKaHUGorLUqvDVJzfQCfXu3vBs04fy0Da+3E
+cDo+w4KiXm0=
 
 -->
