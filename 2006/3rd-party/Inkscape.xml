@@ -23,23 +23,20 @@ user and developer community by using open, community-oriented development.</des
   <category>Graphics</category>
 
   <group arch="Linux-i386" main="usr/bin/inkscape">
-    <implementation id="sha1=a361a7dfa2a0433a8346d6be7abf579ec35191d7" released="2006-05-21" stability="stable" version="0.43">
-      <archive href="http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm" size="9424664"/>
-    </implementation>
 
-    <implementation id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" version="0.44">
+    <implementation id="sha1=1cc004c4c2e132be4200e723d5a47a0ae78292ce" released="2006-06-24" stability="stable" version="0.44">
       <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.44-0.i386.rpm" size="11409999"/>
     </implementation>
     <implementation id="sha1new=a52a05096e08fa14a2b4720713ff9a05b977f199" main="bin/inkscape" released="2007-02-04" stability="stable" version="0.45">
     <archive href="http://kent.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.x86.package" size="5746250" start-offset="30389" type="application/x-lzma-compressed-tar"/>
   </implementation>
-    <implementation id="sha1new=97ee1b0b41832415ce76ba28150394e679f01854" main="bin/inkscape" released="2007-03-20" version="0.45.1">
+    <implementation id="sha1new=97ee1b0b41832415ce76ba28150394e679f01854" main="bin/inkscape" released="2007-03-20" stability="stable" version="0.45.1">
       <archive href="http://mesh.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGDidHBSn9tx+xORARAtmvAJ9qNAkt+Sioazj4HoWhgKlRGZQSgACfa6uEUFSfUetKKhrE
-k7lv7IplAnA=
+iD8DBQBGYratBSn9tx+xORARAlvHAJ9VzZv9rRE37NstqGcRewlF9GaDVQCfQ3sxDCFRJSInJ4Hb
+VIl219Espyw=
 
 -->

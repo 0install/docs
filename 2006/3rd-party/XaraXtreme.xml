@@ -14,13 +14,13 @@ easy-to-use and easy-to-learn approach.</description>
   <category>Graphics</category>
 
   <group main="bin/xaralx">
-    <implementation arch="Linux-i486" id="sha1=8b8e74af00a5e9a22376dcaf9765c81291a95685" released="2006-08-25" version="0.7.1692">
+    <implementation arch="Linux-i486" id="sha1=8b8e74af00a5e9a22376dcaf9765c81291a95685" released="2006-08-25" stability="stable" version="0.7.1692">
       <archive extract="xaralx" href="http://downloads.xara.com/opensource/RecomXaraLX0.7_rev1692.tar.bz2" size="18532162"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkRDBSn9tx+xORARAienAKCAhOYMVtDzTtNgDKwuSNGZRJgPWwCfVb159DiwwHZJeA+N
-aYm08Hk8Q98=
+iD8DBQBGYrbABSn9tx+xORARAki6AJ9ubkwP2GdIfxOZOyEM3i8GYmV90wCfcF5W6Pc/+HrhHLBm
+8VG4Ua4puqU=
 
 -->

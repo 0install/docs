@@ -29,13 +29,13 @@ and Java.</description>
     <implementation id="sha1=bcf1c1c492e8668b2ee31c2222b9e4af9dff2637" released="2007-01-03" stability="stable" version="0.21">
       <archive extract="gdc" href="http://mesh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.21-i686-linux-gcc-4.0.3.tar.bz2" size="2702927"/>
     </implementation>
-    <implementation id="sha1new=bdc73b49b8534529b8c1de2d794a8305759b0baa" released="2007-02-10" version="0.22">
+    <implementation id="sha1new=bdc73b49b8534529b8c1de2d794a8305759b0baa" released="2007-02-10" stability="stable" version="0.22">
       <archive extract="gdc" href="http://ovh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.22-i686-linux-gcc-4.1.1.tar.bz2" size="2802654" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkVTBSn9tx+xORARAsHgAJwN6rKMEw6Pn8d2Yq2OU7CLwH/g9gCeO8uTtMpPdnJFE/CW
-oxqw2ZSe4r0=
+iD8DBQBGYra+BSn9tx+xORARAkq2AJ0ZKwdEafAk/PFUdowMNaYGdE1qmQCffNKk9O2JD+v/JixF
+z0J7aDAoYXs=
 
 -->
