@@ -6,12 +6,12 @@
   <description>
 This is the runtime package for programs that use the v4.4 Berkeley database
 library.</description>
-  <implementation arch="Linux-i386" id="sha1new=96891b89bca0d64cece00d0db1cc0248b2f0ed33" released="2007-01-20" version="4.4.20" version-modifier="-8">
+  <implementation arch="Linux-i386" id="sha1new=96891b89bca0d64cece00d0db1cc0248b2f0ed33" released="2007-01-20" stability="stable" version="4.4.20" version-modifier="-8">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/d/db4.4/libdb4.4_4.4.20-8_i386.deb" size="463914" type="application/x-deb"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktnBSn9tx+xORARAjq6AJ0YAF3RB21C8s2XE490XIVWMVBhgQCgjCc07ZqNpQPNUZ5Y
-4RozaZRIJmU=
+iD8DBQBGYrXRBSn9tx+xORARAqrkAJ46KNi1WqfQDFQx8OXOIh+VKKB6YgCfd2KgNAxj2oIMAg96
+i8/kNGcW7RQ=
 
 -->

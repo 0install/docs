@@ -13,13 +13,13 @@ your software using the rest of our software.</description>
   <category>Development</category>
   <icon href="http://autopackage.org/gnome-devel.png" type="image/png"/>
   <group>
-    <implementation id="sha1new=ba6ff87b8f11f139656a72de73d03fe22649b310" released="2007-04-29" version="2.0.3">
+    <implementation id="sha1new=ba6ff87b8f11f139656a72de73d03fe22649b310" released="2007-04-29" stability="stable" version="2.0.3">
     <archive extract="apbuild-2.0.3" href="http://ftp.sunsite.dk/projects/autopackage/tools/apbuild-2.0.3.tar.gz" size="27960" type="application/x-compressed-tar"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGNHEDBSn9tx+xORARAmSnAKCcRBe5dthLCH4+ZNOGPRNSNW/7ZACfZJ8WPuvjSmOsHblO
-3bcGYaxe9X4=
+iD8DBQBGYrXPBSn9tx+xORARAvQyAJ4zk+j5VJyAVmc2zHBHIIUCSODeSQCfVhQSgPLnHcs7TBnN
+Nxwipl+Bon8=
 
 -->

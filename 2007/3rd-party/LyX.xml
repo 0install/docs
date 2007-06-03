@@ -22,7 +22,7 @@ conference proceedings.</description>
   <icon href="http://0install.net/feed_icons/LyX.png" type="image/png"/>
   <category>Office</category>
   <group>
-    <implementation arch="Linux-i586" id="sha1new=b20815af73f7d33911339eb6857ea9fd0d02b7a9" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/lyx" released="2007-01-13" version="1.4.3">
+    <implementation arch="Linux-i586" id="sha1new=b20815af73f7d33911339eb6857ea9fd0d02b7a9" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/lyx" released="2007-01-13" stability="stable" version="1.4.3">
     <archive href="ftp://ftp.lyx.org/pub/lyx/bin/1.4.3/lyx-1.4.3-1_qt_mdv2006.i586.rpm" size="6308610"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/XdgUtils.xml">
@@ -34,7 +34,7 @@ conference proceedings.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGPZpUBSn9tx+xORARAjnGAJ9gN8++AD0MS63qrrhiP+/aKXU+/QCdHcAazmrDv8LXvLET
-eNOOELG18DE=
+iD8DBQBGYrXUBSn9tx+xORARAkeLAKCSUIn/+0kYlwhUMlZ6Yw3zsxHmaACgh2snyg9TgfYoB0Kt
+z+fbgfk5GXQ=
 
 -->

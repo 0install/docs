@@ -17,7 +17,7 @@ repository (svnadmin) and to make a repository available over a network
   <category>Development</category>
   <needs-terminal/>
   <group doc-dir="usr/share/doc/subversion">
-    <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" version="1.4.2">
+    <implementation arch="Linux-i386" id="sha1new=fdb691602c65ac4d46dd62f4c4b570506fa3f4e8" main="usr/bin/svn" released="2007-01-20" stability="stable" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/subversion_1.4.2dfsg1-2_i386.deb" size="1026576" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libsvn1.xml">
@@ -26,7 +26,7 @@ repository (svnadmin) and to make a repository available over a network
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGWr5BBSn9tx+xORARAngQAKCGq66xBICmY9AbZWVQZFk3/sCTXQCeIhrM3XHplKcZ28kW
-2NMGKvT9njA=
+iD8DBQBGYrXWBSn9tx+xORARAj/tAJ9CGO/R9mZ2UUqDbmOhsgJEHEE8nwCgg6SqMwaqnjW517yR
+qK98fzZyj7o=
 
 -->
