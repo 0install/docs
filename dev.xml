@@ -35,6 +35,13 @@ This is useful if there is no binary for your platform, or if you wish to
 modify the program in some way.
  </dd>
 
+ <dt><a href='feedlint.html'>FeedLint</a></dt>
+ <dd>
+If you maintain a number of feeds, each with several versions of your programs, how do you
+know that all the download links are still OK? Run <b>FeedLint</b> on your feeds from time-to-time
+to check.
+ </dd>
+
  <dt><a href='python-api/html/index.html'>Python API</a></dt>
  <dd>
   The <b>0launch</b> command-line interface to Zero Install is sufficient for most
