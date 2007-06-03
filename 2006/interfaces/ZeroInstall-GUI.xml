@@ -4,8 +4,10 @@
   <name>ZeroInstall-GUI</name>
   <summary>graphical interface for the Zero Install injector</summary>
   <description>
-    The Zero Install GUI displays a window showing which versions of various components will be used when running a program, and allows you to alter various policy settings to affect the selection process. You can use this to mark particular versions of libraries as preferred, bugggy, etc.
-  </description>
+The Zero Install GUI displays a window showing which versions of various
+components will be used when running a program, and allows you to alter various
+policy settings to affect the selection process. You can use this to mark
+particular versions of libraries as preferred, bugggy, etc.</description>
   <homepage>http://0install.net/injector.html</homepage>
 
   <group main="0launch-gui">
@@ -18,19 +20,19 @@
     <implementation id="sha1=86cf742000556e708097a9b362aee574ffc1e0bb" released="2006-10-22" stability="stable" version="0.23.2">
       <archive extract="zeroinstall-gui-0.23.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.2.tar.bz2" size="33012"/>
     </implementation>
-    <implementation id="sha1=fab1becd0f86b4e783c55f676505c058fb8fe706" released="2006-12-02" stability="testing" version="0.24.1">
+    <implementation id="sha1=fab1becd0f86b4e783c55f676505c058fb8fe706" released="2006-12-02" stability="stable" version="0.24.1">
       <archive extract="zeroinstall-gui-0.24.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.1.tar.bz2" size="33914"/>
     </implementation>
-    <implementation id="sha1=3667bd504a8bd09fa75acaee6e17a79d59b3ddca" released="2006-12-03" stability="testing" version="0.24.2">
+    <implementation id="sha1=3667bd504a8bd09fa75acaee6e17a79d59b3ddca" released="2006-12-03" stability="stable" version="0.24.2">
       <archive extract="zeroinstall-gui-0.24.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.2.tar.bz2" size="33917"/>
     </implementation>
-    <implementation id="sha1new=52145efb97dc729009454d7b0201e40f3f2e90d9" released="2007-01-20" stability="testing" version="0.24.3">
+    <implementation id="sha1new=52145efb97dc729009454d7b0201e40f3f2e90d9" released="2007-01-20" stability="stable" version="0.24.3">
       <archive extract="zeroinstall-gui-0.24.3" href="http://heanet.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.3.tar.bz2" size="34356"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsgRgrgeCgFmlPMERAjOGAJ9WEgtf+JwCCDphCCCJe7jSNklM1QCghLk2T1G3jO+xnkcO
-swkT9O06npg=
+iD8DBQBGYqu3rgeCgFmlPMERAp95AKCiCyyF8IgzZKReBxfb21CzD4w6/wCfTAPkM7AJiLJxMy61
+IRtROLVIw6c=
 
 -->

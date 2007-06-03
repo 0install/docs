@@ -25,10 +25,10 @@ For a full tutorial, see 0compile's homepage.</description>
     <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" stability="stable" version="0.2">
       <archive extract="0compile-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
     </implementation>
-    <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="testing" version="0.3">
+    <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="stable" version="0.3">
       <archive extract="0compile-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
     </implementation>
-    <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="testing" version="0.4">
+    <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="stable" version="0.4">
       <archive extract="0compile-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
     </implementation>
     <implementation id="sha1=38eb336dbb23fbca46952e80dc352ef1177f790b" released="2006-10-28" stability="stable" version="0.5">
@@ -47,7 +47,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkTJrgeCgFmlPMERAjWzAJ9HjyOI4Vk09yw1q29Eq1qJaj0h2ACcDEhVkqeVBuch0JfI
-3mhsJqmkIek=
+iD8DBQBGYqvhrgeCgFmlPMERAinlAJ9t7ombxvLpzR59DGDUEDxjh0a7KQCgqShRSoJmvLwo3Onq
+DYve8UF8YlQ=
 
 -->
