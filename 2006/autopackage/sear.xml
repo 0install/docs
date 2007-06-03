@@ -8,13 +8,13 @@ Sear is a client for MMORPGs using the Worldforge system.</description>
   <category>Game</category>
 
   <group main="bin/sear">
-    <implementation id="sha1new=1eb476efef2a17ab14efb77ae99ede2d998779b1" released="2006-12-02" version="0.6.2">
+    <implementation id="sha1new=1eb476efef2a17ab14efb77ae99ede2d998779b1" released="2006-12-02" stability="stable" version="0.6.2">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/worldforge/sear-0.6.2.x86.package" size="35616054" start-offset="14067" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkR7BSn9tx+xORARAq3IAJwK/NaMtSKkCdvoReb7OyWKsHMk4ACfVKFJxUDF39ZNpOkM
-9jIFcU4ixDk=
+iD8DBQBGYq0sBSn9tx+xORARAiG1AKCPvDHgAppk6a9009BMNh9a7oYpngCfQZTA3hVUbFTtApGs
+CahyUSKurcs=
 
 -->

@@ -13,13 +13,13 @@ resource starved planet, it's up to you.</description>
   <category>Game</category>
 
   <group main="bin/xlincity">
-    <implementation id="sha1new=55826888c6a24c6b728063ad3b765788cf105646" released="2006-12-02" version="1.13.1">
+    <implementation id="sha1new=55826888c6a24c6b728063ad3b765788cf105646" released="2006-12-02" stability="stable" version="1.13.1">
       <archive href="http://mesh.dl.sourceforge.net/sourceforge/lincity/lincity-1.13.1.x86.package" size="573942" start-offset="14942" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkRcBSn9tx+xORARAl1hAJ9MqmjgMmzL09NWXuWjLd8wAMIyTgCffSO9/IrM9ZwG6rMJ
-fgkKIHgkRjY=
+iD8DBQBGYq0jBSn9tx+xORARAn+AAJ0dK+6YrR/ptFWooUSmRHCbjbnI2ACdFAZJ7Xu6slNSFWed
+VdOKj4Y0X4Q=
 
 -->

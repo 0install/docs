@@ -23,13 +23,13 @@ environment.</description>
   <category>Game</category>
 
   <group main="bin/armagetronad">
-    <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="2006-12-02" version="0.2.8.2.1">
+    <implementation id="sha1new=197b05deda3422ca3e7e573bc8b9b7edcff7e276" released="2006-12-02" stability="stable" version="0.2.8.2.1">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/armagetronad/armagetronad-0.2.8.2.1.i686-generic-linux-gnu.package" size="1810661" start-offset="16604" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkROBSn9tx+xORARAhnzAJ9Nn8M02IvVqkH3mESoUX+hSvvjPQCfTbX6DiFE9nwIwERC
-2wqBY3Bp3TM=
+iD8DBQBGYq0eBSn9tx+xORARAhT1AJ4smN1B0C3H/yl1007Yq5KB/DFjRgCcC7OphdYt4EObfJaF
+5+EHpXY5HUY=
 
 -->

@@ -14,13 +14,13 @@
   <icon href="http://0install.net/feed_icons/opencity.png" type="image/png"/>
 
   <group main="bin/opencity">
-    <implementation id="sha1new=e6b90b17e33288d39b221873b18afaf34355b5c3" released="Snapshot" version="0.1">
+    <implementation id="sha1new=e6b90b17e33288d39b221873b18afaf34355b5c3" released="Snapshot" stability="stable" version="0.1">
       <archive href="http://ovh.dl.sourceforge.net/sourceforge/opencity/opencity-0.0.4stable.x86.package" size="6055633" start-offset="15196" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFcXNqBSn9tx+xORARAtkJAJ9TMK2PTCX6MDxnSRTyK4awZEPFVwCgnSEN6TiqMuhYb8/H
-d1YBTVb78zA=
+iD8DBQBGYq0lBSn9tx+xORARAmWJAJ9tHJsabYLaPYSBKWMXzoRY5oy4wQCfUUSqwyvrg4jFgD76
+856ao5CJ1sE=
 
 -->

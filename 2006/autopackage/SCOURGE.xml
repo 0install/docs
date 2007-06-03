@@ -13,13 +13,13 @@ liked the old-school isometric games like Exult or Woodward</description>
   <category>Game</category>
 
   <group main="scourge">
-    <implementation id="sha1new=4ec0b58c692fad1a9b0a0c9c360ef8e8a0f48ec6" released="2006-12-02" version="0.11">
+    <implementation id="sha1new=4ec0b58c692fad1a9b0a0c9c360ef8e8a0f48ec6" released="2006-12-02" stability="stable" version="0.11">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/scourge/scourge-0.11.x86.package" size="33243423" start-offset="14787" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkR0BSn9tx+xORARAgkoAJ0Sgs+YL7A+VBy7mr3jm7OFHuXhtQCfa7Ic/Gs1Yfuf1dJi
-BdHC2uo4Qxw=
+iD8DBQBGYq0qBSn9tx+xORARAqP8AJ9JuSCCdnAn+mmK63OiKTHWpVTZMACeJzeTNI6RXFaJ7SPy
+a/VqMBY637M=
 
 -->

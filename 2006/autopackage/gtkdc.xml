@@ -9,13 +9,13 @@ A client for the Direct Connect peer-to-peer network inspired by DC++.</descript
   <category>Network</category>
 
   <group main="bin/gtkdc">
-    <implementation id="sha1new=890406973a3938e2f79be004a1690ccb18ccd258" released="2006-12-02" version="0.2.1">
+    <implementation id="sha1new=890406973a3938e2f79be004a1690ccb18ccd258" released="2006-12-02" stability="stable" version="0.2.1">
       <archive href="http://www.gtkdc.org/gtkdc_files/client/0.2/gtkdc-0.2.1-svn20061113.x86.package" size="217789" start-offset="17656" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGBkRYBSn9tx+xORARApQ9AJ4gIcHDPagsHU/Ap3aNWuAGlPa/OgCfbjGlLl+PQiOtleNg
-fqJjxj0BDEo=
+iD8DBQBGYq0hBSn9tx+xORARAvu+AJ9hwoXZYGCu3/94J2R4JvwZ2j9LdACghhhYiKvQ2UgTNw21
+9cfobT36wdw=
 
 -->
