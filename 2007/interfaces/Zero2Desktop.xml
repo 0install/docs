@@ -16,7 +16,7 @@ to appear in the GNOME or KDE Applications menus.</description>
     <implementation id="sha1new=1c4b6e286aefcfed5358effb05cccfc6584822ef" released="2007-03-22" stability="stable" version="0.1">
       <archive extract="zero2desktop-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zero2desktop-0.1.tar.bz2" size="11316"/>
     </implementation>
-    <implementation id="sha1new=a130c764ae8dba31cc83081a6bb39dec07b8e1ec" released="2007-04-08" version="0.2">
+    <implementation id="sha1new=a130c764ae8dba31cc83081a6bb39dec07b8e1ec" released="2007-04-08" stability="stable" version="0.2">
       <archive extract="zero2desktop-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zero2desktop-0.2.tar.bz2" size="11618"/>
     </implementation>
 
@@ -26,7 +26,7 @@ to appear in the GNOME or KDE Applications menus.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGGVIPrgeCgFmlPMERAtXxAJ9g771wmVm53fL3mcy2a3+izt9UKQCfRxesVUPIR3jC4abW
-t2Arh2zhLGo=
+iD8DBQBGYqqgrgeCgFmlPMERAoXUAJ9ET+6A5EjjAnwCMal5uLDsJ1Xz4gCfQTud2Me8HKVbi4Xv
+zSV3ZtWvZvE=
 
 -->

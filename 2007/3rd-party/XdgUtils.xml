@@ -14,12 +14,12 @@ way to enhance the usage experience of your customers by improving the
 integration of these components in the user's environment. Best of all, Xdg-
 utils is provided as open source and free of charge.</description>
   <homepage>http://portland.freedesktop.org</homepage>
-  <implementation id="sha1new=87a7e092d0a4ec9f02235397c87b454afb806f81" license="OSI Approved :: MIT/X Consortium License" released="2007-03-22" version="1.0.1">
+  <implementation id="sha1new=87a7e092d0a4ec9f02235397c87b454afb806f81" license="OSI Approved :: MIT/X Consortium License" released="2007-03-22" stability="stable" version="1.0.1">
     <archive extract="xdg-utils-1.0.1" href="http://portland.freedesktop.org/download/xdg-utils-1.0.1-scripts.tgz" size="47983" type="application/x-compressed-tar"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGAuyPBSn9tx+xORARAgvsAJ426nTU19EcysqD1/Ame8nX2dlb4gCeNghHhZXKZyIjNymj
-wsS8BHko48Q=
+iD8DBQBGYqseBSn9tx+xORARAiM0AJ4tFHovxx46HwdyQaMJz6js5ZM0uwCgjZoLgd/PKBmDHWny
+2++e3NFmGOE=
 
 -->
