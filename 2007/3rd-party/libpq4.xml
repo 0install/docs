@@ -13,7 +13,7 @@ This package contains the run-time library, needed by packages using libpq.
 
 PostgreSQL is an object-relational SQL database management system.</description>
   <group>
-    <implementation arch="Linux-i386" id="sha1new=b66f0a5be49a8ec168cf2f35819058d0e697690c" released="2007-01-20" version="8.1.5" version-modifier="-2">
+    <implementation arch="Linux-i386" id="sha1new=b66f0a5be49a8ec168cf2f35819058d0e697690c" released="2007-01-20" stability="stable" version="8.1.5" version-modifier="-2">
       <archive href="http://mesh.dl.sourceforge.net/sourceforge/zero-install/libpq4_8.1.5-2_i386.deb" size="261814" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libkrb53.xml">
@@ -22,7 +22,7 @@ PostgreSQL is an object-relational SQL database management system.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBF0W6oBSn9tx+xORARAuOUAJ9+7Lh7Op9zI+64kuVyMVwb7f8WjgCfRPOslgktLliERuCJ
-kM8XZsobFIA=
+iD8DBQBGYq+9BSn9tx+xORARAm4GAJwPwcp3lfPl/XJkAbUCcG8evuTWvQCeN3RmG6nRAYm+QXVE
+28zDGrMyhp8=
 
 -->

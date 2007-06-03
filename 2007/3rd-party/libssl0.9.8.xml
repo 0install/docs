@@ -8,12 +8,12 @@ libssl and libcrypto shared libraries needed by programs like apache-ssl,
 telnet-ssl and openssh.
 
 It is part of the OpenSSL implementation of SSL.</description>
-  <implementation arch="Linux-i386" id="sha1new=6cd837dbcfc6e2efa912506c0ae72b12ef9f1bf8" released="2007-01-20" version="0.9.8">
+  <implementation arch="Linux-i386" id="sha1new=6cd837dbcfc6e2efa912506c0ae72b12ef9f1bf8" released="2007-01-20" stability="stable" version="0.9.8">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8c-4_i386.deb" size="2716198" type="application/x-deb"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktkBSn9tx+xORARAh+XAKCRgb6l4zICj7rl04bfXIJvLL6f0ACfevy9gWM4Lsl+IzRm
-ioBq9KcwCA0=
+iD8DBQBGYq+zBSn9tx+xORARAkjuAJ9sTBY/iTiUbTRAj1qlhqwuuuLpqACZAQNanpPt2aBPaDUW
+k1iQs1J8cM0=
 
 -->

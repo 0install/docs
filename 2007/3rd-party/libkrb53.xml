@@ -13,12 +13,12 @@ This is the MIT reference implementation of Kerberos5.
 
 This package contains the runtime libraries used by applications and Kerberos
 clients.</description>
-  <implementation arch="Linux-i386" id="sha1new=46c174613415d5981def04485e296f671c5f5d60" released="2007-01-20" version="1.4.4" version-modifier="-6">
+  <implementation arch="Linux-i386" id="sha1new=46c174613415d5981def04485e296f671c5f5d60" released="2007-01-20" stability="stable" version="1.4.4" version-modifier="-6">
     <archive href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/libkrb53_1.4.4-6_i386.deb" size="407482" type="application/x-deb"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGXGkJBSn9tx+xORARArCvAJ4l+1UgI9ile57EmAFonDqJZtgSBACdFjE/yF1vv7oEUbHq
-Twd2GlevBwQ=
+iD8DBQBGYq/ABSn9tx+xORARAjGoAJ9JQjmwJdcjaqPm4l25CVmwOZPMIACgmI9Kan3ST5y2qVYX
+t2mZGkwfXBo=
 
 -->

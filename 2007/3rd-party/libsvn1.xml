@@ -7,7 +7,7 @@
 This package includes shared libraries to manipulate Subversion (svn)
 repositories and working copies.</description>
   <group>
-    <implementation arch="Linux-i386" id="sha1new=6d8c6bcd9503ea2ee9665d6505957af9e80a3694" released="2007-01-20" version="1.4.2">
+    <implementation arch="Linux-i386" id="sha1new=6d8c6bcd9503ea2ee9665d6505957af9e80a3694" released="2007-01-20" stability="stable" version="1.4.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/libsvn1_1.4.2dfsg1-2_i386.deb" size="593108" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
@@ -22,7 +22,7 @@ repositories and working copies.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktjBSn9tx+xORARAntbAKCRKS4XkvECPnwVjPMziqtRu8ChUwCdFGgkkldBSNRVSw4D
-ypT7SxbYpKE=
+iD8DBQBGYq+nBSn9tx+xORARAjIlAJ0cG6CNb/S9GF508fY77ckScL6pyQCbB2sT3M9XLfd37wMP
+MuD/Fb5Uao0=
 
 -->

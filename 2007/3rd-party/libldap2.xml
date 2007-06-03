@@ -8,7 +8,7 @@ These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
 Protocol) servers and clients.</description>
   <homepage>http://www.openldap.org/</homepage>
   <group arch="Linux-i386" license="The OpenLDAP Public License">
-    <implementation id="sha1new=51140c39056147bfe4a80a06e1292aa6302c6773" released="2007-02-24" version="2.1.30" version-modifier="-13.2">
+    <implementation id="sha1new=51140c39056147bfe4a80a06e1292aa6302c6773" released="2007-02-24" stability="stable" version="2.1.30" version-modifier="-13.2">
     <archive href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/libldap2_2.1.30-13.2_i386.deb" size="150584" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libgnutls13.xml">
@@ -17,7 +17,7 @@ Protocol) servers and clients.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGPy8HBSn9tx+xORARAv56AJ0aUULMfYWGmWasUgDE+6xeKWAVVQCffDmuGU05NQi/k+C8
-IHZCleYHItQ=
+iD8DBQBGYq/KBSn9tx+xORARApgqAJ9JZ45ssBjp1DUAdtf1+1d3wPiFxACfRctiPb+rOLGqZ9ok
+Mr2Ovd55/pg=
 
 -->

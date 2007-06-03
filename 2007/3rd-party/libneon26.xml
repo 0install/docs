@@ -12,7 +12,7 @@ Provides lower-level interfaces to directly implement new HTTP methods, and
 higher-level interfaces so that you don't have to worry about the lower-level
 stuff.</description>
   <group>
-    <implementation arch="Linux-i386" id="sha1new=7b8af150db54970958b9419b544556b6aab54496" released="2007-01-20" version="0.26.2" version-modifier="-3.1">
+    <implementation arch="Linux-i386" id="sha1new=7b8af150db54970958b9419b544556b6aab54496" released="2007-01-20" stability="stable" version="0.26.2" version-modifier="-3.1">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/n/neon26/libneon26_0.26.2-3.1_i386.deb" size="118850" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libssl0.9.8.xml">
@@ -21,7 +21,7 @@ stuff.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFsktlBSn9tx+xORARAksQAJ99DhhhBoCFTXpzK1DuTGuQkd3ofgCgiQtVmrDcdeJcdDdZ
-U0iP/MPjnvk=
+iD8DBQBGYq+wBSn9tx+xORARAoFlAJ9qFMttnG8KZMGbcsCUUgvL7V6n3QCfX97QUIb6U36rmAIC
+EHwAFZWOpu4=
 
 -->
