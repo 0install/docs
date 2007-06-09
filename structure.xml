@@ -10,6 +10,7 @@
   <item base="doc" label="Documentation">
     <item base="goals" label="Goals"/>
     <item base="howitworks" label="Screenshots"/>
+    <item base="perspectives" label="Perspectives"/>
     <item base="flash" label="Flash demos"/>
     <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
