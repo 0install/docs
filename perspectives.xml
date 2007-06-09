@@ -186,7 +186,7 @@ try to find a set of versions that supports all packages simultaneously.
   and deal with bug reports. Unless you actually want to change something, you
   don't need to do anything.</li>
 
- <li>Dependencies are resolved on a per-program basis. If two programs can use the same library then that's
+ <li>Dependencies are resolved on a per-program basis. If two programs can use the same version of a library then that's
  great; they'll share it. If not, then two copies of the library will co-exist. This is all automatic.</li>
 </ul>
 
