@@ -43,11 +43,14 @@ For a full tutorial, see 0compile's homepage.</description>
     <implementation id="sha1=0d94fb422a93c7326e2fccbebd5d9eab052e2d18" released="2006-11-25" stability="stable" version="0.8">
       <archive extract="0compile-0.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
     </implementation>
+    <implementation id="sha1new=b9ca4f1cf34648b6b241ae23f7139b66236dd207" released="2007-06-10" version="0.9">
+      <archive extract="0compile-0.9" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqvhrgeCgFmlPMERAinlAJ9t7ombxvLpzR59DGDUEDxjh0a7KQCgqShRSoJmvLwo3Onq
-DYve8UF8YlQ=
+iD8DBQBGbDe/rgeCgFmlPMERAlRGAKDRfkRqH/3O7hqcsANzQJo2IIJlCACfXLN8Re4+Tnr1OBWa
+oj2qD5BqzFw=
 
 -->
