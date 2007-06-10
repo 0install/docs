@@ -291,6 +291,21 @@ The <b>arch</b> attribute lets the injector know that it doesn't need to fetch t
 it's looking for source code.
 </p>
 
+<h2>Tips</h2>
+
+<dl>
+ <dt>Python distutils</dt>
+ <dd><p>
+ You should use the <b>--build-base</b> option to make distutils build to 0compile's build directory, not under the source code (which is read-only). Unfortunately, this option
+ isn't available with the <b>install</b> command, so you have to do the build in two steps. A typical command is:
+ </p>
+ <pre>cd "$SRCDIR" &amp;&amp;
+python setup.py build --build-base="$BUILDDIR/build" &amp;&amp;
+cd "$BUILDDIR" &amp;&amp;
+python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build</pre>
+ </dd>
+</dl>
+
 <h2>Further reading</h2>
 
 <dl>
