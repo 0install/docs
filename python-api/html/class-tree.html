@@ -61,6 +61,14 @@
     <li> <strong class="uidlink">object</strong>:
       <em class="summary">The most base type</em>
     <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.Download-class.html">zeroinstall.injector.download.Download</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>:
+      <em class="summary">A database of trusted keys.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Stability-class.html">zeroinstall.injector.model.Stability</a></strong>:
+      <em class="summary">A stability rating.</em>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.zerostore.Stores-class.html">zeroinstall.zerostore.Stores</a></strong>:
       <em class="summary">A list of <a href="zeroinstall.zerostore.Store-class.html" 
         class="link">Store</a>s.</em>
@@ -69,26 +77,25 @@
       <em class="summary">A feed that has been downloaded but not yet added to the 
         interface cache.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>:
-      <em class="summary">The interface cache stores downloaded and verified interfaces in
-        ~/.cache/0install.net/interfaces (by default).</em>
-    </li>
-    <li> <strong class="uidlink">zeroinstall.injector.policy.Policy</strong>:
-      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    <li> <strong class="uidlink">zeroinstall.injector.handler.Handler</strong>:
+      <em class="summary">Integrates download callbacks with an external mainloop.</em>
     <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html">zeroinstall.injector.autopolicy.AutoPolicy</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.background.BackgroundHandler-class.html">zeroinstall.injector.background.BackgroundHandler</a></strong>
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.selections.Selections-class.html">zeroinstall.injector.selections.Selections</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Implementation-class.html">zeroinstall.injector.model.Implementation</a></strong>:
+      <em class="summary">An Implementation is a package which implements an 
+        Interface.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.ZeroInstallImplementation-class.html">zeroinstall.injector.model.ZeroInstallImplementation</a></strong>:
+      <em class="summary">An implementation where all the information comes from Zero 
+        Install.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.Element-class.html">zeroinstall.injector.qdom.Element</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.DistributionImplementation-class.html">zeroinstall.injector.model.DistributionImplementation</a></strong>:
+      <em class="summary">An implementation provided by the distribution.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>:
-      <em class="summary">Integrates download callbacks with an external mainloop.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
-      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.RetrievalMethod-class.html">zeroinstall.injector.model.RetrievalMethod</a></strong>:
       <em class="summary">A RetrievalMethod provides a way to fetch an implementation.</em>
@@ -104,49 +111,50 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Interface-class.html">zeroinstall.injector.model.Interface</a></strong>:
       <em class="summary">An Interface represents some contract of behaviour.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Restriction-class.html">zeroinstall.injector.model.Restriction</a></strong>:
-      <em class="summary">A Restriction limits the allowed implementations of an 
-        Interface.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Implementation-class.html">zeroinstall.injector.model.Implementation</a></strong>:
-      <em class="summary">An Implementation is a package which implements an 
-        Interface.</em>
-    </li>
-    <li> <strong class="uidlink">zeroinstall.injector.handler.Handler</strong>:
-      <em class="summary">Integrates download callbacks with an external mainloop.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.background.BackgroundHandler-class.html">zeroinstall.injector.background.BackgroundHandler</a></strong>
-    </li>
-    </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>:
-      <em class="summary">A database of trusted keys.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>:
+      <em class="summary">The interface cache stores downloaded and verified interfaces in
+        ~/.cache/0install.net/interfaces (by default).</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Dependency-class.html">zeroinstall.injector.model.Dependency</a></strong>:
       <em class="summary">A Dependency indicates that an Implementation requires some 
-        additional code to function, specified by another Interface.</em>
+        additional code to function.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.InterfaceDependency-class.html">zeroinstall.injector.model.InterfaceDependency</a></strong>:
+      <em class="summary">A Dependency on a Zero Install interface.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.selections.Selection-class.html">zeroinstall.injector.selections.Selection</a></strong>:
       <em class="summary">A single selected implementation in a <a 
         href="zeroinstall.injector.selections.Selections-class.html" 
         class="link">Selections</a> set.</em>
     </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Restriction-class.html">zeroinstall.injector.model.Restriction</a></strong>:
+      <em class="summary">A Restriction limits the allowed implementations of an 
+        Interface.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom.Element-class.html">zeroinstall.injector.qdom.Element</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.selections.Selections-class.html">zeroinstall.injector.selections.Selections</a></strong>
+    </li>
+    <li> <strong class="uidlink">zeroinstall.injector.policy.Policy</strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html">zeroinstall.injector.autopolicy.AutoPolicy</a></strong>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Feed-class.html">zeroinstall.injector.model.Feed</a></strong>:
       <em class="summary">An interface's feeds are other interfaces whose implementations 
         can also be used as implementations of this interface.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.download.Download-class.html">zeroinstall.injector.download.Download</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Stability-class.html">zeroinstall.injector.model.Stability</a></strong>:
-      <em class="summary">A stability rating.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Binding-class.html">zeroinstall.injector.model.Binding</a></strong>:
-      <em class="summary">Information about how the choice of a Dependency is made known 
-        to the application being run.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.distro.Distribution-class.html">zeroinstall.injector.distro.Distribution</a></strong>:
+      <em class="summary">Represents a distribution with which we can integrate.</em>
     <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.EnvironmentBinding-class.html">zeroinstall.injector.model.EnvironmentBinding</a></strong>:
-      <em class="summary">Indicate the chosen implementation using an environment 
-        variable.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.distro.DebianDistribution-class.html">zeroinstall.injector.distro.DebianDistribution</a></strong>
     </li>
     </ul>
     </li>
@@ -156,6 +164,8 @@
     <li> <strong class="uidlink">exceptions.Exception</strong>:
       <em class="summary">Common base class for all non-exit exceptions.</em>
     <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.cli.UsageError-class.html">zeroinstall.injector.cli.UsageError</a></strong>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.SafeException-class.html">zeroinstall.SafeException</a></strong>:
       <em class="summary">An exception that can be reported to the user without a stack 
         trace.</em>
@@ -168,15 +178,12 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.cli.UsageError-class.html">zeroinstall.injector.cli.UsageError</a></strong>
-    </li>
     <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
       <em class="summary">An exception that can be reported to the user without a stack 
         trace.</em>
     <ul>
-    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.BadDigest-class.html">zeroinstall.zerostore.BadDigest</a></strong>:
-      <em class="summary">Thrown if a digest is invalid (either syntactically or 
-        cryptographically).</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NonwritableStore-class.html">zeroinstall.zerostore.NonwritableStore</a></strong>:
+      <em class="summary">Attempt to add to a non-writable store directory.</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NotStored-class.html">zeroinstall.zerostore.NotStored</a></strong>:
       <em class="summary">Throws if a requested implementation isn't in the cache.</em>
@@ -188,14 +195,30 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.reader.InvalidInterface-class.html">zeroinstall.injector.reader.InvalidInterface</a></strong>:
       <em class="summary">Raised when parsing an invalid interface.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.NonwritableStore-class.html">zeroinstall.zerostore.NonwritableStore</a></strong>:
-      <em class="summary">Attempt to add to a non-writable store directory.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.zerostore.BadDigest-class.html">zeroinstall.zerostore.BadDigest</a></strong>:
+      <em class="summary">Thrown if a digest is invalid (either syntactically or 
+        cryptographically).</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.alias.NotAnAliasScript-class.html">zeroinstall.alias.NotAnAliasScript</a></strong>
     </li>
     </ul>
     </li>
     </ul>
     </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Binding-class.html">zeroinstall.injector.model.Binding</a></strong>:
+      <em class="summary">Information about how the choice of a Dependency is made known 
+        to the application being run.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model.EnvironmentBinding-class.html">zeroinstall.injector.model.EnvironmentBinding</a></strong>:
+      <em class="summary">Indicate the chosen implementation using an environment 
+        variable.</em>
+    </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>:
+      <em class="summary">Integrates download callbacks with an external mainloop.</em>
     </li>
     </ul>
     </li>
@@ -205,14 +228,14 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.Signature-class.html">zeroinstall.injector.gpg.Signature</a></strong>:
       <em class="summary">Abstract base class for signature check results.</em>
     <ul>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.ErrSig-class.html">zeroinstall.injector.gpg.ErrSig</a></strong>:
+      <em class="summary">Error while checking a signature.</em>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.BadSig-class.html">zeroinstall.injector.gpg.BadSig</a></strong>:
       <em class="summary">A bad signature (doesn't match the message).</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.ValidSig-class.html">zeroinstall.injector.gpg.ValidSig</a></strong>:
       <em class="summary">A valid signature check result.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.ErrSig-class.html">zeroinstall.injector.gpg.ErrSig</a></strong>:
-      <em class="summary">Error while checking a signature.</em>
     </li>
     </ul>
     </li>
@@ -263,7 +286,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Wed Apr 25 20:01:50 2007</td>
+        3.0alpha3 on Sat Jun 16 19:26:41 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

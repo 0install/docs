@@ -96,9 +96,9 @@ Indicate the chosen implementation using an environment variable.<br /><br />
     <span class="summary-sig"><a href="zeroinstall.injector.model.EnvironmentBinding-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">name</span>,
         <span class="summary-sig-arg">insert</span>,
-        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for 
-      signature
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">PREPEND</span>)</span><br />
+      mode argument added in version 0.28
   </td>
 </tr>
 <tr>
@@ -165,7 +165,28 @@ Indicate the chosen implementation using an environment variable.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html#__slots__">__slots__</a> = <code title="['name', 'insert', 'default']">['name', 'insert', 'default']</code>
+    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html#__slots__">__slots__</a> = <code title="['name', 'insert', 'default', 'mode']">['name', 'insert', 'default', 'mode']</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html#PREPEND">PREPEND</a> = <code title="'prepend'">'prepend'</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html#APPEND">APPEND</a> = <code title="'append'">'append'</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html#REPLACE">REPLACE</a> = <code title="'replace'">'replace'</code>
   </td>
 </tr>
 </table>
@@ -226,7 +247,8 @@ Indicate the chosen implementation using an environment variable.<br /><br />
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">name</span>,
         <span class="sig-arg">insert</span>,
-        <span class="sig-arg">default</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">default</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default">PREPEND</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -234,12 +256,10 @@ Indicate the chosen implementation using an environment variable.<br /><br />
     ></td>
   </table>
   
-  x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature
+  mode argument added in version 0.28
   <dl><dt></dt><dd>
     <dl><dt>Overrides:
       object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt></dl>
   </dd></dl>
 </td></tr></table>
@@ -350,7 +370,55 @@ Indicate the chosen implementation using an environment variable.<br /><br />
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['name', 'insert', 'default']                                          
+['name', 'insert', 'default', 'mode']                                  
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="PREPEND"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">PREPEND</h3>
+  None
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+'prepend'                                                              
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="APPEND"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">APPEND</h3>
+  None
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+'append'                                                               
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="REPLACE"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">REPLACE</h3>
+  None
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+'replace'                                                              
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -388,7 +456,7 @@ Indicate the chosen implementation using an environment variable.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Wed Apr 25 20:01:52 2007</td>
+        3.0alpha3 on Sat Jun 16 19:26:43 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

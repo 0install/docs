@@ -67,6 +67,12 @@ object --+
         <strong class="uidshort">Implementation</strong>
 </pre>
 
+<dl><dt>Known Subclasses:</dt>
+<dd>
+    <a href="zeroinstall.injector.model.DistributionImplementation-class.html">DistributionImplementation</a>,
+    <a href="zeroinstall.injector.model.ZeroInstallImplementation-class.html">ZeroInstallImplementation</a>
+</dd></dl>
+
 <hr />
 An Implementation is a package which implements an Interface.<br /><br />
 
@@ -94,21 +100,8 @@ An Implementation is a package which implements an Interface.<br /><br />
     <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">id</span>)</span><br />
-      id can be a local path (string starting with /) or a manifest hash
-      (eg &quot;sha1=XXX&quot;)
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#add_download_source" class="summary-sig-name">add_download_source</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">url</span>,
-        <span class="summary-sig-arg">size</span>,
-        <span class="summary-sig-arg">extract</span>,
-        <span class="summary-sig-arg">start_offset</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Add a download source.
+      x.__init__(...) initializes x; see x.__class__.__doc__ for 
+      signature
   </td>
 </tr>
 <tr>
@@ -116,14 +109,6 @@ An Implementation is a package which implements an Interface.<br /><br />
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#get_stability" class="summary-sig-name">get_stability</a>(<span class="summary-sig-arg">self</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#get_version" class="summary-sig-name">get_version</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Return the version as a string.
   </td>
 </tr>
 <tr>
@@ -147,8 +132,8 @@ An Implementation is a package which implements an Interface.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#set_arch" class="summary-sig-name">set_arch</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">arch</span>)</span>
+    <span class="summary-sig"><a href="zeroinstall.injector.model.Implementation-class.html#get_version" class="summary-sig-name">get_version</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the version as a string.
   </td>
 </tr>
   <tr>
@@ -189,14 +174,59 @@ An Implementation is a package which implements an Interface.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.model.Implementation-class.html#__slots__">__slots__</a> = <code title="['os', 'machine', 'upstream_stability', 'user_stability', 'version', 'size', 'dependencies', 'main', 'metadata', 'id', 'download_sources', 'released', 'interface']">['os', 'machine', 'upstream_stability', 'user_stabil...</code>
+    <a href="zeroinstall.injector.model.Implementation-class.html#__slots__">__slots__</a> = <code title="['upstream_stability', 'user_stability', 'requires', 'main', 'metadata', 'download_sources', 'id', 'interface', 'version', 'released']">['upstream_stability', 'user_stability', 'requires',...</code>
   </td>
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.model.Implementation-class.html#arch">arch</a> = <code title="property(lambda self: _join_arch(self.os, self.machine), set_arch)">property(lambda self: _join_arch(self.os, self.machi...</code>
+    <a href="zeroinstall.injector.model.Implementation-class.html#arch">arch</a> = <code title="property(lambda self: _join_arch(self.os, self.machine))">property(lambda self: _join_arch(self.os, self.machi...</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.Implementation-class.html#machine">machine</a> = <code title="None">None</code><br />
+      Create a new digest.
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.Implementation-class.html#os">os</a> = <code title="None">None</code><br />
+      Create a new digest.
+  </td>
+</tr>
+</table>
+
+<br />
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">[<a href="zeroinstall.injector.model.RetrievalMethod-class.html" 
+      class="link">RetrievalMethod</a>]</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.model.Implementation-class.html#download_sources">download_sources</a><br />
+      list of methods of getting this implementation
   </td>
 </tr>
 </table>
@@ -264,36 +294,13 @@ An Implementation is a package which implements an Interface.<br /><br />
     ></td>
   </table>
   
-  id can be a local path (string starting with /) or a manifest hash (eg
-  &quot;sha1=XXX&quot;)
+  x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature
   <dl><dt></dt><dd>
     <dl><dt>Overrides:
       object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
     </dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="add_download_source"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_download_source</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">url</span>,
-        <span class="sig-arg">size</span>,
-        <span class="sig-arg">extract</span>,
-        <span class="sig-arg">start_offset</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">type</span>=<span class="sig-default">None</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Implementation.add_download_source">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Add a download source.
-  <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -313,29 +320,6 @@ An Implementation is a package which implements an Interface.<br /><br />
   
   None
   <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="get_version"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_version</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Implementation.get_version">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Return the version as a string.
-  <dl><dt></dt><dd>
-      <p><strong>See Also:</strong>
-        <a href="zeroinstall.injector.model-module.html#format_version" 
-        class="link">format_version</a>
-      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -384,23 +368,26 @@ An Implementation is a package which implements an Interface.<br /><br />
   </dd></dl>
 </td></tr></table>
 </div>
-<a name="set_arch"></a>
+<a name="get_version"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_arch</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">arch</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_version</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Implementation.set_arch">source&nbsp;code</a></span>&nbsp;</span
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Implementation.get_version">source&nbsp;code</a></span>&nbsp;</span
     ></td>
   </table>
   
-  None
+  Return the version as a string.
   <dl><dt></dt><dd>
+      <p><strong>See Also:</strong>
+        <a href="zeroinstall.injector.model-module.html#format_version" 
+        class="link">format_version</a>
+      </p>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -433,9 +420,8 @@ An Implementation is a package which implements an Interface.<br /><br />
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['os', 'machine', 'upstream_stability', 'user_stability', 'version', '<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-size', 'dependencies', 'main', 'metadata', 'id', 'download_sources', '<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-released', 'interface']                                                
+['upstream_stability', 'user_stability', 'requires', 'main', 'metadata<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
+', 'download_sources', 'id', 'interface', 'version', 'released']       
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -451,9 +437,76 @@ released', 'interface']
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-property(lambda self: _join_arch(self.os, self.machine), set_arch)     
+property(lambda self: _join_arch(self.os, self.machine))               
       </pre></td></tr></table></dd>
     </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="machine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">machine</h3>
+  Create a new digest. Call update() on the returned object to digest 
+  the data. Call getID() to turn it into a full ID string.
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="os"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">os</h3>
+  Create a new digest. Call update() on the returned object to digest 
+  the data. Call getID() to turn it into a full ID string.
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="download_sources"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">download_sources</h3>
+  list of methods of getting this implementation
+  <dl><dt></dt><dd>
+    <dl><dt>Type:</dt>
+      <dd>[<a href="zeroinstall.injector.model.RetrievalMethod-class.html" 
+      class="link">RetrievalMethod</a>]</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -489,7 +542,7 @@ property(lambda self: _join_arch(self.os, self.machine), set_arch)
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Wed Apr 25 20:01:52 2007</td>
+        3.0alpha3 on Sat Jun 16 19:26:43 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

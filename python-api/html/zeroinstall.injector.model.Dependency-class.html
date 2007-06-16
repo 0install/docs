@@ -67,9 +67,14 @@ object --+
         <strong class="uidshort">Dependency</strong>
 </pre>
 
+<dl><dt>Known Subclasses:</dt>
+<dd>
+    <a href="zeroinstall.injector.model.InterfaceDependency-class.html">InterfaceDependency</a>
+</dd></dl>
+
 <hr />
 A Dependency indicates that an Implementation requires some additional
-  code to function, specified by another Interface.<br /><br />
+  code to function. This is an abstract base class.<br /><br />
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -93,19 +98,9 @@ A Dependency indicates that an Implementation requires some additional
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <span class="summary-sig"><a href="zeroinstall.injector.model.Dependency-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">restrictions</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">metadata</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">metadata</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for 
       signature
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.Dependency-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      str(x)
   </td>
 </tr>
   <tr>
@@ -118,7 +113,8 @@ A Dependency indicates that an Implementation requires some additional
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
       <code>__repr__</code>,
-      <code>__setattr__</code>
+      <code>__setattr__</code>,
+      <code>__str__</code>
       </p>
     </td>
   </tr>
@@ -146,7 +142,7 @@ A Dependency indicates that an Implementation requires some additional
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.model.Dependency-class.html#__slots__">__slots__</a> = <code title="['interface', 'restrictions', 'bindings', 'metadata']">['interface', 'restrictions', 'bindings', 'metadata']</code>
+    <a href="zeroinstall.injector.model.Dependency-class.html#__slots__">__slots__</a> = <code title="['metadata']">['metadata']</code>
   </td>
 </tr>
 </table>
@@ -171,36 +167,10 @@ A Dependency indicates that an Implementation requires some additional
 </tr>
 <tr>
   <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[<a href="zeroinstall.injector.model.Binding-class.html" 
-      class="link">Binding</a>]</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Dependency-class.html#bindings">bindings</a><br />
-      how to make the choice of implementation known
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Dependency-class.html#interface">interface</a><br />
-      the interface required by this dependency
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">{str: str}</code>
   </td><td class="summary">
     <a href="zeroinstall.injector.model.Dependency-class.html#metadata">metadata</a><br />
       any extra attributes from the XML element
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[<a href="zeroinstall.injector.model.Restriction-class.html" 
-      class="link">Restriction</a>]</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Dependency-class.html#restrictions">restrictions</a><br />
-      a list of constraints on acceptable implementations
   </td>
 </tr>
 </table>
@@ -259,9 +229,7 @@ A Dependency indicates that an Implementation requires some additional
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">restrictions</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">metadata</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">metadata</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -274,30 +242,6 @@ A Dependency indicates that an Implementation requires some additional
   <dl><dt></dt><dd>
     <dl><dt>Overrides:
       object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="__str__"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Dependency.__str__">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  str(x)
-  <dl><dt></dt><dd>
-    <dl><dt>Overrides:
-      object.__str__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt></dl>
   </dd></dl>
@@ -332,7 +276,7 @@ A Dependency indicates that an Implementation requires some additional
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['interface', 'restrictions', 'bindings', 'metadata']                  
+['metadata']                                                           
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -357,33 +301,6 @@ A Dependency indicates that an Implementation requires some additional
   </td>
 </tr>
 </table>
-<a name="bindings"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">bindings</h3>
-  how to make the choice of implementation known
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>[<a href="zeroinstall.injector.model.Binding-class.html" 
-      class="link">Binding</a>]</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="interface"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">interface</h3>
-  the interface required by this dependency
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>str</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
 <a name="metadata"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -394,20 +311,6 @@ A Dependency indicates that an Implementation requires some additional
   <dl><dt></dt><dd>
     <dl><dt>Type:</dt>
       <dd>{str: str}</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="restrictions"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">restrictions</h3>
-  a list of constraints on acceptable implementations
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>[<a href="zeroinstall.injector.model.Restriction-class.html" 
-      class="link">Restriction</a>]</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -443,7 +346,7 @@ A Dependency indicates that an Implementation requires some additional
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Wed Apr 25 20:01:52 2007</td>
+        3.0alpha3 on Sat Jun 16 19:26:43 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

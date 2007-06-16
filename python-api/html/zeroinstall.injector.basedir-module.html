@@ -139,6 +139,24 @@
       is nothing to load.
   </td>
 </tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.basedir-module.html#load_data_paths" class="summary-sig-name">load_data_paths</a>(<span class="summary-sig-arg">*resource</span>)</span><br />
+      Returns an iterator which gives each directory named 'resource' in
+      the shared data search path.
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.basedir-module.html#load_first_data" class="summary-sig-name">load_first_data</a>(<span class="summary-sig-arg">*resource</span>)</span><br />
+      Returns the first result from load_data_paths, or None if there is
+      nothing to load.
+  </td>
+</tr>
 </table>
 
 <br />
@@ -163,6 +181,13 @@
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
+    <a href="zeroinstall.injector.basedir-module.html#xdg_data_home">xdg_data_home</a> = <code title="os.environ.get('XDG_DATA_HOME', os.path.join(_home, '.local', 'share'))">os.environ.get('XDG_DATA_HOME', os.path.join(_home, ...</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
     <a href="zeroinstall.injector.basedir-module.html#xdg_cache_home">xdg_cache_home</a> = <code title="os.environ.get('XDG_CACHE_HOME', os.path.join(_home, '.cache'))">os.environ.get('XDG_CACHE_HOME', os.path.join(_home,...</code>
   </td>
 </tr>
@@ -171,6 +196,13 @@
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
     <a href="zeroinstall.injector.basedir-module.html#xdg_config_home">xdg_config_home</a> = <code title="os.environ.get('XDG_CONFIG_HOME', os.path.join(_home, '.config'))">os.environ.get('XDG_CONFIG_HOME', os.path.join(_home...</code>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.basedir-module.html#xdg_data_dirs">xdg_data_dirs</a> = <code title="filter(lambda x: x, xdg_data_dirs)">filter(lambda x: x, xdg_data_dirs)</code>
   </td>
 </tr>
 <tr>
@@ -334,6 +366,53 @@
   </dd></dl>
 </td></tr></table>
 </div>
+<a name="load_data_paths"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_data_paths</span>(<span class="sig-arg">*resource</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.basedir-pysrc.html#load_data_paths">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Returns an iterator which gives each directory named 'resource' in the
+  shared data search path. Information provided by earlier directories 
+  should take precedence over later ones.
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.28
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="load_first_data"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_first_data</span>(<span class="sig-arg">*resource</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.basedir-pysrc.html#load_first_data">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Returns the first result from load_data_paths, or None if there is 
+  nothing to load.
+  <dl><dt></dt><dd>
+      <p><strong>Since:</strong>
+        0.28
+      </p>
+  </dd></dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== VARIABLES DETAILS ==================== -->
 <a name="section-VariablesDetails"></a>
@@ -353,6 +432,23 @@
   </td>
 </tr>
 </table>
+<a name="xdg_data_home"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xdg_data_home</h3>
+  None
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+os.environ.get('XDG_DATA_HOME', os.path.join(_home, '.local', 'share')<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
+)                                                                      
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
 <a name="xdg_cache_home"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -380,6 +476,22 @@ os.environ.get('XDG_CACHE_HOME', os.path.join(_home, '.cache'))
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
 os.environ.get('XDG_CONFIG_HOME', os.path.join(_home, '.config'))      
+      </pre></td></tr></table></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="xdg_data_dirs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xdg_data_dirs</h3>
+  None
+  <dl><dt></dt><dd>
+    <dl><dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+filter(lambda x: x, xdg_data_dirs)                                     
       </pre></td></tr></table></dd>
     </dl>
   </dd></dl>
@@ -449,7 +561,7 @@ filter(lambda x: x, xdg_config_dirs)
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Wed Apr 25 20:01:51 2007</td>
+        3.0alpha3 on Sat Jun 16 19:26:42 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>
