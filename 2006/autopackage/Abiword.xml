@@ -11,10 +11,13 @@ AbiWord is a lightweight word processing application.</description>
     <implementation id="sha1new=ed47b2e3271ea9620a47a57534d6ea35e0753017" released="2006-12-02" stability="stable" version="2.4.5">
       <archive href="http://www.abisource.org/downloads/abiword/2.4.5/Linux/Autopackage/abiword-2.4.5.x86.package" size="3672982" start-offset="17709" type="application/x-bzip-compressed-tar"/>
     </implementation>
+    <requires interface="http://0install.net/2007/3rd-party/libgucharmap4.xml">
+      <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq0WBSn9tx+xORARAq81AJ4n9zvQjYT9bEfeXD695d2hc8yiaQCgkPVaJJvPYAIA+Pwk
-hDJLVUhH1L0=
+iD8DBQBGdWdbBSn9tx+xORARAtQaAJ99G+2cPEQXtojXoxUSM1fXb3dn/wCeIJbiFQpVu4YI31ZM
+yViYnT0CuLc=
 
 -->
