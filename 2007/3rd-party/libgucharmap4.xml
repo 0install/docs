@@ -9,6 +9,7 @@ prominently used by the &quot;gucharmap&quot; program.
 
 This package contains the shared library.</description>
   <homepage>http://gucharmap.sourceforge.net/</homepage>
+  <package-implementation package="libgucharmap4"/>
   <group>
     <implementation doc-dir="usr/share/doc/libgucharmap4" id="sha1new=8de1b84c6d86e3d966085a2a3f6633aa2d150ea3" license="OSI Approved :: GNU General Public License (GPL)" released="2007-06-17" version="1.6.0" version-modifier="-1">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/g/gucharmap/libgucharmap4_1.6.0-1_i386.deb" size="1187536" type="application/x-deb"/>
@@ -16,7 +17,7 @@ This package contains the shared library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdWb3BSn9tx+xORARAk+wAJ9tDpOmj+xxGeJ24wyuK+c5+mFL/QCcDSK9DwiTFYxYBCgB
-+X1dB/Uw+GY=
+iD8DBQBGdrufBSn9tx+xORARAvfvAJ4mZiSxwVuiGmdhTNE+MiMb+wZZeQCgnB+8PGkOnqCHBCaA
+XSAR5yaZNMo=
 
 -->
