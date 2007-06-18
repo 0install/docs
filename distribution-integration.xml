@@ -40,7 +40,7 @@ have the <b>libenchant1</b> library it requires installed using <b>apt-get</b>:
 <pre>$ <b>0launch http://0install.net/2006/autopackage/Abiword.xml</b></pre>
 
 <p style='text-align: center'>
-  <img src='screens/abiword-have-enchant.png' width='658' height='276' alt='Abiword with native libenchant'/>
+  <img src='screens/abiword-have-enchant.png' width='657' height='274' alt='Abiword with native libenchant'/>
 </p>
 
 <p>
@@ -49,14 +49,19 @@ be downloaded:
 </p>
 
 <p style='text-align: center'>
-  <img src='screens/abiword-have-enchant.png' width='580' height='249' alt='Native Abiword'/>
+  <img src='screens/abiword-native.png' width='580' height='249' alt='Native Abiword'/>
 </p>
 
 <p>
-Of couse, you are always feed to change the selected version from the native package to a Zero Install
+Of couse, you are always free to change the selected version from the native package to a Zero Install
 version. This will also happen autoamatically if your native version is incompatible with the required
 version. For example, if you try this on a machine with a very old copy of libenchant1 then Zero Install
 will download a newer version rather than using that one.
+</p>
+
+<p>
+As always, all software installed by Zero Install goes in the cache directory and does not conflict with
+files installed by the native package manager.
 </p>
 
 <h2>Future work</h2>
@@ -65,6 +70,7 @@ will download a newer version rather than using that one.
 Distribution integration is not yet finished. There are some minor bugs in version 0.28 (fixed in the subversion
 copy). Specifically, you can't run a program that depends on native packages using the GUI. However, if you
 try again then it will work because everything required is cached and the GUI isn't needed.
+Also package versions are displayed as (cached) rather than as (package).
 </p>
 
 <p>
@@ -74,8 +80,9 @@ versioning schemes.
 </p>
 
 <p>
-Finally, Zero Install can only get package information from .deb-based systems. RPM is not currently supported
-although adding support should be easy enough now that we have the framework.
+Finally, Zero Install can only get package information from .deb-based systems
+at present. RPM is not currently supported, although adding support should be
+easy enough now that we have the framework.
 </p>
 
 </div>
