@@ -13,14 +13,16 @@ AbiWord is a lightweight word processing application.</description>
     </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libgucharmap4.xml">
       <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+      <version not-before="1.6.0"/>
     </requires>
     <requires interface="http://0install.net/2007/3rd-party/libenchant1.xml">
       <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+      <version not-before="1.3.0"/>
     </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdWpQBSn9tx+xORARAib1AKCTEX4HHSGZ46PYc2SyJJErQHwPEQCfTIsDfqIO+mqzC9fE
-XxrqDcGyHMw=
+iD8DBQBGdrtABSn9tx+xORARAhULAJ4zAuSg6JCcRZ5ab9j01k/LtmVxRwCeLenGFU6jbw08JEjW
+6c7rjOf1kyo=
 
 -->
