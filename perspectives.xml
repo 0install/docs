@@ -199,7 +199,7 @@ try to find a set of versions that supports all packages simultaneously.
 
  <dt>... override a dependency of a Zero Install package to use my custom packaged library?</dt>
  <dd>From version 0.28, you can register an additional feed in
- <b>/usr/share/0install.net</b> (watch this space!).</dd>
+ <b>/usr/share/0install.net</b>. See <a href='distribution-integration.html'>Distribution Integration</a> for details.</dd>
 
  <dt>... suggest suitable Zero Install packages for my users?</dt>
  <dd>See the instructions for administrators above. You just provide launchers.

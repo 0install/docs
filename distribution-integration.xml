@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<div style='max-width: 60em'>
+
+<h2>Distribution integration</h2>
+
+<p>
+If you have already installed a package using your distribution's installer then you may wish to use
+that instead of downloading a second copy using Zero Install. 
+Starting with <a href='injector.html'>Zero Install 0.28</a>, two methods are available to integrate
+Zero Install packages with distribution ones:
+</p>
+
+<ul>
+  <li><p>A distribution package can install a file named <b>/usr/share/0install.net/native_feeds/INTERFACE</b>.
+  This is automatically used as an additional feed for INTERFACE (replace "/" characters in the package's
+  interface URI with "#" characters).
+  </p>
+  
+  <p>This is useful if the package installs the program as a self-contained
+  directory somewhere. i.e. the installed package has the same format as the Zero Install package. If the
+  package already contains a local feed file, you can just symlink to it directly.</p></li>
+
+  <li>
+  <p>
+  A feed author can add a &lt;package-implementation package="name"/&gt; element to their feed. Zero Install
+  will query your distribution's package manager to see if a package with this name is already installed. If so,
+  that version will be considered as another candidate, with a stability rating
+  of "packaged" (which is ranked between "stable" and "preferred").
+  </p>
+  </li>
+</ul>
+
+<p>
+For example, here is what happens if you ask to run AbiWord when you already
+have the <b>libenchant1</b> library it requires installed using <b>apt-get</b>:
+</p>
+
+<pre>$ <b>0launch http://0install.net/2006/autopackage/Abiword.xml</b></pre>
+
+<p style='text-align: center'>
+  <img src='screens/abiword-have-enchant.png' width='658' height='276' alt='Abiword with native libenchant'/>
+</p>
+
+<p>
+If Abiword is itself installed using <b>apt-get</b>, then the dialog is even simpler, and nothing needs to
+be downloaded:
+</p>
+
+<p style='text-align: center'>
+  <img src='screens/abiword-have-enchant.png' width='580' height='249' alt='Native Abiword'/>
+</p>
+
+<p>
+Of couse, you are always feed to change the selected version from the native package to a Zero Install
+version. This will also happen autoamatically if your native version is incompatible with the required
+version. For example, if you try this on a machine with a very old copy of libenchant1 then Zero Install
+will download a newer version rather than using that one.
+</p>
+
+<h2>Future work</h2>
+
+<p>
+Distribution integration is not yet finished. There are some minor bugs in version 0.28 (fixed in the subversion
+copy). Specifically, you can't run a program that depends on native packages using the GUI. However, if you
+try again then it will work because everything required is cached and the GUI isn't needed.
+</p>
+
+<p>
+Since different distributions use different names for the same package we may need to allow distributions
+to be named in the feed files. We may need a way to specify mappings for version numbers, to cope with different
+versioning schemes.
+</p>
+
+<p>
+Finally, Zero Install can only get package information from .deb-based systems. RPM is not currently supported
+although adding support should be easy enough now that we have the framework.
+</p>
+
+</div>
+
+</html>

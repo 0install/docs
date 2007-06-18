@@ -17,6 +17,7 @@
     <item base='injector-security' label='Security'/>
     <item base="sharing" label="Sharing"/>
     <item base="walkthrough" label="Walk-through"/>
+    <item base="distribution-integration" label="Distro integration"/>
     <item base="roadmap" label="Roadmap"/>
     <item base="links" label="Links"/>
   </item>

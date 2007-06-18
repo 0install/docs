@@ -11,7 +11,7 @@ Enchant steps in to provide uniformity and conformity on top of these libraries,
 and implement certain features that may be lacking in any individual provider
 library.</description>
   <homepage>http://www.abisource.com/projects/enchant/</homepage>
-  <package-implementation package="libenchant1"/>
+  <package-implementation package="libenchant1c2a"/>
   <group>
     <implementation doc-dir="usr/share/doc/libenchant1c2a" id="sha1new=c88f4699ce75aaabca86e1cc5bad943193b11736" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2007-06-17" version="1.3.0" version-modifier="-2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/e/enchant/libenchant1c2a_1.3.0-2_i386.deb" size="156870" type="application/x-deb"/>
@@ -19,7 +19,7 @@ library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD4DBQBGdrt3BSn9tx+xORARAs69AJ9djJaWHi1LgBpLeakWj1O2UFw7iACWJNrsf1pKQVYSG9k4
-BfIbjlYs5Q==
+iD8DBQBGdrwTBSn9tx+xORARAqa5AJ4uogNEPyD1E/z5hQHwZUfAmjC/jQCfQdY2V8Mol+xezxgs
+GMLswz1nL/8=
 
 -->
