@@ -7,12 +7,13 @@
 APR is Apache's Portable Runtime Library, designed to be a support library that
 provides a predictable and consistent interface to underlying platform-specific
 implementations.</description>
+  <package-implementation package="libapr1"/>
   <implementation arch="Linux-i386" id="sha1new=edcf527ae9c813bae305beb62548232f44bad6f1" released="2007-01-20" stability="stable" version="1.2.7" version-modifier="-8.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/a/apr/libapr1_1.2.7-8.2_i386.deb" size="109326" type="application/x-deb"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrXQBSn9tx+xORARApbsAJ4jUwgsoULGnFNR3AwYjCOtrtQQxACeOciXODwEyxciIfsh
-qujcw6YFc8w=
+iD8DBQBGdrcqBSn9tx+xORARAsA8AJsE0fvSVzZqIXpWd0+GkgzKIWOGTgCdFJB1w/TeneY4R9U3
+DdHu6FZNAhs=
 
 -->

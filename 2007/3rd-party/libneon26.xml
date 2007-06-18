@@ -11,6 +11,7 @@ WARNING: THE NEON API IS NOT YET STABLE.
 Provides lower-level interfaces to directly implement new HTTP methods, and
 higher-level interfaces so that you don't have to worry about the lower-level
 stuff.</description>
+  <package-implementation package="libneon26"/>
   <group>
     <implementation arch="Linux-i386" id="sha1new=7b8af150db54970958b9419b544556b6aab54496" released="2007-01-20" stability="stable" version="0.26.2" version-modifier="-3.1">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/n/neon26/libneon26_0.26.2-3.1_i386.deb" size="118850" type="application/x-deb"/>
@@ -21,7 +22,7 @@ stuff.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq+wBSn9tx+xORARAoFlAJ9qFMttnG8KZMGbcsCUUgvL7V6n3QCfX97QUIb6U36rmAIC
-EHwAFZWOpu4=
+iD8DBQBGdrbKBSn9tx+xORARArbrAJ95LD0bXTYrneXy1elUoifgroZaSwCgmJQXeSNX7lnf8dq5
+Pqof5azX7yA=
 
 -->

@@ -10,6 +10,7 @@ implementations.
 
 APR Util is a utilities library implemented on top of apr, providing database
 access, xml parsing, and other useful functionality.</description>
+  <package-implementation package="libapr1"/>
   <group>
     <implementation arch="Linux-i386" id="sha1new=cdfb82cbbee7c01671719ad7327c13a9f16054c0" released="2007-01-20" stability="stable" version="1.2.7">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.7+dfsg-2_i386.deb" size="68456" type="application/x-deb"/>
@@ -29,7 +30,7 @@ access, xml parsing, and other useful functionality.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq+5BSn9tx+xORARAuYaAJ9N02YfpezB+nD9rJVFNOICu+zk/wCeMy8acKw62/jVu3I/
-gEzYy7OZ6ZE=
+iD8DBQBGdrc1BSn9tx+xORARAmQaAJ4s1k1L+mRVVok1Fiy5DUvaVPT8OgCdEk5xfgPwG6A5Wwvq
+tzEj9+iLVLM=
 
 -->

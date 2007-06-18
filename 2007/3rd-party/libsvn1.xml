@@ -11,18 +11,21 @@ repositories and working copies.</description>
     <archive href="http://ftp.uk.debian.org/debian/pool/main/s/subversion/libsvn1_1.4.2dfsg1-2_i386.deb" size="593108" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+      <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+      <version not-before="1.2.7"/>
     </requires>
     <requires interface="http://0install.net/2007/3rd-party/libaprutil1.xml">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+      <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+      <version not-before="1.2.7"/>
     </requires>
     <requires interface="http://0install.net/2007/3rd-party/libneon26.xml">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+      <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+      <version not-before="0.26.2"/>
     </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq+nBSn9tx+xORARAjIlAJ0cG6CNb/S9GF508fY77ckScL6pyQCbB2sT3M9XLfd37wMP
-MuD/Fb5Uao0=
+iD8DBQBGdrafBSn9tx+xORARAoeUAJ90cb9VNrIeAsUQzlCxBiXmzaw6yACfSWsweYDUxsq+3Equ
+yyvITFYIwFw=
 
 -->
