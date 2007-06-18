@@ -52,7 +52,7 @@ Hash: SHA1
     <implementation id="sha1new=21d17e1f8412651d0a38e9eda3068e4768c6dc71" released="2007-01-14" stability="stable" version="0.10">
       <archive extract="0publish-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.10.tar.bz2" size="17755"/>
     </implementation>
-    <implementation id="sha1new=1efef7e4e5b69a8d7a1b5a55d716b1f7714d3674" released="2007-06-02" version="0.11">
+    <implementation id="sha1new=1efef7e4e5b69a8d7a1b5a55d716b1f7714d3674" released="2007-06-02" stability="stable" version="0.11">
       <archive extract="0publish-0.11" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.11.tar.bz2" size="17854"/>
     </implementation>
   </group>
@@ -60,7 +60,7 @@ Hash: SHA1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
-iD8DBQFGYbyWrgeCgFmlPMERAsssAJ9kBN83o3N/Yk7ICUE5zkLoFP4w8wCfZ2lm
-EcDzL16D+dd7Z+ysIMuCLuQ=
-=77HK
+iD8DBQFGdvUSrgeCgFmlPMERAmXBAKDOSZR3WEexX/2mRXHNiRjtxJOZ0QCeI5Tm
+4UHjQPi75CStOTr2TW9FkSk=
+=uh8q
 -----END PGP SIGNATURE-----
