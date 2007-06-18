@@ -80,6 +80,12 @@ versioning schemes.
 </p>
 
 <p>
+We only consider native packages that are actually installed. We could also consider native packages
+that are available (you'd need to enter the root password). This might be useful if no Zero Install version
+was available, or if you preferred to use a native package for some reason.
+</p>
+
+<p>
 Finally, Zero Install can only get package information from .deb-based systems
 at present. RPM is not currently supported, although adding support should be
 easy enough now that we have the framework.
