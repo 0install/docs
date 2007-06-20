@@ -118,7 +118,7 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a>, or using wget:
 </p>
 <pre>
-$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.28.tar.gz.gpg</b>
+$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.29.tar.gz.gpg</b>
 </pre>
 
 <p>
@@ -126,8 +126,8 @@ Check that the signature is correct using GPG (this also ensures that GPG is ins
 </p>
 
 <pre>
-$ <b>gpg zeroinstall-injector-0.28.tar.gz.gpg</b>
-gpg: Signature made Sat Jun 16 17:37:40 2007 UTC using DSA key ID 59A53CC1
+$ <b>gpg zeroinstall-injector-0.29.tar.gz.gpg</b>
+gpg: Signature made Wed Jun 20 18:41:55 2007 UTC using DSA key ID 59A53CC1
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -145,8 +145,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xzf zeroinstall-injector-0.28.tar.gz</b>
-$ <b>cd zeroinstall-injector-0.28</b>
+$ <b>tar xzf zeroinstall-injector-0.29.tar.gz</b>
+$ <b>cd zeroinstall-injector-0.29</b>
 </pre>
 
 <table class='split'>
