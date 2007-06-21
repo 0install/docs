@@ -101,7 +101,7 @@ To use the injector, you will need:
 </p>
 
 <ul>
-<li><a href="http://python.org">Python</a> (version 2.3 or later, <i>including</i> any <b>-dev</b> package).</li>
+<li><a href="http://python.org">Python</a> (version 2.4 or later, <i>including</i> any <b>-dev</b> package).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
 <li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.0 or later</a> (only needed for the GUI).</li>
 <li><a href="http://0install.net/public_key.gpg">My GPG key</a>. You can download and import
