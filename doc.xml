@@ -27,6 +27,8 @@
 
     <dt><a href='walkthrough.html'>Manual walk-through</a></dt><dd>In this guide we install a program which is available through Zero Install, but without using the Zero Install software itself. Instead, we will perform each step manually, as an educational experience.</dd>
 
+    <dt><a href='distribution-integration.html'>Distribution integration</a></dt><dd>Zero Install can also satisfy dependencies using packages installed using the distribution's packaging system. If the distribution package isn't installed, or the version isn't suitable, then it will download a Zero Install copy instead.</dd>
+
     <dt><a href='roadmap.html'>Roadmap</a></dt><dd>Where we've been and where we're going.</dd>
 
     <dt><a href='links.html'>Links</a></dt><dd>Links to related software.</dd>

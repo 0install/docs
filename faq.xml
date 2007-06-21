@@ -117,6 +117,14 @@ up your existing installation.
 </p>
 
 <p>
+Zero Install can use distribution packages to satisfy some
+dependencies (rather than downloading a new copy itself). This doesn't affect
+programs installed using the native packaging system at all.
+See <a href='distribution-integration.html'>Distribution Integration</a> for
+details.
+</p>
+
+<p>
 Note: while installation won't cause problems, actually running a program might
 change something (for example, a newer version may automatically upgrade a
 configuration file to a format that the older version can't read). This is

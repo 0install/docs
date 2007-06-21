@@ -114,27 +114,12 @@ modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-post2". Since 0.24.
 <dd>
 Instead of making the user wait while we check for updates, start the program immediately and check in the
 background [ <a href='http://rox.sourceforge.net/desktop/node/384'>screenshot</a> ]. Since 0.26.</dd>
-</dl>
 
-<h3>Features planned for 1.0</h3>
-
-<dl>
 <dt>Automatic secure sharing of downloads</dt>
-<dd>Make a SetUID helper that uses <b>0store copy</b> to copy downloads to a central cache. This allows
-downloads to be shared without the intervention of the system administrator, while still preventing a
-malicious (or virus-infected) user from compromising other user accounts. Need to think about how things
-get removed from the cache when no longer needed! [ <a href='sharing.html'>working, except for removal</a> ]</dd>
-
-<dt>Mirrors for archives</dt>
-<dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
-systems, coral cache, etc. May need to show sponsor logos during the download.
-See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
-
-<dt>Automatic cache cleaning</dt>
 <dd>
-The injector can keep all versions of all libraries on disk at once. This is useful, but there should be a way
-to clean out ones that aren't needed any more to free up disk space. Individual versions can be removed easily
-enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
+If two users ask to run the same version of a program or library, it is only downloaded and stored once.
+The users don't need to trust each other; only genuine unmodified copies can be shared. See
+<a href='sharing.html'>the sharing page</a> for details. Since 0.26.
 </dd>
 
 <dt>Native package manager integration</dt>
@@ -143,8 +128,29 @@ If a Zero Install package requires a library, and the user already has a suitabl
 system (APT, RPM, etc) then the injector should be able to use that version. This would save unnecessarily downloading
 and storing a second copy of the library. The user should still have the option to get the library through Zero Install
 if they want though (e.g., if they want to try a newer version).
-<more href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1621/focus=1633'/>
+See <a href='distribution-integration.html'>Distribution Integration</a> for
+details. Since 0.28.
 </dd>
+
+</dl>
+
+<h3>Features planned for 1.0</h3>
+
+<dl>
+
+<dt>Automatic cache cleaning</dt>
+<dd>
+The injector can keep all versions of all libraries on disk at once. This is useful, but there should be a way
+to clean out ones that aren't needed any more to free up disk space. Individual versions can be removed easily
+enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
+In particular, we need a way to remove a version which was shared between multiple users safely (i.e. only remove it once no user
+requires it).
+</dd>
+
+<dt>Mirrors for archives</dt>
+<dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
+systems, coral cache, etc. May need to show sponsor logos during the download.
+See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
 
 <dt>Optional dependencies</dt>
 <dd>
@@ -159,6 +165,10 @@ The injector tells you that a new version is available, but it doesn't say what 
 should provide a link to the program's release notes on the web.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
 </dd>
+
+<dt>Support for RPM-installed packages</dt>
+<dd>Zero Install can tell when an APT-installed package is available and may use that instead of downloading
+anything itself. We should add similar support for RPM-installed packages.</dd>
 </dl>
 
 <h3>Other possible features</h3>
