@@ -16,12 +16,17 @@ creation and playback with cross-platform compatibility.</description>
   <homepage>http://www.blender.org</homepage>
   <icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/>
   <category>Video</category>
-  <implementation arch="Linux-i386" id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" license="OSI Approved :: GNU General Public License (GPL)" main="blender" released="2007-01-13" stability="stable" version="2.42">
+  <group arch="Linux-i386" license="OSI Approved :: GNU General Public License (GPL)" main="blender">
+    <implementation arch="-" id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" released="2007-01-13" stability="stable" version="2.42">
     <archive extract="blender-2.42a-linux-glibc232-py24-i386-static" href="http://video.blendertestbuilds.de/download.blender.org/release/Blender2.42/blender-2.42a-linux-glibc232-py24-i386-static.tar.bz2" size="11505773"/>
   </implementation>
+    <implementation id="sha1new=fb4333254a4855636c8b70de9cb8bbe90b6b84b4" released="2007-06-23" version="2.44">
+      <archive extract="blender-2.44-linux-glibc232-py24-i386-static" href="http://download.blender.org/release/Blender2.44/blender-2.44-linux-glibc232-py24-i386-static.tar.bz2" size="13195326" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrXPBSn9tx+xORARApi0AKCbA3T2ae7rHiOeCSe2Zf6/NG7HnQCfcPTVzAMwvq0+D8op
-0LaKhaH0RWM=
+iD8DBQBGfR/jBSn9tx+xORARAv3hAJ9l8oj2x58Z8ZMXdHrcFRa3mNnp8gCfYwWB8A3JeKmtKNtS
+ffQMN8feRZw=
 
 -->
