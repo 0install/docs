@@ -53,8 +53,8 @@ This has been the tagline of Armagetron, since, well, a very long time, and is
 probably the shortest and most accurate description possible. Tron was an arcade
 game based on the movie of the same name, release by Disney in 1982. ...</feed>
 
-<feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="Headers for compiling ATK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the ATK header files. They are required when compiling
-    applications that use the ATK library. ATK is an Accessibility Toolkit.</feed>
+<feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="Headers for compiling ATK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the ATK header files. They are required when compiling applications
+that use the ATK library. ATK is an Accessibility Toolkit.</feed>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="feed_icons/barrage.png" width="48" height="48" category="Unknown">Barrage is a rather violent action game with the objective to kill
 	    and destroy as many targets as possible within 3 minutes. The player
@@ -94,6 +94,9 @@ uses the information to construct AppDir wrappers for each application</feed>
 <feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="Adds icons for devices/volumes to the panel" icon="feed_icons/DeviceHandler.xml.png" width="48" height="48" category="Unknown">DeviceHandler is a panel-applet that automatically adds icons for attached
 devices and inserted media to the panel/pinboard.</feed>
 
+<feed uri="http://rox4debian.berlios.de/0install/DevTray.xml" name="DevTray" summary="Shows devices/volumes in the panel" icon="feed_icons/DevTray.png" width="48" height="48" category="System">DevTray is a panel applet that shows devices and volumes. You need dbus (&gt;=0.33)
+and HAL (including python bindings) to run it.</feed>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="Display the difference between two text files." icon="feed_icons/Diff.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/31" category="Unknown">This program displays a coloured context diff between two files.  You
 drop the files from the filer into the upper 2 windows.</feed>
 
@@ -120,9 +123,20 @@ drop saving, search-and-replace and multi-level undo.</feed>
 <feed uri="http://rox4debian.berlios.de/0install/Execute.xml" name="Execute" summary="Run programs by command" icon="feed_icons/Execute.xml.png" width="42" height="42" category="Unknown">This program lets you execute programs by entering commands and also 
 execute them as a different user.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="feed_icons/Fetch.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Fetch" category="Unknown">Fetch is a download handler for ROX-Filer.  When a link is dragged
+<feed uri="http://0install.net/2007/interfaces/FeedLint.xml" name="FeedLint" summary="Check your Zero Install feeds" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/feedlint.html" category="Development">FeedLint is a tool for Zero Install feed authors. It checks that your Zero
+Install feed can be downloaded, that it is valid and that all the links in it
+still work.
+
+Run this on all your feeds from time-to-time to make sure they still work.</feed>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="feed_icons/Fetch.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Fetch" category="Unknown">Fetch is a download handler for ROX-Filer.
+
+When a link is dragged
 from a web browser or similar program to a filer window ROX-Filer
-calls a user-define download handler to fetch the object named by the link.</feed>
+calls a user-defined download handler to fetch the object named by the
+link.
+
+The download handler is defined in the ...</feed>
 
 <feed uri="http://www.hayber.us/0install/Find" name="Find" summary="A find-in-files utility" icon="feed_icons/Find.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/19" category="Unknown">Searches files for specific text, displaying the results in a window. Double click
 on the result line(s) to open the file at that point.
@@ -163,8 +177,8 @@ high performance of C and C++ with ...</feed>
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="Headers for compiling GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the GLib header files. They are required when compiling applications
 that use the GLib library.</feed>
 
-<feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="Headers for compiling C++ GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling
-    C++ applications that use the GLib library.</feed>
+<feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="Headers for compiling C++ GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling C++
+applications that use the GLib library.</feed>
 
 <feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="Set up a GTK 2.4 build environment" icon="feed_icons/GTK-2.4.xml.png" width="37" height="48" homepage="http://0install.net" category="Development">This program runs a command in an environment with PKG_CONFIG_PATH set to
 include the location of the GTK 2.4 and related library headers. By default, it
@@ -172,8 +186,8 @@ runs /bin/sh to give you a shell.
 
 Typical usage is to run this and then configure and build your ...</feed>
 
-<feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="Headers for compiling GTK applications" icon="feed_icons/GTK-dev.png" width="37" height="48" category="Library">These are the GTK header files. They are required when compiling
-    applications that use the GTK+ library.</feed>
+<feed uri="http://0install.net/2006/interfaces/GTK-dev" name="GTK-dev" summary="Headers for compiling GTK applications" icon="feed_icons/GTK-dev.png" width="37" height="48" category="Library">These are the GTK header files. They are required when compiling applications
+that use the GTK+ library.</feed>
 
 <feed uri="http://0install.net/2006/autopackage/gtkdc.xml" name="Gtkdc" summary="Client for the Direct Connect network" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.gtkdc.org/" category="Network">A client for the Direct Connect peer-to-peer network inspired by DC++.</feed>
 
@@ -216,15 +230,25 @@ APR Util is a utilities library implemented on top of apr, providing ...</feed>
 <feed uri="http://0install.net/2007/3rd-party/libdb4.4.xml" name="Libdb4.4" summary="Berkeley v4.4 Database Libraries" icon="tango/applications-system.png" width="48" height="48" category="Library">This is the runtime package for programs that use the v4.4 Berkeley database
 library.</feed>
 
-<feed uri="http://0install.net/2007/3rd-party/libgnutls13.xml" name="Libgnutls13" summary="The GNU TLS library" icon="tango/applications-system.png" width="48" height="48" homepage="ftp://gnutls.hellug.gr/pub/gnutls" category="Library">gnutls is a portable library which implements the Transport Layer Security (TLS)
+<feed uri="http://0install.net/2007/3rd-party/libenchant1.xml" name="Libenchant1" summary="A wrapper library for various spell checker engines" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.abisource.com/projects/enchant/" category="Library">Enchant is a generic spell checking library which uses existing spell checker
+engines such as ispell, aspell and myspell as its backends.
+
+Enchant steps in to provide uniformity and conformity on top of these libraries,
+and implement certain features ...</feed>
+
+<feed uri="http://0install.net/2007/3rd-party/libgnutls13.xml" name="Libgnutls13" summary="The GNU TLS library" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.gnu.org/software/gnutls/" category="Library">gnutls is a portable library which implements the Transport Layer Security (TLS)
 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
 
 Currently gnutls implements:
 
- - the TLS 1.0 and SSL 3.0 protocols, without any US-export controlled
-algorithms
+- the TLS 1.0 and SSL 3.0 protocols, without any US-export controlled algorithms
 
- - X509 ...</feed>
+- X509 ...</feed>
+
+<feed uri="http://0install.net/2007/3rd-party/libgucharmap4.xml" name="Libgucharmap4" summary="Unicode browser widget library" icon="tango/applications-system.png" width="48" height="48" homepage="http://gucharmap.sourceforge.net/" category="Library">The libgucharmap library contains a Unicode browser widget; it is most
+prominently used by the "gucharmap" program.
+
+This package contains the shared library.</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/libkrb53.xml" name="Libkrb53" summary="MIT Kerberos runtime libraries" icon="tango/applications-system.png" width="48" height="48" category="Library">Kerberos is a system for authenticating users and services on a network.
 Kerberos is a trusted third-party service. That means that there is a third
@@ -356,13 +380,16 @@ The pager applet runs inside the ...</feed>
 
 <feed uri="http://www.hayber.us/0install/PanelClock" name="PanelClock" summary="A simpel panel clock applet." icon="feed_icons/PanelClock.png" width="42" height="42" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
 
-<feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="Headers for compiling Pango applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the Pango header files. They are required when compiling
-    applications that use the Pango library. Pango is a library for laying out
-    and rendering of text, with an emphasis on internationalization.</feed>
+<feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="Headers for compiling Pango applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the Pango header files. They are required when compiling applications
+that use the Pango library. Pango is a library for laying out and rendering of
+text, with an emphasis on internationalization.</feed>
 
 <feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="feed_icons/penguin-command.png" width="42" height="48" category="Unknown">What is Penguin-Command? This is a clone of the classic "Missile Command" Game, but it has better graphics and music. The gameplay has only been slightly modified. Penguin Command is licensed under the GPL. Homepage: http://www.linux-games.com</feed>
 
 <feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="An applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Software/Postal" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
+
+<feed uri="http://rox4debian.berlios.de/0install/PyAlsaAudio.xml" name="PyAlsaAudio" summary="ALSA wrapper for Python" icon="tango/applications-system.png" width="48" height="48" homepage="http://sourceforge.net/projects/pyalsaaudio" category="Library">PyAlsaAudio is a Python wrapper for ALSA. Currently PCM playback and capture, as
+well as the Mixer API is supported.</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/PySol.xml" name="PySol" summary="A collection of more than 200 solitaire card games" icon="feed_icons/PySol.png" width="32" height="32" homepage="http://www.pysol.org/" category="Games">PySol is an exciting collection of more than 200 solitaire card games. Its
 features include support for lots of distinct games, very nice look and feel,
@@ -401,6 +428,8 @@ also act as a pinboard, allowing you to pin frequently used files to the desktop
 background.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="Library for ROX applications" icon="feed_icons/ROX-Lib.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/ROX-Lib" category="Unknown">ROX-Lib contains shared code used by most of the ROX applications.</feed>
+
+<feed uri="http://www.kerofin.demon.co.uk/2007/interfaces/ROX-Samba" name="ROX-Samba" summary="Mount samba shares" icon="feed_icons/ROX-Samba.png" width="48" height="48" category="Unknown">Use fusesmb to mount Samba shares as a file system.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="Sets up a ROX desktop session" icon="feed_icons/ROX-Session.png" width="48" height="33" homepage="http://rox.sourceforge.net/desktop/ROX-Session" category="Utility">ROX-Session sets up your desktop when you log in, and starts any applications
 you ask it to. It allows you to set various settings, such as the default font,
