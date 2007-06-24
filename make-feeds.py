@@ -2,7 +2,7 @@
 from zeroinstall.injector.iface_cache import iface_cache
 from zeroinstall.injector.namespaces import XMLNS_IFACE
 
-import sys, os, codecs, urllib
+import sys, os, codecs, urllib, shutil
 import xml.sax.saxutils
 from xml.dom import minidom
 
@@ -79,6 +79,14 @@ for uri in known:
 	     if os.path.isfile(icon_path):
 		     have_icon = True
 
+	if not have_icon:
+		# Get it from the cache
+		cached_icon = iface_cache.get_icon_path(iface)
+		if cached_icon:
+			shutil.copyfile(cached_icon, icon_path)
+			have_icon = True
+			os.system("svn add '%s'" % icon_path)
+			
 	if not have_icon:
 		# Download one then...
 		for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
