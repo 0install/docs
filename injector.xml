@@ -16,18 +16,6 @@ directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a 
 so that you don't need to download anything twice, and programs can still be used when you are off-line.
 </p>
 
-<p>
-The injector can be run manually, but it is normally invoked by another
-program. Some examples include:
-</p>
-
-<ul class='spaced'>
- <li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a> program, it creates an entry on the <k>Applications menu</k> that uses the injector.</li>
- <li>When a <k>ROX desktop</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses the injector.</li>
- <li>When an <k>Xfce</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a <k>launcher button</k> that uses the injector.</li>
- <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs the injector.</li>
-</ul>
-
 <table class='quicklinks'>
  <tr>
   <td><a href='#packages'><img src='tango/go-down.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
