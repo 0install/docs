@@ -270,6 +270,14 @@ support <a href='sharing.html'>sharing</a>.
 
 </dd>
 
+<dt>DOAP: Description of a Project</dt>
+<dd><p>
+<a href='http://usefulinc.com/doap/'>DOAP</a> is a project to create an
+XML/RDF vocabulary to describe open source projects. We should investigate whether
+any of these elements would be useful in Zero Install feed files.
+</p>
+</dd>
+
 </dl>
 
 <p>
