@@ -13,13 +13,13 @@ library.</description>
   <homepage>http://www.abisource.com/projects/enchant/</homepage>
   <package-implementation package="libenchant1c2a"/>
   <group>
-    <implementation doc-dir="usr/share/doc/libenchant1c2a" id="sha1new=c88f4699ce75aaabca86e1cc5bad943193b11736" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2007-06-17" version="1.3.0" version-modifier="-2">
+    <implementation doc-dir="usr/share/doc/libenchant1c2a" id="sha1new=c88f4699ce75aaabca86e1cc5bad943193b11736" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2007-06-17" stability="stable" version="1.3.0" version-modifier="-2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/e/enchant/libenchant1c2a_1.3.0-2_i386.deb" size="156870" type="application/x-deb"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdrwTBSn9tx+xORARAqa5AJ4uogNEPyD1E/z5hQHwZUfAmjC/jQCfQdY2V8Mol+xezxgs
-GMLswz1nL/8=
+iD8DBQBGh8IXBSn9tx+xORARAmxtAJ9SifutLFhXBOkZupJUdY9n+Pz3RQCdGtlAQoyiLJZ0DB6o
+gTgMliHxSfU=
 
 -->

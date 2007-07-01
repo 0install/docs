@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
@@ -57,10 +54,8 @@ Hash: SHA1
     </implementation>
   </group>
 </interface>
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
+<!-- Base64 Signature
+iD8DBQBGh8HIrgeCgFmlPMERAsN8AJ9XzzIUQQhamZlvcJOlaS6YK7EvlwCgnaSMSJ5EH6di85PF
+UXM0P8Kfrvs=
 
-iD8DBQFGdvUSrgeCgFmlPMERAmXBAKDOSZR3WEexX/2mRXHNiRjtxJOZ0QCeI5Tm
-4UHjQPi75CStOTr2TW9FkSk=
-=uh8q
------END PGP SIGNATURE-----
+-->

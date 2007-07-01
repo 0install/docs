@@ -11,13 +11,13 @@ This package contains the shared library.</description>
   <homepage>http://gucharmap.sourceforge.net/</homepage>
   <package-implementation package="libgucharmap4"/>
   <group>
-    <implementation doc-dir="usr/share/doc/libgucharmap4" id="sha1new=8de1b84c6d86e3d966085a2a3f6633aa2d150ea3" license="OSI Approved :: GNU General Public License (GPL)" released="2007-06-17" version="1.6.0" version-modifier="-1">
+    <implementation doc-dir="usr/share/doc/libgucharmap4" id="sha1new=8de1b84c6d86e3d966085a2a3f6633aa2d150ea3" license="OSI Approved :: GNU General Public License (GPL)" released="2007-06-17" stability="stable" version="1.6.0" version-modifier="-1">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/g/gucharmap/libgucharmap4_1.6.0-1_i386.deb" size="1187536" type="application/x-deb"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdr2uBSn9tx+xORARAkabAJ98OFvMvhqkB1BWuepjkrJ+Y7e3zwCeJ7RboOnHu1v1wzQg
-3J78wElPdk8=
+iD8DBQBGh8GVBSn9tx+xORARAjutAKCMMoOX34vHqBxXvvqF+/npnXf6LACeJ0XLoTdU2KfIwaSH
+YU5lvc51JCs=
 
 -->

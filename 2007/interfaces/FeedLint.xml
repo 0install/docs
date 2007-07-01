@@ -14,7 +14,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
   <needs-terminal/>
 
   <group license="OSI Approved :: GNU General Public License (GPL)" main="feedlint">
-    <implementation id="sha1new=5a8436dd1e7272cae7e3e916bf1564aaef6c0ae1" released="2007-06-02" version="0.1">
+    <implementation id="sha1new=5a8436dd1e7272cae7e3e916bf1564aaef6c0ae1" released="2007-06-02" stability="stable" version="0.1">
       <archive extract="feedlint-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.1.tar.bz2" size="8442"/>
     </implementation>
     <implementation id="sha1new=e6731132594dd536ecee432b116e88f549eb1303" released="2007-06-03" stability="stable" version="0.2">
@@ -24,7 +24,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdvVFrgeCgFmlPMERAgyUAKC5zmZAgedU/xT7/OQD8VvxuR9UywCfSruGxSJUjRkMvHK5
-8sCAdcmVWMI=
+iD8DBQBGh8IOrgeCgFmlPMERAu2ZAJ9QKRNPiYozfegoHNa81ZyPjCCkaQCgucixpK0n3P2yJA6H
+NL8/7cH9fk8=
 
 -->
