@@ -77,6 +77,16 @@ the program data though; removing the program from the cache doesn't remove the
 menu item (clicking on it would simply offer to download the program
 again).</p>
 
+<h3>Isn't it wasteful for every program to bundle all its dependencies?</h3>
+<p>
+Yes, but Zero Install doesn't do that. Everything is dynamically linked, just as in
+a traditional Linux system: you can publish a program on your web-site that links against
+a library on another web-site. When updates are available for a library, they are used
+by all programs using that library (except for programs which are incompatible
+with the new library version, which will continue using the older version,
+without preventing other programs from upgrading).
+</p>
+
 <h3>Wouldn't it be cool if you could install software just by clicking in a web page?</h3>
 <p>
 It's a bit of a security risk. If you set up your browser to do this, then the
