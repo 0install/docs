@@ -203,6 +203,18 @@ run Blender with the command:
 
 <pre>$ <b>0launch http://0install.net/2007/3rd-party/Blender.xml</b></pre>
 
+<h2>Check your feed!</h2>
+
+<p>
+It's surprising how easy it is to forget to set the right permissions, etc, so check your new feed!
+<a href='feedlint.html'>FeedLint</a> is an easy first step:
+</p>
+
+<pre>
+$ <b>0alias feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
+$ <b>feedlint http://0install.net/2007/3rd-party/Blender.xml</b>
+</pre>
+
 <h2>Groups and dependencies</h2>
 
 <p>
