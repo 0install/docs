@@ -58,4 +58,4 @@ result.close()
 
 if os.system('xgettext --keyword=_ --from-code=utf-8 feed-translations.c -o feed-translations.pot'):
 	raise Exception('xgettext failed')
-print "Created feed-translations.pot"
+print "Created feed-translations.pot (update the header)"
