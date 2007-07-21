@@ -19,7 +19,7 @@ depend on.
 This program provides a simple graphical interface for creating and editing
 these feeds.</feed>
 
-<feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="Abiword" summary="AbiWord Word Processor" icon="tango/applications-system.png" width="48" height="48" category="Office">AbiWord is a lightweight word processing application.</feed>
+<feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="Abiword" summary="AbiWord Word Processor" icon="feed_icons/Abiword.png" width="32" height="32" category="Office">AbiWord is a lightweight word processing application.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="Create ROX application launchers" icon="feed_icons/AddApp.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/AddApp" category="Utility">AddApp makes it easy to run Zero Install Injector applications from ROX-Filer.
 Give it the URL of the application you want, and it will create a ROX
@@ -37,6 +37,12 @@ AppDir will play the album tracks in the ...</feed>
 for your music collection. All you have to do is point it at the root of your
 music directory and for each directory, the program will download a set of
 corresponding (well, ...</feed>
+
+<feed uri="http://rox.sourceforge.net/2007/interfaces/Appearance.xml" name="Appearance" summary="GTK and Icon theme configuration" icon="feed_icons/Appearance.png" width="64" height="64" homepage="http://rox.sourceforge.net/desktop/Appearance" category="Settings">Appearance is a configlet that allows you to control the look of your desktop.
+(This software replaces the LookAndFeel, Theme and Toolbars&amp;Menus configlets.)
+
+It supports setting the GTK (UI controls) and Icon themes. It also allows the
+setting of ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="Construct AppDir wrappers for applications." icon="feed_icons/AppFactory.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/30" category="Unknown">This program automates the creation of ROX wrappers for non-ROX
 programs</feed>
@@ -94,8 +100,8 @@ uses the information to construct AppDir wrappers for each application</feed>
 <feed uri="http://rox4debian.berlios.de/0install/DeviceHandler.xml" name="DeviceHandler" summary="Adds icons for devices/volumes to the panel" icon="feed_icons/DeviceHandler.xml.png" width="48" height="48" category="Unknown">DeviceHandler is a panel-applet that automatically adds icons for attached
 devices and inserted media to the panel/pinboard.</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/DevTray.xml" name="DevTray" summary="Shows devices/volumes in the panel" icon="feed_icons/DevTray.png" width="48" height="48" category="System">DevTray is a panel applet that shows devices and volumes. You need dbus (&gt;=0.33)
-and HAL (including python bindings) to run it.</feed>
+<feed uri="http://rox4debian.berlios.de/0install/DevTray.xml" name="DevTray" summary="Shows devices/volumes in the panel" icon="feed_icons/DevTray.png" width="48" height="48" category="System">DevTray is a panel applet that shows devices and volumes. You need dbus
+(&gt;=0.33), its python bindings and HAL (&gt;=0.5.7) to run it.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="Display the difference between two text files." icon="feed_icons/Diff.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/31" category="Unknown">This program displays a coloured context diff between two files.  You
 drop the files from the filer into the upper 2 windows.</feed>
@@ -267,6 +273,8 @@ WARNING: THE NEON API IS NOT YET STABLE.
 Provides lower-level interfaces to directly implement new HTTP methods, and
 higher-level interfaces so that you don't have to worry about the ...</feed>
 
+<feed uri="http://teythoon.cryptobitch.de/0install/liboverlay.xml" name="Liboverlay" summary="Overlay library that provides binary relocation support" icon="tango/applications-system.png" width="48" height="48" category="Library">Enter a longer description of the program here.</feed>
+
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml" name="Libpng" summary="Libpng is the official PNG reference library" icon="feed_icons/libpng.png" width="48" height="48" homepage="http://libpng.sourceforge.net" category="Library">It supports almost all PNG features, is extensible, and has been extensively
 tested for over nine years.</feed>
 
@@ -359,6 +367,24 @@ Features:
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/35" category="Unknown">This is a ROX applet to display network status and statistics.</feed>
 
 <feed uri="http://dist.opendocumentfellowship.org/odfviewer.xml" name="Odfviewer" summary="Viewer for OpenDocument Files" icon="feed_icons/odfviewer.png" width="32" height="32" homepage="http://opendocumentfellowship.org/odfviewer" category="Unknown">This is a light-weight, cross-platform viewer for the OASIS OpenDocument format. It is produced by the OpenDocument Fellowship and is based on the Mozilla Application Framework.</feed>
+
+<feed uri="http://riscque.net/Openbox" name="Openbox" summary="Standards compliant, fast, light-weight, extensible window manager" icon="feed_icons/Openbox.png" width="64" height="64" homepage="http://icculus.org/openbox/index.php" category="Unknown">Openbox is a customisable window manager, modelled after Blackbox.
+
+Features:
+
+* ICCCM and EWMH compliance
+
+* Very fast
+
+* Chainable key bindings
+
+* Customizable mouse actions
+
+* Window resistance
+
+* Multi-head Xinerama support
+
+* Pipe menus</feed>
 
 <feed uri="http://0install.net/2006/autopackage/opencity.xml" name="Opencity" summary="OpenCity Simulation Game" icon="feed_icons/opencity.png" width="32" height="32" homepage="http://www.opencity.info/" category="Unknown">OpenCity is a full 3D city simulator game project. It is written in standard
   C++ with OpenGL and SDL from scratch. It is not intended to be a clone of any
