@@ -23,6 +23,11 @@ someone else lists programs good for audio processing, etc. As an example, the
 lists those programs which are designed for use with the ROX desktop.
 </p>
 
+<ul>
+<li><a href='https://launchpad.net/zeroinstall-feed-translations/+translations'>Help translate these descriptions</a></li>
+<li><a href='injector-packagers.html'>Make other software available through Zero Install</a></li>
+</ul>
+
 <feeds/>
 
 <p>
