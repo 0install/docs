@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2007/3rd-party/UserModeLinux.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>UserModeLinux</name>
   <summary>run Linux inside itself</summary>
   <description>
@@ -17,6 +17,8 @@ it to have. With properly limited access, nothing you do on the virtual machine
 can change or damage your real computer, or its software.</description>
   <category>System</category>
   <needs-terminal/>
+  <homepage>http://user-mode-linux.sourceforge.net</homepage>
+  <icon href="http://0install.net/feed_icons/UserModeLinux.png" type="image/png"/>
   <group doc-dir="usr/share/doc/user-mode-linux" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/linux">
     <implementation id="sha1new=e205285d3543ed205acdaa8b87b8fc06504c0081" released="2007-05-28" stability="stable" version="0.54" version-modifier="-2.4.17.1">
     <archive href="http://heanet.dl.sourceforge.net/sourceforge/user-mode-linux/user-mode-linux_0.54-2.4.17.1um-1_i386.deb" size="1495200" type="application/x-deb"/>
@@ -27,7 +29,7 @@ can change or damage your real computer, or its software.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGpzEQBSn9tx+xORARAnHMAJ9xx7rceasr4A1vjhdyBZKaWHa6cwCgnXL0p8AiNWm1jXoF
-E5RWAfkK6z0=
+iD8DBQBGpzRbBSn9tx+xORARAopfAJ9RA+TeLs2wYzpvVrlj0uTPDgwdOQCcDvitjj9ziXl+VJl1
+GF0HRMgKLUQ=
 
 -->
