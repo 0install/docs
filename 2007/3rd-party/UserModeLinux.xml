@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>UserModeLinux</name>
+  <summary>run Linux inside itself</summary>
+  <description>
+User-Mode Linux is a safe, secure way of running Linux versions and Linux
+processes. Run buggy software, experiment with new Linux kernels or
+distributions, and poke around in the internals of Linux, all without risking
+your main Linux setup.
+
+User-Mode Linux gives you a virtual machine that may have more hardware and
+software virtual resources than your actual, physical computer. Disk storage for
+the virtual machine is entirely contained inside a single file on your physical
+machine. You can assign your virtual machine only the hardware access you want
+it to have. With properly limited access, nothing you do on the virtual machine
+can change or damage your real computer, or its software.</description>
+  <category>System</category>
+  <needs-terminal/>
+  <group doc-dir="usr/share/doc/user-mode-linux" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/linux">
+    <implementation id="sha1new=e205285d3543ed205acdaa8b87b8fc06504c0081" released="2007-05-28" stability="stable" version="0.54" version-modifier="-2.4.17.1">
+    <archive href="http://heanet.dl.sourceforge.net/sourceforge/user-mode-linux/user-mode-linux_0.54-2.4.17.1um-1_i386.deb" size="1495200" type="application/x-deb"/>
+  </implementation>
+    <implementation id="sha1new=12bb4f4c31642cd1fa0c0d0aba95ae1092c344d7" main="usr/bin/linux.uml" released="2007-07-25" version="2.6.18" version-modifier="-1">
+      <archive href="http://security.debian.org/debian-security/pool/updates/main/u/user-mode-linux/user-mode-linux_2.6.18-1um-2etch2_i386.deb" size="25577610" type="application/x-deb"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGpzEQBSn9tx+xORARAnHMAJ9xx7rceasr4A1vjhdyBZKaWHa6cwCgnXL0p8AiNWm1jXoF
+E5RWAfkK6z0=
+
+-->
