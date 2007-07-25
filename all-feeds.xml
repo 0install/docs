@@ -597,13 +597,6 @@ of desktop integration tasks. About half of the tools focus on tasks commonly
 required during the installation of a desktop application and the other half
 focuses on ...</feed>
 
-<feed uri="http://teythoon.cryptobitch.de/0install/xfishtank.xml" name="Xfishtank" summary="Cures all ills" icon="tango/applications-system.png" width="48" height="48" category="Unknown">A longer, multi-line description of the behaviour of the
-    program goes here. State clearly what the program is for
-    (clearly enough that people who don't want it will
-    realise too).
-
-    Use a blank line to separate paragraphs.</feed>
-
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="Show a planet" icon="feed_icons/XPlanet.png" width="64" height="51" category="Unknown">XPlanet is a wrapper for xplanet for the ROX desktop.  Its most useful
 mode is as a backdrop application.</feed>
 
