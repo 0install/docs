@@ -20,7 +20,7 @@ can change or damage your real computer, or its software.</description>
   <homepage>http://user-mode-linux.sourceforge.net</homepage>
   <icon href="http://0install.net/feed_icons/UserModeLinux.png" type="image/png"/>
   <group doc-dir="usr/share/doc/user-mode-linux" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/linux">
-    <implementation id="sha1new=e205285d3543ed205acdaa8b87b8fc06504c0081" released="2007-05-28" stability="stable" version="0.54" version-modifier="-2.4.17.1">
+    <implementation id="sha1new=e205285d3543ed205acdaa8b87b8fc06504c0081" released="2007-05-28" stability="stable" version="2.4.17.1">
     <archive href="http://heanet.dl.sourceforge.net/sourceforge/user-mode-linux/user-mode-linux_0.54-2.4.17.1um-1_i386.deb" size="1495200" type="application/x-deb"/>
   </implementation>
     <implementation id="sha1new=12bb4f4c31642cd1fa0c0d0aba95ae1092c344d7" main="usr/bin/linux.uml" released="2007-07-25" version="2.6.18" version-modifier="-1">
@@ -29,7 +29,7 @@ can change or damage your real computer, or its software.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGpzRbBSn9tx+xORARAopfAJ9RA+TeLs2wYzpvVrlj0uTPDgwdOQCcDvitjj9ziXl+VJl1
-GF0HRMgKLUQ=
+iD8DBQBGpzS2BSn9tx+xORARArkYAJ9vmoVPiie3UpHf/ha1hMaeTiBr3QCeOtcum295rGx8268g
+tsUci1GLupo=
 
 -->
