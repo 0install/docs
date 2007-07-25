@@ -38,6 +38,11 @@ for your music collection. All you have to do is point it at the root of your
 music directory and for each directory, the program will download a set of
 corresponding (well, ...</feed>
 
+<feed uri="http://0install.net/2007/3rd-party/APBuild.xml" name="APBuild" summary="A suite of portability tools for developers" icon="feed_icons/APBuild.png" width="48" height="48" homepage="http://autopackage.org/aptools.html" category="Development">In the process of writing autopackage, we've also produced several standalone
+tools, the apbuild programs, that are designed to help Linux developers write
+better software that runs on a wider variety of distributions. They are
+independent of ...</feed>
+
 <feed uri="http://rox.sourceforge.net/2007/interfaces/Appearance.xml" name="Appearance" summary="GTK and Icon theme configuration" icon="feed_icons/Appearance.png" width="64" height="64" homepage="http://rox.sourceforge.net/desktop/Appearance" category="Settings">Appearance is a configlet that allows you to control the look of your desktop.
 (This software replaces the LookAndFeel, Theme and Toolbars&amp;Menus configlets.)
 
@@ -546,6 +551,11 @@ Tide automatically writes the file out as you edit ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="Sets time and date" icon="feed_icons/Time.xml.png" width="48" height="48" category="Unknown">Use this app to set the time and date.
 You need the system-tools-backends to make it work.</feed>
+
+<feed uri="http://0install.net/2007/3rd-party/UserModeLinux.xml" name="UserModeLinux" summary="Run Linux inside itself" icon="feed_icons/UserModeLinux.png" width="36" height="52" homepage="http://user-mode-linux.sourceforge.net" category="System">User-Mode Linux is a safe, secure way of running Linux versions and Linux
+processes. Run buggy software, experiment with new Linux kernels or
+distributions, and poke around in the internals of Linux, all without risking
+your main Linux ...</feed>
 
 <feed uri="http://0install.net/2006/autopackage/vdrift.xml" name="Vdrift" summary="VDrift" icon="tango/applications-system.png" width="48" height="48" category="Games">VDrift is a realistic racing simulation with drifting in mind</feed>
 
