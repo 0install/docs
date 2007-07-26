@@ -9,7 +9,8 @@
 <p>
 Sun have developed a similar system to Zero Install,
 <a href="http://java.sun.com/products/javawebstart">Java Web Start</a>,
-although this only works for Java applications.
+although this only works for Java applications. Microsoft have an
+equivalent called <a href='http://msdn2.microsoft.com/en-us/library/t71a733d(VS.80).aspx'>ClickOnce</a>.
 </p>
 </dd>
 
