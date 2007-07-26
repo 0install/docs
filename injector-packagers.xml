@@ -55,12 +55,11 @@ $ <b>0publish-gui Blender.xml</b>
 <p>
 A window appears prompting you to enter some details about the program. Here, I've copied the details from
 the project's <a href='http://freshmeat.net'>freshmeat.net</a> page. The
-<b>Icon</b> field is optional, and we don't need to specify the feed's URL just
-yet, so I've left them blank:
+<b>Icon</b> field is optional, but I've added one anyway:
 </p>
 
 <p style='text-align: center'>
-<img width="452" height="415" src="screens/0publish-gui/feed-info.png" alt="Creating a new feed" />
+<img width="554" height="367" src="screens/0publish-gui/feed-info.png" alt="Creating a new feed" />
 </p>
 
 <p>
@@ -69,7 +68,7 @@ tab using the <b>Add Archive</b> button:
 </p>
 
 <p style='text-align: center'>
-<img width="452" height="415" src="screens/0publish-gui/no-versions.png" alt="The Versions tab" />
+<img width="554" height="367" src="screens/0publish-gui/no-versions.png" alt="The Versions tab" />
 </p>
 
 <p>
@@ -110,11 +109,12 @@ to use your feed. The drop-down menu shows the available executables.
 The <b>License</b> and <b>Released</b> fields are just for information.
 <b>Released</b> is the date you added this version to the feed, so the default
 of today's date is correct. The <b>OS</b> and <b>CPU</b> fields prevent people
-from trying to use this version on incompatible machines. 
+from trying to use this version on incompatible machines. The <b>Docs</b> field
+can be used to say which directory contains the documentation, if any.
 </p>
 
 <p>
-I've left <b>Stability</b> unset, which means that the rating will be inherited from any containing
+I've left <b>Stability</b> set to <b>(inherit)</b>, which means that the rating will be inherited from any containing
 group. Since we don't have a group, it will get the default value of <b>Testing</b>. You can also
 inherit the other fields (by leaving them blank), although <b>OS</b> and
 <b>CPU</b> are inherited together (you can't inherit one and not the other). Groups are useful when you
@@ -129,7 +129,7 @@ is how they know that they've downloaded exactly the same files as you have
 </p>
 
 <p style='text-align: center'>
-<img width="505" height="248" src="screens/0publish-gui/version-props.png" alt="Choose the main binary" />
+<img width="628" height="263" src="screens/0publish-gui/version-props.png" alt="Choose the main binary" />
 </p>
 
 <p>
@@ -140,7 +140,7 @@ Test</b> button:
 </p>
 
 <p style='text-align: center'>
-<img width="452" height="415" src="screens/0publish-gui/one-version.png" alt="The newly added version" />
+<img width="550" height="390" src="screens/0publish-gui/one-version.png" alt="The newly added version" />
 </p>
 
 <p>
@@ -155,8 +155,8 @@ Click on <b>Execute</b> and check that it runs.
 
 <p>
 It all works perfectly, so we'll publish this feed on the web for other people to use. To do this, we need
-to sign the feed so people can check that it's really from us. Go back to the
-<b>Feed information</b> tab and choose your GPG key from the menu. If you don't have a key, click on the
+to sign the feed so people can check that it's really from us. Go to the
+<b>Publishing</b> tab and choose your GPG key from the menu. If you don't have a key, click on the
 <b>Add</b> button to create one now.
 </p>
 
@@ -167,7 +167,7 @@ when prompted, and choose a good passphrase to protect the key:
 </p>
 
 <p style='text-align: center'>
-<img width="452" height="449" src="screens/0publish-gui/gpg-genkey.png" alt="Create a GPG key" />
+<img width="551" height="570" src="screens/0publish-gui/gpg-genkey.png" alt="Create a GPG key" />
 </p>
 
 <p>
@@ -182,7 +182,7 @@ Click on <b>Save</b> to save it again. This time, you'll be prompted to enter yo
 </p>
 
 <p style='text-align: center'>
-<img width="452" height="415" src="screens/0publish-gui/sign-feed.png" alt="Sign the feed" />
+<img width="566" height="538" src="screens/0publish-gui/sign-feed.png" alt="Sign the feed" />
 </p>
 
 <p>
@@ -223,7 +223,7 @@ specify this. For example, <b>0publish-gui</b> depends on <b>ROX-Lib</b>, which 
 </p>
 
 <p style='text-align: center'>
-<img width="455" height="398" src="screens/0publish-gui/requires.png" alt="Add Requires" />
+<img width="550" height="422" src="screens/0publish-gui/requires.png" alt="Add Requires" />
 </p>
 
 <p>
