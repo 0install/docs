@@ -9,12 +9,12 @@ applications that use the GLib library.</description>
 
   <group>
     <implementation id="sha1=715adfd8066b8c520c11bc924e3dcad29acf9edb" released="2006-06-24" stability="stable" version="2.4.8">
-      <archive extract="glibmm-headers-2.4.8" href="http://optusnet.dl.sourceforge.net/sourceforge/zero-install/glibmm-headers-2.4.8.tar.bz2" size="117261"/>
+      <archive extract="glibmm-headers-2.4.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glibmm-headers-2.4.8.tar.bz2" size="117261"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqUorgeCgFmlPMERAqK1AKDLYYrMOThqhCNrwQ16i/AruSjSegCgoQsJwfp/qZZvs/oZ
-5AtTouOAtWA=
+iD8DBQBGqkbErgeCgFmlPMERAjePAKCYLqzWGG5e9GLvZG2cqvtntuqYhgCgilNM1C9KYWFsPU23
+UTE+zVyCEO0=
 
 -->
