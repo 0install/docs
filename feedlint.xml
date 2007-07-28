@@ -35,7 +35,7 @@ You can pass multiple feeds as arguments and it will check all of them. For each
  <li>Check that the homepage and icon URLs work.</li>
  <li>Get the size of each implementation archive and check that it matches the size in the feed.</li>
  <li>Warn about releases marked as Testing which are more than one week old.</li>
- <li>Recursively check any sub-feeds and dependencies listed in the feed.</li>
+ <li>Recursively check any sub-feeds and dependencies listed in the feed (if run with <b>-d</b>)</li>
 </ul>
 
 <p>Tip: to check all feeds in your domain (e.g. <b>example.com</b>):</p>
@@ -47,7 +47,8 @@ $ <b>0launch --list example.com | xargs feedlint</b>
 <h2>Sample output</h2>
 
 <p>
-Here we ask it to check Edit's feed (and it also checks ROX-Lib, on which Edit depends):
+Here we ask it to check Edit's feed (and it also checks ROX-Lib, on which Edit depends; note
+that this mode now requires the <b>-d</b> option to be used):
 </p>
 
 <p style='text-align: center'>
