@@ -31,10 +31,13 @@ conference proceedings.</description>
     <requires interface="http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml">
       <environment insert="" name="LD_LIBRARY_PATH"/>
     </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libaudio2.xml">
+      <environment insert="usr/lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrXUBSn9tx+xORARAkeLAKCSUIn/+0kYlwhUMlZ6Yw3zsxHmaACgh2snyg9TgfYoB0Kt
-z+fbgfk5GXQ=
+iD8DBQBGuL9yBSn9tx+xORARAuUxAJ9HXrt7jOUDBofV6y85v7fbRpj11ACeJofMDZEXS88hcLfH
+e8UUYns0iKQ=
 
 -->

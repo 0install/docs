@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2007/3rd-party/LyX.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2007/3rd-party/libaudio2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libaudio2</name>
   <summary>the Network Audio System (NAS)</summary>
   <description>
@@ -19,7 +19,7 @@ local output.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGuL6sBSn9tx+xORARAsTQAJsF242c5EwP5TbCzRCfBPlxpJJrMACdGgtKcnjXIK0vDFOc
-qlazCj1PMag=
+iD8DBQBGuL83BSn9tx+xORARAv/FAJ4qmoyS2rJ4QcppEkYvaRKP937GagCghC+C4i5nhF5MhEj3
+akDTC8gI7EI=
 
 -->
