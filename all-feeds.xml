@@ -238,6 +238,11 @@ implementations.
 
 APR Util is a utilities library implemented on top of apr, providing ...</feed>
 
+<feed uri="http://0install.net/2007/3rd-party/libaudio2.xml" name="Libaudio2" summary="The Network Audio System (NAS)" icon="tango/applications-system.png" width="48" height="48" homepage="http://radscan.com/nas.html" category="Library">The Network Audio System was developed by NCD for playing, recording, and
+manipulating audio data over a network. Like the X Window System, it uses the
+client/server model to separate applications from the specific drivers that
+control audio input and ...</feed>
+
 <feed uri="http://0install.net/2007/3rd-party/libdb4.4.xml" name="Libdb4.4" summary="Berkeley v4.4 Database Libraries" icon="tango/applications-system.png" width="48" height="48" category="Library">This is the runtime package for programs that use the v4.4 Berkeley database
 library.</feed>
 
@@ -419,6 +424,15 @@ text, with an emphasis on internationalization.</feed>
 
 <feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="An applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Software/Postal" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
 
+<feed uri="http://modzer0.cs.uaf.edu/repos/hank/0install/Processing.xml" name="Processing" summary="Programming language and enviroment for animation" icon="tango/applications-system.png" width="48" height="48" homepage="http://processing.org/" category="Unknown">Processing is an open source programming language and environment for people who
+want to program images, animation, and interactions. It is used by students,
+artists, designers, researchers, and hobbyists for learning, prototyping, and
+production. It ...</feed>
+
+<feed uri="http://riscque.net/Properties" name="Properties" summary="A file metadata viewer" icon="feed_icons/Properties.png" width="63" height="64" category="Utility">Properties is an independent viewer (and, in the future, editor) of file
+metadata, modelled loosely after those found in Thunar and Nautilus. It is
+primarily designed for the ROX desktop.</feed>
+
 <feed uri="http://rox4debian.berlios.de/0install/PyAlsaAudio.xml" name="PyAlsaAudio" summary="ALSA wrapper for Python" icon="tango/applications-system.png" width="48" height="48" homepage="http://sourceforge.net/projects/pyalsaaudio" category="Library">PyAlsaAudio is a Python wrapper for ALSA. Currently PCM playback and capture, as
 well as the Mixer API is supported.</feed>
 
@@ -443,13 +457,13 @@ Features
     * Simultaneous Rip and Encode
     * Uses cdda2wav and lame/oggenc to do the dirty work.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="feed_icons/ROX-CLib.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/ROX-CLib" category="Unknown">ROX-CLib is a library of support routines for programs intended to be
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="feed_icons/ROX-CLib.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/ROX-CLib.html" category="Development">ROX-CLib is a library of support routines for programs intended to be
 part of the ROX desktop.  It provides similar facilities for C
 programs as ROX-Lib provides for Python programs.
 
 Other compiled languages, such as C++, can use this library.</feed>
 
-<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="A default configuration for ROX" icon="tango/applications-system.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/ROX-Session" category="Library">This package is used by ROX-Session to provide sensible defaults. For example,
+<feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Defaults" name="ROX-Defaults" summary="A default configuration for ROX" icon="tango/applications-system.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/ROX-Session" category="Unknown">This package is used by ROX-Session to provide sensible defaults. For example,
 clicking on a text file will open it in Edit, while clicking on an archive will
 use Archive. The required programs are fetched as required using the injector.</feed>
 
@@ -524,7 +538,7 @@ Displays Shared/Unshared/Swapped memory for each process; state indicator beside
 each process shows current state (running, sleeping, etc); popup menu allows
 processes to be ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="Notification area panel applet" icon="feed_icons/SystemTrayN.png" width="57" height="32" homepage="http://rox.sourceforge.net/desktop/node/214" category="Unknown">This panel applet provides a system tray (also known as
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="Notification area panel applet" icon="feed_icons/SystemTrayN.png" width="57" height="32" homepage="http://www.kerofin.demon.co.uk/rox/systemtrayn.html" category="Utility">This panel applet provides a system tray (also known as
 a notification area) for ROX.
 
 This is based on the SystemTray applet, but updated.</feed>
