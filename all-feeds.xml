@@ -127,6 +127,11 @@ announcing when others may attempt to start.</feed>
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="Simple text editor" icon="feed_icons/Edit.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/Edit" category="Utility">Edit is a simple text editor, with a ROX-style user interface. It has drag-and-
 drop saving, search-and-replace and multi-level undo.</feed>
 
+<feed uri="http://holizz.com/software/0install/emacs.xml" name="Emacs" summary="GNU Emacs" icon="feed_icons/emacs.png" width="48" height="48" homepage="http://www.gnu.org/software/emacs/emacs.html" category="Utility">Emacs is the extensible, customizable, self-documenting real-time display
+editor.</feed>
+
+<feed uri="http://holizz.com/software/0install/Firefox/en-GB.xml" name="Firefox" summary="Web browser" icon="feed_icons/en-GB.png" width="48" height="48" homepage="http://www.mozilla.com/firefox/" category="Network">The award-winning, free Web browser is better than ever. Browse the Web with confidence - Firefox protects you from viruses, spyware and pop-ups. Enjoy improvements to performance, ease of use and privacy. It's easy to import your favorites and ...</feed>
+
 <feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli-data" name="Epeli-data" summary="Data for epeli" icon="tango/applications-system.png" width="48" height="48" category="Library">All the data for the game of life epeli, consisting of two images</feed>
 
 <feed uri="http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc" name="Epeli" summary="Elämäpeli" icon="feed_icons/epeli.xml.asc.png" width="64" height="25" category="Unknown">Yksinkertainen kuvallinen elämäpeli</feed>
@@ -441,6 +446,8 @@ features include support for lots of distinct games, very nice look and feel,
 multiple cardsets and table tiles, sound and background music, unlimited undo &amp;
 redo, load &amp; save ...</feed>
 
+<feed uri="http://holizz.com/software/0install/pysqlite2" name="Pysqlite2" summary="Interface for the SQLite embedded relational database engine" icon="tango/applications-system.png" width="48" height="48" homepage="http://pysqlite.org/" category="Library">pysqlite is a Python DB-API 2.0 interface for the SQLite embedded relational database engine.</feed>
+
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck. Libwnck is a library used by
 pagers and tasklists.</feed>
 
@@ -511,6 +518,8 @@ as send and recieve traditional phone calls from within Skype for a fee.</feed>
 
 <feed uri="http://0install.net/2006/autopackage/Solfege.xml" name="Solfege" summary="Smarten your ears" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.solfege.org" category="Audio">Solfege is free music education software. Use it to train your rhythm, interval,
 scale and chord skills. Solfege - Smarten your ears!</feed>
+
+<feed uri="http://holizz.com/software/0install/sonata.xml" name="Sonata" summary="An elegant music client for MPD" icon="feed_icons/sonata.png" width="64" height="64" homepage="http://sonata.berlios.de/" category="Audio">Sonata is an elegant GTK+ music client for the Music Player Daemon (MPD).</feed>
 
 <feed uri="http://teythoon.cryptobitch.de/0install/speyes.xml" name="Speyes" summary="South Park XEyes clone" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.okb-1.org/speyes/speyes.html" category="Unknown">XEyes clone using South Park characters.
 
