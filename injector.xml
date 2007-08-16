@@ -55,7 +55,7 @@ so that you don't need to download anything twice, and programs can still be use
   <b>Debian/testing (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
 <pre># <b>apt-get install zeroinstall-injector</b></pre></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
-  <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.29-0ubuntu1_all.deb'/><br/>
+  <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.30-0ubuntu1_all.deb'/><br/>
   <b>Ubuntu (feisty/gutsy)</b> Zero Install is in Feisty and Gutsy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
   <p>However, the edgy deb is more up-to-date than the version in feisty, so you may prefer to install that.</p>
