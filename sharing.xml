@@ -10,6 +10,8 @@
    allows software to be shared automatically and safely between mutually-untrusting users.
  </p>
 
+ <toc level='h3'/>
+
  <h3>How it works</h3>
 
  <p>
@@ -91,7 +93,60 @@ $ <b>sha1sum /bin/ls</b>
   not if it's called <b>rm</b>. As long as users don't go around running random binaries they find in the cache, they're OK.
  </p>
 
- <h3>Setting up sharing</h3>
+ <h3>Setting up sharing for version 0.30 or later</h3>
+
+ <p>
+  These instructions are for version 0.30. See below if you have an older version (<b>0launch --version</b> will display the current version).
+ </p>
+
+ <p>
+  The actual code for doing sharing this way is currently <b>EXPERIMENTAL</b> and not enabled by default. This section shows how the system administrator (someone with
+  root access) can enable it. <b>DO NOT</b> do this in security critical environments yet - we're still working on tightening the security on this! Feedback welcome.
+ </p>
+
+ <ol>
+  <li><a href='injector.html'>Install 0launch version 0.30</a> or later.</li>
+  <li>Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
+<pre>
+# adduser --system zeroinst
+</pre>
+</li>
+  <li>Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
+<pre>
+# mkdir /var/cache/0install.net
+# chown zeroinst /var/cache/0install.net
+</pre>
+</li>
+
+  <li>Create <b>/usr/local/bin/0store-secure-add-helper</b> with:
+  <pre>
+#!/bin/sh
+exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" &lt; /dev/null
+</pre>
+</li>
+
+  <li>Make your new script executable:
+<pre>
+# chmod a+x /usr/local/bin/0store-secure-add-helper
+</pre></li>
+
+  <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
+<pre>
+Defaults>zeroinst env_reset
+ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
+</pre>
+ <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
+ later entries.</p>
+</li>
+ </ol>
+
+ <p>
+  When 0launch wants to install a package, it will invoke <b>0store-secure-add-helper</b>. This
+  script uses <b>sudo</b> to run <b>0store-secure-add</b> as the <b>zeroinst</b> user, with
+  a clean environment. No password is required for this.
+ </p>
+
+ <h3>Setting up sharing for older versions (before 0.30)</h3>
 
  <p>
   The actual code for doing sharing this way is currently <b>EXPERIMENTAL</b> and not enabled by default. This section shows how the system administrator (someone with
@@ -162,13 +217,17 @@ ALL     ALL=(zeroinst) NOPASSWD: ZEROINSTALL
   <dt>What kind of things need 'tightening'?</dt>
   <dd>Several things spring to mind:
    <ul>
-    <li>0store add can be used in various ways, including to extract archives with a variety of unpacking programs. Since we
-  only need to support directories, we should use an interface restricted to that.</li>
-    <li>What happens if the user changes the directory whilst it's being added? Not sure if 0store is secure against that.
-    Possibly we should use "0store copy" instead.</li>
+    <li>What happens if the user changes the directory whilst it's being added? We need to audit 0store-secure-add.</li>
     <li>Denial of service attacks, if one user stores lots of stuff (need quotas).</li>
-    <li>The 'sha1' algorithm isn't very strong. Should probably refuse to share packages in this format.</li>
    </ul>
+  </dd>
+
+  <dt>Why do things still get stored in <b>~/.cache</b> after setting this up?</dt>
+  <dd>
+    Things you've already installed will remain there. Only new software is added in the system cache.
+    Also, the old <b>sha1</b> algorithm isn't accepted by the helper, so software using that can't
+    go in the shared cache. If you still have problems, try running <b>0launch -vvc URI</b> (to see debug output).
+    Finally, make sure your script is executable!
   </dd>
   </dl>
 
