@@ -38,7 +38,10 @@ so that you don't need to download anything twice, and programs can still be use
 <ul>
   <li><b>Fedora</b> - a package is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
-  <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which can't install anything; follow <a href='http://thread.gmane.org/gmane.comp.desktop.rox.user/8418/focus=8421'>these instructions</a> to get a working version.</p>
+  <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which can't install anything. We're trying to get Fedora to fix this (see <a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=250168'>bug #250168</a>). Until this is fixed, please download this RPM instead:
+  <br/><download name='zeroinstall-injector-0.30-1.fc7.noarch.rpm'/> (binary RPM for Fedora 7)
+  <br/><download name='zeroinstall-injector-0.30-1.fc7.src.rpm'/> (source RPM)
+  </p>
   </li>
   <li><b>SuSE</b> <download name='zeroinstall-injector-0.27-1.suse_noarch.rpm'/> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
   <li><download name='zeroinstall-injector-0.17-1fc.src.rpm'/> (Source RPM) [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
