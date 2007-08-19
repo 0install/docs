@@ -102,6 +102,7 @@ A group has this syntax:
         arch='...' ? &gt;
     [requires] *
     [group] *
+    [binding] *
     [implementation] *
     [package-implementation] *
   &lt;/group&gt;
@@ -109,8 +110,8 @@ A group has this syntax:
 
 <p>
 All attributes of the group are inherited by any child groups and implementations as defaults, but
-can be overridden there. All dependencies ("requires") are inherited (sub-groups may add more
-dependencies to the list, but cannot remove anything).
+can be overridden there. All dependencies ("requires") and bindings are inherited (sub-groups may add more
+dependencies and bindings to the list, but cannot remove anything).
 </p>
 
 <h2>Implementations</h2>
@@ -132,6 +133,7 @@ the closest ancestor &lt;group&gt; which defines it):
 	arch='...' ? &gt;
     &lt;manifest-digest algorithm='...' value='...' /> *
     [ retrieval-method ] *
+    [binding] *
   &lt;/implementation&gt;
 </pre>
 
@@ -371,6 +373,22 @@ to be selected.
 
 <h2>Bindings</h2>
 
+<p>
+Bindings specify how the chosen implementation is made known to the running program. Bindings
+can appear in a &lt;requires&gt; element, in which case they tell a component how to find its
+dependency, or in an &lt;implementation&gt; (or group), where they tell a component how to find
+itself.
+</p>
+
+<p>
+<strong>Note:</strong> Bindings outside of &lt;requries&gt; elements are not yet supported by any version of Zero Install.
+However, the same effect can be achieved with current versions of 0launch by
+adding an explicit &lt;requires&gt; from a component to itself and putting the
+binding in that.
+</p>
+
+<h3>Environment bindings</h3>
+
 <pre>
     &lt;environment
 	  name='...'
@@ -421,6 +439,34 @@ needed with them:
 <p>
 The <b>mode</b> argument is ignored by versions of the injector prior to 0.28, which act as if
 <b>prepend</b> was given.
+</p>
+
+<h3>Overlay bindings</h3>
+
+<p>
+<strong>Note:</strong> This feature is not yet supported by any version of Zero Install, but is proposed for Klik 2.
+</p>
+
+<pre>
+  &lt;overlay
+    src='...' ?
+    mount-point='...' ? /&gt;
+</pre>
+
+<p>
+An overlay binding specifies that the chosen implementation should be made
+available at the given location in the filesystem (typically, by using some
+kind of per-process union mount).
+</p>
+
+<dl>
+ <dt>src</dt> <dd>The relative path of the directory in the implementation to publish. The default is '.', to publish everything.</dd>
+ <dt>mount-point</dt> <dd>The mount point on which <b>src</b> is to appear in the filesystem. If missing, '/' is assumed.</dd>
+</dl>
+
+<p>
+For example, if the implementation contains the file <b>usr/games/foo</b> then <b>&lt;overlay /&gt;</b> means that the running process should
+be able to access this file using the absolute path <b>/usr/games/foo</b>.
 </p>
 
 <h2 id='versions'>Versions</h2>
