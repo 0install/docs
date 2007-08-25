@@ -63,6 +63,7 @@
      <li class='leaf'><a href='http://sourceforge.net/projects/zero-install'>Project page</a></li>
      <li class='leaf'><a href='http://sourceforge.net/svn/?group_id=76468'>Subversion access</a></li>
      <li class='leaf'><a href='http://sourceforge.net/project/showfiles.php?group_id=76468'>File releases</a></li>
+     <li class='leaf'><a href='http://sourceforge.net/project/stats/detail.php?group_id=76468&amp;ugn=zero-install&amp;type=prweb&amp;mode=alltime'>Statistics</a></li>
     </ul>
   </xsl:template>
 
