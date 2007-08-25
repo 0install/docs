@@ -436,3 +436,7 @@ span.more {
 span.more a {
 	color: #66f;
 }
+
+p.uml {
+	text-align: center;
+}

@@ -10,6 +10,10 @@ and details about how to get them, how to check that they are authentic, how to 
 they depend on.
 </p>
 
+<p class='uml'>
+ <img src='UML/zero-install-feed-classes.png' width='665' height='315' alt='Class diagram for feed files'/>
+</p>
+
 <p>
 Note on terminology: originally the word 'interface' was used to mean both 'interface' and 'feed', so don't
 be confused if you see it used this way.
