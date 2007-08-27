@@ -10,8 +10,22 @@ and details about how to get them, how to check that they are authentic, how to 
 they depend on.
 </p>
 
+<p>
+This class diagram shows how the different concepts are related. Each feed file contributes information to this model:
+</p>
+
 <p class='uml'>
  <img src='UML/zero-install-feed-classes.png' width='665' height='358' alt='Class diagram for feed files'/>
+</p>
+
+<p>
+Each <k>Feed</k> lists a number of <k>Implementations</k>. An <k>Identity</k> is a way to
+recognise an Implementation (e.g. a cryptographic digest). A <k>Retrieval method</k>
+is a way to get an Implementation (e.g. by downloading from an FTP site). A
+<k>Binding</k> says how to let the program locate the Implementations when run. A
+<k>Dependency</k> indicates that one component depends on another (e.g. Gimp requires
+the GTK library). A <k>Constraint</k> limits the choice of a dependency (e.g. Gimp
+requires a version of GTK >= 2.6).
 </p>
 
 <p>
@@ -141,6 +155,10 @@ the closest ancestor &lt;group&gt; which defines it):
   &lt;/implementation&gt;
 </pre>
 
+<p class='uml'>
+  <img src='UML/zero-install-id.png' width='405' height='205' alt='Identity classes'/>
+</p>
+
 <dl>
  <dt>id</dt>
  <dd>The digest of the implementation's manifest, in the form <b>alg=value</b>.
@@ -249,7 +267,15 @@ to.
 <h2>Retrieval methods</h2>
 
 <p>
-A retrieval method is a way of getting an implementation. The simplest retrieval method is the &lt;archive&gt; element:
+A retrieval method is a way of getting an implementation.
+</p>
+
+<p class='uml'>
+  <img src='UML/zero-install-retr.png' width='205' height='385' alt='Retrieval method classes'/>
+</p>
+
+<p>
+The simplest retrieval method is the &lt;archive&gt; element:
 </p>
 
 <pre id='retrievalmethods'>
@@ -382,6 +408,10 @@ Bindings specify how the chosen implementation is made known to the running prog
 can appear in a &lt;requires&gt; element, in which case they tell a component how to find its
 dependency, or in an &lt;implementation&gt; (or group), where they tell a component how to find
 itself.
+</p>
+
+<p class='uml'>
+  <img src='UML/zero-install-binding.png' width='275' height='225' alt='Binding classes'/>
 </p>
 
 <p>

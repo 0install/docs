@@ -125,22 +125,16 @@ architecture</string>
   </void> 
   <void method="addNode"> 
    <object id="ClassNode7" class="com.horstmann.violet.ClassNode"> 
-    <void property="attributes"> 
-     <void property="text"> 
-      <string>algorithm
-value</string> 
-     </void> 
-    </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Digest</string> 
+      <string>Identity</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>776.0</double> 
-     <double>296.0</double> 
+     <double>777.0</double> 
+     <double>306.0</double> 
     </void> 
    </object> 
   </void> 
