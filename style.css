@@ -444,3 +444,13 @@ p.uml {
 p.diagram {
 	text-align: center;
 }
+
+div.lookhere {
+	border: 1px solid black;
+	color: black;
+	padding: .2cm;
+	text-align: center;
+	margin: 2px 8em 2px 8em;
+	background: #ff8;
+	font-weight: bold;
+}
