@@ -116,6 +116,15 @@ $ <b>sha1sum /bin/ls</b>
   root access) can enable it. <b>DO NOT</b> do this in security critical environments yet - we're still working on tightening the security on this! Feedback welcome.
  </p>
 
+ <p>
+  This diagram shows the four processes involved in adding a new package to the system cache. If you have a different environment, you can use a different 'helper' script
+  to integrate it with Zero Install.
+ </p>
+
+ <p class='uml'>
+   <img src='UML/secure-add.violet.png' width='590' height='264' alt='Sequence of operations to add to the system cache'/>
+ </p>
+
  <ol>
   <li><a href='injector.html'>Install 0launch version 0.30</a> or later.</li>
   <li>Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
