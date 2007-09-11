@@ -98,6 +98,14 @@ to be relocatable in the first place.</li>
 <li>Zero Install is platform independent. Klik only runs on Linux.</li>
 </ul>
 
+<p>
+The above refers to Klik 1 (the current version).
+<a href='http://klik.atekon.de/wiki/index.php?title=Recipe_Files&amp;oldid=3568'>Klik 2</a>, which
+is under development, uses a slightly modified version of the Zero Install feed
+format for its recipes. Note: link is to a fixed version, as the Wiki page is frequently
+vandalised.
+</p>
+
 </dd>
 
 <dt>Maven</dt>
