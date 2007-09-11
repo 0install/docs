@@ -122,6 +122,11 @@ The users don't need to trust each other; only genuine unmodified copies can be 
 <a href='sharing.html'>the sharing page</a> for details. Since 0.26.
 </dd>
 
+<dt>Bug reporting</dt>
+<dd>Generate useful information for bug-reports, since we know exactly which version of each library
+was being used. <a href='0compile.html'>0compile</a> already supports this if a build fails, but we could
+do something similar when running programs, too. Right-click on a component in the GUI to use this. Since 0.26.</dd>
+
 <dt>Native package manager integration</dt>
 <dd>
 If a Zero Install package requires a library, and the user already has a suitable version installed with another
@@ -191,11 +196,6 @@ optional dependency; one which isn't listed in the main interface file at all.
 <dt>More meta-data</dt>
 <dd>License terms (and warn about incompatible licenses?), mailing list address, where to send
 bug reports, etc.</dd>
-
-<dt>Bug reporting</dt>
-<dd>Generate useful information for bug-reports, since we know exactly which version of each library
-was being used. <a href='0compile.html'>0compile</a> already supports this if a build fails, but we could
-do something similar when running programs, too.</dd>
 
 <dt>Peer-to-peer downloads</dt>
 <dd>The tricky bit about P2P is normally the free-text searching, but we already know the secure hash
