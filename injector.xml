@@ -39,17 +39,20 @@ Take the <a href='http://0install.net/limesurvey/index.php?sid=75789&amp;lang=en
   <dt>RPMs</dt>
 <dd>
 <ul>
-  <li><b>Fedora</b> - a package is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
+  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
-  <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which can't install anything. We're trying to get Fedora to fix this (see <a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=250168'>bug #250168</a>). Until this is fixed, please download this RPM instead:
+  <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which can't install anything (see <a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=250168'>bug #250168</a>). This may be fixed now in an update (someone please confirm!); otherwise please download this RPM instead:
   <br/><download name='zeroinstall-injector-0.30-1.fc7.noarch.rpm'/> (binary RPM for Fedora 7)
   <br/><download name='zeroinstall-injector-0.30-1.fc7.src.rpm'/> (source RPM)
   </p>
   </li>
   <li><b>SuSE</b> <download name='zeroinstall-injector-0.27-1.suse_noarch.rpm'/> (SuSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
-  <li><download name='zeroinstall-injector-0.17-1fc.src.rpm'/> (Source RPM) [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/994'>Instructions</a> ]</li>
 </ul>
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1171'>Problems with RPMs</a> ]
+<p><b>Experimental binary and source RPMs: </b> More up-to-date RPMs are available for some
+systems through the <a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;p=1&amp;baseproject=ALL'>SUSE build service</a>.
+Please test these and report back (<i>DO NOT</i> install the -test packages). Note
+that the Mandriva package doesn't work on 2007.1 without a
+<a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1792'>minor fix</a>.</p>
 </dd>
 
 <dt>Debs</dt>
@@ -75,6 +78,7 @@ Take the <a href='http://0install.net/limesurvey/index.php?sid=75789&amp;lang=en
 <dd>
 <ul>
   <li><b>Slackware</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><b>FreeBSD</b> <a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</li>
   <li><b>Solaris</b> works (follow instructions below)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
   <li><b>MacOS X</b> should work (follow instructions below), but has not been tested. Please send a report to <a href='support.html'>the mailing list</a> to let us know either way!</li>
