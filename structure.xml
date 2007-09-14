@@ -4,13 +4,12 @@
     <item base="injector" label="Install"/>
     <item base='injector-using' label='Tutorial'/>
     <item base='injector-feeds' label='Software index'/>
-    <item base='injector-trouble' label='Problems'/>
+    <item base="perspectives" label="Perspectives"/>
   </item>
 
   <item base="doc" label="Documentation">
     <item base="goals" label="Goals"/>
     <item base="howitworks" label="Screenshots"/>
-    <item base="perspectives" label="Perspectives"/>
     <item base="flash" label="Flash demos"/>
     <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
@@ -19,6 +18,7 @@
     <item base="walkthrough" label="Walk-through"/>
     <item base="distribution-integration" label="Distro integration"/>
     <item base="roadmap" label="Roadmap"/>
+    <item base='injector-trouble' label='Problems'/>
     <item base="links" label="Links"/>
   </item>
 
