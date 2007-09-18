@@ -415,8 +415,8 @@ itself.
 </p>
 
 <p>
-<strong>Note:</strong> Bindings outside of &lt;requries&gt; elements are not yet supported by any version of Zero Install.
-However, the same effect can be achieved with current versions of 0launch by
+<strong>Note:</strong> Bindings outside of &lt;requries&gt; elements require 0launch >= 0.31.
+However, the same effect can be achieved with earlier versions of 0launch by
 adding an explicit &lt;requires&gt; from a component to itself and putting the
 binding in that.
 </p>
