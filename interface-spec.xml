@@ -204,7 +204,7 @@ the closest ancestor &lt;group&gt; which defines it):
 
  <dt>lang</dt>
  <dd>The natural language(s) which this package supports, as a space-separated
- list of languages codes (in the same format as used by the $LANG environemnt
+ list of languages codes (in the same format as used by the $LANG environment
  variable). For example, the value "en_GB fr" would be used for a package
  supporting British English and French. This attribute is currently ignored by 0launch.</dd>
 
@@ -429,7 +429,7 @@ itself.
 </p>
 
 <p>
-<strong>Note:</strong> Bindings outside of &lt;requries&gt; elements require 0launch >= 0.31.
+<strong>Note:</strong> Bindings outside of &lt;requires&gt; elements require 0launch >= 0.31.
 However, the same effect can be achieved with earlier versions of 0launch by
 adding an explicit &lt;requires&gt; from a component to itself and putting the
 binding in that.
