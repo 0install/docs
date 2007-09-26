@@ -67,7 +67,7 @@ namespace):
   &lt;needs-terminal/&gt; ?
 
   &lt;icon type='...' href='...'/&gt; *
-  &lt;feed src='...' lang='...' ? arch='...' ?/&gt; *
+  &lt;feed src='...' langs='...' ? arch='...' ?/&gt; *
 	
   &lt;feed-for interface='...'/&gt; *
 
@@ -101,7 +101,7 @@ not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
 <dt>&lt;needs-terminal&gt;</dt> <dd>if present, this element indicates that the program requires a terminal in order to run. Graphical launchers should therefore run this program in a suitable terminal emulator.</dd>
 <dt>&lt;icon&gt;</dt> <dd>an icon to use for the program; this is used by programs such as
 <a href="http://rox.sourceforge.net/desktop/AddApp">AddApp</a>.</dd>
-<dt>&lt;feed&gt;</dt> <dd>the linked feed contains more implementations of this feed's interface. The "lang" and "arch" attributes, if present, indicate that all implementations will fall within
+<dt>&lt;feed&gt;</dt> <dd>the linked feed contains more implementations of this feed's interface. The "langs" and "arch" attributes, if present, indicate that all implementations will fall within
 these limits (e.g. arch='*-src' means that there is no point fetching this feed
 unless you are looking for source code). See the &lt;implementation&gt; element
 for a description of the values of these attributes.</dd>
@@ -123,7 +123,7 @@ A group has this syntax:
 	doc-dir='...' ?
 	license='...' ?
         stability='...' ?
-	lang='...' ?
+	langs='...' ?
         arch='...' ? &gt;
     [requires] *
     [group] *
@@ -155,7 +155,7 @@ the closest ancestor &lt;group&gt; which defines it):
 	doc-dir='...' ?
   	released='...' ?
 	stability='...' ?
-	lang='...' ?
+	langs='...' ?
 	arch='...' ? &gt;
     &lt;manifest-digest algorithm='...' value='...' /> *
     [ retrieval-method ] *
@@ -202,7 +202,7 @@ the closest ancestor &lt;group&gt; which defines it):
  <dd>The default stability rating for this implementation. If not present, <b>testing</b> is used.
  See the stability section below for more details.</dd>
 
- <dt>lang</dt>
+ <dt>langs</dt>
  <dd>The natural language(s) which this package supports, as a space-separated
  list of languages codes (in the same format as used by the $LANG environment
  variable). For example, the value "en_GB fr" would be used for a package
