@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Legal issues</h2>
+
+<p>
+I am not a lawyer. This is not legal advice, just a collection of thoughts and issues.
+</p>
+
+<h3>Sharing</h3>
+
+<p>
+The main thing to understand is that Zero Install is all about <k>sharing</k>. It shares libraries between programs, and it shares programs between users and between computers.
+When one user of a computer installs a program, other users can access it too. In the future, it may share programs using peer-to-peer too. Like a web-cache, Zero Install assumes
+content is shareable. Therefore:
+</p>
+
+<ul>
+<li>If your program doesn't (at a minimum) allow <k>unlimited redistribution of unmodified binaries</k>, then DO NOT distribute it using Zero Install!</li>
+</ul>
+
+<p>
+If you want to implement some restrictions (e.g. "you must pay before using this program") then you can require a license key to be entered to make the
+program fully functional, for example. The license key doesn't go in the shared cache and so will not be shared automatically.
+</p>
+
+<p>
+It is a good idea to include a file inside your package giving full details of the license and stating who the copyright holder is.
+</p>
+
+<p>
+As well as sharing packages, Zero Install also assumes that the XML feed files can be stored and copied freely in unmodified form. Like the packages themselves,
+feed files may be archived or stored on mirror sites to improve performance and reliability.
+</p>
+
+<h3>Translations</h3>
+
+<p>
+Unless you state otherwise, it is assumed that your XML feed file can be freely translated into other languages and published on indexing sites.
+</p>
+
+<h3>Digital signatures</h3>
+
+<p>
+All Zero Install feeds have a digital signature. The signature shows that the feed hasn't been tampered with since it was signed. By default, this is
+the only meaning of the signature: an attacker has not intercepted and modified the feed. A signature is <b>not</b> a warranty or guarantee. It is
+not intended to suggest that the package meets any particular quality standards, unless that is stated explicitly.
+</p>
+
+<p>
+In general, the signer of a feed should not have greater legal liability
+because they signed it. You should treat a signed feed exactly as you would an
+unsigned feed which you felt confident had not been modified by a third-party.
+</p>
+
+<h3>Licenses for Zero Install software</h3>
+
+<p>
+Each piece of software is licensed separately. Please consult the documentation page for the program you are interested in for details.
+</p>
+
+</html>

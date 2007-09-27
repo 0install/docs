@@ -19,6 +19,7 @@
     <item base="distribution-integration" label="Distro integration"/>
     <item base="roadmap" label="Roadmap"/>
     <item base='injector-trouble' label='Problems'/>
+    <item base='legal' label='Legal issues'/>
     <item base="links" label="Links"/>
   </item>
 
