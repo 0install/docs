@@ -227,6 +227,27 @@ ALL     ALL=(zeroinst) NOPASSWD: ZEROINSTALL
   a clean environment. No password is required for this.
  </p>
 
+ <h3>AppArmor policy</h3>
+
+ <p>
+  The following AppArmor policy can be used to confine the 0store-secure-add
+  process somewhat. However, the process does need read access everywhere
+  (since it could be copying from anywhere) and write access to the entire
+  cache directory, so this doesn't restrict it much more than it already is due
+  to running as a separate user.
+ </p>
+
+ <pre>#include &lt;tunables/global&gt;
+/usr/bin/0store-secure-add {
+  #include &lt;abstractions/base&gt;
+  #include &lt;abstractions/python&gt;
+
+  /** r,
+  /usr/bin/0store-secure-add mr,
+  /usr/bin/python* ixr,
+  /var/cache/0install.net/implementations/** rw,
+}</pre>
+
  <h3>Questions</h3>
 
  <dl>
