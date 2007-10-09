@@ -100,7 +100,7 @@ def plot(title, data):
 
 		cr.translate(0, row_spacing)
 
-	return surface
+	return surface, max_key_width
 
 if __name__ == '__main__':
 	surface = plot('Test', [

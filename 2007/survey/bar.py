@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import csv, sys, os
 
-src = 'AllResults.csv'
+from support import *
 
 col_from, col_to = map(int, [sys.argv[1], sys.argv[2]])
 
@@ -33,6 +33,4 @@ for line in results:
 
 sorted_results = reversed(sorted([(tally[i], headings[i]) for i in range(0, len(headings))]))
 
-import plot
-surface = plot.plot(title, [(key, value) for value, key in sorted_results])
-surface.write_to_png('charts/%s.png' % title.replace('/', '_').replace(' ', '_').replace('?', ''))
+plot_and_save(title, [(key, value) for value, key in sorted_results])

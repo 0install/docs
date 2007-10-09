@@ -1,5 +1,6 @@
 all_charts:
 	rm -f charts/*.png
+	rm -f charts/template.html
 	./histogram.py 1
 	./histogram.py 2 'str(int(x)/10)' '"%s0-%s9" % (x, x)'
 	./bar.py 3 10

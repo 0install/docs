@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import csv, sys, os
+from support import *
 
 mappings = {
 	'german': 'de',
@@ -12,8 +13,6 @@ mappings = {
 	'czech': 'cs',
 	'en_gb': 'en',
 }
-
-src = 'AllResults.csv'
 
 col = int(sys.argv[1])
 if len(sys.argv) > 2:
@@ -38,6 +37,9 @@ title = data.pop(0)
 print `data`
 print "(%d empty)" % skipped
 print title
+
+if '[' in title:
+	title = title.split('[', 1)[1].strip(']')
 
 count = {}
 
@@ -69,7 +71,5 @@ elif out_fn == 'x':
 else:
 	sorted_keys = sorted(count.keys())
 
-import plot
 def apply_out_fn(x): return eval(out_fn, {'x': x})
-surface = plot.plot(title, [(apply_out_fn(key), count[key]) for key in sorted_keys])
-surface.write_to_png('charts/%s.png' % title.replace('/', '_').replace(' ', '_').replace('?', ''))
+plot_and_save(title, [(apply_out_fn(key), count[key]) for key in sorted_keys])
