@@ -12,6 +12,7 @@ for line in csv.reader(file(src)):
 	x = line[col]
 	if x:
 		x = x[0].capitalize() + x[1:]
+		x = x.replace('&', '&amp;')
 		data.append(x.replace('\\\'', "'").strip())
 	else:
 		skipped += 1
@@ -34,13 +35,13 @@ if long:
 	else:
 		template.write("""<h3>%s</h3>""" % title)
 
-	template.write('\n'.join("<blockquote><q>%s</q></blockquote>" % quote.replace('<', '&lt;') for quote in data))
+	template.write('\n'.join("<blockquote><p><q>%s</q></p></blockquote>" % quote.replace('<', '&lt;') for quote in data))
 else:
 	if '[Other]' in title:
-		template.write("""<blockquote><strong>Other comments: </strong>""")
+		template.write("""<blockquote><p><strong>Other comments: </strong>""")
 	else:
-		template.write("""<h3>%s</h3><blockquote>""" % title)
+		template.write("""<h3>%s</h3><blockquote><p>""" % title)
 
 	template.write(', '.join("<q>%s</q>" % quote.replace('<', '&lt;') for quote in data))
 
-	template.write(".</blockquote>")
+	template.write(".</p></blockquote>")
