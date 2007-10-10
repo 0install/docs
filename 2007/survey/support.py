@@ -18,6 +18,6 @@ def plot_and_save(title, data):
 	<h3>%s</h3>
 
 	<p>
-	 <img style='padding-left: %d' src='%s' width='%d' height='%d' alt='%s'/>
+	 <img style='padding-left: %dpx' src='2007/survey/charts/%s' width='%d' height='%d' alt='%s'/>
 	</p>
 	""" % (title, padding, png.replace("'", "&apos;"), surface.get_width(), surface.get_height(), title.replace("'", "&apos;")))
