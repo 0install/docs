@@ -14,10 +14,10 @@ mappings = {
 	'en_gb': 'en',
 }
 
-col = int(sys.argv[1])
-if len(sys.argv) > 2:
-	fn = sys.argv[2]
-	out_fn = sys.argv[3]
+col = int(args[0])
+if len(args) > 1:
+	fn = args[1]
+	out_fn = args[2]
 else:
 	fn = 'x'
 	out_fn = 'x'
@@ -34,9 +34,9 @@ for line in csv.reader(file(src)):
 		skipped += 1
 
 title = data.pop(0)
-print `data`
-print "(%d empty)" % skipped
-print title
+#print `data`
+#print "(%d empty)" % skipped
+#print title
 
 if '[' in title:
 	title = title.split('[', 1)[1].strip(']')

@@ -1,9 +1,11 @@
 import sys
 import plot
 
-max_width = 200
+max_width = 300
 
-src = 'AllResults.csv'
+src = sys.argv[1]
+assert src.endswith('.csv')
+args = sys.argv[2:]
 
 def plot_and_save(title, data):
 	surface, max_key_width = plot.plot(title, data)

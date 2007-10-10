@@ -3,7 +3,7 @@ import csv, sys, os
 
 from support import *
 
-col_from, col_to = map(int, [sys.argv[1], sys.argv[2]])
+col_from, col_to = map(int, [args[0], args[1]])
 
 data = []
 
@@ -21,7 +21,7 @@ for col in range(col_from, col_to + 1):
 	tally.append(0)
 title = title.strip()
 
-print title + ", count"
+#print title + ", count"
 
 for line in results:
 	for col in range(col_from, col_to + 1):
