@@ -15,7 +15,7 @@ The survey was advertised in various places:
 </p>
 
 <ol>
-<li>Respondant 1 is me.</li>
+<li>Respondent 1 is me.</li>
 <li>Then I <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1783'>announced it</a> on the Zero Install mailing list (2007-09-10), which
 probably corresponds to the next five responses.</li>
 <li>Then I <a href='http://rox.sourceforge.net/desktop/node/756'>posted an announcement</a> to the ROX web-site later the same day.</li>
@@ -39,15 +39,15 @@ an optional section on publishing software using Zero Install.
 
 <toc level='h2'/>
 
-<h2>About the respondants</h2>
+<h2>About the respondents</h2>
 
-<p>The survey starts with a few questions about the respondants
+<p>The survey starts with a few questions about the respondents
 themselves (well, it's nice to start with some easy questions!):</p>
 
 <h3>What is your native language?</h3>
 
 <p>
-  Quite a good range of languages here. Surprisingly, none of the respondants mentioned anything about better localisation support in their comments.
+  Quite a good range of languages here. Surprisingly, none of the respondents mentioned anything about better localisation support in their comments.
 </p>
 
 <p>
@@ -63,7 +63,7 @@ themselves (well, it's nice to start with some easy questions!):</p>
 <h3>Which platforms do you use?</h3>
 
 <p>
-This questions was just about the platforms that the respondants used, not just
+This questions was just about the platforms that the respondents used, not just
 those they used with Zero Install.
 </p>
 
@@ -120,7 +120,7 @@ looks like someone managed to get it working (the other Windows vote corresponds
 <h3>How have you used Zero Install so far?</h3>
 
 <p>
-Lots of the survey respondants haven't used it yet (only 39 / 66 had). I'd count <q>Contributed patches</q> as being a developer, though the respondant didn't. It does bring up the
+Lots of the survey respondents haven't used it yet (only 39 / 66 had). I'd count <q>Contributed patches</q> as being a developer, though the Respondent didn't. It does bring up the
 point that the core devel team is a bit small at the moment ;-)
 </p>
 
@@ -163,7 +163,7 @@ I confess to being puzzled by the four people who find not being able to install
 <p>
 Zero Install is decentralised; if you can publish a web-page, you can publish
 software. Such programs are still first-class citizens, with automatic
-dependancy resolution and automatic updates. Lots of people want to use it to
+dependency resolution and automatic updates. Lots of people want to use it to
 install uncommon software. That's probably due to the large number of ROX users
 (most distributions don't include most of ROX).
 </p>
@@ -245,7 +245,7 @@ timer after you click a link, as well as a white-list of allowed sites). Adding 
 
 <blockquote><p><q>Have AddApp/Zero2Desktop install SendTo items. (Needs mime-types element in interfaces)</q></p></blockquote>
 
-<p>MIME types are an area that should be improved, but we need to guard against the situation where applications fight over MIME types. One possiblity would be to search the menus
+<p>MIME types are an area that should be improved, but we need to guard against the situation where applications fight over MIME types. One possibility would be to search the menus
 when you ask to open something. e.g. <q>No application is registered to handle LyX files. However, the application LyX which you have placed in your Office menu can open it...</q></p>
 
 <p>
@@ -485,7 +485,7 @@ all but the third are clearly features needed by many people. In fact, the major
 many real problems! It took a lot of work to get the list down to just four points (if you list too many points, people get bored and confused).
 </p>
 <p>
-Zero Install was, of course, orignally created because of a need in the ROX project: the
+Zero Install was, of course, originally created because of a need in the ROX project: the
 need to be able to distribute and maintain a complete desktop environment
 without first getting the approval of all the major Linux distributions (who
 would obviously prefer to support only a small number of desktops, and ideally ones
@@ -745,7 +745,7 @@ caching model of installation.
 <blockquote><p><strong>Other comments: </strong><q>Darcs repository</q>.</p></blockquote>
 
 <p>
-Downloading directly from an SCM system is an interesting possiblilty, especially with systems like
+Downloading directly from an SCM system is an interesting possibility, especially with systems like
 <a href='http://git.or.cz/'>GIT</a> which identify particular versions using
 cryptographic hashes in the same way as Zero Install itself does.
 </p>
@@ -767,7 +767,7 @@ There are also various reasons why distributions might not be willing to include
 program. Typically, they feel the user base is too small for it to be worth their
 while supporting the package. This is very reasonable, but they need to make sure
 that people can still install such programs easily, or they will never grow! Zero Install
-is especially important for developers of new libraries: noone wants to use your library
+is especially important for developers of new libraries: no-one wants to use your library
 until every distribution includes it, but no distribution will include it until programs
 are using it!
 </p>
