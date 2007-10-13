@@ -94,13 +94,15 @@ able to set it up to automatically download, compile and publish new versions us
 <h3>How did you hear about Zero Install?</h3>
 
 <p>
-Oops. I forgot to list pro-linux.de as an option. They've run lots of articles about Zero Install! linuxfr.org linked to the survey; lots of people arrived that way!
+Oops. I forgot to list <a href='http://www.pro-linux.de/'>pro-linux.de</a> as
+an option. They've run lots of articles about Zero Install! <a href='Http://linuxfr.org/~MilkaJinka/25303.html'>linuxfr.org</a> linked
+to the survey; lots of people arrived that way!
 </p>
 
 <p>
  <img style='padding-left: 211px' src='2007/survey/charts/How_did_you_hear_about_Zero_Install.png' width='537' height='122' alt='How did you hear about Zero Install?'/>
 </p>
-<blockquote><p><strong>Other comments: </strong><q>I wrote it</q>, <q>Pro-linux.de</q>, <q>Comp.lang.ada</q>, <q>Mailing list</q>, <q>Lsb packaging list</q>, <q>Linuxfr.org</q>, <q>Www.linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Forum</q>, <q>Http://linuxfr.org/~MilkaJinka/25303.html</q>, <q>Linuxfr.org</q>, <q>Linuxfr</q>, <q>LinuxFR.org</q>, <q>Linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Google</q>, <q>StumbleUpon</q>, <q>Linuxfr</q>, <q>Http://lwn.net/Articles/249934/</q>, <q>Www.inkscape.org</q>, <q>Lwn.net</q>, <q>LINUX USER Magzin</q>, <q>Autopackage project</q>, <q>Lwn</q>, <q>Lwn.net</q>, <q>Lwn</q>, <q>Some people wrote about it on some web site, i think it was related to gobolinux</q>, <q>Prolinux.de</q>.</p></blockquote>
+<blockquote><p><strong>Other comments: </strong><q>I wrote it</q>, <q>pro-linux.de</q>, <q>Comp.lang.ada</q>, <q>Mailing list</q>, <q>Lsb packaging list</q>, <q>Linuxfr.org</q>, <q>www.linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Forum</q>, <q>http://linuxfr.org/~MilkaJinka/25303.html</q>, <q>Linuxfr.org</q>, <q>Linuxfr</q>, <q>LinuxFR.org</q>, <q>Linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Google</q>, <q>StumbleUpon</q>, <q>Linuxfr</q>, <q>http://lwn.net/Articles/249934/</q>, <q>www.inkscape.org</q>, <q>lwn.net</q>, <q>LINUX USER Magzin</q>, <q>Autopackage project</q>, <q>lwn</q>, <q>lwn.net</q>, <q>lwn</q>, <q>Some people wrote about it on some web site, i think it was related to gobolinux</q>, <q>prolinux.de</q>.</p></blockquote>
 
 <h2>Running programs with Zero Install</h2>
 
@@ -136,6 +138,12 @@ maintained by their upstream authors, whereas most of the other programs are mad
 
 <blockquote><p><q>ROX-Filer and other ROX apps, blender, lyx</q>, <q>ROX, Sonata</q>, <q>ROX</q>, <q>Rox all</q>, <q>Almost everything ROX-related, and some other feeds.</q>, <q>ROX-Filer</q>, <q>ROX-Filer, ROX-Session</q>, <q>Archive, Wallpaper, Memo, Volume, SystemTrayN, Weather, AppFactory</q>, <q>Blender, S.C.O.U.R.G.E</q>, <q>All rox apps available via 0install</q>, <q>Rox Filler, but I would like to run all my desktop apps using it</q>, <q>ROX filer etc</q>, <q>ROX Desktop components</q>, <q>ROX Desktop</q>, <q>Rox-filer</q>, <q>None to date</q>, <q>None so far, just testing and development</q>, <q>Rox filer</q>, <q>Rox</q>, <q>Rox filer</q>, <q>I don't use it</q>, <q>ROX Filemanager</q>, <q>ROX-Filer, ROX-Session, ROX Configuration utilities</q>, <q>Inkscape</q>, <q>Rox desktop</q>, <q>Saxm2s</q>, <q>Not really any, i'd just want an easier integration with the Gobolinux distribution</q>.</p></blockquote>
 
+<p>
+Most of these programs are listed on the <a href='injector-feeds.html'>software
+index page</a>. To get your program listed there, post to the <a
+href='support.html'>mailing list</a> and <i>tell us your GPG fingerprint</i>!
+</p>
+
 <h3>As a user, how important are these goals to you?</h3>
 
 <p>
@@ -144,7 +152,7 @@ Most of the time, the only reason for installing a program as root is so that a 
 </p>
 
 <p>
-I confess to being puzzled by the four people who find not being able to install without root access is an advantage to them as a user. Don't care is a reasonable answer here
+I confess to being puzzled by the four people who find not being able to install without root access is an advantage to them as a user. "Don't care" is a reasonable answer here
 (lots of people own their own machines), but plenty of people clearly do want to install things more easily on machines where they don't have root access.
 </p>
 
@@ -244,7 +252,7 @@ when you ask to open something. e.g. <q>No application is registered to handle L
 Zero Install also allows another solution to this problem, though. Because programs can be installed on demand, you can associate a MIME type with an application without
 installing the application at all. This makes it possible for distributions to set up handlers for all know types ahead of time. The
 <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Defaults'>ROX-Defaults package</a> does this already for some types; when a ROX user clicks on a .zip file for the first time, they are prompted
-to install <a href='http://rox.sourceforge.net/desktop/Archive'>Archive</a>, for example.
+to download <a href='http://rox.sourceforge.net/desktop/Archive'>Archive</a>, for example.
 </p>
 
 <blockquote><p><q>I'm using E17 Desktop Shell at this moment and there is an Ibar which holds the launchers off apps, KDE4 and Gnome and thinking something similar (kicker or gdesklets with a mac like launcher), would be nice to have some kind of universal drag &amp; drop support for all this alternatives (I don't know if there is a standard for that). May be associations with mime types would be neat, but they can be provided by rox filler.</q></p></blockquote>
@@ -268,9 +276,19 @@ Well overall alot more intuitive for novice similar to windows or mac programs i
 <h3>What security software do you use or want to use with Zero Install?</h3>
 
 <p>
-Surprisingly little interest in Plash, even though this seems to offer the possibility of very good protection. SELinux and AppArmor policies are set ahead of time by the
-admin, which means that they tend to be rather general, yet at the same time overly limiting (e.g. "Acroread can read /**/*.pdf files"), while Plash can be much more specific
-(e.g. "Acroread can read any file I drag to it"). Of course, both static admin-set policies and dynamic user-set policies can be used together.
+Surprisingly little interest in <a href='http://plash.beasts.org/'>Plash</a>,
+even though this seems to offer the possibility of very good protection.
+SELinux and AppArmor policies are set ahead of time by the admin, which means
+that they tend to be rather general, yet at the same time overly limiting (e.g.
+"Acroread can read /**/*.pdf files"), while Plash can be much more specific
+(e.g. "Acroread can read any file I drag to it"). Of course, both static
+admin-set policies and dynamic user-set policies can be used together.
+</p>
+
+<p>
+On the other hand, the current release (1.18) of Plash is rather buggy (it just
+hangs when used with Zero Install). Maybe interest will pick up when/if a new
+version appears.
 </p>
 
 <p>
@@ -398,8 +416,8 @@ error output from the program and details of your system.
 
 <p>
 One fun thing about these reports is that the paths include the cryptographic hash identifying the version. Since a program's author
-typically keeps all versions of their own software around in the cache, you can using just open the same path on your own machine and be looking
-at exactly the same version of the file as the bug submitter (for languages like Python, anyway).
+typically keeps all versions of their own software around in the cache, you can usually just open the same path on your own machine and be looking
+at exactly the same version of the file as the bug submitter.
 </p>
 
 <p>
@@ -407,8 +425,9 @@ at exactly the same version of the file as the bug submitter (for languages like
 </p>
 
 <p>
-I think we may have discovered a UI problem here! It does tell you about this in the Help text. You did all click on the Help
-button, right? ;-)
+I think we may have discovered a UI problem... most people didn't know about
+this! It does tell you about it in the Help text, though. You did all click
+on the Help button, right? ;-)
 </p>
 
 <p style='text-align: center'>
@@ -425,7 +444,7 @@ Note that RPM support is now in svn (thanks to a patch from Stephen Watson).
 <p>
  <img style='padding-left: 21px' src='2007/survey/charts/Which_features_would_you_like_to_see_added___improved_in_the_future.png' width='727' height='142' alt='Which features would you like to see added / improved in the future?'/>
 </p>
-<blockquote><p><strong>Other comments: </strong><q>Support for packages with seperate archives for different languages</q>, <q>More portability and architecture support</q>, <q>Support for another OSes / architectures</q>, <q>Compiling packages from sources for different architectures</q>, <q>More packages.  Integration with apt</q>, <q>H</q>, <q>Integration with PackageKit</q>, <q>Shared cache</q>, <q>Integration with portage</q>.</p></blockquote>
+<blockquote><p><strong>Other comments: </strong><q>Support for packages with seperate archives for different languages</q>, <q>More portability and architecture support</q>, <q>Support for another OSes / architectures</q>, <q>Compiling packages from sources for different architectures</q>, <q>More packages.  Integration with apt</q>, <q>Integration with PackageKit</q>, <q>Shared cache</q>, <q>Integration with portage</q>.</p></blockquote>
 
 <p>
 If you want to add support for your favourite package manager, instructions are here:
@@ -512,8 +531,8 @@ Trying it is pretty easy already, with packages in most distributions ("apt-get 
 <h3>What do you think of the documentation?</h3>
 
 <blockquote><p><q>Nice and well done.</q></p></blockquote>
+<blockquote><p><q>Didn't read it, it was almost as intuitive as possible.</q></p></blockquote>
 <blockquote><p><q>Very good. I've used everything I've wanted to with just a quick look at the documentation.</q></p></blockquote>
-<blockquote><p><q>Good. Needs more overview sections describing what rather than how; it's obviously all written by people who already know what it does.</q></p></blockquote>
 <blockquote><p><q>I found the website helpful and well designed.</q></p></blockquote>
 <blockquote><p><q>It's good.</q></p></blockquote>
 <blockquote><p><q>It's nice and complete</q></p></blockquote>
@@ -535,8 +554,8 @@ Trying it is pretty easy already, with packages in most distributions ("apt-get 
 These three are probably correct, by I'll need more specific input before I can do anything about it:
 </p>
 
+<blockquote><p><q>Good. Needs more overview sections describing what rather than how; it's obviously all written by people who already know what it does.</q></p></blockquote>
 <blockquote><p><q>Far too complex - assume I'm not stupid but also assume I know no Linux jargon.</q></p></blockquote>
-<blockquote><p><q>Didn't read it, it was almost as intuitive as possible.</q></p></blockquote>
 <blockquote><p><q>Not precise enough. Hard to find the most basic things e.g. uninstall or finding out how to start Zero Install Cache.</q></p></blockquote>
 
 <p>
@@ -645,13 +664,13 @@ mainly for this reason). You'd really have to know what you were doing if you wa
 <blockquote><p><q>Once my ROX filer stopped working because it tried to download a newer version and there was a mismatch in zero-install versions. Stopped using it at that point.</q></p></blockquote>
 
 <p>
-I don't understand the last two; please file a bug report!
+I don't understand the last two; please <a href='support.html'>report bugs to the mailing list</a>!
 </p>
 
 <blockquote><p><q>Didnt find it really confusing... but it would be nice if Zero Install could rally more people behind its idea AND that it would be able to continue if main devs no longer have time to maintain (I see that Elektra registry project moves so slow for example, that makes me worried)</q></p></blockquote>
 
 <p>
-Elektra worries me too. It's a shame, because they seem to be to only people
+<a href='http://elektra.g4ii.com'>Elektra</a> worries me too. It's a shame, because they seem to be to only people
 who've figured out what developers like me really want from a configuration
 system: to depend only on an <i>interface</i>, not an <i>implementation</i>.
 Meanwhile, the GNOME devs have discovered that people didn't like depending on
@@ -717,7 +736,7 @@ publish their packages through Zero Install without having to change the
 packages at all in many cases. All the different formats are treated as simple
 archives (even Autopackages, where the executable prologue is skipped) since
 running pre- or post-install scripts doesn't make sense with a side-effect-free
-aching model of installation.
+caching model of installation.
 </p>
 
 <p>
@@ -796,7 +815,7 @@ checks your feeds for problems. All these programs are, of course, themselves av
 
 <p>
 See the <a href='roadmap.html'>roadmap</a> for details of these features.
-Next on my list of tools to write is a script for making releases directly from SCM (i.e. something that will handle tagging the revision, building the packages, running the unit-tests, etc).
+Next on my list of tools to write is a script for making releases directly from your SCM (i.e. something that will handle tagging the revision, building the packages, running the unit-tests, etc).
 </p>
 
 <p>
@@ -822,7 +841,7 @@ email if it's confidential) and tell us what kind of support you need!
 
 <p>
 This can be done with <a href='0compile.html'>0compile</a>, but it's not possible to share between users in that case, because there's no way for one user to know they can
-trust a binary compiled by a different user.
+trust a binary compiled by a different user. A trusted build service (local or remote) could solve that problem.
 </p>
 
 <blockquote><p><q>I hope to see in a near future an entire distribution built onto the 0install platform!</q></p></blockquote>
