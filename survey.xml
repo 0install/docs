@@ -37,6 +37,8 @@ The survey had three sections: about the user, about using Zero Install and
 an optional section on publishing software using Zero Install.
 </p>
 
+<toc level='h2'/>
+
 <h2>About the respondants</h2>
 
 <p>The survey starts with a few questions about the respondants
@@ -693,13 +695,15 @@ It should be a small system and should demonstrate the possibilities of 0install
 <blockquote><p><q>Keep the good work :)</q></p></blockquote>
 
 
-<h3>Are you interested in using Zero Install to distribute software?</h3>
+<h2>Publishing software using Zero Install</h2>
+
+<p>
+Nearly half of the responses were from people interested in providing software, although only a few of them are already doing this.
+</p>
 
 <p>
  <img style='padding-left: 275px' src='2007/survey/charts/Are_you_interested_in_using_Zero_Install_to_distribute_software.png' width='635' height='82' alt='Are you interested in using Zero Install to distribute software?'/>
 </p>
-
-<h3>Do you use Zero Install to distribute software?</h3>
 
 <p>
  <img style='padding-left: 10px' src='2007/survey/charts/Do_you_use_Zero_Install_to_distribute_software.png' width='738' height='122' alt='Do you use Zero Install to distribute software?'/>
@@ -708,15 +712,63 @@ It should be a small system and should demonstrate the possibilities of 0install
 <h3>What format(s) do you use for your packages?</h3>
 
 <p>
+Zero Install supports a wide range of archive formats. This allows people to
+publish their packages through Zero Install without having to change the
+packages at all in many cases. All the different formats are treated as simple
+archives (even Autopackages, where the executable prologue is skipped) since
+running pre- or post-install scripts doesn't make sense with a side-effect-free
+aching model of installation.
+</p>
+
+<p>
  <img style='padding-left: 133px' src='2007/survey/charts/What_format(s)_do_you_use_for_your_packages.png' width='615' height='142' alt='What format(s) do you use for your packages?'/>
 </p>
 <blockquote><p><strong>Other comments: </strong><q>Darcs repository</q>.</p></blockquote>
+
+<p>
+Downloading directly from an SCM system is an interesting possiblilty, especially with systems like
+<a href='http://git.or.cz/'>GIT</a> which identify particular versions using
+cryptographic hashes in the same way as Zero Install itself does.
+</p>
+
 <h3>Why do you (want to) use Zero Install?</h3>
+
+<p>
+As an upstream author, having to provide a different package for every system
+is a lot of work. Every package is a new possible source of bugs and mistakes
+(did you forget to add the LICENSE file to the Debian/etch package? did you forget
+to strip debug symbols from the Fedora RPM?). Building and testing them yourself
+requires you to manage lots of virtual build and test environments, while
+getting others to do it for you means more risk (who are these people?) and packages
+falling behind (why hasn't the Mandriva package been updated for 12 months?).
+</p>
+
+<p>
+There are also various reasons why distributions might not be willing to include a
+program. Typically, they feel the user base is too small for it to be worth their
+while supporting the package. This is very reasonable, but they need to make sure
+that people can still install such programs easily, or they will never grow! Zero Install
+is especially important for developers of new libraries: noone wants to use your library
+until every distribution includes it, but no distribution will include it until programs
+are using it!
+</p>
 
 <p>
  <img style='padding-left: 0px' src='2007/survey/charts/Why_do_you_(want_to)_use_Zero_Install.png' width='852' height='202' alt='Why do you (want to) use Zero Install?'/>
 </p>
-<blockquote><p><strong>Other comments: </strong><q>Because I like 0install, and I support it by packaging software. Also, one day (when 0install is a little more mature), I would like to be able to install an OS, copy/paste some feeds, and have my usual environment appear.</q>, <q>Provide user an easy way to install fresh release without waiting for distribution packages.</q>.</p></blockquote><h3>How do you find the developer documentation?</h3><blockquote><p><q>Great. That's what I was referring to in the other section on documentation. I haven't used any end-user documentation as far as I recall. Maybe ages ago.</q>, <q>Google</q>, <q>Good.</q>, <q>A bit confusing</q>, <q>Ok</q>, <q>I have not read it yet. I will try at the end of this year</q>, <q>Havn't read it yet</q>, <q>Good.</q>, <q>From homepage</q>, <q>It was a link on the front page of the website. Well written, easy to follow</q>.</p></blockquote><h3>What did you find most difficult about providing software using Zero Install?</h3><blockquote><p><q>Creating binaries for different archs (x86_64, etc).</q></p></blockquote>
+<blockquote><p><strong>Other comments: </strong><q>Because I like 0install, and I support it by packaging software. Also, one day (when 0install is a little more mature), I would like to be able to install an OS, copy/paste some feeds, and have my usual environment appear.</q>, <q>Provide user an easy way to install fresh release without waiting for distribution packages.</q>.</p></blockquote>
+
+<h3>How do you find the developer documentation?</h3>
+
+<p>
+The word "find" confused a few people here. I'll try to be clearer in future!
+</p>
+
+<blockquote><p><q>Great. That's what I was referring to in the other section on documentation. I haven't used any end-user documentation as far as I recall. Maybe ages ago.</q>, <q>Google</q>, <q>Good.</q>, <q>A bit confusing</q>, <q>Ok</q>, <q>I have not read it yet. I will try at the end of this year</q>, <q>Havn't read it yet</q>, <q>Good.</q>, <q>From homepage</q>, <q>It was a link on the front page of the website. Well written, easy to follow</q>.</p></blockquote>
+
+<h3>What did you find most difficult about providing software using Zero Install?</h3>
+
+<blockquote><p><q>Creating binaries for different archs (x86_64, etc).</q></p></blockquote>
 <blockquote><p><q>There are some dependencies that aren't already packaged, and I really don't feel like maintaining a package for some library I don't care about.</q></p></blockquote>
 <blockquote><p><q>Lack of libraries already packaged</q></p></blockquote>
 <blockquote><p><q>1) Dependencies. Most libraries aren't available for 0install, so I had to package them as well.
@@ -725,30 +777,62 @@ It should be a small system and should demonstrate the possibilities of 0install
 <blockquote><p><q>Building packages that use shared libraries.</q></p></blockquote>
 <blockquote><p><q>Creating a package</q></p></blockquote>
 <blockquote><p><q>Remembering to update the feed with the latest version, and making sure that my signing key is available on whatever dev machine I am using for the release at the time.</q></p></blockquote>
+
 <h3>Which tools do you use to make packages?</h3>
+
+<p>
+<a href='injector-packagers.html'>0publish-gui</a> is a GTK application to help you publish a package. As long as your package is
+relocatable (can be run from any directory), this is very simple and only takes a few minutes. <a href='0publish.html'>0publish</a> is a command-line tool, intended
+for people writing scripts to update their feeds automatically. <a href='0compile.html'>0compile</a> downloads and builds a package from source. <a href='feedlint.html'>FeedLint</a>
+checks your feeds for problems. All these programs are, of course, themselves available though Zero Install.
+</p>
 
 <p>
  <img style='padding-left: 174px' src='2007/survey/charts/Which_tools_do_you_use_to_make_packages.png' width='565' height='122' alt='Which tools do you use to make packages?'/>
 </p>
 <blockquote><p><strong>Other comments: </strong><q>Crazy shell scripts that fiddle XML manually, as seen in my Firefox packages.</q>, <q>I have not started the packaging</q>, <q>Manually, no other option at the time</q>, <q>Pacman on Arch</q>.</p></blockquote>
+
 <h3>What improvements would you like to see in the future?</h3>
+
+<p>
+See the <a href='roadmap.html'>roadmap</a> for details of these features.
+Next on my list of tools to write is a script for making releases directly from SCM (i.e. something that will handle tagging the revision, building the packages, running the unit-tests, etc).
+</p>
 
 <p>
  <img style='padding-left: 0px' src='2007/survey/charts/What_improvements_would_you_like_to_see_in_the_future.png' width='931' height='122' alt='What improvements would you like to see in the future?'/>
 </p>
-<blockquote><p><strong>Other comments: </strong>.</p></blockquote>
+
+<p>There were no "other comments" here.</p>
+
 <h3>Would you be interested in commercial support?</h3>
+
+<p>
+As a hobby project, I don't get as much time to work on this as I'd like, but
+if there's money available then I may be able to sort something out (I can't
+promise anything). Write to the <a href='support.html'>mailing list</a> (or
+email if it's confidential) and tell us what kind of support you need!
+</p>
 
 <p>
  <img style='padding-left: 275px' src='2007/survey/charts/Would_you_be_interested_in_commercial_support.png' width='501' height='102' alt='Would you be interested in commercial support?'/>
 </p>
 <h3>Any other comments?</h3><blockquote><p><q>"Integration with version control systems" is very interesting. Perhaps specify a "trunk" (rather than stable, or testing, or whatever), and the latest from .../proj/trunk is downloaded and executed (assuming it can be without compilation).</q></p></blockquote>
 <blockquote><p><q>Would like a mechanism for distributing *source* and having it built on target machines, to avoid having to build and distribute binaries.</q></p></blockquote>
+
+<p>
+This can be done with <a href='0compile.html'>0compile</a>, but it's not possible to share between users in that case, because there's no way for one user to know they can
+trust a binary compiled by a different user.
+</p>
+
 <blockquote><p><q>I hope to see in a near future an entire distribution built onto the 0install platform!</q></p></blockquote>
 <blockquote><p><q>More sofware</q></p></blockquote>
 <blockquote><p><q>I am not a packager, yet this answer is mandatory, so i ticked "no".</q></p></blockquote>
 <blockquote><p><q>Feel free to mail me if I  can help you with making the windows build, I use Python.
 HIDDEN@gmail.com</q></p></blockquote>
+
+<p>Emailed and awaiting response.</p>
+
 <blockquote><p><q>Because i make ebuilds...but if zero install works across all distribution it's great</q></p></blockquote>
 <blockquote><p><q>The real reasons I like to distribute software through zeroinstall:
 * my user's shouldn't need root access or much experience with installing software from source
