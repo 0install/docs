@@ -90,8 +90,7 @@
 	
         <div class='footer'>
 	 <p>
-	   Thanks to the University of Southampton for the 0install.org, 0install.net,
-	   zero-install.org and zero-install.net domain names!
+	   Thanks to the University of Southampton for the 0install.net domain name!
 	 </p>
 	 <p>
 	    Web-site &#169; Copyright 2003-2007, Thomas Leonard.<br/>
