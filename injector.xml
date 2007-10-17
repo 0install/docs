@@ -74,8 +74,8 @@ that the Mandriva package doesn't work on 2007.1 without a
   <li><b>FreeBSD</b> <a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</li>
   <li><b>Solaris</b> works (follow instructions below)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
-  <li><b>MacOS X</b> <a href='http://trac.macosforge.org/projects/macports/browser/trunk/dports/sysutils/zeroinstall-injector/'>sysutils/zeroinstall-injector</a> in <a href='http://www.macports.org/'>MacPorts</a> (Anders F Björklund):<br/>
-  <pre># sudo port install zeroinstall-injector</pre></li>
+  <li><b>Mac OS X</b> <a href='http://trac.macosforge.org/projects/macports/browser/trunk/dports/sysutils/zeroinstall-injector/'>sysutils/zeroinstall-injector</a> in <a href='http://www.macports.org/'>MacPorts</a> (Anders F Björklund):<br/>
+  <pre>$ sudo port install zeroinstall-injector</pre></li>
   <li><b>Microsoft Windows</b> is not currently supported, as it lacks the <i>fork</i> system call. This should be easy to work around, if any Windows developers want to volunteer.</li>
   <li>Other (follow instructions below)</li>
 </ul>
