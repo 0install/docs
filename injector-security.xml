@@ -225,7 +225,7 @@ information too.
 
 <p>
 A trusted programmer is identified by their GPG key's fingerprint. When the
-user runs a program, the injector downloads the interface and checks that it
+user runs a program, the injector downloads the feed and checks that it
 is signed by someone the user trusts. If not, the user is asked to confirm
 that they trust the holder of the key to provide software to them:
 </p>
@@ -236,21 +236,21 @@ that they trust the holder of the key to provide software to them:
 </p>
 
 <p>
-Once trusted, the injector will accept any interface from the same domain
+Once trusted, the injector will accept any feed from the same domain
 signed by that key.
 </p>
 
 <p>
-The injector updates interfaces at the request of the user (clicking the
+The injector updates feeds at the request of the user (clicking the
 'Refresh all now' button), or automatically (monthly, for example) if the
-user sets their freshness policy to request this. When updating an interface
+user sets their freshness policy to request this. When updating a feed
 (even automatically) the injector displays a dialog box asking the user
 whether they want to download the new version.
 </p>
 
 <p>
 The injector does not accept incoming connections, so even if a malicious key
-is trusted, the owner must still get the user to download an interface they
+is trusted, the owner must still get the user to download a feed they
 control.
 </p>
 
@@ -275,7 +275,7 @@ not on this list.
 </p>
 
 <p>
-To perform the second attack, the attacker needs to replace a trusted interface
+To perform the second attack, the attacker needs to replace a trusted feed
 file on a server with a compromised version. However, the new file must be
 signed, and the secret signing key should not be on the server. Therefore, the
 attacker has two options:
@@ -284,8 +284,8 @@ attacker has two options:
 <ul>
 <li>Break into the developer's private machine, get their private GPG key,
 install a keystroke logger, and get the GPG pass-phrase. Then break into the
-web server and install a compromised signed interface.</li>
-<li>Break into the webserver and install an interface signed with their own
+web server and install a compromised signed feed.</li>
+<li>Break into the webserver and install a feed signed with their own
 key (a new key with a new fingerprint, but claiming to belong to the original
 author), and trick users into accepting it.</li>
 </ul>

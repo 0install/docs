@@ -674,7 +674,7 @@ I don't understand the last two; please <a href='support.html'>report bugs to th
 who've figured out what developers like me really want from a configuration
 system: to depend only on an <i>interface</i>, not an <i>implementation</i>.
 Meanwhile, the GNOME devs have discovered that people didn't like depending on
-gconf and are busy replacing it with a dependency on D-BUS. Madness. gconf was
+Orbit and are busy replacing it with a dependency on D-BUS. Madness. gconf was
 fine. D-BUS is fine. Flat files are fine. Just don't force us programmers to
 choose!
 </p>
