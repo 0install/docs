@@ -37,7 +37,7 @@ The survey had three sections: about the user, about using Zero Install and
 an optional section on publishing software using Zero Install.
 </p>
 
-<toc level='h2'/>
+<toc level='h3' super-level='h2'/>
 
 <h2>About the respondents</h2>
 
