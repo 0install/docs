@@ -71,7 +71,8 @@ that the Mandriva package doesn't work on 2007.1 without a
 <dt>Other</dt>
 <dd>
 <ul>
-  <li><b>Slackware</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)</li>
+  <li><b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
+      <b>Slackware 12</b> <download name="zeroinstall-injector-noarch-0.30-1_slack12.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
   <li><b>FreeBSD</b> <a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</li>
   <li><b>Solaris</b> works (follow instructions below)</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
