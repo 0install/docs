@@ -132,7 +132,8 @@ HelloWorld.xml is the local feed. Its contents look like this:
 
 <p>
 Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published. If you want to follow this tutorial,
-change it to point to a location to which you can upload files (e.g. "http://localhost/~me/testing/HelloWorld.xml").
+change it to point to a location to which you can upload files (e.g. "http://localhost/~me/testing/HelloWorld.xml") and
+commit the change (<b>git commit -a</b>).
 </p>
 
 <p>
