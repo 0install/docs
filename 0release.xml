@@ -131,7 +131,8 @@ HelloWorld.xml is the local feed. Its contents look like this:
 </pre>
 
 <p>
-Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published.
+Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published. If you want to follow this tutorial,
+change it to point to a location to which you can upload files (e.g. "http://localhost/~me/testing/HelloWorld.xml").
 </p>
 
 <p>
@@ -283,11 +284,17 @@ If you check your GIT repository, you'll see that 0release has now tagged the re
 
 <p>
 Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>
-to your web-server. You should then be able to download and run the program using 0launch:
+to your web-server. You should then be able to download and run the new release, using the URL you
+chose at the start:
 </p>
 
 <pre>
-
+$ 0launch http://localhost/~me/testing/HelloWorld.xml
+Hello World!
 </pre>
+
+<p>
+You can edit <b>make-release</b> to set some commands to automatically upload the files.
+</p>
 
 </html>
