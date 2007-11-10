@@ -16,32 +16,6 @@
   web-server.
  </dd>
 
- <dt><a href='0publish.html'>0publish</a></dt>
- <dd>
-  <b>0publish</b> edits feed files in place. It loads the file, transforms
-  it in some way (such as setting the release date, or adding a new
-  implementation) and then writes it back out again. If the input file was
-  signed, it will resign it when saving with the same key by default. You can
-  also use it to add a signature, or to change the signing key. It is particularly
-  useful in release scripts.
- </dd>
-
- <dt><a href='0compile.html'>0compile</a></dt>
- <dd>
-  <b>0compile</b> creates binaries from source code, either for your own use or ready
-for publishing on the web through Zero Install. It can use Zero Install to
-download any build dependencies (compilers, header files, build tools, etc).
-This is useful if there is no binary for your platform, or if you wish to
-modify the program in some way.
- </dd>
-
- <dt><a href='feedlint.html'>FeedLint</a></dt>
- <dd>
-If you maintain a number of feeds, each with several versions of your programs, how do you
-know that all the download links are still OK? Run <b>FeedLint</b> on your feeds from time-to-time
-to check.
- </dd>
-
  <dt><a href='python-api/html/index.html'>Python API</a></dt>
  <dd>
   The <b>0launch</b> command-line interface to Zero Install is sufficient for most
