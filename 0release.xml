@@ -167,7 +167,22 @@ the location of the local feed on your computer).</li>
 be shared by other developers.</li>
 </ul>
 
-<h2>Creating a new release</h2>
+<p>
+Open the file in a text editor. There are four settings, with comments explaining what is needed.
+The only one you need to set is the first (<b>ARCHIVE_DIR_PUBLIC_URL</b>), which is where people
+will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
+</p>
+
+<pre>
+ARCHIVE_DIR_PUBLIC_URL=http://osdn.dl.sourceforge.net/sourceforge/zero-install
+</pre>
+
+<p>
+The other settings allow 0publish to push files to the remote server automatically, but you can
+leave them as they are and do it manually.
+</p>
+
+<h2>Creating a release candidate</h2>
 
 <p>
 When you want to make a new release, simply run the <b>make-release</b> script, like this:
@@ -176,18 +191,103 @@ When you want to make a new release, simply run the <b>make-release</b> script, 
 <pre>
 $ <b>cd ~/releases/hello</b>
 $ <b>./make-release</b>
+Releasing HelloWorld
+Snapshot version is 0.1-pre
 Version number for new release [0.1]:
-Tagged as v0.1
 </pre>
 
 <p>
 You are prompted to enter the version number for the new release. You can just press Return to accept the
-default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>).
+default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). It then prints:
+</p>
+
+<pre>Releasing version 0.1
+
+Candidate release archive: helloworld-0.1.tar.bz2
+(extracted to /home/talex/tmp/releases/hello/helloworld-0.1 for inspection)
+
+Please check candidate and select an action:
+P) Publish candidate (accept)
+F) Fail candidate (untag)
+(you can also hit CTRL-C and resume this script when done)
+Publish/Fail:
+</pre>
+
+<p>
+0release has now created a candidate archive for you to examine. You might like
+to try extracting it and running the progrm. Note that the archive only contains files
+that are under version control.
 </p>
 
 <p>
-The version number in the XML file will be updated and a release date added. Then that version will be committed.
-You can see the new revision using <b>git log</b> or <b>gitk</b>.
+You can either leave 0release running while you check it, or you can use CTRL-C
+to exit and run the make-release script again later. It will remember where it
+was (it stores the current status in a new <b>release-status</b> file).
 </p>
+
+<p>
+As well as exporting the release archive, 0release also updates your GIT repository
+by committing two new revisions. You can see them using <b>git log</b> or <b>gitk</b>:
+</p>
+
+<p style='text-align: center'>
+<img width="409" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
+</p>
+
+<p>
+The first revision (remotes/origin/master) is the 0.1-pre development snapshot you started with.
+The next revision (Release 0.1) is the version that was released. Its local feed has the version
+"0.1" and today's date as the release date. The latest revision (master) has a version of "0.1-post"
+and removes the release date again. Note that the release hasn't been tagged yet in GIT, but 0release
+has recorded the revision ID in case you decide to accept the release candidate.
+</p>
+
+<h2>Accepting the release candidate</h2>
+
+<p>
+We'll just check that the release works:
+</p>
+
+<pre>$ <b>0launch helloworld-0.1/HelloWorld.xml</b>
+Hello World!
+</pre>
+
+<p>
+Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail
+prompt. Choose <b>Publish</b> (you can just type <b>p&lt;Return&gt;</b>).
+</p>
+
+<p>
+The temporary files (<b>release-status</b> and the extracted
+<b>helloworld-0.1</b> directory) are removed, and you will be prompted to enter
+your GPG passphrase (use <b>--key</b> if you don't want to use the default key).
+</p>
+
+<p>
+A new file then appears: <b>HelloWorld.xml</b>. This is
+the master feed for the program, which you should publish on your web-site. It
+will list all versions of the program (although currently it only contains one
+version, of course). Finally, you will also find a <b>.gpg</b> file containing
+your GPG public key.
+</p>
+
+<p>
+If you check your GIT repository, you'll see that 0release has now tagged the release:
+</p>
+
+<p style='text-align: center'>
+<img width="466" height="78" src="screens/0release-tagged.png" alt="Release tagged" />
+</p>
+
+<h2>Uploading the files</h2>
+
+<p>
+Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>
+to your web-server. You should then be able to download and run the program using 0launch:
+</p>
+
+<pre>
+
+</pre>
 
 </html>
