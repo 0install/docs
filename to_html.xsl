@@ -242,6 +242,9 @@
 	<xsl:if test='@feed'>
 	  <tr><th>Run it</th><td><a href='{@feed}'>Zero Install feed</a></td></tr>
 	</xsl:if>
+	<xsl:if test='@git'>
+	  <tr><th>SCM</th><td><a href='{@git}'>GIT repository</a></td></tr>
+	</xsl:if>
 	<xsl:if test='@svn'>
 	  <tr><th>Subversion</th><td><a href='{@svn}'>Trunk</a></td></tr>
 	</xsl:if>
