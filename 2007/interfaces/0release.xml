@@ -15,14 +15,14 @@
       <version not-before="0.11-post"/>
       <environment insert="0publish" name="0PUBLISH"/>
     </requires>
-    <implementation id="sha1new=356fcde78fd1c8d3550ad654b4ae3d593b123391" released="2007-11-10" version="0.1">
-      <archive extract="0release-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14687"/>
+    <implementation id="sha1new=3cbab8149d25e4bdc00056726a7ed97b2aa43f9c" released="2007-11-10" version="0.1">
+      <archive extract="0release-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14643"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHNgg3rgeCgFmlPMERAjTzAKDRx6rpplrTB59yAYopIADErr539gCfUTrF7WaIkd7gHMbv
-EaJ7ljP3gOs=
+iD8DBQBHNg2LrgeCgFmlPMERAg5iAJ0aQwsXfQPEYdaK027pWO75sjfPaACfRXUlkxfElewLGDa0
+htmPFGi3Jlc=
 
 -->
