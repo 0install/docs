@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>0release</h2>
+
+<program name='0release'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2007/interfaces/0release.xml'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/0release'
+	 license='GNU Lesser General Public License'/>
+
+<p><strong>This program is under construction! Please check back soon!</strong></p>
+
+<p>
+<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
+number and release date, tagging the release in your version control system and updating your Zero Install feed.
+The general process is shown in the diagram below:
+</p>
+
+<table>
+<tr><td>
+<img src='UML/release-process.png' width='355' height='385' alt='The release process' style='padding: .5em'/>
+</td><td>
+<p>
+After doing some development (so you have something to release!) you use 0release to prepare a
+new release. It will:
+</p>
+
+<ol>
+ <li>Run all your unit tests and ensure they all pass.</li>
+ <li>Tag the release in your version control system (e.g. as "1.3")</li>
+ <li>Export the tagged release and create a tarball for distribution.</li>
+ <li>Create a Zero Install feed that will download and run this release.</li>
+ <li>Unpack the release and run the tests again.</li>
+ <li>Update the version numbers in your version control system again (e.g. to "1.3-post")</li>
+</ol>
+
+<p>
+You can then run any final (manual) tests on the release. If you're happy with the result, then
+0release can publish it (e.g. upload the tarball to an FTP server and update the Zero Install feed).
+Otherwise, 0release will untag the release (reversing any effects of preparing it) so that you can
+fix the problems and try again.
+</p>
+</td></tr>
+</table>
+
+<p style='clear: both'>
+Note: you don't <i>need</i> to use this program to make your software available
+through Zero Install. You can just create a tarball using your normal process
+and then <a href='injector-packagers.html'>publish a feed</a> for it. However,
+0release can automate some of the steps for you. It's especially useful for new
+projects, where you don't yet have an established process. Having a program to
+handle new releases brings several advantages over doing it manually:
+</p>
+
+<ul>
+ <li>Making a new release is quicker, since many steps are automated.</li>
+ <li>You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).</li>
+ <li>You get a consistent structure each time (are your archives called "myprog-V.VV-linux.tgz" or "My-Prog-Linux-V.VV.tar.gz"?).</li>
+ <li>If someone else needs to make a release, they will follow the same process.</li>
+</ul>
+
+<h3>Contents</h3>
+
+<toc level='h2'/>
+
+<h2>Preparing your source repository</h2>
+
+<p>
+You'll need a <i>local feed</i> within your source directory (under version
+control). This contains the same information as a normal published feed would
+(name, description, dependencies, etc). The only differences are:
+</p>
+
+<ul>
+<li>The local feed refers to a local directory (e.g. <b>id="."</b> for the
+directory containing the local feed) rather than a cryptographic digest.
+</li>
+<li>It has no digital signature.</li>
+<li>The version will be a development version (e.g "1.2-post" if your last released version was
+"1.2").</li>
+</ul>
+
+<p>
+Having a local feed is useful even if you don't use <b>0release</b>, because it
+lets people check out a development snapshot of your program and then register it
+(using <b>0launch --feed</b>) or run it directly with Zero Install handling its
+dependencies.
+</p>
+
+<p>
+A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git.or.cz/'>GIT</a>
+version control system:
+</p>
+
+<pre>
+$ <b>git-clone http://0install.net/tests/hello.git</b>
+</pre>
+
+<p>
+To check that you can run it:
+</p>
+
+<pre>
+$ <b>cd hello</b>
+$ <b>0launch HelloWorld.xml</b>
+Hello World!
+</pre>
+
+<p>
+HelloWorld.xml is the local feed. Its contents look like this:
+</p>
+
+<pre>&lt;?xml version="1.0" ?&gt;
+&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"&gt;
+  &lt;name&gt;<b>HelloWorld</b>&lt;/name&gt;
+  &lt;summary&gt;<b>minimal demonstration package for 0release</b>&lt;/summary&gt;
+  &lt;description&gt;
+    <b>This program outputs the message "Hello World". You can create new releases of it
+    using 0release.</b>
+  &lt;/description&gt;
+
+  &lt;homepage&gt;<b>http://0install.net/0release.xml</b>&lt;/homepage&gt;
+
+  &lt;feed-for interface='<b>http://0install.net/tests/HelloWorld.xml</b>'/&gt;
+
+  &lt;group main='<b>hello.py</b>'&gt;
+    &lt;implementation id="." version="<b>0.1-pre</b>"/&gt;
+  &lt;/group&gt;
+&lt;/interface&gt;
+</pre>
+
+<p>
+Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published.
+</p>
+
+<p>
+You should add any dependencies inside the &lt;group&gt; element (see the <a href='interface-spec.html'>feed specification</a>
+for details, or edit the feed using <a href='injector-packagers.html'>0publish-gui</a> if you want a graphical interface).
+This example program is so simple it doesn't have any.
+</p>
+
+<h2>Creating the releases directory</h2>
+
+<p>
+Each time you create a new release, the resulting files go in your releases
+directory. Create the directory now and then run <b>0release</b> inside it,
+giving it the location of your local feed. The releases directory must be empty
+when you do this!
+</p>
+
+<pre>
+$ <b>mkdir -p ~/releases/hello</b>
+$ <b>cd ~/releases/hello</b>
+$ <b>0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml</b>
+</pre>
+
+<p>
+This will create a single executable file in the directory, called <b>make-release</b>.
+Run this whenever you want to create a new release of your software.
+</p>
+
+<ul>
+<li>The <b>make-release</b> file contains local configuration information (e.g.
+the location of the local feed on your computer).</li>
+<li>General information about your program goes in the source directory so it can
+be shared by other developers.</li>
+</ul>
+
+<h2>Creating a new release</h2>
+
+<p>
+When you want to make a new release, simply run the <b>make-release</b> script, like this:
+</p>
+
+<pre>
+$ <b>cd ~/releases/hello</b>
+$ <b>./make-release</b>
+Version number for new release [0.1]:
+Tagged as v0.1
+</pre>
+
+<p>
+You are prompted to enter the version number for the new release. You can just press Return to accept the
+default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>).
+</p>
+
+<p>
+The version number in the XML file will be updated and a release date added. Then that version will be committed.
+You can see the new revision using <b>git log</b> or <b>gitk</b>.
+</p>
+
+</html>
