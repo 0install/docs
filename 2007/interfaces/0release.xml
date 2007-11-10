@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/interfaces/0release.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0release</name>
+  <summary>manage new releases with Zero Install</summary>
+  <description>
+    If you have a local feed in the development version of your program,
+    0release can help you to create new releases easily.
+  </description>
+
+  <homepage>http://0install.net/0release.xml</homepage>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release">
+    <requires interface="http://0install.net/2006/interfaces/0publish">
+      <version not-before="0.11-post"/>
+      <environment insert="0publish" name="0PUBLISH"/>
+    </requires>
+    <implementation id="sha1new=356fcde78fd1c8d3550ad654b4ae3d593b123391" released="2007-11-10" version="0.1">
+      <archive extract="0release-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14687"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBHNgg3rgeCgFmlPMERAjTzAKDRx6rpplrTB59yAYopIADErr539gCfUTrF7WaIkd7gHMbv
+EaJ7ljP3gOs=
+
+-->
