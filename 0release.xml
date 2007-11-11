@@ -27,18 +27,16 @@ new release. It will:
 </p>
 
 <ol>
- <li>Run all your unit tests and ensure they all pass.</li>
- <li>Tag the release in your version control system (e.g. as "1.3")</li>
- <li>Export the tagged release and create a tarball for distribution.</li>
- <li>Create a Zero Install feed that will download and run this release.</li>
- <li>Unpack the release and run the tests again.</li>
+ <li>Commit a release revision in your version control system (e.g. with a version of "1.3")</li>
+ <li>Export the release revision and create a tarball for distribution.</li>
+ <li>Unpack the release and run the unit tests.</li>
  <li>Update the version numbers in your version control system again (e.g. to "1.3-post")</li>
 </ol>
 
 <p>
 You can then run any final (manual) tests on the release. If you're happy with the result, then
 0release can publish it (e.g. upload the tarball to an FTP server and update the Zero Install feed).
-Otherwise, 0release will untag the release (reversing any effects of preparing it) so that you can
+Otherwise, 0release will untag the release (reversing the effects of preparing it) so that you can
 fix the problems and try again.
 </p>
 </td></tr>
@@ -139,13 +137,13 @@ commit the change (<b>git commit -a</b>).
 <p>
 You should add any dependencies inside the &lt;group&gt; element (see the <a href='interface-spec.html'>feed specification</a>
 for details, or edit the feed using <a href='injector-packagers.html'>0publish-gui</a> if you want a graphical interface).
-This example program is so simple it doesn't have any.
+This example program is so simple it doesn't have any dependencies.
 </p>
 
 <h2>Creating the releases directory</h2>
 
 <p>
-Each time you create a new release, the resulting files go in your releases
+Each time you create a new release, the resulting files go in your 'releases'
 directory. Create the directory now and then run <b>0release</b> inside it,
 giving it the location of your local feed. The releases directory must be empty
 when you do this!
@@ -206,7 +204,7 @@ default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). 
 <pre>Releasing version 0.1
 
 Candidate release archive: helloworld-0.1.tar.bz2
-(extracted to /home/talex/tmp/releases/hello/helloworld-0.1 for inspection)
+(extracted to /home/me/releases/hello/helloworld-0.1 for inspection)
 
 Please check candidate and select an action:
 P) Publish candidate (accept)
@@ -217,12 +215,12 @@ Publish/Fail:
 
 <p>
 0release has now created a candidate archive for you to examine. You might like
-to try extracting it and running the progrm. Note that the archive only contains files
+to try running the program now. Note that the archive only contains files
 that are under version control.
 </p>
 
 <p>
-You can either leave 0release running while you check it, or you can use CTRL-C
+You can either leave 0release running while you check it, or you can press CTRL-C
 to exit and run the make-release script again later. It will remember where it
 was (it stores the current status in a new <b>release-status</b> file).
 </p>
@@ -281,6 +279,12 @@ If you check your GIT repository, you'll see that 0release has now tagged the re
 <img width="466" height="78" src="screens/0release-tagged.png" alt="Release tagged" />
 </p>
 
+<p>
+If, instead, you had found a problem with the release you would have selected <b>Fail</b> at
+the prompt. 0release would have removed the two revisions (putting "master" back to where it was
+before starting the release) and deleted the temporary files.
+</p>
+
 <h2>Uploading the files</h2>
 
 <p>
@@ -296,6 +300,11 @@ Hello World!
 
 <p>
 You can edit <b>make-release</b> to set some commands to automatically upload the files.
+</p>
+
+<p>
+After publishing, you should also push the branch and tag ("master" and "v0.1" in this case) to
+your public GIT repository.
 </p>
 
 </html>
