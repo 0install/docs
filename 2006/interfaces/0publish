@@ -52,7 +52,7 @@
     <implementation id="sha1new=1efef7e4e5b69a8d7a1b5a55d716b1f7714d3674" released="2007-06-02" stability="stable" version="0.11">
       <archive extract="0publish-0.11" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.11.tar.bz2" size="17854"/>
     </implementation>
-    <implementation id="sha1new=509e055fd62e9925f73238660e35212ded8a6a64" released="2007-11-10" version="0.12">
+    <implementation id="sha1new=509e055fd62e9925f73238660e35212ded8a6a64" released="2007-11-10" stability="stable" version="0.12">
       <archive extract="0publish-0.12" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.12.tar.bz2" size="17974"/>
     </implementation>
     <implementation id="sha1new=9a66a402355b0c444bd5d9c9dea7b94bc3f60bf0" released="2007-11-17" version="0.13">
@@ -61,7 +61,7 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHPxpDrgeCgFmlPMERAlSvAJ9Po1BkHV0X5jwV3CktQr4EKo4CNQCfcrtE6w61GcLtoyRb
-few6wlRG/FE=
+iD8DBQBHPxvDrgeCgFmlPMERAhNLAJ9beVpiNdzklu63Zf+pu3IXrbeV/ACfWrFKs1BemH+5TqLa
+TBiyo0Pt8hI=
 
 -->
