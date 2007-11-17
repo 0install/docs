@@ -20,14 +20,14 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
     <implementation id="sha1new=e6731132594dd536ecee432b116e88f549eb1303" released="2007-06-03" stability="stable" version="0.2">
       <archive extract="feedlint-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.2.tar.bz2" size="9686"/>
     </implementation>
-    <implementation id="sha1new=c991f84fcb4461d2a8980dc5854f12a10b1f8fbf" released="2007-07-28" version="0.3">
+    <implementation id="sha1new=c991f84fcb4461d2a8980dc5854f12a10b1f8fbf" released="2007-07-28" stability="stable" version="0.3">
       <archive extract="feedlint-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.3.tar.bz2" size="10101"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGqyBIrgeCgFmlPMERAsxvAJ95z1oTF4d13ZVItOHVX3N1e0CWEgCgnbq4GjhVolNPmv7y
-DGmRI93ksLU=
+iD8DBQBHP21JrgeCgFmlPMERAq6KAKDIgUyRNrdLTaOyhH0laCZoXCe/9ACcC9A/T0GuGGM6qmGD
+EOhbLVRglRg=
 
 -->
