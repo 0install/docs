@@ -9,8 +9,6 @@
 	 git='http://repo.or.cz/w/0release.git'
 	 license='GNU Lesser General Public License'/>
 
-<p><strong>This program is under construction! Please check back soon!</strong></p>
-
 <p>
 <b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
 number and release date, tagging the release in your version control system and updating your Zero Install feed.
@@ -305,6 +303,12 @@ You can edit <b>make-release</b> to set some commands to automatically upload th
 <p>
 After publishing, you should also push the branch and tag ("master" and "v0.1" in this case) to
 your public GIT repository.
+</p>
+
+<h2>Customising the release process</h2>
+
+<p>
+For more information, see <a href='0release-phases.html'>release phases</a>.
 </p>
 
 </html>

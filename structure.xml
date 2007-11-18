@@ -45,7 +45,9 @@
     <item base='0compile' label='0compile'>
       <item base='0compile-scons' label='Example: SCons'/>
     </item>
-    <item base='0release' label='0release'/>
+    <item base='0release' label='0release'>
+      <item base='0release-phases' label='Release phases'/>
+    </item>
     <item base='feedlint' label='FeedLint'/>
   </item>
 

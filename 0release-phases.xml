@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Release phases</h2>
+
+<p>
+<a href='0release.html'>0release</a> can be used to create releases of your software from a version control system.
+It uses sensible defaults, allowing it to create releases for simple projects with very little configuration.
+For more complex projects, you can specify extra commands that should be run during the release process.
+</p>
+
+<toc level='h2'/>
+
+<h2>Example</h2>
+
+<p>
+For example, imagine that our hello-world example program now prints out a
+banner with its version number when run. <b>hello.py</b> now looks like this:
+</p>
+
+<pre>
+#!/usr/bin/env python
+version='0.1'
+print "Welcome to Hello World version %s" % version
+print "Hello World!"
+</pre>
+
+<p>
+We want to make sure that the number in the hello.py file is updated automatically when we make a new release.
+To do this, add a &lt;release:management&gt; element to your feed, like this:
+</p>
+
+<pre>
+&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"&gt;
+  &lt;name&gt;HelloWorld&lt;/name&gt;
+  &lt;summary&gt;minimal demonstration package for 0release&lt;/summary&gt;
+  &lt;description&gt;
+    This program outputs the message &quot;Hello World&quot;. You can create new releases of it
+    using 0release.
+  &lt;/description&gt;
+
+  <b>&lt;release:management xmlns:release='http://zero-install.sourceforge.net/2007/namespaces/0release'&gt;
+    &lt;release:action phase='commit-release'&gt;sed -i "s/^version='.*'$/version='$RELEASE_VERSION'/" hello.py&lt;/release:action&gt;
+  &lt;/release:management&gt;</b>
+  ...
+&lt;/interface&gt;
+</pre>
+
+<p>
+This tells 0release that during the <b>commit-release</b> phase (in which it updates the version number to the number chosen for the
+release) it should execute the given command, which updates the version line in the Python code. Of course, you can perform any
+action you want.
+</p>
+
+<h2>Phase: commit-release</h2>
+
+<dl>
+ <dt>Current directory</dt><dd>The working copy (under version control), as specified by the <b>id</b> attribute in the feed.</dd>
+ <dt>$RELEASE_VERSION</dt><dd>The version chosen for the new release.</dd>
+</dl>
+
+<p>
+These actions are run after the user has entered the version number for the new release. After the actions are run, 0release will
+update the local feed file with the new version number and commit all changes to the version control system.
+</p>
+
+<p>
+Any changes made to the working copy will therefore appear in both the history and also in the release archive.
+</p>
+
+<p>
+If your script fails (returns a non-zero exit status), 0release will abort but will not revert any changes made by the actions. You
+will have to manually revert any changes before 0release will allow you to restart the release process.
+</p>
+
+
+</html>
