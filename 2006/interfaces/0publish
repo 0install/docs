@@ -58,10 +58,13 @@
     <implementation id="sha1new=9a66a402355b0c444bd5d9c9dea7b94bc3f60bf0" released="2007-11-17" version="0.13">
       <archive extract="0publish-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.13.tar.bz2" size="22322"/>
     </implementation>
+    <implementation id="sha1new=8363677926fb1c85ae43da38ef246fb32c20198c" released="2007-11-18" self-test="tests/testall.py" version="0.14">
+      <archive extract="0publish-0.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.14.tar.bz2" size="22762"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHPxvDrgeCgFmlPMERAhNLAJ9beVpiNdzklu63Zf+pu3IXrbeV/ACfWrFKs1BemH+5TqLa
-TBiyo0Pt8hI=
+iD8DBQBHQCxErgeCgFmlPMERAl88AJ4rg357BFuhI4FLhH9iX0+sMdVEoACgk/bmdiWcVapN2Tqx
+7SKgEtpZ864=
 
 -->
