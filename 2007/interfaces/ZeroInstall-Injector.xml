@@ -28,17 +28,19 @@ requires first uninstalling another.</description>
   <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
     <!-- Update the copy of the version number -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; zeroinstall/__init__.py</release:action>
+    <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; zeroinstall/0launch-gui/gui.py</release:action>
+    <release:action phase="commit-release">0launch http://0install.net/2006/interfaces/0publish --set-released=today --set-version=&quot;$RELEASE_VERSION&quot; zeroinstall/0launch-gui/ZeroInstall-GUI.xml</release:action>
   </release:management>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" self-test="tests/allpython.sh">
-    <implementation id="sha1new=8966105627f53f74fccefdb086f4d8a28abd8fa9" released="2007-11-18" version="0.31">
-      <archive extract="zeroinstall-injector-0.31" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.31.tar.bz2" size="121385"/>
+    <implementation id="sha1new=e1ee85471047f0b800fef438c6b532914ff310ae" released="2007-11-18" version="0.31">
+      <archive extract="zeroinstall-injector-0.31" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.31.tar.bz2" size="121422"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQITJrgeCgFmlPMERAgwlAKCXCFAYdULdQCxqH6Wo7w0Abp+BewCgpLZ9I8J+IXjXZVIH
-9azLG2YVQgU=
+iD8DBQBHQJL+rgeCgFmlPMERAvl1AKDEUnkJi2ZMd08e4ivEANhmEaxS0QCg1P+hwx1E5CJjSRoV
+VJrDIHi2rEI=
 
 -->
