@@ -13,7 +13,7 @@
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release">
     <requires interface="http://0install.net/2006/interfaces/0publish">
       <version not-before="0.13"/>
-      <environment insert="0publish" name="0PUBLISH"/>
+      <environment insert="0publish" mode="replace" name="0PUBLISH"/>
     </requires>
     <implementation id="sha1new=3cbab8149d25e4bdc00056726a7ed97b2aa43f9c" released="2007-11-10" version="0.1">
       <archive extract="0release-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14643"/>
@@ -24,11 +24,14 @@
     <implementation id="sha1new=6c5c1c80426a3ecac80680e27c1adc4855f1ca24" released="2007-11-18" version="0.3">
       <archive extract="0release-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.3.tar.bz2" size="15963"/>
     </implementation>
+    <implementation id="sha1new=7f9605bc10edf28d31399d97e1f54e6862ff8fbb" released="2007-11-18" self-test="tests/testrelease.py" version="0.4">
+      <archive extract="0release-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.4.tar.bz2" size="27460"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQC4prgeCgFmlPMERAt/KAJwKHc2+3lF1YZSqPxEdBDGlvdBgvQCgvTb+61+kyCbwnlbb
-lCsNaGXvzRI=
+iD8DBQBHQJ6argeCgFmlPMERAgXyAJ0S397A4GUBYKSmScSiz0fYONNPIQCglQuliz4aMoM1pYRz
+6BEgdE5mIC8=
 
 -->
