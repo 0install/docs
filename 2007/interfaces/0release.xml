@@ -12,18 +12,12 @@
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release">
     <requires interface="http://0install.net/2006/interfaces/0publish">
-      <version not-before="0.11-post"/>
+      <version not-before="0.13"/>
       <environment insert="0publish" name="0PUBLISH"/>
     </requires>
     <implementation id="sha1new=3cbab8149d25e4bdc00056726a7ed97b2aa43f9c" released="2007-11-10" version="0.1">
       <archive extract="0release-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14643"/>
     </implementation>
-  </group>
-  <group>
-    <requires interface="http://0install.net/2006/interfaces/0publish">
-      <version not-before="0.13"/>
-      <environment insert="0publish" name="0PUBLISH"/>
-    </requires>
     <implementation id="sha1new=3f7e135e96ac04f5779313e60b5a9ec3a11f7c86" released="2007-11-18" version="0.2">
       <archive extract="0release-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.2.tar.bz2" size="15757"/>
     </implementation>
@@ -31,7 +25,7 @@
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQBxUrgeCgFmlPMERAjWpAKDZpXTcDAtTewFG177+WTHs+2ctZgCguXTJvUDvCjAGKXrn
-iepUaCKtZhA=
+iD8DBQBHQB2crgeCgFmlPMERAkLzAKCT4W3cqzb/QA1jgsJ6hJc++1EJAgCfZHwt9+EY+sxQYd9C
+k9xauxnbuK8=
 
 -->
