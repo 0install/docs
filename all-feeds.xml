@@ -19,6 +19,9 @@ depend on.
 This program provides a simple graphical interface for creating and editing
 these feeds.</feed>
 
+<feed uri="http://0install.net/2007/interfaces/0release.xml" name="0release" summary="Manage new releases with Zero Install" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0release.xml" category="Development">If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.</feed>
+
 <feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="Abiword" summary="AbiWord Word Processor" icon="feed_icons/Abiword.png" width="32" height="32" category="Office">AbiWord is a lightweight word processing application.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="Create ROX application launchers" icon="feed_icons/AddApp.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/AddApp" category="Utility">AddApp makes it easy to run Zero Install Injector applications from ROX-Filer.
@@ -216,6 +219,8 @@ that use the GTK+ library.</feed>
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
 Vector Graphics (SVG) file format. Supported SVG features include shapes, paths,
 text, markers, ...</feed>
+
+<feed uri="http://iki.fi/tuomov/dl/Ion3.xml" name="Ion3" summary="The keyboard friendly tiling tabbed window manager" icon="tango/applications-system.png" width="48" height="48" homepage="http://iki.fi/tuomov/ion/" category="Unknown"></feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Keyboard" name="Keyboard" summary="Keyboard configuration applet" icon="feed_icons/Keyboard.png" width="50" height="50" homepage="http://rox.sourceforge.net/desktop/Keyboard" category="Settings">This configuration tool lets you configure keyboard settings, including the
 keyboard layout, key repeat, cursor blinking, and keybindings.
@@ -547,8 +552,8 @@ Displays Shared/Unshared/Swapped memory for each process; state indicator beside
 each process shows current state (running, sleeping, etc); popup menu allows
 processes to be ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="Notification area panel applet" icon="feed_icons/SystemTrayN.png" width="57" height="32" homepage="http://www.kerofin.demon.co.uk/rox/systemtrayn.html" category="Utility">This panel applet provides a system tray (also known as
-a notification area) for ROX.
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN" name="SystemTrayN" summary="Notification area panel applet" icon="feed_icons/SystemTrayN.png" width="57" height="32" homepage="http://www.kerofin.demon.co.uk/rox/systemtrayn.html" category="Utility">This panel applet provides a system tray (also known as a notification area) for
+ROX.
 
 This is based on the SystemTray applet, but updated.</feed>
 

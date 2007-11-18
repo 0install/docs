@@ -4,11 +4,11 @@
   <name>0release</name>
   <summary>manage new releases with Zero Install</summary>
   <description>
-    If you have a local feed in the development version of your program,
-    0release can help you to create new releases easily.
-  </description>
+If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.</description>
 
   <homepage>http://0install.net/0release.xml</homepage>
+  <category>Development</category>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release">
     <requires interface="http://0install.net/2006/interfaces/0publish">
@@ -31,7 +31,7 @@
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQJ6argeCgFmlPMERAgXyAJ0S397A4GUBYKSmScSiz0fYONNPIQCglQuliz4aMoM1pYRz
-6BEgdE5mIC8=
+iD8DBQBHQJ9irgeCgFmlPMERAihvAJ0boOTKdVB1uqztt02OOVp36uMX8gCgw+NM8MK9A/sh+smf
+8f19IZLdVcw=
 
 -->
