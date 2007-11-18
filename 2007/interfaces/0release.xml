@@ -21,11 +21,14 @@
     <implementation id="sha1new=3f7e135e96ac04f5779313e60b5a9ec3a11f7c86" released="2007-11-18" version="0.2">
       <archive extract="0release-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.2.tar.bz2" size="15757"/>
     </implementation>
+    <implementation id="sha1new=6c5c1c80426a3ecac80680e27c1adc4855f1ca24" released="2007-11-18" version="0.3">
+      <archive extract="0release-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.3.tar.bz2" size="15963"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQB2crgeCgFmlPMERAkLzAKCT4W3cqzb/QA1jgsJ6hJc++1EJAgCfZHwt9+EY+sxQYd9C
-k9xauxnbuK8=
+iD8DBQBHQC4prgeCgFmlPMERAt/KAJwKHc2+3lF1YZSqPxEdBDGlvdBgvQCgvTb+61+kyCbwnlbb
+lCsNaGXvzRI=
 
 -->
