@@ -184,10 +184,6 @@ The injector tells you that a new version is available, but it doesn't say what 
 should provide a link to the program's release notes on the web.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
 </dd>
-
-<dt>Support for RPM-installed packages</dt>
-<dd>Zero Install can tell when an APT-installed package is available and may use that instead of downloading
-anything itself. We should add similar support for RPM-installed packages.</dd>
 </dl>
 
 <h3>Other possible features</h3>
