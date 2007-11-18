@@ -13,6 +13,8 @@ number of people, as it is the preferred method of installation for <a
 href='http://rox.sourceforge.net'>ROX</a>, and is generally quite robust.
 </p>
 
+<toc level='h3'/>
+
 <h3>File format stability</h3>
 
 <p>
@@ -135,6 +137,18 @@ and storing a second copy of the library. The user should still have the option 
 if they want though (e.g., if they want to try a newer version).
 See <a href='distribution-integration.html'>Distribution Integration</a> for
 details. Since 0.28.
+</dd>
+
+<dt>RPM integration</dt>
+<dd>
+As above, but for RPM. Since 0.31.
+</dd>
+
+<dt>Implementation bindings</dt>
+<dd>
+In addition to attaching bindings to dependencies (which tell Zero Install how to tell a component about where its
+libraries are), it is now also possible to attach bindings directly to implementations (to tell them where
+they themselves are located). This simplifies packaging certain programs. Since 0.31.
 </dd>
 
 </dl>
