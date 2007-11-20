@@ -23,11 +23,14 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
     <implementation id="sha1new=c991f84fcb4461d2a8980dc5854f12a10b1f8fbf" released="2007-07-28" stability="stable" version="0.3">
       <archive extract="feedlint-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.3.tar.bz2" size="10101"/>
     </implementation>
+    <implementation id="sha1new=10557be412c997eb06e0b7ab315addfd36ef0883" released="2007-11-20" version="0.4">
+      <archive extract="feedlint-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.4.tar.bz2" size="10283"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHP21JrgeCgFmlPMERAq6KAKDIgUyRNrdLTaOyhH0laCZoXCe/9ACcC9A/T0GuGGM6qmGD
-EOhbLVRglRg=
+iD8DBQBHQzIKrgeCgFmlPMERAgS8AKDPara+vCXsM7LvZhV/rSjKP534+QCfQy3XAAu4N60heEHF
+4PNCCipI3BQ=
 
 -->
