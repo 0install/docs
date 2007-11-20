@@ -6,7 +6,7 @@
 <program name='FeedLint'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/FeedLint.xml'
-	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/feedlint'
+	 git='http://repo.or.cz/w/FeedLint.git'
 	 license='GNU General Public License'/>
 
 <p>
