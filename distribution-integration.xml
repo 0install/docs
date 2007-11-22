@@ -83,8 +83,8 @@ was available, or if you preferred to use a native package for some reason.
 </p>
 
 <p>
-Finally, Zero Install can only get package information from .deb-based systems
-at present. RPM (and other systems) are not currently supported, although
+Finally, Zero Install can only get package information from Debian and RPM-based systems
+at present. Slackware and other systems are not currently supported, although
 adding support should be easy enough now that we have the framework.
 </p>
 
