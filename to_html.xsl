@@ -70,7 +70,7 @@
   <xsl:template match='/*'>
     <html xml:lang='en' lang='en'>
       <head>
-        <link rel="alternate" type="application/rss+xml" title="Thomas Leonard's blog" href="http://rox.sourceforge.net/desktop/blog/1/feed" />
+        <link rel="alternate" type="application/rss+xml" title="Thomas Leonard's blog" href="http://roscidus.com/desktop/blog/1/feed" />
         <link rel='stylesheet' type='text/css' href='style.css' />
         <title>The Zero Install system</title>
       </head>
