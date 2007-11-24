@@ -179,9 +179,9 @@ file system, the used size and the size available.
 Hold down the right mouse button for a menu.  ...</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/Freetype2.xml" name="Freetype2" summary="Free, portable library for digital typography" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.freetype.org/" category="Library">FreeType 2 is a high-quality and portable font engine that is capable of
-supporting several font formats (be they bitmapped or scalable) through a
-simple and uniform interface. Its design is modular and allows independent
-"font driver" modules to be ...</feed>
+supporting several font formats (be they bitmapped or scalable) through a simple
+and uniform interface. Its design is modular and allows independent "font
+driver" modules to be ...</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="Set the gamma correction for your screen" icon="feed_icons/Gamma.png" width="47" height="36" homepage="http://rox.sourceforge.net/desktop/Gamma" category="Settings">Gamma is a simple program to set the on-screen gamma correction (using the
 xgamma command, installed with XFree86). You can either set the Red, Green and
@@ -192,6 +192,11 @@ number of targets and nearly all features of Digital Mars D.
 
 D is a systems programming language. Its focus is on combining the power and
 high performance of C and C++ with ...</feed>
+
+<feed uri="http://konstelacioj.info/0install/feeds/geany.xml" name="Geany" summary="A small and fast IDE" icon="feed_icons/geany.png" width="32" height="32" homepage="http://geany.uvena.de/" category="Development">Geany is a text editor using the GTK2 toolkit with basic features of an
+integrated development environment. It was developed to provide a small and fast
+IDE, which has only a few dependencies from other packages. It supports many
+filetypes and has some ...</feed>
 
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="Headers for compiling GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the GLib header files. They are required when compiling applications
 that use the GLib library.</feed>
@@ -456,6 +461,11 @@ redo, load &amp; save ...</feed>
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck. Libwnck is a library used by
 pagers and tasklists.</feed>
 
+<feed uri="http://rox.sourceforge.net/2007/interfaces/Reinteract.xml" name="Reinteract-ROX" summary="A system for interactive experimentation with python" icon="feed_icons/Reinteract.png" width="64" height="32" homepage="http://www.reinteract.org/" category="Unknown">Reinteract is a system for interactive experimentation with python. You enter
+Python code and expressions and immediately see the results. What distinguishes
+Reinteract from a shell (such as IPython or the builtin interactive mode) is
+that you can go ...</feed>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Resolution" name="Resolution" summary="Change screen resolution dynamically" icon="feed_icons/Resolution.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Resolution" category="Settings">This program allows you to change the screen resolution at any time. The change
 is not permanent. This is useful when connecting a laptop to an external monitor
 or a projector, for example, which may require a different screen resolution.
@@ -579,6 +589,12 @@ Tide automatically writes the file out as you edit ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="Sets time and date" icon="feed_icons/Time.xml.png" width="48" height="48" category="Unknown">Use this app to set the time and date.
 You need the system-tools-backends to make it work.</feed>
+
+<feed uri="http://rox4debian.berlios.de/0install/TrayLib.xml" name="TrayLib" summary="Library for tray-like applets" icon="tango/applications-system.png" width="48" height="48" category="Library">TrayLib is a python module that eases the creation of tray-like applets. These
+are applets that mainly consist of a box, which contains some icons representing
+some objects in the system.
+
+It is used by TaskTray and DevTray.</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/UserModeLinux.xml" name="UserModeLinux" summary="Run Linux inside itself" icon="feed_icons/UserModeLinux.png" width="36" height="52" homepage="http://user-mode-linux.sourceforge.net" category="System">User-Mode Linux is a safe, secure way of running Linux versions and Linux
 processes. Run buggy software, experiment with new Linux kernels or
