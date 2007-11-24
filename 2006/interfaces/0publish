@@ -5,17 +5,16 @@
   <name>0publish</name>
   <summary>utility to make creating injector interfaces easier</summary>
   <description>
-    0publish makes creating and modifying injector interface files easier.
-    It can create a new commented template for you or edit an existing one.
+0publish makes creating and modifying injector interface files easier. It can
+create a new commented template for you or edit an existing one.
 
-    Various editing operations are available, the most basic being to let you
-    edit it in your preferred text editor. It automatically removes the
-    signature when loading an interface and creates a new one when writing it
-    back out. It will also validate the new version before saving it.
+Various editing operations are available, the most basic being to let you edit
+it in your preferred text editor. It automatically removes the signature when
+loading an interface and creates a new one when writing it back out. It will
+also validate the new version before saving it.
 
-    A tutorial on 0publish can be found at
-    http://0install.net/injector-packagers.html.
-  </description>
+A tutorial on 0publish can be found at http://0install.net/injector-
+packagers.html.</description>
   <homepage>http://0install.net/0publish.html</homepage>
 
   <group main="0publish">
@@ -55,16 +54,16 @@
     <implementation id="sha1new=509e055fd62e9925f73238660e35212ded8a6a64" released="2007-11-10" stability="stable" version="0.12">
       <archive extract="0publish-0.12" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.12.tar.bz2" size="17974"/>
     </implementation>
-    <implementation id="sha1new=9a66a402355b0c444bd5d9c9dea7b94bc3f60bf0" released="2007-11-17" version="0.13">
+    <implementation id="sha1new=9a66a402355b0c444bd5d9c9dea7b94bc3f60bf0" released="2007-11-17" stability="stable" version="0.13">
       <archive extract="0publish-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.13.tar.bz2" size="22322"/>
     </implementation>
-    <implementation id="sha1new=8363677926fb1c85ae43da38ef246fb32c20198c" released="2007-11-18" self-test="tests/testall.py" version="0.14">
+    <implementation id="sha1new=8363677926fb1c85ae43da38ef246fb32c20198c" released="2007-11-18" self-test="tests/testall.py" stability="stable" version="0.14">
       <archive extract="0publish-0.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.14.tar.bz2" size="22762"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQCxErgeCgFmlPMERAl88AJ4rg357BFuhI4FLhH9iX0+sMdVEoACgk/bmdiWcVapN2Tqx
-7SKgEtpZ864=
+iD8DBQBHSCg7rgeCgFmlPMERAugDAKDLTeT9grF4kbiz8TMzCLz/GUQxfQCgpq7SyqlwRQ5UMPfg
+Rve/1Onsx38=
 
 -->
