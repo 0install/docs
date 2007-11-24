@@ -14,7 +14,7 @@ stuff.</description>
   <package-implementation package="libneon26"/>
   <group>
     <implementation arch="Linux-i386" id="sha1new=7b8af150db54970958b9419b544556b6aab54496" released="2007-01-20" stability="stable" version="0.26.2" version-modifier="-3.1">
-    <archive href="http://ftp.uk.debian.org/debian/pool/main/n/neon26/libneon26_0.26.2-3.1_i386.deb" size="118850" type="application/x-deb"/>
+    <archive href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/libneon26_0.26.2-3.1_i386.deb" size="118850" type="application/x-deb"/>
   </implementation>
     <requires interface="http://0install.net/2007/3rd-party/libssl0.9.8.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
@@ -22,7 +22,7 @@ stuff.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdrbKBSn9tx+xORARArbrAJ95LD0bXTYrneXy1elUoifgroZaSwCgmJQXeSNX7lnf8dq5
-Pqof5azX7yA=
+iD8DBQBHSCXfBSn9tx+xORARApQKAJ0U9oVE/2lkREENbmaluYAxJQxrWwCdGPMuElbuEyJLIzGb
+9Eu5JCYUHwM=
 
 -->
