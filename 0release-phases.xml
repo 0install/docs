@@ -73,5 +73,32 @@ If your script fails (returns a non-zero exit status), 0release will abort but w
 will have to manually revert any changes before 0release will allow you to restart the release process.
 </p>
 
+<h2>Phase: generate-archive</h2>
+
+<dl>
+ <dt>Current directory</dt><dd>A temporary directory created by unpacking the archive exported from the SCM.</dd>
+ <dt>$RELEASE_VERSION</dt><dd>The version chosen for the new release.</dd>
+</dl>
+
+<p>
+Once the release version is committed to version control, 0release exports that revision to a temporary directory.
+After running all the actions in this phase, the release tarball is created from the final state of the directory.
+Use this phase to generate files that should be in the release archive but not in the tagged revision under version
+control. Typical actions here are:
+</p>
+
+<ul>
+<li>Running 'autoconf' to create a 'configure' script.</li>
+<li>Building translations (.mo files) from source .po files.</li>
+<li>Building documentation (e.g. HTML from DocBook sources).</li>
+</ul>
+
+<p>
+Notice that all the above generate <i>platform independent</i> files.
+<i>Do not</i> compile to platform-specific binaries here (e.g. do not compile
+C source files to executables). For such programs, you need one source package
+and multiple binary packages (one for each architecture). Use 0release to create
+the source release, and use <a href='0compile.html'>0compile</a> to create the binaries.
+</p>
 
 </html>
