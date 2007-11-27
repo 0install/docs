@@ -311,4 +311,47 @@ your public GIT repository.
 For more information, see <a href='0release-phases.html'>release phases</a>.
 </p>
 
+<h2>Unpublishing a release</h2>
+
+<p>
+So, you didn't test the release properly, and now you want to pull it down, eh?
+</p>
+
+<p>
+The best way to do this is to use 0publish-gui to set the stability to BUGGY, and
+then publish a new fixed release, with a new version number.
+</p>
+
+<p>
+But if you <i>really</i> insist on trying to unpublish a release and pretending it never
+happened, here's what you have to do:
+</p>
+
+<ol>
+<li>
+<p>
+Edit the master feed (e.g. with 0publish-gui) and delete the new &lt;implementation&gt;.
+Don't just use a text editor; the signature needs updating too! Push the new version to
+your server.
+</p>
+<p>
+Note: if you keep your feed under version control then you could revert the
+change. However, if anyone got the new version before you reverted it, then
+0launch will refuse to go back to the previous version, assuming that this is a
+replay attack. So create a new signature, with a fresh time-stamp.
+</p></li>
+<li>
+<p>
+Reset HEAD to before the release (e.g. "git-reset --hard v0.1^") and delete the tag
+itself (e.g. "git-tag -d v0.1"). Delete the remote tag at the server (e.g.
+"git-push main :v0.1 master"). Like 0launch, if anyone saw the release in GIT, their
+GIT will refuse to go back to an older version. Tell them to use '-f'.
+</p>
+</li>
+<li>
+Delete the tarball from your server.
+</li>
+</ol>
+
+
 </html>
