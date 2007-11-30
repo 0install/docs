@@ -225,19 +225,26 @@ was (it stores the current status in a new <b>release-status</b> file).
 
 <p>
 As well as exporting the release archive, 0release also updates your GIT repository
-by committing two new revisions. You can see them using <b>git log</b> or <b>gitk</b>:
+by committing two new revisions. You can see them using <b>gitk --all</b>:
 </p>
 
 <p style='text-align: center'>
-<img width="409" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
+<img width="491" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
 </p>
 
 <p>
-The first revision (remotes/origin/master) is the 0.1-pre development snapshot you started with.
-The next revision (Release 0.1) is the version that was released. Its local feed has the version
-"0.1" and today's date as the release date. The latest revision (master) has a version of "0.1-post"
-and removes the release date again. Note that the release hasn't been tagged yet in GIT, but 0release
-has recorded the revision ID in case you decide to accept the release candidate.
+The first revision (master) is the 0.1-pre development snapshot you started with. This is also the
+currently checked-out version. 0release has created a new branch called "0release-tmp" with two
+new revisions. "Release 0.1" is the version that will be released. Its local feed has the version
+"0.1" and today's date as the release date. The archive was created from this revision.
+The next revision has a version of "0.1-post" and removes the release date
+again. Note that the release hasn't been tagged yet in GIT, but 0release has
+recorded the revision ID in case you decide to accept the release candidate.
+</p>
+
+<p>
+If you discover any problems you can go ahead and commit a fix, which will appear on the master
+branch (not on the "0release-tmp" branch, which will be discarded if you fail the release).
 </p>
 
 <h2>Accepting the release candidate</h2>
@@ -270,7 +277,8 @@ your GPG public key.
 </p>
 
 <p>
-If you check your GIT repository, you'll see that 0release has now tagged the release:
+If you check your GIT repository, you'll see that 0release has now tagged the release,
+and updated the "master" branch to the tip of the temporary branch:
 </p>
 
 <p style='text-align: center'>
@@ -279,8 +287,8 @@ If you check your GIT repository, you'll see that 0release has now tagged the re
 
 <p>
 If, instead, you had found a problem with the release you would have selected <b>Fail</b> at
-the prompt. 0release would have removed the two revisions (putting "master" back to where it was
-before starting the release) and deleted the temporary files.
+the prompt. 0release would have removed the temporary branch (leaving "master" where it was)
+and deleted the temporary files.
 </p>
 
 <h2>Uploading the files</h2>
