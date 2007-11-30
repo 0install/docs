@@ -30,11 +30,14 @@ can help you to create new releases easily.</description>
     <implementation id="sha1new=f2b5fd0b0b3b14c489aee6ca2b8d73f2ea1baa7c" released="2007-11-25" self-test="tests/testrelease.py" version="0.5">
       <archive extract="0release-0.5" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.5.tar.bz2" size="27639"/>
     </implementation>
+    <implementation id="sha1new=6295c217fc5ee80dd8797bb68f728ae33a86eb26" released="2007-11-30" self-test="tests/testall.py" version="0.6">
+      <archive extract="0release-0.6" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.6.tar.bz2" size="30064"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHSw/lrgeCgFmlPMERAtbdAJ4p+SyGwsdLMmisYd1B9ugDsCRxsQCgxl87c2ycFHoYTykR
-S12OPx7AI1Y=
+iD8DBQBHUGcCrgeCgFmlPMERAt0fAKDEtAA2FIjFJrWtVbUnYsdfsGnjBACfdK0BXwNv1qzmo+cV
+TcQngWqyJtY=
 
 -->
