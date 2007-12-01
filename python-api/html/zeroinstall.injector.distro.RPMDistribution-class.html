@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>zeroinstall.injector.model.InterfaceDependency</title>
+  <title>zeroinstall.injector.distro.RPMDistribution</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,8 +44,8 @@
       <span class="breadcrumbs">
         <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
         <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
-        <a href="zeroinstall.injector.model-module.html">Module&nbsp;model</a> ::
-        Class&nbsp;InterfaceDependency
+        <a href="zeroinstall.injector.distro-module.html">Module&nbsp;distro</a> ::
+        Class&nbsp;RPMDistribution
       </span>
     </td>
     <td>
@@ -53,29 +53,23 @@
         <!-- hide/show private -->
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.model.InterfaceDependency-class.html"
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.distro.RPMDistribution-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class InterfaceDependency</h1><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#InterfaceDependency">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class RPMDistribution</h1><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#RPMDistribution">source&nbsp;code</a></span><br /><br />
 <pre class="base-tree">
-object --+    
-         |    
-<a href="zeroinstall.injector.model.Dependency-class.html">Dependency</a> --+
-             |
-            <strong class="uidshort">InterfaceDependency</strong>
+  object --+    
+           |    
+<a href="zeroinstall.injector.distro.Distribution-class.html">Distribution</a> --+
+               |
+              <strong class="uidshort">RPMDistribution</strong>
 </pre>
 
 <hr />
-A Dependency on a Zero Install interface.<br /><br />
-
-<hr />
-      <p><strong>Since:</strong>
-        0.28
-      </p>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -97,10 +91,8 @@ A Dependency on a Zero Install interface.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.InterfaceDependency-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">restrictions</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">metadata</span>=<span class="summary-sig-default">None</span>)</span><br />
+    <span class="summary-sig"><a href="zeroinstall.injector.distro.RPMDistribution-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">db_dir</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for 
       signature
   </td>
@@ -109,8 +101,24 @@ A Dependency on a Zero Install interface.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model.InterfaceDependency-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      str(x)
+    <span class="summary-sig"><a href="zeroinstall.injector.distro.RPMDistribution-class.html#load_cache" class="summary-sig-name">load_cache</a>(<span class="summary-sig-arg">self</span>)</span>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.distro.RPMDistribution-class.html#generate_cache" class="summary-sig-name">generate_cache</a>(<span class="summary-sig-arg">self</span>)</span>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">&nbsp;</code>
+  </td><td class="summary">
+    <span class="summary-sig"><a href="zeroinstall.injector.distro.RPMDistribution-class.html#get_package_info" class="summary-sig-name">get_package_info</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">factory</span>)</span><br />
+      Get information about the given package.
   </td>
 </tr>
   <tr>
@@ -123,7 +131,8 @@ A Dependency on a Zero Install interface.<br /><br />
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
       <code>__repr__</code>,
-      <code>__setattr__</code>
+      <code>__setattr__</code>,
+      <code>__str__</code>
       </p>
     </td>
   </tr>
@@ -151,62 +160,9 @@ A Dependency on a Zero Install interface.<br /><br />
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.model.InterfaceDependency-class.html#__slots__">__slots__</a> = <code title="['interface', 'restrictions', 'bindings', 'metadata']">['interface', 'restrictions', 'bindings', 'metadata']</code>
+    <a href="zeroinstall.injector.distro.RPMDistribution-class.html#cache_leaf">cache_leaf</a> = <code title="'rpm-status.cache'">'rpm-status.cache'</code>
   </td>
 </tr>
-</table>
-
-<br />
-<!-- ==================== INSTANCE VARIABLES ==================== -->
-<a name="section-InstanceVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[<a href="zeroinstall.injector.model.Binding-class.html" 
-      class="link">Binding</a>]</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.InterfaceDependency-class.html#bindings">bindings</a><br />
-      how to make the choice of implementation known
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.InterfaceDependency-class.html#interface">interface</a><br />
-      the interface required by this dependency
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[<a href="zeroinstall.injector.model.Restriction-class.html" 
-      class="link">Restriction</a>]</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.InterfaceDependency-class.html#restrictions">restrictions</a><br />
-      a list of constraints on acceptable implementations
-  </td>
-</tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="zeroinstall.injector.model.Dependency-class.html">Dependency</a></code></b>:
-      <code><a href="zeroinstall.injector.model.Dependency-class.html#metadata">metadata</a></code>
-      </p>
-    </td>
-  </tr>
 </table>
 
 <br />
@@ -263,13 +219,11 @@ A Dependency on a Zero Install interface.<br /><br />
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">restrictions</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">metadata</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">db_dir</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#InterfaceDependency.__init__">source&nbsp;code</a></span>&nbsp;</span
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#RPMDistribution.__init__">source&nbsp;code</a></span>&nbsp;</span
     ></td>
   </table>
   
@@ -277,30 +231,72 @@ A Dependency on a Zero Install interface.<br /><br />
   signature
   <dl><dt></dt><dd>
     <dl><dt>Overrides:
-      <a href="zeroinstall.injector.model.Dependency-class.html#__init__">Dependency.__init__</a>
+      object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
     </dt></dl>
   </dd></dl>
 </td></tr></table>
 </div>
-<a name="__str__"></a>
+<a name="load_cache"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_cache</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#InterfaceDependency.__str__">source&nbsp;code</a></span>&nbsp;</span
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#RPMDistribution.load_cache">source&nbsp;code</a></span>&nbsp;</span
     ></td>
   </table>
   
-  str(x)
+  None
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="generate_cache"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_cache</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#RPMDistribution.generate_cache">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  None
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+</div>
+<a name="get_package_info"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_package_info</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">factory</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#RPMDistribution.get_package_info">source&nbsp;code</a></span>&nbsp;</span
+    ></td>
+  </table>
+  
+  Get information about the given package. Add zero or more 
+  implementations using the factory (typically at most two will be added; 
+  the currently installed version and the latest available).
   <dl><dt></dt><dd>
     <dl><dt>Overrides:
-      object.__str__
+      <a href="zeroinstall.injector.distro.Distribution-class.html#get_package_info">Distribution.get_package_info</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt></dl>
   </dd></dl>
@@ -325,79 +321,19 @@ A Dependency on a Zero Install interface.<br /><br />
   </td>
 </tr>
 </table>
-<a name="__slots__"></a>
+<a name="cache_leaf"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">__slots__</h3>
+  <h3 class="epydoc">cache_leaf</h3>
   None
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['interface', 'restrictions', 'bindings', 'metadata']                  
+'rpm-status.cache'                                                     
       </pre></td></tr></table></dd>
     </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
-<a name="section-InstanceVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="bindings"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">bindings</h3>
-  how to make the choice of implementation known
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>[<a href="zeroinstall.injector.model.Binding-class.html" 
-      class="link">Binding</a>]</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="interface"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">interface</h3>
-  the interface required by this dependency
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>str</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="restrictions"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">restrictions</h3>
-  a list of constraints on acceptable implementations
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>[<a href="zeroinstall.injector.model.Restriction-class.html" 
-      class="link">Restriction</a>]</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -433,7 +369,7 @@ A Dependency on a Zero Install interface.<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:02 2007</td>
+        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>

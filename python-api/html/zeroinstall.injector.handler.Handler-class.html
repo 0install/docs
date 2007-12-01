@@ -68,16 +68,8 @@ object --+
 </pre>
 
 <hr />
-<p>Integrates download callbacks with an external mainloop. While things 
-  are being downloaded, Zero Install returns control to your program. Your 
-  mainloop is responsible for monitoring the state of the downloads and 
-  notifying Zero Install when they are complete.</p>
-  To do this, you supply a <a 
-  href="zeroinstall.injector.handler.Handler-class.html" 
-  class="link">Handler</a> to the <a 
-  href="zeroinstall.injector.policy-module.html" class="link">policy</a>. 
-  To integrate with your own mainloop, you can either subclass or replace 
-  this.<br /><br />
+This implementation of the handler interface uses the GLib 
+  mainloop.<br /><br />
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -100,7 +92,8 @@ object --+
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+    <span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mainloop</span>=<span class="summary-sig-default">None</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for 
       signature
   </td>
@@ -194,7 +187,35 @@ object --+
   <td width="15%" align="right" valign="top" class="summary">
     <code class="summary-type">&nbsp;</code>
   </td><td class="summary">
-    <a href="zeroinstall.injector.handler.Handler-class.html#__slots__">__slots__</a> = <code title="['monitored_downloads']">['monitored_downloads']</code>
+    <a href="zeroinstall.injector.handler.Handler-class.html#__slots__">__slots__</a> = <code title="['monitored_downloads', '_loop']">['monitored_downloads', '_loop']</code>
+  </td>
+</tr>
+</table>
+
+<br />
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td width="15%" align="right" valign="top" class="summary">
+    <code class="summary-type">{URL: (error_stream, )}</code>
+  </td><td class="summary">
+    <a href="zeroinstall.injector.handler.Handler-class.html#monitored_downloads">monitored_downloads</a><br />
+      dict of downloads in progress
   </td>
 </tr>
 </table>
@@ -252,7 +273,8 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mainloop</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -435,9 +457,41 @@ object --+
   <dl><dt></dt><dd>
     <dl><dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-['monitored_downloads']                                                
+['monitored_downloads', '_loop']                                       
       </pre></td></tr></table></dd>
     </dl>
+  </dd></dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="monitored_downloads"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">monitored_downloads</h3>
+  dict of downloads in progress
+  <dl><dt></dt><dd>
+    <dl><dt>Type:</dt>
+      <dd>{URL: (error_stream, )}</dd></dl>
   </dd></dl>
 </td></tr></table>
 </div>
@@ -473,7 +527,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Jun 16 19:26:43 2007</td>
+        3.0alpha3 on Sat Dec  1 12:35:02 2007</td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
     </td>
