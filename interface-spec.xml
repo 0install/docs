@@ -61,7 +61,7 @@ namespace):
 	   uri='...' ? &gt;
   &lt;name&gt;...&lt;/name&gt;
   &lt;summary&gt;...&lt;/summary&gt;
-  &lt;description&gt;...&lt;/description&gt;
+  &lt;description&gt;...&lt;/description&gt; ?
   &lt;homepage&gt;...&lt;/homepage&gt; ?
   &lt;category type='...' ? &gt;...&lt;/category&gt; *
   &lt;needs-terminal/&gt; ?
@@ -94,7 +94,7 @@ URL, to prevent an attacker replacing one correctly-signed feed with another (e.
 <dt>&lt;name&gt;</dt> <dd>a short name to identify the interface (e.g. "Foo")</dd>
 <dt>&lt;summary&gt;</dt> <dd>a short one-line description; the first word should
 not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
-<dt>&lt;description&gt;</dt> <dd>a full description, which can be several paragraphs long</dd>
+<dt>&lt;description&gt;</dt> <dd>a full description, which can be several paragraphs long (optional since 0.32, but recommended)</dd>
 <dt>&lt;homepage&gt;</dt> <dd>the URL of a web-page describing this interface in more detail</dd>
 <dt>&lt;category&gt;</dt> <dd>a classification for the interface. If no type is given, then the category is one of the
 'Main' categories defined by the <a href='http://standards.freedesktop.org/menu-spec/latest/apa.html'>freedesktop.org menu specification</a>. Otherwise, it is a URI giving the namespace for the category.</dd>
