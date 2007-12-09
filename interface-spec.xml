@@ -159,7 +159,7 @@ the closest ancestor &lt;group&gt; which defines it):
 	stability='...' ?
 	langs='...' ?
 	arch='...' ? &gt;
-    &lt;manifest-digest algorithm='...' value='...' /> *
+    &lt;manifest-digest [digest] * /> *
     [ retrieval-method ] *
     [binding] *
   &lt;/implementation&gt;
@@ -237,8 +237,13 @@ directory structure whose digest matches the one in the <b>id</b>).
 The <b>manifest-digest</b> element can be used to give the digest using other
 algorithms (in addition to the one used in the <b>id</b> attribute). It is
 currently ignored. This is to allow a smooth upgrade to newer digest algorithms
-without breaking old clients.
+without breaking old clients. Each non-namespaced attribute gives a digest, with
+the attribute name being the algorithm. For example:
 </p>
+
+<pre>
+&lt;manifest-digest sha256="4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a"/>
+</pre>
 
 <p>
 Unrecognised elements inside an implementation are ignored. Currently, the
