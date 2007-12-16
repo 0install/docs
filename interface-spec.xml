@@ -203,8 +203,8 @@ the closest ancestor &lt;group&gt; which defines it):
  This is the directory that would end up inside <b>/usr/share/doc</b> on a traditional Linux system.</dd>
 
  <dt>released</dt>
- <dd>The date this implementation was made available, in the format YYYY-MM-DD. For developer snapshots (e.g., a
- CVS checkout) this is typically set to <b>Snapshot</b>.</dd>
+ <dd>The date this implementation was made available, in the format YYYY-MM-DD. For development versions checked
+ out from version control this attribute should not be present.</dd>
 
  <dt>stability</dt>
  <dd>The default stability rating for this implementation. If not present, <b>testing</b> is used.
@@ -420,12 +420,6 @@ injector may choose an implementation.
 
 <p>For example, <b>&lt;version not-before='2.4' before='2.6'&gt;</b> allows any of these
 versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
-</p>
-
-<p>
-Note: to specify the highest <i>suitable</i> version, just add ".0" to the end:
-<b>before='2.4.3.0'</b> will allow any version up to <i>and including</i> 2.4.3
-to be selected.
 </p>
 
 <h2>Bindings</h2>
@@ -729,9 +723,10 @@ will be ignored as a normal comment.
 <h2>Future plans</h2>
 
 <ul>
- <li>The extra meta-data elements need to be better specified, especially the format of the license element.</li>
+ <li>The extra meta-data elements need to be better specified.</li>
  <li>In addition to &lt;version&gt;, it should be possible to specifically exclude certain versions or ranges
  of versions so you can say, for example: "2.0 &lt;= version &lt; 3 and version != 2.57".</li>
+ <li>As well as before and not-before, we should support after and not-after.</li>
  <li>Additional &lt;recipe&gt; step types should be supported, such as &lt;apply-patch&gt;.</li>
  <li>It should be possible to state that a &lt;requires&gt; is actually optional (or only needed if
  some local library isn't available).</li>
