@@ -46,11 +46,20 @@ For a full tutorial, see 0compile's homepage.</description>
     <implementation id="sha1new=b9ca4f1cf34648b6b241ae23f7139b66236dd207" released="2007-06-10" stability="stable" version="0.9">
       <archive extract="0compile-0.9" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
     </implementation>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.28"/>
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+      <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" version="0.10">
+      <archive extract="0compile-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.10.tar.bz2" size="22979"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdvT4rgeCgFmlPMERAtgzAJ45Zdy8fxe/f26S04owbM5Zd7mKFwCfYRyGANcYRhd8ksfx
-gyncbf/VnXI=
+iD8DBQBHb+M+rgeCgFmlPMERAhxRAJ49RXUL+EdKIME7PWEsh6ZQZHHKYwCgi+qXMYiwSIMNfeCD
+hQTV0C7L8RU=
 
 -->
