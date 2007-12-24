@@ -25,6 +25,8 @@ requires first uninstalling another.</description>
   <icon href="http://0install.net/feed_icons/Zero2Desktop.png" type="image/png"/>
   <category>System</category>
 
+  <package-implementation main="/usr/bin/0launch" package="zeroinstall-injector"/>
+
   <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
     <!-- Update the copy of the version number -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; zeroinstall/__init__.py</release:action>
@@ -40,7 +42,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHQJL+rgeCgFmlPMERAvl1AKDEUnkJi2ZMd08e4ivEANhmEaxS0QCg1P+hwx1E5CJjSRoV
-VJrDIHi2rEI=
+iD8DBQBHb9KqrgeCgFmlPMERArWVAJ9DXFaC6LTiOxKUfbyW2buL7vJPCwCfdtpYKcxuxJwpiLJU
+LPMHmGOmwxw=
 
 -->
