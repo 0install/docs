@@ -74,16 +74,7 @@ http://0install.net/2006/autopackage/opencity.xml
 http://0install.net/2006/autopackage/sear.xml
 http://0install.net/2006/3rd-party/GDC.xml
 http://0install.net/2006/3rd-party/SCons.xml
-http://0install.net/2005/interfaces/injector-gui
 http://0install.net/2006/interfaces/0publish
-http://people.freenet.de/LinuxCNC/0install/barrage
-http://people.freenet.de/LinuxCNC/0install/lbreakout
-http://people.freenet.de/LinuxCNC/0install/lgeneral
-http://people.freenet.de/LinuxCNC/0install/libmikmod
-http://people.freenet.de/LinuxCNC/0install/lmarbles
-http://people.freenet.de/LinuxCNC/0install/lpairs
-http://people.freenet.de/LinuxCNC/0install/penguin-command
-http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod
 http://rox.sourceforge.net/2005/interfaces/AddApp
 http://rox.sourceforge.net/2005/interfaces/Archive
 http://rox.sourceforge.net/2005/interfaces/Edit
