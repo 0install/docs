@@ -184,15 +184,14 @@ The injector tells you that a new version is available, but it doesn't say what 
 should provide a link to the program's release notes on the web.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
 </dd>
+
+<dt>Mirrors for feeds</dt>
+<dd>In progress; see <a href='0mirror.html'>0mirror</a>.</dd>
 </dl>
 
 <h3>Other possible features</h3>
 
 <dl>
-<dt>Mirrors for interfaces</dt>
-<dd>More difficult than mirrors for archives, since a malicious mirror could do a replay attack (giving an
-older, but correctly signed, release that is known to be insecure) and users who don't check the signing
-keys may be more at risk.</dd>
 
 <dt>Plug-ins</dt>
 <dd>

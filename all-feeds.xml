@@ -6,11 +6,11 @@ any build dependencies (compilers, header files, build tools, etc).
 
 This is useful if ...</feed>
 
-<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="Utility to make creating injector interfaces easier" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0publish.html" category="Unknown">0publish makes creating and modifying injector interface files easier.
-    It can create a new commented template for you or edit an existing one.
+<feed uri="http://0install.net/2006/interfaces/0publish" name="0publish" summary="Utility to make creating injector interfaces easier" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0publish.html" category="Unknown">0publish makes creating and modifying injector interface files easier. It can
+create a new commented template for you or edit an existing one.
 
-    Various editing operations are available, the most basic being to let you
-    edit it in your ...</feed>
+Various editing operations are available, the most basic being to let you edit
+it in your preferred text ...</feed>
 
 <feed uri="http://0install.net/2007/interfaces/0publish-gui.xml" name="0publish-gui" summary="GTK editor for Zero Install feeds" icon="feed_icons/0publish-gui.png" width="48" height="48" homepage="http://0install.net/injector-packagers.html" category="Development">Publishing a program using Zero Install requires you to create an XML file
 listing the available versions, where to get them, and what other software they
@@ -69,11 +69,6 @@ game based on the movie of the same name, release by Disney in 1982. ...</feed>
 
 <feed uri="http://0install.net/2006/interfaces/ATK-dev" name="ATK-dev" summary="Headers for compiling ATK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the ATK header files. They are required when compiling applications
 that use the ATK library. ATK is an Accessibility Toolkit.</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/barrage" name="Barrage" summary="Barrage is a rather violent action game" icon="feed_icons/barrage.png" width="48" height="48" category="Unknown">Barrage is a rather violent action game with the objective to kill
-	    and destroy as many targets as possible within 3 minutes. The player
-	    controls a gun that may either fire small or large grenades at
-	    soldiers, jeeps and tanks. It is a ...</feed>
 
 <feed uri="http://teythoon.cryptobitch.de/0install/bastet.xml" name="Bastet" summary="Bastard Tetris" icon="tango/applications-system.png" width="48" height="48" homepage="http://fph.altervista.org/prog/bastet.shtml" category="Unknown">"For people who enjoy swearing at their computer, Bastet (short for
     Bastard Tetris) is an attractive alternative to Microsoft Word."
@@ -170,18 +165,20 @@ open the files.</feed>
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/Foobillard/foobillard.xml" name="FooBillard" summary="FooBillard is a free OpenGL-billard game" icon="feed_icons/foobillard.png" width="48" height="30" homepage="http://foobillard.sunsite.dk/" category="Games">FooBillard is a free OpenGL-billard game for Linux with realistic physics, AI-
 player and many gametypes like pool carambol or snooker.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="Display usage of a file system." icon="feed_icons/FreeFS.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/28" category="Unknown">FreeFS displays a small window showing the disk usage of a single file
-system.
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/FreeFS" name="FreeFS" summary="Display usage of a file system." icon="feed_icons/FreeFS.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/freefs.html" category="System">FreeFS displays a small window showing the disk usage of a single file
+system.  
 
 The window displays the file system mount point, the total size of the
 file system, the used size and the size available.
-
+ 
 Hold down the right mouse button for a menu.  ...</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/Freetype2.xml" name="Freetype2" summary="Free, portable library for digital typography" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.freetype.org/" category="Library">FreeType 2 is a high-quality and portable font engine that is capable of
 supporting several font formats (be they bitmapped or scalable) through a simple
 and uniform interface. Its design is modular and allows independent "font
 driver" modules to be ...</feed>
+
+<feed uri="http://holizz.com/software/0install/gajim" name="Gajim" summary="Jabber instant messager" icon="feed_icons/gajim.png" width="48" height="48" homepage="http://gajim.org/" category="Unknown">Gajim is a free software, instant messaging client for the Jabber (XMPP) protocol which uses the GTK+ toolkit.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Gamma" name="Gamma" summary="Set the gamma correction for your screen" icon="feed_icons/Gamma.png" width="47" height="36" homepage="http://rox.sourceforge.net/desktop/Gamma" category="Settings">Gamma is a simple program to set the on-screen gamma correction (using the
 xgamma command, installed with XFree86). You can either set the Red, Green and
@@ -218,8 +215,6 @@ that use the GTK+ library.</feed>
 <feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="Headers for compiling C++ GTK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling
     C++ applications that use the GTK, ATK or Pango libraries..</feed>
 
-<feed uri="http://0install.net/2005/interfaces/injector-gui" name="Injector-GUI" summary="Graphical interface for the injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector-using.html" category="Unknown">The injector GUI displays a window showing which versions of various components will be used when running a program, and allows you to alter various policy settings to affect the selection process. You can use this to mark particular versions of ...</feed>
-
 <feed uri="http://0install.net/2006/3rd-party/Inkscape.xml" name="Inkscape" summary="An SVG-based vector drawing application" icon="feed_icons/Inkscape.png" width="64" height="64" homepage="http://inkscape.org/" category="Graphics">Inkscape is an Open Source vector graphics editor, with capabilities similar to
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
 Vector Graphics (SVG) file format. Supported SVG features include shapes, paths,
@@ -232,16 +227,9 @@ keyboard layout, key repeat, cursor blinking, and keybindings.
 
 You need to be running ROX-Session as your session manager for this to work.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="feed_icons/Launch.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/36" category="Unknown">Launch is called with a URI or URL and then starts a suitable
-application to handle it.  file: URLs are passed to ROX-Filer, http:
-to the default web browser.  The user can define handlers for all URI schemes.</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lbreakout" name="LBreakout" summary="The classical Breakout game improved a lot" icon="feed_icons/lbreakout.png" width="48" height="48" category="Unknown">LBreakout is a classical Breakout game, improved with the powers of
-    the SDL library. Its features include: sound, highscore, a menu with
-    mouse support, mouse or keyboard can be used for playing, controls can
-    be redefined, your starting ...</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lgeneral" name="LGeneral" summary="LGeneral is a turn-based strategy engine heavily inspired by Panzer General" icon="feed_icons/lgeneral.png" width="48" height="48" category="Unknown">LGeneral is a turn-based strategy engine heavily inspired by Panzer General. You play single scenarios or whole campaigns turn by turn against a human player or the AI. Entrenchment, rugged defense, defensive fire, surprise contacts, surrender, unit ...</feed>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Launch" name="Launch" summary="Launch URIs" icon="feed_icons/Launch.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/launch.html" category="Network">Launch is called with a URI or URL and then starts a suitable application to
+handle it.  file: URLs are passed to ROX-Filer, http: to the default web
+browser.  The user can define handlers for all URI schemes.</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/libapr1.xml" name="Libapr1" summary="The Apache Portable Runtime Library" icon="tango/applications-system.png" width="48" height="48" category="Library">APR is Apache's Portable Runtime Library, designed to be a support library that
 provides a predictable and consistent interface to underlying platform-specific
@@ -289,8 +277,6 @@ party (the kerberos server) that is trusted by all the entities on the network
 <feed uri="http://0install.net/2007/3rd-party/libldap2.xml" name="Libldap2" summary="Run-time libraries for the OpenLDAP servers and clients" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.openldap.org/" category="Library">These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
 Protocol) servers and clients.</feed>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/libmikmod" name="Libmikmod" summary="Libmikmod is a portable sound library for Unix and other systems" icon="feed_icons/libmikmod.png" width="64" height="33" category="Library">The MikMod sound library is an excellent way for a programmer to add music and sound effects to an application. It is a powerful and flexible library, with a simple and easy-to-learn API. MikMod is able to play a wide range of module formats, as well ...</feed>
-
 <feed uri="http://0install.net/2007/3rd-party/libneon26.xml" name="Libneon26" summary="An HTTP and WebDAV client library" icon="tango/applications-system.png" width="48" height="48" category="Library">Neon is an HTTP and WebDAV client library, with a C language API.
 
 WARNING: THE NEON API IS NOT YET STABLE.
@@ -334,16 +320,12 @@ city. You must feed, house, provide jobs and goods for your residents. You can
 build a sustainable economy with the help of renewable energy and recycling, or
 you can go for ...</feed>
 
-<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="A Battery status monitor." icon="feed_icons/Lithium.png" width="48" height="28" homepage="http://rox.sourceforge.net/desktop/Software/Lithium" category="Unknown">An applet to monitor the battery charge status for your laptop computer.</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lmarbles" name="LMarbles" summary="LMarbles is an Atomix clone with a slight change in concept" icon="feed_icons/lmarbles.png" width="48" height="48" category="Unknown">Instead of assembling molecules you create figures out of marbles. Nevertheless, the basic game play is the same: If a marble starts to move it will not stop until it hits a wall or another marble. To make it more interesting there are obstacles like ...</feed>
+<feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="A Battery status monitor." icon="feed_icons/Lithium.png" width="48" height="28" homepage="http://www.hayber.us/rox/Lithium" category="Unknown">An applet to monitor the battery charge status for your laptop computer.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="Display the system load." icon="feed_icons/Load.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/32" category="Unknown">Load displays the load average of your system (a
 measure of how much work it is trying to do).  It can function as
 either a panel applet or as an independant program which can draw a
 chart of load against time.</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/lpairs" name="LPairs" summary="LPairs is a classic memory game" icon="feed_icons/lpairs.png" width="48" height="48" category="Unknown">This means you have to find pairs of identical cards which will then be removed. Your time and tries needed will be counted but there is no highscore chart or limit to this. License: GPL Homepage: http://lgames.sourceforge.net</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/LyX.xml" name="LyX" summary="WYSIWYM(ean) document processor" icon="feed_icons/LyX.png" width="48" height="48" homepage="http://www.lyx.org" category="Office">LyX is an advanced open source document processor running on many Unix and some
 non-Unix platforms. It is called a "document processor", because unlike standard
@@ -352,9 +334,6 @@ your ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" width="48" height="36" homepage="http://rox.sourceforge.net/desktop/node/33" category="Unknown">Mail is a ROX applet which monitors your local mailbox and which can
 launch a mail reader application when required.</feed>
-
-<feed uri="http://rox4debian.berlios.de/0install/Media.xml" name="Media" summary="Automatically adds inserted media to panel" icon="feed_icons/Media.xml.png" width="64" height="64" category="Unknown">Media uses ivman to add inserted media to the panel.
-    Mountable media is mounted when inserted.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="feed_icons/Mem.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/34" category="Unknown">This applet displays the current memory usage and
 the current swap space usage.</feed>
@@ -387,11 +366,17 @@ Features:
 * Shuffle play (with cache so you don't replay songs too frequently).
 * ...</feed>
 
+<feed uri="http://riscque.net/offsite/Mutagen" name="Mutagen" summary="A Python module to handle audio metadata" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.sacredchao.net/quodlibet/wiki/Development/Mutagen" category="Audio">Mutagen is a Python module to handle audio metadata. It supports ASF,
+
+FLAC, M4A, Monkey's Audio, MP3, Musepack, Ogg FLAC, Ogg Speex, Ogg
+
+Theora, Ogg Vorbis, True Audio, WavPack and OptimFROG audio files. All
+
+versions of ID3v2 are supported, and all ...</feed>
+
 <feed uri="http://0install.net/2007/3rd-party/Mutt.xml" name="Mutt" summary="Text-based mail client" icon="feed_icons/Mutt.png" width="32" height="32" homepage="http://www.mutt.org/" category="Network">Mutt is a sophisticated text-based Mail User Agent.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/35" category="Unknown">This is a ROX applet to display network status and statistics.</feed>
-
-<feed uri="http://dist.opendocumentfellowship.org/odfviewer.xml" name="Odfviewer" summary="Viewer for OpenDocument Files" icon="feed_icons/odfviewer.png" width="32" height="32" homepage="http://opendocumentfellowship.org/odfviewer" category="Unknown">This is a light-weight, cross-platform viewer for the OASIS OpenDocument format. It is produced by the OpenDocument Fellowship and is based on the Mozilla Application Framework.</feed>
 
 <feed uri="http://riscque.net/Openbox" name="Openbox" summary="Standards compliant, fast, light-weight, extensible window manager" icon="feed_icons/Openbox.png" width="64" height="64" homepage="http://icculus.org/openbox/index.php" category="Unknown">Openbox is a customisable window manager, modelled after Blackbox.
 
@@ -435,9 +420,7 @@ The pager applet runs inside the ...</feed>
 that use the Pango library. Pango is a library for laying out and rendering of
 text, with an emphasis on internationalization.</feed>
 
-<feed uri="http://people.freenet.de/LinuxCNC/0install/penguin-command" name="Penguin Command" summary='Penguin Command is a clone of the classic "Missile Command' icon="feed_icons/penguin-command.png" width="42" height="48" category="Unknown">What is Penguin-Command? This is a clone of the classic "Missile Command" Game, but it has better graphics and music. The gameplay has only been slightly modified. Penguin Command is licensed under the GPL. Homepage: http://www.linux-games.com</feed>
-
-<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="An applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Software/Postal" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
+<feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="An applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" width="48" height="48" homepage="http://www.hayber.us/rox/Postal" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
 
 <feed uri="http://modzer0.cs.uaf.edu/repos/hank/0install/Processing.xml" name="Processing" summary="Programming language and enviroment for animation" icon="tango/applications-system.png" width="48" height="48" homepage="http://processing.org/" category="Unknown">Processing is an open source programming language and environment for people who
 want to program images, animation, and interactions. It is used by students,
@@ -496,7 +479,7 @@ background.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" name="ROX-Lib2" summary="Library for ROX applications" icon="feed_icons/ROX-Lib.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/ROX-Lib" category="Unknown">ROX-Lib contains shared code used by most of the ROX applications.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2007/interfaces/ROX-Samba" name="ROX-Samba" summary="Mount samba shares" icon="feed_icons/ROX-Samba.png" width="48" height="48" category="Unknown">Use fusesmb to mount Samba shares as a file system.</feed>
+<feed uri="http://www.kerofin.demon.co.uk/2007/interfaces/ROX-Samba" name="ROX-Samba" summary="Mount samba shares" icon="feed_icons/ROX-Samba.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/rox-samba.html" category="Network">Use fusesmb to mount Samba shares as a file system.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/ROX-Session" name="ROX-Session" summary="Sets up a ROX desktop session" icon="feed_icons/ROX-Session.png" width="48" height="33" homepage="http://rox.sourceforge.net/desktop/ROX-Session" category="Utility">ROX-Session sets up your desktop when you log in, and starts any applications
 you ask it to. It allows you to set various settings, such as the default font,
@@ -515,8 +498,6 @@ It ...</feed>
 It sports a graphical front-end, similar to glHack or the Falcon's eye. I tried
 to design the 3D UI as a best of both worlds from old to new: It lets you rotate
 the view, ...</feed>
-
-<feed uri="http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod" name="SDL-mixer" summary="Simple multi-channel audio mixer" icon="feed_icons/sdl-mixer-libmikmod.png" width="64" height="32" category="Library">SDL-mixer is a simple multi-channel audio mixer. It supports 8 channels of 16 bit stereo audio, plus a single channel of music. The mixer can currently load Microsoft WAVE files and Creative Labs VOC files as audio samples. The Simple DirectMedia Layer ...</feed>
 
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/SDL-mixer/sdl-mixer.xml" name="SDL-mixer" summary="Simple multi-channel audio mixer" icon="feed_icons/sdl-mixer.png" width="64" height="32" homepage="http://www.libsdl.org/projects/SDL_mixer/" category="Library">SDL-mixer is a simple multi-channel audio mixer. It supports 8 channels of 16
 bit stereo audio, plus a single channel of music. The mixer can currently load
@@ -569,7 +550,7 @@ This is based on the SystemTray applet, but updated.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="feed_icons/Tail.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/29" category="Unknown">This program displays the contents of a text file, updating as the text file is updated.</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/Tasklist" name="Tasklist" summary="Tasklist applet" icon="feed_icons/Tasklist.png" width="44" height="39" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist" category="Unknown">Shows a list of running applications</feed>
+<feed uri="http://rox4debian.berlios.de/0install/Tasklist.xml" name="Tasklist" summary="Tasklist applet" icon="feed_icons/Tasklist.png" width="44" height="39" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist" category="Unknown">Shows a list of running applications</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/TaskTray.xml" name="TaskTray" summary="Shows open windows in the panel" icon="feed_icons/TaskTray.xml.png" width="64" height="17" category="Utility">TaskTray is a panel-applet that shows open windows of running applications.
 
@@ -581,14 +562,13 @@ objects in the X Window System.</feed>
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="feed_icons/Thumbs.png" width="31" height="36" category="Unknown">This program allows you to examine your thumbnail cache and purge it
 when required.</feed>
 
-<feed uri="http://www.cye-tech.com/~lennon/Tide/Tide.xml" name="Tide" summary="A real-time text editor for the ROX desktop" icon="tango/applications-system.png" width="48" height="48" category="Unknown">Tide is a real-time text editor for the ROX desktop, based on 
-Thomas Leonard's Edit (although Tide may seem a bit backwards compared 
-to Edit). 
-Instead of the user manually 'saving' a file, 
-Tide automatically writes the file out as you edit ...</feed>
+<feed uri="http://riscque.net/Tide" name="Tide" summary="A real-time text editor for the ROX desktop" icon="feed_icons/Tide.png" width="49" height="45" category="Utility">Tide is a real-time text editor for the ROX desktop, based on Thomas Leonard's
+Edit (although Tide may seem a bit backwards compared to Edit). Instead of the
+user manually 'saving' a file, Tide automatically writes the file out as you
+edit it. Also, ...</feed>
 
-<feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="Sets time and date" icon="feed_icons/Time.xml.png" width="48" height="48" category="Unknown">Use this app to set the time and date.
-You need the system-tools-backends to make it work.</feed>
+<feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="Sets time and date" icon="feed_icons/Time.xml.png" width="48" height="48" category="Unknown">Use this app to set the time and date. You need the system-tools-backends to
+make it work.</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/TrayLib.xml" name="TrayLib" summary="Library for tray-like applets" icon="tango/applications-system.png" width="48" height="48" category="Library">TrayLib is a python module that eases the creation of tray-like applets. These
 are applets that mainly consist of a box, which contains some icons representing
@@ -622,19 +602,17 @@ clicked.</feed>
 
 <feed uri="http://www.hayber.us/0install/WiFi" name="WiFi" summary="A wireless network quality monitor." icon="feed_icons/WiFi.png" width="64" height="64" category="Unknown">A panel applet to monitor the quality of a Wireless network connection.</feed>
 
+<feed uri="http://riscque.net/WorkspaceList" name="WorkspaceList" summary="A panel applet to display and manage workspaces" icon="tango/applications-system.png" width="48" height="48" category="Utility">WorkspaceList is a ROX Panel applet which helps you to manage multiple
+workspaces. It displays workspaces by name in a drop-down list, allowing you to
+select one to display. You can also type the name of a workspace to display it,
+and this will create ...</feed>
+
 <feed uri="http://0install.net/2006/3rd-party/XaraXtreme.xml" name="Xara Xtreme" summary="Cross-platform vector artwork and photocomposition package" icon="feed_icons/XaraXtreme.png" width="48" height="48" homepage="http://www.xaralx.org/" category="Graphics">XaraLX is a vector graphics and photocomposition program. It is primarily a
 vector graphics program, but it also handles photos and drawings. It has an
 easy-to-use and easy-to-learn approach.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="View and edit extended attributes" icon="feed_icons/XAttr.png" width="48" height="48" category="Unknown">XAttr is a utility for viewing or editing extended attributes which
 are supported by more modern file systems.</feed>
-
-<feed uri="http://teythoon.cryptobitch.de/0install/xcruise.xml" name="Xcruise" summary="Navigate through a three-dimensional view of a file system" icon="tango/applications-system.png" width="48" height="48" homepage="http://xcruiser.sourceforge.net/" category="Unknown">XCruise allows you to ``cruise'' within a 3D-formed file system.
-It constructs the universe from a directory tree, and you can
-move your viewpoint with mouse.
-
-Homepage:
-http://xcruiser.sourceforge.net/</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/XdgUtils.xml" name="XdgUtils" summary="Cross-desktop integration tools" icon="tango/applications-system.png" width="48" height="48" homepage="http://portland.freedesktop.org" category="Library">Xdg-utils is a set of command line tools that assist applications with a variety
 of desktop integration tasks. About half of the tools focus on tasks commonly
@@ -649,9 +627,6 @@ all, that's what teddy bears are for. Look at him, talk to
 him, place heavy windows on top of  him,  zap  him  around
 until  he  becomes dizzy, do what you like; he will always
 be your true ...</feed>
-
-<feed uri="http://dist.opendocumentfellowship.org/xulrunner.xml" name="Xulrunner" summary="Mozilla runtime environment." icon="feed_icons/xulrunner.png" width="16" height="16" homepage="http://developer.mozilla.org/en/docs/XULRunner" category="Unknown">Xulrunner is a runtime environment for the Mozilla
-	Application framework.</feed>
 
 <feed uri="http://teythoon.cryptobitch.de/0install/xworld.xml" name="Xworld" summary="Earth as seen from the direction of the sun" icon="tango/applications-system.png" width="48" height="48" category="Unknown">XWorld displays a pretty picture of our earth as it would look if viewed
 from the direction of the sun. The window is regularly updated. You can use
@@ -673,6 +648,11 @@ This program creates a freedesktop.org ".desktop" file, ...</feed>
 components will be used when running a program, and allows you to alter various
 policy settings to affect the selection process. You can use this to mark
 particular versions of ...</feed>
+
+<feed uri="http://0install.net/2007/interfaces/ZeroInstall.xml" name="ZeroInstall-Injector" summary="Decentralised installation system" icon="feed_icons/ZeroInstall.png" width="48" height="48" homepage="http://0install.net/" category="System">Zero Install is a cross-platform, decentralised installation system. Instead of
+having a central repository in which all software is placed under a naming
+scheme managed by some central authority, programs and libraries in Zero Install
+are identified ...</feed>
 
 <feed uri="http://teythoon.cryptobitch.de/0install/zombies.xml" name="Zombies" summary="Simple robots-like game where you destroy the zombies" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.thistledown.com.au/software/" category="Unknown">The idea of zombies is to kill as many zombies as possible.  Fortunately
 for you, zombies can only move diagonally.  Once all the zombies on a

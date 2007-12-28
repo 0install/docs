@@ -49,6 +49,7 @@
       <item base='0release-phases' label='Release phases'/>
     </item>
     <item base='feedlint' label='FeedLint'/>
+    <item base='0mirror' label='0mirror'/>
   </item>
 
   <item base="support" label="Support"/>

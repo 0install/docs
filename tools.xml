@@ -27,6 +27,12 @@ This is useful if there is no binary for your platform, or if you wish to
 modify the program in some way.
  </dd>
 
+ <dt><a href='0release.html'>0release</a></dt>
+ <dd>
+<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
+number and release date, tagging the release in your version control system and updating your Zero Install feed.
+ </dd>
+
  <dt><a href='feedlint.html'>FeedLint</a></dt>
  <dd>
 If you maintain a number of feeds, each with several versions of your programs, how do you
@@ -34,10 +40,10 @@ know that all the download links are still OK? Run <b>FeedLint</b> on your feeds
 to check.
  </dd>
 
- <dt><a href='0release.html'>0release</a></dt>
+ <dt><a href='0mirror.html'>0mirror</a></dt>
  <dd>
-<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
-number and release date, tagging the release in your version control system and updating your Zero Install feed.
+<b>0mirror</b> keeps an archive of Zero Install feeds and GnuPG keys and exports them
+for publishing on a web-server.
  </dd>
 </dl>
 
