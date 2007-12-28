@@ -1,4 +1,8 @@
+http://0install.net/2007/interfaces/ZeroInstall.xml
+http://holizz.com/software/0install/gajim
 http://rox4debian.berlios.de/0install/TrayLib.xml
+http://riscque.net/WorkspaceList
+http://riscque.net/offsite/Mutagen
 http://rox.sourceforge.net/2007/interfaces/Reinteract.xml
 http://konstelacioj.info/0install/feeds/geany.xml
 http://0install.net/2007/interfaces/0release.xml
@@ -23,7 +27,6 @@ http://rox4debian.berlios.de/0install/PyAlsaAudio.xml
 http://www.kerofin.demon.co.uk/2007/interfaces/ROX-Samba
 http://teythoon.cryptobitch.de/0install/bastet.xml
 http://teythoon.cryptobitch.de/0install/speyes.xml
-http://teythoon.cryptobitch.de/0install/xcruise.xml
 http://teythoon.cryptobitch.de/0install/xteddy.xml
 http://teythoon.cryptobitch.de/0install/xworld.xml
 http://teythoon.cryptobitch.de/0install/zombies.xml
@@ -40,8 +43,6 @@ http://freenet-homepage.de/LinuxCNC/0install/SDL/sdl.xml
 http://0install.net/2007/3rd-party/libgnutls13.xml
 http://0install.net/2007/3rd-party/libldap2.xml
 http://0install.net/2007/3rd-party/libqt-mt3.xml
-http://dist.opendocumentfellowship.org/odfviewer.xml
-http://dist.opendocumentfellowship.org/xulrunner.xml
 http://rox4debian.berlios.de/0install/AlbumArt.xml
 http://www3.telus.net/public/rodw/skype.xml
 http://0install.net/2007/3rd-party/Subversion.xml
@@ -127,13 +128,12 @@ http://www.kerofin.demon.co.uk/2006/interfaces/SystemTrayN
 http://0install.net/2006/interfaces/GTK-dev
 http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli-data
 http://www.hayber.us/0install/PanelClock
-http://rox4debian.berlios.de/0install/Tasklist
+http://rox4debian.berlios.de/0install/Tasklist.xml
 http://0install.net/2006/interfaces/ATK-dev
 http://0install.net/2006/interfaces/Pango-dev
 http://0install.net/2006/interfaces/GLib-dev
 http://www.cs.helsinki.fi/u/ihonkone/epeli/epeli.xml.asc
 http://rox4debian.berlios.de/0install/Libwnck18.xml
-http://rox4debian.berlios.de/0install/Media.xml
 http://0install.net/2006/interfaces/GTK-2.4.xml
 http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet
 http://rox4debian.berlios.de/0install/TaskTray.xml
@@ -150,6 +150,6 @@ http://0install.net/2006/interfaces/0compile.xml
 http://rox4debian.berlios.de/0install/Time.xml
 http://holizz.com/software/0install/firefox
 http://rox4debian.berlios.de/0install/Execute.xml
-http://www.cye-tech.com/~lennon/Tide/Tide.xml
+http://riscque.net/Tide
 http://people.freenet.de/LinuxCNC/0install/dxf2G.xml
 http://0install.net/2006/3rd-party/Freetype2.xml
