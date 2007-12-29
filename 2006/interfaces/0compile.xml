@@ -51,7 +51,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <version not-before="0.28"/>
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
-      <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" version="0.10">
+      <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" stability="stable" version="0.10">
       <archive extract="0compile-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.10.tar.bz2" size="22979"/>
     </implementation>
     </group>
@@ -59,7 +59,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHb+M+rgeCgFmlPMERAhxRAJ49RXUL+EdKIME7PWEsh6ZQZHHKYwCgi+qXMYiwSIMNfeCD
-hQTV0C7L8RU=
+iD8DBQBHdhMsrgeCgFmlPMERAjZsAKCXkCQqhVyqcLAEcL7sFJk/D4TvQgCfS70/qbK2KBZnb97K
+OK8WDUICYTo=
 
 -->
