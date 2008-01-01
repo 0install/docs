@@ -9,13 +9,19 @@ that use the GLib library.</description>
 
   <group arch="Linux-i386">
     <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" stability="stable" version="2.4.8">
-
       <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
     </implementation>
     <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8.1">
       <archive extract="glib-headers-2.4.8.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
     </implementation>
   </group>
+
+  <group arch="Linux-x86_64">
+    <implementation id="sha1new=02c9b0a4db502dde4659468f2355f0bf75fa1336" released="2008-01-01" version="2.4.8">
+      <archive extract="glib-dev-linux-x86_64-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-dev-linux-x86_64-2.4.8.tar.bz2" size="60582"/>
+    </implementation>
+  </group>
+
   <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
     <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8">
       <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
@@ -26,7 +32,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqVKrgeCgFmlPMERAgVjAJ9fYKEgAm+YSlOdInLjtS/CIbMsrQCZAfgdsB9x1A/50oV6
-YOR9LHPZBWw=
+iD8DBQBHej3xrgeCgFmlPMERAovTAJ9yI8vslijlnHHo00liOf5VTB6xdQCgtiGFbkVnErtePo1r
+fzg+tfBQAdE=
 
 -->
