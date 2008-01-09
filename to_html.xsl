@@ -93,7 +93,7 @@
 	   Thanks to the University of Southampton for the 0install.net domain name!
 	 </p>
 	 <p>
-	    Web-site &#169; Copyright 2003-2007, Thomas Leonard.<br/>
+	    Web-site &#169; Copyright 2003-2008, Thomas Leonard.<br/>
 	    Permission is granted to use the site (excluding the software,
 	    which is licensed separately)<br/>in accordance with the terms of the
 	    <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative

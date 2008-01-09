@@ -46,6 +46,14 @@ bundles, setup.exe, etc). Here are some of our goals:
  </tr>
 </table>
 
+<div style='margin-left: auto; margin-right: auto; max-width: 50em; padding: 1em;'>
+<h2>News</h2>
+<dl>
+<dt>Jan 2008</dt><dd>We now have a <a href='http://roscidus.com/0mirror/'>public mirror service</a> running, providing backup copies
+of all known feeds.</dd>
+</dl>
+</div>
+
 <p style='text-align: center;'>
 Translations: <a href='http://www.el-directorio.org/0install'>Spanish</a>
 </p>
