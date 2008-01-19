@@ -87,6 +87,13 @@ with the new library version, which will continue using the older version,
 without preventing other programs from upgrading).
 </p>
 
+<h3>Why is it called the "injector"?</h3>
+
+<p>
+The name comes from <i>Dependency Injection</i> - see <a href='http://roscidus.com/desktop/node/903'>"The scarily-named Injector"</a>
+for details.
+</p>
+
 <h3>Wouldn't it be cool if you could install software just by clicking in a web page?</h3>
 <p>
 It's a bit of a security risk. If you set up your browser to do this, then the
