@@ -56,6 +56,11 @@ handle new releases brings several advantages over doing it manually:
  <li>If someone else needs to make a release, they will follow the same process.</li>
 </ul>
 
+<dl>
+ <dt>Version control systems currently supported</dt>
+ <dd>GIT is fully supported. Baazar support is under development.</dd>
+</dl>
+
 <h3>Contents</h3>
 
 <toc level='h2'/>
@@ -201,6 +206,9 @@ default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). 
 
 <pre>Releasing version 0.1
 
+SKIPPING unit tests for /home/me/releases/hello/helloworld-0.1 (no 'self-test' attribute set)
+Wrote changelog from start to here as changelog-0.1
+
 Candidate release archive: helloworld-0.1.tar.bz2
 (extracted to /home/me/releases/hello/helloworld-0.1 for inspection)
 
@@ -294,6 +302,17 @@ and deleted the temporary files.
 <h2>Uploading the files</h2>
 
 <p>
+If you didn't set an upload command in the make-release configuration file,
+0release will prompt you to upload the files now:
+</p>
+
+<pre>
+Upload helloworld-0.1.tar.bz2 as http://localhost/~me/testing/helloworld-0.1.tar.bz2
+No upload command is set => please upload the archive manually now
+Press Return once archive is uploaded.
+</pre>
+
+<p>
 Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>
 to your web-server. You should then be able to download and run the new release, using the URL you
 chose at the start:
@@ -305,12 +324,8 @@ Hello World!
 </pre>
 
 <p>
-You can edit <b>make-release</b> to set some commands to automatically upload the files.
-</p>
-
-<p>
-After publishing, you should also push the branch and tag ("master" and "v0.1" in this case) to
-your public GIT repository.
+You can edit <b>make-release</b> to set some commands to automatically upload the files and to
+push the branch and tag ("master" and "v0.1" in this case) to your public GIT repository.
 </p>
 
 <h2>Customising the release process</h2>
