@@ -7,6 +7,8 @@
 These are the GLib header files. They are required when compiling applications
 that use the GLib library.</description>
 
+  <feed arch="Linux-ppc" src="http://0install.net/2008/linux-ppc/GLib-dev.xml"/>
+
   <group arch="Linux-i386">
     <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" stability="stable" version="2.4.8">
       <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
@@ -32,7 +34,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHej9grgeCgFmlPMERAmB+AKCS3GKNQ7cwwwmcgQ4ClJIyXak3HACgtIz7k1OABdqqjfSw
-/X38i37j2q0=
+iD8DBQBHlRn+rgeCgFmlPMERArPcAJ4+1vwtQIkWTiJMFcQGULTGXvj/FwCfb4Unf/NXW8qVKQUg
+7QAa6HEspmc=
 
 -->
