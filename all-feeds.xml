@@ -201,6 +201,9 @@ that use the GLib library.</feed>
 <feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="Headers for compiling C++ GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling C++
 applications that use the GLib library.</feed>
 
+<feed uri="http://akfoerster.de/zero/grquiz.xml" name="Grquiz" summary="Graphical quiz program (part of AKFQuiz)" icon="feed_icons/grquiz.png" width="32" height="32" homepage="http://akfquiz.nongnu.org/" category="Education">AKFQuiz is a collection of programs to make quiz games, learning exercises or
+psycho-tests. The program grquiz is the graphical program for it.</feed>
+
 <feed uri="http://0install.net/2006/interfaces/GTK-2.4.xml" name="GTK-2.4" summary="Set up a GTK 2.4 build environment" icon="feed_icons/GTK-2.4.xml.png" width="37" height="48" homepage="http://0install.net" category="Development">This program runs a command in an environment with PKG_CONFIG_PATH set to
 include the location of the GTK 2.4 and related library headers. By default, it
 runs /bin/sh to give you a shell.
@@ -376,7 +379,7 @@ versions of ID3v2 are supported, and all ...</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/Mutt.xml" name="Mutt" summary="Text-based mail client" icon="feed_icons/Mutt.png" width="32" height="32" homepage="http://www.mutt.org/" category="Network">Mutt is a sophisticated text-based Mail User Agent.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/35" category="Unknown">This is a ROX applet to display network status and statistics.</feed>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/netstat.html" category="Network">This is a ROX applet to display network status and statistics.</feed>
 
 <feed uri="http://riscque.net/Openbox" name="Openbox" summary="Standards compliant, fast, light-weight, extensible window manager" icon="feed_icons/Openbox.png" width="64" height="64" homepage="http://icculus.org/openbox/index.php" category="Unknown">Openbox is a customisable window manager, modelled after Blackbox.
 
@@ -444,7 +447,7 @@ redo, load &amp; save ...</feed>
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck. Libwnck is a library used by
 pagers and tasklists.</feed>
 
-<feed uri="http://rox.sourceforge.net/2007/interfaces/Reinteract.xml" name="Reinteract-ROX" summary="A system for interactive experimentation with python" icon="feed_icons/Reinteract.png" width="64" height="32" homepage="http://www.reinteract.org/" category="Unknown">Reinteract is a system for interactive experimentation with python. You enter
+<feed uri="http://rox.sourceforge.net/2007/interfaces/Reinteract.xml" name="Reinteract-ROX" summary="A system for interactive experimentation with python" icon="feed_icons/Reinteract.png" width="64" height="32" homepage="http://www.reinteract.org/" category="Development">Reinteract is a system for interactive experimentation with python. You enter
 Python code and expressions and immediately see the results. What distinguishes
 Reinteract from a shell (such as IPython or the builtin interactive mode) is
 that you can go ...</feed>
@@ -498,6 +501,10 @@ It ...</feed>
 It sports a graphical front-end, similar to glHack or the Falcon's eye. I tried
 to design the 3D UI as a best of both worlds from old to new: It lets you rotate
 the view, ...</feed>
+
+<feed uri="http://akfoerster.de/zero/scrquiz.xml" name="Scrquiz" summary="Quiz program for the text-console (part of AKFQuiz)" icon="feed_icons/scrquiz.png" width="32" height="32" homepage="http://akfquiz.nongnu.org/" category="Education">AKFQuiz is a collection of programs to make quiz games, learning exercises or
+psycho-tests. The program scrquiz is the program for the text-console or
+terminals.</feed>
 
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/SDL-mixer/sdl-mixer.xml" name="SDL-mixer" summary="Simple multi-channel audio mixer" icon="feed_icons/sdl-mixer.png" width="64" height="32" homepage="http://www.libsdl.org/projects/SDL_mixer/" category="Library">SDL-mixer is a simple multi-channel audio mixer. It supports 8 channels of 16
 bit stereo audio, plus a single channel of music. The mixer can currently load
