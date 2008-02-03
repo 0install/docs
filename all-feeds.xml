@@ -381,7 +381,7 @@ versions of ID3v2 are supported, and all ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/NetStat" name="NetStat" summary="Display network status" icon="feed_icons/NetStat.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/netstat.html" category="Network">This is a ROX applet to display network status and statistics.</feed>
 
-<feed uri="http://riscque.net/Openbox" name="Openbox" summary="Standards compliant, fast, light-weight, extensible window manager" icon="feed_icons/Openbox.png" width="64" height="64" homepage="http://icculus.org/openbox/index.php" category="Unknown">Openbox is a customisable window manager, modelled after Blackbox.
+<feed uri="http://riscque.net/3rd-party/Openbox" name="Openbox" summary="Standards compliant, fast, light-weight, extensible window manager" icon="feed_icons/Openbox.png" width="64" height="64" homepage="http://icculus.org/openbox/index.php" category="Utility">Openbox is a customisable window manager, modelled after Blackbox.
 
 Features:
 
