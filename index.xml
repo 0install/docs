@@ -1,17 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 
-<p style='margin-left: auto; margin-right: auto; max-width: 50em; padding: 1em;'>
+<div style='float:left'>
+<p style='max-width: 50em; padding: 1em;'>
 The Zero Install system aims to provide a better way of installing software than traditional systems (tarballs, apt-get,
 bundles, setup.exe, etc). Here are some of our goals:
 </p>
 
-<div style='float: right'>
-<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/TQyChe-iOa0&amp;rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/TQyChe-iOa0&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
-<p><a href='http://www.youtube.com/watch?v=TQyChe-iOa0'>Zero Install introduction</a> (screencast with audio commentary)</p>
-</div>
-
-<table class='picturebullets'>
+<table class='picturebullets' style='margin: 0px'>
  <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can install software</h3>
@@ -41,6 +37,12 @@ bundles, setup.exe, etc). Here are some of our goals:
   </td>
  </tr>
 </table>
+</div>
+
+<div style='text-align: center'>
+<object width="425" height="355" data="http://www.youtube.com/v/TQyChe-iOa0&amp;rel=1" type="application/x-shockwave-flash"/>
+<p><a href="http://www.youtube.com/watch?v=TQyChe-iOa0">Zero Install introduction</a> (screencast with audio commentary)</p>
+</div>
 
 <table class='quicklinks'>
  <tr>
