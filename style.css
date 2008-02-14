@@ -313,6 +313,7 @@ table.quicklinks {
 	padding: 1em;
 	border-spacing: 1em;
 	border-collapse: separate;
+	clear: both;
 }
 
 table.quicklinks td p {
