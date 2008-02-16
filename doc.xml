@@ -4,18 +4,7 @@
 <h2>Documentation layout</h2>
 
 <dl>
-    <dt><a href='goals.html'>Goals</a></dt><dd>Sets out the problems that Zero Install aims to solve
-    in more detail than on the front page.</dd>
-
-    <dt><a href='howitworks.html'>Screenshots</a></dt><dd>What actually happens when you use software
-    this way? An illustrated guide.</dd>
-
-    <dt><a href='perspectives.html'>Perspectives</a></dt><dd>A series of short introductions, targetted at different people (novice users, power users, system administrators, developers and distributions).</dd>
-
-    <dt><a href='flash.html'>Flash demos</a></dt><dd>Flash videos showing Zero Install being used.</dd>
-
-    <dt><a href='matrix.html'>Comparison</a></dt><dd>A table of features and installation systems to
-    show how they differ.</dd>
+    <dt><a href='injector-using.html'>Tutorial</a></dt><dd>Step by step guide to using Zero Install.</dd>
 
     <dt><a href='faq.html'>FAQ</a></dt><dd>Common questions answered.</dd>
 
@@ -30,6 +19,8 @@
     <dt><a href='distribution-integration.html'>Distribution integration</a></dt><dd>Zero Install can also satisfy dependencies using packages installed using the distribution's packaging system. If the distribution package isn't installed, or the version isn't suitable, then it will download a Zero Install copy instead.</dd>
 
     <dt><a href='roadmap.html'>Roadmap</a></dt><dd>Where we've been and where we're going.</dd>
+
+    <dt><a href='injector-trouble.html'>Trouble-shooting</a></dt><dd>What to do if something don't work.</dd>
 
     <dt><a href='legal.html'>Legal issues</a></dt><dd>Thoughts about some legal issues relating to distributing software this way.</dd>
 

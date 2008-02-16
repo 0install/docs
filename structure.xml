@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
   <item base="index" label="Overview">
-    <item base="injector" label="Install"/>
-    <item base='injector-using' label='Tutorial'/>
-    <item base='injector-feeds' label='Software index'/>
-    <item base="perspectives" label="Perspectives"/>
-  </item>
-
-  <item base="doc" label="Documentation">
     <item base="goals" label="Goals"/>
+    <item base="perspectives" label="Perspectives"/>
     <item base="howitworks" label="Screenshots"/>
     <item base="flash" label="Flash demos"/>
     <item base="matrix" label="Comparison"/>
+  </item>
+  
+  <item base="injector" label="Download/install"/>
+  <item base='injector-feeds' label='Software index'/>
+
+  <item base="doc" label="Documentation">
+    <item base='injector-using' label='Tutorial'/>
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
     <item base="sharing" label="Sharing"/>
