@@ -90,6 +90,12 @@ If an injector package for your distribution is listed above, install that and t
 Otherwise, follow the instructions below to install using the generic tarball.
 </p>
 
+<table class='quicklinks'>
+ <tr>
+  <td style='width: 100%'><a href='injector-using.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to tutorial</a></td>
+ </tr>
+</table>
+
 <h2>Installing from tarball</h2>
 
 <p>
@@ -178,8 +184,11 @@ You now have two new commands: <b>0launch</b>, which takes the URL of a program 
 <b>0alias</b>, which lets you use short names instead of URLs.
 </p>
 
-<p>
-Now it's time to <a href='injector-using.html'>try using it...</a>
-</p>
+<table class='quicklinks'>
+ <tr>
+  <td style='width: 100%'><a href='injector-using.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to tutorial</a></td>
+ </tr>
+</table>
+
 
 </html>
