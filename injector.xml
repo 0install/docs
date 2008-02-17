@@ -35,7 +35,7 @@ so that you don't need to download anything twice, and programs can still be use
   <dt>RPMs</dt>
 <dd>
 <ul>
-  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora Extras (thanks to Michel Alexandre Salim), so just do:
+  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which couldn't install anything (see <a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=250168'>bug #250168</a>). This has now been fixed in an update.</p>
   </li>
