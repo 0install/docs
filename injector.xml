@@ -64,7 +64,6 @@ that the Mandriva package doesn't work on 2007.1 without a
   </li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
-  <li><a href='http://article.gmane.org/gmane.comp.desktop.rox.user/6759'>Creating a .deb from source</a></li>
 </ul>
 </dd>
 
