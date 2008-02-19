@@ -9,7 +9,7 @@ Given a standard autoconf source package (in $SRCDIR), this script builds it
 shouldn't be in a -dev package (.so and .la files, etc).
 
 It also edits any pkg-config .pc files to use a relative path for the prefix.</description>
-  <homepage>http://0install.net</homepage>
+  <homepage>http://0install.net/make-headers.html</homepage>
   <category>Development</category>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="make-headers.py">
     <implementation id="sha1new=e64b1263a6ea31faa0d52de0b995538d8e548154" released="2007-03-04" stability="stable" version="0.1">
@@ -18,7 +18,7 @@ It also edits any pkg-config .pc files to use a relative path for the prefix.</d
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqVgrgeCgFmlPMERAmrkAJ0bB5T/6m0j8SmmiEJVcDgCZQPmtACfUYpuGzi1HgwCljRX
-XlrcOOn9wNU=
+iD8DBQBHuzo/rgeCgFmlPMERAooBAJ90vOdnfQ2k0n73lGZx/4/xyyPIPACfSvYlRzHu97pIZ9uT
+0o+QBAYClMA=
 
 -->
