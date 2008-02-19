@@ -50,6 +50,7 @@
       <item base='0release-phases' label='Release phases'/>
     </item>
     <item base='feedlint' label='FeedLint'/>
+    <item base='make-headers' label='Make-headers'/>
     <item base='0mirror' label='0mirror'/>
   </item>
 

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Make-headers</h2>
+
+<program name='Make-headers'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2007/interfaces/Make-headers.xml'
+	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/make-headers'
+	 license='GNU General Public License'/>
+
+<p>
+<b>Make-headers</b> is an extremely simple script for creating -dev packages (packages containing only header files) from
+ordinary source releases. It performs the following steps:
+</p>
+
+<ol>
+ <li>Runs <b>$SRCDIR/configure --prefix $DESTDIR &amp;&amp; make install</b></li>
+ <li>Deletes <b>$DESTDIR/{bin,man,share}</b>, any library binaries (<b>.so</b>, <b>.a</b> and <b>.la</b> files in <b>lib</b>), and any <b>lib/python*</b> directories.</li>
+ <li>Edits any pkg-config files (<b>lib/pkgconfig/*.pc</b>) to use a relative prefix of <b>${pcfiledir}/../..</b>.</li>
+</ol>
+
+<p>
+In other words, it does a full compile-and-install to $DESTDIR, deletes anything that isn't needed in a -dev package, and makes the result relocatable.
+It can be used as the compile command in a source implementation. For example, <a href='http://0install.net/2006/interfaces/GLib-dev'>the GLib-dev feed</a>
+contains this entry:
+</p>
+
+<pre>
+  &lt;group <b>arch="*-src" compile:command="'$BUILD_COMMAND'"</b>&gt;
+    &lt;implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8"&gt;
+      &lt;archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/&gt;
+    &lt;/implementation&gt;
+    &lt;requires interface="<b>http://0install.net/2007/interfaces/Make-headers.xml</b>"&gt;
+      <b>&lt;environment insert="make-headers.py" name="BUILD_COMMAND"/&gt;</b>
+    &lt;/requires&gt;
+</pre>
+
+<p>
+This allows <a href='0compile.html'>0compile</a> to create the GLib-dev package from the upstream source automatically.
+</p>
+
+</html>
