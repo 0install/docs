@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/ATK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2006/interfaces/ATK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>ATK-dev</name>
   <summary>headers for compiling ATK applications</summary>
   <description>
 These are the ATK header files. They are required when compiling applications
 that use the ATK library. ATK is an Accessibility Toolkit.</description>
 
-  <group>
+  <group compile:lib-mappings="atk-1.0:0">
     <implementation id="sha1=6e6dd1f47a5393b7a6dc2af04d755cb6ee1bcb6a" released="2006-05-06" stability="stable" version="1.8.0">
       <archive extract="atk-headers-1.8.0" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.tar.bz2" size="18208"/>
     </implementation>
@@ -17,7 +17,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqbcrgeCgFmlPMERAt2CAKChvVf9MXCEsJ8MoS18uhbb+Mxa6QCgkguBXj3LmNKgYHHx
-vjtaHlTRjng=
+iD8DBQBHvzWOrgeCgFmlPMERAtjQAJ98Se9Kcm55gexLn/NLm7K2YUb8LgCeMiOil1dmFztPSg+b
+OXf7dq+s+Zo=
 
 -->

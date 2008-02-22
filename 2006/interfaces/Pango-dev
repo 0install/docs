@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/Pango-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2006/interfaces/Pango-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Pango-dev</name>
   <summary>headers for compiling Pango applications</summary>
   <description>
@@ -8,7 +8,7 @@ These are the Pango header files. They are required when compiling applications
 that use the Pango library. Pango is a library for laying out and rendering of
 text, with an emphasis on internationalization.</description>
 
-  <group>
+  <group compile:lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0">
     <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" stability="stable" version="1.4.1">
 
       <archive extract="pango-headers-1.4.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
@@ -22,7 +22,7 @@ text, with an emphasis on internationalization.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqT5rgeCgFmlPMERAqUrAJ9oexM2jcsK379wZ2mxZcbWiH8t2wCgzsxMlObac8KsVdyB
-nIz19tU9JfU=
+iD8DBQBHvzW/rgeCgFmlPMERAtRBAKDHsA1s4fc8Z1nOHhYBcObDL6QpLwCgmdBPLe/mES9Y/S2o
+ATzrJBxuBqs=
 
 -->
