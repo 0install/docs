@@ -13,7 +13,7 @@ known markup language. Though the library is written in C a variety of language
 bindings make it available in other environments.</description>
   <homepage>http://xmlsoft.org/</homepage>
   <category>Development</category>
-  <group arch="*-src" compile:binary-lib-mappings="libxml2:2" compile:command="&quot;$BUILD_COMMAND&quot;">
+  <group arch="*-src" compile:binary-lib-mappings="xml2:2" compile:command="&quot;$BUILD_COMMAND&quot;">
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
         <environment insert="make-headers.py" name="BUILD_COMMAND"/>
       </requires>
@@ -21,12 +21,12 @@ bindings make it available in other environments.</description>
     <archive extract="libxml2-2.6.27" href="ftp://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-2.6.27.tar.bz2" size="3442536" type="application/x-bzip-compressed-tar"/>
   </implementation>
   </group>
-  <implementation arch="Linux-x86_64" compile:lib-mappings="libxml2:2" id="sha1new=c5dd932aadd7f52edeadddabd392049f2d67a317" released="2008-02-22" version="2.6.27">
+  <implementation arch="Linux-x86_64" compile:lib-mappings="xml2:2" id="sha1new=c5dd932aadd7f52edeadddabd392049f2d67a317" released="2008-02-22" version="2.6.27">
       <archive extract="libxml2-dev-linux-x86_64-2.6.27" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/libxml2-dev-linux-x86_64-2.6.27.tar.bz2" size="62000"/>
     </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvzsEBSn9tx+xORARAjWLAJ4vqwazPl7x5DpzcVwWjv9+ocVHCwCfc9SSsPZ1b1PPl2Qu
-spZUnd4HNeg=
+iD8DBQBHvzwSBSn9tx+xORARAjGZAJ91woAOCrHWQrL6ZoUk7HU1k7JiSQCcC3Vm06kyhQeJbFGc
+Riw+vlB0aB4=
 
 -->
