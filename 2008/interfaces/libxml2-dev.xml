@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/interfaces/libxml2-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>libxml2-dev</name>
+  <summary>headers for libxml2</summary>
+  <description>
+Libxml2 is the XML C parser and toolkit developed for the Gnome project (but
+usable outside of the Gnome platform), it is free software available under the
+MIT License. XML itself is a metalanguage to design markup languages, i.e. text
+language where semantic and structure are added to the content using extra
+&quot;markup&quot; information enclosed between angle brackets. HTML is the most well-
+known markup language. Though the library is written in C a variety of language
+bindings make it available in other environments.</description>
+  <homepage>http://xmlsoft.org/</homepage>
+  <category>Development</category>
+  <group arch="*-src" compile:binary-lib-mappings="libxml2:2" compile:command="&quot;$BUILD_COMMAND&quot;">
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+        <environment insert="make-headers.py" name="BUILD_COMMAND"/>
+      </requires>
+    <implementation id="sha1new=2e594f8415d75c02db92a8b600816726c71b2394" released="2007-03-19" version="2.6.27">
+    <archive extract="libxml2-2.6.27" href="ftp://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-2.6.27.tar.bz2" size="3442536" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <implementation arch="Linux-x86_64" compile:lib-mappings="libxml2:2" id="sha1new=c5dd932aadd7f52edeadddabd392049f2d67a317" released="2008-02-22" version="2.6.27">
+      <archive extract="libxml2-dev-linux-x86_64-2.6.27" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/libxml2-dev-linux-x86_64-2.6.27.tar.bz2" size="62000"/>
+    </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBHvzsEBSn9tx+xORARAjWLAJ4vqwazPl7x5DpzcVwWjv9+ocVHCwCfc9SSsPZ1b1PPl2Qu
+spZUnd4HNeg=
+
+-->

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/interfaces/libglade-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>libglade-dev</name>
+  <summary>headers for compiling Glade applications</summary>
+  <description>
+These are the Glade header files. They are required when compiling applications
+that use the Glade library.</description>
+
+  <homepage>http://glade.gnome.org</homepage>
+  <category>Development</category>
+
+  <group arch="*-src" compile:binary-lib-mappings="glade-2.0:0" compile:command="&quot;$GTK24&quot; &quot;$MAKE_HEADERS&quot;" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation doc-dir="doc/html" id="sha1new=bce9761699eef1279d6628915a2160677b1f10bd" released="2008-02-22" version="2.0.1">
+      <archive extract="libglade-2.0.1" href="http://ftp.gnome.org/pub/GNOME/sources/libglade/2.0/libglade-2.0.1.tar.bz2" size="264646" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <environment insert="make-headers.py" mode="prepend" name="MAKE_HEADERS"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/GTK-2.4.xml">
+      <environment insert="gtk-2.4" mode="prepend" name="GTK24"/>
+    </requires>
+  </group>
+  <group compile:lib-mappings="glade-2.0:0" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation id="sha1new=d1d62c324b1de73d2b845010bd475063ea8beefc" released="2008-02-22" version="2.0.1">
+      <archive extract="glade-dev-2.0.1" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/glade-dev-2.0.1.tar.bz2" size="5540" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBHvyKYBSn9tx+xORARAhFlAJ904EF62s9wpHJS/xc8LCA8e34iVwCdEVbLdelCfcVIMYrh
+X+lfdef/PHE=
+
+-->
