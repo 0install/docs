@@ -64,11 +64,20 @@ For a full tutorial, see 0compile's homepage.</description>
         <archive extract="0compile-0.11" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.11.tar.bz2" size="23132"/>
       </implementation>
     </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.32"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" version="0.12">
+      <archive extract="0compile-0.12" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHtsfirgeCgFmlPMERAk+YAKDOFQhVsVOKyhWaFnI7H7UIFGfEKQCeMJRRrjAS/y33prrU
-3T4Q5Sstxdg=
+iD8DBQBHwGjVrgeCgFmlPMERAq7IAJ43H1BfueHvt27nh93Pvz0Iw1qR9ACgi5JcXADf8QBAD4T8
+PQ6bEZvQrFM=
 
 -->
