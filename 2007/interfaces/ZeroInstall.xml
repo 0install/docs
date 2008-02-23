@@ -35,7 +35,7 @@ requires first uninstalling another.</description>
   </release:management>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" self-test="tests/allpython.sh">
-    <implementation id="sha1new=e1ee85471047f0b800fef438c6b532914ff310ae" released="2007-11-18" version="0.31">
+    <implementation id="sha1new=e1ee85471047f0b800fef438c6b532914ff310ae" released="2007-11-18" stability="stable" version="0.31">
       <archive extract="zeroinstall-injector-0.31" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.31.tar.bz2" size="121422"/>
     </implementation>
     <implementation id="sha1new=249a1d6122cfd0e867265d16c5631f7461ad1f10" released="2008-02-23" version="0.32">
@@ -45,7 +45,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHwGZKrgeCgFmlPMERAkRBAJ4hedSkwWXFyWT9gJluJilIW7cYMgCgqElZuAp2FKwX9fUq
-crckFbyqIHw=
+iD8DBQBHwGforgeCgFmlPMERAnURAKDYVufe7xy4nSxh0niPYt8DXgkmYgCcCeNs91MIgCDHoBFk
+0d352MII2qI=
 
 -->
