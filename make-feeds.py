@@ -6,6 +6,28 @@ import sys, os, codecs, urllib, shutil
 import xml.sax.saxutils
 from xml.dom import minidom
 
+excluded_uris = set([
+	"http://dist.opendocumentfellowship.org/odfviewer.xml",
+	"http://dist.opendocumentfellowship.org/xulrunner.xml",
+	"http://people.freenet.de/LinuxCNC/0install/barrage",
+	"http://people.freenet.de/LinuxCNC/0install/foobillard",
+	"http://people.freenet.de/LinuxCNC/0install/lbreakout",
+	"http://people.freenet.de/LinuxCNC/0install/lgeneral",
+	"http://people.freenet.de/LinuxCNC/0install/libmikmod",
+	"http://people.freenet.de/LinuxCNC/0install/libpng",
+	"http://people.freenet.de/LinuxCNC/0install/lmarbles",
+	"http://people.freenet.de/LinuxCNC/0install/lpairs",
+	"http://people.freenet.de/LinuxCNC/0install/penguin-command",
+	"http://people.freenet.de/LinuxCNC/0install/sdl",
+	"http://people.freenet.de/LinuxCNC/0install/sdl-mixer",
+	"http://people.freenet.de/LinuxCNC/0install/sdl-mixer-libmikmod",
+	"http://rox.sourceforge.net/2006/interfaces/ROX-Release",
+	"http://rox4debian.berlios.de/0install/Media.xml",
+	"http://rox4debian.berlios.de/0install/Tasklist",
+	"http://0install.net/2005/interfaces/injector-gui",
+	"http://0install.net/2006/interfaces/ZeroInstall-GUI.xml",
+])
+
 MAX_TEASER_LENGTH = 256
 
 rox_homepages = minidom.parse('rox-feeds.xml')
@@ -147,6 +169,8 @@ for uri in os.popen('0launch --list'):
 	if uri.startswith('http://www.ecs.soton.ac.uk/~tal'):
 		continue
 	if uri in known_feeds:
+		continue
+	if uri in excluded_uris:
 		continue
 	if uri not in known:
 		unknown.append(uri)

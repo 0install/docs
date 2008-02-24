@@ -258,6 +258,9 @@ engines such as ispell, aspell and myspell as its backends.
 Enchant steps in to provide uniformity and conformity on top of these libraries,
 and implement certain features ...</feed>
 
+<feed uri="http://0install.net/2008/interfaces/libglade-dev.xml" name="Libglade-dev" summary="Headers for compiling Glade applications" icon="tango/applications-system.png" width="48" height="48" homepage="http://glade.gnome.org" category="Development">These are the Glade header files. They are required when compiling applications
+that use the Glade library.</feed>
+
 <feed uri="http://0install.net/2007/3rd-party/libgnutls13.xml" name="Libgnutls13" summary="The GNU TLS library" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.gnu.org/software/gnutls/" category="Library">gnutls is a portable library which implements the Transport Layer Security (TLS)
 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
 
@@ -318,6 +321,11 @@ for writing pagers and taskslists and stuff.
 libwnck isn't supported in the devel platform, which means OS vendors won't
 guarantee the API/ABI long-term, but authors of open source ...</feed>
 
+<feed uri="http://0install.net/2008/interfaces/libxml2-dev.xml" name="Libxml2-dev" summary="Headers for libxml2" icon="tango/applications-system.png" width="48" height="48" homepage="http://xmlsoft.org/" category="Development">Libxml2 is the XML C parser and toolkit developed for the Gnome project (but
+usable outside of the Gnome platform), it is free software available under the
+MIT License. XML itself is a metalanguage to design markup languages, i.e. text
+language where ...</feed>
+
 <feed uri="http://0install.net/2006/autopackage/Lincity.xml" name="Lincity" summary="City simulation game" icon="tango/applications-system.png" width="48" height="48" homepage="http://lincity.sourceforge.net/" category="Games">Lincity is a city simulation game. You are required to build and maintain a
 city. You must feed, house, provide jobs and goods for your residents. You can
 build a sustainable economy with the help of renewable energy and recycling, or
@@ -325,7 +333,7 @@ you can go for ...</feed>
 
 <feed uri="http://www.hayber.us/0install/Lithium" name="Lithium" summary="A Battery status monitor." icon="feed_icons/Lithium.png" width="48" height="28" homepage="http://www.hayber.us/rox/Lithium" category="Unknown">An applet to monitor the battery charge status for your laptop computer.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="Display the system load." icon="feed_icons/Load.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/32" category="Unknown">Load displays the load average of your system (a
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Load" name="Load" summary="Display the system load." icon="feed_icons/Load.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/load.html" category="System">Load displays the load average of your system (a
 measure of how much work it is trying to do).  It can function as
 either a panel applet or as an independant program which can draw a
 chart of load against time.</feed>
@@ -337,6 +345,12 @@ your ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" width="48" height="36" homepage="http://rox.sourceforge.net/desktop/node/33" category="Unknown">Mail is a ROX applet which monitors your local mailbox and which can
 launch a mail reader application when required.</feed>
+
+<feed uri="http://0install.net/2007/interfaces/Make-headers.xml" name="Make-headers" summary="Creates -dev packages" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/make-headers.html" category="Development">Given a standard autoconf source package (in $SRCDIR), this script builds it
+(configure --prefix=$DISTDIR &amp;&amp; make install) and then removes files which
+shouldn't be in a -dev package (.so and .la files, etc).
+
+It also edits any pkg-config .pc files to ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="feed_icons/Mem.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/34" category="Unknown">This applet displays the current memory usage and
 the current swap space usage.</feed>
@@ -651,7 +665,7 @@ cut in your desktop environment.
 
 This program creates a freedesktop.org ".desktop" file, ...</feed>
 
-<feed uri="http://0install.net/2007/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Library">The Zero Install GUI displays a window showing which versions of various
+<feed uri="http://0install.net/2008/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Library">The Zero Install GUI displays a window showing which versions of various
 components will be used when running a program, and allows you to alter various
 policy settings to affect the selection process. You can use this to mark
 particular versions of ...</feed>

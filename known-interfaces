@@ -1,3 +1,7 @@
+http://0install.net/2008/interfaces/ZeroInstall-GUI.xml
+http://0install.net/2008/interfaces/libglade-dev.xml
+http://0install.net/2008/interfaces/libxml2-dev.xml
+http://0install.net/2007/interfaces/Make-headers.xml
 http://akfoerster.de/zero/grquiz.xml
 http://akfoerster.de/zero/scrquiz.xml
 http://0install.net/2007/interfaces/ZeroInstall.xml
@@ -34,7 +38,6 @@ http://teythoon.cryptobitch.de/0install/xworld.xml
 http://teythoon.cryptobitch.de/0install/zombies.xml
 http://0install.net/2007/3rd-party/Mutt.xml
 http://dom-editor.googlecode.com/svn/feed/Dome.xml
-http://0install.net/2007/interfaces/ZeroInstall-GUI.xml
 http://0install.net/2007/3rd-party/Tgif.xml
 http://0install.net/2007/3rd-party/XdgUtils.xml
 http://0install.net/2007/interfaces/Zero2Desktop.xml
