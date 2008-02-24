@@ -12,7 +12,9 @@
   <item base='injector-feeds' label='Software index'/>
 
   <item base="doc" label="Documentation">
-    <item base='injector-using' label='Tutorial'/>
+    <item base='injector-using' label='Tutorial'>
+      <item base='tutorial-policy' label='Part 2: policy'/>
+    </item>
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
     <item base="sharing" label="Sharing"/>

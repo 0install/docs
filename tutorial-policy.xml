@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Contents</h2>
+
+<toc level='h2'/>
+
+<h2>Zero Install tutorial part 2: Policy settings</h2>
+
+<p>
+To get back to the policy box (so you can change which versions of Edit and
+ROX-Lib you want used), 0launch with the --gui option. If you created a shell alias,
+you can run 0alias again as a shortcut:
+</p>
+
+<pre>
+$ <b>0alias rox-edit</b>
+</pre>
+
+<p>
+You can affect which versions are chosen by changing your policy. Three aspects
+of your policy are shown in the Preferences window: <b>Network use</b>, <b>Freshness</b>
+and <b>Help test new versions</b>:
+</p>
+
+<p style='text-align: center'>
+  <img width="623" height="478" src="screens/preferences.png" alt='The Preferences dialog'/>
+</p>
+
+<p>
+Click on <b>Help test new versions</b>, and
+you may see the version numbers increase, as newer, less well tested, versions
+are chosen.
+However, you may not see any change at all, since there may not be new
+testing versions available when you try this.
+</p>
+
+<p style='text-align: center'>
+<img width="569" height="364" src="inject.png"
+     alt="Versions are selected according to the user's policy" />
+</p>
+
+<p>
+To get Zero Install to notice that a new version is available, click on the <b>Refresh all now</b>
+button (which fetches a fresh copy of each feed). You can also set the freshness
+policy; it will automatically check for updates to feeds that haven't been
+checked within the allowed time.
+</p>
+
+<p>
+These are not the only policy settings. The rest are per-component, and are
+accessed by double-clicking on a line in the list. This is described in the following sections.
+</p>
+
+<p>Note that all changes to your policy are saved as soon as you make them.
+Clicking on <b>Cancel</b> will close the window without running the program,
+but any changes made to the policy are not reversed.
+</p>
+
+
+<h3>Choosing different versions</h3>
+
+<p>
+The interface URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>) is
+used to get the default list of implementations. You can see the information
+about an interface by double-clicking on it in the list of interfaces. For
+example, double-clicking on <b>Edit</b> displays this dialog box:
+</p>
+
+<p style='text-align: center'>
+  <img width="566" height="420" src="screens/edit-properties.png"
+  	alt="Properties of the Edit interface" />
+</p>
+
+<p>
+The list of feeds shows all the places where Zero Install looks for versions of Edit.
+By default, there is just one feed, whose URL is simply Edit's URI; you can
+view it in a web browser if you're interested:
+<a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit's default feed</a>. This is
+an XML file with a GPG signature at the end. The downloaded feed files are stored
+locally in <b>~/.cache/0install.net/interfaces</b>.
+</p>
+
+<p>
+The Versions tab shows all the versions found in all of the feeds:
+</p>
+
+<p style='text-align: center'>
+  <img width="557" height="321" src="screens/edit-versions.png"
+  	alt="Versions of the Edit" />
+</p>
+
+<p>
+</p>
+
+<h3>Stability</h3>
+
+<p>
+The feed file also gives a stability rating for each implementation. The following
+levels are allowed:
+</p>
+
+<ul>
+<li>Stable</li>
+<li>Testing</li>
+<li>Developer</li>
+<li>Buggy</li>
+<li>Insecure</li>
+</ul>
+
+<p>
+Stability ratings are kept independently of the implementations, and are expected to change over
+time. When any new release is made, its stability is initially set to <b>Testing</b>. If you
+have selected <b>Help test new versions</b> in the Preferences dialog box then you will then start using it.
+Otherwise, you will continue with the previous stable release. After a while
+(days, weeks or months, depending on the project) with no serious problems
+found, the author will change the implementation's stability to <b>Stable</b> so that
+everyone will use it.
+</p>
+
+<p>
+If problems are found, it will instead be marked as <b>Buggy</b>, or <b>Insecure</b>. Neither
+will be selected by default, but it is useful to see the reason (you might opt to
+continue using a buggy version if it works for you, but should never use an insecure
+one). <b>Developer</b> is like a more extreme version of <b>Testing</b>, where the program is
+expected to have bugs.
+</p>
+
+<p>
+You can use the <b>Preferred Stability</b> setting in the interface dialog to choose which
+versions to use. You can also change the stability rating of any implementation by clicking on it
+and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
+</p>
+
+<p>
+As you make changes to the policy and ratings, the order of the implementations in the list
+will change. The version at the top is the one that will actually be used. In addition
+to the ratings above, you can set the rating to <b>Preferred</b>. Such versions always come first,
+unless they're not cached and you are in Off-line mode.
+</p>
+
+<p>
+Note: If you want to use the second item on the list because the first is
+buggy, for example, then it is better to mark the first version as buggy than to mark the
+second as preferred. This is because when a new version is available, you will want that to
+become the version at the top of the list, whereas a preferred version will always be first.
+</p>
+
+<h2>How to I uninstall things?</h2>
+
+<p>
+Click on the <b>Cache</b> button in the main window to get the cache
+explorer. Select the versions you don't need anymore and click on <b>Delete</b>.
+</p>
+
+<p style='text-align: center'>
+  <img width="812" height="334" src="injector-cache.png"
+  	alt='Uninstalling programs'/>
+</p>
+
+<h2>List of Zero Install software</h2>
+
+<p>
+See the <a href='injector-feeds.html'>packages</a> page for a list of software currently available
+through Zero Install. See the <a href='injector-packagers.html'>packaging guide</a> for instructions
+on how to provide software yourself.
+</p>
+ 
+</html>
