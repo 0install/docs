@@ -1,20 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>Contents</h2>
-
 <div style='float: right; text-align: center'>
 <object width="425" height="355" data="http://www.youtube.com/v/16btFQGWoJM&amp;rel=1" type="application/x-shockwave-flash"/>
 <p><a href="http://youtube.com/watch?v=16btFQGWoJM">Zero Install launchers tutorial</a> (screencast with audio commentary)</p>
 </div>
+
+<h2>Contents</h2>
 
 <toc level='h2'/>
 
 <h2>Introduction</h2>
 
 <p>
-Zero Install's <b>0launch</b> command can be run manually, but it is normally invoked by another
-program. Some examples include:
+Zero Install's <b>0launch</b> command takes a URI (e.g.
+<a href='http://rox.sourceforge.net/2007/interfaces/Reinteract.xml'>http://rox.sourceforge.net/2007/interfaces/Reinteract.xml</a>) and runs the corresponding
+program. 
+</p>
+
+<p>
+Although 0launch can be run manually, it is normally invoked by a <i>launcher</i>.
+A launcher simply provides an easy way to run a program without entering the full URI, rather as a bookmark in a web-browser provides an easy
+way to return to a web page without entering the full URL. Examples of launchers include:
 </p>
 
 <ul class='spaced'>
@@ -24,22 +31,17 @@ program. Some examples include:
  <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs it.</li>
 </ul>
 
-
-<h2 style='clear: both'>Zero Install from the shell</h2>
-
-<p>
-In this tutorial we'll use the <b>0launch</b> command directly from a shell prompt.
+<p style='text-align: center; clear: both'>
+  <img width="455" height="73" src="tutorial/launcher.png" alt='Launchers diagram'/>
+</p>
+<p style='text-align: center'>
+  <i>A launcher provides an easy way to run a program.</i>
 </p>
 
 <p>
-Now that you've <a href='injector.html'>installed Zero Install</a>, let's try using it to
-get more software.
-</p>
-
-<p>
-Run <b>0launch</b> from your shell prompt (as a normal user, <b>not</b> as root!), giving it the URL
-for the program you want to run. You can get a prompt using a <i>terminal emulator</i>, such as xterm,
-gnome-terminal or konsole. For example ($ is the prompt displayed by the computer):
+However, you can always run the 0launch command manually yourself. For example,
+entering this in a <i>terminal emulator</i> (such as xterm, gnome-terminal or
+konsole) will run the Edit application from the ROX desktop:
 </p>
 
 <pre>
@@ -47,108 +49,25 @@ $ <b>0launch http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
 <ul>
-<li>If you get an error running this command, jump to
+<li>Note: If you get an error following these steps, please skip to
 <a href='injector-trouble.html'>the trouble-shooting section</a>.</li>
 </ul>
 
-<p style='text-align: center'>
-<img width="430" height="370" src="confirm-tal.png"
-     alt="Confirming Thomas Leonard's GPG key" />
-</p>
+<h2>Adding a new launcher</h2>
 
 <p>
-So what happened?
+Different environments provide different ways to add launchers.
 </p>
 
-<ol>
-<li>It realised that it needed to download some files to run Edit, so
-it switched to graphical mode (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1189/focus=1190'>use --console to disable this</a>).</li>
-<li>First, it checks for updates to the graphical user interface (GUI) itself.
-It downloaded the GUI's <i>feed</i> file, which tells it which versions are
-available.</li>
-<li>It prompts you to confirm that you will accept software signed with my key.</li>
-<li>If a newer version of the GUI was found, you would be prompted to download it (or choose
-a different version) at this point.</li>
-</ol>
+<dl>
+ <dt>GNOME</dt>
+ <dd>
+ <p>Choose <b>Add Zero Install Program</b> from the <b>Applications</b> menu. Type in the URI, or drag it from the web-browser into the dialog box. This video above demonstrates this.</p></dd>
 
-<p>Having got a copy of the GUI that everyone is happy with, it proceeds to
-run Edit in the same way:
-</p>
-
-<ol>
-<li>It downloads Edit's feed file.</li>
-<li>Edit is also signed with my key, but you'll be asked to confirm again as Edit is from a different
-domain (<b>rox.sourceforge.net</b> rather than <b>0install.net</b>):
-<p style='text-align: center'>
-<img width="430" height="414" src="confirm-tal-rox.png"
-     alt="Confirming Thomas Leonard's GPG key again" />
-</p></li>
-
-<li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's feed too. This is
-also signed with my key and comes from the ROX domain, so you don't need to confirm again.</li>
-<li>It selects suitable versions of Edit and ROX-Lib and prompts you to accept them:</li>
-</ol>
-
-<p style='text-align: center'>
-<img width="500" height="233" src="edit-injector.png"
-     alt="Running Edit with the injector" />
-</p>
-
+ <dt>Shell</dt>
+ <dd>
 <p>
-The main part of the window contains a list of all the components needed to run Edit.
-At the top is Edit itself, and shown below is ROX-Lib, which Edit needs in order to function.
-If you are happy with the selected versions, click on <b>Run</b> to run the
-program.
-</p>
-
-<p>
-When you click on <b>Run</b>, the two chosen versions will be downloaded:
-</p>
-
-<p style='text-align: center'>
-<img width="327" height="144" src="injector-downloading.png"
-     alt="Downloading Edit and ROX-Lib" />
-</p>
-
-<p>
-The downloaded archives are unpacked into temporary directories and their contents
-checked against the digests in the feed files. If correct, the extracted directories
-are placed in a cache to save having to download them again next time you run Edit.
-No files are placed anywhere except in the cache, and a separate sub-directory is created for each
-archive downloaded. Each sub-directory is named after the digest of its contents, which allows
-downloads to be shared safely between users.
-</p>
-
-<div class='note' style='text-align: left'><h3>Note on sharing downloads</h3>
-<p>
-By default, archives are cached in <b>~/.cache/0install.net/implementations</b>, 
-so if multiple users try to run the same program it will download and save multiple copies.
-To allow automatic (and safe) sharing of downloads, see the <a href='sharing.html'>Sharing</a>
-page.</p>
-</div>
-
-<p>When the downloads are complete, Edit itself runs:</p>
-
-<p style='text-align: center'>
-<img width="395" height="230" src="edit-running.png"
-     alt="Edit running" />
-</p>
-
-<p>
-By default, the GUI confirmation box is only shown if something must be downloaded.
-If you run the command again once <b>Edit</b> has been cached, Edit will run immediately. To get back to
-the dialog box, use the <b>--gui</b> option:
-</p>
-
-<pre>
-$ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b>
-</pre>
-
-<h2>Creating an alias</h2>
-
-<p>
-It's annoying to have to keep typing in the full URL for Edit. The <b>0alias</b> command
-can be used to create little shell scripts to start programs easily:
+The <b>0alias</b> command can be used to create little shell scripts to start programs easily:
 </p>
 
 <pre>
@@ -167,183 +86,116 @@ You can now run Edit like this:
 $ <b>rox-edit</b>
 </pre>
 
+</dd>
+
+<dt>ROX</dt>
+<dd><p>Drag the link from your web-browser to the AddApp program, then drag the launcher from there to wherever you want it. <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>'s page has more details.</p></dd>
+</dl>
+
+<h2>Confirming keys</h2>
+
 <p>
-To get back to the policy box (so you can change which versions of Edit and
-ROX-Lib you want used), run it like this:
+Once 0launch has been run (either manually or by a launcher), it chooses a suitable version of the program and runs it.
+If it doesn't know about this program yet then it will need to download some information about it first. If you tried the Edit
+example above, you're probably looking at this dialog box now:
+</p>
+
+<p style='text-align: center'>
+<img width="430" height="414" src="confirm-tal-rox.png"
+     alt="Confirming Thomas Leonard's GPG key" />
+</p>
+
+<p>
+So what happened?
+</p>
+
+<ol>
+<li>0launch realised that it needed to download some files to run Edit, so
+it switched to graphical mode (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1189/focus=1190'>use --console to disable this</a>).</li>
+<li>It downloaded Edit's feed file and the GPG key that signed it.</li>
+<li>It prompts you to confirm that you trust this key to sign feeds from <b>rox.sourceforge.net</b>.</li>
+</ol>
+
+<p>
+The important thing in this box is the <i>fingerprint</i>, since it can't be faked: anyone can create a key
+with the name "Thomas Leonard", but noone knows how to create another key with this fingerprint.
+</p>
+
+<p>
+Ideally, you should check the fingerprint somehow (maybe the person who recommended Edit to you told you the fingerprint).
+However, there's a handy hints database built into Zero Install to help you out. It's called "unreliable" because I don't
+have the funding to verify people's keys, so it's just a list of keys that have been announced on the mailing list, but it's
+better than nothing. Obviously, I can't accept any kind of legal liablity for its accuracy, but you could pay someone to
+provide a real service if you needed that.
+</p>
+
+<ol>
+<li>Once the key is confirmed, 0launch looks at the information it has downloaded about Edit.</li>
+<li>Edit requires the ROX-Lib library, so it fetches ROX-Lib's feed too. This is
+also signed with my key and comes from the ROX domain, so you don't need to confirm again.</li>
+</ol>
+
+<h2>Downloading and running</h2>
+
+<p>
+After downloading information about Edit and its dependencies, 0launch
+selects suitable versions of them and prompts you to confirm:
+</p>
+
+<p style='text-align: center'>
+<img width="500" height="233" src="edit-injector.png"
+     alt="Running Edit with the injector" />
+</p>
+
+<p>
+The main part of the window contains a list of all the components needed to run Edit.
+At the top is Edit itself, and shown below is ROX-Lib, which Edit needs in order to function.
+If you are happy with the selected versions, click on <b>Run</b> to download and run the
+program (selecting different versions is covered in part two of this tutorial):
+</p>
+
+<p style='text-align: center'>
+<img width="395" height="230" src="edit-running.png"
+     alt="Edit running" />
+</p>
+
+<p>
+By default, the GUI confirmation box is only shown if something must be downloaded.
+If you run the command again once <b>Edit</b> has been cached, Edit will run immediately. To get back to
+the dialog box, use the <b>--gui</b> option:
 </p>
 
 <pre>
-$ <b>rox-edit --versions</b>
+$ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
-<p>
-Of course, if you don't normally use the shell for running applications then you should use some other
-utility to make new programs easy to run. For example, users of the <a href='http://www.xfce.org'>Xfce desktop</a>
-can <a href='http://rox.sourceforge.net/desktop/node/269'>drag the URI to the
-panel's launcher dialog</a>, while users of the <a href="http://rox.sf.net">ROX
-desktop</a> can drag it to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> to create a ROX
-application directory launcher.
-</p>
-
-<h2>Policy settings</h2>
+<h2>Where do the downloads go?</h2>
 
 <p>
-You can affect which versions are chosen by changing your policy. Three aspects
-of your policy are shown in the Preferences window: <b>Network use</b>, <b>Freshness</b>
-and <b>Help test new versions</b>:
-</p>
-
-<p style='text-align: center'>
-  <img width="623" height="478" src="screens/preferences.png" alt='The Preferences dialog'/>
+The feed files describing the available versions of each program and the downloaded packages themselves are
+stored in a <i>cache</i> directory. No files are placed anywhere except in the
+cache, and a separate sub-directory is created for each package downloaded.
+Each sub-directory is named after a cryptographic digest of its contents, which allows
+downloads to be shared safely between users.
 </p>
 
 <p>
-Click on <b>Help test new versions</b>, and
-you may see the version numbers increase, as newer, less well tested, versions
-are chosen.
-However, you may not see any change at all, since there may not be new
-testing versions available when you try this.
-</p>
-
-<p style='text-align: center'>
-<img width="569" height="364" src="inject.png"
-     alt="Versions are selected according to the user's policy" />
-</p>
-
-<p>
-To get Zero Install to notice that a new version is available, click on the <b>Refresh all now</b>
-button (which fetches a fresh copy of each feed). You can also set the freshness
-policy; it will automatically check for updates to feeds that haven't been
-checked within the allowed time.
-</p>
-
-<p>
-These are not the only policy settings. The rest are per-component, and are
-accessed by double-clicking on a line in the list. This is described in the following sections.
-</p>
-
-<p>Note that all changes to your policy are saved as soon as you make them.
-Clicking on <b>Cancel</b> will close the window without running the program,
-but any changes made to the policy are not reversed.
-</p>
-
-
-<h3>Choosing different versions</h3>
-
-<p>
-The interface URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>) is
-used to get the default list of implementations. You can see the information
-about an interface by double-clicking on it in the list of interfaces. For
-example, double-clicking on <b>Edit</b> displays this dialog box:
-</p>
-
-<p style='text-align: center'>
-  <img width="566" height="420" src="screens/edit-properties.png"
-  	alt="Properties of the Edit interface" />
-</p>
-
-<p>
-The list of feeds shows all the places where Zero Install looks for versions of Edit.
-By default, there is just one feed, whose URL is simply Edit's URI; you can
-view it in a web browser if you're interested:
-<a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit's default feed</a>. This is
-an XML file with a GPG signature at the end. The downloaded feed files are stored
-locally in <b>~/.cache/0install.net/interfaces</b>.
-</p>
-
-<p>
-The Versions tab shows all the versions found in all of the feeds:
-</p>
-
-<p style='text-align: center'>
-  <img width="557" height="321" src="screens/edit-versions.png"
-  	alt="Versions of the Edit" />
-</p>
-
-<p>
-</p>
-
-<h3>Stability</h3>
-
-<p>
-The feed file also gives a stability rating for each implementation. The following
-levels are allowed:
-</p>
-
-<ul>
-<li>Stable</li>
-<li>Testing</li>
-<li>Developer</li>
-<li>Buggy</li>
-<li>Insecure</li>
-</ul>
-
-<p>
-Stability ratings are kept independently of the implementations, and are expected to change over
-time. When any new release is made, its stability is initially set to <b>Testing</b>. If you
-have selected <b>Help test new versions</b> in the Preferences dialog box then you will then start using it.
-Otherwise, you will continue with the previous stable release. After a while
-(days, weeks or months, depending on the project) with no serious problems
-found, the author will change the implementation's stability to <b>Stable</b> so that
-everyone will use it.
-</p>
-
-<p>
-If problems are found, it will instead be marked as <b>Buggy</b>, or <b>Insecure</b>. Neither
-will be selected by default, but it is useful to see the reason (you might opt to
-continue using a buggy version if it works for you, but should never use an insecure
-one). <b>Developer</b> is like a more extreme version of <b>Testing</b>, where the program is
-expected to have bugs.
-</p>
-
-<p>
-You can use the <b>Preferred Stability</b> setting in the interface dialog to choose which
-versions to use. You can also change the stability rating of any implementation by clicking on it
-and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
-</p>
-
-<p>
-As you make changes to the policy and ratings, the order of the implementations in the list
-will change. The version at the top is the one that will actually be used. In addition
-to the ratings above, you can set the rating to <b>Preferred</b>. Such versions always come first,
-unless they're not cached and you are in Off-line mode.
-</p>
-
-<p>
-Note: If you want to use the second item on the list because the first is
-buggy, for example, then it is better to mark the first version as buggy than to mark the
-second as preferred. This is because when a new version is available, you will want that to
-become the version at the top of the list, whereas a preferred version will always be first.
-</p>
-
-<h2>How to I uninstall things?</h2>
-
-<p>
-Click on the <b>Cache</b> button in the main window to get the cache
-explorer. Select the versions you don't need anymore and click on <b>Delete</b>.
-</p>
-
-<p style='text-align: center'>
-  <img width="812" height="334" src="injector-cache.png"
-  	alt='Uninstalling programs'/>
-</p>
+By default, archives are cached in <b>~/.cache/0install.net/implementations</b> (i.e. inside your home directory), 
+so if multiple users try to run the same program it will download and save multiple copies.
+To allow automatic (and safe) sharing of downloads, see the <a href='sharing.html'>Sharing</a>
+page.</p>
 
 <h2>List of Zero Install software</h2>
 
 <p>
 See the <a href='injector-feeds.html'>packages</a> page for a list of software currently available
-through Zero Install. See the <a href='injector-packagers.html'>packaging guide</a> for instructions
-on how to provide software yourself.
+through Zero Install. When you're ready, you can continue with the tutorial using the link below:
 </p>
 
-<h2>Further reading</h2>
-
-<ul>
-<li><a href="injector-packagers.html">The Injector: Packaging Guide</a> is for people who
-want to make software available to others through the injector.</li>
-<li><a href="injector-design.html">The Injector: Design</a> explains the design of the Zero Install Injector
-itself.</li>
-<li><a href="http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/803">Release notes and future plans</a>.</li>
-</ul>
+<table class='quicklinks'>
+ <tr>
+  <td style='width: 100%'><a href='tutorial-policy.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to part two</a></td>
+ </tr>
+</table>
  
 </html>
