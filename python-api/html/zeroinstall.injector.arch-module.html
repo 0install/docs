@@ -59,113 +59,98 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module arch</h1><span class="codelink"><a href="zeroinstall.injector.arch-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Module arch</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.arch-pysrc.html">source&nbsp;code</a></span></p>
 <p>Information about the current system's architecture.</p>
   <p>This module provides information about the current system. It is used 
   to determine whether an implementation is suitable for this machine, and 
   to compare different implementations.</p>
-  For example, it will indicate that:
+  <p>For example, it will indicate that:</p>
   <ul>
     <li>
       An i486 machine cannot run an i686 binary.
     </li>
     <li>
-      An i686 machine can run an i486 binary, but would prefer an i586 
-      one.
+      An i686 machine can run an i486 binary, but would prefer an i586 one.
     </li>
     <li>
       A Windows binary cannot run on a Linux machine.
     </li>
   </ul>
-  Each dictionary maps from a supported architecture type to a 
+  <p>Each dictionary maps from a supported architecture type to a 
   preference level. Lower numbers are better, Unsupported architectures are
-  not listed at all.<br /><br />
+  not listed at all.</p>
 
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.arch.Architecture-class.html" class="summary-name">Architecture</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.arch.SourceArchitecture-class.html" class="summary-name">SourceArchitecture</a>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_host_architecture"></a><span class="summary-sig-name">get_host_architecture</span>()</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.arch-pysrc.html#get_host_architecture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.arch-module.html#os_ranks">os_ranks</a> = <code title="{None: 2, _uname [0]: 1,}">{None: 2, _uname [0]: 1,}</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="os_ranks"></a><span class="summary-name">os_ranks</span> = <code title="{None: 2, _uname [0]: 1,}">{None: 2, _uname [0]: 1,}</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.arch-module.html#machine_ranks">machine_ranks</a> = <code title="_get_machine_ranks()">_get_machine_ranks()</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="machine_ranks"></a><span class="summary-name">machine_ranks</span> = <code title="_get_machine_ranks()">_get_machine_ranks()</code>
+    </td>
+  </tr>
 </table>
-
-<br />
-<!-- ==================== VARIABLES DETAILS ==================== -->
-<a name="section-VariablesDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-VariablesDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="os_ranks"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">os_ranks</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{None: 2, _uname [0]: 1,}                                              
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="machine_ranks"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">machine_ranks</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-_get_machine_ranks()                                                   
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -196,10 +181,12 @@ _get_machine_ranks()
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -210,9 +197,8 @@ _get_machine_ranks()
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

@@ -58,68 +58,66 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module helpers</h1><span class="codelink"><a href="zeroinstall.helpers-pysrc.html">source&nbsp;code</a></span><br /><br />
-Convenience routines for performing common operations.<br /><br />
+<h1 class="epydoc">Module helpers</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.helpers-pysrc.html">source&nbsp;code</a></span></p>
+<p>Convenience routines for performing common operations.</p>
 
 <hr />
-      <p><strong>Since:</strong>
+<div class="fields">      <p><strong>Since:</strong>
         0.28
       </p>
-<!-- ==================== FUNCTIONS ==================== -->
+</div><!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Functions</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Functions"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.helpers-module.html#get_selections_gui" class="summary-sig-name">get_selections_gui</a>(<span class="summary-sig-arg">iface_uri</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.helpers-module.html#get_selections_gui" class="summary-sig-name">get_selections_gui</a>(<span class="summary-sig-arg">iface_uri</span>,
         <span class="summary-sig-arg">gui_args</span>,
         <span class="summary-sig-arg">test_callback</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Run the GUI to choose and download a set of implementations.
-  </td>
-</tr>
+      Run the GUI to choose and download a set of implementations.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.helpers-pysrc.html#get_selections_gui">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type"><a href="zeroinstall.injector.selections.Selections-class.html" 
-      class="link">zeroinstall.injector.selections.Selections</a></code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.helpers-module.html#ensure_cached" class="summary-sig-name">ensure_cached</a>(<span class="summary-sig-arg">uri</span>)</span><br />
-      Ensure that an implementation of uri is cached.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.selections.Selections-class.html" 
+      class="link">zeroinstall.injector.selections.Selections</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.helpers-module.html#ensure_cached" class="summary-sig-name">ensure_cached</a>(<span class="summary-sig-arg">uri</span>)</span><br />
+      Ensure that an implementation of uri is cached.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.helpers-pysrc.html#ensure_cached">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== FUNCTION DETAILS ==================== -->
 <a name="section-FunctionDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Function Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-FunctionDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
 </tr>
 </table>
 <a name="get_selections_gui"></a>
@@ -134,33 +132,32 @@ Convenience routines for performing common operations.<br /><br />
         <span class="sig-arg">test_callback</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.helpers-pysrc.html#get_selections_gui">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.helpers-pysrc.html#get_selections_gui">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Run the GUI to choose and download a set of implementations. If the 
+  <p>Run the GUI to choose and download a set of implementations. If the 
   GUI itself is due for a check, refresh it first. The user may ask the GUI
   to submit a bug report about the program. In that case, the GUI may ask 
   us to test it. test_callback is called in that case with the 
   implementations to be tested; the callback will typically call <a 
   href="zeroinstall.injector.run-module.html#test_selections" 
   class="link">zeroinstall.injector.run.test_selections</a> and return the 
-  result of that.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>iface_uri</code></strong> (<code>str</code>) - the required program</li>
-        <li><strong class="pname"><code>gui_args</code></strong> (<code>[str]</code>) - any additional arguments for the GUI itself</li>
-        <li><strong class="pname"><code>test_callback</code></strong> (<code><a 
-          href="zeroinstall.injector.selections.Selections-class.html" 
+  result of that.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>iface_uri</code></strong> (str) - the required program</li>
+        <li><strong class="pname"><code>gui_args</code></strong> ([str]) - any additional arguments for the GUI itself</li>
+        <li><strong class="pname"><code>test_callback</code></strong> (<a href="zeroinstall.injector.selections.Selections-class.html" 
           class="link">zeroinstall.injector.selections.Selections</a> -&gt;
-          str</code>) - function to use to try running the program</li>
-    </ul>
-      <p><strong>Since:</strong>
+          str) - function to use to try running the program</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
         0.28
       </p>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
 <a name="ensure_cached"></a>
 <div>
@@ -172,23 +169,22 @@ Convenience routines for performing common operations.<br /><br />
   <h3 class="epydoc"><span class="sig"><span class="sig-name">ensure_cached</span>(<span class="sig-arg">uri</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.helpers-pysrc.html#ensure_cached">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.helpers-pysrc.html#ensure_cached">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Ensure that an implementation of uri is cached. If not, it downloads 
+  <p>Ensure that an implementation of uri is cached. If not, it downloads 
   one. It uses the GUI if a display is available, or the console 
-  otherwise.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>uri</code></strong> (<code>str</code>) - the required interface</li>
-    </ul>
-    <dl><dt>Returns: <code><a href="zeroinstall.injector.selections.Selections-class.html" 
-      class="link">zeroinstall.injector.selections.Selections</a></code></dt>
-        <dd>a new policy for this program, or None if the user 
-          cancelled</dd></dl>
-  </dd></dl>
+  otherwise.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>uri</code></strong> (str) - the required interface</li>
+    </ul></dd>
+    <dt>Returns: <a href="zeroinstall.injector.selections.Selections-class.html" 
+      class="link">zeroinstall.injector.selections.Selections</a></dt>
+        <dd>a new policy for this program, or None if the user cancelled</dd>
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -222,10 +218,12 @@ Convenience routines for performing common operations.<br /><br />
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -236,9 +234,8 @@ Convenience routines for performing common operations.<br /><br />
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

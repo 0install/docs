@@ -59,386 +59,418 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module model</h1><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Module model</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html">source&nbsp;code</a></span></p>
 <p>In-memory representation of interfaces and other data structures.</p>
-  The objects in this module are used to build a representation of an 
-  XML interface file in memory.<br /><br />
+  <p>The objects in this module are used to build a representation of an 
+  XML interface file in memory.</p>
 
 <hr />
-      <p><strong>See Also:</strong>
+<div class="fields">      <p><strong>See Also:</strong>
         <a href="zeroinstall.injector.reader-module.html" 
         class="link">reader</a> constructs these data-structures.
       </p>
-<!-- ==================== CLASSES ==================== -->
+</div><!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Classes</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Classes"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Stability-class.html">Stability</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.InvalidInterface-class.html" class="summary-name">InvalidInterface</a><br />
+      Raised when parsing an invalid feed.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Stability-class.html" class="summary-name">Stability</a><br />
       A stability rating.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Restriction-class.html">Restriction</a><br />
-      A Restriction limits the allowed implementations of an 
-        Interface.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Restriction-class.html" class="summary-name">Restriction</a><br />
+      A Restriction limits the allowed implementations of an Interface.
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Binding-class.html">Binding</a><br />
-      Information about how the choice of a Dependency is made known 
-        to the application being run.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.VersionRangeRestriction-class.html" class="summary-name">VersionRangeRestriction</a><br />
+      Only versions within the given range are acceptable
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.EnvironmentBinding-class.html">EnvironmentBinding</a><br />
-      Indicate the chosen implementation using an environment 
-        variable.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Binding-class.html" class="summary-name">Binding</a><br />
+      Information about how the choice of a Dependency is made known to 
+        the application being run.
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Feed-class.html">Feed</a><br />
-      An interface's feeds are other interfaces whose implementations 
-        can also be used as implementations of this interface.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.EnvironmentBinding-class.html" class="summary-name">EnvironmentBinding</a><br />
+      Indicate the chosen implementation using an environment variable.
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Dependency-class.html">Dependency</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Feed-class.html" class="summary-name">Feed</a><br />
+      An interface's feeds are other interfaces whose implementations can
+        also be used as implementations of this interface.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Dependency-class.html" class="summary-name">Dependency</a><br />
       A Dependency indicates that an Implementation requires some 
         additional code to function.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.InterfaceDependency-class.html">InterfaceDependency</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.InterfaceDependency-class.html" class="summary-name">InterfaceDependency</a><br />
       A Dependency on a Zero Install interface.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.RetrievalMethod-class.html">RetrievalMethod</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.RetrievalMethod-class.html" class="summary-name">RetrievalMethod</a><br />
       A RetrievalMethod provides a way to fetch an implementation.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.DownloadSource-class.html">DownloadSource</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.DownloadSource-class.html" class="summary-name">DownloadSource</a><br />
       A DownloadSource provides a way to fetch an implementation.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Recipe-class.html">Recipe</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Recipe-class.html" class="summary-name">Recipe</a><br />
       Get an implementation by following a series of steps.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Implementation-class.html">Implementation</a><br />
-      An Implementation is a package which implements an 
-        Interface.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Implementation-class.html" class="summary-name">Implementation</a><br />
+      An Implementation is a package which implements an Interface.
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.DistributionImplementation-class.html">DistributionImplementation</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.DistributionImplementation-class.html" class="summary-name">DistributionImplementation</a><br />
       An implementation provided by the distribution.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.ZeroInstallImplementation-class.html">ZeroInstallImplementation</a><br />
-      An implementation where all the information comes from Zero 
-        Install.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.ZeroInstallImplementation-class.html" class="summary-name">ZeroInstallImplementation</a><br />
+      An implementation where all the information comes from Zero Install.
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model.Interface-class.html">Interface</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.Interface-class.html" class="summary-name">Interface</a><br />
       An Interface represents some contract of behaviour.
-  </td>
-</tr>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" class="summary-name">ZeroInstallFeed</a><br />
+      A feed lists available implementations of an interface.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model.DummyFeed-class.html" class="summary-name">DummyFeed</a>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Functions</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Functions"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#unescape" class="summary-sig-name">unescape</a>(<span class="summary-sig-arg">uri</span>)</span><br />
-      Convert each %20 to a space, etc.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="process_binding"></a><span class="summary-sig-name">process_binding</span>(<span class="summary-sig-arg">e</span>)</span><br />
+      Internal</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#process_binding">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#escape" class="summary-sig-name">escape</a>(<span class="summary-sig-arg">uri</span>)</span><br />
-      Convert each space to %20, etc
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="process_depends"></a><span class="summary-sig-name">process_depends</span>(<span class="summary-sig-arg">item</span>)</span><br />
+      Internal</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#process_depends">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#canonical_iface_uri" class="summary-sig-name">canonical_iface_uri</a>(<span class="summary-sig-arg">uri</span>)</span><br />
-      If uri is a relative path, convert to an absolute one.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unescape"></a><span class="summary-sig-name">unescape</span>(<span class="summary-sig-arg">uri</span>)</span><br />
+      Convert each %20 to a space, etc.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#unescape">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">tuple (opaque)</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#parse_version" class="summary-sig-name">parse_version</a>(<span class="summary-sig-arg">version_string</span>)</span><br />
-      Convert a version string to an internal representation.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="escape"></a><span class="summary-sig-name">escape</span>(<span class="summary-sig-arg">uri</span>)</span><br />
+      Convert each space to %20, etc</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#escape">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.model-module.html#format_version" class="summary-sig-name">format_version</a>(<span class="summary-sig-arg">version</span>)</span><br />
-      Format a parsed version for display.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model-module.html#canonical_iface_uri" class="summary-sig-name">canonical_iface_uri</a>(<span class="summary-sig-arg">uri</span>)</span><br />
+      If uri is a relative path, convert to an absolute one.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#canonical_iface_uri">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">tuple (opaque)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model-module.html#parse_version" class="summary-sig-name">parse_version</a>(<span class="summary-sig-arg">version_string</span>)</span><br />
+      Convert a version string to an internal representation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#parse_version">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model-module.html#format_version" class="summary-sig-name">format_version</a>(<span class="summary-sig-arg">version</span>)</span><br />
+      Format a parsed version for display.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#format_version">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#network_offline">network_offline</a> = <code title="'off-line'">'off-line'</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="binding_names"></a><span class="summary-name">binding_names</span> = <code title="frozenset(['environment'])">frozenset(['environment'])</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#network_minimal">network_minimal</a> = <code title="'minimal'">'minimal'</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="network_offline"></a><span class="summary-name">network_offline</span> = <code title="'off-line'">'off-line'</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#network_full">network_full</a> = <code title="'full'">'full'</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="network_minimal"></a><span class="summary-name">network_minimal</span> = <code title="'minimal'">'minimal'</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#network_levels">network_levels</a> = <code title="network_offline, network_minimal, network_full">network_offline, network_minimal, network_full</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="network_full"></a><span class="summary-name">network_full</span> = <code title="'full'">'full'</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#stability_levels">stability_levels</a> = <code title="{}">{}</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="network_levels"></a><span class="summary-name">network_levels</span> = <code title="network_offline, network_minimal, network_full">network_offline, network_minimal, network_full</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#defaults">defaults</a> = <code title="{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share',}">{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/x...</code><br />
-      Default values for the 'default' attribute for &lt;environment&gt;
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="stability_levels"></a><span class="summary-name">stability_levels</span> = <code title="{}">{}</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#defaults" class="summary-name">defaults</a> = <code title="{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIR\
+S': '/usr/local/share:/usr/share',}">{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/<code class="variable-ellipsis">...</code></code><br />
+      Default values for the 'default' attribute for &lt;environment&gt; 
       bindings of well-known variables.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#insecure">insecure</a> = <code title="Stability(0, 'insecure', 'This is a security risk')">Stability(0, 'insecure', 'This is a security risk')</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="insecure"></a><span class="summary-name">insecure</span> = <code title="Stability(0, 'insecure', 'This is a security risk')">Stability(0, 'insecure', 'This is a security risk')</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#buggy">buggy</a> = <code title="Stability(5, 'buggy', 'Known to have serious bugs')">Stability(5, 'buggy', 'Known to have serious bugs')</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="buggy"></a><span class="summary-name">buggy</span> = <code title="Stability(5, 'buggy', 'Known to have serious bugs')">Stability(5, 'buggy', 'Known to have serious bugs')</code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#developer">developer</a> = <code title="Stability(10, 'developer', 'Work-in-progress - bugs likely')">Stability(10, 'developer', 'Work-in-progress - bugs ...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#developer" class="summary-name">developer</a> = <code title="Stability(10, 'developer', 'Work-in-progress - bugs likely')">Stability(10, 'developer', 'Work-in-progress - bug<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#testing">testing</a> = <code title="Stability(20, 'testing', 'Stability unknown - please test!')">Stability(20, 'testing', 'Stability unknown - please...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#testing" class="summary-name">testing</a> = <code title="Stability(20, 'testing', 'Stability unknown - please test!')">Stability(20, 'testing', 'Stability unknown - please<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#stable">stable</a> = <code title="Stability(30, 'stable', 'Tested - no serious problems found')">Stability(30, 'stable', 'Tested - no serious problem...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#stable" class="summary-name">stable</a> = <code title="Stability(30, 'stable', 'Tested - no serious problems found')">Stability(30, 'stable', 'Tested - no serious problems<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#packaged">packaged</a> = <code title="Stability(35, 'packaged', 'Supplied by the local package manager')">Stability(35, 'packaged', 'Supplied by the local pac...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#packaged" class="summary-name">packaged</a> = <code title="Stability(35, 'packaged', 'Supplied by the local package manager')">Stability(35, 'packaged', 'Supplied by the local pa<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.model-module.html#preferred">preferred</a> = <code title="Stability(40, 'preferred', 'Best of all - must be set manually')">Stability(40, 'preferred', 'Best of all - must be se...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.model-module.html#preferred" class="summary-name">preferred</a> = <code title="Stability(40, 'preferred', 'Best of all - must be set manually')">Stability(40, 'preferred', 'Best of all - must be <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== FUNCTION DETAILS ==================== -->
 <a name="section-FunctionDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Function Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-FunctionDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
 </tr>
 </table>
-<a name="unescape"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">unescape</span>(<span class="sig-arg">uri</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#unescape">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Convert each %20 to a space, etc.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="escape"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">escape</span>(<span class="sig-arg">uri</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#escape">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Convert each space to %20, etc
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
 <a name="canonical_iface_uri"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -449,19 +481,19 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">canonical_iface_uri</span>(<span class="sig-arg">uri</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#canonical_iface_uri">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#canonical_iface_uri">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  If uri is a relative path, convert to an absolute one. Otherwise, 
-  return it unmodified.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt></dl>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>If uri is a relative path, convert to an absolute one. Otherwise, 
+  return it unmodified.</p>
+  <dl class="fields">
+    <dt>Returns: str</dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.SafeException-class.html">SafeException</a></strong></code> - if uri isn't valid</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="parse_version"></a>
@@ -474,12 +506,12 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">parse_version</span>(<span class="sig-arg">version_string</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#parse_version">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#parse_version">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Convert a version string to an internal representation. The parsed 
-  format can be compared quickly using the standard Python functions.
+  <p>Convert a version string to an internal representation. The parsed 
+  format can be compared quickly using the standard Python functions.</p>
   <ul>
     <li>
       Version := DottedList (&quot;-&quot; Mod DottedList?)*
@@ -488,18 +520,18 @@
       DottedList := (Integer (&quot;.&quot; Integer)*)
     </li>
   </ul>
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>tuple (opaque)</code></dt></dl>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <dl class="fields">
+    <dt>Returns: tuple (opaque)</dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.SafeException-class.html">SafeException</a></strong></code> - if the string isn't a valid version</li>
-    </ul>
-      <p><strong>Since:</strong>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
         0.24 (moved from <a href="zeroinstall.injector.reader-module.html" 
     class="link">reader</a>, from where it is still available):
       </p>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
 <a name="format_version"></a>
 <div>
@@ -511,16 +543,17 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">format_version</span>(<span class="sig-arg">version</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#format_version">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#format_version">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Format a parsed version for display. Undoes the effect of <a 
+  <p>Format a parsed version for display. Undoes the effect of <a 
   href="zeroinstall.injector.model-module.html#parse_version" 
-  class="link">parse_version</a>.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt></dl>
-      <p><strong>See Also:</strong>
+  class="link">parse_version</a>.</p>
+  <dl class="fields">
+    <dt>Returns: str</dt>
+  </dl>
+<div class="fields">      <p><strong>See Also:</strong>
         <a 
         href="zeroinstall.injector.model.Implementation-class.html#get_version"
         class="link">Implementation.get_version</a>
@@ -528,108 +561,18 @@
       <p><strong>Since:</strong>
         0.24
       </p>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
 <br />
 <!-- ==================== VARIABLES DETAILS ==================== -->
 <a name="section-VariablesDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-VariablesDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables Details</span></td>
 </tr>
 </table>
-<a name="network_offline"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">network_offline</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-'off-line'                                                             
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="network_minimal"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">network_minimal</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-'minimal'                                                              
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="network_full"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">network_full</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-'full'                                                                 
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="network_levels"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">network_levels</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-network_offline, network_minimal, network_full                         
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="stability_levels"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">stability_levels</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{}                                                                     
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
 <a name="defaults"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -638,46 +581,16 @@ network_offline, network_minimal, network_full
   <h3 class="epydoc">defaults</h3>
   Default values for the 'default' attribute for &lt;environment&gt; 
   bindings of well-known variables.
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIR<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-S': '/usr/local/share:/usr/share',}                                    
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="insecure"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">insecure</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-Stability(0, 'insecure', 'This is a security risk')                    
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="buggy"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">buggy</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-Stability(5, 'buggy', 'Known to have serious bugs')                    
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_DATA_DIR<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+S': '/usr/local/share:/usr/share',}
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="developer"></a>
@@ -686,14 +599,16 @@ Stability(5, 'buggy', 'Known to have serious bugs')
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">developer</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(10, 'developer', 'Work-in-progress - bugs likely')           
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+Stability(10, 'developer', 'Work-in-progress - bugs likely')
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="testing"></a>
@@ -702,14 +617,16 @@ Stability(10, 'developer', 'Work-in-progress - bugs likely')
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">testing</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(20, 'testing', 'Stability unknown - please test!')           
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+Stability(20, 'testing', 'Stability unknown - please test!')
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="stable"></a>
@@ -718,14 +635,16 @@ Stability(20, 'testing', 'Stability unknown - please test!')
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">stable</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(30, 'stable', 'Tested - no serious problems found')          
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+Stability(30, 'stable', 'Tested - no serious problems found')
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="packaged"></a>
@@ -734,14 +653,16 @@ Stability(30, 'stable', 'Tested - no serious problems found')
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">packaged</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(35, 'packaged', 'Supplied by the local package manager')     
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+Stability(35, 'packaged', 'Supplied by the local package manager')
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="preferred"></a>
@@ -750,14 +671,16 @@ Stability(35, 'packaged', 'Supplied by the local package manager')
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">preferred</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(40, 'preferred', 'Best of all - must be set manually')       
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+Stability(40, 'preferred', 'Best of all - must be set manually')
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -791,10 +714,12 @@ Stability(40, 'preferred', 'Best of all - must be set manually')
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -805,9 +730,8 @@ Stability(40, 'preferred', 'Best of all - must be set manually')
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

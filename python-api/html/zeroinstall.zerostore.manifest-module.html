@@ -59,15 +59,14 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module manifest</h1><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Module manifest</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html">source&nbsp;code</a></span></p>
 <p>Processing of implementation manifests.</p>
-  A manifest is a string representing a directory tree, with the 
+  <p>A manifest is a string representing a directory tree, with the 
   property that two trees will generate identical manifest strings if and 
-  only if:
+  only if:</p>
   <ul>
     <li>
-      They have extactly the same set of files, directories and 
-      symlinks.
+      They have extactly the same set of files, directories and symlinks.
     </li>
     <li>
       For each pair of corresponding directories in the two sets:
@@ -103,200 +102,229 @@
   <p>The manifest is typically processed with a secure hash itself. So, the
   idea is that any significant change to the contents of the tree will 
   change the secure hash value of the manifest.</p>
-  A top-level &quot;.manifest&quot; file is ignored.<br /><br />
+  <p>A top-level &quot;.manifest&quot; file is ignored.</p>
 
 <!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Classes</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Classes"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.zerostore.manifest.Algorithm-class.html">Algorithm</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.zerostore.manifest.Algorithm-class.html" class="summary-name">Algorithm</a><br />
       Abstract base class for algorithms.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.zerostore.manifest.OldSHA1-class.html">OldSHA1</a>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.zerostore.manifest.OldSHA1-class.html" class="summary-name">OldSHA1</a>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.zerostore.manifest.HashLibAlgorithm-class.html">HashLibAlgorithm</a>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.zerostore.manifest.HashLibAlgorithm-class.html" class="summary-name">HashLibAlgorithm</a>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Functions</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Functions"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#get_algorithm" class="summary-sig-name">get_algorithm</a>(<span class="summary-sig-arg">name</span>)</span><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#get_algorithm" class="summary-sig-name">get_algorithm</a>(<span class="summary-sig-arg">name</span>)</span><br />
       Look-up an <a 
       href="zeroinstall.zerostore.manifest.Algorithm-class.html" 
-      class="link">Algorithm</a> by name.
-  </td>
-</tr>
+      class="link">Algorithm</a> by name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#get_algorithm">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#generate_manifest" class="summary-sig-name">generate_manifest</a>(<span class="summary-sig-arg">root</span>,
-        <span class="summary-sig-arg">alg</span>=<span class="summary-sig-default">'sha1'</span>)</span>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#generate_manifest" class="summary-sig-name">generate_manifest</a>(<span class="summary-sig-arg">root</span>,
+        <span class="summary-sig-arg">alg</span>=<span class="summary-sig-default">'sha1'</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#generate_manifest">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#add_manifest_file" class="summary-sig-name">add_manifest_file</a>(<span class="summary-sig-arg">dir</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#add_manifest_file" class="summary-sig-name">add_manifest_file</a>(<span class="summary-sig-arg">dir</span>,
         <span class="summary-sig-arg">digest_or_alg</span>)</span><br />
-      Writes a .manifest file into 'dir', and returns the digest.
-  </td>
-</tr>
+      Writes a .manifest file into 'dir', and returns the digest.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#add_manifest_file">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#splitID" class="summary-sig-name">splitID</a>(<span class="summary-sig-arg">id</span>)</span><br />
-      Take an ID in the form 'alg=value' and return a tuple (alg, 
-      value), where 'alg' is an instance of Algorithm and 'value' is a 
-      string.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#splitID" class="summary-sig-name">splitID</a>(<span class="summary-sig-arg">id</span>)</span><br />
+      Take an ID in the form 'alg=value' and return a tuple (alg, value), 
+      where 'alg' is an instance of Algorithm and 'value' is a string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#splitID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#copy_with_verify" class="summary-sig-name">copy_with_verify</a>(<span class="summary-sig-arg">src</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#copy_with_verify" class="summary-sig-name">copy_with_verify</a>(<span class="summary-sig-arg">src</span>,
         <span class="summary-sig-arg">dest</span>,
         <span class="summary-sig-arg">mode</span>,
         <span class="summary-sig-arg">alg</span>,
         <span class="summary-sig-arg">required_digest</span>)</span><br />
       Copy path src to dest, checking that the contents give the right 
-      digest.
-  </td>
-</tr>
+      digest.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_with_verify">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#verify" class="summary-sig-name">verify</a>(<span class="summary-sig-arg">root</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#verify" class="summary-sig-name">verify</a>(<span class="summary-sig-arg">root</span>,
         <span class="summary-sig-arg">required_digest</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Ensure that directory 'dir' generates the given digest.
-  </td>
-</tr>
+      Ensure that directory 'dir' generates the given digest.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#verify">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#copy_tree_with_verify" class="summary-sig-name">copy_tree_with_verify</a>(<span class="summary-sig-arg">source</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#copy_tree_with_verify" class="summary-sig-name">copy_tree_with_verify</a>(<span class="summary-sig-arg">source</span>,
         <span class="summary-sig-arg">target</span>,
         <span class="summary-sig-arg">manifest_data</span>,
         <span class="summary-sig-arg">required_digest</span>)</span><br />
-      Copy directory source to be a subdirectory of target if it matches
-      the required_digest.
-  </td>
-</tr>
+      Copy directory source to be a subdirectory of target if it matches 
+      the required_digest.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_tree_with_verify">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#fixup_permissions" class="summary-sig-name">fixup_permissions</a>(<span class="summary-sig-arg">root</span>)</span><br />
-      Set permissions recursively for children of root:
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.manifest-module.html#fixup_permissions" class="summary-sig-name">fixup_permissions</a>(<span class="summary-sig-arg">root</span>)</span><br />
+      Set permissions recursively for children of root:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#fixup_permissions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.zerostore.manifest-module.html#hashlib">hashlib</a> = <code title="None">None</code><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="hashlib"></a><span class="summary-name">hashlib</span> = <code title="None">None</code><br />
       Create a new digest.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.zerostore.manifest-module.html#algorithms">algorithms</a> = <code title="{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('sha1'),}">{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('sha...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.zerostore.manifest-module.html#algorithms" class="summary-name">algorithms</a> = <code title="{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('sha1'),}">{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== FUNCTION DETAILS ==================== -->
 <a name="section-FunctionDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Function Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-FunctionDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
 </tr>
 </table>
 <a name="get_algorithm"></a>
@@ -309,19 +337,19 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_algorithm</span>(<span class="sig-arg">name</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#get_algorithm">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#get_algorithm">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Look-up an <a 
+  <p>Look-up an <a 
   href="zeroinstall.zerostore.manifest.Algorithm-class.html" 
-  class="link">Algorithm</a> by name.
-  <dl><dt></dt><dd>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  class="link">Algorithm</a> by name.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.BadDigest-class.html">BadDigest</a></strong></code> - if the name is unknown.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="generate_manifest"></a>
@@ -335,21 +363,20 @@
         <span class="sig-arg">alg</span>=<span class="sig-default">'sha1'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#generate_manifest">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#generate_manifest">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
   
-  <dl><dt></dt><dd>
-      <p><strong>Deprecated:</strong>
-        use <a 
-    href="zeroinstall.zerostore.manifest-module.html#get_algorithm" 
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use <a href="zeroinstall.zerostore.manifest-module.html#get_algorithm" 
     class="link">get_algorithm</a> and <a 
     href="zeroinstall.zerostore.manifest.Algorithm-class.html#generate_manifest"
     class="link">Algorithm.generate_manifest</a> instead.
       </p>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
 <a name="add_manifest_file"></a>
 <div>
@@ -362,22 +389,22 @@
         <span class="sig-arg">digest_or_alg</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#add_manifest_file">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#add_manifest_file">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Writes a .manifest file into 'dir', and returns the digest. You should
+  <p>Writes a .manifest file into 'dir', and returns the digest. You should
   call fixup_permissions before this to ensure that the permissions are 
   correct. On exit, dir itself has mode 555. Subdirectories are not 
-  changed.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
+  changed.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>dir</code></strong> - root of the implementation</li>
         <li><strong class="pname"><code>digest_or_alg</code></strong> - should be an instance of Algorithm. Passing a digest here is 
           deprecated.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="splitID"></a>
@@ -390,18 +417,18 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">splitID</span>(<span class="sig-arg">id</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#splitID">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#splitID">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Take an ID in the form 'alg=value' and return a tuple (alg, value), 
-  where 'alg' is an instance of Algorithm and 'value' is a string.
-  <dl><dt></dt><dd>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>Take an ID in the form 'alg=value' and return a tuple (alg, value), 
+  where 'alg' is an instance of Algorithm and 'value' is a string.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.BadDigest-class.html">BadDigest</a></strong></code> - if the algorithm isn't known or the ID has the wrong format.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="copy_with_verify"></a>
@@ -418,28 +445,28 @@
         <span class="sig-arg">required_digest</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_with_verify">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_with_verify">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Copy path src to dest, checking that the contents give the right 
+  <p>Copy path src to dest, checking that the contents give the right 
   digest. dest must not exist. New file is created with a mode of 'mode 
-  &amp; umask'.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>src</code></strong> (<code>str</code>) - source filename</li>
-        <li><strong class="pname"><code>dest</code></strong> (<code>str</code>) - target filename</li>
-        <li><strong class="pname"><code>mode</code></strong> (<code>int</code>) - target mode</li>
-        <li><strong class="pname"><code>alg</code></strong> (<code><a href="zeroinstall.zerostore.manifest.Algorithm-class.html" 
-          class="link">Algorithm</a></code>) - algorithm to generate digest</li>
-        <li><strong class="pname"><code>required_digest</code></strong> (<code>str</code>) - expected digest value</li>
-    </ul>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  &amp; umask'.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>src</code></strong> (str) - source filename</li>
+        <li><strong class="pname"><code>dest</code></strong> (str) - target filename</li>
+        <li><strong class="pname"><code>mode</code></strong> (int) - target mode</li>
+        <li><strong class="pname"><code>alg</code></strong> (<a href="zeroinstall.zerostore.manifest.Algorithm-class.html" 
+          class="link">Algorithm</a>) - algorithm to generate digest</li>
+        <li><strong class="pname"><code>required_digest</code></strong> (str) - expected digest value</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.BadDigest-class.html">BadDigest</a></strong></code> - the contents of the file don't match required_digest</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="verify"></a>
@@ -453,16 +480,15 @@
         <span class="sig-arg">required_digest</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#verify">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#verify">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Ensure that directory 'dir' generates the given digest. For a 
-  non-error return:
+  <p>Ensure that directory 'dir' generates the given digest. For a 
+  non-error return:</p>
   <ul>
     <li>
-      Dir's name must be a digest (in the form 
-      &quot;alg=value&quot;)
+      Dir's name must be a digest (in the form &quot;alg=value&quot;)
     </li>
     <li>
       The calculated digest of the contents must match this name.
@@ -471,12 +497,12 @@
       If there is a .manifest file, then its digest must also match.
     </li>
   </ul>
-  <dl><dt></dt><dd>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.BadDigest-class.html">BadDigest</a></strong></code> - if verification fails.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="copy_tree_with_verify"></a>
@@ -492,19 +518,19 @@
         <span class="sig-arg">required_digest</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_tree_with_verify">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#copy_tree_with_verify">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Copy directory source to be a subdirectory of target if it matches the
+  <p>Copy directory source to be a subdirectory of target if it matches the
   required_digest. manifest_data is normally source/.manifest. source and 
   manifest_data are not trusted (will typically be under the control of 
   another user). The copy is first done to a temporary directory in target,
   then renamed to the final name only if correct. Therefore, an invalid 
   'target/required_digest' will never exist. A successful return means than
-  target/required_digest now exists (whether we created it or not).
-  <dl><dt></dt><dd>
-  </dd></dl>
+  target/required_digest now exists (whether we created it or not).</p>
+  <dl class="fields">
+  </dl>
 </td></tr></table>
 </div>
 <a name="fixup_permissions"></a>
@@ -517,11 +543,11 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">fixup_permissions</span>(<span class="sig-arg">root</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#fixup_permissions">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.zerostore.manifest-pysrc.html#fixup_permissions">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Set permissions recursively for children of root:
+  <p>Set permissions recursively for children of root:</p>
   <ul>
     <li>
       If any X bit is set, they all must be.
@@ -530,64 +556,40 @@
       World readable, non-writable.
     </li>
   </ul>
-  <dl><dt></dt><dd>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'>Exception</strong></code> - if there are unsafe special bits set (setuid, etc).</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <br />
 <!-- ==================== VARIABLES DETAILS ==================== -->
 <a name="section-VariablesDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-VariablesDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="hashlib"></a>
-<div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">hashlib</h3>
-  Create a new digest. Call update() on the returned object to digest 
-  the data. Call getID() to turn it into a full ID string.
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables Details</span></td>
+</tr>
+</table>
 <a name="algorithms"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <h3 class="epydoc">algorithms</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('sha1'),}              
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+{'sha1': OldSHA1(), 'sha1new': HashLibAlgorithm('sha1'),}
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -621,10 +623,12 @@ None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -635,9 +639,8 @@ None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

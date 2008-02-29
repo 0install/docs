@@ -58,14 +58,13 @@
   </tr>
 </table>
 <!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package injector</h1><span class="codelink"><a href="zeroinstall.injector-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Package injector</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector-pysrc.html">source&nbsp;code</a></span></p>
 <p>Code relating to interfaces and policies.</p>
-  To run a program using the injector, the following steps are 
-  typical:
+  <p>To run a program using the injector, the following steps are 
+  typical:</p>
   <ol start="1">
     <li>
-      Instantiate a <a 
-      href="zeroinstall.injector.policy.Policy-class.html" 
+      Instantiate a <a href="zeroinstall.injector.policy.Policy-class.html"
       class="link">policy.Policy</a> (or a sub-class of it), giving it the 
       root interface's URI.
     </li>
@@ -95,59 +94,54 @@
     </li>
     <li>
       Download the selected implementations and unpack into the <a 
-      href="zeroinstall.zerostore-module.html" 
-      class="link">zerostore</a>.
+      href="zeroinstall.zerostore-module.html" class="link">zerostore</a>.
     </li>
     <li>
       Finally, <a href="zeroinstall.injector.run-module.html" 
       class="link">run</a> the program.
     </li>
   </ol>
-  For simple command-line use, the <a 
+  <p>For simple command-line use, the <a 
   href="zeroinstall.injector.autopolicy-module.html" 
   class="link">autopolicy</a> module provides code to perform the above 
   steps. This is used by the <a href="zeroinstall.injector.cli-module.html"
-  class="link">cli</a> module to provide the <b>0launch</b> interface.<br /><br />
+  class="link">cli</a> module to provide the <b>0launch</b> interface.</p>
 
 <!-- ==================== SUBMODULES ==================== -->
 <a name="section-Submodules"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Submodules</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Submodules"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Submodules</span></td>
 </tr>
   <tr><td class="summary">
   <ul class="nomargin">
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.arch-module.html">zeroinstall.injector.arch</a></strong>: <em class="summary">Information about the current system's architecture.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy-module.html">zeroinstall.injector.autopolicy</a></strong>: <em class="summary">A simple non-interactive policy.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.background-module.html">zeroinstall.injector.background</a></strong>: <em class="summary">Check for updates in a background process.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.basedir-module.html">zeroinstall.injector.basedir</a></strong>: <em class="summary">Support code for the freedesktop.org basedir spec.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.cli-module.html">zeroinstall.injector.cli</a></strong>: <em class="summary">The <b>0launch</b> command-line interface.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.distro-module.html">zeroinstall.injector.distro</a></strong>: <em class="summary">Integration with native distribution package managers.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.download-module.html">zeroinstall.injector.download</a></strong>: <em class="summary">Handles URL downloads.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg-module.html">zeroinstall.injector.gpg</a></strong>: <em class="summary">Python interface to GnuPG.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler-module.html">zeroinstall.injector.handler</a></strong>: <em class="summary">Integrates download callbacks with an external mainloop.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache-module.html">zeroinstall.injector.iface_cache</a></strong>: <em class="summary">Manages the interface cache.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.model-module.html">zeroinstall.injector.model</a></strong>: <em class="summary">In-memory representation of interfaces and other data 
-        structures.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.namespaces-module.html">zeroinstall.injector.namespaces</a></strong>: <em class="summary">Useful constants.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy-module.html">zeroinstall.injector.policy</a></strong>: <em class="summary">Chooses a set of implementations based on a policy.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom-module.html">zeroinstall.injector.qdom</a></strong>: <em class="summary">A quick DOM implementation.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.reader-module.html">zeroinstall.injector.reader</a></strong>: <em class="summary">Parses an XML interface into a Python representation.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.run-module.html">zeroinstall.injector.run</a></strong>: <em class="summary">Executes a set of implementations as a program.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.selections-module.html">zeroinstall.injector.selections</a></strong>: <em class="summary">Load and save a set of chosen implementations.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust-module.html">zeroinstall.injector.trust</a></strong>: <em class="summary">Records who we trust to sign interfaces.</em></li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.writer-module.html">zeroinstall.injector.writer</a></strong>: <em class="summary">Save per-interface configuration information.</em></li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.arch-module.html">zeroinstall.injector.arch</a></strong>: <em class="summary">Information about the current system's architecture.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.autopolicy-module.html">zeroinstall.injector.autopolicy</a></strong>: <em class="summary">A simple non-interactive policy.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.background-module.html">zeroinstall.injector.background</a></strong>: <em class="summary">Check for updates in a background process.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.cli-module.html">zeroinstall.injector.cli</a></strong>: <em class="summary">The <b>0launch</b> command-line interface.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.distro-module.html">zeroinstall.injector.distro</a></strong>: <em class="summary">Integration with native distribution package managers.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.download-module.html">zeroinstall.injector.download</a></strong>: <em class="summary">Handles URL downloads.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.fetch-module.html">zeroinstall.injector.fetch</a></strong>: <em class="summary">Downloads feeds, keys, packages and icons.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg-module.html">zeroinstall.injector.gpg</a></strong>: <em class="summary">Python interface to GnuPG.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler-module.html">zeroinstall.injector.handler</a></strong>: <em class="summary">Integrates download callbacks with an external mainloop.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache-module.html">zeroinstall.injector.iface_cache</a></strong>: <em class="summary">Manages the interface cache.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.model-module.html">zeroinstall.injector.model</a></strong>: <em class="summary">In-memory representation of interfaces and other data structures.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.namespaces-module.html">zeroinstall.injector.namespaces</a></strong>: <em class="summary">Useful constants.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy-module.html">zeroinstall.injector.policy</a></strong>: <em class="summary">This class brings together a <a 
+        href="zeroinstall.injector.solver.Solver-class.html" 
+        class="link">solve.Solver</a> to choose a set of implmentations, a 
+        <a href="zeroinstall.injector.fetch.Fetcher-class.html" 
+        class="link">fetch.Fetcher</a> to download additional components, 
+        and the user's configuration settings.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.qdom-module.html">zeroinstall.injector.qdom</a></strong>: <em class="summary">A quick DOM implementation.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.reader-module.html">zeroinstall.injector.reader</a></strong>: <em class="summary">Parses an XML interface into a Python representation.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.run-module.html">zeroinstall.injector.run</a></strong>: <em class="summary">Executes a set of implementations as a program.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.selections-module.html">zeroinstall.injector.selections</a></strong>: <em class="summary">Load and save a set of chosen implementations.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.solver-module.html">zeroinstall.injector.solver</a></strong>: <em class="summary">Chooses a set of components to make a running program.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust-module.html">zeroinstall.injector.trust</a></strong>: <em class="summary">Records who we trust to sign interfaces.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.writer-module.html">zeroinstall.injector.writer</a></strong>: <em class="summary">Save per-interface configuration information.</em>    </li>
   </ul></td></tr>
 </table>
 
@@ -182,10 +176,12 @@
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -196,9 +192,8 @@
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

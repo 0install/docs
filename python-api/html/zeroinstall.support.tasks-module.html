@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.support.tasks</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.support-module.html">Package&nbsp;support</a> ::
+        Module&nbsp;tasks
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.support.tasks-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module tasks</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html">source&nbsp;code</a></span></p>
+<p>The tasks module provides a simple light-weight alternative to 
+  threads.</p>
+  <p>When you have a long-running job you will want to run it in the 
+  background, while the user does other things. There are four ways to do 
+  this:</p>
+  <ul>
+    <li>
+      Use a new thread for each task.
+    </li>
+    <li>
+      Use callbacks from an idle handler.
+    </li>
+    <li>
+      Use a recursive mainloop.
+    </li>
+    <li>
+      Use this module.
+    </li>
+  </ul>
+  <p>Using threads causes a number of problems. Some builds of pygtk/python
+  don't support them, they introduce race conditions, often lead to many 
+  subtle bugs, and they require lots of resources (you probably wouldn't 
+  want 10,000 threads running at once). In particular, two threads can run 
+  at exactly the same time (perhaps on different processors), so you have 
+  to be really careful that they don't both try to update the same variable
+  at the same time. This requires lots of messy locking, which is hard to 
+  get right.</p>
+  <p>Callbacks work within a single thread. For example, you open a dialog 
+  box and then tell the system to call one function if it's closed, and 
+  another if the user clicks OK, etc. The function that opened the box then
+  returns, and the system calls one of the given callback functions later. 
+  Callbacks only execute one at a time, so you don't have to worry about 
+  race conditions. However, they are often very awkward to program with, 
+  because you have to save state somewhere and then pass it to the 
+  functions when they're called.</p>
+  <p>A recursive mainloop only works with nested tasks (you can create a 
+  sub-task, but the main task can't continue until the sub-task has 
+  finished). We use these for, eg, rox.alert() boxes since you don't 
+  normally want to do anything else until the box is closed, but it is not 
+  appropriate for long-running jobs.</p>
+  <p>Tasks use python's generator API to provide a more pleasant interface 
+  to callbacks. See the Task class (below) for more information.</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.Blocker-class.html" class="summary-name">Blocker</a><br />
+      A Blocker object starts life with 'happened = False'.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.IdleBlocker-class.html" class="summary-name">IdleBlocker</a><br />
+      An IdleBlocker blocks until a task starts waiting on it, then 
+      immediately triggers.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.TimeoutBlocker-class.html" class="summary-name">TimeoutBlocker</a><br />
+      Triggers after a set number of seconds.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.InputBlocker-class.html" class="summary-name">InputBlocker</a><br />
+      Triggers when os.read(stream) would not block.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.OutputBlocker-class.html" class="summary-name">OutputBlocker</a><br />
+      Triggers when os.write(stream) would not block.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.support.tasks.Task-class.html" class="summary-name">Task</a><br />
+      Create a new Task when you have some long running function to run 
+        in the background, but which needs to do work in 'chunks'.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.support.tasks-module.html#check" class="summary-sig-name">check</a>(<span class="summary-sig-arg">blockers</span>,
+        <span class="summary-sig-arg">reporter</span>=<span class="summary-sig-default">None</span>)</span><br />
+      See if any of the blockers have pending exceptions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html#check">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.support.tasks-module.html#named_async" class="summary-sig-name">named_async</a>(<span class="summary-sig-arg">name</span>)</span><br />
+      Decorator that turns a generator function into a function that runs 
+      the generator as a Task and returns the Task's finished blocker.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html#named_async">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="async"></a><span class="summary-sig-name">async</span>(<span class="summary-sig-arg">fn</span>)</span><br />
+      Decorator that turns a generator function into a function that runs 
+      the generator as a Task and returns the Task's finished blocker.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html#async">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="check"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">check</span>(<span class="sig-arg">blockers</span>,
+        <span class="sig-arg">reporter</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html#check">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>See if any of the blockers have pending exceptions.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>reporter</code></strong> - invoke this function on each error If reporter is None, raise the
+          first and log the rest.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="named_async"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">named_async</span>(<span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.support.tasks-pysrc.html#named_async">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Decorator that turns a generator function into a function that runs 
+  the generator as a Task and returns the Task's finished blocker.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> - the name for the Task</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

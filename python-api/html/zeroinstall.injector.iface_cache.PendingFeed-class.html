@@ -60,7 +60,7 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class PendingFeed</h1><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class PendingFeed</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
@@ -68,60 +68,77 @@ object --+
 </pre>
 
 <hr />
-A feed that has been downloaded but not yet added to the interface 
+<p>A feed that has been downloaded but not yet added to the interface 
   cache. Feeds remain in this state until the user confirms that they trust
-  at least one of the signatures.<br /><br />
+  at least one of the signatures.</p>
 
 <hr />
-      <p><strong>Since:</strong>
+<div class="fields">      <p><strong>Since:</strong>
         0.25
       </p>
-<!-- ==================== INSTANCE METHODS ==================== -->
+</div><!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Methods</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceMethods"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">url</span>,
         <span class="summary-sig-arg">signed_data</span>)</span><br />
-      Downloaded data is a GPG-signed message.
-  </td>
-</tr>
+      Downloaded data is a GPG-signed message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#begin_key_downloads" class="summary-sig-name">begin_key_downloads</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#download_keys" class="summary-sig-name">download_keys</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">handler</span>,
-        <span class="summary-sig-arg">callback</span>)</span><br />
-      Start downloading any required GPG keys not already on our 
-      keyring.
-  </td>
-</tr>
+        <span class="summary-sig-arg">feed_hint</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Download any required GPG keys not already on our keyring.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.download_keys">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#recheck" class="summary-sig-name">recheck</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set new_xml and sigs by reading signed_data.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#recheck" class="summary-sig-name">recheck</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set new_xml and sigs by reading signed_data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.recheck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -138,104 +155,55 @@ A feed that has been downloaded but not yet added to the interface
     </td>
   </tr>
 </table>
-
-<br />
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#__slots__">__slots__</a> = <code title="['url', 'signed_data', 'sigs', 'new_xml', 'downloads', 'download_callback']">['url', 'signed_data', 'sigs', 'new_xml', 'downloads...</code>
-  </td>
-</tr>
-</table>
-
-<br />
 <!-- ==================== INSTANCE VARIABLES ==================== -->
 <a name="section-InstanceVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#new_xml">new_xml</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+        <a name="new_xml"></a><span class="summary-name">new_xml</span><br />
       the payload of the signed_data, or the whole thing if XML
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">stream</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#signed_data">signed_data</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">stream</span>
+    </td><td class="summary">
+        <a name="signed_data"></a><span class="summary-name">signed_data</span><br />
       the untrusted data
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[<a href="zeroinstall.injector.gpg.Signature-class.html" 
-      class="link">gpg.Signature</a>]</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#sigs">sigs</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[<a href="zeroinstall.injector.gpg.Signature-class.html" 
+      class="link">gpg.Signature</a>]</span>
+    </td><td class="summary">
+        <a name="sigs"></a><span class="summary-name">sigs</span><br />
       signatures extracted from signed_data
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.iface_cache.PendingFeed-class.html#url">url</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+        <a name="url"></a><span class="summary-name">url</span><br />
       URL for the feed
-  </td>
-</tr>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Properties</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Properties"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
 </tr>
   <tr>
     <td colspan="2" class="summary">
@@ -245,24 +213,13 @@ A feed that has been downloaded but not yet added to the interface
     </td>
   </tr>
 </table>
-
-<br />
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Method Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-MethodDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
 <a name="__init__"></a>
@@ -278,58 +235,55 @@ A feed that has been downloaded but not yet added to the interface
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.__init__">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Downloaded data is a GPG-signed message.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>url</code></strong> (<code>str</code>) - the URL of the downloaded feed</li>
-        <li><strong class="pname"><code>signed_data</code></strong> (<code>stream</code>) - the downloaded data (not yet trusted)</li>
-    </ul>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>Downloaded data is a GPG-signed message.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>url</code></strong> (str) - the URL of the downloaded feed</li>
+        <li><strong class="pname"><code>signed_data</code></strong> (stream) - the downloaded data (not yet trusted)</li>
+    </ul></dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'>SafeException</strong></code> - if the data is not signed, and logs the actual data</li>
-    </ul>
-    <dl><dt>Overrides:
-      object.__init__
-    </dt></dl>
-  </dd></dl>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
 </td></tr></table>
 </div>
-<a name="begin_key_downloads"></a>
+<a name="download_keys"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_key_downloads</span>(<span class="sig-arg">self</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_keys</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">handler</span>,
-        <span class="sig-arg">callback</span>)</span>
+        <span class="sig-arg">feed_hint</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.begin_key_downloads">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.download_keys">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Start downloading any required GPG keys not already on our keyring. 
-  When all downloads are done (successful or otherwise), add any new keys 
-  to the keyring, <a 
+  <p>Download any required GPG keys not already on our keyring. When all 
+  downloads are done (successful or otherwise), add any new keys to the 
+  keyring, <a 
   href="zeroinstall.injector.iface_cache.PendingFeed-class.html#recheck" 
-  class="link">recheck</a>, and invoke the callback. If we are already 
-  downloading, return and do nothing else. Otherwise, if nothing needs to 
-  be downloaded, the callback is invoked immediately.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>handler</code></strong> (<code><a href="zeroinstall.injector.handler.Handler-class.html" 
-          class="link">handler.Handler</a></code>) - handler to manage the download</li>
-        <li><strong class="pname"><code>callback</code></strong> (<code>function()</code>) - callback to invoke when done</li>
-    </ul>
-  </dd></dl>
+  class="link">recheck</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>handler</code></strong> (<a href="zeroinstall.injector.handler.Handler-class.html" 
+          class="link">handler.Handler</a>) - handler to manage the download</li>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="recheck"></a>
@@ -342,122 +296,14 @@ A feed that has been downloaded but not yet added to the interface
   <h3 class="epydoc"><span class="sig"><span class="sig-name">recheck</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.recheck">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#PendingFeed.recheck">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Set new_xml and sigs by reading signed_data. You need to call this 
-  when previously-missing keys are added to the GPG keyring.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="__slots__"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">__slots__</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-['url', 'signed_data', 'sigs', 'new_xml', 'downloads', 'download_callb<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-ack']                                                                  
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
-<a name="section-InstanceVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="new_xml"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">new_xml</h3>
-  the payload of the signed_data, or the whole thing if XML
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>str</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="signed_data"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">signed_data</h3>
-  the untrusted data
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>stream</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="sigs"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">sigs</h3>
-  signatures extracted from signed_data
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>[<a href="zeroinstall.injector.gpg.Signature-class.html" 
-      class="link">gpg.Signature</a>]</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="url"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">url</h3>
-  URL for the feed
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>str</dd></dl>
-  </dd></dl>
+  <p>Set new_xml and sigs by reading signed_data. You need to call this 
+  when previously-missing keys are added to the GPG keyring.</p>
+  <dl class="fields">
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -491,10 +337,12 @@ ack']
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:02 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -505,9 +353,8 @@ ack']
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

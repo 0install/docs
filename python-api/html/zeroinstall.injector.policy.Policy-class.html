@@ -60,7 +60,7 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Policy</h1><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class Policy</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
@@ -68,313 +68,389 @@ object --+
 </pre>
 
 <hr />
-Chooses a set of implementations based on a policy. Typical use:
+<p>Chooses a set of implementations based on a policy. Typical use:</p>
   <ol start="1">
     <li>
-      Create a Policy object, giving it the URI of the program to be run
+      Create a Policy object, giving it the URI of the program to be run 
       and a handler.
     </li>
     <li>
       Call <a 
-      href="zeroinstall.injector.policy.Policy-class.html#recalculate" 
-      class="link">recalculate</a>. If more information is needed, the 
-      handler will be used to download it.
+      href="zeroinstall.injector.policy.Policy-class.html#solve_with_downloads"
+      class="link">solve_with_downloads</a>. If more information is needed,
+      a <a href="zeroinstall.injector.fetch.Fetcher-class.html" 
+      class="link">fetch.Fetcher</a> will be used to download it.
     </li>
     <li>
       When all downloads are complete, the <a 
-      href="zeroinstall.injector.policy.Policy-class.html#implementation" 
-      class="link">implementation</a> map contains the chosen versions.
+      href="zeroinstall.injector.policy.Policy-class.html#solver" 
+      class="link">solver</a> contains the chosen versions.
     </li>
     <li>
       Use <a 
       href="zeroinstall.injector.policy.Policy-class.html#get_uncached_implementations"
       class="link">get_uncached_implementations</a> to find where to get 
       these versions and download them using <a 
-      href="zeroinstall.injector.policy.Policy-class.html#begin_impl_download"
-      class="link">begin_impl_download</a>.
+      href="zeroinstall.injector.policy.Policy-class.html#download_uncached_implementations"
+      class="link">download_uncached_implementations</a>.
     </li>
-  </ol><br /><br />
+  </ol>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Methods</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceMethods"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">root</span>,
         <span class="summary-sig-arg">handler</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">False</span>)</span>
-  </td>
-</tr>
+        <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">False</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#set_root" class="summary-sig-name">set_root</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#fetcher" class="summary-sig-name">fetcher</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.fetcher">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_root"></a><span class="summary-sig-name">set_root</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">root</span>)</span><br />
-      Change the root interface URI.
-  </td>
-</tr>
+      Change the root interface URI.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.set_root">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#save_config" class="summary-sig-name">save_config</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Write global settings.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="save_config"></a><span class="summary-sig-name">save_config</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Write global settings.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.save_config">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#process_pending" class="summary-sig-name">process_pending</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      For each pending feed, either import it fully (if we now trust one
-      of the signatures) or start performing whatever action is needed next
-      (either downloading a key or confirming a fingerprint).
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#recalculate" class="summary-sig-name">recalculate</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#recalculate" class="summary-sig-name">recalculate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fetch_stale_interfaces</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Try to choose a set of implementations.
-  </td>
-</tr>
+      Deprecated.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.recalculate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">int</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#compare" class="summary-sig-name">compare</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">b</span>,
-        <span class="summary-sig-arg">a</span>)</span><br />
-      Compare a and b to see which would be chosen first.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">generator</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#usable_feeds" class="summary-sig-name">usable_feeds</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">generator</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#usable_feeds" class="summary-sig-name">usable_feeds</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">iface</span>)</span><br />
       Generator for <code>iface.feeds</code> that are valid for our 
-      architecture.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[model.Implementation]</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_ranked_implementations" class="summary-sig-name">get_ranked_implementations</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">iface</span>)</span><br />
-      Get all implementations from all feeds, in order.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#is_unusable" class="summary-sig-name">is_unusable</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">impl</span>,
-        <span class="summary-sig-arg">restrictions</span>=<span class="summary-sig-default">[]</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_unusable_reason" class="summary-sig-name">get_unusable_reason</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">impl</span>,
-        <span class="summary-sig-arg">restrictions</span>=<span class="summary-sig-default">[]</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type"><a href="zeroinstall.injector.model.Interface-class.html" 
-      class="link">model.Interface</a></code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_interface" class="summary-sig-name">get_interface</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">uri</span>)</span><br />
-      Get an interface from the iface_cache.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#begin_iface_download" class="summary-sig-name">begin_iface_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start downloading the interface, and add a callback to process it 
-      when done.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#begin_impl_download" class="summary-sig-name">begin_impl_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">impl</span>,
-        <span class="summary-sig-arg">retrieval_method</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start fetching impl, using retrieval_method.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#begin_archive_download" class="summary-sig-name">begin_archive_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">download_source</span>,
-        <span class="summary-sig-arg">success_callback</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start fetching an archive.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#begin_icon_download" class="summary-sig-name">begin_icon_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start downloading an icon for this interface.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#store_icon" class="summary-sig-name">store_icon</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">stream</span>)</span><br />
-      Called when an icon has been successfully downloaded.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_implementation_path" class="summary-sig-name">get_implementation_path</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">impl</span>)</span><br />
-      Return the local path of impl.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type"><a href="zeroinstall.injector.model.Implementation-class.html" 
-      class="link">model.Implementation</a></code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_implementation" class="summary-sig-name">get_implementation</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>)</span><br />
-      Get the chosen implementation.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#walk_interfaces" class="summary-sig-name">walk_interfaces</a>(<span class="summary-sig-arg">self</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_cached" class="summary-sig-name">get_cached</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">impl</span>)</span><br />
-      Check whether an implementation is available locally.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#add_to_cache" class="summary-sig-name">add_to_cache</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">source</span>,
-        <span class="summary-sig-arg">data</span>)</span><br />
-      Wrapper for <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_to_cache"
-      class="link">iface_cache.IfaceCache.add_to_cache</a>.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[(str, model.Implementation)]</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_uncached_implementations" class="summary-sig-name">get_uncached_implementations</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      List all chosen implementations which aren't yet available 
-      locally.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#refresh_all" class="summary-sig-name">refresh_all</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Start downloading all feeds for all selected interfaces.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#interface_changed" class="summary-sig-name">interface_changed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>)</span><br />
-      Callback used by <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
+      architecture.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.usable_feeds">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
       
-      class="link">iface_cache.IfaceCache.update_interface_from_network</a>.
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">[model.Interface]</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_feed_targets" class="summary-sig-name">get_feed_targets</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">feed_iface_uri</span>)</span><br />
-      Return a list of Interfaces for which feed_iface can be a 
-      feed.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#is_stale" class="summary-sig-name">is_stale</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed</span>)</span><br />
+      Check whether feed needs updating, based on the configured <a 
+      href="zeroinstall.injector.policy.Policy-class.html#freshness" 
+      class="link">freshness</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.is_stale">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">str</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_icon_path" class="summary-sig-name">get_icon_path</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">iface</span>)</span><br />
-      Get an icon for this interface.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#download_and_import_feed_if_online" class="summary-sig-name">download_and_import_feed_if_online</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed_url</span>)</span><br />
+      If we're online, call <a 
+      href="zeroinstall.injector.fetch.Fetcher-class.html#download_and_import_feed"
+      class="link">fetch.Fetcher.download_and_import_feed</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.download_and_import_feed_if_online">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type"><a href="zeroinstall.injector.model.RetrievalMethod-class.html" 
-      class="link">model.RetrievalMethod</a></code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_best_source" class="summary-sig-name">get_best_source</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_implementation_path" class="summary-sig-name">get_implementation_path</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">impl</span>)</span><br />
-      Return the best download source for this implementation.
-  </td>
-</tr>
+      Return the local path of impl.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation_path">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.model.Implementation-class.html" 
+      class="link">model.Implementation</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_implementation" class="summary-sig-name">get_implementation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">interface</span>)</span><br />
+      Get the chosen implementation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_cached" class="summary-sig-name">get_cached</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">impl</span>)</span><br />
+      Check whether an implementation is available locally.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_cached">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[(str, model.Implementation)]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_uncached_implementations"></a><span class="summary-sig-name">get_uncached_implementations</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      List all chosen implementations which aren't yet available locally.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_uncached_implementations">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#refresh_all" class="summary-sig-name">refresh_all</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Start downloading all feeds for all selected interfaces.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.refresh_all">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[model.Interface]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_feed_targets" class="summary-sig-name">get_feed_targets</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed_iface_uri</span>)</span><br />
+      Return a list of Interfaces for which feed_iface can be a feed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_feed_targets">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#solve_with_downloads" class="summary-sig-name">solve_with_downloads</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Run the solver, then download any feeds that are missing or that need
+      to be updated.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.solve_with_downloads">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#need_download" class="summary-sig-name">need_download</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Decide whether we need to download anything (but don't do it!)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.need_download">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="download_uncached_implementations"></a><span class="summary-sig-name">download_uncached_implementations</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Download all implementations chosen by the solver that are missing 
+      from the cache.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.download_uncached_implementations">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.support.tasks.Task-class.html" 
+      class="link">tasks.Task</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#download_icon" class="summary-sig-name">download_icon</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">interface</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Download an icon for this interface and add it to the icon cache.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.download_icon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_interface" class="summary-sig-name">get_interface</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">uri</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_interface">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -391,164 +467,122 @@ Chooses a set of implementations based on a policy. Typical use:
     </td>
   </tr>
 </table>
-
-<br />
 <!-- ==================== CLASS VARIABLES ==================== -->
 <a name="section-ClassVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#__slots__">__slots__</a> = <code title="['root', 'implementation', 'watchers', 'help_with_testing', 'network_use', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions', 'src', 'root_restrictions', 'stale_feeds']">['root', 'implementation', 'watchers', 'help_with_te...</code>
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="implementation"></a><span class="summary-name">implementation</span> = <code title="property(lambda self: self.solver.selections)">property(lambda self: self.solver.selections)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ready"></a><span class="summary-name">ready</span> = <code title="property(lambda self: self.solver.ready)">property(lambda self: self.solver.ready)</code>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== INSTANCE VARIABLES ==================== -->
 <a name="section-InstanceVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">int</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#freshness">freshness</a><br />
-      seconds allowed since last update
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type"><a href="zeroinstall.injector.handler.Handler-class.html" 
-      class="link">handler.Handler</a></code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#handler">handler</a><br />
-      handler for main-loop integration
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#help_with_testing">help_with_testing</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.policy.Policy-class.html#help_with_testing" class="summary-name">help_with_testing</a> = <code title="property(lambda self: self.solver.help_with_testing, lambda self, valu\
+e: setattr(self.solver, 'help_with_testing', value))">property(lambda self: self.solver.help_wit<code class="variable-ellipsis">...</code></code><br />
       default stability policy
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">{model.Interface: model.Implementation or None}</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#implementation">implementation</a><br />
-      chosen implementations
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#network_use">network_use</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.policy.Policy-class.html#network_use" class="summary-name">network_use</a> = <code title="property(lambda self: self.solver.network_use, lambda self, value: set\
+attr(self.solver, 'network_use', value))">property(lambda self: self.solver.network_use, l<code class="variable-ellipsis">...</code></code><br />
       one of the model.network_* values
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#ready">ready</a><br />
-      whether <a 
-      href="zeroinstall.injector.policy.Policy-class.html#implementation" 
-      class="link">implementation</a> is complete enough to run the 
-      program
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+        <a name="freshness"></a><span class="summary-name">freshness</span><br />
+      seconds allowed since last update
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">{model.Interface -&gt; [model.Restriction]}</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#restrictions">restrictions</a><br />
-      Currently known restrictions for each interface.
-  </td>
-</tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.handler.Handler-class.html" 
+      class="link">handler.Handler</a></span>
+    </td><td class="summary">
+        <a name="handler"></a><span class="summary-name">handler</span><br />
+      handler for main-loop integration
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#root">root</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="root"></a><span class="summary-name">root</span><br />
       URI of the root interface
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#src">src</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.solver.Solver-class.html" 
+      class="link">solve.Solver</a></span>
+    </td><td class="summary">
+        <a name="solver"></a><span class="summary-name">solver</span><br />
+      solver used to choose a set of implementations
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a name="src"></a><span class="summary-name">src</span><br />
       whether we are looking for source code
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">set</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#stale_feeds">stale_feeds</a><br />
-      set of feeds which are present but haven't been checked for a long
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">set</span>
+    </td><td class="summary">
+        <a name="stale_feeds"></a><span class="summary-name">stale_feeds</span><br />
+      set of feeds which are present but haven't been checked for a long 
       time
-  </td>
-</tr>
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.policy.Policy-class.html#watchers">watchers</a><br />
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="watchers"></a><span class="summary-name">watchers</span><br />
       callbacks to invoke after recalculating
-  </td>
-</tr>
+    </td>
+  </tr>
 </table>
-
-<br />
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Properties</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Properties"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
 </tr>
   <tr>
     <td colspan="2" class="summary">
@@ -558,24 +592,13 @@ Chooses a set of implementations based on a policy. Typical use:
     </td>
   </tr>
 </table>
-
-<br />
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Method Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-MethodDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
 <a name="__init__"></a>
@@ -592,87 +615,47 @@ Chooses a set of implementations based on a policy. Typical use:
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.__init__">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>root</code></strong> - The URI of the root interface (the program we want to 
-          run).</li>
-        <li><strong class="pname"><code>handler</code></strong> (<code><a href="zeroinstall.injector.handler.Handler-class.html" 
-          class="link">zeroinstall.injector.handler.Handler</a></code>) - A handler for main-loop integration.</li>
-        <li><strong class="pname"><code>src</code></strong> (<code>bool</code>) - Whether we are looking for source code.</li>
-    </ul>
-    <dl><dt>Overrides:
-      object.__init__
-    </dt></dl>
-  </dd></dl>
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>root</code></strong> - The URI of the root interface (the program we want to run).</li>
+        <li><strong class="pname"><code>handler</code></strong> (<a href="zeroinstall.injector.handler.Handler-class.html" 
+          class="link">zeroinstall.injector.handler.Handler</a>) - A handler for main-loop integration.</li>
+        <li><strong class="pname"><code>src</code></strong> (bool) - Whether we are looking for source code.</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
 </td></tr></table>
 </div>
-<a name="set_root"></a>
+<a name="fetcher"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_root</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">root</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fetcher</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.set_root">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.fetcher">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Change the root interface URI.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="save_config"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">save_config</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.save_config">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
   
-  Write global settings.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="process_pending"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">process_pending</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.process_pending">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  For each pending feed, either import it fully (if we now trust one of 
-  the signatures) or start performing whatever action is needed next 
-  (either downloading a key or confirming a fingerprint).
-  <dl><dt></dt><dd>
-      <p><strong>Since:</strong>
-        0.25
-      </p>
-  </dd></dl>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="recalculate"></a>
@@ -686,59 +669,19 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">fetch_stale_interfaces</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.recalculate">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.recalculate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Try to choose a set of implementations. This may start downloading 
-  more interfaces, but will return immediately.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>fetch_stale_interfaces</code></strong> (<code>bool</code>) - whether to begin downloading interfaces which are present but 
-          haven't been checked within the <a 
-          href="zeroinstall.injector.policy.Policy-class.html#freshness" 
-          class="link">freshness</a> period</li>
-    </ul>
-      <p><strong>Postcondition:</strong>
-        <a href="zeroinstall.injector.policy.Policy-class.html#ready" 
-        class="link">ready</a> indicates whether a possible set of 
-        implementations was chosen
+  <p>Deprecated.</p>
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.policy.Policy-class.html#solve_with_downloads"
+        class="link">solve_with_downloads</a>
       </p>
-      <p><strong>Note:</strong>
-        A policy may be ready before all feeds have been downloaded. As 
-        new feeds arrive, the chosen versions may change.
-      </p>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="compare"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">compare</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">b</span>,
-        <span class="sig-arg">a</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.compare">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Compare a and b to see which would be chosen first.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>interface</code></strong> - The interface we are trying to resolve, which may not be the 
-          interface of a or b if they are from feeds.</li>
-    </ul>
-    <dl><dt>Returns: <code>int</code></dt></dl>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
 <a name="usable_feeds"></a>
 <div>
@@ -751,240 +694,66 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">iface</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.usable_feeds">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.usable_feeds">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Generator for <code>iface.feeds</code> that are valid for our 
-  architecture.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>generator</code></dt></dl>
-      <p><strong>See Also:</strong>
+  <p>Generator for <code>iface.feeds</code> that are valid for our 
+  architecture.</p>
+  <dl class="fields">
+    <dt>Returns: generator</dt>
+  </dl>
+<div class="fields">      <p><strong>See Also:</strong>
         <a href="zeroinstall.injector.arch-module.html" 
         class="link">arch</a>
       </p>
-  </dd></dl>
-</td></tr></table>
+</div></td></tr></table>
 </div>
-<a name="get_ranked_implementations"></a>
+<a name="is_stale"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_ranked_implementations</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">iface</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_stale</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_ranked_implementations">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.is_stale">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Get all implementations from all feeds, in order.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>[model.Implementation]</code></dt>
-        <dd>a sorted list of implementations.</dd></dl>
-  </dd></dl>
+  <p>Check whether feed needs updating, based on the configured <a 
+  href="zeroinstall.injector.policy.Policy-class.html#freshness" 
+  class="link">freshness</a>. None is considered to be stale.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>true if feed is stale or missing.</dd>
+  </dl>
 </td></tr></table>
 </div>
-<a name="is_unusable"></a>
+<a name="download_and_import_feed_if_online"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_unusable</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">impl</span>,
-        <span class="sig-arg">restrictions</span>=<span class="sig-default">[]</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_import_feed_if_online</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed_url</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.is_unusable">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.download_and_import_feed_if_online">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>bool</code></dt>
-        <dd>whether this implementation is unusable.</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="get_unusable_reason"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_unusable_reason</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">impl</span>,
-        <span class="sig-arg">restrictions</span>=<span class="sig-default">[]</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_unusable_reason">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
-        <li><strong class="pname"><code>impl</code></strong> - Implementation to test.</li>
-    </ul>
-    <dl><dt>Returns: <code>str</code></dt>
-        <dd>The reason why this impl is unusable, or None if it's OK.</dd></dl>
-      <p><strong>Note:</strong>
-        The restrictions are for the interface being requested, not the 
-        interface of the implementation; they may be different when feeds 
-        are being used.
-      </p>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="get_interface"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_interface</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">uri</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_interface">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Get an interface from the iface_cache. If it is missing start a new 
-  download. If it is present but stale, add it to <a 
-  href="zeroinstall.injector.policy.Policy-class.html#stale_feeds" 
-  class="link">stale_feeds</a>. This should only be called from <a 
-  href="zeroinstall.injector.policy.Policy-class.html#recalculate" 
-  class="link">recalculate</a>.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code><a href="zeroinstall.injector.model.Interface-class.html" 
-      class="link">model.Interface</a></code></dt></dl>
-      <p><strong>See Also:</strong>
-        iface_cache.iface_cache.get_interface
-      </p>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_iface_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_iface_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.begin_iface_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start downloading the interface, and add a callback to process it when
-  done. If it is already being downloaded, do nothing.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_impl_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_impl_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">impl</span>,
-        <span class="sig-arg">retrieval_method</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.begin_impl_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start fetching impl, using retrieval_method. Each download started 
-  will call monitor_download.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_archive_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_archive_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">download_source</span>,
-        <span class="sig-arg">success_callback</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.begin_archive_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start fetching an archive. You should normally call <a 
-  href="zeroinstall.injector.policy.Policy-class.html#begin_impl_download" 
-  class="link">begin_impl_download</a> instead, since it handles other 
-  kinds of retrieval method too.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_icon_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_icon_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.begin_icon_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start downloading an icon for this interface. On success, add it to 
-  the icon cache. If the interface has no icon, do nothing.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="store_icon"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">store_icon</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">stream</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.store_icon">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Called when an icon has been successfully downloaded. Subclasses may 
-  wish to wrap this to repaint the display.
-  <dl><dt></dt><dd>
-  </dd></dl>
+  <p>If we're online, call <a 
+  href="zeroinstall.injector.fetch.Fetcher-class.html#download_and_import_feed"
+  class="link">fetch.Fetcher.download_and_import_feed</a>. Otherwise, log a
+  suitable warning.</p>
+  <dl class="fields">
+  </dl>
 </td></tr></table>
 </div>
 <a name="get_implementation_path"></a>
@@ -998,18 +767,18 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">impl</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation_path">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation_path">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Return the local path of impl.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt></dl>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>Return the local path of impl.</p>
+  <dl class="fields">
+    <dt>Returns: str</dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.zerostore.NotStored-class.html">zeroinstall.zerostore.NotStored</a></strong></code> - if it needs to be added to the cache first.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="get_implementation"></a>
@@ -1023,44 +792,24 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">interface</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_implementation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Get the chosen implementation.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code><a href="zeroinstall.injector.model.Implementation-class.html" 
-      class="link">model.Implementation</a></code></dt></dl>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>Get the chosen implementation.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>interface</code></strong> (Interface)</li>
+    </ul></dd>
+    <dt>Returns: <a href="zeroinstall.injector.model.Implementation-class.html" 
+      class="link">model.Implementation</a></dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'>SafeException</strong></code> - if interface has not been fetched or no implementation could be 
         chosen.</li>
-    </ul>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="walk_interfaces"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">walk_interfaces</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.walk_interfaces">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  
-  <dl><dt></dt><dd>
-      <p><strong>Deprecated:</strong>
-        use <a 
-    href="zeroinstall.injector.policy.Policy-class.html#implementation" 
-    class="link">implementation</a> instead
-      </p>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="get_cached"></a>
@@ -1074,58 +823,18 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">impl</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_cached">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_cached">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Check whether an implementation is available locally.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>bool</code></dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="add_to_cache"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_to_cache</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">source</span>,
-        <span class="sig-arg">data</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.add_to_cache">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Wrapper for <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#add_to_cache"
-  class="link">iface_cache.IfaceCache.add_to_cache</a>.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="get_uncached_implementations"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_uncached_implementations</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_uncached_implementations">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  List all chosen implementations which aren't yet available 
-  locally.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>[(str, model.Implementation)]</code></dt></dl>
-  </dd></dl>
+  <p>Check whether an implementation is available locally.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>impl</code></strong> (model.Implementation)</li>
+    </ul></dd>
+    <dt>Returns: bool</dt>
+  </dl>
 </td></tr></table>
 </div>
 <a name="refresh_all"></a>
@@ -1139,40 +848,17 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">force</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.refresh_all">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.refresh_all">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Start downloading all feeds for all selected interfaces.
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
+  <p>Start downloading all feeds for all selected interfaces.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>force</code></strong> - Whether to restart existing downloads.</li>
-    </ul>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="interface_changed"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">interface_changed</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.interface_changed">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Callback used by <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
-  
-  class="link">iface_cache.IfaceCache.update_interface_from_network</a>.
-  <dl><dt></dt><dd>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="get_feed_targets"></a>
@@ -1186,151 +872,132 @@ Chooses a set of implementations based on a policy. Typical use:
         <span class="sig-arg">feed_iface_uri</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_feed_targets">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_feed_targets">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Return a list of Interfaces for which feed_iface can be a feed. This 
-  is used by <b>0launch --feed</b>.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>[model.Interface]</code></dt></dl>
-    <dl><dt>Raises:</dt></dl>
-    <ul class="nomargin">
+  <p>Return a list of Interfaces for which feed_iface can be a feed. This 
+  is used by <b>0launch --feed</b>.</p>
+  <dl class="fields">
+    <dt>Returns: [model.Interface]</dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'>SafeException</strong></code> - If there are no known feeds.</li>
-    </ul>
-  </dd></dl>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
-<a name="get_icon_path"></a>
+<a name="solve_with_downloads"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_icon_path</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">iface</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">solve_with_downloads</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_icon_path">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.solve_with_downloads">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Get an icon for this interface. If the icon is in the cache, use that.
-  If not, start a download. If we already started a download (successful or
-  not) do nothing.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>str</code></dt>
-        <dd>The cached icon's path, or None if no icon is currently 
-          available.</dd></dl>
-  </dd></dl>
+  <p>Run the solver, then download any feeds that are missing or that need 
+  to be updated. Each time a new feed is imported into the cache, the 
+  solver is run again, possibly adding new downloads.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>force</code></strong> - whether to download even if we're already ready to run.</li>
+    </ul></dd>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@tasks.async</code></li>
+    </ul></dd>
+  </dl>
 </td></tr></table>
 </div>
-<a name="get_best_source"></a>
+<a name="need_download"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_best_source</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">impl</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">need_download</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_best_source">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.need_download">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  Return the best download source for this implementation.
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code><a href="zeroinstall.injector.model.RetrievalMethod-class.html" 
-      class="link">model.RetrievalMethod</a></code></dt></dl>
-  </dd></dl>
+  <p>Decide whether we need to download anything (but don't do it!)</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>true if we MUST download something (feeds or implementations)</dd>
+  </dl>
 </td></tr></table>
 </div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="__slots__"></a>
+<a name="download_icon"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">__slots__</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-['root', 'implementation', 'watchers', 'help_with_testing', 'network_u<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span class="variable-linewrap"><img src="crarr.png" alt="" /></span>
-', 'src', 'root_restrictions', 'stale_feeds']                          
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_icon</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">interface</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.download_icon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Download an icon for this interface and add it to the icon cache. If 
+  the interface has no icon or we are offline, do nothing.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="zeroinstall.support.tasks.Task-class.html" 
+      class="link">tasks.Task</a></dt>
+        <dd>the task doing the import, or None</dd>
+  </dl>
 </td></tr></table>
+</div>
+<a name="get_interface"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_interface</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">uri</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_interface">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use <a 
+    href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_interface"
+    class="link">iface_cache.IfaceCache.get_interface</a> instead
+      </p>
+</div></td></tr></table>
 </div>
 <br />
 <!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
 <a name="section-InstanceVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variable Details</span></td>
 </tr>
 </table>
-<a name="freshness"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">freshness</h3>
-  seconds allowed since last update
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>int</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="handler"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">handler</h3>
-  handler for main-loop integration
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd><a href="zeroinstall.injector.handler.Handler-class.html" 
-      class="link">handler.Handler</a></dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
 <a name="help_with_testing"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1338,23 +1005,18 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
 <tr><td>
   <h3 class="epydoc">help_with_testing</h3>
   default stability policy
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>bool</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="implementation"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">implementation</h3>
-  chosen implementations
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>{model.Interface: model.Implementation or None}</dd></dl>
-  </dd></dl>
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>bool</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+property(lambda self: self.solver.help_with_testing, lambda self, valu<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+e: setattr(self.solver, 'help_with_testing', value))
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <a name="network_use"></a>
@@ -1364,85 +1026,16 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
 <tr><td>
   <h3 class="epydoc">network_use</h3>
   one of the model.network_* values
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="ready"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">ready</h3>
-  whether <a 
-  href="zeroinstall.injector.policy.Policy-class.html#implementation" 
-  class="link">implementation</a> is complete enough to run the program
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>bool</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="restrictions"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">restrictions</h3>
-  Currently known restrictions for each interface.
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>{model.Interface -&gt; [model.Restriction]}</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="root"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">root</h3>
-  URI of the root interface
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="src"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">src</h3>
-  whether we are looking for source code
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>bool</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="stale_feeds"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">stale_feeds</h3>
-  set of feeds which are present but haven't been checked for a long 
-  time
-  <dl><dt></dt><dd>
-    <dl><dt>Type:</dt>
-      <dd>set</dd></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="watchers"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">watchers</h3>
-  callbacks to invoke after recalculating
-  <dl><dt></dt><dd>
-  </dd></dl>
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+property(lambda self: self.solver.network_use, lambda self, value: set<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+attr(self.solver, 'network_use', value))
+</pre></td></tr></table>
+</dd>
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -1476,10 +1069,12 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:02 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -1490,9 +1085,8 @@ se', 'freshness', 'ready', 'handler', '_warned_offline', 'restrictions<span clas
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

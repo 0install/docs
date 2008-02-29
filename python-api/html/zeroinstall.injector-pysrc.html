@@ -59,23 +59,23 @@
 </table>
 <h1 class="epydoc">Source Code for <a href="zeroinstall.injector-module.html">Package zeroinstall.injector</a></h1>
 <pre class="py-src">
-<span class="py-lineno"> 1</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
-<span class="py-lineno"> 2</span>  <span class="py-line"><span class="py-docstring">Code relating to interfaces and policies.</span> </span>
-<span class="py-lineno"> 3</span>  <span class="py-line"><span class="py-docstring"></span> </span>
-<span class="py-lineno"> 4</span>  <span class="py-line"><span class="py-docstring">To run a program using the injector, the following steps are typical:</span> </span>
-<span class="py-lineno"> 5</span>  <span class="py-line"><span class="py-docstring"></span> </span>
-<span class="py-lineno"> 6</span>  <span class="py-line"><span class="py-docstring"> 1. Instantiate a L{policy.Policy} (or a sub-class of it), giving it the root interface's URI.</span> </span>
-<span class="py-lineno"> 7</span>  <span class="py-line"><span class="py-docstring"> 2. Ask the policy object to choose a set of implementations.</span> </span>
-<span class="py-lineno"> 8</span>  <span class="py-line"><span class="py-docstring">   1. The policy fetches interfaces from the L{iface_cache}, starting a L{download} if needed.</span> </span>
-<span class="py-lineno"> 9</span>  <span class="py-line"><span class="py-docstring">   2. The cached or downloaded XML is parsed into a L{model} using the L{reader} module.</span> </span>
-<span class="py-lineno">10</span>  <span class="py-line"><span class="py-docstring">   3. The policy selects a set of implementations suitable for the current L{arch}.</span> </span>
-<span class="py-lineno">11</span>  <span class="py-line"><span class="py-docstring"> 3. Download the selected implementations and unpack into the L{zerostore}.</span> </span>
-<span class="py-lineno">12</span>  <span class="py-line"><span class="py-docstring"> 4. Finally, L{run} the program.</span> </span>
-<span class="py-lineno">13</span>  <span class="py-line"><span class="py-docstring"></span> </span>
-<span class="py-lineno">14</span>  <span class="py-line"><span class="py-docstring">For simple command-line use, the L{autopolicy} module provides code to perform the above steps. This</span> </span>
-<span class="py-lineno">15</span>  <span class="py-line"><span class="py-docstring">is used by the L{cli} module to provide the B{0launch} interface.</span> </span>
-<span class="py-lineno">16</span>  <span class="py-line"><span class="py-docstring">"""</span> </span>
-<span class="py-lineno">17</span>  <span class="py-line"> </span><script type="text/javascript">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Code relating to interfaces and policies.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">To run a program using the injector, the following steps are typical:</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring"> 1. Instantiate a L{policy.Policy} (or a sub-class of it), giving it the root interface's URI.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring"> 2. Ask the policy object to choose a set of implementations.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">   1. The policy fetches interfaces from the L{iface_cache}, starting a L{download} if needed.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring">   2. The cached or downloaded XML is parsed into a L{model} using the L{reader} module.</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">   3. The policy selects a set of implementations suitable for the current L{arch}.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring"> 3. Download the selected implementations and unpack into the L{zerostore}.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring"> 4. Finally, L{run} the program.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">For simple command-line use, the L{autopolicy} module provides code to perform the above steps. This</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">is used by the L{cli} module to provide the B{0launch} interface.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
 expandto(location.href);
 // -->
@@ -112,10 +112,12 @@ expandto(location.href);
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:06 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:21 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -126,9 +128,8 @@ expandto(location.href);
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

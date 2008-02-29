@@ -60,7 +60,7 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class AutoPolicy</h1><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class AutoPolicy</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy">source&nbsp;code</a></span></p>
 <pre class="base-tree">
    object --+    
             |    
@@ -75,121 +75,90 @@ policy.Policy --+
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Methods</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceMethods"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface_uri</span>,
         <span class="summary-sig-arg">download_only</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">dry_run</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">handler</span>=<span class="summary-sig-default">None</span>)</span>
-  </td>
-</tr>
+        <span class="summary-sig-arg">handler</span>=<span class="summary-sig-default">None</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">bool</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#need_download" class="summary-sig-name">need_download</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Decide whether we need to download anything (but don't do it!)
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#begin_iface_download" class="summary-sig-name">begin_iface_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start downloading the interface, and add a callback to process it 
-      when done.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#start_downloading_impls" class="summary-sig-name">start_downloading_impls</a>(<span class="summary-sig-arg">self</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#begin_archive_download" class="summary-sig-name">begin_archive_download</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">download_source</span>,
-        <span class="summary-sig-arg">success_callback</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Start fetching an archive.
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="execute"></a><span class="summary-sig-name">execute</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prog_args</span>,
         <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span>
-  </td>
-</tr>
+        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.execute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#recalculate_with_dl" class="summary-sig-name">recalculate_with_dl</a>(<span class="summary-sig-arg">self</span>)</span>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#download_and_execute" class="summary-sig-name">download_and_execute</a>(<span class="summary-sig-arg">self</span>,
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="download_and_execute"></a><span class="summary-sig-name">download_and_execute</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prog_args</span>,
         <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>)</span>
-  </td>
-</tr>
+        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.download_and_execute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>policy.Policy</code></b>:
-      <code>add_to_cache</code>,
-      <code>begin_icon_download</code>,
-      <code>begin_impl_download</code>,
-      <code>compare</code>,
-      <code>get_best_source</code>,
+      <code>download_and_import_feed_if_online</code>,
+      <code>download_icon</code>,
+      <code>download_uncached_implementations</code>,
+      <code>fetcher</code>,
       <code>get_cached</code>,
       <code>get_feed_targets</code>,
-      <code>get_icon_path</code>,
       <code>get_implementation</code>,
       <code>get_implementation_path</code>,
       <code>get_interface</code>,
-      <code>get_ranked_implementations</code>,
       <code>get_uncached_implementations</code>,
-      <code>get_unusable_reason</code>,
-      <code>interface_changed</code>,
-      <code>is_unusable</code>,
-      <code>process_pending</code>,
+      <code>is_stale</code>,
+      <code>need_download</code>,
       <code>recalculate</code>,
       <code>refresh_all</code>,
       <code>save_config</code>,
       <code>set_root</code>,
-      <code>store_icon</code>,
-      <code>usable_feeds</code>,
-      <code>walk_interfaces</code>
+      <code>solve_with_downloads</code>,
+      <code>usable_feeds</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -205,51 +174,13 @@ policy.Policy --+
     </td>
   </tr>
 </table>
-
-<br />
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-  <td width="15%" align="right" valign="top" class="summary">
-    <code class="summary-type">&nbsp;</code>
-  </td><td class="summary">
-    <a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#__slots__">__slots__</a> = <code title="['allow_downloads', 'download_only', 'dry_run']">['allow_downloads', 'download_only', 'dry_run']</code>
-  </td>
-</tr>
-</table>
-
-<br />
 <!-- ==================== INSTANCE VARIABLES ==================== -->
 <a name="section-InstanceVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
 </tr>
   <tr>
     <td colspan="2" class="summary">
@@ -260,7 +191,6 @@ policy.Policy --+
       <code>implementation</code>,
       <code>network_use</code>,
       <code>ready</code>,
-      <code>restrictions</code>,
       <code>root</code>,
       <code>src</code>,
       <code>stale_feeds</code>,
@@ -269,24 +199,13 @@ policy.Policy --+
     </td>
   </tr>
 </table>
-
-<br />
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Properties</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Properties"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
 </tr>
   <tr>
     <td colspan="2" class="summary">
@@ -296,24 +215,13 @@ policy.Policy --+
     </td>
   </tr>
 </table>
-
-<br />
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
-<table class="summary" border="1" cellpadding="3"
+<table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Method Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-MethodDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
 <a name="__init__"></a>
@@ -332,220 +240,23 @@ policy.Policy --+
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.__init__">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
+    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
-  
-  <dl><dt></dt><dd>
-    <dl><dt>Parameters:</dt></dl>
-    <ul class="nomargin">
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>handler</code></strong> - (new in 0.30) handler to use, or None to create a <a 
           href="zeroinstall.injector.handler.Handler-class.html" 
           class="link">Handler</a></li>
-    </ul>
-    <dl><dt>Overrides:
-      <a href="zeroinstall.injector.policy.Policy-class.html#__init__">policy.Policy.__init__</a>
-    </dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="need_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">need_download</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.need_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Decide whether we need to download anything (but don't do it!)
-  <dl><dt></dt><dd>
-    <dl><dt>Returns: <code>bool</code></dt>
-        <dd>true if we MUST download something (interfaces or 
-          implementations)</dd></dl>
-      <p><strong>Postcondition:</strong>
-        if we return False, self.stale_feeds contains any feeds which 
-        SHOULD be updated
-      </p>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_iface_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_iface_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.begin_iface_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start downloading the interface, and add a callback to process it when
-  done. If it is already being downloaded, do nothing.
-  <dl><dt></dt><dd>
-    <dl><dt>Overrides:
-      <a href="zeroinstall.injector.policy.Policy-class.html#begin_iface_download">policy.Policy.begin_iface_download</a>
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="start_downloading_impls"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">start_downloading_impls</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.start_downloading_impls">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="begin_archive_download"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_archive_download</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">download_source</span>,
-        <span class="sig-arg">success_callback</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.begin_archive_download">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  Start fetching an archive. You should normally call <a 
-  href="zeroinstall.injector.policy.Policy-class.html#begin_impl_download" 
-  class="link">begin_impl_download</a> instead, since it handles other 
-  kinds of retrieval method too.
-  <dl><dt></dt><dd>
-    <dl><dt>Overrides:
-      <a href="zeroinstall.injector.policy.Policy-class.html#begin_archive_download">policy.Policy.begin_archive_download</a>
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt></dl>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="execute"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">execute</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">prog_args</span>,
-        <span class="sig-arg">main</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.execute">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="recalculate_with_dl"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">recalculate_with_dl</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.recalculate_with_dl">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<a name="download_and_execute"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_execute</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">prog_args</span>,
-        <span class="sig-arg">refresh</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">main</span>=<span class="sig-default">None</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.download_and_execute">source&nbsp;code</a></span>&nbsp;</span
-    ></td>
-  </table>
-  
-  None
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="__slots__"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">__slots__</h3>
-  None
-  <dl><dt></dt><dd>
-    <dl><dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-['allow_downloads', 'download_only', 'dry_run']                        
-      </pre></td></tr></table></dd>
-    </dl>
-  </dd></dl>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
 </td></tr></table>
 </div>
 <br />
@@ -579,10 +290,12 @@ policy.Policy --+
 </table>
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
-    <td align="left" class="footer">Generated by Epydoc
-        3.0alpha3 on Sat Dec  1 12:35:01 2007</td>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -593,9 +306,8 @@ policy.Policy --+
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>
