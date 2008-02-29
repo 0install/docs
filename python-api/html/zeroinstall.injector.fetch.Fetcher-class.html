@@ -68,6 +68,8 @@ object --+
 </pre>
 
 <hr />
+<p>Downloads and stores various things.</p>
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -106,7 +108,7 @@ object --+
         <span class="summary-sig-arg">stores</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">impl_hint</span>=<span class="summary-sig-default">None</span>)</span><br />
-      A Cook follows a Recipe.</td>
+      Follow a Recipe.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.cook">source&nbsp;code</a></span>
             
@@ -122,7 +124,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="download_and_import_feed"></a><span class="summary-sig-name">download_and_import_feed</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#download_and_import_feed" class="summary-sig-name">download_and_import_feed</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">feed_url</span>,
         <span class="summary-sig-arg">iface_cache</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
@@ -139,16 +141,17 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type"><a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">tasks.Blocker</a></span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="download_impl"></a><span class="summary-sig-name">download_impl</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#download_impl" class="summary-sig-name">download_impl</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">impl</span>,
         <span class="summary-sig-arg">retrieval_method</span>,
         <span class="summary-sig-arg">stores</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Download impl, using retrieval_method.</td>
+      Download an implementation.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.download_impl">source&nbsp;code</a></span>
             
@@ -253,6 +256,24 @@ object --+
     </td>
   </tr>
 </table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.handler.Handler-class.html" 
+      class="link">handler.Handler</a></span>
+    </td><td class="summary">
+        <a name="handler"></a><span class="summary-name">handler</span><br />
+      handler to use for user-interaction
+    </td>
+  </tr>
+</table>
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -323,7 +344,7 @@ object --+
     </td>
   </tr></table>
   
-  <p>A Cook follows a Recipe.</p>
+  <p>Follow a Recipe.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -337,9 +358,75 @@ object --+
 <div class="fields">      <p><strong>See Also:</strong>
         <a 
         href="zeroinstall.injector.fetch.Fetcher-class.html#download_impl" 
-        class="link">download_impl</a>
+        class="link">download_impl</a> uses this method when appropriate
       </p>
 </div></td></tr></table>
+</div>
+<a name="download_and_import_feed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_import_feed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed_url</span>,
+        <span class="sig-arg">iface_cache</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.download_and_import_feed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Download the feed, download any required keys, confirm trust if needed
+  and import.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>feed_url</code></strong> (str) - the feed to be downloaded</li>
+        <li><strong class="pname"><code>iface_cache</code></strong> (<a href="zeroinstall.injector.iface_cache.IfaceCache-class.html" 
+          class="link">iface_cache.IfaceCache</a>) - cache in which to store the feed</li>
+        <li><strong class="pname"><code>force</code></strong> - whether to abort and restart an existing download</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="download_impl"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_impl</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">impl</span>,
+        <span class="sig-arg">retrieval_method</span>,
+        <span class="sig-arg">stores</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.download_impl">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Download an implementation.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>impl</code></strong> (<a 
+          href="zeroinstall.injector.model.ZeroInstallImplementation-class.html"
+          class="link">model.ZeroInstallImplementation</a>) - the selected implementation</li>
+        <li><strong class="pname"><code>retrieval_method</code></strong> (<a href="zeroinstall.injector.model.RetrievalMethod-class.html" 
+          class="link">model.RetrievalMethod</a>) - a way of getting the implementation (e.g. an Archive or a Recipe)</li>
+        <li><strong class="pname"><code>stores</code></strong> (<a href="zeroinstall.zerostore.Stores-class.html" 
+          class="link">zerostore.Stores</a>) - where to store the downloaded implementation</li>
+        <li><strong class="pname"><code>force</code></strong> - whether to abort and restart an existing download</li>
+    </ul></dd>
+    <dt>Returns: <a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">tasks.Blocker</a></dt>
+  </dl>
+</td></tr></table>
 </div>
 <a name="download_archive"></a>
 <div>
@@ -423,7 +510,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    Generated by Epydoc 3.0.1 on Fri Feb 29 20:43:08 2008
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

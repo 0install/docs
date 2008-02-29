@@ -68,8 +68,8 @@ object --+
 </pre>
 
 <hr />
-<p>This implementation of the handler interface uses the GLib 
-  mainloop.</p>
+<p>This implementation uses the GLib mainloop. Note that QT4 can use the 
+  GLib mainloop too.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -125,7 +125,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#impl_added_to_store" class="summary-sig-name">impl_added_to_store</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">impl</span>)</span><br />
-      Called by the Fetcher when adding an implementation.</td>
+      Called by the <a href="zeroinstall.injector.fetch.Fetcher-class.html"
+      class="link">fetch.Fetcher</a> when adding an implementation.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.impl_added_to_store">source&nbsp;code</a></span>
             
@@ -141,7 +142,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="downloads_changed"></a><span class="summary-sig-name">downloads_changed</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="downloads_changed"></a><span class="summary-sig-name">downloads_changed</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This is just for the GUI to override to update its display.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.downloads_changed">source&nbsp;code</a></span>
             
@@ -157,8 +159,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="wait_for_blocker"></a><span class="summary-sig-name">wait_for_blocker</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">blocker</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#wait_for_blocker" class="summary-sig-name">wait_for_blocker</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">blocker</span>)</span><br />
+      Run a recursive mainloop until blocker is triggered.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.wait_for_blocker">source&nbsp;code</a></span>
             
@@ -191,7 +194,8 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type"><a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">tasks.Blocker</a></span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -368,13 +372,39 @@ object --+
     </td>
   </tr></table>
   
-  <p>Called by the Fetcher when adding an implementation. The GUI uses this
-  to update its display.</p>
+  <p>Called by the <a href="zeroinstall.injector.fetch.Fetcher-class.html" 
+  class="link">fetch.Fetcher</a> when adding an implementation. The GUI 
+  uses this to update its display.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>impl</code></strong> (<a href="zeroinstall.injector.model.Implementation-class.html" 
           class="link">model.Implementation</a>) - the implementation which has been added</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="wait_for_blocker"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">wait_for_blocker</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">blocker</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.wait_for_blocker">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Run a recursive mainloop until blocker is triggered.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>blocker</code></strong> (<a href="zeroinstall.support.tasks.Blocker-class.html" 
+          class="link">tasks.Blocker</a>) - event to wait on</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -437,7 +467,8 @@ object --+
           class="link">gpg.check_stream</a>)</li>
         <li><strong class="pname"><code>iface_xml</code></strong> - the downloaded data (not yet trusted)</li>
     </ul></dd>
-    <dt>Returns:</dt>
+    <dt>Returns: <a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">tasks.Blocker</a></dt>
         <dd>a blocker, if confirmation will happen asynchronously, or None</dd>
   </dl>
 </td></tr></table>
@@ -528,7 +559,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    Generated by Epydoc 3.0.1 on Fri Feb 29 20:43:08 2008
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

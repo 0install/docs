@@ -68,6 +68,8 @@ object --+
 </pre>
 
 <hr />
+<p>A download of a single resource to a temporary file.</p>
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -85,7 +87,7 @@ object --+
           <td><span class="summary-sig"><a href="zeroinstall.injector.download.Download-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">url</span>,
         <span class="summary-sig-arg">hint</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Create a new download.</td>
+      Create a new download object.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.__init__">source&nbsp;code</a></span>
             
@@ -101,7 +103,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="start"></a><span class="summary-sig-name">start</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.download.Download-class.html#start" class="summary-sig-name">start</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Create a temporary file and begin the download.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.start">source&nbsp;code</a></span>
             
@@ -117,23 +120,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="download_as_child"></a><span class="summary-sig-name">download_as_child</span>(<span class="summary-sig-arg">self</span>)</span></td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.download_as_child">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="abort"></a><span class="summary-sig-name">abort</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.download.Download-class.html#abort" class="summary-sig-name">abort</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Signal the current download to stop.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.abort">source&nbsp;code</a></span>
             
@@ -145,11 +133,11 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">int | None</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_current_fraction"></a><span class="summary-sig-name">get_current_fraction</span>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.download.Download-class.html#get_current_fraction" class="summary-sig-name">get_current_fraction</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the current fraction of this download that has been fetched 
       (from 0 to 1), or None if the total size isn't known.</td>
           <td align="right" valign="top">
@@ -163,11 +151,12 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">int</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_bytes_downloaded_so_far"></a><span class="summary-sig-name">get_bytes_downloaded_so_far</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.download.Download-class.html#get_bytes_downloaded_so_far" class="summary-sig-name">get_bytes_downloaded_so_far</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the download progress.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.get_bytes_downloaded_so_far">source&nbsp;code</a></span>
             
@@ -206,6 +195,91 @@ object --+
       <code>__repr__</code>,
       <code>__setattr__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+        <a name="aborted_by_user"></a><span class="summary-name">aborted_by_user</span><br />
+      whether anyone has called <a 
+      href="zeroinstall.injector.download.Download-class.html#abort" 
+      class="link">abort</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+        <a name="child_pid"></a><span class="summary-name">child_pid</span><br />
+      the child process's PID
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">tasks.Blocker</a></span>
+    </td><td class="summary">
+        <a name="downloaded"></a><span class="summary-name">downloaded</span><br />
+      triggered when the download ends (on success or failure)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+        <a name="errors"></a><span class="summary-name">errors</span><br />
+      data received from the child's stderr
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int | None</span>
+    </td><td class="summary">
+        <a name="expected_size"></a><span class="summary-name">expected_size</span><br />
+      the expected final size of the file
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">object</span>
+    </td><td class="summary">
+        <a name="hint"></a><span class="summary-name">hint</span><br />
+      hint passed by and for caller
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">(download_starting | download_fetching | download_failed | 
+      download_complete)</span>
+    </td><td class="summary">
+        <a name="status"></a><span class="summary-name">status</span><br />
+      the status of the download
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">file</span>
+    </td><td class="summary">
+        <a name="tempfile"></a><span class="summary-name">tempfile</span><br />
+      the file storing the downloaded data
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+        <a name="url"></a><span class="summary-name">url</span><br />
+      the URL of the resource being fetched
     </td>
   </tr>
 </table>
@@ -251,17 +325,115 @@ object --+
     </td>
   </tr></table>
   
-  <p>Create a new download.</p>
+  <p>Create a new download object.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>url</code></strong> - the resource to download</li>
         <li><strong class="pname"><code>hint</code></strong> - object with which this download is associated (an optional hint 
-          for the GUI) Initial status is starting.</li>
+          for the GUI)</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
     </dt>
+  </dl>
+<div class="fields">      <p><strong>Postcondition:</strong>
+        <a href="zeroinstall.injector.download.Download-class.html#status" 
+        class="link">status</a> == <a 
+        href="zeroinstall.injector.download-module.html#download_starting" 
+        class="link">download_starting</a>.
+      </p>
+</div></td></tr></table>
+</div>
+<a name="start"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">start</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.start">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a temporary file and begin the download.</p>
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Precondition:</strong>
+        <a href="zeroinstall.injector.download.Download-class.html#status" 
+        class="link">status</a> == <a 
+        href="zeroinstall.injector.download-module.html#download_starting" 
+        class="link">download_starting</a>
+      </p>
+</div></td></tr></table>
+</div>
+<a name="abort"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">abort</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.abort">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Signal the current download to stop.</p>
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Postcondition:</strong>
+        <a 
+        href="zeroinstall.injector.download.Download-class.html#aborted_by_user"
+        class="link">aborted_by_user</a>
+      </p>
+</div></td></tr></table>
+</div>
+<a name="get_current_fraction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_current_fraction</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.get_current_fraction">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the current fraction of this download that has been fetched 
+  (from 0 to 1), or None if the total size isn't known.</p>
+  <dl class="fields">
+    <dt>Returns: int | None</dt>
+        <dd>fraction downloaded</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_bytes_downloaded_so_far"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_bytes_downloaded_so_far</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.download-pysrc.html#Download.get_bytes_downloaded_so_far">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the download progress. Will be zero if the download has not yet 
+  started.</p>
+  <dl class="fields">
+    <dt>Returns: int</dt>
   </dl>
 </td></tr></table>
 </div>
@@ -321,7 +493,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Feb 29 08:12:20 2008
+    Generated by Epydoc 3.0.1 on Fri Feb 29 20:43:08 2008
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
