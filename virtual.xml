@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Virtual Machines</h2>
+
+<p>
+As well as allowing sharing between users, you can also use Zero Install to share
+packages between virtual machines. That is, the package is downloaded and stored once,
+but all virtual machines can run it.
+</p>
+
+<h2>VirtualBox</h2>
+
+<p>
+<a href='http://www.virtualbox.org/'>VirtualBox</a> is a popular free (GPL) virtualisation system. To share your
+host's cache with a guest:
+</p>
+
+<ul>
+ <li>Create a new guest and install an operating system as usual. The guest OS does not need to be the same as the host OS.</li>
+ <li>Install the guest tools (choose <b>Install Guest Additions...</b> from the <b>Devices</b> menu).</li>
+ <li>Add a shared folder. <b>Folder Path</b> is your implementation cache on the host. This will be <b>/var/cache/0install.net/implementations</b>
+ if you have <a href='sharing.html'>sharing</a> enabled, or <b>~/.cache/0install.net/implementations</b> if not. <b>Folder Name</b> can be
+ anything, e.g. <b>ZeroInstall</b>.</li>
+ <li>In the guest, mount the new file-system under <b>/var/cache/0install.net/implementations</b> (regardless of where it is on the host):
+ <pre>sudo mount -t vboxsf ZeroInstall /var/cache/0install.net/implementations</pre></li>
+</ul>
+
+<p>
+Notes:
+</p>
+
+<ol>
+<li><p>If you used the host's /var/cache directory then the guest won't be able to write to the host's cache, which is good for security. Anything installed by the guest will be available only on that guest.
+If you want to configure sharing between guest users, however, you'll need to configure a second shared directory, one for guest-wide packages and one for host packages (<b>man 0store</b> for details).</p></li>
+
+<li><p>If you shared the ~/.cache directory, then root in the guest will be able to write to the host cache, which is good for sharing but not so good for security. If you also configure
+<a href='sharing.html'>sharing</a> in the guest, then guest users can install to the host's cache. Here, you are trusting the guest OS to check the digests correctly.</p></li>
+
+<li><p>It is also possible (though more difficult) to set things up so that an untrusted guest OS can put things in the host's cache (verified by the host).
+For this, you will need to make your own version of the <b>0store-secure-add-helper</b> script
+that passes the directory to the host for verification.</p></li>
+
+<li><p>Because Zero Install packages are named by their digest, there are no problems with sharing a single cache between different architectures (whether virtual machines or physical machines with a network
+file-system). Packages that can be shared will be shared automatically, packages that can't will co-exist peacefully.</p></li>
+</ol>
+
+</html>
