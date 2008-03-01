@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<interface uri="http://0install.net/2006/interfaces/GLib-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile" xmlns:ns="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>GLib-dev</name>
   <summary>headers for compiling GLib applications</summary>
   <description>
@@ -23,6 +23,15 @@ that use the GLib library.</description>
       <implementation id="sha1new=02c9b0a4db502dde4659468f2355f0bf75fa1336" released="2008-01-01" version="2.4.8">
         <archive extract="glib-dev-linux-x86_64-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-dev-linux-x86_64-2.4.8.tar.bz2" size="60582"/>
       </implementation>
+      <implementation id="sha1new=d28896189ef660a41b64d962f4868544f3d5e791" released="2008-03-01" version="2.6.6">
+        <archive extract="glib-dev-linux-x86_64-2.6.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.6.6.tar.bz2" size="63460"/>
+      </implementation>
+      <implementation id="sha1new=8a67babef1b5361cf43c6312c63bb6295b03f453" released="2008-03-01" version="2.8.6">
+        <archive extract="glib-dev-linux-x86_64-2.8.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.8.6.tar.bz2" size="64466"/>
+      </implementation>
+      <implementation id="sha1new=d96dfcb02d1185313500fd65ed309a0a4c90143b" released="2008-03-01" version="2.10.3">
+        <archive extract="glib-dev-linux-x86_64-2.10.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.10.3.tar.bz2" size="65726"/>
+      </implementation>
     </group>
   </group>
 
@@ -30,13 +39,22 @@ that use the GLib library.</description>
     <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8">
       <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=7f6c569883b43b13b12ea01b51dcaefe5b4da6be" released="2008-03-01" version="2.6.6">
+        <archive extract="glib-2.6.6" href="ftp://ftp.gtk.org/pub/gtk/v2.6/glib-2.6.6.tar.bz2" size="2380899" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    <implementation id="sha1new=3a4f763ad42ff1089f52c6837e30c5e6d7adb059" released="2008-03-01" version="2.8.6">
+      <archive extract="glib-2.8.6" href="ftp://ftp.gtk.org/pub/gtk/v2.8/glib-2.8.6.tar.bz2" size="2691171" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=8527e97c35221d327b49cddc0f5d701f572de146" released="2008-03-01" version="2.10.3">
+      <archive extract="glib-2.10.3" href="ftp://ftp.gtk.org/pub/glib/2.10/glib-2.10.3.tar.bz2" size="2774011" type="application/x-bzip-compressed-tar"/>
+    </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
       <environment insert="make-headers.py" name="BUILD_COMMAND"/>
     </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvzZbrgeCgFmlPMERAnZGAJ9vinCtrqVigdjUEaCMiZ73Z/8IKACffJRStnOvDvb1Z66D
-AeawPYbhzeY=
+iD8DBQBHybsdrgeCgFmlPMERAv7aAKDBy8AbHkguaIW4jsUVjdwBik7vfQCdFCb0j5lBnaJx9Vbh
+cLDwSiB9OUk=
 
 -->
