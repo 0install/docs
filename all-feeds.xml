@@ -423,6 +423,8 @@ describing formal geometrical constraints. This project is a basic tool for
 educational or modeling purpose. It is distributed under the GNU GPL licence,
 free and multi-platform ...</feed>
 
+<feed uri="http://www.cs.helsinki.fi/u/ihonkone/openttd/openttd2.xml" name="Openttd-tz-fix" summary="Fix for openttd.xml" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.openttd.org/" category="Games">http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1966</feed>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="Window manager for the ROX Desktop" icon="feed_icons/OroboROX.png" width="56" height="56" homepage="http://rox.sourceforge.net/desktop/OroboROX" category="Unknown">OroboROX is a lightweight Window Manager for the ROX Desktop. OroboROX is in development and not completely stable and could give you problems with some applications. But many people are using this as their everyday WM, so don't hesitate to try it ...</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Pager" name="Pager" summary="Pager applet" icon="feed_icons/Pager.png" width="42" height="26" homepage="http://rox.sourceforge.net/desktop/Pager" category="Utility">As the screen generally isn't big enough for all your programs, most people have
