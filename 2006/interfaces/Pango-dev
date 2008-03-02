@@ -7,6 +7,19 @@
 These are the Pango header files. They are required when compiling applications
 that use the Pango library. Pango is a library for laying out and rendering of
 text, with an emphasis on internationalization.</description>
+  <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
+    <implementation id="sha1new=bab2ca22fe45a6af3fd312d5dacef3bf90a60173" released="2008-03-01" version="1.10.4">
+      <archive extract="pango-1.10.4" href="ftp://ftp.gtk.org/pub/gtk/v2.8/pango-1.10.4.tar.bz2" size="1184862" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <environment insert="make-headers.py" mode="replace" name="BUILD_COMMAND"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+      <version not-before="2.8"/>
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+      <environment insert="bin" mode="prepend" name="PATH"/>
+    </requires>
+  </group>
 
   <group compile:lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0">
     <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" stability="stable" version="1.4.1">
@@ -22,7 +35,7 @@ text, with an emphasis on internationalization.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvzW/rgeCgFmlPMERAtRBAKDHsA1s4fc8Z1nOHhYBcObDL6QpLwCgmdBPLe/mES9Y/S2o
-ATzrJBxuBqs=
+iD8DBQBHycsSb88SG+I5DgsRAnXfAJ9WoH6FGs82HyJqjyLwzuUNDH2gBACdFAgnQY1zOXvaAFrg
+oMPmzZMudKk=
 
 -->

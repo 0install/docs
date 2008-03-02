@@ -20,7 +20,7 @@ that use the GLib library.</description>
       <implementation id="sha1new=e9095593f2aaef2132879d2d34fc2b00cc06953a" released="2008-03-01" version="2.6.6">
         <archive extract="glib-dev-linux-i486-2.6.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-i486-2.6.6.tar.bz2" size="63625"/>
       </implementation>
-        <implementation id="sha1new=beecdb7be4e7517675bb61214ba80989ed8a20b2" released="2008-03-01" version="2.8.6">
+      <implementation id="sha1new=beecdb7be4e7517675bb61214ba80989ed8a20b2" released="2008-03-01" version="2.8.6">
         <archive extract="glib-dev-linux-i486-2.8.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-i486-2.8.6.tar.bz2" size="64482"/>
       </implementation>
         <implementation id="sha1new=0937c75920f53080d89aecc1ca5b4bf05eff21d0" released="2008-03-01" version="2.10.3">
@@ -35,8 +35,8 @@ that use the GLib library.</description>
       <implementation id="sha1new=d28896189ef660a41b64d962f4868544f3d5e791" released="2008-03-01" version="2.6.6">
         <archive extract="glib-dev-linux-x86_64-2.6.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.6.6.tar.bz2" size="63460"/>
       </implementation>
-      <implementation id="sha1new=8a67babef1b5361cf43c6312c63bb6295b03f453" released="2008-03-01" version="2.8.6">
-        <archive extract="glib-dev-linux-x86_64-2.8.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.8.6.tar.bz2" size="64466"/>
+      <implementation id="sha1new=515b9892c98a2a262faed065b51274c65ae6603c" released="2008-03-01" version="2.8.6">
+        <archive extract="glib-dev-linux-x86_64-2.8.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.8.6.tar.bz2" size="95722"/>
       </implementation>
       <implementation id="sha1new=d96dfcb02d1185313500fd65ed309a0a4c90143b" released="2008-03-01" version="2.10.3">
         <archive extract="glib-dev-linux-x86_64-2.10.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.10.3.tar.bz2" size="65726"/>
@@ -63,7 +63,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHycVRrgeCgFmlPMERAti1AJ4kmkCJ3G9nBIYvuqFaYIhpXqbp+ACgpkMb8aYcQZ6Rf+t6
-5vANsUbaYzg=
+iD8DBQBHyc9ErgeCgFmlPMERAsYmAKCisBFDNDdN2J6DJGQKds169zP/kQCfbUGeV0+ne3NJtZZs
+lR7ucf9xQ9A=
 
 -->
