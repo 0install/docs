@@ -65,10 +65,7 @@ be a 'pass') but it should give the general idea.
  
  <dt>Signatures</dt>				
  <dd>Software comes with a digital signature, which is checked automatically by the system.<br/>
- Notes: The Zero Install filesystem remembers the signing key when software is
- first accessed, and checks that it hasn't changed when upgrading. The injector
- prompts the user even on the first access. Java Web-Start requires all
- components to be signed with the same key.
+ Note: Java Web-Start requires all components to be signed with the same key.
  </dd>
  
  <dt>Conflict-free</dt>
