@@ -31,6 +31,7 @@ be a 'pass') but it should give the general idea.
  <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<yes/>			<no>Only Java</no>	<yes/></tr>
  <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<no/>			<yes/>			<yes/></tr>
  <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/>			<yes/></tr>
+ <tr><th>Thousands of packages available</th>		<yes/>			<yes/>			<no/>		<yes/>			<td>Unknown</td>	<no/></tr>
 
 </table>
 
@@ -106,6 +107,9 @@ plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.
 
  <dt>Usable when off-line</dt>
  <dd>Once a program has been installed, the program can be run again while disconnected.</dd>
+
+ <dt>Thousands of packages available</dt>
+ <dd>The system is widely adopted.</dd>
 </dl>
 
 <h2>See also</h2>
