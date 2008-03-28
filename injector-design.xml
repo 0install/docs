@@ -359,19 +359,31 @@ The injector will also examine the dependencies of ROX-Lib and Python
 recursively.
 </p>
 
-<h2>Running the injector on itself</h2>
+<h2>Object diagram</h2>
 
 <p>
-The injector's GUI is just another application, and is fetched using the
-injector. You can therefore edit the policy for the GUI using the GUI:
+This diagram shows some of the main Python objects in the Zero Install software:
 </p>
 
-<pre>
-$ 0launch -dg http://0install.net/2007/interfaces/ZeroInstall-GUI.xml
-</pre>
+<p style='text-align: center'>
+ <img width="645" height="565" src="UML/injector-objects.png" alt="Object diagram"/>
+</p>
 
 <p>
-(in fact, as a short-cut, you can just do <b>0launch -g</b>)
+The <b>0launch</b> command is implemented by the <b>cli</b> module. This uses a <b>Policy</b> to
+select (and possibly download) a set of components (programs and libraries), which it then runs using
+the <b>run</b> module.</p>
+
+<p>
+The <b>Policy</b> uses a <b>Solver</b> to select a set of implementations suitable for the current
+<b>Architecture</b> (e.g. "Linux-i686"). It uses a <b>Fetcher</b> to download any missing or out-of-date
+feeds. Downloads are managed by a <b>Handler</b>, which interacts with the user to display progress
+and to confirm any new keys. Once a set of implementations has been chosen, the
+<b>Fetcher</b> is used again to download any missing packages.
+</p>
+
+<p>
+For more details about these classes, see the <a href='python-api/html/index.html'>Python API</a>.
 </p>
 
 <h2>Future plans</h2>
