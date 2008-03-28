@@ -39,7 +39,7 @@ the change log:
 </p>
 
 <pre>
-$ svn log https://svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/interface-spec.xml
+$ svn log https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/interface-spec.xml
 </pre>
 
 <h2>Contents</h2>
