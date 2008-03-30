@@ -186,22 +186,6 @@ the dialog box, use the <b>--gui</b> option:
 $ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
-<h2>Where do the downloads go?</h2>
-
-<p>
-The feed files describing the available versions of each program and the downloaded packages themselves are
-stored in a <i>cache</i> directory. No files are placed anywhere except in the
-cache, and a separate sub-directory is created for each package downloaded.
-Each sub-directory is named after a cryptographic digest of its contents, which allows
-downloads to be shared safely between users.
-</p>
-
-<p>
-By default, archives are cached in <b>~/.cache/0install.net/implementations</b> (i.e. inside your home directory), 
-so if multiple users try to run the same program it will download and save multiple copies.
-To allow automatic (and safe) sharing of downloads, see the <a href='sharing.html'>Sharing</a>
-page.</p>
-
 <h2>List of Zero Install software</h2>
 
 <p>

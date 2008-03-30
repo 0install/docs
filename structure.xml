@@ -13,7 +13,8 @@
 
   <item base="doc" label="Documentation">
     <item base='injector-using' label='Tutorial'>
-      <item base='tutorial-policy' label='Part 2: policy'/>
+      <item base='tutorial-downloads' label='Part 2: downloads'/>
+      <item base='tutorial-policy' label='Part 3: policy'/>
     </item>
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
