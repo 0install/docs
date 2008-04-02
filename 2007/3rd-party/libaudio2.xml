@@ -14,12 +14,12 @@ local output.</description>
   <homepage>http://radscan.com/nas.html</homepage>
   <group>
     <implementation doc-dir="usr/share/doc/libaudio2" id="sha1new=ffc10e373f32e6e6bad14a415f6938af20ce5509" released="2007-08-07" version="1.9" version-modifier="-2">
-    <archive href="http://ftp.uk.debian.org/debian/pool/main/n/nas/libaudio2_1.9-2+b1_i386.deb" size="77764" type="application/x-deb"/>
+    <archive href="http://mesh.dl.sourceforge.net/sourceforge/zero-install/libaudio2_1.9-2+b1_i386.deb" size="77764" type="application/x-deb"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGuL83BSn9tx+xORARAv/FAJ4qmoyS2rJ4QcppEkYvaRKP937GagCghC+C4i5nhF5MhEj3
-akDTC8gI7EI=
+iD8DBQBH8nkABSn9tx+xORARAuc6AJ95FvhZbB07xtcHAkZqaTjmg0jKtgCdHwrFM5j/oQTPN2yA
+DWsyXrCrgLQ=
 
 -->
