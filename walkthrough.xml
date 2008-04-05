@@ -28,8 +28,15 @@ be using <a href='http://rox.sourceforge.net/2005/interfaces/Edit'>Edit</a> for 
 
 <p>
 Open the feed for Edit above in your browser. The feed is an XML file
-listing the available versions of Edit. If your browser renders it as a web-page,
-use <b>View Source</b> to see the XML. We'll use this information to download and run Edit.
+listing the available versions of Edit. Your browser should render it as a web-page:
+</p>
+
+<p style='text-align: center; clear: both'>
+  <a href='http://rox.sourceforge.net/2005/interfaces/Edit'><img width="622" height="580" src="screens/edit-xslt.png" alt="Edit's web page"/></a>
+</p>
+
+<p>
+Use <b>View Source</b> to see the XML. We'll use this information to download and run Edit.
 </p>
 
 <security>
