@@ -71,7 +71,7 @@
 	<dt>Available versions</dt>
 	<dd>
 	  <xsl:choose>
-	    <xsl:when test='//zi:requires'>
+	    <xsl:when test='//zi:implementation'>
 	      <p>The list below is just for information; Zero Install will automatically download one of
 	      these versions for you.
 	      </p>
