@@ -156,7 +156,7 @@
 
   <xsl:template match='*[name() = "video"]'>
     <object width="425" height="355" type="application/x-shockwave-flash">
-      <xsl:attribute name='data'>http://www.youtube.com/v/<xsl:value-of select='@href'/></xsl:attribute>
+      <xsl:attribute name='data'>http://www.youtube.com/v/<xsl:value-of select='@vid'/></xsl:attribute>
       <a>
         <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute>
         <img src='screens/no_video.png' width='425' height='355' alt='Embedded video not supported by your browser'/>
