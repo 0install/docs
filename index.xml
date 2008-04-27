@@ -56,7 +56,7 @@ bundles, setup.exe, etc). Here are some of our goals:
 <h2>News</h2>
 <dl>
 <dt>Apr 2008</dt><dd>0launch can <a href='http://repo.or.cz/w/zeroinstall.git'>now</a> fallback to using a mirror automatically.
-The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>third part of the video
+The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>second part of the video
 tutorial</a> is now up.</dd>
 <dt>Mar 2008</dt><dd><a href='http://www.netbsd.org/gallery/pkgsrc-interviews.html#zero-install'>Zero Install interview on netbsd.org</a>.</dd>
 <dt>Feb 2008</dt><dd><a href='injector.html'>Zero Install 0.32</a> has been released, with some large-scale refactoring of the Python API
