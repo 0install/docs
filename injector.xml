@@ -53,14 +53,14 @@ that the Mandriva package doesn't work on 2007.1 without a
 <dd>
 <ul>
   <li><b>Debian/oldstable (sarge)</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
-  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.32-1_all.deb'/> (Debian package; python-central)<br/>
+  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.33-1_all.deb'/> (Debian package; python-central)<br/>
   <b>Debian/testing (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
 <pre># <b>apt-get install zeroinstall-injector</b></pre></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
   <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.30-0ubuntu1_all.deb'/><br/>
-  <b>Ubuntu (feisty/gutsy)</b> Zero Install is in Feisty and Gutsy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
+  <b>Ubuntu (feisty/gutsy/hardy)</b> Zero Install is in Feisty, Gutsy and Hardy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-  <p>However, the edgy deb is more up-to-date than the version in feisty, so you may prefer to install that.</p>
+  <p>However, the Debian/etch package is more up-to-date than this version, so you may prefer to install that.</p>
   </li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
