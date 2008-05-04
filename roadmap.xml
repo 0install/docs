@@ -151,6 +151,12 @@ libraries are), it is now also possible to attach bindings directly to implement
 they themselves are located). This simplifies packaging certain programs. Since 0.31.
 </dd>
 
+<dt>Mirrors for feeds</dt>
+<dd>Run a public mirror that periodically fetches the latest versions of feeds and makes them available from a single site,
+so that 0launch will download from the mirror if the upstream site becomes unavailable. Since 0.33, 0launch will download
+from the <a href='http://roscidus.com/0mirror/'>roscidus.com/0mirror</a> mirror site if a feed takes longer than 5 seconds
+to download.</dd>
+
 </dl>
 
 <h3>Features planned for 1.0</h3>
@@ -185,8 +191,6 @@ should provide a link to the program's release notes on the web.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
 </dd>
 
-<dt>Mirrors for feeds</dt>
-<dd>In progress; see <a href='0mirror.html'>0mirror</a>.</dd>
 </dl>
 
 <h3>Other possible features</h3>
