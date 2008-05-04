@@ -33,11 +33,14 @@ can help you to create new releases easily.</description>
     <implementation id="sha1new=6295c217fc5ee80dd8797bb68f728ae33a86eb26" released="2007-11-30" self-test="tests/testall.py" stability="stable" version="0.6">
       <archive extract="0release-0.6" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.6.tar.bz2" size="30064"/>
     </implementation>
+    <implementation id="sha1new=c8dd31aea0b1c69c1b3ffd2270bec6ff725563a4" released="2008-05-04" self-test="tests/testall.py" version="0.7">
+      <archive extract="0release-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0release-0.7.tar.bz2" size="30225"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHkztArgeCgFmlPMERAkmvAJ9AG/5v89sJjZpvSKcoKJlqjH123ACghso06MwW5Qh0c186
-a0ehFwTiYWY=
+iD8DBQBIHdCergeCgFmlPMERAqzBAKCCOeBDltWkxdNDL9A8Nhy/2i8H0wCghRqiRhZfd8J2oEVJ
+kpejmPLPJo4=
 
 -->
