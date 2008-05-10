@@ -55,10 +55,14 @@ user and developer community by using open, community-oriented development.</des
       <environment insert="lib/pkgconfig" mode="replace" name="PKG_CONFIG_PATH"/>
       <version not-before="2.12"/>
     </requires>
+    <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+      <!-- GTK sets the version, we just need to get this -->
+      <environment insert="bin" mode="prepend" name="PATH"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJeUYBSn9tx+xORARArM7AJ9o/luWgW8CJPowD9dCYB+Ev/YmSwCglflxS7S4UMKP3wYn
-9JI7t727iNc=
+iD4DBQBIJeYdBSn9tx+xORARAp5KAJ4i9SQ5ezd01j4lwRsmgXBHVGdaYwCUDKZ/ublRqkdbfD75
+Vkr9VZHKiw==
 
 -->
