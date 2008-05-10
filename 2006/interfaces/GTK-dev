@@ -16,10 +16,34 @@ that use the GTK+ library.</description>
     <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" stability="stable" version="2.4.14.1">
       <archive extract="gtk-headers-2.4.14.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.1.tar.bz2" size="157929"/>
     </implementation>
+    <implementation id="sha1new=cc1df9d2a745cf0b245526c6b1065faf28f851ea" released="2008-05-10" version="2.12.9">
+      <archive extract="gtk-dev-linux-x86_64-2.12.9" href="http://downloads.sourceforge.net/zero-install/gtk-dev-linux-x86_64-2.12.9.tar.bz2" size="945557" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+  <group arch="*-src" compile:binary-lib-mappings="gtk-x11-2.0:0 gdk-x11-2.0:0 gdk_pixbuf-2.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <version not-before="0.2"/>
+      <environment insert="make-headers.py" name="BUILD_COMMAND"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+      <version not-before="2.13.5"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/ATK-dev">
+      <version not-before="1.9.0"/>
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/Pango-dev">
+      <version not-before="1.17.3"/>
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <implementation id="sha1new=5a4dae99f4d57edff6bb9347e0cf72e817f48182" released="2008-05-10" version="2.12.9">
+      <archive extract="gtk+-2.12.9" href="http://ftp.gnome.org/pub/gnome/sources/gtk+/2.12/gtk+-2.12.9.tar.bz2" size="16027448" type="application/x-bzip-compressed-tar"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvzVXrgeCgFmlPMERAs9xAJ0RnEQGlWUysjyDeBEuGR+7ZrlRcwCgpi536iKrTpjQBhVl
-ynAML8lum5c=
+iD8DBQBIJcg0rgeCgFmlPMERAhYPAKCmYu2wfEETzHjY9VWOU8mTFwDZxACgnFCTm2LEIKLhN3fd
+3EVccjr4jBk=
 
 -->
