@@ -14,10 +14,23 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
     <implementation id="sha1=4ccf2ed4da6ec5052de7ca4b548e36bd7fc16be4" released="2006-05-10" stability="stable" version="1.8.0.1">
       <archive extract="atk-headers-1.8.0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.1.tar.bz2" size="18256"/>
     </implementation>
+    <implementation id="sha1new=61d0238880a8770123436e5ef5dc29243a80822c" released="2008-05-10" version="1.22.0">
+      <archive extract="atk-dev-linux-x86_64-1.22.0" href="http://downloads.sourceforge.net/zero-install/atk-dev-linux-x86_64-1.22.0.tar.bz2" size="25376"/>
+    </implementation>
+  </group>
+
+  <group arch="*-src" compile:binary-lib-mappings="atk-1.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
+    <implementation id="sha1new=315b5a6ea0c1af29ffa6df4ef5836110770901e6" released="2008-05-10" version="1.22.0">
+      <archive extract="atk-1.22.0" href="http://ftp.gnome.org/pub/gnome/sources/atk/1.22/atk-1.22.0.tar.bz2" size="709221" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <version not-before="0.2"/>
+      <environment insert="make-headers.py" name="BUILD_COMMAND"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvzWOrgeCgFmlPMERAtjQAJ98Se9Kcm55gexLn/NLm7K2YUb8LgCeMiOil1dmFztPSg+b
-OXf7dq+s+Zo=
+iD8DBQBIJbKzrgeCgFmlPMERApN7AKCpnEL1/qU++sXaUgyghQ/UsOUQeQCfZe8uTh3BTESntEcK
+HXB0cMM1Kbo=
 
 -->
