@@ -9,7 +9,7 @@ that use the GLib library.</description>
 
   <feed arch="Linux-ppc" src="http://0install.net/2008/linux-ppc/GLib-dev.xml"/>
 
-  <group compile:lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0">
+  <group compile:lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0 gthread-2.0:0">
     <group arch="Linux-i386">
       <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" stability="stable" version="2.4.8">
         <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
@@ -47,7 +47,7 @@ that use the GLib library.</description>
     </group>
   </group>
 
-  <group arch="*-src" compile:binary-lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
+  <group arch="*-src" compile:binary-lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0 gthread-2.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
     <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8">
       <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
     </implementation>
@@ -70,7 +70,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJabMrgeCgFmlPMERAqEJAJ9Q7pXXzgtxh7ys+ft81TIgI61f/ACg1WfNkYkfMO9tmfWC
-HnMNTGWLix0=
+iD8DBQBIJfRxrgeCgFmlPMERAl2aAKDFhx5pu+Zf5HrFJFRHC73aMOxjJACg3iLTVVhWOtTHXhDm
+odgXabHpWrs=
 
 -->
