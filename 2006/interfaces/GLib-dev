@@ -41,6 +41,9 @@ that use the GLib library.</description>
       <implementation id="sha1new=d96dfcb02d1185313500fd65ed309a0a4c90143b" released="2008-03-01" version="2.10.3">
         <archive extract="glib-dev-linux-x86_64-2.10.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.10.3.tar.bz2" size="65726"/>
       </implementation>
+      <implementation id="sha1new=96667a5606f161c6b0c729df83a452003cb32e8b" released="2008-05-10" version="2.16.3">
+        <archive extract="glib-dev-linux-x86_64-2.16.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-x86_64-2.16.3.tar.bz2" size="156595"/>
+      </implementation>
     </group>
   </group>
 
@@ -57,6 +60,9 @@ that use the GLib library.</description>
     <implementation id="sha1new=8527e97c35221d327b49cddc0f5d701f572de146" released="2008-03-01" version="2.10.3">
       <archive extract="glib-2.10.3" href="ftp://ftp.gtk.org/pub/glib/2.10/glib-2.10.3.tar.bz2" size="2774011" type="application/x-bzip-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=8ed19b673c5ed53f5805ee7e8207d0413bfd69ef" released="2008-05-10" version="2.16.3">
+      <archive extract="glib-2.16.3" href="http://ftp.gnome.org/pub/gnome/sources/glib/2.16/glib-2.16.3.tar.bz2" size="4540919" type="application/x-bzip-compressed-tar"/>
+    </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
       <version not-before="0.2"/>
       <environment insert="make-headers.py" name="BUILD_COMMAND"/>
@@ -64,7 +70,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHyp1prgeCgFmlPMERAiXbAJsEaaiLJPb58faOqPJHOu6X4SPQFgCgjOHNV5vrRPkrtZYD
-ekSy0DddePY=
+iD8DBQBIJabMrgeCgFmlPMERAqEJAJ9Q7pXXzgtxh7ys+ft81TIgI61f/ACg1WfNkYkfMO9tmfWC
+HnMNTGWLix0=
 
 -->
