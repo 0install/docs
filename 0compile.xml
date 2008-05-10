@@ -305,6 +305,12 @@ The <b>arch</b> attribute lets the injector know that it doesn't need to fetch t
 it's looking for source code.
 </p>
 
+<h2>Making library headers available (-dev packages)</h2>
+
+<p>
+See <a href='make-headers.html'>Make-headers</a> for information about publishing library source and -dev packages.
+</p>
+
 <h2>Adding run-time dependencies</h2>
 
 <p>
