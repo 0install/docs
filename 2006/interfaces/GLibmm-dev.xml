@@ -7,7 +7,7 @@
 These are the glibmm header files. They are required when compiling C++
 applications that use the GLib library.</description>
 
-  <group>
+  <group compile:lib-mappings="glibmm-2.4:1 glibmm_generate_extra_defs-2.4:1">
     <implementation id="sha1=715adfd8066b8c520c11bc924e3dcad29acf9edb" released="2006-06-24" stability="stable" version="2.4.8">
       <archive extract="glibmm-headers-2.4.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glibmm-headers-2.4.8.tar.bz2" size="117261"/>
     </implementation>
@@ -16,7 +16,7 @@ applications that use the GLib library.</description>
     </implementation>
   </group>
   <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
-    <implementation id="sha1new=7c2427080889f5500c674efe8fcff0d7e40c2fd2" released="2008-05-10" version="2.16.2">
+    <implementation compile:binary-lib-mappings="glibmm-2.4:1 glibmm_generate_extra_defs-2.4:1" id="sha1new=7c2427080889f5500c674efe8fcff0d7e40c2fd2" released="2008-05-10" version="2.16.2">
       <archive extract="glibmm-2.16.2" href="http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.16/glibmm-2.16.2.tar.bz2" size="12146183" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -25,7 +25,7 @@ applications that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJYr9rgeCgFmlPMERAqixAJ4l37L00PI2GXSID3PwIY4fwvXW8QCgmvudO6jHts6OFvdm
-DFUGroI8uo4=
+iD8DBQBIJY5grgeCgFmlPMERAgD8AKDHH9bej7+i3FrIofNtuSZqDJO2owCdFPWmIk1RFbQdQDfo
+mDwZA0GisOA=
 
 -->
