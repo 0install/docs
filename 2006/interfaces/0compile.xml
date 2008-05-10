@@ -69,7 +69,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <version not-before="0.32"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
-      <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" version="0.12">
+      <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" stability="stable" version="0.12">
       <archive extract="0compile-0.12" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
     </implementation>
     </group>
@@ -77,7 +77,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHwGjVrgeCgFmlPMERAq7IAJ43H1BfueHvt27nh93Pvz0Iw1qR9ACgi5JcXADf8QBAD4T8
-PQ6bEZvQrFM=
+iD8DBQBIJeF/rgeCgFmlPMERAuSWAKCiEJXMD/J+/tMF1HUAHiicAE5y0wCfWdxmUT3csDQdYWVH
+7zREy357MkI=
 
 -->
