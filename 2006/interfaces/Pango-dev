@@ -7,21 +7,33 @@
 These are the Pango header files. They are required when compiling applications
 that use the Pango library. Pango is a library for laying out and rendering of
 text, with an emphasis on internationalization.</description>
-  <group arch="*-src" compile:binary-lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0 pangoft2-1.0:0" compile:command="&quot;$BUILD_COMMAND&quot;">
-    <implementation id="sha1new=bab2ca22fe45a6af3fd312d5dacef3bf90a60173" released="2008-03-01" version="1.10.4">
-      <archive extract="pango-1.10.4" href="ftp://ftp.gtk.org/pub/gtk/v2.8/pango-1.10.4.tar.bz2" size="1184862" type="application/x-bzip-compressed-tar"/>
-    </implementation>
+  <group arch="*-src" compile:binary-lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0 pangoft2-1.0:0 pangocairo-1.0:0" compile:command="&quot;$BUILD_COMMAND&quot;">
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
       <environment insert="make-headers.py" mode="replace" name="BUILD_COMMAND"/>
     </requires>
-    <requires interface="http://0install.net/2006/interfaces/GLib-dev">
-      <version not-before="2.8"/>
-      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
-      <environment insert="bin" mode="prepend" name="PATH"/>
-    </requires>
+    <group>
+      <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+        <version not-before="2.8"/>
+        <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+        <environment insert="bin" mode="prepend" name="PATH"/>
+      </requires>
+      <implementation id="sha1new=bab2ca22fe45a6af3fd312d5dacef3bf90a60173" released="2008-03-01" version="1.10.4">
+        <archive extract="pango-1.10.4" href="ftp://ftp.gtk.org/pub/gtk/v2.8/pango-1.10.4.tar.bz2" size="1184862" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="http://0install.net/2006/interfaces/GLib-dev">
+        <version not-before="2.14.0"/>
+        <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+        <environment insert="bin" mode="prepend" name="PATH"/>
+      </requires>
+      <implementation id="sha1new=b359f1b41ad3da0855777034eaf0199259690b9f" released="2008-05-10" version="1.20.2">
+        <archive extract="pango-1.20.2" href="http://ftp.gnome.org/pub/gnome/sources/pango/1.20/pango-1.20.2.tar.bz2" size="1414871" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    </group>
   </group>
 
-  <group compile:lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0 pangoft2-1.0:0">
+  <group compile:lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0 pangoft2-1.0:0 pangocairo-1.0:0">
     <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" stability="stable" version="1.4.1">
 
       <archive extract="pango-headers-1.4.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
@@ -32,13 +44,16 @@ text, with an emphasis on internationalization.</description>
     <implementation id="sha1=260687eb207dc87811043d35570fb3779071a575" released="2006-06-04" stability="stable" version="1.4.1.2">
       <archive extract="pango-headers-1.4.1.2" href="http://easynews.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.2.tar.bz2" size="19078"/>
     </implementation>
-    <implementation id="sha1new=8d4f953df046d6a94ae0700e51faee559d428880" released="2008-03-02" version="1.10.4">
+    <implementation id="sha1new=8d4f953df046d6a94ae0700e51faee559d428880" released="2008-03-02" stability="stable" version="1.10.4">
       <archive extract="pango-dev-linux-x86_64-1.10.4" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.10.4.tar.bz2" size="182394"/>
     </implementation>
+    <implementation id="sha1new=f44d77837d6bacf78e638bc4acb50493fab7e9e8" released="2008-05-10" version="1.20.2">
+        <archive extract="pango-dev-linux-x86_64-1.20.2" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.20.2.tar.bz2" size="194688" type="application/x-bzip-compressed-tar"/>
+      </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHyrzfrgeCgFmlPMERArXtAKCpoR5Jo6SdVWdgOyQLZNYj4G43PQCgniFozWQBfTioUiy6
-5jlLLnVbs6g=
+iD8DBQBIJcQmrgeCgFmlPMERAgMzAJ9Y5ze9CoBv+tnf8EEitJEzoNS+jwCgujdc+I5L/IicNFCY
+V0eNbdGVyr0=
 
 -->
