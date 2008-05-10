@@ -48,13 +48,9 @@ user and developer community by using open, community-oriented development.</des
       <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
     </requires>
     <requires interface="http://0install.net/2006/interfaces/GLibmm-dev.xml">
-        <version not-before="2.4"/>
-        <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
-      </requires>
-    <requires interface="http://0install.net/2006/interfaces/Pango-dev">
-        <version not-before="1.4"/>
-        <environment insert="lib/pkgconfig" mode="replace" name="PKG_CONFIG_PATH"/>
-      </requires>
+      <version not-before="2.4"/>
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
     <requires interface="http://0install.net/2006/interfaces/GTK-dev">
       <environment insert="lib/pkgconfig" mode="replace" name="PKG_CONFIG_PATH"/>
       <version not-before="2.12"/>
@@ -62,7 +58,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJd9+BSn9tx+xORARAhUjAJsG0xoVe8r/ty/hfZwY/9q9/6vawgCfT4wEwH6mhNVtEPwn
-FkXYaBiSbS4=
+iD8DBQBIJeUYBSn9tx+xORARArM7AJ9o/luWgW8CJPowD9dCYB+Ev/YmSwCglflxS7S4UMKP3wYn
+9JI7t727iNc=
 
 -->
