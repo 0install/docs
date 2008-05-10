@@ -33,6 +33,9 @@ user and developer community by using open, community-oriented development.</des
     <implementation id="sha1new=97ee1b0b41832415ce76ba28150394e679f01854" main="bin/inkscape" released="2007-03-20" stability="stable" version="0.45.1">
       <archive href="http://mesh.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=c1a1484b75a85307aedfbbe9e58ebc4163f7ee71" released="2008-05-10" version="0.46">
+      <archive extract="inkscape-linux-i486-0.46" href="http://downloads.sourceforge.net/zero-install/inkscape-linux-i486-0.46.tar.bz2" size="14299779" type="application/x-bzip-compressed-tar"/>
+    </implementation>
   </group>
   <group arch="Linux-x86_64" main="bin/inkscape">
     <implementation id="sha1new=edebf675354b258aaa172dd542df4b98c22f9fb6" released="2008-05-10" version="0.46">
@@ -62,7 +65,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iD4DBQBIJeYdBSn9tx+xORARAp5KAJ4i9SQ5ezd01j4lwRsmgXBHVGdaYwCUDKZ/ublRqkdbfD75
-Vkr9VZHKiw==
+iD8DBQBIJfvfBSn9tx+xORARAljWAJ9f2NpT826CXg+TDMX3Ec8iH2ozhgCgh7dn+xIej/wLbBH1
+sW5MoYUA4mc=
 
 -->

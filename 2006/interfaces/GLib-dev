@@ -26,6 +26,9 @@ that use the GLib library.</description>
         <implementation id="sha1new=0937c75920f53080d89aecc1ca5b4bf05eff21d0" released="2008-03-01" version="2.10.3">
         <archive extract="glib-dev-linux-i486-2.10.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-i486-2.10.3.tar.bz2" size="65659"/>
       </implementation>
+      <implementation id="sha1new=c7de7834b6bfcad169790d00a203354684e5971e" released="2008-05-10" version="2.16.3">
+      <archive extract="glib-dev-linux-i486-2.16.3" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-i486-2.16.3.tar.bz2" size="152923" type="application/x-bzip-compressed-tar"/>
+    </implementation>
     </group>
   
     <group arch="Linux-x86_64">
@@ -70,7 +73,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJfRxrgeCgFmlPMERAl2aAKDFhx5pu+Zf5HrFJFRHC73aMOxjJACg3iLTVVhWOtTHXhDm
-odgXabHpWrs=
+iD8DBQBIJfw6rgeCgFmlPMERAo+HAJ9g+geuVqMuM2WSj+sTPxa8DiKiagCg3AOW+eQATljA9tqJ
+WN03wtdR0P8=
 
 -->
