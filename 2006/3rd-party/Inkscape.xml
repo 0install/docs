@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2006/3rd-party/Inkscape.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2006/3rd-party/Inkscape.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Inkscape</name>
   <summary>an SVG-based vector drawing application</summary>
   <description>
@@ -34,9 +34,35 @@ user and developer community by using open, community-oriented development.</des
       <archive href="http://mesh.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.45.1.x86.package" size="5794625" start-offset="30916" type="application/x-lzma-compressed-tar"/>
     </implementation>
   </group>
+  <group arch="Linux-x86_64" main="bin/inkscape">
+    <implementation id="sha1new=edebf675354b258aaa172dd542df4b98c22f9fb6" released="2008-05-10" version="0.46">
+      <archive extract="inkscape-linux-x86_64-0.46" href="http://downloads.sourceforge.net/zero-install/inkscape-linux-x86_64-0.46.tar.bz2" size="14758655" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+  <group arch="*-src" compile:binary-main="bin/inkscape" compile:command="&quot;$SRCDIR/configure&quot; --enable-binreloc --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install &amp;&amp; strip &quot;$DISTDIR&quot;/bin/*" license="OSI Approved :: GNU General Public License v2">
+    <implementation id="sha1new=39d1f3561bb667fe1ea0346f81f74f104f82011c" released="2008-05-10" version="0.46">
+      <archive extract="inkscape-0.46" href="http://dfn.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.46.tar.gz" size="18615326" type="application/x-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2006/interfaces/GTKmm-dev.xml">
+      <version not-before="2.10"/>
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2006/interfaces/GLibmm-dev.xml">
+        <version not-before="2.4"/>
+        <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+      </requires>
+    <requires interface="http://0install.net/2006/interfaces/Pango-dev">
+        <version not-before="1.4"/>
+        <environment insert="lib/pkgconfig" mode="replace" name="PKG_CONFIG_PATH"/>
+      </requires>
+    <requires interface="http://0install.net/2006/interfaces/GTK-dev">
+      <environment insert="lib/pkgconfig" mode="replace" name="PKG_CONFIG_PATH"/>
+      <version not-before="2.12"/>
+    </requires>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYratBSn9tx+xORARAlvHAJ9VzZv9rRE37NstqGcRewlF9GaDVQCfQ3sxDCFRJSInJ4Hb
-VIl219Espyw=
+iD8DBQBIJd9+BSn9tx+xORARAhUjAJsG0xoVe8r/ty/hfZwY/9q9/6vawgCfT4wEwH6mhNVtEPwn
+FkXYaBiSbS4=
 
 -->
