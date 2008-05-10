@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>GLibmm-dev</name>
   <summary>headers for compiling C++ GLib applications</summary>
   <description>
@@ -11,10 +11,21 @@ applications that use the GLib library.</description>
     <implementation id="sha1=715adfd8066b8c520c11bc924e3dcad29acf9edb" released="2006-06-24" stability="stable" version="2.4.8">
       <archive extract="glibmm-headers-2.4.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/glibmm-headers-2.4.8.tar.bz2" size="117261"/>
     </implementation>
+    <implementation id="sha1new=c4b8409a0b8b6698cf8303ea94a76ef3e96c6bc2" released="2008-05-10" version="2.16.2">
+      <archive extract="glibmm-dev-linux-x86_64-2.16.2" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/glibmm-dev-linux-x86_64-2.16.2.tar.bz2" size="182559" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+  <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
+    <implementation id="sha1new=7c2427080889f5500c674efe8fcff0d7e40c2fd2" released="2008-05-10" version="2.16.2">
+      <archive extract="glibmm-2.16.2" href="http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.16/glibmm-2.16.2.tar.bz2" size="12146183" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
+      <environment insert="make-headers.py" mode="replace" name="BUILD_COMMAND"/>
+    </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGqkbErgeCgFmlPMERAjePAKCYLqzWGG5e9GLvZG2cqvtntuqYhgCgilNM1C9KYWFsPU23
-UTE+zVyCEO0=
+iD8DBQBIJYr9rgeCgFmlPMERAqixAJ4l37L00PI2GXSID3PwIY4fwvXW8QCgmvudO6jHts6OFvdm
+DFUGroI8uo4=
 
 -->
