@@ -7,7 +7,7 @@
 These are the glibmm header files. They are required when compiling C++
 applications that use the GTK, ATK or Pango libraries..</description>
 
-  <group compile:lib-mappings="gtkmm-2.4:1">
+  <group compile:lib-mappings="gtkmm-2.4:1 gdkmm-2.4:1 atkmm-1.6:1 pangomm-1.4:1">
     <implementation id="sha1=02b1ddcdcc54cff44bc48951249609df5d0afe9f" released="2006-06-24" stability="stable" version="2.4.11">
     
       <archive extract="gtkmm-headers-2.4.11" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/gtkmm-headers-2.4.11.tar.bz2" size="292375"/>
@@ -16,7 +16,7 @@ applications that use the GTK, ATK or Pango libraries..</description>
       <archive extract="gtkmm-dev-linux-x86_64-2.12.7" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/gtkmm-dev-linux-x86_64-2.12.7.tar.bz2" size="396941"/>
     </implementation>
   </group>
-  <group arch="*-src" compile:binary-lib-mappings="gtkmm-2.4:1" compile:command="&quot;$BUILD_COMMAND&quot;">
+  <group arch="*-src" compile:binary-lib-mappings="gtkmm-2.4:1 gdkmm-2.4:1 atkmm-1.6:1 pangomm-1.4:1" compile:command="&quot;$BUILD_COMMAND&quot;">
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
       <environment insert="make-headers.py" mode="replace" name="BUILD_COMMAND"/>
     </requires>
@@ -30,7 +30,7 @@ applications that use the GTK, ATK or Pango libraries..</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJZ4IrgeCgFmlPMERAvrVAKCrSpa5/Dr2L4z/1rgZU8nYz5pmhACgjydGDKjtmlMjmP0h
-LRLCn0rvKBs=
+iD8DBQBIJdGargeCgFmlPMERAqzIAKClvWrrBi42Ujo84gqObnK/x9jLdwCfZuUUuEJUctBhc1QP
+iLw2W1j3dJk=
 
 -->
