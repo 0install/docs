@@ -50,7 +50,7 @@ that use the GLib library.</description>
     </group>
   </group>
 
-  <group arch="*-src" compile:binary-lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0 gthread-2.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
+  <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
     <implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8">
       <archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/>
     </implementation>
@@ -67,13 +67,13 @@ that use the GLib library.</description>
       <archive extract="glib-2.16.3" href="http://ftp.gnome.org/pub/gnome/sources/glib/2.16/glib-2.16.3.tar.bz2" size="4540919" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
-      <version not-before="0.2"/>
+      <version not-before="0.3"/>
       <environment insert="make-headers.py" name="BUILD_COMMAND"/>
     </requires>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJfw6rgeCgFmlPMERAo+HAJ9g+geuVqMuM2WSj+sTPxa8DiKiagCg3AOW+eQATljA9tqJ
-WN03wtdR0P8=
+iD8DBQBIJrkRrgeCgFmlPMERAqBcAJ4kEuIh+rZ28/SzA5ZvNAsVfUig6QCglcKiAcWKQj/wy6zI
+VGjCv11GdEU=
 
 -->
