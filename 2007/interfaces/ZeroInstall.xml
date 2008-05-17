@@ -41,14 +41,14 @@ requires first uninstalling another.</description>
     <implementation id="sha1new=249a1d6122cfd0e867265d16c5631f7461ad1f10" released="2008-02-23" version="0.32">
       <archive extract="zeroinstall-injector-0.32" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.32.tar.bz2" size="126877"/>
     </implementation>
-    <implementation id="sha1new=6f2914e6e4757a25580d35cc65891a42a638994c" released="2008-05-04" version="0.33">
+    <implementation id="sha1new=6f2914e6e4757a25580d35cc65891a42a638994c" released="2008-05-04" stability="stable" version="0.33">
       <archive extract="zeroinstall-injector-0.33" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.33.tar.bz2" size="130726"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBILpvRrgeCgFmlPMERAsooAJ4/yXBP4TohQTwJTtRaZKhqtZi8uQCfVAt2bk23Kr34O/er
-gJ4YxN7o6EQ=
+iD8DBQBILp4frgeCgFmlPMERAuSFAJ9eFsfmnikZsuKZKpldUwdZFacyAACgyyOCdNL9/WSYxRnj
+91zfC97odqI=
 
 -->

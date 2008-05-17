@@ -23,13 +23,13 @@ can change or damage your real computer, or its software.</description>
     <implementation id="sha1new=e205285d3543ed205acdaa8b87b8fc06504c0081" released="2007-05-28" stability="stable" version="2.4.17.1">
     <archive href="http://heanet.dl.sourceforge.net/sourceforge/user-mode-linux/user-mode-linux_0.54-2.4.17.1um-1_i386.deb" size="1495200" type="application/x-deb"/>
   </implementation>
-    <implementation id="sha1new=12bb4f4c31642cd1fa0c0d0aba95ae1092c344d7" main="usr/bin/linux.uml" released="2007-07-25" stability="stable" version="2.6.18" version-modifier="-1">
-      <archive href="http://ftp.uk.debian.org/debian/pool/main/u/user-mode-linux/user-mode-linux_2.6.18-1um-2etch2_i386.deb" size="25577610" type="application/x-deb"/>
+    <implementation id="sha1new=1fc35d7dd32b438c0cd7c2b5b01ed5a72915c1d2" main="usr/bin/linux.uml" released="2008-05-17" version="2.6.18" version-modifier="-1">
+      <archive href="http://ftp.uk.debian.org/debian/pool/main/u/user-mode-linux/user-mode-linux_2.6.18-1um-2etch.18etch1_i386.deb" size="25585940" type="application/x-deb"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHSCevBSn9tx+xORARAjwEAJ4yIaW08vUr01LKJ2XwcNtXz4a09ACfZVB5CZ8BHklgsQls
-dhBcRnQHnBU=
+iD8DBQBILp+JBSn9tx+xORARAsJTAJ9LpMofWuM6uKHjKSc94EBJ3FQRdQCfZ5kvhFw8AApKdOU1
+Ok+3TvxT7gQ=
 
 -->
