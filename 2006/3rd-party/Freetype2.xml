@@ -25,12 +25,12 @@ Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</descri
   </group>
   <group arch="Linux-i486">
     <implementation id="sha1=04a048c7eb79317a04602b1e906c301ce49ef1c1" released="2006-11-12" stability="stable" version="2.1.10">
-      <archive extract="freetype2-2.1.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/freetype2-2.1.10.tar.bz2" size="652612"/>
+      <archive extract="freetype2-2.1.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/freetype2-2.1.10.tar.bz2" size="652612"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrgmrgeCgFmlPMERAhCYAKDGygPlMgUGkcF5LHNJoj9MvLizVwCfb/Wh3pLwsdNCR5ZK
-+SNMu7gLY5E=
+iD8DBQBILprnrgeCgFmlPMERAh/pAJ93LmHC2nbfSdqzfhQvAgTNE04TFACgn0TA3ZvsgtdUaHpl
+r+0XDuXbMY8=
 
 -->

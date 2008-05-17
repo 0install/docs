@@ -12,19 +12,19 @@ particular versions of libraries as preferred, bugggy, etc.</description>
 
   <group main="0launch-gui">
     <implementation id="sha1=9cd66d454ff3055002c2106ad74f470b1b2c1996" released="2006-09-16" stability="stable" version="0.22.1">
-      <archive extract="zeroinstall-gui-0.22.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.22.1.tar.bz2" size="30000"/>
+      <archive extract="zeroinstall-gui-0.22.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.22.1.tar.bz2" size="30000"/>
     </implementation>
     <implementation id="sha1=487c7127a729db69059d58a388a0d074e46decce" released="2006-10-08" stability="stable" version="0.23.1">
-      <archive extract="zeroinstall-gui-0.23.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.1.tar.bz2" size="32832"/>
+      <archive extract="zeroinstall-gui-0.23.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.1.tar.bz2" size="32832"/>
     </implementation>
     <implementation id="sha1=86cf742000556e708097a9b362aee574ffc1e0bb" released="2006-10-22" stability="stable" version="0.23.2">
-      <archive extract="zeroinstall-gui-0.23.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.2.tar.bz2" size="33012"/>
+      <archive extract="zeroinstall-gui-0.23.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.23.2.tar.bz2" size="33012"/>
     </implementation>
     <implementation id="sha1=fab1becd0f86b4e783c55f676505c058fb8fe706" released="2006-12-02" stability="stable" version="0.24.1">
-      <archive extract="zeroinstall-gui-0.24.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.1.tar.bz2" size="33914"/>
+      <archive extract="zeroinstall-gui-0.24.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.1.tar.bz2" size="33914"/>
     </implementation>
     <implementation id="sha1=3667bd504a8bd09fa75acaee6e17a79d59b3ddca" released="2006-12-03" stability="stable" version="0.24.2">
-      <archive extract="zeroinstall-gui-0.24.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.2.tar.bz2" size="33917"/>
+      <archive extract="zeroinstall-gui-0.24.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.2.tar.bz2" size="33917"/>
     </implementation>
     <implementation id="sha1new=52145efb97dc729009454d7b0201e40f3f2e90d9" released="2007-01-20" stability="stable" version="0.24.3">
       <archive extract="zeroinstall-gui-0.24.3" href="http://heanet.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-gui-0.24.3.tar.bz2" size="34356"/>
@@ -32,7 +32,7 @@ particular versions of libraries as preferred, bugggy, etc.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqu3rgeCgFmlPMERAp95AKCiCyyF8IgzZKReBxfb21CzD4w6/wCfTAPkM7AJiLJxMy61
-IRtROLVIw6c=
+iD8DBQBILpuJrgeCgFmlPMERAlVWAKDIn30LjebsuxdJVQ8N/Z5DUdqm8ACeM8PQAElY/7NZKDIJ
+AHpYoxisx7o=
 
 -->

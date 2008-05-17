@@ -60,14 +60,14 @@ the GTK dependencies to the source interface file.</description>
         <archive extract="gtk2.4-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.3.tar.bz2" size="2153"/>
       </implementation>
       <implementation id="sha1=710455966211e583a4400f923fc75ede576fe31e" released="2006-11-26" stability="stable" version="0.4">
-        <archive extract="gtk-2.4-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/gtk-2.4-0.4.tar.bz2" size="2333"/>
+        <archive extract="gtk-2.4-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-2.4-0.4.tar.bz2" size="2333"/>
       </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYqWRrgeCgFmlPMERAk/HAKCwjohAEps+lONYploBRiuuXrTaUwCgh40fdNFFIOcQWloV
-5igwp1dhZEo=
+iD8DBQBILpsergeCgFmlPMERAmkxAJ43fyllML8Fxz85OVIHt1wmhqBdUQCeNYX7ZRsxuzwtGTIN
+RTqv9eyry1U=
 
 -->

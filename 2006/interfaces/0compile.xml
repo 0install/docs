@@ -20,31 +20,31 @@ For a full tutorial, see 0compile's homepage.</description>
 
   <group main="0compile">
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
-      <archive extract="0compile-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.1.tar.bz2" size="15393"/>
+      <archive extract="0compile-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.1.tar.bz2" size="15393"/>
     </implementation>
     <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" stability="stable" version="0.2">
-      <archive extract="0compile-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
+      <archive extract="0compile-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
     </implementation>
     <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="stable" version="0.3">
-      <archive extract="0compile-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
+      <archive extract="0compile-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
     </implementation>
     <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="stable" version="0.4">
-      <archive extract="0compile-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
+      <archive extract="0compile-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
     </implementation>
     <implementation id="sha1=38eb336dbb23fbca46952e80dc352ef1177f790b" released="2006-10-28" stability="stable" version="0.5">
-      <archive extract="0compile-0.5" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.5.tar.bz2" size="17751"/>
+      <archive extract="0compile-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.5.tar.bz2" size="17751"/>
     </implementation>
     <implementation id="sha1=1930fefbbf3b92f119005bcb125dcea371cc74d0" released="2006-11-12" stability="stable" version="0.6">
-      <archive extract="0compile-0.6" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.6.tar.bz2" size="17472"/>
+      <archive extract="0compile-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.6.tar.bz2" size="17472"/>
     </implementation>
     <implementation id="sha1=6e6d75b9956fedfe58bcd0be597e81a86182c764" released="2006-11-21" stability="stable" version="0.7">
-      <archive extract="0compile-0.7" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.7.tar.bz2" size="19966"/>
+      <archive extract="0compile-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.7.tar.bz2" size="19966"/>
     </implementation>
     <implementation id="sha1=0d94fb422a93c7326e2fccbebd5d9eab052e2d18" released="2006-11-25" stability="stable" version="0.8">
-      <archive extract="0compile-0.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
+      <archive extract="0compile-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
     </implementation>
     <implementation id="sha1new=b9ca4f1cf34648b6b241ae23f7139b66236dd207" released="2007-06-10" stability="stable" version="0.9">
-      <archive extract="0compile-0.9" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
+      <archive extract="0compile-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -52,7 +52,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
       <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" stability="stable" version="0.10">
-      <archive extract="0compile-0.10" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.10.tar.bz2" size="22979"/>
+      <archive extract="0compile-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.10.tar.bz2" size="22979"/>
     </implementation>
     </group>
     <group>
@@ -61,7 +61,7 @@ For a full tutorial, see 0compile's homepage.</description>
         <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
       </requires>
       <implementation id="sha1new=6db70a83b92238fe86e444f3cd3bb7433772e150" released="2008-02-16" self-test="tests/testcompile.py" version="0.11">
-        <archive extract="0compile-0.11" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.11.tar.bz2" size="23132"/>
+        <archive extract="0compile-0.11" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.11.tar.bz2" size="23132"/>
       </implementation>
     </group>
     <group>
@@ -70,14 +70,14 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" stability="stable" version="0.12">
-      <archive extract="0compile-0.12" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
+      <archive extract="0compile-0.12" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJeF/rgeCgFmlPMERAuSWAKCiEJXMD/J+/tMF1HUAHiicAE5y0wCfWdxmUT3csDQdYWVH
-7zREy357MkI=
+iD8DBQBILpsLrgeCgFmlPMERAvXIAJ0Ue8j1TvoTpSp5EkR4KmqWpc6W/wCgtqXyMk4vB/fi1mYb
+lrEAbL4/9g4=
 
 -->

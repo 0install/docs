@@ -15,22 +15,22 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
   <group license="OSI Approved :: GNU General Public License (GPL)" main="feedlint">
     <implementation id="sha1new=5a8436dd1e7272cae7e3e916bf1564aaef6c0ae1" released="2007-06-02" stability="stable" version="0.1">
-      <archive extract="feedlint-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.1.tar.bz2" size="8442"/>
+      <archive extract="feedlint-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.1.tar.bz2" size="8442"/>
     </implementation>
     <implementation id="sha1new=e6731132594dd536ecee432b116e88f549eb1303" released="2007-06-03" stability="stable" version="0.2">
-      <archive extract="feedlint-0.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.2.tar.bz2" size="9686"/>
+      <archive extract="feedlint-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.2.tar.bz2" size="9686"/>
     </implementation>
     <implementation id="sha1new=c991f84fcb4461d2a8980dc5854f12a10b1f8fbf" released="2007-07-28" stability="stable" version="0.3">
-      <archive extract="feedlint-0.3" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.3.tar.bz2" size="10101"/>
+      <archive extract="feedlint-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.3.tar.bz2" size="10101"/>
     </implementation>
     <implementation id="sha1new=10557be412c997eb06e0b7ab315addfd36ef0883" released="2007-11-20" stability="stable" version="0.4">
-      <archive extract="feedlint-0.4" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.4.tar.bz2" size="10283"/>
+      <archive extract="feedlint-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.4.tar.bz2" size="10283"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBHwB86rgeCgFmlPMERAlJGAJ9xIwQnUcoyLGnK4Fa65uO/sTY1cACfZ5c9txbNL9E53RDe
-0KmwlRcqPsM=
+iD8DBQBILpvHrgeCgFmlPMERAh3PAKCMO+a5rm8cZvPAalO6KiqtvXK7dACgz81Ds88k/qYT8nuv
+WDV0lh+igk0=
 
 -->
