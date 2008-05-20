@@ -39,7 +39,6 @@ so that you don't need to download anything twice, and programs can still be use
   <pre># <b>yum install zeroinstall-injector</b></pre>
   <p><strong>Fedora 7: </strong>Fedora 7 went out with an old version which couldn't install anything (see <a href='https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=250168'>bug #250168</a>). This has now been fixed in an update.</p>
   </li>
-  <li><b>SUSE</b> <download name='zeroinstall-injector-0.27-1.suse_noarch.rpm'/> (SUSE 9.3 RPM) (contributed by Thomas Formella) [ <download name='zeroinstall-injector-0.19-1suse.spec'/> (.spec file) ]</li>
   <li><b>OpenSUSE</b> <download name='zeroinstall-injector-0.33-3suse.i586.rpm'/> (OpenSUSE 10.3 RPM) (copied from OpenSUSE build service)</li>
 </ul>
 <p><b>Experimental binary and source RPMs: </b> More up-to-date RPMs are available for some
