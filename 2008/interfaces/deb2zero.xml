@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/interfaces/deb2zero.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>deb2zero</name>
+  <summary>create Zero Install feeds from Debian packages</summary>
+  <description>
+Zero Install is a decentralised installation system. Meta-data about each
+package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
+files and downloads and runs the programs. The feed files can be created
+manually (e.g. using 0publish or 0publish-gui). However, Debian packages already
+contain much of the required information. This program extracts the information
+in an existing Debian package and uses it to generate the feed.</description>
+
+  <homepage>http://0install.net/deb2zero.html</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <group doc-dir="doc" license="OSI Approved :: GNU General Public License v3" main="deb2zero">
+    <implementation id="sha1new=3679566a37f0dd1a6159a0f9e30191c6b3fa2f0a" released="2008-05-21" version="0.1">
+      <archive extract="deb2zero-0.1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.1.tar.bz2" size="14180"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBINHdKrgeCgFmlPMERAmI+AJ97zfBE78tJUpB9NbZTAPtUqMMSXACgh0GHv6Hzj2QjZEAw
+jXC+rghTUG0=
+
+-->
