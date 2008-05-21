@@ -56,6 +56,7 @@
     <item base='feedlint' label='FeedLint'/>
     <item base='make-headers' label='Make-headers'/>
     <item base='0mirror' label='0mirror'/>
+    <item base='deb2zero' label='deb2zero'/>
   </item>
 
   <item base="support" label="Support"/>

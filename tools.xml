@@ -45,6 +45,11 @@ to check.
 <b>0mirror</b> keeps an archive of Zero Install feeds and GnuPG keys and exports them
 for publishing on a web-server.
  </dd>
+
+ <dt><a href='deb2zero.html'>deb2zero</a></dt>
+ <dd>
+<b>deb2zero</b> publishes a Debian package in a Zero Install feed.
+ </dd>
 </dl>
 
 </html>

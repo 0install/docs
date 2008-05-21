@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>deb2zero</h2>
+
+<program name='deb2zero'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2008/interfaces/deb2zero.xml'
+	 git='http://repo.or.cz/w/deb2zero.git'
+	 license='GNU General Public License'/>
+
+<p>
+<b>deb2zero</b> takes the URL of a Debian package and publishes it in a Zero Install feed.
+</p>
+
+<p>
+You can always use <a href='0publish.html'>0publish</a> to publish any tarball, RPM, Deb, Zip
+or Autopackage file, but you have to enter the meta-data (name, summary, description, etc)
+manually. Since Debian packages already contain this information, it's easier to extract it
+and generate the feed automatically. This is what deb2zero does.
+</p>
+
+<p>
+You can download <b>deb2zero</b> and create a short-cut to it in the usual way:
+</p>
+
+<pre>$ 0alias deb2zero http://0install.net/2008/interfaces/deb2zero.xml</pre>
+
+
+<h2>Creating the feed</h2>
+
+<p>Select the Debian package you want to publish. You need the full URL.
+Since packages sometimes move, you should probably make a copy of it on
+your own server and use that URL, but for this demo we'll link directly
+to Debian's copy of the program (GQView for this tutorial):
+</p>
+
+<pre>$ deb2zero http://ftp.uk.debian.org/debian/pool/main/g/gqview/gqview_2.0.1-1_i386.deb &gt; GQView.xml</pre>
+
+<p>
+This downloads the Debian package to the current directory and creates a feed called <b>GQView.xml</b>.
+</p>
+
+<p>
+Note: deb2zero guesses some things (such as which binary to run by default if
+the package contains several) so you should check the feed file manually and
+edit if required. In this case, no editing is needed.
+</p>
+
+<h2>Testing</h2>
+
+<p>
+When testing, you should make sure that the program isn't already installed (e.g.
+by <b>apt-get</b>). Some programs contain hard-coded paths, and will therefore
+appear to work correctly... but only on a system which already has the program!
+</p>
+
+<p>
+To test the feed:
+</p>
+
+<pre>$ 0launch -g ./GQView.xml</pre>
+
+<p>
+Note that deb2zero added the downloaded package's contents to the Zero Install
+cache, so it will show up as being already cached.
+</p>
+
+<h2>Publishing</h2>
+
+<p>
+If you want to publish the feed so that others can use it, you'll also need to
+sign it. This is very easy: load it into 0publish-gui and select or create a
+key using the "Publishing" tab. You'll also need to pick a URL for the feed itself.
+See the <a href='http://0install.net/injector-packagers.html'>packaging tutorial</a> for details.
+</p>
+
+<h2>Adding more versions</h2>
+
+<p>
+To add a new version to your feed later:
+</p>
+
+<pre>
+  $ deb2zero http://.../new-version.deb > new.xml
+  $ 0publish --local new.xml GQView.xml
+</pre>
+
+</html>
