@@ -22,11 +22,14 @@ in an existing Debian package and uses it to generate the feed.</description>
     <implementation id="sha1new=8a51f458ace0f5e81ff3d5f5fb48c10f2dc7edfa" released="2008-05-21" version="0.2">
       <archive extract="deb2zero-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.2.tar.bz2" size="14300"/>
     </implementation>
+    <implementation id="sha1new=9ec0a8cdf2ccdbeb9883f1da9ee4b806b4d5167f" released="2008-05-24" version="0.3">
+      <archive extract="deb2zero-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.3.tar.bz2" size="15304"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBINafjrgeCgFmlPMERAjy4AJ9NgKGp6vUhOkzdC3Qys7RZf48auQCfX2RQyQ4op93JkH/3
-q9EWJPYTsf8=
+iD8DBQBIN/wzrgeCgFmlPMERAlkUAJ97U/YN2ryCHT1C6mP5ytkcA0JINQCfQBqLsG2hdS7E3bY/
+jW1NbgbXEk4=
 
 -->
