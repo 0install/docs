@@ -24,12 +24,15 @@ in an existing Debian package and uses it to generate the feed.</description>
     </implementation>
     <implementation id="sha1new=9ec0a8cdf2ccdbeb9883f1da9ee4b806b4d5167f" released="2008-05-24" version="0.3">
       <archive extract="deb2zero-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.3.tar.bz2" size="15304"/>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+        <environment insert="" mode="prepend" name="PATH"/>
+      </requires>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIN/wzrgeCgFmlPMERAlkUAJ97U/YN2ryCHT1C6mP5ytkcA0JINQCfQBqLsG2hdS7E3bY/
-jW1NbgbXEk4=
+iD8DBQBIOBsvrgeCgFmlPMERAsw2AJ9WCyHH3++Q2VWbJ+VXt9drBUyeLQCfStKvlgOgbhx1zyF6
+IBqCkt0pRyc=
 
 -->
