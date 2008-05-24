@@ -37,7 +37,7 @@ your own server and use that URL, but for this demo we'll link directly
 to Debian's copy of the program (GQView for this tutorial):
 </p>
 
-<pre>$ deb2zero http://ftp.uk.debian.org/debian/pool/main/g/gqview/gqview_2.0.1-1_i386.deb &gt; GQView.xml</pre>
+<pre>$ deb2zero http://ftp.uk.debian.org/debian/pool/main/g/gqview/gqview_2.0.1-1_i386.deb GQView.xml</pre>
 
 <p>
 This downloads the Debian package to the current directory and creates a feed called <b>GQView.xml</b>.
@@ -55,6 +55,8 @@ edit if required. In this case, no editing is needed.
 When testing, you should make sure that the program isn't already installed (e.g.
 by <b>apt-get</b>). Some programs contain hard-coded paths, and will therefore
 appear to work correctly... but only on a system which already has the program!
+Also, Zero Install may select the natively-installed version, depending on your
+policy settings.
 </p>
 
 <p>
@@ -80,25 +82,44 @@ See the <a href='http://0install.net/injector-packagers.html'>packaging tutorial
 <h2>Adding more versions</h2>
 
 <p>
-To add a new version to your feed later:
+To add a new version to your feed later, just run the command again with the new URL:
 </p>
 
 <pre>
-  $ deb2zero http://.../new-version.deb > new.xml
-  $ 0publish --local new.xml GQView.xml
+$ deb2zero http://.../new-version.deb GQView.xml
+</pre>
+
+<h2>Using a Packages file</h2>
+
+<p>
+As an alternative to specifying the URL of the Debian package directly, you can
+download an index file to the current directory and then just give the package
+name. e.g. to use the current Debian/stable package for the amd64 (x86_64) architecture:
+</p>
+
+<pre>
+$ wget ftp://ftp.debian.org/debian/dists/stable/main/binary-amd64/Packages.bz2
+$ bunzip2 Packages.bz2
+$ deb2zero gqview GQView.xml
 </pre>
 
 <h2>Security notes</h2>
 
 <p>
-deb2zero does not verify anything about the archive it downloads. However, if a file with the same
-name already exists in the current directory, it uses that instead. Therefore, if you have a secure
-way of getting the .deb file (e.g. because you created it), use that.
+deb2zero does not verify anything about the archive it downloads when you use a
+URL. However, if a file with the same name already exists in the current
+directory, it uses that instead. Therefore, if you have a secure way of getting
+the .deb file (e.g. because you created it), use that.
 </p>
 
 <p>
 deb2zero calculates the digest of the package and stores it in the feed it creates, so anyone using
 the feed can at least verify that the package they download is identical to the one you used.
+</p>
+
+<p>
+If you use a Packages index file, then it does check the digest against the one in
+the Packages file.
 </p>
 
 </html>
