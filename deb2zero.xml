@@ -20,6 +20,8 @@ manually. Since Debian packages already contain this information, it's easier to
 and generate the feed automatically. This is what deb2zero does.
 </p>
 
+<toc level='h2'/>
+
 <p>
 You can download <b>deb2zero</b> and create a short-cut to it in the usual way:
 </p>
@@ -85,5 +87,18 @@ To add a new version to your feed later:
   $ deb2zero http://.../new-version.deb > new.xml
   $ 0publish --local new.xml GQView.xml
 </pre>
+
+<h2>Security notes</h2>
+
+<p>
+deb2zero does not verify anything about the archive it downloads. However, if a file with the same
+name already exists in the current directory, it uses that instead. Therefore, if you have a secure
+way of getting the .deb file (e.g. because you created it), use that.
+</p>
+
+<p>
+deb2zero calculates the digest of the package and stores it in the feed it creates, so anyone using
+the feed can at least verify that the package they download is identical to the one you used.
+</p>
 
 </html>
