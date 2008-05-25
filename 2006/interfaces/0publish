@@ -61,12 +61,12 @@ packagers.html.</description>
       <archive extract="0publish-0.14" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.14.tar.bz2" size="22762"/>
     </implementation>
     <implementation id="sha1new=2667f5c5762c7b8fae4e2e645757c9d4c4d1f34d" released="2008-05-25" self-test="tests/testall.py" version="0.15">
-      <archive extract="0publish-0.15" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.15.tar.bz2" size="22850"/>
+      <archive extract="0publish-0.15" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.15.tar.bz2" size="22850"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIOSMqrgeCgFmlPMERApuQAKDPgYaS1YHflikU3AXEutSWfFiFxgCZAbxL1iCsRI73PAFc
-Ak61j1CZwbc=
+iD8DBQBIOSvvrgeCgFmlPMERAt3yAKDcWwcPwkl89Z0E0290TB1jd2WcJQCfXeOy2h9HOOd1Bcd9
+l9/64qKxl+o=
 
 -->
