@@ -44,6 +44,11 @@ This downloads the Debian package to the current directory and creates a feed ca
 </p>
 
 <p>
+You will be prompted to "Enter the URI for this feed". This is the URL from
+which other people will download your feed file.
+</p>
+
+<p>
 Note: deb2zero guesses some things (such as which binary to run by default if
 the package contains several) so you should check the feed file manually and
 edit if required. In this case, no editing is needed.
@@ -74,9 +79,23 @@ cache, so it will show up as being already cached.
 
 <p>
 If you want to publish the feed so that others can use it, you'll also need to
-sign it. This is very easy: load it into 0publish-gui and select or create a
-key using the "Publishing" tab. You'll also need to pick a URL for the feed itself.
-See the <a href='http://0install.net/injector-packagers.html'>packaging tutorial</a> for details.
+sign it, which can be done by giving the GPG key to use with the <b>--key</b>
+option:
+</p>
+
+<pre>
+$ deb2zero -k Bob http://.../package.deb
+</pre>
+
+<p>
+Note that if this version was already added then it deb2zero won't do anything, so
+if you already made an unsigned feed then delete it first, or use <a
+href='0publish.html'>0publish --xmlsign</a> to resign it.
+</p>
+
+<p>
+See the <a href='http://0install.net/injector-packagers.html'>packaging tutorial</a> for
+more details about signing feeds.
 </p>
 
 <h2>Adding more versions</h2>
@@ -102,6 +121,55 @@ $ wget ftp://ftp.debian.org/debian/dists/stable/main/binary-amd64/Packages.bz2
 $ bunzip2 Packages.bz2
 $ deb2zero gqview GQView.xml
 </pre>
+
+<p>
+You can use the <b>-p</b> flag to specify an alternative location for the Packages
+file. This is useful if you want to add packages for several different architectures
+to a single feed.
+</p>
+
+<h2>Dependencies</h2>
+
+<p>
+deb2zero can process the 'Depends' field in a Debian package and generate a
+corresponding &lt;requires&gt; element in the feed. For this to work, you need to
+create a file called <b>~/.config/0install.net/deb2zero/deb-mappings</b> (see
+the <a href='http://www.freedesktop.org/wiki/Specifications/basedir-spec'>freedesktop.org
+basedir specification</a> for details about configuration file locations). Each
+line of the file gives a mapping from a Debian package name to the
+corresponding Zero Install feed URI.
+For example, if you specify:
+</p>
+
+<pre>
+libfoo: http://0install.net/2008/3rd-party/libfoo.xml
+</pre>
+
+<p>then deb2zero will then turn</p>
+
+<pre>
+Depends: libfoo
+</pre>
+
+into
+
+<pre>
+  &lt;requires interface="http://0install.net/2008/3rd-party/libfoo.xml">
+    &lt;environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+  &lt;/requires>
+</pre>
+
+<p>
+Note that setting LD_LIBRARY_PATH is just a guess. It may be that the package
+depends on libfoo in some other way (e.g. it needs a binary in $PATH). In that
+case, you'll need to edit the feed to correct it.
+</p>
+
+<p>
+When you create a new feed, deb2zero automatically appends the new mapping
+to the deb-mappings file for you. The last line of the file is also used to
+suggest a default when naming new feeds.
+</p>
 
 <h2>Security notes</h2>
 
