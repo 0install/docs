@@ -29,8 +29,11 @@ Give it the URL of the application you want, and it will create a ROX
 application directory to run the application. To switch to a different version
 of the application, ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="feed_icons/Album.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/24" category="Unknown">This program builds self-contained collections of audio files for use
-with ROX-Filer.
+<feed uri="http://akfoerster.de/zero/akfquiz-quizfiles.xml" name="AKFQuiz quizfiles" summary="Some quiz files for AKFQuiz" icon="feed_icons/akfquiz-quizfiles.png" width="32" height="32" homepage="http://akfquiz.nongnu.org/" category="Education">AKFQuiz is a collection of programs to make quiz games, learning exercises or
+psycho-tests.</feed>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Album" name="Album" summary="Build albums from MP3 or OGG files" icon="feed_icons/Album.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/album.html" category="Audio">This program builds self-contained collections of audio files for use
+with ROX-Filer.  
 
 It collects together all the tracks from an album and
 packages them as an AppDir with the cover for the icon.  Running the
@@ -52,7 +55,7 @@ independent of ...</feed>
 It supports setting the GTK (UI controls) and Icon themes. It also allows the
 setting of ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="Construct AppDir wrappers for applications." icon="feed_icons/AppFactory.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/30" category="Unknown">This program automates the creation of ROX wrappers for non-ROX
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/AppFactory" name="AppFactory" summary="Construct AppDir wrappers for applications." icon="feed_icons/AppFactory.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/appfactory.html" category="Settings">This program automates the creation of ROX wrappers for non-ROX
 programs</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Archive" name="Archive" summary="Create or read archive files" icon="feed_icons/Archive.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/Archive" category="Utility">You can use Archive to compress a directory or file into a single, smaller file
@@ -88,15 +91,20 @@ cdrommodule.so, provide an easy way for Python programs to fetch information on
 audio CDs from CDDB (http://www.cddb.com/) -- a very large online database of
 track listings ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="Clock panel applet" icon="feed_icons/Clock.png" width="47" height="46" homepage="http://rox.sourceforge.net/desktop/node/27" category="Unknown">This is a panel clock, with support for setting
-alarms.  It can also function in its own window.</feed>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="Clock panel applet" icon="feed_icons/Clock.png" width="47" height="46" homepage="http://www.kerofin.demon.co.uk/rox/clock.html" category="Utility">This is a panel clock, with support for setting alarms.  It can also function in
+its own window.</feed>
 
 <feed uri="http://web.telia.com/~u86012345/0install/Contacts" name="Contacts" summary="Contact management program" icon="feed_icons/Contacts.png" width="48" height="48" category="Unknown"></feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="feed_icons/Depend.png" width="48" height="48" category="Unknown">This examines a ROX application and reports dependencies the
+<feed uri="http://0install.net/2008/interfaces/deb2zero.xml" name="Deb2zero" summary="Create Zero Install feeds from Debian packages" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/deb2zero.html" category="Development">Zero Install is a decentralised installation system. Meta-data about each
+package is published in a "feed" file. The Zero Install client reads these feeds
+files and downloads and runs the programs. The feed files can be created
+manually (e.g. using ...</feed>
+
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="feed_icons/Depend.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/depend.html" category="Unknown">This examines a ROX application and reports dependencies the
 application has declared and also whether it thinks they are fulfilled.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="feed_icons/Desktop2App.png" width="48" height="48" category="Unknown">Other desktops use .desktop files to define applications but ROX does
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Desktop2App" name="Desktop2App" summary="Convert .desktop files into AppDir wrappers" icon="feed_icons/Desktop2App.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/desktop2app.html" category="System">Other desktops use .desktop files to define applications but ROX does
 not, preferring to use AppDirs.  This program reads .desktop files and
 uses the information to construct AppDir wrappers for each application</feed>
 
@@ -106,7 +114,7 @@ devices and inserted media to the panel/pinboard.</feed>
 <feed uri="http://rox4debian.berlios.de/0install/DevTray.xml" name="DevTray" summary="Shows devices/volumes in the panel" icon="feed_icons/DevTray.png" width="48" height="48" category="System">DevTray is a panel applet that shows devices and volumes. You need dbus
 (&gt;=0.33), its python bindings and HAL (&gt;=0.5.7) to run it.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="Display the difference between two text files." icon="feed_icons/Diff.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/31" category="Unknown">This program displays a coloured context diff between two files.  You
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Diff" name="Diff" summary="Display the difference between two text files." icon="feed_icons/Diff.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/diff.html" category="Utility">This program displays a coloured context diff between two files.  You
 drop the files from the filer into the upper 2 windows.</feed>
 
 <feed uri="http://dom-editor.googlecode.com/svn/feed/Dome.xml" name="Dome" summary="GTK-based XML editor" icon="feed_icons/Dome.png" width="41" height="18" homepage="http://code.google.com/p/dom-editor/" category="Utility">Dome is an visual programming language for manipulation of XML documents
@@ -114,7 +122,7 @@ developed at the University of Southampton. It has been used in the AKT project
 to trawl through large websites, extracting information from them by
 transforming the source HTML ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="feed_icons/DownloadManager.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/DownloadManager" category="Unknown">DownloadManager is an optional assistant for Fetch and other download
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/DownloadManager" name="DownloadManager" summary="Coordinate downloads" icon="feed_icons/DownloadManager.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/downloadmanager.html" category="Network">DownloadManager is an optional assistant for Fetch and other download
 helper programs that use its protocol.  DownloadManager monitors the
 number of active downloads using DBus  and limits the quantity by
 announcing when others may attempt to start.</feed>
@@ -143,7 +151,7 @@ still work.
 
 Run this on all your feeds from time-to-time to make sure they still work.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="feed_icons/Fetch.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Fetch" category="Unknown">Fetch is a download handler for ROX-Filer.
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Fetch" name="Fetch" summary="Download files for ROX-Filer" icon="feed_icons/Fetch.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/fetch.html" category="Network">Fetch is a download handler for ROX-Filer.  
 
 When a link is dragged
 from a web browser or similar program to a filer window ROX-Filer
@@ -195,11 +203,19 @@ integrated development environment. It was developed to provide a small and fast
 IDE, which has only a few dependencies from other packages. It supports many
 filetypes and has some ...</feed>
 
+<feed uri="http://0install.net/2008/interfaces/Glade-dev.xml" name="Libglade-dev" summary="Headers for compiling Glade applications" icon="tango/applications-system.png" width="48" height="48" homepage="http://glade.gnome.org" category="Development">These are the Glade header files. They are required when compiling applications
+that use the Glade library.</feed>
+
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="Headers for compiling GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the GLib header files. They are required when compiling applications
 that use the GLib library.</feed>
 
 <feed uri="http://0install.net/2006/interfaces/GLibmm-dev.xml" name="GLibmm-dev" summary="Headers for compiling C++ GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling C++
 applications that use the GLib library.</feed>
+
+<feed uri="http://0install.net/2008/3rd-party/groundhog.xml" name="Groundhog" summary="A simple logic game" icon="tango/applications-system.png" width="48" height="48" category="Games">The purpose of this game is to put balls in pockets of the same color
+by manipulating a maze of tubes.
+
+Homepage: http://home-2.consunet.nl/~cb007736/groundhog.html</feed>
 
 <feed uri="http://akfoerster.de/zero/grquiz.xml" name="Grquiz" summary="Graphical quiz program (part of AKFQuiz)" icon="feed_icons/grquiz.png" width="32" height="32" homepage="http://akfquiz.nongnu.org/" category="Education">AKFQuiz is a collection of programs to make quiz games, learning exercises or
 psycho-tests. The program grquiz is the graphical program for it.</feed>
@@ -215,8 +231,8 @@ that use the GTK+ library.</feed>
 
 <feed uri="http://0install.net/2006/autopackage/gtkdc.xml" name="Gtkdc" summary="Client for the Direct Connect network" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.gtkdc.org/" category="Network">A client for the Direct Connect peer-to-peer network inspired by DC++.</feed>
 
-<feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="Headers for compiling C++ GTK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling
-    C++ applications that use the GTK, ATK or Pango libraries..</feed>
+<feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="Headers for compiling C++ GTK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling C++
+applications that use the GTK, ATK or Pango libraries..</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/Inkscape.xml" name="Inkscape" summary="An SVG-based vector drawing application" icon="feed_icons/Inkscape.png" width="64" height="64" homepage="http://inkscape.org/" category="Graphics">Inkscape is an Open Source vector graphics editor, with capabilities similar to
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
@@ -343,7 +359,7 @@ non-Unix platforms. It is called a "document processor", because unlike standard
 word processors, LyX encourages an approach to writing based on the structure of
 your ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" width="48" height="36" homepage="http://rox.sourceforge.net/desktop/node/33" category="Unknown">Mail is a ROX applet which monitors your local mailbox and which can
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" width="48" height="36" homepage="http://www.kerofin.demon.co.uk/rox/mail.html" category="Network">Mail is a ROX applet which monitors your local mailbox and which can
 launch a mail reader application when required.</feed>
 
 <feed uri="http://0install.net/2007/interfaces/Make-headers.xml" name="Make-headers" summary="Creates -dev packages" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/make-headers.html" category="Development">Given a standard autoconf source package (in $SRCDIR), this script builds it
@@ -352,7 +368,7 @@ shouldn't be in a -dev package (.so and .la files, etc).
 
 It also edits any pkg-config .pc files to ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="feed_icons/Mem.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/34" category="Unknown">This applet displays the current memory usage and
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mem" name="Mem" summary="Display memory usage." icon="feed_icons/Mem.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/mem.html" category="System">This applet displays the current memory usage and
 the current swap space usage.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Memo" name="Memo" summary="Alarm clock and reminder list" icon="feed_icons/Memo.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/Memo" category="Utility">Memo is a small utility which you can use to store appointments and 'TODO'
@@ -571,7 +587,7 @@ ROX.
 
 This is based on the SystemTray applet, but updated.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="feed_icons/Tail.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/node/29" category="Unknown">This program displays the contents of a text file, updating as the text file is updated.</feed>
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="feed_icons/Tail.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/tail.html" category="Utility">This program displays the contents of a text file, updating as the text file is updated.</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Tasklist.xml" name="Tasklist" summary="Tasklist applet" icon="feed_icons/Tasklist.png" width="44" height="39" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist" category="Unknown">Shows a list of running applications</feed>
 
@@ -582,7 +598,7 @@ Every application is presented as an icon.</feed>
 <feed uri="http://0install.net/2007/3rd-party/Tgif.xml" name="Tgif" summary="Interactive 2-D drawing tool" icon="feed_icons/Tgif.png" width="51" height="37" homepage="http://bourbon.usc.edu/tgif/" category="Graphics">Tgif is an interactive drawing tool that allows the user to draw and manipulate
 objects in the X Window System.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="feed_icons/Thumbs.png" width="31" height="36" category="Unknown">This program allows you to examine your thumbnail cache and purge it
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs" name="Thumbs" summary="Purge thumbnail cache" icon="feed_icons/Thumbs.png" width="31" height="36" homepage="http://www.kerofin.demon.co.uk/rox/thumbs.html" category="Graphics">This program allows you to examine your thumbnail cache and purge it
 when required.</feed>
 
 <feed uri="http://riscque.net/Tide" name="Tide" summary="A real-time text editor for the ROX desktop" icon="feed_icons/Tide.png" width="49" height="45" category="Utility">Tide is a real-time text editor for the ROX desktop, based on Thomas Leonard's
@@ -606,8 +622,8 @@ your main Linux ...</feed>
 
 <feed uri="http://0install.net/2006/autopackage/vdrift.xml" name="Vdrift" summary="VDrift" icon="tango/applications-system.png" width="48" height="48" category="Games">VDrift is a realistic racing simulation with drifting in mind</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="Generate thumbnail images from video files" icon="feed_icons/VideoThumbnail.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/node/26" category="Unknown">This is a helper program for ROX-Filer.
-It provides thumbnail images for video files by executing MPlayer or
+<feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/VideoThumbnail" name="VideoThumbnail" summary="Generate thumbnail images from video files" icon="feed_icons/VideoThumbnail.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/VideoThumbnail.html" category="Audio">This is a helper program for ROX-Filer.
+It provides thumbnail images for video files by executing MPlayer or 
 totem-video-thumbnailer with
 appropriate options and post-processing the output.</feed>
 
@@ -634,7 +650,7 @@ and this will create ...</feed>
 vector graphics program, but it also handles photos and drawings. It has an
 easy-to-use and easy-to-learn approach.</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="View and edit extended attributes" icon="feed_icons/XAttr.png" width="48" height="48" category="Unknown">XAttr is a utility for viewing or editing extended attributes which
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XAttr" name="XAttr" summary="View and edit extended attributes" icon="feed_icons/XAttr.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/xattr.html" category="Utility">XAttr is a utility for viewing or editing extended attributes which
 are supported by more modern file systems.</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/XdgUtils.xml" name="XdgUtils" summary="Cross-desktop integration tools" icon="tango/applications-system.png" width="48" height="48" homepage="http://portland.freedesktop.org" category="Library">Xdg-utils is a set of command line tools that assist applications with a variety
@@ -642,7 +658,7 @@ of desktop integration tasks. About half of the tools focus on tasks commonly
 required during the installation of a desktop application and the other half
 focuses on ...</feed>
 
-<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="Show a planet" icon="feed_icons/XPlanet.png" width="64" height="51" category="Unknown">XPlanet is a wrapper for xplanet for the ROX desktop.  Its most useful
+<feed uri="http://www.kerofin.demon.co.uk/2006/interfaces/XPlanet" name="XPlanet" summary="Show a planet" icon="feed_icons/XPlanet.png" width="64" height="51" homepage="http://www.kerofin.demon.co.uk/rox/xplanet.html" category="Settings">XPlanet is a wrapper for xplanet for the ROX desktop.  Its most useful
 mode is as a backdrop application.</feed>
 
 <feed uri="http://teythoon.cryptobitch.de/0install/xteddy.xml" name="Xteddy" summary="Cuddly teddy bear for your desktop" icon="tango/applications-system.png" width="48" height="48" homepage="http://staffwww.itn.liu.se/~stegu/xteddy/" category="Unknown">Normally, xteddy just sits  around  doing  nothing.  After
