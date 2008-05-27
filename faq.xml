@@ -315,6 +315,13 @@ As with the regular web, people can leave redirections to the new
 site.</p>
 
 <p>
+Also, if a feed can't be fetched from its main site, Zero Install will
+automatically try using a <a href='0mirror.html'>mirror service.</a>
+Mirror services continue hosting feeds that are no longer available from their
+original sites.
+</p>
+
+<p>
 The <b>0launch --import</b> command lets you import the interface from the
 new location, and <b>0store</b> allows adding any archive to the cache (provided
 its message digest matches).

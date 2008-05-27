@@ -41,13 +41,9 @@ for sites with plenty of bandwidth (which we don't have currently; sorry!).
 <h2>Status</h2>
 
 <p>
-0mirror is not yet released, although it works well enough to create the roscidus.com mirror. Next steps:
+0mirror is not yet officially released, although the GIT version works well enough to create the roscidus.com mirror.
+0launch 0.33 has built-in support for using the mirror service. On older versions, the GPG keys and feeds can be added manually
+(e.g. using <b>0launch --import feed.xml</b>).
 </p>
-
-<ul>
- <li>Update 0launch so that it can switch to using the mirror automatically. Currently, users must manually import
- the keys and XML.</li>
- <li>Publish an admin Atom feed with any errors that occurred when updating (e.g. untrusted GPG key).</li>
-</ul>
 
 </html>
