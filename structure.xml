@@ -51,7 +51,7 @@
       <item base='0compile-scons' label='Example: SCons'/>
     </item>
     <item base='0release' label='0release'>
-      <item base='0release-phases' label='Release phases'/>
+      <item base='0release-phases' label='Customisation'/>
     </item>
     <item base='feedlint' label='FeedLint'/>
     <item base='make-headers' label='Make-headers'/>

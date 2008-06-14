@@ -75,7 +75,7 @@ control). This contains the same information as a normal published feed would
 
 <ul>
 <li>The local feed refers to a local directory (e.g. <b>id="."</b> for the
-directory containing the local feed) rather than a cryptographic digest.
+directory containing the local feed) rather than a secure hash.
 </li>
 <li>It has no digital signature.</li>
 <li>The version will be a development version (e.g "1.2-post" if your last released version was
@@ -313,7 +313,7 @@ Press Return once archive is uploaded.
 </pre>
 
 <p>
-Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>
+Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>)
 to your web-server. You should then be able to download and run the new release, using the URL you
 chose at the start:
 </p>

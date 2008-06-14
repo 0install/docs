@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>Release phases</h2>
+<h2>Release customisation</h2>
 
 <p>
 <a href='0release.html'>0release</a> can be used to create releases of your software from a version control system.
 It uses sensible defaults, allowing it to create releases for simple projects with very little configuration.
-For more complex projects, you can specify extra commands that should be run during the release process.
+For more complex projects, you can specify extra commands that should be run during the release process using the
+syntax described here.
 </p>
 
 <toc level='h2'/>
@@ -100,5 +101,20 @@ C source files to executables). For such programs, you need one source package
 and multiple binary packages (one for each architecture). Use 0release to create
 the source release, and use <a href='0compile.html'>0compile</a> to create the binaries.
 </p>
+
+<h2>&lt;add-toplevel-directory&gt;</h2>
+
+<p>
+Adding this element causes 0release to put everything in a sub-directory, named after the
+feed. This is probably only useful for ROX applications, where the version control system
+contains e.g. just <b>AppRun</b> but the release should contain <b>archive-2.2/Archive/AppRun</b>.
+This is done using:
+</p>
+
+<pre>
+  &lt;release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
+    &lt;release:add-toplevel-directory/>
+  &lt;/release:management>
+</pre>
 
 </html>
