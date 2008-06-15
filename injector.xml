@@ -25,8 +25,10 @@ so that you don't need to download anything twice, and programs can still be use
  </tr>
 </table>
 
+<p>See also:</p>
 <ul>
  <li><a href='http://www.gnomefiles.org/version.php?soft_id=921'>Release notes</a> (all versions)</li>
+ <li><a href='using-git.html'>Testing development versions</a></li>
 </ul>
 
 <h2><a name='packages'/>Packages</h2>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Testing developer versions using GIT</h2>
+
+<p>
+If you want to work on the code, or test a fix that has just been made,
+you'll want to get the latest developer version. We use GIT for version
+control, so make sure you have that. e.g. (on Ubuntu):
+</p>
+
+<pre>$ apt-get install git-core gitk</pre>
+
+<p>(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)</p>
+
+<p>Click on the <b>SCM</b> link on any program's page to see its GIT page
+(for example, <a href='http://repo.or.cz/w/zeroinstall.git'>zeroinstall.git</a> for Zero Install itself).
+The link for cloning is displayed there; use it like this:</p>
+
+<pre>
+$ git clone git://repo.or.cz/zeroinstall.git
+$ cd zeroinstall
+</pre>
+
+<p>
+The directory contains the latest version, plus a single (hidden) .git
+directory with all the git-related bits.
+You can install it as usual:
+</p>
+
+<pre>
+$ sudo python setup.py install
+</pre>
+
+<p>To see the log:</p>
+
+<pre>
+$ git log
+</pre>
+
+<p>
+This doesn't require network access; your clone has the whole history.
+</p>
+
+<p>
+To view a visualisation of the history:
+</p>
+
+<pre>
+$ gitk --all
+</pre>
+
+<p>(--all shows the history of all branches and tags, not just the main trunk)</p>
+
+<h2>Fetching updates</h2>
+
+<p>To download the latest updates into your copy:</p>
+
+<pre>
+$ git pull
+</pre>
+
+<p>
+You can also pull from other places. If someone posts to the mailing list,
+they will tell you where to pull from to try the feature out. If they send
+a patch, you can apply it with:
+</p>
+
+<pre>$ git apply &lt; the.patch</pre>
+
+<h2>Making patches</h2>
+
+<p>
+If you've changed the code in some way then you can commit the changes like
+this (this just stores them on your own computer, in the .git sub-directory).
+</p>
+
+<pre>$ git commit -a</pre>
+
+<p>Enter a log message. The first line should be a short summary (like the
+subject of an email). Then leave a blank line, then write a longer description.
+</p>
+
+<p>To view your patch after committing:</p>
+
+<pre>$ git show</pre>
+
+<p>If you realised you made a mistake, correct it and then do:</p>
+
+<pre>$ git commit -a --amend</pre>
+
+<p>
+Finally, to make a patch file ready to send to the <a href='support.html'>mailing list</a>:
+</p>
+
+<pre>$ git format-patch origin/master</pre>
+
+</html>
