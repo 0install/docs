@@ -163,7 +163,7 @@ If you don't have the root password, use this command.
 You'll need to make sure that ~/bin is in $PATH, and
 ~/lib/python is in $PYTHONPATH in this case.
 </p>
-<pre>$ <b>python setup.py install --home ~</b>
+<pre>$ <b>python setup.py install --home ~ --install-data ~/.local</b>
 $ <b>export PATH=$HOME/bin:$PATH</b>
 $ <b>export PYTHONPATH=$HOME/lib/python</b>
 </pre>
