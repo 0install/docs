@@ -18,6 +18,16 @@ $ <b>0alias rox-edit</b>
 </pre>
 
 <p>
+If, instead, you added it to the menu then choose <b>Zero Install -> Manage Applications</b>
+from the <b>Applications</b> menu and click on the edit properties icon next to the application
+(requires 0launch 0.34 or later):
+</p>
+
+<p style='text-align: center'>
+  <img width="457" height="364" src="screens/manage-apps.png" alt='0desktop --manage'/>
+</p>
+
+<p>
 You can affect which versions are chosen by changing your policy. Three aspects
 of your policy are shown in the Preferences window: <b>Network use</b>, <b>Freshness</b>
 and <b>Help test new versions</b>:
