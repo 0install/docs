@@ -54,7 +54,7 @@ that the Mandriva package doesn't work on 2007.1 without a
 <dd>
 <ul>
   <li><b>Debian/oldstable (sarge)</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
-  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.33-1_all.deb'/> (Debian package; python-central)<br/>
+  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.34-1_all.deb'/> (Debian package; python-central)<br/>
   <b>Debian/testing (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
 <pre># <b>apt-get install zeroinstall-injector</b></pre></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
