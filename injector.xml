@@ -99,12 +99,13 @@ Otherwise, follow the instructions below to install using the generic tarball.
 <h2>Installing from tarball</h2>
 
 <p>
-To use the injector, you will need:
+To use Zero Install, you will need:
 </p>
 
 <ul>
 <li><a href="http://python.org">Python</a> (version 2.4 or later, <i>including</i> any <b>-dev</b> package).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
+<li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
 <li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.0 or later, including python-glade2</a> (only needed for the GUI).</li>
 </ul>
 
@@ -114,8 +115,8 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.33.tar.bz2</b>
-$ <b>wget http://osdn.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.33.tar.bz2.sig</b>
+$ <b>wget http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.34.tar.bz2</b>
+$ <b>wget http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.34.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -125,9 +126,9 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 </p>
 
 <pre>
-$ <b>gpg --recv-key --keyserver www.keyserver.net 59A53CC1</b>
-$ <b>gpg zeroinstall-injector-0.33.tar.bz2.sig</b>
-gpg: Signature made Sun 04 May 2008 14:12:24 BST using DSA key ID 59A53CC1
+$ <b>gpg --recv-key --keyserver subkeys.pgp.net 59A53CC1</b>
+$ <b>gpg zeroinstall-injector-0.34.tar.bz2.sig</b>
+gpg: Signature made Wed 18 Jun 2008 18:15:01 BST using DSA key ID 59A53CC1
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -145,8 +146,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xjf zeroinstall-injector-0.33.tar.bz2</b>
-$ <b>cd zeroinstall-injector-0.33</b>
+$ <b>tar xjf zeroinstall-injector-0.34.tar.bz2</b>
+$ <b>cd zeroinstall-injector-0.34</b>
 </pre>
 
 <table class='split'>
@@ -172,7 +173,7 @@ $ <b>export PYTHONPATH=$HOME/lib/python</b>
 </table>
 
 <dl>
-<dt>error: invalid Python installation: unable to open /usr/lib/python2.3/config/Makefile</dt>
+<dt>error: invalid Python installation: unable to open /usr/lib/python2.5/config/Makefile</dt>
 <dd>You need to install the <i>python-dev</i> package, not just <i>python</i>.</dd>
 <dt>package init file 'zeroinstall/0launch-gui/__init__.py' not found (or not a regular file)</dt>
 <dd>This is just a warning and is harmless.</dd>
