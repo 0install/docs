@@ -55,6 +55,8 @@ bundles, setup.exe, etc). Here are some of our goals:
 <div style='margin-left: auto; margin-right: auto; max-width: 50em; padding: 1em;'>
 <h2>News</h2>
 <dl>
+<dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu. See this
+<a href='tutorial-policy.html'>screenshot</a> at the top of the policy tutorial.</dd>
 <dt>May 2008</dt><dd>The new <a href='deb2zero.html'>deb2zero</a> utility can publish a Debian package in a Zero Install feed.</dd>
 <dt>Apr 2008</dt><dd>0launch can <a href='http://repo.or.cz/w/zeroinstall.git'>now</a> fallback to using a mirror automatically.
 The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>second part of the video
@@ -62,8 +64,6 @@ tutorial</a> is now up.</dd>
 <dt>Mar 2008</dt><dd><a href='http://www.netbsd.org/gallery/pkgsrc-interviews.html#zero-install'>Zero Install interview on netbsd.org</a>.</dd>
 <dt>Feb 2008</dt><dd><a href='injector.html'>Zero Install 0.32</a> has been released, with some large-scale refactoring of the Python API
 and improvements to the GUI. I've also added some tutorial videos to the site.</dd>
-<dt>Jan 2008</dt><dd>We now have a <a href='http://roscidus.com/0mirror/'>public mirror service</a> running, providing backup copies
-of all known feeds.</dd>
 </dl>
 </div>
 
