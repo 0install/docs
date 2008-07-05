@@ -15,12 +15,12 @@ It is being used in planetarium projectors. Just set your coordinates and go.</d
 
   <group main="bin/stellarium">
     <implementation id="sha1new=bca0db4dd29e89a5b695686e4657cda70017dd5b" released="2006-12-02" stability="stable" version="0.6.2">
-      <archive href="http://bylands.dur.ac.uk/~mh/stellarium-0.6.2.x86.package" size="8972783" start-offset="15400" type="application/x-bzip-compressed-tar"/>
+      <archive href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/stellarium-0.6.2.x86.tgz" size="8974924" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq0xBSn9tx+xORARAv+lAJ4/gCyLTZvTcBHXLxJEW1C+M7Nw6wCfdJ4VDiQf7Z9JFEo3
-jIvDnyTPEUQ=
+iD8DBQBIb80TBSn9tx+xORARAjijAJ4u9EROEQixrGOeD60ux4rcE5X5jwCfaBrTNswy/eywbZs/
+7hWYvGMGMz0=
 
 -->
