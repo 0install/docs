@@ -23,6 +23,7 @@ and Java.</description>
   <category>Development</category>
 
   <group main="bin/gdc">
+    <group arch="*-i686">
     <implementation id="sha1=2fd9fee961b71095a49439a01bbe4a9611e10016" released="2006-11-25" stability="stable" version="0.19">
       <archive extract="gdc" href="http://belnet.dl.sourceforge.net/sourceforge/dgcc/gdc-0.19-linux-i386.tar.bz2" size="2595249"/>
     </implementation>
@@ -32,10 +33,19 @@ and Java.</description>
     <implementation id="sha1new=bdc73b49b8534529b8c1de2d794a8305759b0baa" released="2007-02-10" stability="stable" version="0.22">
       <archive extract="gdc" href="http://ovh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.22-i686-linux-gcc-4.1.1.tar.bz2" size="2802654" type="application/x-bzip-compressed-tar"/>
     </implementation>
+      <implementation arch="*-i686" id="sha1new=7ff08ee85c828f745a17c00acb67f5e0c09e9285" released="2008-07-13" version="0.24">
+      <archive extract="gdc" href="http://kent.dl.sourceforge.net/sourceforge/dgcc/gdc-0.24-i686-linux-gnu-gcc-4.1.2.tar.bz2" size="2984616" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+    <group arch="*-x86_64">
+    <implementation arch="*-x86_64" id="sha1new=b95ac27dabb9050145af0d8e4f01871c41732cd1" released="2008-07-13" version="0.24">
+      <archive extract="gdc" href="http://kent.dl.sourceforge.net/sourceforge/dgcc/gdc-0.24-x86_64-linux-gnu-gcc-4.1.2.tar.bz2" size="3765103" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYra+BSn9tx+xORARAkq2AJ0ZKwdEafAk/PFUdowMNaYGdE1qmQCffNKk9O2JD+v/JixF
-z0J7aDAoYXs=
+iD8DBQBIeen7BSn9tx+xORARAqVfAJ4tDftjc5MJ3Hz+crd39V+2In61qACfZj1V1Gqfwnr2ufrt
+UfO9PvNfg0A=
 
 -->
