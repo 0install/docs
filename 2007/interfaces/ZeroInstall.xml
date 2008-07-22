@@ -44,14 +44,14 @@ requires first uninstalling another.</description>
     <implementation id="sha1new=6f2914e6e4757a25580d35cc65891a42a638994c" released="2008-05-04" stability="stable" version="0.33">
       <archive extract="zeroinstall-injector-0.33" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.33.tar.bz2" size="130726"/>
     </implementation>
-    <implementation id="sha1new=5b22c28dcd28917faa7cc4660efe88867d7a31db" released="2008-06-18" version="0.34">
+    <implementation id="sha1new=5b22c28dcd28917faa7cc4660efe88867d7a31db" released="2008-06-18" stability="stable" version="0.34">
       <archive extract="zeroinstall-injector-0.34" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.34.tar.bz2" size="137919"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIWWBZrgeCgFmlPMERAp8WAKDTcKJ4g479DEa+0VTHbIZ3r8MobQCfYIgAUbEzRUAMi0uR
-rK5Waoaa59g=
+iD8DBQBIhdyBrgeCgFmlPMERAosoAJ4z9sWJYTmyrbSWs8QMlNKm6l/NYgCfWl41wUiUICF5SQfK
+n2JxKeupaDw=
 
 -->
