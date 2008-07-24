@@ -55,6 +55,7 @@ bundles, setup.exe, etc). Here are some of our goals:
 <div style='margin-left: auto; margin-right: auto; max-width: 50em; padding: 1em;'>
 <h2>News</h2>
 <dl>
+<dt>Jul 2008</dt><dd><a href='0export.html'>0export</a> can be used to create a self-extracting "setup.sh" installer, for distribution on CD, etc.</dd>
 <dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu. See this
 <a href='tutorial-policy.html'>screenshot</a> at the top of the policy tutorial.</dd>
 <dt>May 2008</dt><dd>The new <a href='deb2zero.html'>deb2zero</a> utility can publish a Debian package in a Zero Install feed.</dd>

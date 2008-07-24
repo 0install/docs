@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>0export</h2>
+
+<program name='0export'
+	 author='Thomas Leonard'
+	 git='http://repo.or.cz/w/0export.git'
+	 license='GNU General Public License'/>
+
+<p>
+<b>0export</b> creates self-installing bundles for distribution on CD, etc
+</p>
+
+<p>
+Normally, a program is run by passing its name (a URI) to the 0launch
+command. This downloads the appropriate feeds, choose a set of
+implementations (a version of the program, along with any libraries it
+needs) and downloads them too.
+</p>
+
+<p>
+However, it is sometimes useful to bundle a program and its libraries
+together on a CD (for example) so that it can be used on machines without a
+network connection, or where the network is very slow. It is also useful for
+archival purposes, in case the original web-sites supplying required
+libraries become unavailable.
+</p>
+
+<p>
+0export takes the URI of a program and creates a "setup.sh" file; a
+self-extracting archive containing everything needed to run the program.
+This file can be executed on a machine without a network connection to
+install or run the program.
+</p>
+
+<p>
+Unlike the bundles created by the related <a href='http://roscidus.com/desktop/Zero2Bundle'>Zero2Bundle</a> program, programs
+installed using setup.sh are added to the Zero Install cache and are
+therefore still <a href='sharing.html'>shared between users</a>, and
+will get updates over the web where possible.
+</p>
+
+<toc level='h2'/>
+
+<h2>Current status</h2>
+
+<p>
+This program is not yet complete. At the end of the installation process, the installer
+should add a launcher for the program to the user's desktop. Currently, it just runs the
+program directly (meaning that if the user wants to run the program again, they have to
+run the setup.sh script again!).
+</p>
+
+<h2>Installing 0export</h2>
+
+<!--
+<p>
+You can download <b>0export</b> and create a short-cut to it in the usual way:
+</p>
+
+<pre>$ 0alias 0export http://0install.net/2008/interfaces/0export.xml</pre>
+-->
+
+<p>
+This program has not been officially released yet. However, you can use the developer
+version like this:
+</p>
+
+<pre>
+$ git clone git://repo.or.cz/0export.git
+$ 0alias 0export 0export/0export.xml
+</pre>
+
+<h2>Creating a setup.sh for your program</h2>
+
+<p>
+Run 0export, passing in the name of the installer file to create and the name (URI)
+of the main program. For example, to create an installer for Edit:
+</p>
+
+<pre>
+$ 0export setup.sh http://rox.sourceforge.net/2005/interfaces/Edit
+</pre>
+
+<p>
+The resulting setup.sh file can be copied to a CD and run on another machine. This
+machine does not need a network connection. It also does not need to have Zero Install
+installed on it before-hand.
+</p>
+
+<p>
+However, if the machine does have a network connection then the user will be notified
+of updates in the usual way.
+</p>
+
+<h2>Format of the setup.sh</h2>
+
+<p>
+The bulk of the setup.sh file is an archive containing:
+</p>
+
+<ul>
+<li>All feeds needed to run the program.</li>
+<li>All GPGs keys signing the feeds.</li>
+<li>All selected implementations (versions).</li>
+<li>A copy of Zero Install, in case the target system doesn't have it.</li>
+<li>An installation script.</li>
+</ul>
+
+<p>
+To make the archive self-extracting, a short shell script is prepended to
+the archive which unpacks it to a temporary directory and then runs the
+installer. If you want to extract the files without executing anything, you
+can get the information you need from the first four lines of the script, which
+look like this:
+</p>
+
+<pre>
+#!/bin/sh
+# 0export 0.1
+archive_offset=00831
+archive_format=application/x-bzip-compressed-tar
+</pre>
+
+<h2>Testing</h2>
+
+<p>
+To test the installer:
+</p>
+
+<pre>$ sh setup.sh</pre>
+
+<p>
+The script currently (0.1-pre) does the following:
+</p>
+
+<ol>
+<li>Runs <b>gpg --import</b> on each GPG key in the archive, adding the keys that
+signed the feeds to your key-ring.</li>
+<li>Runs <b>0launch --import</b> on each feed in the archive. Every signing GPG key
+is added to the trusted list for the feed's domain. This allows checking for updates
+in future without confirming the keys. If the user already has a newer version of the
+feed, the import has no effect.</li>
+<li>Chooses a set of implementations (<b>0launch --get-selections URI</b>) in
+minimal network use mode and with the implementations in the setup.sh available.</li>
+<li>Copies any selected implementations into the system or user's cache (<b>~/.cache/0install.net/implementations</b>).</li>
+<li>Runs the program (<b>0launch --offline URI</b>).</li>
+</ol>
+
+<p>
+In future, the last step will be to install a launcher in the user's menus instead.
+All steps use the bundled version of 0launch.
+</p>
+
+<h2>FAQ</h2>
+
+<dl>
+<dt>What about security?</dt>
+
+<dd>Running an executable isn't a great way to install a program. The normal
+Zero Install process of dragging a feed link to a trusted installation program
+is much better. However, distributions have been very slow to support this.
+0export is an attempt to boot-strap the adoption process. The setup.sh script is
+designed to be easy to parse, so that in future it can be used as a simple archive.
+</dd>
+
+<dt>Why doesn't it confirm before trusting the keys?</dt>
+
+<dd>
+If the setup.sh is genuine then this is what you want. If it isn't, it's
+already too late. Even if the normal install script asked for confirmation,
+a malicious version could be modified to skip the check. One of many reasons
+why install scripts are a bad idea.
+</dd>
+
+<dt>Support for multiple architectures or multiple applications in one bundle?</dt>
+
+<dd>
+Not yet, but it's easy to add.
+</dd>
+
+<dt>What about a GUI?</dt>
+<dd>
+Hopefully in the future.
+</dd>
+
+</dl>
+</html>

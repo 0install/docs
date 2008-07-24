@@ -293,14 +293,8 @@ version of any particular program, you can see that the savings can be quite lar
 <h3>What about people without Internet connections?</h3>
 
 <p>
-The injector provides the <b>0store</b> command for this purpose
-(<b>man 0store</b> for details). This allows you to import a large program
-into the cache from a CD.
-</p>
-
-<p>
-If you have no network connection at all, you'll need to import the interface too,
-using <b>0launch --import interface.xml</b>.
+You can use <a href='0export.html'>0export</a> to create a setup.sh self-extracting
+installation script for distribution on CDs.
 </p>
 
 <h3>What about when resources move?</h3>

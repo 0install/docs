@@ -46,6 +46,12 @@ to check.
 for publishing on a web-server.
  </dd>
 
+ <dt><a href='0export.html'>0export</a></dt>
+ <dd>
+<b>0export</b> creates a self-extracting installer for a given program, for
+distribution on CDs, etc.
+ </dd>
+
  <dt><a href='deb2zero.html'>deb2zero</a></dt>
  <dd>
 <b>deb2zero</b> publishes a Debian package in a Zero Install feed.
