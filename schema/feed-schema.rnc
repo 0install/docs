@@ -1,5 +1,6 @@
 # RELAX NG compact schema for Zero Install feeds
 # Copyright 2008, Thomas Leonard
+# License: GNU Lesser General Public License, 2.1
 
 # Note that new elements and attributes may be added to the format at any
 # time. Programs are expected to ignore anything they don't understand.
@@ -55,8 +56,8 @@ Implementation = element implementation {
 RetrievalMethod = Archive | element recipe { Archive+ }
 
 Archive = element archive {
-  attribute href { text }? &
-  attribute size { text }? &
+  attribute href { text } &
+  attribute size { text } &
   attribute extract { text }? &
   attribute type { text }? &
   attribute start-offset { text }?
@@ -84,8 +85,8 @@ Constraint = element version {
 }
 
 Interface = element interface {
-  attribute min-injector-version { text } ? &
-  attribute uri { text } ? &
+  attribute min-injector-version { text }? &
+  attribute uri { text }? &
 
   element name { text } &
   element summary { text } &
@@ -102,7 +103,7 @@ Interface = element interface {
     element release:action {
       attribute phase { text },
       text
-    } * &
+    }* &
     element release:add-toplevel-directory { empty }?
   }? &
 
@@ -113,8 +114,8 @@ Interface = element interface {
 
   element feed {
     attribute src { text },
-    attribute langs { text } ?,
-    attribute arch { text } ?
+    attribute langs { text }?,
+    attribute arch { text }?
   }* &
 	
   element feed-for {
