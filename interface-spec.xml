@@ -34,6 +34,10 @@ be confused if you see it used this way.
 </p>
 
 <p>
+A RELAX NG schema can be found in <a href='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/schema/'>/svnroot/zero-install/trunk/htdocs/schema</a>.
+</p>
+
+<p>
 Changes to this document (and to the rest of the web-site) are tracked using subversion. To view
 the change log:
 </p>
@@ -160,8 +164,9 @@ the closest ancestor &lt;group&gt; which defines it):
 	langs='...' ?
 	arch='...' ? &gt;
     &lt;manifest-digest [digest] * /> *
-    [ retrieval-method ] *
+    [retrieval-method] *
     [binding] *
+    [requires] *
   &lt;/implementation&gt;
 </pre>
 
