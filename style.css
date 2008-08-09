@@ -222,10 +222,14 @@ td.sidebar a:hover {
 
 div.footer {
 	font-size: smaller;
-	text-align: center;
+	text-align: right;
 	color: #222;
 	margin: 8em 2em 1em 2em;
 	clear: both;
+}
+
+div.footer span.logos a {
+	margin-left: 10px;
 }
 
 dl dt {

@@ -90,28 +90,28 @@
 	
         <div class='footer'>
 	 <p>
-	   Thanks to the University of Southampton for the 0install.net domain name!
-	 </p>
-	 <p>
-	    Web-site &#169; Copyright 2003-2008, Thomas Leonard.<br/>
+	    Web-site &#169; Copyright 2003-2008 by Thomas Leonard<br/>
+	  </p>
+	  <p>
 	    Permission is granted to use the site (excluding the software,
 	    which is licensed separately)<br/>in accordance with the terms of the
 	    <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative
-	    Commons Attribution-ShareAlike 2.5 license</a>.<br/>
+	    Commons Attribution-ShareAlike 2.5 license</a>.
+	  </p>
+	  <p>
+	    Thanks to the University of Southampton for the 0install.net domain name!<br/>
 	    Some of the icons are from (or based on icons from) the
 	    <a href='http://tango-project.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
 	  </p>
-	 <p>
-	   <a href="http://creativecommons.org/licenses/by-sa/2.5/">
-	      <img src="http://creativecommons.org/images/public/somerights20.gif"
-	      	   alt='Attribution-ShareAlike' width='88' height='31'/>
-	   </a>
-	 </p>
-	   <div class='logos'>
+	  <span class='logos'>
 	    <a href="http://sourceforge.net/projects/zero-install">
 	      <img width="88" height="31" alt="SF logo"
      	       src="http://sourceforge.net/sflogo.php?group_id=7023&amp;type=1"/>
 	    </a>
+	     <a href="http://creativecommons.org/licenses/by-sa/2.5/">
+	      <img src="http://creativecommons.org/images/public/somerights20.gif"
+	      	   alt='Attribution-ShareAlike' width='88' height='31'/>
+	     </a>
 	    <a href="http://jigsaw.w3.org/css-validator/check/referer">
 	      <img style="border:0;width:88px;height:31px"
 	   		src="http://jigsaw.w3.org/css-validator/images/vcss" 
@@ -121,7 +121,7 @@
 	      <img src="http://www.w3.org/Icons/valid-xhtml10"
 	    	   alt="Valid XHTML 1.0!" height="31" width="88"/>
 	    </a>
-	   </div>
+	  </span>
 	</div>
 	  </td>
 	 </tr>
