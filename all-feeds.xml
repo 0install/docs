@@ -130,6 +130,10 @@ announcing when others may attempt to start.</feed>
 <feed uri="http://people.freenet.de/LinuxCNC/0install/dxf2G.xml" name="Dxf2G" summary="Converts 2D .dxf files into G-Code" icon="tango/applications-system.png" width="48" height="48" homepage="http://pier.unirc.eu/" category="Unknown">dxf2G is a simple program that converts dxf 2D files into a .ngc
     G code files usable in programs such as Emc2 (www.linuxcnc.org).</feed>
 
+<feed uri="http://dzen.geekmode.org/dwl/dzen.xml" name="Dzen" summary="A general purpose messaging and notification program" icon="tango/applications-system.png" width="48" height="48" homepage="http://gotmor.googlepages.com/dzen" category="Utility">Dzen is a general purpose messaging, notification and menuing program for X11.
+It was desigend to be scriptable in any language and integrate well with window
+managers like dwm, wmii and xmonad though it will work with any windowmanger.</feed>
+
 <feed uri="http://rox.sourceforge.net/2005/interfaces/Edit" name="Edit" summary="Simple text editor" icon="feed_icons/Edit.png" width="47" height="47" homepage="http://rox.sourceforge.net/desktop/Edit" category="Utility">Edit is a simple text editor, with a ROX-style user interface. It has drag-and-
 drop saving, search-and-replace and multi-level undo.</feed>
 
@@ -439,7 +443,11 @@ describing formal geometrical constraints. This project is a basic tool for
 educational or modeling purpose. It is distributed under the GNU GPL licence,
 free and multi-platform ...</feed>
 
-<feed uri="http://www.cs.helsinki.fi/u/ihonkone/openttd/openttd2.xml" name="Openttd-tz-fix" summary="Fix for openttd.xml" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.openttd.org/" category="Games">http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1966</feed>
+<feed uri="http://www.cs.helsinki.fi/u/ihonkone/openttd/openttd2.xml" name="OpenTTD" summary="Transport Tycoon Deluxe clone" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.openttd.org/" category="Games">OpenTTD is a clone of the Microprose game "Transport Tycoon Deluxe", a popular
+game originally written by Chris Sawyer. It attempts to mimic the original game
+as closely as possible while extending it with new features.
+
+OpenTTD is licensed under the ...</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/OroboROX" name="OroboROX" summary="Window manager for the ROX Desktop" icon="feed_icons/OroboROX.png" width="56" height="56" homepage="http://rox.sourceforge.net/desktop/OroboROX" category="Unknown">OroboROX is a lightweight Window Manager for the ROX Desktop. OroboROX is in development and not completely stable and could give you problems with some applications. But many people are using this as their everyday WM, so don't hesitate to try it ...</feed>
 
@@ -604,7 +612,7 @@ when required.</feed>
 <feed uri="http://riscque.net/Tide" name="Tide" summary="A real-time text editor for the ROX desktop" icon="feed_icons/Tide.png" width="49" height="45" category="Utility">Tide is a real-time text editor for the ROX desktop, based on Thomas Leonard's
 Edit (although Tide may seem a bit backwards compared to Edit). Instead of the
 user manually 'saving' a file, Tide automatically writes the file out as you
-edit it. Also, ...</feed>
+edit it. Tide ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Time.xml" name="Time" summary="Sets time and date" icon="feed_icons/Time.xml.png" width="48" height="48" category="Unknown">Use this app to set the time and date. You need the system-tools-backends to
 make it work.</feed>
