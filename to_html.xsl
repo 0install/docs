@@ -44,7 +44,6 @@
   </xsl:template>
 
   <xsl:template name='make-links'>
-    <h2>Navigation</h2>
     <ul class='pages'>
       <xsl:apply-templates select='document("structure.xml")/layout/item'/>
     </ul>
@@ -76,14 +75,14 @@
       </head>
 
       <body>
-	<h1>The Zero Install system</h1>
+	<h1>Zero Install</h1>
+	<p class='author'>Dr Thomas Leonard <span class='actions'>[ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</span></p>
 	<table>
 	 <tr>
 	  <td class='sidebar'>
 	   <xsl:call-template name='make-links'/>
 	  </td>
           <td class='main'>
-            <p class='author'>Dr Thomas Leonard [ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</p>
 	   <div class='main'>
             <xsl:apply-templates/>
 	   </div>

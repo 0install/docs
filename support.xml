@@ -21,8 +21,7 @@ getting emails.
   <li><a href="http://lists.sourceforge.net/lists/listinfo/zero-install-devel">Subscribe to get emails</a></li>
 </ul>
 
-<div class='note' style='text-align: left'>
-<h3>If clicking on the news: link above directly doesn't work</h3>
+<p>If clicking on the news: link above directly doesn't work:</p>
 
 <ol>
 <li>Load <b>Pan</b> (or some other news-reader) and add <b>news.gmane.org</b> as a new server (<b>Tools-&gt;News
@@ -35,7 +34,6 @@ menu to make it easier to find them in future. Note that 'Subscribing' to a
 news group just marks it as interesting to your news-reader. It is
 different to subscribing to get emails.</li>
 </ol>
-</div>
 
 <h2>Bug tracker</h2>
 

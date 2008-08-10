@@ -52,7 +52,7 @@ bundles, setup.exe, etc). Here are some of our goals:
  </tr>
 </table>
 
-<div style='margin-left: auto; margin-right: auto; max-width: 50em; padding: 1em;'>
+<div>
 <h2>News</h2>
 <dl>
 <dt>Jul 2008</dt><dd><a href='0export.html'>0export</a> can be used to create a self-extracting "setup.sh" installer, for distribution on CD, etc.</dd>

@@ -12,11 +12,16 @@ body {
 }
 
 p.author {
-	text-align: right;
+	margin: .1em 0 1em 0;
+	text-align: center;
+}
+
+p.author span.actions {
+	color: #aaa;
 }
 
 h2:first-child {
-	margin-top: 1em;
+	margin-top: 0;
 }
 
 h2 {
@@ -30,12 +35,16 @@ p.q {
 }
 
 div.note {
-	border: 1px solid black;
+	border-left: 2px solid black;
 	color: black;
-	background: #eee;
-	padding: .2cm;
-	text-align: center;
-	margin: 2px 4em 2px 4em;
+	padding: 0 1em 0 1em;
+	text-align: left;
+	margin: 2px 1em 2px 1em;
+}
+
+div.note h3 {
+	margin: 0;
+	font-size: medium;
 }
 
 div.security {
@@ -54,10 +63,6 @@ p.note {
 	font-size: smaller;
 	padding-left: 1cm;
 	padding-right: 1cm;
-}
-
-div.note h3 {
-	text-align: center;
 }
 
 div.stop h3 {
@@ -151,10 +156,9 @@ th {
 }
 
 h1 {
-	padding: .2em;
+	padding: .2em 0 0 0;
 	margin: 0;
 	text-align: center;
-	background: #def;
 }
 
 td.sidebar h2 {
@@ -163,6 +167,8 @@ td.sidebar h2 {
 }
 
 td.sidebar {
+	border-top: 1px dashed #88f;
+	border-right: 1px dashed #88f;
 	vertical-align: top;
 	background: #def;
 	padding: 0;
@@ -172,8 +178,6 @@ td.sidebar {
 
 td.main {
 	vertical-align: top;
-	border-top: 1px solid #88f;
-	border-left: 1px solid #88f;
 	padding-right: 2em;
 	padding-left: 2em;
 	width: 100%;
@@ -404,10 +408,10 @@ td.teaser a {
 
 div.program {
 	float: right;
-	border: 1px dashed #888;
+	border: 1px dashed #88f;
 	margin: 0.5em;
 	padding: 0.5em;
-	background: #eee;
+	background: #def;
 	font-size: smaller;
 }
 
