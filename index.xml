@@ -2,7 +2,7 @@
 <html xmlns='http://www.w3.org/1999/xhtml'>
 
 <div style='float:left'>
-<p style='max-width: 50em; padding: 1em;'>
+<p style='max-width: 50em;'>
 The Zero Install system aims to provide a better way of installing software than traditional systems (tarballs, apt-get,
 bundles, setup.exe, etc). Here are some of our goals:
 </p>

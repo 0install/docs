@@ -141,10 +141,8 @@ INFO:root:Executing: /home/talex/.cache/0install.net/implementations/sha1=329e6c
 You could also run this version of Edit with this version of ROX-Lib by setting PYTHONPATH and running the AppRun script manually.
 </p>
 
-<table class='quicklinks'>
- <tr>
-  <td style='width: 100%'><a href='tutorial-policy.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to part three</a></td>
- </tr>
-</table>
+<quicklinks>
+  <link href='tutorial-policy.html' img='tango/go-next.png'>Continue to part three</link>
+</quicklinks>
  
 </html>

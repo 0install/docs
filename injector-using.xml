@@ -193,10 +193,8 @@ See the <a href='injector-feeds.html'>packages</a> page for a list of software c
 through Zero Install. When you're ready, you can continue with the tutorial using the link below:
 </p>
 
-<table class='quicklinks'>
- <tr>
-  <td style='width: 100%'><a href='tutorial-downloads.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to part two</a></td>
- </tr>
-</table>
+<quicklinks>
+  <link href='tutorial-downloads.html' img='tango/go-next.png'>Continue to part two</link>
+</quicklinks>
  
 </html>

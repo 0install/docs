@@ -30,10 +30,11 @@ div.main a {
 
 td.header {
 	text-align: left;
+	padding-left: 2em;
 }
 
 p.author {
-	margin: .1em 0 1em 0;
+	margin: .1em 0 1.5em 0;
 	font-size: small;
 }
 
