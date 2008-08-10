@@ -39,6 +39,7 @@ an optional section on publishing software using Zero Install.
 
 <toc level='h3' super-level='h2'/>
 
+<div class='answers'>
 <h2>About the respondents</h2>
 
 <p>The survey starts with a few questions about the respondents
@@ -104,6 +105,8 @@ to the survey; lots of people arrived that way!
 </p>
 <blockquote><p><strong>Other comments: </strong><q>I wrote it</q>, <q>pro-linux.de</q>, <q>Comp.lang.ada</q>, <q>Mailing list</q>, <q>Lsb packaging list</q>, <q>Linuxfr.org</q>, <q>www.linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Forum</q>, <q>http://linuxfr.org/~MilkaJinka/25303.html</q>, <q>Linuxfr.org</q>, <q>Linuxfr</q>, <q>LinuxFR.org</q>, <q>Linuxfr.org</q>, <q>Linuxfr.org</q>, <q>Google</q>, <q>StumbleUpon</q>, <q>Linuxfr</q>, <q>http://lwn.net/Articles/249934/</q>, <q>www.inkscape.org</q>, <q>lwn.net</q>, <q>LINUX USER Magzin</q>, <q>Autopackage project</q>, <q>lwn</q>, <q>lwn.net</q>, <q>lwn</q>, <q>Some people wrote about it on some web site, i think it was related to gobolinux</q>, <q>prolinux.de</q>.</p></blockquote>
 
+</div>
+<div class='answers'>
 <h2>Running programs with Zero Install</h2>
 
 <h3>What operating systems / distributions do you use Zero Install with?</h3>
@@ -714,6 +717,8 @@ It should be a small system and should demonstrate the possibilities of 0install
 <blockquote><p><q>Keep the good work :)</q></p></blockquote>
 
 
+</div>
+<div class='answers'>
 <h2>Publishing software using Zero Install</h2>
 
 <p>
@@ -858,4 +863,5 @@ HIDDEN@gmail.com</q></p></blockquote>
 * zeroinstall checks for updates every so often for them, so I know that it is unlikely that many people will be using very out-of-date versions of my projects.
 
 Again, keep up the excellent work!</q></p></blockquote>
+</div>
 </html>
