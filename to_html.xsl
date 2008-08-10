@@ -28,7 +28,14 @@
 	  <xsl:attribute name='class'>leaf</xsl:attribute>
 	</xsl:otherwise>
       </xsl:choose>
-      <a href="{@base}.html">
+      <xsl:variable name='href'>
+        <xsl:choose>
+	  <xsl:when test='@href'><xsl:value-of select='@href'/></xsl:when>
+	  <xsl:when test='@base'><xsl:value-of select='@base'/>.html</xsl:when>
+	  <xsl:otherwise>Missing base or href</xsl:otherwise>
+	</xsl:choose>
+      </xsl:variable>
+      <a href="{$href}">
       <xsl:if test='$file = concat(@base, ".html")'>
 	<xsl:attribute name='class'>selected</xsl:attribute>
       </xsl:if>
@@ -56,14 +63,6 @@
       <input type="hidden" name="cof" value="FORID:0" />
      </p>
     </form>
-
-    <h2>SourceForge</h2>
-    <ul>
-     <li class='leaf'><a href='http://sourceforge.net/projects/zero-install'>Project page</a></li>
-     <li class='leaf'><a href='http://sourceforge.net/svn/?group_id=76468'>Subversion access</a></li>
-     <li class='leaf'><a href='http://sourceforge.net/project/showfiles.php?group_id=76468'>File releases</a></li>
-     <li class='leaf'><a href='http://sourceforge.net/project/stats/detail.php?group_id=76468&amp;ugn=zero-install&amp;type=prweb&amp;mode=alltime'>Statistics</a></li>
-    </ul>
   </xsl:template>
 
   <xsl:template match='/*'>
@@ -204,7 +203,7 @@
         </ul>
       </xsl:when>
       <xsl:otherwise>
-        <ol>
+        <ol class='toc'>
         <xsl:for-each select='following::*[name() = $level]'>
           <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
         </xsl:for-each>
