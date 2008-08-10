@@ -1,6 +1,11 @@
 html {
 	color: black;
 	background: white;
+	font-family: serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: sans-serif;
 }
 
 body {
@@ -11,9 +16,25 @@ body {
 	color: black;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div.main a {
+	font-weight: bold;
+}
+
+td.header {
+	text-align: left;
+}
+
 p.author {
 	margin: .1em 0 1em 0;
-	text-align: center;
+	font-size: small;
 }
 
 p.author span.actions {
@@ -103,6 +124,7 @@ tt {
 }
 
 dt {
+	font-family: sans-serif;
 	font-weight: bold;
 }
 
@@ -158,7 +180,7 @@ th {
 h1 {
 	padding: .2em 0 0 0;
 	margin: 0;
-	text-align: center;
+	font-size: 400%;
 }
 
 td.sidebar h2 {
@@ -329,11 +351,12 @@ table.quicklinks td p {
 	margin: 0;
 }
 
-table.quicklinks td a {
+table.quicklinks a.img {
 	text-decoration: none;
 }
 
 table.quicklinks td {
+	font-family: sans-serif;
 	font-weight: bold;
 	text-align: center;
 	padding: 1em;
@@ -443,6 +466,7 @@ span.more {
 
 span.more a {
 	color: #66f;
+	font-weight: normal;
 }
 
 p.uml {
@@ -461,4 +485,9 @@ div.lookhere {
 	margin: 2px 8em 2px 8em;
 	background: #ff8;
 	font-weight: bold;
+}
+
+p.caption {
+	font-style: italic;
+	font-size: smaller;
 }

@@ -16,14 +16,12 @@ directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a 
 so that you don't need to download anything twice, and programs can still be used when you are off-line.
 </p>
 
-<table class='quicklinks'>
- <tr>
-  <td><a href='#packages'><img src='tango/go-down.png' alt='' width='48' height='48'/> <br/>Install it!</a></td>
-  <td><a href='doc.html'><img src='tango/book.png' alt='' width='48' height='48'/> <br/>Read more</a></td>
-  <td><a href='dev.html'><img src='tango/applications-development.png' alt='' width='48' height='48'/> <br/>Developers</a></td>
-  <td><a href='faq.html'><img src='tango/help-browser.png' alt='' width='48' height='48'/> <br/>FAQ</a></td>
- </tr>
-</table>
+<quicklinks>
+ <link href='#packages' img='tango/go-down.png'>Install it!</link>
+  <link href='doc.html' img='tango/book.png'>Read more</link>
+  <link href='dev.html' img='tango/applications-development.png'>Developers</link>
+  <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
+</quicklinks>
 
 <p>See also:</p>
 <ul>
@@ -90,11 +88,9 @@ If an injector package for your distribution is listed above, install that and t
 Otherwise, follow the instructions below to install using the generic tarball.
 </p>
 
-<table class='quicklinks'>
- <tr>
-  <td style='width: 100%'><a href='injector-using.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to tutorial</a></td>
- </tr>
-</table>
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
 
 <h2>Installing from tarball</h2>
 

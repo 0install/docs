@@ -75,9 +75,14 @@
       </head>
 
       <body>
-	<h1>Zero Install</h1>
-	<p class='author'>Dr Thomas Leonard <span class='actions'>[ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</span></p>
 	<table>
+	 <tr>
+	  <td/>
+	  <td class='header'>
+	    <h1>Zero Install</h1>
+	    <p class='author'>Dr Thomas Leonard <span class='actions'>[ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</span></p>
+	  </td>
+	 </tr>
 	 <tr>
 	  <td class='sidebar'>
 	   <xsl:call-template name='make-links'/>
@@ -153,6 +158,20 @@
     </td>
   </xsl:template>
 
+  <xsl:template match='*[name() = "quicklinks"]'>
+    <xsl:variable name='width'><xsl:value-of select='100 div count(*)'/></xsl:variable>
+    <table class='quicklinks'>
+     <tr>
+      <xsl:for-each select='*[name() = "link"]'>
+       <td style='width: {$width}%'>
+        <a href='{@href}'><img src='{@img}' alt='' width='48' height='48'/></a><br/>
+        <a href='{@href}'><xsl:apply-templates/></a>
+       </td>
+      </xsl:for-each>
+     </tr>
+    </table>
+  </xsl:template>
+
   <xsl:template match='*[name() = "video"]'>
     <object width="425" height="355" type="application/x-shockwave-flash">
       <xsl:attribute name='data'>http://www.youtube.com/v/<xsl:value-of select='@vid'/></xsl:attribute>
@@ -161,8 +180,8 @@
         <img src='screens/no_video.png' width='425' height='355' alt='Embedded video not supported by your browser'/>
       </a>
     </object>
-    <p><a>
-      <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a> (screencast with audio commentary)
+    <p class='caption'><a>
+      <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>(screencast with audio commentary)
     </p>
   </xsl:template>
 
