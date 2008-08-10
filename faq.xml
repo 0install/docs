@@ -3,12 +3,15 @@
 
 <h2>FAQ</h2>
 
-<toc level='h3' super-level='h2'/>
+<toc level='dt' super-level='h2'/>
 
-<div>
+<div class='answers'>
 <h2>General questions</h2>
 
-<h3>What is it?</h3>
+<dl>
+
+<dt>What is it?</dt>
+<dd>
 
 <p>
 Zero Install is a way to run software without an explicit installation step.
@@ -16,22 +19,30 @@ This is easier (<i>install and run</i> becomes just <i>run</i>) and safer
 (installation doesn't happen as root).
 </p>
 
-<h3>I haven't tried it yet, but it sounds really complicated</h3>
+</dd>
+<dt>I haven't tried it yet, but it sounds really complicated</dt>
+<dd>
 <p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
 
-<h3>What are "decentralised" installation systems, and why are they important?</h3>
+</dd>
+<dt>What are "decentralised" installation systems, and why are they important?</dt>
+<dd>
 <p>
 See my <a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems'>essay on OSNews</a> or,
 if you're in a hurry, just read <a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems/page7/'>the summary</a>.
 </p>
 
-<h3>Doesn't Zero Install require a kernel module?</h3>
+</dd>
+<dt>Doesn't Zero Install require a kernel module?</dt>
+<dd>
 <p>
 Not any more. That was <a href='fs-faq.html'>the old version</a>.
 </p>
 
-<h3>Isn't is really hard to run applications if you always have to
-type URIs for them?</h3>
+</dd>
+<dt>Isn't is really hard to run applications if you always have to
+type URIs for them?</dt>
+<dd>
 
 <p>Yes. As with the web, that works but it's not the intended way to
 do it. Like the web, you have links to the URIs, and you use the links
@@ -49,8 +60,10 @@ add it to your Start menu. A 'distribution' could be nothing more than a web
 page listing links to high quality software for a particular audience.
 </p>
 
-<h3>How do you do integration (eg, making a Start menu show all
-installed software)?</h3>
+</dd>
+<dt>How do you do integration (eg, making a Start menu show all
+installed software)?</dt>
+<dd>
 
 <p>Since there is no concept of software being 'installed' or
 'not-installed', this is not required. The menu (or other launching
@@ -77,7 +90,9 @@ the program data though; removing the program from the cache doesn't remove the
 menu item (clicking on it would simply offer to download the program
 again).</p>
 
-<h3>Isn't it wasteful for every program to bundle all its dependencies?</h3>
+</dd>
+<dt>Isn't it wasteful for every program to bundle all its dependencies?</dt>
+<dd>
 <p>
 Yes, but Zero Install doesn't do that. Everything is dynamically linked, just as in
 a traditional Linux system: you can publish a program on your web-site that links against
@@ -87,14 +102,18 @@ with the new library version, which will continue using the older version,
 without preventing other programs from upgrading).
 </p>
 
-<h3>Why is it called the "injector"?</h3>
+</dd>
+<dt>Why is it called the "injector"?</dt>
+<dd>
 
 <p>
 The name comes from <i>Dependency Injection</i> - see <a href='http://roscidus.com/desktop/node/903'>"The scarily-named Injector"</a>
 for details.
 </p>
 
-<h3>Wouldn't it be cool if you could install software just by clicking in a web page?</h3>
+</dd>
+<dt>Wouldn't it be cool if you could install software just by clicking in a web page?</dt>
+<dd>
 <p>
 It's a bit of a security risk. If you set up your browser to do this, then the
 author of any random web-site can try to trick you into clicking on some
@@ -123,7 +142,9 @@ process doesn't even start. As an added bonus, this lets you specify where
 on your desktop you want the launcher created.
 </p>
 
-<h3>Will Zero Install conflict with my existing package manager?</h3>
+</dd>
+<dt>Will Zero Install conflict with my existing package manager?</dt>
+<dd>
 
 <p>
 No. Zero Install only writes to its own cache directory. It is completely
@@ -149,7 +170,9 @@ essentially the same situation as when you downgrade a package to a previous
 version using your normal package manager.
 </p>
 
-<h3>How do I know you won't start charging for this service?</h3>
+</dd>
+<dt>How do I know you won't start charging for this service?</dt>
+<dd>
 
 <p>
 I'm not providing a service. You distribute software by hosting some files on
@@ -160,8 +183,10 @@ The core software is all LGPL or GPL. Of course, you're welcome to
 money</a> if you want ;-)
 </p>
 
-<h3>What if something gets automatically removed from the cache while
-I'm up a mountain with my laptop?</h3>
+</dd>
+<dt>What if something gets automatically removed from the cache while
+I'm up a mountain with my laptop?</dt>
+<dd>
 
 <p>Currently, nothing is ever automatically removed from the cache.
 Users can choose the purging scheme that suits them. For users with
@@ -185,8 +210,10 @@ You can also just delete things from the <b>~/.cache/0install.net</b>
 directory directly, but it's easier using the GUI.
 </p>
 
-<h3>What happens if there are two programs which may not be run simultaneously
-for some reason?</h3>
+</dd>
+<dt>What happens if there are two programs which may not be run simultaneously
+for some reason?</dt>
+<dd>
 <p>
 Running and installing are separate. In Debian, for example, installing some
 software (eg, exim) may also cause it to run, but in zero install there is no
@@ -194,7 +221,9 @@ install step, only the running step. So, you can 'install' any number of
 conflicting packages, but you can still only run one mail system at once.
 </p>
 
-<h3>Can upstream authors really be trusted to provide decent quality software?</h3>
+</dd>
+<dt>Can upstream authors really be trusted to provide decent quality software?</dt>
+<dd>
 
 <p>
 Traditionally, a lot of the QA work that goes on in open source software is done
@@ -221,7 +250,9 @@ In this case, a Zero Install packager can provide a fixed version from their own
 and get other people to link to that. The advantage here is that, again, everyone benefits.
 </p>
 
-<h3>Does this replace /etc, /var, /tmp, etc?</h3>
+</dd>
+<dt>Does this replace /etc, /var, /tmp, etc?</dt>
+<dd>
 
 <p>
 No. Zero Install is read-only, so you couldn't store configuration, data or temporary
@@ -248,7 +279,9 @@ here; if lost it will just prompt you to download the programs again when you ru
 tmpfs rather than a physical disk).</dd>
 </dl>
 
-<h3>What was the inspiration for Zero Install?</h3>
+</dd>
+<dt>What was the inspiration for Zero Install?</dt>
+<dd>
 
 <p>
 Several things. <a href="http://www.coda.cs.cmu.edu/">CODA</a> and
@@ -260,21 +293,27 @@ Konvalo or <a href="http://cr.yp.to/slashpackage.html">D. J. Bernstein's
 slashpackage</a> though, because I had never heard of them when I started the
 project.</p>
 
+</dd>
+</dl>
 
 </div>
 
-<div>
+<div class='answers'>
 <h2>Network questions</h2>
 
+<dl>
 
-<h3>Isn't fetching stuff over the web really slow?</h3>
+<dt>Isn't fetching stuff over the web really slow?</dt>
+<dd>
 
 <p>You have to get stuff over the web anyway the first time. The
 system caches everything, and you can run the software in future
 without needing a network connection.
 </p>
 
-<h3>Doesn't it require a fast Internet connection?</h3>
+</dd>
+<dt>Doesn't it require a fast Internet connection?</dt>
+<dd>
 
 <p>
 No more than downloading programs from the Internet normally. However, it can
@@ -290,14 +329,18 @@ documentation, use a particular export filter, etc, but rarely do so for any giv
 version of any particular program, you can see that the savings can be quite large.
 </p>
 
-<h3>What about people without Internet connections?</h3>
+</dd>
+<dt>What about people without Internet connections?</dt>
+<dd>
 
 <p>
 You can use <a href='0export.html'>0export</a> to create a setup.sh self-extracting
 installation script for distribution on CDs.
 </p>
 
-<h3>What about when resources move?</h3>
+</dd>
+<dt>What about when resources move?</dt>
+<dd>
 <p>Everything you've already accessed at least once will continue to
 work. Users trying software for the first time will find that it
 doesn't work due to broken links. This is not new, either. The download
@@ -321,14 +364,18 @@ new location, and <b>0store</b> allows adding any archive to the cache (provided
 its message digest matches).
 </p>
 
+</dd>
+</dl>
 
 </div>
-<div>
 
+<div class='answers'>
 <h2>Security questions</h2>
 
+<dl>
 
-<h3>How secure is this?</h3>
+<dt>How secure is this?</dt>
+<dd>
 <p>About as secure as any system which ultimately involves running
 software written by people you don't know who live in far away
 countries. However, since the downloading is automatic, there are more
@@ -354,7 +401,9 @@ See the <a href='injector-security.html'>injector security issues</a> document
 for more information.
 </p>
 
-<h3>Doesn't Zero Install make it easier to send users malicious software?</h3>
+</dd>
+<dt>Doesn't Zero Install make it easier to send users malicious software?</dt>
+<dd>
 
 <p>
 Not really. True, you could email a user, telling them to run:
@@ -381,8 +430,10 @@ Zero Install helps with large, complicated programs with lots of
 dependencies, whereas your typical malicious program is only a few lines long,
 and doesn't benefit from it.
 </p>
+</dd>
 
-<h3>But what about kernel bugs? Zero Install is still vulnerable then!</h3>
+<dt>But what about kernel bugs? Zero Install is still vulnerable then!</dt>
+<dd>
 
 <p>
 Recently, a bug was found (and fixed) in the Linux kernel that allowed any user
@@ -398,13 +449,17 @@ If your kernel is insecure, you have a problem with or without Zero Install.
 </p>
 
 
+</dd>
+</dl>
 </div>
-<div>
 
+<div class='answers'>
 <h2>Developers</h2>
 
+<dl>
 
-<h3>How do I provide software using Zero Install?</h3>
+<dt>How do I provide software using Zero Install?</dt>
+<dd>
 
 <p>
 The main requirement is that the program doesn't use hard-coded paths. It should
@@ -429,8 +484,10 @@ are available, how to get them, and what libraries they require.
 <p>See the <i> <a href='injector-packagers.html'>Injector Packaging Guide</a></i>
 for details.</p>
 
+</dd>
 
-<h3>How can I run my own version of something, instead of downloading a released version?</h3>
+<dt>How can I run my own version of something, instead of downloading a released version?</dt>
+<dd>
 
 <p>
 Let's say you want to run a subversion (developer) version of Edit. Start by checking out the latest
@@ -469,8 +526,10 @@ $ 0launch Edit.xml
 Of course, you could do <b>0alias edit-svn Edit.xml</b> to make a command that runs this version
 easily.
 </p>
+</dd>
 
-<h3>How can I register my own version under the original's URI?</h3>
+<dt>How can I register my own version under the original's URI?</dt>
+<dd>
 
 <p>
 The answer to the last question showed how to run a local version of a program directly, using 0launch
@@ -519,8 +578,10 @@ This is particularly useful for libraries, since they are always used by other p
 than run directly.
 </p>
 
-<h3>Is Linux binary compatibility good enough to share binaries between
-distributions?</h3>
+</dd>
+<dt>Is Linux binary compatibility good enough to share binaries between
+distributions?</dt>
+<dd>
 
 <p>
 There are some problems in this area generally (not just with Zero Install).
@@ -533,6 +594,8 @@ more compatible binaries by compiling against older versions of header files; se
 for an example.
 </p>
 
+</dd>
+</dl>
 </div>
 
 </html>

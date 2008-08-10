@@ -337,7 +337,6 @@ tr.summary p {
 	padding: 0.2em;
 	margin: 0;
 	margin-left: 1em;
-	font-style: italic;
 }
 
 table.picturebullets td.image {
@@ -457,6 +456,7 @@ div.program th {
 
 span.keyphrase {
 	color: #800;
+	font-style: italic;
 }
 
 span.more:hover {
@@ -495,7 +495,11 @@ div.lookhere {
 	font-weight: bold;
 }
 
-p.caption {
+span.captionnote {
 	font-style: italic;
 	font-size: smaller;
+}
+
+div.answers {
+	padding-top: 2em;
 }

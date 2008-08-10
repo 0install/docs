@@ -180,7 +180,8 @@
       </a>
     </object>
     <p class='caption'><a>
-      <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>(screencast with audio commentary)
+      <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>
+      <span class='captionnote'>(screencast with audio commentary)</span>
     </p>
   </xsl:template>
 
@@ -195,6 +196,9 @@
             <li><xsl:value-of select='.'/>
 	      <ol>
                 <xsl:for-each select='../*[name() = $level]'>
+                  <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+                </xsl:for-each>
+                <xsl:for-each select='../*[name() = "dl"]/*[name() = $level]'>
                   <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
                 </xsl:for-each>
 	      </ol>
@@ -282,7 +286,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match='*[name() = "h3" or name() = "h2"]'>
+  <xsl:template match='*[name() = "h3" or name() = "h2" or name() = "dt"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>
       <xsl:apply-templates/>
