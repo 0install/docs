@@ -58,7 +58,7 @@
     <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse">
      <p>
       <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
-      <input name="q" type="text" size="18" />
+      <input name="q" type="text" size="14" />
       <input type="submit" name="sa" value="Search" />
       <input type="hidden" name="cof" value="FORID:0" />
      </p>
