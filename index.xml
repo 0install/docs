@@ -2,7 +2,7 @@
 <html xmlns='http://www.w3.org/1999/xhtml'>
 
 <div style='float:left'>
-<p style='max-width: 50em;'>
+<p style='max-width: 50em; margin-top: 0; padding-top: 0;'>
 The Zero Install system aims to provide a better way of installing software than traditional systems (tarballs, apt-get,
 bundles, setup.exe, etc). Here are some of our goals:
 </p>
@@ -65,9 +65,5 @@ tutorial</a> is now up.</dd>
 and improvements to the GUI. I've also added some tutorial videos to the site.</dd>
 </dl>
 </div>
-
-<p style='text-align: center;'>
-Translations: <a href='http://www.el-directorio.org/0install'>Spanish</a>
-</p>
 
 </html>

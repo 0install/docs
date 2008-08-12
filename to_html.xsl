@@ -63,6 +63,11 @@
       <input type="hidden" name="cof" value="FORID:0" />
      </p>
     </form>
+
+    <ul>
+    <li><a href='http://www.el-directorio.org/0install'>Spanish</a></li>
+    </ul>
+
   </xsl:template>
 
   <xsl:template match='/*'>

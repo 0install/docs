@@ -201,6 +201,8 @@ td.sidebar {
 
 td.main {
 	vertical-align: top;
+	padding-top: 0;
+	margin-top: 0;
 	padding-right: 2em;
 	padding-left: 2em;
 	width: 100%;
