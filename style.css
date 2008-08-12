@@ -218,11 +218,13 @@ td.sidebar li {
 	padding-right: .1em;
 	font-weight: bold;
 	padding-top: .4em;
+	font-family: sans-serif;
 }
 
 td.sidebar li li {
 	padding-top: 0;
 	font-weight: normal;
+	font-family: serif;
 }
 
 td.sidebar li.leaf {
