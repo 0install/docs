@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>0export</h2>
-
 <program name='0export'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/0export.git'
-	 license='GNU General Public License'/>
+	 license='GNU General Public License'>
 
 <p>
 <b>0export</b> creates self-installing bundles for distribution on CD, etc
@@ -40,6 +38,8 @@ installed using setup.sh are added to the Zero Install cache and are
 therefore still <a href='sharing.html'>shared between users</a>, and
 will get updates over the web where possible.
 </p>
+
+</program>
 
 <toc level='h2'/>
 

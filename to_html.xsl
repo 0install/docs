@@ -107,10 +107,6 @@
 	    <a href='http://tango-project.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
 	  </p>
 	  <span class='logos'>
-	    <a href="http://sourceforge.net/projects/zero-install">
-	      <img width="88" height="31" alt="SF logo"
-     	       src="http://sourceforge.net/sflogo.php?group_id=7023&amp;type=1"/>
-	    </a>
 	     <a href="http://creativecommons.org/licenses/by-sa/2.5/">
 	      <img src="http://creativecommons.org/images/public/somerights20.gif"
 	      	   alt='Attribution-ShareAlike' width='88' height='31'/>
@@ -123,6 +119,10 @@
 	    <a class='outside' href="http://validator.w3.org/check/referer">
 	      <img src="http://www.w3.org/Icons/valid-xhtml10"
 	    	   alt="Valid XHTML 1.0!" height="31" width="88"/>
+	    </a>
+	    <a href="http://sourceforge.net/projects/zero-install">
+	      <img width="88" height="31" alt="SF logo"
+     	       src="http://sourceforge.net/sflogo.php?group_id=7023&amp;type=1"/>
 	    </a>
 	  </span>
 	</div>
@@ -163,8 +163,10 @@
      <tr>
       <xsl:for-each select='*[name() = "link"]'>
        <td style='width: {$width}%'>
-        <a href='{@href}'><img src='{@img}' alt='' width='48' height='48'/></a><br/>
-        <a href='{@href}'><xsl:apply-templates/></a>
+	<div>
+         <a href='{@href}'><img src='{@img}' alt='' width='48' height='48'/></a><br/>
+         <a href='{@href}'><xsl:apply-templates/></a>
+	</div>
        </td>
       </xsl:for-each>
      </tr>
@@ -268,6 +270,13 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "program"]'>
+    <table>
+     <tr>
+      <td style='vertical-align: top'>
+       <h2><xsl:choose><xsl:when test='@title'><xsl:value-of select='@title'/></xsl:when><xsl:otherwise><xsl:value-of select='@name'/></xsl:otherwise></xsl:choose></h2>
+       <xsl:apply-templates/>
+      </td>
+      <td style='vertical-align: top'>
     <div class='program'>
       <table>
         <tr><th>Name</th><td><xsl:value-of select='@name'/></td></tr>
@@ -284,6 +293,9 @@
 	</xsl:if>
       </table>
     </div>
+      </td>
+     </tr>
+    </table>
   </xsl:template>
 
   <xsl:template match='*[name() = "h3" or name() = "h2" or name() = "dt"]'>

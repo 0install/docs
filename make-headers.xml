@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>Make-headers</h2>
-
 <program name='Make-headers'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/Make-headers.xml'
 	 git='http://repo.or.cz/w/make-headers.git'
-	 license='GNU General Public License'/>
+	 license='GNU General Public License'>
 
 <p>
 <b>Make-headers</b> is an extremely simple script for creating -dev packages (packages containing only header files) from
@@ -20,6 +18,7 @@ ordinary source releases. It performs the following steps:
  <li>Deletes <b>$DESTDIR/{bin,man,share}</b>, any library binaries (<b>.so</b>, <b>.a</b> and <b>.la</b> files in <b>lib</b>), and any <b>lib/python*</b> directories.</li>
  <li>Edits any pkg-config files (<b>lib/pkgconfig/*.pc</b>) to use a relative prefix of <b>${pcfiledir}/../..</b>.</li>
 </ol>
+</program>
 
 <p>
 In other words, it does a full compile-and-install to $DESTDIR, deletes anything that isn't needed in a -dev package, and makes the result relocatable.

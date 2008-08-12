@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>0compile</h2>
-
 <program name='0compile'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2006/interfaces/0compile.xml'
 	 git='http://repo.or.cz/w/0compile.git'
-	 license='GNU Lesser General Public License'/>
+	 license='GNU Lesser General Public License'>
+
 <p>
 Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile
 a new binary from a source package. This is useful if:
@@ -18,6 +17,8 @@ a new binary from a source package. This is useful if:
  <li>you wish to build using different library versions; or</li>
  <li>you wish to make changes to a program or library.</li>
 </ul>
+
+</program>
 
 <p>
 This tutorial shows how to use <b>0compile</b> for these purposes. It is

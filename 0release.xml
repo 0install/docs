@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>0release</h2>
-
 <program name='0release'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/0release.xml'
 	 git='http://repo.or.cz/w/0release.git'
-	 license='GNU Lesser General Public License'/>
+	 license='GNU Lesser General Public License'>
 
 <p>
 <b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
 number and release date, tagging the release in your version control system and updating your Zero Install feed.
+</p>
+</program>
+
+<p>
 The general process is shown in the diagram below:
 </p>
 

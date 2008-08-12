@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>deb2zero</h2>
-
 <program name='deb2zero'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2008/interfaces/deb2zero.xml'
 	 git='http://repo.or.cz/w/deb2zero.git'
-	 license='GNU General Public License'/>
+	 license='GNU General Public License'>
 
 <p>
 <b>deb2zero</b> takes the URL of a Debian package and publishes it in a Zero Install feed.
@@ -19,6 +17,8 @@ or Autopackage file, but you have to enter the meta-data (name, summary, descrip
 manually. Since Debian packages already contain this information, it's easier to extract it
 and generate the feed automatically. This is what deb2zero does.
 </p>
+
+</program>
 
 <toc level='h2'/>
 

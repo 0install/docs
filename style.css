@@ -258,14 +258,13 @@ td.sidebar a:hover {
 
 div.footer {
 	font-size: smaller;
-	text-align: right;
 	color: #222;
-	margin: 8em 2em 1em 2em;
+	margin: 8em 2em 1em 0;
 	clear: both;
 }
 
 div.footer span.logos a {
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 dl dt {
@@ -347,10 +346,9 @@ table.picturebullets td.image {
 }
 
 table.quicklinks {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1em;
-	border-spacing: 1em;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
 	border-collapse: separate;
 	clear: both;
 }
@@ -364,13 +362,19 @@ table.quicklinks a.img {
 	text-decoration: none;
 }
 
-table.quicklinks td {
+table.quicklinks td div {
 	font-family: sans-serif;
 	font-weight: bold;
 	text-align: center;
+	margin: 1em 2em 1em 0;
 	padding: 1em;
 	background: #def;
-	-moz-border-radius: 1em 1em 1em 1em;
+	border: 1px dashed #88f;
+}
+
+table.quicklinks td {
+	padding: 0;
+	margin: 0;
 	width: 25%;
 }
 
@@ -412,6 +416,7 @@ td.keyinfo {
 }
 
 td.keyinfo a {
+	font-family: sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -441,10 +446,11 @@ td.teaser a {
 div.program {
 	float: right;
 	border: 1px dashed #88f;
-	margin: 0.5em;
-	padding: 0.5em;
 	background: #def;
+	margin-left: 2em;
+	padding: 0.5em;
 	font-size: smaller;
+	white-space: nowrap;
 }
 
 div.program th:after {
@@ -503,5 +509,9 @@ span.captionnote {
 }
 
 div.answers {
+	padding-top: 2em;
+}
+
+div.news {
 	padding-top: 2em;
 }

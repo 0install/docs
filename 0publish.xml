@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>0publish: Scripting the release process</h2>
-
 <program name='0publish'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2006/interfaces/0publish'
 	 git='http://repo.or.cz/w/0publish.git'
-	 license='GNU Lesser General Public License'/>
+	 license='GNU Lesser General Public License'>
 
 <p>
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
@@ -25,6 +23,8 @@ Note: <a href='0release.html'>0release</a> provides a more complete solution
 for managing releases (0release uses 0publish internally, but also handles many
 other aspects of making releases for you).
 </p>
+
+</program>
 
 <toc level='h2'/>
 

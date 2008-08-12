@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>Zero Install: Packaging Guide</h2>
-
 <program name='0publish-gui'
+	 title='Packaging guide'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/0publish-gui.xml'
 	 svn='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/0publish-gui'
-	 license='GNU General Public License'/>
+	 license='GNU General Public License'>
 
 <p>
 This guide shows how to make software available through <a href="injector.html">Zero Install</a>.
@@ -19,6 +18,8 @@ and animation program.
 You should already be familiar with the general operation of Zero Install. In not, start by reading
 the <a href='injector-using.html'>user tutorial</a>.
 </p>
+
+</program>
 
 <toc level='h2'/>
 

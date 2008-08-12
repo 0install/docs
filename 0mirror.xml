@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>0mirror</h2>
-
 <program name='0mirror'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/0mirror.git'
-	 license='GNU General Public License'/>
+	 license='GNU General Public License'>
 <p>
 With Zero Install, each software author publishes a feed on their web-site
 giving details about their software. Users can use these feeds to download the
@@ -37,6 +35,8 @@ published site contains:
 Note that it does not export the actual programs themselves, although that would certainly be useful
 for sites with plenty of bandwidth (which we don't have currently; sorry!).
 </p>
+
+</program>
 
 <h2>Status</h2>
 

@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<h2>The Zero Install Injector</h2>
-
 <program name='Zero Install Injector'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/zeroinstall.git'
-	 license='GNU Lesser General Public License'/>
+	 license='GNU Lesser General Public License'>
 
 <p>
 The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
@@ -15,6 +13,7 @@ to be installed or run as root. It does <b>not</b> write to any shared
 directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a cache directory
 so that you don't need to download anything twice, and programs can still be used when you are off-line.
 </p>
+</program>
 
 <quicklinks>
  <link href='#packages' img='tango/go-down.png'>Install it!</link>
@@ -180,11 +179,8 @@ You now have two new commands: <b>0launch</b>, which takes the URL of a program 
 <b>0alias</b>, which lets you use short names instead of URLs.
 </p>
 
-<table class='quicklinks'>
- <tr>
-  <td style='width: 100%'><a href='injector-using.html'><img src='tango/go-next.png' alt='' width='48' height='48'/> <br/>Continue to tutorial</a></td>
- </tr>
-</table>
-
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
 
 </html>
