@@ -13,18 +13,24 @@ This is the shared version of libcurl.
 
  Homepage: http://curl.haxx.se</description>
   <package-implementation package="libcurl3-gnutls"/>
-  <group arch="Linux-x86_64">
-    <implementation id="sha1new=484439b16c705bc8a79e49bc391b400baf620970" released="2008-08-16" version="7.15.5-1">
-      <archive href="http://ftp.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.15.5-1etch1_amd64.deb" size="164638"/>
-    </implementation>
-    <implementation arch="Linux-i386" id="sha1new=75b487d7e1b7d179dc845e1f393afdf997a4b0a8" released="2008-08-16" version="7.15.5-1">
-      <archive href="http://ftp.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.15.5-1etch1_i386.deb" size="163196"/>
-    </implementation>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libkrb53.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <group arch="Linux-x86_64">
+      <implementation id="sha1new=484439b16c705bc8a79e49bc391b400baf620970" released="2008-08-16" version="7.15.5-1">
+        <archive href="http://ftp.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.15.5-1etch1_amd64.deb" size="164638"/>
+      </implementation>
+    </group>
+    <group arch="Linux-i386">
+      <implementation id="sha1new=75b487d7e1b7d179dc845e1f393afdf997a4b0a8" released="2008-08-16" version="7.15.5-1">
+        <archive href="http://ftp.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.15.5-1etch1_i386.deb" size="163196"/>
+      </implementation>
+    </group>
   </group>
-
 </interface>
 <!-- Base64 Signature
-iD8DBQBIppl8BSn9tx+xORARAgyWAJsGOokbQrUFQK5UGBaV/8v3k5VD5QCfUxXN8/Oq8IkQEReY
-pn9077k4ShE=
+iD8DBQBIppqOBSn9tx+xORARAh8sAJ96HUQM5mxbCPpSzLqF+J+FjYZ6ygCfR1b7kHEaG4/cwqeY
+foHT2XvJowQ=
 
 -->
