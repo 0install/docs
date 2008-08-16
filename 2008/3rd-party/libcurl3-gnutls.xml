@@ -14,6 +14,9 @@ This is the shared version of libcurl.
  Homepage: http://curl.haxx.se</description>
   <package-implementation package="libcurl3-gnutls"/>
   <group>
+    <requires interface="http://0install.net/2007/3rd-party/libgnutls13.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
     <requires interface="http://0install.net/2007/3rd-party/libkrb53.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
@@ -30,7 +33,7 @@ This is the shared version of libcurl.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIppqOBSn9tx+xORARAh8sAJ96HUQM5mxbCPpSzLqF+J+FjYZ6ygCfR1b7kHEaG4/cwqeY
-foHT2XvJowQ=
+iD8DBQBIppvYBSn9tx+xORARAm9+AJ0VWKmGQOPnoXihCu91QfmCUFDFjwCfbNLMz7Vfb5IxHxTc
+Ju2K4/iFW6s=
 
 -->
