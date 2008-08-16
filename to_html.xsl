@@ -109,7 +109,7 @@
 	  <p>
 	    Thanks to the University of Southampton for the 0install.net domain name!<br/>
 	    Some of the icons are from (or based on icons from) the
-	    <a href='http://tango-project.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
+	    <a href='http://tango.freedesktop.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
 	  </p>
 	  <span class='logos'>
 	     <a href="http://creativecommons.org/licenses/by-sa/2.5/">
