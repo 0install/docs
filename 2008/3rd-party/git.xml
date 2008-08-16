@@ -22,14 +22,14 @@ interface, is provided as separate git* packages.</description>
     <requires interface="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-      <implementation id="sha1new=7ab179300091ed1d224f7767cda14c5ff7342fc2" released="2008-08-16" version="1">
+    <implementation id="sha1new=7ab179300091ed1d224f7767cda14c5ff7342fc2" released="2008-08-16" version="1.5.6.3">
       <archive href="http://www.backports.org/debian/pool/main/g/git-core/git-core_1.5.6.3-1+lenny1~bpo40+1_i386.deb" size="3093630"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIpplEBSn9tx+xORARAnqfAJ9G+YdiTGe8biaQmsmaV5zrKBJ80QCfUwLDnb5N9kzA8Z0c
-hJrt+2f3EDg=
+iD8DBQBIpqCEBSn9tx+xORARAq+yAJkB4SerWDBFSVFvM4OuoxiF123VlgCeJ+uctyVNRXt4GMjd
+GhWOiZGUlWI=
 
 -->
