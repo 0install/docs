@@ -207,6 +207,12 @@ integrated development environment. It was developed to provide a small and fast
 IDE, which has only a few dependencies from other packages. It supports many
 filetypes and has some ...</feed>
 
+<feed uri="http://0install.net/2008/3rd-party/git.xml" name="Git-core" summary="Fast, scalable, distributed revision control system" icon="tango/applications-system.png" width="48" height="48" category="Development">Git is popular version control system designed to handle very large
+projects with speed and efficiency; it is used mainly for various open
+source projects, most notably the Linux kernel.
+
+Git falls in the category of distributed source code management ...</feed>
+
 <feed uri="http://0install.net/2008/interfaces/Glade-dev.xml" name="Libglade-dev" summary="Headers for compiling Glade applications" icon="tango/applications-system.png" width="48" height="48" homepage="http://glade.gnome.org" category="Development">These are the Glade header files. They are required when compiling applications
 that use the Glade library.</feed>
 
@@ -268,6 +274,16 @@ APR Util is a utilities library implemented on top of apr, providing ...</feed>
 manipulating audio data over a network. Like the X Window System, it uses the
 client/server model to separate applications from the specific drivers that
 control audio input and ...</feed>
+
+<feed uri="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml" name="Libcurl3-gnutls" summary="Multi-protocol file transfer library" icon="tango/applications-system.png" width="48" height="48" category="Library">libcurl is designed to be a solid, usable, reliable and portable
+multi-protocol file transfer library.
+
+SSL support is provided by GnuTLS.
+To enable LDAP support package libldap2-dev is required.
+
+This is the shared version of libcurl.
+
+ Homepage: ...</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/libdb4.4.xml" name="Libdb4.4" summary="Berkeley v4.4 Database Libraries" icon="tango/applications-system.png" width="48" height="48" category="Library">This is the runtime package for programs that use the v4.4 Berkeley database
 library.</feed>
@@ -332,6 +348,13 @@ It is part of the OpenSSL implementation of SSL.</feed>
 
 <feed uri="http://0install.net/2007/3rd-party/libsvn1.xml" name="Libsvn1" summary="Shared libraries used by Subversion" icon="tango/applications-system.png" width="48" height="48" category="Library">This package includes shared libraries to manipulate Subversion (svn)
 repositories and working copies.</feed>
+
+<feed uri="http://0install.net/2008/3rd-party/libtasn1-3.xml" name="Libtasn1-3" summary="Manage ASN.1 structures (runtime)" icon="tango/applications-system.png" width="48" height="48" category="Library">Manage ASN1 (Abstract Syntax Notation One) structures.
+The main features of this library are:
+  * on-line ASN1 structure management that doesn't require any C code
+    file generation.
+  * off-line ASN1 structure management with C code file generation
+ ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" width="48" height="48" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/" category="Library">a library to use for writing pagers and taskslists</feed>
 
