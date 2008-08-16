@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/3rd-party/git.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>git-core</name>
+  <summary>fast, scalable, distributed revision control system</summary>
+  <description>Git is popular version control system designed to handle very large
+projects with speed and efficiency; it is used mainly for various open
+source projects, most notably the Linux kernel.
+
+Git falls in the category of distributed source code management tools.
+Every Git working directory is a full-fledged repository with full
+revision tracking capabilities, not dependent on network access or a
+central server.
+
+This package provides the git main components with minimal dependencies.
+Additional functionality, e.g. a graphical user interface and revision
+tree visualizer, tools for interoperating with other VCS's, or a web
+interface, is provided as separate git* packages.</description>
+  <category>Development</category>
+  <package-implementation main="/usr/bin/git" package="git-core"/>
+  <group arch="Linux-i386" main="usr/bin/git">
+    <implementation id="sha1new=7ab179300091ed1d224f7767cda14c5ff7342fc2" released="2008-08-16" version="1">
+      <archive href="http://www.backports.org/debian/pool/main/g/git-core/git-core_1.5.6.3-1+lenny1~bpo40+1_i386.deb" size="3093630"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBIppeSBSn9tx+xORARAg93AKCPG8m2+gVhoL2MwIVx4kx0n9yV5gCeNO+uL+2/u8v1FBeO
+r8CDrg9VuDQ=
+
+-->
