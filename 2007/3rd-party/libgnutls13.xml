@@ -19,15 +19,14 @@ Currently gnutls implements:
 
 This package contains the runtime libraries.</description>
   <homepage>http://www.gnu.org/software/gnutls/</homepage>
-  <implementation arch="Linux-i386" id="sha1new=cd0ebf346deb951f8ed4eab53c9b486545af470b" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2007-02-24" stability="stable" version="1.4.4" version-modifier="-3">
-    <archive href="http://ftp.uk.debian.org/debian/pool/main/g/gnutls13/libgnutls13_1.4.4-3_i386.deb" size="281824" type="application/x-deb"/>
-  </implementation>
-  <implementation arch="Linux-i386" id="sha1new=3445a2b1632a2b5c0ba977c1296f94ec4dce78a8" released="2008-08-16" version="1.4.4-3">
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation arch="Linux-i386" id="sha1new=3445a2b1632a2b5c0ba977c1296f94ec4dce78a8" released="2008-08-16" version="1.4.4-3">
       <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls13/libgnutls13_1.4.4-3+etch1_i386.deb" size="281748"/>
     </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIpp0BBSn9tx+xORARAtYeAJ44JQD4AQSJSdnhSRusJ9FRy2WglgCaAkxE8yo7PHIsM6LJ
-KQmQ8N62QLw=
+iD8DBQBIpp2+BSn9tx+xORARAgjQAJ9dCfo7WuyZzJmD8BqV2opk2IpWFgCffxbDSX3qtHAyCiOW
+5he5Zagk1wk=
 
 -->
