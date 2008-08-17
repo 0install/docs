@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/3rd-party/libvorbisfile3.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libvorbisfile3</name>
+  <summary>The Vorbis General Audio Compression Codec</summary>
+  <description>Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+general-purpose compressed audio format for audio and music at fixed
+and variable bitrates from 16 to 128 kbps/channel.
+
+The Vorbisfile library provides a convenient high-level API for decoding
+and basic manipulation of all Vorbis I audio streams.</description>
+  <package-implementation package="libvorbisfile3"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=006bbd812b88aea47b607dab742842caabd18493" released="2008-08-17" version="1.1.2">
+      <archive href="http://ftp.debian.org/debian/pool/main/libv/libvorbis/libvorbisfile3_1.1.2.dfsg-1.4_i386.deb" size="18884"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=02ad5dc930f4ef4a73278480c1c488cc625fcfdf" released="2008-08-17" version="1.1.2">
+      <archive href="http://ftp.debian.org/debian/pool/main/libv/libvorbis/libvorbisfile3_1.1.2.dfsg-1.4_amd64.deb" size="17790"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBIqDduBSn9tx+xORARAjB6AKCJ0NO0RPs5nImTwhsTltXXl8s85QCfV4tsFz5I/ha/VY49
+j8XeLpoNeUA=
+
+-->
