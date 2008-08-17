@@ -319,6 +319,11 @@ party (the kerberos server) that is trusted by all the entities on the network
 <feed uri="http://0install.net/2007/3rd-party/libldap2.xml" name="Libldap2" summary="Run-time libraries for the OpenLDAP servers and clients" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.openldap.org/" category="Library">These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
 Protocol) servers and clients.</feed>
 
+<feed uri="http://0install.net/2008/3rd-party/libmng1.xml" name="Libmng1" summary="Multiple-image Network Graphics library" icon="tango/applications-system.png" width="48" height="48" category="Library">The libmng library supports decoding, displaying, encoding, and various
+other manipulations of the Multiple-image Network Graphics (MNG) format
+image files. It uses the zlib compression library, and optionally the
+JPEG library by the Independent JPEG ...</feed>
+
 <feed uri="http://0install.net/2007/3rd-party/libneon26.xml" name="Libneon26" summary="An HTTP and WebDAV client library" icon="tango/applications-system.png" width="48" height="48" category="Library">Neon is an HTTP and WebDAV client library, with a C language API.
 
 WARNING: THE NEON API IS NOT YET STABLE.
@@ -355,6 +360,18 @@ The main features of this library are:
     file generation.
   * off-line ASN1 structure management with C code file generation
  ...</feed>
+
+<feed uri="http://0install.net/2008/3rd-party/libvorbis0a.xml" name="Libvorbis0a" summary="The Vorbis General Audio Compression Codec" icon="tango/applications-system.png" width="48" height="48" category="Library">Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+general-purpose compressed audio format for audio and music at fixed
+and variable bitrates from 16 to 128 kbps/channel.
+
+The Vorbis library is the primary Ogg Vorbis library.</feed>
+
+<feed uri="http://0install.net/2008/3rd-party/libvorbisfile3.xml" name="Libvorbisfile3" summary="The Vorbis General Audio Compression Codec" icon="tango/applications-system.png" width="48" height="48" category="Library">Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+general-purpose compressed audio format for audio and music at fixed
+and variable bitrates from 16 to 128 kbps/channel.
+
+The Vorbisfile library provides a convenient high-level API ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Libwnck18.xml" name="Libwnck18" summary="Window Navigator Construction Kit" icon="tango/applications-system.png" width="48" height="48" homepage="http://ftp.gnome.org/pub/GNOME/sources/libwnck/" category="Library">a library to use for writing pagers and taskslists</feed>
 
