@@ -157,6 +157,16 @@ so that 0launch will download from the mirror if the upstream site becomes unava
 from the <a href='http://roscidus.com/0mirror/'>roscidus.com/0mirror</a> mirror site if a feed takes longer than 5 seconds
 to download.</dd>
 
+<dt>Manage applications added to the menu</dt>
+<dd>
+Provide built-in support for editing and removing launchers added to the GNOME and KDE menus. Since 0.34.
+</dd>
+
+<dt>Multi-arch support</dt>
+<dd>Many newer computers can run both 64-bit and 32-bit applications. However, each process must be made up of components (libraries)
+of the same type (a 64-bit program requires all 64-bit libraries, a 32-bit program requires all 32-bit libraries). Since 0.35.
+</dd>
+
 </dl>
 
 <h3>Features planned for 1.0</h3>
