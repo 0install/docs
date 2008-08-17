@@ -16,6 +16,11 @@
   web-server.
  </dd>
 
+ <dt><a href='injector-specs.html'>Specifications</a></dt>
+ <dd>
+  Formal specifications for the file formats used by the injector.
+ </dd>
+
  <dt><a href='python-api/html/index.html'>Python API</a></dt>
  <dd>
   The <b>0launch</b> command-line interface to Zero Install is sufficient for most
@@ -24,9 +29,9 @@
   also a useful reference for people wanting to modify the injector itself.
  </dd>
 
- <dt><a href='injector-specs.html'>Specifications</a></dt>
+ <dt><a href='using-git.html'>Using GIT</a></dt>
  <dd>
-  Formal specifications for the file formats used by the injector.
+  How to get the very latest developer versions using GIT.
  </dd>
 
  <dt><a href='injector-design.html'>Design</a></dt>
