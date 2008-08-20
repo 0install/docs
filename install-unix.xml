@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Installation : Unix</h2>
+
+<dl>
+<dt>FreeBSD</dt>
+<dd><a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</dd>
+
+<dt>Solaris</dt>
+<dd>The injector has been tested on Solaris and works fine. Use <a href='install-source.html'>the source package</a> to install.</dd>
+</dl>
+
+<p>
+If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
+Otherwise, <a href='install-source.html'>get the source package</a> instead!
+</p>
+
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
+
+</html>

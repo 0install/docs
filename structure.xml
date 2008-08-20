@@ -8,7 +8,14 @@
     <item base="matrix" label="Comparison"/>
   </item>
   
-  <item base="injector" label="Download/install"/>
+  <item base="injector" label="Download/install">
+    <item base="install-linux" label="Linux"/>
+    <item base="install-mac" label="Mac OS X"/>
+    <item base="install-source" label="Source code"/>
+    <item base="install-unix" label="Unix"/>
+    <item base="install-windows" label="Windows"/>
+  </item>
+
   <item base='injector-feeds' label='Software index'/>
 
   <item base="doc" label="Documentation">

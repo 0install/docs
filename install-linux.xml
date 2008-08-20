@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2><a name='packages'/>Linux Packages</h2>
+
+<dl>
+  <dt>RPMs</dt>
+<dd>
+<ul>
+  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
+  <pre># <b>yum install zeroinstall-injector</b></pre>
+  </li>
+  <li><b>OpenSUSE</b> <download name='zeroinstall-injector-0.33-3suse.i586.rpm'/> (OpenSUSE 10.3 RPM) (copied from OpenSUSE build service)</li>
+</ul>
+<p><b>Newer binary and source RPMs</b> are available through the <a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;p=1&amp;baseproject=ALL'>SUSE build service</a>.
+Please test these and report back (<i>DO NOT</i> install the -test packages). Note
+that the Mandriva package doesn't work on 2007.1 without a
+<a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1792'>minor fix</a>.</p>
+</dd>
+
+<dt>Debs</dt>
+<dd>
+<ul>
+  <li><b>Debian/oldstable (sarge)</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
+  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.35-1_all.deb'/> (Debian package; python-central)<br/>
+  <b>Debian/testing (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
+<pre># <b>apt-get install zeroinstall-injector</b></pre></li>
+  <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
+  <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.30-0ubuntu1_all.deb'/><br/>
+  <b>Ubuntu (feisty/gutsy/hardy)</b> Zero Install is in Feisty, Gutsy and Hardy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
+<pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
+  <p>However, the Debian/etch package is more up-to-date than this version, so you may prefer to install that.</p>
+  </li>
+  <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
+  <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
+</ul>
+</dd>
+
+<dt>Other</dt>
+<dd>
+<ul>
+  <li><b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
+      <b>Slackware 12</b> <download name="zeroinstall-injector-0.32-i686-2_slack12.0_mjk.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
+  <li><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
+  <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
+</ul>
+</dd>
+</dl>
+
+<p>
+If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
+Otherwise, <a href='install-source.html'>get the source package</a> instead!
+</p>
+
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
+
+</html>

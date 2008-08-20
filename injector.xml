@@ -4,6 +4,7 @@
 <program name='Zero Install Injector'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/zeroinstall.git'
+	 title='Zero Install Injector: Downloads'
 	 license='GNU Lesser General Public License'>
 
 <p>
@@ -16,11 +17,22 @@ so that you don't need to download anything twice, and programs can still be use
 </program>
 
 <quicklinks>
- <link href='#packages' img='tango/go-down.png'>Install it!</link>
   <link href='doc.html' img='tango/book.png'>Read more</link>
   <link href='dev.html' img='tango/applications-development.png'>Developers</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
 </quicklinks>
+
+<p>
+Select your platform from the list below. If your system isn't listed, choose <i>Source</i>.
+</p>
+
+<ul>
+ <li><a href='install-linux.html'>Linux</a> (packages for various distributions)</li>
+ <li><a href='install-mac.html'>Mac OS X</a> (Mac Ports)</li>
+ <li><a href='install-source.html'>Source</a> (install with Python distutils)</li>
+ <li><a href='install-unix.html'>Unix</a> (FreeBSD)</li>
+ <li><a href='install-windows.html'>Windows</a> (under development)</li>
+</ul>
 
 <p>See also:</p>
 <ul>
@@ -28,157 +40,5 @@ so that you don't need to download anything twice, and programs can still be use
  <li><a href='using-git.html'>Testing development versions</a></li>
 </ul>
 
-<h2><a name='packages'/>Packages</h2>
-
-<dl>
-  <dt>RPMs</dt>
-<dd>
-<ul>
-  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
-  <pre># <b>yum install zeroinstall-injector</b></pre>
-  </li>
-  <li><b>OpenSUSE</b> <download name='zeroinstall-injector-0.33-3suse.i586.rpm'/> (OpenSUSE 10.3 RPM) (copied from OpenSUSE build service)</li>
-</ul>
-<p><b>Newer binary and source RPMs</b> are available through the <a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;p=1&amp;baseproject=ALL'>SUSE build service</a>.
-Please test these and report back (<i>DO NOT</i> install the -test packages). Note
-that the Mandriva package doesn't work on 2007.1 without a
-<a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1792'>minor fix</a>.</p>
-</dd>
-
-<dt>Debs</dt>
-<dd>
-<ul>
-  <li><b>Debian/oldstable (sarge)</b> <download name='zeroinstall-injector_0.22-1_all.deb'/> (Debian package; Python 2.3)<br/>
-  <b>Debian/stable (etch)</b> <download name='zeroinstall-injector_0.35-1_all.deb'/> (Debian package; python-central)<br/>
-  <b>Debian/testing (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
-<pre># <b>apt-get install zeroinstall-injector</b></pre></li>
-  <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
-  <b>Ubuntu (edgy)</b> <download name='zeroinstall-injector_0.30-0ubuntu1_all.deb'/><br/>
-  <b>Ubuntu (feisty/gutsy/hardy)</b> Zero Install is in Feisty, Gutsy and Hardy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
-<pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-  <p>However, the Debian/etch package is more up-to-date than this version, so you may prefer to install that.</p>
-  </li>
-  <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
-  <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
-</ul>
-</dd>
-
-<dt>Other</dt>
-<dd>
-<ul>
-  <li><b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
-      <b>Slackware 12</b> <download name="zeroinstall-injector-0.32-i686-2_slack12.0_mjk.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
-  <li><b>FreeBSD</b> <a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</li>
-  <li><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
-  <li><b>Solaris</b> works (follow instructions below)</li>
-  <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
-  <li><b>Mac OS X</b> <a href='http://trac.macosforge.org/projects/macports/browser/trunk/dports/sysutils/zeroinstall-injector/'>sysutils/zeroinstall-injector</a> in <a href='http://www.macports.org/'>MacPorts</a> (Anders F Björklund):<br/>
-  <pre>$ sudo port install zeroinstall-injector</pre></li>
-  <li><b>Microsoft Windows</b> is not currently supported, as it lacks the <i>fork</i> system call. This should be easy to work around, if any Windows developers want to volunteer.</li>
-  <li>Other (follow instructions below)</li>
-</ul>
-</dd>
-</dl>
-
-<p>
-If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
-Otherwise, follow the instructions below to install using the generic tarball.
-</p>
-
-<quicklinks>
-  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
-</quicklinks>
-
-<h2>Installing from tarball</h2>
-
-<p>
-To use Zero Install, you will need:
-</p>
-
-<ul>
-<li><a href="http://python.org">Python</a> (version 2.4 or later, <i>including</i> any <b>-dev</b> package).</li>
-<li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
-<li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
-<li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.0 or later, including python-glade2</a> (only needed for the GUI).</li>
-</ul>
-
-<p>
-Download the latest .tar.bz2 archive from <a
-href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id=146899">the
-download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
-</p>
-<pre>
-$ <b>wget http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.35.tar.bz2</b>
-$ <b>wget http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.35.tar.bz2.sig</b>
-</pre>
-
-<p>
-Check that the signature is correct using GPG (this also ensures that GPG is installed correctly).
-You'll need <a href="http://0install.net/public_key.gpg">my GPG key</a>, which you can download and import
-using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</a>):
-</p>
-
-<pre>
-$ <b>gpg --recv-key --keyserver subkeys.pgp.net 59A53CC1</b>
-$ <b>gpg zeroinstall-injector-0.35.tar.bz2.sig</b>
-gpg: Signature made Sat 16 Aug 2008 14:15:57 BST using DSA key ID 59A53CC1
-gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
-gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
-gpg: WARNING: This key is not certified with a trusted signature!
-gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 9242 9807 C985 3C07 44A6  8B9A AE07 8280 59A5 3CC1
-</pre>
-
-<p>
-The warning is just to tell you that you haven't yet established that the key really
-belongs to me (ultra-paranoid users will now cross-check the finger-print using
-some other source of information).
-</p>
-
-<p>
-You should now extract the archive, and change directory inside it:
-</p>
-<pre>
-$ <b>tar xjf zeroinstall-injector-0.35.tar.bz2</b>
-$ <b>cd zeroinstall-injector-0.35</b>
-</pre>
-
-<table class='split'>
- <col id="col1"/>
- <tr><th>Installing normally</th><th>Installing without root access</th></tr>
- <tr>
-  <td>
-  <p>For a normal install, either su to root, install, and exit from root, or use sudo:</p>
-<pre>$ <b>sudo python setup.py install</b>
-</pre>
- </td><td>
-<p>
-If you don't have the root password, use this command.
-You'll need to make sure that ~/bin is in $PATH, and
-~/lib/python is in $PYTHONPATH in this case.
-</p>
-<pre>$ <b>python setup.py install --home ~ --install-data ~/.local</b>
-$ <b>export PATH=$HOME/bin:$PATH</b>
-$ <b>export PYTHONPATH=$HOME/lib/python</b>
-</pre>
-  </td>
- </tr>
-</table>
-
-<dl>
-<dt>error: invalid Python installation: unable to open /usr/lib/python2.5/config/Makefile</dt>
-<dd>You need to install the <i>python-dev</i> package, not just <i>python</i>.</dd>
-<dt>package init file 'zeroinstall/0launch-gui/__init__.py' not found (or not a regular file)</dt>
-<dd>This is just a warning and is harmless.</dd>
-</dl>
-
-<p>
-You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
-<b>0alias</b>, which lets you use short names instead of URLs.
-</p>
-
-<quicklinks>
-  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
-</quicklinks>
 
 </html>

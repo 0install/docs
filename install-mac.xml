@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Installation : Mac OS X</h2>
+
+<p>
+You can install the <a href='http://trac.macosforge.org/projects/macports/browser/trunk/dports/sysutils/zeroinstall-injector/'>sysutils/zeroinstall-injector</a> package in <a href='http://www.macports.org/'>MacPorts</a> using this command:
+</p>
+
+<pre>$ sudo port install zeroinstall-injector</pre>
+
+<p>(Contributed by Anders F Björklund)</p>
+
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
+
+</html>

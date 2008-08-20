@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Installation : Windows</h2>
+
+<p>
+Windows is not currently supported, but if you have some programming knowledge, please help out!
+</p>
+
+<p>Here's how to test it</p>
+
+<ol>
+ <li>Install <a href='http://code.google.com/p/msysgit/'>msysgit</a></li>
+ <li>Run git-gui from the Start menu, and clone <b>git://repo.or.cz/zeroinstall.git</b></li>
+ <li>Install python-2.5.2.msi from <a href='http://www.python.org'>python.org</a></li>
+ <li>Install gtk-2.12.9-win32-2.exe from link on <a href='http://www.pygtk.org/downloads.html'>pygtk.org's download page</a></li>
+ <li>Install PyGObject and PyGTK from the same page</li>
+ <li>Installed windows binary of GnuPG from <a href='http://gnupg.org'>gnupg.og</a></li>
+ <li>Go to <b>Start -> Control panel -> System -> Advanced -> Environment Variables</b>. Edit "Path". Append: <b>;c:\python25;c:\gnupg</b> (or wherever you installed Python and GnuPG)</li>
+ <li>Use <b>Start -> Run -> cmd</b>. Make sure the <b>python</b> and <b>gpg</b> commands can be found</li>
+</ol>
+
+<p>
+You can now cd to your cloned GIT repository and run 0launch (use <b>-vvc</b> for maximum logging). This will probably fail. See if you can make it work. Open issues:
+</p>
+
+<ul>
+ <li>The InputBlocker in download.py doesn't work. You can replace the whole line with just <b>yield</b> as a work-around. This breaks the download progress bars, but works apart from that.</li>
+ <li>It thinks gpg isn't in $PATH. Edit gpg.py to disable that check. Ideally, patch it to actually search the Windows %PATH% correctly.</li>
+ <li>Downloading GPG keys fails, due to some odd backslashes. You can <b>gpg --import</b> the keys manually. Ideally, figure out what's going on there.</li>
+ <li>All downloads have \r codes inserted into them. Looks like subprocess.Popen in download.py is turning a binary file into a text file. How can that happen?</li>
+</ul>
+
+<p>
+That's as far as we've got so far. Let us know how you get on. Good luck!
+</p>
+
+<quicklinks>
+  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
+
+</html>
