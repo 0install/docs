@@ -7,9 +7,6 @@
   <category>Development</category>
   <package-implementation main="/usr/bin/gnome-inform7" package="gnome-inform7"/>
   <group arch="Linux-x86_64" main="usr/bin/gnome-inform7">
-    <requires interface="http://0install.net/2008/3rd-party/libsdl-mixer1.2.xml">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
-    </requires>
     <implementation id="sha1new=45f0cc694ce7985798a43f84da0dee8d9c8d2e86" released="2008-05-26" version="5">
       <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_amd64.deb" size="8615456"/>
       <overlay mount-point="/usr/share" src="usr/share"/>
