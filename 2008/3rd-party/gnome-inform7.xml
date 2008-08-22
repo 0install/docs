@@ -3,19 +3,25 @@
 <interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>gnome-inform7</name>
   <summary>GNOME port of the Inform 7 IDE</summary>
-  <description>GNOME Inform 7 is a GNOME port of the Inform 7 integrated development environment for Inform 7. Inform 7 is a &quot;natural&quot; programming language for writing interactive fiction (also known as text adventures.)</description>
+  <description>
+GNOME Inform 7 is a GNOME port of the Inform 7 integrated development
+environment for Inform 7. Inform 7 is a &quot;natural&quot; programming language for
+writing interactive fiction (also known as text adventures.)</description>
   <category>Development</category>
   <package-implementation main="/usr/bin/gnome-inform7" package="gnome-inform7"/>
-  <group arch="Linux-x86_64" main="usr/bin/gnome-inform7">
-    <implementation id="sha1new=45f0cc694ce7985798a43f84da0dee8d9c8d2e86" released="2008-05-26" version="5">
-      <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_amd64.deb" size="8615456"/>
-      <overlay mount-point="/usr/share" src="usr/share"/>
-    </implementation>
+  <homepage>http://sourceforge.net/projects/gnome-inform7</homepage>
+  <group main="usr/bin/gnome-inform7">
+    <group arch="Linux-i486">
+      <implementation id="sha1new=6bcbf2e684b227711d7174b00d6348a0180a9a8e" released="2008-08-22" version="5">
+        <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_i386.deb" size="8626954" type="application/x-deb"/>
+      </implementation>
+    </group>
+    <group arch="Linux-x86_64">
+      <implementation id="sha1new=45f0cc694ce7985798a43f84da0dee8d9c8d2e86" released="2008-05-26" version="5">
+        <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_amd64.deb" size="8615456"/>
+      </implementation>
+    </group>
+    <overlay mount-point="/usr/share" src="usr/share"/>
   </group>
 
 </interface>
-<!-- Base64 Signature
-iD8DBQBIryMgBSn9tx+xORARAiEtAJ9XWcLfT1GaupSpoKNIps0H2fNepgCdFLQ+yGpE0cazQRcx
-5Jy8VT9/3F0=
-
--->
