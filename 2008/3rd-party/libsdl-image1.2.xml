@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/3rd-party/libsdl-image1.2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libsdl-image1.2</name>
+  <summary>image loading library for Simple DirectMedia Layer 1.2</summary>
+  <description>This is a simple library to load images of various formats as SDL surfaces.
+This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
+formats.</description>
+  <package-implementation package="libsdl-image1.2"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=d7cca0657b58705252332ba7f68980af4b21712f" released="2008-08-23" version="1.2.5-2">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/sdl-image1.2/libsdl-image1.2_1.2.5-2+etch1_i386.deb" size="29632"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ca65a1b18563d4ca730e4dbb9fdaf1e17e86422b" released="2008-08-23" version="1.2.5-2">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/sdl-image1.2/libsdl-image1.2_1.2.5-2+etch1_amd64.deb" size="30812"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iD8DBQBIr+/6BSn9tx+xORARAm9VAJ9wjuidWjfjxQzHjrD12qz+9O8vtgCfbgxtLL8Od23oR8Pi
+mRLfaHqzXDk=
+
+-->
