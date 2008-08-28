@@ -19,16 +19,20 @@ and scanner objects.</description>
 
   <icon href="http://0install.net/tests/scons-logo.png" type="image/png"/>
   <category>Development</category>
+  <needs-terminal/>
 
-  <group main="scons.py">
+  <group license="OSI Approved :: MIT/X Consortium License" main="scons.py">
     <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" stability="stable" version="0.96.92">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
+    </implementation>
+    <implementation id="sha1new=4aee85f548a8e2dc943dd385ddc0b106b64227d3" released="2008-08-28" version="1.0.0">
+      <archive href="http://switch.dl.sourceforge.net/sourceforge/scons/scons-local-1.0.0.tar.gz" size="375546" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrgUrgeCgFmlPMERAnS5AKDZKPfytF1NzKaHUGorLUqvDVJzfQCfXu3vBs04fy0Da+3E
-cDo+w4KiXm0=
+iD8DBQBItuskBSn9tx+xORARAl+4AJ94IizGPD9Wc+/8R4Rk55QQvosFVwCeKHX0R4Qrz3stln/d
+IK6YCciPdD0=
 
 -->
