@@ -95,6 +95,20 @@
 	   <div class='main'>
             <xsl:apply-templates/>
 	   </div>
+
+	 <xsl:if test='$file != "index.html"'>
+	   <form id='commentForm' method='post' action='http://roscidus.com/comments/comment.php' class='comment'>
+	     <fieldset>
+	       <textarea name='b' rows='2' cols='80'>Your comment here...</textarea><br/>
+	       <input type='hidden' name='page' value='{$file}'/>
+	       <input type='submit' value='Send feedback'/>
+	     </fieldset>
+	     <script type='text/javascript'>
+		b = document.getElementById("commentForm").b;
+		b.onfocus = function () {b.style.color="#000"; if (b.value == "Your comment here...") b.value = "";};
+	     </script>
+	   </form>
+	 </xsl:if>
 	
         <div class='footer'>
 	 <p>

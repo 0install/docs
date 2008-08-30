@@ -517,3 +517,18 @@ div.answers {
 div.news {
 	padding-top: 2em;
 }
+
+form.comment {
+	padding-top: 2em;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+form.comment textarea {
+	margin-bottom: .2em;
+	color: #888;
+}
