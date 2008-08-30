@@ -5,9 +5,9 @@
 		xmlns='http://www.w3.org/1999/xhtml'>
 
 <!-- doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" -->
-  <xsl:output method="xml" encoding="utf-8"
-	doctype-system="/usr/share/4Suite/Schemata/xhtml1-strict.dtd"
-	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"/>
+  <xsl:output method="html" encoding="utf-8"
+	doctype-system="http://www.w3.org/TR/html4/strict.dtd"
+	doctype-public="-//W3C//DTD HTML 4.01//EN"/>
 
   <xsl:param name="file">unknown</xsl:param>
 

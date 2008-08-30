@@ -7,7 +7,7 @@ htmlfiles: ${HTML}
 
 %.html: %.xml to_html.xsl structure.xml
 	xsltproc -o $@ --stringparam file "$@" to_html.xsl "$<"
-	xmllint --noout --valid $@
+	#xmllint --noout --valid $@
 
 rox-feeds.xml:
 	wget 'http://rox.sourceforge.net/desktop/rox/zero-install-feeds' -O rox-feeds.xml
