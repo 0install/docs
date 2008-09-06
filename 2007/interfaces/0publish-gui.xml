@@ -41,13 +41,13 @@ these feeds.</description>
     <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
       <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
     </requires>
-    <implementation id="sha1new=8499203c95bf3dced11c8ff6307b2ac2be2f07c6" released="2008-08-08" version="0.9">
-      <archive extract="0publish-gui-0.9" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.9.tar.bz2" size="32071"/>
+    <implementation id="sha1new=8499203c95bf3dced11c8ff6307b2ac2be2f07c6" released="2008-08-08" stability="stable" version="0.9">
+      <archive extract="0publish-gui-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.9.tar.bz2" size="32071"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBInVNzrgeCgFmlPMERAlKbAKDNCAscQMaOi7oaFNQrEu5Eg+g1ogCeKA7aFZwIGYPLUdXo
-MLttRZj1hiU=
+iD8DBQBIwmXbrgeCgFmlPMERArEfAKDHvSdiicOeHrJmc9hqxPH/EBSR8QCg06+5mmPPYs6spsNm
+AvJebBXP3nE=
 
 -->
