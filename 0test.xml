@@ -16,6 +16,16 @@ It can also test combinations of various versions of a program and its dependenc
 </program>
 
 <p>
+Create a short-cut to it in the usual way:
+</p>
+
+<pre>
+$ 0alias 0test http://0install.net/2008/interfaces/0test.xml
+</pre>
+
+<h2>Usage</h2>
+
+<p>
 Most simply, you can use it to run the tests for a program you have downloaded or checked out of version control. e.g.
 </p>
 
