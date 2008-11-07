@@ -96,6 +96,7 @@
             <xsl:apply-templates/>
 	   </div>
 
+	 <!--
 	 <xsl:if test='$file != "index.html"'>
 	   <form id='commentForm' method='post' action='http://roscidus.com/comments/comment.php' class='comment'>
 	     <fieldset>
@@ -109,6 +110,7 @@
 	     </script>
 	   </form>
 	 </xsl:if>
+	 -->
 	
         <div class='footer'>
 	 <p>

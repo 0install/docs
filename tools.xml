@@ -56,6 +56,12 @@ distribution on CDs, etc.
  <dd>
 <b>deb2zero</b> publishes a Debian package in a Zero Install feed.
  </dd>
+
+ <dt><a href='0test.html'>0test</a></dt>
+ <dd>
+<b>0test</b> runs the self-tests for a given program with various version combinations.
+ </dd>
+
 </dl>
 
 </html>

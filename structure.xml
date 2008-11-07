@@ -66,6 +66,7 @@
     <item base='0mirror' label='0mirror'/>
     <item base='0export' label='0export'/>
     <item base='deb2zero' label='deb2zero'/>
+    <item base='0test' label='0test'/>
   </item>
 
   <item base="support" label="Support"/>

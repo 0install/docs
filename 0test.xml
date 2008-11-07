@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<program name='0test'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/2008/interfaces/0test.xml'
+	 git='http://repo.or.cz/w/0test.git'
+	 license='GNU General Public License'>
+
+<p>
+A Zero Install <a href='interface-spec.html'>feed</a> can specify a command to run to test the program automatically
+using the <b>self-test</b> attribute. 0test runs this command.
+It can also test combinations of various versions of a program and its dependencies.
+</p>
+
+</program>
+
+<p>
+Most simply, you can use it to run the tests for a program you have downloaded or checked out of version control. e.g.
+</p>
+
+<pre>
+$ git clone some-program
+$ 0test some-program/program.xml
+</pre>
+
+<p>
+You can also use it to test released programs, e.g. to test the default version of <a hef='0compile.html'>0compile</a>:
+</p>
+
+<pre>
+$ 0test http://0install.net/2006/interfaces/0compile.xml
+</pre>
+
+<p>
+You can specify a particular set of versions to test:
+</p>
+
+<pre>
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.10 0.11 0.12
+</pre>
+
+<p>
+Finally, you can specify versions of libraries the program depends on too. 0test will try all combinations.
+This tests three versions of 0compile against two versions of Zero Install (a total of 2 x 3 = 6 tests):
+</p>
+
+<pre>
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.10 0.12 0.12-post \
+        http://0install.net/2007/interfaces/ZeroInstall.xml 0.31 0.36
+</pre>
+
+<p>
+A summary is printed at the end showing the result of each combination:
+</p>
+
+<dl>
+ <dt>Passed</dt><dd>the tests all passed successfully (the command returned an exit status of zero)</dd>
+ <dt>Skipped</dt><dd>this combination of versions can't be used together (or no tests are defined)</dd>
+ <dt>Failed</dt><dd>some tests failed (the self-test command returned a non-zero exit status)</dd>
+</dl>
+
+</html>
