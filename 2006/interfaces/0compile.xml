@@ -72,12 +72,15 @@ For a full tutorial, see 0compile's homepage.</description>
       <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" stability="stable" version="0.12">
       <archive extract="0compile-0.12" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
     </implementation>
+      <implementation id="sha1new=702f562f48780dc21ac980d74ad7c5437c028ba7" released="2008-11-08" self-test="tests/testcompile.py" version="0.13">
+      <archive extract="0compile-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.13.tar.bz2" size="24378"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBILpsLrgeCgFmlPMERAvXIAJ0Ue8j1TvoTpSp5EkR4KmqWpc6W/wCgtqXyMk4vB/fi1mYb
-lrEAbL4/9g4=
+iEYEABECAAYFAkkV3qMACgkQrgeCgFmlPMGhIwCgxNAFphzwOapYH9PZTJWbjTcm2fMAn3+RiqHC
+Ch05AHSqO4/SfHVq2R0H
 
 -->
