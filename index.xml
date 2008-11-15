@@ -53,6 +53,8 @@ bundles, setup.exe, etc). Here are some of our goals:
 <div class='news'>
 <h2>News</h2>
 <dl>
+<dt>Nov 2008</dt><dd><a href='0test.html'>0test</a> released; this tool can test combinations of various versions of a program and its dependencies.</dd>
+<dt>Sep 2008</dt><dd><a href='http://www.gnomefiles.org/version.php?soft_id=921'>0launch 0.36</a> released, fixing some performance problems and other bugs.</dd>
 <dt>Jul 2008</dt><dd><a href='0export.html'>0export</a> can be used to create a self-extracting "setup.sh" installer, for distribution on CD, etc.</dd>
 <dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu. See this
 <a href='tutorial-policy.html'>screenshot</a> at the top of the policy tutorial.</dd>
@@ -61,8 +63,6 @@ bundles, setup.exe, etc). Here are some of our goals:
 The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>second part of the video
 tutorial</a> is now up.</dd>
 <dt>Mar 2008</dt><dd><a href='http://www.netbsd.org/gallery/pkgsrc-interviews.html#zero-install'>Zero Install interview on netbsd.org</a>.</dd>
-<dt>Feb 2008</dt><dd><a href='injector.html'>Zero Install 0.32</a> has been released, with some large-scale refactoring of the Python API
-and improvements to the GUI. I've also added some tutorial videos to the site.</dd>
 </dl>
 </div>
 
