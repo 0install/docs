@@ -47,17 +47,20 @@ requires first uninstalling another.</description>
     <implementation id="sha1new=5b22c28dcd28917faa7cc4660efe88867d7a31db" released="2008-06-18" stability="stable" version="0.34">
       <archive extract="zeroinstall-injector-0.34" href="http://easynews.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.34.tar.bz2" size="137919"/>
     </implementation>
-    <implementation id="sha1new=53c6c6db52d2e66969d9ab4114677efe9af07b63" released="2008-08-16" stable="stable" version="0.35">
+    <implementation id="sha1new=53c6c6db52d2e66969d9ab4114677efe9af07b63" released="2008-08-16" stability="stable" version="0.35">
       <archive extract="zeroinstall-injector-0.35" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.35.tar.bz2" size="139939"/>
     </implementation>
-    <implementation id="sha1new=c6067f8581662190caafa1353c300b7e13bd0d73" released="2008-09-06" version="0.36">
+    <implementation id="sha1new=c6067f8581662190caafa1353c300b7e13bd0d73" released="2008-09-06" stability="stable" version="0.36">
       <archive extract="zeroinstall-injector-0.36" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.36.tar.bz2" size="140345"/>
+    </implementation>
+    <implementation id="sha1new=744991c3cf1b7c169f5bfdad92c1a5a8925b6ecd" released="2008-11-30" version="0.37">
+      <archive extract="zeroinstall-injector-0.37" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.37.tar.bz2" size="140574"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIwmbOrgeCgFmlPMERAh5zAKCcVjdwMP4Kl0d7vOgrJdQV/gpAcgCg2SglRxCmrti7NLZc
-iZPovBOf38w=
+iEYEABECAAYFAkkyr68ACgkQrgeCgFmlPMGCZwCgt6zvk/nXEPFyM0VWTR1oEea8tHoAn0fjPITy
+Pk2h6LuWEldpoySEwDoe
 
 -->
