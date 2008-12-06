@@ -73,11 +73,20 @@ For a full tutorial, see 0compile's homepage.</description>
       <archive extract="0compile-0.12" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
     </implementation>
     </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.37"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=e6ca330bc7f82f9e3d52434d6829a486393aaad7" released="2008-12-06" self-test="tests/testcompile.py" version="0.13">
+      <archive extract="0compile-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.13.tar.bz2" size="24283"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkkV9n4ACgkQrgeCgFmlPMGNtACeOl86tJyDEBg2Y2D9YDlrfofuXuYAn3pvO+gI
-CPa37IJp9dteXhA3MvaQ
+iEYEABECAAYFAkk6elcACgkQrgeCgFmlPMGocgCfa6YtB4xbXsry6ti8SbxlKV6lukIAoL2l5+zq
+o7IkrzOTBV381q7igS18
 
 -->
