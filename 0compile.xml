@@ -87,6 +87,11 @@ To compile the program, use the <b>build</b> command (from inside the <b>GNU-Hel
 
 <pre>
 $ <b>0compile build</b>
+TMPDIR=/tmp/0compile-T5GJBj
+BUILDDIR=/home/me/GNU-Hello/build
+DISTDIR=/home/me/GNU-Hello/gnu-hello-linux-x86_64-1.3
+SRCDIR=/home/me/.cache/0install.net/implementations/...
+cd /tmp/GNU-Hello/build
 Executing: "$SRCDIR/configure" --prefix="$DISTDIR" &amp;&amp; make install
 ...
 </pre>
@@ -206,7 +211,7 @@ If you compare the new <b>gnu-hello-linux-x86_64-1.3-1/0install</b> directory wi
 </ul>
 
 <p>
-These two features make it very easy to keep track of what you changed, which may well come in useful later! However, if
+These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if
 you are making larger changes to the code then you will want to use a proper version control system (such as
 <a href='http://git.or.cz/'>GIT</a>).
 </p>
@@ -271,7 +276,7 @@ $ <b>0publish /var/www/interfaces/MyProg.xml \
 </pre>
 
 <p>
-There are also some extra attributes you should add to the <b>implementation</b> element:
+There are also some extra attributes you can add to the <b>implementation</b> element:
 </p>
 
 <dl>
@@ -284,6 +289,13 @@ There are also some extra attributes you should add to the <b>implementation</b>
  <dt>compile:binary-main</dt>
  <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary feed that is created. If it is not given, then
  the binary created cannot be executed (e.g., it is a library).</dd>
+
+ <dt>compile:dup-src</dt>
+ <dd>Some programs insist on creating files in their source directory, which is
+typically a read-only directory when using Zero Install. In this case, set
+<b>compile:dup-src='true'</b> and 0compile will copy everything in $SRCDIR
+into 'build' before building.</dd>
+
 </dl>
 
 <p>
