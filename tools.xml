@@ -62,6 +62,11 @@ distribution on CDs, etc.
 <b>0test</b> runs the self-tests for a given program with various version combinations.
  </dd>
 
+ <dt><a href='0share.html'>0share</a></dt>
+ <dd>
+<b>0share</b> allows peer-to-peer sharing of Zero Install packages.
+ </dd>
+
 </dl>
 
 </html>
