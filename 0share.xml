@@ -89,7 +89,7 @@ You'll probably want to run 0share without write access anywhere (for security),
 create a new user for that and try running it:
 </p>
 
-<pre>$ <b>sudo adduser zeroshare</b>
+<pre>$ <b>sudo adduser --system zeroshare</b>
 $ <b>sudo su zeroshare -s /usr/bin/env -- 0launch -vc http://0install.net/2008/interfaces/0share.xml</b></pre>
 
 <p>
