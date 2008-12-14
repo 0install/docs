@@ -22,6 +22,17 @@ these feeds.</feed>
 <feed uri="http://0install.net/2007/interfaces/0release.xml" name="0release" summary="Manage new releases with Zero Install" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0release.xml" category="Development">If you have a local feed in the development version of your program, 0release
 can help you to create new releases easily.</feed>
 
+<feed uri="http://0install.net/2008/interfaces/0share.xml" name="0share" summary="Peer-to-peer sharing of Zero Install packages" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0share.html" category="Network">Zero Install is a decentralised installation system. Meta-data about each
+package is published in a "feed" file.
+
+Before downloading a package over the internet, 0launch can check to see if any
+nearby machines have a copy, and get it from them instead ...</feed>
+
+<feed uri="http://0install.net/2008/interfaces/0test.xml" name="0test" summary="Test Zero Install programs" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/0test.html" category="Development">Use 0test to run the unit tests for a Zero Install program. You can use this to
+test released versions or developer snapshots. You can give a selection of
+versions to test, and you can test against different versions of dependencies to
+create a matrix ...</feed>
+
 <feed uri="http://0install.net/2006/autopackage/Abiword.xml" name="Abiword" summary="AbiWord Word Processor" icon="feed_icons/Abiword.png" width="32" height="32" category="Office">AbiWord is a lightweight word processing application.</feed>
 
 <feed uri="http://rox.sourceforge.net/2005/interfaces/AddApp" name="AddApp" summary="Create ROX application launchers" icon="feed_icons/AddApp.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/AddApp" category="Utility">AddApp makes it easy to run Zero Install Injector applications from ROX-Filer.
@@ -91,6 +102,8 @@ cdrommodule.so, provide an easy way for Python programs to fetch information on
 audio CDs from CDDB (http://www.cddb.com/) -- a very large online database of
 track listings ...</feed>
 
+<feed uri="http://crystalspace3d.org/0install/celstart-runtime-1.9.xml" name="CELstart binary" summary="Run CrystalSpace+CEL game packages (runtime)" icon="feed_icons/celstart-runtime-1.9.png" width="64" height="64" homepage="http://crystalspace3d.org/main/CELstart" category="Library"></feed>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="Clock panel applet" icon="feed_icons/Clock.png" width="47" height="46" homepage="http://www.kerofin.demon.co.uk/rox/clock.html" category="Utility">This is a panel clock, with support for setting alarms.  It can also function in
 its own window.</feed>
 
@@ -100,6 +113,16 @@ its own window.</feed>
 package is published in a "feed" file. The Zero Install client reads these feeds
 files and downloads and runs the programs. The feed files can be created
 manually (e.g. using ...</feed>
+
+<feed uri="http://delight.sourceforge.net/feed/Delight-gcc.xml" name="Delight-gcc" summary="Core GCC-based compiler for Delight" icon="tango/applications-system.png" width="48" height="48" homepage="http://delight.sourceforge.net/" category="Development">Delight is an imperative, object-oriented programming language with a Python-
+like syntax. Internally, it is based on the D programming language.</feed>
+
+<feed uri="http://delight.sourceforge.net/feed/Delight-stdlib.xml" name="Delight-stdlib" summary="The Delight standard library" icon="tango/applications-system.png" width="48" height="48" homepage="http://delight.sourceforge.net/" category="Development">This is the standard library for the Delight programming language.</feed>
+
+<feed uri="http://delight.sourceforge.net/feed/Delight.xml" name="Delight" summary="Build tool for the Delight language" icon="tango/applications-system.png" width="48" height="48" homepage="http://delight.sourceforge.net/" category="Development">Delight is an imperative, object-oriented programming language with a Python-
+like syntax. Internally, it is based on the D programming language, and
+therefore supports classes, interfaces and templates, and compiles to efficient
+native code using GDC.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Depend" name="Depend" summary="List dependencies of ROX applications" icon="feed_icons/Depend.png" width="48" height="48" homepage="http://www.kerofin.demon.co.uk/rox/depend.html" category="Unknown">This examines a ROX application and reports dependencies the
 application has declared and also whether it thinks they are fulfilled.</feed>
@@ -497,11 +520,15 @@ workspace, a report you are writing on another, and so on.
 
 The pager applet runs inside the ...</feed>
 
+<feed uri="http://rox4debian.berlios.de/0install/Pager.xml" name="Pager" summary="Shows miniatures of all workspaces" icon="feed_icons/Pager.png" width="42" height="26" category="Unknown">Pager shows miniatures of all workspaces</feed>
+
 <feed uri="http://www.hayber.us/0install/PanelClock" name="PanelClock" summary="A simpel panel clock applet." icon="feed_icons/PanelClock.png" width="42" height="42" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
 
 <feed uri="http://0install.net/2006/interfaces/Pango-dev" name="Pango-dev" summary="Headers for compiling Pango applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the Pango header files. They are required when compiling applications
 that use the Pango library. Pango is a library for laying out and rendering of
 text, with an emphasis on internationalization.</feed>
+
+<feed uri="http://rox4debian.berlios.de/0install/Picky.xml" name="Picky" summary="An image viewer/slideshow app" icon="feed_icons/Picky.png" width="64" height="64" homepage="http://rdsarts.com/code/picky/" category="Graphics"></feed>
 
 <feed uri="http://www.hayber.us/0install/Postal" name="Postal" summary="An applet to periodically check one or more IMAP folders." icon="feed_icons/Postal.png" width="48" height="48" homepage="http://www.hayber.us/rox/Postal" category="Unknown">An applet to periodically check one or more IMAP folders</feed>
 
@@ -526,6 +553,8 @@ redo, load &amp; save ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Python-Wnck.xml" name="Python-Wnck" summary="Python-bindings for the wnck-library" icon="tango/applications-system.png" width="48" height="48" category="Library">Python-Wnck provides python-bindings for libwnck. Libwnck is a library used by
 pagers and tasklists.</feed>
+
+<feed uri="http://crystalspace3d.org/0install/python25.xml" name="Python25" summary="Python 2.5 runtime" icon="feed_icons/python25.png" width="39" height="39" homepage="http://python.org/" category="Library"></feed>
 
 <feed uri="http://rox.sourceforge.net/2007/interfaces/Reinteract.xml" name="Reinteract-ROX" summary="A system for interactive experimentation with python" icon="feed_icons/Reinteract.png" width="64" height="32" homepage="http://www.reinteract.org/" category="Development">Reinteract is a system for interactive experimentation with python. You enter
 Python code and expressions and immediately see the results. What distinguishes
@@ -596,6 +625,8 @@ emulators.</feed>
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="Sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png" width="48" height="48" category="Games">Sear is a client for MMORPGs using the Worldforge system.</feed>
 
+<feed uri="http://rox4debian.berlios.de/0install/SimpleClock.xml" name="SimpleClock" summary="A simple clock" icon="feed_icons/SimpleClock.png" width="48" height="48" category="Unknown">SimpleClock is a very simple clock for the panel.</feed>
+
 <feed uri="http://www3.telus.net/public/rodw/skype.xml" name="Skype" summary="Instant messaging / VoIP application" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.skype.com" category="Unknown">Allows one to message and place free voice calls to other Skype users, as well
 as send and recieve traditional phone calls from within Skype for a fee.</feed>
 
@@ -636,6 +667,11 @@ ROX.
 This is based on the SystemTray applet, but updated.</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Tail" name="Tail" summary="Monitor a text file" icon="feed_icons/Tail.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/tail.html" category="Utility">This program displays the contents of a text file, updating as the text file is updated.</feed>
+
+<feed uri="http://delight.sourceforge.net/feed/Tango.xml" name="Tango" summary="Developer's Library for D" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.dsource.org/projects/tango" category="Development">Tango is a cross-platform open-source software library, written in the D
+programming language for D programmers. It is structured as a cohesive and
+comprehensive library for general purpose usage, and is supported by a growing
+number of recognized D ...</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/Tasklist.xml" name="Tasklist" summary="Tasklist applet" icon="feed_icons/Tasklist.png" width="44" height="39" homepage="http://rox.sourceforge.net/phpwiki/index.php/Tasklist" category="Unknown">Shows a list of running applications</feed>
 
@@ -719,6 +755,16 @@ be your true ...</feed>
 from the direction of the sun. The window is regularly updated. You can use
 xworld in lieu of a clock.</feed>
 
+<feed uri="http://crystalspace3d.org/downloads/YoFrankie/YoFrankie-data.xml" name="YoFrankie (CrystalSpace edition) Data" summary="YoFrankie data files" icon="feed_icons/YoFrankie-data.png" width="64" height="64" homepage="http://www.yofrankie.org" category="Games"></feed>
+
+<feed uri="http://crystalspace3d.org/downloads/YoFrankie/YoFrankie-LQ.xml" name="YoFrankie LQ (CrystalSpace edition)" summary="Open game, low quality" icon="feed_icons/YoFrankie-LQ.png" width="64" height="64" homepage="http://www.yofrankie.org" category="Games">The YoFrankie level realized using CrystalSpace. Low quality - shadows and
+reflections are disabled.</feed>
+
+<feed uri="http://crystalspace3d.org/downloads/YoFrankie/YoFrankie-VLQ.xml" name="YoFrankie VLQ (CrystalSpace edition)" summary="Open game, very low quality" icon="feed_icons/YoFrankie-VLQ.png" width="64" height="64" homepage="http://www.yofrankie.org" category="Games">The YoFrankie level realized using CrystalSpace. Very low quality - shadows and reflections are
+disabled, lighting quality is reduced.</feed>
+
+<feed uri="http://crystalspace3d.org/downloads/YoFrankie/YoFrankie.xml" name="YoFrankie (CrystalSpace edition)" summary="Open game" icon="feed_icons/YoFrankie.png" width="64" height="64" homepage="http://www.yofrankie.org" category="Games"></feed>
+
 <feed uri="http://rox.sourceforge.net/2006/interfaces/Zero2Bundle.xml" name="Zero2Bundle" summary="Create ROX application bundles" icon="feed_icons/Zero2Bundle.png" width="48" height="48" homepage="http://rox.sourceforge.net/desktop/Zero2Bundle" category="Utility">Zero2Bundle makes it easy to create self-contained ROX application directories
 from Zero Install Injector feeds.
 
@@ -730,6 +776,11 @@ identify them. To make applications easier to run you'll want to create a short-
 cut in your desktop environment.
 
 This program creates a freedesktop.org ".desktop" file, ...</feed>
+
+<feed uri="http://0install.net/2007/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Library">The Zero Install GUI displays a window showing which versions of various
+components will be used when running a program, and allows you to alter various
+policy settings to affect the selection process. You can use this to mark
+particular versions of ...</feed>
 
 <feed uri="http://0install.net/2008/interfaces/ZeroInstall-GUI.xml" name="ZeroInstall-GUI" summary="Graphical interface for the Zero Install injector" icon="tango/applications-system.png" width="48" height="48" homepage="http://0install.net/injector.html" category="Library">The Zero Install GUI displays a window showing which versions of various
 components will be used when running a program, and allows you to alter various
