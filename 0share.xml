@@ -14,10 +14,14 @@ it directly from the first one.
 </p>
 
 <p>
-This program is new and experimental. It is currently only useful as a proof-of-concept.
+This program is new and experimental.
 </p>
 
 </program>
+
+<p class='diagram'>
+  <img src='screens/p2p.png' width='722' height='329' alt='Screenshot'/>
+</p>
 
 <h2>Testing</h2>
 
