@@ -224,8 +224,7 @@ bug reports, etc.</dd>
 <dd>The tricky bit about P2P is normally the free-text searching, but we already know the secure hash
 of the manifest we want, and when we get it we have the hash of every file we need, so this should be easy!
 The idea is that if someone on your local network has already downloaded a program, you can get it from them
-automatically.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1262/focus=1266'>Discussion</a> ]
+automatically. See <a href='0share.html'>0share</a> for current experimental version.
 </dd>
 
 <dt>Binary patches</dt>
