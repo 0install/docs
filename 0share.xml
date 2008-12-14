@@ -100,10 +100,11 @@ You can then add a line to your crontab file to make it start on boot:
 @reboot zeroshare 0launch -vc http://0install.net/2008/interfaces/0share.xml 2>&amp;1 >/dev/null
 </pre>
 
-<h2>Future plans</h2>
+<h2>Using with 0launch</h2>
 
 <p>
-Get 0launch to use this system automatically, rather than making you run "0share -f" manually.
+As this is experimental, you'll need to use the <a href='http://repo.or.cz/w/zeroinstall.git?a=shortlog;h=refs/heads/peer2peer'>peer2peer branch</a> of Zero Install.
+In that branch, P2P support is turned on when using the GUI for downloads.
 </p>
 
 </html>

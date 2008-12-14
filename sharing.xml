@@ -10,6 +10,12 @@
    allows software to be shared automatically and safely between mutually-untrusting users.
  </p>
 
+ <p>
+   Note: this page is about sharing between users on a single computer. If you want to do peer-to-peer
+   sharing on a LAN, see <a href='0share.html'>0share</a>. If you want to share between virtual machines
+   running on a single host, see <a href='virtual.html'>virtual machines</a>.
+ </p>
+
  <toc level='h3'/>
 
  <h3>How it works</h3>
@@ -105,15 +111,15 @@ $ <b>sha1sum /bin/ls</b>
   not if it's called <b>rm</b>. As long as users don't go around running random binaries they find in the cache, they're OK.
  </p>
 
- <h3>Setting up sharing for version 0.30 or later</h3>
+ <h3>Setting up sharing</h3>
 
  <p>
-  These instructions are for version 0.30. See below if you have an older version (<b>0launch --version</b> will display the current version).
+  These instructions require Zero Install version 0.30 or later.
  </p>
 
  <p>
-  The actual code for doing sharing this way is currently <b>EXPERIMENTAL</b> and not enabled by default. This section shows how the system administrator (someone with
-  root access) can enable it. <b>DO NOT</b> do this in security critical environments yet - we're still working on tightening the security on this! Feedback welcome.
+  The actual code for doing sharing this way is currently experimental and not enabled by default. This section shows how the system administrator (someone with
+  root access) can enable it. It is probably best not to do this in security critical environments yet as we're still working on tightening the security. Feedback welcome.
  </p>
 
  <p>
@@ -164,66 +170,6 @@ ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
  <p>
   When 0launch wants to install a package, it will invoke <b>0store-secure-add-helper</b>. This
   script uses <b>sudo</b> to run <b>0store-secure-add</b> as the <b>zeroinst</b> user, with
-  a clean environment. No password is required for this.
- </p>
-
- <h3>Setting up sharing for older versions (before 0.30)</h3>
-
- <p>
-  The actual code for doing sharing this way is currently <b>EXPERIMENTAL</b> and not enabled by default. This section shows how the system administrator (someone with
-  root access) can enable it. <b>DO NOT</b> do this in security critical environments yet - we're still working on tightening the security on this! Feedback welcome.
- </p>
-
- <ol>
-  <li><a href='injector.html'>Install 0launch version 0.26</a> or later.</li>
-  <li>Create a new system user called 'zeroinst' (this command is for Debian; other systems may need other commands):
-<pre>
-# adduser --system zeroinst
-</pre>
-</li>
-  <li>Create the shared directory, owned by this new user:
-<pre>
-# mkdir /var/cache/0install.net
-# chown zeroinst /var/cache/0install.net
-</pre>
-</li>
-
-  <li>Create <b>/usr/local/bin/0store-helper</b> with:
-  <pre>
-#!/bin/sh
-cd "$2" || exit 1
-chmod -R a+rX .
-exec sudo -u zeroinst /usr/local/bin/0store-helper-priv "$1"
-</pre>
-</li>
-
-  <li>Create <b>/usr/local/bin/0store-helper-priv</b> with:
-<pre>
-#!/bin/sh
-exec 0store add "$1" .
-</pre>
-  </li>
-
-  <li>Make your new scripts executable:
-<pre>
-# chmod a+x /usr/local/bin/0store-helper
-# chmod a+x /usr/local/bin/0store-helper-priv
-</pre></li>
-
-  <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
-<pre>
-Cmnd_Alias      ZEROINSTALL = /usr/local/bin/0store-helper-priv
-Defaults>zeroinst env_reset
-ALL     ALL=(zeroinst) NOPASSWD: ZEROINSTALL
-</pre>
- <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
- later entries.</p>
-</li>
- </ol>
-
- <p>
-  When 0launch wants to install a package, it will invoke <b>0store-helper</b>. This
-  script uses <b>sudo</b> to run <b>0store-helper-priv</b> as the <b>zeroinst</b> user, with
   a clean environment. No password is required for this.
  </p>
 
