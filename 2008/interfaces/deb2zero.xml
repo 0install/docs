@@ -40,11 +40,19 @@ in an existing Debian package and uses it to generate the feed.</description>
       <archive extract="deb2zero-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.4.tar.bz2" size="16988"/>
     </implementation>
     </group>
+    <group>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+      <environment insert="0publish" mode="prepend" name="PUBLISH_COMMAND"/>
+    </requires>
+      <implementation id="sha1new=068c5d5df9313712ee0cf817217be1d774e88492" released="2008-12-19" version="0.5">
+      <archive extract="deb2zero-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.5.tar.bz2" size="17036"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIhdtGrgeCgFmlPMERAhIqAJ9cH4qunMU0ZWqs8/OwNrKFzrVpewCg1SMRDUfSQluK/aeT
-ERG+TcSgGkE=
+iEYEABECAAYFAklL4qgACgkQrgeCgFmlPMGRRACgpZpyun9DkUoMjkL4jbZricAo6Z8AoK4IOedY
+ZQJXxsQhu9ObNtDRFgjQ
 
 -->
