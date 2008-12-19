@@ -30,29 +30,24 @@ in an existing Debian package and uses it to generate the feed.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="prepend" name="PUBLISH_COMMAND"/>
-    </requires>
+        <environment insert="0publish" mode="prepend" name="PUBLISH_COMMAND"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
         <version not-before="0.33"/>
         <environment insert="" mode="prepend" name="PYTHONPATH"/>
       </requires>
       <implementation id="sha1new=dbefcd8cefa66c07d39cb50880bfda0ff8e0d8a9" released="2008-05-26" version="0.4">
-      <archive extract="deb2zero-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.4.tar.bz2" size="16988"/>
-    </implementation>
-    </group>
-    <group>
-      <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="prepend" name="PUBLISH_COMMAND"/>
-    </requires>
+        <archive extract="deb2zero-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.4.tar.bz2" size="16988"/>
+      </implementation>
       <implementation id="sha1new=068c5d5df9313712ee0cf817217be1d774e88492" released="2008-12-19" version="0.5">
-      <archive extract="deb2zero-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.5.tar.bz2" size="17036"/>
-    </implementation>
+        <archive extract="deb2zero-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.5.tar.bz2" size="17036"/>
+      </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklL4qgACgkQrgeCgFmlPMGRRACgpZpyun9DkUoMjkL4jbZricAo6Z8AoK4IOedY
-ZQJXxsQhu9ObNtDRFgjQ
+iEYEABECAAYFAklL7NsACgkQrgeCgFmlPMHI+wCfdSem431Yvy5JZPwWT1Ff1Zyeg64AnRbCALxZ
+UwvsauvSGA8iOgYADhFh
 
 -->
