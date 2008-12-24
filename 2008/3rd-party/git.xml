@@ -23,13 +23,13 @@ interface, is provided as separate git* packages.</description>
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <implementation id="sha1new=7ab179300091ed1d224f7767cda14c5ff7342fc2" released="2008-08-16" version="1.5.6.3">
-      <archive href="http://www.backports.org/debian/pool/main/g/git-core/git-core_1.5.6.3-1+lenny1~bpo40+1_i386.deb" size="3093630"/>
+      <archive href="http://ovh.dl.sourceforge.net/sourceforge/zero-install/git-core_1.5.6.3-1+lenny1bpo40+1_i386.deb" size="3093630"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIpqCEBSn9tx+xORARAq+yAJkB4SerWDBFSVFvM4OuoxiF123VlgCeJ+uctyVNRXt4GMjd
-GhWOiZGUlWI=
+iEYEABECAAYFAklSHNQACgkQBSn9tx+xORBbLACfdMpJtKKSK6rQGCwaQe4P0kHH0HcAn1p1158k
+xEItnceq4OInV0IsyoO1
 
 -->
