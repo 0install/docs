@@ -79,7 +79,9 @@
 	       <tr><th>Version</th><th>Released</th><th>Stability</th><th>Platform</th><th>Download</th></tr>
 	       <xsl:for-each select='//zi:implementation'>
 	        <tr>
-	         <td><xsl:value-of select='(ancestor-or-self::*[@version])[last()]/@version'/></td>
+		 <td><xsl:value-of select='(ancestor-or-self::*[@version])[last()]/@version'/>
+		   <xsl:if test='(ancestor-or-self::*[@version])[last()]/@version-modifier'><xsl:value-of select='(ancestor-or-self::*[@version])[last()]/@version-modifier'/></xsl:if>
+		 </td>
 	         <td><xsl:value-of select='(ancestor-or-self::*[@released])[last()]/@released'/></td>
 	         <td><xsl:value-of select='(ancestor-or-self::*[@stability])[last()]/@stability'/></td>
 	         <td>
