@@ -12,7 +12,7 @@
   </li>
   <li><b>OpenSUSE</b> <download name='zeroinstall-injector-0.33-3suse.i586.rpm'/> (OpenSUSE 10.3 RPM) (copied from OpenSUSE build service)</li>
 </ul>
-<p><b>Newer binary and source RPMs</b> are available through the <a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;p=1&amp;baseproject=ALL'>SUSE build service</a>.
+<p><b>Newer binary and source RPMs</b> are available through the <a href='http://download.opensuse.org/repositories/home:/talex5/'>SUSE build service</a>.
 Please test these and report back (<i>DO NOT</i> install the -test packages). Note
 that the Mandriva package doesn't work on 2007.1 without a
 <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1792'>minor fix</a>.</p>
