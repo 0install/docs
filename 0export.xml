@@ -41,6 +41,8 @@ therefore still <a href='sharing.html'>shared between users</a>, and
 will get updates over the web where possible.
 </p>
 
+<toc level='h2'/>
+
 <h2>Using a 0export package</h2>
 
 <p>Open the file with your file manager, or run "<b>sh setup.sh</b>" in a terminal:</p>
@@ -60,8 +62,6 @@ will get updates over the web where possible.
 <p style='text-align: center'>
   <img width="399" height="162" src="screens/0export-actions.png" alt='Optional actions'/>
 </p>
-
-<toc level='h2'/>
 
 <h2>Current status</h2>
 
