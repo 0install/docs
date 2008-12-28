@@ -36,14 +36,14 @@ can help you to create new releases easily.</description>
     <implementation id="sha1new=c8dd31aea0b1c69c1b3ffd2270bec6ff725563a4" released="2008-05-04" self-test="tests/testall.py" stability="stable" version="0.7">
       <archive extract="0release-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.7.tar.bz2" size="30225"/>
     </implementation>
-    <implementation id="sha1new=511a56893691d75f66acef9d56abea23962e9eab" released="2008-06-14" self-test="tests/testall.py" version="0.8">
+    <implementation id="sha1new=511a56893691d75f66acef9d56abea23962e9eab" released="2008-06-14" self-test="tests/testall.py" stability="stable" version="0.8">
       <archive extract="0release-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.8.tar.bz2" size="30350"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIU6LQrgeCgFmlPMERAoEmAJ9wVoynBoVTbZBG8Tzot5qhZjY4AgCdHHhmUBoA+ikAJXRn
-5XLoWLrptRc=
+iEYEABECAAYFAklX8jMACgkQrgeCgFmlPMGiMQCgqFWnTGxZQcs9OrDcVO4Q2p+Qf0QAoNvvI8Wz
+D5GQ04OJwbJgGcAFxhKT
 
 -->

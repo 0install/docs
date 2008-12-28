@@ -18,13 +18,13 @@ It also edits any pkg-config .pc files to use a relative path for the prefix.</d
     <implementation id="sha1new=7473c004528b51af2ea97671b07067825734a495" released="2008-03-02" version="0.2">
       <archive extract="make-headers-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.2.tar.bz2" size="7758"/>
     </implementation>
-    <implementation id="sha1new=949e623662a2cdb038d989f585b059ddf71d1cf1" released="2008-05-11" version="0.3">
+    <implementation id="sha1new=949e623662a2cdb038d989f585b059ddf71d1cf1" released="2008-05-11" stability="stable" version="0.3">
       <archive extract="make-headers-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.3.tar.bz2" size="8496"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBILpvMrgeCgFmlPMERAg28AJwIwgjXAT53/q6wciv+Ng6NkLUOTQCgz0r4NLOSpowtzdUj
-a3OXF625xXU=
+iEYEABECAAYFAklX8jgACgkQrgeCgFmlPMFEPgCfSA/QNlyQ8rIiGct2m6RI8EB/Me0AoM7hWgFb
+P9u55Nk4G43yCunDQE1b
 
 -->

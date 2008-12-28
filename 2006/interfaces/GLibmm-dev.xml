@@ -16,7 +16,7 @@ applications that use the GLib library.</description>
     </implementation>
   </group>
   <group arch="*-src" compile:command="&quot;$BUILD_COMMAND&quot;">
-    <implementation compile:binary-lib-mappings="glibmm-2.4:1 glibmm_generate_extra_defs-2.4:1" id="sha1new=7c2427080889f5500c674efe8fcff0d7e40c2fd2" released="2008-05-10" version="2.16.2">
+    <implementation compile:binary-lib-mappings="glibmm-2.4:1 glibmm_generate_extra_defs-2.4:1" id="sha1new=7c2427080889f5500c674efe8fcff0d7e40c2fd2" released="2008-05-10" stability="stable" version="2.16.2">
       <archive extract="glibmm-2.16.2" href="http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.16/glibmm-2.16.2.tar.bz2" size="12146183" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -25,7 +25,7 @@ applications that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBILpsWrgeCgFmlPMERApKfAJ0cFRhJebRCJL2I3XFkINBQqvJBiwCdEzQMS4hbFprjOADQ
-E/HefJq/468=
+iEYEABECAAYFAklX8hcACgkQrgeCgFmlPMFTcwCgx2hpPSSxYN5zjUt3oVx2dqFIYisAoLbP1Z5n
+oG/LjHczck+3ojOLzG/q
 
 -->

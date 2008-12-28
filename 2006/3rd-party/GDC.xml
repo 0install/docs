@@ -38,14 +38,14 @@ and Java.</description>
     </implementation>
   </group>
     <group arch="*-x86_64">
-    <implementation arch="*-x86_64" id="sha1new=b95ac27dabb9050145af0d8e4f01871c41732cd1" released="2008-07-13" version="0.24">
+    <implementation arch="*-x86_64" id="sha1new=b95ac27dabb9050145af0d8e4f01871c41732cd1" released="2008-07-13" stability="stable" version="0.24">
       <archive extract="gdc" href="http://kent.dl.sourceforge.net/sourceforge/dgcc/gdc-0.24-x86_64-linux-gnu-gcc-4.1.2.tar.bz2" size="3765103" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIeen7BSn9tx+xORARAqVfAJ4tDftjc5MJ3Hz+crd39V+2In61qACfZj1V1Gqfwnr2ufrt
-UfO9PvNfg0A=
+iEYEABECAAYFAklX8dQACgkQBSn9tx+xORCf1QCfXq/YizmG7Z5k26JHZudbCi2MPiIAoIUBl04R
+hzyMO6daKCoh0ZCrzECt
 
 -->

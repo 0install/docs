@@ -63,7 +63,7 @@ that use the GLib library.</description>
     <implementation id="sha1new=8527e97c35221d327b49cddc0f5d701f572de146" released="2008-03-01" version="2.10.3">
       <archive extract="glib-2.10.3" href="ftp://ftp.gtk.org/pub/glib/2.10/glib-2.10.3.tar.bz2" size="2774011" type="application/x-bzip-compressed-tar"/>
     </implementation>
-    <implementation id="sha1new=8ed19b673c5ed53f5805ee7e8207d0413bfd69ef" released="2008-05-10" version="2.16.3">
+    <implementation id="sha1new=8ed19b673c5ed53f5805ee7e8207d0413bfd69ef" released="2008-05-10" stability="stable" version="2.16.3">
       <archive extract="glib-2.16.3" href="http://ftp.gnome.org/pub/gnome/sources/glib/2.16/glib-2.16.3.tar.bz2" size="4540919" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -73,7 +73,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJrkRrgeCgFmlPMERAqBcAJ4kEuIh+rZ28/SzA5ZvNAsVfUig6QCglcKiAcWKQj/wy6zI
-VGjCv11GdEU=
+iEYEABECAAYFAklX8goACgkQrgeCgFmlPMGNQgCgxNB4tfIzH/easgGtPhcsNXHV4V8AnjHiYL2G
+NHvnP80yKgMHWemHQeMJ
 
 -->

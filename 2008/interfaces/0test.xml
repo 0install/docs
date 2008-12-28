@@ -19,14 +19,14 @@ create a matrix of test results.</description>
   <needs-terminal/>
 
   <group license="OSI Approved :: GNU General Public License v2" main="multi-tester">
-    <implementation id="sha1new=e74e52960c6c6e6ee602807a92636bc06dfb0ea0" main="multi-tester" released="2008-11-06" version="0.1">
+    <implementation id="sha1new=e74e52960c6c6e6ee602807a92636bc06dfb0ea0" main="multi-tester" released="2008-11-06" stability="stable" version="0.1">
       <archive extract="0test-0.1" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0test-0.1.tar.bz2" size="8971"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkkTUtIACgkQrgeCgFmlPMGhjQCgnFxYUmL+Sd+2H8TKJzuFoIYnRtUAnA/BUpRA
-HVnyJHrVMNJCij1pcTqk
+iEYEABECAAYFAklX8VwACgkQrgeCgFmlPMGbLQCgl06jta5czDosQ6vTXRbZ9EiPaiMAoNgGTuFa
+TjAhn3gPUDoKjUs7FD+d
 
 -->

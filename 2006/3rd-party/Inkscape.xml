@@ -43,7 +43,7 @@ user and developer community by using open, community-oriented development.</des
     </implementation>
   </group>
   <group arch="*-src" compile:binary-main="bin/inkscape" compile:command="&quot;$SRCDIR/configure&quot; --enable-binreloc --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install &amp;&amp; strip &quot;$DISTDIR&quot;/bin/*" license="OSI Approved :: GNU General Public License v2">
-    <implementation id="sha1new=39d1f3561bb667fe1ea0346f81f74f104f82011c" released="2008-05-10" version="0.46">
+    <implementation id="sha1new=39d1f3561bb667fe1ea0346f81f74f104f82011c" released="2008-05-10" stability="stable" version="0.46">
       <archive extract="inkscape-0.46" href="http://dfn.dl.sourceforge.net/sourceforge/inkscape/inkscape-0.46.tar.gz" size="18615326" type="application/x-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2006/interfaces/GTKmm-dev.xml">
@@ -65,7 +65,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJf0QBSn9tx+xORARAv9LAJ9d3uncJBCrwhSCtrK1R5dKu97PzQCeI9r1CIE4q8ZPfkBG
-lR85bkc4byk=
+iEYEABECAAYFAklX8cIACgkQBSn9tx+xORCuAwCeK0nyUDJZqMSwL+6ddAgDHnlZwooAn0ltxcq2
+UT/2+4sd8r6GRsVZCIeq
 
 -->

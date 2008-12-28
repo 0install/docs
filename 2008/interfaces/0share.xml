@@ -17,14 +17,14 @@ software hasn't been modified.</description>
   <needs-terminal/>
 
   <group doc-dir="doc" main="0share">
-    <implementation id="sha1new=dcf87e827a2bdba2cbf286fe9a70e70eb7e0cd60" main="0share" released="2008-12-13" version="0.1">
+    <implementation id="sha1new=dcf87e827a2bdba2cbf286fe9a70e70eb7e0cd60" main="0share" released="2008-12-13" stability="stable" version="0.1">
       <archive extract="0share-0.1" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0share-0.1.tar.bz2" size="14438"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklENbEACgkQrgeCgFmlPMHU3gCdH1JiCI+IFzm72jtlbAiLft9W94sAnihsg61D
-kxYQHfAXIS25FJ6NIhY6
+iEYEABECAAYFAklX8ksACgkQrgeCgFmlPMHvGACgyCxs5wWU1tVDjBec6MLEPcc1GHEAniqic1tT
+40Ffj468VjVRq2l2bt2v
 
 -->

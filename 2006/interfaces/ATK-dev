@@ -20,7 +20,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 
   <group arch="*-src" compile:binary-lib-mappings="atk-1.0:0" compile:command="&quot;$BUILD_COMMAND&quot; --keep=bin">
-    <implementation id="sha1new=315b5a6ea0c1af29ffa6df4ef5836110770901e6" released="2008-05-10" version="1.22.0">
+    <implementation id="sha1new=315b5a6ea0c1af29ffa6df4ef5836110770901e6" released="2008-05-10" stability="stable" version="1.22.0">
       <archive extract="atk-1.22.0" href="http://ftp.gnome.org/pub/gnome/sources/atk/1.22/atk-1.22.0.tar.bz2" size="709221" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -30,7 +30,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJbKzrgeCgFmlPMERApN7AKCpnEL1/qU++sXaUgyghQ/UsOUQeQCfZe8uTh3BTESntEcK
-HXB0cMM1Kbo=
+iEYEABECAAYFAklX8eQACgkQrgeCgFmlPMGgQwCfYCSTYAXQo1qHolbKoSze89GFfa4An1+Mp92T
+4F4L1XZ3suGTevwbmaf1
 
 -->

@@ -51,13 +51,13 @@ that use the GTK+ library.</description>
       <version not-before="1.17.3"/>
       <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
     </requires>
-    <implementation id="sha1new=5a4dae99f4d57edff6bb9347e0cf72e817f48182" released="2008-05-10" version="2.12.9">
+    <implementation id="sha1new=5a4dae99f4d57edff6bb9347e0cf72e817f48182" released="2008-05-10" stability="stable" version="2.12.9">
       <archive extract="gtk+-2.12.9" href="http://ftp.gnome.org/pub/gnome/sources/gtk+/2.12/gtk+-2.12.9.tar.bz2" size="16027448" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIJeTergeCgFmlPMERAj4AAJ9qoCebAZZO21VosqhqOPca5sGqvQCfZ3AypJGplKqRHtjN
-wgOBqb5twBI=
+iEYEABECAAYFAklX8h0ACgkQrgeCgFmlPMH+AACffpb+RaiXwOPPxZVdjCktN0GjThsAn0k0i1DM
+kNGz8rV2nBH/nbMQ27cr
 
 -->
