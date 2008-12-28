@@ -25,6 +25,8 @@ archival purposes, in case the original web-sites supplying required
 libraries become unavailable.
 </p>
 
+</program>
+
 <p>
 0export takes the URI of a program and creates a "setup.sh" file; a
 self-extracting archive containing everything needed to run the program.
@@ -39,10 +41,24 @@ therefore still <a href='sharing.html'>shared between users</a>, and
 will get updates over the web where possible.
 </p>
 
-</program>
+<h2>Using a 0export package</h2>
+
+<p>Open the file with your file manager, or run "<b>sh setup.sh</b>" in a terminal:</p>
 
 <p style='text-align: center'>
-  <img width="385" height="191" src="screens/0export-unpack.png" alt='A self-extracting 0export package'/>
+  <img width="536" height="323" src="screens/0export-run.png" alt='Running a 0export setup file'/>
+</p>
+
+<p>The archive will unpack and run:</p>
+
+<p style='text-align: center'>
+  <img width="399" height="162" src="screens/0export-unpack.png" alt='The self-extracting package unpacks itself'/>
+</p>
+
+<p>You can add the program to your menus or run it directly.</p>
+
+<p style='text-align: center'>
+  <img width="399" height="162" src="screens/0export-actions.png" alt='Optional actions'/>
 </p>
 
 <toc level='h2'/>
@@ -50,10 +66,8 @@ will get updates over the web where possible.
 <h2>Current status</h2>
 
 <p>
-This program is not yet complete. At the end of the installation process, the installer
-should add a launcher for the program to the user's desktop. Currently, it just runs the
-program directly (meaning that if the user wants to run the program again, they have to
-run the setup.sh script again!).
+This program is not yet complete. In particular, adding the program to the user's menus only works if the user
+already has Zero Install itself installed.
 </p>
 
 <h2>Installing 0export</h2>
@@ -182,11 +196,6 @@ why install scripts are a bad idea.
 
 <dd>
 Not yet, but it's easy to add.
-</dd>
-
-<dt>What about a GUI?</dt>
-<dd>
-Hopefully in the future.
 </dd>
 
 </dl>
