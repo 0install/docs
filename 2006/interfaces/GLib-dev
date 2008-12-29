@@ -11,10 +11,7 @@ that use the GLib library.</description>
 
   <group compile:lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0 gthread-2.0:0">
     <group arch="Linux-i386">
-      <implementation id="sha1=71938d42fc6217ad666d87f9715a3bc782dcb5cc" released="2006-04-02" stability="stable" version="2.4.8">
-        <archive extract="glib-headers-2.4.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.tar.bz2" size="67471"/>
-      </implementation>
-      <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8.1">
+      <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8">
         <archive extract="glib-headers-2.4.8.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
       </implementation>
       <implementation id="sha1new=e9095593f2aaef2132879d2d34fc2b00cc06953a" released="2008-03-01" version="2.6.6">
@@ -73,7 +70,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8goACgkQrgeCgFmlPMGNQgCgxNB4tfIzH/easgGtPhcsNXHV4V8AnjHiYL2G
-NHvnP80yKgMHWemHQeMJ
+iEYEABECAAYFAklY9s0ACgkQrgeCgFmlPMGv3ACgqv3mQnjq/so7AOZmSDpsbDB8JdwAoNDbw4W3
+KptY0PyMBgCdLU2vE3Ad
 
 -->
