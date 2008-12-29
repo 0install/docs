@@ -78,17 +78,13 @@ demand (depending on the distribution's installer).
 
 <p>Indeed, the question is backwards. The menu doesn't show installed
 software; rather, the 'installed' software is what the user has put on
-the menu.
+the menu (e.g. using the <b>0desktop</b> command).
 </p>
 
-<p><i>However</i>, there's nothing to stop you implementing a more
-'traditional' installation system on top of Zero Install. 
-<a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a>
-adds a launcher to the GNOME or KDE Applications menu, by creating a
-freedesktop.org ".desktop" file for it. The new menu entry is independent of
-the program data though; removing the program from the cache doesn't remove the
-menu item (clicking on it would simply offer to download the program
-again).</p>
+<p>
+The new menu entry is independent of the program data though; removing the
+program from the cache doesn't remove the menu item (clicking on it would
+simply offer to download the program again).</p>
 
 </dd>
 <dt>Isn't it wasteful for every program to bundle all its dependencies?</dt>
@@ -101,6 +97,9 @@ by all programs using that library (except for programs which are incompatible
 with the new library version, which will continue using the older version,
 without preventing other programs from upgrading).
 </p>
+
+<p>However, see <a href='0export.html'>0export</a> for a tool to create such all-in-one
+bundles for distribution on CD.</p>
 
 </dd>
 <dt>Why is it called the "injector"?</dt>
@@ -247,7 +246,8 @@ would benefit everyone, not just Debian users.
 Of course, the other reason why packages may be different to the upstream versions is
 because upstream is slow to respond, uninterested, or known to be careless about quality.
 In this case, a Zero Install packager can provide a fixed version from their own site
-and get other people to link to that. The advantage here is that, again, everyone benefits.
+and get other people to link to that. The advantage here is that, again, everyone benefits,
+not just users of one distribution.
 </p>
 
 </dd>
