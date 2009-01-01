@@ -52,6 +52,7 @@ written by the FSF to demonstrate use of the popular GNU build tools:
 
 <pre>
 $ <b>0compile setup http://0install.net/tests/GNU-Hello.xml GNU-Hello</b>
+Created directory GNU-Hello
 </pre>
 
 <p>
@@ -102,35 +103,34 @@ header files (<b>libc-dev</b>), so you should install these yourself. They come 
 </p>
 
 <p>
-<b>0compile</b> starts by creating two sub-directories: <b>gnu-hello-linux-x86_64-1.3</b> for the
-final result (the exact name will depend on your system and on the chosen
-version), and <b>build</b> for any temporary files. It then executes a command
-specified in the source feed, which actually builds the software (using
-the
-standard GNU build system in this case).
+<b>0compile</b> starts by creating two sub-directories: <b>gnu-hello-linux-x86_64</b> for the
+final result (the exact name will depend on your system) and <b>build</b> for
+any temporary files. It then executes a command specified in the source feed,
+which actually builds the software (using the standard GNU build system in this
+case).
 </p>
 
 <p>
 Note that the command installs to the
-<b>gnu-hello-linux-x86_64-1.3</b> directory rather than to the usual <b>/usr/local</b>. In fact, if you have
+<b>gnu-hello-linux-x86_64</b> directory rather than to the usual <b>/usr/local</b>. In fact, if you have
 <a href='http://plash.beasts.org/'>plash</a> installed, the command is run in a
 sandbox with very limited write permissions. [ update: Plash support is temporarily disabled by default while a few issues are worked out; set $USE_PLASH_0COMPILE to turn it on again ]
 </p>
 
 <p>
-Assuming the build is successful, <b>gnu-hello-linux-x86_64-1.3</b> will contain the final result,
-including a handy <b>gnu-hello-linux-x86_64-1.3/0install/GNU-Hello.xml</b> local feed file, which you can use to
+Assuming the build is successful, <b>gnu-hello-linux-x86_64</b> will contain the final result,
+including a handy <b>gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b> local feed file, which you can use to
 run the new binary:
 </p>
 
 <pre>
-$ <b>0launch gnu-hello-linux-x86_64-1.3/0install/GNU-Hello.xml</b>
+$ <b>0launch gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
 Hello, world!
 </pre>
 
 <p>
 In fact, since <b>GNU-Hello</b> doesn't list any dependencies, we could have just run
-the <b>gnu-hello-linux-x86_64-1.3/bin/hello</b> binary directly in this case. For more complex programs,
+the <b>gnu-hello-linux-x86_64/bin/hello</b> binary directly in this case. For more complex programs,
 the feed file will be useful. You can also pass it to <b>0launch
 --feed</b> to register the new binary under the program's normal URI:
 </p>
@@ -140,7 +140,7 @@ $ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
 Can't find all required implementations:
 - &lt;Interface http://0install.net/tests/GNU-Hello.xml> -> None
 
-$ <b>0launch --feed gnu-hello-linux-x86_64-1.3/0install/GNU-Hello.xml</b>
+$ <b>0launch --feed gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
 1) Add as feed for 'http://0install.net/tests/GNU-Hello.xml'
 
 $ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
@@ -155,11 +155,11 @@ rebuilding faster.
 </p>
 
 <p>
-For future reference, there is also a <b>gnu-hello-linux-x86_64-1.3/0install/build-environment.xml</b>  file. This is a copy
-of the <b>0compile-env.xml</b> used for the build, but with a few extra details of the build added,
-including the hostname of the machine used for the build, a timestamp and your username. This file
-is written before the build starts, so the build process may add to it (or move it, or even delete
-it).
+For future reference, there is also a <b>gnu-hello-linux-x86_64/0install/build-environment.xml</b> file.
+This is a selections file, as produced by <b>0launch --source --get-selections</b>, but with a few extra
+details of the build added, including the hostname of the machine used for the
+build, a timestamp and your username. This file is written before the build
+starts, so the build process may add to it.
 </p>
 
 <h2>Modifying the source</h2>
@@ -176,7 +176,7 @@ Copied as '/home/me/GNU-Hello/src'
 
 <p>
 Edit the source as needed with the text editor of your choice. For example, we can change the
-message (using <a href='http://www.gnu.org/fun/jokes/ed.msg.html'>ed, the standard text editor</a>).
+message (here we're using <a href='http://www.gnu.org/fun/jokes/ed.msg.html'>ed, the standard text editor</a>):
 </p>
 
 <pre>
@@ -191,21 +191,16 @@ wq</b>
 
 <pre>
 $ <b>0compile build</b>
-$ <b>0launch gnu-hello-linux-x86_64-1.3-1/0install/GNU-Hello.xml</b>
+$ <b>0launch gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
 Goodbye, world!
 </pre>
 
 <p>
-<strong>Note</strong> that the version number in the directory name has changed to have a "-1" on the end! This indicates
-that you have modified it.
-</p>
-
-<p>
-If you compare the new <b>gnu-hello-linux-x86_64-1.3-1/0install</b> directory with the old one, you'll discover a couple of differences:
+If you compare the new <b>gnu-hello-linux-x86_64/0install</b> directory with the old one, you'll discover a couple of differences:
 </p>
 
 <ul>
- <li>A new file is present, <b>gnu-hello-linux-x86_64-1.3-1/0install/from-1.3.patch</b>, containing a diff between the original sources and
+ <li>A new file is present, <b>gnu-hello-linux-x86_64/0install/from-1.3.patch</b>, containing a diff between the original sources and
  your modified ones (to display this without rebuilding, use <b>0compile diff</b>).</li>
  <li>The version number in the local feed has <b>-1</b> appended, to indicate that this version has been modified.</li>
 </ul>
@@ -220,10 +215,9 @@ you are making larger changes to the code then you will want to use a proper ver
 
 <p>
 To share our new binary with other people, we just need to archive up the
-<b>gnu-hello-linux-x86_64-1.3</b> directory and upload it to an FTP or HTTP server somewhere
-(remember to upload the 1.3-1 directory if you want to publish your modified version instead).
+<b>gnu-hello-linux-x86_64</b> directory and upload it to an FTP or HTTP server somewhere.
 Pass the URL of the remote directory to <b>0compile</b> and upload the
-resulting binary:
+resulting binary (note: the version will be 1.3-1 if you modified the source):
 </p>
 
 <pre>
