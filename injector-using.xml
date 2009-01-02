@@ -165,7 +165,7 @@ selects suitable versions of them and prompts you to confirm:
 </p>
 
 <p style='text-align: center'>
-<img width="500" height="233" src="edit-injector.png"
+<img width="530" height="228" src="screens/edit-injector.png"
      alt="Running Edit with the injector" />
 </p>
 
@@ -177,7 +177,7 @@ program (selecting different versions is covered in part two of this tutorial):
 </p>
 
 <p style='text-align: center'>
-<img width="395" height="230" src="edit-running.png"
+<img width="483" height="195" src="screens/edit-running.png"
      alt="Edit running" />
 </p>
 
