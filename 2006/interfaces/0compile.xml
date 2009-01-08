@@ -81,7 +81,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <implementation id="sha1new=e6ca330bc7f82f9e3d52434d6829a486393aaad7" released="2008-12-06" self-test="tests/testcompile.py" stability="stable" version="0.13">
       <archive extract="0compile-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.13.tar.bz2" size="24283"/>
     </implementation>
-      <implementation id="sha1new=804c80c539e29b7750dd816ec6c734cfb42447ab" released="2009-01-01" self-test="tests/testcompile.py" version="0.14">
+      <implementation id="sha1new=804c80c539e29b7750dd816ec6c734cfb42447ab" released="2009-01-01" self-test="tests/testcompile.py" stability="stable" version="0.14">
       <archive extract="0compile-0.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.14.tar.bz2" size="25548"/>
     </implementation>
     </group>
@@ -89,7 +89,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklc3OgACgkQrgeCgFmlPMHEGgCfehWQzQ8MuagZ2QAo28TtfQdRNOYAn3d+PniY
-YRb3WEVNLESsrKW818fV
+iEYEABECAAYFAklmTd4ACgkQrgeCgFmlPMHE3ACdHvfOrcZdYJlTNSevSpkxO9YlrW8AnRZjDagD
+a4cSAjy+k6iVE+tt/IKo
 
 -->
