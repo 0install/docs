@@ -225,11 +225,6 @@ number of targets and nearly all features of Digital Mars D.
 D is a systems programming language. Its focus is on combining the power and
 high performance of C and C++ with ...</feed>
 
-<feed uri="http://konstelacioj.info/0install/feeds/geany.xml" name="Geany" summary="A small and fast IDE" icon="feed_icons/geany.png" width="32" height="32" homepage="http://geany.uvena.de/" category="Development">Geany is a text editor using the GTK2 toolkit with basic features of an
-integrated development environment. It was developed to provide a small and fast
-IDE, which has only a few dependencies from other packages. It supports many
-filetypes and has some ...</feed>
-
 <feed uri="http://0install.net/2008/3rd-party/git.xml" name="Git-core" summary="Fast, scalable, distributed revision control system" icon="tango/applications-system.png" width="48" height="48" category="Development">Git is popular version control system designed to handle very large
 projects with speed and efficiency; it is used mainly for various open
 source projects, most notably the Linux kernel.
@@ -573,6 +568,11 @@ Features
     * Editable track, title, genre, etc., even after CDDB fetching.
     * Simultaneous Rip and Encode
     * Uses cdda2wav and lame/oggenc to do the dirty work.</feed>
+
+<feed uri="http://rox.sourceforge.net/2008/ROX-All.xml" name="ROX-All" summary="Launchers for popular ROX applications" icon="feed_icons/ROX-All.png" width="64" height="30" homepage="http://roscidus.com/desktop/ROX-All" category="Utility">ROX-All is a single archive containing launchers for most of the ROX
+applications. The launchers will download the latest versions of programs when
+you run them the first time. Therefore, you will need a network connection (but
+only when downloading or ...</feed>
 
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/ROX-CLib" name="ROX-CLib" summary="C library for ROX programs" icon="feed_icons/ROX-CLib.png" width="47" height="47" homepage="http://www.kerofin.demon.co.uk/rox/ROX-CLib.html" category="Development">ROX-CLib is a library of support routines for programs intended to be
 part of the ROX desktop.  It provides similar facilities for C
