@@ -20,42 +20,33 @@ to prevent it switching to GUI mode too. Eg:
 
 <pre>
 $ <b>0launch -vvc http://rox.sourceforge.net/2005/interfaces/Edit</b>
-DEBUG:root:Location of 'implementation-dirs' config file being used: 'None'
-DEBUG:root:Added system store '/var/cache/0install.net/implementations'
-DEBUG:root:Supported systems: '{None: 2, 'Linux': 1}'
-DEBUG:root:Supported processors: '{None: 4, 'i386': 3, 'i586': 1, 'i486': 2, 'i686': 0}'
-DEBUG:root:Recalculate! root = http://rox.sourceforge.net/2005/interfaces/Edit
+INFO:root:Running 0launch 0.37 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.5.2 (r252:60911, Oct  5 2008, 19:29:17) 
+[GCC 4.3.2]
 DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/Edit
 DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;
-	from /home/talex/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
-DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 120.23 hours
-DEBUG:root:Processing feed &lt;Feed from /home/talex/Projects/Edit/Edit.xml&gt;
-DEBUG:root:Initialising new interface object for /home/talex/Projects/Edit/Edit.xml
-DEBUG:root:Loading local interface file '/home/talex/Projects/Edit/Edit.xml'
-DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;),
-	with feeds: [&lt;Feed from /home/talex/Projects/Edit/Edit.xml&gt;]
-DEBUG:root:Will use implementation /home/talex/Projects (version 2.0.0)
+  from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+DEBUG:root:Supported systems: '{None: 2, 'Linux': 1}'
+DEBUG:root:Supported processors: '{None: 5, 'x86_64': 0, 'i586': 2, 'i486': 3, 'i686': 1, 'i386': 4}'
+DEBUG:root:Solve! root = http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;), with feeds: []
+DEBUG:root:Processing feed http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:root:Will use implementation sha1=329e6c0191f65ef2996b49837d04c4cfe6934758 (version 2.0)
 DEBUG:root:Considering dependency &lt;Dependency on http://rox.sourceforge.net/2005/interfaces/ROX-Lib;
-	bindings: 1 [&lt;environ PYTHONPATH += ROX-Lib2/python&gt;]&gt;
+  bindings: [&lt;environ PYTHONPATH prepend ROX-Lib2/python&gt;][]&gt;
 DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/ROX-Lib
 DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;
-	from /home/talex/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
-DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 20.95 hours
-DEBUG:root:Processing feed &lt;Feed from /home/talex/Projects/ROX-Lib2/ROX-Lib.xml&gt;
-DEBUG:root:Initialising new interface object for /home/talex/Projects/ROX-Lib2/ROX-Lib.xml
-DEBUG:root:Loading local interface file '/home/talex/Projects/ROX-Lib2/ROX-Lib.xml'
-DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;),
-	with feeds: [&lt;Feed from /home/talex/Projects/ROX-Lib2/ROX-Lib.xml&gt;]
-DEBUG:root:Will use implementation /home/talex/Projects (version 2.0.2.0)
-DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 120.23 hours
-DEBUG:root:Staleness for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 20.95 hours
-INFO:root:PYTHONPATH=/home/talex/Projects/ROX-Lib2/python:/home/talex/Projects/ROX-Lib2/python
-INFO:root:Executing: /home/talex/Projects/Edit/AppRun
+  from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
+DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;), with feeds: []
+DEBUG:root:Processing feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+DEBUG:root:Will use implementation sha1new=9c116df3689d60df58925a7c634064ac2394f696 (version 2.0.5)
+DEBUG:root:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 0.01 hours
+DEBUG:root:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 0.01 hours
+INFO:root:PYTHONPATH=/home/me/.cache/0install.net/implementations/sha1new=9c116df3689d60df58925a7c634064ac2394f696/ROX-Lib2/python
+INFO:root:Executing: /home/me/.cache/0install.net/implementations/sha1=329e6c0191f65ef2996b49837d04c4cfe6934758/Edit/AppRun
 </pre>
 
 <p>
-In the example above, the injector ends up using my local CVS copies of both Edit and ROX-Lib. Here
-are some known problems, and their solutions:
+Here are some known problems, and their solutions:
 </p>
 
 <ul>
