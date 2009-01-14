@@ -97,6 +97,11 @@ graphics, scientific and engineering visualization, and game content creation.
 It includes tools for modeling, texturing (node based materials or uv mapped),
 uv mapping, ...</feed>
 
+<feed uri="http://riscque.net/3rd-party/cairo" name="Cairo" summary="2D graphics library" icon="feed_icons/cairo.png" width="64" height="14" homepage="http://www.cairographics.org/" category="Graphics">Cairo is a 2D graphics library with support for multiple output devices.
+Currently supported output targets include the X Window System, Quartz, Win32,
+image buffers, PostScript, PDF, and SVG file output. Experimental backends
+include OpenGL (through ...</feed>
+
 <feed uri="http://rox4debian.berlios.de/0install/CDDB-Py.xml" name="CDDB-Py" summary="Python interface to CD-IDs and FreeDB" icon="tango/applications-system.png" width="48" height="48" homepage="http://cddb-py.sourceforge.net/" category="Library">The dynamic duo of CDDB.py and DiscID.py, along with their side-kick C module
 cdrommodule.so, provide an easy way for Python programs to fetch information on
 audio CDs from CDDB (http://www.cddb.com/) -- a very large online database of
@@ -421,6 +426,9 @@ non-Unix platforms. It is called a "document processor", because unlike standard
 word processors, LyX encourages an approach to writing based on the structure of
 your ...</feed>
 
+<feed uri="http://crystalspace3d.org/0install/lzmadec-static.xml" name="Lzmadec-static" summary="Version of lzmadec with minimal dependencies" icon="tango/applications-system.png" width="48" height="48" homepage="http://tukaani.org/lzma/" category="Utility">This is a build of lzmadec, the LZMA file decompressor, with minimal
+dependencies (only requires glibc &gt;= 2.0).</feed>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Mail" name="Mail" summary="Monitor mailbox" icon="feed_icons/Mail.png" width="48" height="36" homepage="http://www.kerofin.demon.co.uk/rox/mail.html" category="Network">Mail is a ROX applet which monitors your local mailbox and which can
 launch a mail reader application when required.</feed>
 
@@ -538,6 +546,8 @@ primarily designed for the ROX desktop.</feed>
 
 <feed uri="http://rox4debian.berlios.de/0install/PyAlsaAudio.xml" name="PyAlsaAudio" summary="ALSA wrapper for Python" icon="tango/applications-system.png" width="48" height="48" homepage="http://sourceforge.net/projects/pyalsaaudio" category="Library">PyAlsaAudio is a Python wrapper for ALSA. Currently PCM playback and capture, as
 well as the Mixer API is supported.</feed>
+
+<feed uri="http://riscque.net/3rd-party/pycairo" name="Pycairo" summary="Python bindings for the cairo graphics library" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.cairographics.org/pycairo/" category="Graphics"></feed>
 
 <feed uri="http://0install.net/2006/3rd-party/PySol.xml" name="PySol" summary="A collection of more than 200 solitaire card games" icon="feed_icons/PySol.png" width="32" height="32" homepage="http://www.pysol.org/" category="Games">PySol is an exciting collection of more than 200 solitaire card games. Its
 features include support for lots of distinct games, very nice look and feel,
