@@ -56,11 +56,14 @@ requires first uninstalling another.</description>
     <implementation id="sha1new=744991c3cf1b7c169f5bfdad92c1a5a8925b6ecd" released="2008-11-30" stability="stable" version="0.37">
       <archive extract="zeroinstall-injector-0.37" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.37.tar.bz2" size="140574"/>
     </implementation>
+    <implementation id="sha1new=83df6822e6f5eeca5030f8aa9c9108c7e60817e8" released="2009-01-18" version="0.38">
+      <archive extract="zeroinstall-injector-0.38" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.38.tar.bz2" size="142177"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8j4ACgkQrgeCgFmlPMHLLgCgulXOH93dv7pU1PPvkP1aRSMabX4An3owBUNS
-uN0QbkpOJ45w07595/7q
+iEYEABECAAYFAkly/W8ACgkQrgeCgFmlPMFxgACfYXe8Qp+w2Erq1hMqT5VcCeT+fwEAn0OPlDa8
+vLENvPtjL6u7RUIFWgK2
 
 -->
