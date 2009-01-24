@@ -26,15 +26,12 @@ PySol is written in 100% pure Python</description>
 
   <group main="usr/share/games/pysol/wrapper">
     <implementation id="sha1new=d53155be13f152fc9af45ebcdffcae8f2be456ac" released="2004-06-18" stability="stable" version="4.82.1.2">
-      <recipe>
-        <archive href="http://debian.tu-bs.de/debian/pool/main/p/pysol/pysol_4.82.1-2_all.deb" size="1490082"/>
-        <archive href="http://0install.net/tests/pysol-patch.tgz" size="235"/>
-      </recipe>
+      <archive extract="pysol-4.82.1-2" href="http://garr.dl.sourceforge.net/sourceforge/zero-install/pysol-4.82.1-2.tar.bz2" size="1460676" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYra/BSn9tx+xORARAldKAJoCmYb9YCbuDpF5Fd8RdaYfdBDlggCeJUAD1Dsobn98WtCK
-/2y1jaC+nTw=
+iEYEABECAAYFAkl7ICkACgkQBSn9tx+xORA+sACfYtleZ0K9j/AAZNBOnjQSAuwALgQAoJpXMvfL
+QSXpmo/jEPnb91TC0Nn5
 
 -->
