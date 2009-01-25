@@ -21,27 +21,35 @@ For a full tutorial, see 0compile's homepage.</description>
   <group main="0compile">
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
       <archive extract="0compile-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.1.tar.bz2" size="15393"/>
+      <manifest-digest sha1new="ff6dda7e319c46e4fee85ccb7bdbd09cc19937a7"/>
     </implementation>
     <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" stability="stable" version="0.2">
       <archive extract="0compile-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
+      <manifest-digest sha1new="514f0ca80314e25fd2d6fb5a7212d1a009015460"/>
     </implementation>
     <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="stable" version="0.3">
       <archive extract="0compile-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
+      <manifest-digest sha1new="a8a33b41f86dab4e109d06a0b6c85b2906977b1f"/>
     </implementation>
     <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="stable" version="0.4">
       <archive extract="0compile-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
+      <manifest-digest sha1new="66f9c469a15a2ceec25f777cf01ad180e1c8f4df"/>
     </implementation>
     <implementation id="sha1=38eb336dbb23fbca46952e80dc352ef1177f790b" released="2006-10-28" stability="stable" version="0.5">
       <archive extract="0compile-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.5.tar.bz2" size="17751"/>
+      <manifest-digest sha1new="ac023a52e8071d0789a73f6142335b9a117ca739"/>
     </implementation>
     <implementation id="sha1=1930fefbbf3b92f119005bcb125dcea371cc74d0" released="2006-11-12" stability="stable" version="0.6">
       <archive extract="0compile-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.6.tar.bz2" size="17472"/>
+      <manifest-digest sha1new="827bf590fa844baabc8c7a79327850d72ff2454f"/>
     </implementation>
     <implementation id="sha1=6e6d75b9956fedfe58bcd0be597e81a86182c764" released="2006-11-21" stability="stable" version="0.7">
       <archive extract="0compile-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.7.tar.bz2" size="19966"/>
+      <manifest-digest sha1new="f7a1c8091089717856819a193accda51e708e3c4"/>
     </implementation>
     <implementation id="sha1=0d94fb422a93c7326e2fccbebd5d9eab052e2d18" released="2006-11-25" stability="stable" version="0.8">
       <archive extract="0compile-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
+      <manifest-digest sha1new="d90230c7661210f55236319a2c2e520139f977d7"/>
     </implementation>
     <implementation id="sha1new=b9ca4f1cf34648b6b241ae23f7139b66236dd207" released="2007-06-10" stability="stable" version="0.9">
       <archive extract="0compile-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
@@ -89,7 +97,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklmTd4ACgkQrgeCgFmlPMHE3ACdHvfOrcZdYJlTNSevSpkxO9YlrW8AnRZjDagD
-a4cSAjy+k6iVE+tt/IKo
+iEYEABECAAYFAkl8dRMACgkQrgeCgFmlPMGnsgCggTQoN6kaldjUUfsbGt0TznbWOi0AnibvMxEC
+/yjbTOWTpWhVYzFClq/s
 
 -->

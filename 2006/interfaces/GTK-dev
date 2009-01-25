@@ -15,6 +15,7 @@ that use the GTK+ library.</description>
     </implementation>
     <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" stability="stable" version="2.4.14.1">
       <archive extract="gtk-headers-2.4.14.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.1.tar.bz2" size="157929"/>
+      <manifest-digest sha1new="fb70e59085d4eb9f5ec3978766c252e4c987b3d8"/>
     </implementation>
     <group>
       <implementation id="sha1new=cc1df9d2a745cf0b245526c6b1065faf28f851ea" released="2008-05-10" version="2.12.9">
@@ -57,7 +58,7 @@ that use the GTK+ library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8h0ACgkQrgeCgFmlPMH+AACffpb+RaiXwOPPxZVdjCktN0GjThsAn0k0i1DM
-kNGz8rV2nBH/nbMQ27cr
+iEYEABECAAYFAkl8dRMACgkQrgeCgFmlPMEnuACgwbVQTsVxyKHBBwAE3Ha2yA4OzVQAoIvFdQ+6
+eIoPSOsn4Tfn9wc3WOy6
 
 -->

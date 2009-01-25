@@ -13,6 +13,7 @@ that use the GLib library.</description>
     <group arch="Linux-i386">
       <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8">
         <archive extract="glib-headers-2.4.8.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glib-headers-2.4.8.1.tar.bz2" size="59915"/>
+        <manifest-digest sha1new="59f22a7127ba1bbc7e7ee88031aefe59dfeb2cbf"/>
       </implementation>
       <implementation id="sha1new=e9095593f2aaef2132879d2d34fc2b00cc06953a" released="2008-03-01" version="2.6.6">
         <archive extract="glib-dev-linux-i486-2.6.6" href="http://downloads.sourceforge.net/zero-install/glib-dev-linux-i486-2.6.6.tar.bz2" size="63625"/>
@@ -70,7 +71,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklY9s0ACgkQrgeCgFmlPMGv3ACgqv3mQnjq/so7AOZmSDpsbDB8JdwAoNDbw4W3
-KptY0PyMBgCdLU2vE3Ad
+iEYEABECAAYFAkl8dRIACgkQrgeCgFmlPMHmRwCaApIFlvWB3KvLdKl/tjOSvt/BXLIAnRLeMZ6r
+LLlk0EBAZSe7pubgEmMh
 
 -->

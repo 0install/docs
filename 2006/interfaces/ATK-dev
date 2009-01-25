@@ -13,6 +13,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
     </implementation>
     <implementation id="sha1=4ccf2ed4da6ec5052de7ca4b548e36bd7fc16be4" released="2006-05-10" stability="stable" version="1.8.0.1">
       <archive extract="atk-headers-1.8.0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.1.tar.bz2" size="18256"/>
+      <manifest-digest sha1new="b2d44ce6995389dbcc09cf5df6c613839f63124f"/>
     </implementation>
     <implementation id="sha1new=61d0238880a8770123436e5ef5dc29243a80822c" released="2008-05-10" version="1.22.0">
       <archive extract="atk-dev-linux-x86_64-1.22.0" href="http://downloads.sourceforge.net/zero-install/atk-dev-linux-x86_64-1.22.0.tar.bz2" size="25376"/>
@@ -30,7 +31,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8eQACgkQrgeCgFmlPMGgQwCfYCSTYAXQo1qHolbKoSze89GFfa4An1+Mp92T
-4F4L1XZ3suGTevwbmaf1
+iEYEABECAAYFAkl8dRAACgkQrgeCgFmlPMEEGgCgqh1McagQrGIwJvyAZchKFajClQwAoNT8+oJa
+jM2Qr02w19FpgkTXeScA
 
 -->

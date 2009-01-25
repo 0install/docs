@@ -43,6 +43,7 @@ text, with an emphasis on internationalization.</description>
     </implementation>
     <implementation id="sha1=260687eb207dc87811043d35570fb3779071a575" released="2006-06-04" stability="stable" version="1.4.1.2">
       <archive extract="pango-headers-1.4.1.2" href="http://easynews.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.2.tar.bz2" size="19078"/>
+      <manifest-digest sha1new="73e83919220add4846b2affbd985bd0c0fd8c279"/>
     </implementation>
     <implementation id="sha1new=8d4f953df046d6a94ae0700e51faee559d428880" released="2008-03-02" stability="stable" version="1.10.4">
       <archive extract="pango-dev-linux-x86_64-1.10.4" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.10.4.tar.bz2" size="182394"/>
@@ -53,7 +54,7 @@ text, with an emphasis on internationalization.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8icACgkQrgeCgFmlPMGOJwCgphHHZTRGbGvlc7e9YxtTtKQUH+sAoLejXfSq
-eQW0GJMzSiTWGfWypb+N
+iEYEABECAAYFAkl8dRIACgkQrgeCgFmlPMEeBgCgz7A4ZInh+ClrwoZ4xeumjhzovxQAoMbmHf5z
+TPhpWrx8qyddWdlSwHHb
 
 -->

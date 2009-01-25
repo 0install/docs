@@ -20,6 +20,7 @@ packagers.html.</description>
   <group main="0publish">
     <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" stability="stable" version="0.1">
       <archive extract="0publish-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
+      <manifest-digest sha1new="eccc7bb963db26a025feaf6f2642b36edd08d78f"/>
     </implementation>
     <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" stability="stable" version="0.2">
       <archive extract="0publish-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
@@ -66,7 +67,7 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklmTccACgkQrgeCgFmlPMEQewCeMaSzE/SpWbWJN6SUZyD09FXo7YYAniebTWh5
-z2ON7q3LkXvXlMtl9yTg
+iEYEABECAAYFAkl8dRIACgkQrgeCgFmlPMGljwCfWaXuMlb2Xrf00z107TaqTlxklVQAnjDyM30s
+aC6jr+LcNpdC8kfx1Lui
 
 -->

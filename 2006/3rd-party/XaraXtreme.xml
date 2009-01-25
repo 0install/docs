@@ -16,11 +16,12 @@ easy-to-use and easy-to-learn approach.</description>
   <group main="bin/xaralx">
     <implementation arch="Linux-i486" id="sha1=8b8e74af00a5e9a22376dcaf9765c81291a95685" released="2006-08-25" stability="stable" version="0.7.1692">
       <archive extract="xaralx" href="http://downloads.xara.com/opensource/RecomXaraLX0.7_rev1692.tar.bz2" size="18532162"/>
+      <manifest-digest sha1new="6a8329833fabd20eafe9da5e01a9c8520c1e2fec"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrbABSn9tx+xORARAki6AJ9ubkwP2GdIfxOZOyEM3i8GYmV90wCfcF5W6Pc/+HrhHLBm
-8VG4Ua4puqU=
+iEYEABECAAYFAkl8dQ4ACgkQBSn9tx+xORAsCQCfZe+grAbOdFZRr7zysGpea+6+jEsAn3FzJheq
+jfw7006fB4Tzi6TMbIR0
 
 -->
