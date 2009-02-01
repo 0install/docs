@@ -532,3 +532,14 @@ form.comment textarea {
 	margin-bottom: .2em;
 	color: #888;
 }
+
+a.button:hover {
+	background: yellow;
+	text-decoration: none;
+}
+
+a.button {
+	border: 1px solid black;
+	background: #def;
+	padding: 0.1em;
+}

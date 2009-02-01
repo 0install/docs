@@ -28,9 +28,10 @@ that the Mandriva package doesn't work on 2007.1 without a
 <pre># <b>apt-get install zeroinstall-injector</b></pre></li>
   <li><b>Ubuntu (breezy/dapper)</b> <download name='zeroinstall-injector_0.22-1_all_ubuntu.deb'/> (Ubuntu package; Python 2.4)<br/>
   <b>Ubuntu (edgy)</b> Use the Debian/etch package above.<br/>
-  <b>Ubuntu (feisty/gutsy/hardy)</b> Zero Install is in Feisty, Gutsy and Hardy (<a href='https://help.ubuntu.com/6.10/ubuntu/desktopguide/C/extra-repositories.html'>Universe</a>), so you can just do:
+  <b>Ubuntu (feisty/gutsy/hardy/intrepid)</b> Zero Install is all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-  <p>However, the Debian/etch package is more up-to-date than this version, so you may prefer to install that.</p>
+<p>Intrepid (8.10) users can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.
+However, the Debian/etch package is more up-to-date than the Ubuntu version, so you may prefer to install that.</p>
   </li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
