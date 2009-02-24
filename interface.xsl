@@ -39,19 +39,26 @@
 	<dl>
 	 <dt>Overview</dt>
 	 <dd>
-	<xsl:choose>
+	 <xsl:choose>
 	 <xsl:when test='//zi:implementation[@main] | //zi:group[@main]'>
-	  <p>This is a Zero Install feed. To run this program from the command-line, use this
-	  command:</p>
+	  <p>This is a Zero Install feed. To add this program to your Applications menu, choose
+	  <b>Zero Install -> Add New Program</b> from the <b>Applications</b> menu. e.g. on Ubuntu:</p>
+	  <p style='text-align: center'>
+	   <img width="335" height="259" src="http://0install.net/tutorial/add-with-gnome.png" alt='Adding with GNOME'/>
+	  </p>
+	  <p>If you don't see this menu item, install the <b>zeroinstall-injector</b> package from your
+	  distribution's repository, or from <a href='http://0install.net/injector.html'>0install.net</a>.</p>
+
+	  <p>
+	  Drag <a href='{/zi:interface/@uri}'>the feed's URL</a> to the dialog box that appears.
+	  Other environments may use other systems. For example, if you are a ROX desktop user, drag
+	  the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> instead.
+	  </p>
+
+	  <p>Alternatively, to run it from the command-line:</p>
 	  <pre>$ 0launch <xsl:value-of select='/zi:interface/@uri'/></pre>
 	  <p>
 	  The <b>0alias</b> command can be used to create a short-cut to run it again later.
-	  </p>
-	  <p>
-	  If you use a graphical desktop, you can drag <a href='{/zi:interface/@uri}'>the feed's URL</a> to
-	  an installer such as <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> (ROX),
-	  <a href='http://rox.sourceforge.net/desktop/node/269'>the Xfce 4.4 panel</a>, or
-	  <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a> (GNOME and KDE).
 	  </p>
 	  <p>
 	  If you don't have the <b>0launch</b> command, download it from
