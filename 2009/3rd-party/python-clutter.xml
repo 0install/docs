@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2009/3rd-party/python-clutter.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>python-clutter</name>
+  <summary>Python bindings for the clutter library</summary>
+  <description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.</description>
+  <homepage>http://www.clutter-project.org/</homepage>
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation arch="Linux-x86_64" id="sha1new=482fd674b4fb7b1a2afeab610db8b31041368b35" released="2009-02-25" version="0.8.2">
+      <archive extract="python-clutter-linux-x86_64-0.8.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/python-clutter-linux-x86_64-0.8.2.tar.bz2" size="313958"/>
+    </implementation>
+    <implementation arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="docs" id="sha1new=3472e197151b16e1a00983cf5a983843d1d12806" released="2009-02-25" version="0.8.2">
+    <archive extract="pyclutter-0.8.2" href="http://www.clutter-project.org/sources/pyclutter/0.8/pyclutter-0.8.2.tar.bz2" size="416167" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+    <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
+  </group>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkmlwEQACgkQBSn9tx+xORC0fQCgmkWdmKVBdUnnnAg4p4qJniGX1voAoIx84xYV
+7OVAETM95KawL1MFf4m6
+
+-->
