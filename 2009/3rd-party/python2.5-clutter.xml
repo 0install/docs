@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2009/3rd-party/python-clutter.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<interface uri="http://0install.net/2009/3rd-party/python2.5-clutter.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>python-clutter</name>
   <summary>Python bindings for the clutter library</summary>
   <description>
@@ -25,7 +25,7 @@ efficient and flexible.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkmlwEQACgkQBSn9tx+xORC0fQCgmkWdmKVBdUnnnAg4p4qJniGX1voAoIx84xYV
-7OVAETM95KawL1MFf4m6
+iEYEABECAAYFAkmmSFkACgkQBSn9tx+xORC6iQCdEYuvU9QCCwaMe6SXZD04DYEjTh4An3nU/Gd9
+Dab7bA8vrByYRbFkT+pO
 
 -->
