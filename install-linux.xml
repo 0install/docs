@@ -6,31 +6,39 @@
 <dl>
   <dt>RPMs</dt>
 <dd>
-<ul>
+<ul class='spaced'>
+  <li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/CentOS_5/noarch/'>CentOS 5 RPMs</a></li>
   <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   </li>
-  <li><b>OpenSUSE</b> <download name='zeroinstall-injector-0.33-3suse.i586.rpm'/> (OpenSUSE 10.3 RPM) (copied from OpenSUSE build service)</li>
+  <li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2008/noarch/'>Mandriva 2008 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2009/noarch/'>Mandriva 2009 RPMs</a></li>
+  <li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_10.3/i586/'>OpenSUSE 10.3 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.0/i586/'>OpenSUSE 11.0 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.1/i586/'>OpenSUSE 11.1 RPMs</a><br/>
+    <strong>Note:</strong> do not install the -test RPMs</li>
+  <li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPMs</a></li>
 </ul>
-<p><b>Newer binary and source RPMs</b> are available through the <a href='http://download.opensuse.org/repositories/home:/talex5/'>SUSE build service</a>.
-Please test these and report back (<i>DO NOT</i> install the -test packages). Note
-that the Mandriva package doesn't work on 2007.1 without a
-<a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/1792'>minor fix</a>.</p>
 </dd>
 
 <dt>Debs</dt>
 <dd>
-<ul>
+<ul class='spaced'>
   <li>
   <b>Debian/oldstable (etch)</b> <download name='zeroinstall-injector_0.38-1_all.deb'/> (Debian package; python-central)<br/>
   <b>Debian/stable (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
-  <pre># <b>apt-get install zeroinstall-injector</b></pre></li>
+  <pre># <b>apt-get install zeroinstall-injector</b></pre>
+  However, a newer version is available here: <download name='zeroinstall-injector_0.39-1_all.deb'/>
+  </li>
   <li>
-  <b>Ubuntu (edgy)</b> Use the Debian/etch package above.<br/>
-  <b>Ubuntu (feisty/gutsy/hardy/intrepid)</b> Zero Install is all recent versions of Ubuntu, so you can just do:
+  <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty)</b> Zero Install is all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>Intrepid (8.10) users can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.
-However, the Debian/etch package is more up-to-date than the Ubuntu version, so you may prefer to install that.</p>
+However, the Debian/lenny package is more up-to-date than the Ubuntu version, so you may prefer to install that.</p>
   </li>
   <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
@@ -39,7 +47,7 @@ However, the Debian/etch package is more up-to-date than the Ubuntu version, so 
 
 <dt>Other</dt>
 <dd>
-<ul>
+<ul class='spaced'>
   <li><b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
       <b>Slackware 12</b> <download name="zeroinstall-injector-0.32-i686-2_slack12.0_mjk.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
   <li><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
