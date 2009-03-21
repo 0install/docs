@@ -16,7 +16,7 @@ To use Zero Install, you will need:
 </p>
 
 <ul>
-<li><a href="http://python.org">Python</a> (version 2.4 or later, <i>including</i> any <b>-dev</b> package).</li>
+<li><a href="http://python.org">Python</a> (version 2.5 or later, <i>including</i> any <b>-dev</b> package).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
 <li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
 <li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.0 or later, including python-glade2</a> (only needed for the GUI).</li>
