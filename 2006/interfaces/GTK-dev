@@ -18,7 +18,7 @@ that use the GTK+ library.</description>
       <manifest-digest sha1new="fb70e59085d4eb9f5ec3978766c252e4c987b3d8"/>
     </implementation>
     <group>
-      <implementation id="sha1new=cc1df9d2a745cf0b245526c6b1065faf28f851ea" released="2008-05-10" version="2.12.9">
+      <implementation id="sha1new=cc1df9d2a745cf0b245526c6b1065faf28f851ea" released="2008-05-10" stability="stable" version="2.12.9">
         <archive extract="gtk-dev-linux-x86_64-2.12.9" href="http://downloads.sourceforge.net/zero-install/gtk-dev-linux-x86_64-2.12.9.tar.bz2" size="945557" type="application/x-bzip-compressed-tar"/>
       </implementation>
       <requires interface="http://0install.net/2006/interfaces/GLib-dev">
@@ -58,7 +58,7 @@ that use the GTK+ library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkl8dRMACgkQrgeCgFmlPMEnuACgwbVQTsVxyKHBBwAE3Ha2yA4OzVQAoIvFdQ+6
-eIoPSOsn4Tfn9wc3WOy6
+iEYEABECAAYFAknGAGEACgkQrgeCgFmlPME9UgCguG1E2RPbBhdujVm7KGZapLxbdzUAn3qviz00
+2GM+NPiBzRlpROAYAG9V
 
 -->

@@ -56,17 +56,17 @@ requires first uninstalling another.</description>
     <implementation id="sha1new=744991c3cf1b7c169f5bfdad92c1a5a8925b6ecd" released="2008-11-30" stability="stable" version="0.37">
       <archive extract="zeroinstall-injector-0.37" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.37.tar.bz2" size="140574"/>
     </implementation>
-    <implementation id="sha1new=83df6822e6f5eeca5030f8aa9c9108c7e60817e8" released="2009-01-18" version="0.38">
+    <implementation id="sha1new=83df6822e6f5eeca5030f8aa9c9108c7e60817e8" released="2009-01-18" stability="stable" version="0.38">
       <archive extract="zeroinstall-injector-0.38" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.38.tar.bz2" size="142177"/>
     </implementation>
-    <implementation id="sha1new=cdcdb4c4855292851adaa279fa5a2823c4e94f8e" released="2009-03-08" version="0.39">
+    <implementation id="sha1new=cdcdb4c4855292851adaa279fa5a2823c4e94f8e" released="2009-03-08" stability="stable" version="0.39">
       <archive extract="zeroinstall-injector-0.39" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.39.tar.bz2" size="149493"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkmzsV4ACgkQrgeCgFmlPMEdhACfdpduOsgUd/QzU7Rc0hZkIytMCaMAoL/LfcmT
-V0Th51b8gIPZX3bO9gsi
+iEYEABECAAYFAknGAIgACgkQrgeCgFmlPMEo3wCfXkRr87jnVxhM5lr/LE9MAUX6ehcAnA7sEL25
+s4uDUnGd2liD3yhdsdV/
 
 -->
