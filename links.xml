@@ -185,14 +185,22 @@ but many do.
 
 </dd>
 
-<dt>EDOS</dt>
+<dt>EDOS / Mancoosi</dt>
 
 <dd>
 <p>
 The <a href='http://www.edos-project.org/xwiki/bin/Main/'>EDOS</a> (<i>Environment
-for the development and Distribution of Open Source software</i>) project is a research
+for the development and Distribution of Open Source software</i>) project was a research
 project looking at dependency management, QA, and efficient distribution of
 large software systems.
+</p>
+
+<p>
+<a href='http://www.mancoosi.org/'>Mancoosi</a> is a follow-on project
+("Managing the Complexity of the Open Source Infrastructure"). The
+group invited me to give a talk (March 2009); here are
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2322'>my notes</a>
+from the event.
 </p>
 </dd>
 
