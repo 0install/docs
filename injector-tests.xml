@@ -131,6 +131,56 @@ installed. Although this feed only includes Debian (and Ubuntu, etc) packages, t
 is that a single feed can support packages for multiple distributions, plus Zero Install downloads.
 </dd>
 
+<dt><a href="http://0install.net/tests/Test-Hello.xml">http://0install.net/tests/Test-Hello.xml</a></dt>
+<dd>
+This program needs to be compiled, and it depends on another package (GNU-Hello) that also
+needs to be compiled. It can be used to test "0compile autocompile", which will download, build
+and register both of them at once:
+<pre>
+$ <b>0compile autocompile http://0install.net/tests/Test-Hello.xml</b>
+================= http://0install.net/tests/Test-Hello.xml =================
+
+Selecting versions for Test-Hello...
+Selection done.
+
+Plan:
+
+- Test-Hello: Compile 1.0 (sha1new=8c368c5ed6cc65f528efd7b24cc8c25e4490977f)
+  - GNU Hello: Compile 1.3 (sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7)
+
+================= http://0install.net/tests/GNU-Hello.xml ==================
+
+Selecting versions for GNU Hello...
+Selection done.
+
+Plan:
+
+- GNU Hello: Compile 1.3 (sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7)
+
+No dependencies need compiling... compile GNU Hello itself...
+[...]
+Implementation metadata written to /tmp/home/.config/0install.net/0compile/builds/http:##0install.net#tests#GNU-Hello.xml/GNU-Hello-1.3-x86_64.xml
+Storing build in cache...
+Registering feed...
+
+Selecting versions for Test-Hello...
+Selection done.
+
+Plan:
+
+- Test-Hello: Compile 1.0 (sha1new=8c368c5ed6cc65f528efd7b24cc8c25e4490977f)
+  - GNU Hello: Use existing binary 1.3 (Linux-x86_64)
+
+No dependencies need compiling... compile Test-Hello itself...
+[...]
+Implementation metadata written to /tmp/home/.config/0install.net/0compile/builds/http:##0install.net#tests#Test-Hello.xml/Test-Hello-1.0-x86_64.xml
+Storing build in cache...
+Registering feed...
+$ <b>0launch http://0install.net/tests/Test-Hello.xml</b>
+GNU-Hello says: Hello, world!
+</pre>
+</dd>
+
 </dl>
 
 </html>
