@@ -23,12 +23,12 @@ that use the Glade library.</description>
   </group>
   <group compile:lib-mappings="glade-2.0:0" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
     <implementation id="sha1new=d1d62c324b1de73d2b845010bd475063ea8beefc" released="2008-02-22" version="2.0.1">
-      <archive extract="glade-dev-2.0.1" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/glade-dev-2.0.1.tar.bz2" size="5540" type="application/x-bzip-compressed-tar"/>
+      <archive extract="glade-dev-2.0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/glade-dev-2.0.1.tar.bz2" size="5540" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHvyKYBSn9tx+xORARAhFlAJ904EF62s9wpHJS/xc8LCA8e34iVwCdEVbLdelCfcVIMYrh
-X+lfdef/PHE=
+iEYEABECAAYFAkniEjkACgkQBSn9tx+xORCQawCfXsD6bZravE4ASlcBj3NHEwKVNjoAn3Ch1Yr4
+O8K5G+oSaf0VuI+oPVms
 
 -->
