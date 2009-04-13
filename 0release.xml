@@ -14,12 +14,13 @@ number and release date, tagging the release in your version control system and 
 </program>
 
 <p>
-The general process is shown in the diagram below:
+The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below
+(the process for programs which release a source package and multiple binary packages is described later):
 </p>
 
 <table>
 <tr><td>
-<img src='UML/release-process.png' width='355' height='385' alt='The release process' style='padding: .5em'/>
+<img src='UML/release-process.png' width='365' height='655' alt='The release process' style='padding: .5em'/>
 </td><td>
 <p>
 After doing some development (so you have something to release!) you use 0release to prepare a
@@ -27,17 +28,18 @@ new release. It will:
 </p>
 
 <ol>
- <li>Commit a release revision in your version control system (e.g. with a version of "1.3")</li>
+ <li>Commit a release revision in your version control system (e.g. with a version of "1.3") on a new temporary branch.</li>
  <li>Export the release revision and create a tarball for distribution.</li>
  <li>Unpack the release and run the unit tests.</li>
- <li>Update the version numbers in your version control system again (e.g. to "1.3-post")</li>
+ <li>Update the version numbers in your version control system again (e.g. to "1.3-post").</li>
 </ol>
 
 <p>
 You can then run any final (manual) tests on the release. If you're happy with the result, then
-0release can publish it (e.g. upload the tarball to an FTP server and update the Zero Install feed).
-Otherwise, 0release will untag the release (reversing the effects of preparing it) so that you can
-fix the problems and try again.
+0release can publish it (e.g. upload the tarball to an FTP server, update the Zero Install feed, and
+push the new commits and tag to your public version control system). Otherwise,
+0release will discard the temporary branch so that you can fix the problems and
+try again.
 </p>
 </td></tr>
 </table>
@@ -60,7 +62,7 @@ handle new releases brings several advantages over doing it manually:
 
 <dl>
  <dt>Version control systems currently supported</dt>
- <dd>GIT is fully supported. Baazar support is under development.</dd>
+ <dd>GIT is fully supported. It should be fairly easy to support other (distributed) version control systems.</dd>
 </dl>
 
 <h3>Contents</h3>
