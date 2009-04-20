@@ -41,7 +41,56 @@ slightly more limited. Here are
 
 <toc level='h2'/>
 
-<h2>Creating the build environment</h2>
+<h2>Autocompile</h2>
+
+<p>
+  If you just want to compile some existing source code (without changing it),
+  then the <b>autocompile</b> sub-command does the job. Given the URI of a
+  program, it will download and compile the source in a temporary directory,
+  add the resulting binary to the Zero Install cache, and register the new
+  binary with 0launch. If the source depends on other programs, it will also
+  download and compile them in the same way if no binary is currently available
+  for the preferred version.
+</p>
+
+<p>
+  For example (GNU-Hello is a simple test program with no dependencies):
+</p>
+
+<pre>
+$ <b>0compile autocompile http://0install.net/tests/GNU-Hello.xml</b>
+================= http://0install.net/tests/GNU-Hello.xml ==================
+
+Selecting versions for GNU Hello...
+Selection done.
+
+Plan:
+
+- GNU Hello: Compile 1.3 (sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7)
+
+...
+</pre>
+
+<p>
+  Note that GNU-Hello does not get the C-compiler through Zero Install, so you
+  will need that already (hint: <b>apt-get install build-essential</b>). Once
+  compiled, you can run it like this:
+</p>
+
+<pre>
+  $ <b>0launch http://0install.net/tests/GNU-Hello.xml</b>
+  Hello, world!
+</pre>
+
+<h2>Manual compilation</h2>
+
+<p>
+  If you want to modify the source before building, keep the object files
+  around for rebuilding or choose the versions used, you'll want to use the
+  manual commands, described in the following sections.
+</p>
+
+<h3>Creating the build environment</h3>
 
 <p>
 To get started, run <b>0compile setup</b> with the URL of the program you want
@@ -80,7 +129,7 @@ $ <b>cd GNU-Hello</b>
 $ <b>0compile setup</b>
 </pre>
 
-<h2>Building</h2>
+<h3>Building</h3>
 
 <p>
 To compile the program, use the <b>build</b> command (from inside the <b>GNU-Hello</b> directory):
@@ -162,7 +211,7 @@ build, a timestamp and your username. This file is written before the build
 starts, so the build process may add to it.
 </p>
 
-<h2>Modifying the source</h2>
+<h3>Modifying the source</h3>
 
 <p>
 By default, <b>0compile</b> keeps the source code in the (read-only) Zero Install cache, so if you
@@ -211,7 +260,7 @@ you are making larger changes to the code then you will want to use a proper ver
 <a href='http://git.or.cz/'>GIT</a>).
 </p>
 
-<h2>Publishing the binary</h2>
+<h3>Publishing the binary</h3>
 
 <p>
 To share our new binary with other people, we just need to archive up the
@@ -252,6 +301,23 @@ $ <b>0publish .../GNU-Hello.xml \
 
 <p>
 Then upload the signed <b>.../GNU-Hello.xml</b> file and the exported GPG key to your webserver.
+</p>
+
+<h3>Bundling dependencies</h3>
+
+<p>
+  You might want to build on a machine without network access, or to archive
+  everything needed to build a particular program. To do that, use this
+  command:
+</p>
+
+<p>
+  $ <b>0compile include-deps</b>
+</p>
+
+<p>
+  The source code and all dependencies will be copied into a new <b>dependencies</b> sub-directory. When building,
+  this directory is added to 0launch's implementation cache search path (using <b>0launch --with-store</b>).
 </p>
 
 <h2>Making source available</h2>
@@ -312,13 +378,13 @@ The <b>arch</b> attribute lets the injector know that it doesn't need to fetch t
 it's looking for source code.
 </p>
 
-<h2>Making library headers available (-dev packages)</h2>
+<h3>Making library headers available (-dev packages)</h3>
 
 <p>
 See <a href='make-headers.html'>Make-headers</a> for information about publishing library source and -dev packages.
 </p>
 
-<h2>Adding run-time dependencies</h2>
+<h3>Adding run-time dependencies</h3>
 
 <p>
 By default, the feed created for the new binary doesn't have any dependencies. There are two ways to add them:
@@ -339,7 +405,7 @@ You can edit the feed XML file directly during the build (it's in the <b>$DISTDI
 </li>
 </ul>
 
-<h2>Tips</h2>
+<h3>Tips</h3>
 
 <dl>
  <dt>Python distutils</dt>
@@ -354,7 +420,7 @@ python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build</pre>
  </dd>
 </dl>
 
-<h2>Further reading</h2>
+<h3>Further reading</h3>
 
 <dl>
  <dt><a href='0compile-scons.html'>Example: SCons</a></dt>
