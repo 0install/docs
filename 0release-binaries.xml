@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<h2>Releases with source and binary packages</h2>
+
+<p>
+<a href='0release.html'>0release</a> can be used to create releases of your software from a version control system.
+The main page described how to make releases of programs which are architecture-independent (e.g. programs written
+in Python) where a single package is produced. This page explains what happens for programs which must be compiled
+for different architectures (e.g. C programs).
+</p>
+
+<p>
+The extended release process looks like this:
+</p>
+
+<p>
+<img src='UML/release-process-binaries.png' width='515' height='655' alt='The release process with binary packages'/>
+</p>
+
+<p>TODO: 0release doesn't currently unit-test the binaries it produces</p>
+
+<!--
+<p>
+The main complication here is that compiling the binaries may require sending
+the release candidate source package to other machines (real or virtual) and
+then collecting the resulting packages.
+</p>
+-->
+
+<p>
+After generating an archive and a feed for the source code release candidate (where <b>arch='*-src'</b>), 0release also
+compiles a binary for the host system (using <a href='0compile.html'>0compile</a>). It uploads both the source and binary
+archive and publishes both in the Zero Install feed.
+</p>
+
+<p>
+For an example of a simple binary package that works this way, have a look at the
+<a href='http://repo.or.cz/w/0release.git?a=blob;f=tests/c-prog.tgz;h=ae1f06864c70f65fdef5a00065fb82eec809d6dc;hb=a7bce06b6494407b2d80124c65f13493e3b44378'>c-prog.tgz</a> package in 0release's tests directory:
+</p>
+
+<pre>
+$ <b>tar xzf c-prog.tgz</b>
+$ <b>mkdir release-c-prog</b>
+$ <b>cd release-c-prog</b>
+$ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.xml</b>
+</pre>
+
+<h3>Compiling on other systems</h3>
+  
+
+<p>TODO: 0release does not currently support compiling binaries for multiple platforms, but it should be easy to add.</p>
+
+<!--
+
+  , by running this command:
+</p>
+
+<pre>
+  0release - -build-slave src-feed src-archive archive-dir-public-url target-feed
+</pre>
+
+<p>
+  When invoked this way, 0release creates a temporary directory and builds the given source code using
+  <a href='0compile.html'>0compile</a>. The end result is a binary package and a corresponding feed (<i>target-feed</i>).
+  The binary package is created in the directory from which 0release - -build-slave is invoked, and its name
+  is given in the generated feed.
+</p>
+
+<p>
+  You may wish to build binaries on multiple systems. In this case, 0release will run a command you provide with the same
+  arguments as for the "0release - -build-slave" command above. Your script should:
+</p>
+
+<ol>
+  <li>Copy the source archive and feed (the first two arguments) to the target system.</li>
+  <li>Run <b>0release - -build-slave ...</b> on the target system.</li>
+  <li>Copy the resulting archive and feed back to the original system.</li>
+</ol>
+
+<p>
+  For example:
+</p>
+
+<pre>
+  #!/bin/sh -e
+  ssh target "rm -rf build-dir &amp;&amp; mkdir build-dir"
+  scp "$1" "$2" target:build-dir/
+  ssh target "cd build-dir &amp;&amp; 0launch http://0install.net/2007/interfaces/0release.xml - -build-slave "$1" "$2" "$3" out.xml"
+  scp target:build-dir/out.xml "$4"
+</pre>
+-->
+
+</html>
