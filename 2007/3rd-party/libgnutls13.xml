@@ -23,13 +23,13 @@ This package contains the runtime libraries.</description>
     <requires interface="http://0install.net/2008/3rd-party/libtasn1-3.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation arch="Linux-i386" id="sha1new=3445a2b1632a2b5c0ba977c1296f94ec4dce78a8" released="2008-08-16" version="1.4.4-3">
+    <implementation arch="Linux-i386" id="sha1new=3445a2b1632a2b5c0ba977c1296f94ec4dce78a8" released="2008-08-16" stability="stable" version="1.4.4-3">
       <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls13/libgnutls13_1.4.4-3+etch1_i386.deb" size="281748"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIpp8yBSn9tx+xORARAkZ3AKCgumQ1gD52sQF1Nz5GacQRqI5H5gCeOn3QlVxu0vOX1J2c
-cBOS6EBXWGY=
+iEYEABECAAYFAkn9oBYACgkQBSn9tx+xORA+JQCcDUdkhwBovxQDhI1HlIt2FOlFNMcAnRhdGkof
+Z5pCLXHUb3vdfbToUAor
 
 -->

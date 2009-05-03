@@ -10,13 +10,13 @@ Mutt is a sophisticated text-based Mail User Agent.</description>
   <needs-terminal/>
   <icon href="http://0install.net/feed_icons/Mutt.png" type="image/png"/>
   <group doc-dir="usr/share/doc/mutt" license="OSI Approved :: GNU General Public License (GPL)" main="usr/bin/mutt">
-    <implementation id="sha1new=25e80c9249550fa8bb77d1becff6a255ffe5cb04" released="2007-11-24" version="1.5.13" version-modifier="-1.1">
+    <implementation id="sha1new=25e80c9249550fa8bb77d1becff6a255ffe5cb04" released="2007-11-24" stability="stable" version="1.5.13" version-modifier="-1.1">
       <archive href="http://ftp.uk.debian.org/debian/pool/main/m/mutt/mutt_1.5.13-1.1etch1_i386.deb" size="1809440" type="application/x-deb"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBHSCpHBSn9tx+xORARAnldAJ9fQ0Vvg5enXuCL05CliEXjJ66+lACfYwc+ruqpM1kG6yvt
-0BNGXHaObXk=
+iEYEABECAAYFAkn9oBUACgkQBSn9tx+xORAEkwCfQcOCiRlj6gQ7vIF1DwLheHw5JjUAnjM0jy4v
+/3LmXHUG/9McXRwgUNxU
 
 -->

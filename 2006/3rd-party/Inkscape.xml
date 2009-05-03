@@ -38,7 +38,7 @@ user and developer community by using open, community-oriented development.</des
     </implementation>
   </group>
   <group arch="Linux-x86_64" main="bin/inkscape">
-    <implementation id="sha1new=edebf675354b258aaa172dd542df4b98c22f9fb6" released="2008-05-10" version="0.46">
+    <implementation id="sha1new=edebf675354b258aaa172dd542df4b98c22f9fb6" released="2008-05-10" stability="stable" version="0.46">
       <archive extract="inkscape-linux-x86_64-0.46" href="http://downloads.sourceforge.net/zero-install/inkscape-linux-x86_64-0.46.tar.bz2" size="14758655" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
@@ -65,7 +65,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8cIACgkQBSn9tx+xORCuAwCeK0nyUDJZqMSwL+6ddAgDHnlZwooAn0ltxcq2
-UT/2+4sd8r6GRsVZCIeq
+iEYEABECAAYFAkn9oAsACgkQBSn9tx+xORDOuACfWZEJ7I9q37PwgeT810rQJyF1zocAn3PN0Pho
+tsAiPDjuybY5hFG01oU9
 
 -->
