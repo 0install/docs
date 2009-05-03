@@ -15,7 +15,7 @@ number and release date, tagging the release in your version control system and 
 
 <p>
 The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below
-(the process for programs which release a source package and multiple binary packages is described later):
+(<a href='0release-binaries.html'>releasing a source package and multiple binary packages</a> is also possible):
 </p>
 
 <table>
@@ -99,7 +99,7 @@ version control system:
 </p>
 
 <pre>
-$ <b>git-clone http://0install.net/tests/hello.git</b>
+$ <b>git clone http://0install.net/tests/hello.git</b>
 </pre>
 
 <p>
@@ -160,6 +160,11 @@ when you do this!
 $ <b>mkdir -p ~/releases/hello</b>
 $ <b>cd ~/releases/hello</b>
 $ <b>0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml</b>
+Setting up releases directory for HelloWorld
+Success - created script:
+ ~/releases/hello/make-release
+Now edit it with your local settings.
+Then, create new releases by running it.
 </pre>
 
 <p>
@@ -175,7 +180,7 @@ be shared by other developers.</li>
 </ul>
 
 <p>
-Open the file in a text editor. There are four settings, with comments explaining what is needed.
+Open the file in a text editor. There are five settings, with comments explaining what is needed.
 The only one you need to set is the first (<b>ARCHIVE_DIR_PUBLIC_URL</b>), which is where people
 will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
 </p>
@@ -185,8 +190,8 @@ ARCHIVE_DIR_PUBLIC_URL=http://osdn.dl.sourceforge.net/sourceforge/zero-install
 </pre>
 
 <p>
-The other settings allow 0publish to push files to the remote server automatically, but you can
-leave them as they are and do it manually.
+The other settings allow 0release to push files to the remote server automatically, but you can
+leave them as they are and do it manually if you prefer.
 </p>
 
 <h2>Creating a release candidate</h2>
@@ -209,12 +214,13 @@ default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). 
 </p>
 
 <pre>Releasing version 0.1
-
-SKIPPING unit tests for /home/me/releases/hello/helloworld-0.1 (no 'self-test' attribute set)
+HEAD is now at a2d1ed9 Prints "Hello World" already!
+SKIPPING unit tests for ~/releases/0.1/helloworld-0.1 (no 'self-test' attribute set)
+Wrote source feed as helloworld-0.1.xml
 Wrote changelog from start to here as changelog-0.1
 
 Candidate release archive: helloworld-0.1.tar.bz2
-(extracted to /home/me/releases/hello/helloworld-0.1 for inspection)
+(extracted to ~/releases/0.1/helloworld-0.1 for inspection)
 
 Please check candidate and select an action:
 P) Publish candidate (accept)
@@ -241,7 +247,7 @@ by committing two new revisions. You can see them using <b>gitk --all</b>:
 </p>
 
 <p style='text-align: center'>
-<img width="491" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
+<img width="487" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
 </p>
 
 <p>
@@ -265,7 +271,7 @@ branch (not on the "0release-tmp" branch, which will be discarded if you fail th
 We'll just check that the release works:
 </p>
 
-<pre>$ <b>0launch helloworld-0.1/HelloWorld.xml</b>
+<pre>$ <b>0launch 0.1/helloworld-0.1/HelloWorld.xml</b>
 Hello World!
 </pre>
 
@@ -277,8 +283,15 @@ prompt. Choose <b>Publish</b> (you can just type <b>p&lt;Return&gt;</b>).
 <p>
 The temporary files (<b>release-status</b> and the extracted
 <b>helloworld-0.1</b> directory) are removed, and you will be prompted to enter
-your GPG passphrase (use <b>--key</b> if you don't want to use the default key).
+your GPG passphrase to sign the release (use <b>--key</b> if you don't want to use the default key).
 </p>
+
+<pre>Tagged as v0.1
+HEAD is now at 07f3c9e Start development series 0.1-post
+Deleted branch 0release-tmp.
+Changing key from 'None' to '<i>YOUR-KEY</i>'
+Exported public key as '~/releases/<i>YOUR-KEY</i>.gpg'
+</pre>
 
 <p>
 A new file then appears: <b>HelloWorld.xml</b>. This is
@@ -294,7 +307,7 @@ and updated the "master" branch to the tip of the temporary branch:
 </p>
 
 <p style='text-align: center'>
-<img width="466" height="78" src="screens/0release-tagged.png" alt="Release tagged" />
+<img width="409" height="54" src="screens/0release-tagged.png" alt="Release tagged" />
 </p>
 
 <p>
@@ -311,20 +324,45 @@ If you didn't set an upload command in the make-release configuration file,
 </p>
 
 <pre>
-Upload helloworld-0.1.tar.bz2 as http://localhost/~me/testing/helloworld-0.1.tar.bz2
+Upload status:
+- helloworld-0.1.tar.bz2 : Upload required
+
+Upload 0.1/helloworld-0.1.tar.bz2 as http://osdn.dl.sourceforge.net/sourceforge/zero-install/helloworld-0.1.tar.bz2
 No upload command is set => please upload the archive manually now
-Press Return once archive is uploaded.
+Press Return once the archive is uploaded.
 </pre>
 
 <p>
 Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>)
-to your web-server. You should then be able to download and run the new release, using the URL you
+to your web-server. When you press Return, 0release will check that the archives were uploaded
+correctly:
+</p>
+
+<pre>Testing URL http://osdn.dl.sourceforge.net/sourceforge/zero-install/helloworld-0.1.tar.bz2...
+
+Upload status:
+- helloworld-0.1.tar.bz2 : Upload has been checked (exists and has correct size)
+</pre>
+
+<p>
+You should then be able to download and run the new release, using the URL you
 chose at the start:
 </p>
 
 <pre>
 $ 0launch http://localhost/~me/testing/HelloWorld.xml
 Hello World!
+</pre>
+
+<p>
+Finally, it will prompt you to upload the feed and the new GIT commits:
+</p>
+
+<pre>
+Upload ~/releases/HelloWorld.xml into http://0install.net/tests
+NOTE: No feed upload command set => you'll have to upload them yourself!
+Push changes to public SCM repository...
+NOTE: No public repository set => you'll have to push the tag and trunk yourself.
 </pre>
 
 <p>
@@ -336,6 +374,12 @@ push the branch and tag ("master" and "v0.1" in this case) to your public GIT re
 
 <p>
 For more information, see <a href='0release-phases.html'>release phases</a>.
+</p>
+
+<h2>Source and binaries</h2>
+
+<p>
+If your program needs to be compiled, see <a href='0release-binaries.html'>Releasing binaries</a>.
 </p>
 
 <h2>Unpublishing a release</h2>

@@ -60,6 +60,7 @@
     </item>
     <item base='0release' label='0release'>
       <item base='0release-phases' label='Customisation'/>
+      <item base='0release-binaries' label='Compiled binaries'/>
     </item>
     <item base='feedlint' label='FeedLint'/>
     <item base='make-headers' label='Make-headers'/>
