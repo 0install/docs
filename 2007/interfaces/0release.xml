@@ -42,11 +42,14 @@ can help you to create new releases easily.</description>
     <implementation id="sha1new=6428caafecb773c291da7f8987f4e711dd7d00e2" released="2009-05-03" self-test="tests/testall.py" version="0.9">
       <archive extract="0release-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.9.tar.bz2" size="53436"/>
     </implementation>
+    <implementation id="sha1new=5a19b21a3c4e62871ff18cf9355ccfd91f987ce9" released="2009-05-04" self-test="tests/testall.py" version="0.10">
+      <archive extract="0release-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.tar.bz2" size="53961"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkn96K0ACgkQrgeCgFmlPMHK2QCgmEdDSHqwPjM+BY1BKzWGr9a0O4EAoKh6fUoW
-DapmjiAGh/tWGEvM8F1s
+iEYEABECAAYFAkn/EcQACgkQrgeCgFmlPMFfyQCeKAL5v99/oDceOJ7jIVQH1lHb0EQAoMxO5mWj
+BJOwmzVg8RnOGxC+HEC5
 
 -->
