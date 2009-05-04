@@ -103,7 +103,7 @@ $ <b>git clone http://0install.net/tests/hello.git</b>
 </pre>
 
 <p>
-To check that you can run it:
+To check that you can run it, use <a href='injector.html'>0launch</a> on the feed:
 </p>
 
 <pre>
@@ -152,8 +152,7 @@ This example program is so simple it doesn't have any dependencies.
 <p>
 Each time you create a new release, the resulting files go in your 'releases'
 directory. Create the directory now and then run <b>0release</b> inside it,
-giving it the location of your local feed. The releases directory must be empty
-when you do this!
+giving it the location of your local feed.
 </p>
 
 <pre>

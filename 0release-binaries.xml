@@ -89,7 +89,7 @@ stop = stop-vm FreeBSD
 </p>
 
 <ol>
-  <li>The name of the generated XML feed file for the source release candidate</li>
+  <li>The name of the generated XML feed file for the source release candidate.</li>
   <li>The name of the generated source archive.</li>
   <li>The URL of the directory where the release will be hosted eventually.</li>
   <li>The name of the binary feed to be generated.</li>
