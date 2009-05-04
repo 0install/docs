@@ -46,49 +46,83 @@ $ <b>cd release-c-prog</b>
 $ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.xml</b>
 </pre>
 
-<h3>Compiling on other systems</h3>
+<h2>Compiling on multiple systems</h2>
   
+<p><strong>Note:</strong> this requires the GIT version of 0release (0.9-post).</p>
 
-<p>TODO: 0release does not currently support compiling binaries for multiple platforms, but it should be easy to add.</p>
+<p>
+  To build binaries for multiple architectures, you'll need to create a configuration file listing the available <i>builders</i>.
+  0release uses the <a href='http://www.freedesktop.org/wiki/Specifications/basedir-spec'>Base Directory Specification</a> to find
+  its configuration files; with the default settings, you need to create the file <b>~/.config/0install.net/0release/builders.conf</b>.
+</p>
 
-<!--
-
-  , by running this command:
+<p>
+  The <b>builders.conf</b> file has a [global] section listing the builders to use, followed by one section for each builder. Each builder can have three commands
+  specified: one to start the builder (optional), one the actually do the build, and one to shutdown the builder (optional). Here is an example configuration:
 </p>
 
 <pre>
-  0release - -build-slave src-feed src-archive archive-dir-public-url target-feed
+[global]
+builders = host, freebsd
+
+[builder-host]
+build = 0launch --not-before 0.9 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
+
+[builder-freebsd]
+start = start-vm FreeBSD
+build = build-on-vm "$@"
+stop = stop-vm FreeBSD
 </pre>
 
 <p>
-  When invoked this way, 0release creates a temporary directory and builds the given source code using
-  <a href='0compile.html'>0compile</a>. The end result is a binary package and a corresponding feed (<i>target-feed</i>).
-  The binary package is created in the directory from which 0release - -build-slave is invoked, and its name
-  is given in the generated feed.
+  This defines two builders named "host" and "freebsd". "host" simply runs 0release in build-slave mode on the local machine (in fact, you don't need to specify this section
+  because it exists by default). The "freebsd" builder runs some other scripts which bring up a virtual machine, submit the build to it, and then shut it down again.
 </p>
 
 <p>
-  You may wish to build binaries on multiple systems. In this case, 0release will run a command you provide with the same
-  arguments as for the "0release - -build-slave" command above. Your script should:
+  The reason for having separate start/build/stop commands is simply to make error handling easier. If the <b>start</b> command succeeds then the <b>stop</b> command will always be run, even if the <b>build</b>
+  command fails. If <b>start</b> fails, the other commands are not run.
+</p>
+
+<h3>The build command</h3>
+
+<p>
+  The build command is called with four arguments:
 </p>
 
 <ol>
-  <li>Copy the source archive and feed (the first two arguments) to the target system.</li>
-  <li>Run <b>0release - -build-slave ...</b> on the target system.</li>
-  <li>Copy the resulting archive and feed back to the original system.</li>
+  <li>The name of the generated XML feed file for the source release candidate</li>
+  <li>The name of the generated source archive.</li>
+  <li>The URL of the directory where the release will be hosted eventually.</li>
+  <li>The name of the binary feed to be generated.</li>
 </ol>
 
 <p>
-  For example:
+  The three names are of files in the current directory without the directory part; this simplifies the copying. The build command must do three things:
+</p>
+
+<ol>
+  <li>Copy the input files (the source feed and archive) to the build system.</li>
+  <li>Invoke "0release --build-slave" to do the build.</li>
+  <li>Copy the results (the binary feed and archive) back to the local system.</li>
+</ol>
+
+<p>
+  For example, the <b>build-on-vm</b> script might look like this:
 </p>
 
 <pre>
-  #!/bin/sh -e
-  ssh target "rm -rf build-dir &amp;&amp; mkdir build-dir"
-  scp "$1" "$2" target:build-dir/
-  ssh target "cd build-dir &amp;&amp; 0launch http://0install.net/2007/interfaces/0release.xml - -build-slave "$1" "$2" "$3" out.xml"
-  scp target:build-dir/out.xml "$4"
+#!/bin/sh -ex
+PORT="2222"
+LOGIN="builder@localhost"
+ssh -p $PORT $LOGIN 'rm -rf build; mkdir build'
+scp -P $PORT "$1" "$2" ${LOGIN}:build/
+ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch --not-before 0.9 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"' "$@"
+scp -P $PORT "${LOGIN}:build/*" .
 </pre>
--->
+
+<p>
+  This assumes that the virtual machine is listening on port 2222 (probably forwarded to port 22 in the guest) and has a user named "builder".
+</p>
 
 </html>
