@@ -48,8 +48,6 @@ $ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.x
 
 <h2>Compiling on multiple systems</h2>
   
-<p><strong>Note:</strong> this requires the GIT version of 0release (0.9-post).</p>
-
 <p>
   To build binaries for multiple architectures, you'll need to create a configuration file listing the available <i>builders</i>.
   0release uses the <a href='http://www.freedesktop.org/wiki/Specifications/basedir-spec'>Base Directory Specification</a> to find
@@ -66,7 +64,7 @@ $ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.x
 builders = host, freebsd
 
 [builder-host]
-build = 0launch --not-before 0.9 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
+build = 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
 
 [builder-freebsd]
 start = start-vm FreeBSD
@@ -117,7 +115,7 @@ PORT="2222"
 LOGIN="builder@localhost"
 ssh -p $PORT $LOGIN 'rm -rf build; mkdir build'
 scp -P $PORT "$1" "$2" ${LOGIN}:build/
-ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch --not-before 0.9 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"' "$@"
+ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"' "$@"
 scp -P $PORT "${LOGIN}:build/*" .
 </pre>
 
