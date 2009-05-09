@@ -45,11 +45,15 @@ can help you to create new releases easily.</description>
     <implementation id="sha1new=5a19b21a3c4e62871ff18cf9355ccfd91f987ce9" released="2009-05-04" self-test="tests/testall.py" version="0.10">
       <archive extract="0release-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.tar.bz2" size="53961"/>
     </implementation>
+    <implementation id="sha1new=1d20091466927b1b7444e6af71425fe39ca3c14e" released="2009-05-09" self-test="tests/testall.py" version="0.10.1">
+      <manifest-digest sha256="42bf498b09b730f6a51034ef5fbd4221488bc7874088722828186c7b7d89a7da"/>
+      <archive extract="0release-0.10.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.1.tar.bz2" size="53939"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkn/EcQACgkQrgeCgFmlPMFfyQCeKAL5v99/oDceOJ7jIVQH1lHb0EQAoMxO5mWj
-BJOwmzVg8RnOGxC+HEC5
+iEYEABECAAYFAkoFW2AACgkQrgeCgFmlPMFUtgCgyDY/0pN1mEJ0prBfNKuGYiPoCegAoKpLIo+M
+2TanC0RaKffU3PItEb8T
 
 -->
