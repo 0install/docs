@@ -67,14 +67,14 @@ builders = host, freebsd
 build = 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
 
 [builder-freebsd]
-start = start-vm FreeBSD
-build = build-on-vm "$@"
-stop = stop-vm FreeBSD
+start = VBoxManage startvm "FreeBSD" --type vrdp
+build = build-on-vm 2222 "$@"
+stop = VBoxManage controlvm "FreeBSD" savestate
 </pre>
 
 <p>
   This defines two builders named "host" and "freebsd". "host" simply runs 0release in build-slave mode on the local machine (in fact, you don't need to specify this section
-  because it exists by default). The "freebsd" builder runs some other scripts which bring up a virtual machine, submit the build to it, and then shut it down again.
+  because it exists by default). The "freebsd" builder runs some other scripts which bring up a VirtualBox virtual machine, submit the build to it, and then shut it down again.
 </p>
 
 <p>
@@ -110,17 +110,26 @@ stop = stop-vm FreeBSD
 </p>
 
 <pre>
-#!/bin/sh -ex
-PORT="2222"
+#!/bin/sh -e
+PORT="$1"
+shift
 LOGIN="builder@localhost"
-ssh -p $PORT $LOGIN 'rm -rf build; mkdir build'
+
+while true; do
+  ssh -p $PORT $LOGIN 'rm -rf build; mkdir build' &amp;&amp; break
+  echo Waiting for VM to be ready...
+  sleep 2
+done
+
+ssh -p $PORT $LOGIN 'ntpdate your.server.here'  # Avoid clock-skew problems
+
 scp -P $PORT "$1" "$2" ${LOGIN}:build/
-ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"' "$@"
+ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch -v --not-before 0.10 http://0install.net/2007/interfaces/0release.xml -v --build-slave "$@"' "$@"
 scp -P $PORT "${LOGIN}:build/*" .
 </pre>
 
 <p>
-  This assumes that the virtual machine is listening on port 2222 (probably forwarded to port 22 in the guest) and has a user named "builder".
+  This assumes that the virtual machine is listening on some port which is forwarded to port 22 in the guest, and has a user named "builder".
 </p>
 
 </html>
