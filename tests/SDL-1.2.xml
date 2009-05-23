@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/lib/SDL-1.2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>SDL-1.2</name>
+  <summary>cross-platform multimedia library</summary>
+  <description>
+Simple DirectMedia Layer is a cross-platform multimedia library designed to
+provide low level access to audio, keyboard, mouse, joystick, 3D hardware via
+OpenGL, and 2D video framebuffer. It is used by MPEG playback software,
+emulators, and many popular games, including the award winning Linux port of
+&quot;Civilization: Call To Power.&quot;
+
+SDL supports Linux, Windows, Windows CE, BeOS, MacOS, Mac OS X, FreeBSD, NetBSD,
+OpenBSD, BSD/OS, Solaris, IRIX, and QNX. The code contains support for AmigaOS,
+Dreamcast, Atari, AIX, OSF/Tru64, RISC OS, SymbianOS, and OS/2, but these are
+not officially supported.
+
+SDL is written in C, but works with C++ natively, and has bindings to several
+other languages, including Ada, C#, D, Eiffel, Erlang, Euphoria, Guile, Haskell,
+Java, Lisp, Lua, ML, Objective C, Pascal, Perl, PHP, Pike, Pliant, Python, Ruby,
+Smalltalk, and Tcl.</description>
+  <homepage>http://www.libsdl.org</homepage>
+  <category>Graphics</category>
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <group arch="Linux-x86_64">
+      <implementation doc-dir="usr/share/doc/SDL-1.2.13" id="sha1new=8a4b3dcf2b34d2755e791538b9adbc425867367e" released="2009-05-23" version="1.2.13">
+	<archive href="http://www.libsdl.org/release/SDL-1.2.13-1.x86_64.rpm" size="197171" type="application/x-rpm"/>
+      </implementation>
+    </group>
+    <group arch="Linux-i386">
+      <implementation doc-dir="usr/share/doc/SDL-1.2.13" id="sha1new=1ff1995a403d342e5cdcfa2fa2104750226fa7df" released="2009-05-23" version="1.2.13">
+	<archive href="http://www.libsdl.org/release/SDL-1.2.13-1.i386.rpm" size="213268" type="application/x-rpm"/>
+      </implementation>
+    </group>
+  </group>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkoYOf8ACgkQBSn9tx+xORBNmQCeLXntdXBkiaJQJvr/2J8tZNgF0UQAn0kkIZsI
+5hNXmfJfhSuGMOeADufl
+
+-->
