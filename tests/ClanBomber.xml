@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/ClanBomber.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>ClanBomber</name>
+  <summary>Blow away your opponents</summary>
+  <description>
+The goal of clanbomber is to blow away your opponents using bombs, but avoid
+being blown up yourself. Up to eight players are supported, up to three of them
+can be humans; the others are controlled by the computer.</description>
+  <category>Game</category>
+  <homepage>http://www.nongnu.org/clanbomber/</homepage>
+  <group arch="Linux-i686" license="OSI Approved :: GNU General Public License v2" stability="developer" version="2.1.0" version-modifier="-pre">
+    <implementation id="sha1new=d4ca988e6a2c2822e8401da69b6d5f7da8a1c43e" main="AppRun" released="2009-05-20" version="2.1.0" version-modifier="-pre">
+      <archive extract="clanbomber-2.1.0_20090511-bin" href="http://download.savannah.gnu.org/releases-noredirect/clanbomber/monthly/bin/clanbomber-2.1.0_20090511-bin.tar.lzma" size="1989989" type="application/x-lzma-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/tests/SDL-1.2.xml">
+      <environment insert="usr/lib64" mode="prepend" name="LD_LIBRARY_PATH"/>
+    </requires>
+  </group>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkoYO6YACgkQBSn9tx+xORDUjQCfRxHVHk/ff/7eQBmazYLb/iDEKfcAn0wiWJQ3
+cvJDwWUyN5byWNSqxBSr
+
+-->
