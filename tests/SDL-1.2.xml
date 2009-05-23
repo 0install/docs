@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/lib/SDL-1.2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/tests/SDL-1.2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>SDL-1.2</name>
   <summary>cross-platform multimedia library</summary>
   <description>
@@ -35,7 +35,7 @@ Smalltalk, and Tcl.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkoYOf8ACgkQBSn9tx+xORBNmQCeLXntdXBkiaJQJvr/2J8tZNgF0UQAn0kkIZsI
-5hNXmfJfhSuGMOeADufl
+iEYEABECAAYFAkoYO0AACgkQBSn9tx+xORAioACfZOsaTpR2a8blFg0YisAs+DD2jEoAoJYu7Gs1
+LN3Lv+6G8HBCDKPvRd3Y
 
 -->
