@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>Barrage</name>
+    <summary>Barrage is a rather violent action game</summary>
+    <description>
+	    Barrage is a rather violent action game with the objective to kill
+	    and destroy as many targets as possible within 3 minutes. The player
+	    controls a gun that may either fire small or large grenades at
+	    soldiers, jeeps and tanks. It is a very simple gameplay though it is
+	    not that easy to get high scores. License: GPL
+            Homepage: http://lgames.sourceforge.net
+    </description>
+    <group>
+    <requires interface="http://www.libsdl.org/lib/libsdl1.2.xml">
+	<environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://www.libsdl.org/lib/libsdl-mixer1.2.xml">
+	<environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i686" id="sha1=4fe8b784cbce20e2d09d5d735c1c9599117a520c" main="barrage.sh" stability="stable" version="1.0.2">
+        <archive extract="barrage-1.0.2" href="http://people.freenet.de/LinuxCNC/0install/barrage-1.0.2.tar.bz2" size="377678"/>
+     </implementation>
+     </group>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkoZHcUACgkQb88SG+I5Dgt78gCfancNmDjuJpg0OZLr7W/bCru5yMoAn38Bl43g
+bCSbwBB9qzeRjBaixwXj
+
+-->
