@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/tests/Barrage.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
     <name>Barrage</name>
     <summary>Barrage is a rather violent action game</summary>
     <description>
@@ -24,7 +24,7 @@
      </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkoZHcUACgkQb88SG+I5Dgt78gCfancNmDjuJpg0OZLr7W/bCru5yMoAn38Bl43g
-bCSbwBB9qzeRjBaixwXj
+iEYEABECAAYFAkoZHkQACgkQb88SG+I5Dgvf4wCfXpuoFFvKeJryTnykR0MKc8TyslYAn1a8nJ51
+m6W4ywjEr5Eyb6JTJRid
 
 -->
