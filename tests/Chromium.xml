@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/Chromium.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>chromium-browser</name>
+  <summary>Chromium browser</summary>
+  <description>Chromium is an open-source browser project that aims to build a safer, faster,
+and more stable way for all Internet users to experience the web.
+
+This binary is from the Ubuntu PPA: https://launchpad.net/~chromium-daily/+archive/ppa
+</description>
+  <category>Network</category>
+  <package-implementation main="/usr/bin/chromium-browser" package="chromium-browser"/>
+  <group arch="Linux-i386" main="usr/bin/chromium-browser">
+    <implementation id="sha1new=0ac7431250863cd6b6e4a6e73d50ea9e4ffc89f4" released="2009-05-31" version="3.0.183.0">
+      <archive href="http://ppa.launchpad.net/chromium-daily/ppa/ubuntu/pool/main/c/chromium-browser/chromium-browser_3.0.183.0~svn20090530r17289-0ubuntu1~ucd2~hardy_i386.deb" size="16822028"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkoiPbMACgkQBSn9tx+xORD/twCfRv+YJLUOWwFoxs4RF8pmSLTTbrwAn0r2LssZ
+0ueG+v4SGLy6wb9iEyfL
+
+-->
