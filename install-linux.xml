@@ -36,7 +36,7 @@
   However, a newer version is available here: <download name='zeroinstall-injector_0.39-1_all.deb'/>
   </li>
   <li>
-  <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty)</b> Zero Install is all recent versions of Ubuntu, so you can just do:
+  <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>Intrepid users can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
 <p><strong>Hardy (8.04): </strong>a later version is <download name='zeroinstall-injector_0.39-1_all.deb'/>.</p>
