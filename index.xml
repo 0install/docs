@@ -33,11 +33,6 @@
   </td>
  </tr>
 </table>
-</div>
-
-<div style='text-align: center'>
-<video vid='Lu0MAiNIaGM'>Zero Install introduction</video>
-</div>
 
 <quicklinks>
   <link href='injector.html' img='tango/go-next.png'>Install it!</link>
@@ -45,8 +40,13 @@
   <link href='dev.html' img='tango/applications-development.png'>Developers</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
 </quicklinks>
+</div>
 
-<div class='news'>
+<div style='text-align: center'>
+<video vid='Lu0MAiNIaGM'>Zero Install introduction</video>
+</div>
+
+<div class='news' style='clear: both'>
 <h2>News</h2>
 <dl>
 <dt>May 2009</dt><dd><a href='0release.html'>0release 0.10</a> automatically creates binary packages along with the source releases.</dd>
