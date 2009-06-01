@@ -109,6 +109,10 @@ track listings ...</feed>
 
 <feed uri="http://crystalspace3d.org/0install/celstart-runtime-1.9.xml" name="CELstart binary" summary="Run CrystalSpace+CEL game packages (runtime)" icon="feed_icons/celstart-runtime-1.9.png" width="64" height="64" homepage="http://crystalspace3d.org/main/CELstart" category="Library"></feed>
 
+<feed uri="http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml" name="ClanBomber" summary="Blow away your opponents" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.nongnu.org/clanbomber/" category="Games">The goal of clanbomber is to blow away your opponents using bombs, but avoid
+being blown up yourself. Up to eight players are supported, up to three of them
+can be humans; the others are controlled by the computer.</feed>
+
 <feed uri="http://www.kerofin.demon.co.uk/2005/interfaces/Clock" name="Clock" summary="Clock panel applet" icon="feed_icons/Clock.png" width="47" height="46" homepage="http://www.kerofin.demon.co.uk/rox/clock.html" category="Utility">This is a panel clock, with support for setting alarms.  It can also function in
 its own window.</feed>
 
@@ -239,6 +243,14 @@ Git falls in the category of distributed source code management ...</feed>
 <feed uri="http://0install.net/2008/interfaces/Glade-dev.xml" name="Libglade-dev" summary="Headers for compiling Glade applications" icon="tango/applications-system.png" width="48" height="48" homepage="http://glade.gnome.org" category="Development">These are the Glade header files. They are required when compiling applications
 that use the Glade library.</feed>
 
+<feed uri="http://riscque.net/3rd-party/GLib" name="GLib" summary="Library of useful routines for C programming" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.gtk.org" category="Development">GLib is the low-level core library that forms the basis for projects
+
+such as GTK+ and GNOME. It provides data structure handling for C,
+
+portability wrappers, and interfaces for such runtime functionality
+
+as an event loop, threads, dynamic loading, ...</feed>
+
 <feed uri="http://0install.net/2006/interfaces/GLib-dev" name="GLib-dev" summary="Headers for compiling GLib applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the GLib header files. They are required when compiling applications
 that use the GLib library.</feed>
 
@@ -266,6 +278,12 @@ that use the GTK+ library.</feed>
 
 <feed uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" name="GTKmm-dev" summary="Headers for compiling C++ GTK applications" icon="tango/applications-system.png" width="48" height="48" category="Library">These are the glibmm header files. They are required when compiling C++
 applications that use the GTK, ATK or Pango libraries..</feed>
+
+<feed uri="http://riscque.net/3rd-party/GTKSourceView" name="GTKSourceView" summary="A text widget that extends the standard gtk+ 2.x text widget" icon="tango/applications-system.png" width="48" height="48" homepage="http://gtksourceview.sourceforge.net/" category="Library">It improves the gtk+ text widget by implementing syntax highlighting and other
+features typical of a source editor.
+
+It is part of the GNOME Desktop Environment and it is currently being used by
+gedit, MonoDevelop, Glimmer and several other projects.</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/Inkscape.xml" name="Inkscape" summary="An SVG-based vector drawing application" icon="feed_icons/Inkscape.png" width="64" height="64" homepage="http://inkscape.org/" category="Graphics">Inkscape is an Open Source vector graphics editor, with capabilities similar to
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
@@ -548,6 +566,20 @@ primarily designed for the ROX desktop.</feed>
 well as the Mixer API is supported.</feed>
 
 <feed uri="http://riscque.net/3rd-party/pycairo" name="Pycairo" summary="Python bindings for the cairo graphics library" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.cairographics.org/pycairo/" category="Graphics"></feed>
+
+<feed uri="http://riscque.net/3rd-party/pyGObject" name="PyGObject" summary="Python bindings for GObject" icon="tango/applications-system.png" width="48" height="48" homepage="http://pygtk.org" category="Development">GObject is a object system library used by GTK+ and GStreamer.
+
+PyGObject provides a convenient wrapper for the GObject+ library for use in
+Python programs, and takes care of many of the boring details such as managing
+memory and type casting.  When ...</feed>
+
+<feed uri="http://riscque.net/3rd-party/pyGTK" name="PyGTK" summary="Python bindings for GTK+" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.pygtk.org/" category="Development">PyGTK lets you to easily create programs with a graphical user interface using
+the Python programming language. The underlaying GTK+ library provides all kind
+of visual elements and utilities for it and, if needed, you can develop full
+featured ...</feed>
+
+<feed uri="http://riscque.net/3rd-party/pyGTKSourceView" name="PyGTKSourceView" summary="Python bindings for GTKSourceView" icon="tango/applications-system.png" width="48" height="48" category="Development">PyGTKSourceView is a set of bindings for GTKSourceView, allowing use of them in
+the Python programming language.</feed>
 
 <feed uri="http://0install.net/2006/3rd-party/PySol.xml" name="PySol" summary="A collection of more than 200 solitaire card games" icon="feed_icons/PySol.png" width="32" height="32" homepage="http://www.pysol.org/" category="Games">PySol is an exciting collection of more than 200 solitaire card games. Its
 features include support for lots of distinct games, very nice look and feel,
