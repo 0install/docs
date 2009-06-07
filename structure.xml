@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-  <item base="index" label="Overview">
+  <item href='.' base="index" label="Overview">
     <item base="goals" label="Goals"/>
     <item base="perspectives" label="Perspectives"/>
     <item base="howitworks" label="Screenshots"/>
