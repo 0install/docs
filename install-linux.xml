@@ -9,19 +9,19 @@
 <ul class='spaced'>
   <li>
     <a href='http://download.opensuse.org/repositories/home:/talex5/CentOS_5/noarch/'>CentOS 5 RPMs</a></li>
-  <li><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
+  <li id='fedora'><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   <p>Newer versions are also available: <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_10/noarch/'>Fedora 10 RPMs</a></p>
   </li>
-  <li>
+  <li id='mandriva'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2008/noarch/'>Mandriva 2008 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2009/noarch/'>Mandriva 2009 RPMs</a></li>
-  <li>
+  <li id='suse'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_10.3/i586/'>OpenSUSE 10.3 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.0/i586/'>OpenSUSE 11.0 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.1/i586/'>OpenSUSE 11.1 RPMs</a><br/>
     <strong>Note:</strong> do not install the -test RPMs</li>
-  <li>
+  <li id='redhat'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPMs</a></li>
 </ul>
 </dd>
@@ -29,13 +29,13 @@
 <dt>Debs</dt>
 <dd>
 <ul class='spaced'>
-  <li>
+  <li id='debian'>
   <b>Debian/oldstable (etch)</b> <download name='zeroinstall-injector_0.38-1_all.deb'/> (Debian package; python-central)<br/>
   <b>Debian/stable (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
   <pre># <b>apt-get install zeroinstall-injector</b></pre>
   However, a newer version is available here: <download name='zeroinstall-injector_0.39-1_all.deb'/>
   </li>
-  <li>
+  <li id='ubuntu'>
   <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>Intrepid users can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
@@ -43,7 +43,7 @@
 <p><strong>Jaunty (9.04): </strong> The version in Jaunty doesn't work with FTP downloads due to a <a href='https://bugs.launchpad.net/ubuntu/+source/zeroinstall-injector/+bug/366333'>bug</a>,
   but <download name='zeroinstall-injector_0.40-1_all.deb'/> contains a fix.</p>
   </li>
-  <li><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
+  <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
 </ul>
 </dd>
@@ -51,9 +51,10 @@
 <dt>Other</dt>
 <dd>
 <ul class='spaced'>
-  <li><b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
+  <li id='slackware'>
+      <b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
       <b>Slackware 12</b> <download name="zeroinstall-injector-0.32-i686-2_slack12.0_mjk.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
-  <li><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
+  <li id='gentoo'><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
   <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
 </ul>
 </dd>
