@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                version='1.0'
-		xmlns='http://www.w3.org/1999/xhtml'>
+		version='1.0'>
 
 <!-- doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" -->
   <xsl:output method="html" encoding="utf-8"
@@ -71,7 +70,7 @@
   </xsl:template>
 
   <xsl:template match='/*'>
-    <html xml:lang='en' lang='en'>
+    <html lang='en'>
       <head>
         <link rel="alternate" type="application/rss+xml" title="Thomas Leonard's blog" href="http://roscidus.com/desktop/blog/1/feed" />
         <link rel='stylesheet' type='text/css' href='style.css' />
@@ -137,10 +136,12 @@
 	   		src="http://jigsaw.w3.org/css-validator/images/vcss" 
 	    		alt="Valid CSS!"/>
 	    </a>
+	    <!--
 	    <a class='outside' href="http://validator.w3.org/check/referer">
 	      <img src="http://www.w3.org/Icons/valid-xhtml10"
 	    	   alt="Valid XHTML 1.0!" height="31" width="88"/>
 	    </a>
+	    -->
 	    <a href="http://sourceforge.net/projects/zero-install">
 	      <img width="88" height="31" alt="SF logo"
      	       src="http://sourceforge.net/sflogo.php?group_id=7023&amp;type=1"/>
