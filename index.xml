@@ -34,8 +34,10 @@
  </tr>
 </table>
 
+@AUTO_DOWNLOAD_HTML@
+
 <quicklinks>
-  <link href='injector.html' img='tango/go-next.png'>Install it!</link>
+  <link href='injector.html' img='tango/go-next.png'>Install it</link>
   <link href='doc.html' img='tango/book.png'>Read more</link>
   <link href='dev.html' img='tango/applications-development.png'>Developers</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
