@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2009/3rd-party/clutter-gtk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>clutter-gtk</name>
+  <summary>embed clutter in GTK</summary>
+  <description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.
+
+This package allows embedding a Clutter stage inside a GTK window.</description>
+  <homepage>http://www.clutter-project.org/</homepage>
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="doc" id="sha1new=7d2c883eaf883d4541fd67a86f8a81f8e3aa41a5" license="OSI Approved :: GNU General Public License v2" released="2009-06-09" version="0.8.3">
+      <archive extract="clutter-gtk-0.8.3" href="http://www.clutter-project.org/sources/clutter-gtk/0.8/clutter-gtk-0.8.3.tar.bz2" size="279080" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
+      <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+    </requires>
+  </group>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkouOk4ACgkQBSn9tx+xORC1CACfdsccUHK2bBvBE6/+MHqWBzruCnoAnjHCqKfN
+OwWqPhslqg+uCuW/W4R1
+
+-->
