@@ -42,7 +42,7 @@ in an existing Debian package and uses it to generate the feed.</description>
       <implementation id="sha1new=068c5d5df9313712ee0cf817217be1d774e88492" released="2008-12-19" stability="stable" version="0.5">
         <archive extract="deb2zero-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.5.tar.bz2" size="17036"/>
       </implementation>
-      <implementation id="sha1new=2723c6f29678c3ba928d22fafd5525aba6f3496d" released="2009-05-24" version="0.6">
+      <implementation id="sha1new=2723c6f29678c3ba928d22fafd5525aba6f3496d" released="2009-05-24" stability="stable" version="0.6">
       <manifest-digest sha256="2da09304236aa10eff687f0edac6896f97b55d9c78c5718ad1d5478fc4f5f583"/>
       <archive extract="deb2zero-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/deb2zero-0.6.tar.bz2" size="17133"/>
     </implementation>
@@ -51,7 +51,7 @@ in an existing Debian package and uses it to generate the feed.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkoZIgcACgkQrgeCgFmlPMF0kACdHccE1FhZvZjcSjxZ0w+9/iQRfSEAoKIQwhXE
-xoFdvQDLoPJshR8v5nnJ
+iEYEABECAAYFAko0yf4ACgkQrgeCgFmlPMFyIgCcDvNoFPi5T45SA/a1JD/gzyyK+yAAoNWjIt6p
+c6h+NfR7hEKi+7kbb+JN
 
 -->

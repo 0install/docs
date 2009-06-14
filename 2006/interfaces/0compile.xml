@@ -101,7 +101,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <implementation id="sha1new=66f18fb05805524d58bde28865063a001303b73e" released="2009-04-20" self-test="tests/testcompile.py" stability="stable" version="0.15">
       <archive extract="0compile-0.15" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.15.tar.bz2" size="28071"/>
     </implementation>
-      <implementation id="sha1new=614643cbee8749fb214cfa2fc7cf604e6ff8486b" released="2009-05-05" self-test="tests/testcompile.py" version="0.16">
+      <implementation id="sha1new=614643cbee8749fb214cfa2fc7cf604e6ff8486b" released="2009-05-05" self-test="tests/testcompile.py" stability="stable" version="0.16">
       <archive extract="0compile-0.16" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.16.tar.bz2" size="28100"/>
     </implementation>
     </group>
@@ -109,7 +109,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkoAdLEACgkQrgeCgFmlPMGgBQCcCvBuNBY1gi/4QkRB1A6irrP7OTIAoJPFqMAN
-DXpdqo/54hq1t3iImynF
+iEYEABECAAYFAko0ydwACgkQrgeCgFmlPMHh1QCgzOwbpj2sdYNVj2U/VTgSNONY8kQAnA7j0SpH
+SGpilmT8w4t6HrrWjzAD
 
 -->
