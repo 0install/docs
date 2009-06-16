@@ -405,6 +405,52 @@ You can edit the feed XML file directly during the build (it's in the <b>$DISTDI
 </li>
 </ul>
 
+<h3>Legacy helper features</h3>
+
+<p>
+  0compile has some special code to detect and handle some common cases in legacy code:
+</p>
+
+<dl>
+  <dt>Generated pkgconfig files with absolute paths</dt>
+  <dd><p>If $DISTDIR ends up containing a directory called 'pkgconfig', it checks each .pc
+      file inside for an absolute prefix. If found, it is changed to a relative path.</p>
+    <p>Note: for "pure" Zero Install libraries, just use a relative path (e.g. <b>prefix=${pcfiledir}/..</b>) in
+      the .pc file in the source, and copy it unchanged to $DISTDIR.</p>
+  </dd>
+
+  <dt>Build dependencies containing /usr/lib/lib*.so broken symlinks</dt>
+  <dd>
+    <p>
+    RPM unpacks all packages over the root, so one package can have a symlink to a
+    file provided by a different package. This is often used to set the default
+    version of a library in RPM packages. e.g.
+    </p><ul>
+      <li>-devel package: libSDL.so -> libSDL-1.2.so.0.11.2 (broken link)</li>
+      <li>runtime package: provides libSDL-1.2.so.0.11.2</li>
+    </ul><p>
+    Since Zero Install keeps every package in its own directory, this doesn't work.
+    Therefore, 0compile searches for such broken links, searches for a matching target, and creates
+    a fixed link in a temporary directory, added to LD_LIBRARY_PATH. This makes it easy to depend
+    on unmodified -devel packages which were designed for non-Zero Install systems.
+    </p>
+    <p>
+      Note: a "pure" Zero Install library wouldn't need to include the version number in
+      the library filename, so no symlink would be needed. If you did want to include the
+      number in the filename, the symlink to it would go in the runtime package, not the
+      -devel package.
+    </p>
+  </dd>
+
+  <dt>Build dependencies with lib64 directories</dt>
+  <dd><p>
+    If the feed tries to add a directory under 'lib' or 'usr/lib' to
+    $PKG_CONFIG_PATH, and the directory doesn't exist, 0compile uses the corresponding
+    'lib64' directory instead, if present. This is for existing RPMs which use a
+    different directory structure for different architectures.
+  </p></dd>
+</dl>
+
 <h3>Tips</h3>
 
 <dl>
