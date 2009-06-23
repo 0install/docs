@@ -14,9 +14,9 @@ efficient and flexible.
 
 This package allows embedding a Clutter stage inside a GTK window.</description>
   <homepage>http://www.clutter-project.org/</homepage>
-  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
-    <implementation arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="doc" id="sha1new=7d2c883eaf883d4541fd67a86f8a81f8e3aa41a5" license="OSI Approved :: GNU General Public License v2" released="2009-06-09" version="0.8.3">
-      <archive extract="clutter-gtk-0.8.3" href="http://www.clutter-project.org/sources/clutter-gtk/0.8/clutter-gtk-0.8.3.tar.bz2" size="279080" type="application/x-bzip-compressed-tar"/>
+  <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="doc" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation id="sha1new=666fe8579646c68ad79c7ffe24aacd2a52baf011" released="2009-06-23" version="0.8.3" version-modifier="-1">
+      <archive extract="clutter-gtk-0.8.3" href="http://master.dl.sourceforge.net/sourceforge/zero-install/clutter-gtk-0.8.3-1.tar.bz2" size="286317" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
       <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
@@ -24,7 +24,7 @@ This package allows embedding a Clutter stage inside a GTK window.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkouOk4ACgkQBSn9tx+xORC1CACfdsccUHK2bBvBE6/+MHqWBzruCnoAnjHCqKfN
-OwWqPhslqg+uCuW/W4R1
+iEYEABECAAYFAkpBEmIACgkQBSn9tx+xORCWyACcCnsmkkmQ+OgleNgItgLH3huCcNMAnRdT9egx
+X4M2Xzx5nkL8H7g2IBWR
 
 -->
