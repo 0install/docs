@@ -15,8 +15,8 @@ efficient and flexible.</description>
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
 
     <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="docs">
-      <implementation id="sha1new=3472e197151b16e1a00983cf5a983843d1d12806" released="2009-02-25" version="0.8.2-1">
-	<archive extract="pyclutter-0.8.2" href="http://www.clutter-project.org/sources/pyclutter/0.8/pyclutter-0.8.2.tar.bz2" size="416167" type="application/x-bzip-compressed-tar"/>
+      <implementation id="sha1new=26463f17d7d11fea15695df62d472e85f9b54ae8" released="2009-06-24" version="0.8.2" version-modifier="-1">
+        <archive extract="pyclutter-0.8.2" href="http://master.dl.sourceforge.net/sourceforge/zero-install/pyclutter-0.8.2-1.tar.bz2" size="400521" type="application/x-bzip-compressed-tar"/>
       </implementation>
       <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
 	<environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
@@ -35,7 +35,7 @@ efficient and flexible.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAko360YACgkQBSn9tx+xORAxWgCfTRpfKMaEOXDzuQAcHKN6hGImsAEAn1R+gErN
-YhNe/zjzn88nNhZaBMG0
+iEYEABECAAYFAkpB0xsACgkQBSn9tx+xORCs7wCdFxN81g/J5mBxlIWGXbm0ueGfz80AniQ5Vbdu
+HJBh+FhrVlpJ0lWxGS/D
 
 -->
