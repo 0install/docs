@@ -17,9 +17,13 @@ efficient and flexible.</description>
     <archive extract="clutter-0.8.8" href="http://www.clutter-project.org/sources/clutter/0.8/clutter-0.8.8.tar.bz2" size="1599546" type="application/x-bzip-compressed-tar"/>
   </implementation>
   </group>
+  <implementation arch="Linux-x86_64" id="sha1new=2bfe536800de2ee1bd52131bc4a7b4b5877403f9" released="2009-06-25" version="0.8.8">
+      <manifest-digest sha256="f070379f39e1e45ab3039932f4c3ce065247b7dd519f561585c9b6be680ce6f7"/>
+      <archive extract="clutter-linux-x86_64-0.8.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/clutter-linux-x86_64-0.8.8.tar.bz2" size="1182368"/>
+    </implementation>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpDw3kACgkQBSn9tx+xORCKPwCgmOMXHisnWNXScBjWyqaE41cQ2p4AnAsSFBUB
-Up9V/6OWsUdCq9y01kf0
+iEYEABECAAYFAkpDxswACgkQBSn9tx+xORDWOQCgjKoWrL1GP1bYKeq7ku7KT9NsHmYAn3QgJhJo
+jrGBoQG1y47M43qXv6lM
 
 -->

@@ -22,9 +22,13 @@ This package allows embedding a Clutter stage inside a GTK window.</description>
       <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
     </requires>
   </group>
+  <implementation arch="Linux-x86_64" id="sha1new=04c967e0f773829fb2a294a7ee806c402f492664" released="2009-06-25" version="0.8.3-1">
+      <manifest-digest sha256="bf2090d8e8a0c24bc78a4edba26408d2259e745e451ba893ab6fa3947ac5433e"/>
+      <archive extract="clutter-gtk-linux-x86_64-0.8.3-1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/clutter-gtk-linux-x86_64-0.8.3-1.tar.bz2" size="51420"/>
+    </implementation>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpBEmIACgkQBSn9tx+xORCWyACcCnsmkkmQ+OgleNgItgLH3huCcNMAnRdT9egx
-X4M2Xzx5nkL8H7g2IBWR
+iEYEABECAAYFAkpDx1QACgkQBSn9tx+xORBzrgCePefhfzVHvz1ZdwZB3Yk9KhS4J7gAnRGX9szb
+M0zrsevfh7wboCaOdo/X
 
 -->

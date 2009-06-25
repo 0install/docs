@@ -26,6 +26,11 @@ efficient and flexible.</description>
       </requires>
     </group>
 
+    <implementation arch="Linux-x86_64" id="sha1new=7c47ad679f6c0a7052689e65d6c335c623f29c24" released="2009-06-25" version="0.8.2-1">
+      <manifest-digest sha256="0a9aef881fcdac9eabd3b3b233f127aee2726807a7bf0092ebd9fa18bf686b06"/>
+      <archive extract="python-clutter-linux-x86_64-0.8.2-1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/python-clutter-linux-x86_64-0.8.2-1.tar.bz2" size="333473"/>
+    </implementation>
+
     <requires compile:include-binary="true" interface="http://0install.net/2009/3rd-party/clutter.xml">
       <environment insert="lib" mode="prepend" name="LD_LIBRARY_PATH"/>
     </requires>
@@ -35,7 +40,7 @@ efficient and flexible.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpB0xsACgkQBSn9tx+xORCs7wCdFxN81g/J5mBxlIWGXbm0ueGfz80AniQ5Vbdu
-HJBh+FhrVlpJ0lWxGS/D
+iEYEABECAAYFAkpDyNEACgkQBSn9tx+xORDHUQCdGPgphsmyrvGV+kAmquMHurptHNQAn25Ug/Ag
+H3kgnrkPbh8WsbkeXWcr
 
 -->
