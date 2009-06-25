@@ -13,19 +13,13 @@ complexity from the developer. The Clutter API is intended to be easy to use,
 efficient and flexible.</description>
   <homepage>http://www.clutter-project.org/</homepage>
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
-    <implementation arch="Linux-i486" id="sha1new=9314696831f9de8884293efebe6f3b672ca6d774" released="2009-02-26" version="0.8.8">
-      <archive extract="clutter-linux-i486-0.8.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/clutter-linux-i486-0.8.8.tar.bz2" size="1117557"/>
-    </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=72118cb502d55f5abf67feca54775226a53c02cb" released="2009-02-25" version="0.8.8">
-      <archive extract="clutter-linux-x86_64-0.8.8" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/clutter-linux-x86_64-0.8.8.tar.bz2" size="1183094"/>
-    </implementation>
     <implementation arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="doc" id="sha1new=42b08d86e3c04d0b6aff67dda1a3dead9705ef1b" released="2009-02-25" version="0.8.8">
     <archive extract="clutter-0.8.8" href="http://www.clutter-project.org/sources/clutter/0.8/clutter-0.8.8.tar.bz2" size="1599546" type="application/x-bzip-compressed-tar"/>
   </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkmmTI4ACgkQBSn9tx+xORAx1wCeKmcAzDDwl6w7JTWxvc2gaNWyWqkAnjtEv60g
-OsKIg5Hb2ZiF+DyC+7Wp
+iEYEABECAAYFAkpDw3kACgkQBSn9tx+xORCKPwCgmOMXHisnWNXScBjWyqaE41cQ2p4AnAsSFBUB
+Up9V/6OWsUdCq9y01kf0
 
 -->
