@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<h2>0compile: Developers</h2>
+
+<p>
+  This page explains how to publish source code using Zero Install. Publishing source this way means that:
+</p>
+
+<ul>
+  <li>Users can compile it easily <a href='0compile.html'>using 0compile</a>.</li>
+  <li>Build dependencies, such as header files and build tools, can be downloaded automatically.</li>
+  <li><a href='0release.html'>0release</a> can automatically compile binaries for your software during the release process.</li>
+</ul>
+
+<h2>Making source available</h2>
+
+<p>
+To make source code available for others to use you need to add source
+implementations to the program's feed file. This is almost exactly the same as
+adding binaries, except that you give <b>src</b> as the machine type to <b>0publish</b>:
+</p>
+
+<pre>
+$ <b>0publish /var/www/interfaces/MyProg.xml \
+  --add-version=5 \
+  --archive-url=http://mysite/downloads/myprog-5-src.tar.bz2 \
+  --set-released=today \
+  --set-arch=*-src</b>
+</pre>
+
+<p>
+There are also some extra attributes you can add to the <b>implementation</b> element:
+</p>
+
+<dl>
+ <dt>compile:command</dt>
+ <dd>This must be present. Its value is a shell command, executed inside the <b>build</b> directory. It must compile the source
+ in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>. If this command starts to get complicated,
+ you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute
+ to the command to run the script.</dd>
+
+ <dt>compile:binary-main</dt>
+ <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary feed that is created. If it is not given, then
+ the binary created cannot be executed (e.g., it is a library).</dd>
+
+ <dt>compile:dup-src</dt>
+ <dd>Some programs insist on creating files in their source directory, which is
+typically a read-only directory when using Zero Install. In this case, set
+<b>compile:dup-src='true'</b> and 0compile will copy everything in $SRCDIR
+into 'build' before building.</dd>
+
+</dl>
+
+<p>
+The <b>compile</b> prefix must be bound to <b>0compile</b>'s namespace somewhere, e.g.:
+</p>
+
+<pre>xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"</pre>
+
+<p>
+Note: You can keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
+the main feed, e.g.:
+</p>
+
+<pre>
+  &lt;feed src='http://mysite/interfaces/MyProg<b>-src</b>.xml' <b>arch='*-src'</b>/&gt;
+</pre>
+
+<p>
+The <b>arch</b> attribute lets the injector know that it doesn't need to fetch this file unless
+it's looking for source code.
+</p>
+
+<h2>Making library headers available (-dev packages)</h2>
+
+<p>
+See <a href='make-headers.html'>Make-headers</a> for information about publishing library source and -dev packages.
+</p>
+
+<h2>Adding run-time dependencies</h2>
+
+<p>
+By default, the feed created for the new binary doesn't have any dependencies. There are two ways to add them:
+</p>
+
+<ul>
+<li>You can annotate any &lt;requires&gt; element in your source feed with the 'include-binary' attribute. This
+causes the dependency to appear in the generated binary's feed, in addition to being made available at
+compile-time. e.g.
+<pre>
+    &lt;requires <b>compile:include-binary='true'</b> interface="http://my/library"&gt;
+      &lt;environment insert="lib" name="MY_LIBRARY_DIR" mode="replace"/&gt;
+    &lt;/requires&gt;
+</pre>
+</li>
+<li>
+You can edit the feed XML file directly during the build (it's in the <b>$DISTDIR/0install</b> directory).
+</li>
+</ul>
+
+<h2>Tips</h2>
+
+<dl>
+ <dt>Python distutils</dt>
+ <dd><p>
+ You should use the <b>--build-base</b> option to make distutils build to 0compile's build directory, not under the source code (which is read-only). Unfortunately, this option
+ isn't available with the <b>install</b> command, so you have to do the build in two steps. A typical command is:
+ </p>
+ <pre>cd "$SRCDIR" &amp;&amp;
+python setup.py build --build-base="$BUILDDIR/build" &amp;&amp;
+cd "$BUILDDIR" &amp;&amp;
+python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build</pre>
+ </dd>
+</dl>
+
+<h2>Further reading</h2>
+
+<dl>
+ <dt><a href='0compile-scons.html'>Example: SCons</a></dt>
+ <dd>This example shows how to compile a simple "Hello world" program using
+ the SCons build system. Both the source and SCons are fetched using Zero
+ Install.</dd>
+</dl>
+
+</html>

@@ -51,6 +51,8 @@
 <div class='news' style='clear: both'>
 <h2>News</h2>
 <dl>
+<dt>Jun 2009</dt><dd>An experimental <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2390'>Firefox extension for Zero Install</a> is now available.<br/>
+<a href='0compile.html'>0compile 0.18</a> adds a GUI to the "autocompile" feature and introduces more support for compiling legacy source code.</dd>
 <dt>May 2009</dt><dd><a href='0release.html'>0release 0.10</a> automatically creates binary packages along with the source releases.<br/>
 Added <a href='http://apps.sourceforge.net/ideatorrent/zero-install/'>IdeaTorrent</a> to track popular ideas - open for voting now!</dd>
 <dt>Apr 2009</dt><dd><a href='injector.html'>0launch 0.40</a> released (fixes FTP support with Python 2.6).<br/>
