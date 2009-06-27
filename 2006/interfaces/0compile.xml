@@ -108,12 +108,16 @@ For a full tutorial, see 0compile's homepage.</description>
       <manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
       <archive extract="0compile-0.17" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.17.tar.bz2" size="29159"/>
     </implementation>
+      <implementation id="sha1new=b44757b155ebf0de8343ecbdf18563e9e5d2c29f" released="2009-06-27" self-test="tests/testcompile.py" version="0.18">
+      <manifest-digest sha256="feba92a479210a34ed911470de3fd054a2e03ae2ac6ece032ad7ae44eb5adc90"/>
+      <archive extract="0compile-0.18" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.18.tar.bz2" size="32053"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAko37V8ACgkQrgeCgFmlPMHPsgCfVQ3N7ucFyQNCdmo66YW1YBv0DR0AnA6tKTUA
-jeerM4WuvseUSDLnp2j7
+iEYEABECAAYFAkpFz0cACgkQrgeCgFmlPMF/YgCdG44NwCSK0u8IfhZt+Ig1FSasDKcAn1jpMTqt
+epSCRCYOdGhMmrDBz2It
 
 -->
