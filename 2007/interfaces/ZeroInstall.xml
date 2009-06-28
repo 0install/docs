@@ -69,11 +69,15 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="ba8a3bb9d1bbff475a8f1a5df80ce7376736a58376c632baeb3f27f02137d29a"/>
       <archive extract="zeroinstall-injector-0.41" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.41.tar.bz2" size="150613"/>
     </implementation>
+    <implementation id="sha1new=9b3ad716ce728afffd6e1d9808139b9a370f52d0" released="2009-06-28" version="0.41.1">
+      <manifest-digest sha256="98d96e76ef156ce00f317ca153547ece121c2656e7d97a1b6da78bbd683760ba"/>
+      <archive extract="zeroinstall-injector-0.41.1" href="http://internap.dl.sourceforge.net/sourceforge/zero-install/zeroinstall-injector-0.41.1.tar.bz2" size="150775"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpGVwEACgkQrgeCgFmlPMGjOgCg1D+JhVnR8pKlX93pl1dU1O132u4AnidG9x8/
-RqUQEZRCy7yuOXbQ1hJT
+iEYEABECAAYFAkpHo9MACgkQrgeCgFmlPMHNUwCeMwBYP9jaLEkMAiUFxaGIwqs+XNoAoJ4mUt5n
+3lpMa+Q0yAAEmIn8Egz6
 
 -->
