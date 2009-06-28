@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
+<p><strong>2009-06-28: </strong> Security update: you must use the <b>always_set_home</b> sudo option. Old versions of these instructions didn't use it. 0launch 0.41.1 and later will check that you have it turned on.</p>
+
 <h2>Sharing downloads between users</h2>
 
  <p>
@@ -159,7 +161,7 @@ exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" &lt; /dev/null
 
   <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
 <pre>
-Defaults>zeroinst env_reset
+Defaults>zeroinst env_reset,always_set_home
 ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
 </pre>
  <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
