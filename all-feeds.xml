@@ -377,6 +377,12 @@ higher-level interfaces so that you don't have to worry about the ...</feed>
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/Libpng/libpng.xml" name="Libpng" summary="Libpng is the official PNG reference library" icon="feed_icons/libpng.png" width="48" height="48" homepage="http://libpng.sourceforge.net" category="Library">It supports almost all PNG features, is extensible, and has been extensively
 tested for over nine years.</feed>
 
+<feed uri="http://www.nongnu.org/clanbomber/zeroinstall/libpng12-0.xml" name="Libpng12-0" summary="PNG library" icon="tango/applications-system.png" width="48" height="48" homepage="http://libpng.org/pub/png/" category="Library">libpng is a library implementing an interface for reading and writing PNG
+(Portable Network Graphics) format files.
+
+This package contains the runtime library files needed to run software using
+libpng.</feed>
+
 <feed uri="http://0install.net/2007/3rd-party/libpq4.xml" name="Libpq4" summary="PostgreSQL C client library" icon="tango/applications-system.png" width="48" height="48" category="Library">libpq is a C library that enables user programs to communicate with the
 PostgreSQL database server. The server can be on another machine and accessed
 through TCP/IP. This version of libpq is compatible with servers from PostgreSQL
@@ -401,6 +407,10 @@ The main features of this library are:
     file generation.
   * off-line ASN1 structure management with C code file generation
  ...</feed>
+
+<feed uri="http://www.nongnu.org/clanbomber/zeroinstall/libtiff.xml" name="Libtiff" summary="Tag Image File Format (TIFF) library" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.remotesensing.org/libtiff/" category="Library">libtiff is a library providing support for the Tag Image File Format (TIFF), a
+widely used format for storing image data. This package includes the shared
+library.</feed>
 
 <feed uri="http://0install.net/2008/3rd-party/libvorbis0a.xml" name="Libvorbis0a" summary="The Vorbis General Audio Compression Codec" icon="tango/applications-system.png" width="48" height="48" category="Library">Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
 general-purpose compressed audio format for audio and music at fixed
@@ -664,6 +674,11 @@ Microsoft WAVE files and Creative Labs VOC files as audio samples.</feed>
 <feed uri="http://freenet-homepage.de/LinuxCNC/0install/SDL/sdl.xml" name="SDL" summary="Simple DirectMedia Layer" icon="feed_icons/sdl.png" width="64" height="32" homepage="http://www.libsdl.org/" category="Library">The Simple DirectMedia Layer (SDL for short) is a cross-platfrom library
 designed to make it easy to write multi-media software, such as games and
 emulators.</feed>
+
+<feed uri="http://www.nongnu.org/clanbomber/zeroinstall/SDL_image.xml" name="SDL_image" summary="Image loading library for Simple DirectMedia Layer 1.2" icon="tango/applications-system.png" width="48" height="48" homepage="http://www.libsdl.org/projects/SDL_image/" category="Library">This is a simple library to load images of various formats as SDL surfaces.
+
+This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
+formats.</feed>
 
 <feed uri="http://0install.net/2006/autopackage/sear.xml" name="Sear" summary="Sear - a client for Worldforge" icon="tango/applications-system.png" width="48" height="48" category="Games">Sear is a client for MMORPGs using the Worldforge system.</feed>
 
