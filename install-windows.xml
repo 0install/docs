@@ -7,6 +7,11 @@
 Windows is not currently supported, but if you have some programming knowledge, please help out!
 </p>
 
+<p>
+Note: These instructions are for MSYS (that is, regular Windows). It may be easier to use it under <a href='http://www.cygwin.com/'>Cygwin</a>, but we haven't had any reports from Windows users either way so far.
+The <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2503'>How to have Zero Install running with Portable Cygwin on Windows XP</a> thread on the mailing list contains some discussion about that.
+</p>
+
 <p>Here's how to test it</p>
 
 <ol>
