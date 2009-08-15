@@ -59,4 +59,31 @@ unsigned feed which you felt confident had not been modified by a third-party.
 Each piece of software is licensed separately. Please consult the documentation page for the program you are interested in for details.
 </p>
 
+<h3>Privacy</h3>
+
+<p>
+  When you run a program using "0launch URI" the first time, an HTTP request is sent to the given URL asking for the feed. This will, of course, contain
+  your IP address and can be logged. Future invocations will normally generate no network accesses, unless it's time to check for updates (which can be disabled).
+  If the original site is slow or fails, 0launch will also contact the mirror server to get a copy there. The mirror server therefore also knows your IP address
+  and the URI of the program you are running. The default mirror service will not share this information with anyone. TODO: it should be possible to
+  change the mirror service's address, or disable it.
+</p>
+
+<p>
+  When encountering a new GPG key, 0launch will contact a key information server to provide advice about the key. It will send the fingerprint of the key to
+  be checked. The key server therefore also knows your IP address and the author of the program you are trying to run. The default key information server will
+  not share this information with anyone. TODO: it should be possible to change the key information service's address, or disable it.
+</p>
+
+<p>
+  The privacy issues are therefore similar to browsing the web, where your address and the URL of what you're accessing can be recorded by the site you visit, any
+  web cache you go through, and the URL may be sent to anti-phishing sites for checking.
+</p>
+
+<p>
+  Although the package files may be <a href='sharing.html'>shared between users</a>, the feeds are not. Therefore, it is possible to see which programs a user has ever run by looking in their
+  home directory (~/.cache/0install.net/ or ~/.config/0install.net/). Zero Install creates both of these directories with the permissions "rwx------" (owner access
+  only), but of course the superuser of the machine you're using still has access.
+</p>
+
 </html>
