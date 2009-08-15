@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+import os, sys, subprocess
+if len(sys.argv) < 3:
+	raise Exception("Usage: RELEASE_VERSION=... %s project app file..." % sys.argv[0])
+
+user = 'tal197'
+version = os.environ['RELEASE_VERSION']
+project = sys.argv[1]
+app = sys.argv[2]
+files = sys.argv[3:]
+
+path = '/home/frs/project/' + project[0] + "/" + project[:2] + "/" + project + "/" + app + "/" + version + "/"
+print "Press RETURN to upload to sf.net file release system in %s" % path
+
+cmd = ['rsync', '-avP', '--progress', '-e', 'ssh'] + files + \
+	[user + ',' + project + '@frs.sourceforge.net:' + path]
+print ' '.join(cmd)
+subprocess.check_call(cmd)
