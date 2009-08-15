@@ -423,5 +423,28 @@ Delete the tarball from your server.
 </li>
 </ol>
 
+<h2>Uploading to SourceForge.net</h2>
+
+<p>
+  To upload to SourceForge's File Release System, you need the project name, user name, program name and release version number.
+  I use a <a href='/scripts/0release-upload-archive-sf'>script to upload archives to SourceForge</a>. To use it:
+</p>
+
+<ol>
+  <li>Put the script in your $PATH as <b>0release-upload-archive-sf</b>.</li>
+  <li>Edit it to contain your sf.net username, not mine (the line <b>user = 'tal197'</b>)</li>
+  <li>In your <b>make-release</b> script, use these settings:<pre>
+PROJECT=<b>zero-install</b>
+PROGRAM=<b>0release</b>
+ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/$RELEASE_VERSION'
+ARCHIVE_UPLOAD_COMMAND='0release-upload-archive-sf $PROJECT $PROGRAM "$@"'
+</pre>
+  </li>
+  <li>Replace <b>zero-install</b> with the name of your project and <b>0release</b> with the name of your program.</li>
+</ol>
+
+<p>
+  These instructions are correct for sf.net as of 2009-08-15.
+</p>
 
 </html>
