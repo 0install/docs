@@ -436,9 +436,11 @@ Delete the tarball from your server.
   <li>In your <b>make-release</b> script, use these settings:<pre>
 PROJECT=<b>zero-install</b>
 PROGRAM=<b>0release</b>
-ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/$RELEASE_VERSION'
-ARCHIVE_UPLOAD_COMMAND='0release-upload-archive-sf $PROJECT $PROGRAM "$@"'
+ARCHIVE_DIR_PUBLIC_URL="http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/"'$RELEASE_VERSION'
+ARCHIVE_UPLOAD_COMMAND="upload.sf.net $PROJECT $PROGRAM "'"$@"'
 </pre>
+The tricky quoting is because $PROJECT and $PROGRAM expand when the script is read, but $RELEASE_VERSION and "$@"
+expand when the command is later executed.
   </li>
   <li>Replace <b>zero-install</b> with the name of your project and <b>0release</b> with the name of your program.</li>
 </ol>
