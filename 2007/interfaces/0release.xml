@@ -49,11 +49,21 @@ can help you to create new releases easily.</description>
       <manifest-digest sha256="42bf498b09b730f6a51034ef5fbd4221488bc7874088722828186c7b7d89a7da"/>
       <archive extract="0release-0.10.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.1.tar.bz2" size="53939"/>
     </implementation>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.40"/>
+      <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=346e2a055dfb9f6a86a3ebf8c159535525c537ae" released="2009-08-15" self-test="tests/testall.py" version="0.11">
+      <manifest-digest sha256="e247293a2b4228d749a1d9d51884f2d4761b701a61f79358c980c9c090bcded6"/>
+      <archive extract="0release-0.11" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11/0release-0.11.tar.bz2" size="54206"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAko0yeoACgkQrgeCgFmlPMGTbgCfcntaBP7ZgcWp+6D/tYB9aIkBeiEAoLoep5wT
-Mkfu9xIOarWs7CvKxSgO
+iEYEABECAAYFAkqGqa4ACgkQrgeCgFmlPMEinQCgtM6CR0LaJMRU3oZFjcF0kq4p22AAnAgNlTVg
+ZlvENy0ROcHaDI9EnjJy
 
 -->
