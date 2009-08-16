@@ -185,7 +185,7 @@ will download the release from. In my case, I'll be uploading them to SourceForg
 </p>
 
 <pre>
-ARCHIVE_DIR_PUBLIC_URL=http://osdn.dl.sourceforge.net/sourceforge/zero-install
+ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/zero-install/hello/$RELEASE_VERSION'
 </pre>
 
 <p>
@@ -326,7 +326,7 @@ If you didn't set an upload command in the make-release configuration file,
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload required
 
-Upload 0.1/helloworld-0.1.tar.bz2 as http://osdn.dl.sourceforge.net/sourceforge/zero-install/helloworld-0.1.tar.bz2
+Upload 0.1/helloworld-0.1.tar.bz2 as http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2
 No upload command is set => please upload the archive manually now
 Press Return once the archive is uploaded.
 </pre>
@@ -337,7 +337,7 @@ to your web-server. When you press Return, 0release will check that the archives
 correctly:
 </p>
 
-<pre>Testing URL http://osdn.dl.sourceforge.net/sourceforge/zero-install/helloworld-0.1.tar.bz2...
+<pre>Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
 
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload has been checked (exists and has correct size)
