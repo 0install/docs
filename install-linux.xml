@@ -8,7 +8,7 @@
 <dd>
 <ul class='spaced'>
   <li>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/CentOS_5/noarch/'>CentOS 5 RPMs</a></li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5:/zero-install-python-2.4/CentOS_5/noarch/'>CentOS 5 RPMs</a></li>
   <li id='fedora'><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
   <p>Newer versions are also available: <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_10/noarch/'>Fedora 10 RPMs</a></p>
