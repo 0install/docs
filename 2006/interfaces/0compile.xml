@@ -20,39 +20,39 @@ For a full tutorial, see 0compile's homepage.</description>
 
   <group main="0compile">
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
-      <archive extract="0compile-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.1.tar.bz2" size="15393"/>
+      <archive extract="0compile-0.1" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.1/0compile-0.1.tar.bz2" size="15393"/>
       <manifest-digest sha1new="ff6dda7e319c46e4fee85ccb7bdbd09cc19937a7"/>
     </implementation>
     <implementation id="sha1=6ba70297b3e3730573717cc46131166a6bbbe70e" released="2006-10-08" stability="stable" version="0.2">
-      <archive extract="0compile-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.2.tar.bz2" size="15432"/>
+      <archive extract="0compile-0.2" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.2/0compile-0.2.tar.bz2" size="15432"/>
       <manifest-digest sha1new="514f0ca80314e25fd2d6fb5a7212d1a009015460"/>
     </implementation>
     <implementation id="sha1=87c3f6411f61f4ec6b11f393d9a4581ec2a5c29b" released="2006-10-25" stability="stable" version="0.3">
-      <archive extract="0compile-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.3.tar.bz2" size="15913"/>
+      <archive extract="0compile-0.3" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.3/0compile-0.3.tar.bz2" size="15913"/>
       <manifest-digest sha1new="a8a33b41f86dab4e109d06a0b6c85b2906977b1f"/>
     </implementation>
     <implementation id="sha1=b6b6f20276ac3f068eede0e6b23438f97534e740" released="2006-10-26" stability="stable" version="0.4">
-      <archive extract="0compile-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.4.tar.bz2" size="17180"/>
+      <archive extract="0compile-0.4" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.4/0compile-0.4.tar.bz2" size="17180"/>
       <manifest-digest sha1new="66f9c469a15a2ceec25f777cf01ad180e1c8f4df"/>
     </implementation>
     <implementation id="sha1=38eb336dbb23fbca46952e80dc352ef1177f790b" released="2006-10-28" stability="stable" version="0.5">
-      <archive extract="0compile-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.5.tar.bz2" size="17751"/>
+      <archive extract="0compile-0.5" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.5/0compile-0.5.tar.bz2" size="17751"/>
       <manifest-digest sha1new="ac023a52e8071d0789a73f6142335b9a117ca739"/>
     </implementation>
     <implementation id="sha1=1930fefbbf3b92f119005bcb125dcea371cc74d0" released="2006-11-12" stability="stable" version="0.6">
-      <archive extract="0compile-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.6.tar.bz2" size="17472"/>
+      <archive extract="0compile-0.6" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.6/0compile-0.6.tar.bz2" size="17472"/>
       <manifest-digest sha1new="827bf590fa844baabc8c7a79327850d72ff2454f"/>
     </implementation>
     <implementation id="sha1=6e6d75b9956fedfe58bcd0be597e81a86182c764" released="2006-11-21" stability="stable" version="0.7">
-      <archive extract="0compile-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.7.tar.bz2" size="19966"/>
+      <archive extract="0compile-0.7" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.7/0compile-0.7.tar.bz2" size="19966"/>
       <manifest-digest sha1new="f7a1c8091089717856819a193accda51e708e3c4"/>
     </implementation>
     <implementation id="sha1=0d94fb422a93c7326e2fccbebd5d9eab052e2d18" released="2006-11-25" stability="stable" version="0.8">
-      <archive extract="0compile-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.8.tar.bz2" size="21042"/>
+      <archive extract="0compile-0.8" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.8/0compile-0.8.tar.bz2" size="21042"/>
       <manifest-digest sha1new="d90230c7661210f55236319a2c2e520139f977d7"/>
     </implementation>
     <implementation id="sha1new=b9ca4f1cf34648b6b241ae23f7139b66236dd207" released="2007-06-10" stability="stable" version="0.9">
-      <archive extract="0compile-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.9.tar.bz2" size="21231"/>
+      <archive extract="0compile-0.9" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.9/0compile-0.9.tar.bz2" size="21231"/>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -60,7 +60,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
       <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" stability="stable" version="0.10">
-      <archive extract="0compile-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.10.tar.bz2" size="22979"/>
+      <archive extract="0compile-0.10" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.10/0compile-0.10.tar.bz2" size="22979"/>
     </implementation>
     </group>
     <group>
@@ -69,7 +69,7 @@ For a full tutorial, see 0compile's homepage.</description>
         <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
       </requires>
       <implementation id="sha1new=6db70a83b92238fe86e444f3cd3bb7433772e150" released="2008-02-16" self-test="tests/testcompile.py" version="0.11">
-        <archive extract="0compile-0.11" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.11.tar.bz2" size="23132"/>
+        <archive extract="0compile-0.11" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.11/0compile-0.11.tar.bz2" size="23132"/>
       </implementation>
     </group>
     <group>
@@ -78,7 +78,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" stability="stable" version="0.12">
-      <archive extract="0compile-0.12" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0compile-0.12.tar.bz2" size="23741"/>
+      <archive extract="0compile-0.12" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.12/0compile-0.12.tar.bz2" size="23741"/>
     </implementation>
     </group>
     <group>
@@ -87,10 +87,10 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=e6ca330bc7f82f9e3d52434d6829a486393aaad7" released="2008-12-06" self-test="tests/testcompile.py" stability="stable" version="0.13">
-      <archive extract="0compile-0.13" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.13.tar.bz2" size="24283"/>
+      <archive extract="0compile-0.13" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.13/0compile-0.13.tar.bz2" size="24283"/>
     </implementation>
       <implementation id="sha1new=804c80c539e29b7750dd816ec6c734cfb42447ab" released="2009-01-01" self-test="tests/testcompile.py" stability="stable" version="0.14">
-      <archive extract="0compile-0.14" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.14.tar.bz2" size="25548"/>
+      <archive extract="0compile-0.14" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.14/0compile-0.14.tar.bz2" size="25548"/>
     </implementation>
     </group>
     <group>
@@ -99,25 +99,25 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=66f18fb05805524d58bde28865063a001303b73e" released="2009-04-20" self-test="tests/testcompile.py" stability="stable" version="0.15">
-      <archive extract="0compile-0.15" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.15.tar.bz2" size="28071"/>
+      <archive extract="0compile-0.15" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.15/0compile-0.15.tar.bz2" size="28071"/>
     </implementation>
       <implementation id="sha1new=614643cbee8749fb214cfa2fc7cf604e6ff8486b" released="2009-05-05" self-test="tests/testcompile.py" stability="stable" version="0.16">
-      <archive extract="0compile-0.16" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.16.tar.bz2" size="28100"/>
+      <archive extract="0compile-0.16" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.16/0compile-0.16.tar.bz2" size="28100"/>
     </implementation>
       <implementation id="sha1new=040da89786e7c1fdaf3067d50e956f2afe46c726" released="2009-06-16" self-test="tests/testcompile.py" version="0.17">
       <manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
-      <archive extract="0compile-0.17" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.17.tar.bz2" size="29159"/>
+      <archive extract="0compile-0.17" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.17/0compile-0.17.tar.bz2" size="29159"/>
     </implementation>
       <implementation id="sha1new=b44757b155ebf0de8343ecbdf18563e9e5d2c29f" released="2009-06-27" self-test="tests/testcompile.py" version="0.18">
       <manifest-digest sha256="feba92a479210a34ed911470de3fd054a2e03ae2ac6ece032ad7ae44eb5adc90"/>
-      <archive extract="0compile-0.18" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/0compile-0.18.tar.bz2" size="32053"/>
+      <archive extract="0compile-0.18" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.18/0compile-0.18.tar.bz2" size="32053"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpFz0cACgkQrgeCgFmlPMF/YgCdG44NwCSK0u8IfhZt+Ig1FSasDKcAn1jpMTqt
-epSCRCYOdGhMmrDBz2It
+iEYEABECAAYFAkqigokACgkQrgeCgFmlPMGjsQCbBmwADa5uF4mTKUmbKF7vZzJk/hoAn0K1UX/p
+DlP7wn2nBjkRQNKqVQxo
 
 -->
