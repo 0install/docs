@@ -123,7 +123,7 @@ example above, you're probably looking at this dialog box now:
 </p>
 
 <p style='text-align: center'>
-<img width="430" height="414" src="confirm-tal-rox.png"
+<img width="477" height="463" src="confirm-tal-rox.png"
      alt="Confirming Thomas Leonard's GPG key" />
 </p>
 
@@ -145,9 +145,11 @@ with the name "Thomas Leonard", but noone knows how to create another key with t
 
 <p>
 Ideally, you should check the fingerprint somehow (maybe the person who recommended Edit to you told you the fingerprint).
-However, there's a handy hints database built into Zero Install to help you out. It's called "unreliable" because I don't
+We run a simple hints server to help you out. It's called "unreliable" because I don't
 have the funding to verify people's keys, so it's just a list of keys that have been announced on the mailing list, but it's
-better than nothing. Obviously, I can't accept any kind of legal liablity for its accuracy, but you could pay someone to
+better than nothing. It also now tells you whether the developer is a member of the Debian project. Hopefully we will be
+able to add more sources of information later.
+Obviously, I can't accept any kind of legal liablity for its accuracy, but you could pay someone to
 provide a real service if you needed that.
 </p>
 
