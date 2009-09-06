@@ -95,7 +95,7 @@ For a full tutorial, see 0compile's homepage.</description>
     </group>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.40"/>
+      <version before="0.42" not-before="0.40"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=66f18fb05805524d58bde28865063a001303b73e" released="2009-04-20" self-test="tests/testcompile.py" stability="stable" version="0.15">
@@ -117,7 +117,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkqigokACgkQrgeCgFmlPMGjsQCbBmwADa5uF4mTKUmbKF7vZzJk/hoAn0K1UX/p
-DlP7wn2nBjkRQNKqVQxo
+iEYEABECAAYFAkqjrdkACgkQrgeCgFmlPMHMoACfSfUvC/J2vQTt3DYoQ7Grk/n9ZxoAoNFTNfXQ
+Dpp5CxvRnS92wBqWMdSF
 
 -->
