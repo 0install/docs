@@ -51,6 +51,7 @@
 <div class='news' style='clear: both'>
 <h2>News</h2>
 <dl>
+<dt>Sep 2009</dt><dd><a href='injector.html'>0launch 0.42</a> released. The new version has better internationalisation support, and is able to look up GPG key information from a server. The default service informs you if the feed is signed by a member of the Debian project, in addition to showing information from the old database. We hope to add other trust sources in the future. <a href='distribution-integration.html'>Distribution integration</a> now also works with multi-arch RPMs. libglade is no longer a dependency. The experimental Windows branch is now <a href ='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2590/focus=2598'>able to run Seamonkey</a>.</dd>
 <dt>Jul 2009</dt><dd>No release this month, but work includes much improved <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2489'>internationalisation support</a>, support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2506'>key information servers</a>, and support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2515'>GtkBuilder</a>.</dd>
 <dt>Jun 2009</dt><dd>An experimental <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2390'>Firefox extension for Zero Install</a> is now available.<br/>
 <a href='0compile.html'>0compile 0.18</a> adds a GUI to the "autocompile" feature and introduces more support for compiling legacy source code.</dd>
