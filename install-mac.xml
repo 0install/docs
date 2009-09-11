@@ -25,7 +25,7 @@ or for the Darwin sub-system with X11 using <a href='#macports'>MacPorts</a> or 
 
 <h3 id='macosx'>Mac OS X</h3>
 
-<img src='zeroinstall-gtkquartz.png' alt='' width='576' height='322' />
+<img src='screens/zeroinstall-gtkquartz.png' alt='' width='576' height='322' />
 
 <p>You need to do four installations and two compilations, for requirements:</p>
 <ul>
@@ -111,7 +111,7 @@ $ <b>0launch --gui</b> <i>URI</i>
 
 <h3>Darwin/X11</h3>
 
-<img src='zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
+<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
 
 <dl>
 <dt id='macports'>MacPorts</dt>
