@@ -125,7 +125,7 @@ You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysut
 <dt id='fink'>Fink</dt>
 <dd>
 <p>
-There is no package for <tt>zeroinstall-injector</tt> in <a href='http://www.finkproject.org/'>Fink</a>, but you can use it to install the requirements and then install Zero Install <link href='install-source.html'>from source</link> in the Fink environment until a package is provided:
+There is no package for <tt>zeroinstall-injector</tt> in <a href='http://www.finkproject.org/'>Fink</a>, but you can use it to install the requirements and then install Zero Install <a href='install-source.html'>from source</a> in the Fink environment until a package is provided:
 </p>
 
 <pre>$ sudo fink install python25 gnupg gtk+2 pygtk2-py25</pre>
