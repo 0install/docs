@@ -15,16 +15,16 @@ It is part of the OpenSSL implementation of SSL.</description>
     <implementation id="sha1new=e83af06b667857fe961c498058544f9b2ec4ff11" released="2008-05-17" stability="stable" version="0.9.8" version-modifier="-4.3">
     <archive href="http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl0.9.8_0.9.8c-4etch3_i386.deb" size="2717086" type="application/x-deb"/>
   </implementation>
-    <implementation id="sha1new=aabb7e2841806b1252b14f2fa2b0662ee759b2d4" released="2009-09-25" version="0.9.8-1">
+    <implementation id="sha1new=aabb7e2841806b1252b14f2fa2b0662ee759b2d4" released="2009-09-25" version="0.9.8-15.3">
       <archive href="http://ftp.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8g-15+lenny3_i386.deb" size="2976772"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=57a8221e9590546671984a120705d00d95d0c74f" released="2009-09-25" version="0.9.8-1">
+    <implementation arch="Linux-x86_64" id="sha1new=57a8221e9590546671984a120705d00d95d0c74f" released="2009-09-25" version="0.9.8-15.3">
       <archive href="http://ftp.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8g-15+lenny3_amd64.deb" size="975498"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9EsoACgkQBSn9tx+xORB7EwCcCJuNxZ2pQhwAU3ey4EFzLfCNO54An2/Xod27
-YXl9GSur9zwZIDG71gU1
+iEYEABECAAYFAkq9E3AACgkQBSn9tx+xORDJqQCeL2xXlvsvc/s9MCNTi+jlZCypu3sAn0RG//0b
+9qQXurQS59RH51hDGoMv
 
 -->
