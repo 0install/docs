@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libgpg-error0.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libgpg-error0</name>
+  <summary>library for common error values and messages in GnuPG components</summary>
+  <description>Library that defines common error values for all GnuPG
+components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+pinentry, SmartCard Daemon and possibly more in the future.</description>
+  <package-implementation package="libgpg-error0"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=74e5caf4db7632e053b5438f1cd80512eca4974d" released="2009-09-25" version="1.4-2">
+      <archive href="http://ftp.debian.org/debian/pool/main/libg/libgpg-error/libgpg-error0_1.4-2_i386.deb" size="34586"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=193374058d303ab3e43668e790e046c89562208a" released="2009-09-25" version="1.4-2">
+      <archive href="http://ftp.debian.org/debian/pool/main/libg/libgpg-error/libgpg-error0_1.4-2_amd64.deb" size="34784"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DogACgkQBSn9tx+xORAZtwCffBCgbS48JyezePKDocnHaf19It8An2rfelDp
+6BjRUndpHZFFKJ9PZzk2
+
+-->

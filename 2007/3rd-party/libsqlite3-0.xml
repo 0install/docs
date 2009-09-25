@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libsqlite3-0.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libsqlite3-0</name>
+  <summary>SQLite 3 shared library</summary>
+  <description>SQLite is a C library that implements an SQL database engine.
+Programs that link with the SQLite library can have SQL database
+access without running a separate RDBMS process.</description>
+  <package-implementation package="libsqlite3-0"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=e3575e011c8e2125e7af7ea66d73e3a15358a361" released="2009-09-25" version="3.5.9-6">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/sqlite3/libsqlite3-0_3.5.9-6_i386.deb" size="244576"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a955dc4a6c54d32df58e37be0676ddf65c517d76" released="2009-09-25" version="3.5.9-6">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/sqlite3/libsqlite3-0_3.5.9-6_amd64.deb" size="252914"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DpcACgkQBSn9tx+xORCPRQCfRRec9bFvzSeSKoALQH63ZfLHaEwAniSmNcRR
+iDf16Kad0ly4bQz+8sJo
+
+-->

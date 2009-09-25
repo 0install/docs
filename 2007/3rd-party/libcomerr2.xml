@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libcomerr2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libcomerr2</name>
+  <summary>common error description library</summary>
+  <description>libcomerr is an attempt to present a common error-handling mechanism to
+manipulate the most common form of error code in a fashion that does not
+have the problems identified with mechanisms commonly in use.</description>
+  <package-implementation package="libcomerr2"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=8786520fb3f32bed39456b894a171f309ae39348" released="2009-09-25" version="1.41.3-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/e/e2fsprogs/libcomerr2_1.41.3-1_i386.deb" size="41630"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7eef8c2c0bb7f946260cd7366dec7038c9c22f3c" released="2009-09-25" version="1.41.3-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/e/e2fsprogs/libcomerr2_1.41.3-1_amd64.deb" size="42456"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DpAACgkQBSn9tx+xORAPLQCfaPEy51yUNdGVm/9WzlzW0fKxLpoAn18+w7Zu
+wUNDbvLgKR+jztl7oSrE
+
+-->

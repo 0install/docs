@@ -23,9 +23,35 @@ repositories and working copies.</description>
       <version not-before="0.26.2"/>
     </requires>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libaprutil1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libdb4.6.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libneon27-gnutls.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libsasl2-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libserf-0-0.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=fd765195629f233fa6883005736ba5391dde0380" released="2009-09-25" version="1.5.1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/subversion/libsvn1_1.5.1dfsg1-4_i386.deb" size="793692"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3ad575bcd43cbb927d8d6e316101c3f69c40ae14" released="2009-09-25" version="1.5.1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/subversion/libsvn1_1.5.1dfsg1-4_amd64.deb" size="864266"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdrafBSn9tx+xORARAoeUAJ90cb9VNrIeAsUQzlCxBiXmzaw6yACfSWsweYDUxsq+3Equ
-yyvITFYIwFw=
+iEUEABECAAYFAkq9Dn0ACgkQBSn9tx+xORAttwCfYSdzz/BbOs5cbq3P7+ruDPzNSgIAljpjNA8k
+Dj7WNg0/8nnIn8jeLrM=
 
 -->

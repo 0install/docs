@@ -24,9 +24,26 @@ repository (svnadmin) and to make a repository available over a network
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libsvn1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libsasl2-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=5b798c33aae53cac9ef61780a6545ff78d14c86d" main="usr/bin/svn" released="2009-09-25" version="1.5.1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/subversion/subversion_1.5.1dfsg1-4_i386.deb" size="1270554"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=825ea741466fbe260a82748dc10200fbd62f7d30" main="usr/bin/svn" released="2009-09-25" version="1.5.1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/subversion/subversion_1.5.1dfsg1-4_amd64.deb" size="1283306"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYrXWBSn9tx+xORARAj/tAJ9CGO/R9mZ2UUqDbmOhsgJEHEE8nwCgg6SqMwaqnjW517yR
-qK98fzZyj7o=
+iEYEABECAAYFAkq9DnsACgkQBSn9tx+xORDRlACeKyNcT6fg+VMO1UmkePcVB7Csto8AmQEJ4xCg
+cXq/2J7Q38/rh8ZhWG5H
 
 -->

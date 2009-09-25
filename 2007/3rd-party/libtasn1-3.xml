@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2008/3rd-party/libtasn1-3.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libtasn1-3</name>
+  <summary>Manage ASN.1 structures (runtime)</summary>
+  <description>Manage ASN1 (Abstract Syntax Notation One) structures.
+The main features of this library are:
+  * on-line ASN1 structure management that doesn't require any C code
+    file generation.
+  * off-line ASN1 structure management with C code file generation
+    containing an array.
+  * DER (Distinguish Encoding Rules) encoding
+  * no limits for INTEGER and ENUMERATED values
+
+This package contains runtime libraries.</description>
+  <package-implementation package="libtasn1-3"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=a54ad923f8668a855be14a2f161aa5bbf511bee2" released="2009-09-25" version="1.4-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/libt/libtasn1-3/libtasn1-3_1.4-1_i386.deb" size="58720"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=65214cb9733a855742ca3c8867aacb9b2f4bd13b" released="2009-09-25" version="1.4-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/libt/libtasn1-3/libtasn1-3_1.4-1_amd64.deb" size="60242"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DokACgkQBSn9tx+xORAcXwCeN8YPHzkp4sSQ+hcGmIX7Hf4gUowAoJvOtgQp
+vx5iuXYw/fQsY7gMS2i3
+
+-->

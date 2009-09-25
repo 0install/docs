@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libgnutls26.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libgnutls26</name>
+  <summary>the GNU TLS library - runtime library</summary>
+  <description>gnutls is a portable library which implements the Transport Layer
+Security (TLS) 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
+
+Currently gnutls implements:
+ - the TLS 1.0 and SSL 3.0 protocols, without any US-export
+   controlled algorithms
+ - X509 Public Key Infrastructure (with several limitations).
+ - SRP for TLS authentication.
+ - TLS Extension mechanism
+
+This package contains the runtime libraries.</description>
+  <package-implementation package="libgnutls26"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libgcrypt11.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libgpg-error0.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2008/3rd-party/libtasn1-3.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=923fe401fb3809ce60198681c688673280e84437" released="2009-09-25" version="2.4.2-6">
+      <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls26/libgnutls26_2.4.2-6+lenny1_i386.deb" size="457306"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3f5bc528fca2a0702d297f356ac08f34428cd7cb" released="2009-09-25" version="2.4.2-6">
+      <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls26/libgnutls26_2.4.2-6+lenny1_amd64.deb" size="505908"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DoYACgkQBSn9tx+xORAVWQCfUgnbIo2nEFL+7CWnQVXmYBlEX0AAnRF3E2Mc
+JO8l/M5MI3+JCdBKAiPl
+
+-->

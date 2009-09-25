@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/Subversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>subversion</name>
+  <summary>Advanced version control system</summary>
+  <description>Subversion, also known as svn, is a version control system much like
+the Concurrent Versions System (CVS). Version control systems allow
+many individuals (who may be distributed geographically) to
+collaborate on a set of files (typically source code). Subversion has
+all the major features of CVS, plus certain new features that CVS
+users often wish they had.
+
+This package includes the Subversion client (svn), tools to create a
+Subversion repository (svnadmin) and to make a repository available
+over a network (svnserve).</description>
+  <category>Development</category>
+  <package-implementation main="/usr/bin/svn" package="subversion"/>
+  <group arch="Linux-i386" main="usr/bin/svn">
+    <requires interface="http://0install.net/2007/3rd-party/libsvn1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libsasl2-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=5b798c33aae53cac9ef61780a6545ff78d14c86d" released="2009-09-25" version="1.5.1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/subversion/subversion_1.5.1dfsg1-4_i386.deb" size="1270554"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DiAACgkQBSn9tx+xORADVgCgg5TrTYYiMdb4IBfKJv9JmBYZ+ZsAnjPOpEtq
+1Bl+ew0/xksIUJfq9xn9
+
+-->

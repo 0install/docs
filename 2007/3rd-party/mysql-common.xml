@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/mysql-common.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>mysql-common</name>
+  <summary>MySQL database common files</summary>
+  <description>MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+server. SQL (Structured Query Language) is the most popular database query
+language in the world. The main goals of MySQL are speed, robustness and
+ease of use.
+
+This package includes files needed by all versions of the client library
+(e.g. /etc/mysql/my.cnf).</description>
+  <package-implementation package="mysql-common"/>
+  <group arch="Linux-*">
+    <implementation id="sha1new=6e97b5e5263f98081e56b13691fff0813781699f" released="2009-09-25" version="5.0.51">
+      <archive href="http://ftp.debian.org/debian/pool/main/m/mysql-dfsg-5.0/mysql-common_5.0.51a-24+lenny2_all.deb" size="60754"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DiIACgkQBSn9tx+xORA9HgCgkzn2ksORR6ylfe45fWADmM5TIdsAoIowLoC8
+AIUD0QY467juvQN++A/4
+
+-->

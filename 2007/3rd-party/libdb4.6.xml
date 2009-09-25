@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libdb4.6.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libdb4.6</name>
+  <summary>Berkeley v4.6 Database Libraries [runtime]</summary>
+  <description>This is the runtime package for programs that use the v4.6 Berkeley
+database library.</description>
+  <package-implementation package="libdb4.6"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=eaaf8b87e08695c941271028c4c0c2ac59b51c94" released="2009-09-25" version="4.6.21-11">
+      <archive href="http://ftp.debian.org/debian/pool/main/d/db4.6/libdb4.6_4.6.21-11_i386.deb" size="572548"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=c092d9993194a25acd259522311d2b53407ff5de" released="2009-09-25" version="4.6.21-11">
+      <archive href="http://ftp.debian.org/debian/pool/main/d/db4.6/libdb4.6_4.6.21-11_amd64.deb" size="593588"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DoIACgkQBSn9tx+xORAgFQCglO+zLtjNbO8gj/s2kYsG7rLEq8QAn0Khy6e1
+O/PRZ6zTTE1UvH+C0Io9
+
+-->

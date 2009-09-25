@@ -28,9 +28,41 @@ access, xml parsing, and other useful functionality.</description>
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libdb4.6.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libexpat1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libmysqlclient15off.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libpq5.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libsqlite3-0.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libuuid1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=1a9e0221797936c51a35c3ef5ca160908ca81f58" released="2009-09-25" version="1.2.12">
+      <archive href="http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.12+dfsg-8+lenny4_i386.deb" size="73814"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8f50495c07d0ae826bcd70c846223837695dadb4" released="2009-09-25" version="1.2.12">
+      <archive href="http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.12+dfsg-8+lenny4_amd64.deb" size="80046"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdrc1BSn9tx+xORARAmQaAJ4s1k1L+mRVVok1Fiy5DUvaVPT8OgCdEk5xfgPwG6A5Wwvq
-tzEj9+iLVLM=
+iEYEABECAAYFAkq9DoAACgkQBSn9tx+xORCL2ACcDX18Smh9mSY7FPnJy4yE2fiDgk4An1D0ZrVO
+K0YbQXSIhhkNbj7FNA36
 
 -->

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libpq5.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libpq5</name>
+  <summary>PostgreSQL C client library</summary>
+  <description>libpq is a C library that enables user programs to communicate with
+the PostgreSQL database server. The server can be on another machine
+and accessed through TCP/IP. This version of libpq is compatible
+with servers from PostgreSQL 8.2 or later.
+
+This package contains the run-time library, needed by packages using
+libpq.
+
+PostgreSQL is an object-relational SQL database management system.</description>
+  <package-implementation package="libpq5"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libcomerr2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libkrb53.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libssl0.9.8.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=c012c06bc0c848754a24299d586232c7055be6a4" released="2009-09-25" version="8.3.7-0">
+      <archive href="http://ftp.debian.org/debian/pool/main/p/postgresql-8.3/libpq5_8.3.7-0lenny1_i386.deb" size="363392"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a80e4d3573887e47828d3ae77dc1e58aa6a4a9c6" released="2009-09-25" version="8.3.7-0">
+      <archive href="http://ftp.debian.org/debian/pool/main/p/postgresql-8.3/libpq5_8.3.7-0lenny1_amd64.deb" size="371876"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9Do8ACgkQBSn9tx+xORDSqwCfdGxhAJr907GI/iQnCX+Yd20nlTMAmwaH+kz1
+Ctym/o8O7mwLPaNiRELi
+
+-->

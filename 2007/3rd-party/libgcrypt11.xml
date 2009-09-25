@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libgcrypt11.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libgcrypt11</name>
+  <summary>LGPL Crypto library - runtime library</summary>
+  <description>libgcrypt contains cryptographic functions. Many important free
+ciphers, hash algorithms and public key signing algorithms have been
+implemented:
+arcfour, blowfish, cast5, DSA, DSA2, des, 3DES, elgamal, MD5, rijndael,
+RMD160, RSA, SEED, SHA1, SHA-384, SHA-512, twofish, tiger.</description>
+  <package-implementation package="libgcrypt11"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libgpg-error0.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=feab6d80bacee7c5bf025db890e7f4c8e47667aa" released="2009-09-25" version="1.4.1-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.4.1-1_i386.deb" size="241564"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ae98f7c52e0626bf0ee5de289dcdcffaaaff7aa3" released="2009-09-25" version="1.4.1-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.4.1-1_amd64.deb" size="244792"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DocACgkQBSn9tx+xORCxygCgijeXNKMc3n6mcVHsqGx+FYXGjzkAoIFzqVi0
+G1jj3Jt2pk62uSh5PO+f
+
+-->

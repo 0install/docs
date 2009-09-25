@@ -16,9 +16,23 @@ clients.</description>
   <implementation arch="Linux-i386" id="sha1new=46c174613415d5981def04485e296f671c5f5d60" released="2007-01-20" stability="stable" version="1.4.4" version-modifier="-6">
     <archive href="http://kent.dl.sourceforge.net/sourceforge/zero-install/libkrb53_1.4.4-6_i386.deb" size="407482" type="application/x-deb"/>
   </implementation>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libcomerr2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libkeyutils1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=97f09ac5e76740286a4471e6f8a2dc4d565879e4" released="2009-09-25" version="1.6">
+      <archive href="http://ftp.debian.org/debian/pool/main/k/krb5/libkrb53_1.6.dfsg.4~beta1-5lenny1_i386.deb" size="481306"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0ce815ff554a95fa0857d987baeb6a7d3d361aec" released="2009-09-25" version="1.6">
+      <archive href="http://ftp.debian.org/debian/pool/main/k/krb5/libkrb53_1.6.dfsg.4~beta1-5lenny1_amd64.deb" size="519406"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBIppsWBSn9tx+xORARAj7KAJ0UbEK+f5lrKNIGInmo2N75S9rrvACdF+/9Ab0suFA+jhP2
-ykUILqnFeUw=
+iEYEABECAAYFAkq9DpIACgkQBSn9tx+xORB0oQCfZ5RLBGMM7wetbHfimu9qA6yVkNIAnRqAVRUU
+z49qrDrLzjpexxm5YKvV
 
 -->

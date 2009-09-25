@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libserf-0-0.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libserf-0-0</name>
+  <summary>high-performance asynchronous HTTP client library</summary>
+  <description>serf library is a C-based HTTP client library built upon the Apache
+Portable Runtime (APR) library. It multiplexes connections, running the
+read/write communication asynchronously. Memory copies and
+transformations are kept to a minimum to provide high performance
+operation.</description>
+  <package-implementation package="libserf-0-0"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libapr1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libaprutil1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libssl0.9.8.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libuuid1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=d3048e9f9fdfc3341bfd7b66e29e925fa2618905" released="2009-09-25" version="0.2.0-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/serf/libserf-0-0_0.2.0-1_i386.deb" size="31158"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=e93a8d7e9ce90922a390bfcf5ae406f78fb4ef66" released="2009-09-25" version="0.2.0-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/s/serf/libserf-0-0_0.2.0-1_amd64.deb" size="34398"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DpwACgkQBSn9tx+xORD2fwCdESS6wxGWXWhedrW/ieFLAhY4blEAmgMVrT5a
++dUUJ4yccawe/ZlErngu
+
+-->

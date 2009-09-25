@@ -11,9 +11,20 @@ implementations.</description>
   <implementation arch="Linux-i386" id="sha1new=edcf527ae9c813bae305beb62548232f44bad6f1" released="2007-01-20" stability="stable" version="1.2.7" version-modifier="-8.2">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/a/apr/libapr1_1.2.7-8.2_i386.deb" size="109326" type="application/x-deb"/>
   </implementation>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libuuid1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=69f6c497ffcb777858c417972661edfe9a9b9c90" released="2009-09-25" version="1.2.12-5">
+      <archive href="http://ftp.debian.org/debian/pool/main/a/apr/libapr1_1.2.12-5+lenny1_i386.deb" size="108882"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=cab487c78151afa454a755e9b0642718734e3ee3" released="2009-09-25" version="1.2.12-5">
+      <archive href="http://ftp.debian.org/debian/pool/main/a/apr/libapr1_1.2.12-5+lenny1_amd64.deb" size="114326"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGdrcqBSn9tx+xORARAsA8AJsE0fvSVzZqIXpWd0+GkgzKIWOGTgCdFJB1w/TeneY4R9U3
-DdHu6FZNAhs=
+iEYEABECAAYFAkq9Dn4ACgkQBSn9tx+xORDKRACgkj4HQN+fnxMbtdftSfAYpgNwn6YAn31vlkqz
+F6uZyUSE42oyf3rg3ekB
 
 -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2007/3rd-party/libldap-2.4-2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libldap-2.4-2</name>
+  <summary>OpenLDAP libraries</summary>
+  <description>These are the run-time libraries for the OpenLDAP (Lightweight Directory
+Access Protocol) servers and clients.</description>
+  <package-implementation package="libldap-2.4-2"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libgnutls26.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libsasl2-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=fafda378632d37f3bf28ef93cc9b5b9d005077fb" released="2009-09-25" version="2.4.11-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.11-1_i386.deb" size="188070"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=438802d9dc14c468a74cf9e423c4aa75f28fbe84" released="2009-09-25" version="2.4.11-1">
+      <archive href="http://ftp.debian.org/debian/pool/main/o/openldap/libldap-2.4-2_2.4.11-1_amd64.deb" size="204758"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkq9DoUACgkQBSn9tx+xORAZVACePg4ZkCMZ6I3/fXAOjRWWbmQnAHYAoI50vi++
+JW8D1qc/zPbkD2aAidli
+
+-->

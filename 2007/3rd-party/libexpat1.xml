@@ -10,9 +10,15 @@ parsing XML.</description>
   <implementation arch="Linux-i386" id="sha1new=1b4b34591222bd9f698f7f027e1af022f143fc06" license="Freely Distributable" released="2007-02-24" stability="stable" version="1.95.8" version-modifier="-3.4">
     <archive href="http://ftp.uk.debian.org/debian/pool/main/e/expat/libexpat1_1.95.8-3.4_i386.deb" size="62934" type="application/x-deb"/>
   </implementation>
+  <implementation arch="Linux-i386" id="sha1new=b687e1acff49b40ada5d8060b4492e7e601fd42a" released="2009-09-25" version="2.0.1-4">
+      <archive href="http://ftp.debian.org/debian/pool/main/e/expat/libexpat1_2.0.1-4_i386.deb" size="131788"/>
+    </implementation>
+  <implementation arch="Linux-x86_64" id="sha1new=b08ab594ccd9ede499b9d43ac3f7cd5272969168" released="2009-09-25" version="2.0.1-4">
+      <archive href="http://ftp.debian.org/debian/pool/main/e/expat/libexpat1_2.0.1-4_amd64.deb" size="136198"/>
+    </implementation>
 </interface>
 <!-- Base64 Signature
-iD8DBQBGYq/GBSn9tx+xORARAnHjAJ94zaaL+Zgx5O79gJRiPwtYyz6h0ACdF7ykjaUVszWhRt7R
-2Hm7NdWZ4jk=
+iEYEABECAAYFAkq9DoMACgkQBSn9tx+xORCsswCdFF6wJ02unAIiWUqSiPvyPjk5XCwAoJZFOMT4
+r0HxGIfjpT6cWE73RLeG
 
 -->
