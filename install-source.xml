@@ -19,7 +19,7 @@ To use Zero Install, you will need:
 <li><a href="http://python.org">Python</a> (version 2.5 or later, <i>including</i> any <b>-dev</b> package).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
 <li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
-<li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.12</a> or later (only needed for the GUI). If you have an older version of GTK, use Zero Install version 0.41 instead.</li>
+<li><a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.12</a> or later (only needed for the GUI). If you have an older version of GTK, use Zero Install version 0.41 instead. Note: even if you don't use the GUI, you still need python-gobject. This is a dependency of PyGTK, but is also available separately.</li>
 </ul>
 </program>
 
