@@ -23,6 +23,8 @@ There is currently no package available.
 <p>You can either install Zero Install for regular <a href='#macosx'>Mac OS X</a> (Quartz),<br />
 or for the Darwin sub-system with X11 using <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
 
+<toc level='h3'/>
+
 <h3 id='macosx'>Mac OS X</h3>
 
 <img src='screens/zeroinstall-gtkquartz.png' alt='' width='576' height='322' />
@@ -109,28 +111,22 @@ $ <b>0launch --gui</b> <i>URI</i>
 </pre>
 </blockquote>
 
-<h3>Darwin/X11</h3>
+<h3>MacPorts (Darwin/X11)</h3>
 
-<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
-
-<dl>
-<dt id='macports'>MacPorts</dt>
-<dd>
 <p>
-You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysutils/zeroinstall-injector/'>sysutils/zeroinstall-injector</a> package in <a href='http://www.macports.org/'>MacPorts</a> using this command, which will also install requirements like <i>lang/python25</i>, <i>mail/gnupg</i>, <i>x11/gtk2</i> and <i>python/py25-gtk</i>:
+You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysutils/zeroinstall-injector/'>zeroinstall-injector</a> package in <a href='http://www.macports.org/'>MacPorts</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk2</i> and <i>py25-gtk</i>:
 </p>
 
 <pre>$ sudo port install zeroinstall-injector</pre>
-</dd>
-<dt id='fink'>Fink</dt>
-<dd>
+
+<h3>Fink (Darwin/X11)</h3>
 <p>
-There is no package for <tt>zeroinstall-injector</tt> in <a href='http://www.finkproject.org/'>Fink</a>, but you can use it to install the requirements and then install Zero Install <a href='install-source.html'>from source</a> in the Fink environment until a package is provided:
+You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinstall-injector'>zeroinstall-injector</a> package in in <a href='http://www.finkproject.org/'>Fink</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk+2</i>, and <i>pygtk2-py25</i>:
 </p>
 
-<pre>$ sudo fink install python25 gnupg gtk+2 pygtk2-py25</pre>
-</dd>
-</dl>
+<pre>$ sudo fink install zeroinstall-injector</pre>
+
+<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
 
 <p>
 You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
