@@ -125,7 +125,7 @@ HelloWorld.xml is the local feed. Its contents look like this:
     using 0release.</b>
   &lt;/description&gt;
 
-  &lt;homepage&gt;<b>http://0install.net/0release.xml</b>&lt;/homepage&gt;
+  &lt;homepage&gt;<b>http://0install.net/0release.html</b>&lt;/homepage&gt;
 
   &lt;feed-for interface='<b>http://0install.net/tests/HelloWorld.xml</b>'/&gt;
 
@@ -437,7 +437,7 @@ Delete the tarball from your server.
 PROJECT=<b>zero-install</b>
 PROGRAM=<b>0release</b>
 ARCHIVE_DIR_PUBLIC_URL="http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/"'$RELEASE_VERSION'
-ARCHIVE_UPLOAD_COMMAND="upload.sf.net $PROJECT $PROGRAM "'"$@"'
+ARCHIVE_UPLOAD_COMMAND="0release-upload-archive-sf $PROJECT $PROGRAM "'"$@"'
 </pre>
 The tricky quoting is because $PROJECT and $PROGRAM expand when the script is read, but $RELEASE_VERSION and "$@"
 expand when the command is later executed.

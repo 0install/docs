@@ -98,8 +98,8 @@ control. Typical actions here are:
 Notice that all the above generate <i>platform independent</i> files.
 <i>Do not</i> compile to platform-specific binaries here (e.g. do not compile
 C source files to executables). For such programs, you need one source package
-and multiple binary packages (one for each architecture). Use 0release to create
-the source release, and use <a href='0compile.html'>0compile</a> to create the binaries.
+and multiple binary packages (one for each architecture).
+See <a href='0release-binaries.html'>Releases with source and binary packages</a> for that.
 </p>
 
 <h2>&lt;add-toplevel-directory&gt;</h2>
