@@ -391,7 +391,8 @@ suitable implementation, downloading one if required.
 
 <pre>
   &lt;requires
-	interface='...' &gt;
+	interface='...'
+	use='...' ? &gt;
     [ constraints ] *
     [ bindings ] *
   &lt;/requires&gt;
@@ -400,6 +401,13 @@ suitable implementation, downloading one if required.
 <p>
 The constraint elements (if any) limit the set of acceptable versions. The bindings specify how
 the injector should make its choice known (typically, by setting environment variables).
+</p>
+
+<p>
+The <b>use</b> attribute can be used to indicate that this dependency is only needed in some cases. By default, 0launch >= 0.43
+will skip any &lt;requires&gt; element with this attribute set. Earlier versions process all &lt;requires&gt; elements
+whether this attribute is present or not. 0test >= 0.2 will process dependencies where <b>use="testing"</b>, in
+addition to the program's normal dependencies.
 </p>
 
 <h2>Constraints</h2>
