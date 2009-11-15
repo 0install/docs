@@ -47,7 +47,7 @@ You can specify a particular set of versions to test:
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.10 0.11 0.12
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.16 0.17
 </pre>
 
 <p>
@@ -56,8 +56,8 @@ This tests three versions of 0compile against two versions of Zero Install (a to
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.10 0.12 0.12-post \
-        http://0install.net/2007/interfaces/ZeroInstall.xml 0.31 0.36
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.17 0.18 0.18-post \
+        http://0install.net/2007/interfaces/ZeroInstall.xml 0.41 0.42
 </pre>
 
 <p>
@@ -69,5 +69,46 @@ A summary is printed at the end showing the result of each combination:
  <dt>Skipped</dt><dd>this combination of versions can't be used together (or no tests are defined)</dd>
  <dt>Failed</dt><dd>some tests failed (the self-test command returned a non-zero exit status)</dd>
 </dl>
+
+<h2>Specifying a test command</h2>
+
+<p>
+  The <b>--test-command</b> option can be used to run the command of your choice, rather than the test
+  command given in the feed's <b>self-test</b> attribute. The path of the program's main executable is available as $1.
+</p>
+    
+<p>
+  For example, to check that "rox --version" worked in versions 2.8 and 2.9 of
+  ROX-Filer:
+</p>
+    
+<pre>0test -t '$1 --version > /dev/null' http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9</pre>
+
+<h2>Test-only dependencies</h2>
+
+<p>
+  Dependencies marked with <b>use="testing"</b> in their feed are normally ignored by 0launch. However, when using 0test
+  they are enabled.
+</p>
+
+<p>
+  This allows you to add extra dependencies that are only used when testing
+  your program. For example, you can use this to depend on a testing framework
+  or a large test data-set:
+</p>
+
+<pre>
+    &lt;group self-test="tests/testall.py"&gt;
+      &lt;requires interface="http://example.com/somelib.xml"&gt;
+	...
+      &lt;/requires&gt;
+      &lt;requires interface="http://testing.com/testframework.xml" <b>use="testing"</b>&gt;
+	&lt;environment insert="" mode="replace" name="TEST_FRAMEWORK"/&gt;
+      &lt;/requires&gt;
+      &lt;implementation id="." version="0.1-pre"/&gt;
+    &lt;/group&gt;
+</pre>
+
+<p>Note: 0launch &lt; 0.43 doesn't know about the <b>use</b> attribute and will include the dependency in all cases.</p>
 
 </html>
