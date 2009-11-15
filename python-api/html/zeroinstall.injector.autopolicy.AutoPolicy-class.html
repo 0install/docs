@@ -106,7 +106,7 @@ policy.Policy --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="execute"></a><span class="summary-sig-name">execute</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prog_args</span>,
         <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span></td>
@@ -125,7 +125,7 @@ policy.Policy --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="download_and_execute"></a><span class="summary-sig-name">download_and_execute</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#download_and_execute" class="summary-sig-name">download_and_execute</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prog_args</span>,
         <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>)</span></td>
@@ -157,11 +157,13 @@ policy.Policy --+
       <code>refresh_all</code>,
       <code>save_config</code>,
       <code>set_root</code>,
+      <code>solve_and_download_impls</code>,
       <code>solve_with_downloads</code>,
       <code>usable_feeds</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
+      <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
       <code>__new__</code>,
@@ -169,7 +171,9 @@ policy.Policy --+
       <code>__reduce_ex__</code>,
       <code>__repr__</code>,
       <code>__setattr__</code>,
-      <code>__str__</code>
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
       </p>
     </td>
   </tr>
@@ -276,6 +280,62 @@ policy.Policy --+
   </dl>
 </td></tr></table>
 </div>
+<a name="execute"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">execute</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">prog_args</span>,
+        <span class="sig-arg">main</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.execute">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use <a 
+    href="zeroinstall.injector.policy.Policy-class.html#solve_and_download_impls"
+    class="link">solve_and_download_impls</a> and <a 
+    href="zeroinstall.injector.run-module.html#execute" 
+    class="link">run.execute</a>
+      </p>
+</div></td></tr></table>
+</div>
+<a name="download_and_execute"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_execute</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">prog_args</span>,
+        <span class="sig-arg">refresh</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">main</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.download_and_execute">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use <a 
+    href="zeroinstall.injector.policy.Policy-class.html#solve_and_download_impls"
+    class="link">solve_and_download_impls</a> instead
+      </p>
+</div></td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -308,7 +368,7 @@ policy.Policy --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Jan 25 18:46:41 2009
+    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

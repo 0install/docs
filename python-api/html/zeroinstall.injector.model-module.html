@@ -110,6 +110,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
+        <a href="zeroinstall.injector.model.VersionRestriction-class.html" class="summary-name">VersionRestriction</a><br />
+      Only select implementations with a particular version number.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
         <a href="zeroinstall.injector.model.VersionRangeRestriction-class.html" class="summary-name">VersionRangeRestriction</a><br />
       Only versions within the given range are acceptable
     </td>
@@ -431,49 +439,51 @@ S': '/usr/local/share:/usr/share',}">{'PATH': '/bin:/usr/bin', 'XDG_CONFIG_DIRS'
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="insecure"></a><span class="summary-name">insecure</span> = <code title="Stability(0, 'insecure', 'This is a security risk')">Stability(0, 'insecure', 'This is a security risk')</code>
+        <a href="zeroinstall.injector.model-module.html#insecure" class="summary-name">insecure</a> = <code title="Stability(0, N_('insecure'), _('This is a security risk'))">Stability(0, N_('insecure'), _('This is a security <code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="buggy"></a><span class="summary-name">buggy</span> = <code title="Stability(5, 'buggy', 'Known to have serious bugs')">Stability(5, 'buggy', 'Known to have serious bugs')</code>
+        <a href="zeroinstall.injector.model-module.html#buggy" class="summary-name">buggy</a> = <code title="Stability(5, N_('buggy'), _('Known to have serious bugs'))">Stability(5, N_('buggy'), _('Known to have serious bug<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.model-module.html#developer" class="summary-name">developer</a> = <code title="Stability(10, 'developer', 'Work-in-progress - bugs likely')">Stability(10, 'developer', 'Work-in-progress - bug<code class="variable-ellipsis">...</code></code>
+        <a href="zeroinstall.injector.model-module.html#developer" class="summary-name">developer</a> = <code title="Stability(10, N_('developer'), _('Work-in-progress - bugs likely'))">Stability(10, N_('developer'), _('Work-in-progress<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.model-module.html#testing" class="summary-name">testing</a> = <code title="Stability(20, 'testing', 'Stability unknown - please test!')">Stability(20, 'testing', 'Stability unknown - please<code class="variable-ellipsis">...</code></code>
+        <a href="zeroinstall.injector.model-module.html#testing" class="summary-name">testing</a> = <code title="Stability(20, N_('testing'), _('Stability unknown - please test!'))">Stability(20, N_('testing'), _('Stability unknown - <code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.model-module.html#stable" class="summary-name">stable</a> = <code title="Stability(30, 'stable', 'Tested - no serious problems found')">Stability(30, 'stable', 'Tested - no serious problems<code class="variable-ellipsis">...</code></code>
+        <a href="zeroinstall.injector.model-module.html#stable" class="summary-name">stable</a> = <code title="Stability(30, N_('stable'), _('Tested - no serious problems found'))">Stability(30, N_('stable'), _('Tested - no serious pr<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.model-module.html#packaged" class="summary-name">packaged</a> = <code title="Stability(35, 'packaged', 'Supplied by the local package manager')">Stability(35, 'packaged', 'Supplied by the local pa<code class="variable-ellipsis">...</code></code>
+        <a href="zeroinstall.injector.model-module.html#packaged" class="summary-name">packaged</a> = <code title="Stability(35, N_('packaged'), _('Supplied by the local package manager\
+'))">Stability(35, N_('packaged'), _('Supplied by the lo<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.model-module.html#preferred" class="summary-name">preferred</a> = <code title="Stability(40, 'preferred', 'Best of all - must be set manually')">Stability(40, 'preferred', 'Best of all - must be <code class="variable-ellipsis">...</code></code>
+        <a href="zeroinstall.injector.model-module.html#preferred" class="summary-name">preferred</a> = <code title="Stability(40, N_('preferred'), _('Best of all - must be set manually')\
+)">Stability(40, N_('preferred'), _('Best of all - mu<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -609,6 +619,42 @@ S': '/usr/local/share:/usr/share',}
   </dl>
 </td></tr></table>
 </div>
+<a name="insecure"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">insecure</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+Stability(0, N_('insecure'), _('This is a security risk'))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="buggy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">buggy</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+Stability(5, N_('buggy'), _('Known to have serious bugs'))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="developer"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -621,7 +667,7 @@ S': '/usr/local/share:/usr/share',}
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(10, 'developer', 'Work-in-progress - bugs likely')
+Stability(10, N_('developer'), _('Work-in-progress - bugs likely'))
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -639,7 +685,7 @@ Stability(10, 'developer', 'Work-in-progress - bugs likely')
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(20, 'testing', 'Stability unknown - please test!')
+Stability(20, N_('testing'), _('Stability unknown - please test!'))
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -657,7 +703,7 @@ Stability(20, 'testing', 'Stability unknown - please test!')
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(30, 'stable', 'Tested - no serious problems found')
+Stability(30, N_('stable'), _('Tested - no serious problems found'))
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -675,7 +721,8 @@ Stability(30, 'stable', 'Tested - no serious problems found')
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(35, 'packaged', 'Supplied by the local package manager')
+Stability(35, N_('packaged'), _('Supplied by the local package manager<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+'))
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -693,7 +740,8 @@ Stability(35, 'packaged', 'Supplied by the local package manager')
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Stability(40, 'preferred', 'Best of all - must be set manually')
+Stability(40, N_('preferred'), _('Best of all - must be set manually')<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+)
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -731,7 +779,7 @@ Stability(40, 'preferred', 'Best of all - must be set manually')
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Jan 25 18:46:41 2009
+    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

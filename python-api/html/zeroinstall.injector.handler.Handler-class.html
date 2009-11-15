@@ -194,6 +194,46 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">None | <a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">Blocker</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#confirm_keys" class="summary-sig-name">confirm_keys</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pending</span>,
+        <span class="summary-sig-arg">fetch_key_info</span>)</span><br />
+      We don't trust any of the signatures yet.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_keys">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#confirm_import_feed" class="summary-sig-name">confirm_import_feed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pending</span>,
+        <span class="summary-sig-arg">valid_sigs</span>)</span><br />
+      Sub-classes should override this method to interact with the user 
+      about new feeds.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_import_feed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type"><a href="zeroinstall.support.tasks.Blocker-class.html" 
       class="link">tasks.Blocker</a></span>
     </td><td class="summary">
@@ -236,6 +276,7 @@ object --+
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
+      <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
       <code>__new__</code>,
@@ -243,7 +284,9 @@ object --+
       <code>__reduce_ex__</code>,
       <code>__repr__</code>,
       <code>__setattr__</code>,
-      <code>__str__</code>
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
       </p>
     </td>
   </tr>
@@ -436,6 +479,100 @@ object --+
   </dl>
 </td></tr></table>
 </div>
+<a name="confirm_keys"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">confirm_keys</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pending</span>,
+        <span class="sig-arg">fetch_key_info</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_keys">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>We don't trust any of the signatures yet. Ask the user. When done 
+  update the <a href="zeroinstall.injector.trust-module.html" 
+  class="link">trust</a> database, and then call <a 
+  href="zeroinstall.injector.trust.TrustDB-class.html#notify" 
+  class="link">trust.TrustDB.notify</a>. This method just calls <a 
+  href="zeroinstall.injector.handler.Handler-class.html#confirm_import_feed"
+  class="link">confirm_import_feed</a> if the handler (self) is new-style, 
+  or <a 
+  href="zeroinstall.injector.handler.Handler-class.html#confirm_trust_keys"
+  class="link">confirm_trust_keys</a> for older classes. A class is 
+  considered old-style if it overrides confirm_trust_keys and not 
+  confirm_import_feed.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pending</code></strong> (<a href="zeroinstall.injector.iface_cache.PendingFeed-class.html"
+          class="link">PendingFeed</a>) - an object holding details of the updated feed</li>
+        <li><strong class="pname"><code>fetch_key_info</code></strong> (str -&gt; <a href="zeroinstall.support.tasks.Blocker-class.html" 
+          class="link">Blocker</a>) - a function which can be used to fetch information about a key 
+          fingerprint</li>
+    </ul></dd>
+    <dt>Returns: None | <a href="zeroinstall.support.tasks.Blocker-class.html" 
+      class="link">Blocker</a></dt>
+        <dd>A blocker that triggers when the user has chosen, or None if 
+          already done.</dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.42
+      </p>
+</div></td></tr></table>
+</div>
+<a name="confirm_import_feed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">confirm_import_feed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pending</span>,
+        <span class="sig-arg">valid_sigs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_import_feed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sub-classes should override this method to interact with the user 
+  about new feeds. If multiple feeds need confirmation, <a 
+  href="zeroinstall.injector.handler.Handler-class.html#confirm_keys" 
+  class="link">confirm_keys</a> will only invoke one instance of this 
+  method at a time.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pending</code></strong> (<a href="zeroinstall.injector.iface_cache.PendingFeed-class.html"
+          class="link">PendingFeed</a>) - the new feed to be imported</li>
+        <li><strong class="pname"><code>valid_sigs</code></strong> ({<a href="zeroinstall.injector.gpg.ValidSig-class.html" 
+          class="link">gpg.ValidSig</a> : <a 
+          href="zeroinstall.injector.fetch.KeyInfoFetcher-class.html" 
+          class="link">fetch.KeyInfoFetcher</a>}) - maps signatures to a list of fetchers collecting information 
+          about the key</li>
+    </ul></dd>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@tasks.async</code></li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.42
+      </p>
+      <p><strong>See Also:</strong>
+        <a 
+        href="zeroinstall.injector.handler.Handler-class.html#confirm_keys"
+        class="link">confirm_keys</a>
+      </p>
+</div></td></tr></table>
+</div>
 <a name="confirm_trust_keys"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -471,7 +608,12 @@ object --+
       class="link">tasks.Blocker</a></dt>
         <dd>a blocker, if confirmation will happen asynchronously, or None</dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        see <a 
+    href="zeroinstall.injector.handler.Handler-class.html#confirm_keys" 
+    class="link">confirm_keys</a>
+      </p>
+</div></td></tr></table>
 </div>
 <a name="report_error"></a>
 <div>
@@ -559,7 +701,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Jan 25 18:46:42 2009
+    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
