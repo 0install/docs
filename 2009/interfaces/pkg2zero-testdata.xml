@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2009/interfaces/pkg2zero-testdata.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>pkg2zero-testdata</name>
+  <summary>data for unit-tests</summary>
+  <description>
+    These files are needed to run the unit-tests for pkg2zero. As they are
+    quite large, they have their own package.
+  </description>
+
+  <homepage>http://0install.net/pkg2zero.html</homepage>
+  <category>Development</category>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAksACwAACgkQrgeCgFmlPMGzpQCgrJ89l4KQ8qRHgA26IUdAVm5Huv4AoLc0wIzF
+Lxqj/5QDQpGiqCIHGcAJ
+
+-->
