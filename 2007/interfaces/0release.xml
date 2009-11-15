@@ -58,12 +58,16 @@ can help you to create new releases easily.</description>
       <manifest-digest sha256="e247293a2b4228d749a1d9d51884f2d4761b701a61f79358c980c9c090bcded6"/>
       <archive extract="0release-0.11" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11/0release-0.11.tar.bz2" size="54206"/>
     </implementation>
+      <implementation id="sha1new=6f8c8c1083981e1dfbcc4191af82aa3e554a4921" released="2009-11-15" self-test="tests/testall.py" version="0.11.1">
+      <manifest-digest sha256="c0c505dd7a02d28db6cb0e0d00be7aca9eec0d241293a8e7ce9ec5812c6bc07e"/>
+      <archive extract="0release-0.11.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11.1/0release-0.11.1.tar.bz2" size="54181"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkqGqa4ACgkQrgeCgFmlPMEinQCgtM6CR0LaJMRU3oZFjcF0kq4p22AAnAgNlTVg
-ZlvENy0ROcHaDI9EnjJy
+iEYEABECAAYFAksAKbsACgkQrgeCgFmlPMH/lwCfYDQDQkUlSVRDxvTfCJGSflZyUggAn1laxv2b
+0p0tgw/nCKlybzBINDic
 
 -->
