@@ -22,11 +22,15 @@ create a matrix of test results.</description>
     <implementation id="sha1new=e74e52960c6c6e6ee602807a92636bc06dfb0ea0" main="multi-tester" released="2008-11-06" stability="stable" version="0.1">
       <archive extract="0test-0.1" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0test-0.1.tar.bz2" size="8971"/>
     </implementation>
+    <implementation id="sha1new=157a798c62fe1e6d7d62b8353bfa64b07e5fe83f" main="0test" released="2009-11-15" version="0.2">
+      <manifest-digest sha256="858e9b09a3749c18ff07049e6a050a14aabd54c4ab8404f58703ddb4ca005fa9"/>
+      <archive extract="0test-0.2" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0test-0.2.tar.bz2" size="9134"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8VwACgkQrgeCgFmlPMGbLQCgl06jta5czDosQ6vTXRbZ9EiPaiMAoNgGTuFa
-TjAhn3gPUDoKjUs7FD+d
+iEYEABECAAYFAksAFjsACgkQrgeCgFmlPMHAFACgmLgGiDNPB6NBvbM15UYjr1tJK4cAoNDgZoWt
+0GyucuFQs0SMHteFx6SX
 
 -->
