@@ -77,15 +77,19 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="5e2164fdbc10eecc65f418c9b45f7f4f7b62204cbe7c98a59dc0dbdebfa39d42"/>
       <archive extract="zeroinstall-injector-0.42" href="http://internap.dl.sourceforge.net/project/zero-install/injector/0.42/zeroinstall-injector-0.42.tar.bz2" size="152576"/>
     </implementation>
-    <implementation id="sha1new=6ed270825a0d31a9f1e02ffa138b90ab2df4a810" released="2009-09-11" version="0.42.1">
+    <implementation id="sha1new=6ed270825a0d31a9f1e02ffa138b90ab2df4a810" released="2009-09-11" stability="stable" version="0.42.1">
       <manifest-digest sha256="a03edf03a0961b75c4207f8ce6d46a5c1a1b9919620e235b63307a6912f6ad01"/>
       <archive extract="zeroinstall-injector-0.42.1" href="http://downloads.sourceforge.net/project/zero-install/injector/0.42.1/zeroinstall-injector-0.42.1.tar.bz2" size="152639"/>
+    </implementation>
+    <implementation id="sha1new=6a28d9305c915b9cb25cf72e530ef2adbbbce7e0" released="2009-11-22" version="0.43">
+      <manifest-digest sha256="33b3c027a3ffff90b6ae30c1616398ce9fd41dde2703e9be660db1907d2994c4"/>
+      <archive extract="zeroinstall-injector-0.43" href="http://downloads.sourceforge.net/project/zero-install/injector/0.43/zeroinstall-injector-0.43.tar.bz2" size="187129"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkqqDxQACgkQrgeCgFmlPMHHWwCfTO88EEJztNWFbLQ4VtvKOb+iPu4An0E00Uk4
-NbFaJ1mHe2HajsxOwjR4
+iEYEABECAAYFAksJcI8ACgkQrgeCgFmlPME6uQCfUVQiqbdRJpRo87y2cI8v5fxrXqwAoI9QCY6j
+LJp9jgUf1sBRN2vlVSxL
 
 -->
