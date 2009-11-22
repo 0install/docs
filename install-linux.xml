@@ -15,11 +15,13 @@
   </li>
   <li id='mandriva'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2008/noarch/'>Mandriva 2008 RPMs</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2009/noarch/'>Mandriva 2009 RPMs</a></li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2009/noarch/'>Mandriva 2009 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010/noarch/'>Mandriva 2010 RPMs</a></li>
   <li id='suse'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_10.3/i586/'>OpenSUSE 10.3 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.0/i586/'>OpenSUSE 11.0 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.1/i586/'>OpenSUSE 11.1 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.2/i586/'>OpenSUSE 11.2 RPMs</a><br/>
     <strong>Note:</strong> do not install the -test RPMs</li>
   <li id='redhat'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPMs</a></li>
