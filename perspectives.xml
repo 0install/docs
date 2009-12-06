@@ -86,8 +86,7 @@ all about putting you in control of your computer:
  <dd>You should never need to reinstall anything. Zero Install puts each
  package in a read-only cache directory, indexed by a cryptographic digest of the
  contents. Therefore, reinstalling is guaranteed to have no effect! If you think the
- cache has got corrupted somehow, you can use the GUI to verify it (run <b>0launch -g</b>,
- click on <b>Show Cache</b> and then choose <b>Verify integrity</b> from the menu).
+ cache has got corrupted somehow, you can run <b>0store audit</b> to check it.
  Deleting the program's configuration files may help, though.</dd>
 </dl>
 
