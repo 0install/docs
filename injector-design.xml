@@ -46,10 +46,6 @@ trust each other not to put malicious code in the shared cache.
 
 <h2>Requirements</h2>
 
-<p>
-The injector has the same overall goals as Zero Install:
-</p>
-
 <ul>
 <li>Any user can run any program they want, without it needing to be
 installed first.</li>
@@ -119,21 +115,21 @@ be one of the users, or a system daemon.
 </p>
 
 <p>
-Traditional Zero Install uses a system daemon running as its own user.
+The original Zero Install used a system daemon running as its own user.
 Both users know that /uri/0install/gimp.org/gimp has been downloaded
 faithfully from gimp.org, because only the daemon can make things appear
 there and it won't do anything else.
 </p>
 
 <p>
-Injector Zero Install has one of the users download the software. This
+The current ("injector") Zero Install has one of the users download the software. This
 is nicer, because they can do things like use a mirror or a CD to get the
 archives. The user uses a setuid (to 'zeroinstall') program to copy the
 downloaded (unpacked) directory into the cache. The helper generates a
 digest of the whole directory structure (the SHA1 of the manifest file,
 which contains the directory structure and the SHA1 sums of all the
 files inside it) and puts the directory in the cache named with the
-digest (/var/cache/zero-install/sha1=8374ab3254...).
+digest (/var/cache/0install.net/sha256=8374ab3254...).
 </p>
 
 <p>
@@ -171,17 +167,6 @@ comes out with bug-fixes, we will want Memo to use it automatically.
 </p>
 
 <p>
-Zero Install solved this in the past by means of the <b>latest</b> symlinks. Here,
-Memo 2.0.0 uses <b>python.org/latest</b>, which is always a symlink to the latest
-version. But this isn't flexible enough to cope with the list of cases above.
-What if Python 2.2.1 is available, but we'd rather continue with 2.2.0 than
-download it? The <b>0divert</b> command allows the root user to redirect these
-symlinks, but a major goal of Zero Install is to make software use easy without
-involving an administrator. Also, <b>0divert</b> affects all users, whereas we only
-wish to affect one user, or maybe even only one program.
-</p>
-
-<p>
 The injector solves this problem by selecting components to meet a program's requirements,
 according to rules specified by the user:
 </p>
@@ -204,7 +189,7 @@ according to rules specified by the user:
 <dd>is a list of implementations of an interface.</dd>
 </dl>
 <p>
-In Zero Install, interfaces are named by globally unique URLs (like web pages). Some examples
+In Zero Install, interfaces are named by globally unique URIs (like web pages). Some examples
 of interfaces are:
 </p>
 
@@ -248,14 +233,20 @@ considered as separate implementations if they differ in any way.
 </p>
 
 <p>
-A version is a dot-separated list of integers. Eg "1.2.3". It can be just a
-single number ("1") or a sequence of any number of components ("1.4.2.3").
-Versions are ordered like this:
+A version is a sequence of dot-separated lists of integers, each followed by an
+optional modifier. e.g. "1.2.3-pre4". It can be just a single number ("1") or a
+sequence of any number of components ("1.4-rc3.4-post"). The modifiers are
+"-pre", "-rc", "-" and "-post". Versions are ordered like this:
 </p>
 
 <ul>
 <li>1</li>
+<li>1.1-pre7</li>
+<li>1.1-rc3</li>
 <li>1.1</li>
+<li>1.1-1</li>
+<li>1.1-post</li>
+<li>1.1.1</li>
 <li>1.2</li>
 <li>1.2.1</li>
 <li>1.2.1.4</li>
@@ -265,10 +256,7 @@ Versions are ordered like this:
 
 <p>
 The injector doesn't care about anything other than the sort order (i.e., whether
-one version comes before or after another). It is assumed that an
-implementation can be safely replaced by one with a later version number, but
-not with an earlier one. So, if you ask for "1.2.1" then you might get "1.2.2"
-or "1.3" or even "5.7", but not "1.2.0". This is a little different to some
+one version comes before or after another). This is a little different to some
 other systems, where numbers in different places have different meanings.
 </p>
 
@@ -285,7 +273,7 @@ version) to an interface should be handled by creating a new interface. Eg:
 <h2>Stability</h2>
 
 <p>
-The interface file should also give a stability rating for each implementation. The following
+The feed file should also give a stability rating for each implementation. The following
 levels are allowed:
 </p>
 
@@ -337,7 +325,7 @@ become the version at the top of the list, whereas a preferred version will alwa
 <h2>Dependencies</h2>
 
 <p>
-The interface file also lists the dependencies of each implementation; the
+The feed file also lists the dependencies of each implementation; the
 injector locates an implementation of each dependency, recursively. All
 information about dependencies is handled at the interface level; this is
 because the same implementation may be used in different ways. Also, for
