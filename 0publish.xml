@@ -71,6 +71,7 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
   <dd>Change a local implementation to one with a digest and an archive.
   See the <a href='package-scons.html'>SCons tutorial</a> for an example.</dd>
   <dt>-c, --create</dt><dd>Create a new feed file (if non-existant) without prompting.</dd>
+  <dt>-d ALG, --add-digest=ALG</dt><dd>Add extra digests using the given algorithm.</dd>
   <dt>-e, --edit</dt><dd>Edit with $EDITOR. This is useful if the file is signed, since
   it removes the signature at the start and resigns at the end. It also checks that the
   new feed is valid before overwriting the old copy.</dd>
@@ -88,6 +89,7 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
   <dt>--set-stability=STABILITY</dt><dd>Set the stability rating.</dd>
   <dt>--set-version=VERSION</dt><dd>Set the version number (used when making a release from CVS).</dd>
   <dt>-s, --stable</dt><dd>Mark the current testing version as stable.</dd>
+  <dt>--select-version=VERSION</dt><dd>Select version to use in --set-* commands.</dd>
   <dt>-x, --xmlsign</dt><dd>Add an XML signature block. All remote feeds must be signed.</dd>
   <dt>-u, --unsign</dt><dd>Remove any signature.</dd>
   <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
