@@ -122,7 +122,6 @@
 	    Commons Attribution-ShareAlike 2.5 license</a>.
 	  </p>
 	  <p>
-	    Thanks to the University of Southampton for the 0install.net domain name!<br/>
 	    Some of the icons are from (or based on icons from) the
 	    <a href='http://tango.freedesktop.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
 	  </p>
