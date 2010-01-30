@@ -44,14 +44,14 @@ these feeds.</description>
     <implementation id="sha1new=8499203c95bf3dced11c8ff6307b2ac2be2f07c6" released="2008-08-08" stability="stable" version="0.9">
       <archive extract="0publish-gui-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.9.tar.bz2" size="32071"/>
     </implementation>
-    <implementation id="sha1new=03fccf616d3c965fa60583784dbe65c0ff1e7a1d" released="2009-09-10" version="0.10">
+    <implementation id="sha1new=03fccf616d3c965fa60583784dbe65c0ff1e7a1d" released="2009-09-10" stability="stable" version="0.10">
       <manifest-digest sha256="7866d9d0ad1b477fe289c449008f13a6588a18a087433a6b393cd4d7971ad0a7"/>
       <archive extract="0publish-gui-0.10" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.10/0publish-gui-0.10.tar.bz2" size="32136"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkqo+3IACgkQrgeCgFmlPMFBXACgm8nxyHw7Da89WQpQuXGs+6hSsZoAoNfBCCAI
-UoohptjcWPu09DQWywq3
+iEYEABECAAYFAktkNBMACgkQrgeCgFmlPMFp7gCcDYQL7Q4MNLn/sgzuIjW8NfTrgngAoNGRWr3M
+YGqRualKefTsEtmLSG1A
 
 -->
