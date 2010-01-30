@@ -113,7 +113,7 @@
 	
         <div class='footer'>
 	 <p>
-	    Web-site &#169; Copyright 2003-2009 by Thomas Leonard<br/>
+	    Web-site &#169; Copyright 2003-2010 by Thomas Leonard<br/>
 	  </p>
 	  <p>
 	    Permission is granted to use the site (excluding the software,
