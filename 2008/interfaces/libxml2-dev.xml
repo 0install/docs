@@ -27,15 +27,15 @@ bindings make it available in other environments.</description>
 
   <group compile:lib-mappings="xml2:2">
     <implementation arch="Linux-x86_64" id="sha1new=c5dd932aadd7f52edeadddabd392049f2d67a317" released="2008-02-22" version="2.6.27">
-      <archive extract="libxml2-dev-linux-x86_64-2.6.27" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/libxml2-dev-linux-x86_64-2.6.27.tar.bz2" size="62000"/>
+      <archive extract="libxml2-dev-linux-x86_64-2.6.27" href="http://sourceforge.net/projects/zero-install/files/3rd-party/0/libxml2-dev-linux-x86_64-2.6.27.tar.bz2/download" size="62000"/>
     </implementation>
     <implementation arch="Linux-i486" id="sha1new=2b7f4b03a714f4fc50198479c79d11a207791f20" released="2008-02-22" stability="stable" version="2.6.27">
-      <archive extract="libxml2-dev-linux-i486-2.6.27" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/libxml2-dev-linux-i486-2.6.27.tar.bz2" size="61924"/>
+      <archive extract="libxml2-dev-linux-i486-2.6.27" href="http://sourceforge.net/projects/zero-install/files/3rd-party/0/libxml2-dev-linux-i486-2.6.27.tar.bz2/download" size="61924"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkn9oB0ACgkQBSn9tx+xORAK1wCfS1gnAvG7qRA7BTeheDOmthoDfAUAn0TWEbQl
-afVHPSZEE8ivC/1Zzwyy
+iEYEABECAAYFAktlgjcACgkQBSn9tx+xORDQfACfRzlPPt2ziqLco5TLYThmVJhHZkYAn03Frm2a
+JCFrNMs9Lw9X1RRF3trq
 
 -->
