@@ -108,16 +108,30 @@ For a full tutorial, see 0compile's homepage.</description>
       <manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
       <archive extract="0compile-0.17" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.17/0compile-0.17.tar.bz2" size="29159"/>
     </implementation>
-      <implementation id="sha1new=b44757b155ebf0de8343ecbdf18563e9e5d2c29f" released="2009-06-27" self-test="tests/testcompile.py" version="0.18">
+      <implementation id="sha1new=b44757b155ebf0de8343ecbdf18563e9e5d2c29f" released="2009-06-27" self-test="tests/testcompile.py" stability="stable" version="0.18">
       <manifest-digest sha256="feba92a479210a34ed911470de3fd054a2e03ae2ac6ece032ad7ae44eb5adc90"/>
       <archive extract="0compile-0.18" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.18/0compile-0.18.tar.bz2" size="32053"/>
+    </implementation>
+    </group>
+    <group>
+      <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+    </requires>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.41"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=dc0f2399f093f06101a40874f08e80f3aa6c2957" released="2010-01-31" self-test="tests/testcompile.py" version="0.19">
+      <manifest-digest sha256="81faaa77d0c38589f705c5ea47e78d63c55b0638284986b1b24877a258ad224d"/>
+      <archive extract="0compile-0.19" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.19/0compile-0.19.tar.bz2" size="32106"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkqjrdkACgkQrgeCgFmlPMHMoACfSfUvC/J2vQTt3DYoQ7Grk/n9ZxoAoNFTNfXQ
-Dpp5CxvRnS92wBqWMdSF
+iEYEABECAAYFAktlhyEACgkQrgeCgFmlPMFv+gCggJTQP9hxlULcgxJf1IiRhushbgEAn3i0GkGo
+rAedc4jMJIm8s0I5xlIC
 
 -->
