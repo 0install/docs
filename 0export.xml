@@ -4,6 +4,7 @@
 <program name='0export'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/0export.git'
+	 feed='http://0install.net/tools/0export.xml'
 	 license='GNU General Public License'>
 
 <p>
@@ -12,7 +13,7 @@
 
 <p>
 Normally, a program is run by passing its name (a URI) to the 0launch
-command. This downloads the appropriate feeds, choose a set of
+command. This downloads the appropriate feeds, chooses a set of
 implementations (a version of the program, along with any libraries it
 needs) and downloads them too.
 </p>
@@ -72,23 +73,11 @@ already has Zero Install itself installed.
 
 <h2>Installing 0export</h2>
 
-<!--
 <p>
 You can download <b>0export</b> and create a short-cut to it in the usual way:
 </p>
 
-<pre>$ 0alias 0export http://0install.net/2008/interfaces/0export.xml</pre>
--->
-
-<p>
-This program has not been officially released yet. However, you can use the developer
-version like this:
-</p>
-
-<pre>
-$ git clone git://repo.or.cz/0export.git
-$ 0alias 0export 0export/0export.xml
-</pre>
+<pre>$ 0alias 0export http://0install.net/tools/0export.xml</pre>
 
 <h2>Creating a setup.sh for your program</h2>
 
@@ -150,7 +139,7 @@ To test the installer:
 <pre>$ sh setup.sh</pre>
 
 <p>
-The script currently (0.1-pre) does the following:
+The script currently (0export 0.1) does the following:
 </p>
 
 <ol>
