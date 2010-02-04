@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tools/0export.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0export</name>
+  <summary>create self-installing bundles for distribution on CD</summary>
+  <description>
+However, it is sometimes useful to bundle a program and its libraries together
+on a CD (for example) so that it can be used on machines without a network
+connection, or where the network is very slow. It is also useful for archival
+purposes, in case the original web-sites supplying required libraries become
+unavailable.
+
+0export takes the URI of a program and creates a &quot;setup.sh&quot; file; a self-
+extracting archive containing everything needed to run the program. This file
+can be executed on a machine without a network connection to install or run the
+program.
+
+Unlike the bundles created by the related zero2bundle program, programs
+installed using setup.sh are added to the Zero Install cache and are therefore
+still shared between users, and will get updates over the web where possible.</description>
+  <homepage>http://0install.net/0export.html</homepage>
+
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
+    <!-- Update the copy of the version number in the main program -->
+    <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; 0export</release:action>
+  </release:management>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <group main="0export">
+    <implementation doc-dir="doc" id="sha1new=4b7ef993c49bff2f603f63634e68109568a08c5f" license="OSI Approved :: GNU General Public License v3" main="0export" released="2010-02-04" version="0.1">
+      <manifest-digest sha256="0fbac33455908b0b431b6895dba43dfc892b682004e24e67dd2c77e3f57e56cf"/>
+      <archive extract="0export-0.1" href="http://downloads.sourceforge.net/project/zero-install/0export/0.1/0export-0.1.tar.bz2" size="20343"/>
+    </implementation>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.33"/>
+      <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
+    </requires>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAktrQ/kACgkQrgeCgFmlPME3WACeIQujoEV+BLGb1+/vooj2zmZRgn0AnRV+3Y70
+Uh8dag8xfW/X116gnXAS
+
+-->
