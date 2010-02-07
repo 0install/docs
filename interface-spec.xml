@@ -268,12 +268,30 @@ implementation of this interface. The syntax is:
 <pre>
   &lt;package-implementation
     package='...'
+    distributions='...' ?
     main='...' ? &gt;
 </pre>
 
 <p>
 If the named package is available then it will be considered as a possible implementation
 of the interface. If <b>main</b> is given then it must be an absolute path.
+</p>
+
+<p>
+If the <b>distributions</b> attribute is present then it is a space-separated list of distribution names
+where this element applies. 0launch >= 0.45 ranks the &lt;package-implementation&gt; elements according
+to how well they match the host distribution and then only uses the best match (or matches, if several get
+the same score). Only these distribution names are supported currently, and they are case-sensitive:
+</p>
+
+<ul>
+  <li>RPM (all RPM-based distributions)</li>
+  <li>Debian (all Debian-based distributions)</li>
+  <li>Gentoo</li>
+</ul>
+
+<p>
+Earlier versions of 0launch ignore the <b>distributions</b> attribute and process all of the elements.
 </p>
 
 <p>
@@ -292,8 +310,7 @@ are read from the native packaging system.
 
 <p>
 Support for distribution packages was added in version 0.28 of the injector. Earlier versions ignore
-this element. Future versions may provide a way to specify which distributions the element applies
-to.
+this element.
 </p>
 
 <h2>Retrieval methods</h2>
