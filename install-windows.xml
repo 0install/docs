@@ -4,46 +4,53 @@
 <h2>Installation : Windows</h2>
 
 <p>
-Windows is not currently supported, but if you have some programming knowledge, please help out!
+Windows partially works with Zero Install but this is not yet ready for general use. If you have some programming knowledge, please help out!
 </p>
 
 <p>
-Note: These instructions are for MSYS (that is, regular Windows). It may be easier to use it under <a href='http://www.cygwin.com/'>Cygwin</a>, but we haven't had any reports from Windows users either way so far.
-The <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2503'>How to have Zero Install running with Portable Cygwin on Windows XP</a> thread on the mailing list contains some discussion about that.
+Note: These instructions are for regular Windows. For Cygwin, see the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2503'>How to have Zero Install running with Portable Cygwin on Windows XP</a> thread on the mailing list.
 </p>
 
-<p>Here's how to test it</p>
+<h2>Installing the pre-requisites</h2>
 
 <ol>
- <li>Install <a href='http://code.google.com/p/msysgit/'>msysgit</a></li>
- <li>Run git-gui from the Start menu, and clone <b>git://repo.or.cz/zeroinstall.git</b></li>
- <li>Install python-2.5.2.msi from <a href='http://www.python.org'>python.org</a></li>
- <li>Install gtk-2.12.9-win32-2.exe from link on <a href='http://www.pygtk.org/downloads.html'>pygtk.org's download page</a></li>
- <li>Install PyGObject and PyGTK from the same page</li>
- <li>Install Windows binary of GnuPG from <a href='http://gnupg.org'>gnupg.og</a></li>
- <li>Install Windows binary of bzip2 from <a href='http://www.bzip.org/'>bzip.org</a>. Call it <b>bunzip2.exe</b> and put it in your %PATH.</li>
- <li>Go to <b>Start -> Control panel -> System -> Advanced -> Environment Variables</b>. Edit "Path". Append: <b>;c:\python25;c:\gnupg</b> (or wherever you installed Python and GnuPG)</li>
- <li>Use <b>Start -> Run -> cmd</b>. Make sure the <b>python</b> and <b>gpg</b> commands can be found</li>
+  <li>Install python-2.6.4.msi from <a href='http://www.python.org'>python.org</a> and add the install directory to the path (C:\Python26). Do <i>not</i> use Python 3.</li>
+ <li>Extract <a href='http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.5-20091215_win32.zip'>gtk+-bundle_2.18.5-20091215_win32.zip</a> from  <a href='http://www.gtk.org/'>gtk.org</a>.</li>
+ <li>Install PyCairo 1.4.12-2, PyGObject 2.14.2-2 and PyGTK 2.12.1-3 from <a href='http://www.pygtk.org/'>pygtk.org</a>.</li>
+ <li>Install the Windows binary of GnuPG from <a href='http://gnupg.org'>gnupg.og</a>  and add the install directory to the path (C:\Program Files\GNU\GnuPG) <b>OR</b><br/>
+Install <a href='http://www.gpg4win.org/'>gpg4win</a>.</li>
+ <li><i>Optional:</i> Install the Windows binary of bzip2 from <a href='http://www.bzip.org/'>bzip.org</a>. Call it <b>bunzip2.exe</b> and put it in your %PATH%.</li>
+ <li>Use <b>Start -> Run -> cmd</b>. Make sure the <b>python</b> and <b>gpg</b> commands can be found.</li>
 </ol>
 
+<h2>Getting Zero Install itself</h2>
+<ol>
+ <li>Install <a href='http://code.google.com/p/msysgit/'>msysgit</a> and open a GIT bash prompt.</li>
+ <li>Run "git clone git://repo.or.cz/zeroinstall.git". This will create a directory named "zeroinstall". cd to it and run "git checkout origin/windows".</li>
+ <li>cd to the zeroinstall directory and run "python setup.py install".</li>
+</ol>
+
+<h2>Running it</h2>
+
 <p>
-You can now cd to your cloned GIT repository and run 0launch (use <b>-vvc</b> for maximum logging). This will probably fail. See if you can make it work. Open issues:
+  cd to your cloned GIT repository and run 0launch any time (use -vvc for maximum logging), e.g.
 </p>
 
-<p><strong>2009-02-03: Update: there is a new "windows" branch which gets a bit further... ("git checkout windows")</strong></p>
+<pre>python 0launch http://afb.users.sourceforge.net/zero-install/interfaces/seamonkey.xml</pre>
+
+<h2>Notes</h2>
 
 <ul>
- <li>The InputBlocker in download.py doesn't work. You can replace the whole line with just <b>yield</b> as a work-around. This is inefficient, but works. [ in the windows branch ]</li>
- <li>It thinks gpg isn't in $PATH. Edit gpg.py to disable that check. Ideally, patch it to actually search the Windows %PATH% correctly. [ fixed on windows branch ]</li>
- <li>All downloads have \r codes inserted into them. Looks like subprocess.Popen in download.py is turning a binary file into a text file. How can that happen? [ fixed on windows branch ]</li>
- <li>/var/cache/0install.net isn't a good place for the system store on Windows. Where should it go?</li>
- <li>os.utime fails for some reason. Shouldn't be needed with recent Python versions anyway.</li>
- <li>Unpacking loses the X permission, causing the digest check to fail. Store it in some DOS attribute?</li>
-</ul>
+<li>The GUI does not work, use the command line instead.</li>
 
-<p>
-That's as far as we've got so far. Let us know how you get on. Good luck!
-</p>
+<li>Don't run 0launch itself from inside MSYS (git bash) it will fail at the gpg key import.</li>
+<li>To add a directory to the path:
+  <ol>
+    <li>Left click <b>My Computer -> Properties -> Advanced -> Environment Variables</b>.</li>
+    <li>Edit "Path". Append the directory. Directories should be separated by a ";", e.g. <b>C:\Python26;C:\Program Files\GNU\GnuPG</b>.</li>
+  </ol>
+</li>
+</ul>
 
 <quicklinks>
   <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
