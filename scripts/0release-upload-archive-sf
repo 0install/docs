@@ -10,7 +10,6 @@ app = sys.argv[2]
 files = sys.argv[3:]
 
 path = '/home/frs/project/' + project[0] + "/" + project[:2] + "/" + project + "/" + app + "/" + version + "/"
-print "Press RETURN to upload to sf.net file release system in %s" % path
 
 cmd = ['rsync', '-avP', '--progress', '-e', 'ssh'] + files + \
 	[user + ',' + project + '@frs.sourceforge.net:' + path]
