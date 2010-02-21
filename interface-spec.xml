@@ -154,6 +154,7 @@ the closest ancestor &lt;group&gt; which defines it):
 <pre>
   &lt;implementation
 	id='...'
+	local-path='...' ?
   	version='...' ?
   	version-modifier='...' ?
 	main='...' ?
@@ -176,12 +177,16 @@ the closest ancestor &lt;group&gt; which defines it):
 
 <dl>
  <dt>id</dt>
- <dd>The digest of the implementation's manifest, in the form <b>alg=value</b>.
- See the <a href='manifest-spec.html'>manifest specification</a> for details
- about manifests. If the feed file is a local file (the interface 'uri'
- starts with <b>/</b>) then the <b>id</b> <i>may</i> instead contain the
- pathname of a local directory (either an absolute path or a path relative
- to the directory containing the feed file).</dd>
+ <dd>A unique identifier for this implementation. For example, when the user marks a particular
+   version as buggy this identifier is used to keep track of it, and saving and restoring selections
+   uses it. However, see the important historical note below.</dd>
+
+ <dt>local-path</dt>
+ <dd>
+ If the feed file is a local file (the interface 'uri' starts with <b>/</b>)
+ then the <b>local-path</b> attribute <i>may</i> contain the pathname of a local
+ directory (either an absolute path or a path relative to the directory
+ containing the feed file). See the historical note below.</dd>
 
  <dt>version</dt>
  <dd>The version number. See the version numbers section below for more details.</dd>
@@ -232,23 +237,23 @@ the closest ancestor &lt;group&gt; which defines it):
 </dl>
 
 <p>
-For non-local implementations (those where the <b>id</b> doesn't start with
-<b>/</b>), the element contains a set of <i>retrieval methods</i>, each of
-which gives a different way of getting the implementation (i.e., of getting a
-directory structure whose digest matches the one in the <b>id</b>).
-</p>
-
-<p>
-The <b>manifest-digest</b> element can be used to give the digest using other
-algorithms (in addition to the one used in the <b>id</b> attribute). It is
-currently ignored. This is to allow a smooth upgrade to newer digest algorithms
-without breaking old clients. Each non-namespaced attribute gives a digest, with
-the attribute name being the algorithm. For example:
+  The <b>manifest-digest</b> element is used to give digests of the .manifest file
+  using various hashing algorithms (but see the historical note below). Having multiple
+  algorithms allows a smooth upgrade to newer digest algorithms without breaking old
+  clients. Each non-namespaced attribute gives a digest, with the attribute
+  name being the algorithm. For example:
 </p>
 
 <pre>
 &lt;manifest-digest sha256="4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a"/>
 </pre>
+
+<p>
+For non-local implementations (those without a local-path attribute), the
+element contains a set of <i>retrieval methods</i>, each of which gives a
+different way of getting the implementation (i.e., of getting a directory
+structure whose digest matches the ones given.
+</p>
 
 <p>
 Unrecognised elements inside an implementation are ignored. Currently, the
@@ -257,6 +262,35 @@ it may use other strategies (such as choosing the closest mirror, or letting
 the user select one manually). It may also use other methods which aren't listed,
 such as searching for the implementation on a peer-to-peer network.
 </p>
+
+<h3>Historical note about id</h3>
+
+<p>
+  0launch >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any)
+  from the local-path attribute and the digests from the &lt;manifest-digest&gt;.
+</p>
+
+<p>
+  0launch &lt; 0.45 ignores the local-path attribute and the &lt;manifest-digest&gt; element.
+  If the ID starts with '.' or '/' then the ID is also the local path; otherwise, it is the
+  single manifest digest.
+</p>
+
+<p>
+  For backwards compatibility, 0launch >= 0.45 will treat an ID starting with '.' or '/' as a
+  local path if no local-path attribute is present, and it will treat it as an additional
+  digest if it contains an '=' character.
+</p>
+
+<p>
+  Therefore, if you want to generate feeds compatible with past and future versions:
+</p>
+
+<ul>
+  <li>If you have a digest, set the ID to "sha1new=..." and put the sha256 digest in the
+    &lt;manifest-digest&gt;.</li>
+  <li>If you have a local implementation then set both id and local-path to the pathname.</li>
+</ul>
 
 <h2>Package implementations</h2>
 
