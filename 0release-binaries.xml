@@ -64,8 +64,7 @@ $ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.x
 builders = host, freebsd
 
 [builder-host]
-build = 0launch --not-before 0.10 \
-  http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
+build = 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
 
 [builder-freebsd]
 start = VBoxManage startvm "FreeBSD" --type vrdp
