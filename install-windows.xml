@@ -8,6 +8,12 @@ Windows partially works with Zero Install but this is not yet ready for general 
 </p>
 
 <p>
+<strong>2010-02-26: </strong> Huge progress! Bastian Eicher has created a first prototype of a Windows installer for Zero Install which includes all the dependencies for you: please <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3001'>help test it!</a>
+</p>
+
+<h2>Older (manual) instructions</h2>
+
+<p>
 Note: These instructions are for regular Windows. For Cygwin, see the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2503'>How to have Zero Install running with Portable Cygwin on Windows XP</a> thread on the mailing list.
 </p>
 
