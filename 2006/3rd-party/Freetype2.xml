@@ -18,6 +18,8 @@ Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</descri
   <!-- Optionally, uncomment this to specify an icon: -->
   <!-- <icon href='http://site/icon.png' type='image/png'/> -->
 
+  <package-implementation package="libfreetype6"/>
+
   <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; LDFLAGS=-Wl,-rpath-link=/lib &amp;&amp; make install &amp;&amp; cd &quot;$DISTDIR&quot; &amp;&amp; rm -rf include bin share lib/pkgconfig lib/*.a lib/*.la" compile:min-version="0.6">
     <implementation id="sha1=9b2205347600b15c0092ceb19493f7ba63c6e35e" released="2006-11-12" stability="stable" version="2.1.10">
       <archive extract="freetype-2.1.10" href="http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.10.tar.bz2" size="1037107"/>
@@ -32,7 +34,7 @@ Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</descri
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkl8dKIACgkQrgeCgFmlPMH5JQCaAnzI4MYVI/mEaprKTmd4H8sort8AoN3W2/4z
-eOS9mjw8Mm6MWSFMnHR1
+iEYEABECAAYFAkuJcuwACgkQrgeCgFmlPMFHIwCfb6PcxytRn/JWhKVxD37+IPvsb5kAn0huJgFk
+jV9JWBGbsT3PGgvKADjV
 
 -->
