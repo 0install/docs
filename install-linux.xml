@@ -52,6 +52,9 @@
 <dt>Other</dt>
 <dd>
 <ul class='spaced'>
+  <li id='arch'>
+    <b>Arch Linux</b> <a href='http://aur.archlinux.org/packages.php?ID=2676'>zeroinstall-injector</a> is available with Arch Linux.
+  </li>
   <li id='slackware'>
       <b>Slackware 10.2</b> <download name="0install-0.27-noarch-1_slack10.2.tgz"/> (Slackware 10.2 package) (contributed by Peter Santoro)<br/>
       <b>Slackware 12</b> <download name="zeroinstall-injector-0.32-i686-2_slack12.0_mjk.tgz"/> (Slackware 12 package) (contributed by MilkaJinka)</li>
