@@ -51,6 +51,7 @@
 <div class='news' style='clear: both'>
 <h2>News</h2>
 <dl>
+<dt>Feb 2010</dt><dd><a href='install-windows.html'>The Windows version</a> is coming along nicely - please help to test it! Also, <a href='0export.html'>0export 0.1</a> was released; this allows easy creation of bundles for off-line distribution or archiving.</dd>
 <dt>Jan 2010</dt><dd><a href='injector.html'>0launch 0.44</a> released. Improvements include a progress display in console mode, support for GnuPG 2, canonicalisation of architectures and some minor bug-fixes.</dd>
 <dt>Dec 2009</dt><dd>The Sugar project has also provided <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/2866'>experimental PackageKit integration</a>. <a href='http://repo.roscidus.com'>repo.roscidus.com</a> now hosts Java 6 (JRE and JDK), SWT and E packages.</dd>
 <dt>Nov 2009</dt><dd>A new Zero Install repository has been set up on <a href='http://repo.roscidus.com'>repo.roscidus.com</a> to host feeds for programs where the upstream authors don't provide one. 0launch 0.43 was released, with support for xz compression, gettings feeds over https and a Spanish translation.</dd>
