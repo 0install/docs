@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/Tricky.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Tricky</name>
+  <summary>has tricky dependencies</summary>
+  <description>
+</description>
+
+  <group main="tricky">
+    <implementation id="sha1new=5cbf4a56baf2c5526c04dd8a7e9527dbf411ab2a" main="tricky" released="2010-03-13" version="0.2">
+    <archive extract="tricky-0.2" href="http://downloads.sourceforge.net/project/zero-install/tests/tricky-0.2.tgz" size="206" type="application/x-compressed-tar"/>
+  </implementation>
+    <requires interface="http://0install.net/tests/libtricky.xml">
+      <environment insert="lib" name="TRICKY"/>
+    </requires>
+  </group>
+  <implementation id="sha1new=06574792d63546407a1e3918a88f75c2ede5f868" main="tricky" released="2010-03-13" version="0.1">
+    <archive extract="tricky-0.1" href="http://downloads.sourceforge.net/project/zero-install/tests/tricky-0.1.tgz" size="187" type="application/x-compressed-tar"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkublBAACgkQb88SG+I5Dgt3SACcDoPG7rLUdRLp2jBmBoKHCK3TY5AAn2nXNjq0
+DqBeV8Mbscjdcac/avjz
+
+-->
