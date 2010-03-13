@@ -9,9 +9,6 @@ telnet-ssl and openssh.
 
 It is part of the OpenSSL implementation of SSL.</description>
   <group arch="Linux-i386">
-    <implementation id="sha1new=6386a02aaaa373ffae2e9a917508d1417478ae43" released="2010-03-13" version="0.9.8">
-      <archive href="http://repo.roscidus.com/lib/ssl/libssl0.9.8-amd64-0.9.8g-15+lenny6.tar.bz2" size="962209" type="application/x-bzip-compressed-tar"/>
-    </implementation>
     <implementation id="sha1new=785824ea49084092cca4c82c3edac4704bb2bee6" released="2010-03-13" version="0.9.8">
       <archive href="http://repo.roscidus.com/lib/ssl/libssl0.9.8-i386-0.9.8g-15+lenny6.tar.bz2" size="2970316" type="application/x-bzip-compressed-tar"/>
     </implementation>
@@ -21,12 +18,17 @@ It is part of the OpenSSL implementation of SSL.</description>
     </implementation>
     <implementation id="sha1new=aabb7e2841806b1252b14f2fa2b0662ee759b2d4" released="2009-09-25" version="0.9.8-15.3">
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=57a8221e9590546671984a120705d00d95d0c74f" released="2009-09-25" version="0.9.8-15.3">
+  </group>
+  <group arch="Linux-x86_64">
+    <implementation id="sha1new=6386a02aaaa373ffae2e9a917508d1417478ae43" released="2010-03-13" version="0.9.8">
+      <archive href="http://repo.roscidus.com/lib/ssl/libssl0.9.8-amd64-0.9.8g-15+lenny6.tar.bz2" size="962209" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=57a8221e9590546671984a120705d00d95d0c74f" released="2009-09-25" version="0.9.8-15.3">
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkucCsIACgkQBSn9tx+xORBvcwCfX7SB/qde/uR26DLR85F/TttSu/AAmgPRjMJl
-eS42luifUNYRFQmQ4uE0
+iEYEABECAAYFAkucDX8ACgkQBSn9tx+xORAFHQCfXW8uIy53TmguFgahC0eJgeO7I3sAoImKr0h5
+WniVxQbI67PW1bOoQ8Hn
 
 -->
