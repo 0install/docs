@@ -1,14 +1,13 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?><interface uri="http://0install.net/tests/Visual-ldd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" min-injector-version='0.21'>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface min-injector-version="0.21" uri="http://0install.net/tests/Visual-ldd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Visual-ldd</name>
   <summary>tool that shows library dependancies in a tree</summary>
   <description>
 Visual Dependency Walker is a tool that will show you a graphical tree of all
 the shared libraries that a given ELF binary links to. It can be used to figure
 out why your program is linked against a certain library, and to check for
-version conflicts.
-  </description>
+version conflicts.</description>
 
   <homepage>http://freshmeat.net/projects/visual_ldd/</homepage>
 
@@ -21,7 +20,7 @@ version conflicts.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBEevIgAWhfEWB7ssURAuIBAJ4lA5eCmZOYQel1SimfBfuLU9pMIACgk4jCcMXzmctMDT5i
-tIgaGnARdOE=
+iEYEABECAAYFAkuk27oACgkQBSn9tx+xORDKIQCaAx391+gDMxZSbwv6FNnlkOaDw/YAn3/U4jia
+hAlOzdphuhUJ6rW2GYVa
 
 -->
