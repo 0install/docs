@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/tests/GNU-Hello.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>GNU Hello</name>
   <summary>produces a familiar, friendly greeting</summary>
@@ -14,10 +13,8 @@ languages, and so on. Of course, the primary purpose of this program is to
 demonstrate how to write other programs that do these things; it serves as a
 model for all of the GNU coding standards and other recommended practices.
 
-The primary purpose of this Zero Install interface is to demonstrate
-how to compile binary packages from sources that follow the GNU automake
-system.
-  </description>
+The primary purpose of this Zero Install interface is to demonstrate how to
+compile binary packages from sources that follow the GNU automake system.</description>
   <homepage>http://www.gnu.org/software/hello/</homepage>
 
   <group arch="*-src" compile:binary-main="bin/hello" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install">
@@ -37,7 +34,7 @@ system.
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFFpgmmx9df5ch2pARAqJ6AJsGh6At2ujcWM16WHGjGLXgNEge9gCbBGFFdrFaIQz1Ugdr
-EDgTUeLoIrA=
+iEYEABECAAYFAkuk20cACgkQBSn9tx+xORD7IwCfXtXCD5TqESrL5ugPYtsvY5r6IZEAnR1NByKE
+KsgtElIkjESVMXUYC62+
 
 -->
