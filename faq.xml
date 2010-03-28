@@ -175,8 +175,8 @@ version using your normal package manager.
 
 <p>
 I'm not providing a service. You distribute software by hosting some files on
-your own web server. The only centralised URL is the default place it checks for
-updates to the GUI, and you can change that easily enough (or just disable updating).
+your own web server. The only centralised URLs are the default mirror site and
+the default GPG key information server, both of which are optional.
 The core software is all LGPL or GPL. Of course, you're welcome to
 <a href='http://sourceforge.net/developer/user_donations.php?user_id=40461'>send me
 money</a> if you want ;-)
@@ -361,7 +361,12 @@ original sites.
 <p>
 The <b>0launch --import</b> command lets you import the interface from the
 new location, and <b>0store</b> allows adding any archive to the cache (provided
-its message digest matches).
+its message digest matches). Because Zero Install simply unpacks an archive
+when installing a package, anyone with that program cached can re-export it (e.g. using
+<a href='0export.html'>0export</a>). Because Zero Install digests are over the
+package archive's contents (not the archive itself), the original GPG signature is
+still valid (and is also exported by 0export). The digest can also be checked
+against the one from the mirror server.
 </p>
 
 </dd>
@@ -383,8 +388,8 @@ chances for automatic checking (eg, verifying GPG signatures, etc):
 </p>
 
 <p style='text-align: center'>
-<img width="432" height="382" src="screens/trust-domain.png"
-     alt='You are asked to confirm each new key'/>
+<img width="477" height="463" src="confirm-tal-rox.png"
+     alt="Confirming Thomas Leonard's GPG key" />
 </p>
 
 <p>
@@ -436,8 +441,8 @@ and doesn't benefit from it.
 <dd>
 
 <p>
-Recently, a bug was found (and fixed) in the Linux kernel that allowed any user
-to become root. Most famously, it was used to compromise some of Debian's
+Sometimes, bugs are found (and fixed) in the Linux kernel that allow any user
+to become root. For example, one was used to compromise some of Debian's
 servers. Couldn't a user access some software through Zero Install that
 took advantage of this bug to break an un-patched machine?
 </p>
@@ -471,8 +476,8 @@ than <b>/usr/share/gamedata/level1</b>). Many programs do this already.
 
 <p>
 Once you have suitable binary, upload an archive of it onto your web-site in the normal
-manner. The most widely understood format is <b>.tar.gz</b>, but Zero Install can also extract
-from <b>.tar.bz2</b> archives, <b>.zip</b> files, and <b>.rpm</b>, <b>.deb</b> and <b>.autopackage</b> packages if the
+manner. The most widely understood formats are <b>.tar.gz</b> and <b>.tar.bz2</b>, but Zero Install can also extract
+from <b>.zip</b> files, and <b>.rpm</b>, <b>.deb</b> and <b>.autopackage</b> packages if the
 appropriate extraction program is available (<b>unzip</b>, <b>rpm2cpio</b>, etc). Often, you
 don't need to do anything special for Zero Install and can just use your existing binary release.
 </p>
@@ -481,7 +486,7 @@ don't need to do anything special for Zero Install and can just use your existin
 are available, how to get them, and what libraries they require.
 </p>
 
-<p>See the <i> <a href='injector-packagers.html'>Injector Packaging Guide</a></i>
+<p>See the <i><a href='injector-packagers.html'>Injector Packaging Guide</a></i>
 for details.</p>
 
 </dd>
@@ -490,21 +495,20 @@ for details.</p>
 <dd>
 
 <p>
-Let's say you want to run a subversion (developer) version of Edit. Start by checking out the latest
-version from SVN, as normal:
+Let's say you want to run a Git (developer) version of Edit. Start by cloning Edit's Git repository, as normal:
 </p>
 
 <pre>
-$ svn co https://svn.sourceforge.net/svnroot/rox/trunk/Edit 
+$ git clone git://repo.or.cz/rox-edit.git Edit
 </pre>
 
 <div class='note'>
 <p>
-Aside: If you don't have a subversion client, just use Zero Install to get one:
+Aside: If you don't have Git, just use Zero Install to get it:
 </p>
 
 <pre>
-$ 0alias svn http://0install.net/2007/3rd-party/Subversion.xml
+$ 0alias git http://0install.net/2008/3rd-party/git.xml
 </pre>
 </div>
 
@@ -518,12 +522,13 @@ using <b>0launch</b>:
 $ cd Edit
 $ ./AppRun
 *** This program needs ROX-Lib2 (version 1.19.14) to run.
+
 $ 0launch Edit.xml
 [ edit runs ]
 </pre>
 
 <p>
-Of course, you could do <b>0alias edit-svn Edit.xml</b> to make a command that runs this version
+Of course, you could do <b>0alias edit-git Edit.xml</b> to make a command that runs this version
 easily.
 </p>
 </dd>
