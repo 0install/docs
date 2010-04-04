@@ -17,6 +17,7 @@ Additional functionality, e.g. a graphical user interface and revision
 tree visualizer, tools for interoperating with other VCS's, or a web
 interface, is provided as separate git* packages.</description>
   <category>Development</category>
+  <feed src="http://repo.roscidus.com/git/core"/>
   <package-implementation main="/usr/bin/git" package="git-core"/>
   <group arch="Linux-i386" main="usr/bin/git">
     <requires interface="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml">
@@ -29,7 +30,7 @@ interface, is provided as separate git* packages.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklSHNQACgkQBSn9tx+xORBbLACfdMpJtKKSK6rQGCwaQe4P0kHH0HcAn1p1158k
-xEItnceq4OInV0IsyoO1
+iEYEABECAAYFAku4YasACgkQBSn9tx+xORATkgCdEmlfHQn4CGsW7tXTetC5WnfSAEwAnjQ5SEsX
+efh0ZhV6UOUr1SaSqEjN
 
 -->
