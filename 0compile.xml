@@ -54,7 +54,7 @@ slightly more limited. Here are
 </p>
 
 <p>
-  For example (GNU-Hello is a simple test program with no dependencies):
+  For example (GNU-Hello is a simple test program which depends only on "make"):
 </p>
 
 <pre>
@@ -67,6 +67,10 @@ Selection done.
 Plan:
 
 - GNU Hello: Compile 1.3 (sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7)
+  - make: Use existing binary 3.81-7 (*-x86_64)
+
+No dependencies need compiling... compile GNU Hello itself...
+Waiting for selected implementations to be downloaded...
 
 ...
 </pre>
