@@ -24,7 +24,7 @@ way to return to a web page without entering the full URL. Examples of launchers
 </p>
 
 <ul class='spaced'>
- <li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a> program, it creates an entry on the <k>Applications menu</k> that uses it.</li>
+<li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <b>Add New Program</b> box, it creates an entry on the <k>Applications menu</k> that uses it.</li>
  <li>When a <k>ROX desktop</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses it.</li>
  <li>When an <k>Xfce</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a <k>launcher button</k> that uses it.</li>
  <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs it.</li>
@@ -69,7 +69,7 @@ Type in the URI, or drag it from the web-browser into the dialog box. This video
 <p>Note that on older versions, the menu item is labelled <b>Zero2Desktop</b> and it's on the <b>System/Preferences</b> menu.</p>
 <p>
 <b>Ubuntu users</b>: You need to open and then close the menu editor after adding a program
-before it will show up; see <a href='https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958'>Ubuntu bug #191958</a>.
+before it will show up; see <a href='https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958'>Ubuntu bug #191958</a>. You can also run programs directly by choosing <b>Manage Programs</b> from the menu.
 </p>
 
  </dd>

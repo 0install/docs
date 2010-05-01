@@ -9,8 +9,8 @@
 
 <p>
 To get back to the policy box (so you can change which versions of Edit and
-ROX-Lib you want used), 0launch with the --gui option. If you created a shell alias,
-you can run 0alias again as a shortcut:
+ROX-Lib you want used), run 0launch with the --gui option. If you created a
+shell alias, you can run 0alias again as a shortcut:
 </p>
 
 <pre>
@@ -19,8 +19,7 @@ $ <b>0alias rox-edit</b>
 
 <p>
 If, instead, you added it to the menu then choose <b>Zero Install -> Manage Applications</b>
-from the <b>Applications</b> menu and click on the edit properties icon next to the application
-(requires 0launch 0.34 or later):
+from the <b>Applications</b> menu and click on the edit properties icon next to the application:
 </p>
 
 <p style='text-align: center'>
@@ -143,10 +142,11 @@ and choosing a new rating from the popup menu. User-set ratings are shown in cap
 </p>
 
 <p>
-As you make changes to the policy and ratings, the order of the implementations in the list
-will change. The version at the top is the one that will actually be used. In addition
-to the ratings above, you can set the rating to <b>Preferred</b>. Such versions always come first,
-unless they're not cached and you are in Off-line mode.
+As you make changes to the policy and ratings, the selected implementation
+will change. The version shown in bold (or at the top of the list, in older versions) is
+the one that will actually be used. In addition to the ratings above, you can
+set the rating to <b>Preferred</b>. Such versions always come first, unless
+they're not cached and you are in Off-line mode.
 </p>
 
 <p>

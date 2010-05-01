@@ -54,8 +54,12 @@ describing software. Normally, a program author would describe their program usi
 </p>
 
 <pre><![CDATA[
-  <p>Version 2.0 is the current stable version. It was released on 2005-09-21.
-  Edit requires the <a href="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">ROX-Lib</a> library.</p>
+<p>
+  Version 2.0 is the current stable version. It was released on 2005-09-21.
+  Edit requires the
+  <a href="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">ROX-Lib</a>
+  library.
+</p>
 ]]></pre>
 
 <p>
@@ -96,8 +100,11 @@ identity (a secure checksum to verify that it hasn't been modified in any way). 
 </p>
 
 <pre>
-    &lt;implementation id="<b>sha1new=9c116df3689d60df58925a7c634064ac2394f696</b>" released="2007-11-09" version="2.0.5">
-      &lt;archive extract="rox-lib2-2.0.5" href="<b>http://osdn.dl.sourceforge.net/sourceforge/rox/rox-lib2-2.0.5.tar.bz2</b>" size="139670"/>
+  &lt;implementation id="<b>sha1new=9c116df3689d60df58925a7c634064ac2394f696</b>"
+                     released="2007-11-09" version="2.0.5">
+     &lt;archive extract="rox-lib2-2.0.5"
+		 href="<b>http://osdn.dl.sourceforge.net/sourceforge/rox/rox-lib2-2.0.5.tar.bz2</b>"
+                 size="139670"/>
     &lt;/implementation>
 </pre>
 
@@ -133,8 +140,8 @@ runs Edit. You can see this process by running 0launch in verbose mode like this
 
 <pre>
 $ 0launch --verbose http://rox.sourceforge.net/2005/interfaces/Edit
-INFO:root:<b>PYTHONPATH=/var/cache/0install.net/implementations/sha1new=9c116df3689d60df58925a7c634064ac2394f696/ROX-Lib2/python</b>
-INFO:root:Executing: /home/talex/.cache/0install.net/implementations/sha1=329e6c0191f65ef2996b49837d04c4cfe6934758/Edit/AppRun
+INFO:root:<b>PYTHONPATH=/var/cache/0install.net/implementations/sha1new=9c116...394f696/ROX-Lib2/python</b>
+INFO:root:Executing: /home/talex/.cache/0install.net/implementations/sha1=329e6c...e69758/Edit/AppRun
 </pre>
 
 <p>
