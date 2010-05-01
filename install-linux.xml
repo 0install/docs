@@ -41,7 +41,7 @@
   However, a newer version is available here: <download name='zeroinstall-injector_0.39-1_all.deb'/>
   </li>
   <li id='ubuntu'>
-  <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty/karmic)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
+  <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty/karmic/lucid)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>You can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
 <p><strong>Jaunty (9.04): </strong> The version in Jaunty doesn't work with FTP downloads due to a <a href='https://bugs.launchpad.net/ubuntu/+source/zeroinstall-injector/+bug/366333'>bug</a>,
