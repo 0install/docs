@@ -3,31 +3,37 @@
 
 <toc level='h2'/>
 
-<h2>The Injector: Design</h2>
+<h2>Zero Install Design Details</h2>
 
 <p>
-This page describes the design of the injector.
+This page describes the design of Zero Install itself.
 </p>
 
 <p>
-Everything 0install downloads from the net currently goes in <b>~/.cache/0install.net/</b>.
+Note: Zero Install is based on the principle of <a
+href='http://en.wikipedia.org/wiki/Dependency_injection'>Dependency
+Injection</a>, and is sometimes therefore referred to as <i>the injector</i>.
+</p>
+
+<p>
+Everything 0launch downloads from the net by default goes in <b>~/.cache/0install.net/</b>.
 Every archive it downloads unpacks into its own directory inside this. So,
 there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact,
-there's one directory for every version of ROX-Filer, if you want more than one
+there's one directory for every version of ROX-Filer, in case you want more than one
 available. Every directory is uniquely named, so you'll never get conflicts
 when trying to install two different programs.
 </p>
 
 <p>
-The injector doesn't store anything else, except a few config details
+The injector doesn't store anything else, except a few configuration details
 (such as whether you want to check for updates automatically), which go in
-<b>~/.config/0install.net/</b>. The goal is to be as non-invasive as possible, so that
-installation never causes any mysterious messing with other files all over the
-disk that happens with some installation systems.
+<b>~/.config/0install.net/</b>.
+Installation never causes any mysterious changes with other files,
+as happens with some other installation systems.
 </p>
 
 <p>
-The idea is that you don't need to back up <b>~/.cache</b>, because you can
+The idea is that you don't need to backup <b>~/.cache</b>, because you can
 always download the stuff again. For example, if you delete the whole
 <b>~/.cache/0install.net/</b> directory and then click on ROX-Filer, it will just prompt you
 to download it again. The cache is just to make things faster (and work when
@@ -38,7 +44,7 @@ modify anything in there.
 <p>
 If <a href='sharing.html'>sharing</a> is enabled, then Zero Install stores
 downloaded implementations in <b>/var/cache/0install.net/</b> instead of in
-your home directory. This allows sharing between users. The use of
+<b>~/.cache/0install.net/</b>. This allows sharing between users. The use of
 cryptographic digests (described below) makes this safe; users don't need to
 trust each other not to put malicious code in the shared cache.
 </p>
@@ -99,8 +105,7 @@ using a dedicated 'sandbox' user for some tasks.
 
 <p>
 First, users need some way to specify what they want to run exactly.
-"Run the Gimp" is too vague (good gimp or evil gimp?), so we use URLs
-(like autopackage).
+"Run the Gimp" is too vague (good gimp or evil gimp?), so we use URLs.
 </p>
 
 <p>
@@ -112,33 +117,13 @@ gimp.org/gimp", the system downloads both programs.
 <p>
 Clearly, something has to actually download the software. It can either
 be one of the users, or a system daemon.
-</p>
-
-<p>
-The original Zero Install used a system daemon running as its own user.
-Both users know that /uri/0install/gimp.org/gimp has been downloaded
-faithfully from gimp.org, because only the daemon can make things appear
-there and it won't do anything else.
-</p>
-
-<p>
-The current ("injector") Zero Install has one of the users download the software. This
+The original Zero Install used a system daemon running as its own user, but
+the current ("injector") Zero Install has one of the users download the software. This
 is nicer, because they can do things like use a mirror or a CD to get the
 archives. The user uses a setuid (to 'zeroinstall') program to copy the
-downloaded (unpacked) directory into the cache. The helper generates a
-digest of the whole directory structure (the SHA1 of the manifest file,
-which contains the directory structure and the SHA1 sums of all the
-files inside it) and puts the directory in the cache named with the
-digest (/var/cache/0install.net/sha256=8374ab3254...).
-</p>
-
-<p>
-When user B wants to run the Gimp, 0launch gets the SHA1 sum for
-gimp.org/gimp and looks to see if it's in the cache. If it is, the user
-knows that it is the copy they wanted (since the helper won't copy
-modified versions into the cache under that digest name). Everything in
-the cache is owned by zeroinstall, and no user (or virus ;-) has write
-access to it.
+downloaded (unpacked) directory into the shared cache in a location derived
+from a secure hash of its contents. See the <a href='sharing.html'>Sharing</a>
+page for details.
 </p>
 
 <h2>Policies</h2>
@@ -174,6 +159,12 @@ according to rules specified by the user:
 <p style='text-align: center'>
 <img width="569" height="364" src="inject.png"
      alt="The injector selects versions according to the user's policy" />
+</p>
+
+<p>
+Zero Install uses a SAT solver with conflict-driven learning to find the optimal solution
+quickly. See <a href='http://roscidus.com/desktop/node/954'>The Zero Install SAT Solver</a>
+for details.
 </p>
 
 <h2>Interfaces and Implementations</h2>
@@ -214,7 +205,7 @@ of Control</i>).</p>
 
 <p>
 Both tasks are handled by the injector. This takes as input an interface and
-chooses an implementation based on the your policy.
+chooses an implementation based on the policy.
 </p>
 
 <p>
