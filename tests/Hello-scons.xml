@@ -11,7 +11,7 @@ fetch the source and the build system (scons).
   <homepage>http://0install.net/0compile.html</homepage>
 
   <group arch="*-src" compile:binary-main="hello" compile:command="&quot;$SCONS/scons.py&quot; -C &quot;$SRCDIR&quot; builddir=&quot;$BUILDDIR&quot; &quot;$DISTDIR&quot;">
-    <requires interface="http://0install.net/tests/SCons.xml">
+    <requires interface="http://0install.net/2006/3rd-party/SCons.xml">
       <environment insert="" name="SCONS"/>
     </requires>
 
@@ -21,7 +21,7 @@ fetch the source and the build system (scons).
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkvnBT0ACgkQrgeCgFmlPMGOnQCghDMTtUpnMynxRDOZDN1Lzf3aiB8AnjP8I+/m
-RB39L8t15Fo7WnJBDFly
+iEYEABECAAYFAkvnBokACgkQrgeCgFmlPMFXKgCfYFfGn1NtkzmA7B/d3fzmcclliGYAmgPfPx3d
+js6btJzGvOwYsNH5le+2
 
 -->

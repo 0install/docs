@@ -28,11 +28,14 @@ and scanner objects.</description>
     <implementation id="sha1new=4aee85f548a8e2dc943dd385ddc0b106b64227d3" released="2008-08-28" stability="stable" version="1.0.0">
       <archive href="http://switch.dl.sourceforge.net/sourceforge/scons/scons-local-1.0.0.tar.gz" size="375546" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=716e6fd4a2a9dc63a54ca3403aed960f28768181" released="2010-05-09" version="1.3.0">
+      <archive href="http://downloads.sourceforge.net/project/scons/scons-local/1.3.0.d20100501/scons-local-1.3.0.d20100501.tar.gz" size="417184" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8c8ACgkQBSn9tx+xORC2dACggd5OopZEdkPvm9O9nXe3aTTRJf8AoJwrwbbR
-7uKSfXLx2+DsnEMBCX4t
+iEYEABECAAYFAkvnBj4ACgkQBSn9tx+xORB6/wCfQ4mfqnOnwCiOJNLUR0ACo4v9a3EAnArDdXCK
+LaBZ5eeYfVFrcdSN9YDp
 
 -->
