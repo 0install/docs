@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl'
-     href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://0install.net/tests/Hello-scons.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Hello-scons</name>
   <summary>example of building with scons</summary>
@@ -17,12 +16,12 @@ fetch the source and the build system (scons).
     </requires>
 
     <implementation id="sha1=43b982d79cca7cac008593396b382253d75bb609" released="2006-09-29" version="1.0">
-      <archive extract="hello-scons-1.0" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/hello-scons-1.0.tar.bz2" size="2242"/>
+      <archive extract="hello-scons-1.0" href="http://downloads.sourceforge.net/project/zero-install/Hello-scons/1.0/hello-scons-1.0.tar.bz2" size="2242"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iD8DBQBFHSw4rgeCgFmlPMERAuPNAJ4rnDfla8R4yFK7hLKDkj9VIoCPdQCg0vZfjhWJEnRtfRHx
-i93x/b1BGO0=
+iEYEABECAAYFAkvnBT0ACgkQrgeCgFmlPMGOnQCghDMTtUpnMynxRDOZDN1Lzf3aiB8AnjP8I+/m
+RB39L8t15Fo7WnJBDFly
 
 -->
