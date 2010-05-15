@@ -191,7 +191,7 @@ the closest ancestor &lt;group&gt; which defines it):
  <dt>version</dt>
  <dd>The version number. See the version numbers section below for more details.</dd>
 
- <dt>version-modifier</dt>
+ <dt>version-modifier (deprecated)</dt>
  <dd>A string to be appended to the version. The purpose of this is to allow complex version numbers (such as
  "1.0-rc2") without breaking older versions of the injector (before 0.24), which only support dot-separated
  lists of integers.</dd>
@@ -233,7 +233,7 @@ the closest ancestor &lt;group&gt; which defines it):
  which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>.</dd>
 
  <dt>license</dt>
- <dd>License terms (typically a Trove category, as used on <a href='http://freshmeat.net/browse/13/'>freshmeat.net</a>).</dd>
+ <dd>License terms (typically a <a href='http://catb.org/~esr/trove/'>Trove</a> category, as used on sf.net).</dd>
 </dl>
 
 <p>
@@ -251,8 +251,8 @@ the closest ancestor &lt;group&gt; which defines it):
 <p>
 For non-local implementations (those without a local-path attribute), the
 element contains a set of <i>retrieval methods</i>, each of which gives a
-different way of getting the implementation (i.e., of getting a directory
-structure whose digest matches the ones given.
+different way of getting the implementation (i.e. of getting a directory
+structure whose digest matches the ones given).
 </p>
 
 <p>
@@ -322,6 +322,8 @@ the same score). Only these distribution names are supported currently, and they
   <li>RPM (all RPM-based distributions)</li>
   <li>Debian (all Debian-based distributions)</li>
   <li>Gentoo</li>
+  <li>Slack (Slackware)</li>
+  <li>Ports (FreeBSD Ports)</li>
 </ul>
 
 <p>
@@ -457,7 +459,7 @@ the injector should make its choice known (typically, by setting environment var
 <p>
 The <b>use</b> attribute can be used to indicate that this dependency is only needed in some cases. By default, 0launch >= 0.43
 will skip any &lt;requires&gt; element with this attribute set. Earlier versions process all &lt;requires&gt; elements
-whether this attribute is present or not. 0test >= 0.2 will process dependencies where <b>use="testing"</b>, in
+whether this attribute is present or not. <a href='0test.html'>0test</a> >= 0.2 will process dependencies where <b>use="testing"</b>, in
 addition to the program's normal dependencies.
 </p>
 
@@ -748,19 +750,8 @@ The source element may be used in future to record the source used to build this
 <h2>Digital signatures</h2>
 
 <p>
-When an interface is downloaded from the web, it must contain a digital signature. Two signature formats are
-supported:
-</p>
-
-<h3>GPG plain signatures</h3>
-
-<p>A plain signature is generated from an unsigned interface using the command
-<b>gpg --clearsign</b>. The resulting file is a plain text file but is not valid XML.
-This format is supported by all versions of the injector.
-</p>
-
-<h3>GPG XML signatures</h3>
-<p>An interface can also be signed by appending an XML comment block of the form:</p>
+When a feed is downloaded from the web, it must contain a digital signature.
+A feed is signed by appending an XML comment block of the form:</p>
 <pre><![CDATA[
 <!-- Base64 Signature
 iD8DBQBEXM/qrgeCgFmlPMERArNSAKDBuNz5SQMZ8rwJmW2fhNHJwor6KwCgwx7XEfY+6gUC90rJ
@@ -770,18 +761,16 @@ b5eCY+I8HNA=
 
 <p>
 This block <b>must</b> go at the end of the file, and contains a Base64-encoded version of
-the file that would be created by using <b>gpg --detach-sign</b> on the original interface.
+the file that would be created by using <b>gpg --detach-sign</b> on the original feed.
 The signature block must start on a new line, may not contain anything except valid base64
 characters, and nothing may follow the signature block. XML signature blocks are supported
 from version 0.18 of the injector and may be generated easily using the
 <a href='0publish.html'>0publish</a> command.
-They have the advantage that the result is still valid XML and can therefore be processed and
-styled using standard tools.
 </p>
 
 <p>
 Local interfaces are plain XML, although having an XML signature block is no problem as it
-will be ignored as a normal comment.
+will be ignored as a normal XML comment.
 </p>
 
 <h2>Future plans</h2>
