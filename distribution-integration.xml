@@ -6,31 +6,9 @@
 <h2>Distribution integration</h2>
 
 <p>
-If you have already installed a package using your distribution's installer then you may wish to use
+If you have already installed a package using your distribution's installer then Zero install can use
 that instead of downloading a second copy using Zero Install. 
-Starting with <a href='injector.html'>Zero Install 0.29</a>, two methods are available to integrate
-Zero Install packages with distribution ones:
 </p>
-
-<ul>
-  <li><p>A distribution package can install a file named <b>/usr/share/0install.net/native_feeds/INTERFACE</b>.
-  This is automatically used as an additional feed for INTERFACE (replace "/" characters in the package's
-  interface URI with "#" characters).
-  </p>
-  
-  <p>This is useful if the package installs the program as a self-contained
-  directory somewhere. i.e. the installed package has the same format as the Zero Install package. If the
-  package already contains a local feed file, you can just symlink to it directly.</p></li>
-
-  <li>
-  <p>
-  A feed author can add a &lt;package-implementation package="name"/&gt; element to their feed. Zero Install
-  will query your distribution's package manager to see if a package with this name is already installed. If so,
-  that version will be considered as another candidate, with a stability rating
-  of "packaged" (which is ranked between "stable" and "preferred").
-  </p>
-  </li>
-</ul>
 
 <p>
 For example, here is what happens if you ask to run AbiWord when you already
@@ -44,7 +22,7 @@ have the <b>libenchant1</b> library it requires installed using <b>apt-get</b>:
 </p>
 
 <p>
-If Abiword is itself installed using <b>apt-get</b>, then the dialog is even simpler, and nothing needs to
+If Abiword is itself installed as a distribution package, then the dialog is even simpler, and nothing needs to
 be downloaded:
 </p>
 
@@ -64,28 +42,61 @@ As always, all software installed by Zero Install goes in the cache directory an
 files installed by the native package manager.
 </p>
 
+<h2>How it works</h2>
+
+<p>
+Two methods are available to integrate Zero Install packages with distribution ones:
+</p>
+
+<ul>
+  <li>
+  <p>
+  A feed author can add a &lt;package-implementation package="name"/&gt; element to their feed. Zero Install
+  will query your distribution's package manager to see if a package with this name is already installed. If so,
+  that version will be considered as another candidate, with a stability rating
+  of "packaged" (which is ranked between "stable" and "preferred").
+  </p><p>
+  Zero Install can get package information from Debian-based systems (including Ubuntu, etc), RPM-based systems,
+  Slackware, Gentoo and FreeBSD Ports at present. Adding support for extra packaging systems is
+  quite easy, and patches (not yet merged) exist to use any backend supported by PackageKit.
+  </p>
+
+  <p>
+  Since different distributions use different names for the same package, you can specify which
+  distribution(s) an element applies to like this (some RPM-based distributions use "pkgconfig", while
+  other RPM systems use "pkg-config", which is also the name used by Debian):
+  </p>
+
+  <pre>
+  &lt;package-implementation distributions="RPM" package="pkgconfig"/>
+  &lt;package-implementation distributions="RPM Debian" package="pkg-config"/>
+  &lt;package-implementation distributions="Gentoo" package="dev-util/pkgconfig"/></pre>
+  </li>
+
+  <li><p>A distribution package can install a file named <b>/usr/share/0install.net/native_feeds/INTERFACE</b>.
+  This is automatically used as an additional feed for INTERFACE (replace "/" characters in the package's
+  interface URI with "#" characters).
+  </p>
+  
+  <p>This is useful if the package installs the program as a self-contained
+  directory somewhere. i.e. the installed package has the same format as the Zero Install package. If the
+  package already contains a local feed file, you can just symlink to it directly.</p></li>
+
+</ul>
+
+
 <h2>Future work</h2>
 
 <p>
-Distribution integration is not yet finished.
-</p>
-
-<p>
-Since different distributions use different names for the same package we may need to allow distributions
-to be named in the feed files. We may need a way to specify mappings for version numbers, to cope with different
+We may need a way to specify mappings for version numbers, to cope with different
 versioning schemes.
 </p>
 
 <p>
 We only consider native packages that are actually installed. We could also consider native packages
 that are available (you'd need to enter the root password). This might be useful if no Zero Install version
-was available, or if you preferred to use a native package for some reason.
-</p>
-
-<p>
-Finally, Zero Install can only get package information from Debian and RPM-based systems
-at present. Slackware and other systems are not currently supported, although
-adding support should be easy enough now that we have the framework.
+was available, or if you preferred to use a native package for some reason. <b>Update:</b> 0.48 will discover
+available but uninstalled packages using the apt cache and will prompt the user to install them if necessary.
 </p>
 
 </div>
