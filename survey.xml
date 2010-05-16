@@ -335,7 +335,7 @@ keys, or some kind of distributed trust system ("3 of your friends trust this ke
 <blockquote><p><strong>Other comments: </strong><q>I am the only user, there is no sharing</q>, <q>Didn't notice sharing abilities...</q>.</p></blockquote>
 
 <p>
-We do mention the sharing on the <a href='index.html'>front page</a> (4th bullet), the <a href='matrix.html'>comparison page</a> and the <a href='sharing.html'>sharing</a> page.
+We do mention the sharing on the <a href='/'>front page</a> (4th bullet), the <a href='matrix.html'>comparison page</a> and the <a href='sharing.html'>sharing</a> page.
 People still seem to miss it, though. Good to see someone using it with VMs already.
 </p>
 
@@ -483,7 +483,7 @@ which don't yet have integration. With 'recommended' (not 'required') dependenci
 
 <blockquote><p><q>It does not address a clearly defined need</q></p></blockquote>
 
-<p>This was (I think) a comment from the LSB list. I think this claim is hard to substantiate. The <a href='index.html'>front page</a> list fours key features, of which
+<p>This was (I think) a comment from the LSB list. I think this claim is hard to substantiate. The <a href='/'>front page</a> list fours key features, of which
 all but the third are clearly features needed by many people. In fact, the major problem with presenting a "clearly defined need" is that Zero Install can solve so
 many real problems! It took a lot of work to get the list down to just four points (if you list too many points, people get bored and confused).
 </p>
