@@ -214,12 +214,12 @@ default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). 
 
 <pre>Releasing version 0.1
 HEAD is now at a2d1ed9 Prints "Hello World" already!
-SKIPPING unit tests for ~/releases/0.1/helloworld-0.1 (no 'self-test' attribute set)
+SKIPPING unit tests for ~/releases/hello/0.1/helloworld-0.1 (no 'self-test' attribute set)
 Wrote source feed as helloworld-0.1.xml
 Wrote changelog from start to here as changelog-0.1
 
 Candidate release archive: helloworld-0.1.tar.bz2
-(extracted to ~/releases/0.1/helloworld-0.1 for inspection)
+(extracted to ~/releases/hello/0.1/helloworld-0.1 for inspection)
 
 Please check candidate and select an action:
 P) Publish candidate (accept)
@@ -289,7 +289,7 @@ your GPG passphrase to sign the release (use <b>--key</b> if you don't want to u
 HEAD is now at 07f3c9e Start development series 0.1-post
 Deleted branch 0release-tmp.
 Changing key from 'None' to '<i>YOUR-KEY</i>'
-Exported public key as '~/releases/<i>YOUR-KEY</i>.gpg'
+Exported public key as '~/releases/hello/<i>YOUR-KEY</i>.gpg'
 </pre>
 
 <p>
@@ -359,7 +359,7 @@ Finally, it will prompt you to upload the feed and the new GIT commits:
 </p>
 
 <pre>
-Upload ~/releases/HelloWorld.xml into http://0install.net/tests
+Upload ~/releases/hello/HelloWorld.xml into http://0install.net/tests
 NOTE: No feed upload command set => you'll have to upload them yourself!
 Push changes to public SCM repository...
 NOTE: No public repository set => you'll have to push the tag and trunk yourself.
