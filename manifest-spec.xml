@@ -127,7 +127,8 @@ do).
 </p>
 
 <p>
-The file itself is encoded as UTF-8, with Unix line-endings ("\n"). Note that
+The file itself is encoded as UTF-8, with Unix line-endings ("\n") and no
+<a href='http://en.wikipedia.org/wiki/Byte-order_mark'>BOM</a>. Note that
 some operating systems treat filenames as sequences of bytes (rather than as
 sequences of characters), and thus may be able to handle filenames which cannot
 be represented as strings. A Zero Install implementation cannot contain such
