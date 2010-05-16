@@ -54,15 +54,6 @@
       <xsl:apply-templates select='document("structure.xml")/layout/item'/>
     </ul>
 
-    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse">
-     <p>
-      <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
-      <input name="q" type="text" size="14" />
-      <input type="submit" name="sa" value="Search" />
-      <input type="hidden" name="cof" value="FORID:0" />
-     </p>
-    </form>
-
     <ul>
     <li><a href='http://www.el-directorio.org/0install'>Spanish</a></li>
     </ul>
@@ -80,8 +71,17 @@
       <body>
 	<table>
 	 <tr>
-	  <td/>
+	   <td/>
 	  <td class='header'>
+	    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse" style='float: right; padding-right: 1em;'>
+	     <p>
+	      <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
+	      <input name="q" type="text" size="14" />
+	      <input type="submit" name="sa" value="Search" />
+	      <input type="hidden" name="cof" value="FORID:0" />
+	     </p>
+	    </form>
+
 	    <h1>Zero Install</h1>
 	    <!--<p class='author'>Dr Thomas Leonard <span class='actions'>[ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</span></p>-->
 	  </td>
