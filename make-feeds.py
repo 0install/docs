@@ -42,7 +42,7 @@ def quoteattr(x):
 		return xml.sax.saxutils.quoteattr(x)
 	return "''"
 
-known = [line.strip() for line in file('known-interfaces')]
+known = [line.strip() for line in file('known-interfaces') if not line.startswith('-')]
 known.sort(key = lambda s: s.rsplit('/', 1)[1].lower())
 
 known_feeds = {}
@@ -57,9 +57,11 @@ pretty_name = {'Game' : 'Games'}
 result.write('<?xml version="1.0" encoding="utf-8"?>\n')
 result.write('<list>\n')
 for uri in known:
-	assert uri.startswith('http://')
-	assert not uri.startswith('http://0install.net/tests/')
+	assert uri.startswith('http://') or uri.startswith('https://'), uri
+	if uri.startswith('http://0install.net/tests/'): continue
 	assert not uri.startswith('http://localhost')
+	if uri.startswith('http://services.sugarlabs.org/gcompris/'): continue
+	print uri
 
 	iface = iface_cache.get_interface(uri)
 
@@ -111,13 +113,14 @@ for uri in known:
 			
 	if not have_icon:
 		# Download one then...
-		for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
-			if icon_elem.getAttribute('type') == 'image/png':
-				icon_href = icon_elem.getAttribute('href')
-				urllib.urlretrieve(icon_href, icon_path)
-				have_icon = True
-				os.system("svn add '%s'" % icon_path)
-				break
+		if not uri.startswith('http://edalb.awardspace.com'):
+			for icon_elem in iface.get_metadata(XMLNS_IFACE, 'icon'):
+				if icon_elem.getAttribute('type') == 'image/png':
+					icon_href = icon_elem.getAttribute('href')
+					urllib.urlretrieve(icon_href, icon_path)
+					have_icon = True
+					os.system("svn add '%s'" % icon_path)
+					break
 	if not have_icon:
 		icon_path = 'tango/applications-system.png'
 	
