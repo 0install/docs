@@ -56,8 +56,21 @@ This tests three versions of 0compile against two versions of Zero Install (a to
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20 0.20-post \
-        http://0install.net/2007/interfaces/ZeroInstall.xml 0.46 0.47
+$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20 0.20-post \
+        http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.47-post</b>
+...
+SUMMARY:
+
+Passed
+ - 0compile v0.20, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.20-post, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.20-post, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+None skipped
+Failed
+ - 0compile v0.19.1, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.19.1, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.20, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+
 </pre>
 
 <p>
