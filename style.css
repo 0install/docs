@@ -147,9 +147,6 @@ table.split th {
 	padding: 1em;
 }
 
-table.frontpage *#col1 { border-right: 4px dashed #aaa; }
-table.frontpage th { border-bottom: 4px dashed #aaa; }
-
 table.matrix {
 	border: 1px solid black;
 }
@@ -190,8 +187,8 @@ td.sidebar h2 {
 }
 
 td.sidebar {
-	border-top: 1px dashed #88f;
-	border-right: 1px dashed #88f;
+	-moz-border-radius: 0 1em 0 0;
+	-webkit-border-radius: 0 1em 0 0;
 	vertical-align: top;
 	background: #def;
 	padding: 0;
@@ -355,15 +352,11 @@ div.quicklinks {
 	border-collapse: separate;
 	clear: both;
 	text-align: center;
+	white-space: nowrap;
 }
 
 div.row {
 	display:table-row;
-}
-
-div.row a {
-	display:table-cell;
-	color: blue;
 }
 
 div.quicklinks a:hover {
@@ -371,17 +364,22 @@ div.quicklinks a:hover {
 }
 
 div.quicklinks a {
+	display:table-cell;
+	color: blue;
+	min-width: 6em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
 	width: 25%;
 	font-family: sans-serif;
 	font-weight: bold;
 	padding: 1em;
 	background: #def;
-	border: 1px dashed #88f;
 	vertical-align: middle;
 }
 
 div.quicklinks a:hover {
-	background: #ffc;
+	background: #88f;
+	color: white;
 }
 
 div.quicklinks a.autodownload {
@@ -459,8 +457,9 @@ td.teaser a {
 }
 
 div.program {
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
 	float: right;
-	border: 1px dashed #88f;
 	background: #def;
 	margin-left: 2em;
 	padding: 0.5em;
