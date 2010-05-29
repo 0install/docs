@@ -39,6 +39,8 @@ slightly more limited. Here are
 <a href='http://rox.sourceforge.net/desktop/node/360'>some screenshots</a>.
 </p>
 
+<h2>Contents</h2>
+
 <toc level='h2'/>
 
 <h2>Autocompile</h2>
@@ -67,7 +69,7 @@ Selection done.
 Plan:
 
 - GNU Hello: Compile 1.3 (sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7)
-  - make: Use existing binary 3.81-7 (*-x86_64)
+  - make: Use existing binary 3.81-5 (Linux-x86_64)
 
 No dependencies need compiling... compile GNU Hello itself...
 Waiting for selected implementations to be downloaded...
@@ -388,6 +390,22 @@ Then upload the signed <b>.../GNU-Hello.xml</b> file and the exported GPG key to
     using absolute paths which were only valid during the build.
   </p></dd>
 </dl>
+
+<h2>Recreating a build environment</h2>
+
+<p>
+  If you want to rebuild a binary package, see if it includes the <b>0install/build-environment.xml</b> file that 0compile generates automatically. If so, you can re-create the build like this:
+</p>
+
+<pre>
+  $ <b>0compile setup .../someprog-binary/0install/build-environment.xml some-prog</b>
+  $ <b>cd some-prog</b>
+  $ <b>0compile build</b>
+</pre>
+
+<p>
+  For example, in the GNU-Hello case this would allow you to build using the same source code and the exact same version of "make" used in the original compile.
+</p>
 
 <h2>Making source available</h2>
 

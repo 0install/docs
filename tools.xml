@@ -42,7 +42,7 @@ to check.
 
  <dt><a href='make-headers.html'>Make-headers</a></dt>
  <dd>
-Make-headers is an extremely simple script for creating -dev packages (packages containing only header files) from ordinary source releases.
+<b>Make-headers</b> is an extremely simple script for creating -dev packages (packages containing only header files) from ordinary source releases.
  </dd>
 
  <dt><a href='0mirror.html'>0mirror</a></dt>
