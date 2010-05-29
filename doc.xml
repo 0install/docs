@@ -31,12 +31,6 @@
     <dt><a href='links.html'>Links</a></dt><dd>Links to related software.</dd>
 </dl>
 
-<p>
-If you're looking for information about the <b>old</b> filesystem-based
-version of Zero Install, see <a href='filesystem.html'>The /uri/0install
-filesystem</a>.
-</p>
-
 <quicklinks>
   <link href='injector.html' img='tango/go-next.png'>Install it!</link>
   <link href='injector-security.html' img='tango/secure.png'>Security</link>

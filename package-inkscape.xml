@@ -115,7 +115,7 @@ Exported public key as 'AE07828059A53CC1.gpg'
 
 <p>
 Upload the resulting <b>Inkscape.xml</b> and GPG files to the same directory on the web-server. The XML file
-should look something like <a href='tests/Inkscape.xml'>the Inkscape.xml test interface</a>.
+should look something like <a href='http://0install.net/2006/3rd-party/Inkscape.xml'>the Inkscape.xml test interface</a>.
 </p>
 
 <h2>Using the published interface</h2>
