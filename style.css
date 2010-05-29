@@ -347,37 +347,50 @@ table.picturebullets td.image {
 	vertical-align: top;
 }
 
-table.quicklinks {
-	margin: 0;
+div.quicklinks {
+	display:table;
+	margin: 0 0 0 -2em;
 	padding: 0;
-	border-spacing: 0;
+	border-spacing: 2em;
 	border-collapse: separate;
 	clear: both;
+	text-align: center;
 }
 
-table.quicklinks td p {
-	padding: 0;
-	margin: 0;
+div.row {
+	display:table-row;
 }
 
-table.quicklinks a.img {
+div.row a {
+	display:table-cell;
+	color: blue;
+}
+
+div.quicklinks a:hover {
 	text-decoration: none;
 }
 
-table.quicklinks td div {
+div.quicklinks a {
+	width: 25%;
 	font-family: sans-serif;
 	font-weight: bold;
-	text-align: center;
-	margin: 1em 2em 1em 0;
 	padding: 1em;
 	background: #def;
 	border: 1px dashed #88f;
+	vertical-align: middle;
 }
 
-table.quicklinks td {
-	padding: 0;
-	margin: 0;
-	width: 25%;
+div.quicklinks a:hover {
+	background: #ffc;
+}
+
+div.quicklinks a.autodownload {
+	background: #63a624;
+	color: white;
+}
+
+div.quicklinks a.autodownload:hover {
+	background: #63c624;
 }
 
 span.count {
@@ -542,18 +555,4 @@ a.button {
 	border: 1px solid black;
 	background: #def;
 	padding: 0.1em;
-}
-
-div.autodownload {
-	background: #63a624;
-	color: white;
-	padding: 1em;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-div.autodownload:hover {
-	color: white;
-	text-decoration: underline;
 }

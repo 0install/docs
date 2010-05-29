@@ -180,18 +180,19 @@
 
   <xsl:template match='*[name() = "quicklinks"]'>
     <xsl:variable name='width'><xsl:value-of select='100 div count(*)'/></xsl:variable>
-    <table class='quicklinks'>
-     <tr>
+    <div class='quicklinks'>
+     <div class='row'>
       <xsl:for-each select='*[name() = "link"]'>
-       <td style='width: {$width}%'>
-	<div>
-         <a href='{@href}'><img src='{@img}' alt='' width='48' height='48'/></a><br/>
-         <a href='{@href}'><xsl:apply-templates/></a>
-	</div>
-       </td>
+	<a href='{@href}'>
+         <img src='{@img}' alt='' width='48' height='48'/><br/>
+         <xsl:apply-templates/>
+	</a>
       </xsl:for-each>
-     </tr>
-    </table>
+      <xsl:for-each select='*[name() = "mainlink"]'>
+	<xsl:apply-templates select='*|text()'/>
+      </xsl:for-each>
+     </div>
+    </div>
   </xsl:template>
 
   <xsl:template match='*[name() = "video"]'>

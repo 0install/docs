@@ -32,7 +32,7 @@ function get_download_html() {
 		}
 	}
 
-	return "<a href='$link'><div class='autodownload'>Get Zero Install$platform</div></a>";
+	return "<a href='$link' class='autodownload'>Get Zero Install$platform</a>";
 }
 
 echo get_download_html();
