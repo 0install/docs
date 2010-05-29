@@ -47,7 +47,7 @@ You can specify a particular set of versions to test:
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.16 0.17
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20
 </pre>
 
 <p>
@@ -56,8 +56,8 @@ This tests three versions of 0compile against two versions of Zero Install (a to
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.17 0.18 0.18-post \
-        http://0install.net/2007/interfaces/ZeroInstall.xml 0.41 0.42
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20 0.20-post \
+        http://0install.net/2007/interfaces/ZeroInstall.xml 0.46 0.47
 </pre>
 
 <p>
@@ -82,7 +82,14 @@ A summary is printed at the end showing the result of each combination:
   ROX-Filer:
 </p>
     
-<pre>0test -t '$1 --version > /dev/null' http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9</pre>
+<pre>$ <b>0test -t '$1 --version > /dev/null' \
+    http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9</b>
+Passed
+ - ROX-Filer v2.8
+ - ROX-Filer v2.9
+None skipped
+None failed
+</pre>
 
 <h2>Test-only dependencies</h2>
 
