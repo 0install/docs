@@ -40,6 +40,11 @@ know that all the download links are still OK? Run <b>FeedLint</b> on your feeds
 to check.
  </dd>
 
+ <dt><a href='make-headers.html'>Make-headers</a></dt>
+ <dd>
+Make-headers is an extremely simple script for creating -dev packages (packages containing only header files) from ordinary source releases.
+ </dd>
+
  <dt><a href='0mirror.html'>0mirror</a></dt>
  <dd>
 <b>0mirror</b> keeps an archive of Zero Install feeds and GnuPG keys and exports them
@@ -52,9 +57,9 @@ for publishing on a web-server.
 distribution on CDs, etc.
  </dd>
 
- <dt><a href='deb2zero.html'>deb2zero</a></dt>
+ <dt><a href='pkg2zero.html'>pkg2zero</a></dt>
  <dd>
-<b>deb2zero</b> publishes a Debian package in a Zero Install feed.
+<b>pkg2zero</b> publishes a Debian or RPM package in a Zero Install feed.
  </dd>
 
  <dt><a href='0test.html'>0test</a></dt>

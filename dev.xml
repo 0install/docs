@@ -44,6 +44,9 @@
   A set of test interfaces to check that the injector is working
   correctly.
  </dd>
+
+ <dt><a href='tools.html'>Tools</a></dt>
+ <dd>There are many useful tools for generating feeds, validating them, making releases, etc.</dd>
 </dl>
 
 <h2>Off-site documentation</h2>
