@@ -163,9 +163,11 @@
 <a name="Blocker.__init__"></a><div id="Blocker.__init__-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="Blocker.__init__-toggle" onclick="return toggle('Blocker.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.Blocker-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Blocker.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Blocker.__init__-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">happened</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt>           <tt class="py-comment"># False until event triggered</tt> </tt>
 <a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_zero_lib_tasks</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>    <tt class="py-comment"># Tasks waiting on this blocker</tt> </tt>
-<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable zeroinstall.injector.model.DummyFeed.name=zeroinstall.injector.model.DummyFeed-class.html#name,Variable zeroinstall.injector.model.Interface.name=zeroinstall.injector.model.Interface-class.html#name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-10', 'name', 'link-10');">name</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-11', 'name', 'link-10');">name</a></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable zeroinstall.injector.model.DummyFeed.name=zeroinstall.injector.model.DummyFeed-class.html#name,Variable zeroinstall.injector.model.Interface.name=zeroinstall.injector.model.Interface-class.html#name,Method zeroinstall.injector.sat.VarInfo.name()=zeroinstall.injector.sat.VarInfo-class.html#name"><a title="zeroinstall.injector.model.DummyFeed.name
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-10', 'name', 'link-10');">name</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-11', 'name', 'link-10');">name</a></tt> </tt>
 </div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
 <a name="Blocker.trigger"></a><div id="Blocker.trigger-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="Blocker.trigger-toggle" onclick="return toggle('Blocker.trigger');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.Blocker-class.html#trigger">trigger</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">exception</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Blocker.trigger-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Blocker.trigger-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                <tt class="py-docstring">"""The event has happened. Note that this cannot be undone;</tt> </tt>
@@ -209,7 +211,8 @@ zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="ret
 </div><a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"> </tt>
 <a name="Blocker.__str__"></a><div id="Blocker.__str__-def"><a name="L146"></a><tt class="py-lineno">146</tt> <a class="py-toggle" href="#" id="Blocker.__str__-toggle" onclick="return toggle('Blocker.__str__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.Blocker-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Blocker.__str__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Blocker.__str__-expanded"><a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-23', 'name', 'link-10');">name</a></tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-23', 'name', 'link-10');">name</a></tt> </tt>
 </div></div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
 <a name="IdleBlocker"></a><div id="IdleBlocker-def"><a name="L149"></a><tt class="py-lineno">149</tt> <a class="py-toggle" href="#" id="IdleBlocker-toggle" onclick="return toggle('IdleBlocker');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="zeroinstall.support.tasks.IdleBlocker-class.html">IdleBlocker</a><tt class="py-op">(</tt><tt class="py-base-class">Blocker</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="IdleBlocker-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="IdleBlocker-expanded"><a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-docstring">"""An IdleBlocker blocks until a task starts waiting on it, then</tt> </tt>
@@ -227,7 +230,7 @@ zeroinstall.support.tasks.OutputBlocker.add_task" class="py-name" href="#" oncli
 </div><div id="TimeoutBlocker-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="TimeoutBlocker-expanded"><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-docstring">"""Triggers after a set number of seconds."""</tt> </tt>
 <a name="TimeoutBlocker.__init__"></a><div id="TimeoutBlocker.__init__-def"><a name="L160"></a><tt class="py-lineno">160</tt> <a class="py-toggle" href="#" id="TimeoutBlocker.__init__-toggle" onclick="return toggle('TimeoutBlocker.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.TimeoutBlocker-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">timeout</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="TimeoutBlocker.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="TimeoutBlocker.__init__-expanded"><a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">                <tt class="py-docstring">"""Trigger after 'timeout' seconds (may be a fraction)."""</tt> </tt>
-<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                <tt id="link-27" class="py-name"><a title="zeroinstall.support.tasks.Blocker" class="py-name" href="#" onclick="return doclink('link-27', 'Blocker', 'link-3');">Blocker</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method zeroinstall.NeedDownload.__init__()=zeroinstall.NeedDownload-class.html#__init__,Method zeroinstall.gtkui.addbox.AddBox.__init__()=zeroinstall.gtkui.addbox.AddBox-class.html#__init__,Method zeroinstall.gtkui.applistbox.ActionsRenderer.__init__()=zeroinstall.gtkui.applistbox.ActionsRenderer-class.html#__init__,Method zeroinstall.gtkui.applistbox.AppListBox.__init__()=zeroinstall.gtkui.applistbox.AppListBox-class.html#__init__,Method zeroinstall.gtkui.cache.CacheExplorer.__init__()=zeroinstall.gtkui.cache.CacheExplorer-class.html#__init__,Method zeroinstall.gtkui.gtkutils.Template.__init__()=zeroinstall.gtkui.gtkutils.Template-class.html#__init__,Method zeroinstall.gtkui.help_box.HelpBox.__init__()=zeroinstall.gtkui.help_box.HelpBox-class.html#__init__,Method zeroinstall.gtkui.trust_box.TrustBox.__init__()=zeroinstall.gtkui.trust_box.TrustBox-class.html#__init__,Method zeroinstall.injector.arch.Architecture.__init__()=zeroinstall.injector.arch.Architecture-class.html#__init__,Method zeroinstall.injector.arch.SourceArchitecture.__init__()=zeroinstall.injector.arch.SourceArchitecture-class.html#__init__,Method zeroinstall.injector.autopolicy.AutoPolicy.__init__()=zeroinstall.injector.autopolicy.AutoPolicy-class.html#__init__,Method zeroinstall.injector.background.BackgroundHandler.__init__()=zeroinstall.injector.background.BackgroundHandler-class.html#__init__,Method zeroinstall.injector.distro.CachedDistribution.__init__()=zeroinstall.injector.distro.CachedDistribution-class.html#__init__,Method zeroinstall.injector.download.Download.__init__()=zeroinstall.injector.download.Download-class.html#__init__,Method zeroinstall.injector.download.DownloadAborted.__init__()=zeroinstall.injector.download.DownloadAborted-class.html#__init__,Method zeroinstall.injector.fetch.Fetcher.__init__()=zeroinstall.injector.fetch.Fetcher-class.html#__init__,Method zeroinstall.injector.fetch.KeyInfoFetcher.__init__()=zeroinstall.injector.fetch.KeyInfoFetcher-class.html#__init__,Method zeroinstall.injector.gpg.Key.__init__()=zeroinstall.injector.gpg.Key-class.html#__init__,Method zeroinstall.injector.gpg.Signature.__init__()=zeroinstall.injector.gpg.Signature-class.html#__init__,Method zeroinstall.injector.handler.Handler.__init__()=zeroinstall.injector.handler.Handler-class.html#__init__,Method zeroinstall.injector.iface_cache.IfaceCache.__init__()=zeroinstall.injector.iface_cache.IfaceCache-class.html#__init__,Method zeroinstall.injector.iface_cache.PendingFeed.__init__()=zeroinstall.injector.iface_cache.PendingFeed-class.html#__init__,Method zeroinstall.injector.model.Dependency.__init__()=zeroinstall.injector.model.Dependency-class.html#__init__,Method zeroinstall.injector.model.DistributionImplementation.__init__()=zeroinstall.injector.model.DistributionImplementation-class.html#__init__,Method zeroinstall.injector.model.DownloadSource.__init__()=zeroinstall.injector.model.DownloadSource-class.html#__init__,Method zeroinstall.injector.model.EnvironmentBinding.__init__()=zeroinstall.injector.model.EnvironmentBinding-class.html#__init__,Method zeroinstall.injector.model.Feed.__init__()=zeroinstall.injector.model.Feed-class.html#__init__,Method zeroinstall.injector.model.Implementation.__init__()=zeroinstall.injector.model.Implementation-class.html#__init__,Method zeroinstall.injector.model.Interface.__init__()=zeroinstall.injector.model.Interface-class.html#__init__,Method zeroinstall.injector.model.InterfaceDependency.__init__()=zeroinstall.injector.model.InterfaceDependency-class.html#__init__,Method zeroinstall.injector.model.InvalidInterface.__init__()=zeroinstall.injector.model.InvalidInterface-class.html#__init__,Method zeroinstall.injector.model.OverlayBinding.__init__()=zeroinstall.injector.model.OverlayBinding-class.html#__init__,Method zeroinstall.injector.model.Recipe.__init__()=zeroinstall.injector.model.Recipe-class.html#__init__,Method zeroinstall.injector.model.Stability.__init__()=zeroinstall.injector.model.Stability-class.html#__init__,Method zeroinstall.injector.model.VersionRangeRestriction.__init__()=zeroinstall.injector.model.VersionRangeRestriction-class.html#__init__,Method zeroinstall.injector.model.VersionRestriction.__init__()=zeroinstall.injector.model.VersionRestriction-class.html#__init__,Method zeroinstall.injector.model.ZeroInstallFeed.__init__()=zeroinstall.injector.model.ZeroInstallFeed-class.html#__init__,Method zeroinstall.injector.model.ZeroInstallImplementation.__init__()=zeroinstall.injector.model.ZeroInstallImplementation-class.html#__init__,Method zeroinstall.injector.policy.Policy.__init__()=zeroinstall.injector.policy.Policy-class.html#__init__,Method zeroinstall.injector.qdom.Element.__init__()=zeroinstall.injector.qdom.Element-class.html#__init__,Method zeroinstall.injector.qdom.QSAXhandler.__init__()=zeroinstall.injector.qdom.QSAXhandler-class.html#__init__,Method zeroinstall.injector.selections.Selection.__init__()=zeroinstall.injector.selections.Selection-class.html#__init__,Method zeroinstall.injector.selections.Selections.__init__()=zeroinstall.injector.selections.Selections-class.html#__init__,Method zeroinstall.injector.solver.DefaultSolver.__init__()=zeroinstall.injector.solver.DefaultSolver-class.html#__init__,Method zeroinstall.injector.solver.Solver.__init__()=zeroinstall.injector.solver.Solver-class.html#__init__,Method zeroinstall.injector.trust.TrustDB.__init__()=zeroinstall.injector.trust.TrustDB-class.html#__init__,Method zeroinstall.support.tasks.Blocker.__init__()=zeroinstall.support.tasks.Blocker-class.html#__init__,Method zeroinstall.support.tasks.InputBlocker.__init__()=zeroinstall.support.tasks.InputBlocker-class.html#__init__,Method zeroinstall.support.tasks.OutputBlocker.__init__()=zeroinstall.support.tasks.OutputBlocker-class.html#__init__,Method zeroinstall.support.tasks.Task.__init__()=zeroinstall.support.tasks.Task-class.html#__init__,Method zeroinstall.support.tasks.TimeoutBlocker.__init__()=zeroinstall.support.tasks.TimeoutBlocker-class.html#__init__,Method zeroinstall.zerostore.Store.__init__()=zeroinstall.zerostore.Store-class.html#__init__,Method zeroinstall.zerostore.Stores.__init__()=zeroinstall.zerostore.Stores-class.html#__init__,Method zeroinstall.zerostore.manifest.HashLibAlgorithm.__init__()=zeroinstall.zerostore.manifest.HashLibAlgorithm-class.html#__init__"><a title="zeroinstall.NeedDownload.__init__
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                <tt id="link-27" class="py-name"><a title="zeroinstall.support.tasks.Blocker" class="py-name" href="#" onclick="return doclink('link-27', 'Blocker', 'link-3');">Blocker</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method zeroinstall.NeedDownload.__init__()=zeroinstall.NeedDownload-class.html#__init__,Method zeroinstall.gtkui.addbox.AddBox.__init__()=zeroinstall.gtkui.addbox.AddBox-class.html#__init__,Method zeroinstall.gtkui.applistbox.ActionsRenderer.__init__()=zeroinstall.gtkui.applistbox.ActionsRenderer-class.html#__init__,Method zeroinstall.gtkui.applistbox.AppListBox.__init__()=zeroinstall.gtkui.applistbox.AppListBox-class.html#__init__,Method zeroinstall.gtkui.cache.CacheExplorer.__init__()=zeroinstall.gtkui.cache.CacheExplorer-class.html#__init__,Method zeroinstall.gtkui.gtkutils.Template.__init__()=zeroinstall.gtkui.gtkutils.Template-class.html#__init__,Method zeroinstall.gtkui.help_box.HelpBox.__init__()=zeroinstall.gtkui.help_box.HelpBox-class.html#__init__,Method zeroinstall.gtkui.trust_box.TrustBox.__init__()=zeroinstall.gtkui.trust_box.TrustBox-class.html#__init__,Method zeroinstall.injector.arch.Architecture.__init__()=zeroinstall.injector.arch.Architecture-class.html#__init__,Method zeroinstall.injector.arch.SourceArchitecture.__init__()=zeroinstall.injector.arch.SourceArchitecture-class.html#__init__,Method zeroinstall.injector.autopolicy.AutoPolicy.__init__()=zeroinstall.injector.autopolicy.AutoPolicy-class.html#__init__,Method zeroinstall.injector.background.BackgroundHandler.__init__()=zeroinstall.injector.background.BackgroundHandler-class.html#__init__,Method zeroinstall.injector.distro.Cache.__init__()=zeroinstall.injector.distro.Cache-class.html#__init__,Method zeroinstall.injector.distro.CachedDistribution.__init__()=zeroinstall.injector.distro.CachedDistribution-class.html#__init__,Method zeroinstall.injector.distro.DebianDistribution.__init__()=zeroinstall.injector.distro.DebianDistribution-class.html#__init__,Method zeroinstall.injector.distro.GentooDistribution.__init__()=zeroinstall.injector.distro.GentooDistribution-class.html#__init__,Method zeroinstall.injector.distro.PortsDistribution.__init__()=zeroinstall.injector.distro.PortsDistribution-class.html#__init__,Method zeroinstall.injector.distro.SlackDistribution.__init__()=zeroinstall.injector.distro.SlackDistribution-class.html#__init__,Method zeroinstall.injector.download.Download.__init__()=zeroinstall.injector.download.Download-class.html#__init__,Method zeroinstall.injector.download.DownloadAborted.__init__()=zeroinstall.injector.download.DownloadAborted-class.html#__init__,Method zeroinstall.injector.fetch.Fetcher.__init__()=zeroinstall.injector.fetch.Fetcher-class.html#__init__,Method zeroinstall.injector.fetch.KeyInfoFetcher.__init__()=zeroinstall.injector.fetch.KeyInfoFetcher-class.html#__init__,Method zeroinstall.injector.gpg.Key.__init__()=zeroinstall.injector.gpg.Key-class.html#__init__,Method zeroinstall.injector.gpg.Signature.__init__()=zeroinstall.injector.gpg.Signature-class.html#__init__,Method zeroinstall.injector.handler.Handler.__init__()=zeroinstall.injector.handler.Handler-class.html#__init__,Method zeroinstall.injector.iface_cache.IfaceCache.__init__()=zeroinstall.injector.iface_cache.IfaceCache-class.html#__init__,Method zeroinstall.injector.iface_cache.PendingFeed.__init__()=zeroinstall.injector.iface_cache.PendingFeed-class.html#__init__,Method zeroinstall.injector.model.Dependency.__init__()=zeroinstall.injector.model.Dependency-class.html#__init__,Method zeroinstall.injector.model.DistributionImplementation.__init__()=zeroinstall.injector.model.DistributionImplementation-class.html#__init__,Method zeroinstall.injector.model.DistributionSource.__init__()=zeroinstall.injector.model.DistributionSource-class.html#__init__,Method zeroinstall.injector.model.DownloadSource.__init__()=zeroinstall.injector.model.DownloadSource-class.html#__init__,Method zeroinstall.injector.model.EnvironmentBinding.__init__()=zeroinstall.injector.model.EnvironmentBinding-class.html#__init__,Method zeroinstall.injector.model.Feed.__init__()=zeroinstall.injector.model.Feed-class.html#__init__,Method zeroinstall.injector.model.Implementation.__init__()=zeroinstall.injector.model.Implementation-class.html#__init__,Method zeroinstall.injector.model.Interface.__init__()=zeroinstall.injector.model.Interface-class.html#__init__,Method zeroinstall.injector.model.InterfaceDependency.__init__()=zeroinstall.injector.model.InterfaceDependency-class.html#__init__,Method zeroinstall.injector.model.InvalidInterface.__init__()=zeroinstall.injector.model.InvalidInterface-class.html#__init__,Method zeroinstall.injector.model.OverlayBinding.__init__()=zeroinstall.injector.model.OverlayBinding-class.html#__init__,Method zeroinstall.injector.model.Recipe.__init__()=zeroinstall.injector.model.Recipe-class.html#__init__,Method zeroinstall.injector.model.Stability.__init__()=zeroinstall.injector.model.Stability-class.html#__init__,Method zeroinstall.injector.model.VersionRangeRestriction.__init__()=zeroinstall.injector.model.VersionRangeRestriction-class.html#__init__,Method zeroinstall.injector.model.VersionRestriction.__init__()=zeroinstall.injector.model.VersionRestriction-class.html#__init__,Method zeroinstall.injector.model.ZeroInstallFeed.__init__()=zeroinstall.injector.model.ZeroInstallFeed-class.html#__init__,Method zeroinstall.injector.model.ZeroInstallImplementation.__init__()=zeroinstall.injector.model.ZeroInstallImplementation-class.html#__init__,Method zeroinstall.injector.policy.Policy.__init__()=zeroinstall.injector.policy.Policy-class.html#__init__,Method zeroinstall.injector.qdom.Element.__init__()=zeroinstall.injector.qdom.Element-class.html#__init__,Method zeroinstall.injector.qdom.QSAXhandler.__init__()=zeroinstall.injector.qdom.QSAXhandler-class.html#__init__,Method zeroinstall.injector.sat.SATProblem.__init__()=zeroinstall.injector.sat.SATProblem-class.html#__init__,Method zeroinstall.injector.sat.VarInfo.__init__()=zeroinstall.injector.sat.VarInfo-class.html#__init__,Method zeroinstall.injector.selections.Selection.__init__()=zeroinstall.injector.selections.Selection-class.html#__init__,Method zeroinstall.injector.selections.Selections.__init__()=zeroinstall.injector.selections.Selections-class.html#__init__,Method zeroinstall.injector.solver.ImplInfo.__init__()=zeroinstall.injector.solver.ImplInfo-class.html#__init__,Method zeroinstall.injector.solver.SATSolver.__init__()=zeroinstall.injector.solver.SATSolver-class.html#__init__,Method zeroinstall.injector.solver.Solver.__init__()=zeroinstall.injector.solver.Solver-class.html#__init__,Method zeroinstall.injector.trust.TrustDB.__init__()=zeroinstall.injector.trust.TrustDB-class.html#__init__,Method zeroinstall.support.tasks.Blocker.__init__()=zeroinstall.support.tasks.Blocker-class.html#__init__,Method zeroinstall.support.tasks.InputBlocker.__init__()=zeroinstall.support.tasks.InputBlocker-class.html#__init__,Method zeroinstall.support.tasks.OutputBlocker.__init__()=zeroinstall.support.tasks.OutputBlocker-class.html#__init__,Method zeroinstall.support.tasks.Task.__init__()=zeroinstall.support.tasks.Task-class.html#__init__,Method zeroinstall.support.tasks.TimeoutBlocker.__init__()=zeroinstall.support.tasks.TimeoutBlocker-class.html#__init__,Method zeroinstall.zerostore.Store.__init__()=zeroinstall.zerostore.Store-class.html#__init__,Method zeroinstall.zerostore.Stores.__init__()=zeroinstall.zerostore.Stores-class.html#__init__,Method zeroinstall.zerostore.manifest.HashLibAlgorithm.__init__()=zeroinstall.zerostore.manifest.HashLibAlgorithm-class.html#__init__"><a title="zeroinstall.NeedDownload.__init__
 zeroinstall.gtkui.addbox.AddBox.__init__
 zeroinstall.gtkui.applistbox.ActionsRenderer.__init__
 zeroinstall.gtkui.applistbox.AppListBox.__init__
@@ -239,7 +242,12 @@ zeroinstall.injector.arch.Architecture.__init__
 zeroinstall.injector.arch.SourceArchitecture.__init__
 zeroinstall.injector.autopolicy.AutoPolicy.__init__
 zeroinstall.injector.background.BackgroundHandler.__init__
+zeroinstall.injector.distro.Cache.__init__
 zeroinstall.injector.distro.CachedDistribution.__init__
+zeroinstall.injector.distro.DebianDistribution.__init__
+zeroinstall.injector.distro.GentooDistribution.__init__
+zeroinstall.injector.distro.PortsDistribution.__init__
+zeroinstall.injector.distro.SlackDistribution.__init__
 zeroinstall.injector.download.Download.__init__
 zeroinstall.injector.download.DownloadAborted.__init__
 zeroinstall.injector.fetch.Fetcher.__init__
@@ -251,6 +259,7 @@ zeroinstall.injector.iface_cache.IfaceCache.__init__
 zeroinstall.injector.iface_cache.PendingFeed.__init__
 zeroinstall.injector.model.Dependency.__init__
 zeroinstall.injector.model.DistributionImplementation.__init__
+zeroinstall.injector.model.DistributionSource.__init__
 zeroinstall.injector.model.DownloadSource.__init__
 zeroinstall.injector.model.EnvironmentBinding.__init__
 zeroinstall.injector.model.Feed.__init__
@@ -268,9 +277,12 @@ zeroinstall.injector.model.ZeroInstallImplementation.__init__
 zeroinstall.injector.policy.Policy.__init__
 zeroinstall.injector.qdom.Element.__init__
 zeroinstall.injector.qdom.QSAXhandler.__init__
+zeroinstall.injector.sat.SATProblem.__init__
+zeroinstall.injector.sat.VarInfo.__init__
 zeroinstall.injector.selections.Selection.__init__
 zeroinstall.injector.selections.Selections.__init__
-zeroinstall.injector.solver.DefaultSolver.__init__
+zeroinstall.injector.solver.ImplInfo.__init__
+zeroinstall.injector.solver.SATSolver.__init__
 zeroinstall.injector.solver.Solver.__init__
 zeroinstall.injector.trust.TrustDB.__init__
 zeroinstall.support.tasks.Blocker.__init__
@@ -281,7 +293,8 @@ zeroinstall.support.tasks.TimeoutBlocker.__init__
 zeroinstall.zerostore.Store.__init__
 zeroinstall.zerostore.Stores.__init__
 zeroinstall.zerostore.manifest.HashLibAlgorithm.__init__" class="py-name" href="#" onclick="return doclink('link-28', '__init__', 'link-28');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-29" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-29', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-29', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
 <a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                <tt class="py-name">gobject</tt><tt class="py-op">.</tt><tt class="py-name">timeout_add</tt><tt class="py-op">(</tt><tt class="py-name">long</tt><tt class="py-op">(</tt><tt id="link-30" class="py-name" targets="Variable zeroinstall.gtkui.treetips.TreeTips.timeout=zeroinstall.gtkui.treetips.TreeTips-class.html#timeout"><a title="zeroinstall.gtkui.treetips.TreeTips.timeout" class="py-name" href="#" onclick="return doclink('link-30', 'timeout', 'link-30');">timeout</a></tt> <tt class="py-op">*</tt> <tt class="py-number">1000</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_timeout</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">         </tt>
 <a name="TimeoutBlocker._timeout"></a><div id="TimeoutBlocker._timeout-def"><a name="L165"></a><tt class="py-lineno">165</tt> <a class="py-toggle" href="#" id="TimeoutBlocker._timeout-toggle" onclick="return toggle('TimeoutBlocker._timeout');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.TimeoutBlocker-class.html#_timeout">_timeout</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -310,7 +323,12 @@ zeroinstall.injector.arch.Architecture.__init__
 zeroinstall.injector.arch.SourceArchitecture.__init__
 zeroinstall.injector.autopolicy.AutoPolicy.__init__
 zeroinstall.injector.background.BackgroundHandler.__init__
+zeroinstall.injector.distro.Cache.__init__
 zeroinstall.injector.distro.CachedDistribution.__init__
+zeroinstall.injector.distro.DebianDistribution.__init__
+zeroinstall.injector.distro.GentooDistribution.__init__
+zeroinstall.injector.distro.PortsDistribution.__init__
+zeroinstall.injector.distro.SlackDistribution.__init__
 zeroinstall.injector.download.Download.__init__
 zeroinstall.injector.download.DownloadAborted.__init__
 zeroinstall.injector.fetch.Fetcher.__init__
@@ -322,6 +340,7 @@ zeroinstall.injector.iface_cache.IfaceCache.__init__
 zeroinstall.injector.iface_cache.PendingFeed.__init__
 zeroinstall.injector.model.Dependency.__init__
 zeroinstall.injector.model.DistributionImplementation.__init__
+zeroinstall.injector.model.DistributionSource.__init__
 zeroinstall.injector.model.DownloadSource.__init__
 zeroinstall.injector.model.EnvironmentBinding.__init__
 zeroinstall.injector.model.Feed.__init__
@@ -339,9 +358,12 @@ zeroinstall.injector.model.ZeroInstallImplementation.__init__
 zeroinstall.injector.policy.Policy.__init__
 zeroinstall.injector.qdom.Element.__init__
 zeroinstall.injector.qdom.QSAXhandler.__init__
+zeroinstall.injector.sat.SATProblem.__init__
+zeroinstall.injector.sat.VarInfo.__init__
 zeroinstall.injector.selections.Selection.__init__
 zeroinstall.injector.selections.Selections.__init__
-zeroinstall.injector.solver.DefaultSolver.__init__
+zeroinstall.injector.solver.ImplInfo.__init__
+zeroinstall.injector.solver.SATSolver.__init__
 zeroinstall.injector.solver.Solver.__init__
 zeroinstall.injector.trust.TrustDB.__init__
 zeroinstall.support.tasks.Blocker.__init__
@@ -352,7 +374,8 @@ zeroinstall.support.tasks.TimeoutBlocker.__init__
 zeroinstall.zerostore.Store.__init__
 zeroinstall.zerostore.Stores.__init__
 zeroinstall.zerostore.manifest.HashLibAlgorithm.__init__" class="py-name" href="#" onclick="return doclink('link-36', '__init__', 'link-28');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-37" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-37', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-37', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
 <a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="zeroinstall.support.tasks.InputBlocker._stream
 zeroinstall.support.tasks.OutputBlocker._stream" class="py-name" href="#" onclick="return doclink('link-38', '_stream', 'link-34');">_stream</a></tt> <tt class="py-op">=</tt> <tt class="py-name">stream</tt> </tt>
 </div><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">         </tt>
@@ -397,7 +420,12 @@ zeroinstall.injector.arch.Architecture.__init__
 zeroinstall.injector.arch.SourceArchitecture.__init__
 zeroinstall.injector.autopolicy.AutoPolicy.__init__
 zeroinstall.injector.background.BackgroundHandler.__init__
+zeroinstall.injector.distro.Cache.__init__
 zeroinstall.injector.distro.CachedDistribution.__init__
+zeroinstall.injector.distro.DebianDistribution.__init__
+zeroinstall.injector.distro.GentooDistribution.__init__
+zeroinstall.injector.distro.PortsDistribution.__init__
+zeroinstall.injector.distro.SlackDistribution.__init__
 zeroinstall.injector.download.Download.__init__
 zeroinstall.injector.download.DownloadAborted.__init__
 zeroinstall.injector.fetch.Fetcher.__init__
@@ -409,6 +437,7 @@ zeroinstall.injector.iface_cache.IfaceCache.__init__
 zeroinstall.injector.iface_cache.PendingFeed.__init__
 zeroinstall.injector.model.Dependency.__init__
 zeroinstall.injector.model.DistributionImplementation.__init__
+zeroinstall.injector.model.DistributionSource.__init__
 zeroinstall.injector.model.DownloadSource.__init__
 zeroinstall.injector.model.EnvironmentBinding.__init__
 zeroinstall.injector.model.Feed.__init__
@@ -426,9 +455,12 @@ zeroinstall.injector.model.ZeroInstallImplementation.__init__
 zeroinstall.injector.policy.Policy.__init__
 zeroinstall.injector.qdom.Element.__init__
 zeroinstall.injector.qdom.QSAXhandler.__init__
+zeroinstall.injector.sat.SATProblem.__init__
+zeroinstall.injector.sat.VarInfo.__init__
 zeroinstall.injector.selections.Selection.__init__
 zeroinstall.injector.selections.Selections.__init__
-zeroinstall.injector.solver.DefaultSolver.__init__
+zeroinstall.injector.solver.ImplInfo.__init__
+zeroinstall.injector.solver.SATSolver.__init__
 zeroinstall.injector.solver.Solver.__init__
 zeroinstall.injector.trust.TrustDB.__init__
 zeroinstall.support.tasks.Blocker.__init__
@@ -439,7 +471,8 @@ zeroinstall.support.tasks.TimeoutBlocker.__init__
 zeroinstall.zerostore.Store.__init__
 zeroinstall.zerostore.Stores.__init__
 zeroinstall.zerostore.manifest.HashLibAlgorithm.__init__" class="py-name" href="#" onclick="return doclink('link-51', '__init__', 'link-28');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-52" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-52', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-52', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
 <a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="zeroinstall.support.tasks.InputBlocker._stream
 zeroinstall.support.tasks.OutputBlocker._stream" class="py-name" href="#" onclick="return doclink('link-53', '_stream', 'link-34');">_stream</a></tt> <tt class="py-op">=</tt> <tt class="py-name">stream</tt> </tt>
 </div><a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">         </tt>
@@ -495,7 +528,8 @@ zeroinstall.support.tasks.OutputBlocker._tag" class="py-name" href="#" onclick="
 <a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">                <tt class="py-keyword">assert</tt> <tt class="py-name">iterator</tt><tt class="py-op">.</tt><tt class="py-name">next</tt><tt class="py-op">,</tt> <tt class="py-string">"Object passed is not an iterator!"</tt> </tt>
 <a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iterator</tt> <tt class="py-op">=</tt> <tt class="py-name">iterator</tt> </tt>
 <a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="zeroinstall.support.tasks.Blocker" class="py-name" href="#" onclick="return doclink('link-65', 'Blocker', 'link-3');">Blocker</a></tt><tt class="py-op">(</tt><tt id="link-66" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-66', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-66', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt> </tt>
 <a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">                <tt class="py-comment"># Block new task on the idle handler...</tt> </tt>
 <a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">                <tt id="link-67" class="py-name"><a title="zeroinstall.support.tasks._idle_blocker" class="py-name" href="#" onclick="return doclink('link-67', '_idle_blocker', 'link-63');">_idle_blocker</a></tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="zeroinstall.support.tasks.Blocker.add_task
 zeroinstall.support.tasks.IdleBlocker.add_task
@@ -523,7 +557,8 @@ zeroinstall.support.tasks.OutputBlocker.remove_task" class="py-name" href="#" on
 <a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-op">(</tt><tt class="py-name">Exception</tt><tt class="py-op">,</tt> <tt class="py-name">KeyboardInterrupt</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">ex</tt><tt class="py-op">:</tt> </tt>
 <a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">                        <tt class="py-comment"># Task crashed</tt> </tt>
 <a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">                        <tt class="py-name">info</tt><tt class="py-op">(</tt><tt id="link-74" class="py-name"><a title="zeroinstall._" class="py-name" href="#" onclick="return doclink('link-74', '_', 'link-1');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Exception from '%(name)s': %(exception)s"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'name'</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt><tt class="py-op">.</tt><tt id="link-75" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-75', 'name', 'link-10');">name</a></tt><tt class="py-op">,</tt> <tt class="py-string">'exception'</tt><tt class="py-op">:</tt> <tt class="py-name">ex</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-75', 'name', 'link-10');">name</a></tt><tt class="py-op">,</tt> <tt class="py-string">'exception'</tt><tt class="py-op">:</tt> <tt class="py-name">ex</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
 <a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">                        <tt class="py-comment">#import traceback</tt> </tt>
 <a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">                        <tt class="py-comment">#traceback.print_exc()</tt> </tt>
 <a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">                        <tt class="py-name">tb</tt> <tt class="py-op">=</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exc_info</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt> </tt>
@@ -555,11 +590,13 @@ zeroinstall.support.tasks.OutputBlocker.add_task" class="py-name" href="#" oncli
 </div><a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">         </tt>
 <a name="Task.__repr__"></a><div id="Task.__repr__-def"><a name="L290"></a><tt class="py-lineno">290</tt> <a class="py-toggle" href="#" id="Task.__repr__-toggle" onclick="return toggle('Task.__repr__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.Task-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Task.__repr__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Task.__repr__-expanded"><a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-string">"Task(%s)"</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt><tt class="py-op">.</tt><tt id="link-84" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-84', 'name', 'link-10');">name</a></tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-84', 'name', 'link-10');">name</a></tt> </tt>
 </div><a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line">         </tt>
 <a name="Task.__str__"></a><div id="Task.__str__-def"><a name="L293"></a><tt class="py-lineno">293</tt> <a class="py-toggle" href="#" id="Task.__str__-toggle" onclick="return toggle('Task.__str__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks.Task-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="Task.__str__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Task.__str__-expanded"><a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt><tt class="py-op">.</tt><tt id="link-85" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-85', 'name', 'link-10');">name</a></tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-85', 'name', 'link-10');">name</a></tt> </tt>
 </div></div><a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"> </tt>
 <a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line"><tt class="py-comment"># Must append to _run_queue right after calling this!</tt> </tt>
 <a name="_schedule"></a><div id="_schedule-def"><a name="L297"></a><tt class="py-lineno">297</tt> <a class="py-toggle" href="#" id="_schedule-toggle" onclick="return toggle('_schedule');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.support.tasks-module.html#_schedule">_schedule</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -603,7 +640,8 @@ zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="ret
 <a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line">        <tt class="py-keyword">def</tt> <tt class="py-def-name">deco</tt><tt class="py-op">(</tt><tt class="py-param">fn</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">run</tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 <a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt id="link-100" class="py-name" targets="Class zeroinstall.support.tasks.Task=zeroinstall.support.tasks.Task-class.html"><a title="zeroinstall.support.tasks.Task" class="py-name" href="#" onclick="return doclink('link-100', 'Task', 'link-100');">Task</a></tt><tt class="py-op">(</tt><tt class="py-name">fn</tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-101" class="py-name"><a title="zeroinstall.injector.model.DummyFeed.name
-zeroinstall.injector.model.Interface.name" class="py-name" href="#" onclick="return doclink('link-101', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> </tt>
+zeroinstall.injector.model.Interface.name
+zeroinstall.injector.sat.VarInfo.name" class="py-name" href="#" onclick="return doclink('link-101', 'name', 'link-10');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> </tt>
 </div><a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line">                <tt id="link-102" class="py-name" targets="Module zeroinstall.injector.run=zeroinstall.injector.run-module.html"><a title="zeroinstall.injector.run" class="py-name" href="#" onclick="return doclink('link-102', 'run', 'link-102');">run</a></tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt> <tt class="py-op">=</tt> <tt class="py-name">fn</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt> </tt>
 <a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-103" class="py-name"><a title="zeroinstall.injector.run" class="py-name" href="#" onclick="return doclink('link-103', 'run', 'link-102');">run</a></tt> </tt>
 </div><a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">deco</tt> </tt>
@@ -653,7 +691,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:49 2009
+    Generated by Epydoc 3.0.1 on Sun May 30 13:43:45 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

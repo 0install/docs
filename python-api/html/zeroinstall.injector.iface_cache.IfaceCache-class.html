@@ -114,20 +114,39 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="update_interface_if_trusted"></a><span class="summary-sig-name">update_interface_if_trusted</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">interface</span>,
+        <span class="summary-sig-arg">sigs</span>,
+        <span class="summary-sig-arg">xml</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_interface_if_trusted">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted" class="summary-sig-name">update_interface_if_trusted</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_feed_if_trusted" class="summary-sig-name">update_feed_if_trusted</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed_url</span>,
         <span class="summary-sig-arg">sigs</span>,
         <span class="summary-sig-arg">xml</span>)</span><br />
-      Update a cached interface (using <a 
-      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
-      class="link">update_interface_from_network</a>) if we trust the 
+      Update a cached feed (using <a 
+      href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_feed_from_network"
+      class="link">update_feed_from_network</a>) if we trust the 
       signatures.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_interface_if_trusted">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_feed_if_trusted">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -141,13 +160,32 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network" class="summary-sig-name">update_interface_from_network</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="update_interface_from_network"></a><span class="summary-sig-name">update_interface_from_network</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">new_xml</span>,
-        <span class="summary-sig-arg">modified_time</span>)</span><br />
-      Update a cached interface.</td>
+        <span class="summary-sig-arg">modified_time</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_interface_from_network">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_feed_from_network" class="summary-sig-name">update_feed_from_network</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed_url</span>,
+        <span class="summary-sig-arg">new_xml</span>,
+        <span class="summary-sig-arg">modified_time</span>)</span><br />
+      Update a cached feed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_feed_from_network">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -163,7 +201,8 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_feed" class="summary-sig-name">get_feed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">url</span>)</span><br />
+        <span class="summary-sig-arg">url</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
       Get a feed from the cache.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed">source&nbsp;code</a></span>
@@ -283,6 +322,63 @@ object --+
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.model.Feed-class.html" 
+      class="link">Feed</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_feed_imports" class="summary-sig-name">get_feed_imports</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iface</span>)</span><br />
+      Get all feeds that add to this interface.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed_imports">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">{str: <a href="zeroinstall.injector.model.ZeroInstallFeed-class.html"
+      class="link">ZeroInstallFeed</a> | None}</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_feeds" class="summary-sig-name">get_feeds</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iface</span>)</span><br />
+      Get all feeds for this interface.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feeds">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[<a href="zeroinstall.injector.model.Implementation-class.html" 
+      class="link">Implementation</a>]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_implementations" class="summary-sig-name">get_implementations</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iface</span>)</span><br />
+      Return all implementations from all of iface's feeds.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_implementations">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -352,81 +448,86 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="update_interface_if_trusted"></a>
+<a name="update_feed_if_trusted"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_interface_if_trusted</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_feed_if_trusted</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed_url</span>,
         <span class="sig-arg">sigs</span>,
         <span class="sig-arg">xml</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_interface_if_trusted">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_feed_if_trusted">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Update a cached interface (using <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_from_network"
-  class="link">update_interface_from_network</a>) if we trust the 
-  signatures. If we don't trust any of the signatures, do nothing.</p>
+  <p>Update a cached feed (using <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_feed_from_network"
+  class="link">update_feed_from_network</a>) if we trust the signatures. If
+  we don't trust any of the signatures, do nothing.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>interface</code></strong> (<a href="zeroinstall.injector.model.Interface-class.html" 
-          class="link">model.Interface</a>) - the interface being updated</li>
+        <li><strong class="pname"><code>feed_url</code></strong> (str) - the feed being updated</li>
         <li><strong class="pname"><code>sigs</code></strong> ([<a href="zeroinstall.injector.gpg.Signature-class.html" 
           class="link">gpg.Signature</a>]) - signatures from <a 
           href="zeroinstall.injector.gpg-module.html#check_stream" 
           class="link">gpg.check_stream</a></li>
-        <li><strong class="pname"><code>xml</code></strong> (str) - the downloaded replacement interface document</li>
+        <li><strong class="pname"><code>xml</code></strong> (str) - the downloaded replacement feed document</li>
     </ul></dd>
     <dt>Returns: bool</dt>
-        <dd>True if the interface was updated</dd>
+        <dd>True if the feed was updated</dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+</div></td></tr></table>
 </div>
-<a name="update_interface_from_network"></a>
+<a name="update_feed_from_network"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_interface_from_network</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_feed_from_network</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed_url</span>,
         <span class="sig-arg">new_xml</span>,
         <span class="sig-arg">modified_time</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_interface_from_network">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.update_feed_from_network">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Update a cached interface. Called by <a 
-  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_interface_if_trusted"
-  class="link">update_interface_if_trusted</a> if we trust this data. After
-  a successful update, <a href="zeroinstall.injector.writer-module.html" 
-  class="link">writer</a> is used to update the interface's last_checked 
+  <p>Update a cached feed. Called by <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#update_feed_if_trusted"
+  class="link">update_feed_if_trusted</a> if we trust this data. After a 
+  successful update, <a href="zeroinstall.injector.writer-module.html" 
+  class="link">writer</a> is used to update the feed's last_checked 
   time.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>interface</code></strong> (<a href="zeroinstall.injector.model.Interface-class.html" 
-          class="link">model.Interface</a>) - the interface being updated</li>
-        <li><strong class="pname"><code>new_xml</code></strong> (str) - the downloaded replacement interface document</li>
+        <li><strong class="pname"><code>feed_url</code></strong> (<a href="zeroinstall.injector.model.Interface-class.html" 
+          class="link">model.Interface</a>) - the feed being updated</li>
+        <li><strong class="pname"><code>new_xml</code></strong> (str) - the downloaded replacement feed document</li>
         <li><strong class="pname"><code>modified_time</code></strong> (long) - the timestamp of the oldest trusted signature (used as an 
-          approximation to the interface's modification time)</li>
+          approximation to the feed's modification time)</li>
     </ul></dd>
     <dt>Raises:</dt>
     <dd><ul class="nomargin-top">
         <li><code><strong class='fraise'><a href="zeroinstall.injector.iface_cache.ReplayAttack-class.html">ReplayAttack</a></strong></code> - if modified_time is older than the currently cached time</li>
     </ul></dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+</div></td></tr></table>
 </div>
 <a name="get_feed"></a>
 <div>
@@ -436,7 +537,8 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feed</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">url</span>)</span>
+        <span class="sig-arg">url</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed">source&nbsp;code</a></span>&nbsp;
@@ -448,6 +550,7 @@ object --+
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>url</code></strong> - the URL of the feed</li>
+        <li><strong class="pname"><code>force</code></strong> - load the file from disk again</li>
     </ul></dd>
     <dt>Returns: <a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
       class="link">model.ZeroInstallFeed</a></dt>
@@ -589,6 +692,88 @@ object --+
       </p>
 </div></td></tr></table>
 </div>
+<a name="get_feed_imports"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feed_imports</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">iface</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed_imports">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all feeds that add to this interface. This is the feeds explicitly
+  added by the user, feeds added by the distribution, and feeds imported by
+  a &lt;feed&gt; in the main feed (but not recursively, at present).</p>
+  <dl class="fields">
+    <dt>Returns: <a href="zeroinstall.injector.model.Feed-class.html" 
+      class="link">Feed</a></dt>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+</div></td></tr></table>
+</div>
+<a name="get_feeds"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feeds</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">iface</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feeds">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all feeds for this interface. This is a mapping from feed URLs to 
+  ZeroInstallFeeds. It includes the interface's main feed, plus the 
+  resolution of every feed returned by <a 
+  href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_feed_imports"
+  class="link">get_feed_imports</a>. Uncached feeds are indicated by a 
+  value of None.</p>
+  <dl class="fields">
+    <dt>Returns: {str: <a href="zeroinstall.injector.model.ZeroInstallFeed-class.html"
+      class="link">ZeroInstallFeed</a> | None}</dt>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+</div></td></tr></table>
+</div>
+<a name="get_implementations"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_implementations</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">iface</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_implementations">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return all implementations from all of iface's feeds.</p>
+  <dl class="fields">
+    <dt>Returns: [<a href="zeroinstall.injector.model.Implementation-class.html" 
+      class="link">Implementation</a>]</dt>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+</div></td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -621,7 +806,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
+    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

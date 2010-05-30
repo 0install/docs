@@ -60,7 +60,10 @@
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
 <h1 class="epydoc">Module reader</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html">source&nbsp;code</a></span></p>
-<p>Parses an XML interface into a Python representation.</p>
+<p>Parses an XML feed into a Python representation. You should probably 
+  use <a href="zeroinstall.injector.iface_cache-module.html#iface_cache" 
+  class="link">iface_cache.iface_cache</a> rather than the functions 
+  here.</p>
 
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
@@ -93,6 +96,23 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#load_feed_from_cache" class="summary-sig-name">load_feed_from_cache</a>(<span class="summary-sig-arg">url</span>)</span><br />
+      Load a feed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed_from_cache">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_overrides" class="summary-sig-name">update_user_overrides</a>(<span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">main_feed</span>=<span class="summary-sig-default">None</span>)</span><br />
       Update an interface with user-supplied information.</td>
@@ -111,9 +131,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#check_readable" class="summary-sig-name">check_readable</a>(<span class="summary-sig-arg">interface_uri</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#check_readable" class="summary-sig-name">check_readable</a>(<span class="summary-sig-arg">feed_url</span>,
         <span class="summary-sig-arg">source</span>)</span><br />
-      Test whether an interface file is valid.</td>
+      Test whether a feed file is valid.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#check_readable">source&nbsp;code</a></span>
             
@@ -135,6 +155,24 @@
       Read in information about an interface.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#load_feed" class="summary-sig-name">load_feed</a>(<span class="summary-sig-arg">source</span>,
+        <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Load a feed from a local file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -181,6 +219,28 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="load_feed_from_cache"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_feed_from_cache</span>(<span class="sig-arg">url</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed_from_cache">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Load a feed. If the feed is remote, load from the cache. If local, 
+  load it directly.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the feed, or None if it's remote and not cached.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="update_user_overrides"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -218,7 +278,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_readable</span>(<span class="sig-arg">interface_uri</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_readable</span>(<span class="sig-arg">feed_url</span>,
         <span class="sig-arg">source</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -226,11 +286,11 @@
     </td>
   </tr></table>
   
-  <p>Test whether an interface file is valid.</p>
+  <p>Test whether a feed file is valid.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>interface_uri</code></strong> (str) - the interface's URI</li>
+        <li><strong class="pname"><code>feed_url</code></strong> (str) - the feed's expected URL</li>
         <li><strong class="pname"><code>source</code></strong> (str) - the name of the file to test</li>
     </ul></dd>
     <dt>Returns: int</dt>
@@ -258,7 +318,7 @@
     </td>
   </tr></table>
   
-  <p>Read in information about an interface.</p>
+  <p>Read in information about an interface. Deprecated.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -277,6 +337,45 @@
 <div class="fields">      <p><strong>See Also:</strong>
         <a href="zeroinstall.injector.reader-module.html#update_from_cache"
         class="link">update_from_cache</a>, which calls this
+      </p>
+</div></td></tr></table>
+</div>
+<a name="load_feed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_feed</span>(<span class="sig-arg">source</span>,
+        <span class="sig-arg">local</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Load a feed from a local file.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>source</code></strong> (str) - the name of the file to read</li>
+        <li><strong class="pname"><code>local</code></strong> (bool) - this is a local feed</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the new feed</dd>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="zeroinstall.injector.model.InvalidInterface-class.html">InvalidInterface</a></strong></code> - if the source's syntax is incorrect</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.48
+      </p>
+      <p><strong>See Also:</strong>
+        <a href="zeroinstall.injector.iface_cache-module.html#iface_cache" 
+        class="link">iface_cache.iface_cache</a>, which uses this to load 
+        the feeds
       </p>
 </div></td></tr></table>
 </div>
@@ -312,7 +411,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
+    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

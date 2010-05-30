@@ -62,13 +62,11 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class DebianDistribution</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-    object --+        
-             |        
-  <a href="zeroinstall.injector.distro.Distribution-class.html">Distribution</a> --+    
-                 |    
-<a href="zeroinstall.injector.distro.CachedDistribution-class.html">CachedDistribution</a> --+
-                     |
-                    <strong class="uidshort">DebianDistribution</strong>
+  object --+    
+           |    
+<a href="zeroinstall.injector.distro.Distribution-class.html">Distribution</a> --+
+               |
+              <strong class="uidshort">DebianDistribution</strong>
 </pre>
 
 <hr />
@@ -88,9 +86,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="generate_cache"></a><span class="summary-sig-name">generate_cache</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.DebianDistribution-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">dpkg_status</span>,
+        <span class="summary-sig-arg">pkgcache</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.generate_cache">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -117,11 +118,44 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int | None</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.DebianDistribution-class.html#get_score" class="summary-sig-name">get_score</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">disto_name</span>)</span><br />
+      Indicate how closely the host distribution matches this one.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.get_score">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.DebianDistribution-class.html#get_installed" class="summary-sig-name">get_installed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package_id</span>)</span><br />
+      Check whether 'package' is currently installed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.get_installed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="zeroinstall.injector.distro.CachedDistribution-class.html">CachedDistribution</a></code></b>:
-      <code><a href="zeroinstall.injector.distro.CachedDistribution-class.html#__init__">__init__</a></code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -180,6 +214,33 @@
     <span class="table-header">Method Details</span></td>
 </tr>
 </table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">dpkg_status</span>,
+        <span class="sig-arg">pkgcache</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <a name="get_package_info"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -208,6 +269,70 @@
     </ul></dd>
     <dt>Overrides:
         <a href="zeroinstall.injector.distro.Distribution-class.html#get_package_info">Distribution.get_package_info</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_score"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_score</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">disto_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.get_score">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Indicate how closely the host distribution matches this one. The 
+  &lt;package-implementation&gt; with the highest score is passed to <a 
+  href="zeroinstall.injector.distro.Distribution-class.html#get_package_info"
+  class="link">Distribution.get_package_info</a>. If several elements get 
+  the same score, get_package_info is called for all of them.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>distribution</code></strong> - a distribution name</li>
+    </ul></dd>
+    <dt>Returns: int | None</dt>
+        <dd>an integer, or None if there is no match at all</dd>
+    <dt>Overrides:
+        <a href="zeroinstall.injector.distro.Distribution-class.html#get_score">Distribution.get_score</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_installed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_installed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#DebianDistribution.get_installed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check whether 'package' is currently installed.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>package_id</code></strong> - the Implementation ID used by get_package_info</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>True iff the package is currently installed</dd>
+    <dt>Overrides:
+        <a href="zeroinstall.injector.distro.Distribution-class.html#get_installed">Distribution.get_installed</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -245,7 +370,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
+    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

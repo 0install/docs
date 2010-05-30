@@ -118,18 +118,16 @@ handler.Handler --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type"><a href="zeroinstall.support.tasks.Blocker-class.html" 
-      class="link">tasks.Blocker</a></span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.background.BackgroundHandler-class.html#confirm_trust_keys" class="summary-sig-name">confirm_trust_keys</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">sigs</span>,
-        <span class="summary-sig-arg">iface_xml</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.background.BackgroundHandler-class.html#confirm_import_feed" class="summary-sig-name">confirm_import_feed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pending</span>,
+        <span class="summary-sig-arg">valid_sigs</span>)</span><br />
       Run the GUI if we need to confirm any keys.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.background-pysrc.html#BackgroundHandler.confirm_trust_keys">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.background-pysrc.html#BackgroundHandler.confirm_import_feed">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -196,8 +194,8 @@ handler.Handler --+
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>handler.Handler</code></b>:
-      <code>confirm_import_feed</code>,
       <code>confirm_keys</code>,
+      <code>confirm_trust_keys</code>,
       <code>downloads_changed</code>,
       <code>get_download</code>,
       <code>impl_added_to_store</code>,
@@ -232,6 +230,7 @@ handler.Handler --+
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>handler.Handler</code></b>:
+      <code>dry_run</code>,
       <code>monitored_downloads</code>,
       <code>n_completed_downloads</code>,
       <code>total_bytes_downloaded</code>
@@ -291,20 +290,19 @@ handler.Handler --+
   </dl>
 </td></tr></table>
 </div>
-<a name="confirm_trust_keys"></a>
+<a name="confirm_import_feed"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">confirm_trust_keys</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface</span>,
-        <span class="sig-arg">sigs</span>,
-        <span class="sig-arg">iface_xml</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">confirm_import_feed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pending</span>,
+        <span class="sig-arg">valid_sigs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.background-pysrc.html#BackgroundHandler.confirm_trust_keys">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.background-pysrc.html#BackgroundHandler.confirm_import_feed">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -312,17 +310,12 @@ handler.Handler --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>interface</code></strong> - the interface being updated</li>
-        <li><strong class="pname"><code>sigs</code></strong> - a list of signatures (from <a 
-          href="zeroinstall.injector.gpg-module.html#check_stream" 
-          class="link">gpg.check_stream</a>)</li>
-        <li><strong class="pname"><code>iface_xml</code></strong> - the downloaded data (not yet trusted)</li>
+        <li><strong class="pname"><code>pending</code></strong> - the new feed to be imported</li>
+        <li><strong class="pname"><code>valid_sigs</code></strong> - maps signatures to a list of fetchers collecting information 
+          about the key</li>
     </ul></dd>
-    <dt>Returns: <a href="zeroinstall.support.tasks.Blocker-class.html" 
-      class="link">tasks.Blocker</a></dt>
-        <dd>a blocker, if confirmation will happen asynchronously, or None</dd>
     <dt>Overrides:
-        <a href="zeroinstall.injector.handler.Handler-class.html#confirm_trust_keys">handler.Handler.confirm_trust_keys</a>
+        <a href="zeroinstall.injector.handler.Handler-class.html#confirm_import_feed">handler.Handler.confirm_import_feed</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -413,7 +406,7 @@ handler.Handler --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 15 17:45:46 2009
+    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
