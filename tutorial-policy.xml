@@ -159,8 +159,8 @@ become the version at the top of the list, whereas a preferred version will alwa
 <h2>How to I uninstall things?</h2>
 
 <p>
-Click on the <b>Cache</b> button in the main window to get the cache
-explorer. Select the versions you don't need anymore and click on <b>Delete</b>.
+Click on the <b>Show Cache</b> button in the <b>Manage Programs</b> box to get the cache
+explorer (or run "<b>0store manage</b>"). Select the versions you don't need anymore and click on <b>Delete</b>.
 </p>
 
 <p style='text-align: center'>
