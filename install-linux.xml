@@ -38,15 +38,14 @@
   <b>Debian/oldstable (etch)</b> <download name='zeroinstall-injector_0.38-1_all.deb'/> (Debian package; python-central)<br/>
   <b>Debian/stable (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
   <pre># <b>apt-get install zeroinstall-injector</b></pre>
-  However, a newer version is available here: <download name='zeroinstall-injector_0.39-1_all.deb'/>
+  <p>Anders F Björklund has made a repository with backports of later versions to Debian/stable. Add this to sources.list to use it:</p>
+<pre>deb http://afb.users.sourceforge.net/zero-install/debian lenny main</pre>
   </li>
   <li id='ubuntu'>
   <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty/karmic/lucid)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>You can also install by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
-<p><strong>Jaunty (9.04): </strong> The version in Jaunty doesn't work with FTP downloads due to a <a href='https://bugs.launchpad.net/ubuntu/+source/zeroinstall-injector/+bug/366333'>bug</a>,
-  but <download name='zeroinstall-injector_0.41-1_all.deb'/> contains a fix.</p>
-  </li>
+</li>
   <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
 </ul>
