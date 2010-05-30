@@ -4,7 +4,7 @@
 <h2>Screenshots</h2>
 
 <p>
-<a href='injector.html'>The injector</a> (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
+<a href='injector.html'>0launch</a> is a small Python program. You ask it to run a program by giving
 it the program's full name (a web address). The injector does <b>not</b> need
 to be installed or run as root. It does <b>not</b> write to any of the traditional software
 directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a cache directory
@@ -13,61 +13,54 @@ so that you don't need to download anything twice, and programs can still be use
 
 <h3>Getting software</h3>
 
-<table class='picturebullets'>
+<table class='howitworks'>
  <tr>
-  <td class='image'><img src='screens/find-url.png' alt='' width='256' height='171'/></td>
+  <td class='image'><img src='screens/find-url.png' alt='' width='400' height='313'/></td>
   <td><h3>Find a program you want to run on the web</h3>
       <p>If it's a Zero Install program, it will give the URL to use. In this
-      example, you would drag <a href='http://freenet-homepage.de/LinuxCNC/0install/Foobillard/foobillard.xml'>this
-      FooBillard link</a> to your installer.</p>
+      example, you would drag <a href='http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml'>the
+      ClanBomber link</a> to your installer.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='screens/add-url.png' alt='' width='400' height='289'/></td>
+  <td><h3>Give the link to your installer</h3>
       <p>
       The injector can be run manually (<b>0launch URL</b>), but it is normally
       invoked by another program. Some examples include:
       </p>
 <ul>
- <li>GNOME and KDE users will drag the link to <a href='http://0install.net/2007/interfaces/Zero2Desktop.xml'>Zero2Desktop</a>, creating a launcher on their Applications menu that uses the injector.</li>
+ <li>GNOME and KDE users will drag the link to their <b>Add New Program</b> dialog, creating a launcher on their Applications menu.</li>
  <li>ROX users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses the injector.</li>
- <li>Xfce users will drag the link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, creating a launcher button that uses the injector.</li>
- <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut that runs the injector.</li>
+ <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut.</li>
 </ul>
   </td>
  </tr>
  <tr>
-  <td class='image'><img src='screens/confirm-key.png' alt='' width='256' height='154'/></td>
+  <td class='image'><img src='screens/confirm-key.png' alt='' width='400' height='323'/></td>
   <td><h3>Confirm the keys</h3>
-      <p>The injector downloads information about the program from the given address.</p>
+      <p>Zero Install downloads information about the program from the given address.</p>
       <p>It checks that the information is signed using a GPG key you trust, confirming first if not.
-      Even if you don't know about this key yet, the injector may provide a hint if it's in its database.</p>
+      Even if you don't know about this key yet, it may provide a hint if it's in its database.</p>
   </td>
  </tr>
  <tr>
-  <td class='image'><img src='screens/find-libraries.png' alt='' width='256' height='127'/></td>
+  <td class='image'><img src='screens/find-libraries.png' alt='' width='400' height='264'/></td>
   <td><h3>Finding libraries</h3>
-  <p>The downloaded file says that <b>FooBillard</b> requires various libraries (libpng, SDL, and SDL-mixer).
-Each library is identified by a web address (URL) in the same way that the main <b>FooBillard</b> program was.
-The injector downloads information about them in the same way. Since they may
-be written by different people and be on different sites, you may be asked to confirm more keys. The injector
-displays a dialog box showing the program and all required libraries.</p>
+  <p>The downloaded file says that <b>ClanBomber</b> requires various libraries (SDL, libpng, etc).
+Each library is identified by a web address (URL) in the same way that the main <b>ClanBomber</b> program was.
+Zero Install downloads information about them in the same way. Since they may
+be written by different people and be on different sites, you may be asked to confirm more keys. The window
+displays a dialog box showing the program and all required libraries. Click <b>Download</b>.</p>
   </td>
  </tr>
  <tr>
-  <td class='image'><img src='screens/versions.png' alt='' width='256' height='150'/></td>
-  <td><h3>Confirming the versions</h3>
-  <p>Next to each component (program or library), the injector displays the version it will download. If you
-want to use a different version, you can change it here. You can either select versions manually, or change
-your <i>policy</i>. For example, you can choose whether the injector prefers
-versions that have been tested for a while, or always defaults to the newest one available. When you're
-happy, click on <b>Execute</b>.
-  </p>
-  </td>
- </tr>
- <tr>
-  <td class='image'><img src='screens/download-foo.png' alt='' width='256' height='133'/></td>
+  <td class='image'><img src='screens/download-foo.png' alt='' width='400' height='349'/></td>
   <td><h3>Downloading</h3>
   <p>The injector now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
 RPM, deb and autopackage). It unpacks each one into its own directory and
 checks its contents against the <i>cryptographic digest</i>
-given in the (signed) interface file. If the archive has been changed since the interface file was signed,
+given in the (signed) feed file. If the archive has been changed since the feed was signed,
 the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory
 (see <a href='sharing.html'>sharing</a> for more information) in its own
 subdirectory, named after the digest. This ensures that no two downloads can
@@ -76,58 +69,20 @@ conflict with each other.
   </td>
  </tr>
  <tr>
-  <td class='image'><img src='screens/foo-billard.png' alt='' width='256' height='216'/></td>
+  <td class='image'><img src='screens/run-clan.png' alt='' width='400' height='271'/></td>
   <td><h3>Running</h3>
-  <p>Finally, the injector runs the program, setting any required environment
-  variables (specified in the interface files) to let it find its libraries. Enjoy your new software!</p>
+  <p>If you used <a>Add New Program</a>, you should now find the game in your menu. If you used <b>0alias</b>,
+  you'll have a new shell command, etc.</p>
+  </td>
+ </tr>
+ <tr>
+  <td class='image'><img src='screens/clanbomber.png' alt='' width='400' height='311'/></td>
+  <td><h3>Enjoy your new software!</h3>
+  <p>When you run the program, Zero Install will check for updates from time-to-time and may offer to
+  download them for you.</p>
   </td>
  </tr>
 </table>
-
-<h3>Upgrading</h3>
-
-<table class='picturebullets'>
- <tr>
-  <td class='image'><img src='screens/check-for-updates.png' alt='' width='256' height='108'/></td>
-  <td><h3>Run the program normally</h3>
-    <p>The injector remembers when you last checked each program for updates. If it's been too long
-    (by default, one month) then it quickly checks to see if a newer version is available when the
-    program is started. You can skip or disable the check if you prefer. If a new version is available,
-    you'll be shown the same dialog box confirming the versions as when installing.
-    </p>
-   </td>
- </tr>
- <tr>
-  <td class='image'><img src='screens/change-version.png' alt='' width='256' height='190'/></td>
-  <td><h3>Changing version manually</h3>
-      <p>Your launcher should provide a way to get back to the versions box at any time. For example,
-      a ROX user would right-click on the launcher and choose <b>Versions...</b>. A command-line user
-      can use the <b>--gui</b> flag to <b>0launch</b>. This displays the same versions dialog box as
-      before.
-      </p>
-  </td>
- </tr>
-</table>
-
-<h3>Uninstalling</h3>
-
-<table class='picturebullets'>
- <tr>
-  <td class='image'><img src='screens/uninstall.png' alt='' width='256' height='121'/></td>
-  <td><h3>Open the cache viewer</h3>
-    <p>From the dialog box listing the versions, click on the <b>Cache</b> button to see what
-    versions you have available in your cache. Select any you don't want and remove them.
-    If you try to run a program after removing code it needs, it will just display the normal
-    versions dialog box asking you to confirm the version you want to download, and you'll be
-    able to fetch it again.
-    </p>
-   </td>
- </tr>
-</table>
-
-<p>
-You might also like to watch the <a href='flash.html'>Flash recordings</a>.
-</p>
 
 <p>
 For an explanation of what's happening behind the scenes, follow <a href='walkthrough.html'>the manual walk-through</a>.

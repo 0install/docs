@@ -555,3 +555,8 @@ a.button {
 	background: #def;
 	padding: 0.1em;
 }
+
+table.howitworks td {
+	vertical-align: top;
+	padding: 1em;
+}
