@@ -44,7 +44,7 @@
   <li id='ubuntu'>
   <b>Ubuntu (feisty/gutsy/hardy/intrepid/jaunty/karmic/lucid)</b> Zero Install is in all recent versions of Ubuntu, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-<p>You can also install your distribution's version <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, the <a href='http://packages.debian.org/sid/zeroinstall-injector'>Debian/unstable package</a> should also work on Ubuntu.</p>
+<p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, the <a href='http://packages.debian.org/sid/zeroinstall-injector'>Debian/unstable package</a> should also work on Ubuntu.</p>
 </li>
   <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
   <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>

@@ -179,7 +179,7 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "quicklinks"]'>
-    <xsl:variable name='width'><xsl:value-of select='100 div count(*)'/></xsl:variable>
+    <!-- <xsl:variable name='width'><xsl:value-of select='100 div count(*)'/></xsl:variable> -->
     <div class='quicklinks'>
      <div class='row'>
       <xsl:for-each select='*[name() = "link"]'>
