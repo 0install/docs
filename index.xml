@@ -47,8 +47,13 @@
 </div>
 
 <div class='news' style='clear: both'>
+
+<h2>Help Wanted!</h2>
+<p>The RPM in Fedora is very out-of-date (0.38). Could someone talk to them about updating to <a href='http://0install.net/install-linux.html'>the 0.48 RPM</a>? Likewise for any other distributions that have got behind. If you'd like to help with this (or anything else), please introduce yourself on our friendly <a href='support.html'>mailing list</a>!</p>
+
 <h2>News</h2>
 <dl>
+<dt>May 2010</dt><dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3267'>0launch 0.48</a> (and 0.47) released, with support for selecting downloads by language, support for native Slackware and FreeBSD packages as dependencies. Development of <a href='http://0install.de'>the .NET version</a> continues.</dd>
 <dt>Apr 2010</dt><dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3090'>0launch 0.46 released</a>, with the new SAT solver. Feeds for <a href='http://repo.roscidus.com/devel/pkg-config'>pkg-config</a> and <a href='http://repo.roscidus.com/devel/make'>make</a> are now available so they can be used as build dependencies with <a href='0compile.html'>0compile</a>. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3126'>Distribution integration for Gentoo and FreeBSD Ports</a> has been added. An <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3109'>OpenOffice.org feed</a> is under development.</dd>
 <dt>Mar 2010</dt><dd><a href='injector.html'>0launch 0.45</a> released, with support for native Gentoo packages and distribution-specific package names, better support for alternative digest algorithms and better support for pathnames on Windows. A new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3082'>SAT solver</a> has been implemented, which can select the best set of versions in every situation. <a href='http://roscidus.com/0mirror/'>The feed mirror site</a> has been greatly upgraded, with per-user and per-site lists of feeds and rankings.</dd>
 <dt>Feb 2010</dt><dd><a href='install-windows.html'>The Windows version</a> is coming along nicely - please help to test it! Also, <a href='0export.html'>0export 0.1</a> was released; this allows easy creation of bundles for off-line distribution or archiving.</dd>
