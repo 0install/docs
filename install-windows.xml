@@ -7,8 +7,10 @@
 Windows partially works with Zero Install but this is not yet ready for general use. If you have some programming knowledge, please help out!
 </p>
 
+<h2>.NET version</h2>
+
 <p>
-<strong>2010-02-26: </strong> Huge progress! Bastian Eicher has created a first prototype of a Windows installer for Zero Install which includes all the dependencies for you: please <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3001'>help test it!</a>
+A <a href='http://0install.de/windows/'>.NET version of Zero Install</a> is being developed for Windows.
 </p>
 
 <h2>Older (manual) instructions</h2>
