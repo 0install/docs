@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html>
 
-<div style='float:left'>
+<div>
 
 <table class='picturebullets' style='margin: 0px'>
  <tr class='summary'>
@@ -42,11 +42,11 @@
 </quicklinks>
 </div>
 
-<div style='text-align: center'>
+<div style='text-align: center; float: right; padding: 2em;'>
 <video vid='Lu0MAiNIaGM'>Zero Install introduction</video>
 </div>
 
-<div class='news' style='clear: both'>
+<div class='news'>
 
 <h2>Help Wanted!</h2>
 <p>The RPM in Fedora is very out-of-date (0.38). Could someone talk to them about updating to <a href='http://0install.net/install-linux.html'>the 0.48 RPM</a>? Likewise for any other distributions that have got behind. If you'd like to help with this (or anything else), please introduce yourself on our friendly <a href='support.html'>mailing list</a>!</p>
