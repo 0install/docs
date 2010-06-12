@@ -103,7 +103,7 @@ but the software would still get no ability to do anything at install time.
 </p>
 
 <p>
-The reason we allow anyone to install software by default is the priciple of
+The reason we allow anyone to install software by default is the principle of
 <i>Do Not Prohibit What You Cannot Prevent</i> [citation needed]. On Linux, unprivileged
 users can install software even without Zero Install, so trying to stop them makes life
 harder for legitimate users but doesn't improve security.
@@ -225,7 +225,7 @@ own files, for example.
 
 <p>
 Of course, the system may itself have bugs. Ideally, the system should be
-upgraded when a problem is found (eg, in the Linux kernel). However, if users
+upgraded when a problem is found (e.g. in the Linux kernel). However, if users
 are using sandboxing to protect themselves from the programs they run then
 this may provide an added layer of protection to the system, assuming the
 users themselves are not malicious.
