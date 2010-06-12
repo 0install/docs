@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<h2>The Injector: Security Model</h2>
+<h2>Security Model</h2>
 
 <p>
-This page describes the injector's security model.
+This page describes Zero Install's security model.
 </p>
 
 <p>
@@ -12,7 +12,7 @@ I've noticed that if you describe a security model with digital signatures
 and GPG keys, people start worrying about all kinds of unlikely theoretical
 exploits. Whereas if you just stick software on the web with no security
 what-so-ever, everyone seems completely happy to use it. But for those few
-people who do care about security, this document explains how the injector
+people who do care about security, this document explains how Zero Install
 tries to improve the situation.
 </p>
 
@@ -154,7 +154,7 @@ software in a sandbox is of limited benefit if it requires full root access to
 install it first!
 </p>
 
-<h2>The Injector's trust model</h2>
+<h2>Zero Install's trust model</h2>
 
 <p>
 Sandboxing is used to restrict what code can do. Linux and similar systems come
@@ -175,7 +175,7 @@ program really came from them?
 
 
 <p>
-The basis of the injector's model is the standard multi-user model used by
+The basis of Zero Install's model is the standard multi-user model used by
 Linux. The principle is that the system's responsibility is to protect users
 from each other, and to protect the system from the users. If one user (or
 a program they run) can delete another user's files without permission, then
@@ -225,7 +225,7 @@ information too.
 
 <p>
 A trusted programmer is identified by their GPG key's fingerprint. When the
-user runs a program, the injector downloads the feed and checks that it
+user runs a program, Zero Install downloads the feed and checks that it
 is signed by someone the user trusts. If not, the user is asked to confirm
 that they trust the holder of the key to provide software to them:
 </p>
@@ -236,7 +236,7 @@ that they trust the holder of the key to provide software to them:
 </p>
 
 <p>
-Once trusted, the injector will accept any feed from the same domain
+Once trusted, Zero Install will accept any feed from the same domain
 signed by that key.
 </p>
 
@@ -244,7 +244,7 @@ signed by that key.
 The injector updates feeds at the request of the user (clicking the
 'Refresh all now' button), or automatically (monthly, for example) if the
 user sets their freshness policy to request this. When updating a feed
-(even automatically) the injector displays a dialog box asking the user
+(even automatically) Zero Install displays a dialog box asking the user
 whether they want to download the new version.
 </p>
 
