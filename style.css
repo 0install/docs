@@ -559,3 +559,19 @@ table.howitworks td {
 	vertical-align: top;
 	padding: 1em;
 }
+
+table.table {
+	border: 1px solid #888;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.table th {
+	background: #888;
+	color: white;
+}
+
+table.table td {
+	padding: 0.1em;
+	border: 1px solid #888;
+}

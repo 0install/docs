@@ -71,6 +71,44 @@ Some key points about Zero Install's security model:
  </dd>
 </dl>
 
+<h2>Authorisation vs Privileges</h2>
+
+<p>
+It's also important to separate out two aspects of installation that are easily
+confused: <i>who</i> is authorised to install software and <i>what privileges</i> the software
+is given by the act of installing it. Here, "apt-get" is used as a short-hard
+for "a typical traditional Linux package manager":
+</p>
+
+<table class='table'>
+<tr><th></th><th colspan='2'>Who can install things</th></tr>
+<tr><th>Privileges granted</th><th>Only root</th><th>Anyone</th></tr>
+<tr><th>Full access</th><td>Default apt-get</td><td>apt-get with modified rules</td></tr>
+<tr><th>No access</th><td>Zero Install with restrictions</td><td>Default Zero Install</td></tr>
+</table>
+
+<p>
+A typical package manager only allows root (or an administrator) to install
+software by default, and grants that software full access to the machine,
+including access to all user accounts. You can change the rules to allow others to
+install software (e.g. using PolicyKit or sudoers, you might allow anyone to upgrade a
+package), but the software still gets complete access to the machine.
+</p>
+
+<p>
+Zero Install allows anyone to install software by default, but gives the
+software no access to the machine (since it doesn't run any of its code at
+install time). You could configure Zero Install so that only root can install software,
+but the software would still get no ability to do anything at install time.
+</p>
+
+<p>
+The reason we allow anyone to install software by default is the priciple of
+<i>Do Not Prohibit What You Cannot Prevent</i> [citation needed]. On Linux, unprivileged
+users can install software even without Zero Install, so trying to stop them makes life
+harder for legitimate users but doesn't improve security.
+</p>
+
 <h2>Security and Usability</h2>
 
 <p>
@@ -231,7 +269,7 @@ that they trust the holder of the key to provide software to them:
 </p>
 
 <p style='text-align: center'>
-<img width="428" height="400" src="trustbox.png"
+<img width="477" height="463" src="confirm-tal-rox.png"
      alt='You are asked to confirm each new key'/>
 </p>
 
@@ -241,15 +279,14 @@ signed by that key.
 </p>
 
 <p>
-The injector updates feeds at the request of the user (clicking the
-'Refresh all now' button), or automatically (monthly, for example) if the
-user sets their freshness policy to request this. When updating a feed
-(even automatically) Zero Install displays a dialog box asking the user
-whether they want to download the new version.
+Zero Install updates feeds at the request of the user (clicking the
+'Refresh' button), or automatically (monthly, by default) if the
+user sets their freshness policy to request this. If a program is not
+used, Zero Install does not check for updates to it.
 </p>
 
 <p>
-The injector does not accept incoming connections, so even if a malicious key
+Zero Install does not accept incoming network connections, so even if a malicious key
 is trusted, the owner must still get the user to download a feed they
 control.
 </p>
@@ -325,7 +362,7 @@ installation.
 
 <p>
 Whether we have strong sandboxing or not, it is important to know where software
-has come from and to only accept digitally signed software. The injector maintains
+has come from and to only accept digitally signed software. Zero Install maintains
 a list of trusted keys, and aids the user's decision of whether to trust a key
 using its database of known keys. The default database provides only low security;
 organisations may wish to provide their own database and perform real verification
