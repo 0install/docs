@@ -47,7 +47,7 @@ You can specify a particular set of versions to test:
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.20 0.21
 </pre>
 
 <p>
