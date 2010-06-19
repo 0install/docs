@@ -575,3 +575,32 @@ table.table td {
 	padding: 0.1em;
 	border: 1px solid #888;
 }
+
+
+table.testresults {
+	border: 1px solid black;
+	background: white;
+	color: white;
+}
+
+table.testresults th {
+	text-align: left;
+	background: #888;
+}
+
+table.testresults td.passed {
+	white-space: pre;
+}
+
+table.testresults td.passed {
+	background: green;
+}
+
+table.testresults td.skipped {
+	background: yellow;
+	color: #888;
+}
+
+table.testresults td.failed {
+	background: red;
+}

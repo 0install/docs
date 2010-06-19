@@ -51,29 +51,6 @@ $ 0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20
 </pre>
 
 <p>
-Finally, you can specify versions of libraries the program depends on too. 0test will try all combinations.
-This tests three versions of 0compile against two versions of Zero Install (a total of 2 x 3 = 6 tests):
-</p>
-
-<pre>
-$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.19.1 0.20 0.20-post \
-        http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.47-post</b>
-...
-SUMMARY:
-
-Passed
- - 0compile v0.20, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
- - 0compile v0.20-post, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
- - 0compile v0.20-post, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
-None skipped
-Failed
- - 0compile v0.19.1, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
- - 0compile v0.19.1, ZeroInstall-Injector v0.47-post, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
- - 0compile v0.20, ZeroInstall-Injector v0.47, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
-
-</pre>
-
-<p>
 A summary is printed at the end showing the result of each combination:
 </p>
 
@@ -82,6 +59,64 @@ A summary is printed at the end showing the result of each combination:
  <dt>Skipped</dt><dd>this combination of versions can't be used together (or no tests are defined)</dd>
  <dt>Failed</dt><dd>some tests failed (the self-test command returned a non-zero exit status)</dd>
 </dl>
+
+<p>
+You can specify versions of libraries the program depends on too. 0test will try all combinations.
+This tests three versions of 0compile against three versions of Zero Install (a total of 3 x 3 = 9 tests):
+</p>
+
+<pre>$ <b>0test --html results.html \
+  http://0install.net/2006/interfaces/0compile.xml 0.19 0.20 0.20-post \
+  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.48-post</b>
+Passed
+ - 0compile v0.20, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.20, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.20-post, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.20-post, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+Skipped
+ - 0compile v0.20-post, ZeroInstall-Injector v(none), ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+Failed
+ - 0compile v0.19, ZeroInstall-Injector v0.47, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.19, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.19, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.20, ZeroInstall-Injector v0.47, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+</pre>
+
+<p>
+  The <b>--html results.html</b> option causes it to also generate this table:
+</p>
+
+<table class="testresults"><tr><th/><th colspan="3">ZeroInstall-Injector</th></tr><tr><th>0compile</th><th>0.47</th><th>0.48</th><th>0.48-post</th></tr>
+<tr><th>0.19</th><td class="failed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="failed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="failed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td></tr>
+<tr><th>0.20</th><td class="failed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td></tr>
+<tr><th>0.20-post</th><td class="skipped">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
+0publish 0.17-post</td></tr>
+</table>
+
+<p>
+Green = Passed, Red = Failed, Yellow = Skipped. The contents of the cells show the versions of components used in the tests where you didn't specify the version (so 0test selected
+one for you).
+</p>
+
+<p>
+  We can see in this example that the unit-tests for 0compile 0.19 no longer pass, regardless of the version of Zero Install used.
+  This problem was caused by a change to the GNU-Hello test program it uses within its own tests. Ideally, programs should depend on their
+  test data using <b>&lt;requires interface="..." use="testing"&gt;</b>, but 0compile actually needed to test downloading of the test code itself.
+  0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.20-post depends on
+  a later version explicitly, so the broken combination is skipped.
+</p>
+
+<p>
+If you specify a test matrix with more than two dimensions, 0test will generate a series of tables.
+</p>
 
 <h2>Specifying a test command</h2>
 
