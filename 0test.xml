@@ -47,7 +47,12 @@ You can specify a particular set of versions to test:
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml 0.20 0.21
+$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.20 0.21</b>
+Passed
+ - 0compile v0.20, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6, 0publish v0.17
+Skipped
+ - 0compile v(none)
+None failed
 </pre>
 
 <p>
