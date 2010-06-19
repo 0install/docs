@@ -26,11 +26,21 @@ create a matrix of test results.</description>
       <manifest-digest sha256="858e9b09a3749c18ff07049e6a050a14aabd54c4ab8404f58703ddb4ca005fa9"/>
       <archive extract="0test-0.2" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0test-0.2.tar.bz2" size="9134"/>
     </implementation>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.46"/>
+      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=68b8237cb26db334551379db52487a035906a49e" main="0test" released="2010-06-19" self-test="test0test.py" version="0.3">
+      <manifest-digest sha256="4b201ec31af16c8bec86295cc18a43d7568dc0f4af02d4dcd9bedc1b395201d6"/>
+      <archive extract="0test-0.3" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3/0test-0.3.tar.bz2" size="11445"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAktkeB4ACgkQrgeCgFmlPMHwlQCfZtKmMxLJQNmoI2cW1ZC/ww+MassAoKol3xBO
-e8Ym01lTarwZA+xqvLv6
+iEYEABECAAYFAkwcshQACgkQrgeCgFmlPME7nQCgsS6KIczMIK4Qq8y5UziPHFezbxIAoL5NHU/m
+1LpaGcyX/RYdYH+1CIUm
 
 -->
