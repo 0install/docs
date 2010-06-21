@@ -18,7 +18,6 @@ tree visualizer, tools for interoperating with other VCS's, or a web
 interface, is provided as separate git* packages.</description>
   <category>Development</category>
   <feed src="http://repo.roscidus.com/git/core"/>
-  <package-implementation main="/usr/bin/git" package="git-core"/>
   <group arch="Linux-i386" main="usr/bin/git">
     <requires interface="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
@@ -30,7 +29,7 @@ interface, is provided as separate git* packages.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAku4YasACgkQBSn9tx+xORATkgCdEmlfHQn4CGsW7tXTetC5WnfSAEwAnjQ5SEsX
-efh0ZhV6UOUr1SaSqEjN
+iEYEABECAAYFAkwfXesACgkQBSn9tx+xORAgFgCfS83+cDFZHAauh9HTruGE/D5VzLIAn3nFjDnV
+QSdQ+IDIqNHFHr1MyJX2
 
 -->
