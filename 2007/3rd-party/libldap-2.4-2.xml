@@ -7,8 +7,8 @@
 Access Protocol) servers and clients.</description>
   <package-implementation package="libldap-2.4-2"/>
   <group arch="Linux-i386">
-    <requires interface="http://0install.net/2007/3rd-party/libgnutls26.xml">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    <requires interface="http://repo.roscidus.com/lib/gnutls26">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <requires interface="http://0install.net/2007/3rd-party/libsasl2-2.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
@@ -23,7 +23,7 @@ Access Protocol) servers and clients.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DoUACgkQBSn9tx+xORAZVACePg4ZkCMZ6I3/fXAOjRWWbmQnAHYAoI50vi++
-JW8D1qc/zPbkD2aAidli
+iEYEABECAAYFAkwlzzoACgkQBSn9tx+xORBOcACfeQ3S2mcWeDG0rT0Bikf7Ei2sClwAn1oDmxFs
+4yFbR7P7/D/rkKOJNUTo
 
 -->
