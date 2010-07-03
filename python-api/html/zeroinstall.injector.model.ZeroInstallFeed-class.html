@@ -104,6 +104,43 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model.ZeroInstallFeed-class.html#get_distro_feed" class="summary-sig-name">get_distro_feed</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Does this feed contain any &lt;pacakge-implementation&gt; elements? 
+      i.e.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.get_distro_feed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[str]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model.ZeroInstallFeed-class.html#get_package_impls" class="summary-sig-name">get_package_impls</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">distro</span>)</span><br />
+      Find the best &lt;pacakge-implementation&gt; element(s) for the given
+      distribution.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.get_package_impls">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="get_name"></a><span class="summary-sig-name">get_name</span>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.get_name">source&nbsp;code</a></span>
@@ -202,6 +239,38 @@ object --+
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model.ZeroInstallFeed-class.html#summary" class="summary-sig-name">summary</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.summary">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.model.ZeroInstallFeed-class.html#description" class="summary-sig-name">description</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.description">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -230,10 +299,10 @@ object --+
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">{str: str}</span>
     </td><td class="summary">
-        <a name="description"></a><span class="summary-name">description</span><br />
-      long textual description
+        <a name="descriptions"></a><span class="summary-name">descriptions</span><br />
+      long textual description (in various languages, since 0.49)
     </td>
   </tr>
 <tr>
@@ -296,10 +365,10 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">{str: str}</span>
     </td><td class="summary">
-        <a name="summary"></a><span class="summary-name">summary</span><br />
-      short textual description
+        <a name="summaries"></a><span class="summary-name">summaries</span><br />
+      short textual description (in various languages, since 0.49)
     </td>
   </tr>
 <tr>
@@ -361,14 +430,68 @@ object --+
         <li><strong class="pname"><code>feed_element</code></strong> (<a href="zeroinstall.injector.qdom.Element-class.html" 
           class="link">qdom.Element</a>) - the root element of a feed file</li>
         <li><strong class="pname"><code>local_path</code></strong> - the pathname of this local feed, or None for remote feeds</li>
-        <li><strong class="pname"><code>distro</code></strong> (<a href="zeroinstall.injector.distro.Distribution-class.html" 
-          class="link">distro.Distribution</a> or None) - used to resolve distribution package references</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
     </dt>
   </dl>
 </td></tr></table>
+</div>
+<a name="get_distro_feed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_distro_feed</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.get_distro_feed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Does this feed contain any &lt;pacakge-implementation&gt; elements? 
+  i.e. is it worth asking the package manager for more information?</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the URL of the virtual feed, or None</dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.49
+      </p>
+</div></td></tr></table>
+</div>
+<a name="get_package_impls"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_package_impls</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">distro</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.get_package_impls">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Find the best &lt;pacakge-implementation&gt; element(s) for the given 
+  distribution.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>distro</code></strong> (<a href="zeroinstall.injector.distro.Distribution-class.html" 
+          class="link">distro.Distribution</a>) - the distribution to use to rate them</li>
+    </ul></dd>
+    <dt>Returns: [str]</dt>
+        <dd>a list of tuples for the best ranked elements</dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.49
+      </p>
+</div></td></tr></table>
 </div>
 <a name="__repr__"></a>
 <div>
@@ -391,6 +514,52 @@ object --+
         object.__repr__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="summary"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">summary</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.summary">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="description"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">description</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#ZeroInstallFeed.description">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -426,7 +595,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
+    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

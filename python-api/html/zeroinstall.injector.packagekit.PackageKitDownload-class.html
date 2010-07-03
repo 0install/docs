@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>zeroinstall.injector.model.Stability</title>
+  <title>zeroinstall.injector.packagekit.PackageKitDownload</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,8 +44,8 @@
       <span class="breadcrumbs">
         <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
         <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
-        <a href="zeroinstall.injector.model-module.html">Module&nbsp;model</a> ::
-        Class&nbsp;Stability
+        <a href="zeroinstall.injector.packagekit-module.html">Module&nbsp;packagekit</a> ::
+        Class&nbsp;PackageKitDownload
       </span>
     </td>
     <td>
@@ -53,24 +53,23 @@
         <!-- hide/show private -->
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.model.Stability-class.html"
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Stability</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class PackageKitDownload</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">Stability</strong>
+       object --+    
+                |    
+download.Download --+
+                    |
+                   <strong class="uidshort">PackageKitDownload</strong>
 </pre>
 
 <hr />
-<p>A stability rating. Each implementation has an upstream stability 
-  rating and, optionally, a user-set rating.</p>
-
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -85,13 +84,14 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.model.Stability-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">level</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">description</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">url</span>,
+        <span class="summary-sig-arg">hint</span>,
+        <span class="summary-sig-arg">pk</span>,
+        <span class="summary-sig-arg">packagekit_id</span>)</span><br />
+      Create a new download object.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -105,10 +105,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__cmp__"></a><span class="summary-sig-name">__cmp__</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">other</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html#start" class="summary-sig-name">start</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Create a temporary file and begin the download.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__cmp__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.start">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -122,10 +122,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.model.Stability-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      str(x)</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html#abort" class="summary-sig-name">abort</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Signal the current download to stop.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__str__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.abort">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -135,14 +135,32 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">int | None</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.model.Stability-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      repr(x)</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html#get_current_fraction" class="summary-sig-name">get_current_fraction</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the current fraction of this download that has been fetched 
+      (from 0 to 1), or None if the total size isn't known.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__repr__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.get_current_fraction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKitDownload-class.html#get_bytes_downloaded_so_far" class="summary-sig-name">get_bytes_downloaded_so_far</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the download progress.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.get_bytes_downloaded_so_far">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -152,6 +170,9 @@ object --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>download.Download</code></b>:
+      <code>__str__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -160,9 +181,35 @@ object --+
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
       <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>download.Download</code></b>:
+      <code>aborted_by_user</code>,
+      <code>child</code>,
+      <code>downloaded</code>,
+      <code>errors</code>,
+      <code>expected_size</code>,
+      <code>hint</code>,
+      <code>status</code>,
+      <code>tempfile</code>,
+      <code>unmodified</code>,
+      <code>url</code>
       </p>
     </td>
   </tr>
@@ -200,19 +247,28 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">level</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">description</span>)</span>
+        <span class="sig-arg">url</span>,
+        <span class="sig-arg">hint</span>,
+        <span class="sig-arg">pk</span>,
+        <span class="sig-arg">packagekit_id</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
+  <p>Create a new download object.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>url</code></strong> - the resource to download</li>
+        <li><strong class="pname"><code>hint</code></strong> - object with which this download is associated (an optional hint 
+          for the GUI)</li>
+        <li><strong class="pname"><code>modification_time</code></strong> - string with HTTP date that indicates last modification time. The 
+          resource will not be downloaded if it was not modified since that
+          date.</li>
+    </ul></dd>
     <dt>Overrides:
         object.__init__
         <dd><em class="note">(inherited documentation)</em></dd>
@@ -220,49 +276,98 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="__str__"></a>
+<a name="start"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">start</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__str__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.start">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>str(x)</p>
+  <p>Create a temporary file and begin the download.</p>
   <dl class="fields">
     <dt>Overrides:
-        object.__str__
+        <a href="zeroinstall.injector.download.Download-class.html#start">download.Download.start</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="__repr__"></a>
+<a name="abort"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">abort</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.model-pysrc.html#Stability.__repr__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.abort">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>repr(x)</p>
+  <p>Signal the current download to stop.</p>
   <dl class="fields">
     <dt>Overrides:
-        object.__repr__
+        <a href="zeroinstall.injector.download.Download-class.html#abort">download.Download.abort</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_current_fraction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_current_fraction</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.get_current_fraction">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the current fraction of this download that has been fetched 
+  (from 0 to 1), or None if the total size isn't known.</p>
+  <dl class="fields">
+    <dt>Returns: int | None</dt>
+        <dd>fraction downloaded</dd>
+    <dt>Overrides:
+        <a href="zeroinstall.injector.download.Download-class.html#get_current_fraction">download.Download.get_current_fraction</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_bytes_downloaded_so_far"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_bytes_downloaded_so_far</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKitDownload.get_bytes_downloaded_so_far">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the download progress. Will be zero if the download has not yet 
+  started.</p>
+  <dl class="fields">
+    <dt>Returns: int</dt>
+    <dt>Overrides:
+        <a href="zeroinstall.injector.download.Download-class.html#get_bytes_downloaded_so_far">download.Download.get_bytes_downloaded_so_far</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>

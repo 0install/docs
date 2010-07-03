@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>zeroinstall.gtkui.treetips.TreeTips</title>
+  <title>zeroinstall.injector.packagekit.PackageKit</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
-        <a href="zeroinstall.gtkui-module.html">Package&nbsp;gtkui</a> ::
-        <a href="zeroinstall.gtkui.treetips-module.html">Module&nbsp;treetips</a> ::
-        Class&nbsp;TreeTips
+        <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
+        <a href="zeroinstall.injector.packagekit-module.html">Module&nbsp;packagekit</a> ::
+        Class&nbsp;PackageKit
       </span>
     </td>
     <td>
@@ -53,25 +53,21 @@
         <!-- hide/show private -->
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="zeroinstall.gtkui.treetips.TreeTips-class.html"
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.packagekit.PackageKit-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class TreeTips</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips">source&nbsp;code</a></span></p>
-<p>This object allows you to set location-dependent tooltips on a 
-  TreeView. Connect your TreeView's leave-notify-event to the <a 
-  href="zeroinstall.gtkui.treetips.TreeTips-class.html#hide" 
-  class="link">hide</a> method. In your motion-notify-event handler, call 
-  <a href="zeroinstall.gtkui.treetips.TreeTips-class.html#prime" 
-  class="link">prime</a> when the pointer moves to an area with a new 
-  message. The message will be shown after a delay. If calculation of the 
-  message is expensive, override <a 
-  href="zeroinstall.gtkui.treetips.TreeTips-class.html#get_tooltip_text" 
-  class="link">get_tooltip_text</a> instead.</p>
+<h1 class="epydoc">Class PackageKit</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">PackageKit</strong>
+</pre>
 
+<hr />
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -86,10 +82,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="show"></a><span class="summary-sig-name">show</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">parent</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKit-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.show">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -103,13 +99,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.gtkui.treetips.TreeTips-class.html#prime" class="summary-sig-name">prime</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">parent</span>,
-        <span class="summary-sig-arg">item</span>)</span><br />
-      Call this whenever the pointer moves to an area with a different 
-      tooltip.</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKit-class.html#available" class="summary-sig-name">available</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.prime">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.available">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -123,11 +115,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="tooltip_draw"></a><span class="summary-sig-name">tooltip_draw</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">widget</span>,
-        <span class="summary-sig-arg">ev</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKit-class.html#pk" class="summary-sig-name">pk</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.tooltip_draw">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.pk">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -141,10 +131,13 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="tooltip_destroyed"></a><span class="summary-sig-name">tooltip_destroyed</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">widget</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKit-class.html#get_candidates" class="summary-sig-name">get_candidates</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package_name</span>,
+        <span class="summary-sig-arg">factory</span>,
+        <span class="summary-sig-arg">prefix</span>)</span><br />
+      Add any cached candidates.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.tooltip_destroyed">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.get_candidates">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -158,10 +151,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.gtkui.treetips.TreeTips-class.html#hide" class="summary-sig-name">hide</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Hide the tooltip, if any.</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.packagekit.PackageKit-class.html#fetch_candidates" class="summary-sig-name">fetch_candidates</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package_names</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.hide">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.fetch_candidates">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -169,63 +162,38 @@
       
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.gtkui.treetips.TreeTips-class.html#get_tooltip_text" class="summary-sig-name">get_tooltip_text</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      &quot;Converts the object passed to <a 
-      href="zeroinstall.gtkui.treetips.TreeTips-class.html#prime" 
-      class="link">prime</a> to a string for display.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.get_tooltip_text">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
     </td>
   </tr>
 </table>
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Class Variables</span></td>
+    <span class="table-header">Properties</span></td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="timeout"></a><span class="summary-name">timeout</span> = <code title="None">None</code><br />
-      Create a new digest.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="widget"></a><span class="summary-name">widget</span> = <code title="None">None</code><br />
-      Create a new digest.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="item"></a><span class="summary-name">item</span> = <code title="None">None</code><br />
-      Create a new digest.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="time"></a><span class="summary-name">time</span> = <code title="0">0</code>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
     </td>
   </tr>
 </table>
@@ -238,78 +206,129 @@
     <span class="table-header">Method Details</span></td>
 </tr>
 </table>
-<a name="prime"></a>
+<a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">prime</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">parent</span>,
-        <span class="sig-arg">item</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.prime">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Call this whenever the pointer moves to an area with a different 
-  tooltip.</p>
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="available"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">available</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.available">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>parent</code></strong> - the TreeView widget</li>
-        <li><strong class="pname"><code>item</code></strong> - the text to display @see <a 
-          href="zeroinstall.gtkui.treetips.TreeTips-class.html#get_tooltip_text"
-          class="link">get_tooltip_text</a></li>
+        <li><code>@property</code></li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="hide"></a>
+<a name="pk"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">hide</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pk</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.hide">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.pk">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Hide the tooltip, if any. Sets <a 
-  href="zeroinstall.gtkui.treetips.TreeTips-class.html#item" 
-  class="link">item</a> to None.</p>
+  
   <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_tooltip_text"></a>
+<a name="get_candidates"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tooltip_text</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_candidates</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package_name</span>,
+        <span class="sig-arg">factory</span>,
+        <span class="sig-arg">prefix</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html#TreeTips.get_tooltip_text">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.get_candidates">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>&quot;Converts the object passed to <a 
-  href="zeroinstall.gtkui.treetips.TreeTips-class.html#prime" 
-  class="link">prime</a> to a string for display. The default 
-  implementation just calls <code>str</code>, but subclasses can override 
-  it.</p>
+  <p>Add any cached candidates. The candidates are those discovered by a 
+  previous call to <a 
+  href="zeroinstall.injector.packagekit.PackageKit-class.html#fetch_candidates"
+  class="link">fetch_candidates</a>.</p>
   <dl class="fields">
-    <dt>Returns:</dt>
-        <dd>the tooltip message</dd>
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>package_name</code></strong> - the distribution's name for the package</li>
+        <li><strong class="pname"><code>factory</code></strong> - a function to add a new implementation to the feed</li>
+        <li><strong class="pname"><code>prefix</code></strong> - the prefix for the implementation's ID</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fetch_candidates"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fetch_candidates</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package_names</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.packagekit-pysrc.html#PackageKit.fetch_candidates">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@tasks.async</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>

@@ -113,8 +113,24 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_overrides" class="summary-sig-name">update_user_overrides</a>(<span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">main_feed</span>=<span class="summary-sig-default">None</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_feed_overrides" class="summary-sig-name">update_user_feed_overrides</a>(<span class="summary-sig-arg">feed</span>)</span><br />
+      Update a feed with user-supplied information.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_user_feed_overrides">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_user_overrides" class="summary-sig-name">update_user_overrides</a>(<span class="summary-sig-arg">interface</span>)</span><br />
       Update an interface with user-supplied information.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_user_overrides">source&nbsp;code</a></span>
@@ -215,7 +231,9 @@
         <dd>True if cached version and user overrides loaded OK. False if 
           upstream not cached. Local interfaces (starting with /) are 
           always considered to be cached, although they are not actually 
-          stored in the cache.</dd>
+          stored in the cache. Internal: use <a 
+          href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_interface"
+          class="link">iface_cache.IfaceCache.get_interface</a> instread.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -241,6 +259,30 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="update_user_feed_overrides"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_user_feed_overrides</span>(<span class="sig-arg">feed</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_user_feed_overrides">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update a feed with user-supplied information. Sets last_checked and 
+  user_stability ratings.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>feed</code></strong> - feed to update @since 0.49</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="update_user_overrides"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -248,28 +290,23 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_user_overrides</span>(<span class="sig-arg">interface</span>,
-        <span class="sig-arg">main_feed</span>=<span class="sig-default">None</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_user_overrides</span>(<span class="sig-arg">interface</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_user_overrides">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Update an interface with user-supplied information.</p>
+  <p>Update an interface with user-supplied information. Sets preferred 
+  stability and updates extra_feeds.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>interface</code></strong> (<a href="zeroinstall.injector.model.Interface-class.html" 
           class="link">model.Interface</a>) - the interface object to update</li>
-        <li><strong class="pname"><code>main_feed</code></strong> - feed to update with last_checked information</li>
     </ul></dd>
   </dl>
-<div class="fields">      <p><strong>Note:</strong>
-        feed updates shouldn't really be here. main_feed may go away in 
-        future.
-      </p>
-</div></td></tr></table>
+</td></tr></table>
 </div>
 <a name="check_readable"></a>
 <div>
@@ -411,7 +448,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
+    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:42 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

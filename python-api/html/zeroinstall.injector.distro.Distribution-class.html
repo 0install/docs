@@ -124,15 +124,53 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
+      class="link">model.ZeroInstallFeed</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.Distribution-class.html#get_feed" class="summary-sig-name">get_feed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">master_feed</span>)</span><br />
+      Generate a feed containing information about distribution packages.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.get_feed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.Distribution-class.html#get_installed" class="summary-sig-name">get_installed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">package_id</span>)</span><br />
-      Check whether 'package' is currently installed.</td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.Distribution-class.html#fetch_candidates" class="summary-sig-name">fetch_candidates</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">master_feed</span>)</span><br />
+      Collect information about versions we could install using the 
+      distribution's package manager.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.get_installed">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.fetch_candidates">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="zeroinstall.injector.packagekit.PackageKit-class.html" 
+      class="link">packagekit.PackageKit</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.distro.Distribution-class.html#packagekit" class="summary-sig-name">packagekit</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      For use by subclasses.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.packagekit">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -246,29 +284,87 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="get_installed"></a>
+<a name="get_feed"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_installed</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">package_id</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">master_feed</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.get_installed">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.get_feed">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Check whether 'package' is currently installed.</p>
+  <p>Generate a feed containing information about distribution packages. 
+  This should immediately return a feed containing an implementation for 
+  the package if it's already installed. Information about versions that 
+  could be installed using the distribution's package manager can be added 
+  asynchronously later (see <a 
+  href="zeroinstall.injector.distro.Distribution-class.html#fetch_candidates"
+  class="link">fetch_candidates</a>).</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>package_id</code></strong> (str) - the Implementation ID used by get_package_info</li>
+        <li><strong class="pname"><code>master_feed</code></strong> (<a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
+          class="link">model.ZeroInstallFeed</a>) - feed containing the &lt;package-implementation&gt; elements</li>
     </ul></dd>
+    <dt>Returns: <a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
+      class="link">model.ZeroInstallFeed</a></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fetch_candidates"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fetch_candidates</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">master_feed</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.fetch_candidates">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Collect information about versions we could install using the 
+  distribution's package manager. On success, the distribution feed in 
+  iface_cache is updated.</p>
+  <dl class="fields">
     <dt>Returns:</dt>
-        <dd>True iff the package is currently installed</dd>
+        <dd>a <a href="zeroinstall.support.tasks.Blocker-class.html" 
+          class="link">tasks.Blocker</a> if the task is in progress, or 
+          None if not</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="packagekit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">packagekit</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.distro-pysrc.html#Distribution.packagekit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>For use by subclasses.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="zeroinstall.injector.packagekit.PackageKit-class.html" 
+      class="link">packagekit.PackageKit</a></dt>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -304,7 +400,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun May 30 13:43:43 2010
+    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
