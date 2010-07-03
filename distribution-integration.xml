@@ -7,7 +7,7 @@
 
 <p>
 If you have already installed a package using your distribution's installer then Zero install can use
-that instead of downloading a second copy using Zero Install. 
+that instead of downloading a second copy using Zero Install. It can also use <a href='http://www.packagekit.org/'>PackageKit</a> to install them, if the user is authorised.
 </p>
 
 <p>
@@ -38,8 +38,8 @@ will download a newer version rather than using that one.
 </p>
 
 <p>
-As always, all software installed by Zero Install goes in the cache directory and does not conflict with
-files installed by the native package manager.
+All software installed by Zero Install goes in the cache directory and does not conflict with
+files installed by the native package manager. If PackageKit is used instead, the user is prompted to confirm, since installing distribution packages can affect the system as a whole. Note that PackageKit can only be used to install packages from the distribution's repository.
 </p>
 
 <h2>How it works</h2>
@@ -58,7 +58,7 @@ Two methods are available to integrate Zero Install packages with distribution o
   </p><p>
   Zero Install can get package information from Debian-based systems (including Ubuntu, etc), RPM-based systems,
   Slackware, Gentoo and FreeBSD Ports at present. Adding support for extra packaging systems is
-  quite easy, and patches (not yet merged) exist to use any backend supported by PackageKit.
+  quite easy (see <a href='python-api/html/zeroinstall.injector.distro-module.html'>distro.py</a>).
   </p>
 
   <p>
@@ -83,21 +83,6 @@ Two methods are available to integrate Zero Install packages with distribution o
   package already contains a local feed file, you can just symlink to it directly.</p></li>
 
 </ul>
-
-
-<h2>Future work</h2>
-
-<p>
-We may need a way to specify mappings for version numbers, to cope with different
-versioning schemes.
-</p>
-
-<p>
-We only consider native packages that are actually installed. We could also consider native packages
-that are available (you'd need to enter the root password). This might be useful if no Zero Install version
-was available, or if you preferred to use a native package for some reason. <b>Update:</b> 0.48 will discover
-available but uninstalled packages using the apt cache and will prompt the user to install them if necessary.
-</p>
 
 </div>
 
