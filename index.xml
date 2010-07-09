@@ -49,7 +49,8 @@
 <div class='news'>
 
 <h2>Help Wanted!</h2>
-<p>The RPM in Fedora is very out-of-date (0.38). Could someone talk to them about updating to <a href='http://0install.net/install-linux.html'>the 0.48 RPM</a>? Likewise for any other distributions that have got behind. If you'd like to help with this (or anything else), please introduce yourself on our friendly <a href='support.html'>mailing list</a>!</p>
+<p>
+<a href='https://features.opensuse.org/310040'>OpenSUSE packager needed</a>. An RPM already exists in their build service, but someone needs to get it into the main repository. If you'd like to help with this (or anything else), please introduce yourself on our friendly <a href='support.html'>mailing list</a>!</p>
 
 <h2>News</h2>
 <dl>
