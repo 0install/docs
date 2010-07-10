@@ -33,14 +33,14 @@ still shared between users, and will get updates over the web where possible.</d
       <archive extract="0export-0.1" href="http://downloads.sourceforge.net/project/zero-install/0export/0.1/0export-0.1.tar.bz2" size="20343"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.33"/>
+      <version before="0.49" not-before="0.33"/>
       <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
     </requires>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAktrQ/kACgkQrgeCgFmlPME3WACeIQujoEV+BLGb1+/vooj2zmZRgn0AnRV+3Y70
-Uh8dag8xfW/X116gnXAS
+iEYEABECAAYFAkw4S+YACgkQrgeCgFmlPMEr6QCeL7AsQ7gPxVzGqxDpxgIj98HAO0QAoMr8+6mg
+Yo3WNurkDl73WIhFgHcm
 
 -->
