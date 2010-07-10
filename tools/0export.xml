@@ -28,7 +28,7 @@ still shared between users, and will get updates over the web where possible.</d
   <needs-terminal/>
 
   <group main="0export">
-    <implementation doc-dir="doc" id="sha1new=4b7ef993c49bff2f603f63634e68109568a08c5f" license="OSI Approved :: GNU General Public License v3" main="0export" released="2010-02-04" version="0.1">
+    <implementation doc-dir="doc" id="sha1new=4b7ef993c49bff2f603f63634e68109568a08c5f" license="OSI Approved :: GNU General Public License v3" main="0export" released="2010-02-04" stability="stable" version="0.1">
       <manifest-digest sha256="0fbac33455908b0b431b6895dba43dfc892b682004e24e67dd2c77e3f57e56cf"/>
       <archive extract="0export-0.1" href="http://downloads.sourceforge.net/project/zero-install/0export/0.1/0export-0.1.tar.bz2" size="20343"/>
     </implementation>
@@ -37,10 +37,20 @@ still shared between users, and will get updates over the web where possible.</d
       <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
     </requires>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.49"/>
+      <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
+    </requires>
+    <implementation doc-dir="doc" id="sha1new=7cd47059b4b312de215af750201a4b9981197019" license="OSI Approved :: GNU General Public License v3" main="0export" released="2010-07-10" self-test="test.py" version="0.2">
+      <manifest-digest sha256="dc573f14f52dd5d489734b9d48cbe4510a406dbdee280f3446b99751ddcce943"/>
+      <archive extract="0export-0.2" href="http://downloads.sourceforge.net/project/zero-install/0export/0.2/0export-0.2.tar.bz2" size="22009"/>
+    </implementation>
+  </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkw4S+YACgkQrgeCgFmlPMEr6QCeL7AsQ7gPxVzGqxDpxgIj98HAO0QAoMr8+6mg
-Yo3WNurkDl73WIhFgHcm
+iEYEABECAAYFAkw4dDYACgkQrgeCgFmlPMFCLQCfVdD3+CdagdRQePKqyxKnrZTvk74AoM/AQvs7
+3FvxJvY+c79kEQ9+sX7g
 
 -->
