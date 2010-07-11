@@ -20,9 +20,10 @@ This is easier (<i>install and run</i> becomes just <i>run</i>) and safer
 </p>
 
 </dd>
-<dt>I haven't tried it yet, but it sounds really complicated</dt>
+
+<dt>How many Zero Install packages are there?</dt>
 <dd>
-<p>It isn't. <a href='injector.html'>Try it</a>. Now.</p>
+<p>The <a href='http://roscidus.com/0mirror/'>public mirror site</a> provides a list of feeds we know about. There are currently more than 500, although the quality varies.</p>
 
 </dd>
 <dt>What are "decentralised" installation systems, and why are they important?</dt>
