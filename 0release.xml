@@ -62,7 +62,7 @@ handle new releases brings several advantages over doing it manually:
 
 <dl>
  <dt>Version control systems currently supported</dt>
- <dd>GIT is fully supported. It should be fairly easy to support other (distributed) version control systems.</dd>
+ <dd>Git is fully supported. It should be fairly easy to support other (distributed) version control systems.</dd>
 </dl>
 
 <h3>Contents</h3>
@@ -94,7 +94,7 @@ dependencies.
 </p>
 
 <p>
-A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git.or.cz/'>GIT</a>
+A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git.or.cz/'>Git</a>
 version control system:
 </p>
 
@@ -189,6 +189,16 @@ ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/zero-install/he
 </pre>
 
 <p>
+Note that $RELEASE_VERSION is used because SourceForge puts each archive in a different directory,
+whose name is the version number. If you put all your archives in a single directory, you don't
+need this. e.g. you could use:
+</p>
+
+<pre>
+ARCHIVE_DIR_PUBLIC_URL='http://localhost/~me/testing'
+</pre>
+
+<p>
 The other settings allow 0release to push files to the remote server automatically, but you can
 leave them as they are and do it manually if you prefer.
 </p>
@@ -241,21 +251,22 @@ was (it stores the current status in a new <b>release-status</b> file).
 </p>
 
 <p>
-As well as exporting the release archive, 0release also updates your GIT repository
+As well as exporting the release archive, 0release also updates your Git repository
 by committing two new revisions. You can see them using <b>gitk --all</b>:
 </p>
 
 <p style='text-align: center'>
-<img width="487" height="54" src="screens/0release-rc.png" alt="New revisions created by 0release" />
+<img width="425" height="72" src="screens/0release-rc.png" alt="New revisions created by 0release" />
 </p>
 
 <p>
-The first revision (master) is the 0.1-pre development snapshot you started with. This is also the
+The first revision is the 0.1-pre development snapshot you started with. The "master" branch adds
+the commit where you changed the &lt;feed-for&gt; element. This is also the
 currently checked-out version. 0release has created a new branch called "0release-tmp" with two
 new revisions. "Release 0.1" is the version that will be released. Its local feed has the version
 "0.1" and today's date as the release date. The archive was created from this revision.
 The next revision has a version of "0.1-post" and removes the release date
-again. Note that the release hasn't been tagged yet in GIT, but 0release has
+again. Note that the release hasn't been tagged yet in Git, but 0release has
 recorded the revision ID in case you decide to accept the release candidate.
 </p>
 
@@ -301,12 +312,12 @@ your GPG public key.
 </p>
 
 <p>
-If you check your GIT repository, you'll see that 0release has now tagged the release,
+If you check your Git repository, you'll see that 0release has now tagged the release,
 and updated the "master" branch to the tip of the temporary branch:
 </p>
 
 <p style='text-align: center'>
-<img width="409" height="54" src="screens/0release-tagged.png" alt="Release tagged" />
+<img width="425" height="72" src="screens/0release-tagged.png" alt="Release tagged" />
 </p>
 
 <p>
@@ -355,7 +366,7 @@ Hello World!
 </pre>
 
 <p>
-Finally, it will prompt you to upload the feed and the new GIT commits:
+Finally, it will prompt you to upload the feed and the new Git commits:
 </p>
 
 <pre>
@@ -367,7 +378,7 @@ NOTE: No public repository set => you'll have to push the tag and trunk yourself
 
 <p>
 You can edit <b>make-release</b> to set some commands to automatically upload the files and to
-push the branch and tag ("master" and "v0.1" in this case) to your public GIT repository.
+push the branch and tag ("master" and "v0.1" in this case) to your public Git repository.
 </p>
 
 <h2>Customising the release process</h2>
@@ -415,8 +426,8 @@ replay attack. So create a new signature, with a fresh time-stamp.
 <p>
 Reset HEAD to before the release (e.g. "git-reset --hard v0.1^") and delete the tag
 itself (e.g. "git-tag -d v0.1"). Delete the remote tag at the server (e.g.
-"git-push main :v0.1 master"). Like 0launch, if anyone saw the release in GIT, their
-GIT will refuse to go back to an older version. Tell them to use '-f'.
+"git-push main :v0.1 master"). Like 0launch, if anyone saw the release in Git, their
+Git will refuse to go back to an older version. Tell them to use '-f'.
 </p>
 </li>
 <li>
