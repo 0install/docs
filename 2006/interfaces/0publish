@@ -68,14 +68,14 @@ packagers.html.</description>
       <manifest-digest sha256="69323cf58481acc74673466f6bde9f736137ed7803642655aa43fa4a208f370a"/>
       <archive extract="0publish-0.16" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.16.tar.bz2" size="23491"/>
     </implementation>
-    <implementation id="sha1new=847ea445c181d5da5a86c2e5ccb620a92d6f6771" released="2010-01-30" self-test="tests/testall.py" version="0.17">
+    <implementation id="sha1new=847ea445c181d5da5a86c2e5ccb620a92d6f6771" released="2010-01-30" self-test="tests/testall.py" stability="stable" version="0.17">
       <manifest-digest sha256="cae2d05188cfd140eca87204e8957128494173f914efc458416543825454130b"/>
       <archive extract="0publish-0.17" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.17/0publish-0.17.tar.bz2" size="23981"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAktkcncACgkQrgeCgFmlPMGKgQCeLEvpBwSb7osubcpK3ouPZUCeRD0Anjgo+7As
-HjvHT5XfxJhL/pH1CmwE
+iEYEABECAAYFAkxEpskACgkQrgeCgFmlPMEnmwCg1BT64+8pxMtcdLYllDYZieiCN4AAoNYwuZq2
+cz8h5/dUNVJCBgX5HGKy
 
 -->
