@@ -104,7 +104,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <implementation id="sha1new=614643cbee8749fb214cfa2fc7cf604e6ff8486b" released="2009-05-05" self-test="tests/testcompile.py" stability="stable" version="0.16">
       <archive extract="0compile-0.16" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.16/0compile-0.16.tar.bz2" size="28100"/>
     </implementation>
-      <implementation id="sha1new=040da89786e7c1fdaf3067d50e956f2afe46c726" released="2009-06-16" self-test="tests/testcompile.py" version="0.17">
+      <implementation id="sha1new=040da89786e7c1fdaf3067d50e956f2afe46c726" released="2009-06-16" self-test="tests/testcompile.py" stability="stable" version="0.17">
       <manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
       <archive extract="0compile-0.17" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.17/0compile-0.17.tar.bz2" size="29159"/>
     </implementation>
@@ -163,7 +163,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkwm9yEACgkQrgeCgFmlPMHiYQCghJWOW+gE+ccqkc7xs1TSnfjBYwQAoItfhErE
-Mivk/dIHiafeKKhwFm8y
+iEYEABECAAYFAkxLAa0ACgkQrgeCgFmlPMFt0QCgmtIs/DdcAp8govWvFhtbne1riIMAnAhoI1Pz
+ED7vJvf4zrZ41iOIBqKe
 
 -->
