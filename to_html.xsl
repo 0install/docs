@@ -123,7 +123,7 @@
 	  </p>
 	  <p>
 	    Some of the icons are from (or based on icons from) the
-	    <a href='http://tango.freedesktop.org/Tango_Desktop_Project'>Tango Desktop Project</a>.
+	    <a href='http://tango.freedesktop.org/Tango_Desktop_Project'>Tango Desktop Project</a> and the <a href='http://www.openclipart.org/'>Open Clipart Library</a>.
 	  </p>
 	  <span class='logos'>
 	     <a href="http://creativecommons.org/licenses/by-sa/2.5/">
@@ -323,7 +323,7 @@
   <xsl:template match='*[name() = "h3" or name() = "h2" or name() = "dt"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>
-      <xsl:apply-templates/>
+      <xsl:apply-templates select='text()|@*'/>
     </xsl:copy>
   </xsl:template>
 

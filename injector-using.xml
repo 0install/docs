@@ -26,7 +26,6 @@ way to return to a web page without entering the full URL. Examples of launchers
 <ul class='spaced'>
 <li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <b>Add New Program</b> box, it creates an entry on the <k>Applications menu</k> that uses it.</li>
  <li>When a <k>ROX desktop</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses it.</li>
- <li>When an <k>Xfce</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/node/269'>xfce4-panel</a> program, it creates a <k>launcher button</k> that uses it.</li>
  <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs it.</li>
 </ul>
 
@@ -114,12 +113,34 @@ $ <b>rox-edit</b>
 </dd>
 </dl>
 
-<h2>Confirming keys</h2>
+<h2 style='clear: both'>What it does</h2>
+
+<p style='text-align: center; float: right'>
+  <img width="640" height="719" src="diagrams/0launch.png" alt='Running a program'/>
+</p>
 
 <p>
-Once 0launch has been run (either manually or by a launcher), it chooses a suitable version of the program and runs it.
-If it doesn't know about this program yet then it will need to download some information about it first. If you tried the Edit
-example above, you're probably looking at this dialog box now:
+  Zero Install downloads files from several different places.
+</p>
+
+<p>
+  First, it downloads from the author's web-site a list of versions of the application that are available and what other libraries the application requires. Zero Install then downloads information about those libraries too, from their web-sites.
+</p>
+
+<p>
+  These lists are signed by the developer who published them. When you use software from a developer for the first time, Zero Install asks you to confirm that you trust this person's signature. It asks your <i>Key information server</i> for extra information to help you decide.</p>
+
+<p>Finally, it chooses an appropriate set of versions and downloads those packages.
+</p>
+
+<p>
+  The <a href='http://roscidus.com/0mirror/'>Mirror server</a> is used as a backup if the project servers don't respond or return an error.
+</p>
+
+<h2 style='clear: both'>Confirming keys</h2>
+
+<p>
+If you tried the Edit example above, you're probably looking at this dialog box now:
 </p>
 
 <p style='text-align: center'>
@@ -147,7 +168,7 @@ with the name "Thomas Leonard", but noone knows how to create another key with t
 Ideally, you should check the fingerprint somehow (maybe the person who recommended Edit to you told you the fingerprint).
 We run a simple hints server to help you out. It's called "unreliable" because I don't
 have the funding to verify people's keys, so it's just a list of keys that have been announced on the mailing list, but it's
-better than nothing. It also now tells you whether the developer is a member of the Debian project. Hopefully we will be
+better than nothing. It also tells you whether the developer is a member of the Debian project. Hopefully we will be
 able to add more sources of information later.
 Obviously, I can't accept any kind of legal liablity for its accuracy, but you could pay someone to
 provide a real service if you needed that.
