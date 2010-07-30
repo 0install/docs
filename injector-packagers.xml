@@ -263,8 +263,8 @@ to set the license, main, OS and CPU settings in one place. You can also share d
    Games have an annoying habit of trying to <b>cd</b> to a hard-coded directory in their start-up
    script. You could try asking the author to fix it (<b>cd "`dirname $0`"</b> would work just as
    well). It's also possible to patch the download using a <b>recipe</b> element, but the GUI doesn't
-   provide an interface for this. See <a href='http://0install.net/2006/3rd-party/PySol.xml'>PySol's feed</a>
-   for an example. The trick here is getting the ID right; you need the digest of the directory structure
+   provide an interface for this.
+   The trick here is getting the ID right; you need the digest of the directory structure
    <i>after</i> the patch has been applied. <b>0store manifest</b> can help here.
   </p>
  </dd>
