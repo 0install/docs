@@ -326,7 +326,7 @@
   <xsl:template match='*[name() = "h3" or name() = "h2" or name() = "dt"]'>
     <xsl:copy>
       <xsl:attribute name='id'><xsl:value-of select="generate-id()"/></xsl:attribute>
-      <xsl:apply-templates select='text()|@*'/>
+      <xsl:apply-templates select='*|text()|@*'/>
     </xsl:copy>
   </xsl:template>
 
