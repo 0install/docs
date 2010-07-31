@@ -72,7 +72,7 @@
 	<table>
 	 <tr>
 	  <td class='logo'>
-	    <a href='/'><img src='icons/zeroinstall-icon.png' width='96' height='95' alt='logo'/></a>
+	    <a href='/'><img src='logo/zeroinstall-icon.png' width='96' height='95' alt='logo'/></a>
 	  </td>
 	  <td class='header'>
 	    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse" style='float: right; padding-right: 1em;'>
