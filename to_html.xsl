@@ -71,7 +71,9 @@
       <body>
 	<table>
 	 <tr>
-	   <td/>
+	  <td class='logo'>
+	    <a href='/'><img src='icons/zeroinstall-icon.png' width='96' height='95' alt='logo'/></a>
+	  </td>
 	  <td class='header'>
 	    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse" style='float: right; padding-right: 1em;'>
 	     <p>
@@ -82,7 +84,7 @@
 	     </p>
 	    </form>
 
-	    <h1>Zero Install</h1>
+	    <h1><a href='/'>Zero Install</a></h1>
 	    <p class='summary'>a decentralised cross-distribution software installation system</p>
 	    <!--<p class='author'>Dr Thomas Leonard <span class='actions'>[ <a href="support.html">contact</a> | <a href="public_key.gpg">GPG public key</a> | <a href="http://roscidus.com/desktop/blog/1">blog</a> | <a href="http://sourceforge.net/developer/user_donations.php?user_id=40461">donations</a> ]</span></p>-->
 	  </td>

@@ -8,6 +8,16 @@ h1, h2, h3, h4, h5 {
 	font-family: sans-serif;
 }
 
+h1 a {
+  	color: black;
+	text-decoration: none;
+}
+
+h1 a:hover {
+  	color: black;
+	text-decoration: none;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -610,4 +620,9 @@ table.testresults td.skipped {
 
 table.testresults td.failed {
 	background: red;
+}
+
+td.logo {
+	text-align: center;
+	vertical-align: middle;
 }
