@@ -176,9 +176,16 @@ th {
 }
 
 h1 {
-	padding: .2em 0 .2em 0;
+	padding: .2em 0 0 0;
 	margin: 0;
 	font-size: 400%;
+}
+
+p.summary {
+  	margin: 0;
+	padding: 0 0 1em 0;
+	font-style: italic;
+	color: #666;
 }
 
 td.sidebar h2 {

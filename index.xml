@@ -13,7 +13,7 @@
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
-      <p>You don't need to be <k>blessed by a distribution</k> (or anyone else) to be part of Zero Install;<br/>
+    <p>If you have a web-site, you can distibute your software;<br/>
       The system is <k>completely decentralised</k> <more href='goals.html#anyonedistrib'/></p>
   </td>
  </tr>
