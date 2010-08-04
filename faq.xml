@@ -34,10 +34,11 @@ if you're in a hurry, just read <a href='http://osnews.com/story.php/16956/Decen
 </p>
 
 </dd>
-<dt>Doesn't Zero Install require a kernel module?</dt>
+<dt>Where does it install things to?</dt>
 <dd>
 <p>
-Not any more. That was the first version.
+By default, everything goes under <b>~/.cache/0install.net/</b>. If you <a href='sharing.html'>enable system-wide sharing</a>, then things go under
+<b>/var/cache/0install.net/</b> instead.
 </p>
 
 </dd>
