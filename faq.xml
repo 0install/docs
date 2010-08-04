@@ -41,6 +41,15 @@ By default, everything goes under <b>~/.cache/0install.net/</b>. If you <a href=
 <b>/var/cache/0install.net/</b> instead.
 </p>
 
+<p>
+If you want to know where a particular program is, you can use <b>--dry-run</b>, e.g.
+</p>
+
+<pre>
+$ <b>0launch --dry-run http://.../someprog</b>
+Would execute: ~/.cache/0install.net/implementations/.../someprog
+</pre>
+
 </dd>
 <dt>Isn't is really hard to run applications if you always have to
 type URIs for them?</dt>
