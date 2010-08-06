@@ -31,7 +31,7 @@ create a matrix of test results.</description>
       <version not-before="0.46"/>
       <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
     </requires>
-      <implementation id="sha1new=68b8237cb26db334551379db52487a035906a49e" main="0test" released="2010-06-19" self-test="test0test.py" version="0.3">
+      <implementation id="sha1new=68b8237cb26db334551379db52487a035906a49e" main="0test" released="2010-06-19" self-test="test0test.py" stability="stable" version="0.3">
       <manifest-digest sha256="4b201ec31af16c8bec86295cc18a43d7568dc0f4af02d4dcd9bedc1b395201d6"/>
       <archive extract="0test-0.3" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3/0test-0.3.tar.bz2" size="11445"/>
     </implementation>
@@ -40,7 +40,7 @@ create a matrix of test results.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkwcshQACgkQrgeCgFmlPME7nQCgsS6KIczMIK4Qq8y5UziPHFezbxIAoL5NHU/m
-1LpaGcyX/RYdYH+1CIUm
+iEYEABECAAYFAkxcPwkACgkQrgeCgFmlPMEiFgCgleJ27oEfmUQp6MlzuPZOqKb4aXsAnifeqHZi
+LV7cA2cj/hFn0cYpjS7i
 
 -->
