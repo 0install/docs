@@ -76,7 +76,6 @@
 
   <item href='http://sourceforge.net' label='SourceForge'>
     <item href='http://sourceforge.net/projects/zero-install' label='Project page'/>
-    <item href='http://sourceforge.net/svn/?group_id=76468' label='Subversion access'/>
     <item href='http://sourceforge.net/project/showfiles.php?group_id=76468' label='File releases'/>
     <item href='http://sourceforge.net/project/stats/detail.php?group_id=76468&amp;ugn=zero-install&amp;type=prweb&amp;mode=alltime' label='Statistics'/>
     <item href='http://apps.sourceforge.net/ideatorrent/zero-install/' label='IdeaTorrent'/>
