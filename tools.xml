@@ -72,6 +72,11 @@ distribution on CDs, etc.
 <b>0share</b> allows peer-to-peer sharing of Zero Install packages.
  </dd>
 
+ <dt><a href='ebox.html'>ebox</a></dt>
+ <dd>
+<b>ebox</b> proof-of-concept sandboxing system.
+ </dd>
+
 </dl>
 
 </html>
