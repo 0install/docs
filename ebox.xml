@@ -155,6 +155,10 @@ We don't have to worry that these two programs will conflict or try to use the s
 Add a contact called "Bob" to Alice's contacts list, and a contact called "Alice" to Bob's list. One of them should send an invitation (a file), and the other should accept it. The invitation file should be transferred over some secure channel and kept safe until pairing is complete.
 </p>
 
+<p>
+Note that ebox-chat is a peer-to-peer chat program with no central server. If there are firewalls or NATs between the machines, things get "interesting"... it's only a demo after all ;-)
+</p>
+
 <div class='figure'>
 <img src='screens/ebox-chat3.png' width='543' height='209' alt='pairing chat instances'/>
 </div>
@@ -251,6 +255,21 @@ the sandboxing.
 <p>
 If a networked application (e.g. ebox-chat) seem to freeze, try wiggling the mouse; it might just need
 more entropy to generate random numbers for the crypto.
+</p>
+
+<h2>Conclusions</h2>
+
+<p>
+Zero Install can be used to install and run sandboxed software. It does not execute any of the downloaded
+code outside of the sandbox and installation of malicious code does not affect other programs on the
+computer, even those running as the same user. Despite this, libraries are shared
+automatically between programs (sandboxed or not), update notifications work as normal, etc.
+</p>
+
+<p>
+In addition to its normal mode of operation, in which it sets environment variables to let components find
+their dependencies, Zero Install can also integrate tightly with a particular programming language, injecting
+scoped dependencies directly into individual modules within the language.
 </p>
 
 </html>
