@@ -71,6 +71,12 @@ Some key points about Zero Install's security model:
  </dd>
 </dl>
 
+<h2>Demo!</h2>
+
+<p>
+For a demonstration of using sandboxing with Zero Install, see <a href='ebox.html'>ebox</a>.
+</p>
+
 <h2>Authorisation vs Privileges</h2>
 
 <p>
