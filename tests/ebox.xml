@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/ebox.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ebox</name>
+  <summary>instance manager for E programs</summary>
+  <description>
+ebox installs instances of E programs. Each program runs with access, by
+default, only to its own instance directory. The code is separate; managed by
+Zero Install.</description>
+
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
+    <!-- Update the copy of the version number in the main program -->
+    <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; ebox.py</release:action>
+  </release:management>
+
+  <implementation id="sha1new=ecdef857ad04fafa79eb05be062bace8949f9871" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2010-08-07" version="0.1">
+    <requires interface="http://repo.roscidus.com/e/e-swt">
+      <environment insert="rune" name="EBOX_RUNE"/>
+    </requires>
+    <manifest-digest sha256="550fdd7c84497cff82a14d5f11e1ce27214c34ee0ce76c1d40154424de5a32eb"/>
+    <archive extract="ebox-0.1" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.1/ebox-0.1.tar.bz2" size="14062"/>
+  </implementation>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkxdPx8ACgkQrgeCgFmlPMGTuQCfciPyFaYdMNHs8bnuPSlrJUfsBmAAoLPpyjf0
+BHYB40DKUQEc16HJrkSy
+
+-->
