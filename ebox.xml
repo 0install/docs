@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<program name='ebox'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/tests/ebox.xml'
+	 git='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/ebox;a=summary'
+	 license='GNU Lesser General Public License'>
+
+<p>
+EBox is a proof-of-concept that integrates Zero Install's safe installation with E's sandboxing
+features. It allows you to install programs and run them in a restricted environment. Despite this, the
+programs still benefit from Zero Install's dependency handling, automatic updates, sharing, etc.
+</p>
+
+</program>
+
+<toc level='h2'/>
+
+<h2>Overview</h2>
+
+<p>
+A secure system should allow the user to install and run software with limited privileges, so that
+the damage that can be caused by malicious software is limited. The sandboxing should be simple
+enough that it can be used by all users as a matter of course.
+</p>
+
+<p>
+Zero Install is designed to solve the installation part of this problem, and is intended to integrate
+with existing sandboxing tools to provide the rest. The purposes of this page are:
+</p>
+
+<ul>
+ <li>To make it clear what we hope to achieve with Zero Install.</li>
+ <li>To demonstrate that such integration is possible, and provide an example of how to do it.</li>
+ <li>To find bugs or weaknesses in Zero Install's implemenation or design.</li>
+</ul>
+
+<p>
+Different sandboxes provide different features. Ideally we would use an OS-level tool that could
+sandbox any application (e.g. Plash). However, these are not yet widely available, difficult to deploy,
+or only available on certain systems. Therefore, this example uses application-level sandboxing instead
+(relying on security features of the programming language rather than those of the operating system). The
+advantage is that it should work everywhere. The disadvantage is that it only works with programs written
+in that language.
+</p>
+
+<p>
+We start with a tutorial showing how to install and run a couple of sample applications. Then we present
+a challenge: modify the sample applications to escape from the sandbox! If you find a security flaw,
+please report it to <a href='support.html'>the mailing list</a>, and I'll add you to the high-score table:
+</p>
+
+<table class='table' style='width: 90%'>
+ <tr><th>Date</th><th>Finder</th><th>Flaw</th></tr>
+ <tr><td>-</td><td>(your name here!)</td><td>-</td></tr>
+</table>
+
+<h2>Tutorial</h2>
+
+<p>
+You can create a short-cut to ebox with 0alias, like this:
+</p>
+
+<pre>
+$ <b>0alias ebox http://0install.net/tests/ebox.xml</b>
+</pre>
+
+<p>
+You can then install a program like this:
+</p>
+
+<pre>
+$ <b>ebox ~/edit http://0install.net/tests/ebox-edit.xml</b>
+Created instance directory. To run:
+~/edit/AppRun
+</pre>
+
+<p>
+This creates a directory at the path you specified ("~/edit"). This directory contains all the program's configuration, and a script to start it (AppRun).
+</p>
+
+<p>
+[ Technically, it's a <a href='http://roscidus.com/desktop/AppDirs'>ROX application directory</a>, but whereas these normally include program code (but no
+configuration), this one includes only configuration, with the code going in the Zero Install cache. ]
+</p>
+
+<p>
+If you run the <b>~/edit/AppRun</b> script, a fairly normal-looking text editor should appear. You can open, edit and save files just as you'd expect:
+</p>
+
+<div class='figure'>
+<img src='screens/ebox-edit.png' width='335' height='229' alt='ebox-edit screenshot'/>
+</div>
+
+<p>
+However, the program is running in a restricted environment. It can only access files that you select using a file selector dialog box. It's hard to demonstrate this
+security, because permission is granted automatically by your actions, so you should <a href='#attacking'>try attacking it</a> to convince yourself.
+</p>
+
+<h3>What a boxed program can and can't do</h3>
+
+<ul>
+<li>Every window it opens is prefixed with the name you gave it (e.g. "edit: &lt;untitled&gt;").</li>
+<li>It can't access a file unless you explictly select it, or pass it as a command-line argument.</li>
+<li>It can't send a copy of a file you open over the network (see below for network access).</li>
+<li>It can read and write files under its own 'data' directory (<b>~/edit/data/*</b>)</li>
+<li>If you grant it access to something (e.g. read access to a file), it could presist this in <b>~/edit/auths/*</b> so it still has it next time you run the program, although ebox-edit itself doesn't do this.</li>
+<li>It can open any number of windows, use up lots of CPU time, etc.</li>
+</ul>
+
+<h3>Networking</h3>
+
+<p>
+Next, we'll try a program that uses the network:
+</p>
+
+<pre>
+$ <b>ebox alicesChat http://0install.net/tests/ebox-chat.xml</b>
+</pre>
+
+<p>
+Notice that ebox-chat uses the same library (ebox-help) as ebox-edit, and so they share a single copy:
+</p>
+
+<div class='figure'>
+<img src='screens/ebox-chat1.png' width='512' height='232' alt='downloading ebox-chat'/>
+</div>
+
+<p>
+ebox-chat is a simple chat program. When you run it, it will ask for permission to access the network:
+</p>
+
+<div class='figure'>
+<img src='screens/ebox-chat2.png' width='333' height='153' alt='grant network access'/>
+</div>
+
+<p>
+Once you give it network access, it is able to store it for later (creating the file <b>alicesChat/auths/network</b>), so you won't have to reconfirm each time it starts. It then displays an (empty) list of contacts.
+</p>
+
+<p>
+We'll need someone to talk to. This could be on another machine, or you can take advantage of the sandboxing to create a second instance on the same machine. We'll pretend that the first instance is running on Alice's computer, and the second is Bob's:
+</p>
+
+<pre>
+$ <b>ebox bobsChat http://0install.net/tests/ebox-chat.xml</b>
+</pre>
+
+<p>
+We don't have to worry that these two programs will conflict or try to use the same configuration; they can each only access files inside their own directory by default. When you run bobsChat, you'll need to grant that network access too.
+</p>
+
+<p>
+Add a contact called "Bob" to Alice's contacts list, and a contact called "Alice" to Bob's list. One of them should send an invitation (a file), and the other should accept it. The invitation file should be transferred over some secure channel and kept safe until pairing is complete.
+</p>
+
+<div class='figure'>
+<img src='screens/ebox-chat3.png' width='543' height='209' alt='pairing chat instances'/>
+</div>
+
+<p>Once paired, either party can call the other:</p>
+
+<div class='figure'>
+<img src='screens/ebox-chat4.png' width='543' height='200' alt='calling'/>
+</div>
+
+
+<h2 id='attacking'>The challenge!</h2>
+
+<p>
+I have a file, <b>/home/tal/precious.txt</b>, containing some important information. Your challenge is
+to either discover the contents of this file or to change it. You do this by
+creating a malicious application (e.g. by modifying ebox-edit or ebox-chat). I will install your program
+and try using it for a bit.
+</p>
+
+<ul>
+<li>If Zero Install warns me that your key isn't trusted, I'll ignore it and trust the key anyway.</li>
+<li>I will also approve any keys needed for any libraries you depend on.</li>
+<li>Since I don't trust your program, I won't try to open my precious file in it. I will be happy to create and edit test files, though.</li>
+<li>The precious.txt file has no special protection: it's a regular text file, readable by me (if I ask ebox-edit to open it, it will).</li>
+<li>For this challenge, we exclude denial-of-service attacks (e.g. if you make my computer run so slowly I have to reboot it).</li>
+</ul>
+
+<p>
+The easiest way to get started is to clone ebox-edit's Git repository and create a new instance from
+its local feed:
+</p>
+
+<pre>
+$ <b>git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/ebox-edit</b>
+$ <b>ebox test-instance ebox-edit/edit.xml</b>
+$ <b>./test-instance/AppRun</b>
+</pre>
+
+<p>
+You can try to modify the files in the checkout to escape from the sandbox. The syntax is
+explained in the <a href='http://wiki.erights.org/wiki/Walnut'>Walnut guide to E</a>.
+</p>
+
+<h3>Bonus challenge!</h3>
+
+<p>
+Alternatively, you could clone the ebox-help Git repository and modify the library. Register your
+modified library with 0launch (using "0launch --feed ebox-help/help.xml") and run a program that
+depends on it. You should find that the library runs in an even more restricted environment; it
+doesn't even get access to the application data!
+</p>
+
+<h2>Future work</h2>
+
+<p>
+To make this useful, we need to integrate with a general purpose sandbox, such as Plash, so we
+can sandbox any application, not just those written in E.
+</p>
+
+</html>

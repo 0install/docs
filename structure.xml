@@ -70,6 +70,7 @@
     <item base='pkg2zero' label='pkg2zero'/>
     <item base='0test' label='0test'/>
     <item base='0share' label='0share'/>
+    <item base='ebox' label='ebox'/>
   </item>
 
   <item base="support" label="Support"/>
