@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/ebox-chat.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:e="http://erights.org/0install">
+  <name>ebox-chat</name>
+  <summary>sandboxed chat program</summary>
+  <description>
+    EBox-Chat is a demonstration chat client. It allows secure two-way text-based communication with another instance of itself.
+    It is designed to be installed using the ebox demonstration sandboxing system.
+  </description>
+
+  <implementation e:main="boxchat.e-swt" id="sha1new=7e3f40140ab94b32d31808641e2872c36c5c2c73" released="2010-08-07" version="0.1">
+    <requires interface="http://0install.net/tests/ebox-help.xml">
+      <environment insert="" name="help"/>
+    </requires>
+    <manifest-digest sha256="fdc562131abd8d110f8359821394744c03a4b8d3284385f9a340223ebba20577"/>
+    <archive extract="ebox-chat-0.1" href="http://downloads.sourceforge.net/project/zero-install/ebox-chat/0.1/ebox-chat-0.1.tar.bz2" size="5480"/>
+  </implementation>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkxdbvoACgkQrgeCgFmlPMFfdACgxfd+d3NrVbL+u3J4uSFGJ8Mt33QAn0ohod+Y
+NbZtfw7Hd9W9woXhqyaq
+
+-->
