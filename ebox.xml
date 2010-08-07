@@ -208,11 +208,49 @@ depends on it. You should find that the library runs in an even more restricted 
 doesn't even get access to the application data!
 </p>
 
-<h2>Future work</h2>
+<p>
+This demonstrates an interesting feature of ebox. Zero Install normally tells a component (such as
+ebox-edit) how to find a dependency (ebox-help) by setting environment variables (e.g. $CLASSPATH).
+Environment variables are global to the process. Instead, ebox makes the dependency appear directly as a variable
+in the module's scope. For example, ebox-edit declares a dependency on ebox-help like this:
+</p>
+
+<pre>
+    &lt;requires interface="http://0install.net/tests/ebox-help.xml">
+      &lt;environment insert="" name="help"/>
+    &lt;/requires>
+</pre>
+
+<p>
+It then creates a help window by calling
+<b>&lt;help:makeHelp>(shell, &lt;this:manual>)</b>. Here, the <b>&lt;help></b> loader is injected
+directly by ebox, and scoped to the ebox module:
+</p>
+
+<ul>
+<li>To code in ebox-edit, &lt;help> refers to the ebox-help library, while &lt;this> refers to ebox-edit.</li>
+<li>To code in ebox-help, &lt;help> is not visible, while &lt;this> refers to ebox-help.</li>
+</ul>
+
+<p>
+This means that libraries can't conflict even within a process. elib-help can't override a function defined in ebox-edit, for example, so the ebox-edit author doesn't need to fully trust the help library!
+</p>
+
+<h2>Notes</h2>
 
 <p>
 To make this useful, we need to integrate with a general purpose sandbox, such as Plash, so we
 can sandbox any application, not just those written in E.
+</p>
+
+<p>
+The long startup time for edit and chat is simply because they're running on Java, not because of
+the sandboxing.
+</p>
+
+<p>
+If a networked application (e.g. ebox-chat) seem to freeze, try wiggling the mouse; it might just need
+more entropy to generate random numbers for the crypto.
 </p>
 
 </html>
