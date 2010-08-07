@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/ebox-help.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ebox-help</name>
+  <summary>EBox help viewer</summary>
+  <description>
+    This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
+  </description>
+
+  <implementation id="sha1new=ee9a9c48da71efaf9aa8a4daf5447005300963f4" released="2010-08-07" version="0.1">
+    <manifest-digest sha256="57978e3c251b1124afde72fe64198eaf953ce9c5ae1561a0158dd664e664ed53"/>
+    <archive extract="ebox-help-0.1" href="http://downloads.sourceforge.net/project/zero-install/ebox-help/0.1/ebox-help-0.1.tar.bz2" size="1310"/>
+  </implementation>
+
+</interface>
+<!-- Base64 Signature
+iEYEABECAAYFAkxdSJUACgkQrgeCgFmlPMH9wACg0Z8j5DvI9pgsEa72wW+8PkzhDKQAniKfwXkL
+VxSRTLpm0ecc+pizSXdB
+
+-->
