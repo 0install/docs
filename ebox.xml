@@ -148,7 +148,7 @@ $ <b>ebox bobsChat http://0install.net/tests/ebox-chat.xml</b>
 </pre>
 
 <p>
-We don't have to worry that these two programs will conflict or try to use the same configuration; they can each only access files inside their own directory by default. When you run bobsChat, you'll need to grant that network access too.
+We don't have to worry that these two programs will conflict or try to use the same configuration; they can each only access files inside their own directory by default. Of course, the actual program code is shared between them. When you run bobsChat, you'll need to grant that network access too.
 </p>
 
 <p>
