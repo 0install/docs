@@ -6,7 +6,7 @@ function get_download_html() {
 		"Ubuntu/9.04" => "http://downloads.sourceforge.net/zero-install/zeroinstall-injector_0.41-1_all.deb",
 		"Ubuntu/8.10" => "apt:zeroinstall-injector",
 		"Ubuntu/8.04" => "http://downloads.sourceforge.net/zero-install/zeroinstall-injector_0.39-1_all.deb",
-		"Ubuntu" => "install-linux.html#ubuntu",
+		"Ubuntu" => "apt:zeroinstall-injector",
 		"Debian" => "install-linux.html#debian",
 		"FreeBSD" => "install-unix.html#freebsd",
 		"Mac OS X" => "install-mac.html",
