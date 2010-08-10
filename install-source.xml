@@ -88,6 +88,10 @@ You'll need to make sure that ~/bin is in $PATH, and
 $ <b>export PATH=$HOME/bin:$PATH</b>
 $ <b>export PYTHONPATH=$HOME/lib/python</b>
 </pre>
+<p>
+Logging out and back in again will ensure $PATH and the Applications menu get updated correctly,
+on Ubuntu at least.
+</p>
   </td>
  </tr>
 </table>
