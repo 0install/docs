@@ -3,11 +3,12 @@
 
 <h2>User tutorials</h2>
 
-<p>
-  How to install and run software.
-</p>
-
 <dl>
+ <dt><a href='howitworks.html'>Quick Start</a></dt>
+ <dd>
+   Start here! Step-by-step guide to installing a program.
+ </dd>
+
  <dt><a href='tutorial-launchers.html'>Launchers</a></dt>
  <dd>
    How to add a program launcher to GNOME, KDE, ROX or the shell.
