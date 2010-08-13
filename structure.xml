@@ -19,7 +19,8 @@
   <item base='injector-feeds' label='Software index'/>
 
   <item base="doc" label="Documentation">
-    <item base='injector-using' label='Tutorial'>
+    <item base='injector-using' label='Tutorials'>
+      <item base='tutorial-launchers' label='Part 1: launchers'/>
       <item base='tutorial-downloads' label='Part 2: downloads'/>
       <item base='tutorial-policy' label='Part 3: policy'/>
     </item>
