@@ -24,13 +24,10 @@ getting emails.
 <p>If clicking on the news: link above directly doesn't work:</p>
 
 <ol>
-<li>Load <b>Pan</b> (or some other news-reader) and add <b>news.gmane.org</b> as a new server (<b>Tools-&gt;News
-Servers</b>).</li>
-<li>Select <b>gmane</b> using the <b>Server</b> menu.</li>
-<li>Type <b>zero-install</b> into the group search box (top left) and press
-<b>Return</b> to find the group.</li>
+<li>Load <b>Pan</b> (or some other news-reader) and add <b>news.gmane.org</b> as a new server (<b>Edit-&gt;Edit News Servers</b>).</li>
+<li>Type <b>zero-install</b> into the group search box (top left).</li>
 <li>You can right click over the group and choose <b>Subscribe</b> from the
-menu to make it easier to find them in future. Note that 'Subscribing' to a
+menu to make it easier to find it in future. Note that 'Subscribing' to a
 news group just marks it as interesting to your news-reader. It is
 different to subscribing to get emails.</li>
 </ol>
@@ -61,7 +58,7 @@ not to do this.
 </p>
 
 <p>
-However, reports of security problems or requests for interviews, may be
+However, reports of security problems or requests for interviews may be
 <a href='http://sourceforge.net/users/tal197/'>sent by email</a>.
 </p>
 
