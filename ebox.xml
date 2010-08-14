@@ -257,6 +257,17 @@ If a networked application (e.g. ebox-chat) seem to freeze, try wiggling the mou
 more entropy to generate random numbers for the crypto.
 </p>
 
+<p>
+About E: the important point here isn't how this particular sandbox works, but how
+sandboxing can be supported by Zero Install in general. However, here are
+some useful links about E and its underlying security model:
+</p>
+
+<ul>
+<li><a href='http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing'>http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing</a></li>
+<li><a href='http://en.wikipedia.org/wiki/Object-capability_model'>http://en.wikipedia.org/wiki/Object-capability_model</a></li>
+</ul>
+
 <h2>Conclusions</h2>
 
 <p>
