@@ -170,7 +170,7 @@ Note that ebox-chat is a peer-to-peer chat program with no central server. If th
 </div>
 
 
-<h2 id='attacking'>The challenge!</h2>
+<h2><a name='attacking'/>The challenge!</h2>
 
 <p>
 I have a file, <b>/home/tal/precious.txt</b>, containing some important information. Your challenge is
