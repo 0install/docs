@@ -1,19 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<h2>Testing developer versions using GIT</h2>
+<h2>Testing developer versions using Git</h2>
 
 <p>
 If you want to work on the code, or test a fix that has just been made,
-you'll want to get the latest developer version. We use GIT for version
-control, so make sure you have that. e.g. (on Ubuntu):
+you'll want to get the latest developer version. We use Git for version
+control, so make sure you have that. You'll also need 'gettext' to build
+the translations.
 </p>
 
-<pre>$ apt-get install git-core gitk</pre>
+<p>
+To install these on Ubuntu, open a terminal emulator and run this command:
+</p>
+
+<pre>$ sudo apt-get install git-core gitk gettext</pre>
 
 <p>(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)</p>
 
-<p>Click on the <b>SCM</b> link on any program's page to see its GIT page
+<p>Click on the <b>SCM</b> link on any program's page to see its Git page
 (for example, <a href='http://repo.or.cz/w/zeroinstall.git'>zeroinstall.git</a> for Zero Install itself).
 The link for cloning is displayed there; use it like this:</p>
 
