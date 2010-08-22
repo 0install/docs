@@ -344,25 +344,14 @@ Press Return once the archive is uploaded.
 </pre>
 
 <p>
-Copy the files (<b>helloworld-0.1.tar.bz2</b>, <b>HelloWorld.xml</b> and <b>&lt;KEYID&gt;.gpg</b>)
-to your web-server. When you press Return, 0release will check that the archives were uploaded
+Copy the archive (<b>helloworld-0.1.tar.bz2</b>)
+to your web-server. When you press Return, 0release will check that the archive was uploaded
 correctly:
 </p>
-
 <pre>Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
 
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload has been checked (exists and has correct size)
-</pre>
-
-<p>
-You should then be able to download and run the new release, using the URL you
-chose at the start:
-</p>
-
-<pre>
-$ 0launch http://localhost/~me/testing/HelloWorld.xml
-Hello World!
 </pre>
 
 <p>
@@ -374,6 +363,17 @@ Upload ~/releases/hello/HelloWorld.xml into http://0install.net/tests
 NOTE: No feed upload command set => you'll have to upload them yourself!
 Push changes to public SCM repository...
 NOTE: No public repository set => you'll have to push the tag and trunk yourself.
+</pre>
+
+<p>
+After uploading <b>HelloWorld.xml</b> (to the URL you put in the feed-for) and <b>&lt;KEYID&gt;.gpg</b>
+(to the same directory), you should then be able to download and run the new release, using the URL you
+chose at the start:
+</p>
+
+<pre>
+$ 0launch http://localhost/~me/testing/HelloWorld.xml
+Hello World!
 </pre>
 
 <p>
