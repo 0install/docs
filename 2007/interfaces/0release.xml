@@ -58,16 +58,30 @@ can help you to create new releases easily.</description>
       <manifest-digest sha256="e247293a2b4228d749a1d9d51884f2d4761b701a61f79358c980c9c090bcded6"/>
       <archive extract="0release-0.11" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11/0release-0.11.tar.bz2" size="54206"/>
     </implementation>
-      <implementation id="sha1new=6f8c8c1083981e1dfbcc4191af82aa3e554a4921" released="2009-11-15" self-test="tests/testall.py" version="0.11.1">
+      <implementation id="sha1new=6f8c8c1083981e1dfbcc4191af82aa3e554a4921" released="2009-11-15" self-test="tests/testall.py" stability="stable" version="0.11.1">
       <manifest-digest sha256="c0c505dd7a02d28db6cb0e0d00be7aca9eec0d241293a8e7ce9ec5812c6bc07e"/>
       <archive extract="0release-0.11.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11.1/0release-0.11.1.tar.bz2" size="54181"/>
     </implementation>
     </group>
   </group>
+  <group>
+    <requires interface="http://0install.net/2006/interfaces/0publish">
+      <version not-before="0.17"/>
+      <environment insert="0publish" mode="replace" name="0PUBLISH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.40"/>
+      <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
+    </requires>
+    <implementation id="sha1new=bc8cc5da6342e7b8fbaac4d9fd34577df79188db" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2010-08-22" self-test="tests/testall.py" version="0.12">
+      <manifest-digest sha256="d529431da382edbafab7ab21cda40e4eae7fbeabcf617d540c0251fd697ca5ed"/>
+      <archive extract="0release-0.12" href="http://downloads.sourceforge.net/project/zero-install/0release/0.12/0release-0.12.tar.bz2" size="54467"/>
+    </implementation>
+  </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAksAKbsACgkQrgeCgFmlPMH/lwCfYDQDQkUlSVRDxvTfCJGSflZyUggAn1laxv2b
-0p0tgw/nCKlybzBINDic
+iEYEABECAAYFAkxw4lYACgkQrgeCgFmlPMHDLgCfZ5xSLGT5F8BG/kItELypmGqV4poAoIiho5IT
+gn7niCuMdF7FxAwgFpuk
 
 -->
