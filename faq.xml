@@ -42,13 +42,23 @@ By default, everything goes under <b>~/.cache/0install.net/</b>. If you <a href=
 </p>
 
 <p>
-If you want to know where a particular program is, you can use <b>--dry-run</b>, e.g.
+If you want to know where a particular program is, you can use <b>--show</b> (version 0.50 and later), e.g.
 </p>
 
 <pre>
-$ <b>0launch --dry-run http://.../someprog</b>
-Would execute: ~/.cache/0install.net/implementations/.../someprog
+$ <b>0launch --show http://rox.sourceforge.net/2005/interfaces/Edit</b>
+- URI: http://rox.sourceforge.net/2005/interfaces/Edit
+  Version: 2.1
+  Path: /home/me/.cache/0install.net/implementations/sha1new=3ab69dda3902c...034958015aaa
+  - URI: http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+    Version: 2.0.6
+    Path: /home/me/.cache/0install.net/implementations/sha256=ccefa7b1873926d...df6d0c06243e
 </pre>
+
+<p>
+That said, you shouldn't ever need to know where things are cached. If you're relying on this
+for some reason, you're probably doing it wrong ;-)
+</p>
 
 </dd>
 <dt>Isn't is really hard to run applications if you always have to
