@@ -162,6 +162,10 @@ process doesn't even start. As an added bonus, this lets you specify where
 on your desktop you want the launcher created.
 </p>
 
+<p>
+That said, if you want this anyway then there's an experimental <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2390'>Firefox Extension</a> to do this.
+</p>
+
 </dd>
 <dt>Will Zero Install conflict with my existing package manager?</dt>
 <dd>
