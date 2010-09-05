@@ -22,7 +22,7 @@ requires first uninstalling another.</description>
 
   <homepage>http://0install.net/</homepage>
 
-  <icon href="http://0install.net/feed_icons/Zero2Desktop.png" type="image/png"/>
+  <icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/>
   <category>System</category>
 
   <package-implementation main="/usr/bin/0launch" package="zeroinstall-injector"/>
@@ -117,7 +117,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxvq+YACgkQrgeCgFmlPMFDIACg0MPhhMt864YbCO7rbDDo5Xkl9UYAnA8Ynx41
-J1t4d9bVekctq7VqHxhp
+iEYEABECAAYFAkyDa5IACgkQrgeCgFmlPMG/BwCfXYRqgvVnK06XHqVydU9BdfE3/3QAn3KZT+oV
+csetHtqVq5aFFNq22oMo
 
 -->
