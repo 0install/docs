@@ -62,8 +62,14 @@ $ gitk --all
 <p>To download the latest updates into your copy:</p>
 
 <pre>
-$ git pull
+$ git pull --rebase
 </pre>
+
+<p>
+(The --rebase option says that if you've committed some changes locally, they should be
+reapplied on top of the latest version. Otherwise, it would create a merge commit, which
+is usually not what you want.)
+</p>
 
 <p>
 You can also pull from other places. If someone posts to the mailing list,
