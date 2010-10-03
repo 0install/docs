@@ -28,8 +28,13 @@ contains this entry:
 
 <pre>
   &lt;group <b>arch="*-src" compile:command='"$BUILD_COMMAND"'</b>&gt;
-    &lt;implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604" released="2007-03-04" stability="stable" version="2.4.8"&gt;
-      &lt;archive extract="glib-2.4.8" href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2" size="2152755" type="application/x-bzip-compressed-tar"/&gt;
+    &lt;implementation id="sha1new=fd1cf4afd14067866e626a2c91f9839f4639e604"
+                    released="2007-03-04" stability="stable"
+		    version="2.4.8"&gt;
+      &lt;archive extract="glib-2.4.8"
+               href="ftp://ftp.gtk.org/pub/gtk/v2.4/glib-2.4.8.tar.bz2"
+	       size="2152755"
+	       type="application/x-bzip-compressed-tar"/&gt;
     &lt;/implementation&gt;
     &lt;requires interface="<b>http://0install.net/2007/interfaces/Make-headers.xml</b>"&gt;
       <b>&lt;environment insert="make-headers.py" name="BUILD_COMMAND"/&gt;</b>
