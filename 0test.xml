@@ -127,7 +127,7 @@ If you specify a test matrix with more than two dimensions, 0test will generate 
 
 <p>
   The <b>--test-command</b> option can be used to run the command of your choice, rather than the test
-  command given in the feed's <b>self-test</b> attribute. The path of the program's main executable is available as $1.
+  command given in the feed's <b>self-test</b> attribute. The path of the program's main executable is available as $1 (or the root directory of the package if there is no 'main').
 </p>
     
 <p>
