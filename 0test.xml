@@ -49,9 +49,9 @@ You can specify a particular set of versions to test:
 <pre>
 $ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.20 0.21</b>
 Passed
- - 0compile v0.20, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6, 0publish v0.17
-Skipped
- - 0compile v(none)
+ - 0compile v0.20, ZeroInstall-Injector v0.48-1, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.21, ZeroInstall-Injector v0.48-1, 0publish v0.17-post, ROX-Lib2 v2.0.6-post
+None skipped
 None failed
 </pre>
 
