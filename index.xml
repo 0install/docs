@@ -54,6 +54,7 @@
 
 <h2>News</h2>
 <dl>
+<dt>Nov 2010</dt><dd>The new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3566'>&lt;command&gt;</a> work has now been merged. This is intended to replace 'main', 'test' and similar attributes with a more flexible and generic system. It allows passing extra arguments to commands (including passing dependencies), having command-specific dependencies, and being able to specify an intepreter in a cross-platform way.</dd>
 <dt>Oct 2010</dt><dd>A first binary of the <a href='http://0install.de/downloads/'>Windows version</a> has been released.</dd>
 <dt>Sep 2010</dt><dd>Lots of discussion about laying an <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3478'>app store</a> interface on top of Zero Install.</dd>
 <dt>Aug 2010</dt><dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3472'>0launch 0.50 released</a>. The <a href='ebox.html'>EBox security demonstration</a> was launched, showing how to integrate Zero Install with sandboxing, allowing users to run software they don't trust fully in a restricted environment. See if you can break out of the sandbox!</dd>
