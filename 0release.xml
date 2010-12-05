@@ -426,7 +426,7 @@ replay attack. So create a new signature, with a fresh time-stamp.
 <p>
 Reset HEAD to before the release (e.g. "git-reset --hard v0.1^") and delete the tag
 itself (e.g. "git-tag -d v0.1"). Delete the remote tag at the server (e.g.
-"git-push main :v0.1 master"). Like 0launch, if anyone saw the release in Git, their
+"git push origin :v0.1 master"). Like 0launch, if anyone saw the release in Git, their
 Git will refuse to go back to an older version. Tell them to use '-f'.
 </p>
 </li>
