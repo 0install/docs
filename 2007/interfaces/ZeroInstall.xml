@@ -113,15 +113,15 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="868702f632af6517df8b1537483d520f5320293c2f00ccb8ed32539b43c89bec"/>
       <archive extract="zeroinstall-injector-0.50" href="http://downloads.sourceforge.net/project/zero-install/injector/0.50/zeroinstall-injector-0.50.tar.bz2" size="270152"/>
     </implementation>
-    <implementation id="sha1new=44db8523d50a53942b201296c48c02f749858ddc" released="2010-12-05" version="0.51">
-      <manifest-digest sha256="d496959752eba0fd3a2b82f535e0ed1db340d20e0199e419959d3b7997556ea7"/>
-      <archive extract="zeroinstall-injector-0.51" href="http://downloads.sourceforge.net/project/zero-install/injector/0.51/zeroinstall-injector-0.51.tar.bz2" size="273615"/>
+    <implementation id="sha1new=c4e711ced6c266928f6b30c6af435db312872089" released="2010-12-05" version="0.51">
+      <manifest-digest sha256="e4f8357253344b619bae4b233cd2ff18c6184b9b32a74ee04dea0247581e2739"/>
+      <archive extract="zeroinstall-injector-0.51" href="http://downloads.sourceforge.net/project/zero-install/injector/0.51/zeroinstall-injector-0.51.tar.bz2" size="273513"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkz77fkACgkQrgeCgFmlPMHX3gCfW4qqgjD0wXc0IrreoLiamPdt5pEAniWGQ1oi
-YI+LG7yfj9ZI7G3jb0DR
+iEYEABECAAYFAkz7+OAACgkQrgeCgFmlPME0uwCg4Bec+lbxx3NGWRRPw2P9E1JgLZIAni2nX57u
+7xhLBw6VhEwPO+zj8NXK
 
 -->
