@@ -31,13 +31,17 @@ Zero Install.</description>
     <requires interface="http://repo.roscidus.com/e/e-swt">
       <environment insert="rune" name="EBOX_RUNE"/>
     </requires>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version before="0.51"/>
+      <environment insert="." name="PYTHONPATH"/>
+    </requires>
     <manifest-digest sha256="cee5446da38955ce5f6c483512797d2891bb07d06835e28bc8487a41facaa821"/>
     <archive extract="ebox-0.3" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.3/ebox-0.3.tar.bz2" size="14237"/>
   </implementation>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxecawACgkQrgeCgFmlPMG0MwCeI2vq2NmcR1I0PPaUGJMYNC0Ujr8AoIbCyitz
-nEci3I3vyTo7eMDyv4jp
+iEYEABECAAYFAkz77t8ACgkQrgeCgFmlPMFKEwCfRsrma6joL0kqV5VxV5/tpcvRP20Ani/WzCXL
+8uD8iuY8HIEhIJSEXpyr
 
 -->
