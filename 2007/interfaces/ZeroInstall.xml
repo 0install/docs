@@ -117,11 +117,15 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="e4f8357253344b619bae4b233cd2ff18c6184b9b32a74ee04dea0247581e2739"/>
       <archive extract="zeroinstall-injector-0.51" href="http://downloads.sourceforge.net/project/zero-install/injector/0.51/zeroinstall-injector-0.51.tar.bz2" size="273513"/>
     </implementation>
+    <implementation id="sha1new=06e71d0eeb9fd2a2235d3d614f3c9a6e5b2fb278" released="2010-12-05" version="0.51.1">
+      <manifest-digest sha256="d0957ae2ff97a89a6f64bc61c34c8a5bbd360ed4b7a918f589ff3f7375aeb95d"/>
+      <archive extract="zeroinstall-injector-0.51.1" href="http://downloads.sourceforge.net/project/zero-install/injector/0.51.1/zeroinstall-injector-0.51.1.tar.bz2" size="273632"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkz7+OAACgkQrgeCgFmlPME0uwCg4Bec+lbxx3NGWRRPw2P9E1JgLZIAni2nX57u
-7xhLBw6VhEwPO+zj8NXK
+iEYEABECAAYFAkz8DpIACgkQrgeCgFmlPMH2EACgmBhfd0y90i9PE3/41gum9hLcSUkAn0yQFnsJ
+TbSmYnJlVSC93sxjOEXb
 
 -->
