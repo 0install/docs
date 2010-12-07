@@ -15,17 +15,18 @@ This class diagram shows how the different concepts are related. Each feed file 
 </p>
 
 <p class='uml'>
- <img src='UML/zero-install-feed-classes.png' width='665' height='358' alt='Class diagram for feed files'/>
+ <img src='UML/zero-install-feed-classes.png' width='705' height='378' alt='Class diagram for feed files'/>
 </p>
 
 <p>
-Each <k>Feed</k> lists a number of <k>Implementations</k>. An <k>Identity</k> is a way to
-recognise an Implementation (e.g. a cryptographic digest). A <k>Retrieval method</k>
-is a way to get an Implementation (e.g. by downloading from an FTP site). A
-<k>Binding</k> says how to let the program locate the Implementations when run. A
-<k>Dependency</k> indicates that one component depends on another (e.g. Gimp requires
-the GTK library). A <k>Constraint</k> limits the choice of a dependency (e.g. Gimp
-requires a version of GTK >= 2.6).
+Each <k>Feed</k> lists a number of <k>Implementations</k> (versions). An <k>Identity</k>
+is a way to recognise an Implementation (e.g. a cryptographic digest). A
+<k>Retrieval method</k> is a way to get an Implementation (e.g. by downloading
+from an FTP site). A <k>Command</k> says how to run an Implementation as a
+program.A <k>Dependency</k> indicates that one component depends on another
+(e.g. Gimp requires the GTK library). A <k>Binding</k> says how to let the
+program locate the Implementations when run. A <k>Constraint</k> limits the
+choice of a dependency (e.g. Gimp requires a version of GTK >= 2.6).
 </p>
 
 <p>
@@ -165,6 +166,7 @@ the closest ancestor &lt;group&gt; which defines it):
 	langs='...' ?
 	arch='...' ? &gt;
     &lt;manifest-digest [digest] * /> *
+    [command] *
     [retrieval-method] *
     [binding] *
     [requires] *
@@ -291,6 +293,62 @@ such as searching for the implementation on a peer-to-peer network.
     &lt;manifest-digest&gt;.</li>
   <li>If you have a local implementation then set both id and local-path to the pathname.</li>
 </ul>
+
+<h2>Commands</h2>
+
+<p>
+  The <b>main</b> attribute above provides a simple way to say how to run this implementation. The
+  &lt;command&gt; element (supported since 0.51, released Dec 2010) provides a more flexible alternative.
+</p>
+
+<pre>
+  &lt;command
+    name='...'
+    path='...' ? &gt;
+    [requires] *
+    [runner] ?
+    &lt;arg&gt; ... &lt;/arg&gt; *
+  &lt;/command&gt;
+</pre>
+
+<dl>
+  <dt>name</dt>
+  <dd>By default, 0launch executes the "run" command, but the <b>--command</b> option can be used to specify a different one.
+    <a href='0test.html'>0test</a> runs the "test" command (replacing the old <b>self-test</b> attribute) and <a href='0compile.html'>0compile</a> runs the "compile" command (replacing the <b>compile:command</b> attribute).</dd>
+  <dt>path</dt>
+  <dd>The relative path of the executable within the implementation (optional if &lt;runner&gt; is used).</dd>
+</dl>
+
+<p>
+  Additional arguments can be passed using the &lt;arg&gt; element. Within an argument, "${name}" is expanded to the value of the corresponding environment variable. These arguments are passed to the program before any arguments specified by the user.
+</p>
+
+<p>
+  Command-specific dependencies can be specified for a command by nesting &lt;requires&gt; elements. For example, an interpreter might only depend on libreadline when
+  used interactively, but not when used as a library, or the "test" command might depend on a test framework.
+</p>
+
+<p>
+  The &lt;runner&gt; element introduces a special kind of dependency: the program that is used to run this one. For example, a Python
+  program might specify Python as its runner. &lt;runner&gt; is a subclass of
+  &lt;requires&gt; and accepts the same attributes and child elements. In addition, you can specify arguments to pass to the runner by nesting them inside the &lt;runner&gt; element.
+  These arguments are passed before the path of the executable given by the 'path' attribute.
+</p>
+
+<p>For example:</p>
+
+<pre>
+    &lt;command name='run' path="causeway.e-swt"&gt;
+      &lt;runner interface='http://repo.roscidus.com/e/e-core'&gt;
+        &lt;arg&gt;-cpa&lt;/arg&gt;
+        &lt;arg&gt;$SWT_JAR&lt;/arg&gt;
+      &lt;/runner&gt;
+    &lt;/command&gt;
+</pre>
+
+<p>
+  In this case, 0launch will run the command <b>/path/to/e-interpreter -cpa /path/to/swt.jar /path/to/causeway.e-swt</b>.
+</p>
 
 <h2>Package implementations</h2>
 
