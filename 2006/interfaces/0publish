@@ -72,10 +72,14 @@ packagers.html.</description>
       <manifest-digest sha256="cae2d05188cfd140eca87204e8957128494173f914efc458416543825454130b"/>
       <archive extract="0publish-0.17" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.17/0publish-0.17.tar.bz2" size="23981"/>
     </implementation>
+    <implementation id="sha1new=eb9961c14b9a54dc45fa80a9c22a185887454659" released="2010-12-10" self-test="tests/testall.py" version="0.18">
+      <manifest-digest sha256="be0c0773733055496669ea98e61772ae08f1a3add638a2e9f833bb9f966161ef"/>
+      <archive extract="0publish-0.18" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.18/0publish-0.18.tar.bz2" size="24244"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxEpskACgkQrgeCgFmlPMEnmwCg1BT64+8pxMtcdLYllDYZieiCN4AAoNYwuZq2
-cz8h5/dUNVJCBgX5HGKy
+iEYEABECAAYFAk0Cf5UACgkQrgeCgFmlPMHQ5QCgiIfZJHSCiFLyO1Wn8eq77HpJ7eoAoJ9Kly1I
+V+z4lY4ehuzVtQAky1rd
 
 -->
