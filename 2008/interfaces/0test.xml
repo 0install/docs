@@ -40,21 +40,11 @@ create a matrix of test results.</description>
       <archive extract="0test-0.3.1" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3.1/0test-0.3.1.tar.bz2" size="11580"/>
     </implementation>
     </group>
-    <group>
-      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.51"/>
-      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
-    </requires>
-      <implementation id="sha1new=30bd70440cf6277695a10a68322ea88fb8a67805" main="0test" released="2010-12-10" version="0.4">
-      <manifest-digest sha256="d19187423e048d0349b4c2ddd5f107935090ffdafa5e53744217ed787960b69a"/>
-      <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12181"/>
-    </implementation>
-    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk0Ci1cACgkQrgeCgFmlPMES7QCgtW+VoPid5XjQ6r27vqSYiyu1aVUAoLDl7f8D
-bDk/E26pfzuiiB30D9Rz
+iEYEABECAAYFAk0ClAcACgkQrgeCgFmlPMGG7ACgsRODXPEx0MLKsaO5lVzIWJvI7HgAn0vStqZW
+pSP5M3dATeL2ei7vwSUh
 
 -->
