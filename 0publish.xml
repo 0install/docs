@@ -66,6 +66,7 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
 
 <dl>
   <dt>-h, --help</dt><dd>Show help message and exit.</dd>
+  <dt>--add-types</dt><dd>add missing MIME-type attributes.</dd>
   <dt>--add-version=VERSION</dt><dd>Add a new implementation (use with <b>--archive-url</b>, etc).</dd>
   <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
   <dd>Change a local implementation to one with a digest and an archive.
