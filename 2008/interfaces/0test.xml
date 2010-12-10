@@ -35,16 +35,26 @@ create a matrix of test results.</description>
       <manifest-digest sha256="4b201ec31af16c8bec86295cc18a43d7568dc0f4af02d4dcd9bedc1b395201d6"/>
       <archive extract="0test-0.3" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3/0test-0.3.tar.bz2" size="11445"/>
     </implementation>
-      <implementation id="sha1new=9a3689f6830544a91b49f7484577d3b9a51a7273" main="0test" released="2010-10-28" self-test="test0test.py" version="0.3.1">
+      <implementation id="sha1new=9a3689f6830544a91b49f7484577d3b9a51a7273" main="0test" released="2010-10-28" self-test="test0test.py" stability="stable" version="0.3.1">
       <manifest-digest sha256="e37e2ee81aa365b7f403f069d96aba0d1eaa44e2220ec04052d5550ebf093506"/>
       <archive extract="0test-0.3.1" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3.1/0test-0.3.1.tar.bz2" size="11580"/>
+    </implementation>
+    </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.51"/>
+      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+    </requires>
+      <implementation id="sha1new=30bd70440cf6277695a10a68322ea88fb8a67805" main="0test" released="2010-12-10" version="0.4">
+      <manifest-digest sha256="d19187423e048d0349b4c2ddd5f107935090ffdafa5e53744217ed787960b69a"/>
+      <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12181"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkzJvioACgkQrgeCgFmlPMHqrgCfTrTLPAO5/yPlj1tqQirYveP9f0sAnRLjymoM
-Nam9d/btE1SH1ZYwDUpF
+iEYEABECAAYFAk0Ci1cACgkQrgeCgFmlPMES7QCgtW+VoPid5XjQ6r27vqSYiyu1aVUAoLDl7f8D
+bDk/E26pfzuiiB30D9Rz
 
 -->
