@@ -119,7 +119,7 @@ one for you).
 <p>
   We can see in this example that the unit-tests for 0compile 0.19 no longer pass, regardless of the version of Zero Install used.
   This problem was caused by a change to the GNU-Hello test program it uses within its own tests. Ideally, programs should depend on their
-  test data using <b>&lt;requires interface="..." use="testing"&gt;</b>, but 0compile actually needed to test downloading of the test code itself.
+  test data using <b>&lt;requires&gt;</b> (see below), but 0compile actually needed to test downloading of the test code itself.
   0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.21 depends on
   a later version explicitly, so the broken combination is skipped.
 </p>
