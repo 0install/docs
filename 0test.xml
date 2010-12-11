@@ -9,7 +9,7 @@
 
 <p>
 A Zero Install <a href='interface-spec.html'>feed</a> can specify a command to run to test the program automatically
-using the <b>self-test</b> attribute. 0test runs this command.
+using the <b>self-test</b> attribute (or the "test" command). 0test runs this command.
 It can also test combinations of various versions of a program and its dependencies.
 </p>
 
@@ -39,8 +39,14 @@ You can also use it to test released programs, e.g. to test the default version 
 </p>
 
 <pre>
-$ 0test http://0install.net/2006/interfaces/0compile.xml
+$ <b>0test http://0install.net/2006/interfaces/0compile.xml</b>
+Passed
+ - 0compile v0.21-post, ZeroInstall-Injector v0.51.1, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
 </pre>
+
+<p>
+  0test prints out the result and the versions of all components used in the test.
+</p>
 
 <p>
 You can specify a particular set of versions to test:
@@ -71,39 +77,38 @@ This tests three versions of 0compile against three versions of Zero Install (a 
 </p>
 
 <pre>$ <b>0test --html results.html \
-  http://0install.net/2006/interfaces/0compile.xml 0.19 0.20 0.20-post \
-  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.48-post</b>
+  http://0install.net/2006/interfaces/0compile.xml 0.19 0.20 0.21 \
+  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.49</b>
 Passed
- - 0compile v0.20, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.20, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.20-post, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.20-post, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.20, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.20, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.21, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.21, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
 Skipped
- - 0compile v0.20-post, ZeroInstall-Injector v(none), ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.21, ZeroInstall-Injector v0.47
 Failed
- - 0compile v0.19, ZeroInstall-Injector v0.47, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.19, ZeroInstall-Injector v0.48, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.19, ZeroInstall-Injector v0.48-post, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
- - 0compile v0.20, ZeroInstall-Injector v0.47, ROX-Lib2 v2.0.6-post, 0publish v0.17-post
+ - 0compile v0.19, ZeroInstall-Injector v0.47, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.19, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.19, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
+ - 0compile v0.20, ZeroInstall-Injector v0.47, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
 </pre>
 
 <p>
   The <b>--html results.html</b> option causes it to also generate this table:
 </p>
 
-<table class="testresults"><tr><th/><th colspan="3">ZeroInstall-Injector</th></tr><tr><th>0compile</th><th>0.47</th><th>0.48</th><th>0.48-post</th></tr>
-<tr><th>0.19</th><td class="failed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="failed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="failed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td></tr>
-<tr><th>0.20</th><td class="failed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td></tr>
-<tr><th>0.20-post</th><td class="skipped">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td><td class="passed">ROX-Lib2 2.0.6-post
-0publish 0.17-post</td></tr>
+<table class="testresults"><tr><th/><th colspan="3">ZeroInstall-Injector</th></tr><tr><th>0compile</th><th>0.47</th><th>0.48</th><th>0.49</th></tr>
+<tr><th>0.19</th><td class="failed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td><td class="failed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td><td class="failed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td></tr>
+<tr><th>0.20</th><td class="failed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td></tr>
+<tr><th>0.21</th><td class="skipped">skipped</td><td class="passed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
+ROX-Lib2 2.0.6-post</td></tr>
 </table>
 
 <p>
@@ -115,7 +120,7 @@ one for you).
   We can see in this example that the unit-tests for 0compile 0.19 no longer pass, regardless of the version of Zero Install used.
   This problem was caused by a change to the GNU-Hello test program it uses within its own tests. Ideally, programs should depend on their
   test data using <b>&lt;requires interface="..." use="testing"&gt;</b>, but 0compile actually needed to test downloading of the test code itself.
-  0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.20-post depends on
+  0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.21 depends on
   a later version explicitly, so the broken combination is skipped.
 </p>
 
@@ -144,31 +149,29 @@ None skipped
 None failed
 </pre>
 
+<p>
+  Known issue: 0test can currently only select versions with a "run" command (even though you're
+  overriding it with your own command). This will be fixed when 0launch 0.52 is released.
+</p>
+
 <h2>Test-only dependencies</h2>
 
 <p>
-  Dependencies marked with <b>use="testing"</b> in their feed are normally ignored by 0launch. However, when using 0test
-  they are enabled.
-</p>
-
-<p>
-  This allows you to add extra dependencies that are only used when testing
-  your program. For example, you can use this to depend on a testing framework
-  or a large test data-set:
+  Starting from 0test 0.4, you can also use the &lt;command&gt; syntax instead of the self-test attribute. This allows passing extra arguments and specifying test-specific dependencies. For example:
 </p>
 
 <pre>
-    &lt;group self-test="tests/testall.py"&gt;
-      &lt;requires interface="http://example.com/somelib.xml"&gt;
-	...
-      &lt;/requires&gt;
-      &lt;requires interface="http://testing.com/testframework.xml" <b>use="testing"</b>&gt;
-	&lt;environment insert="" mode="replace" name="TEST_FRAMEWORK"/&gt;
-      &lt;/requires&gt;
-      &lt;implementation id="." version="0.1-pre"/&gt;
-    &lt;/group&gt;
+  &lt;group&gt;
+    &lt;requires interface="http://example.com/somelib.xml"&gt;
+      ...
+    &lt;/requires&gt;
+    <b>&lt;command name="test" path="tests/testall.py"&gt;</b>
+      <b>&lt;requires interface="http://testing.com/testframework.xml"&gt;</b>
+	<b>&lt;environment insert="" mode="replace" name="TEST_FRAMEWORK"/&gt;</b>
+      <b>&lt;/requires&gt;</b>
+    <b>&lt;/command&gt;</b>
+    &lt;implementation id="." version="0.1-pre"/&gt;
+  &lt;/group&gt;
 </pre>
-
-<p>Note: 0launch &lt; 0.43 doesn't know about the <b>use</b> attribute and will include the dependency in all cases.</p>
 
 </html>
