@@ -7,177 +7,92 @@
 This document explains what we've done and where we're going with future versions.
 </p>
 
-<p>
-Despite its pre-1.0 version number, Zero Install is currently used by a large
-number of people, as it is the preferred method of installation for <a
-href='http://rox.sourceforge.net'>ROX</a>, and is generally quite robust.
-</p>
-
 <toc level='h3'/>
 
-<quicklinks>
-  <link href='http://sourceforge.net/apps/ideatorrent/zero-install/ideatorrent/most_popular_ever/' img='http://apps.sourceforge.net/ideatorrent/zero-install/modules/ideatorrent/themes/brownie/images/ideamail.png'>Vote on ideas!</link>
-</quicklinks>
-
-<h3>File format stability</h3>
+<h3>History</h3>
 
 <p>
-Although we have not reached the 1.0 release, the injector has a very good
-record of backwards compatibility. In fact, you can run Edit with the XML
-interface file used to demonstrate version 0.2 of the injector (released
-2005-03-14) on the very latest (0.22) version of the injector. The only
-incompatible change was between versions 0.1 and 0.2!  Of course, it doesn't
-work the other way; interfaces designed to work with later versions of the
-injector will use features not available on older versions.
+This is a quick overview of the major features added to Zero Install. It focusses on features available to feed authors, who want to know which features they can safely use while supporting users on older distributions.
 </p>
 
-<h3>Completed features</h3>
+<h4>2005 (versions 0.1 to 0.17)</h4>
 
 <p>
-This is a quick overview of the major features added to the injector.
+  Zero Install was created in 2003 as a distributed network filesystem. In 2005, it was redesigned to the current "injector" system. Feed files from version 0.2
+  can still be run using the current (0.51) version.
 </p>
 
-<dl>
-<dt>Dependencies, graphical interface, user-set policies</dt>
-<dd>Since 0.1</dd>
+<h4>2006 (versions 0.18 to 0.24)</h4>
 
-<dt>Updating over HTTP, GPG signatures</dt>
-<dd>Since 0.2</dd>
+<p>
+  Major features added in 2006:
+</p>
 
-<dt>Pass options to programs</dt>
-<dd>Since 0.5</dd>
+<ul>
+  <li>Support FTP downloads of archives.</li>
+  <li>XML signatures (not just plain GPG).</li>
+  <li>The &lt;recipe&gt; element allows combining multiple archives.</li>
+  <li>Restrictions on suitable versions of dependencies, using the &lt;version&gt; element.</li>
+  <li>Support for other secure hashes (not just sha1).</li>
+  <li>Support for extracting from RPM, Debian, Autopackage, zip and Cabinet format archives.</li>
+  <li>Compile a binary from source.</li>
+  <li>More flexible version numbering (e.g. "1.2-post7").</li>
+</ul>
 
-<dt>Create alias scripts</dt>
-<dd>Since 0.7</dd>
+<h4>2007 (version 0.25 to 0.31)</h4>
 
-<dt>Automatic public key fetching</dt>
-<dd>Since 0.8</dd>
+<ul>
+<li>Extracting from .tar.lzma and .tar (uncompressed) archives.</li>
+<li>Background checking for updates.</li>
+<li>Automatic <a href='sharing.html'>secure sharing</a> of downloads.</li>
+<li>Bug reporting.</li>
+<li><a href='distribution-integration.html'>Native package manager integration</a> for Debian and RPM systems.</li>
+<li>Implementation bindings (&lt;environment&gt; directly inside &lt;implementation&gt;).</li>
+</ul>
 
-<dt>Allow symlinks</dt>
-<dd>Since 0.10</dd>
+<h4>2008 (version 0.32 to 0.37)</h4>
 
-<dt>RPM packages of the injector</dt>
-<dd>Since 0.13</dd>
+<ul>
+  <li><a href='http://roscidus.com/0mirror/'>Mirrors for feeds</a>.</li>
+  <li>Manage applications added to the menu (GNOME and KDE).</li>
+  <li>Multi-arch support</li>
+</ul>
 
-<dt>Local interfaces and adding additional remote feeds</dt>
-<dd>Since 0.14</dd>
+<h4>2009 (versions 0.38 to 0.43)</h4>
 
-<dt>Support for architecture-dependant binaries</dt>
-<dd>Since 0.15</dd>
+<ul>
+  <li>Support for Fink (Mac OS X).</li>
+  <li>Easier compile-from-source ("Automatic" mode).</li>
+  <li>Key information server.</li>
+  <li>&lt;needs-terminal&gt; supported.</li>
+  <li>Downloading feeds over HTTPS.</li>
+</ul>
 
-<dt>Additional feeds in interfaces</dt>
-<dd>Since 0.17</dd>
+<h4>2010 (versions 0.44 onwards)</h4>
 
-<dt>Support FTP downloads of archives, XML signatures and extracting from RPMs</dt>
-<dd>Since 0.18</dd>
+<ul>
+  <li>Download progress bars in console mode.</li>
+  <li>Canonical CPU type names.</li>
+  <li>Gentoo, Slackware and FreeBSD Ports integration.</li>
+  <li>Apple dmg-format archives can be used on Mac OS X.</li>
+  <li>Specify distribution name in &lt;package-implementation&gt;.</li>
+  <li>Support for multiple hash algorithms for a single implementation.</li>
+  <li>Added 'local-path' attribute.</li>
+  <li><a href='http://roscidus.com/desktop/node/954'>SAT solver</a> handles complex version requirements.</li>
+  <li>Select implementations based on user's locale.</li>
+  <li>Support for PackageKit (prompt the user to install distribution packages where necessary).</li>
+  <li>Initial Windows support.</li>
+  <li>The &lt;command&gt; element allows passing extra arguments.</li>
+  <li>The &lt;runner&gt; element allows specifying the intepreter.</li>
+</ul>
 
-<dt>Icons for interfaces, graphical cache explorer, and 0publish command to help with creating interface files</dt>
-<dd>Since 0.19</dd>
 
-<dt>Recipes</dt>
-<dd>Combine several archives to create a single version.
-Since 0.20</dd>
-
-<dt>Restrictions on suitable versions of dependencies</dt>
-<dd>Since 0.20</dd>
-
-<dt>Extracting from Debian packages</dt>
-<dd>Since 0.20</dd>
-
-<dt>Support for other secure hashes</dt>
-<dd>Since 0.20</dd>
-
-<dt>Support for extracting from Autopackage and zip archives</dt>
-<dd>Since 0.21</dd>
-
-<dt>Secure local copy (checking the digest)</dt>
-<dd>Since 0.22</dd>
-
-<dt>Compile a binary from source</dt>
-<dd>If a binary doesn't exist for your platform, the injector should be able to compile one from source for
-you. This should include downloading any necessary compilers, headers and build tools using Zero Install. The
-resulting binary should come with an automatically-generated interface file, ready for publishing the binary
-on the web. The archive should also include a provenance file listing the exact versions of dependencies used
-to build it, allowing it to be recompiled in the same environment later.
-Supported since version 0.23.
-</dd>
-
-<dt>More flexible version numbering</dt>
-<dd>
-The injector only supports a list of dot-separated integers. It would be useful to support some common
-modifiers, e.g. "1.0-pre1", "2.0.0-rc3", "5-post2". Since 0.24.
-</dd>
-
-<dt>Extracting from Cabinet packages</dt>
-<dd>Since 0.24</dd>
-
-<dt>Extracting from .tar.lzma and .tar (uncompressed) archives</dt>
-<dd>Since 0.25</dd>
-
-<dt>Background checking for updates</dt>
-<dd>
-Instead of making the user wait while we check for updates, start the program immediately and check in the
-background [ <a href='http://rox.sourceforge.net/desktop/node/384'>screenshot</a> ]. Since 0.26.</dd>
-
-<dt>Automatic secure sharing of downloads</dt>
-<dd>
-If two users ask to run the same version of a program or library, it is only downloaded and stored once.
-The users don't need to trust each other; only genuine unmodified copies can be shared. See
-<a href='sharing.html'>the sharing page</a> for details. Since 0.26.
-</dd>
-
-<dt>Bug reporting</dt>
-<dd>Generate useful information for bug-reports, since we know exactly which version of each library
-was being used. <a href='0compile.html'>0compile</a> already supports this if a build fails, but we could
-do something similar when running programs, too. Right-click on a component in the GUI to use this. Since 0.26.</dd>
-
-<dt>Native package manager integration</dt>
-<dd>
-If a Zero Install package requires a library, and the user already has a suitable version installed with another
-system (APT, RPM, etc) then the injector should be able to use that version. This would save unnecessarily downloading
-and storing a second copy of the library. The user should still have the option to get the library through Zero Install
-if they want though (e.g., if they want to try a newer version).
-See <a href='distribution-integration.html'>Distribution Integration</a> for
-details. Since 0.28.
-</dd>
-
-<dt>RPM integration</dt>
-<dd>
-As above, but for RPM. Since 0.31.
-</dd>
-
-<dt>Implementation bindings</dt>
-<dd>
-In addition to attaching bindings to dependencies (which tell Zero Install how to tell a component about where its
-libraries are), it is now also possible to attach bindings directly to implementations (to tell them where
-they themselves are located). This simplifies packaging certain programs. Since 0.31.
-</dd>
-
-<dt>Mirrors for feeds</dt>
-<dd>Run a public mirror that periodically fetches the latest versions of feeds and makes them available from a single site,
-so that 0launch will download from the mirror if the upstream site becomes unavailable. Since 0.33, 0launch will download
-from the <a href='http://roscidus.com/0mirror/'>roscidus.com/0mirror</a> mirror site if a feed takes longer than 5 seconds
-to download.</dd>
-
-<dt>Manage applications added to the menu</dt>
-<dd>
-Provide built-in support for editing and removing launchers added to the GNOME and KDE menus. Since 0.34.
-</dd>
-
-<dt>Multi-arch support</dt>
-<dd>Many newer computers can run both 64-bit and 32-bit applications. However, each process must be made up of components (libraries)
-of the same type (a 64-bit program requires all 64-bit libraries, a 32-bit program requires all 32-bit libraries). Since 0.35.
-</dd>
-
-</dl>
-
-<h3>Features planned for 1.0</h3>
-
+<h3>Possible future features</h3>
 <dl>
 
 <dt>Automatic cache cleaning</dt>
 <dd>
-The injector can keep all versions of all libraries on disk at once. This is useful, but there should be a way
+0install can keep all versions of all libraries on disk at once. This is useful, but there should be a way
 to clean out ones that aren't needed any more to free up disk space. Individual versions can be removed easily
 enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
 In particular, we need a way to remove a version which was shared between multiple users safely (i.e. only remove it once no user
@@ -191,36 +106,22 @@ See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
 
 <dt>Optional dependencies</dt>
 <dd>
-The interface file format only allows 'required' dependencies at present. It should also support the
+The feed file format only allows 'required' dependencies at present. It should also support the
 'recommended' (optional and selected by default) and 'suggested' (optional and unselected by default)
 relationships.
 </dd>
-
-<dt>Display release notes</dt>
-<dd>
-The injector tells you that a new version is available, but it doesn't say what changed! At the very least, it
-should provide a link to the program's release notes on the web.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1316/focus=1316'>Discussion</a> ]
-</dd>
-
-</dl>
-
-<h3>Other possible features</h3>
-
-<dl>
 
 <dt>Plug-ins</dt>
 <dd>
 It should be possible to add additional interfaces to a program's dependencies list. For example, you could add
 the interface for a French dictionary to a word processor to let you spell-check French documents.
 This would usually require some support from the application itself. A plug-in is a more general type of
-optional dependency; one which isn't listed in the main interface file at all.
+optional dependency; one which isn't listed in the main feed file at all.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1072/focus=1073'>Discussion</a> ]
 </dd>
 
 <dt>More meta-data</dt>
-<dd>License terms (and warn about incompatible licenses?), mailing list address, where to send
-bug reports, etc.</dd>
+<dd>Mailing list address, release notes, where to send bug reports, etc.</dd>
 
 <dt>Peer-to-peer downloads</dt>
 <dd>The tricky bit about P2P is normally the free-text searching, but we already know the secure hash
@@ -244,15 +145,14 @@ URIs or trusted public keys).</dd>
 <dt>Third-party sign-off</dt>
 <dd>A distribution can sign an upstream release ("Certified for use with SuSE 10.2", etc). Users can set a policy
 to run only approved versions by default. Or, a third-party could provide additional input to the hints box
-(the injector's GUI contains a built-in "Unreliable hints database", but a commercial organisation could offer
+(we already provide the "Unreliable hints database", but a commercial organisation could offer
 a real service).
 </dd>
 
 <dt>Sandboxing</dt>
 <dd>
-Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. It should be
-possible to trust keys only in a limited way, so that such software must run in a sandbox. Sandboxed software must still
-be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion.
+Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. Sandboxed software must still
+be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion. <a href='ebox.html'>EBox</a> shows how this integration can work.
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Discussion</a> ]
 </dd>
 
