@@ -19,7 +19,7 @@ function get_download_html() {
 		"Knoppix" => "install-linux.html#knoppix",
 		"Linux" => "install-linux.html",
 		"Gentoo" => "http://gentoo-portage.com/rox-base/zeroinstall-injector",
-		"Windows" => "install-windows.html",
+		"Windows" => "http://0install.de/downloads/?lang=en",
 	);
 
 	$platform = "";
