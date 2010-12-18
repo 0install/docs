@@ -45,7 +45,7 @@ create a matrix of test results.</description>
       <version not-before="0.51"/>
       <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
     </requires>
-      <implementation id="sha1new=73c6c68ded77ac26a286fab9164df6b97359de6f" main="0test" released="2010-12-11" version="0.4">
+      <implementation id="sha1new=73c6c68ded77ac26a286fab9164df6b97359de6f" main="0test" released="2010-12-11" stability="stable" version="0.4">
       <manifest-digest sha256="8a0de00bb6a9ec0fef763fc2b39379d1f5db572d50c2e235c04f872a88e1bc3b"/>
       <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12261"/>
     </implementation>
@@ -54,7 +54,7 @@ create a matrix of test results.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk0DZcwACgkQrgeCgFmlPMGIkwCgtKJhjmFvv8bx2SIaPttI9UbX61IAn2b1acZJ
-qdVUjqIrkyXdk51Wi9Z2
+iEYEABECAAYFAk0My8sACgkQrgeCgFmlPMF9LgCdFuALXRDVE6hlEA/9CajVmoq5JDIAoI96mjmF
+Xs+HJGEKsOR8158ekpjQ
 
 -->
