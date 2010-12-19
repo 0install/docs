@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<program name='Zero Install Injector'
+<program name='Zero Install'
 	 author='Thomas Leonard'
 	 git='http://repo.or.cz/w/zeroinstall.git'
-	 title='Zero Install Injector: Downloads'
+	 title='Zero Install: Downloads'
 	 license='GNU Lesser General Public License'>
 
 <p>
-The injector (<b>0launch</b>) is a small Python program. You ask it to run a program by giving
-it the program's full name (a web address). The injector does <b>not</b> need
+<b>0launch</b> is a small Python program. You ask it to run a program by giving
+it the program's full name (a web address). It does <b>not</b> need
 to be installed or run as root. It does <b>not</b> write to any shared
 directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a cache directory
 so that you don't need to download anything twice, and programs can still be used when you are off-line.
