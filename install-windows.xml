@@ -3,65 +3,8 @@
 
 <h2>Installation : Windows</h2>
 
-<p>
-Windows partially works with Zero Install but this is not yet ready for general use. If you have some programming knowledge, please help out!
-</p>
-
-<h2>.NET version</h2>
-
-<p>
-A <a href='http://0install.de/windows/'>.NET version of Zero Install</a> is being developed for Windows.
-</p>
-
-<h2>Older (manual) instructions</h2>
-
-<p>
-Note: These instructions are for regular Windows. For Cygwin, see the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2503'>How to have Zero Install running with Portable Cygwin on Windows XP</a> thread on the mailing list.
-</p>
-
-<h2>Installing the pre-requisites</h2>
-
-<ol>
-  <li>Install python-2.6.4.msi from <a href='http://www.python.org'>python.org</a> and add the install directory to the path (C:\Python26). Do <i>not</i> use Python 3.</li>
- <li>Extract <a href='http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.5-20091215_win32.zip'>gtk+-bundle_2.18.5-20091215_win32.zip</a> from  <a href='http://www.gtk.org/'>gtk.org</a>.</li>
- <li>Install PyCairo 1.4.12-2, PyGObject 2.14.2-2 and PyGTK 2.12.1-3 from <a href='http://www.pygtk.org/'>pygtk.org</a>.</li>
- <li>Install the Windows binary of GnuPG from <a href='http://gnupg.org'>gnupg.og</a>  and add the install directory to the path (C:\Program Files\GNU\GnuPG) <b>OR</b><br/>
-Install <a href='http://www.gpg4win.org/'>gpg4win</a>.</li>
- <li><i>Optional:</i> Install the Windows binary of bzip2 from <a href='http://www.bzip.org/'>bzip.org</a>. Call it <b>bunzip2.exe</b> and put it in your %PATH%.</li>
- <li>Use <b>Start -> Run -> cmd</b>. Make sure the <b>python</b> and <b>gpg</b> commands can be found.</li>
-</ol>
-
-<h2>Getting Zero Install itself</h2>
-<ol>
- <li>Install <a href='http://code.google.com/p/msysgit/'>msysgit</a> and open a GIT bash prompt.</li>
- <li>Run "git clone git://repo.or.cz/zeroinstall.git". This will create a directory named "zeroinstall". cd to it and run "git checkout origin/windows".</li>
- <li>cd to the zeroinstall directory and run "python setup.py install".</li>
-</ol>
-
-<h2>Running it</h2>
-
-<p>
-  cd to your cloned GIT repository and run 0launch any time (use -vvc for maximum logging), e.g.
-</p>
-
-<pre>python 0launch http://afb.users.sourceforge.net/zero-install/interfaces/seamonkey.xml</pre>
-
-<h2>Notes</h2>
-
 <ul>
-<li>The GUI does not work, use the command line instead.</li>
-
-<li>Don't run 0launch itself from inside MSYS (git bash) it will fail at the gpg key import.</li>
-<li>To add a directory to the path:
-  <ol>
-    <li>Left click <b>My Computer -> Properties -> Advanced -> Environment Variables</b>.</li>
-    <li>Edit "Path". Append the directory. Directories should be separated by a ";", e.g. <b>C:\Python26;C:\Program Files\GNU\GnuPG</b>.</li>
-  </ol>
-</li>
+  <li><a href='http://0install.de/downloads/?lang=en'>.NET version of Zero Install</a></li>
 </ul>
-
-<quicklinks>
-  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
-</quicklinks>
 
 </html>
