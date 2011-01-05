@@ -15,34 +15,34 @@ these feeds.</description>
   <category>Development</category>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="0publish-gui">
     <implementation id="sha1new=1e543d90e9a95951111e54bd17b230536aca6fd1" released="2007-01-13" stability="stable" version="0.1">
-      <archive extract="0publish-gui-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.1.tar.bz2" size="26536"/>
+      <archive extract="0publish-gui-0.1" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.1/0publish-gui-0.1.tar.bz2" size="26536"/>
     </implementation>
     <implementation id="sha1new=639e733caa7620e44053f5d3dc6e563e0b122e54" released="2007-01-14" stability="stable" version="0.2">
-      <archive extract="0publish-gui-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.2.tar.bz2" size="27205"/>
+      <archive extract="0publish-gui-0.2" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.2/0publish-gui-0.2.tar.bz2" size="27205"/>
     </implementation>
     <implementation id="sha1new=d5fa690748d4e192e8041a7a7ec814c5f591a235" released="2007-01-21" stability="stable" version="0.3">
-      <archive extract="0publish-gui-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.3.tar.bz2" size="27252"/>
+      <archive extract="0publish-gui-0.3" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.3/0publish-gui-0.3.tar.bz2" size="27252"/>
     </implementation>
     <implementation id="sha1new=aa75e953f4f83f1551a3ba3cea3137bd01dd1c20" released="2007-02-11" stability="stable" version="0.4">
-      <archive extract="0publish-gui-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.4.tar.bz2" size="29267"/>
+      <archive extract="0publish-gui-0.4" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.4/0publish-gui-0.4.tar.bz2" size="29267"/>
     </implementation>
     <implementation id="sha1new=2a95d43799d51c3c947a6fdb46a36daa4c0eb183" released="2007-03-10" stability="stable" version="0.5">
-      <archive extract="0publish-gui-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.5.tar.bz2" size="29310"/>
+      <archive extract="0publish-gui-0.5" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.5/0publish-gui-0.5.tar.bz2" size="29310"/>
     </implementation>
     <implementation id="sha1new=e361f46d53de28f7779e25687c772ad4420f10ac" released="2007-03-25" stability="stable" version="0.6">
-      <archive extract="0publish-gui-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.6.tar.bz2" size="29658"/>
+      <archive extract="0publish-gui-0.6" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.6/0publish-gui-0.6.tar.bz2" size="29658"/>
     </implementation>
     <implementation id="sha1new=65f6464eeb47ca6816836bec3800190051c1ad79" released="2007-05-19" stability="stable" version="0.7">
-      <archive extract="0publish-gui-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.7.tar.bz2" size="29587"/>
+      <archive extract="0publish-gui-0.7" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.7/0publish-gui-0.7.tar.bz2" size="29587"/>
     </implementation>
     <implementation id="sha1new=dca457cf9d7f93ca3aa1d81fd00d2e1df73c8bdf" released="2007-07-26" stability="stable" version="0.8">
-      <archive extract="0publish-gui-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.8.tar.bz2" size="31351"/>
+      <archive extract="0publish-gui-0.8" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.8/0publish-gui-0.8.tar.bz2" size="31351"/>
     </implementation>
     <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
       <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
     </requires>
     <implementation id="sha1new=8499203c95bf3dced11c8ff6307b2ac2be2f07c6" released="2008-08-08" stability="stable" version="0.9">
-      <archive extract="0publish-gui-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-gui-0.9.tar.bz2" size="32071"/>
+      <archive extract="0publish-gui-0.9" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.9/0publish-gui-0.9.tar.bz2" size="32071"/>
     </implementation>
     <implementation id="sha1new=03fccf616d3c965fa60583784dbe65c0ff1e7a1d" released="2009-09-10" stability="stable" version="0.10">
       <manifest-digest sha256="7866d9d0ad1b477fe289c449008f13a6588a18a087433a6b393cd4d7971ad0a7"/>
@@ -51,7 +51,7 @@ these feeds.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAktkNBMACgkQrgeCgFmlPMFp7gCcDYQL7Q4MNLn/sgzuIjW8NfTrgngAoNGRWr3M
-YGqRualKefTsEtmLSG1A
+iEYEABECAAYFAk0kK6YACgkQrgeCgFmlPMF1RwCgydX1qoDhckUwayqnusrm3cO7xygAoL4u0qYd
+yUxK+iC+BirOeRB7ZUM3
 
 -->
