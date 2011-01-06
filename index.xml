@@ -54,6 +54,7 @@
 
 <h2>News</h2>
 <dl>
+<dt>Dec 2010</dt><dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3568'>0launch 0.51</a> released with the new command support. New releases of <a href='0test.html'>0test</a> and <a href='0publish.html'>0publish</a>.</dd>
 <dt>Nov 2010</dt><dd>The new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3566'>&lt;command&gt;</a> work has now been merged. This is intended to replace 'main', 'test' and similar attributes with a more flexible and generic system. It allows passing extra arguments to commands (including passing dependencies), having command-specific dependencies, and being able to specify an intepreter in a cross-platform way.</dd>
 <dt>Oct 2010</dt><dd>A first binary of the <a href='http://0install.de/downloads/'>Windows version</a> has been released.</dd>
 <dt>Sep 2010</dt><dd>Lots of discussion about laying an <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3478'>app store</a> interface on top of Zero Install.</dd>
