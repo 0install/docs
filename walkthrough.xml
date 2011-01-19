@@ -114,8 +114,10 @@ the XML file is this bit:
       &lt;environment insert="ROX-Lib2/python" name="PYTHONPATH"/&gt;
     &lt;/requires&gt;
 ...
-    &lt;implementation id="sha1=329e6c0191f65ef2996b49837d04c4cfe6934758" released="2005-09-21" stability="stable" <b>version="2.0"</b>&gt;
-      &lt;archive extract="edit-2.0" href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/&gt;
+    &lt;implementation id="sha1=329e6c0191f65ef2996b49837d04c4cfe6934758"
+                    released="2005-09-21" stability="stable" <b>version="2.0"</b>&gt;
+      &lt;archive extract="edit-2.0"
+               href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/&gt;
     &lt;/implementation&gt;
   &lt;/group&gt;
 </pre>
@@ -139,8 +141,10 @@ How do we know the archive hasn't been tampered with? The author of the XML feed
 digest</i> of the archive's contents and stored it in the feed:
 </p>
 <pre>
-    &lt;implementation id="<b>sha1=329e6c0191f65ef2996b49837d04c4cfe6934758</b>" released="2005-09-21" stability="stable" <b>version="2.0"</b>&gt;
-      &lt;archive extract="edit-2.0" href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/&gt;
+    &lt;implementation id="<b>sha1=329e6c0191f65ef2996b49837d04c4cfe6934758</b>"
+                    released="2005-09-21" stability="stable" <b>version="2.0"</b>&gt;
+      &lt;archive extract="edit-2.0"
+               href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/&gt;
     &lt;/implementation&gt;
 </pre>
 <p>
@@ -150,7 +154,7 @@ file listing all the files and directories in the archive, along with <i>their</
 <a href='manifest-spec.html'>these instructions</a>. We'll cheat, by using <b>0store</b> to generate it for us:
 </p>
 <pre>
-$ 0store manifest edit-2.0
+$ 0store manifest edit-2.0 sha1
 D 1127294333 /Edit
 F 0cfc0b0c42b4f4c077f005f31ea1801a8e43bde0 1053080001 3409 .DirIcon
 ...
@@ -164,7 +168,7 @@ line isn't part of the manifest; it's the digest of the manifest itself. It is t
 line) in case we want to do an audit later:
 </p>
 <pre>
-$ 0store manifest edit-2.0 | head -n -1 > edit-2.0/.manifest
+$ 0store manifest edit-2.0 sha1 | head -n -1 > edit-2.0/.manifest
 </pre>
 <p>
 This file will have the digest we require:
@@ -304,7 +308,8 @@ file (replacing <b>/</b> characters with %2f in the traditional web way):
 </p>
 
 <pre>
-$ mv Edit.xml ~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+$ mv Edit.xml \
+     ~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
 </pre>
 
 <p>
@@ -312,7 +317,8 @@ It's a bit ugly, but at least it's unique and we can find it again. We'll store 
 </p>
 
 <pre>
-$ mv ROX-Lib.xml ~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
+$ mv ROX-Lib.xml \
+  ~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
 </pre>
 
 <p>

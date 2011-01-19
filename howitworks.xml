@@ -5,7 +5,7 @@
 
 <p>
 <a href='injector.html'>0launch</a> is a small Python program. You ask it to run a program by giving
-it the program's full name (a web address). The injector does <b>not</b> need
+it the program's full name (a web address). Zero Install does <b>not</b> need
 to be installed or run as root. It does <b>not</b> write to any of the traditional software
 directories (like <b>/usr/bin</b> or <b>/usr/lib</b>). It stores downloads in a cache directory
 so that you don't need to download anything twice, and programs can still be used when you are off-line.
@@ -26,12 +26,12 @@ so that you don't need to download anything twice, and programs can still be use
   <td class='image'><img src='screens/add-url.png' alt='' width='400' height='289'/></td>
   <td><h3>Give the link to your installer</h3>
       <p>
-      The injector can be run manually (<b>0launch URL</b>), but it is normally
+      Zero Install can be run manually (<b>0launch URL</b>), but it is normally
       invoked by another program. Some examples include:
       </p>
 <ul>
  <li>GNOME and KDE users will drag the link to their <b>Add New Program</b> dialog, creating a launcher on their Applications menu.</li>
- <li>ROX users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses the injector.</li>
+ <li>ROX users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses 0launch.</li>
  <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut.</li>
 </ul>
   </td>
@@ -57,7 +57,7 @@ displays a dialog box showing the program and all required libraries. Click <b>D
  <tr>
   <td class='image'><img src='screens/download-foo.png' alt='' width='400' height='349'/></td>
   <td><h3>Downloading</h3>
-  <p>The injector now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
+  <p>Zero Install now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
 RPM, deb and autopackage). It unpacks each one into its own directory and
 checks its contents against the <i>cryptographic digest</i>
 given in the (signed) feed file. If the archive has been changed since the feed was signed,
