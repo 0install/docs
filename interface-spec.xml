@@ -571,26 +571,38 @@ binding in that.
 <pre>
     &lt;environment
 	  name='...'
-	  insert='...'
+	  (insert='...' | value='...')
 	  mode='prepend|append|replace' ?
 	  default='...' ? /&gt; *
 </pre>
 
 <p>
-The location of the chosen implementation is passed to the program by setting environment variables,
+Details of the chosen implementation is passed to the program by setting environment variables,
 as specified by the &lt;environment&gt; elements (typically, there will be exactly one of these in each
 &lt;requires&gt; element). Each environment element gives the name of the variable and the relative path
 of the item within the implementation to insert into the variable's value.
 </p>
 
 <p>
+Usually, the (badly-named) <b>insert</b> attribute is used, which adds a path to something inside the
+implementation to the environment variable. For example, &lt;environment
+name='PATH' insert='bin'/&gt; would perform something similar to the bash shell
+statement <b>export PATH=/path/to/impl/bin:$PATH</b>.
+</p>
+
+<p>
+Alternatively, you can use the <b>value</b> attribute to use a literal string. For example,
+&lt;environment name='GRAPHICAL_MODE' value='TRUE' mode='replace'/&gt;. This requires 0launch >= 0.52.
+</p>
+
+<p>
 If <b>mode</b> is <b>prepend</b> (or not set), then the absolute path of the
-item is prepended to the current value of the variable, separated by a colon
-character. If the environment variable is not currently set then the path is
-prepended to the value of the default attribute. If no default value is given
-either then the default for that environment variable is used, or the
-environment variable's value is set to the absolute path directly if there is
-no default.
+item is prepended to the current value of the variable. The separator character
+is the colon character on POSIX systems, and semi-colon on Windows. If the
+environment variable is not currently set then the path is prepended to the
+value of the default attribute. If no default value is given either then the
+default for that environment variable is used, or the environment variable's
+value is set to the absolute path directly if there is no default.
 </p>
 
 <p>
@@ -599,10 +611,6 @@ value is added at the end instead of the beginning. If the mode is <b>replace</b
 the old value is overwritten, and the <b>default</b> attribute is ignored.
 </p>
 
-<p>
-For example, &lt;environment name='PATH' insert='bin'/&gt; would perform something similar to the
-bash shell statement <b>export PATH=/path/to/impl/bin:$PATH</b>.
-</p>
 
 <p>
 The following environment variables have known defaults and therefore the <b>default</b> attribute is not
