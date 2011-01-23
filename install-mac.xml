@@ -3,8 +3,6 @@
 
 <h2>Installation : Mac OS X</h2>
 
-<p>[ Yes, we know these instructions are unreasonably complicated. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a> ]</p>
-
 <p>
 To use Zero Install, you will need:
 </p>
@@ -12,78 +10,140 @@ To use Zero Install, you will need:
 <ul>
 <li><a href='http://www.python.org/'>Python</a> (version 2.5 or later is needed).</li>
 <li><a href='http://www.gnupg.org/'>GnuPG</a> (to check the digital signatures).</li>
-<li><a href='http://www.gtk.org/'>GTK</a> (2.12 or later needed for both CLI/GUI).</li>
-<li><a href='http://www.pygtk.org/'>PyGTK</a> (2.12 or later needed for both CLI/GUI).</li>
+<li><a href='http://www.gtk.org/'>GObject/GTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
+<li><a href='http://www.pygtk.org/'>PyGObject/PyGTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
 </ul>
 
 <p>
-There is currently no package available.
+The installation process assumes a familiarity with the <i>Terminal</i> and <i>Developer Tools</i>.<br />
+There is yet no installer available for Mac OS X, so it needs to be built from source...
 </p>
 
-<h2>Instructions</h2>
+<p>
+The easiest way of installing Zero Install and its requirements is by using a &#8220;package<br />
+manager&#8221;, to handle building both it and the dependencies (mentioned above) for you:
+</p>
 
-<p>You can either install Zero Install for regular <a href='#macosx'>Mac OS X</a> (Quartz),<br />
-or for the Darwin sub-system with X11 using <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
+<p>You can either install Zero Install for the regular <a href='#macosx'>Mac OS X</a> (Quartz) with <a href='#jhbuild'>JHBuild</a>,<br />
+or for its <a href='#darwin'>Darwin</a> BSD sub-system (using X11) using <a href='#macports'>MacPorts</a>, <a href='#fink'>Fink</a> or <a href='#fink'>Homebrew</a>.</p>
 
-<toc level='h3'/>
+<dl>
+  <dt id='darwin'>Darwin/X11</dt>
 
-<h3 id='macosx'>Mac OS X</h3>
+<dd>
+<p>
+<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
+</p>
 
+<h3 id='macports'>MacPorts installation</h3>
+
+<p>
+You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysutils/zeroinstall-injector/'>zeroinstall-injector</a> package in <a href='http://www.macports.org/'>MacPorts</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk2</i> and <i>py25-gtk</i>:
+</p>
+
+<pre>$ <b>sudo port install zeroinstall-injector</b></pre>
+
+<h3 id='fink'>Fink installation</h3>
+<p>
+You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinstall-injector'>zeroinstall-injector</a> package in in <a href='http://www.finkproject.org/'>Fink</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk+2</i>, and <i>pygtk2-py25</i>:
+</p>
+
+<pre>$ <b>sudo fink install zeroinstall-injector</b></pre>
+
+<h3 id='homebrew'>Homebrew installation</h3>
+<p>
+You can install the <a href='https://github.com/afb/homebrew/commit/84a2c61ce3e320cd765040edbd3491550771f7f7'>zeroinstall-injector</a> package in in <a href='http://mxcl.github.com/homebrew/'>Homebrew</a> using this command, which will also install requirements like <i>python</i>, <i>gnupg</i>, <i>gtk+</i>, and <i>pygtk</i>:
+</p>
+
+<pre>$ <b>brew install zeroinstall-injector</b></pre>
+
+<h3>After the installation</h3>
+<p>
+You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
+<b>0alias</b>, which lets you use short names instead of URLs.
+</p>
+
+<pre>
+$ <b>0launch</b> <i>URI</i>
+</pre>
+
+</dd>
+
+  <dt id='quartz'>Mac OS X/Quartz</dt>
+
+<dd>
+<p>
 <img src='screens/zeroinstall-gtkquartz.png' alt='' width='576' height='322' />
+</p>
+
+<h3 id='jhbuild'>JHBuild installation</h3>
 
 <p>You need to do four installations and two compilations, for requirements:</p>
 <ul>
-<li><p>Install <a href='http://www.python.org/'>Python</a> 2.5, from <a href='http://www.python.org/download/'>python.org / download</a></p>
+<li><p>Install <a href='http://www.python.org/'>Python</a> 2.5+, from <a href='http://www.python.org/download/'>python.org / download</a> (if needed)</p>
 <ul>
-<li>python-2.5.4-macosx.dmg (Universal Binary, for Mac OS X 10.3.9 and later)</li>
+<li>python-2.5.4-macosx.dmg (Universal Binary, for Mac OS X 10.3.9 and later)
+<pre>$ python --version</pre></li>
 </ul></li>
-<li><p>Install <a href='http://www.gnupg.org/'>GnuPG</a> 1.4, from <a href='http://macgpg.sourceforge.net/'>macgpg.sourceforge.net</a></p>
+<li><p>Install <a href='http://www.gnupg.org/'>GnuPG</a> 1.4+, from <a href='http://macgpg.sourceforge.net/'>macgpg.sourceforge.net</a> (if needed)</p>
 <ul>
-<li>GnuPG1.4.9.dmg (Universal Binary, installs <tt>/usr/local/bin/gpg</tt> command)</li>
+<li>GnuPG1.4.9.dmg (Universal Binary, installs <tt>/usr/local/bin/gpg</tt> command)
+<pre>$ gpg --version</pre></li>
 </ul></li>
 <li><p>Install <a href='http://subversion.tigris.org/'>Subversion</a>, from <a href='http://downloads.open.collab.net/binaries.html'>collab.net</a> (if needed)</p>
 <ul>
 <li><p>Check availability with:</p>
-<pre>$ <b>svn --version</b></pre></li>
+<pre>$ svn --version</pre></li>
 </ul></li>
 <li><p>Install <a href='http://git-scm.com/'>Git</a>, from <a href='http://metastatic.org/source/git-osx.html'>metastatic.org</a> (if needed)</p>
 <ul>
 <li><p>Check availability with:</p>
-<pre>$ <b>git --version</b></pre></li>
+<pre>$ git --version</pre></li>
 </ul></li>
-<li><p>Compile <a href='http://www.gtk.org/'>GTK</a> from source, using <i>jhbuild</i></p>
+<li><p>Compile <a href='http://www.gtk.org/'>GTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
 <p>
 You will need the <b>Xcode Tools</b> for this, installed separately.<br />
 Comes bundled with the OS, but needs to be updated at <a href='http://developer.apple.com/' title='Apple Developer Connection'>ADC</a>.
 </p>
 <p>
 You <u>cannot</u> mix the <b>GTK-OSX</b> installation with MacPorts/Fink,<br />
-so make sure that they are <u>not</u> in the PATH/FLAGS variables...
+so make sure that those are <u>not</u> in the PATH/FLAGS variables...
 </p>
 
 <ol>
 <li>
-<p>Download <a href='http://downloads.sourceforge.net/sourceforge/gtk-osx/gtk-osx-build-setup.sh'>gtk-osx-build-setup.sh</a>.</p>
+<p>Download <a href='http://downloads.sourceforge.net/sourceforge/gtk-osx/gtk-osx-build-setup.sh'>gtk-osx-build-setup.sh</a>.</p></li>
 
 <li>
 <p>In the <i>Terminal</i> application, do:</p>
 <pre>
 $ <b>sh gtk-osx-build-setup.sh</b>
+$ PATH=$HOME/.local/bin:$PATH
+$ export PATH
 $ <b>jhbuild bootstrap</b>
 
 $ <b>jhbuild build meta-gtk-osx-bootstrap</b>
 $ <b>jhbuild build meta-gtk-osx-core</b>
-</pre></li>
+</pre>
+<p>To test the build, you can use:</p>
+<pre>
+$ gtk-demo
+</pre>
 </li></ol>
+</li>
 
-<li><p>Compile <a href='http://www.pygtk.org/'>PyGTK</a> from source, using <i>jhbuild</i></p>
+<li><p>Compile <a href='http://www.pygtk.org/'>PyGTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
 <ol start='3'>
 <li>
 <p>Continued from commands above:</p>
 <pre>
-$ <b>jhbuild build pygtk</b>
-</pre></li>
-</ol></li>
+$ <b>jhbuild build meta-gtk-osx-python</b>
+</pre>
+<p>To test the build, you can use:</p>
+<pre>
+$ pygtk-demo
+</pre>
+</li></ol>
 </li>
 </ul>
 
@@ -101,38 +161,30 @@ Note that Mac OS X uses <tt>curl</tt> to download files, instead of <tt>wget</tt
 <pre>
 $ <b>sudo python setup.py install</b>
 </pre>
+</li></ol>
 </li>
-</ol></li>
 </ul>
 
 <p>Now the installation is complete. To start Zero Install, you use commands:</p>
 <blockquote>
 <pre>
-$ <b>jhbuild shell</b>
-$ <b>0launch --gui</b> <i>URI</i>
+$ jhbuild shell
+$ <b>0launch</b> <i>URI</i>
 </pre>
 </blockquote>
+</dd>
+</dl>
 
-<h3>MacPorts (Darwin/X11)</h3>
+<h2>Work in Progress</h2>
 
 <p>
-You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysutils/zeroinstall-injector/'>zeroinstall-injector</a> package in <a href='http://www.macports.org/'>MacPorts</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk2</i> and <i>py25-gtk</i>:
+Once a native Mac OS X interface is available, this process will become much simpler...<br/>
+It will also blend in more with the Mac desktop than what the GTK current interface does.
 </p>
 
-<pre>$ sudo port install zeroinstall-injector</pre>
-
-<h3>Fink (Darwin/X11)</h3>
 <p>
-You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinstall-injector'>zeroinstall-injector</a> package in in <a href='http://www.finkproject.org/'>Fink</a> using this command, which will also install requirements like <i>python25</i>, <i>gnupg</i>, <i>gtk+2</i>, and <i>pygtk2-py25</i>:
-</p>
-
-<pre>$ sudo fink install zeroinstall-injector</pre>
-
-<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='576' height='322' />
-
-<p>
-You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
-<b>0alias</b>, which lets you use short names instead of URLs.
+There will also be an <i>Installer</i> package available, to avoid having to build it from source.<br/>
+But it should work OK already. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a>
 </p>
 
 <quicklinks>
