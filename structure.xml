@@ -17,6 +17,7 @@
   </item>
 
   <item base='injector-feeds' label='Software index'/>
+  <item base="support" label="Support"/>
 
   <item base="doc" label="Documentation">
     <item base='injector-using' label='Tutorials'>
@@ -38,6 +39,7 @@
   </item>
 
   <item base='dev' label='Developers'>
+    <item base='get-involved' label='Get involved'/>
     <item base='injector-packagers' label='Packaging guide'>
       <item base='package-scons' label='0publish tutorial'/>
       <item base='injector-find' label='Example: Find'/>
@@ -73,8 +75,6 @@
     <item base='0share' label='0share'/>
     <item base='ebox' label='ebox'/>
   </item>
-
-  <item base="support" label="Support"/>
 
   <item href='http://sourceforge.net' label='SourceForge'>
     <item href='http://sourceforge.net/projects/zero-install' label='Project page'/>

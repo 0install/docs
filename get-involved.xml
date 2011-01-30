@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<h2>Get Involved!</h2>
+
+<p>
+The Zero Install project is run by volunteers, and we're always happy to have new users, developers and evangelists! If you'd like to join us, please introduce yourself on our friendly <a href='support.html'>mailing list</a>.
+</p>
+
+<p>
+Here are some suggestions for things you might like to try:
+</p>
+
+<h3>Champion for OpenSUSE</h3>
+<p>
+We need a champion to <a href='https://features.opensuse.org/310040'>get the OpenSUSE package into the OpenSUSE distribution</a>. An RPM already exists in their build service, but someone needs to get it into the main repository. This may require some diplomacy.</p>
+
+<h3>Creating packages</h3>
+<p>
+If you've written some programs of your own, try <a href='injector-packagers.html'>making feeds for them</a>. Report your experiences, bugs found and suggestions to the mailing list.
+</p>
+
+<h3>Evangelism</h3>
+<p>
+Zero Install has been working since 2003, but still many people haven't even heard of us. Writing articles for blogs, news sites, etc would be a great help. Let us know on the mailing list if an article gets published - we're always interested in feedback.
+</p>
+<p>
+Also, asking software authors if they'd be interested in publishing a feed would be really useful.
+</p>
+
+<h3>Become a 0install developer</h3>
+<p>
+There's a list of features waiting to be implemented on the <a href='roadmap.html'>roadmap page</a>.
+</p>
+</html>
