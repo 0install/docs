@@ -156,6 +156,19 @@ be able to run other programs through Zero Install, adding them to the cache as 
 [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Discussion</a> ]
 </dd>
 
+<dt>wxWidgets GUI for Mac and Windows</dt>
+<dd>
+Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>Discussion</a> ]
+</dd>
+
+<dt>An app-store</dt>
+<dd>
+To help people get started quickly with 0install, it would be good to have a simple,
+familiar "app-store" user interface.
+[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>Discussion</a> ]
+</dd>
+
 </dl>
 
 </html>
