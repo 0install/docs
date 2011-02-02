@@ -72,14 +72,23 @@ packagers.html.</description>
       <manifest-digest sha256="cae2d05188cfd140eca87204e8957128494173f914efc458416543825454130b"/>
       <archive extract="0publish-0.17" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.17/0publish-0.17.tar.bz2" size="23981"/>
     </implementation>
-    <implementation id="sha1new=eb9961c14b9a54dc45fa80a9c22a185887454659" released="2010-12-10" self-test="tests/testall.py" version="0.18">
+    <implementation id="sha1new=eb9961c14b9a54dc45fa80a9c22a185887454659" released="2010-12-10" self-test="tests/testall.py" stability="stable" version="0.18">
       <manifest-digest sha256="be0c0773733055496669ea98e61772ae08f1a3add638a2e9f833bb9f966161ef"/>
       <archive extract="0publish-0.18" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.18/0publish-0.18.tar.bz2" size="24244"/>
     </implementation>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+      <implementation id="sha1new=a100ea10f7e6ec981af6d19e7cab2a31fd1febd8" released="2011-02-02" self-test="tests/testall.py" version="0.19">
+      <manifest-digest sha256="1704f494381431ddf65f257bf87fa6f0e5c7386bd68fd7204401a0d9700b5c84"/>
+      <archive extract="0publish-0.19" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.19/0publish-0.19.tar.bz2" size="24866"/>
+    </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk0Cf5UACgkQrgeCgFmlPMHQ5QCgiIfZJHSCiFLyO1Wn8eq77HpJ7eoAoJ9Kly1I
-V+z4lY4ehuzVtQAky1rd
+iEYEABECAAYFAk1JoFwACgkQrgeCgFmlPMGmuQCffGiBRqiSTr3DRSDDidPRE3B2qxsAoIIw6vLy
+SLrGg7E2bFRw2l2DG1RQ
 
 -->
