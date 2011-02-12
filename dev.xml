@@ -9,6 +9,11 @@
 </p>
 
 <dl>
+ <dt><a href='get-involved.html'>Get involved</a></dt>
+ <dd>
+   Suggestions on how to join the project.
+ </dd>
+
  <dt><a href='injector-packagers.html'>Packaging guide</a></dt>
  <dd>
   This guide takes you through the steps involved in making a package available
@@ -70,13 +75,6 @@
  The binaries produced this way do not depend on Zero Install, so you can use Zero Install as
  part of your build process even if you don't distribute the resulting binaries that way.
  </p>
- </dd>
-
- <dt><a href='http://www.brucalipto.org/docs/injector_en.html'>brucalipto.org's packaging guide</a></dt>
- <dd>
-  <p>
-  Piero shows how to package software for Zero Install, using subversion as an example.
-  </p>
  </dd>
 </dl>
 
