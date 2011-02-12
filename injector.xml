@@ -16,28 +16,27 @@ so that you don't need to download anything twice, and programs can still be use
 </p>
 </program>
 
-<quicklinks>
-  <link href='doc.html' img='tango/book.png'>Read more</link>
-  <link href='dev.html' img='tango/applications-development.png'>Developers</link>
-  <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
-</quicklinks>
-
 <p>
 Select your platform from the list below. If your system isn't listed, choose <i>Source</i>.
 </p>
 
 <ul>
  <li><a href='install-linux.html'>Linux</a> (packages for various distributions)</li>
- <li><a href='install-mac.html'>Mac OS X</a> (Mac Ports)</li>
+ <li><a href='install-mac.html'>Mac OS X</a> (Mac Ports, Fink, Homebrew, JHBuild)</li>
  <li><a href='install-source.html'>Source</a> (install with Python distutils)</li>
- <li><a href='install-unix.html'>Unix</a> (FreeBSD)</li>
- <li><a href='install-windows.html'>Windows</a> (under development)</li>
+ <li><a href='install-unix.html'>Unix</a> (FreeBSD, Solaris)</li>
+ <li><a href='install-windows.html'>Windows</a></li>
 </ul>
 
 <p>See also:</p>
 <ul>
- <li><a href='using-git.html'>Testing development versions</a></li>
+ <li><a href='using-git.html'>Testing development versions</a> (Git)</li>
 </ul>
 
+<quicklinks>
+  <link href='doc.html' img='tango/book.png'>Read more</link>
+  <link href='dev.html' img='tango/applications-development.png'>Developers</link>
+  <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
+</quicklinks>
 
 </html>
