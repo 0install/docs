@@ -626,3 +626,17 @@ td.logo {
 	text-align: center;
 	vertical-align: middle;
 }
+
+dl.roadmap {
+  margin-left: 2em;
+}
+
+dl.roadmap dt {
+  display: list-item;
+  font-weight: normal;
+  font-family: serif;
+}
+
+dl.roadmap dd {
+  padding-top: .4em;
+}

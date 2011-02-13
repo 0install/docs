@@ -68,7 +68,7 @@ This is a quick overview of the major features added to Zero Install. It focusse
   <li>Downloading feeds over HTTPS.</li>
 </ul>
 
-<h4>2010 (versions 0.44 onwards)</h4>
+<h4>2010 (versions 0.44 to 0.51)</h4>
 
 <ul>
   <li>Download progress bars in console mode.</li>
@@ -86,9 +86,83 @@ This is a quick overview of the major features added to Zero Install. It focusse
   <li>The &lt;runner&gt; element allows specifying the intepreter.</li>
 </ul>
 
+<h4>2011 (versions 0.52 onwards)</h4>
 
-<h3>Possible future features</h3>
-<dl>
+<ul>
+  <li>The "0install" command.</li>
+  <li>The value attribute for &lt;environment&gt;.</li>
+  <li>Recursive use of &lt;runner&gt;.</li>
+</ul>
+
+
+<h3>Current and future plans</h3>
+
+<p>
+This is a DRAFT roadmap (currently being discussed on the mailing list). Times
+just estimates, subject to people having time to work on things. All the things
+shown under "1.0" need to be either moved to specific devel versions (e.g. 0.54) or
+to 2.x, depending on who is able to work on them and when. <a href='get-involved.html'>Volunteers needed!</a>
+</p>
+
+<h4>Version 0.52 (Feb 2011)</h4>
+
+<dl class='roadmap'>
+  <dt>Remove deprecated features</dt>
+  <dd>Get rid of features that have now been deprecated for a long time, e.g. plain GPG signatures on feeds.</dd>
+
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3738'>Better defaults for approving new keys</a></dt>
+  <dd>Auto approve keys in some cases (e.g. the first time a new program is used and the key is known to the key server, there's
+    little point asking users to confirm).</dd>
+
+  <dt>Caching of solver results (for speed)</dt>
+  <dd>On less powerful machines (e.g. OLPC laptops) we can save CPU time by remembering which versions we selected rather than recalculating
+    everytime a program is executed.</dd>
+</dl>
+
+<h4>Version 0.53 (Mar 2011)</h4>
+
+<dl class='roadmap'>
+  <dt>API clean-up</dt>
+  <dd>Make sure the Python API is in a state we can maintain for a long time for the 1.x series.</dd>
+
+  <dt>Custom bug-report address</dt>
+  <dd>A feed should be able to specify where bug reports are to be sent. Currently, they all go to the 0install project itself.</dd>
+</dl>
+
+<h4>Version 1.0 (summer 2011)</h4>
+
+<dl class='roadmap'>
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store</a></dt>
+<dd>
+To help people get started quickly with 0install, it would be good to have a simple,
+familiar "app-store" user interface.
+</dd>
+
+<dt>A Mac OS X binary package</dt>
+<dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
+
+<dt>Add missing features to Windows version</dt>
+<dd>e.g. 0alias and other features available in the Linux version</dd>
+
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>wxWidgets GUI for Mac and Windows</a></dt>
+<dd>
+Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
+</dd>
+
+<dt>Support for services</dt>
+<dd>e.g. a 0service command that integrates with systemd</dd>
+
+<dt>More sandboxing demos</dt>
+<dd>Show integration with e.g. Rainbow, Plash or LXC, in addition to the current <a href='ebox.html'>E support</a>.</dd>
+
+<dt>Better desktop integration</dt>
+<dd>e.g. a better Firefox plugin, XFCE support.</dd>
+
+</dl>
+
+<h4>Version 2.x</h4>
+
+<dl class='roadmap'>
 
 <dt>Automatic cache cleaning</dt>
 <dd>
@@ -97,6 +171,11 @@ to clean out ones that aren't needed any more to free up disk space. Individual 
 enough via the cache explorer, but it should be more automatic, a bit like "apt-get autoclean" or deborphan.
 In particular, we need a way to remove a version which was shared between multiple users safely (i.e. only remove it once no user
 requires it).
+</dd>
+
+<dt>Managing instances (configurations/profiles) of programs</dt>
+<dd>0install currently only manages code, not configuration. It is assumed that programs look in ~/.config and similar places for this.
+0install should have support for multiple instances (configurations / profiles) for any program. This will be needed for sandboxing anyway.
 </dd>
 
 <dt>Mirrors for archives</dt>
@@ -111,17 +190,23 @@ The feed file format only allows 'required' dependencies at present. It should a
 relationships.
 </dd>
 
-<dt>Plug-ins</dt>
+<dt>Lazy dependencies</dt>
+<dd>
+  Support dependencies that are only downloaded when needed. For example, ROX-Filer's options box has a button to launch the
+  MIME-Editor application. ROX-Filer should be able to depend on MIME-Editor in its feed, without requiring MIME-Editor to be
+  downloaded before ROX-Filer can be started.
+</dd>
+
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1072/focus=1073'>Plug-ins</a></dt>
 <dd>
 It should be possible to add additional interfaces to a program's dependencies list. For example, you could add
 the interface for a French dictionary to a word processor to let you spell-check French documents.
 This would usually require some support from the application itself. A plug-in is a more general type of
 optional dependency; one which isn't listed in the main feed file at all.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1072/focus=1073'>Discussion</a> ]
 </dd>
 
 <dt>More meta-data</dt>
-<dd>Mailing list address, release notes, where to send bug reports, etc.</dd>
+<dd>Mailing list address, release notes, etc.</dd>
 
 <dt>Peer-to-peer downloads</dt>
 <dd>The tricky bit about P2P is normally the free-text searching, but we already know the secure hash
@@ -130,14 +215,23 @@ The idea is that if someone on your local network has already downloaded a progr
 automatically. See <a href='0share.html'>0share</a> for current experimental version.
 </dd>
 
-<dt>Binary patches</dt>
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1214/focus=1214'>Binary patches</a></dt>
 <dd>
 We have the secure hash of the currently-cached versions, so we can check that they're unmodified. In that case,
 we could just download a delta to the next version rather than getting everything again. 0publish should create
 these deltas automatically. Rsync may also be an option for some sites.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1214/focus=1214'>Discussion</a> ]
 </dd>
 
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Sandboxing</a></dt>
+<dd>
+Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. Sandboxed software must still
+be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion. <a href='ebox.html'>EBox</a> shows how this integration can work.
+</dd>
+</dl>
+
+<h4>Other possible features</h4>
+
+<dl class='roadmap'>
 <dt>Kiosk mode</dt>
 <dd>The system administrator can restrict what software users can install using Zero Install (white-list interface
 URIs or trusted public keys).</dd>
@@ -147,26 +241,6 @@ URIs or trusted public keys).</dd>
 to run only approved versions by default. Or, a third-party could provide additional input to the hints box
 (we already provide the "Unreliable hints database", but a commercial organisation could offer
 a real service).
-</dd>
-
-<dt>Sandboxing</dt>
-<dd>
-Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. Sandboxed software must still
-be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion. <a href='ebox.html'>EBox</a> shows how this integration can work.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Discussion</a> ]
-</dd>
-
-<dt>wxWidgets GUI for Mac and Windows</dt>
-<dd>
-Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>Discussion</a> ]
-</dd>
-
-<dt>An app-store</dt>
-<dd>
-To help people get started quickly with 0install, it would be good to have a simple,
-familiar "app-store" user interface.
-[ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>Discussion</a> ]
 </dd>
 
 </dl>
