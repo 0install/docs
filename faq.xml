@@ -348,12 +348,6 @@ extras have to get installed with the main program because users can't install
 anything themselves later if they find they need it.
 </p>
 
-<p>
-When you consider that users always need the <i>ability</i> to read a program's
-documentation, use a particular export filter, etc, but rarely do so for any given
-version of any particular program, you can see that the savings can be quite large.
-</p>
-
 </dd>
 <dt>What about people without Internet connections?</dt>
 <dd>
@@ -384,7 +378,7 @@ original sites.
 </p>
 
 <p>
-The <b>0launch --import</b> command lets you import the interface from the
+The <b>0launch --import</b> command lets you import the feed from the
 new location, and <b>0store</b> allows adding any archive to the cache (provided
 its message digest matches). Because Zero Install simply unpacks an archive
 when installing a package, anyone with that program cached can re-export it (e.g. using
@@ -539,15 +533,21 @@ $ 0alias git http://0install.net/2008/3rd-party/git.xml
 
 <p>
 Now, if you try to run it directly, it will probably complain that it can't find ROX-Lib (a library
-it needs). The required libraries are listed in the <b>Edit.xml</b> file, and you can run that
-using <b>0launch</b>:
+it needs):
 </p>
 
 <pre>
 $ cd Edit
 $ ./AppRun
 *** This program needs ROX-Lib2 (version 1.19.14) to run.
+</pre>
 
+<p>
+The required libraries are listed in the <b>Edit.xml</b> file, and you can run that
+using <b>0launch</b>:
+</p>
+
+<pre>
 $ 0launch Edit.xml
 [ edit runs ]
 </pre>
