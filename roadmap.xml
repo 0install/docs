@@ -144,11 +144,6 @@ familiar "app-store" user interface.
 <dt>Add missing features to Windows version</dt>
 <dd>e.g. 0alias and other features available in the Linux version</dd>
 
-<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>wxWidgets GUI for Mac and Windows</a></dt>
-<dd>
-Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
-</dd>
-
 <dt>Support for services</dt>
 <dd>e.g. a 0service command that integrates with systemd</dd>
 
@@ -163,6 +158,11 @@ Having a GUI that uses wxWidgets would make 0install much easier to use on Mac O
 <h4>Version 2.x</h4>
 
 <dl class='roadmap'>
+
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>wxWidgets GUI for Mac and Windows</a></dt>
+<dd>
+Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
+</dd>
 
 <dt>Automatic cache cleaning</dt>
 <dd>
