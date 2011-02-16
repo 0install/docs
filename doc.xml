@@ -18,8 +18,6 @@
 
     <dt><a href='distribution-integration.html'>Distribution integration</a></dt><dd>Zero Install can also satisfy dependencies using packages installed using the distribution's packaging system. If the distribution package isn't installed, or the version isn't suitable, then it will download a Zero Install copy instead.</dd>
 
-    <dt><a href='roadmap.html'>Roadmap</a></dt><dd>Where we've been and where we're going.</dd>
-
     <dt><a href='injector-trouble.html'>Trouble-shooting</a></dt><dd>What to do if something don't work.</dd>
 
     <dt><a href='virtual.html'>Virtual machines</a></dt><dd>How to share software between virtual machines using Zero Install.</dd>

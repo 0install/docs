@@ -30,7 +30,6 @@
     <item base="sharing" label="Sharing"/>
     <item base="walkthrough" label="Walk-through"/>
     <item base="distribution-integration" label="Distro integration"/>
-    <item base="roadmap" label="Roadmap"/>
     <item base='injector-trouble' label='Problems'/>
     <item base='virtual' label='Virtual machines'/>
     <item base='legal' label='Legal issues'/>
@@ -39,6 +38,7 @@
   </item>
 
   <item base='dev' label='Developers'>
+    <item base="roadmap" label="Roadmap"/>
     <item base='get-involved' label='Get involved'/>
     <item base='injector-packagers' label='Packaging guide'>
       <item base='package-scons' label='0publish tutorial'/>
