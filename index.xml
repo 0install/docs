@@ -18,21 +18,16 @@
   </td>
  </tr>
  <tr class='summary'>
-  <td class='image'><img src='tango/update.png' alt='' width='48' height='46'/></td>
-  <td><h3>Automatic updates</h3>
-    <p>When updates are available, Zero Install will notify you<more href='goals.html#updates'/></p>
-  </td>
- </tr>
- <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
-  <td><h3>Security</h3>
-      <p>If one user downloads a <k>malicious</k> program, <k>other users</k> aren't affected;<br/>
-      Users can <k>share</k> downloads without having to <k>trust</k> each other;<br/>
-      Installation does not <k>execute</k> any of the downloaded code;<br/>
+  <td><h3>You control your own computer</h3>
+      <p>Installation does not <k>execute</k> any of the downloaded code;<br/>
+      Supports <k>sandboxes</k> and <k>virtualisation</k>;<br/>
       <k>Digital signatures</k> are always checked before new software is run <more href='injector-security.html'/></p>
   </td>
  </tr>
 </table>
+
+<p>... and automatic updates, shared libraries, sharing between users, binary and source packages, ...</p>
 
 <quicklinks>
   <link href='doc.html' img='tango/book.png'>Read more</link>
