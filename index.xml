@@ -7,7 +7,7 @@
  <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
   <td><h3>Principle of least authority</h3>
-    <p>You don't have to be the <k>administrator</k> just to <k>install a word-processor</k>;<br/>
+    <p>Users don't need <k>administrator</k> access just to <k>install a word-processor</k>;<br/>
       Supports <k>sandboxes</k> and <k>virtualisation</k></p>
   </td>
  </tr>
@@ -16,7 +16,6 @@
   <td><h3>Anyone can distribute software</h3>
     <p>If you have a web-site, you can distibute your software;<br/>
       Create <k>one package</k> that <k>works everywhere</k>;<br/>
-      Distributions may <k>recommend</k> software, but users <k>choose</k>;<br/>
       The system is <k>completely decentralised</k>
     </p>
   </td>
