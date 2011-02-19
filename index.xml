@@ -6,28 +6,31 @@
 <table class='picturebullets' style='margin: 0px'>
  <tr class='summary'>
   <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
-  <td><h3>Anyone can install software</h3>
-      <p>You don't have to be the <k>administrator</k> just to <k>install a word-processor</k> <more href='goals.html#anyoneinstall'/></p>
+  <td><h3>Principle of least authority</h3>
+    <p>You don't have to be the <k>administrator</k> just to <k>install a word-processor</k>;<br/>
+      Supports <k>sandboxes</k> and <k>virtualisation</k></p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
     <p>If you have a web-site, you can distibute your software;<br/>
-      The system is <k>completely decentralised</k> <more href='goals.html#anyonedistrib'/></p>
+      Create <k>one package</k> that <k>works everywhere</k>;<br/>
+      Distributions may <k>recommend</k> software, but users <k>choose</k>;<br/>
+      The system is <k>completely decentralised</k>
+    </p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
   <td><h3>You control your own computer</h3>
       <p>Installation does not <k>execute</k> any of the downloaded code;<br/>
-      Supports <k>sandboxes</k> and <k>virtualisation</k>;<br/>
-      <k>Digital signatures</k> are always checked before new software is run <more href='injector-security.html'/></p>
+      <k>Digital signatures</k> are always checked before new software is run</p>
   </td>
  </tr>
 </table>
 
-<p>... and automatic updates, shared libraries, sharing between users, binary and source packages, ...</p>
+<p>... plus automatic updates, shared libraries, sharing between users, binary and source packages, Linux, Mac, Windows,&#xA0;...</p>
 
 <quicklinks>
   <link href='doc.html' img='tango/book.png'>Read more</link>
