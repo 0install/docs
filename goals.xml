@@ -122,7 +122,7 @@ E: Couldn't find package rox-session</pre>
   </td>
  </tr>
  <tr>
-  <td class='image'><img src='tango/secure.png' alt='' width='39' height='48'/></td>
+  <td class='image'><img src='tango/secure.png' alt='' width='48' height='48'/></td>
   <td><h3>Good security</h3>
   <p>If one user downloads a malicious program, other users aren't affected.<br/>
   Installation does not execute any of the downloaded code.<br/>
