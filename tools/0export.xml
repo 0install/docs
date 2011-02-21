@@ -52,7 +52,7 @@ still shared between users, and will get updates over the web where possible.</d
       <version not-before="0.52"/>
       <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
     </requires>
-    <implementation doc-dir="doc" id="sha1new=c411762dc29344ee800f72895962cec1b80884bc" license="OSI Approved :: GNU General Public License v3" main="0export" released="2011-01-27" self-test="test.py" version="0.3">
+    <implementation doc-dir="doc" id="sha1new=c411762dc29344ee800f72895962cec1b80884bc" license="OSI Approved :: GNU General Public License v3" main="0export" released="2011-01-27" self-test="test.py" stability="stable" version="0.3">
       <manifest-digest sha256="86cdc3c82d2a30460978fe7b60769432320a86c79c1827d76b21ae8f31218e77"/>
       <archive extract="0export-0.3" href="http://downloads.sourceforge.net/project/zero-install/0export/0.3/0export-0.3.tar.bz2" size="22115"/>
     </implementation>
@@ -60,7 +60,7 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1ByeQACgkQrgeCgFmlPMFckwCgkhr6o2ll7rbHOm6BCvpF8Qcu/8kAn3UsIaZ6
-Crj+LF1P3SoAG+guyDYS
+iEYEABECAAYFAk1itRQACgkQrgeCgFmlPMGbJwCdFGJAs7upEwVzDVGHtAVvRyZ756AAnjzyiPyb
+7P9W9XSd+N/HSz5ETBKS
 
 -->
