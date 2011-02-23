@@ -122,6 +122,9 @@ to 2.x, depending on who is able to work on them and when. <a href='get-involved
 <h4>Version 0.53 (Mar 2011)</h4>
 
 <dl class='roadmap'>
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a></dt>
+  <dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
+
   <dt>API clean-up</dt>
   <dd>Make sure the Python API is in a state we can maintain for a long time for the 1.x series.</dd>
 
@@ -137,9 +140,6 @@ to 2.x, depending on who is able to work on them and when. <a href='get-involved
 To help people get started quickly with 0install, it would be good to have a simple,
 familiar "app-store" user interface.
 </dd>
-
-<dt>A Mac OS X binary package</dt>
-<dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
 
 <dt>Add missing features to Windows version</dt>
 <dd>e.g. 0alias and other features available in the Linux version</dd>
