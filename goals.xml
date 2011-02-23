@@ -8,61 +8,23 @@ Let's expand a little on the goals set out on the <a href='/'>title page</a>:
 </p>
 
 <table class='picturebullets'>
- <tr id='anyoneinstall'>
-  <td class='image'><img src='tango/package-x-generic.png' alt='' width='48' height='48'/></td>
-  <td><h3>Anyone can install software</h3>
-<div class='figure' style='float: right'>
-  <img width="610" height="331" src="debian-help.png"
-     alt="A Debian user asks for help" />
-  <p>A Debian user tries to read the OpenOffice documentation.<br/>
-  Zero Install would have offered to download it instead.</p>
-</div>
-
- <p>
- You don't have to be root just to install a word-processor, or its
- documentation. Most packaging systems only allow the root user to install
- software.
- </p>
- 
- <p>
- Traditionally, if a user needs a package that isn't installed, they just get an
- error message. In the screenshot, the system administrator must install the
- openoffice.org-help package before the user can read the documentation, or
- the user must install from source and handle any dependencies themselves.
- On a Zero Install system, Zero Install would have offered to download the
- documentation when the user selected <b>Help</b>.
- </p>
-
- <p>
- Of course, Debian could fix this particular problem by making the OpenOffice package
- depend on the documentation package. But then, installing OpenOffice would require far
- more disk space if you didn't need the documentation (and most of the time, for most
- versions of most software packages, you <i>don't</i> need the documentation... but an
- administrator can't know ahead of time what will be needed by their users). Also, users
- still wouldn't be able to install OpenOffice itself in the first place.
- </p>
-  </td>
- </tr>
  <tr id='anyonedistrib'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
   <td><h3>Anyone can distribute software</h3>
- <p>
- One of the more frustrating aspects of open source software is finding a
- program you want, only to discover that there is no package available for your
- distribution. Eg, on Debian (I'm not picking on Debian, it's just I've got a
- Debian system here!):
- </p>
-
-<pre># apt-get install rox-session
-E: Couldn't find package rox-session</pre>
- 
- <p>
- You don't need to be blessed by a distribution (or anyone else)
- to be part of Zero Install; all you need is a web page. Software is named
- by URI:
- </p>
-
- <pre>$ 0launch http://rox.sourceforge.net/2005/interfaces/ROX-Session</pre>
+    <p>
+      The traditional Linux distribution system, using centralised repositories, creates
+      an interesting chicken-and-egg situation: distributions won't package software until
+      it becomes popular, but software won't become popular until it's easy to install.
+    </p>
+    <p>
+      You don't need to be blessed by a distribution (or anyone else)
+      to be part of 0install; all you need is a web page.
+    </p>
+    <p>
+      It's easier too: you can make a single archive can work on all platforms
+      (for platform-independent applications such as Python or Java programs,
+      at least).
+    </p>
 
  <p>
    See the "<a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems'>Decentralised
@@ -71,16 +33,60 @@ E: Couldn't find package rox-session</pre>
 
  <p>
   See the <a href='dev.html'>developer documentation</a> for information on
-  distributing software using Zero Install.
+  distributing software using 0install.
  </p>
  
   </td>
  </tr>
+ <tr id='anyoneinstall'>
+  <td class='image'><img src='tango/secure.png' alt='' width='48' height='48'/></td>
+  <td><h3>Security is central</h3>
+    <p>
+      Security is sometimes seen as the enemy of usability, but we see it as the foundation
+      of a usable system. Good security doesn't just mean not having your data destroyed
+      by viruses - it means freedom to experiment with new software.
+    </p>
+    <p>
+      The problems with a centrally-controlled "app store" as the only means to
+      get software are clear to everyone: applications that compete with the
+      store owner's interests are banned. Innovation and competition suffer.
+      But the same effect can be acheived without overt restrictions if getting
+      software from outside the distribution repository is simply too risky for
+      users to consider.
+    </p>
+    <p>
+      See the <a href='injector-security.html'>security page</a> for more information about 0install's security features.
+    </p>
+  </td>
+</tr>
+ <tr id='control'>
+  <td class='image'><img src='tango/Emblem-person-blue.png' alt='' width='48' height='48'/></td>
+  <td><h3>You control your own computer</h3>
+      <p>
+	When you install a package with a traditional installer, you have no way of
+	knowing what it will do. Will it add itself to a menu somewhere? Start a service
+	whenever you turn on the computer? Stop another program from working?
+      </p>
+      <p>
+	0install merely <i>caches</i> programs, each version of each package in its own
+	directory. Changes to the environment, such as adding a menu entry, only happen
+	in response to a deliberate action on your part.
+      </p>
+      <p>
+	Because programs don't conflict, you're free to try the very latest development
+	version of a program (along with all the bleeding-edge libraries it needs) without
+	destabilising the rest of your system. If two programs want the same version of
+	a library, they'll share it. Otherwise, they'll use separate copies. And you can
+	always revert back to an older version... or run old and new versions of the same
+	program side-by-side!
+      </p>
+    </td>
+  </tr>
  <tr id='updates'>
   <td class='image'><img src='tango/update.png' alt='' width='48' height='46'/></td>
   <td><h3>Automatic updates</h3>
 
-    <p>When you run a program and it has been a month since the last check, Zero Install will quietly
+    <p>When you run a program and it has been a month since the last check, 0install will quietly
       check for updates in the background. If any are available, you will be notified.</p>
 
     <p>The frequency of these checks is configurable, and you can choose not to use the latest version
@@ -92,7 +98,7 @@ E: Couldn't find package rox-session</pre>
   <td><h3>It doesn't matter whether software is installed or not</h3>
 
  <p>Traditional systems make running software a two-step process: first you
- install it, then you run it.  In a Zero Install system, you just run it and
+ install it, then you run it.  In a 0install system, you just run it and
  the system handles the rest (downloading and caching as needed). You can delete
  the downloaded programs later to save space, and they will be fetched again
  automatically if they are needed in the future.</p>
@@ -103,14 +109,14 @@ E: Couldn't find package rox-session</pre>
  <tr id='safesharing'>
   <td class='image'><img src='tango/share.png' alt='' width='48' height='31'/></td>
   <td><h3>Shared downloads</h3>
- <p>If one user installs a 20 Mb application, another user can run it without downloading it again.
+ <p>If one user installs a 200 Mb application, another user can run it without downloading it again.
  Most packaging systems solve this problem by only allowing root to install software. The systems which
- don't have this limitation (eg, <a href='http://autopackage.org'>autopackage</a>) typically end up downloading
- and storing multiple copies of a program; one for each user. Zero Install
+ don't have this limitation typically end up downloading
+ and storing multiple copies of a program; one for each user. 0install
  shares downloads (safely) between users.
  </p>
  <p>
-  With Zero Install, each user downloads a small <i>feed file</i> which gives the cryptographic
+  With 0install, each user downloads a small <i>feed file</i> which gives the cryptographic
   digest of the full package. The digest can be used to check that a package already on the computer
   (downloaded by another user) hasn't been tampered with. Most simply, each user can make a copy of the
   original download this way (which shares the download but not the disk space). With a special helper,
@@ -118,18 +124,6 @@ E: Couldn't find package rox-session</pre>
  </p>
  <p>
    See the <a href='sharing.html'>Sharing</a> page for information about using this feature.
-  </p>
-  </td>
- </tr>
- <tr>
-  <td class='image'><img src='tango/secure.png' alt='' width='48' height='48'/></td>
-  <td><h3>Good security</h3>
-  <p>If one user downloads a malicious program, other users aren't affected.<br/>
-  Installation does not execute any of the downloaded code.<br/>
-  Digital signatures are always checked before software is run.</p>
-  <p>
-   See the <a href='injector-security.html'>Injector security</a> page for more information about Zero Install's
-   security features.
   </p>
   </td>
  </tr>
