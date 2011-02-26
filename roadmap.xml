@@ -159,6 +159,10 @@ familiar "app-store" user interface.
 
 <dl class='roadmap'>
 
+  <dt>Drop Python 2.5 support</dt>
+  <dd>Making Python 2.6 the minimum version is the first step in the (long) process of supporting
+    Python 3.</dd>
+
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>wxWidgets GUI for Mac and Windows</a></dt>
 <dd>
 Having a GUI that uses wxWidgets would make 0install much easier to use on Mac OS X and Windows, and would fit in better with the native look-and-feel.
