@@ -1,10 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html>
 
-<h2>Documentation layout</h2>
+<h2>Documentation</h2>
 
 <dl>
+    <dt><a href='goals.html'>Goals</a></dt><dd>A more detailed explanation of 0install's goals.</dd>
+    <dt><a href='perspectives.html'>Perspectives</a></dt><dd>How 0install benefits users, administrators, developers and distributions.</dd>
     <dt><a href='injector-using.html'>Tutorial</a></dt><dd>Step by step guide to using Zero Install.</dd>
+    <dt><a href='matrix.html'>Feature matrix</a></dt><dd>Compares 0install with some related technologies.</dd>
 
     <dt><a href='faq.html'>FAQ</a></dt><dd>Common questions answered.</dd>
 

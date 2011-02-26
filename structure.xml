@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-  <item href='.' base="index" label="Overview">
-    <item base="goals" label="Goals"/>
-    <item base="perspectives" label="Perspectives"/>
-    <item base="howitworks" label="Screenshots"/>
-    <item base="flash" label="Flash demos"/>
-    <item base="matrix" label="Comparison"/>
-  </item>
+  <item href='.' base="index" label="Overview"/>
   
   <item base="injector" label="Download/install">
     <item base="install-linux" label="Linux"/>
@@ -20,11 +14,15 @@
   <item base="support" label="Support"/>
 
   <item base="doc" label="Documentation">
+    <item base="goals" label="Goals"/>
+    <item base="perspectives" label="Perspectives"/>
     <item base='injector-using' label='Tutorials'>
+      <item base="howitworks" label="Screenshots"/>
       <item base='tutorial-launchers' label='Part 1: launchers'/>
       <item base='tutorial-downloads' label='Part 2: downloads'/>
       <item base='tutorial-policy' label='Part 3: policy'/>
     </item>
+    <item base="matrix" label="Comparison"/>
     <item base="faq" label="FAQ"/>
     <item base='injector-security' label='Security'/>
     <item base="sharing" label="Sharing"/>

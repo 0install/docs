@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<p><strong>2009-06-28: </strong> Security update: you must use the <b>always_set_home</b> sudo option. Old versions of these instructions didn't use it. 0launch 0.41.1 and later will check that you have it turned on.</p>
-
 <h2>Sharing downloads between users</h2>
 
  <p>

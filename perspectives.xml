@@ -197,7 +197,7 @@ try to find a set of versions that supports all packages simultaneously.
  depends on the program, of course).</dd>
 
  <dt>... override a dependency of a Zero Install package to use my custom packaged library?</dt>
- <dd>From version 0.28, you can register an additional feed in
+ <dd>You can register an additional feed in
  <b>/usr/share/0install.net</b>. See <a href='distribution-integration.html'>Distribution Integration</a> for details.</dd>
 
  <dt>... suggest suitable Zero Install packages for my users?</dt>
@@ -212,6 +212,12 @@ try to find a set of versions that supports all packages simultaneously.
 In general, we welcome better integration with distributions, so write to our
 <a href='support.html'>mailing list</a> and we'll work something out!
 </p>
+
+<h2>Further reading</h2>
+
+<ul>
+  <li><a href='doc.html'>Back to the documentation index</a></li>
+</ul>
 
 </div>
 
