@@ -31,10 +31,9 @@
 <dd>
 <ul class='spaced'>
   <li id='debian'>
-  <b>Debian/oldstable (etch)</b> <download name='zeroinstall-injector_0.38-1_all.deb'/> (Debian package; python-central)<br/>
-  <b>Debian/stable (lenny)</b> Zero Install is part of the main Debian archive, so you can get it with:
+  <b>Debian (lenny and squeeze)</b> Zero Install is part of the main Debian archive, so you can get it with:
   <pre># <b>apt-get install zeroinstall-injector</b></pre>
-  <p>Anders F Björklund has made a repository with backports of later versions to Debian/stable. Add this to sources.list to use it:</p>
+  <p>Anders F Björklund has made a repository with backports of later versions to lenny. Add this to sources.list to use it:</p>
 <pre>deb http://afb.users.sourceforge.net/zero-install/debian lenny main</pre>
   </li>
   <li id='ubuntu'>
@@ -43,7 +42,6 @@
 <p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, the <a href='http://packages.debian.org/sid/zeroinstall-injector'>Debian/unstable package</a> should also work on Ubuntu.</p>
 </li>
   <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
-  <li><b>Nokia 770</b> <a href='http://web.telia.com/~u86012345/nokia770/'>zeroinstall-injector_0.19_arm.deb download page</a> (Nokia 770 Debian package contributed by Niklas Höglund; Python 2.4)</li>
 </ul>
 </dd>
 
@@ -56,14 +54,13 @@
   <li id='slackware'>
     <b>Slackware</b> packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a></li>
   <li id='gentoo'><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
-  <li><a href="http://thread.gmane.org/gmane.comp.desktop.rox.devel/7405">GoboLinux instructions</a> (anyone want to create a recipe?)</li>
 </ul>
 </dd>
 </dl>
 
 <p>
 If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
-Otherwise, <a href='install-source.html'>get the source package</a> instead!
+Otherwise, <a href='install-source.html'>get the source package instead</a>.
 </p>
 
 <quicklinks>
