@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>zeroinstall.cmd.remove_feed</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
+        <a href="zeroinstall.cmd-module.html">Package&nbsp;cmd</a> ::
+        Module&nbsp;remove_feed
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="zeroinstall.cmd.remove_feed-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="zeroinstall.cmd.remove_feed-module.html">Module zeroinstall.cmd.remove_feed</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">The B{0install remove-feed} command-line interface.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2011, Thomas Leonard</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"># See the README file for details, or visit http://0install.net.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable zeroinstall.cmd.add_feed.syntax=zeroinstall.cmd.add_feed-module.html#syntax,Variable zeroinstall.cmd.config.syntax=zeroinstall.cmd.config-module.html#syntax,Variable zeroinstall.cmd.download.syntax=zeroinstall.cmd.download-module.html#syntax,Variable zeroinstall.cmd.import.syntax=zeroinstall.cmd.import-module.html#syntax,Variable zeroinstall.cmd.list.syntax=zeroinstall.cmd.list-module.html#syntax,Variable zeroinstall.cmd.list_feeds.syntax=zeroinstall.cmd.list_feeds-module.html#syntax,Variable zeroinstall.cmd.remove_feed.syntax=zeroinstall.cmd.remove_feed-module.html#syntax,Variable zeroinstall.cmd.run.syntax=zeroinstall.cmd.run-module.html#syntax,Variable zeroinstall.cmd.select.syntax=zeroinstall.cmd.select-module.html#syntax,Variable zeroinstall.cmd.update.syntax=zeroinstall.cmd.update-module.html#syntax"><a title="zeroinstall.cmd.add_feed.syntax
+zeroinstall.cmd.config.syntax
+zeroinstall.cmd.download.syntax
+zeroinstall.cmd.import.syntax
+zeroinstall.cmd.list.syntax
+zeroinstall.cmd.list_feeds.syntax
+zeroinstall.cmd.remove_feed.syntax
+zeroinstall.cmd.run.syntax
+zeroinstall.cmd.select.syntax
+zeroinstall.cmd.update.syntax" class="py-name" href="#" onclick="return doclink('link-0', 'syntax', 'link-0');">syntax</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"FEED"</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package zeroinstall=zeroinstall-module.html"><a title="zeroinstall" class="py-name" href="#" onclick="return doclink('link-1', 'zeroinstall', 'link-1');">zeroinstall</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package zeroinstall.cmd=zeroinstall.cmd-module.html"><a title="zeroinstall.cmd" class="py-name" href="#" onclick="return doclink('link-2', 'cmd', 'link-2');">cmd</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module zeroinstall.cmd.add_feed=zeroinstall.cmd.add_feed-module.html"><a title="zeroinstall.cmd.add_feed" class="py-name" href="#" onclick="return doclink('link-3', 'add_feed', 'link-3');">add_feed</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Function zeroinstall.cmd.add_feed.add_options()=zeroinstall.cmd.add_feed-module.html#add_options,Function zeroinstall.cmd.config.add_options()=zeroinstall.cmd.config-module.html#add_options,Function zeroinstall.cmd.download.add_options()=zeroinstall.cmd.download-module.html#add_options,Function zeroinstall.cmd.import.add_options()=zeroinstall.cmd.import-module.html#add_options,Function zeroinstall.cmd.list.add_options()=zeroinstall.cmd.list-module.html#add_options,Function zeroinstall.cmd.list_feeds.add_options()=zeroinstall.cmd.list_feeds-module.html#add_options,Function zeroinstall.cmd.run.add_options()=zeroinstall.cmd.run-module.html#add_options,Function zeroinstall.cmd.select.add_options()=zeroinstall.cmd.select-module.html#add_options"><a title="zeroinstall.cmd.add_feed.add_options
+zeroinstall.cmd.config.add_options
+zeroinstall.cmd.download.add_options
+zeroinstall.cmd.import.add_options
+zeroinstall.cmd.list.add_options
+zeroinstall.cmd.list_feeds.add_options
+zeroinstall.cmd.run.add_options
+zeroinstall.cmd.select.add_options" class="py-name" href="#" onclick="return doclink('link-4', 'add_options', 'link-4');">add_options</a></tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="zeroinstall.cmd.add_feed" class="py-name" href="#" onclick="return doclink('link-5', 'add_feed', 'link-3');">add_feed</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="zeroinstall.cmd.add_feed.add_options
+zeroinstall.cmd.config.add_options
+zeroinstall.cmd.download.add_options
+zeroinstall.cmd.import.add_options
+zeroinstall.cmd.list.add_options
+zeroinstall.cmd.list_feeds.add_options
+zeroinstall.cmd.run.add_options
+zeroinstall.cmd.select.add_options" class="py-name" href="#" onclick="return doclink('link-6', 'add_options', 'link-4');">add_options</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="handle"></a><div id="handle-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="handle-toggle" onclick="return toggle('handle');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="zeroinstall.cmd.remove_feed-module.html#handle">handle</a><tt class="py-op">(</tt><tt class="py-param">config</tt><tt class="py-op">,</tt> <tt class="py-param">options</tt><tt class="py-op">,</tt> <tt class="py-param">args</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="handle-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="handle-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-7" class="py-name"><a title="zeroinstall.cmd.add_feed" class="py-name" href="#" onclick="return doclink('link-7', 'add_feed', 'link-3');">add_feed</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Function zeroinstall.cmd.add_feed.handle()=zeroinstall.cmd.add_feed-module.html#handle,Function zeroinstall.cmd.config.handle()=zeroinstall.cmd.config-module.html#handle,Function zeroinstall.cmd.download.handle()=zeroinstall.cmd.download-module.html#handle,Function zeroinstall.cmd.import.handle()=zeroinstall.cmd.import-module.html#handle,Function zeroinstall.cmd.list.handle()=zeroinstall.cmd.list-module.html#handle,Function zeroinstall.cmd.list_feeds.handle()=zeroinstall.cmd.list_feeds-module.html#handle,Function zeroinstall.cmd.remove_feed.handle()=zeroinstall.cmd.remove_feed-module.html#handle,Function zeroinstall.cmd.run.handle()=zeroinstall.cmd.run-module.html#handle,Function zeroinstall.cmd.select.handle()=zeroinstall.cmd.select-module.html#handle,Function zeroinstall.cmd.update.handle()=zeroinstall.cmd.update-module.html#handle"><a title="zeroinstall.cmd.add_feed.handle
+zeroinstall.cmd.config.handle
+zeroinstall.cmd.download.handle
+zeroinstall.cmd.import.handle
+zeroinstall.cmd.list.handle
+zeroinstall.cmd.list_feeds.handle
+zeroinstall.cmd.remove_feed.handle
+zeroinstall.cmd.run.handle
+zeroinstall.cmd.select.handle
+zeroinstall.cmd.update.handle" class="py-name" href="#" onclick="return doclink('link-8', 'handle', 'link-8');">handle</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name" targets="Module zeroinstall.cmd.config=zeroinstall.cmd.config-module.html"><a title="zeroinstall.cmd.config" class="py-name" href="#" onclick="return doclink('link-9', 'config', 'link-9');">config</a></tt><tt class="py-op">,</tt> <tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-name">add_ok</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">remove_ok</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="zeroinstall-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://0install.net">Project Homepage</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:19 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

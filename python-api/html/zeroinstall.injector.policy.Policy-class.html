@@ -111,9 +111,12 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">root</span>,
+        <span class="summary-sig-arg">root</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">handler</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">False</span>)</span><br />
+        <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">command</span>=<span class="summary-sig-default">-1</span>,
+        <span class="summary-sig-arg">config</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">requirements</span>=<span class="summary-sig-default">None</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.__init__">source&nbsp;code</a></span>
@@ -146,26 +149,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="set_root"></a><span class="summary-sig-name">set_root</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">root</span>)</span><br />
-      Change the root interface URI.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.set_root">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="save_config"></a><span class="summary-sig-name">save_config</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Write global settings.</td>
+          <td><span class="summary-sig"><a name="save_config"></a><span class="summary-sig-name">save_config</span>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.save_config">source&nbsp;code</a></span>
             
@@ -351,8 +335,8 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#get_feed_targets" class="summary-sig-name">get_feed_targets</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">feed_iface_uri</span>)</span><br />
-      Return a list of Interfaces for which feed_iface can be a feed.</td>
+        <span class="summary-sig-arg">feed</span>)</span><br />
+      Return a list of Interfaces for which feed can be a feed.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_feed_targets">source&nbsp;code</a></span>
             
@@ -476,6 +460,22 @@ object --+
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#command" class="summary-sig-name">command</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.command">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -517,6 +517,14 @@ object --+
         <a name="ready"></a><span class="summary-name">ready</span> = <code title="property(lambda self: self.solver.ready)">property(lambda self: self.solver.ready)</code>
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="zeroinstall.injector.policy.Policy-class.html#handler" class="summary-name">handler</a> = <code title="property(lambda self: self.config.handler, lambda self, value: setattr\
+(self.config, 'handler', value))">property(lambda self: self.config.handler, lambda se<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
 </table>
 <!-- ==================== INSTANCE VARIABLES ==================== -->
 <a name="section-InstanceVariables"></a>
@@ -530,8 +538,8 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">bool</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.policy.Policy-class.html#help_with_testing" class="summary-name">help_with_testing</a> = <code title="property(lambda self: self.solver.help_with_testing, lambda self, valu\
-e: setattr(self.solver, 'help_with_testing', value))">property(lambda self: self.solver.help_wit<code class="variable-ellipsis">...</code></code><br />
+        <a href="zeroinstall.injector.policy.Policy-class.html#help_with_testing" class="summary-name">help_with_testing</a> = <code title="property(lambda self: self.config.help_with_testing, lambda self, valu\
+e: setattr(self.config, 'help_with_testing', bool(value)))">property(lambda self: self.config.help_wit<code class="variable-ellipsis">...</code></code><br />
       default stability policy
     </td>
   </tr>
@@ -539,8 +547,8 @@ e: setattr(self.solver, 'help_with_testing', value))">property(lambda self: self
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="zeroinstall.injector.policy.Policy-class.html#network_use" class="summary-name">network_use</a> = <code title="property(lambda self: self.solver.network_use, lambda self, value: set\
-attr(self.solver, 'network_use', value))">property(lambda self: self.solver.network_use, l<code class="variable-ellipsis">...</code></code><br />
+        <a href="zeroinstall.injector.policy.Policy-class.html#network_use" class="summary-name">network_use</a> = <code title="property(lambda self: self.config.network_use, lambda self, value: set\
+attr(self.config, 'network_use', value))">property(lambda self: self.config.network_use, l<code class="variable-ellipsis">...</code></code><br />
       one of the model.network_* values
     </td>
   </tr>
@@ -548,25 +556,26 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">int</span>
     </td><td class="summary">
-        <a name="freshness"></a><span class="summary-name">freshness</span><br />
+        <a href="zeroinstall.injector.policy.Policy-class.html#freshness" class="summary-name">freshness</a> = <code title="property(lambda self: self.config.freshness, lambda self, value: setat\
+tr(self.config, 'freshness', str(value)))">property(lambda self: self.config.freshness, lambd<code class="variable-ellipsis">...</code></code><br />
       seconds allowed since last update
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type"><a href="zeroinstall.injector.handler.Handler-class.html" 
-      class="link">handler.Handler</a></span>
-    </td><td class="summary">
-        <a name="handler"></a><span class="summary-name">handler</span><br />
-      handler for main-loop integration
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="root"></a><span class="summary-name">root</span><br />
-      URI of the root interface
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.policy.Policy-class.html#root" class="summary-sig-name">root</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      URI of the root interface</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.root">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 <tr>
@@ -576,14 +585,6 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
     </td><td class="summary">
         <a name="solver"></a><span class="summary-name">solver</span><br />
       solver used to choose a set of implementations
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-        <a name="src"></a><span class="summary-name">src</span><br />
-      whether we are looking for source code
     </td>
   </tr>
 <tr>
@@ -646,9 +647,12 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">root</span>,
+        <span class="sig-arg">root</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">handler</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">src</span>=<span class="sig-default">False</span>)</span>
+        <span class="sig-arg">src</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">command</span>=<span class="sig-default">-1</span>,
+        <span class="sig-arg">config</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">requirements</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -661,10 +665,11 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>root</code></strong> - The URI of the root interface (the program we want to run).</li>
-        <li><strong class="pname"><code>handler</code></strong> (<a href="zeroinstall.injector.handler.Handler-class.html" 
-          class="link">zeroinstall.injector.handler.Handler</a>) - A handler for main-loop integration.</li>
-        <li><strong class="pname"><code>src</code></strong> (bool) - Whether we are looking for source code.</li>
+        <li><strong class="pname"><code>requirements</code></strong> (<a 
+          href="zeroinstall.injector.requirements.Requirements-class.html" 
+          class="link">requirements.Requirements</a>) - Details about the program we want to run</li>
+        <li><strong class="pname"><code>config</code></strong> (<code class="link">ConfigParser.ConfigParser</code> Note: all 
+          other arguments are deprecated (since 0launch 0.52)) - The configuration settings to use, or None to load from disk.</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -906,16 +911,21 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feed_targets</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">feed_iface_uri</span>)</span>
+        <span class="sig-arg">feed</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.get_feed_targets">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Return a list of Interfaces for which feed_iface can be a feed. This 
-  is used by <b>0launch --feed</b>.</p>
+  <p>Return a list of Interfaces for which feed can be a feed. This is used
+  by <b>0install add-feed</b>.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>feed</code></strong> (<a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
+          class="link">model.ZeroInstallFeed</a> (or, deprecated, a URL)) - the feed</li>
+    </ul></dd>
     <dt>Returns: [model.Interface]</dt>
     <dt>Raises:</dt>
     <dd><ul class="nomargin-top">
@@ -1062,6 +1072,58 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
       </p>
 </div></td></tr></table>
 </div>
+<a name="command"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">command</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.command">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variable Details</span></td>
+</tr>
+</table>
+<a name="handler"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">handler</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+property(lambda self: self.config.handler, lambda self, value: setattr<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+(self.config, 'handler', value))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
 <a name="section-InstanceVariableDetails"></a>
@@ -1086,8 +1148,8 @@ attr(self.solver, 'network_use', value))">property(lambda self: self.solver.netw
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-property(lambda self: self.solver.help_with_testing, lambda self, valu<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-e: setattr(self.solver, 'help_with_testing', value))
+property(lambda self: self.config.help_with_testing, lambda self, valu<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+e: setattr(self.config, 'help_with_testing', bool(value)))
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1105,10 +1167,54 @@ e: setattr(self.solver, 'help_with_testing', value))
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-property(lambda self: self.solver.network_use, lambda self, value: set<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-attr(self.solver, 'network_use', value))
+property(lambda self: self.config.network_use, lambda self, value: set<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+attr(self.config, 'network_use', value))
 </pre></td></tr></table>
 </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="freshness"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">freshness</h3>
+  seconds allowed since last update
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd>int</dd>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+property(lambda self: self.config.freshness, lambda self, value: setat<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+tr(self.config, 'freshness', str(value)))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="root"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">root</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.policy-pysrc.html#Policy.root">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  URI of the root interface
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1144,7 +1250,7 @@ attr(self.solver, 'network_use', value))
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:18 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

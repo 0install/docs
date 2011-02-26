@@ -79,7 +79,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_from_cache" class="summary-sig-name">update_from_cache</a>(<span class="summary-sig-arg">interface</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update_from_cache" class="summary-sig-name">update_from_cache</a>(<span class="summary-sig-arg">interface</span>,
+        <span class="summary-sig-arg">iface_cache</span>=<span class="summary-sig-default">None</span>)</span><br />
       Read a cached interface and any native feeds or user overrides.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_from_cache">source&nbsp;code</a></span>
@@ -96,7 +97,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#load_feed_from_cache" class="summary-sig-name">load_feed_from_cache</a>(<span class="summary-sig-arg">url</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#load_feed_from_cache" class="summary-sig-name">load_feed_from_cache</a>(<span class="summary-sig-arg">url</span>,
+        <span class="summary-sig-arg">selections_ok</span>=<span class="summary-sig-default">False</span>)</span><br />
       Load a feed.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed_from_cache">source&nbsp;code</a></span>
@@ -167,7 +169,8 @@
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#update" class="summary-sig-name">update</a>(<span class="summary-sig-arg">interface</span>,
         <span class="summary-sig-arg">source</span>,
-        <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>)</span><br />
+        <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">iface_cache</span>=<span class="summary-sig-default">None</span>)</span><br />
       Read in information about an interface.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update">source&nbsp;code</a></span>
@@ -185,7 +188,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.reader-module.html#load_feed" class="summary-sig-name">load_feed</a>(<span class="summary-sig-arg">source</span>,
-        <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>)</span><br />
+        <span class="summary-sig-arg">local</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">selections_ok</span>=<span class="summary-sig-default">False</span>)</span><br />
       Load a feed from a local file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed">source&nbsp;code</a></span>
@@ -213,7 +217,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_from_cache</span>(<span class="sig-arg">interface</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_from_cache</span>(<span class="sig-arg">interface</span>,
+        <span class="sig-arg">iface_cache</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update_from_cache">source&nbsp;code</a></span>&nbsp;
@@ -244,7 +249,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_feed_from_cache</span>(<span class="sig-arg">url</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_feed_from_cache</span>(<span class="sig-arg">url</span>,
+        <span class="sig-arg">selections_ok</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed_from_cache">source&nbsp;code</a></span>&nbsp;
@@ -348,7 +354,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">update</span>(<span class="sig-arg">interface</span>,
         <span class="sig-arg">source</span>,
-        <span class="sig-arg">local</span>=<span class="sig-default">False</span>)</span>
+        <span class="sig-arg">local</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">iface_cache</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#update">source&nbsp;code</a></span>&nbsp;
@@ -385,7 +392,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">load_feed</span>(<span class="sig-arg">source</span>,
-        <span class="sig-arg">local</span>=<span class="sig-default">False</span>)</span>
+        <span class="sig-arg">local</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">selections_ok</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#load_feed">source&nbsp;code</a></span>&nbsp;
@@ -398,6 +406,8 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>source</code></strong> (str) - the name of the file to read</li>
         <li><strong class="pname"><code>local</code></strong> (bool) - this is a local feed</li>
+        <li><strong class="pname"><code>selections_ok</code></strong> (bool) - if it turns out to be a local selections document, return that 
+          instead</li>
     </ul></dd>
     <dt>Returns:</dt>
         <dd>the new feed</dd>
@@ -448,7 +458,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:42 2010
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

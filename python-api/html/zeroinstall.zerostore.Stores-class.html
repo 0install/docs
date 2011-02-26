@@ -103,7 +103,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="lookup"></a><span class="summary-sig-name">lookup</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.Stores-class.html#lookup" class="summary-sig-name">lookup</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">digest</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup">source&nbsp;code</a></span>
@@ -120,11 +120,29 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="lookup_any"></a><span class="summary-sig-name">lookup_any</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.Stores-class.html#lookup_any" class="summary-sig-name">lookup_any</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">digests</span>)</span><br />
       Search for digest in all stores.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup_any">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.zerostore.Stores-class.html#lookup_maybe" class="summary-sig-name">lookup_maybe</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">digests</span>)</span><br />
+      Like lookup_any, but return None if it isn't found.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup_maybe">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -260,6 +278,76 @@ object --+
   </dl>
 </td></tr></table>
 </div>
+<a name="lookup"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">lookup</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">digest</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use lookup_any instead
+      </p>
+</div></td></tr></table>
+</div>
+<a name="lookup_any"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">lookup_any</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">digests</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup_any">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Search for digest in all stores.</p>
+  <dl class="fields">
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="zeroinstall.zerostore.NotStored-class.html">NotStored</a></strong></code> - if not found</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="lookup_maybe"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">lookup_maybe</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">digests</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.zerostore-pysrc.html#Stores.lookup_maybe">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Like lookup_any, but return None if it isn't found.</p>
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.53
+      </p>
+</div></td></tr></table>
+</div>
 <a name="add_dir_to_cache"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -369,7 +457,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:18 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

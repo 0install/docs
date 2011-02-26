@@ -86,27 +86,6 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.selections.Selection-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">dependencies</span>,
-        <span class="summary-sig-arg">bindings</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">attrs</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">digests</span>=<span class="summary-sig-default">None</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.selections-pysrc.html#Selection.__init__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.selections.Selection-class.html#local_path" class="summary-sig-name">local_path</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.selections-pysrc.html#Selection.local_path">source&nbsp;code</a></span>
@@ -134,6 +113,25 @@ object --+
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.selections.Selection-class.html#is_available" class="summary-sig-name">is_available</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stores</span>)</span><br />
+      Is this implementation available locally? (a local implementation or 
+      a cached ZeroInstallImplementation)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.selections-pysrc.html#Selection.is_available">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -141,6 +139,7 @@ object --+
       <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
+      <code>__init__</code>,
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
@@ -223,14 +222,6 @@ object --+
       list of dependencies
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">[str]</span>
-    </td><td class="summary">
-        <a name="digests"></a><span class="summary-name">digests</span><br />
-      a list of manifest digests
-    </td>
-  </tr>
 </table>
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
@@ -257,35 +248,6 @@ object --+
     <span class="table-header">Method Details</span></td>
 </tr>
 </table>
-<a name="__init__"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">dependencies</span>,
-        <span class="sig-arg">bindings</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">attrs</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">digests</span>=<span class="sig-default">None</span>)</span>
-    <br /><em class="fname">(Constructor)</em>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.selections-pysrc.html#Selection.__init__">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
-  <dl class="fields">
-    <dt>Overrides:
-        object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt>
-  </dl>
-</td></tr></table>
-</div>
 <a name="local_path"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -332,6 +294,31 @@ object --+
     </dt>
   </dl>
 </td></tr></table>
+</div>
+<a name="is_available"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_available</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stores</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.selections-pysrc.html#Selection.is_available">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Is this implementation available locally? (a local implementation or a
+  cached ZeroInstallImplementation)</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.53
+      </p>
+</div></td></tr></table>
 </div>
 <br />
 <!-- ==================== CLASS VARIABLE DETAILS ==================== -->
@@ -393,7 +380,7 @@ property(lambda self: self.attrs.get('from-feed', self.interface))
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:18 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

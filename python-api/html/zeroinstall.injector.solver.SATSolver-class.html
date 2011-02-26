@@ -70,9 +70,6 @@ object --+
 </pre>
 
 <hr />
-<p>Converts the problem to a set of pseudo-boolean constraints and uses a
-  PB solver to solve them.</p>
-
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -87,10 +84,24 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.solver.SATSolver-class.html#iface_cache" class="summary-sig-name">iface_cache</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.solver-pysrc.html#SATSolver.iface_cache">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.solver.SATSolver-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">network_use</span>,
-        <span class="summary-sig-arg">iface_cache</span>,
-        <span class="summary-sig-arg">stores</span>,
+        <span class="summary-sig-arg">config</span>,
         <span class="summary-sig-arg">extra_restrictions</span>=<span class="summary-sig-default">None</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
@@ -132,11 +143,29 @@ object --+
           <td><span class="summary-sig"><a href="zeroinstall.injector.solver.SATSolver-class.html#solve" class="summary-sig-name">solve</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">root_interface</span>,
         <span class="summary-sig-arg">root_arch</span>,
+        <span class="summary-sig-arg">command_name</span>=<span class="summary-sig-default">'run'</span>,
         <span class="summary-sig-arg">closest_match</span>=<span class="summary-sig-default">False</span>)</span><br />
       Get the best implementation of root_interface and all of its 
       dependencies.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.solver-pysrc.html#SATSolver.solve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_failure_reason"></a><span class="summary-sig-name">get_failure_reason</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return an exception explaining why the solve failed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.solver-pysrc.html#SATSolver.get_failure_reason">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -171,14 +200,6 @@ object --+
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Instance Variables</span></td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
-    </td><td class="summary">
-        <a href="zeroinstall.injector.solver.SATSolver-class.html#langs" class="summary-name">langs</a><br />
-      the preferred languages (e.g.
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="zeroinstall.injector.solver.Solver-class.html">Solver</a></code></b>:
@@ -216,6 +237,29 @@ object --+
     <span class="table-header">Method Details</span></td>
 </tr>
 </table>
+<a name="iface_cache"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">iface_cache</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.solver-pysrc.html#SATSolver.iface_cache">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -224,9 +268,7 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">network_use</span>,
-        <span class="sig-arg">iface_cache</span>,
-        <span class="sig-arg">stores</span>,
+        <span class="sig-arg">config</span>,
         <span class="sig-arg">extra_restrictions</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -240,13 +282,9 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>network_use</code></strong> (<a href="zeroinstall.injector.model-module.html#network_levels" 
-          class="link">model.network_levels</a>) - how much use to make of the network</li>
-        <li><strong class="pname"><code>iface_cache</code></strong> (<a href="zeroinstall.injector.iface_cache.IfaceCache-class.html" 
-          class="link">iface_cache.IfaceCache</a>) - a cache of feeds containing information about available versions</li>
-        <li><strong class="pname"><code>stores</code></strong> (<a href="zeroinstall.zerostore.Stores-class.html" 
-          class="link">zerostore.Stores</a>) - a cached of implementations (affects choice when offline or when 
-          minimising network use)</li>
+        <li><strong class="pname"><code>config</code></strong> (<a href="zeroinstall.injector.policy.Config-class.html" 
+          class="link">policy.Config</a>) - policy preferences (e.g. stability), the iface_cache and the 
+          stores to use</li>
         <li><strong class="pname"><code>extra_restrictions</code></strong> ({<a href="zeroinstall.injector.model.Interface-class.html" 
           class="link">model.Interface</a>: [<a 
           href="zeroinstall.injector.model.Restriction-class.html" 
@@ -299,6 +337,7 @@ object --+
   <h3 class="epydoc"><span class="sig"><span class="sig-name">solve</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">root_interface</span>,
         <span class="sig-arg">root_arch</span>,
+        <span class="sig-arg">command_name</span>=<span class="sig-default">'run'</span>,
         <span class="sig-arg">closest_match</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -313,35 +352,12 @@ object --+
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>root_interface</code></strong> - the URI of the program to be solved</li>
         <li><strong class="pname"><code>root_arch</code></strong> - the desired target architecture</li>
+        <li><strong class="pname"><code>command_name</code></strong> - which &lt;command&gt; element to select</li>
     </ul></dd>
     <dt>Overrides:
         <a href="zeroinstall.injector.solver.Solver-class.html#solve">Solver.solve</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
-<a name="section-InstanceVariableDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Instance Variable Details</span></td>
-</tr>
-</table>
-<a name="langs"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">langs</h3>
-  the preferred languages (e.g. [&quot;es_ES&quot;, &quot;en&quot;]). 
-  Initialised to the current locale.
-  <dl class="fields">
-    <dt>Type:</dt>
-      <dd>str</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -377,7 +393,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
+    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:18 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
