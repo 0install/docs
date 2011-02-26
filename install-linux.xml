@@ -59,7 +59,7 @@
 </dl>
 
 <p>
-If an injector package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
+If a package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
 Otherwise, <a href='install-source.html'>get the source package instead</a>.
 </p>
 
