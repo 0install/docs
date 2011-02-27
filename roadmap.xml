@@ -98,10 +98,10 @@ This is a quick overview of the major features added to Zero Install. It focusse
 <h3>Current and future plans</h3>
 
 <p>
-This is a DRAFT roadmap (currently being discussed on the mailing list). Times
-just estimates, subject to people having time to work on things. All the things
-shown under "1.0" need to be either moved to specific devel versions (e.g. 0.55) or
-to 2.x, depending on who is able to work on them and when. <a href='get-involved.html'>Volunteers needed!</a>
+This is a rough roadmap. Times are just estimates, subject to people being able to
+work on things. Everything shown under "1.0" needs to be either moved to
+specific devel versions (e.g. 0.55) or to 2.x, depending on who is able to work
+on them and when. <a href='get-involved.html'>Volunteers needed!</a>
 </p>
 
 <h4>Version 0.53 (Mar 2011)</h4>
