@@ -100,39 +100,39 @@ This is a quick overview of the major features added to Zero Install. It focusse
 <p>
 This is a DRAFT roadmap (currently being discussed on the mailing list). Times
 just estimates, subject to people having time to work on things. All the things
-shown under "1.0" need to be either moved to specific devel versions (e.g. 0.54) or
+shown under "1.0" need to be either moved to specific devel versions (e.g. 0.55) or
 to 2.x, depending on who is able to work on them and when. <a href='get-involved.html'>Volunteers needed!</a>
 </p>
 
-<h4>Version 0.52 (Feb 2011)</h4>
+<h4>Version 0.53 (Mar 2011)</h4>
 
 <dl class='roadmap'>
   <dt>Remove deprecated features</dt>
   <dd>Get rid of features that have now been deprecated for a long time, e.g. plain GPG signatures on feeds.</dd>
 
+  <dt>API clean-up</dt>
+  <dd>Make sure the Python API is in a state we can maintain for a long time for the 1.x series.</dd>
+
   <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3738'>Better defaults for approving new keys</a></dt>
   <dd>Auto approve keys in some cases (e.g. the first time a new program is used and the key is known to the key server, there's
     little point asking users to confirm).</dd>
+</dl>
+
+<h4>Version 0.54 (Apr 2011)</h4>
+
+<dl class='roadmap'>
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a></dt>
+  <dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
+
+  <dt>Custom bug-report address</dt>
+  <dd>A feed should be able to specify where bug reports are to be sent. Currently, they all go to the 0install project itself.</dd>
 
   <dt>Caching of solver results (for speed)</dt>
   <dd>On less powerful machines (e.g. OLPC laptops) we can save CPU time by remembering which versions we selected rather than recalculating
     everytime a program is executed.</dd>
 </dl>
 
-<h4>Version 0.53 (Mar 2011)</h4>
-
-<dl class='roadmap'>
-  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a></dt>
-  <dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
-
-  <dt>API clean-up</dt>
-  <dd>Make sure the Python API is in a state we can maintain for a long time for the 1.x series.</dd>
-
-  <dt>Custom bug-report address</dt>
-  <dd>A feed should be able to specify where bug reports are to be sent. Currently, they all go to the 0install project itself.</dd>
-</dl>
-
-<h4>Version 1.0 (summer 2011)</h4>
+<h4>Version 1.0 (Summer 2011)</h4>
 
 <dl class='roadmap'>
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store</a></dt>
