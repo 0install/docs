@@ -16,7 +16,7 @@ To use Zero Install, you will need:
 
 <p>
 The installation process assumes a familiarity with the <i>Terminal</i> and <i>Developer Tools</i>.<br />
-There is yet no installer available for Mac OS X, so it needs to be built from source...
+There is no installer available for Mac OS X yet, so it needs to be built from source...
 </p>
 
 <p>
@@ -179,7 +179,7 @@ $ <b>0launch</b> <i>URI</i>
 
 <p>
 Once a native Mac OS X interface is available, this process will become much simpler...<br/>
-It will also blend in more with the Mac desktop than what the GTK current interface does.
+It will also blend in more with the Mac desktop than what the current GTK interface does.
 </p>
 
 <p>
