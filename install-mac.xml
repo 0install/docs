@@ -25,7 +25,7 @@ manager&#8221;, to handle building both it and the dependencies (mentioned above
 </p>
 
 <p>You can either install Zero Install for the regular <a href='#macosx'>Mac OS X</a> (Quartz) with <a href='#jhbuild'>JHBuild</a>,<br />
-or for its <a href='#darwin'>Darwin</a> BSD sub-system (using X11) using <a href='#macports'>MacPorts</a>, <a href='#fink'>Fink</a> or <a href='#fink'>Homebrew</a>.</p>
+or for its <a href='#darwin'>Darwin</a> BSD sub-system (using X11) using either of <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
 
 <dl>
   <dt id='darwin'>Darwin/X11</dt>
@@ -49,13 +49,6 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 </p>
 
 <pre>$ <b>sudo fink install zeroinstall-injector</b></pre>
-
-<h3 id='homebrew'>Homebrew installation</h3>
-<p>
-You can install the <a href='https://github.com/afb/homebrew/commit/84a2c61ce3e320cd765040edbd3491550771f7f7'>zeroinstall-injector</a> package in in <a href='http://mxcl.github.com/homebrew/'>Homebrew</a> using this command, which will also install requirements like <i>python</i>, <i>gnupg</i>, <i>gtk+</i>, and <i>pygtk</i>:
-</p>
-
-<pre>$ <b>brew install zeroinstall-injector</b></pre>
 
 <h3>After the installation</h3>
 <p>
