@@ -139,6 +139,9 @@ $ <b>rox-edit</b>
 
 <h2 style='clear: both'>Confirming keys</h2>
 
+<p>[ Note: starting with version 0.53, this dialog isn't shown by default if the key is known to the
+hints database. Turn off "Automatic approval for new feeds" in the preferences box if you want the old behaviour back. ]</p>
+
 <p>
 If you tried the Edit example above, you're probably looking at this dialog box now:
 </p>
