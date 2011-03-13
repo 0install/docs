@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2008/interfaces/lzmadec.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2010/interfaces/xzdec.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>xzdec</name>
   <summary>XZ Decompressor</summary>
   <description>
@@ -11,7 +11,7 @@ xzdec is a liblzma-based decompression-only tool for .xz files.</description>
   <feed src="http://afb.users.sourceforge.net/zero-install/interfaces/xzdec.xml"/>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk19IQMACgkQrgeCgFmlPME8CgCdFPEZqrsQkD+9ZHeIKn79YuEt5c8An3P8H87Z
-9xB1yqgdr8VKd5VF6sKj
+iEYEABECAAYFAk19IbIACgkQrgeCgFmlPMH3vACgwcDJU37VlWS9AmbeCTQDEaYAo5oAnRxLHs8N
+Bp1HAfY6QrgkugNNOViN
 
 -->
