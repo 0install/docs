@@ -28,7 +28,7 @@ create a matrix of test results.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.46"/>
+      <version before="0.53" not-before="0.46"/>
       <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=68b8237cb26db334551379db52487a035906a49e" main="0test" released="2010-06-19" self-test="test0test.py" stability="stable" version="0.3">
@@ -42,7 +42,7 @@ create a matrix of test results.</description>
     </group>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.51"/>
+      <version before="0.53" not-before="0.51"/>
       <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=73c6c68ded77ac26a286fab9164df6b97359de6f" main="0test" released="2010-12-11" stability="stable" version="0.4">
@@ -54,7 +54,7 @@ create a matrix of test results.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk0My8sACgkQrgeCgFmlPMF9LgCdFuALXRDVE6hlEA/9CajVmoq5JDIAoI96mjmF
-Xs+HJGEKsOR8158ekpjQ
+iEYEABECAAYFAk1/p6cACgkQrgeCgFmlPMFL4wCfYpnZPwAwhe6U4lk7IBNnyPsHXsMAn2yMunNq
+E7CJYJodbnJ1xFHEn1FD
 
 -->
