@@ -50,11 +50,22 @@ create a matrix of test results.</description>
       <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12261"/>
     </implementation>
     </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="0.52"/>
+      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+    </requires>
+      <command name="test" path="test0test.py"/>
+      <implementation id="sha1new=00127c13229be2d757fe482d3ccbbb34229dfa4f" main="0test" released="2011-03-15" version="0.5">
+      <manifest-digest sha256="ba586eb43abdb01bf92c0a7e58d5af54828b2bdc03faf873786a0a1c7ecab809"/>
+      <archive extract="0test-0.5" href="http://downloads.sourceforge.net/project/zero-install/0test/0.5/0test-0.5.tar.bz2" size="12340"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1/p6cACgkQrgeCgFmlPMFL4wCfYpnZPwAwhe6U4lk7IBNnyPsHXsMAn2yMunNq
-E7CJYJodbnJ1xFHEn1FD
+iEYEABECAAYFAk1/qUMACgkQrgeCgFmlPMF2VACgv+YBvdWW+YeTsZZiy4BG1l4V9hcAnArJx96M
+aL8nbDNIi2NOwT8YFXFI
 
 -->
