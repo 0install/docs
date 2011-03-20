@@ -18,7 +18,7 @@ packagers.html.</description>
   <homepage>http://0install.net/0publish.html</homepage>
 
   <group main="0publish">
-    <command name="run">
+    <command name="run" path="0publish">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -31,7 +31,7 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk2GExMACgkQrgeCgFmlPMF2AwCdGQdQjyzdq+aBnV9HSSDZ6IhIUbMAn31NMOOd
-dmuoxaJPGu/4s5D6TEZo
+iEYEABECAAYFAk2GE08ACgkQrgeCgFmlPMEGfQCfer9DeVYj203gldC3BaRnagBVRwUAoKRlurtB
+FzoPbIu31jzvJ2Rp7roi
 
 -->
