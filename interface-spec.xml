@@ -226,7 +226,9 @@ the closest ancestor &lt;group&gt; which defines it):
  <dd>The natural language(s) which this package supports, as a space-separated
  list of languages codes (in the same format as used by the $LANG environment
  variable). For example, the value "en_GB fr" would be used for a package
- supporting British English and French. This attribute is currently ignored by 0launch.</dd>
+ supporting British English and French. Supported since 0.48. Note that versions before 0.54
+ require the region separator to be '_' (underscore), while later versions also allow the use of '-'
+ for consistency with the xml:lang format.</dd>
 
  <dt>arch</dt>
  <dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <b>os-cpu</b>.

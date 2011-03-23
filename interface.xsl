@@ -88,6 +88,9 @@
 	        <tr>
 		 <td><xsl:value-of select='(ancestor-or-self::*[@version])[last()]/@version'/>
 		   <xsl:if test='(ancestor-or-self::*[@version])[last()]/@version-modifier'><xsl:value-of select='(ancestor-or-self::*[@version])[last()]/@version-modifier'/></xsl:if>
+		   <xsl:if test='@langs'>
+		     (<xsl:value-of select='@langs'/>)
+		   </xsl:if>
 		 </td>
 	         <td><xsl:value-of select='(ancestor-or-self::*[@released])[last()]/@released'/></td>
 	         <td><xsl:value-of select='(ancestor-or-self::*[@stability])[last()]/@stability'/></td>
@@ -150,7 +153,9 @@
   </xsl:template>
 
   <xsl:template mode='dl' match='zi:description'>
+   <xsl:if test="not(@xml:lang)">
     <dt>Description</dt><dd><p><xsl:value-of select="."/></p></dd>
+   </xsl:if>
   </xsl:template>
 
   <xsl:template mode='dl' match='zi:icon'>
