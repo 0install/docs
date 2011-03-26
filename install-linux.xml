@@ -39,7 +39,7 @@
   <li id='ubuntu'>
   <b>Ubuntu</b> Zero Install is in all versions of Ubuntu since 2007, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-<p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, the <a href='http://packages.debian.org/sid/zeroinstall-injector'>Debian/unstable package</a> should also work on Ubuntu.</p>
+<p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, try <a href='http://downloads.sourceforge.net/project/zero-install/injector/0.53/zeroinstall-injector_0.53-1_all.deb'>zeroinstall-injector_0.53-1_all.deb</a>.</p>
 </li>
   <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
 </ul>
