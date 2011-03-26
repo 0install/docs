@@ -18,15 +18,24 @@
 <p>
 To make source code available for others to use you need to add source
 implementations to the program's feed file. This is almost exactly the same as
-adding binaries, except that you give <b>src</b> as the machine type to <b>0publish</b>:
+adding binaries, except that you give <b>src</b> as the machine (CPU) type:
+</p>
+
+<p style='text-align: center'>
+<img width="676" height="456" src="screens/add-source-impl.png" alt="Adding a source implementation" />
+</p>
+
+<p>
+  You can also edit the XML directly, which gives more control. A minimal source implementation might look like this:
 </p>
 
 <pre>
-$ <b>0publish /var/www/interfaces/MyProg.xml \
-  --add-version=5 \
-  --archive-url=http://mysite/downloads/myprog-5-src.tar.bz2 \
-  --set-released=today \
-  --set-arch=*-src</b>
+&lt;implementation
+  arch="*-src"
+  id="."
+  version="0.1-pre"
+  xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"
+  compile:command="make -f ${SRCDIR}/Makefile"/>
 </pre>
 
 <p>
@@ -52,36 +61,46 @@ into 'build' before building.</dd>
 
 </dl>
 
-<p>
-The <b>compile</b> prefix must be bound to <b>0compile</b>'s namespace somewhere, e.g.:
-</p>
-
-<pre>xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"</pre>
+<h2>Customising the binary implementation</h2>
 
 <p>
-Note: You can keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
-the main feed, e.g.:
+  Starting from 0compile 0.23, you can specify a template &lt;implementation&gt; for the binary. You can use this, for example, to add &lt;command&gt; elements to it. Here's a more complex example for a Java program:
 </p>
 
 <pre>
-  &lt;feed src='http://mysite/interfaces/MyProg<b>-src</b>.xml' <b>arch='*-src'</b>/&gt;
+  &lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre" <b>compile:min-version='0.23'</b>>
+    <b>&lt;command name='compile' shell-command='make -f ${SRCDIR}/src/Makefile'></b>
+      <b>&lt;compile:implementation arch='*-*'></b>
+        &lt;environment name='CLASSPATH' insert='.'/>
+        &lt;requires interface="http://repo.roscidus.com/utils/graphviz"/>
+        <b>&lt;command name='run'></b>
+          &lt;runner interface='http://repo.roscidus.com/java/openjdk-6-jre'/>
+          &lt;arg>com.example.MainClass&lt;/arg>
+        &lt;/command>
+      &lt;/compile:implementation>
+    &lt;/command>
+    &lt;requires interface="http://repo.roscidus.com/java/iris" compile:include-binary='true'/>
+    &lt;requires interface="http://repo.roscidus.com/java/openjdk-6-jdk">
+      &lt;environment name='PATH' insert='bin'/>
+    &lt;/requires>
+  &lt;/implementation>
 </pre>
 
-<p>
-The <b>arch</b> attribute lets the injector know that it doesn't need to fetch this file unless
-it's looking for source code.
-</p>
+<p>The interesting bits here are:</p>
 
-<h2>Making library headers available (-dev packages)</h2>
-
-<p>
-See <a href='make-headers.html'>Make-headers</a> for information about publishing library source and -dev packages.
-</p>
+<dl>
+  <dt>arch="*-src"</dt><dd>tells us that the root &lt;implementation&gt; describes some source code.</dd>
+  <dt>compile:min-version</dt><dd>requires 0compile >= 0.23 to use the template feature.</dd>
+  <dt>&lt;command name='compile'&gt;</dt><dd>this replaces the old <b>compile:command</b> attribute described above.</dd>
+  <dt>&lt;compile:implementation&gt;</dt><dd>this is the template for the implementation that will be created by the compile.</dd>
+  <dt>arch='*-*'</dt><dd>indicates that the generated binary is platform independent (Java bytecode).</dd>
+  <dt>&lt;command name='run'&gt;</dt><dd>says how to run the resulting binary (by using the Java runtime).</dd>
+</dl>
 
 <h2>Adding run-time dependencies</h2>
 
 <p>
-By default, the feed created for the new binary doesn't have any dependencies. There are two ways to add them:
+By default, the feed created for the new binary doesn't have any dependencies. There are three ways to add them:
 </p>
 
 <ul>
@@ -94,6 +113,7 @@ compile-time. e.g.
     &lt;/requires&gt;
 </pre>
 </li>
+<li>You can use the template feature described above.</li>
 <li>
 You can edit the feed XML file directly during the build (it's in the <b>$DISTDIR/0install</b> directory).
 </li>
@@ -102,6 +122,30 @@ You can edit the feed XML file directly during the build (it's in the <b>$DISTDI
 <h2>Tips</h2>
 
 <dl>
+<dt>Using a separate source feed</dt>
+<dd>
+<p>
+You can keep the source implementations in a separate file (<b>MyProg-src.xml</b>) and add a feed from
+the main feed, e.g.:
+</p>
+
+<pre>
+  &lt;feed src='http://mysite/interfaces/MyProg<b>-src</b>.xml' <b>arch='*-src'</b>/&gt;
+</pre>
+
+<p>
+The <b>arch</b> attribute lets the injector know that it doesn't need to fetch this file unless
+it's looking for source code.
+</p>
+</dd>
+
+<dt>Making library headers available (-dev packages)</dt>
+<dd>
+<p>
+See <a href='make-headers.html'>Make-headers</a> for information about publishing library source and -dev packages.
+</p>
+</dd>
+
  <dt>Python distutils</dt>
  <dd><p>
  You should use the <b>--build-base</b> option to make distutils build to 0compile's build directory, not under the source code (which is read-only). Unfortunately, this option
