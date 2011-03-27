@@ -22,6 +22,13 @@ manager&#8221;, to handle building both it and the dependencies (mentioned above
 <p>You can install Zero Install for regular <a href='#macosx'>Mac OS X</a> (Quartz) with <a href='#jhbuild'>JHBuild</a> or <a href='#bundle'>Bundle</a>,<br />
 or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using either of <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
 
+<p>Currently using MacPorts, Fink or JHBuild all require compiling from source code,<br />
+so if you want to get started quickly the easiest way is the Bundle: <a href='http://downloads.sourceforge.net/project/zero-install/injector/0.53/ZeroInstall.pkg'>ZeroInstall.pkg</a></p>
+
+<quicklinks>
+  <link href='http://downloads.sourceforge.net/project/zero-install/injector/0.53/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
+</quicklinks>
+
 <dl>
   <dt id='darwin'>Darwin/X11</dt>
 
