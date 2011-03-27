@@ -15,17 +15,12 @@ To use Zero Install, you will need:
 </ul>
 
 <p>
-The installation process assumes a familiarity with the <i>Terminal</i> and <i>Developer Tools</i>.<br />
-There is no installer available for Mac OS X yet, so it needs to be built from source...
-</p>
-
-<p>
 The easiest way of installing Zero Install and its requirements is by using a &#8220;package<br />
 manager&#8221;, to handle building both it and the dependencies (mentioned above) for you:
 </p>
 
-<p>You can either install Zero Install for the regular <a href='#macosx'>Mac OS X</a> (Quartz) with <a href='#jhbuild'>JHBuild</a>,<br />
-or for its <a href='#darwin'>Darwin</a> BSD sub-system (using X11) using either of <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
+<p>You can install Zero Install for regular <a href='#macosx'>Mac OS X</a> (Quartz) with <a href='#jhbuild'>JHBuild</a> or <a href='#bundle'>Bundle</a>,<br />
+or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using either of <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
 
 <dl>
   <dt id='darwin'>Darwin/X11</dt>
@@ -49,16 +44,6 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 </p>
 
 <pre>$ <b>sudo fink install zeroinstall-injector</b></pre>
-
-<h3>After the installation</h3>
-<p>
-You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
-<b>0alias</b>, which lets you use short names instead of URLs.
-</p>
-
-<pre>
-$ <b>0launch</b> <i>URI</i>
-</pre>
 
 </dd>
 
@@ -160,15 +145,30 @@ $ <b>sudo python setup.py install</b>
 </li>
 </ul>
 
-<p>Now the installation is complete. To start Zero Install, you use commands:</p>
-<blockquote>
+<p>Now the installation is complete. To set up variables, you start it with:</p>
 <pre>
-$ jhbuild shell
-$ <b>0launch</b> <i>URI</i>
+$ <b>jhbuild shell</b>
 </pre>
-</blockquote>
+
+<h3 id='bundle'>Bundle installation</h3>
+<p>
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/0.53/ZeroInstall.pkg'>ZeroInstall.pkg</a> package for <a href='http://en.wikipedia.org/wiki/Installer_(Mac_OS_X)'>Installer.app</a>, which will use system <i>python</i> and install requirements like <i>GnuPG.pkg</i> and <i>PyGTK.pkg</i>:
+</p>
+
+<pre>$ <b>sudo installer -pkg ZeroInstall.pkg -target /</b></pre>
+
 </dd>
 </dl>
+
+<h3>After the installation</h3>
+<p>
+You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
+<b>0alias</b>, which lets you use short names instead of URLs.
+</p>
+
+<pre>
+$ <b>0launch</b> <i>URI</i>
+</pre>
 
 <h2>Work in Progress</h2>
 
@@ -178,8 +178,8 @@ It will also blend in more with the Mac desktop than what the current GTK interf
 </p>
 
 <p>
-There will also be an <i>Installer</i> package available, to avoid having to build it from source.<br/>
-But it should work OK already. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a>
+But it should work OK already. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a><br />
+Note that <b>0desktop</b> only works for GNOME/KDE/etc, for Finder you use <i>AddApp.app</i>...
 </p>
 
 <quicklinks>
