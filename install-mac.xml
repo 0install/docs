@@ -87,13 +87,12 @@ Comes bundled with the OS, but needs to be updated at <a href='http://developer.
 You <u>cannot</u> mix the <b>GTK-OSX</b> installation with MacPorts/Fink,<br />
 so make sure that those are <u>not</u> in the PATH/FLAGS variables...
 </p>
-</li>
 
 <ol>
 <li>
-<p>Download <a href='http://downloads.sourceforge.net/sourceforge/gtk-osx/gtk-osx-build-setup.sh'>gtk-osx-build-setup.sh</a>.</p></li>
+<p>Download <a href='http://downloads.sourceforge.net/sourceforge/gtk-osx/gtk-osx-build-setup.sh'>gtk-osx-build-setup.sh</a>.</p>
 
-<p>For details, see <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>gtk-osx-wiki:Build</a></p>
+<p>For details, see <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>gtk-osx-wiki:Build</a></p></li>
 
 <li>
 <p>In the <i>Terminal</i> application, do:</p>
@@ -105,6 +104,7 @@ $ <b>jhbuild bootstrap</b>
 </pre>
 </li>
 </ol>
+</li>
 
 <li><p>Compile <a href='http://www.gtk.org/'>GTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
 <ol start='3'>
