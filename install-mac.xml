@@ -78,7 +78,7 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 <li><p>Check availability with:</p>
 <pre>$ git --version</pre></li>
 </ul></li>
-<li><p>Compile <a href='http://www.gtk.org/'>GTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
+<li><p>Setup <a href='http://gtk-osx.sourceforge.net/'>GTK-OSX</a> environment, with <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
 <p>
 You will need the <b>Xcode Tools</b> for this, installed separately.<br />
 Comes bundled with the OS, but needs to be updated at <a href='http://developer.apple.com/' title='Apple Developer Connection'>ADC</a>.
@@ -87,6 +87,7 @@ Comes bundled with the OS, but needs to be updated at <a href='http://developer.
 You <u>cannot</u> mix the <b>GTK-OSX</b> installation with MacPorts/Fink,<br />
 so make sure that those are <u>not</u> in the PATH/FLAGS variables...
 </p>
+</li>
 
 <ol>
 <li>
@@ -101,7 +102,15 @@ $ <b>sh gtk-osx-build-setup.sh</b>
 $ PATH=$HOME/.local/bin:$PATH
 $ export PATH
 $ <b>jhbuild bootstrap</b>
+</pre>
+</li>
+</ol>
 
+<li><p>Compile <a href='http://www.gtk.org/'>GTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
+<ol start='3'>
+<li>
+<p>Continued from commands above:</p>
+<pre>
 $ <b>jhbuild build meta-gtk-osx-bootstrap</b>
 $ <b>jhbuild build meta-gtk-osx-core</b>
 </pre>
@@ -113,7 +122,7 @@ $ gtk-demo
 </li>
 
 <li><p>Compile <a href='http://www.pygtk.org/'>PyGTK</a> from source, using <a href='http://live.gnome.org/Jhbuild'>jhbuild</a></p>
-<ol start='3'>
+<ol start='4'>
 <li>
 <p>Continued from commands above:</p>
 <pre>
