@@ -27,7 +27,7 @@ or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using eith
 
 <dd>
 <p>
-<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='536' height='274' />
+<img src='screens/zeroinstall-gtkmacx11.png' alt='' width='578' height='316' />
 </p>
 
 <h3 id='macports'>MacPorts installation</h3>
@@ -51,7 +51,7 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 
 <dd>
 <p>
-<img src='screens/zeroinstall-gtkquartz.png' alt='' width='536' height='274' />
+<img src='screens/zeroinstall-gtkquartz.png' alt='' width='578' height='316' />
 </p>
 
 <h3 id='jhbuild'>JHBuild installation</h3>
