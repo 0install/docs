@@ -80,8 +80,9 @@ You can install the <a href='http://downloads.sourceforge.net/project/zero-insta
 
 <h3>After the installation</h3>
 <p>
-You now have two new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
-<b>0alias</b>, which lets you use short names instead of URLs.
+You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it,
+<b>0alias</b>, which lets you use short names instead of URLs, and
+<b>0install</b>, which provides access to other features.
 </p>
 
 <pre>
