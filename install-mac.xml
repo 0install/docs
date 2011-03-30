@@ -98,7 +98,7 @@ It will also blend in more with the Mac desktop than what the current GTK interf
 
 <p>
 But it should work OK already. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a><br />
-Note that <b>0desktop</b> only works for GNOME/KDE/etc, for Finder you use <i>AddApp.app</i>...
+Note that <b>0desktop</b> only works for GNOME/KDE/etc, for Finder you use <a href='http://afb.users.sourceforge.net/zero-install/interfaces/AddApp.xml'><i>AddApp.app</i></a>...
 </p>
 
 <quicklinks>
