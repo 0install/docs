@@ -25,7 +25,7 @@ way to return to a web page without entering the full URL. Examples of launchers
 
 <ul class='spaced'>
 <li>When a <k>GNOME</k> or <k>KDE</k> user drags a web-browser link to the <b>Add New Program</b> box, it creates an entry on the <k>Applications menu</k> that uses it.</li>
- <li>When a <k>ROX desktop</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses it.</li>
+ <li>When a <k>ROX desktop</k> or <k>Finder</k> user drags a web-browser link to the <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> program, it creates a <k>launcher application</k> that uses it.</li>
  <li>When a <k>shell</k> user runs the <b>0alias</b> command, it creates a <k>shell short-cut</k> that runs it.</li>
 </ul>
 
@@ -85,6 +85,13 @@ before it will show up; see <a href='https://bugs.launchpad.net/ubuntu/+source/x
 <dd><p>Drag the link from your web-browser to the AddApp program, then drag the launcher from there to wherever you want it. <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>'s page has more details.</p>
 <p style='text-align: center'>
   <img width="546" height="184" src="tutorial/add-with-rox.png" alt='Adding with ROX'/>
+</p>
+</dd>
+
+<dt>Finder</dt>
+<dd><p>Copy the link from your web-browser to the AddApp program, then save the launcher from there to wherever you want it.</p>
+<p style='text-align: center'>
+  <img width="591" height="200" src="tutorial/add-with-finder.png" alt='Adding with Finder'/>
 </p>
 </dd>
 
