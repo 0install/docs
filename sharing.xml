@@ -140,8 +140,8 @@ $ <b>sha1sum /bin/ls</b>
 </li>
   <li>Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
 <pre>
-# mkdir /var/cache/0install.net
-# chown zeroinst /var/cache/0install.net
+# mkdir -p /var/cache/0install.net/implementations
+# chown zeroinst /var/cache/0install.net/implementations
 </pre>
 </li>
 
@@ -150,6 +150,7 @@ $ <b>sha1sum /bin/ls</b>
 #!/bin/sh
 exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" &lt; /dev/null
 </pre>
+(note: the path will be /usr/<b>local</b>/bin/0store-secure-add if you installed from source)
 </li>
 
   <li>Make your new script executable:
@@ -163,7 +164,7 @@ Defaults>zeroinst env_reset,always_set_home
 ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
 </pre>
  <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
- later entries.</p>
+   later entries. Again, use /usr/<b>local</b>/bin if you installed from source.</p>
 </li>
  </ol>
 
