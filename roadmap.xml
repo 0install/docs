@@ -93,6 +93,7 @@ This is a quick overview of the major features added to Zero Install. It focusse
   <li>The value attribute for &lt;environment&gt;.</li>
   <li>Recursive use of &lt;runner&gt;.</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3738'>Better defaults for approving new keys</a>.</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3934'>A Mac OS X binary package</a>.</li>
 </ul>
 
 
@@ -106,9 +107,6 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 <h4>Version 0.54 (Apr 2011)</h4>
 
 <dl class='roadmap'>
-  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a></dt>
-  <dd>It's too hard to get 0install installed on Mac OS X. We need an easy-to-install binary package.</dd>
-
   <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3915'>Improved Python support</a></dt>
   <dd>Provide a way for packages to depend on the distribution Python interpreter without breaking systems without native package integration.</dd>
 </dl>
