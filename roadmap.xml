@@ -133,6 +133,12 @@ To help people get started quickly with 0install, it would be good to have a sim
 familiar "app-store" user interface.
 </dd>
 
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3847'>Feed search</a></dt>
+<dd>
+Add a free-text search engine for names and descriptions
+locally cached feeds, to enable quick off-line searching.
+</dd>
+
 <dt>Add missing features to Windows version</dt>
 <dd>e.g. 0alias and other features available in the Linux version</dd>
 
