@@ -11,7 +11,7 @@ that use the Glade library.</description>
   <category>Development</category>
 
   <group arch="*-src" compile:binary-lib-mappings="glade-2.0:0" compile:command="&quot;$GTK24&quot; &quot;$MAKE_HEADERS&quot;" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
-    <implementation doc-dir="doc/html" id="sha1new=bce9761699eef1279d6628915a2160677b1f10bd" released="2008-02-22" version="2.0.1">
+    <implementation doc-dir="doc/html" id="sha1new=bce9761699eef1279d6628915a2160677b1f10bd" released="2008-02-22" stability="stable" version="2.0.1">
       <archive extract="libglade-2.0.1" href="http://ftp.gnome.org/pub/GNOME/sources/libglade/2.0/libglade-2.0.1.tar.bz2" size="264646" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2007/interfaces/Make-headers.xml">
@@ -28,7 +28,7 @@ that use the Glade library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkn9oB0ACgkQBSn9tx+xORAtagCfUq+uCNe/rGzXFUPhnTbM7KjSbcQAoIXDhGd2
-g7fF7UYY7tBUIph1V+g8
+iEYEABECAAYFAk2pk1oACgkQBSn9tx+xORDMfwCfd20S0E3ui6IL5qYHrFAoKA7y94sAn3miCm+g
+zJZyt20UgYNwJzhVsqRo
 
 -->

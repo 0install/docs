@@ -20,7 +20,7 @@ bindings make it available in other environments.</description>
     <implementation id="sha1new=2e594f8415d75c02db92a8b600816726c71b2394" released="2007-03-19" version="2.6.27">
     <archive extract="libxml2-2.6.27" href="ftp://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-2.6.27.tar.bz2" size="3442536" type="application/x-bzip-compressed-tar"/>
   </implementation>
-    <implementation id="sha1new=469d91c99cffcb32cf59baf9395fd596c3e58871" released="2009-04-12" version="2.7.3">
+    <implementation id="sha1new=469d91c99cffcb32cf59baf9395fd596c3e58871" released="2009-04-12" stability="stable" version="2.7.3">
       <archive extract="libxml2-2.7.3" href="ftp://xmlsoft.org/libxml2/libxml2-2.7.3.tar.gz" size="4789450" type="application/x-compressed-tar"/>
     </implementation>
   </group>
@@ -35,7 +35,7 @@ bindings make it available in other environments.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAktlgokACgkQBSn9tx+xORDiMACeNC/ElEDa1G2WRpdEye/VZbl6cCcAn0KgkBN/
-u995ES0EfezxyLCfvN6S
+iEYEABECAAYFAk2pk0sACgkQBSn9tx+xORChLQCgjpQKwlFTbZ1z5I+On9V1m2ujArsAnRb48zNh
+098SzeqUdI5l5m5Pm+tK
 
 -->

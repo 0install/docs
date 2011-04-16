@@ -23,7 +23,7 @@ in an existing package and uses it to generate the feed.</description>
       <version not-before="0.33"/>
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
-    <implementation id="sha1new=d0db1f3cded69104cd805703671fc3ba93678c93" main="pkg2zero" released="2009-11-15" version="0.7">
+    <implementation id="sha1new=d0db1f3cded69104cd805703671fc3ba93678c93" main="pkg2zero" released="2009-11-15" stability="stable" version="0.7">
       <manifest-digest sha256="86bf9d02d39b06aa2f6bad98747559b3bdf550aa7c35ea4b97fcacad1a563580"/>
       <archive extract="pkg2zero-0.7" href="http://downloads.sourceforge.net/project/zero-install/pkg2zero/0.7/pkg2zero-0.7.tar.bz2" size="19899"/>
     </implementation>
@@ -31,7 +31,7 @@ in an existing package and uses it to generate the feed.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAksADV4ACgkQrgeCgFmlPMHUTQCg2MhV2bRRrnXZCs5YykN6Z+vQ0/0An0EhafRQ
-uiusOPNKzCh0Fi/Gp5CD
+iEYEABECAAYFAk2pkvcACgkQrgeCgFmlPMHbBgCfYToF2lxYFXUIz01lCpBX48pv6fkAnRNb86qX
+BvbnS6YrHVXyFrZjp74m
 
 -->

@@ -80,7 +80,7 @@ packagers.html.</description>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
-      <implementation id="sha1new=a100ea10f7e6ec981af6d19e7cab2a31fd1febd8" released="2011-02-02" self-test="tests/testall.py" version="0.19">
+      <implementation id="sha1new=a100ea10f7e6ec981af6d19e7cab2a31fd1febd8" released="2011-02-02" self-test="tests/testall.py" stability="stable" version="0.19">
       <manifest-digest sha256="1704f494381431ddf65f257bf87fa6f0e5c7386bd68fd7204401a0d9700b5c84"/>
       <archive extract="0publish-0.19" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.19/0publish-0.19.tar.bz2" size="24866"/>
     </implementation>
@@ -88,7 +88,7 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1JoFwACgkQrgeCgFmlPMGmuQCffGiBRqiSTr3DRSDDidPRE3B2qxsAoIIw6vLy
-SLrGg7E2bFRw2l2DG1RQ
+iEYEABECAAYFAk2pk40ACgkQrgeCgFmlPMGGjgCdEkjX8r1KRsbs0Ukwc6oOPyGWC+IAn1cZvDoY
+KCNXCWIr4p7D44W3eyz5
 
 -->

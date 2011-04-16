@@ -172,7 +172,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <version not-before="0.52"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
-      <implementation id="sha1new=a3839c73cb4c8b8f53b3bc4a1b7c6e483cd38ee4" released="2011-03-26" self-test="tests/testcompile.py" version="0.23">
+      <implementation id="sha1new=a3839c73cb4c8b8f53b3bc4a1b7c6e483cd38ee4" released="2011-03-26" self-test="tests/testcompile.py" stability="stable" version="0.23">
       <manifest-digest sha256="e94f0ed99293bb0b32cfd8f23795752f212cf76607b910a6aa79345e5b6f455e"/>
       <archive extract="0compile-0.23" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.23/0compile-0.23.tar.bz2" size="33361"/>
     </implementation>
@@ -181,7 +181,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk2OKKQACgkQrgeCgFmlPMFHrQCfaeG5okw+9pUZtBixKp332+oo09EAniyU3GBV
-Iw413Dz02q4R4On8FNfi
+iEYEABECAAYFAk2pk5cACgkQrgeCgFmlPMHeqACdHUHtkltW2dGaHM9t/OR1jSITye4AoLpIIN2g
+fOHaJf5Vrt2PWcwFSUqS
 
 -->
