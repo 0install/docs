@@ -73,7 +73,7 @@ can help you to create new releases easily.</description>
       <version not-before="0.40"/>
       <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
     </requires>
-    <implementation id="sha1new=bc8cc5da6342e7b8fbaac4d9fd34577df79188db" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2010-08-22" self-test="tests/testall.py" version="0.12">
+    <implementation id="sha1new=bc8cc5da6342e7b8fbaac4d9fd34577df79188db" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2010-08-22" self-test="tests/testall.py" stability="stable" version="0.12">
       <manifest-digest sha256="d529431da382edbafab7ab21cda40e4eae7fbeabcf617d540c0251fd697ca5ed"/>
       <archive extract="0release-0.12" href="http://downloads.sourceforge.net/project/zero-install/0release/0.12/0release-0.12.tar.bz2" size="54467"/>
     </implementation>
@@ -81,7 +81,7 @@ can help you to create new releases easily.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxw4lYACgkQrgeCgFmlPMHDLgCfZ5xSLGT5F8BG/kItELypmGqV4poAoIiho5IT
-gn7niCuMdF7FxAwgFpuk
+iEYEABECAAYFAk2pYGMACgkQrgeCgFmlPMHRJQCgu9PMAoFqdWOssGRmDwt1oCFWtHIAnRA3CESF
+7rfd9F33FUdvgpFDhaiR
 
 -->
