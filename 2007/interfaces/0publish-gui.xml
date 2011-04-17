@@ -48,10 +48,26 @@ these feeds.</description>
       <manifest-digest sha256="7866d9d0ad1b477fe289c449008f13a6588a18a087433a6b393cd4d7971ad0a7"/>
       <archive extract="0publish-gui-0.10" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.10/0publish-gui-0.10.tar.bz2" size="32136"/>
     </implementation>
+    <group>
+      <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <command name="run" path="0publish-gui">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <implementation id="sha1new=e2b9ab395ecc6cd0b0229c0bfcf88f10f4b545f1" released="2011-04-17" version="0.11">
+      <manifest-digest sha256="a7eb8c791cb928a5843f2a6cba72c4f361816598db42784c229c1c259a3dd1f2"/>
+      <archive extract="0publish-gui-0.11" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.11/0publish-gui-0.11.tar.bz2" size="32590"/>
+    </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk0kK6YACgkQrgeCgFmlPMF1RwCgydX1qoDhckUwayqnusrm3cO7xygAoL4u0qYd
-yUxK+iC+BirOeRB7ZUM3
+iEYEABECAAYFAk2rGE8ACgkQrgeCgFmlPMFqQwCfYPDam88DpuMAjiHiNdFMOmm2OmQAoKME2ZdG
+lsWc+P616NprxeNunf0/
 
 -->
