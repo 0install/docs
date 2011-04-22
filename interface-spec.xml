@@ -234,7 +234,7 @@ the closest ancestor &lt;group&gt; which defines it):
  <dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <b>os-cpu</b>.
  The injector knows that certain platforms are backwards-compatible with others, so binaries with <b>arch="Linux-i486"</b>
  will still be available on <i>Linux-i686</i> machines, for example. Either the <i>os</i> or <i>cpu</i> part may be <b>*</b>,
- which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>.</dd>
+ which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>. See also: the <a href='#archs'>list of valid architecture names</a>.</dd>
 
  <dt>license</dt>
  <dd>License terms (typically a <a href='http://catb.org/~esr/trove/'>Trove</a> category, as used on sf.net).</dd>
@@ -840,6 +840,34 @@ from version 0.18 of the injector and may be generated easily using the
 Local interfaces are plain XML, although having an XML signature block is no problem as it
 will be ignored as a normal XML comment.
 </p>
+
+<h2 name='archs'>Valid architecture names</h2>
+
+<p>The <b>arch</b> attribute is a value in the form "OS-CPU". The values come from the <b>uname</b> system call, but
+there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:</p>
+
+<ul>
+  <li>*</li>
+  <li>Darwin</li>
+  <li>FreeBSD</li>
+  <li>Linux</li>
+  <li>MacOSX</li>
+  <li>Windows</li>
+</ul>
+
+Valid values for CPU include:
+
+<ul>
+  <li>*</li>
+  <li>src</li>
+  <li>i386</li>
+  <li>i486</li>
+  <li>i586</li>
+  <li>i686</li>
+  <li>ppc</li>
+  <li>ppc64</li>
+  <li>x86_64</li>
+</ul>
 
 <h2>Future plans</h2>
 
