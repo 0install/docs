@@ -848,7 +848,8 @@ there is some normalisation (e.g. because Windows doesn't report the same CPU na
 
 <ul>
   <li>*</li>
-  <li>Darwin</li>
+  <li>Cygwin (a Unix-compatibility layer for Windows)</li>
+  <li>Darwin (MacOSX, without the proprietary bits)</li>
   <li>FreeBSD</li>
   <li>Linux</li>
   <li>MacOSX</li>
