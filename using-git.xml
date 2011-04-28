@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
+<toc level='h2'/>
+
 <h2>Testing developer versions using Git</h2>
 
 <p>
@@ -30,10 +32,12 @@ $ cd zeroinstall
 <p>
 The directory contains the latest version, plus a single (hidden) .git
 directory with all the git-related bits.
-You can install it as usual:
+You can install it as usual, except that you need to create the translation (.mo)
+files first:
 </p>
 
 <pre>
+$ make translations
 $ sudo python setup.py install
 </pre>
 
@@ -105,5 +109,39 @@ Finally, to make a patch file ready to send to the <a href='support.html'>mailin
 </p>
 
 <pre>$ git format-patch origin/master</pre>
+
+<h2>Making a new translation</h2>
+
+<p>The steps are:</p>
+
+<ol>
+  <li>Create the .pot (.po template) file.</li>
+  <li>Create a new directory <b>share/locale/<i>$locale</i>/LC_MESSAGES</b> inside the Git checkout.</li>
+  <li>Copy the .pot file inside it with a .po extension.</li>
+</ol>
+
+<p>
+  e.g. to make a French translation:
+</p>
+
+<pre>
+  $ make share/locale/zero-install.pot
+  $ mkdir -p share/locale/<b>fr</b>/LC_MESSAGES
+  $ cp share/locale/zero-install.pot share/locale/<b>fr</b>/LC_MESSAGES/zero-install.po
+</pre>
+
+<p>
+  Then edit the .po file to give a translation for each string. When you're done, create the .mo
+  file from the .po file and test:
+</p>
+
+<pre>
+  $ make translations
+  $ ./0launch
+</pre>
+
+<p>
+  Finally, <a href='support.html'>send us</a> the new .po file.
+</p>
 
 </html>
