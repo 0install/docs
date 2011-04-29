@@ -47,7 +47,7 @@ There are also some extra attributes you can add to the <b>implementation</b> el
  <dd>This must be present. Its value is a shell command, executed inside the <b>build</b> directory. It must compile the source
  in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>. If this command starts to get complicated,
  you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute
- to the command to run the script.</dd>
+ to the command to run the script. The path to the generated feed for the new binary is <b>$BINARYFEED</b>, if you need it during the build.</dd>
 
  <dt>compile:binary-main</dt>
  <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary feed that is created. If it is not given, then
