@@ -93,7 +93,8 @@ This is a quick overview of the major features added to Zero Install. It focusse
   <li>The value attribute for &lt;environment&gt;.</li>
   <li>Recursive use of &lt;runner&gt;.</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3738'>Better defaults for approving new keys</a>.</li>
-  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3934'>A Mac OS X binary package</a>.</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a>.</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3915'>Improved Python support</a>.</li>
 </ul>
 
 
@@ -104,24 +105,20 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 0.54 (Apr 2011)</h4>
+<h4>Version 1.0 (aiming for late May 2011)</h4>
 
 <dl class='roadmap'>
-  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3915'>Improved Python support</a></dt>
-  <dd>Provide a way for packages to depend on the distribution Python interpreter without breaking systems without native package integration.</dd>
+  <dt>Final 1.0 release! Should be largely identical to <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4076'>the 0install 1.0-rc1 release candidate</a>.</dt>
 </dl>
 
-<h4>Version 1.0-rc1 (May 2011) - release candidate</h4>
+<h4>Version 1.1</h4>
 
 <dl class='roadmap'>
-  <dt>Just bug-fixes and translation updates.</dt>
+  <dt>Drop Python 2.5 support</dt>
+  <dd>Making Python 2.6 the minimum version is the first step in the (long) process of supporting
+    Python 3.</dd>
 </dl>
 
-<h4>Version 1.0 (June 2011)</h4>
-
-<dl class='roadmap'>
-  <dt>Final release!</dt>
-</dl>
 
 <h4>Version 2.x</h4>
 
@@ -157,10 +154,6 @@ of locally cached feeds, to enable quick off-line searching.
 
 <dt>Better desktop integration</dt>
 <dd>e.g. a better Firefox plugin, XFCE support.</dd>
-
-  <dt>Drop Python 2.5 support</dt>
-  <dd>Making Python 2.6 the minimum version is the first step in the (long) process of supporting
-    Python 3.</dd>
 
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3693/focus=3718'>wxWidgets GUI for Mac and Windows</a></dt>
 <dd>
