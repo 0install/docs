@@ -129,15 +129,31 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="90d99b918d81aaf30678eb5b56a57dcc0cfb40196e2697a9fd83453748e5fddb"/>
       <archive extract="zeroinstall-injector-0.53" href="http://downloads.sourceforge.net/project/zero-install/injector/0.53/zeroinstall-injector-0.53.tar.bz2" size="281595"/>
     </implementation>
-    <implementation id="sha1new=48a00b75259bb97c39bd47bf1b0a0f270680edc2" released="2011-04-09" version="0.54">
+    <implementation id="sha1new=48a00b75259bb97c39bd47bf1b0a0f270680edc2" released="2011-04-09" stability="stable" version="0.54">
       <manifest-digest sha256="8e518cc08bfbd0477f9b274cfbbec2668e79fa82ec4e7b34d610f7ec8077df64"/>
       <archive extract="zeroinstall-injector-0.54" href="http://downloads.sourceforge.net/project/zero-install/injector/0.54/zeroinstall-injector-0.54.tar.bz2" size="323661"/>
+    </implementation>
+  </group>
+  <group>
+    <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <command name="run" path="0launch">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-04-29" version="1.0-rc1">
+      <manifest-digest sha256="c515378dd31c6d31051829c4cdde079c3d9dd3d124dda076e0189c52b1ce0e98"/>
+      <archive extract="zeroinstall-injector-1.0-rc1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector-1.0-rc1.tar.bz2" size="324263"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEUEABECAAYFAk2gGqcACgkQrgeCgFmlPMHGegCYg9x2EgEvSIB4Zt7XWqmGHeXYIwCfSzbXPZTX
-S4L/IvQQ3aWC3T/b2ro=
+iEYEABECAAYFAk26ffoACgkQrgeCgFmlPMHp3gCfRHtpmb3+cHP1cwADAen5Ktq4vM0AoNle2Krd
+yvtrPsn3XBuFo2eFKElX
 
 -->
