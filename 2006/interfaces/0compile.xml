@@ -151,7 +151,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
     </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.48"/>
+      <version before="1.0-rc1" not-before="0.48"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <implementation id="sha1new=ba9cfb154f8faace2522e348070531f2911f55d3" released="2010-06-24" self-test="tests/testcompile.py" stability="stable" version="0.21">
@@ -166,38 +166,46 @@ For a full tutorial, see 0compile's homepage.</description>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.52"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version before="1.0-rc1" not-before="0.52"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=a3839c73cb4c8b8f53b3bc4a1b7c6e483cd38ee4" released="2011-03-26" self-test="tests/testcompile.py" stability="stable" version="0.23">
-      <manifest-digest sha256="e94f0ed99293bb0b32cfd8f23795752f212cf76607b910a6aa79345e5b6f455e"/>
-      <archive extract="0compile-0.23" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.23/0compile-0.23.tar.bz2" size="33361"/>
-    </implementation>
-      <group>
-        <command name="test" path="tests/testcompile.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
-        <command name="run" path="0compile">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
-        <implementation id="sha1new=66e0842f55e9fbd7e1776680d74fc3b273b7956e" released="2011-04-29" version="0.24">
-      <manifest-digest sha256="03116765d66b93abb7ed7daa109957ebc661d10d366a30273e61bfc75a0a2832"/>
-      <archive extract="0compile-0.24" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24/0compile-0.24.tar.bz2" size="33488"/>
-    </implementation>
-      </group>
+	<manifest-digest sha256="e94f0ed99293bb0b32cfd8f23795752f212cf76607b910a6aa79345e5b6f455e"/>
+	<archive extract="0compile-0.23" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.23/0compile-0.23.tar.bz2" size="33361"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+	<version not-before="0.52"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
+      <command name="test" path="tests/testcompile.py">
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
+      <command name="run" path="0compile">
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
+      <implementation id="sha1new=66e0842f55e9fbd7e1776680d74fc3b273b7956e" released="2011-04-29" version="0.24">
+	<manifest-digest sha256="03116765d66b93abb7ed7daa109957ebc661d10d366a30273e61bfc75a0a2832"/>
+	<archive extract="0compile-0.24" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24/0compile-0.24.tar.bz2" size="33488"/>
+      </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk26h5gACgkQrgeCgFmlPMH7IQCgkiq6Xi/A3szwWSJTodYd8gCkb6oAn2H0UQqf
-AJ1CrZPofEA+M8Spezt+
+iEYEABECAAYFAk26iKYACgkQrgeCgFmlPMHOLgCeNkST071Ci8uVyP85//LM3v2mY2IAnRCPDItT
+TDYIoO+fc7vSzSbj3c3H
 
 -->
