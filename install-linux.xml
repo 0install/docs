@@ -11,7 +11,9 @@
   <pre># <b>yum install zeroinstall-injector</b></pre>
   <p>Newer versions are also available:</p><p>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_12/noarch/'>Fedora 12 RPMs</a><br/>
-  <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_13/noarch/'>Fedora 13 RPMs</a></p>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_13/noarch/'>Fedora 13 RPMs</a><br/>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_14/noarch/'>Fedora 14 RPMs</a>
+    </p>
   </li>
   <li id='mandriva'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010/noarch/'>Mandriva 2010 RPMs</a><br/>
