@@ -84,11 +84,27 @@ packagers.html.</description>
       <manifest-digest sha256="1704f494381431ddf65f257bf87fa6f0e5c7386bd68fd7204401a0d9700b5c84"/>
       <archive extract="0publish-0.19" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.19/0publish-0.19.tar.bz2" size="24866"/>
     </implementation>
+      <group>
+        <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+        <command name="run" path="0publish">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+        <implementation id="sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43" released="2011-05-01" version="0.20">
+      <manifest-digest sha256="24533dcef144809ec544f5a52777e6d4316b4a0a207b75a7c0ef9765366dc219"/>
+      <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899"/>
+    </implementation>
+      </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk2pk40ACgkQrgeCgFmlPMGGjgCdEkjX8r1KRsbs0Ukwc6oOPyGWC+IAn1cZvDoY
-KCNXCWIr4p7D44W3eyz5
+iEYEABECAAYFAk29QH4ACgkQrgeCgFmlPMGENwCghlRV5GryP4roZSq+kQ22P/htEXcAn3WAO77r
+fYRB05xSxDRzgt8qvekV
 
 -->
