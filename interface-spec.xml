@@ -454,6 +454,7 @@ The type of the archive is given as a MIME type in the <b>type</b> attribute
  <li>application/x-compressed-tar (.tar.gz or .tgz)</li>
  <li>application/zip (.zip)</li>
  <li>application/vnd.ms-cab-compressed (.cab)</li>
+ <li>application/x-ruby-gem (.gem) - since version 1.0-rc1</li>
 </ul>
 
 <p>
