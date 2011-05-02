@@ -2,9 +2,9 @@
 
 function get_download_html() {
 	$platforms = array(
-		"Ubuntu/11.04" => "http://downloads.sourceforge.net/project/zero-install/injector/0.53/zeroinstall-injector_0.53-1_all.deb",
-		"Ubuntu/10.10" => "http://downloads.sourceforge.net/project/zero-install/injector/0.53/zeroinstall-injector_0.53-1_all.deb",
-		"Ubuntu/10.04" => "apt:zeroinstall-injector",
+		"Ubuntu/11.04" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
+		"Ubuntu/10.10" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
+		"Ubuntu/10.04" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
 		"Ubuntu/9.10" => "apt:zeroinstall-injector",
 		"Ubuntu/9.04" => "http://downloads.sourceforge.net/zero-install/zeroinstall-injector_0.41-1_all.deb",
 		"Ubuntu/8.10" => "apt:zeroinstall-injector",
