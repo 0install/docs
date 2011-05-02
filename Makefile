@@ -12,10 +12,10 @@ htmlfiles: ${HTML}
 	xsltproc -o $@ --stringparam file index.html to_html.xsl "$<"
 	sed -i 's/@AUTO_DOWNLOAD_HTML@/<?php require("detect.php"); ?>/' "$@"
 
-rox-feeds.xml:
-	wget 'http://rox.sourceforge.net/desktop/rox/zero-install-feeds' -O rox-feeds.xml
+lists/featured.xml: lists/featured.lst
+	(cd lists; ./make-list.py featured.lst)
 
-injector-feeds.html: all-feeds.xml
+injector-feeds.html: lists/featured.xml
 
 linklint:
 	linklint -error -warn -xref -forward -http -host 0install.net /@
