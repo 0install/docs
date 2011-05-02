@@ -244,39 +244,30 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "feeds"]'>
-     <h2>Contents</h2>
-     <ol>
-       <xsl:for-each select='document("all-feeds.xml")/*/category'>
-         <xsl:variable name='category'><xsl:value-of select='@name'/></xsl:variable>
-         <li><a href='#cat-{@name}'><xsl:value-of select='@name'/></a> <span class='count'>(<xsl:value-of select='count(document("all-feeds.xml")/*/feed[@category=$category])'/>)</span></li>
-       </xsl:for-each>
-     </ol>
-
-     <xsl:for-each select='document("all-feeds.xml")/*/category'>
-       <xsl:variable name='category'><xsl:value-of select='@name'/></xsl:variable>
-       <h2 id='cat-{$category}'><xsl:value-of select='$category'/></h2>
-       <table class='picturebullets' style='margin-left: 2em'>
-        <xsl:for-each select='document("all-feeds.xml")/*/feed[@category=$category]'>
-         <tr class='d{position() mod 2}'>
-          <td class='image'>
-	   <img src='{@icon}' alt='' width='{@width}' height='{@height}'/>
-          </td>
-          <td class='keyinfo'><a href='{@uri}'><xsl:value-of select='@name'/></a><br/>
-           <span class='summary'><xsl:value-of select='@summary'/></span><br/>
-          </td>
+    <xsl:variable name='source' select='document(@source)'/>
+    <table class='picturebullets' style='margin-left: 2em'>
+      <xsl:for-each select='$source/*/feed'>
+	<tr class='d{position() mod 2}'>
+	  <td class='image'>
+	    <img src='{@icon}' alt='' width='{@width}' height='{@height}'/>
+	  </td>
+	  <td class='keyinfo'><a href='{@uri}'><xsl:value-of select='@name'/></a><br/>
+	    <span class='summary'><xsl:value-of select='@summary'/></span><br/>
+	  </td>
 	  <td class='teaser'>
-	    <xsl:value-of select='.'/>
+	    <xsl:value-of select='text()|*'/>
 	    <xsl:if test='@homepage'>
-              <a href='{@homepage}'>Home page</a>
+	      <a href='{@homepage}'>Home page</a>
 	    </xsl:if>
 	  </td>
-         </tr>
-        </xsl:for-each>
-      </table>
-     </xsl:for-each>
+	</tr>
+      </xsl:for-each>
+    </table>
+    <!--
     <p>
-      Number of feeds: <xsl:value-of select='count(document("all-feeds.xml")/*/feed)'/>
+      Number of feeds: <xsl:value-of select='count($source/*/feed)'/>
     </p>
+    -->
   </xsl:template>
 
   <xsl:template match='*[name() = "security"]'>

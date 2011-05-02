@@ -1,35 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<h2>Zero Install feeds</h2>
-
-<p>
-Here are some sites that have already started providing software via this system. If you find any
-more, write to the list to let us know and we will add them here.
-</p>
+<h2>Zero Install: Featured Applications</h2>
 
 <p>
 To get these programs, drag the program's title from your web-browser to your installer.
-If you need more help, consult the <a href='injector.html'>injector
-installation instructions</a>.
+If you need more help, consult the <a href='injector.html'>installation instructions</a>.
+</p>
+
+<feeds source='lists/featured.xml'/>
+
+<h2>More feeds</h2>
+
+<p>
+  This pages used to list all the known feeds, but the list was getting much too long, so now it just
+  shows a few selected applications. Hopefully, other people will set up more specialised lists for particular
+  groups of people.
 </p>
 
 <p>
-Note: The aim of this page is to list <i>all</i> feeds, regardless of their quality. My hope is that
-other people will set up sites listing sub-sets of these suitable for different groups of users. For
-example, someone might publish a page linking to programs especially suitable for children, while
-someone else lists programs good for audio processing, etc. As an example, the
-<a href='http://rox.sourceforge.net/desktop/ZeroInstall'>ROX Zero Install software index</a>
+  For example, the <a href='http://rox.sourceforge.net/desktop/ZeroInstall'>ROX Zero Install software index</a>
 lists those programs which are designed for use with the ROX desktop.
 </p>
 
-<ul>
-<li><a href='https://launchpad.net/zeroinstall-feed-translations/+translations'>Help translate these descriptions</a></li>
-<li><a href='injector-packagers.html'>Make other software available through Zero Install</a></li>
-<li><a href='http://roscidus.com/0mirror'>Backup site with copies of these feeds</a></li>
-</ul>
-
-<feeds/>
+<p>
+  For a complete list of all known feeds, see the <a href='http://roscidus.com/0mirror/'>feed mirror site</a>.
+</p>
 
 <p>
 If you want to make additional programs available this way, please read the
