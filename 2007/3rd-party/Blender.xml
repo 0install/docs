@@ -17,7 +17,7 @@ creation and playback with cross-platform compatibility.</description>
   <icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/>
   <category>Video</category>
   <group arch="Linux-i386" license="OSI Approved :: GNU General Public License (GPL)" main="blender">
-    <implementation arch="-" id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" released="2007-01-13" stability="stable" version="2.42">
+    <implementation id="sha1new=a7ef2e3cb34b5f243bf48cb3ab63bb511556e6d5" released="2007-01-13" stability="stable" version="2.42">
       <archive extract="blender-2.42a-linux-glibc232-py24-i386-static" href="http://video.blendertestbuilds.de/download.blender.org/release/Blender2.42/blender-2.42a-linux-glibc232-py24-i386-static.tar.bz2" size="11505773"/>
     </implementation>
     <implementation id="sha1new=fb4333254a4855636c8b70de9cb8bbe90b6b84b4" released="2007-06-23" stability="stable" version="2.44">
@@ -56,11 +56,11 @@ creation and playback with cross-platform compatibility.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJNxQvAAAoJEAcTP5bKdNi6nfIIAI4opfb/6b0UvY1Mgkt34T+Mw+yMJBqwhCpE
-MdS0mTDFRVobR5XwoD/4FH5WeWzdVBlEn1Raz7Lao4/4Pwh9aaaj+z9pZIEj08bwxDYEKkvP/54R
-GkIaXHKjrwDYHaEJY+vplLaS6WqVm8qrcIX0ftHQX7aS+1DmampBgur2FDzgNc67EIXSxRQgK0zn
-CZHFfZhlqIx1XxSCOKSgylU34eeXV9j7AcUSlwTbqPmPR+g0cAIfSQxyEg4/uWK9cdJaGZ8kQk3v
-bvzuR/swKD2JgMwSNBP1diu0UhY9Yza1RXAkgS2T06NXSzJ98At0IZU1/vPSAX+8TWL8dj9S5qvA
-vKY=
+iQEcBAABCAAGBQJNxUOCAAoJEAcTP5bKdNi6wEMH/11bP5Z3o16Jnsbub6IS1OvT4yI3JLc7PMRJ
+UJr0jax7gy6A9VsNWxK0sCNArYv6Y60vsAhB1VgXKO0ZiWWNNKuKEVkU/g2FtNv/aiKRvsDO61Fq
+rn3ejElHah/y3FRL3dkGDbsMc42mL3xUmZCD0XGrSErF/Bkg1UJN8ffmVRGcV+Z1c3vUzrDT7hac
+6D6VprEypctHjhpLHEP8h7B09dpvH8bfqAJeGR8XyOJE6Tib4s5ElO+YDfKbeQvf9kKi2SJ2434k
+Bjd9d/sOlmPrxzmIkSskfcIh3BUsGhuMqqFWkCK8VTcI8zABBI2P3//MVBNCmTgu8dh5mtwIsHDW
+s0s=
 
 -->
