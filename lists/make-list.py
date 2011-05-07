@@ -11,6 +11,9 @@ config = load_config()
 MAX_TEASER_LENGTH = 256
 MAX_ICON_SIZE = 64
 
+top_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+feed_icons_dir = os.path.join(top_dir, 'feed_icons')
+
 def get_icon(elem, iface):
 	uri = iface.uri
 	have_icon = False
@@ -19,7 +22,7 @@ def get_icon(elem, iface):
 		name = name[:-4]
 
 	icon_path = 'feed_icons/%s.png' % name
-	full_icon_path = '../' + icon_path
+	full_icon_path = os.path.join(top_dir, icon_path)
 	if os.path.isfile(full_icon_path):
 		have_icon = True
 	else:
@@ -38,7 +41,7 @@ def get_icon(elem, iface):
 			
 	if not have_icon:
 		icon_path = 'tango/applications-system.png'
-		full_icon_path = '../' + icon_path
+		full_icon_path = os.path.join(top_dir, icon_path)
 	
 	icon_meta = {}
 	child = subprocess.Popen(["pngmeta", "--all", "--", full_icon_path], stdout = subprocess.PIPE)

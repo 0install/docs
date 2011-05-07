@@ -12,10 +12,10 @@ htmlfiles: ${HTML}
 	xsltproc -o $@ --stringparam file index.html to_html.xsl "$<"
 	sed -i 's/@AUTO_DOWNLOAD_HTML@/<?php require("detect.php"); ?>/' "$@"
 
-lists/featured.xml: lists/featured.lst lists/0tools.xml
-	(cd lists; ./make-list.py featured.lst)
+lists/%.xml: lists/%.lst
+	./lists/make-list.py $<
 
-injector-feeds.html: lists/featured.xml
+injector-feeds.html: lists/featured.xml lists/0tools.xml
 
 linklint:
 	linklint -error -warn -xref -forward -http -host 0install.net /@
