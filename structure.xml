@@ -10,7 +10,7 @@
     <item base="install-windows" label="Windows"/>
   </item>
 
-  <item base='injector-feeds' label='Software index'/>
+  <item base='injector-feeds' label='Featured apps'/>
   <item base="support" label="Support"/>
 
   <item base="doc" label="Documentation">

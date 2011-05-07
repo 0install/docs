@@ -8,24 +8,38 @@ To get these programs, drag the program's title from your web-browser to your in
 If you need more help, consult the <a href='injector.html'>installation instructions</a>.
 </p>
 
+<toc level='h3'/>
+
+<h3>Popular applications</h3>
+
 <feeds source='lists/featured.xml'/>
 
-<h2>More feeds</h2>
+<h3>0install tools</h3>
 
 <p>
-  This pages used to list all the known feeds, but the list was getting much too long, so now it just
-  shows a few selected applications. Hopefully, other people will set up more specialised lists for particular
-  groups of people.
+  These programs are related to 0install itself (e.g. tools for making and updating feeds). They
+  are, of course, distributed through 0install:
 </p>
 
-<p>
-  For example, the <a href='http://rox.sourceforge.net/desktop/ZeroInstall'>ROX Zero Install software index</a>
-lists those programs which are designed for use with the ROX desktop.
-</p>
+<feeds source='lists/0tools.xml'/>
+
+<h3>More feeds</h3>
 
 <p>
-  For a complete list of all known feeds, see the <a href='http://roscidus.com/0mirror/'>feed mirror site</a>.
+  This pages used to list all the known feeds, but the list was getting much
+  too long, so now it just shows a few selected applications. Other sites
+  provide specialised lists for particular groups of people:
 </p>
+
+<dl>
+  <dt><a href='http://roscidus.com/0mirror/'>All known feeds</a></dt>
+  <dd>The mirror site contains a list of all feeds known to us.</dd>
+
+  <dt><a href='http://rox.sourceforge.net/desktop/ZeroInstall'>ROX Zero Install software index</a></dt>
+  <dd>Programs which are designed for use with the ROX desktop.</dd>
+
+</dl>
+
 
 <p>
 If you want to make additional programs available this way, please read the

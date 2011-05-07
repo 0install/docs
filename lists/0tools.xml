@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<list>
+  <feed height="48" homepage="create a binary release from source code" icon="tango/applications-system.png" name="0compile" summary="create a binary release from source code" uri="http://0install.net/2006/interfaces/0compile.xml" width="48">
+    0compile creates a binary from source code, either for your own use or ready for
+publishing on the web through Zero Install. It can use Zero Install to download
+any build dependencies (compilers, header files, build tools, etc).
+
+This is useful if ...
+  </feed>
+  <feed height="48" homepage="utility to make creating injector interfaces easier" icon="tango/applications-system.png" name="0publish" summary="utility to make creating injector interfaces easier" uri="http://0install.net/2006/interfaces/0publish" width="48">
+    0publish makes creating and modifying injector interface files easier. It can
+create a new commented template for you or edit an existing one.
+
+Various editing operations are available, the most basic being to let you edit
+it in your preferred text ...
+  </feed>
+  <feed height="48" homepage="GTK editor for Zero Install feeds" icon="feed_icons/0publish-gui.png" name="0publish-gui" summary="GTK editor for Zero Install feeds" uri="http://0install.net/2007/interfaces/0publish-gui.xml" width="48">
+    Publishing a program using Zero Install requires you to create an XML file
+listing the available versions, where to get them, and what other software they
+depend on.
+
+This program provides a simple graphical interface for creating and editing
+these feeds.
+  </feed>
+  <feed height="48" homepage="manage new releases with Zero Install" icon="tango/applications-system.png" name="0release" summary="manage new releases with Zero Install" uri="http://0install.net/2007/interfaces/0release.xml" width="48">
+    If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.
+  </feed>
+  <feed height="48" homepage="check your Zero Install feeds" icon="tango/applications-system.png" name="FeedLint" summary="check your Zero Install feeds" uri="http://0install.net/2007/interfaces/FeedLint.xml" width="48">
+    FeedLint is a tool for Zero Install feed authors. It checks that your Zero
+Install feed can be downloaded, that it is valid and that all the links in it
+still work.
+
+Run this on all your feeds from time-to-time to make sure they still work.
+  </feed>
+  <feed height="48" homepage="creates -dev packages" icon="tango/applications-system.png" name="Make-headers" summary="creates -dev packages" uri="http://0install.net/2007/interfaces/Make-headers.xml" width="48">
+    Given a standard autoconf source package (in $SRCDIR), this script builds it
+(configure --prefix=$DISTDIR &amp;&amp; make install) and then removes files which
+shouldn't be in a -dev package (.so and .la files, etc).
+
+It also edits any pkg-config .pc files to ...
+  </feed>
+  <feed height="48" homepage="decentralised installation system" icon="feed_icons/ZeroInstall.png" name="ZeroInstall-Injector" summary="decentralised installation system" uri="http://0install.net/2007/interfaces/ZeroInstall.xml" width="48">
+    Zero Install is a cross-platform, decentralised installation system. Instead of
+having a central repository in which all software is placed under a naming
+scheme managed by some central authority, programs and libraries in Zero Install
+are identified ...
+  </feed>
+  <feed height="48" homepage="test Zero Install programs" icon="tango/applications-system.png" name="0test" summary="test Zero Install programs" uri="http://0install.net/2008/interfaces/0test.xml" width="48">
+    Use 0test to run the unit tests for a Zero Install program. You can use this to
+test released versions or developer snapshots. You can give a selection of
+versions to test, and you can test against different versions of dependencies to
+create a matrix ...
+  </feed>
+  <feed height="48" homepage="create Zero Install feeds from Debian and RPM packages" icon="tango/applications-system.png" name="pkg2zero" summary="create Zero Install feeds from Debian and RPM packages" uri="http://0install.net/2009/interfaces/pkg2zero.xml" width="48">
+    Zero Install is a decentralised installation system. Meta-data about each
+package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
+files and downloads and runs the programs. The feed files can be created
+manually (e.g. using ...
+  </feed>
+  <feed height="48" homepage="create self-installing bundles for distribution on CD" icon="tango/applications-system.png" name="0export" summary="create self-installing bundles for distribution on CD" uri="http://0install.net/tools/0export.xml" width="48">
+    However, it is sometimes useful to bundle a program and its libraries together
+on a CD (for example) so that it can be used on machines without a network
+connection, or where the network is very slow. It is also useful for archival
+purposes, in case ...
+  </feed>
+</list>
