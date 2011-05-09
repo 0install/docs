@@ -76,7 +76,8 @@ def add_details(elem, iface):
 	for child in iface.get_metadata(XMLNS_IFACE, 'homepage'):
 		homepage = child.content
 		break
-	elem.setAttribute('homepage', iface.summary)
+	if homepage:
+		elem.setAttribute('homepage', homepage)
 
 	description = iface.description
 	if len(description) > MAX_TEASER_LENGTH:
