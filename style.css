@@ -191,6 +191,13 @@ h1 {
 	font-size: 400%;
 }
 
+p.tagline {
+  	margin: 0;
+	padding: 0 0 1em 16em;
+	font-style: italic;
+	color: #666;
+}
+
 p.summary {
   	margin: 0;
 	padding: 0 0 1em 0;
