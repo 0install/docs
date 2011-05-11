@@ -145,7 +145,7 @@ requires first uninstalling another.</description>
 	<version before="3"/>
       </runner>
     </command>
-    <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-04-29" version="1.0-rc1">
+    <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-04-29" stability="stable" version="1.0-rc1">
       <manifest-digest sha256="c515378dd31c6d31051829c4cdde079c3d9dd3d124dda076e0189c52b1ce0e98"/>
       <archive extract="zeroinstall-injector-1.0-rc1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector-1.0-rc1.tar.bz2" size="324263"/>
     </implementation>
@@ -153,7 +153,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk26ffoACgkQrgeCgFmlPMHp3gCfRHtpmb3+cHP1cwADAen5Ktq4vM0AoNle2Krd
-yvtrPsn3XBuFo2eFKElX
+iEYEABECAAYFAk3K2kcACgkQrgeCgFmlPMEsGQCcDvpa/N4LGgDPPHy8yhaoirjLApEAn22yjv9B
++vfq4s6X7NdI2WmJbyF/
 
 -->
