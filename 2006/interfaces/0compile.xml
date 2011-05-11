@@ -200,7 +200,7 @@ For a full tutorial, see 0compile's homepage.</description>
 	<manifest-digest sha256="03116765d66b93abb7ed7daa109957ebc661d10d366a30273e61bfc75a0a2832"/>
 	<archive extract="0compile-0.24" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24/0compile-0.24.tar.bz2" size="33488"/>
       </implementation>
-      <implementation id="sha1new=a5c2b51f5f2ceb68140b5b808d0943ed7e9c80ea" released="2011-04-29" version="0.24.1">
+      <implementation id="sha1new=a5c2b51f5f2ceb68140b5b808d0943ed7e9c80ea" released="2011-04-29" stability="stable" version="0.24.1">
       <manifest-digest sha256="962a7d81d83a9e646e636b3d77afa0dd01ad3d25932ead8dfdce99cb3f3a737a"/>
       <archive extract="0compile-0.24.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24.1/0compile-0.24.1.tar.bz2" size="33774"/>
     </implementation>
@@ -209,7 +209,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk26418ACgkQrgeCgFmlPMHl+gCgw0QZDdsu/HijOIM+DE76EKak6y0An0tyJh0Q
-7Tay2VETgtctI1HYfjqs
+iEYEABECAAYFAk3K2egACgkQrgeCgFmlPMFk2gCfdvX8vkPpzacJ+fpFZEJ0On07hnwAoKxSkm45
+3sDV/3OtsU5hA4rcrfsA
 
 -->
