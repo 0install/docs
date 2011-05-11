@@ -95,7 +95,7 @@ packagers.html.</description>
 	<version before="3"/>
       </runner>
     </command>
-        <implementation id="sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43" released="2011-05-01" version="0.20">
+        <implementation id="sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43" released="2011-05-01" stability="stable" version="0.20">
       <manifest-digest sha256="24533dcef144809ec544f5a52777e6d4316b4a0a207b75a7c0ef9765366dc219"/>
       <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899"/>
     </implementation>
@@ -104,7 +104,7 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk29QH4ACgkQrgeCgFmlPMGENwCghlRV5GryP4roZSq+kQ22P/htEXcAn3WAO77r
-fYRB05xSxDRzgt8qvekV
+iEYEABECAAYFAk3K1TgACgkQrgeCgFmlPMFFuwCg0ILJDylpNdEaiAHAMOIRINIGqMcAoNsuPD1O
+bnAyPgI0IktCVYvg/58f
 
 -->
