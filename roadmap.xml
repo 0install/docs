@@ -117,6 +117,11 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
   <dt>Drop Python 2.5 support</dt>
   <dd>Making Python 2.6 the minimum version is the first step in the (long) process of supporting
     Python 3.</dd>
+  <dt>&lt;environment separator=...&gt; attribute</dt>
+  <dd>Allows building lists for programs that don't use the normal ":" (or ";" on Windows) separator.</dd>
+
+  <dt>More flexible &lt;recipe&gt;s</dt>
+  <dd>e.g. applying patch files, unpacking nested archives.</dd>
 </dl>
 
 
@@ -124,10 +129,10 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 
 <dl class='roadmap'>
 
-<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store</a></dt>
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store style interface</a></dt>
 <dd>
 To help people get started quickly with 0install, it would be good to have a simple,
-familiar "app-store" user interface.
+familiar "app-store" user interface. Of course, without restricting people to just those applications.
 </dd>
 
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3847'>Feed search</a></dt>
