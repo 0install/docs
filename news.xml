@@ -21,6 +21,36 @@
 <dt>Mar 2010</dt><dd><a href='injector.html'>0launch 0.45</a> released, with support for native Gentoo packages and distribution-specific package names, better support for alternative digest algorithms and better support for pathnames on Windows. A new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3082'>SAT solver</a> has been implemented, which can select the best set of versions in every situation. <a href='http://roscidus.com/0mirror/'>The feed mirror site</a> has been greatly upgraded, with per-user and per-site lists of feeds and rankings.</dd>
 <dt>Feb 2010</dt><dd><a href='install-windows.html'>The Windows version</a> is coming along nicely - please help to test it! Also, <a href='0export.html'>0export 0.1</a> was released; this allows easy creation of bundles for off-line distribution or archiving.</dd>
 <dt>Jan 2010</dt><dd><a href='injector.html'>0launch 0.44</a> released. Improvements include a progress display in console mode, support for GnuPG 2, canonicalisation of architectures and some minor bug-fixes.</dd>
+<dt>Dec 2009</dt><dd>The Sugar project has also provided <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/2866'>experimental PackageKit integration</a>. <a href='http://repo.roscidus.com'>repo.roscidus.com</a> now hosts Java 6 (JRE and JDK), SWT and E packages.</dd>
+<dt>Nov 2009</dt><dd>A new Zero Install repository has been set up on <a href='http://repo.roscidus.com'>repo.roscidus.com</a> to host feeds for programs where the upstream authors don't provide one. 0launch 0.43 was released, with support for xz compression, gettings feeds over https and a Spanish translation.</dd>
+<dt>Oct 2009</dt><dd>Lots of <a href='http://www.mail-archive.com/sugar-devel@lists.sugarlabs.org/msg09868.html'>interesting discussion</a> between Sugar Labs (One Laptop per Child) and Zero Install developers about using Zero Install to distribute Sugar Activities. The project has also offered us hosting to set up a repository for third-party packages (i.e. those where the upstream project isn't interested in providing packages of their own). Meanwhile, the grid.dk project has written up <a href='http://old.nabble.com/gobject-dependencies-for-CLI-mode--tt25810119.html#a25810119'>some instructions</a> for using Zero Install to deploy Grid applications. <a href='deb2zero.html'>deb2zero</a> has been merged with rpm2zero to form <a href='http://old.nabble.com/pkg2zero-%28deb2zero-%2B-rpm2zero%29-tt26048471.html'>pkg2zero</a>.</dd>
+<dt>Sep 2009</dt><dd><a href='injector.html'>0launch 0.42</a> released. The new version has better internationalisation support, and is able to look up GPG key information from a server. The default service informs you if the feed is signed by a member of the Debian project, in addition to showing information from the old database. We hope to add other trust sources in the future. <a href='distribution-integration.html'>Distribution integration</a> now also works with multi-arch RPMs. libglade is no longer a dependency. The experimental Windows branch is now <a href ='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2590/focus=2598'>able to run Seamonkey</a>.</dd>
+<dt>Jul 2009</dt><dd>No release this month, but work includes much improved <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2489'>internationalisation support</a>, support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2506'>key information servers</a>, and support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2515'>GtkBuilder</a>.</dd>
+<dt>Jun 2009</dt><dd>An experimental <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2390'>Firefox extension for Zero Install</a> is now available.<br/>
+<a href='0compile.html'>0compile 0.18</a> adds a GUI to the "autocompile" feature and introduces more support for compiling legacy source code.</dd>
+<dt>May 2009</dt><dd><a href='0release.html'>0release 0.10</a> automatically creates binary packages along with the source releases.<br/>
+Added <a href='http://sourceforge.net/apps/ideatorrent/zero-install/ideatorrent/most_popular_ever/'>IdeaTorrent</a> to track popular ideas - open for voting now!</dd>
+<dt>Apr 2009</dt><dd><a href='injector.html'>0launch 0.40</a> released (fixes FTP support with Python 2.6).<br/>
+The new <a href='0compile.html'>0compile autocompile</a> feature will download source code and build and register the binary in one go, along with any dependencies.</dd>
+<dt>Mar 2009</dt><dd><a href='injector.html'>0launch 0.39</a> released, with support for translations, improved background updates and better support for the RPM and Fink package managers.</dd>
+<dt>Jan 2009</dt><dd><a href='injector.html'>0launch 0.38</a> released, with better support for sudo, and a new "0store audit" command to check the whole cache.
+<br/>The <a href='0export.html'>0export</a> command is now much improved, with a simple GUI.</dd>
+<dt>Dec 2008</dt><dd><a href='0share.html'>Peer-to-peer</a> downloads are now supported (experimental feature).</dd>
+<dt>Nov 2008</dt><dd><a href='0test.html'>0test</a> released; this tool can test combinations of various versions of a program and its dependencies.</dd>
+<dt>Sep 2008</dt><dd><a href='http://www.gnomefiles.org/version.php?soft_id=921'>0launch 0.36</a> released, fixing some performance problems and other bugs.</dd>
+<dt>Jul 2008</dt><dd><a href='0export.html'>0export</a> can be used to create a self-extracting "setup.sh" installer, for distribution on CD, etc.</dd>
+<dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu. See this
+<a href='tutorial-policy.html'>screenshot</a> at the top of the policy tutorial.</dd>
+<dt>May 2008</dt><dd>The new <a href='deb2zero.html'>deb2zero</a> utility can publish a Debian package in a Zero Install feed.</dd>
+<dt>Apr 2008</dt><dd>0launch can <a href='http://repo.or.cz/w/zeroinstall.git'>now</a> fallback to using a mirror automatically.
+The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>second part of the video
+tutorial</a> is now up.</dd>
+<dt>Mar 2008</dt><dd><a href='http://www.netbsd.org/gallery/pkgsrc-interviews.html#zero-install'>Zero Install interview on netbsd.org</a>.</dd>
+<dt>Feb 2008</dt><dd><a href='injector.html'>Zero Install 0.32</a> has been released, with some large-scale refactoring of the Python API
+ and improvements to the GUI. I've also added some tutorial videos to the site.</dd>
+<dt>Jan 2008</dt><dd>We now have a <a href='http://roscidus.com/0mirror/'>public mirror service</a> running, providing backup copies
+of all known feeds.</dd>
+
 </dl>
 
 <p>For more information see the <a href='support.html'>mailing list archives</a> and the <a href='roadmap.html'>roadmap</a>.
