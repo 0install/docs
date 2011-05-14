@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
   <item href='.' base="index" label="Overview"/>
+  <item base='news' label="News"/>
   
   <item base="injector" label="Download/install">
     <item base="install-linux" label="Linux"/>

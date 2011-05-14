@@ -213,6 +213,12 @@
     </p>
   </xsl:template>
 
+  <xsl:template match='*[name() = "news"]'>
+    <dl>
+      <xsl:apply-templates select='document("news.xml")/html/div/dl/*[count(preceding::dd) &lt; 5]'/>
+    </dl>
+  </xsl:template>
+
   <xsl:template match='*[name() = "toc"]'>
     <xsl:variable name='level'><xsl:value-of select='@level'/></xsl:variable>
 
