@@ -4,7 +4,7 @@
     The award-winning Firefox Web browser has security, speed and new features that
 will change the way you use the Web. Don't settle for anything less.
   </feed>
-  <feed height="48" homepage="http://www.nongnu.org/clanbomber/" icon="tango/applications-system.png" name="ClanBomber" summary="Blow away your opponents" uri="http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml" width="48">
+  <feed height="36" homepage="http://www.nongnu.org/clanbomber/" icon="feed_icons/ClanBomber.png" name="ClanBomber" summary="Blow away your opponents" uri="http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml" width="48">
     The goal of clanbomber is to blow away your opponents using bombs, but avoid
 being blown up yourself.
   </feed>
@@ -21,7 +21,7 @@ graphics, scientific and engineering visualization, and game content creation.
 It includes tools for modeling, texturing (node based materials or uv mapped),
 uv mapping, ...
   </feed>
-  <feed height="48" homepage="http://www.openttd.org" icon="tango/applications-system.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">
+  <feed height="48" homepage="http://www.openttd.org" icon="feed_icons/openttd.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">
     OpenTTD is an open source clone of the Microprose game &quot;Transport Tycoon
 Deluxe&quot;, a popular game originally written by Chris Sawyer. It attempts to mimic
 the original game as closely as possible while extending it with new features.

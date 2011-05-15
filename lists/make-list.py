@@ -42,6 +42,7 @@ def get_icon(elem, iface):
 	if not have_icon:
 		icon_path = 'tango/applications-system.png'
 		full_icon_path = os.path.join(top_dir, icon_path)
+		print "No icon for", uri, name
 	
 	icon_meta = {}
 	child = subprocess.Popen(["pngmeta", "--all", "--", full_icon_path], stdout = subprocess.PIPE)
