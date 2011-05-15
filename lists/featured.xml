@@ -14,7 +14,7 @@ drop support and background file operations, and is highly configurable. It can
 also act as a pinboard, allowing you to pin frequently used files to the desktop
 background.
   </feed>
-  <feed height="26" homepage="http://www.blender.org" icon="feed_icons/Blender.png" name="Blender" summary="a versatile 3D animation creation suite" uri="http://0install.net/2007/3rd-party/Blender.xml" width="32">
+  <feed height="48" homepage="http://www.blender.org" icon="feed_icons/Blender.png" name="Blender" summary="a versatile 3D animation creation suite" uri="http://0install.net/2007/3rd-party/Blender.xml" width="48">
     Blender is a fully integrated 3D animation suite for use in animation, still
 graphics, scientific and engineering visualization, and game content creation.
 
