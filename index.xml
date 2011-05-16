@@ -50,8 +50,10 @@
 </quicklinks>
 </div>
 
-<div style='text-align: center; float: right; padding: 2em;'>
-<video vid='Lu0MAiNIaGM'>Zero Install introduction</video>
+<div style='text-align: center; padding: 2em;'>
+  <iframe width="640" height="390" src="http://www.youtube.com/embed/kxPK3Hg49g0" frameborder="0" allowfullscreen="true"></iframe>
+  <p><a href='http://youtu.be/kxPK3Hg49g0'>0install introduction</a><br/>
+(screencast with audio commentary)</p>
 </div>
 
 <div class='news'>
