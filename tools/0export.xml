@@ -4,7 +4,7 @@
   <name>0export</name>
   <summary>create self-installing bundles for distribution on CD</summary>
   <description>
-However, it is sometimes useful to bundle a program and its libraries together
+It is sometimes useful to bundle a program and its libraries together
 on a CD (for example) so that it can be used on machines without a network
 connection, or where the network is very slow. It is also useful for archival
 purposes, in case the original web-sites supplying required libraries become
@@ -60,7 +60,7 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1itRQACgkQrgeCgFmlPMGbJwCdFGJAs7upEwVzDVGHtAVvRyZ756AAnjzyiPyb
-7P9W9XSd+N/HSz5ETBKS
+iEYEABECAAYFAk3YzToACgkQrgeCgFmlPMH9ZQCgqF7ctKB8Kol6MZkaUtPM7oniMUIAnA5n8cRw
+SMsYeN7OlA36f1smxE79
 
 -->
