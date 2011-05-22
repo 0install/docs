@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Author: Tim Cuthbertson
-License: ?
+Modified by Thomas Leonard.
+License: Creative Commons Attribution-ShareAlike 2.5 license
+http://creativecommons.org/licenses/by-sa/2.5/
 -->
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
