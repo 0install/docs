@@ -77,52 +77,65 @@ http://creativecommons.org/licenses/by-sa/2.5/
 									<dt>Available versions</dt>
 									<dd>
 										<xsl:choose>
-											<xsl:when test="//zi:implementation">
+											<xsl:when test="//zi:implementation|//zi:package-implementation">
 												<p class="yourinfo">
 													(Zero Install will automatically download one of these versions for you)
-											</p>
-												<table cellpadding="0" cellspacing="0">
-													<tr>
-														<th>Version</th>
-														<th>Released</th>
-														<th>Stability</th>
-														<th>Platform</th>
-														<th>Download</th>
-													</tr>
-													<xsl:for-each select="//zi:implementation">
+												</p>
+												<xsl:if test='//zi:implementation'>
+													<table cellpadding="0" cellspacing="0">
 														<tr>
-															<td>
-																<xsl:value-of select="(ancestor-or-self::*[@version])[last()]/@version"/>
-																<xsl:if test="(ancestor-or-self::*[@version])[last()]/@version-modifier">
-																	<xsl:value-of select="(ancestor-or-self::*[@version])[last()]/@version-modifier"/>
-																</xsl:if>
-															</td>
-															<td>
-																<xsl:value-of select="(ancestor-or-self::*[@released])[last()]/@released"/>
-															</td>
-															<td>
-																<xsl:value-of select="(ancestor-or-self::*[@stability])[last()]/@stability"/>
-															</td>
-															<td>
-																<xsl:variable name="arch" select="(ancestor-or-self::*[@arch])[last()]/@arch"/>
-																<xsl:choose>
-																	<xsl:when test="$arch = &quot;*-src&quot;">Source code</xsl:when>
-																	<xsl:when test="not($arch)">Any</xsl:when>
-																	<xsl:otherwise>
-																		<xsl:value-of select="$arch"/>
-																	</xsl:otherwise>
-																</xsl:choose>
-															</td>
-															<td>
-																<xsl:for-each select=".//zi:archive"><a href="{@href}">Download</a> (<xsl:value-of select="@size"/> bytes)
-																</xsl:for-each>
-															</td>
+															<th>Version</th>
+															<th>Released</th>
+															<th>Stability</th>
+															<th>Platform</th>
+															<th>Download</th>
 														</tr>
-													</xsl:for-each>
-												</table>
-												
+														<xsl:for-each select="//zi:implementation">
+															<tr>
+																<td>
+																	<xsl:value-of select="(ancestor-or-self::*[@version])[last()]/@version"/>
+																	<xsl:if test="(ancestor-or-self::*[@version])[last()]/@version-modifier">
+																		<xsl:value-of select="(ancestor-or-self::*[@version])[last()]/@version-modifier"/>
+																	</xsl:if>
+																</td>
+																<td>
+																	<xsl:value-of select="(ancestor-or-self::*[@released])[last()]/@released"/>
+																</td>
+																<td>
+																	<xsl:value-of select="(ancestor-or-self::*[@stability])[last()]/@stability"/>
+																</td>
+																<td>
+																	<xsl:variable name="arch" select="(ancestor-or-self::*[@arch])[last()]/@arch"/>
+																	<xsl:choose>
+																		<xsl:when test="$arch = &quot;*-src&quot;">Source code</xsl:when>
+																		<xsl:when test="not($arch)">Any</xsl:when>
+																		<xsl:otherwise>
+																			<xsl:value-of select="$arch"/>
+																		</xsl:otherwise>
+																	</xsl:choose>
+																</td>
+																<td>
+																	<xsl:for-each select=".//zi:archive"><a href="{@href}">Download</a> (<xsl:value-of select="@size"/> bytes)
+																	</xsl:for-each>
+																</td>
+															</tr>
+														</xsl:for-each>
+													</table>
+												</xsl:if>
 
-
+												<xsl:if test='//zi:package-implementation'>
+													<p>Non-Zero Install packages provided by distributions can provide this interface:</p>
+													<table cellpadding="0" cellspacing="0">
+														<tr><th>Distribution</th><th>Package name</th></tr>
+														<xsl:for-each select='//zi:package-implementation'>
+															<tr>
+																<td><xsl:value-of select='(ancestor-or-self::*[@distributions])[last()]/@distributions'/>
+																</td>
+																<td><xsl:value-of select='(ancestor-or-self::*[@package])[last()]/@package'/></td>
+															</tr>
+														</xsl:for-each>
+													</table>
+												</xsl:if>
 											</xsl:when>
 											<xsl:otherwise>
 												<p>No versions are available for downlad.</p>
@@ -143,7 +156,7 @@ http://creativecommons.org/licenses/by-sa/2.5/
 									<a name="what-is-this"></a>
 									<h3>What is this page, and how do I use it?</h3>
 									<xsl:choose>
-										<xsl:when test="//zi:implementation[@main] | //zi:group[@main] | //zi:command[@name='run']">
+										<xsl:when test="//zi:implementation[@main] | //zi:group[@main] | //zi:command[@name='run'] | //zi:package-implementation[@main]">
 
 											<p>This is a runnable Zero Install feed. To add this program to your Applications menu, choose
 												<b>Zero Install -&gt; Add New Program</b> from the <b>Applications</b> menu, and drag this
@@ -219,12 +232,17 @@ http://creativecommons.org/licenses/by-sa/2.5/
 		<xsl:param name="text"/>
 		<xsl:if test='normalize-space($text)'>
 			<xsl:variable name='first' select='substring-before($text, "&#xa;&#xa;")'/>
-			<xsl:if test='normalize-space($first)'>
-			  <p><xsl:value-of select='$first'/></p>
-			</xsl:if>
-			<xsl:call-template name='description'>
-				<xsl:with-param name='text'><xsl:value-of select='substring-after($text, "&#xa;&#xa;")'/></xsl:with-param>
-			</xsl:call-template>
+			<xsl:choose>
+				<xsl:when test='normalize-space($first)'>
+					<p><xsl:value-of select='$first'/></p>
+					<xsl:call-template name='description'>
+						<xsl:with-param name='text'><xsl:value-of select='substring-after($text, "&#xa;&#xa;")'/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<p><xsl:value-of select='$text'/></p>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:if>
 	</xsl:template>
 
