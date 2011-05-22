@@ -21,9 +21,7 @@ http://creativecommons.org/licenses/by-sa/2.5/
 			<body>
 				<div class="site">
 					<div class="title"> 
-						<a href="/"> 
-							0install.net
-						</a> 
+						<a href="/">0install.net</a>
 					</div>
 					<div class="main">
 						<div class="content">
@@ -171,7 +169,6 @@ http://creativecommons.org/licenses/by-sa/2.5/
 
 										</xsl:otherwise>
 									</xsl:choose>
-									<a href="#">back to top.</a>
 								</div>
 						</div>
 					</div>
