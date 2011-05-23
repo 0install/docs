@@ -29,4 +29,11 @@ the original game as closely as possible while extending it with new features.
   <feed height="50" homepage="http://gcompris.net/" icon="feed_icons/gcompris.png" name="GCompris" summary="Full featured educational application for children from 2 to 10" uri="http://services.sugarlabs.org/gcompris" width="50">
     Full featured educational application for children from 2 to 10
   </feed>
+  <feed height="48" homepage="http://www.solfege.org" icon="feed_icons/solfege.png" name="solfege" summary="free ear training software" uri="http://www.solfege.org/zeroinstall/solfege.xml" width="48">
+    Solfege is a free ear training program written in python using gtk+ and
+
+PyGTK.  Solfege is expected to work on any OS where python, gtk+ and
+
+pygtk are ported, but some adjustments might be necessary.
+  </feed>
 </list>
