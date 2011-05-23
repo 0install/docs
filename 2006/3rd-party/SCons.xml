@@ -23,19 +23,19 @@ and scanner objects.</description>
 
   <group license="OSI Approved :: MIT/X Consortium License" main="scons.py">
     <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" stability="stable" version="0.96.92">
-      <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
+      <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688" type="application/x-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=4aee85f548a8e2dc943dd385ddc0b106b64227d3" released="2008-08-28" stability="stable" version="1.0.0">
       <archive href="http://switch.dl.sourceforge.net/sourceforge/scons/scons-local-1.0.0.tar.gz" size="375546" type="application/x-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=716e6fd4a2a9dc63a54ca3403aed960f28768181" released="2010-05-09" version="1.3.0">
-      <archive href="http://downloads.sourceforge.net/project/scons/scons-local/1.3.0.d20100501/scons-local-1.3.0.d20100501.tar.gz" size="417184" type="application/x-compressed-tar"/>
+      <archive href="https://downloads.sourceforge.net/project/zero-install/3rd-party/scons-local-1.3.0.d20100501.tar.bz2" size="316776" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkvnBj4ACgkQBSn9tx+xORB6/wCfQ4mfqnOnwCiOJNLUR0ACo4v9a3EAnArDdXCK
-LaBZ5eeYfVFrcdSN9YDp
+iEYEABECAAYFAk3aVWgACgkQBSn9tx+xORAhHQCfW9KwZ3w2bdpx97DYMAffKM5mTXoAniTIIjQr
+3mN3PwR4zy7Zr3pRns6Y
 
 -->
