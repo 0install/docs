@@ -149,11 +149,15 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="c515378dd31c6d31051829c4cdde079c3d9dd3d124dda076e0189c52b1ce0e98"/>
       <archive extract="zeroinstall-injector-1.0-rc1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector-1.0-rc1.tar.bz2" size="324263"/>
     </implementation>
+    <implementation id="sha1new=c1219e906e201e60b4d19e417070a47ee4caefcf" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-05-23" version="1.0">
+      <manifest-digest sha256="874b2bd03f32b49ff51c8a0b64077f8f0a56e8966f0f841bf960bf5a77709919"/>
+      <archive extract="zeroinstall-injector-1.0" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0.tar.bz2" size="324040"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3K2kcACgkQrgeCgFmlPMEsGQCcDvpa/N4LGgDPPHy8yhaoirjLApEAn22yjv9B
-+vfq4s6X7NdI2WmJbyF/
+iEYEABECAAYFAk3aFskACgkQrgeCgFmlPMFtGwCgukMyfxD+kots28yYaE7y9cu8HHUAoMVQcyEk
+IdAtJBJJu3VwafG1uEIc
 
 -->
