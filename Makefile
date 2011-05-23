@@ -15,7 +15,7 @@ htmlfiles: ${HTML}
 lists/%.xml: lists/%.lst
 	./lists/make-list.py $<
 
-index.html: index.xml news.xml
+index.php: index.xml news.xml
 
 injector-feeds.html: lists/featured.xml lists/0tools.xml
 
