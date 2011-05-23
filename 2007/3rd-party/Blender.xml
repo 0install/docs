@@ -26,45 +26,45 @@ creation and playback with cross-platform compatibility.</description>
   </group>
 
   <group license="OSI Approved :: GNU General Public License (GPL)" main="blender">
-    <implementation arch="FreeBSD-i386" id="sha1new=4e3b6dbf5dd5ec22cf666e97fff7d9699ecdada9" released="2011-04-17" version="2.57">
+    <implementation arch="FreeBSD-i386" id="sha1new=4e3b6dbf5dd5ec22cf666e97fff7d9699ecdada9" released="2011-04-17" stability="stable" version="2.57">
       <archive href="http://download.blender.org/release/Blender2.57/blender-2.57-FreeBSD-i386.tbz" size="16344580" type="application/x-bzip-compressed-tar"/>
     </implementation>
-    <implementation arch="FreeBSD-x86_64" id="sha1new=54981e506165d503798d9f0bf5df3754bc510196" released="2011-04-17" version="2.57">
+    <implementation arch="FreeBSD-x86_64" id="sha1new=54981e506165d503798d9f0bf5df3754bc510196" released="2011-04-17" stability="stable" version="2.57">
       <archive href="http://download.blender.org/release/Blender2.57/blender-2.57-FreeBSD-amd64.tbz" size="17037441" type="application/x-bzip-compressed-tar"/>
     </implementation>
 
     <group main="blender.app/Contents/MacOS/blender">
-      <implementation arch="MacOSX-x86_64" id="sha1new=4c473292b8aa6a70eeae8a3103b4fe622c38772e" released="2011-04-17" version="2.57">
+      <implementation arch="MacOSX-x86_64" id="sha1new=4c473292b8aa6a70eeae8a3103b4fe622c38772e" released="2011-04-17" stability="stable" version="2.57">
 	<archive extract="blender-2.57-release-OSX_10.5_x86_64" href="http://download.blender.org/release/Blender2.57/blender-2.57-OSX_10.5_x86_64.zip" size="22860699" type="application/zip"/>
       </implementation>
-      <implementation arch="MacOSX-i386" id="sha1new=abf9fb97622067e452fabedfa4cf44a571cf798e" released="2011-04-17" version="2.57">
+      <implementation arch="MacOSX-i386" id="sha1new=abf9fb97622067e452fabedfa4cf44a571cf798e" released="2011-04-17" stability="stable" version="2.57">
 	<archive extract="blender-2.57-release-OSX_10.5_i386" href="http://download.blender.org/release/Blender2.57/blender-2.57-OSX_10.5_i386.zip" size="22520053" type="application/zip"/>
       </implementation>
-      <implementation arch="MacOSX-ppc" id="sha1new=190719674e45b660c2b07f72ab29b7794d977dd7" released="2011-04-17" version="2.57">
+      <implementation arch="MacOSX-ppc" id="sha1new=190719674e45b660c2b07f72ab29b7794d977dd7" released="2011-04-17" stability="stable" version="2.57">
 	<archive extract="blender-2.57-release-OSX_10.5_ppc" href="http://download.blender.org/release/Blender2.57/blender-2.57-OSX_10.5_ppc.zip" size="23633380" type="application/zip"/>
       </implementation>
     </group>
 
-    <implementation arch="Linux-x86_64" id="sha1new=068261100e3f36660995a6604ac47a5dc72b116d" released="2011-04-17" version="2.57">
+    <implementation arch="Linux-x86_64" id="sha1new=068261100e3f36660995a6604ac47a5dc72b116d" released="2011-04-17" stability="stable" version="2.57">
       <archive extract="blender-2.57-linux-glibc27-x86_64" href="http://download.blender.org/release/Blender2.57/blender-2.57-linux-glibc27-x86_64.tar.bz2" size="31505454" type="application/x-bzip-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-i686" id="sha1new=bdc30f5c5f1b9ed72fa26e6b7e27d7bc99c258a0" released="2011-04-17" version="2.57">
+    <implementation arch="Linux-i686" id="sha1new=bdc30f5c5f1b9ed72fa26e6b7e27d7bc99c258a0" released="2011-04-17" stability="stable" version="2.57">
       <archive extract="blender-2.57-linux-glibc27-i686" href="http://download.blender.org/release/Blender2.57/blender-2.57-linux-glibc27-i686.tar.bz2" size="30066713" type="application/x-bzip-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=585e596da63a0cfb8542e98c1c2164a21c6feff2" released="2011-04-17" version="2.57">
+    <implementation arch="Windows-x86_64" id="sha1new=585e596da63a0cfb8542e98c1c2164a21c6feff2" released="2011-04-17" stability="stable" version="2.57">
       <archive extract="blender-2.57-windows64" href="http://download.blender.org/release/Blender2.57/blender-2.57-windows64.zip" size="32359330" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i386" id="sha1new=0d3249e5161de9c7c92219b7a4ba32468e003cfe" released="2011-04-17" version="2.57">
+    <implementation arch="Windows-i386" id="sha1new=0d3249e5161de9c7c92219b7a4ba32468e003cfe" released="2011-04-17" stability="stable" version="2.57">
       <archive extract="blender-2.57-windows32" href="http://download.blender.org/release/Blender2.57/blender-2.57-windows32.zip" size="28163629" type="application/zip"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJN2jGmAAoJEAcTP5bKdNi6ETAH/R8V0SsimH1Pd+cfP17SLyDfLoXK//E1EbS+
-S79ebiUL+6InDB2HhLUjKEdgdkfhMBRaF4lZ6rb2capscJNxWTbJ7XFcuS7XOqp13vd0hCCQpkeW
-01pjy+oSTm6M+nLVUBYzpe/biTn+ipdF/Fd6DPawknEMFpAXNbCEhnpX6k2B9/Eft2AE4gVw8YM4
-Oq/ESWjroL9hx2666+jSMFH4W+suqiTE60PN1rgmocWKq5Skk9HJmoTWQHVS5hajYlFUZFk2k0yM
-1GqYx4R/4ounPZs9lgSmnvEZ+DfMb4bmi55xWe264oSuW3+HP6LuXHbY3XXqcxlLoXSvftO8+W58
-p9w=
+iQEcBAABCAAGBQJN2jIiAAoJEAcTP5bKdNi6H9cIAImE4Xl5PcRGyIAOZsPMiSdW5v8ei7ualw81
+ZAcAyqK5Wl4YtFg6ngMAdXFv93vL6HLO/RVtlO7FcNaOZMm1nyaz5eIv2wGsysp2b7voNe0bz80+
+Wx0BkgFYnTjhXRcD7a7lohStFYM3+bNujolI9Ncky8JoxOD//F9BwCiV1/o4elVo9inFwxnbyazk
+NDHtJb2GdVneH3OtADyPAaM/oHGHwX7s6zPpCTDtpXdZ34OvgzRI+SZYTb23JnTlTBlRHY/MpaCT
+VhR/owgykEAthwVf9N0f+YZc7mWivrOs1jS+9nr3G02Lzl0lMHdt21YtRR80DfxaMarnkHhjIFfo
+d50=
 
 -->
