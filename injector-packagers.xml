@@ -14,12 +14,18 @@ We will start by packaging <a href='http://www.blender.org'>Blender</a>, an open
 and animation program.
 </p>
 
+</program>
+
 <p>
 You should already be familiar with the general operation of Zero Install. If not, start by reading
 the <a href='injector-using.html'>user tutorial</a>.
 </p>
 
-</program>
+<p>
+We assume here that a binary release already exists (perhaps published by someone else) and you want to
+make it available through 0install. If you want to publish your own programs, you might also be interested
+in <a href='0release.html'>0release</a>, which generates a release from a Git repository.
+</p>
 
 <toc level='h2'/>
 
