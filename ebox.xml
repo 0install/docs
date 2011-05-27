@@ -185,7 +185,7 @@ and try using it for a bit.
 <li>If Zero Install warns me that your key isn't trusted, I'll ignore it and trust the key anyway.</li>
 <li>I will also approve any keys needed for any libraries you depend on.</li>
 <li>Since I don't trust your program, I won't try to open my precious file in it. I will be happy to create and edit test files, though.</li>
-<li>The precious.txt file has no special protection: it's a regular text file, readable by me (if I ask ebox-edit to open it, it will).</li>
+<li>The precious.txt file has no special protection: it's a regular text file, readable and writable by me (if I ask ebox-edit to open it, it will).</li>
 <li>For this challenge, we exclude denial-of-service attacks (e.g. if you make my computer run so slowly I have to reboot it).</li>
 </ul>
 
