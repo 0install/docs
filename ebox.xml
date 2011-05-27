@@ -255,7 +255,7 @@ the sandboxing.
 </p>
 
 <p>
-If a networked application (e.g. ebox-chat) seem to freeze, try wiggling the mouse; it might just need
+If a networked application (e.g. ebox-chat) seems to freeze, try wiggling the mouse; it might just need
 more entropy to generate random numbers for the crypto.
 </p>
 
