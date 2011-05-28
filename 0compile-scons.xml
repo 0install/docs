@@ -1,16 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<h2>Example: 0compile and SCons</h2>
+<program name='Hello-scons'
+	 author='Thomas Leonard'
+	 feed='http://0install.net/tests/Hello-scons.xml'
+	 git='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-scons'
+	 license='Public domain'>
 
 <p>
-<b>Hello-scons</b> is a simple "Hello world" program written in C. It is built using SCons.
+  <b>Hello-scons</b> is a simple "Hello world" program written in C. It is built using the
+  <a href='http://www.scons.org/'>SCons build tool</a>.
 </p>
 
 <p>
 Its purpose is to demonstrate the use of 0compile to fetch build dependencies;
 you do not need to install SCons manually on your system in order to build it.
 </p>
+
+</program>
 
 <p>
 This example assumes that you have already read
@@ -31,7 +38,7 @@ You will be prompted to choose the versions of Hello-scons and SCons:
 </p>
 
 <p style='text-align: center'>
-<img width="555" height="268" src="screens/hello-scons.png"
+<img width="610" height="238" src="screens/hello-scons.png"
      alt="Choosing versions" />
 </p>
 
@@ -42,11 +49,11 @@ To build, change into the new directory and use the build command:
 <pre>
 $ <b>cd Hello-scons</b>
 $ <b>0compile build</b>
-Executing: "$SCONS/scons.py" -C "$SRCDIR" builddir="$BUILDDIR" "$DISTDIR"
+Executing: "$SCONS/scons.py" -f "$SRCDIR/SConstruct" --srcdir="$SRCDIR" "$DISTDIR"
 </pre>
 
 <p>
-This creates a 'hello-scons-1.0' directory ready for use and/or distribution,
+This creates a 'hello-scons-ARCH' directory ready for use and/or distribution,
 and a 'build' directory with some temporary files, such as 'hello.o'. This is
 used only to speed up later rebuilds.
 </p>
@@ -56,7 +63,7 @@ To run:
 </p>
 
 <pre>
-$ <b>0launch hello-scons-1.0/0install/Hello-scons.xml</b>
+$ <b>0launch hello-scons-linux-x86_64/0install/Hello-scons.xml</b>
 Hello world!
 </pre>
 
@@ -75,14 +82,12 @@ The main issues with using SCons with 0compile are that:
 
 <ul>
 <li><p>SCons defaults to saving build files in the source directory. <b>0compile</b>
-requires that the source directory is assumed to be read-only (and if
-plash is installed, this is enforced). Therefore, you must set the build
-and signature database directories to the build directory.</p></li>
+requires that the source directory is not written to during the build (since the 0install cache
+is read-only). Therefore, you must use --srcdir.</p></li>
 
 <li><p>By default, SCons resets all environment variables. This means that
 instead of compiling against the library versions you chose, it will
-build against whatever happens to be the default on the system today.
-This also breaks plash, which requires certain variables to be set.</p></li>
+build against whatever happens to be the default on the system today.</p></li>
 </ul>
 
 <p>
@@ -94,5 +99,18 @@ For more information (including how to publish the binary using Zero Install),
 see <a href='0compile.html'>the main 0compile tutorial</a>.
 </p>
 
+<h2>Building from a Git checkout</h2>
+
+<p>
+  To build the latest Git version of hello-scons:
+</p>
+
+<pre>
+$ <b>git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/hello-scons</b>
+$ <b>cd hello-scons</b>
+$ <b>0compile build</b>
+$ <b>0launch hello-scons-linux-x86_64/0install/Hello-scons.xml</b>
+Hello world!
+</pre>
 
 </html>
