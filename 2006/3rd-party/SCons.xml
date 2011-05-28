@@ -28,14 +28,17 @@ and scanner objects.</description>
     <implementation id="sha1new=4aee85f548a8e2dc943dd385ddc0b106b64227d3" released="2008-08-28" stability="stable" version="1.0.0">
       <archive href="http://switch.dl.sourceforge.net/sourceforge/scons/scons-local-1.0.0.tar.gz" size="375546" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation id="sha1new=716e6fd4a2a9dc63a54ca3403aed960f28768181" released="2010-05-09" version="1.3.0">
+    <implementation id="sha1new=716e6fd4a2a9dc63a54ca3403aed960f28768181" released="2010-05-09" stability="stable" version="1.3.0">
       <archive href="https://downloads.sourceforge.net/project/zero-install/3rd-party/scons-local-1.3.0.d20100501.tar.bz2" size="316776" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=86311df9d410de36d75bc51762d2927f2f045ebf" released="2011-05-28" version="2.0.1">
+      <archive href="http://downloads.sourceforge.net/project/scons/scons-src/2.0.1/scons-local-2.0.1.tar.gz" size="389396" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3aVWgACgkQBSn9tx+xORAhHQCfW9KwZ3w2bdpx97DYMAffKM5mTXoAniTIIjQr
-3mN3PwR4zy7Zr3pRns6Y
+iEYEABECAAYFAk3gt24ACgkQBSn9tx+xORAMegCfWUubWZu5qZnS6YWk4iUXMSvb1AIAn0uvA989
+ol57+U7i1UcQiCHajXG2
 
 -->
