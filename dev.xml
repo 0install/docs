@@ -52,6 +52,11 @@
   correctly.
  </dd>
 
+ <dt><a href='templates.html'>Templates</a></dt>
+ <dd>
+   Sample code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
+ </dd>
+
  <dt><a href='tools.html'>Tools</a></dt>
  <dd>There are many useful tools for generating feeds, validating them, making releases, etc.</dd>
 </dl>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<h2>Templates</h2>
+
+<p>
+This page lists some example code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
+</p>
+
+<dl>
+  <dt><a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-python'>hello-python</a></dt>
+<dd>A simple Python program. Depends on Python 2.x using 0install. See the <a href='0release.html'>0release tutorial</a> for more information.</dd>
+
+<dt><a href='http://repo.or.cz/w/0release.git?a=blob;f=tests/c-prog.tgz;h=ae1f06864c70f65fdef5a00065fb82eec809d6dc;hb=a7bce06b6494407b2d80124c65f13493e3b44378'>c-prog</a></dt>
+<dd>A simple C program. Shows how to make a source package that can be used by <a href='0compile.html'>0compile</a> to create a binary release. See <a href='0release-binaries.html'>0release: binaries</a> for details.
+</dd>
+
+<dt><a href='http://0install.net/tests/Hello-scons.xml'>hello-scons</a></dt>
+<dd>Another C program, but this time using SCons instead of Make as the build tool. See <a href='0compile-scons.html'>0compile: Scons</a> for details.</dd>
+</dl>
+
+</html>

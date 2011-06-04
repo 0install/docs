@@ -53,6 +53,7 @@
     <item base='using-git' label='Using GIT'/>
     <item base='injector-design' label='Design'/>
     <item base='injector-tests' label='Tests'/>
+    <item base='templates' label='Templates'/>
   </item>
 
   <item base='tools' label='Tools'>
