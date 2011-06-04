@@ -99,7 +99,7 @@ version control system:
 </p>
 
 <pre>
-$ <b>git clone http://0install.net/tests/hello.git</b>
+$ <b>git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/hello-python</b>
 </pre>
 
 <p>
@@ -107,7 +107,7 @@ To check that you can run it, use <a href='injector.html'>0launch</a> on the fee
 </p>
 
 <pre>
-$ <b>cd hello</b>
+$ <b>cd hello-python</b>
 $ <b>0launch HelloWorld.xml</b>
 Hello World!
 </pre>
@@ -116,23 +116,27 @@ Hello World!
 HelloWorld.xml is the local feed. Its contents look like this:
 </p>
 
-<pre>&lt;?xml version="1.0" ?&gt;
-&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"&gt;
-  &lt;name&gt;<b>HelloWorld</b>&lt;/name&gt;
-  &lt;summary&gt;<b>minimal demonstration package for 0release</b>&lt;/summary&gt;
-  &lt;description&gt;
+<pre>&lt;?xml version="1.0" ?>
+&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  &lt;name><b>HelloWorld</b>&lt;/name>
+  &lt;summary><b>minimal demonstration package for 0release</b>&lt;/summary>
+  &lt;description>
     <b>This program outputs the message "Hello World". You can create new releases of it
     using 0release.</b>
-  &lt;/description&gt;
+  &lt;/description>
 
-  &lt;homepage&gt;<b>http://0install.net/0release.html</b>&lt;/homepage&gt;
+  &lt;homepage><b>http://0install.net/0release.xml</b>&lt;/homepage>
 
-  &lt;feed-for interface='<b>http://0install.net/tests/HelloWorld.xml</b>'/&gt;
+  &lt;feed-for interface='<b>http://0install.net/tests/HelloWorld.xml</b>'/>
 
-  &lt;group main='<b>hello.py</b>'&gt;
-    &lt;implementation id="." version="<b>0.1-pre</b>"/&gt;
-  &lt;/group&gt;
-&lt;/interface&gt;
+  &lt;implementation id="." version="<b>0.1-pre</b>">
+    &lt;command name='run' path='<b>hello.py</b>'>
+      &lt;runner interface='http://repo.roscidus.com/python/python'>
+        &lt;version before='3'/>
+      &lt;/runner>
+    &lt;/command>
+  &lt;/implementation>
+&lt;/interface>
 </pre>
 
 <p>
@@ -142,9 +146,9 @@ commit the change (<b>git commit -a</b>).
 </p>
 
 <p>
-You should add any dependencies inside the &lt;group&gt; element (see the <a href='interface-spec.html'>feed specification</a>
+You should add any dependencies inside the &lt;implementation&gt; element (see the <a href='interface-spec.html'>feed specification</a>
 for details, or edit the feed using <a href='injector-packagers.html'>0publish-gui</a> if you want a graphical interface).
-This example program is so simple it doesn't have any dependencies.
+This example program is so simple it doesn't have any dependencies beyond its interpreter: Python &lt; 3
 </p>
 
 <h2>Creating the releases directory</h2>
@@ -256,11 +260,11 @@ by committing two new revisions. You can see them using <b>gitk --all</b>:
 </p>
 
 <p style='text-align: center'>
-<img width="425" height="72" src="screens/0release-rc.png" alt="New revisions created by 0release" />
+<img width="470" height="89" src="screens/0release-rc.png" alt="New revisions created by 0release" />
 </p>
 
 <p>
-The first revision is the 0.1-pre development snapshot you started with. The "master" branch adds
+The lowest two revisions are the history you started with. The "master" branch adds
 the commit where you changed the &lt;feed-for&gt; element. This is also the
 currently checked-out version. 0release has created a new branch called "0release-tmp" with two
 new revisions. "Release 0.1" is the version that will be released. Its local feed has the version
@@ -317,7 +321,7 @@ and updated the "master" branch to the tip of the temporary branch:
 </p>
 
 <p style='text-align: center'>
-<img width="425" height="72" src="screens/0release-tagged.png" alt="Release tagged" />
+<img width="470" height="89" src="screens/0release-tagged.png" alt="Release tagged" />
 </p>
 
 <p>
@@ -380,6 +384,14 @@ Hello World!
 You can edit <b>make-release</b> to set some commands to automatically upload the files and to
 push the branch and tag ("master" and "v0.1" in this case) to your public Git repository.
 </p>
+
+<p>
+Tip: to check that all files are present, use <a href='feedlint.html'>FeedLint</a>:
+</p>
+
+<pre>
+$ 0launch http://0install.net/2007/interfaces/FeedLint.xml http://localhost/~me/testing/HelloWorld.xml
+</pre>
 
 <h2>Customising the release process</h2>
 
