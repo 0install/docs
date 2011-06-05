@@ -13,6 +13,10 @@
   <li><a href='0release.html'>0release</a> can automatically compile binaries for your software during the release process.</li>
 </ul>
 
+<h2>Contents</h2>
+
+<toc level='h2'/>
+
 <h2>Making source available</h2>
 
 <p>
@@ -157,6 +161,10 @@ cd "$BUILDDIR" &amp;&amp;
 python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build</pre>
  </dd>
 </dl>
+
+<h2>Examples</h2>
+
+<p>Anders F Björklund has created a set of <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4273'>example source feeds</a>. There are also some <a href='templates.html'>template projects</a> which can be used as a starting point for publishing your own software.</p>
 
 <h2>Further reading</h2>
 
