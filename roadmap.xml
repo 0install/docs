@@ -117,6 +117,12 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 
   <dt>More flexible &lt;recipe&gt;s</dt>
   <dd>e.g. applying patch files, unpacking nested archives.</dd>
+
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a></dt>
+  <dd>
+    The feed file format only allows 'required' dependencies at present. It should also support
+    'recommended' dependencies.
+  </dd>
 </dl>
 
 
@@ -178,13 +184,6 @@ requires it).
 <dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
 systems, coral cache, etc. May need to show sponsor logos during the download.
 See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
-
-<dt>Optional dependencies</dt>
-<dd>
-The feed file format only allows 'required' dependencies at present. It should also support the
-'recommended' (optional and selected by default) and 'suggested' (optional and unselected by default)
-relationships.
-</dd>
 
 <dt>Lazy dependencies</dt>
 <dd>
