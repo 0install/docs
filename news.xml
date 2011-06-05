@@ -6,12 +6,16 @@
 <dl>
 <dt>May 2011</dt>
 <dd>
+  <p>
   <b>Zero Install 1.0 released!</b>
   [ <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4186'>en</a> | <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4213'>de</a> ]<br/>
   Coverage on <a href='http://developers.slashdot.org/story/11/05/23/1828238/Zero-Install-Project-Makes-10-Release'>Slashdot</a>, <a href='http://www.osnews.com/comments/24778'>OSNews</a>, <a href='http://lwn.net/Articles/444688/'>LWN.net</a>.<br/>
   In German: <a href='http://www.pro-linux.de/news/1/17086/zeroinstall-10-erschienen.html'>pro-linux.de</a>, <a href='http://www.golem.de/1105/83725.html'>golem.de</a> and <a href='http://www.linux-magazin.de/NEWS/Zero-Install-erreicht-Version-1.0'>linux-magazin.de</a>.<br/>
   In Russian: <a href='http://www.linuxcenter.ru/news/2011/05/24/12364/'>linuxcenter.ru</a>.<br/>
-  In Czech: <a href='http://www.root.cz/zpravicky/0install-1-0-nabizi-decentralizovany-instalacni-system/'>root.cz</a>.
+  In Czech: <a href='http://www.root.cz/zpravicky/0install-1-0-nabizi-decentralizovany-instalacni-system/'>root.cz</a>.</p>
+<p>
+  Windows versions <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4104'>0.54.3</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4248'>0.54.4</a> were released: there's now a portable version for USB sticks, better Java support, a GUI for selecting versions and a few bug fixes. There's also now a <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4163'>Windows version of the feed editor</a>.</p>
+  <p>The <a href='http://0install.net/install-mac.html'>Mac packages</a> have been updated to 0.54.</p>
 </dd>
 
 <dt>Apr 2011</dt>
