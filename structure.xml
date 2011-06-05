@@ -40,6 +40,7 @@
     <item base="roadmap" label="Roadmap"/>
     <item base='get-involved' label='Get involved'/>
     <item base='injector-packagers' label='Packaging guide'>
+      <item base='packaging-binaries' label='Packaging binaries'/>
       <item base='package-scons' label='0publish tutorial'/>
       <item base='injector-find' label='Example: Find'/>
       <item base='package-inkscape' label='Example: Inkscape'/>
