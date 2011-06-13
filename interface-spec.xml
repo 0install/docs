@@ -576,6 +576,7 @@ binding in that.
 	  name='...'
 	  (insert='...' | value='...')
 	  mode='prepend|append|replace' ?
+	  separator='...' ?
 	  default='...' ? /&gt; *
 </pre>
 
@@ -600,12 +601,13 @@ Alternatively, you can use the <b>value</b> attribute to use a literal string. F
 
 <p>
 If <b>mode</b> is <b>prepend</b> (or not set), then the absolute path of the
-item is prepended to the current value of the variable. The separator character
-is the colon character on POSIX systems, and semi-colon on Windows. If the
-environment variable is not currently set then the path is prepended to the
-value of the default attribute. If no default value is given either then the
-default for that environment variable is used, or the environment variable's
-value is set to the absolute path directly if there is no default.
+item is prepended to the current value of the variable. The default separator character
+is the colon character on POSIX systems, and semi-colon on Windows. This can be overridden
+using <b>separator</b> (0install >= 1.1). If the environment variable is not currently
+set then the path is prepended to the value of the default attribute. If no
+default value is given either then the default for that environment variable is
+used, or the environment variable's value is set to the absolute path directly
+if there is no default.
 </p>
 
 <p>
