@@ -412,4 +412,9 @@ Then upload the signed <b>.../GNU-Hello.xml</b> file and the exported GPG key to
 <p>If you want to publish source code so that other people can compile it using 0compile,
   see <a href='0compile-dev.html'>0compile: Developers</a>.</p>
 
+<h2>Building in a clean chroot</h2>
+
+<p>If you want to build the source package in a clean "chroot" sandbox environment,
+  see <a href='0compile-chroot.html'>0compile: Chroot Build</a>.</p>
+
 </html>
