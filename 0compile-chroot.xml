@@ -84,6 +84,29 @@ Copyright (C) 2007 Thomas Leonard
 ...
 </pre>
 
+<p>
+Has <tt>build-essential</tt> dependencies:</p>
+
+<ul style='font-size:0.75em'>
+<li>dpkg-dev
+  <ul>
+﻿  <li>dpkg</li>
+  <li>perl5</li>
+  <li>perl-modules</li>
+  <li>cpio</li>
+  <li>bzip2</li>
+  <li>lzma</li>
+  <li>patch</li>
+  <li>make</li>
+  <li>binutils</li>
+  <li>libtimedate-perl</li>
+  <li>gcc | c-compiler</li>
+  </ul></li>
+<li>g++</li>
+<li>libc6-dev | libc-dev</li>
+<li>make</li>
+</ul>
+
 </dd>
   <dt id='redhat'>Redhat / Fedora</dt>
 
@@ -129,6 +152,33 @@ Copyright (C) 2007 Thomas Leonard
 
 $ <b>mock --root=$ROOT --arch=$ARCH --clean</b>
 </pre>
+
+<p>
+Has <tt>buildsys-build</tt> dependencies:</p>
+
+<ul style='font-size:0.75em'>
+<li>﻿bash</li>
+<li>buildsys-macros</li>
+<li>bzip2</li>
+<li>coreutils</li>
+<li>cpio</li>
+<li>diffutils</li>
+<li>elfutils</li>
+<li>gcc-c++</li>
+<li>gcc</li>
+<li>gzip</li>
+<li>make</li>
+<li>patch</li>
+<li>perl</li>
+<li>redhat-release</li>
+<li>redhat-rpm-config</li>
+<li>rpm-build</li>
+<li>sed</li>
+<li>tar</li>
+<li>unzip</li>
+<li>which</li>
+</ul>
+
 </dd>
 </dl>
 
