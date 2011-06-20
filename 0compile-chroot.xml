@@ -29,10 +29,11 @@
 <ol>
   <li>Build on a <a href='#debian'>Debian system</a> (including Ubuntu), using APT and .deb with <b>pbuilder</b></li>
   <li>Build on a <a href='#redhat'>Redhat system</a> (including Fedora), using Yum and .rpm with <b>mock</b></li>
+  <li>Build on a <a href='#lfs'>Linux From Scratch</a> system, using only source tarballs with <b>chroot</b></li>
 </ol>
 
 <p>
-  For both systems we use a "build" directory, that is bind-mounted inside the chroot, to hold our build results.
+  For all systems we use a "build" directory, that is bind-mounted inside the chroot, to hold our build results.
 </p>
 
 <dl>
@@ -177,6 +178,56 @@ Has <tt>buildsys-build</tt> dependencies:</p>
 <li>tar</li>
 <li>unzip</li>
 <li>which</li>
+</ul>
+
+</dd>
+
+  <dt id='lfs'>Linux From Scratch</dt>
+
+<dd>
+
+<p>
+<a href="http://www.linuxfromscratch.org/lfs/">http://www.linuxfromscratch.org/lfs/</a></p>
+
+<p>Build LFS:</p>
+<ul>
+<li><a href='http://www.linuxfromscratch.org/lfs/view/stable/'>Read the Linux From Scratch Book</a></li>
+</ul>
+<p>Enter chroot:</p>
+<blockquote>
+<pre>
+export LFS=/mnt/lfs
+
+sudo mount -v --bind /dev $LFS/dev
+
+sudo mount -vt devpts devpts $LFS/dev/pts
+sudo mount -vt tmpfs shm $LFS/dev/shm
+sudo mount -vt proc proc $LFS/proc
+sudo mount -vt sysfs sysfs $LFS/sys
+
+sudo mkdir -pv $LFS/build
+sudo mount -v --bind ./build $LFS/build
+
+$ <b>sudo chroot $LFS /usr/bin/env -i \
+    HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /bin/bash --login</b>
+# cat /etc/lfs-release
+6.8
+</pre>
+</blockquote>
+<p>BLFS packages:</p>
+<ul>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html'>OpenSSL</a> (Python dependency)</li>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/python.html'>Python</a></li>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/postlfs/gnupg.html'>GnuPG</a></li>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/pcre.html'>PCRE</a> (Glib dependency)</li>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/glib2.html'>GLib</a> (PyGObject dependency)</li>
+<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/python-modules.html#pygobject'>PyGObject</a></li>
+</ul>
+<p>Zero Install itself:</p>
+<ul>
+<li><a href='http://0install.net/install-source.html'>ZeroInstall-Injector</a></li>
 </ul>
 
 </dd>
