@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jun 2011</dt>
+<dd>
+  <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4331'>0install 1.1 released</a>, adding support for optional dependencies, custom path separators in environment bindings and a new command for calculating digests easily. The <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4289'>Windows version reached 1.0</a>. The <a href='http://0install.net/injector-packagers.html'>Packaging guide</a> has been improved and there are now a set of <a href='http://0install.net/templates.html'>template projects</a> so you can see how to use 0install with various different languages and build systems.
+</dd>
 <dt>May 2011</dt>
 <dd>
   <p>
