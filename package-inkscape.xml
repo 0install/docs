@@ -144,7 +144,7 @@ They can then run it by typing <b>inkscape</b>. To choose a different version:
 </p>
 
 <pre>
-$ <b>inkscape --versions</b>
+$ <b>0alias inkscape</b>
 </pre>
 
 

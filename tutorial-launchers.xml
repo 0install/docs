@@ -103,9 +103,6 @@ The <b>0alias</b> command can be used to create little shell scripts to start pr
 
 <pre>
 $ <b>0alias rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
-Created script '/home/talex/bin/rox-edit'.
-To edit policy: rox-edit --versions
-(note: some shells require you to type 'rehash' now)
 </pre>
 
 <p>
