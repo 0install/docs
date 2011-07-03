@@ -13,7 +13,9 @@ Here are some suggestions for things you might like to try:
 
 <h3>Champion for OpenSUSE</h3>
 <p>
-We need a champion to <a href='https://features.opensuse.org/310040'>get the OpenSUSE package into the OpenSUSE distribution</a>. An RPM already exists in their build service, but someone needs to get it into the main repository. This may require some diplomacy.</p>
+We need a champion to <a href='https://features.opensuse.org/310040'>get the OpenSUSE package into the OpenSUSE distribution</a>. An RPM already exists in their build service, but someone needs to get it into the main repository.</p>
+
+<p><strong>2011-07-03:</strong> The package is <a href='https://build.opensuse.org/package/show?package=zeroinstall-injector&amp;project=devel%3AopenSUSE%3AFactory'>now in devel:openSUSE:Factory</a>. The next step is to get it into openSUSE:Factory.</p>
 
 <h3>Creating packages</h3>
 <p>
