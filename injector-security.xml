@@ -57,7 +57,7 @@ Some key points about Zero Install's security model:
  <dd>
  To protect against the possibility of attackers breaking into a web-server and replacing the real
  software with modified versions, or redirecting network traffic to the real web-server to their own,
- Zero Install only runs code that is signed by a GPG key you have said you trust.
+ Zero Install only runs code that is signed by a GPG key you trust to provide software from that web-site. By default, it will automatically approve keys known to the key information server; this can be disabled from the preferences dialog.
  </dd>
 
  <dt>Security when <i>running</i> programs is your problem</dt>
