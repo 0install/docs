@@ -54,10 +54,6 @@
       <xsl:apply-templates select='document("structure.xml")/layout/item'/>
     </ul>
 
-    <ul>
-    <li><a href='http://www.el-directorio.org/0install'>Spanish</a></li>
-    </ul>
-
   </xsl:template>
 
   <xsl:template match='/*'>

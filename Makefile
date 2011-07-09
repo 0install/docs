@@ -42,6 +42,7 @@ HTML = index.php \
        make-headers.html \
        manifest-spec.html \
        news.html \
+       packagers.html \
        package-inkscape.html \
        package-rox.html \
        package-scons.html \
@@ -57,9 +58,11 @@ HTML = index.php \
        tutorial-downloads.html \
        tutorial-launchers.html \
        tutorial-policy.html \
+       users.html \
        using-git.html \
        virtual.html \
-       walkthrough.html
+       walkthrough.html \
+       why.html
 
 all: htmlfiles
 	(ls *.html; find python-api -name '*.html') | sed 's!^\(\./\)\?!http://0install.net/!' | grep -v /google > sitemap.txt

@@ -4,28 +4,15 @@
 <h2>Developers</h2>
 
 <p>
- This section is for both people distributing software using Zero Install, and for
- people working on the Zero Install system itself.
+ This section is for people developing 0install itself, or integrating it
+ into their own systems (for example, if you want to use 0install to manage
+ plugins for your application).
 </p>
 
 <dl>
-  <dt><a href='roadmap.html'>Roadmap</a></dt><dd>Where we've been and where we're going.</dd>
-
  <dt><a href='get-involved.html'>Get involved</a></dt>
  <dd>
    Suggestions on how to join the project.
- </dd>
-
- <dt><a href='injector-packagers.html'>Packaging guide</a></dt>
- <dd>
-  This guide takes you through the steps involved in making a package available
-  through Zero Install. You will need to be able to upload (static) files to a
-  web-server.
- </dd>
-
- <dt><a href='injector-specs.html'>Specifications</a></dt>
- <dd>
-  Formal specifications for the file formats used by the injector.
  </dd>
 
  <dt><a href='python-api/html/index.html'>Python API</a></dt>
@@ -33,10 +20,10 @@
   The <b>0launch</b> command-line interface to Zero Install is sufficient for most
   purposes. However, sometimes you may want to use the Python library interface.
   This is used by programs such as <b>0compile</b> and <b>0publish</b>, and is
-  also a useful reference for people wanting to modify the injector itself.
+  also a useful reference for people wanting to modify 0install itself.
  </dd>
 
- <dt><a href='using-git.html'>Using GIT</a></dt>
+ <dt><a href='using-git.html'>Using Git</a></dt>
  <dd>
   How to get the very latest developer versions using GIT.
  </dd>
@@ -50,38 +37,6 @@
  <dd>
   A set of test interfaces to check that the injector is working
   correctly.
- </dd>
-
- <dt><a href='templates.html'>Templates</a></dt>
- <dd>
-   Sample code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
- </dd>
-
- <dt><a href='tools.html'>Tools</a></dt>
- <dd>There are many useful tools for generating feeds, validating them, making releases, etc.</dd>
-</dl>
-
-<h2>Off-site documentation</h2>
-
-<dl>
- <dt><a href='http://rox.sourceforge.net/desktop/node/300'>Compiling with SCons and GTK</a></dt>
- <dd>
-  <p>Article showing how to use Zero Install in your build scripts to download the SCons build system and
-  use it to compile your program.</p>
- </dd>
-
- <dt><a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a></dt>
-
- <dd>
-  <p>This blog article shows how to use Zero Install to compile your program against older
- versions of library headers than are the default on your system. Binaries created this way
- work on a wider range of systems (all systems with a GTK version newer than the headers). Also,
- since they download the required headers automatically, users don't need to have the headers
- already on their system in order to compile your program.</p>
- <p>
- The binaries produced this way do not depend on Zero Install, so you can use Zero Install as
- part of your build process even if you don't distribute the resulting binaries that way.
- </p>
  </dd>
 </dl>
 

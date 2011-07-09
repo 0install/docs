@@ -17,42 +17,73 @@
       <item base='virtual' label='Virtual machines'/>
     </item>
     <item base='injector-security' label='Security'/>
+    <item base="roadmap" label="Roadmap"/>
+  </item>
+
+  <item base="why" label="Why 0install">
+    <item base="perspectives" label="Perspectives"/>
+    <item base="comparison" label="Comparison"/>
+    <!-- <item base='survey' label='Survey results'/> -->
   </item>
 
   <item base='injector-feeds' label='Featured apps'/>
 
   <item base="doc" label="Documentation">
-    <item base="perspectives" label="Perspectives"/>
-    <item base='injector-using' label='Tutorials'>
-      <item base="howitworks" label="Screenshots"/>
-      <item base='tutorial-launchers' label='Part 1: launchers'/>
-      <item base='tutorial-downloads' label='Part 2: downloads'/>
-      <item base='tutorial-policy' label='Part 3: policy'/>
+    <item base='users' label='For users'>
+      <item base='injector-using' label='Tutorials'>
+	<item base="howitworks" label="Screenshots"/>
+	<item base='tutorial-launchers' label='Part 1: launchers'/>
+	<item base='tutorial-downloads' label='Part 2: downloads'/>
+	<item base='tutorial-policy' label='Part 3: policy'/>
+      </item>
+      <item base="walkthrough" label="Walk-through"/>
     </item>
-    <item base="comparison" label="Comparison"/>
-    <item base="walkthrough" label="Walk-through"/>
-    <item base='survey' label='Survey results'/>
-  </item>
 
-  <item base='dev' label='Developers'>
-    <item base="roadmap" label="Roadmap"/>
-    <item base='get-involved' label='Get involved'/>
-    <item base='injector-packagers' label='Packaging guide'>
-      <item base='packaging-binaries' label='Packaging binaries'/>
-      <item base='package-scons' label='0publish tutorial'/>
-      <item base='injector-find' label='Example: Find'/>
-      <item base='package-inkscape' label='Example: Inkscape'/>
-      <item base='package-rox' label='Example: ROX-Filer'/>
+    <item base='packagers' label='For packagers'>
+      <item base='injector-packagers' label='Packaging guide'>
+	<item base='packaging-binaries' label='Packaging binaries'/>
+	<item base='package-scons' label='0publish tutorial'/>
+	<item base='injector-find' label='Example: Find'/>
+	<item base='package-inkscape' label='Example: Inkscape'/>
+	<item base='package-rox' label='Example: ROX-Filer'/>
+      </item>
+      <item base='templates' label='Templates'/>
     </item>
+
+    <item base='dev' label='For developers'>
+      <item base='get-involved' label='Get involved'/>
+      <item base='python-api/html/index' label='Python API'/>
+      <item base='using-git' label='Using Git'/>
+      <item base='injector-design' label='Design'/>
+      <item base='injector-tests' label='Tests'/>
+    </item>
+
+    <item base='tools' label='Tools'>
+      <item base='0publish' label='0publish'/>
+      <item base='0compile' label='0compile'>
+	<item base='0compile-dev' label='Developers'/>
+	<item base='0compile-chroot' label='Chroot Build'/>
+	<item base='0compile-scons' label='Example: SCons'/>
+      </item>
+      <item base='0release' label='0release'>
+	<item base='0release-phases' label='Customisation'/>
+	<item base='0release-binaries' label='Compiled binaries'/>
+      </item>
+      <item base='feedlint' label='FeedLint'/>
+      <item base='make-headers' label='Make-headers'/>
+      <item base='0mirror' label='0mirror'/>
+      <item base='0export' label='0export'/>
+      <item base='pkg2zero' label='pkg2zero'/>
+      <item base='0test' label='0test'/>
+      <item base='0share' label='0share'/>
+      <item base='ebox' label='ebox'/>
+    </item>
+
     <item base='injector-specs' label='Specifications'>
       <item base='interface-spec' label='Feed files'/>
       <item base='manifest-spec' label='Manifests'/>
     </item>
-    <item base='python-api/html/index' label='Python API'/>
-    <item base='using-git' label='Using GIT'/>
-    <item base='injector-design' label='Design'/>
-    <item base='injector-tests' label='Tests'/>
-    <item base='templates' label='Templates'/>
+
   </item>
 
   <item base="support" label="Support">
@@ -60,28 +91,7 @@
     <item href="support.html#bugs" label="Bug tracker"/>
     <item base="faq" label="FAQ"/>
     <item base='injector-trouble' label='Troubleshooting'/>
-    <item href="support.html#commercial" label="Commercial support"/>
-  </item>
-
-  <item base='tools' label='Tools'>
-    <item base='0publish' label='0publish'/>
-    <item base='0compile' label='0compile'>
-      <item base='0compile-dev' label='Developers'/>
-      <item base='0compile-chroot' label='Chroot Build'/>
-      <item base='0compile-scons' label='Example: SCons'/>
-    </item>
-    <item base='0release' label='0release'>
-      <item base='0release-phases' label='Customisation'/>
-      <item base='0release-binaries' label='Compiled binaries'/>
-    </item>
-    <item base='feedlint' label='FeedLint'/>
-    <item base='make-headers' label='Make-headers'/>
-    <item base='0mirror' label='0mirror'/>
-    <item base='0export' label='0export'/>
-    <item base='pkg2zero' label='pkg2zero'/>
-    <item base='0test' label='0test'/>
-    <item base='0share' label='0share'/>
-    <item base='ebox' label='ebox'/>
+    <item href="support.html#commercial" label="Commercial"/>
   </item>
 
   <item base='legal' label='Legal issues'/>
