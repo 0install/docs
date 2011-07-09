@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+
+<h2>Features</h2>
+
+<dl>
+  <dt>Decentralised; anyone can distribute software</dt>
+  <dd>
+    <p>
+      The traditional Linux distribution system, using centralised repositories, creates
+      an interesting chicken-and-egg situation: distributions won't package software until
+      it becomes popular, but software won't become popular until it's easy to install.
+    </p>
+    <p>
+      You don't need to be blessed by a distribution (or anyone else)
+      to be part of 0install; all you need is a web page.
+    </p>
+    <p>
+      It's easier too: you can make a single archive that works on all platforms
+      (for platform-independent applications such as Python or Java programs),
+      or have 0install download the correct archive automatically (for platform-specific
+      binaries).
+    </p>
+    <p>
+      See the "<a href='http://osnews.com/story.php/16956/Decentralised-Installation-Systems'>Decentralised
+      Installation Systems</a>" essay on OSNews for a more complete introduction to the subject.
+    </p>
+    <p>
+      See the <a href='packaging-guide.html'>Packaging Guide</a> for information on
+      distributing software using 0install.
+    </p>
+  </dd>
+
+  <dt>Security is central</dt>
+  <dd>
+    <p>
+      Security is sometimes seen as the enemy of usability, but we see it as the foundation
+      of a usable system. Good security doesn't just mean not having your data destroyed
+      by viruses - it means freedom to experiment with new software.
+    </p>
+    <p>
+      The problems with a centrally-controlled "app store" as the only means to
+      get software are clear to everyone: applications that compete with the
+      store owner's interests are banned. Innovation and competition suffer.
+      But the same effect can be acheived without overt restrictions if getting
+      software from outside the distribution repository is simply too risky for
+      users to consider.
+    </p>
+    <p>
+      See the <a href='injector-security.html'>security page</a> for more
+      information about 0install's security features.
+    </p>
+  </dd>
+
+  <dt>You control your own computer</dt>
+  <dd>
+    <p>
+      When you install a package with a traditional installer, you have no way of
+      knowing what it will do. Will it add itself to a menu somewhere? Start a service
+      whenever you turn on the computer? Stop another program from working?
+    </p>
+    <p>
+      0install merely <i>caches</i> programs, each version of each package in its own
+      directory. Changes to the environment, such as adding a menu entry, only happen
+      in response to a deliberate action on your part.
+    </p>
+  </dd>
+
+  <dt>Conflict free</dt>
+  <dd>
+    <p>
+      If two programs want the same version of a library, they'll share it.
+      Otherwise, they'll use separate copies.
+    </p>
+    <p>
+      You're free to try the very latest development version of a program
+      (along with all the bleeding-edge libraries it needs) without
+      destabilising the rest of your system.  And you can always revert back to
+      an older version... or run old and new versions of the same program
+      side-by-side!
+    </p>
+  </dd>
+
+  <dt>Shared binaries/cache</dt>
+  <dd>
+    <p>
+      0install supports sharing of binaries (the implementation cache) 
+      <a href='sharing.html'>between users</a> and <a href='virtual.html'>between virtual
+      machines</a>.
+    </p>
+    <p>
+      If one user installs a 200 Mb application, another user can run it without downloading it again.
+      Most packaging systems solve this problem by only allowing root to install software. The systems which
+      don't have this limitation typically end up downloading
+      and storing multiple copies of a program; one for each user. 0install
+      shares downloads (safely) between users.
+    </p>
+    <p>
+      With 0install, each user downloads a small <i>feed file</i> which gives the cryptographic
+      digest of the full package. The digest can be used to check that a package already on the computer
+      (downloaded by another user) hasn't been tampered with. Most simply, each user can make a copy of the
+      original download this way (which shares the download but not the disk space). With a special helper,
+      even the disk copies can be safely shared.
+    </p>
+  </dd>
+
+  <dt>Cross-Platform and Cross-Distribution</dt>
+  <dd>
+    <p>
+      A single 0install package can be used across multiple Linux distributions, Mac OS X,
+      Unix and Windows systems (given that the packaged application itself is written to be
+      cross-platform as well).
+    </p>
+  </dd>
+  
+  <dt>Automatic updates</dt>
+  <dd>
+    <p>
+      When you run a program and it has been a month since the last check, 0install will quietly
+      check for updates in the background. If any are available, you will be notified.
+    </p>
+    <p>
+      The frequency of these checks is configurable, and you can choose not to use the latest version
+      if you prefer.
+    </p>
+  </dd>
+
+  <dt>Binary and source packages</dt>
+  <dd><p>0install supports both <a href='0compile.html'>compiling applications from source</a> and downloading binaries.</p></dd>
+
+  <dt>Native package manager integration</dt>
+  <dd>
+    <p>
+      If you have already installed a package using your distribution's installer
+      then 0install can use that instead of downloading a second copy.
+    </p>
+    <p>
+      It can also use use PackageKit to install system packages using the
+      distribution's package manager, if no 0install package is available.
+    </p>
+
+    <p>
+      See the <a href='distribution-integration.html'>distro integration page</a>
+      for more information.
+    </p>
+  </dd>
+
+  <dt>Run without root</dt>
+  <dd>
+    <p>
+      Run new applications on your system without root privileges. 0install does
+      <b>not</b> write to any of the traditional software directories like
+      <b>/usr/bin</b> or <b>/usr/lib</b>. Instead it uses the cache directories.
+    </p>
+  </dd>
+
+</dl>
+
+</html>

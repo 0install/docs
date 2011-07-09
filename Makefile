@@ -18,9 +18,9 @@ HTML = index.php \
        doc.html \
        ebox.html \
        faq.html \
+       features.html \
        feedlint.html \
        get-involved.html \
-       goals.html \
        howitworks.html \
        injector-design.html \
        injector-feeds.html \

@@ -11,10 +11,17 @@
     <item base="install-windows" label="Windows"/>
   </item>
 
+  <item base="features" label="Features">
+    <item base="distribution-integration" label="Distro integration"/>
+    <item base="sharing" label="Sharing">
+      <item base='virtual' label='Virtual machines'/>
+    </item>
+    <item base='injector-security' label='Security'/>
+  </item>
+
   <item base='injector-feeds' label='Featured apps'/>
 
   <item base="doc" label="Documentation">
-    <item base="goals" label="Goals"/>
     <item base="perspectives" label="Perspectives"/>
     <item base='injector-using' label='Tutorials'>
       <item base="howitworks" label="Screenshots"/>
@@ -23,11 +30,7 @@
       <item base='tutorial-policy' label='Part 3: policy'/>
     </item>
     <item base="comparison" label="Comparison"/>
-    <item base='injector-security' label='Security'/>
-    <item base="sharing" label="Sharing"/>
     <item base="walkthrough" label="Walk-through"/>
-    <item base="distribution-integration" label="Distro integration"/>
-    <item base='virtual' label='Virtual machines'/>
     <item base='survey' label='Survey results'/>
   </item>
 
