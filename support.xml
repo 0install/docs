@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html>
 
-<h2>Mailing lists</h2>
+<h2 id='lists'>Mailing lists</h2>
 
 <p>The project has a single mailing list, which can be used for sending
 bug reports, patches, suggestions, questions, etc.
@@ -32,7 +32,7 @@ news group just marks it as interesting to your news-reader. It is
 different to subscribing to get emails.</li>
 </ol>
 
-<h2>Bug tracker</h2>
+<h2 id='bugs'>Bug tracker</h2>
 
 <p>Bugs can also be filed on the bug tracker. However, it's best to post
 non-trivial bugs to the mailing list too, as more people will see them
@@ -43,11 +43,11 @@ there.</p>
 <li><a href="http://sourceforge.net/tracker/?func=add&amp;group_id=76468&amp;atid=547191">Submit a new bug</a></li>
 </ul>
 
-<h2>IRC</h2>
+<h2 id='IRC'>IRC</h2>
 
 <p>We can (occasionally) be found on IRC on Freenode, in #0install.</p>
 
-<h2>Email</h2>
+<h2 id='email'>Email</h2>
 
 <p>
 If possible, please send questions and comments to the mailing list, so that other people
@@ -62,7 +62,7 @@ However, reports of security problems or requests for interviews may be
 <a href='http://sourceforge.net/users/tal197/'>sent by email</a>.
 </p>
 
-<h2>Commercial support</h2>
+<h2 id='commercial'>Commercial support</h2>
 
 <p>
 If you require commercial support, you can either ask on the mailing list (see above) or email.

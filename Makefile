@@ -1,4 +1,65 @@
-HTML = index.php faq.html support.html doc.html injector.html injector-packagers.html injector-design.html injector-security.html injector-using.html injector-tests.html links.html matrix.html injector-feeds.html injector-specs.html injector-trouble.html 0publish.html howitworks.html goals.html dev.html injector-find.html package-rox.html interface-spec.html manifest-spec.html package-inkscape.html roadmap.html 0compile.html 0compile-scons.html package-scons.html sharing.html walkthrough.html feedlint.html perspectives.html distribution-integration.html legal.html survey.html 0release.html tools.html 0release-phases.html 0mirror.html make-headers.html tutorial-policy.html virtual.html tutorial-downloads.html deb2zero.html using-git.html 0export.html install-source.html install-linux.html install-mac.html install-windows.html install-unix.html 0test.html 0share.html 0release-binaries.html 0compile-dev.html 0compile-chroot.html pkg2zero.html ebox.html tutorial-launchers.html get-involved.html news.html templates.html packaging-binaries.html
+HTML = index.php \
+       0compile-chroot.html \
+       0compile-dev.html \
+       0compile.html \
+       0compile-scons.html \
+       0export.html \
+       0mirror.html \
+       0publish.html \
+       0release-binaries.html \
+       0release.html \
+       0release-phases.html \
+       0share.html \
+       0test.html \
+       comparison.html \
+       deb2zero.html \
+       dev.html \
+       distribution-integration.html \
+       doc.html \
+       ebox.html \
+       faq.html \
+       feedlint.html \
+       get-involved.html \
+       goals.html \
+       howitworks.html \
+       injector-design.html \
+       injector-feeds.html \
+       injector-find.html \
+       injector.html \
+       injector-packagers.html \
+       injector-security.html \
+       injector-specs.html \
+       injector-tests.html \
+       injector-trouble.html \
+       injector-using.html \
+       install-linux.html \
+       install-mac.html \
+       install-source.html \
+       install-unix.html \
+       install-windows.html \
+       interface-spec.html \
+       legal.html \
+       make-headers.html \
+       manifest-spec.html \
+       news.html \
+       package-inkscape.html \
+       package-rox.html \
+       package-scons.html \
+       packaging-binaries.html \
+       perspectives.html \
+       pkg2zero.html \
+       roadmap.html \
+       sharing.html \
+       support.html \
+       survey.html \
+       templates.html \
+       tools.html \
+       tutorial-downloads.html \
+       tutorial-launchers.html \
+       tutorial-policy.html \
+       using-git.html \
+       virtual.html \
+       walkthrough.html
 
 all: htmlfiles
 	(ls *.html; find python-api -name '*.html') | sed 's!^\(\./\)\?!http://0install.net/!' | grep -v /google > sitemap.txt

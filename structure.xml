@@ -3,7 +3,7 @@
   <item href='.' base="index" label="Overview"/>
   <item base='news' label="News"/>
   
-  <item base="injector" label="Download/install">
+  <item base="injector" label="Download 0install">
     <item base="install-linux" label="Linux"/>
     <item base="install-mac" label="Mac OS X"/>
     <item base="install-source" label="Source code"/>
@@ -12,7 +12,6 @@
   </item>
 
   <item base='injector-feeds' label='Featured apps'/>
-  <item base="support" label="Support"/>
 
   <item base="doc" label="Documentation">
     <item base="goals" label="Goals"/>
@@ -23,17 +22,13 @@
       <item base='tutorial-downloads' label='Part 2: downloads'/>
       <item base='tutorial-policy' label='Part 3: policy'/>
     </item>
-    <item base="matrix" label="Comparison"/>
-    <item base="faq" label="FAQ"/>
+    <item base="comparison" label="Comparison"/>
     <item base='injector-security' label='Security'/>
     <item base="sharing" label="Sharing"/>
     <item base="walkthrough" label="Walk-through"/>
     <item base="distribution-integration" label="Distro integration"/>
-    <item base='injector-trouble' label='Problems'/>
     <item base='virtual' label='Virtual machines'/>
-    <item base='legal' label='Legal issues'/>
     <item base='survey' label='Survey results'/>
-    <item base="links" label="Links"/>
   </item>
 
   <item base='dev' label='Developers'>
@@ -57,6 +52,14 @@
     <item base='templates' label='Templates'/>
   </item>
 
+  <item base="support" label="Support">
+    <item href="support.html#lists" label="Mailing lists"/>
+    <item href="support.html#bugs" label="Bug tracker"/>
+    <item base="faq" label="FAQ"/>
+    <item base='injector-trouble' label='Troubleshooting'/>
+    <item href="support.html#commercial" label="Commercial support"/>
+  </item>
+
   <item base='tools' label='Tools'>
     <item base='0publish' label='0publish'/>
     <item base='0compile' label='0compile'>
@@ -77,6 +80,8 @@
     <item base='0share' label='0share'/>
     <item base='ebox' label='ebox'/>
   </item>
+
+  <item base='legal' label='Legal issues'/>
 
   <item href='http://sourceforge.net' label='SourceForge'>
     <item href='http://sourceforge.net/projects/zero-install' label='Project page'/>

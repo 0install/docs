@@ -7,7 +7,7 @@
     <dt><a href='goals.html'>Goals</a></dt><dd>A more detailed explanation of 0install's goals.</dd>
     <dt><a href='perspectives.html'>Perspectives</a></dt><dd>How 0install benefits users, administrators, developers and distributions.</dd>
     <dt><a href='injector-using.html'>Tutorial</a></dt><dd>Step by step guide to using Zero Install.</dd>
-    <dt><a href='matrix.html'>Feature matrix</a></dt><dd>Compares 0install with some related technologies.</dd>
+    <dt><a href='comparison.html'>Comparison</a></dt><dd>Compares 0install with some related technologies.</dd>
 
     <dt><a href='faq.html'>FAQ</a></dt><dd>Common questions answered.</dd>
 
@@ -28,8 +28,6 @@
     <dt><a href='legal.html'>Legal issues</a></dt><dd>Thoughts about some legal issues relating to distributing software this way.</dd>
 
     <dt><a href='survey.html'>Survey results</a></dt><dd>A write-up of the 2007 survey results.</dd>
-
-    <dt><a href='links.html'>Links</a></dt><dd>Links to related software.</dd>
 </dl>
 
 <quicklinks>
