@@ -183,7 +183,7 @@ For a full tutorial, see 0compile's homepage.</description>
 	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
       </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-	<version not-before="0.52"/>
+	<version before="1.2" not-before="0.52"/>
 	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
       </requires>
       <command name="test" path="tests/testcompile.py">
@@ -213,7 +213,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3K5TEACgkQrgeCgFmlPMEQ9ACeNwFbFAqBHJJg8VR0wgXiIGiDe/sAn0ImofZz
-/5ckjlfu0pdl/08fSGRW
+iEYEABECAAYFAk4TXy4ACgkQrgeCgFmlPMH58ACfW0BodlsFyLrYkuoIcaih3TP1kMoAn2gE77xD
+7n2IpbvmKyalhag94cqn
 
 -->
