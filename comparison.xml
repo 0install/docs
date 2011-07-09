@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+
+<h2>Compared with other systems</h2>
+
+<toc level='h3'/>
+
+<h3>Matrix</h3>
+
+<p>
+This matrix shows some desirable features in a packaging system, and shows which
+systems provide them. Obviously, these things tend to be a bit biased (both in
+terms of what features are chosen for comparison, and of what is considered to
+be a 'pass') but it should give the general idea.
+</p>
+
+<table class='matrix'>
+ <tr><th>Feature</th>					<th>Source tarball</th>	<th><a href='http://www.debian.org/doc/manuals/apt-howto/index.en.html'>APT</a></th>
+ 													<th><a href='http://autopackage.org'>Autopackage</a></th>
+															<th><a href='http://java.sun.com/products/javawebstart/'>Java WS</a></th>
+																		<th><a href='injector.html'>Zero Install</a></th></tr>
+
+ <tr><th>Users can install software</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<yes/>			<yes/></tr>
+ <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<yes><a href='sharing.html'>Yes</a></yes></tr>
+ <tr><th>Multiple versions coexist</th>			<yes/>			<no/>			<no/>		<no/>			<yes/></tr>
+ <tr><th>Uninstall</th>					<td>Sometimes</td>	<yes/>			<yes/>		<yes>(cache)</yes>	<yes>(cache)</yes></tr>
+ <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<td>Only one</td>	<yes/></tr>
+ <tr><th>Conflict-free</th>				<no/>			<no/>			<no/>		<yes/>			<yes/></tr>
+ <tr><th>Decentralised</th>				<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<no>Only Java</no>	<yes/></tr>
+ <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<yes/>			<yes/></tr>
+ <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Thousands of packages available</th>		<yes/>			<yes/>			<no/>		<td>Unknown</td>	<no/></tr>
+
+</table>
+
+<h4>Explanation of features</h4>
+
+<dl>
+ <dt>Users can install software</dt>		
+ <dd>A user without root privileges can install software using this system (without unreasonable extra effort).</dd>
+ 
+ <dt>Dependencies handled automatically</dt>	
+ <dd>If a program requires some library to function, the system will locate, download and install the library too.</dd>
+
+ <dt>Automatic upgrading</dt>			
+ <dd>The system can check for and install upgrades automatically or at the operator's request. User does not have to
+ perform a full install operation manually on each package.</dd>
+ 
+ <dt>Libraries shared between programs</dt>
+ <dd>If two programs use the same library, the library is only downloaded and stored once. Upgrading a library will
+ benefit all programs that use it.</dd>
+ 
+ <dt>Downloads shared between users</dt>		
+ <dd>If two users install/use the same program, it is only downloaded once and stored once.<br/>
+ See <a href='sharing.html'>Sharing</a> for how to set this up with Zero Install.
+ </dd>
+ 
+ <dt>Multiple versions coexist</dt>
+ <dd>Two versions of a program or library can be installed at the same time, and the user can choose which one to run.</dd>
+
+ <dt>Uninstall</dt>
+ <dd>Programs can be cleanly removed from the system easily (reversing the effects of the install).</dd>
+ 
+ <dt>Signatures</dt>				
+ <dd>Software comes with a digital signature, which is checked automatically by the system.<br/>
+ Note: Java Web-Start requires all components to be signed with the same key.
+ </dd>
+ 
+ <dt>Conflict-free</dt>
+ <dd>If program A requires an old version of a library, and program B requires a new version, A and B can both be installed and
+ used at the same time. The system will never refuse to install one program because some other program is installed.</dd>
+ 
+ <dt>Decentralised</dt>
+ <dd>A program packaged for this system can be installed easily, without having to be in some special centralised repository.<br/>
+ Notes: Debian allows extra repositories to be added, but this is a manual
+ step, requires root access, and is a considerable security risk.</dd>
+ 
+ <dt>Non-root install of system</dt>		
+ <dd>The packaging system itself can be easily installed without administrator privileges, and the normal selection of
+ software will be available.</dd>
+
+ <dt>All programming languages</dt>			
+ <dd>All types of program can be accessed using this system.</dd>
+
+ <dt>Supports sandboxing</dt>
+ <dd>If you have a way of running an application in a sandboxed environment (eg, a Java virtual machine), then the
+ installation system will let you install and run the program without forcing you to run any of the downloaded
+ code outside of the sandbox.<br/>
+ The easiest way to get sandboxing with the injector is to run it twice: once in download-only mode with write
+ access to the cache, and then again in offline mode with read-only access to actually run the program. To control
+ access, you can use a program such as <a href='http://plash.beasts.org/'>Plash</a>, e.g.:
+ <pre>plash$ <b>!!0launch --download-only 'http://0install.net/2006/interfaces/0publish'</b>
+plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.cache ~/.config</b></pre>
+ This downloads and runs the <a href='0publish.html'>0publish</a> program
+ (which will display its help message) without granting it write access to
+ anything. Even if it contained a bug which made it try to delete all your
+ files, plash should prevent it from doing any harm. If you use it to process a
+ file, you can give it write access to just that file by using <b>=></b> in the
+ normal plash manner. In future versions, this should all be made automatic, so
+ you don't have to run <b>0launch</b> twice.
+ </dd>
+
+ <dt>Usable when off-line</dt>
+ <dd>Once a program has been installed, the program can be run again while disconnected.</dd>
+
+ <dt>Thousands of packages available</dt>
+ <dd>The system is widely adopted.</dd>
+</dl>
+
+<h3>By project</h3>
+
+<dl class='spaced'>
+<dt>Java Web Start</dt>
+<dd>
+<p>
+Sun have developed a similar system to Zero Install,
+<a href="http://java.sun.com/products/javawebstart">Java Web Start</a>,
+although this only works for Java applications. Microsoft have an
+equivalent called <a href='http://msdn2.microsoft.com/en-us/library/t71a733d(VS.80).aspx'>ClickOnce</a>.
+</p>
+</dd>
+
+<dt>Konvalo</dt>
+<dd>
+<p>
+Konvalo was a very similar idea to the old Zero Install filesystem, but
+implemented using CODA rather than with a custom kernel module.</p>
+
+<p>
+One disadvantage of Konvalo was that you needed to run a public CODA server
+to distribute software, whereas both Zero Install implementations only require
+a web-server serving static pages.
+</p>
+
+<p>
+The project did not attract support from the community and the author
+abandoned the effort in April 2006, asking for links to it from this site
+to be removed.
+</p>
+</dd>
+
+<dt>Klik</dt>
+
+<dd>
+<p>
+<a href='http://klik.atekon.de'>Klik</a> allows users to install software by clicking on 
+links in web-pages (or even just by looking at a web page). Like Zero Install, it stores
+each package in its own directory and sets environment variables to let it run.
+There is a central server which sends shell scripts to clients; executing the
+script causes the software to be downloaded and installed. This process is
+started automatically by your web browser.
+</p>
+
+<p>
+Klik is mainly focused on having a large selection of packages working now,
+but pays little attention to security. Klik packages can be automatically
+converted to Zero Install ones. See my <a
+href='http://rox.sourceforge.net/desktop/node/290'>article about Zero Install
+and Klik</a> for more details.
+</p>
+
+<p>Differences between Klik and Zero Install include:</p>
+
+<ul>
+<li>The recipes Zero Install downloads are XML files, not shell scripts (this is similar
+to the difference between tar and shar files).</li>
+
+<li>Zero Install downloads are GPG signed.</li>
+
+<li>Zero Install is decentralised: you need permission from the Klik
+maintainers to distribute a Klik package. You don't need anyone's permission to
+distribute with Zero Install.</li>
+
+<li>Zero Install can check for updates automatically (by default once a month,
+but configurable). Klik requires you to check for updates yourself.</li>
+
+<li>Zero Install handles dynamic linking. This allows upgrading a library to
+benefit multiple applications, and saves space and bandwidth. It also lets you
+use a different version of a library if you want. Klik bundles all dependencies
+into the package (Zero Install also
+<a href='http://rox.sourceforge.net/desktop/Zero2Bundle'>supports</a> this mode
+of operation if desired).</li>
+
+<li>Zero Install can <a href='sharing.html'>share downloads</a> between users
+safely, using cryptographic digests.</li>
+
+<li>Zero Install supports compiling from source if you want, though not all
+packages support this yet.</li>
+
+<li>Zero Install lets you download older versions or programs or libraries.
+Klik only provides a single version for download, although you can keep using
+older versions once you've got them.</li>
+
+<li>Zero Install is fully <acronym title='Open Source Software'>OSS</acronym>. Only the Klik client is.</li>
+
+<li>Klik runs the 'intellipatch' script on downloads, which does a
+search-and-replace for filename paths in binaries (simple text matching) and
+changes them. This allows some programs which aren't built to be binary
+relocatable to work. Zero Install doesn't support this, and requires binaries
+to be relocatable in the first place.</li>
+
+<li>Klik has many more packages available right now.</li>
+
+<li>Zero Install is platform independent. Klik only runs on Linux.</li>
+</ul>
+
+<p>
+The above refers to Klik 1 (the current version).
+<a href='http://klik.atekon.de/wiki/index.php?title=Recipe_Files&amp;oldid=3568'>Klik 2</a>, which
+is under development, uses a slightly modified version of the Zero Install feed
+format for its recipes. Note: link is to a fixed version, as the Wiki page is frequently
+vandalised.
+</p>
+
+</dd>
+
+<dt>Maven</dt>
+
+<dd>
+<p>
+<a href='http://maven.apache.org/'>Maven</a> is a build tool (like make or ant)
+for Java programs. Although not an installation system, it is similar to
+the injector in that each product has a <b>project.xml</b> file with a list of
+dependencies. When building a product, maven downloads the specified version of
+each dependency and stores it in a cache directory. Some differences between
+maven 1.0 (I have not yet tested version 2.0) and the injector:
+</p>
+<ul>
+<li>Only exact versions of dependencies are given. Maven cannot select the
+best version from a set. In an installation system, this would lead to a lot
+of extra downloads as programs used different library versions
+unnecessarily. It also makes it harder to get security fixes.</li>
+<li>
+Dependencies are not fetched recursively. If A requires B, and B requires C,
+then maven will not fetch C unless A requests it explicitly. 
+</li>
+<li>
+The <b>project.xml</b> files are not signed, as they are not fetched by
+maven. Only implementations are downloaded.
+</li>
+<li>
+There is no digest of the downloads in the project file, so no security checks
+are performed to confirm that the download is OK, and downloads cannot be
+shared safely between users.
+</li>
+<li>
+Only Java is supported (everything is added to CLASSPATH, nowhere else).
+</li>
+<li>
+Dependencies are named using a simple two-layer system (e.g., axis/axis-jaxrpc).
+Therefore, a central repository is required to avoid naming conflicts.
+</li>
+</ul>
+
+<p>
+Note that you can use Zero Install in a maven-like way for compiling programs.
+See <a href='http://rox.sourceforge.net/desktop/node/289'>Easy GTK binary compatibility</a>
+for an example of using Zero Install to compile a C program against an older version
+of a library's header files to ensure greater compatibility.
+</p>
+</dd>
+
+<dt>Autopackage</dt>
+<dd>
+<p>
+Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
+let users install software and to make software distribution decentralised.
+The work done by the Autopackage developers to make packages relocatable is 
+necessary for the Zero Install injector too. Some differences between this and
+Zero Install:
+</p>
+<ul>
+<li>A script inside each package installs the files, making sandboxing
+difficult. It also <a href='http://www.kitenet.net/~joey/blog/entry/autopackage_designed_by_monkeys-2005-03-28-14-20.html'>makes conversion to other
+packaging formats troublesome</a>.</li>
+<li>Security features such as GPG signatures have not been implemented. Given
+that packages are executable files, the design doesn't seem to allow this to be fixed.</li>
+<li>Downloads cannot be safely shared between users.</li>
+<li>No checking for updates or support for multiple versions.</li>
+<li>Being closer to traditional installation, it's easier to package existing
+applications with Autopackage.</li>
+</ul>
+
+<p>
+Note that it is quite possible to list autopackages in a Zero Install feed, as
+described in <a href='http://thread.gmane.org/gmane.comp.autopackage.devel/5733/focus=5733'>this
+post on the Autopackage mailing list</a>. In this case, no scripts are run during
+installation (the package is treated as a normal archive), so not all packages will work,
+but many do.
+</p>
+
+</dd>
+
+<dt>EDOS / Mancoosi</dt>
+
+<dd>
+<p>
+The <a href='http://www.edos-project.org/xwiki/bin/Main/'>EDOS</a> (<i>Environment
+for the development and Distribution of Open Source software</i>) project was a research
+project looking at dependency management, QA, and efficient distribution of
+large software systems.
+</p>
+
+<p>
+<a href='http://www.mancoosi.org/'>Mancoosi</a> is a follow-on project
+("Managing the Complexity of the Open Source Infrastructure"). The
+group invited me to give a talk (March 2009); here are
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2322'>my notes</a>
+from the event.
+</p>
+</dd>
+
+<dt>Nix</dt>
+
+<dd>
+<p>
+<a href='http://nix.cs.uu.nl/'>Nix</a> is another "purely functional" package
+manager. It is purely functional in the sense that each version of a package
+has its own directory. As with Zero Install, "upgrading" creates a new
+directory for the new version, rather than modifying the existing one. Unlike
+Zero Install, however, whether a package is installed affects the behaviour of the
+system. For example, running "firefox" when Firefox isn't installed produces an
+error in Nix, whereas in Zero Install it will install Firefox first if missing
+and then continue. In other words, installation has side-effects in Nix.
+</p>
+
+<p>
+Additional feeds (e.g. for pre-built binaries) can be registered using
+"nix-channel --add", which appears to work much like "0launch --feed", although
+each channel can contain binaries for multiple packages.
+The channel "MANIFEST" file doesn't appear to have a digital signature. Presumably this
+will be added at some point.
+</p>
+
+<p>
+Each version of a package has a digest (hash), which includes all build
+dependencies (e.g. the version of the compiler used), just as it does in Zero
+Install (for packages built using 0compile, at least).
+</p>
+
+<p>
+An important difference between the two is that the Nix hash is a hash of the
+<i>inputs</i> used to build the package, whereas the Zero Install hash is a
+hash of the <i>resulting binary</i>.
+Nix does this to support binaries that hard code
+their own paths, since the final hash needs to be known at compile time.
+For source (non-compiled)
+packages, the Nix hash is a hash of the contents, as with Zero Install.
+The Zero Install hash often happens to include the inputs, since it covers the
+"build-environment.xml" file which 0compile places in each binary package. Zero
+Install doesn't allow binaries to include hard-coded paths.
+</p>
+
+<p>Update: Nix is planning to use binary hashes everywhere in future (zeroing out
+self-references for the purposes of calcuating the hashes). The same thing was proposed
+a few years ago for Zero Install (the
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/882/focus=882'>relocation table</a>).
+It relies on the cache directory being at a fixed location, whereas people often have Zero Install
+set up to use their home directory, but it's basically a good idea.</p>
+
+<p>
+Another difference between Nix and Zero Install is that Nix treats configurations
+as packages. Changing your configuration is like "upgrading" your configuration
+package to a new version. Rolling back a change is like reverting to a previous
+version. Zero Install doesn't generally handle configuration settings,
+preferring to let the user use subversion (or similar) for that, but it's an interesting idea.
+</p>
+
+<p>
+Building a Nix package involves creating a "Nix expression" in a (custom)
+functional language. The expression fills the same role as a Zero Install source
+feed: it says where to download the source, what its digest is, what the
+build dependencies are, and how to build it.
+</p>
+
+<p>
+While Zero Install is mainly targeted at adding additional packages to an existing
+system, Nix aims to manage the whole system (although it installs cleanly alongside
+your existing package manager). Nix packages have short names (like "perl") not
+full URIs, and thus it appears to assume a centrally-controlled repository.
+</p>
+
+<p>
+In Nix, mutually untrusting users cannot share packages. The manual says <q>A setuid
+installation should only by used if the users in the Nix group are mutually
+trusted, since any user in that group has the ability to change anything in the
+Nix store</q>. Because the Nix hash is a hash of the inputs, it is not possible
+for the system to verify that a package is valid (it would have to download the
+sources and compile the program itself; Nix can share binaries in this case).
+Because Zero Install hashes are always hashes of the package contents, it does
+support <a href='sharing.html'>sharing</a>.
+</p>
+
+</dd>
+
+<dt>DOAP: Description of a Project</dt>
+<dd><p>
+<a href='http://usefulinc.com/doap/'>DOAP</a> is a project to create an
+XML/RDF vocabulary to describe open source projects. We should investigate whether
+any of these elements would be useful in Zero Install feed files.
+</p>
+</dd>
+
+</dl>
+
+</html>
