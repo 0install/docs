@@ -133,6 +133,7 @@ A group has this syntax:
         arch='...' ? &gt;
     [requires] *
     [group] *
+    [command] *
     [binding] *
     [implementation] *
     [package-implementation] *
@@ -141,7 +142,7 @@ A group has this syntax:
 
 <p>
 All attributes of the group are inherited by any child groups and implementations as defaults, but
-can be overridden there. All dependencies ("requires") and bindings are inherited (sub-groups may add more
+can be overridden there. All dependencies ("requires"), bindings and commands are inherited (sub-groups may add more
 dependencies and bindings to the list, but cannot remove anything).
 </p>
 
