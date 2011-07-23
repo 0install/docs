@@ -15,9 +15,16 @@
   </xsl:template>
 
   <xsl:template match='item'>
+    <!-- Show expanded if we have children and,
+         - We are selected
+	 - One of our descendants is selected, or
+	 - We are a top-level item
+    -->
+    <xsl:variable name='expand' select='item and ((descendant-or-self::item[concat(@base, ".html") = $file]) or ..=/)'/>
+
     <li>
       <xsl:choose>
-        <xsl:when test='item and (../descendant-or-self::item[concat(@base, ".html") = $file])'>
+        <xsl:when test='$expand'>
 	  <xsl:attribute name='class'>open</xsl:attribute>
         </xsl:when>
         <xsl:when test='item'>
@@ -41,7 +48,7 @@
         <xsl:value-of select='@label'/>&#160;
       </a>
       <!-- Expanded contents -->
-      <xsl:if test='item and (../descendant-or-self::item[concat(@base, ".html") = $file])'>
+      <xsl:if test='$expand'>
        <ul>
         <xsl:apply-templates select='item'/>
        </ul>
