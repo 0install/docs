@@ -568,14 +568,7 @@ itself.
 </p>
 
 <p class='uml'>
-  <img src='UML/zero-install-binding.png' width='275' height='225' alt='Binding classes'/>
-</p>
-
-<p>
-<strong>Note:</strong> Bindings outside of &lt;requires&gt; elements require 0launch >= 0.31.
-However, the same effect can be achieved with earlier versions of 0launch by
-adding an explicit &lt;requires&gt; from a component to itself and putting the
-binding in that.
+  <img src='UML/zero-install-binding.png' width='425' height='225' alt='Binding classes'/>
 </p>
 
 <h3>Environment bindings</h3>
@@ -590,14 +583,14 @@ binding in that.
 </pre>
 
 <p>
-Details of the chosen implementation is passed to the program by setting environment variables,
+Details of the chosen implementation are passed to the program by setting environment variables,
 as specified by the &lt;environment&gt; elements (typically, there will be exactly one of these in each
 &lt;requires&gt; element). Each environment element gives the name of the variable and the relative path
 of the item within the implementation to insert into the variable's value.
 </p>
 
 <p>
-Usually, the (badly-named) <b>insert</b> attribute is used, which adds a path to something inside the
+Usually, the (badly-named) <b>insert</b> attribute is used, which adds a path to a file or directory inside the
 implementation to the environment variable. For example, &lt;environment
 name='PATH' insert='bin'/&gt; would perform something similar to the bash shell
 statement <b>export PATH=/path/to/impl/bin:$PATH</b>.
@@ -637,37 +630,55 @@ needed with them:
 <dt>XDG_DATA_DIRS</dt><dd>/usr/local/share:/usr/share</dd>
 </dl>
 
-<p>
-The <b>mode</b> argument is ignored by versions of the injector prior to 0.28, which act as if
-<b>prepend</b> was given.
-</p>
-
-<h3>Overlay bindings</h3>
+<h3>Executable bindings</h3>
 
 <p>
-<strong>Note:</strong> This feature is not yet supported by any version of Zero Install, but is proposed for Klik 2.
+  These both require 0install >= 1.2.
 </p>
 
 <pre>
-  &lt;overlay
-    src='...' ?
-    mount-point='...' ? /&gt;
+    &lt;executable-in-var
+	  name='...'
+	  command='...' ? /&gt; *
+
+    &lt;executable-in-path
+	  name='...'
+	  command='...' ? /&gt; *
 </pre>
 
 <p>
-An overlay binding specifies that the chosen implementation should be made
-available at the given location in the filesystem (typically, by using some
-kind of per-process union mount).
+  These are used when the program needs to run another program. <b>command</b> says which of the program's commands to use; the default is "run".
 </p>
 
-<dl>
- <dt>src</dt> <dd>The relative path of the directory in the implementation to publish. The default is '.', to publish everything.</dd>
- <dt>mount-point</dt> <dd>The mount point on which <b>src</b> is to appear in the filesystem. If missing, '/' is assumed.</dd>
-</dl>
+<p>
+  &lt;executable-in-var&gt; stores the path of the selected executable
+  in the named environment variable. For example, if a program uses <b>$MAKE</b> to run make, you can provide the required command
+  like this:
+</p>
+
+<pre>
+  &lt;requires interface="http://repo.roscidus.com/devel/make"&gt;
+    &lt;executable-in-var name='MAKE'/&gt;
+  &lt;/requires&gt;
+</pre>
 
 <p>
-For example, if the implementation contains the file <b>usr/games/foo</b> then <b>&lt;overlay /&gt;</b> means that the running process should
-be able to access this file using the absolute path <b>/usr/games/foo</b>.
+  &lt;executable-in-path&gt; works in a similar way, except that it adds a directory containing the executable to $PATH. For example,
+  if the program instead just runs the <b>make</b> command, you would use:
+</p>
+
+<pre>
+  &lt;requires interface="http://repo.roscidus.com/devel/make"&gt;
+    &lt;executable-in-path name='make'/&gt;
+  &lt;/requires&gt;
+</pre>
+
+<p>
+  It is preferable to use &lt;executable-in-var&gt; where possible, to avoid making $PATH very long.
+</p>
+
+<p>
+  Implementation note: On POSIX systems, 0install will create a shell script under ~/.cache/0install.net/injector/executables and pass the path of this script. 
 </p>
 
 <h2 id='versions'>Versions</h2>
