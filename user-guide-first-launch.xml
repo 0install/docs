@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+
+<h2>First Launch</h2>
+<p>
+  When launching a feed for the first time, 0install will download the
+  necessary files for you and store them in <a href='user-guide-cache.html'>the cache</a>.
+  Next time, 0install will use these stored files, so you don't need to download the
+  program again. From time to time 0install will check for updates and offer to
+  download them. For example:
+</p>
+
+<pre>
+  $ 0launch http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml
+</pre>
+
+<table class='howitworks'>
+ <tr><th colspan='2'>1. Confirm the keys</th></tr>
+ <tr>
+  <td class='image'><img src='screens/confirm-key.png' alt='' width='400' height='323'/></td>
+  <td>
+      <p>Zero Install downloads information about the program from the given address.</p>
+      <p>It checks that the information is signed using a GPG key you trust, confirming first if not.
+      Even if you don't know about this key yet, it may provide a hint if it's in our database.</p>
+    <p>[ Note: newer versions skip this confirmation for keys in the database. You can set
+      it to confirm all keys in the Preferences dialog if you prefer the old behaviour. ]</p>
+  </td>
+ </tr>
+
+ <tr><th colspan='2'>2. Download the files</th></tr>
+ <tr>
+  <td class='image'><img src='screens/find-libraries.png' alt='' width='400' height='264'/></td>
+  <td>
+  <p>The downloaded file says that <b>ClanBomber</b> requires various libraries (SDL, libpng, etc).
+Each library is identified by a web address (URL) in the same way that the main <b>ClanBomber</b> program was.
+Zero Install downloads information about them in the same way. Since they may
+be written by different people and be on different sites, you may be asked to confirm more keys. The window
+displays a dialog box showing the program and all required libraries. Click <b>Download</b>.</p>
+  </td>
+ </tr>
+
+ <tr><th colspan='2'>3. Wait for the download to finish</th></tr>
+ <tr>
+  <td class='image'><img src='screens/download-foo.png' alt='' width='400' height='349'/></td>
+  <td>
+  <p>Zero Install now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
+rpm and deb). It unpacks each one into its own directory and
+checks its contents against the <i>cryptographic digest</i>
+given in the (signed) feed file. If the archive has been changed since the feed was signed,
+the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory
+(see <a href='sharing.html'>sharing</a> for more information) in its own
+subdirectory, named after the digest. This ensures that no two downloads can
+conflict with each other.
+  </p>
+  </td>
+ </tr>
+</table>
+
+<quicklinks>
+  <link href='user-guide-intro.html' img='tango/go-prev.png'>Go back</link>
+  <link href='user-guide-shortcuts.html' img='tango/go-next.png'>Continue</link>
+</quicklinks>
+ 
+</html>

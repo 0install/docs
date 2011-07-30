@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+
+<h2>Making shortcuts</h2>
+
+<p>
+  Shortcuts provide an easy way to run a program without entering the full URI,
+  just like a bookmark in a web-browser provides an easy way to return to a web
+  page without entering the full URL. 
+</p>
+
+<p>
+Different environments provide different ways to add shortcuts.
+</p>
+
+<toc level="h3"/>
+
+
+<h3>GNOME</h3>
+
+<p>
+  Choose <b>Zero Install -> Add New Program</b> from the <b>Applications</b>
+  menu.  Type in the URI, or drag it from the web-browser into the dialog box.
+  This video above demonstrates this.
+</p>
+
+<p style='text-align: center'>
+  <img width="335" height="259" src="tutorial/add-with-gnome.png" alt='Adding with GNOME'/>
+</p>
+
+<p>
+  <b>Ubuntu users</b>: You need to open and then close the menu editor after
+  adding a program before it will show up; see 
+  <a href='https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958'>Ubuntu
+  bug #191958</a>. You can also run programs directly by choosing <b>Manage
+  Programs</b> from the menu.
+</p>
+
+
+<h3>KDE</h3>
+
+<p>
+  Choose <b>Add Zero Install Program</b> from the <b>Utilities</b> menu. Type
+  in the URI, or drag it from the web-browser into the dialog box.
+</p>
+
+<p style='text-align: center'>
+  <img width="318" height="165" src="tutorial/add-with-kde.png" alt='Adding with KDE'/>
+</p>
+
+
+<h3>ROX</h3>
+
+<p>
+  Drag the link from your web-browser to the AddApp program, then drag the
+  launcher from there to wherever you want it. 
+  <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>'s page has
+  more details.
+</p>
+
+<p style='text-align: center'>
+  <img width="546" height="184" src="tutorial/add-with-rox.png" alt='Adding with ROX'/>
+</p>
+
+
+<h3>Finder</h3>
+
+<p>
+  Copy the link from your web-browser to the AddApp program, then save the
+  launcher from there to wherever you want it.
+</p>
+
+<p style='text-align: center'>
+  <img width="591" height="200" src="tutorial/add-with-finder.png" alt='Adding with Finder'/>
+</p>
+
+
+<h3>Shell</h3>
+
+<p>
+  The <b>0alias</b> command can be used to create little shell scripts to start
+  programs easily:
+</p>
+
+<pre>
+$ <b>0alias rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
+</pre>
+
+<p>
+  The command puts the script in the first writable directory in your $PATH.
+  You can now run Edit like this:
+</p>
+
+<pre>
+$ <b>rox-edit</b>
+</pre>
+
+<quicklinks>
+  <link href='user-guide-first-launch.html' img='tango/go-prev.png'>Go back</link>
+  <link href='user-guide-policy.html' img='tango/go-next.png'>Continue</link>
+</quicklinks>
+ 
+</html>
