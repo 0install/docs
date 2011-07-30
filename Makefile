@@ -21,7 +21,11 @@ HTML = index.php \
        features.html \
        feedlint.html \
        get-involved.html \
-       howitworks.html \
+       user-guide-cache.html \
+       user-guide-first-launch.html \
+       user-guide-intro.html \
+       user-guide-policy.html \
+       user-guide-shortcuts.html \
        injector-design.html \
        injector-feeds.html \
        injector-find.html \
@@ -31,7 +35,6 @@ HTML = index.php \
        injector-specs.html \
        injector-tests.html \
        injector-trouble.html \
-       injector-using.html \
        install-linux.html \
        install-mac.html \
        install-source.html \
@@ -50,14 +53,12 @@ HTML = index.php \
        perspectives.html \
        pkg2zero.html \
        roadmap.html \
+       servers.html \
        sharing.html \
        support.html \
        survey.html \
        templates.html \
        tools.html \
-       tutorial-downloads.html \
-       tutorial-launchers.html \
-       tutorial-policy.html \
        users.html \
        using-git.html \
        virtual.html \

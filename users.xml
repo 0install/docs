@@ -1,13 +1,43 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html>
 
-<h2>Documentation</h2>
+<h2>User Guide</h2>
 
-<dl>
-    <dt><a href='injector-using.html'>Tutorial</a></dt><dd>Step by step guide to using Zero Install.</dd>
+<p>
+  This guide starts by explaining the basics: showing you how to launch applications, make
+  shortcuts and so on. It then proceeds by delving deeper into more advanced topics.
+</p>
+<p>
+  The guide assumes you have <a href='injector.html'>got 0install</a>.
+</p>
 
-    <dt><a href='walkthrough.html'>Manual walk-through</a></dt><dd>In this guide we install a program which is available through Zero Install, but without using the Zero Install software itself. Instead, we will perform each step manually, as an educational experience.</dd>
-</dl>
+<h3>Contents</h3>
+<ol>
+  <li>
+    Basic Usage
+    <ol>
+      <li><a href='user-guide-intro.html'>Introduction</a></li>
+      <li><a href='user-guide-first-launch.html'>First Launch</a></li>
+      <li><a href='user-guide-0launch.html'>Launching Directly</a></li>
+      <li><a href='user-guide-shortcuts.html'>Making Shortcuts</a></li>
+    </ol>
+  </li>
+
+  <li>
+    Advanced Usage
+    <ol>
+      <li><a href='user-guide-policy.html'>Policy Settings</a></li>
+      <li><a href='user-guide-cache.html'>Cache and sharing</a></li>
+      <li><a href='walkthrough.html'>Manual walk-through</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p>
+  After you have read this guide, you may want to read 
+  <a href='packaging-guide-understanding.html'>the Understanding 0install
+    section</a> of the packaging guide for deeper understanding.
+</p>
 
 <quicklinks>
   <link href='injector.html' img='tango/go-next.png'>Install it!</link>

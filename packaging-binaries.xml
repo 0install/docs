@@ -2,7 +2,7 @@
 <html lang="en">
 
 <program name='0publish-gui'
-	 title='Packaging guide'
+	 title='Packaging binaries with 0publish-gui'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/0publish-gui.xml'
 	 git='http://repo.or.cz/w/0publish-gui.git'
@@ -18,7 +18,7 @@ and animation program.
 
 <p>
 You should already be familiar with the general operation of Zero Install. If not, start by reading
-the <a href='injector-using.html'>user tutorial</a>.
+the <a href='users.html'>user tutorial</a>.
 </p>
 
 <p>

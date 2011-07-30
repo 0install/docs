@@ -563,7 +563,7 @@ These three are probably correct, by I'll need more specific input before I can 
 
 <p>
 Poor uninstall documentation might just be because there actually isn't a very good interface at present; you have to select each package to remove
-manually, as explained in the <a href='injector-using.html'>the new user tutorial</a>. I'm not sure that "starting" the cache means. The cache is just
+manually, as explained in the <a href='users.html'>the new user tutorial</a>. I'm not sure that "starting" the cache means. The cache is just
 a directory.
 </p>
 

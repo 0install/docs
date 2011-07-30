@@ -30,13 +30,17 @@
 
   <item base="doc" label="Documentation">
     <item base='users' label='For users'>
-      <item base='injector-using' label='Tutorials'>
-	<item base="howitworks" label="Screenshots"/>
-	<item base='tutorial-launchers' label='Part 1: launchers'/>
-	<item base='tutorial-downloads' label='Part 2: downloads'/>
-	<item base='tutorial-policy' label='Part 3: policy'/>
+      <item href='user-guide-intro.html' label='Basic usage'>
+        <item base='user-guide-intro' label='Introduction'/>
+        <item base='user-guide-first-launch' label='First launch'/>
+        <item base='user-guide-shortcuts' label='Making shortcuts'/>
       </item>
-      <item base="walkthrough" label="Walk-through"/>
+      <item href='user-guide-policy.html' label='Advanced usage'>
+        <item base='user-guide-policy' label="Policy settings"/>
+        <item base='user-guide-cache' label="Cache and sharing"/>
+        <item base='servers' label="Servers"/>
+        <item base="walkthrough" label="Walk-through"/>
+      </item>
     </item>
 
     <item base='packagers' label='For packagers'>

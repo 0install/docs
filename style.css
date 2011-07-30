@@ -579,6 +579,10 @@ a.button {
 	padding: 0.1em;
 }
 
+table.howitworks th {
+  	text-align: left;
+}
+
 table.howitworks td {
 	vertical-align: top;
 	padding: 1em;

@@ -62,12 +62,12 @@
 </dl>
 
 <p>
-If a package for your distribution is listed above, install that and then <a href='injector-using.html'>try using it</a>!
+If a package for your distribution is listed above, install that and then <a href='users.html'>try using it</a>!
 Otherwise, <a href='install-source.html'>get the source package instead</a>.
 </p>
 
 <quicklinks>
-  <link href='injector-using.html' img='tango/go-next.png'>Continue to tutorial</link>
+  <link href='users.html' img='tango/go-next.png'>Continue to tutorial</link>
 </quicklinks>
 
 </html>

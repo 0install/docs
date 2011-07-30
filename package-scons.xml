@@ -17,7 +17,7 @@ We will start by packaging SCons, a build system (a little like Make).
 
 <p>
 You should already be familiar with the general operation of the injector. In not, start by reading
-the <a href='injector-using.html'>user tutorial</a>.
+the <a href='users.html'>user tutorial</a>.
 </p>
 
 <toc level='h2'/>
