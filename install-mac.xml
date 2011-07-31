@@ -25,6 +25,9 @@ or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using eith
 <p>Currently using MacPorts, Fink or JHBuild all require compiling from source code,<br />
 so if you want to get started quickly the easiest way is the Bundle: <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/ZeroInstall.pkg'>ZeroInstall.pkg</a></p>
 
+<p>Note: to use the 1.0 Bundle on OS X Lion, you need to tell python to use version 2.6<br />
+by using this command before starting it: <tt>export VERSIONER_PYTHON_VERSION=2.6</tt></p>
+
 <quicklinks>
   <link href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
 </quicklinks>
