@@ -135,11 +135,11 @@
     <ul>
     <li> <strong class="uidlink"><a href="zeroinstall.alias.NotAnAliasScript-class.html">zeroinstall.alias.NotAnAliasScript</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.SafeException-class.html">zeroinstall.SafeException</a></strong>:
+    <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
       <em class="summary">An exception that can be reported to the user without a stack 
         trace.</em>
     </li>
-    <li> <strong class="uidlink">zeroinstall.SafeException</strong>:
+    <li> <strong class="uidlink"><a href="zeroinstall.SafeException-class.html">zeroinstall.SafeException</a></strong>:
       <em class="summary">An exception that can be reported to the user without a stack 
         trace.</em>
     </li>
@@ -158,7 +158,7 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Command-class.html">zeroinstall.injector.model.Command</a></strong>:
       <em class="summary">A Command is a way of running an Implementation as a program.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Config-class.html">zeroinstall.injector.policy.Config</a></strong>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.config.Config-class.html">zeroinstall.injector.config.Config</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.Dependency-class.html">zeroinstall.injector.model.Dependency</a></strong>:
       <em class="summary">A Dependency indicates that an Implementation requires some 
@@ -173,6 +173,9 @@
     <li> <strong class="uidlink">zeroinstall.injector.download.Download</strong>:
       <em class="summary">A download of a single resource to a temporary file.</em>
     </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.driver.Driver-class.html">zeroinstall.injector.driver.Driver</a></strong>:
+      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.model.DummyFeed-class.html">zeroinstall.injector.model.DummyFeed</a></strong>:
       <em class="summary">Temporary class used during API transition.</em>
     </li>
@@ -186,11 +189,11 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.fetch.Fetcher-class.html">zeroinstall.injector.fetch.Fetcher</a></strong>:
       <em class="summary">Downloads and stores various things.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>:
-      <em class="summary">This implementation uses the GLib mainloop.</em>
-    </li>
     <li> <strong class="uidlink">zeroinstall.injector.handler.Handler</strong>:
-      <em class="summary">This implementation uses the GLib mainloop.</em>
+      <em class="summary">A Handler is used to interact with the user (e.g.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.handler.Handler-class.html">zeroinstall.injector.handler.Handler</a></strong>:
+      <em class="summary">A Handler is used to interact with the user (e.g.</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html">zeroinstall.injector.iface_cache.IfaceCache</a></strong>:
       <em class="summary">The interface cache stores downloaded and verified interfaces in 
@@ -208,8 +211,7 @@
       <em class="summary">A feed that has been downloaded but not yet added to the interface 
         cache.</em>
     </li>
-    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>:
-      <em class="summary">Chooses a set of implementations based on a policy.</em>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.policy.Policy-class.html">zeroinstall.injector.policy.Policy</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.requirements.Requirements-class.html">zeroinstall.injector.requirements.Requirements</a></strong>:
       <em class="summary">Holds information about what the user asked for (which program, 
@@ -231,6 +233,8 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector.selections.Selections-class.html">zeroinstall.injector.selections.Selections</a></strong>:
       <em class="summary">A selected set of components which will make up a complete program.</em>
     </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.run.Setup-class.html">zeroinstall.injector.run.Setup</a></strong>
+    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg.Signature-class.html">zeroinstall.injector.gpg.Signature</a></strong>:
       <em class="summary">Abstract base class for signature check results.</em>
     </li>
@@ -247,6 +251,11 @@
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustDB-class.html">zeroinstall.injector.trust.TrustDB</a></strong>:
       <em class="summary">A database of trusted keys.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.trust.TrustMgr-class.html">zeroinstall.injector.trust.TrustMgr</a></strong>:
+      <em class="summary">A TrustMgr handles the process of deciding whether to trust new 
+        keys (contacting the key information server, prompting the user, 
+        accepting automatically, etc)</em>
     </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.sat.VarInfo-class.html">zeroinstall.injector.sat.VarInfo</a></strong>
     </li>
@@ -287,7 +296,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:56 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

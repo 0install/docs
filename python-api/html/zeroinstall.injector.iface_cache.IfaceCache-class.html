@@ -397,6 +397,64 @@ object --+
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[model.Interface]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#get_feed_targets" class="summary-sig-name">get_feed_targets</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed</span>)</span><br />
+      Return a list of Interfaces for which feed can be a feed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed_targets">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#is_stale" class="summary-sig-name">is_stale</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">feed</span>,
+        <span class="summary-sig-arg">freshness_threshold</span>)</span><br />
+      Check whether feed needs updating, based on the configured <code 
+      class="link">freshness</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.is_stale">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">generator</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.iface_cache.IfaceCache-class.html#usable_feeds" class="summary-sig-name">usable_feeds</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iface</span>,
+        <span class="summary-sig-arg">arch</span>)</span><br />
+      Generator for <code>iface.feeds</code> that are valid for this 
+      architecture.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.usable_feeds">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -853,6 +911,99 @@ object --+
       </p>
 </div></td></tr></table>
 </div>
+<a name="get_feed_targets"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_feed_targets</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.get_feed_targets">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return a list of Interfaces for which feed can be a feed. This is used
+  by <b>0install add-feed</b>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>feed</code></strong> (<a href="zeroinstall.injector.model.ZeroInstallFeed-class.html" 
+          class="link">model.ZeroInstallFeed</a> (or, deprecated, a URL)) - the feed</li>
+    </ul></dd>
+    <dt>Returns: [model.Interface]</dt>
+    <dt>Raises:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code><strong class='fraise'><a href="zeroinstall.SafeException-class.html">SafeException</a></strong></code> - If there are no known feeds.</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.53
+      </p>
+</div></td></tr></table>
+</div>
+<a name="is_stale"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_stale</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">feed</span>,
+        <span class="sig-arg">freshness_threshold</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.is_stale">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check whether feed needs updating, based on the configured <code 
+  class="link">freshness</code>. None is considered to be stale. If we 
+  already tried to update the feed within FAILED_CHECK_DELAY, returns 
+  false.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>True if feed should be updated</dd>
+  </dl>
+<div class="fields">      <p><strong>Since:</strong>
+        0.53
+      </p>
+</div></td></tr></table>
+</div>
+<a name="usable_feeds"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">usable_feeds</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">iface</span>,
+        <span class="sig-arg">arch</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.iface_cache-pysrc.html#IfaceCache.usable_feeds">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Generator for <code>iface.feeds</code> that are valid for this 
+  architecture.</p>
+  <dl class="fields">
+    <dt>Returns: generator</dt>
+  </dl>
+<div class="fields">      <p><strong>See Also:</strong>
+        <a href="zeroinstall.injector.arch-module.html" 
+        class="link">arch</a>
+      </p>
+      <p><strong>Since:</strong>
+        0.53
+      </p>
+</div></td></tr></table>
+</div>
 <br />
 <!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
 <a name="section-InstanceVariableDetails"></a>
@@ -918,7 +1069,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:57 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

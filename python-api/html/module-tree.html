@@ -59,13 +59,14 @@
 <h1 class="epydoc">Module Hierarchy</h1>
 <ul class="nomargin-top">
     <li> <strong class="uidlink"><a href="zeroinstall-module.html">zeroinstall</a></strong>: <em class="summary">The Python implementation of the Zero Install injector is divided 
-        into four sub-packages:</em>
+        into five sub-packages:</em>
     <ul>
     <li> <strong class="uidlink"><a href="zeroinstall.alias-module.html">zeroinstall.alias</a></strong>: <em class="summary">Support code for 0alias scripts.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd-module.html">zeroinstall.cmd</a></strong>: <em class="summary">The <b>0install</b> command-line interface.</em>
     <ul>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd.add_feed-module.html">zeroinstall.cmd.add_feed</a></strong>: <em class="summary">The <b>0install add-feed</b> command-line interface.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd.config-module.html">zeroinstall.cmd.config</a></strong>: <em class="summary">The <b>0install config</b> command-line interface.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.cmd.digest-module.html">zeroinstall.cmd.digest</a></strong>: <em class="summary">The <b>0install digest</b> command-line interface.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd.download-module.html">zeroinstall.cmd.download</a></strong>: <em class="summary">The <b>0install download</b> command-line interface.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd.import-module.html">zeroinstall.cmd.import</a></strong>: <em class="summary">The <b>0install import</b> command-line interface.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.cmd.list-module.html">zeroinstall.cmd.list</a></strong>: <em class="summary">The <b>0install list</b> command-line interface.</em>    </li>
@@ -95,11 +96,19 @@
     <li> <strong class="uidlink"><a href="zeroinstall.injector-module.html">zeroinstall.injector</a></strong>: <em class="summary">Code relating to interfaces and policies.</em>
     <ul>
     <li class="private"> <strong class="uidlink"><a href="zeroinstall.injector._download_child-module.html">zeroinstall.injector._download_child</a></strong>    </li>
+    <li class="private"> <strong class="uidlink"><a href="zeroinstall.injector._runenv-module.html">zeroinstall.injector._runenv</a></strong>: <em class="summary">Helper script for &lt;executable&gt; bindings.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.arch-module.html">zeroinstall.injector.arch</a></strong>: <em class="summary">Information about the current system's architecture.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.background-module.html">zeroinstall.injector.background</a></strong>: <em class="summary">Check for updates in a background process.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.cli-module.html">zeroinstall.injector.cli</a></strong>: <em class="summary">The <b>0launch</b> command-line interface.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.config-module.html">zeroinstall.injector.config</a></strong>: <em class="summary">Holds user settings and various helper objects.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.distro-module.html">zeroinstall.injector.distro</a></strong>: <em class="summary">Integration with native distribution package managers.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.download-module.html">zeroinstall.injector.download</a></strong>: <em class="summary">Handles URL downloads.</em>    </li>
+    <li> <strong class="uidlink"><a href="zeroinstall.injector.driver-module.html">zeroinstall.injector.driver</a></strong>: <em class="summary">This class brings together a <a 
+        href="zeroinstall.injector.solver.Solver-class.html" 
+        class="link">solve.Solver</a> to choose a set of implmentations, a 
+        <a href="zeroinstall.injector.fetch.Fetcher-class.html" 
+        class="link">fetch.Fetcher</a> to download additional components, 
+        and the user's configuration settings.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.fetch-module.html">zeroinstall.injector.fetch</a></strong>: <em class="summary">Downloads feeds, keys, packages and icons.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.gpg-module.html">zeroinstall.injector.gpg</a></strong>: <em class="summary">Python interface to GnuPG.</em>    </li>
     <li> <strong class="uidlink"><a href="zeroinstall.injector.handler-module.html">zeroinstall.injector.handler</a></strong>: <em class="summary">Integrates download callbacks with an external mainloop.</em>    </li>
@@ -176,7 +185,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:56 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

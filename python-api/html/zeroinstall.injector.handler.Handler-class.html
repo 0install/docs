@@ -68,8 +68,8 @@ object --+
 </pre>
 
 <hr />
-<p>This implementation uses the GLib mainloop. Note that QT4 can use the 
-  GLib mainloop too.</p>
+<p>A Handler is used to interact with the user (e.g. to confirm keys, 
+  display download progress, etc).</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -160,8 +160,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#wait_for_blocker" class="summary-sig-name">wait_for_blocker</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">blocker</span>)</span><br />
-      Run a recursive mainloop until blocker is triggered.</td>
+        <span class="summary-sig-arg">blocker</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.wait_for_blocker">source&nbsp;code</a></span>
             
@@ -186,26 +185,6 @@ object --+
       Return the Download object currently downloading 'url'.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.get_download">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">None | <a href="zeroinstall.support.tasks.Blocker-class.html" 
-      class="link">Blocker</a></span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.handler.Handler-class.html#confirm_keys" class="summary-sig-name">confirm_keys</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">pending</span>,
-        <span class="summary-sig-arg">fetch_key_info</span>)</span><br />
-      We don't trust any of the signatures yet.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_keys">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -450,15 +429,13 @@ object --+
     </td>
   </tr></table>
   
-  <p>Run a recursive mainloop until blocker is triggered.</p>
+  
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>blocker</code></strong> (<a href="zeroinstall.support.tasks.Blocker-class.html" 
-          class="link">tasks.Blocker</a>) - event to wait on</li>
-    </ul></dd>
   </dl>
-</td></tr></table>
+<div class="fields">      <p><strong>Deprecated:</strong>
+        use tasks.wait_for_blocker instead
+      </p>
+</div></td></tr></table>
 </div>
 <a name="get_download"></a>
 <div>
@@ -488,49 +465,6 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="confirm_keys"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">confirm_keys</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">pending</span>,
-        <span class="sig-arg">fetch_key_info</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.handler-pysrc.html#Handler.confirm_keys">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>We don't trust any of the signatures yet. Ask the user. When done 
-  update the <a href="zeroinstall.injector.trust-module.html" 
-  class="link">trust</a> database, and then call <a 
-  href="zeroinstall.injector.trust.TrustDB-class.html#notify" 
-  class="link">trust.TrustDB.notify</a>. This method starts downloading 
-  information about the signing keys and calls <a 
-  href="zeroinstall.injector.handler.Handler-class.html#confirm_import_feed"
-  class="link">confirm_import_feed</a>.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>pending</code></strong> (<a href="zeroinstall.injector.iface_cache.PendingFeed-class.html"
-          class="link">PendingFeed</a>) - an object holding details of the updated feed</li>
-        <li><strong class="pname"><code>fetch_key_info</code></strong> (str -&gt; <a href="zeroinstall.support.tasks.Blocker-class.html" 
-          class="link">Blocker</a>) - a function which can be used to fetch information about a key 
-          fingerprint</li>
-    </ul></dd>
-    <dt>Returns: None | <a href="zeroinstall.support.tasks.Blocker-class.html" 
-      class="link">Blocker</a></dt>
-        <dd>A blocker that triggers when the user has chosen, or None if 
-          already done.</dd>
-  </dl>
-<div class="fields">      <p><strong>Since:</strong>
-        0.42
-      </p>
-</div></td></tr></table>
-</div>
 <a name="confirm_import_feed"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -549,9 +483,9 @@ object --+
   
   <p>Sub-classes should override this method to interact with the user 
   about new feeds. If multiple feeds need confirmation, <a 
-  href="zeroinstall.injector.handler.Handler-class.html#confirm_keys" 
-  class="link">confirm_keys</a> will only invoke one instance of this 
-  method at a time.</p>
+  href="zeroinstall.injector.trust.TrustMgr-class.html#confirm_keys" 
+  class="link">trust.TrustMgr.confirm_keys</a> will only invoke one 
+  instance of this method at a time.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -570,11 +504,6 @@ object --+
   </dl>
 <div class="fields">      <p><strong>Since:</strong>
         0.42
-      </p>
-      <p><strong>See Also:</strong>
-        <a 
-        href="zeroinstall.injector.handler.Handler-class.html#confirm_keys"
-        class="link">confirm_keys</a>
       </p>
 </div></td></tr></table>
 </div>
@@ -693,7 +622,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:57 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -85,10 +85,26 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">handler</span>)</span><br />
+        <span class="summary-sig-arg">config</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#handler" class="summary-sig-name">handler</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.handler">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -143,7 +159,6 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#get_packagekit_feed" class="summary-sig-name">get_packagekit_feed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">iface_cache</span>,
         <span class="summary-sig-arg">feed_url</span>)</span><br />
       Send a query to PackageKit (if available) for information about this 
       package.</td>
@@ -164,7 +179,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#download_and_import_feed" class="summary-sig-name">download_and_import_feed</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">feed_url</span>,
-        <span class="summary-sig-arg">iface_cache</span>,
+        <span class="summary-sig-arg">iface_cache</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
       Download the feed, download any required keys, confirm trust if 
       needed and import.</td>
@@ -245,8 +260,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="zeroinstall.injector.fetch.Fetcher-class.html#download_icon" class="summary-sig-name">download_icon</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">interface</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">modification_time</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
       Download an icon for this interface and add it to the icon cache.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.download_icon">source&nbsp;code</a></span>
@@ -325,19 +339,11 @@ object --+
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str | None</span>
+      <span class="summary-type"><a href="zeroinstall.injector.config.Config-class.html" 
+      class="link">config.Config</a></span>
     </td><td class="summary">
-        <a name="feed_mirror"></a><span class="summary-name">feed_mirror</span><br />
-      the base URL of a mirror site for keys and feeds
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type"><a href="zeroinstall.injector.handler.Handler-class.html" 
-      class="link">handler.Handler</a></span>
-    </td><td class="summary">
-        <a name="handler"></a><span class="summary-name">handler</span><br />
-      handler to use for user-interaction
+        <a name="config"></a><span class="summary-name">config</span><br />
+      used to get handler, iface_cache and stores
     </td>
   </tr>
 <tr>
@@ -347,14 +353,6 @@ object --+
     </td><td class="summary">
         <a name="key_info"></a><span class="summary-name">key_info</span><br />
       caches information about GPG keys
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
-    </td><td class="summary">
-        <a name="key_info_server"></a><span class="summary-name">key_info_server</span><br />
-      the base URL of a key information server
     </td>
   </tr>
 </table>
@@ -391,7 +389,7 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">handler</span>)</span>
+        <span class="sig-arg">config</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -406,6 +404,29 @@ object --+
         object.__init__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="handler"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handler</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.handler">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -454,7 +475,6 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_packagekit_feed</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">iface_cache</span>,
         <span class="sig-arg">feed_url</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -481,7 +501,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_import_feed</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">feed_url</span>,
-        <span class="sig-arg">iface_cache</span>,
+        <span class="sig-arg">iface_cache</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -495,8 +515,7 @@ object --+
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>feed_url</code></strong> (str) - the feed to be downloaded</li>
-        <li><strong class="pname"><code>iface_cache</code></strong> (<a href="zeroinstall.injector.iface_cache.IfaceCache-class.html" 
-          class="link">iface_cache.IfaceCache</a>) - cache in which to store the feed</li>
+        <li><strong class="pname"><code>iface_cache</code></strong> - (deprecated)</li>
         <li><strong class="pname"><code>force</code></strong> - whether to abort and restart an existing download</li>
     </ul></dd>
   </dl>
@@ -572,8 +591,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">download_icon</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">interface</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">modification_time</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="zeroinstall.injector.fetch-pysrc.html#Fetcher.download_icon">source&nbsp;code</a></span>&nbsp;
@@ -581,7 +599,7 @@ object --+
   </tr></table>
   
   <p>Download an icon for this interface and add it to the icon cache. If 
-  the interface has no icon or we are offline, do nothing.</p>
+  the interface has no icon do nothing.</p>
   <dl class="fields">
     <dt>Returns: <a href="zeroinstall.support.tasks.Task-class.html" 
       class="link">tasks.Task</a></dt>
@@ -645,7 +663,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Feb 26 16:55:17 2011
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:57 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
