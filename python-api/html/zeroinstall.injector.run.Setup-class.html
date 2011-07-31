@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>zeroinstall.injector.autopolicy.AutoPolicy</title>
+  <title>zeroinstall.injector.run.Setup</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,8 +44,8 @@
       <span class="breadcrumbs">
         <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
         <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
-        <a href="zeroinstall.injector.autopolicy-module.html">Module&nbsp;autopolicy</a> ::
-        Class&nbsp;AutoPolicy
+        <a href="zeroinstall.injector.run-module.html">Module&nbsp;run</a> ::
+        Class&nbsp;Setup
       </span>
     </td>
     <td>
@@ -53,24 +53,26 @@
         <!-- hide/show private -->
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html"
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.run.Setup-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class AutoPolicy</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class Setup</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-   object --+    
-            |    
-policy.Policy --+
-                |
-               <strong class="uidshort">AutoPolicy</strong>
+object --+
+         |
+        <strong class="uidshort">Setup</strong>
 </pre>
 
 <hr />
-<!-- ==================== INSTANCE METHODS ==================== -->
+<hr />
+<div class="fields">      <p><strong>Since:</strong>
+        1.2
+      </p>
+</div><!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
@@ -84,15 +86,33 @@ policy.Policy --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">interface_uri</span>,
-        <span class="summary-sig-arg">download_only</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">dry_run</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">src</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">handler</span>=<span class="summary-sig-default">None</span>)</span><br />
+          <td><span class="summary-sig"><a href="zeroinstall.injector.run.Setup-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stores</span>,
+        <span class="summary-sig-arg">selections</span>)</span><br />
       x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">[str]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.run.Setup-class.html#build_command" class="summary-sig-name">build_command</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">command_iface</span>,
+        <span class="summary-sig-arg">command_name</span>,
+        <span class="summary-sig-arg">user_command</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create a list of strings to be passed to exec to run the 
+      &lt;command&gt;s in the selections.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.build_command">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -106,12 +126,11 @@ policy.Policy --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">prog_args</span>,
-        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wrapper</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td><span class="summary-sig"><a name="prepare_env"></a><span class="summary-sig-name">prepare_env</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Do all the environment bindings in the selections (setting 
+      os.environ).</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.execute">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.prepare_env">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -125,12 +144,33 @@ policy.Policy --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="zeroinstall.injector.autopolicy.AutoPolicy-class.html#download_and_execute" class="summary-sig-name">download_and_execute</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">prog_args</span>,
-        <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">main</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td><span class="summary-sig"><a href="zeroinstall.injector.run.Setup-class.html#do_binding" class="summary-sig-name">do_binding</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">impl</span>,
+        <span class="summary-sig-arg">binding</span>,
+        <span class="summary-sig-arg">dep</span>)</span><br />
+      Called by <a 
+      href="zeroinstall.injector.run.Setup-class.html#prepare_env" 
+      class="link">prepare_env</a> for each binding.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.download_and_execute">source&nbsp;code</a></span>
+            <span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.do_binding">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="do_exec_binding"></a><span class="summary-sig-name">do_exec_binding</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">binding</span>,
+        <span class="summary-sig-arg">dep</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.do_exec_binding">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -140,27 +180,6 @@ policy.Policy --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>policy.Policy</code></b>:
-      <code>download_and_import_feed_if_online</code>,
-      <code>download_icon</code>,
-      <code>download_uncached_implementations</code>,
-      <code>fetcher</code>,
-      <code>get_cached</code>,
-      <code>get_feed_targets</code>,
-      <code>get_implementation</code>,
-      <code>get_implementation_path</code>,
-      <code>get_interface</code>,
-      <code>get_uncached_implementations</code>,
-      <code>is_stale</code>,
-      <code>need_download</code>,
-      <code>recalculate</code>,
-      <code>refresh_all</code>,
-      <code>save_config</code>,
-      <code>set_root</code>,
-      <code>solve_and_download_impls</code>,
-      <code>solve_with_downloads</code>,
-      <code>usable_feeds</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -186,37 +205,20 @@ policy.Policy --+
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Class Variables</span></td>
 </tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>policy.Policy</code></b>:
-      <code>implementation</code>,
-      <code>ready</code>
-      </p>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="stores"></a><span class="summary-name">stores</span> = <code title="None">None</code><br />
+      Create a new digest.
     </td>
   </tr>
-</table>
-<!-- ==================== INSTANCE VARIABLES ==================== -->
-<a name="section-InstanceVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Instance Variables</span></td>
-</tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>policy.Policy</code></b>:
-      <code>freshness</code>,
-      <code>handler</code>,
-      <code>help_with_testing</code>,
-      <code>network_use</code>,
-      <code>root</code>,
-      <code>solver</code>,
-      <code>src</code>,
-      <code>stale_feeds</code>,
-      <code>target_arch</code>,
-      <code>watchers</code>
-      </p>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="selections"></a><span class="summary-name">selections</span> = <code title="None">None</code><br />
+      Create a new digest.
     </td>
   </tr>
 </table>
@@ -253,15 +255,12 @@ policy.Policy --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">interface_uri</span>,
-        <span class="sig-arg">download_only</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">dry_run</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">src</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">handler</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">stores</span>,
+        <span class="sig-arg">selections</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -270,9 +269,8 @@ policy.Policy --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>handler</code></strong> - (new in 0.30) handler to use, or None to create a <a 
-          href="zeroinstall.injector.handler.Handler-class.html" 
-          class="link">Handler</a></li>
+        <li><strong class="pname"><code>stores</code></strong> (<a href="zeroinstall.zerostore.Stores-class.html" 
+          class="link">zerostore.Stores</a>) - where to find cached implementations</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -280,61 +278,72 @@ policy.Policy --+
   </dl>
 </td></tr></table>
 </div>
-<a name="execute"></a>
+<a name="build_command"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">execute</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">prog_args</span>,
-        <span class="sig-arg">main</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wrapper</span>=<span class="sig-default">None</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">build_command</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">command_iface</span>,
+        <span class="sig-arg">command_name</span>,
+        <span class="sig-arg">user_command</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.execute">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.build_command">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  
+  <p>Create a list of strings to be passed to exec to run the 
+  &lt;command&gt;s in the selections.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>command_iface</code></strong> (str) - the interface of the program being run</li>
+        <li><strong class="pname"><code>command_name</code></strong> (str) - the name of the command being run</li>
+        <li><strong class="pname"><code>user_command</code></strong> (<a href="zeroinstall.injector.model.Command-class.html" 
+          class="link">model.Command</a>) - a custom command to use instead</li>
+    </ul></dd>
+    <dt>Returns: [str]</dt>
+        <dd>the argument list</dd>
   </dl>
-<div class="fields">      <p><strong>Deprecated:</strong>
-        use <a 
-    href="zeroinstall.injector.policy.Policy-class.html#solve_and_download_impls"
-    class="link">solve_and_download_impls</a> and <a 
-    href="zeroinstall.injector.run-module.html#execute" 
-    class="link">run.execute</a>
-      </p>
-</div></td></tr></table>
+</td></tr></table>
 </div>
-<a name="download_and_execute"></a>
+<a name="do_binding"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">download_and_execute</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">prog_args</span>,
-        <span class="sig-arg">refresh</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">main</span>=<span class="sig-default">None</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">do_binding</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">impl</span>,
+        <span class="sig-arg">binding</span>,
+        <span class="sig-arg">dep</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="zeroinstall.injector.autopolicy-pysrc.html#AutoPolicy.download_and_execute">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="zeroinstall.injector.run-pysrc.html#Setup.do_binding">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  
+  <p>Called by <a 
+  href="zeroinstall.injector.run.Setup-class.html#prepare_env" 
+  class="link">prepare_env</a> for each binding. Sub-classes may wish to 
+  override this.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>impl</code></strong> (<a href="zeroinstall.injector.selections.Selection-class.html" 
+          class="link">selections.Selection</a>) - the selected implementation</li>
+        <li><strong class="pname"><code>binding</code></strong> (<a href="zeroinstall.injector.model.Binding-class.html" 
+          class="link">model.Binding</a>) - the binding to be processed</li>
+        <li><strong class="pname"><code>dep</code></strong> (<a href="zeroinstall.injector.model.Dependency-class.html" 
+          class="link">model.Dependency</a>) - the dependency containing the binding, or None for implementation
+          bindings</li>
+    </ul></dd>
   </dl>
-<div class="fields">      <p><strong>Deprecated:</strong>
-        use <a 
-    href="zeroinstall.injector.policy.Policy-class.html#solve_and_download_impls"
-    class="link">solve_and_download_impls</a> instead
-      </p>
-</div></td></tr></table>
+</td></tr></table>
 </div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
@@ -368,7 +377,7 @@ policy.Policy --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:43 2010
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:57 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>zeroinstall.gtkui.treetips</title>
+  <title>zeroinstall.injector.reader.MissingLocalFeed</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="zeroinstall-module.html">Package&nbsp;zeroinstall</a> ::
-        <a href="zeroinstall.gtkui-module.html">Package&nbsp;gtkui</a> ::
-        Module&nbsp;treetips
+        <a href="zeroinstall.injector-module.html">Package&nbsp;injector</a> ::
+        <a href="zeroinstall.injector.reader-module.html">Module&nbsp;reader</a> ::
+        Class&nbsp;MissingLocalFeed
       </span>
     </td>
     <td>
@@ -52,31 +53,100 @@
         <!-- hide/show private -->
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="zeroinstall.gtkui.treetips-module.html"
+            >]&nbsp;|&nbsp;<a href="zeroinstall.injector.reader.MissingLocalFeed-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
-<!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module treetips</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.gtkui.treetips-pysrc.html">source&nbsp;code</a></span></p>
-<p>Add tooltips to a TreeView.</p>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class MissingLocalFeed</h1><p class="nomargin-top"><span class="codelink"><a href="zeroinstall.injector.reader-pysrc.html#MissingLocalFeed">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+              object --+                
+                       |                
+exceptions.BaseException --+            
+                           |            
+        exceptions.Exception --+        
+                               |        
+                   SafeException --+    
+                                   |    
+              model.InvalidInterface --+
+                                       |
+                                      <strong class="uidshort">MissingLocalFeed</strong>
+</pre>
 
-<!-- ==================== CLASSES ==================== -->
-<a name="section-Classes"></a>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Classes</span></td>
+    <span class="table-header">Instance Methods</span></td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="zeroinstall.gtkui.treetips.TreeTips-class.html" class="summary-name">TreeTips</a><br />
-      This object allows you to set location-dependent tooltips on a 
-        TreeView.
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>model.InvalidInterface</code></b>:
+      <code>__init__</code>,
+      <code>__unicode__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.Exception</code></b>:
+      <code>__new__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__getslice__</code>,
+      <code>__reduce__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__setstate__</code>,
+      <code>__str__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__format__</code>,
+      <code>__hash__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>model.InvalidInterface</code></b>:
+      <code>feed_url</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
+      <code>args</code>,
+      <code>message</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
     </td>
   </tr>
 </table>
@@ -111,7 +181,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Jul  3 20:30:42 2010
+    Generated by Epydoc 3.0.1 on Sun Jul 31 09:51:57 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
