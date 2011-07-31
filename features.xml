@@ -26,7 +26,7 @@
       Installation Systems</a>" essay on OSNews for a more complete introduction to the subject.
     </p>
     <p>
-      See the <a href='packaging-guide.html'>Packaging Guide</a> for information on
+      See the <a href='packagers.html'>Packaging Guide</a> for information on
       distributing software using 0install.
     </p>
   </dd>

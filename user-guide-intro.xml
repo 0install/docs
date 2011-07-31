@@ -28,7 +28,7 @@
     </li>
     <li>
       <p>
-        Either <a href='user-guide-0launch.html'>launch it directly</a>:
+        Either launch it directly:
       </p>
       <pre>$ <b>0launch http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml</b></pre>
       <p>

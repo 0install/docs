@@ -57,8 +57,7 @@ The new <a href='0compile.html'>0compile autocompile</a> feature will download s
 <dt>Nov 2008</dt><dd><a href='0test.html'>0test</a> released; this tool can test combinations of various versions of a program and its dependencies.</dd>
 <dt>Sep 2008</dt><dd><a href='http://www.gnomefiles.org/version.php?soft_id=921'>0launch 0.36</a> released, fixing some performance problems and other bugs.</dd>
 <dt>Jul 2008</dt><dd><a href='0export.html'>0export</a> can be used to create a self-extracting "setup.sh" installer, for distribution on CD, etc.</dd>
-<dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu. See this
-<a href='tutorial-policy.html'>screenshot</a> at the top of the policy tutorial.</dd>
+<dt>Jun 2008</dt><dd>GNOME and KDE integration is now much improved, with a new interface for managing applications you've added to the menu.</dd>
 <dt>May 2008</dt><dd>The new <a href='deb2zero.html'>deb2zero</a> utility can publish a Debian package in a Zero Install feed.</dd>
 <dt>Apr 2008</dt><dd>0launch can <a href='http://repo.or.cz/w/zeroinstall.git'>now</a> fallback to using a mirror automatically.
 The <a href='http://youtube.com/watch?v=z7-ZfFKdW7M'>second part of the video
