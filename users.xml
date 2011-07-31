@@ -18,7 +18,6 @@
     <ol>
       <li><a href='user-guide-intro.html'>Introduction</a></li>
       <li><a href='user-guide-first-launch.html'>First Launch</a></li>
-      <li><a href='user-guide-0launch.html'>Launching Directly</a></li>
       <li><a href='user-guide-shortcuts.html'>Making Shortcuts</a></li>
     </ol>
   </li>
@@ -28,6 +27,7 @@
     <ol>
       <li><a href='user-guide-policy.html'>Policy Settings</a></li>
       <li><a href='user-guide-cache.html'>Cache and sharing</a></li>
+      <li><a href='servers.html'>Servers</a></li>
       <li><a href='walkthrough.html'>Manual walk-through</a></li>
     </ol>
   </li>
