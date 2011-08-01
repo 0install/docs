@@ -56,16 +56,32 @@ create a matrix of test results.</description>
       <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
     </requires>
       <command name="test" path="test0test.py"/>
-      <implementation id="sha1new=00127c13229be2d757fe482d3ccbbb34229dfa4f" main="0test" released="2011-03-15" version="0.5">
+      <implementation id="sha1new=00127c13229be2d757fe482d3ccbbb34229dfa4f" main="0test" released="2011-03-15" stability="stable" version="0.5">
       <manifest-digest sha256="ba586eb43abdb01bf92c0a7e58d5af54828b2bdc03faf873786a0a1c7ecab809"/>
       <archive extract="0test-0.5" href="http://downloads.sourceforge.net/project/zero-install/0test/0.5/0test-0.5.tar.bz2" size="12340"/>
     </implementation>
+      <group>
+        <command name="test" path="test0test.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+        <command name="run" path="0test">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+        <implementation id="sha1new=b6e0d1b247ae7f6a57cfb2fc4f74786d4b196b3f" main="0test" released="2011-08-01" version="0.6">
+      <manifest-digest sha256="86c7057a2907da18304d85044f8a36b99d5ceb57dffa229a6ce6f3e35ff898bd"/>
+      <archive extract="0test-0.6" href="http://downloads.sourceforge.net/project/zero-install/0test/0.6/0test-0.6.tar.bz2" size="12582"/>
+    </implementation>
+      </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1/qUMACgkQrgeCgFmlPMF2VACgv+YBvdWW+YeTsZZiy4BG1l4V9hcAnArJx96M
-aL8nbDNIi2NOwT8YFXFI
+iEYEABECAAYFAk43AVcACgkQrgeCgFmlPMFUfACfegc/KFNQ6+d/iVHeygNdNPcIpkUAn2Fssn4v
+mcSGNMSoVRebeC9nSYhh
 
 -->
