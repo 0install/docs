@@ -50,7 +50,7 @@ You can install the <a href='http://trac.macports.org/browser/trunk/dports/sysut
 
 <h3 id='fink'>Fink installation</h3>
 <p>
-You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinstall-injector'>zeroinstall-injector</a> package in <a href='http://www.finkproject.org/'>Fink</a> using this command, which will also install requirements like <i>python26</i>, <i>gnupg</i>, <i>gtk+2</i>, and <i>pygtk2-py26</i>:
+You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinstall-injector'>zeroinstall-injector</a> package in <a href='http://www.finkproject.org/'>Fink</a> using this command, which will also install requirements like <i>python26</i>, <i>gnupg</i>, <i>gtk+2</i>, and <i>pygtk2-gtk-py26</i>:
 </p>
 
 <pre>$ <b>sudo fink install zeroinstall-injector</b></pre>
