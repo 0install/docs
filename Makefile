@@ -74,8 +74,8 @@ htmlfiles: ${HTML}
 	xsltproc -o $@ --stringparam file "$@" to_html.xsl "$<"
 
 %.php: %.xml to_html.xsl structure.xml
-	xsltproc -o $@ --stringparam file index.html to_html.xsl "$<"
-	sed -i 's/@AUTO_DOWNLOAD_HTML@/<?php require("detect.php"); ?>/' "$@"
+	xsltproc --stringparam file index.html to_html.xsl "$<" | \
+	sed -e 's/@AUTO_DOWNLOAD_HTML@/<?php require("detect.php"); ?>/' > "$@"
 
 lists/%.xml: lists/%.lst
 	./lists/make-list.py $<
