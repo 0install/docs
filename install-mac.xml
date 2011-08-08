@@ -23,13 +23,10 @@ manager&#8221;, to handle building both it and the dependencies (mentioned above
 or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using either of <a href='#macports'>MacPorts</a> or <a href='#fink'>Fink</a>.</p>
 
 <p>Currently using MacPorts, Fink or JHBuild all require compiling from source code,<br />
-so if you want to get started quickly the easiest way is the Bundle: <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/ZeroInstall.pkg'>ZeroInstall.pkg</a></p>
-
-<p>Note: to use the 1.0 Bundle on OS X Lion, you need to tell python to use version 2.6<br />
-by using this command before starting it: <tt>export VERSIONER_PYTHON_VERSION=2.6</tt></p>
+so if you want to get started quickly the easiest way is the Bundle: <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/ZeroInstall.pkg'>ZeroInstall.pkg</a></p>
 
 <quicklinks>
-  <link href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
+  <link href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
 </quicklinks>
 
 <dl>
@@ -66,14 +63,14 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 
 <h3 id='jhbuild'>JHBuild installation</h3>
 <p>
-You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/zero-install.modules'>zero-install.modules</a> with <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>GTK-OSX's JHBuild</a> using this command, which will also install requirements like <i>gnupg</i> and <i>pygtk</i>:
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/gtk-osx-zero-install.modules'>gtk-osx-zero-install.modules</a> with <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>GTK-OSX's JHBuild</a> using this command, which will install requirements like <i>gnupg</i> and <i>pygtk</i>:
 </p>
 
 <pre>$ <b>jhbuild -m $PWD/zero-install.modules build meta-zero-install</b></pre>
 
 <h3 id='bundle'>Bundle installation</h3>
 <p>
-You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.0/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(Mac_OS_X)'>Installer.app</a>, which will use system <i>python</i> and install requirements like <i>GnuPG.pkg</i> and <i>PyGTK.pkg</i>:
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(Mac_OS_X)'>Installer.app</a>, which will use system <i>python</i> and install requirements like <i>GnuPG.pkg</i> and <i>PyGTK.pkg</i>:
 </p>
 
 <pre>$ <b>sudo installer -pkg ZeroInstall.pkg -target /</b></pre>
