@@ -122,7 +122,7 @@ users and makes it easy for them to get automatic updates.
 
  <dt>... add programs to everyone's desktop?</dt>
  <dd>You can add launchers to $PATH using <b>0alias</b>, and you can add
- menu entries using <a href='http://rox.sourceforge.net/desktop/node/402'>Zero2Desktop</a>. Put the scripts or .desktop files in a common directory, just as with any other
+ menu entries using <b>0desktop</b>. Put the scripts or .desktop files in a common directory, just as with any other
  program. You should set up sharing before doing this, or every user will
  have to download a separate copy of the program.</dd>
 
