@@ -4,7 +4,7 @@
 <div>
 <h2>News</h2>
 <dl>
-<dt>July 2011</dt>
+<dt>Jul 2011</dt>
 <dd>
   <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4387'>0launch 1.2</a> released, adding support for &lt;executable-in-var&gt; and &lt;executable-in-path&gt; bindings, faster PackageKit queries and speed improvements in the GUI for packages with many dependencies. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4365'>Windows 0install 1.1.1</a> was released. 0install is now <a href='https://build.opensuse.org/package/binaries?package=zeroinstall-injector&amp;project=openSUSE%3AFactory&amp;repository=standard'>in the main OpenSUSE repository</a>. There is also a <a href='users.html'>new user guide</a>.
 </dd>
