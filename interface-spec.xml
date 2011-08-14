@@ -85,7 +85,7 @@ namespace):
 <dl>
 
 <dt>min-injector-version</dt>
-<dd>This attribute gives the oldest version of the injector that can read this file. Older versions will
+<dd>This attribute gives the oldest version of 0install that can read this file. Older versions will
 tell the user to upgrade if they are asked to read the file. Versions prior to 0.20 do not perform this check, however.
 If the attribute is not present, the file can be read by all versions.
 </dd>
@@ -196,19 +196,19 @@ the closest ancestor &lt;group&gt; which defines it):
 
  <dt>version-modifier (deprecated)</dt>
  <dd>A string to be appended to the version. The purpose of this is to allow complex version numbers (such as
- "1.0-rc2") without breaking older versions of the injector (before 0.24), which only support dot-separated
+ "1.0-rc2") without breaking older versions of 0install (before 0.24), which only support dot-separated
  lists of integers.</dd>
 
- <dt>main</dt>
+ <dt>main (deprecated)</dt>
  <dd>The relative path of an executable inside the implementation that should be executed by default
  when the interface is run. If an implementation has no <b>main</b> setting, then it cannot be executed
  without specifying one manually (with <b>0launch --main=MAIN</b>). This typically means that the interface
- is for a library.</dd>
+ is for a library. Note: <b>main</b> is being replaced by the &lt;command&gt; element.</dd>
 
- <dt>self-test</dt>
+ <dt>self-test (deprecated)</dt>
  <dd>The relative path of an executable inside the implementation that can be executed to test the program.
  The program must be non-interactive (e.g. it can't open any windows or prompt for input).
- It should return with an exit status of zero if the tests pass. Any other status indicates failure.
+ It should return with an exit status of zero if the tests pass. Any other status indicates failure. Note: <b>self-test</b> is being replaced by the &lt;command&gt; element.
  </dd>
 
  <dt>doc-dir</dt>
@@ -233,7 +233,7 @@ the closest ancestor &lt;group&gt; which defines it):
 
  <dt>arch</dt>
  <dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <b>os-cpu</b>.
- The injector knows that certain platforms are backwards-compatible with others, so binaries with <b>arch="Linux-i486"</b>
+ 0install knows that certain platforms are backwards-compatible with others, so binaries with <b>arch="Linux-i486"</b>
  will still be available on <i>Linux-i686</i> machines, for example. Either the <i>os</i> or <i>cpu</i> part may be <b>*</b>,
  which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>. See also: <a href='#archs'>Valid architecture names</a>.</dd>
 
@@ -255,18 +255,20 @@ the closest ancestor &lt;group&gt; which defines it):
 
 <p>
 For non-local implementations (those without a local-path attribute), the
-element contains a set of <i>retrieval methods</i>, each of which gives a
-different way of getting the implementation (i.e. of getting a directory
-structure whose digest matches the ones given).
+&lt;implementation&gt; element contains a set of <i>retrieval methods</i>, each
+of which gives a different way of getting the implementation (i.e. of getting a
+directory structure whose digest matches the ones given).
 </p>
 
 <p>
-Unrecognised elements inside an implementation are ignored. Currently, the
-injector always chooses the first of the methods it understands, but in future
-it may use other strategies (such as choosing the closest mirror, or letting
-the user select one manually). It may also use other methods which aren't listed,
-such as searching for the implementation on a peer-to-peer network.
+Currently, 0install always chooses the first of the methods it understands,
+but in future it may use other strategies (such as choosing the closest mirror,
+or letting the user select one manually). It may also use other methods which
+aren't listed, such as searching for the implementation on a peer-to-peer
+network.
 </p>
+
+<p>Unrecognised elements inside an implementation are ignored.</p>
 
 <h3>Historical note about id</h3>
 
@@ -406,7 +408,7 @@ are read from the native packaging system.
 </p>
 
 <p>
-Support for distribution packages was added in version 0.28 of the injector. Earlier versions ignore
+Support for distribution packages was added in version 0.28 of 0install. Earlier versions ignore
 this element.
 </p>
 
@@ -480,7 +482,7 @@ An implementation can also be created by following a &lt;recipe&gt;:
 In this case, each child element of the recipe represents a step. To get an implementation by following a recipe,
 a new empty directory is created and then all of the steps are performed in sequence. The resulting directory
 must have the digest given in the implementation's <b>id</b>. A recipe containing only a single archive is equivalent
-to just specifying the archive on its own (except that recipes aren't supported prior to version 0.20 of the injector).
+to just specifying the archive on its own (except that recipes aren't supported prior to version 0.20 of 0install).
 If a recipe contains an unrecognised element then the whole recipe must be ignored.
 </p>
 
@@ -500,7 +502,7 @@ choose the versions and upgrade them individually.
 
 <p>
 A &lt;requires&gt; element means that every implementation within the same group (including nested
-sub-groups) requires an implementation of the specified interface when run. The injector will choose a
+sub-groups) requires an implementation of the specified interface when run. 0install will choose a
 suitable implementation, downloading one if required.
 </p>
 
@@ -516,7 +518,7 @@ suitable implementation, downloading one if required.
 
 <p>
 The constraint elements (if any) limit the set of acceptable versions. The bindings specify how
-the injector should make its choice known (typically, by setting environment variables).
+0install should make its choice known (typically, by setting environment variables).
 </p>
 
 <p>
@@ -536,8 +538,8 @@ version is preferable to not selecting one).
 <h2>Constraints</h2>
 
 <p>
-Constraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which the
-injector may choose an implementation.
+Constraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which
+0install may choose an implementation.
 </p>
 
 <pre>
@@ -639,11 +641,11 @@ needed with them:
 <pre>
     &lt;executable-in-var
 	  name='...'
-	  command='...' ? /&gt; *
+	  command='...' ? /&gt;
 
     &lt;executable-in-path
 	  name='...'
-	  command='...' ? /&gt; *
+	  command='...' ? /&gt;
 </pre>
 
 <p>
@@ -719,7 +721,7 @@ Numerically, the modifiers come in the order "-pre" (pre-release), "-rc" (releas
 </ul>
 
 <p>
-The injector doesn't care about anything other than the sort order (i.e., whether
+0install doesn't care about anything other than the sort order (i.e., whether
 one version comes before or after another). It is expected that an
 implementation can be safely replaced by one with a later version number, but
 not necessarily with an earlier one. So, if an application works with version
@@ -748,8 +750,8 @@ version) to an interface should be handled by creating a new interface URI. Eg:
 </ul>
 
 <p>
-Note that version numbers containing dash characters are not supported before version 0.24 of the
-injector. To create feeds that still work with older versions, you can use the
+Note that version numbers containing dash characters are not supported before version 0.24 of
+0install. To create feeds that still work with older versions, you can use the
 <b>version-modifier</b> attribute. E.g., use <b>version='1' version-modifier='-pre'</b> instead
 of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
 </p>
@@ -780,7 +782,7 @@ will use it.
 </p>
 
 <p>
-If problems are found, it can instead be marked as <b>buggy</b>, or <b>insecure</b>. The injector
+If problems are found, it can instead be marked as <b>buggy</b>, or <b>insecure</b>. 0install
 won't select either by default, but it is useful to users to see the reason (users may opt to
 continue using a buggy version if it seems to work for them, but they should never use an insecure
 one). <b>developer</b> is like a more extreme version of <b>testing</b>, where the program is
@@ -803,7 +805,7 @@ save network use.
 
 <p>
 All elements can contain extension elements, provided they are not in the Zero
-Install namespace used by the elements defined here. The injector does not
+Install namespace used by the elements defined here. 0install does not
 currently make use of these elements itself, but other programs may find them
 useful. In future, some of these may be used (for example, the GUI may display
 the license terms).
@@ -855,7 +857,7 @@ This block <b>must</b> go at the end of the file, and contains a Base64-encoded 
 the file that would be created by using <b>gpg --detach-sign</b> on the original feed.
 The signature block must start on a new line, may not contain anything except valid base64
 characters, and nothing may follow the signature block. XML signature blocks are supported
-from version 0.18 of the injector and may be generated easily using the
+from version 0.18 of 0install and may be generated easily using the
 <a href='0publish.html'>0publish</a> command.
 </p>
 
@@ -901,8 +903,6 @@ Valid values for CPU include:
  of versions so you can say, for example: "2.0 &lt;= version &lt; 3 and version != 2.57".</li>
  <li>As well as before and not-before, we should support after and not-after.</li>
  <li>Additional &lt;recipe&gt; step types should be supported, such as &lt;apply-patch&gt;.</li>
- <li>It should be possible to state that a &lt;requires&gt; is actually optional (or only needed if
- some local library isn't available).</li>
  <li>It should be possible to give a delta (binary patch) against a previous version, to make upgrading
  quicker.</li>
  <li>It should be possible to scope bindings. For example, when a DTP package requires a clipart package, the
