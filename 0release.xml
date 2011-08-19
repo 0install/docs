@@ -227,7 +227,7 @@ default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). 
 </p>
 
 <pre>Releasing version 0.1
-HEAD is now at a2d1ed9 Prints "Hello World" already!
+HEAD is now at 387535a Updated feed-for to localhost for testing
 SKIPPING unit tests for ~/releases/hello/0.1/helloworld-0.1 (no 'self-test' attribute set)
 Wrote source feed as helloworld-0.1.xml
 Wrote changelog from start to here as changelog-0.1
@@ -436,8 +436,8 @@ replay attack. So create a new signature, with a fresh time-stamp.
 </p></li>
 <li>
 <p>
-Reset HEAD to before the release (e.g. "git-reset --hard v0.1^") and delete the tag
-itself (e.g. "git-tag -d v0.1"). Delete the remote tag at the server (e.g.
+Reset HEAD to before the release (e.g. "git reset --hard v0.1^") and delete the tag
+itself (e.g. "git tag -d v0.1"). Delete the remote tag at the server (e.g.
 "git push origin :v0.1 master"). Like 0launch, if anyone saw the release in Git, their
 Git will refuse to go back to an older version. Tell them to use '-f'.
 </p>
