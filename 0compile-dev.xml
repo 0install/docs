@@ -72,8 +72,12 @@ into 'build' before building.</dd>
 </p>
 
 <pre>
-  &lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre" <b>compile:min-version='0.23'</b>>
-    <b>&lt;command name='compile' shell-command='make -f ${SRCDIR}/src/Makefile'></b>
+  &lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre" <b>compile:min-version='0.24'</b>>
+  <b>&lt;command name="compile" path="src/Makefile"></b>
+      &lt;runner interface='http://repo.roscidus.com/devel/make'>
+        &lt;arg>-f&lt;/arg>
+      &lt;/runner>
+
       <b>&lt;compile:implementation arch='*-*'></b>
         &lt;environment name='CLASSPATH' insert='.'/>
         &lt;requires interface="http://repo.roscidus.com/utils/graphviz"/>
@@ -94,7 +98,7 @@ into 'build' before building.</dd>
 
 <dl>
   <dt>arch="*-src"</dt><dd>tells us that the root &lt;implementation&gt; describes some source code.</dd>
-  <dt>compile:min-version</dt><dd>requires 0compile >= 0.23 to use the template feature.</dd>
+  <dt>compile:min-version</dt><dd>requires 0compile >= 0.24 to use the template feature.</dd>
   <dt>&lt;command name='compile'&gt;</dt><dd>this replaces the old <b>compile:command</b> attribute described above.</dd>
   <dt>&lt;compile:implementation&gt;</dt><dd>this is the template for the implementation that will be created by the compile.</dd>
   <dt>arch='*-*'</dt><dd>indicates that the generated binary is platform independent (Java bytecode).</dd>
