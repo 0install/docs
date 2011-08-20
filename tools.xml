@@ -7,6 +7,10 @@
  This section contains various utility programs that make using Zero Install easier.
 </p>
 
+<toc level='h3'/>
+
+<h3>Publishing and updating feeds</h3>
+
 <dl>
  <dt><a href='0publish.html'>0publish</a></dt>
  <dd>
@@ -18,6 +22,27 @@
   useful in release scripts.
  </dd>
 
+ <dt><a href='0release.html'>0release</a></dt>
+ <dd>
+<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
+number and release date, tagging the release in your version control system and updating your Zero Install feed.
+ </dd>
+
+ <dt><a href='http://gfxmonk.net/dist/0install/mkzero.xml'>mkzero</a></dt>
+ <dd>
+   <b>mkzero</b> is a light-weight alternative to 0release. It doesn't support version control integration, tagging, or local feeds. It is useful for
+   quickly pubishing simple packages.
+ </dd>
+
+ <dt><a href='pkg2zero.html'>pkg2zero</a></dt>
+ <dd>
+<b>pkg2zero</b> publishes a Debian or RPM package in a Zero Install feed.
+ </dd>
+</dl>
+
+<h3>Compiling</h3>
+
+<dl>
  <dt><a href='0compile.html'>0compile</a></dt>
  <dd>
   <b>0compile</b> creates binaries from source code, either for your own use or ready
@@ -27,10 +52,18 @@ This is useful if there is no binary for your platform, or if you wish to
 modify the program in some way.
  </dd>
 
- <dt><a href='0release.html'>0release</a></dt>
+ <dt><a href='make-headers.html'>Make-headers</a></dt>
  <dd>
-<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
-number and release date, tagging the release in your version control system and updating your Zero Install feed.
+<b>Make-headers</b> is an extremely simple script for creating -dev packages (packages containing only header files) from ordinary source releases.
+ </dd>
+</dl>
+
+<h3>Testing</h3>
+
+<dl>
+ <dt><a href='0test.html'>0test</a></dt>
+ <dd>
+<b>0test</b> runs the self-tests for a given program with various version combinations.
  </dd>
 
  <dt><a href='feedlint.html'>FeedLint</a></dt>
@@ -40,9 +73,15 @@ know that all the download links are still OK? Run <b>FeedLint</b> on your feeds
 to check.
  </dd>
 
- <dt><a href='make-headers.html'>Make-headers</a></dt>
+</dl>
+
+<h3>Sharing</h3>
+
+<dl>
+ <dt><a href='0export.html'>0export</a></dt>
  <dd>
-<b>Make-headers</b> is an extremely simple script for creating -dev packages (packages containing only header files) from ordinary source releases.
+<b>0export</b> creates a self-extracting installer for a given program, for
+distribution on CDs, etc.
  </dd>
 
  <dt><a href='0mirror.html'>0mirror</a></dt>
@@ -51,32 +90,20 @@ to check.
 for publishing on a web-server.
  </dd>
 
- <dt><a href='0export.html'>0export</a></dt>
- <dd>
-<b>0export</b> creates a self-extracting installer for a given program, for
-distribution on CDs, etc.
- </dd>
-
- <dt><a href='pkg2zero.html'>pkg2zero</a></dt>
- <dd>
-<b>pkg2zero</b> publishes a Debian or RPM package in a Zero Install feed.
- </dd>
-
- <dt><a href='0test.html'>0test</a></dt>
- <dd>
-<b>0test</b> runs the self-tests for a given program with various version combinations.
- </dd>
-
  <dt><a href='0share.html'>0share</a></dt>
  <dd>
 <b>0share</b> allows peer-to-peer sharing of Zero Install packages.
  </dd>
+</dl>
 
+
+<h3>Security</h3>
+
+<dl>
  <dt><a href='ebox.html'>ebox</a></dt>
  <dd>
 <b>ebox</b> proof-of-concept sandboxing system.
  </dd>
-
 </dl>
 
 </html>
