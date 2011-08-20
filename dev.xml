@@ -9,6 +9,10 @@
  plugins for your application).
 </p>
 
+<p>
+  If you want to make programs available through 0install, see the <a href='packagers.html'>packaging guide</a> instead.
+</p>
+
 <dl>
  <dt><a href='get-involved.html'>Get involved</a></dt>
  <dd>
@@ -31,12 +35,6 @@
  <dt><a href='injector-design.html'>Design</a></dt>
  <dd>
   A more detailed description of the design of Zero Install.
- </dd>
-
- <dt><a href='injector-tests.html'>Tests</a></dt>
- <dd>
-  A set of test interfaces to check that the injector is working
-  correctly.
  </dd>
 </dl>
 

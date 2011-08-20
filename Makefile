@@ -33,7 +33,6 @@ HTML = index.php \
        injector-packagers.html \
        injector-security.html \
        injector-specs.html \
-       injector-tests.html \
        injector-trouble.html \
        install-linux.html \
        install-mac.html \

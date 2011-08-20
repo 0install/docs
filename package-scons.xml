@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
-<h2>The Injector: Packaging Guide (non-graphical version)</h2>
+<h2>Packaging Guide (non-graphical version)</h2>
 
 <p>
-This guide shows how to make software available through <a href="injector.html">the injector</a>, using
+This guide shows how to make software available through <a href="injector.html">0install</a>, using
 the command-line <a href='0publish.html'>0publish</a> program. New users will probably prefer to start
 with the <a href='injector-packagers.html'>graphical GTK interface</a> instead, but this version is
 useful when writing scripts to automatically publish new versions, or if you can't run the graphical
@@ -16,7 +16,7 @@ We will start by packaging SCons, a build system (a little like Make).
 </p>
 
 <p>
-You should already be familiar with the general operation of the injector. In not, start by reading
+You should already be familiar with the general operation of 0install. In not, start by reading
 the <a href='users.html'>user tutorial</a>.
 </p>
 
@@ -222,8 +222,13 @@ If you look in the <b>SCons.xml</b> file, you'll see that <b>0publish</b> change
 to this:
 </p>
 
-<pre><![CDATA[<implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-18" version="0.96.92">
-  <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688"/>
+<pre><![CDATA[<implementation
+    id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758"
+    released="2006-05-18"
+    version="0.96.92">
+  <archive
+      href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz"
+      size="249688"/>
 </implementation>]]></pre>
 
 <p>
