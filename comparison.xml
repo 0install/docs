@@ -148,7 +148,7 @@ to be removed.
 
 <dd>
 <p>
-<a href='http://klik.atekon.de'>Klik</a> allows users to install software by clicking on 
+<a href='http://en.wikipedia.org/wiki/Klik_%28packaging_method%29'>Klik</a> allows users to install software by clicking on 
 links in web-pages (or even just by looking at a web page). Like Zero Install, it stores
 each package in its own directory and sets environment variables to let it run.
 There is a central server which sends shell scripts to clients; executing the
@@ -192,7 +192,7 @@ safely, using cryptographic digests.</li>
 <li>Zero Install supports compiling from source if you want, though not all
 packages support this yet.</li>
 
-<li>Zero Install lets you download older versions or programs or libraries.
+<li>Zero Install lets you download older versions of programs or libraries.
 Klik only provides a single version for download, although you can keep using
 older versions once you've got them.</li>
 
@@ -210,11 +210,9 @@ to be relocatable in the first place.</li>
 </ul>
 
 <p>
-The above refers to Klik 1 (the current version).
-<a href='http://klik.atekon.de/wiki/index.php?title=Recipe_Files&amp;oldid=3568'>Klik 2</a>, which
-is under development, uses a slightly modified version of the Zero Install feed
-format for its recipes. Note: link is to a fixed version, as the Wiki page is frequently
-vandalised.
+  The above refers to Klik 1, which is no longer available. Klik 2 was never released.
+  The successor to Klik 2, <a href='http://portablelinuxapps.org'>portablelinuxapps.org</a> is not
+  working (as of 2011-08-22).
 </p>
 
 </dd>
@@ -225,26 +223,18 @@ vandalised.
 <p>
 <a href='http://maven.apache.org/'>Maven</a> is a build tool (like make or ant)
 for Java programs. Although not an installation system, it is similar to
-the injector in that each product has a <b>project.xml</b> file with a list of
-dependencies. When building a product, maven downloads the specified version of
+0install in that each product has a <b>pom.xml</b> file with a list of
+dependencies. When building a product, Maven downloads the specified version of
 each dependency and stores it in a cache directory. Some differences between
-maven 1.0 (I have not yet tested version 2.0) and the injector:
+Maven 2.0 and 0install:
 </p>
 <ul>
-<li>Only exact versions of dependencies are given. Maven cannot select the
-best version from a set. In an installation system, this would lead to a lot
-of extra downloads as programs used different library versions
-unnecessarily. It also makes it harder to get security fixes.</li>
 <li>
-Dependencies are not fetched recursively. If A requires B, and B requires C,
-then maven will not fetch C unless A requests it explicitly. 
-</li>
-<li>
-The <b>project.xml</b> files are not signed, as they are not fetched by
+The <b>pom.xml</b> files are not signed, as they are not fetched by
 maven. Only implementations are downloaded.
 </li>
 <li>
-There is no digest of the downloads in the project file, so no security checks
+There is no digest of the downloads in the POM file, so no security checks
 are performed to confirm that the download is OK, and downloads cannot be
 shared safely between users.
 </li>
@@ -271,7 +261,7 @@ of a library's header files to ensure greater compatibility.
 Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
 let users install software and to make software distribution decentralised.
 The work done by the Autopackage developers to make packages relocatable is 
-necessary for the Zero Install injector too. Some differences between this and
+necessary for Zero Install too. Some differences between this and
 Zero Install:
 </p>
 <ul>
@@ -293,6 +283,8 @@ post on the Autopackage mailing list</a>. In this case, no scripts are run durin
 installation (the package is treated as a normal archive), so not all packages will work,
 but many do.
 </p>
+
+<p>Autopackage is no longer maintained, but has merged with the <a href='http://listaller.tenstral.net/'>Listaller project</a>.</p>
 
 </dd>
 
@@ -319,7 +311,7 @@ from the event.
 
 <dd>
 <p>
-<a href='http://nix.cs.uu.nl/'>Nix</a> is another "purely functional" package
+<a href='http://nixos.org/'>Nix</a> is a "purely functional" package
 manager. It is purely functional in the sense that each version of a package
 has its own directory. As with Zero Install, "upgrading" creates a new
 directory for the new version, rather than modifying the existing one. Unlike
@@ -407,5 +399,10 @@ any of these elements would be useful in Zero Install feed files.
 </dd>
 
 </dl>
+
+<p>
+  If you believe that any of the information above is inaccurate or out-of-date, please
+  write to <a href='support.html#lists'>the mailing list</a> to let us know. Thanks!
+</p>
 
 </html>
