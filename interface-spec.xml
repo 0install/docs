@@ -398,7 +398,7 @@ Note that, unlike a normal implementation, a distribution package does not resol
 Any bindings inside &lt;requires&gt; elements for the interface will be ignored; it is assumed that
 the requiring component knows how to use the packaged version without further help. Therefore, adding
 distribution packages to your interface considerably weakens the guarantees you are making about what
-the requestor may get.
+the requester may get.
 </p>
 
 <p>

@@ -31,8 +31,8 @@ be downloaded:
 </p>
 
 <p>
-Of couse, you are always free to change the selected version from the native package to a Zero Install
-version. This will also happen autoamatically if your native version is incompatible with the required
+Of course, you are always free to change the selected version from the native package to a Zero Install
+version. This will also happen automatically if your native version is incompatible with the required
 version. For example, if you try this on a machine with a very old copy of libenchant1 then Zero Install
 will download a newer version rather than using that one.
 </p>

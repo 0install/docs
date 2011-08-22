@@ -109,7 +109,7 @@ The bulk of the setup.sh file is an archive containing:
 
 <ul>
 <li>All feeds needed to run the program.</li>
-<li>All GPGs keys signing the feeds.</li>
+<li>All GPG keys signing the feeds.</li>
 <li>All selected implementations (versions).</li>
 <li>A copy of Zero Install, in case the target system doesn't have it.</li>
 <li>An installation script.</li>

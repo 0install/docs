@@ -33,7 +33,7 @@ with existing sandboxing tools to provide the rest. The purposes of this page ar
 <ul>
  <li>To make it clear what we hope to achieve with Zero Install.</li>
  <li>To demonstrate that such integration is possible, and provide an example of how to do it.</li>
- <li>To find bugs or weaknesses in Zero Install's implemenation or design.</li>
+ <li>To find bugs or weaknesses in Zero Install's implementation or design.</li>
 </ul>
 
 <p>
@@ -104,10 +104,10 @@ security, because permission is granted automatically by your actions, so you sh
 
 <ul>
 <li>Every window it opens is prefixed with the name you gave it (e.g. "edit: &lt;untitled&gt;").</li>
-<li>It can't access a file unless you explictly select it, or pass it as a command-line argument.</li>
+<li>It can't access a file unless you explicitly select it, or pass it as a command-line argument.</li>
 <li>It can't send a copy of a file you open over the network (see below for network access).</li>
 <li>It can read and write files under its own 'data' directory (<b>~/edit/data/*</b>)</li>
-<li>If you grant it access to something (e.g. read access to a file), it could presist this in <b>~/edit/auths/*</b> so it still has it next time you run the program, although ebox-edit itself doesn't do this.</li>
+<li>If you grant it access to something (e.g. read access to a file), it could persist this in <b>~/edit/auths/*</b> so it still has it next time you run the program, although ebox-edit itself doesn't do this.</li>
 <li>It can open any number of windows, use up lots of CPU time, etc.</li>
 </ul>
 

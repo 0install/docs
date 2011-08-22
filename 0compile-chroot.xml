@@ -28,7 +28,7 @@
 
 <ol>
   <li>Build on a <a href='#debian'>Debian system</a> (including Ubuntu), using APT and .deb with <b>pbuilder</b></li>
-  <li>Build on a <a href='#redhat'>Redhat system</a> (including Fedora), using Yum and .rpm with <b>mock</b></li>
+  <li>Build on a <a href='#redhat'>Red Hat system</a> (including Fedora), using Yum and .rpm with <b>mock</b></li>
   <li>Build on a <a href='#lfs'>Linux From Scratch</a> system, using only source tarballs with <b>chroot</b></li>
 </ol>
 
@@ -109,7 +109,7 @@ Has <tt>build-essential</tt> dependencies:</p>
 </ul>
 
 </dd>
-  <dt id='redhat'>Redhat / Fedora</dt>
+  <dt id='redhat'>Red Hat / Fedora</dt>
 
 <dd>
 

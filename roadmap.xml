@@ -12,7 +12,7 @@ This document explains what we've done and where we're going with future version
 <h3>History</h3>
 
 <p>
-This is a quick overview of the major features added to Zero Install. It focusses on features available to feed authors, who want to know which features they can safely use while supporting users on older distributions.
+This is a quick overview of the major features added to Zero Install. It focuses on features available to feed authors, who want to know which features they can safely use while supporting users on older distributions.
 </p>
 
 <h4>2005 (versions 0.1 to 0.17)</h4>
@@ -83,7 +83,7 @@ This is a quick overview of the major features added to Zero Install. It focusse
   <li>Support for PackageKit (prompt the user to install distribution packages where necessary).</li>
   <li>Initial Windows support.</li>
   <li>The &lt;command&gt; element allows passing extra arguments.</li>
-  <li>The &lt;runner&gt; element allows specifying the intepreter.</li>
+  <li>The &lt;runner&gt; element allows specifying the interpreter.</li>
 </ul>
 
 <h4>2011 (versions 0.52 onwards)</h4>
@@ -139,7 +139,7 @@ of locally cached feeds, to enable quick off-line searching.
 
 <dt>Caching of solver results (for speed)</dt>
 <dd>On less powerful machines (e.g. OLPC laptops) we can save CPU time by remembering which versions we selected rather than recalculating
-  everytime a program is executed.</dd>
+  every time a program is executed.</dd>
 
 <dt>Support for services</dt>
 <dd>e.g. a 0service command that integrates with systemd</dd>
@@ -221,7 +221,7 @@ be able to run other programs through Zero Install, adding them to the cache as 
 URIs or trusted public keys).</dd>
 
 <dt>Third-party sign-off</dt>
-<dd>A distribution can sign an upstream release ("Certified for use with SuSE 10.2", etc). Users can set a policy
+<dd>A distribution can sign an upstream release ("Certified for use with SUSE 10.2", etc). Users can set a policy
 to run only approved versions by default. Or, a third-party could provide additional input to the hints box
 (we already provide the "Unreliable hints database", but a commercial organisation could offer
 a real service).

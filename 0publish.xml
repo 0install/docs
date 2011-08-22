@@ -71,7 +71,7 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
   <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
   <dd>Change a local implementation to one with a digest and an archive.
   See the <a href='package-scons.html'>SCons tutorial</a> for an example.</dd>
-  <dt>-c, --create</dt><dd>Create a new feed file (if non-existant) without prompting.</dd>
+  <dt>-c, --create</dt><dd>Create a new feed file (if non-existent) without prompting.</dd>
   <dt>-d ALG, --add-digest=ALG</dt><dd>Add extra digests using the given algorithm.</dd>
   <dt>-e, --edit</dt><dd>Edit with $EDITOR. This is useful if the file is signed, since
   it removes the signature at the start and resigns at the end. It also checks that the

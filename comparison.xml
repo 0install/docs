@@ -88,7 +88,7 @@ be a 'pass') but it should give the general idea.
  <dd>All types of program can be accessed using this system.</dd>
 
  <dt>Supports sandboxing</dt>
- <dd>If you have a way of running an application in a sandboxed environment (eg, a Java virtual machine), then the
+ <dd>If you have a way of running an application in a sandboxed environment (e.g., a Java virtual machine), then the
  installation system will let you install and run the program without forcing you to run any of the downloaded
  code outside of the sandbox.<br/>
  The easiest way to get sandboxing with the injector is to run it twice: once in download-only mode with write
@@ -357,7 +357,7 @@ Install doesn't allow binaries to include hard-coded paths.
 </p>
 
 <p>Update: Nix is planning to use binary hashes everywhere in future (zeroing out
-self-references for the purposes of calcuating the hashes). The same thing was proposed
+self-references for the purposes of calculating the hashes). The same thing was proposed
 a few years ago for Zero Install (the
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/882/focus=882'>relocation table</a>).
 It relies on the cache directory being at a fixed location, whereas people often have Zero Install

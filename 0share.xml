@@ -75,7 +75,7 @@ If it doesn't work:
 </p>
 
 <ul>
- <li>Check that your filewall allows TCP and UDP connections to port 38339 on the first machine.</li>
+ <li>Check that your firewall allows TCP and UDP connections to port 38339 on the first machine.</li>
  <li>Try using -H on the second machine to give the hostname of the first machine explicitly.</li>
  <li>If you get "Network is unreachable", you may be missing a default route (see "ip route").</li>
 </ul>
