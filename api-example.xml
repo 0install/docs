@@ -63,7 +63,7 @@ tasks.wait_for_blocker(download_info(url))
 <h3>Depending on 0install</h3>
 
 <p>
-  Just importing the "zeroinstall" module as shown above would get it from the system installation of 0install. It's better to create a local feed for your program and give 0install as a dependency. Then you can be sure your program will get a version of the libraries that it is compatible with (the system version may be too old). Here's a sample feed you can use:
+  Just running the example above using e.g. "python example.py" would get the "zeroinstall" library from the system installation of 0install. It's better to create a local feed for your program and give 0install as a dependency. Then you can be sure your program will get a version of the libraries that it is compatible with (the system version may be too old). Here's a sample feed you can use:
 </p>
 
 <pre>
