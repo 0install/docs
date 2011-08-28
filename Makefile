@@ -11,6 +11,7 @@ HTML = index.php \
        0release-phases.html \
        0share.html \
        0test.html \
+       api-example.html \
        comparison.html \
        deb2zero.html \
        dev.html \

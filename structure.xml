@@ -56,9 +56,11 @@
 
     <item base='dev' label='For developers'>
       <item base='get-involved' label='Get involved'/>
-      <item base='python-api/html/index' label='Python API'/>
       <item base='using-git' label='Using Git'/>
       <item base='injector-design' label='Design'/>
+
+      <item base='python-api/html/index' label='Python API'/>
+      <item base='api-example' label='API example'/>
     </item>
 
     <item base='tools' label='Tool reference'>

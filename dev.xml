@@ -19,23 +19,45 @@
    Suggestions on how to join the project.
  </dd>
 
- <dt><a href='python-api/html/index.html'>Python API</a></dt>
- <dd>
-  The <b>0launch</b> command-line interface to Zero Install is sufficient for most
-  purposes. However, sometimes you may want to use the Python library interface.
-  This is used by programs such as <b>0compile</b> and <b>0publish</b>, and is
-  also a useful reference for people wanting to modify 0install itself.
- </dd>
-
  <dt><a href='using-git.html'>Using Git</a></dt>
  <dd>
-  How to get the very latest developer versions using GIT.
+  How to get the very latest developer versions using Git.
  </dd>
 
  <dt><a href='injector-design.html'>Design</a></dt>
  <dd>
   A more detailed description of the design of Zero Install.
  </dd>
+</dl>
+
+<h3>The Python API</h3>
+
+<p>
+  The <b>0launch</b>/<b>0install</b> command-line interface to Zero Install is sufficient for most
+  purposes. However, sometimes you may want to use the Python library interface.
+  This is used by programs such as <b>0compile</b> and <b>0publish</b>, and is
+  also a useful reference for people wanting to modify 0install itself.
+</p>
+
+<dl>
+ <dt><a href='python-api/html/index.html'>Python API</a></dt>
+ <dd>
+   The reference documentation, generated automatically from the source code.
+ </dd>
+
+ <dt><a href='api-example.html'>Using the API</a></dt>
+ <dd>A simple example showing how to get started with the Python API.</dd>
+</dl>
+
+<h3>Other guides</h3>
+
+<dl>
+
+ <dt><a href='http://gfxmonk.net/2011/08/02/using-zero-install-as-a-plugin-manager.html'>Using Zero-Install as a Plugin Manager</a></dt>
+ <dd>
+   A blog post showing how 0install can be used to manage plugins for your application.
+ </dd>
+
 </dl>
 
 </html>
