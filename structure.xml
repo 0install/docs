@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-  <item href='.' base="index" label="Overview"/>
-  <item base='news' label="News"/>
+  <item href='.' base="index" label="Overview">
+    <item base="why" label="About 0install">
+      <item base="perspectives" label="Perspectives"/>
+      <item base="comparison" label="Comparison"/>
+      <!-- <item base='survey' label='Survey results'/> -->
+    </item>
+
+    <item base="features" label="Features">
+      <item base="distribution-integration" label="Distro integration"/>
+      <item base="sharing" label="Sharing">
+	<item base='virtual' label='Virtual machines'/>
+      </item>
+      <item base='injector-security' label='Security'/>
+    </item>
+  </item>
+
+  <item base='news' label="News">
+    <item base="roadmap" label="Roadmap"/>
+  </item>
   
   <item base="injector" label="Download 0install">
     <item base="install-linux" label="Linux"/>
@@ -9,21 +26,6 @@
     <item base="install-source" label="Source code"/>
     <item base="install-unix" label="Unix"/>
     <item base="install-windows" label="Windows"/>
-  </item>
-
-  <item base="features" label="Features">
-    <item base="distribution-integration" label="Distro integration"/>
-    <item base="sharing" label="Sharing">
-      <item base='virtual' label='Virtual machines'/>
-    </item>
-    <item base='injector-security' label='Security'/>
-    <item base="roadmap" label="Roadmap"/>
-  </item>
-
-  <item base="why" label="Why 0install">
-    <item base="perspectives" label="Perspectives"/>
-    <item base="comparison" label="Comparison"/>
-    <!-- <item base='survey' label='Survey results'/> -->
   </item>
 
   <item base='injector-feeds' label='Featured apps'/>

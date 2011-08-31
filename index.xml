@@ -43,7 +43,7 @@
   and <k>Windows</k> systems. It is fully <k>Open Source</k>.</p>
 
 <quicklinks>
-  <link href='doc.html' img='tango/book.png'>Read more</link>
+  <link href='why.html' img='tango/book.png'>Read more</link>
   <link href='dev.html' img='tango/applications-development.png'>Developers</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
   <mainlink>@AUTO_DOWNLOAD_HTML@</mainlink>
