@@ -50,6 +50,7 @@ HTML = index.php \
        package-rox.html \
        package-scons.html \
        packaging-binaries.html \
+       packaging-concepts.html \
        perspectives.html \
        pkg2zero.html \
        roadmap.html \

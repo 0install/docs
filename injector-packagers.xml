@@ -15,6 +15,11 @@
   (e.g. <a href='http://0install.net/tools/0export.xml'>0export</a>) and <i>View Page Source</i>.
 </p>
 
+<p>
+  Before you start, have a look at <a href='packaging-concepts.html'>Understanding 0install: important concepts</a> to make
+  sure you understand some key terms and ideas.
+</p>
+
 <p><strong>I want to...</strong></p>
 
 <dt>
