@@ -137,6 +137,7 @@ $ <b>sha1sum /bin/ls</b>
 <pre>
 # adduser --system zeroinst
 </pre>
+<p>Note: on systems without <b>adduser</b> try <b>useradd</b> instead.</p>
 </li>
   <li>Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
 <pre>
@@ -153,9 +154,9 @@ exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" &lt; /dev/null
 (note: the path will be /usr/<b>local</b>/bin/0store-secure-add if you installed from source)
 </li>
 
-  <li>Make your new script executable:
+  <li>Make your new script readable and executable by everyone:
 <pre>
-# chmod a+x /usr/local/bin/0store-secure-add-helper
+# chmod a+rx /usr/local/bin/0store-secure-add-helper
 </pre></li>
 
   <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
