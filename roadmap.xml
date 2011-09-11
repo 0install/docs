@@ -98,6 +98,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4186'>0install 1.0 final!</a></li>
   <li>&lt;environment separator=...&gt; attribute</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a></li>
+  <li>&lt;executable-in-var> and &lt;executable-in-path> bindings</li>
 </ul>
 
 
@@ -108,16 +109,20 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 1.2</h4>
+<h4>Version 1.3 (Sep 2011)</h4>
 
-<dl>
-  <dt>More flexible &lt;recipe&gt;s</dt>
-  <dd>e.g. applying patch files, unpacking nested archives.</dd>
-</dl>
+<ul>
+  <li>Use threads instead of sub-processes for downloads (more efficient)</li>
+  <li>MacPorts distribution support</li>
+  <li>Update to network-manager 0.9 API</li>
+</ul>
 
 <h4>Version 2.x</h4>
 
 <dl class='roadmap'>
+
+<dt>More flexible &lt;recipe&gt;s</dt>
+<dd>e.g. applying patch files, unpacking nested archives.</dd>
 
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store style interface</a></dt>
 <dd>
