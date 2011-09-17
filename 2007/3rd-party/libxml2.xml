@@ -11,20 +11,21 @@ can do this because it's written in SGML, the international standard
 metalanguage for markup languages.
 
 This package provides a library providing an extensive API to handle
-such XML data files.</description>
+such XML data files.
+
+This feed is deprecated; use http://repo.roscidus.com/lib/xml2 instead.
+</description>
   <package-implementation package="libxml2"/>
+  <feed src="http://repo.roscidus.com/lib/xml2"/>
   <group arch="Linux-i386">
     <implementation id="sha1new=73b4b856409f289ef29eac5d582ba1b724026ee5" released="2009-09-25" version="2.6.32">
-      <archive href="http://ftp.debian.org/debian/pool/main/libx/libxml2/libxml2_2.6.32.dfsg-5+lenny1_i386.deb" size="814686"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=e896b1790a73224437132f487a883cb547df3672" released="2009-09-25" version="2.6.32">
-      <archive href="http://ftp.debian.org/debian/pool/main/libx/libxml2/libxml2_2.6.32.dfsg-5+lenny1_amd64.deb" size="860528"/>
     </implementation>
   </group>
-
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DpsACgkQBSn9tx+xORA9dgCff+czZQXROganRwdYrbnmYPsJTSwAnRtlT/bz
-xItLm7K+tAHvSULkdhFV
+iEYEABECAAYFAk50gQ4ACgkQBSn9tx+xORDLLQCeMK3DjQDWyBLVwkbYBas7OC4Nf6IAn1S7uE1T
+b/f626DeX3mgxWmgaIT5
 
 -->
