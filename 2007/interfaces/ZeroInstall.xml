@@ -134,7 +134,7 @@ requires first uninstalling another.</description>
       <archive extract="zeroinstall-injector-0.54" href="http://downloads.sourceforge.net/project/zero-install/injector/0.54/zeroinstall-injector-0.54.tar.bz2" size="323661"/>
     </implementation>
   </group>
-  <group>
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
     <command name="test" path="tests/testall.py">
       <runner interface="http://repo.roscidus.com/python/python">
 	<version before="3"/>
@@ -145,11 +145,11 @@ requires first uninstalling another.</description>
 	<version before="3"/>
       </runner>
     </command>
-    <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-04-29" stability="stable" version="1.0-rc1">
+    <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" released="2011-04-29" stability="stable" version="1.0-rc1">
       <manifest-digest sha256="c515378dd31c6d31051829c4cdde079c3d9dd3d124dda076e0189c52b1ce0e98"/>
       <archive extract="zeroinstall-injector-1.0-rc1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector-1.0-rc1.tar.bz2" size="324263"/>
     </implementation>
-    <implementation id="sha1new=c1219e906e201e60b4d19e417070a47ee4caefcf" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-05-23" stability="stable" version="1.0">
+    <implementation id="sha1new=c1219e906e201e60b4d19e417070a47ee4caefcf" released="2011-05-23" stability="stable" version="1.0">
       <manifest-digest sha256="874b2bd03f32b49ff51c8a0b64077f8f0a56e8966f0f841bf960bf5a77709919"/>
       <archive extract="zeroinstall-injector-1.0" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0.tar.bz2" size="324040"/>
     </implementation>
@@ -165,7 +165,7 @@ requires first uninstalling another.</description>
       <command name="run" path="0launch">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-      <implementation id="sha1new=26fcb8d1d2cec6cacbe2dec64b217e54e252daf1" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-06-25" stability="stable" version="1.1">
+      <implementation id="sha1new=26fcb8d1d2cec6cacbe2dec64b217e54e252daf1" released="2011-06-25" stability="stable" version="1.1">
       <manifest-digest sha256="22eef9f243ca417ad5550eb21b0e25d413a71764007afafc983ec6eab3c59704"/>
       <archive extract="zeroinstall-injector-1.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.1/zeroinstall-injector-1.1.tar.bz2" size="325809"/>
     </implementation>
@@ -178,17 +178,21 @@ requires first uninstalling another.</description>
         <command name="run" path="0launch">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-        <implementation id="sha1new=7d1ecfbd76a42d56f029f9d0c72e4ac26c8561de" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" released="2011-07-23" version="1.2">
+    <implementation id="sha1new=7d1ecfbd76a42d56f029f9d0c72e4ac26c8561de" released="2011-07-23" stability="stable" version="1.2">
       <manifest-digest sha256="0c2e5652706c6e6806a1d9b13779d6ae1c8eb91fe2bd65b53c871d93d08e9cfd"/>
       <archive extract="zeroinstall-injector-1.2" href="http://downloads.sourceforge.net/project/zero-install/injector/1.2/zeroinstall-injector-1.2.tar.bz2" size="328458"/>
     </implementation>
       </group>
+      <implementation id="sha1new=8056a5697cfb51590d7b4e5dfefe82c8f528251c" released="2011-09-18" version="1.3">
+      <manifest-digest sha256="e31bfde49a3934cb732f612749fede837f12ca061d5de50c9c9feb3adac6694b"/>
+      <archive extract="zeroinstall-injector-1.3" href="http://downloads.sourceforge.net/project/zero-install/injector/1.3/zeroinstall-injector-1.3.tar.bz2" size="369966"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk4qjKwACgkQrgeCgFmlPMGDVACcChahSGPB86Qx0ByFHOhsrrOjc44An3SZg0OR
-H8Vwd852YC2Jcg2o4Igu
+iEYEABECAAYFAk51yp0ACgkQrgeCgFmlPMH14QCfVXzROnAV5ethjy8pLgWfnOFrnCYAnRZN9KSw
+IVNRID+hSmHpFmyoXVWe
 
 -->
