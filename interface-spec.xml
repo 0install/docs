@@ -310,6 +310,7 @@ network.
   &lt;command
     name='...'
     path='...' ? &gt;
+    [binding] *
     [requires] *
     [runner] ?
     &lt;arg&gt; ... &lt;/arg&gt; *
@@ -331,6 +332,10 @@ network.
 <p>
   Command-specific dependencies can be specified for a command by nesting &lt;requires&gt; elements. For example, an interpreter might only depend on libreadline when
   used interactively, but not when used as a library, or the "test" command might depend on a test framework.
+</p>
+
+<p>
+  Command-specific bindings (0launch >= 1.3) create a binding from the implementation to itself. For example, the "test" command may want to make the "run" command available in $PATH using &lt;executable-in-path&gt;.
 </p>
 
 <p>
