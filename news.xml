@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Sep 2011</dt>
+<dd>
+  <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4590'>0install 1.3</a> released: downloading now uses threads, rather than sub-processes, for greater efficiency; NetworkManager 0.9 is now supported; command-specific bindings are now supported; the HTTPS connection to the key information service is now properly authenticated; and a German translation was added.
+</dd>
 <dt>Aug 2011</dt>
 <dd>
 There's a new guide to <a href='http://gfxmonk.net/2011/08/02/using-zero-install-as-a-plugin-manager.html'>Using Zero Install as a plugin manager</a> for your application, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4491'>0install 1.1.2 for Windows</a> was released, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4502'>0compile 0.25</a> was released, adding support for &lt;command&gt; and &lt;runner&gt; (to specify the compile command), and a there is a new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4510'>fork of 0publish</a> with a new API.
