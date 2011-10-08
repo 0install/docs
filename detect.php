@@ -2,6 +2,7 @@
 
 function get_download_html() {
 	$platforms = array(
+		"Ubuntu/11.10" => "apt:zeroinstall-injector",
 		"Ubuntu/11.04" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
 		"Ubuntu/10.10" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
 		"Ubuntu/10.04" => "https://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector_1.0~rc1-1_all.deb",
