@@ -9,6 +9,8 @@ that use the GLib library.</description>
 
   <feed arch="Linux-ppc" src="http://0install.net/2008/linux-ppc/GLib-dev.xml"/>
 
+  <package-implementation distributions="Ports" package="glib"/>
+
   <group compile:lib-mappings="glib-2.0:0 gmodule-2.0:0 gobject-2.0:0 gthread-2.0:0">
     <group arch="Linux-i386">
       <implementation id="sha1=1662d6e85a0fcb518942a1d5e29e05537dbe7733" stability="stable" version="2.4.8">
@@ -71,7 +73,7 @@ that use the GLib library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAknGADwACgkQrgeCgFmlPMGbiQCdGqyTJo7gfjsU8meEUjQKh8Pc/ZsAn3MlCeG2
-i2m7vCQw1hRzu1Dnknn4
+iEYEABECAAYFAk6R27sACgkQrgeCgFmlPMFvAQCeIHkoTMfquQrXGxM5DaaXd4cgkMoAoK6S8xfq
+3ilKaEyTvnLaWKB1Rcqz
 
 -->
