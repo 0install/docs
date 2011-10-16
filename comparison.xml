@@ -311,9 +311,9 @@ from the event.
 
 <dd>
 <p>
-<a href='http://nixos.org/'>Nix</a> is a "purely functional" package
-manager. It is purely functional in the sense that each version of a package
-has its own directory. As with Zero Install, "upgrading" creates a new
+<a href='http://nixos.org/'>Nix</a> is a purely functional package
+manager. Each version of a package has its own directory. As with Zero Install,
+"upgrading" creates a new
 directory for the new version, rather than modifying the existing one. Unlike
 Zero Install, however, whether a package is installed affects the behaviour of the
 system. For example, running "firefox" when Firefox isn't installed produces an
@@ -388,6 +388,18 @@ Because Zero Install hashes are always hashes of the package contents, it does
 support <a href='sharing.html'>sharing</a>.
 </p>
 
+</dd>
+
+<dt>Glick 2</dt>
+
+<dd>
+  <a href='http://people.gnome.org/~alexl/glick2/'>Glick 2</a> has essentially the same
+  goals as 0install, but includes all dependencies in a single bundle rather
+  than linking libraries dynamically at run-time (for example, when a library
+  is updated, every program using that library must be updated individually).
+  It has support for non-relocatable applications, using some Linux-specific
+  tricks. It might be worth using these in 0install to implement the &lt;mount-point&gt;
+  binding, but few applications are non-relocatable these days.
 </dd>
 
 <dt>DOAP: Description of a Project</dt>
