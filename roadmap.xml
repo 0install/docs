@@ -101,6 +101,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>&lt;executable-in-var> and &lt;executable-in-path> bindings</li>
   <li>Use threads instead of sub-processes for downloads (more efficient)</li>
   <li>Update to network-manager 0.9 API</li>
+  <li>MacPorts distribution support</li>
 </ul>
 
 
@@ -111,10 +112,9 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 1.4 (Oct 2011)</h4>
+<h4>Version 1.5 (Nov 2011)</h4>
 
 <ul>
-  <li>MacPorts distribution support</li>
   <li>HTTP connection pooling, rate limiting and DNS caching</li>
 </ul>
 
