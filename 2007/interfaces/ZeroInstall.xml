@@ -191,12 +191,16 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="240cd0e254ce83d404e034a7b73d15ddd1faee3ee7ad601b3bce8abc18461c07"/>
       <archive extract="zeroinstall-injector-1.4" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2" size="370786"/>
     </implementation>
+      <implementation id="sha1new=9c0227dd0d824b1176bf6eec84e891ae05830554" released="2011-10-16" version="1.4.1">
+      <manifest-digest sha256="996b4d6af37cb08fe7c2ef191ae5814ad9a8b203fbc0880d34f6cd5bc787b805"/>
+      <archive extract="zeroinstall-injector-1.4.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2" size="371079"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk6aqIkACgkQrgeCgFmlPMG9GQCg18ycGzgQ35o8QzwEzuUM58LdCqYAoNn/LtnB
-o2QIRRxho+7wWLFz0f88
+iEYEABECAAYFAk6ataIACgkQrgeCgFmlPMEMDwCgoMGFnPpcprjGkxIbt1ScJrH1Y5kAnjFfJ9Dy
+yJs8GH/iijsNoBDtUtve
 
 -->
