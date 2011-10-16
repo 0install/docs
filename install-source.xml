@@ -36,8 +36,8 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.3/zeroinstall-injector-1.3.tar.bz2</b>
-$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.3/zeroinstall-injector-1.3.tar.bz2.sig</b>
+$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2</b>
+$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -47,14 +47,14 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 </p>
 
 <pre>
-$ <b>gpg --recv-key --keyserver pgp.mit.edu 59A53CC1</b>
-$ <b>gpg zeroinstall-injector-1.3.tar.bz2.sig</b>
-gpg: Signature made Sun Sep 18 11:55:46 2011 BST using DSA key ID 59A53CC1
+$ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
+$ <b>gpg zeroinstall-injector-1.4.tar.bz2.sig</b>
+gpg: Signature made Sun Oct 16 10:50:00 2011 BST using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 9242 9807 C985 3C07 44A6  8B9A AE07 8280 59A5 3CC1
+Primary key fingerprint: DA98 25AE CAD0 8975 7CDA  BD8E 0713 3F96 CA74 D8BA
 </pre>
 
 <p>
@@ -67,8 +67,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xjf zeroinstall-injector-1.3.tar.bz2</b>
-$ <b>cd zeroinstall-injector-1.3</b>
+$ <b>tar xjf zeroinstall-injector-1.4.tar.bz2</b>
+$ <b>cd zeroinstall-injector-1.4</b>
 </pre>
 
 <table class='split'>
