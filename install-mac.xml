@@ -66,7 +66,7 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/gtk-osx-zero-install.modules'>gtk-osx-zero-install.modules</a> with <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>GTK-OSX's JHBuild</a> using this command, which will install requirements like <i>gnupg</i> and <i>pygtk</i>:
 </p>
 
-<pre>$ <b>jhbuild -m $PWD/zero-install.modules build meta-zero-install</b></pre>
+<pre>$ <b>jhbuild -m $PWD/gtk-osx-zero-install.modules build meta-zero-install</b></pre>
 
 <h3 id='bundle'>Bundle installation</h3>
 <p>
