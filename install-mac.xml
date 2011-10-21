@@ -63,7 +63,7 @@ You can install the <a href='http://pdb.finkproject.org/pdb/package.php/zeroinst
 
 <h3 id='jhbuild'>JHBuild installation</h3>
 <p>
-You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/gtk-osx-zero-install.modules'>gtk-osx-zero-install.modules</a> with <a href='http://sourceforge.net/apps/trac/gtk-osx/wiki/Build'>GTK-OSX's JHBuild</a> using this command, which will install requirements like <i>gnupg</i> and <i>pygtk</i>:
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.2/gtk-osx-zero-install.modules'>gtk-osx-zero-install.modules</a> with <a href='http://live.gnome.org/GTK%2B/OSX/Building'>GTK-OSX's JHBuild</a> using this command, which will install requirements like <i>gnupg</i> and <i>pygtk</i>:
 </p>
 
 <pre>$ <b>jhbuild -m $PWD/gtk-osx-zero-install.modules build meta-zero-install</b></pre>
