@@ -1,4 +1,5 @@
 HTML = index.php \
+       0bootstrap.html \
        0compile-chroot.html \
        0compile-dev.html \
        0compile.html \

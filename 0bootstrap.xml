@@ -11,6 +11,8 @@
 <b>0bootstrap</b> generates a native package that installs a 0install launcher.
 </p>
 
+<p><strong>This program is not ready for use yet.</strong></p>
+
 <p>
 Normally, a launcher is created by passing its name (a URI) to the 0desktop
 command (or "Add New Program"). This downloads the appropriate feeds, their
@@ -92,12 +94,12 @@ $ 0alias 0bootstrap 0bootstrap.xml</pre>
 <h2>Creating a package for your program</h2>
 
 <p>
-Run 0bootstrap, passing in the system and the name (URI) of the main program.
+Run 0bootstrap, passing in the package format and the name (URI) of the main program.
 For example, to create an Ubuntu package for Edit:
 </p>
 
 <pre>
-$ 0bootstrap --browser Ubuntu http://rox.sourceforge.net/2005/interfaces/Edit
+$ 0bootstrap --format=deb http://rox.sourceforge.net/2005/interfaces/Edit > edit.deb
 </pre>
 
 <p>
