@@ -22,7 +22,9 @@
     <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-6.1sle11.i586.rpm'>SLE 11 RPM</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.3/i586/'>OpenSUSE 11.3 RPMs</a><br/>
     <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-1suse.noarch.rpm'>OpenSUSE 11.4 RPMs</a><br/>
-    <strong>Note:</strong> do not install the -test RPMs</li>
+    <strong>Note:</strong> do not install the -test RPMs.
+    <p>A package is now in <a href='https://build.opensuse.org/package/show?package=zeroinstall-injector&amp;project=openSUSE%3AFactory'>the openSUSE Factory</a>, so
+  it should be part of the next release.</p></li>
   <li id='redhat'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPM</a> (0.35)<br/>
     <a href='http://download.fedora.redhat.com/pub/epel/6/i386/zeroinstall-injector-0.53-1.el6.noarch.rpm'>RHEL 6 RPM</a> (0.53)
