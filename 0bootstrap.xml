@@ -99,7 +99,7 @@ For example, to create an Ubuntu package for Edit:
 </p>
 
 <pre>
-$ 0bootstrap --format=deb http://rox.sourceforge.net/2005/interfaces/Edit > edit.deb
+$ 0bootstrap --format=deb http://rox.sourceforge.net/2005/interfaces/Edit
 </pre>
 
 <p>
