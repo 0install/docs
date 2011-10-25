@@ -67,24 +67,24 @@
     </item>
 
     <item base='tools' label='Tool reference'>
-      <item base='0publish' label='0publish'/>
       <item base='0compile' label='0compile'>
 	<item base='0compile-dev' label='Developers'/>
 	<item base='0compile-chroot' label='Chroot Build'/>
 	<item base='0compile-scons' label='Example: SCons'/>
       </item>
+      <item base='ebox' label='ebox'/>
+      <item base='0export' label='0export'/>
+      <item base='feedlint' label='FeedLint'/>
+      <item base='make-headers' label='Make-headers'/>
+      <item base='0mirror' label='0mirror'/>
+      <item base='pkg2zero' label='pkg2zero'/>
+      <item base='0publish' label='0publish'/>
       <item base='0release' label='0release'>
 	<item base='0release-phases' label='Customisation'/>
 	<item base='0release-binaries' label='Compiled binaries'/>
       </item>
-      <item base='feedlint' label='FeedLint'/>
-      <item base='make-headers' label='Make-headers'/>
-      <item base='0mirror' label='0mirror'/>
-      <item base='0export' label='0export'/>
-      <item base='pkg2zero' label='pkg2zero'/>
-      <item base='0test' label='0test'/>
       <item base='0share' label='0share'/>
-      <item base='ebox' label='ebox'/>
+      <item base='0test' label='0test'/>
     </item>
 
     <item base='injector-specs' label='Specifications'>
