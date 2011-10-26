@@ -19,62 +19,62 @@ packagers.html.</description>
 
   <group main="0publish">
     <implementation id="sha1=eccc7bb963db26a025feaf6f2642b36edd08d78f" released="2006-02-25" stability="stable" version="0.1">
-      <archive extract="0publish-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.1.tar.bz2" size="15397"/>
+      <archive extract="0publish-0.1" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.1/0publish-0.1.tar.bz2" size="15397" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="eccc7bb963db26a025feaf6f2642b36edd08d78f"/>
     </implementation>
     <implementation id="sha1=93dbcd1300e1fbd4ded368c52ce68f6ee6470805" released="2006-03-05" stability="stable" version="0.2">
-      <archive extract="0publish-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.2.tar.bz2" size="15461"/>
+      <archive extract="0publish-0.2" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.2/0publish-0.2.tar.bz2" size="15461" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=afc14e8f19d40178fbb5e879d3b3b14510d8dc2e" released="2006-05-06" version="0.3">
-      <archive extract="0publish-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.3.tar.bz2" size="14679"/>
+      <archive extract="0publish-0.3" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.3/0publish-0.3.tar.bz2" size="14679" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=ae2c7a24f2da67d05cdaf1b263451a315ce485ef" released="2006-05-13" stability="stable" version="0.4">
-      <archive extract="0publish-0.4" href="http://superb-west.dl.sourceforge.net/sourceforge/zero-install/0publish-0.4.tar.bz2" size="16620"/>
+      <archive extract="0publish-0.4" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.4/0publish-0.4.tar.bz2" size="16620" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=8146bd363e8009090522063266c70e615f1855ee" released="2006-05-18" stability="stable" version="0.5">
-      <archive extract="0publish-0.5" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/0publish-0.5.tar.bz2" size="16895"/>
+      <archive extract="0publish-0.5" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.5/0publish-0.5.tar.bz2" size="16895" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=40ad36b30b1cdafa0fe086c48b592c8d45dc0867" released="2006-06-24" stability="stable" version="0.6">
-      <archive extract="0publish-0.6" href="http://belnet.dl.sourceforge.net/sourceforge/zero-install/0publish-0.6.tar.bz2" size="17123"/>
+      <archive extract="0publish-0.6" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.6/0publish-0.6.tar.bz2" size="17123" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=c83bc2c4f44b326f2aa3e11425c26b46da5c1a4a" released="2006-09-27" stability="stable" version="0.7">
-      <archive extract="0publish-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.7.tar.bz2" size="17720"/>
+      <archive extract="0publish-0.7" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.7/0publish-0.7.tar.bz2" size="17720" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=2fbddcd48727f0cf5e6537eb84fe4e324f020a79" released="2006-10-26" stability="stable" version="0.8">
-      <archive extract="0publish-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.8.tar.bz2" size="17789"/>
+      <archive extract="0publish-0.8" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.8/0publish-0.8.tar.bz2" size="17789" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=b214b5b3662216f7fc0a2440d19f98954a4f320a" released="2006-10-28" stability="stable" version="0.9">
-      <archive extract="0publish-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.9.tar.bz2" size="17793"/>
+      <archive extract="0publish-0.9" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.9/0publish-0.9.tar.bz2" size="17793" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=21d17e1f8412651d0a38e9eda3068e4768c6dc71" released="2007-01-14" stability="stable" version="0.10">
-      <archive extract="0publish-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.10.tar.bz2" size="17755"/>
+      <archive extract="0publish-0.10" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.10/0publish-0.10.tar.bz2" size="17755" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=1efef7e4e5b69a8d7a1b5a55d716b1f7714d3674" released="2007-06-02" stability="stable" version="0.11">
-      <archive extract="0publish-0.11" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.11.tar.bz2" size="17854"/>
+      <archive extract="0publish-0.11" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.11/0publish-0.11.tar.bz2" size="17854" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=509e055fd62e9925f73238660e35212ded8a6a64" released="2007-11-10" stability="stable" version="0.12">
-      <archive extract="0publish-0.12" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.12.tar.bz2" size="17974"/>
+      <archive extract="0publish-0.12" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.12/0publish-0.12.tar.bz2" size="17974" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=9a66a402355b0c444bd5d9c9dea7b94bc3f60bf0" released="2007-11-17" stability="stable" version="0.13">
-      <archive extract="0publish-0.13" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.13.tar.bz2" size="22322"/>
+      <archive extract="0publish-0.13" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.13/0publish-0.13.tar.bz2" size="22322" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=8363677926fb1c85ae43da38ef246fb32c20198c" released="2007-11-18" self-test="tests/testall.py" stability="stable" version="0.14">
-      <archive extract="0publish-0.14" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.14.tar.bz2" size="22762"/>
+      <archive extract="0publish-0.14" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.14/0publish-0.14.tar.bz2" size="22762" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=2667f5c5762c7b8fae4e2e645757c9d4c4d1f34d" released="2008-05-25" self-test="tests/testall.py" stability="stable" version="0.15">
-      <archive extract="0publish-0.15" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.15.tar.bz2" size="22850"/>
+      <archive extract="0publish-0.15" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.15/0publish-0.15.tar.bz2" size="22850" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=96e31d8a4ba9c282250ca3a7fd71ad546bf98ef5" released="2009-05-31" self-test="tests/testall.py" stability="stable" version="0.16">
       <manifest-digest sha256="69323cf58481acc74673466f6bde9f736137ed7803642655aa43fa4a208f370a"/>
-      <archive extract="0publish-0.16" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0publish-0.16.tar.bz2" size="23491"/>
+      <archive extract="0publish-0.16" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.16/0publish-0.16.tar.bz2" size="23491" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=847ea445c181d5da5a86c2e5ccb620a92d6f6771" released="2010-01-30" self-test="tests/testall.py" stability="stable" version="0.17">
       <manifest-digest sha256="cae2d05188cfd140eca87204e8957128494173f914efc458416543825454130b"/>
-      <archive extract="0publish-0.17" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.17/0publish-0.17.tar.bz2" size="23981"/>
+      <archive extract="0publish-0.17" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.17/0publish-0.17.tar.bz2" size="23981" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=eb9961c14b9a54dc45fa80a9c22a185887454659" released="2010-12-10" self-test="tests/testall.py" stability="stable" version="0.18">
       <manifest-digest sha256="be0c0773733055496669ea98e61772ae08f1a3add638a2e9f833bb9f966161ef"/>
-      <archive extract="0publish-0.18" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.18/0publish-0.18.tar.bz2" size="24244"/>
+      <archive extract="0publish-0.18" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.18/0publish-0.18.tar.bz2" size="24244" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -82,7 +82,7 @@ packagers.html.</description>
     </requires>
       <implementation id="sha1new=a100ea10f7e6ec981af6d19e7cab2a31fd1febd8" released="2011-02-02" self-test="tests/testall.py" stability="stable" version="0.19">
       <manifest-digest sha256="1704f494381431ddf65f257bf87fa6f0e5c7386bd68fd7204401a0d9700b5c84"/>
-      <archive extract="0publish-0.19" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.19/0publish-0.19.tar.bz2" size="24866"/>
+      <archive extract="0publish-0.19" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.19/0publish-0.19.tar.bz2" size="24866" type="application/x-bzip-compressed-tar"/>
     </implementation>
       <group>
         <command name="test" path="tests/testall.py">
@@ -97,14 +97,14 @@ packagers.html.</description>
     </command>
         <implementation id="sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43" released="2011-05-01" stability="stable" version="0.20">
       <manifest-digest sha256="24533dcef144809ec544f5a52777e6d4316b4a0a207b75a7c0ef9765366dc219"/>
-      <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899"/>
+      <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899" type="application/x-bzip-compressed-tar"/>
     </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3K1TgACgkQrgeCgFmlPMFFuwCg0ILJDylpNdEaiAHAMOIRINIGqMcAoNsuPD1O
-bnAyPgI0IktCVYvg/58f
+iEYEABECAAYFAk6oWesACgkQrgeCgFmlPMEUAACfWBhkEf4bupJ96o5UQsmi/go+B8oAoIYFI+j2
+OcQPbAaREmqVvJ6uc5XK
 
 -->
