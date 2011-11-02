@@ -38,8 +38,6 @@
   <li id='debian'>
   <b>Debian (lenny and squeeze)</b> Zero Install is part of the main Debian archive, so you can get it with:
   <pre># <b>apt-get install zeroinstall-injector</b></pre>
-  <p>Anders F Björklund has made a repository with backports of later versions to lenny. Add this to sources.list to use it:</p>
-<pre>deb http://afb.users.sourceforge.net/zero-install/debian lenny main</pre>
   </li>
   <li id='ubuntu'>
   <b>Ubuntu</b> Zero Install is in all versions of Ubuntu since 2007, so you can just do:
