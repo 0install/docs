@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Oct 2011</dt>
+<dd>
+The Sugar project announced <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4627'>Sweets Zero Install based Package Management System</a> (Sugar is a desktop environment designed for children), originally developed for the One Laptop per Child XO-1 netbook. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4643'>0install 1.4</a> was released, adding support for MacPorts dependencies. It also fixes a number of bugs.
+</dd>
 <dt>Sep 2011</dt>
 <dd>
   <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4590'>0install 1.3</a> released: downloading now uses threads, rather than sub-processes, for greater efficiency; NetworkManager 0.9 is now supported; command-specific bindings are now supported; the HTTPS connection to the key information service is now properly authenticated; and a German translation was added.
