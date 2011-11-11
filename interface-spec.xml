@@ -34,9 +34,10 @@ Note on terminology: originally the word 'interface' was used to mean both 'inte
 be confused if you see it used this way.
 </p>
 
-<p>
-A RELAX NG schema can be found in <a href='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/schema/'>/svnroot/zero-install/trunk/htdocs/schema</a>.
-</p>
+<ul>
+  <li><a href='http://0install.de/schema/injector/interface/schema.xsd'>XSD schema</a></li>
+  <li><a href='https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/schema/'>RELAX NG schema</a></li>
+</ul>
 
 <p>
 Changes to this document (and to the rest of the web-site) are tracked using subversion. To view
