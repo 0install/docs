@@ -40,13 +40,8 @@ be confused if you see it used this way.
 </ul>
 
 <p>
-Changes to this document (and to the rest of the web-site) are tracked using subversion. To view
-the change log:
+  Changes to this document (and to the rest of the web-site) are <a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/htdocs;a=history;f=interface-spec.xml;hb=HEAD'>tracked using Git</a>.
 </p>
-
-<pre>
-$ svn log https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/interface-spec.xml
-</pre>
 
 <h2>Contents</h2>
 <toc level='h2'/>
