@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/tests/Drupal.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Drupal</name>
+  <summary>content management platform</summary>
+  <description>
+Drupal is an open source content management platform powering millions of
+websites and applications. It’s built, used, and supported by an active and
+diverse community of people around the world.</description>
+  <homepage>http://drupal.org</homepage>
+  <category>Network</category>
+  <group doc-dir="." license="OSI Approved :: GNU General Public License v2">
+    <implementation id="sha1new=ef7e06f5f4ad0ed1b03d2050c779d0f41b9acff1" released="2011-11-13" version="7.9">
+    <archive extract="drupal-7.9" href="http://ftp.drupal.org/files/projects/drupal-7.9.tar.gz" size="2788086" type="application/x-compressed-tar"/>
+  </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABCAAGBQJOv50fAAoJEAcTP5bKdNi6fsgH/3pONguh3kSSozcX2iegQTOMQ1zHbBQnMGTU
+f629nx3txq+1Pl+IFZUU+DrxV/GXhYJuZu3VIzjetG6xpQI82e4/mwyQ2oAIgR4BavWc/JpRkoGP
+X6NVUvu3NIqyGqrFeTTQAxkpScq9l11SLG/0N9F7yKwlBcsG+BmtSb5kwq6Q86NPPCeaOe2g/WFj
+OFImvIUjz238qZpNR5+H1MZdvB+ZyhxSSWsxbKTkAif/0fXRKfHB2lGpBs4vtLJbM9z8z5DaA3Ip
+hG/v6i/O6KgNl03VCIxNJyNXNEFcnxr/Q0NHHk3YNElNNKVciCr73vohbVVcgwX5V/s5r84lyte6
+Fqc=
+
+-->
