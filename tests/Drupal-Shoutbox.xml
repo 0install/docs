@@ -10,17 +10,37 @@
 The Shoutbox module provides a block where visitors can quickly post short
 messages.</description>
   <group license="OSI Approved :: GNU General Public License v2">
-    <implementation id="sha1new=df327289c2be387c6e3e7ff3eb0bb1305babc9b1" released="2011-11-13" version="1.0-pre2">
-    <archive href="http://ftp.drupal.org/files/projects/shoutbox-7.x-1.0-alpha2.tar.gz" size="35838" type="application/x-compressed-tar"/>
-  </implementation>
+    <environment insert="shoutbox" name="drupal-modules"/>
+
+    <group>
+      <!-- Drupal 7.x versions -->
+      <requires interface="http://0install.net/tests/Drupal.xml">
+	<version before="8" not-before="7"/>
+      </requires>
+
+      <implementation id="sha1new=df327289c2be387c6e3e7ff3eb0bb1305babc9b1" released="2011-11-13" version="1.0-pre2">
+	<archive href="http://ftp.drupal.org/files/projects/shoutbox-7.x-1.0-alpha2.tar.gz" size="35838" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <!-- Drupal 6.x versions -->
+      <requires interface="http://0install.net/tests/Drupal.xml">
+	<version before="7" not-before="6"/>
+      </requires>
+
+      <implementation id="sha1new=5a0d908fc53e4467937104d6b4d46901d89129f4" released="2011-11-13" version="2.7">
+	<archive href="http://ftp.drupal.org/files/projects/shoutbox-6.x-2.7.tar.gz" size="34093" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJOv8qIAAoJEAcTP5bKdNi6mDkH/1QlWYm5mfRFx5e3ch/l/HcE+QWIUOw3DtId
-DpgO5J3LEXLyCLRxPIcJUGJpwjpzKie+QXDGO17mOwM/hs+J5Qp6V06XvgZ64qrY8T6r4I5VPwyI
-umCWCFNyIxjsG9j6Q15dTUW9uQe+at8SDkFu7wSTaVCaxF2kZOiaBb4GU9BKVlAWvaSoirbgMlp6
-obKJL6cPgDM7EyCOUezetz6/9wgYHeOqCbP53zaBbV6DdGTTtZIW1NUz7OQiUP+CW8I6OrXMWQOH
-9QjUlYPeIYOblVc3qt7WINB6obrv0DRruQNroKzDi0c5MOjp4SZeRww3xEdneXEyMsrONcwsws0H
-Rx0=
+iQEcBAABCAAGBQJOv8+DAAoJEAcTP5bKdNi6ExkIAIwCa2hGeHtZJH1N+PjYQWUlOKG9WACP0iWB
+e/gNoQP2QANaHVibrJoYXCDV2pM13XcmLAvtaxUSjj0P7bBDXuwU16nfRbpzOuKI0wLbOnAScvfY
+FuRc8tdVG2CCw+3dXgCGmxnMVkElXsa5JeR4WJodAczZpF+vulWsOsC1WNuYnIYhCeW1usCHmhKC
+vNl5yusrdJRct8+XfVzOTLD/jTljN0Up+oPxe1kLtNnCdwhkXli0DNFDMnVUVAkqOvoI/zebkQbH
+iWvK+ek5gUR7DGPKngsA4gu57JBTvbqFXBW1pU18lVg32nvVHjAxgNnvhvBsErTGGsvZs5BWtizf
+Qso=
 
 -->
