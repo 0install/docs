@@ -9,22 +9,18 @@
 <ul class='spaced'>
   <li id='fedora'><b>Fedora</b> - a <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
   <pre># <b>yum install zeroinstall-injector</b></pre>
-  <p>Newer versions are also available:</p><p>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_12/noarch/'>Fedora 12 RPMs</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_13/noarch/'>Fedora 13 RPMs</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Fedora_14/noarch/'>Fedora 14 RPMs</a>
-    </p>
+  <p>Newer versions are also available from the <a href='http://download.opensuse.org/repositories/home:/talex5/'>build service</a>.</p>
   </li>
   <li id='mandriva'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010/noarch/'>Mandriva 2010 RPMs</a><br/>
     <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010.1/noarch/'>Mandriva 2010.1 RPMs</a></li>
-  <li id='suse'>
+  <li id='suse'><p><b>OpenSUSE</b> - a package is now available from the main repository (since OpenSUSE 12.1):</p>
+    <p><a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;baseproject=openSUSE%3A12.1&amp;lang=en&amp;exclude_debug=true#'>Package in the OpenSUSE distribution</a></p>
+    <p>For older systems:</p>
     <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-6.1sle11.i586.rpm'>SLE 11 RPM</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.3/i586/'>OpenSUSE 11.3 RPMs</a><br/>
-    <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-1suse.noarch.rpm'>OpenSUSE 11.4 RPMs</a><br/>
-    <strong>Note:</strong> do not install the -test RPMs.
-    <p>A package is now in <a href='https://build.opensuse.org/package/show?package=zeroinstall-injector&amp;project=openSUSE%3AFactory'>the openSUSE Factory</a>, so
-  it should be part of the next release.</p></li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.3/noarch/'>OpenSUSE 11.3 RPMs</a><br/>
+    <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-1suse.noarch.rpm'>OpenSUSE 11.4 RPMs</a>
+    <p><strong>Note:</strong> do not install the -test RPMs.</p></li>
   <li id='redhat'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPM</a> (0.35)<br/>
     <a href='http://download.fedora.redhat.com/pub/epel/6/i386/zeroinstall-injector-0.53-1.el6.noarch.rpm'>RHEL 6 RPM</a> (0.53)
@@ -42,7 +38,7 @@
   <li id='ubuntu'>
   <b>Ubuntu</b> Zero Install is in all versions of Ubuntu since 2007, so you can just do:
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
-<p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>. If you want a newer version, try <a href='http://downloads.sourceforge.net/project/zero-install/injector/0.53/zeroinstall-injector_0.53-1_all.deb'>zeroinstall-injector_0.53-1_all.deb</a>.</p>
+<p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
 </li>
   <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
 </ul>
@@ -56,7 +52,7 @@
   </li>
   <li id='slackware'>
     <b>Slackware</b> packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a></li>
-  <li id='gentoo'><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage.</li>
+  <li id='gentoo'><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage (the version, 0.49, is very old though).</li>
 </ul>
 </dd>
 </dl>
