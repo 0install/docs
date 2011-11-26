@@ -191,7 +191,7 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="240cd0e254ce83d404e034a7b73d15ddd1faee3ee7ad601b3bce8abc18461c07"/>
       <archive extract="zeroinstall-injector-1.4" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2" size="370786"/>
     </implementation>
-      <implementation id="sha1new=9c0227dd0d824b1176bf6eec84e891ae05830554" released="2011-10-16" version="1.4.1">
+      <implementation id="sha1new=9c0227dd0d824b1176bf6eec84e891ae05830554" released="2011-10-16" stability="stable" version="1.4.1">
       <manifest-digest sha256="996b4d6af37cb08fe7c2ef191ae5814ad9a8b203fbc0880d34f6cd5bc787b805"/>
       <archive extract="zeroinstall-injector-1.4.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2" size="371079"/>
     </implementation>
@@ -200,7 +200,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk6oU/AACgkQrgeCgFmlPMEO2wCg1557RtdkTQ1/3Z8le4qlEE822b4An2jQXrUd
-yHetpYJIp5+SCAPKhFTS
+iEYEABECAAYFAk7RP4oACgkQrgeCgFmlPMHsIwCdGqnWBceShHygpjLBumgn93fcCWgAn2K3Cdc1
+7PRtw74SBGKToBUJL/xg
 
 -->
