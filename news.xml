@@ -4,6 +4,12 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Nov 2011</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4722'>0install 1.4 for Windows</a> released! As well as bringing the new features from 1.4 to Windows users, this also adds better Windows integration: a "My applications" list, desktop integration with start menu, file types, etc, command-line aliases (0alias), and synchronization between multiple machines (0install sync).
+We also created some demo packages showing how 0install can be used to <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4718/focus=4719'>manage Drupal plugins</a> and <a href='http://www.osnews.com/permalink?498222'>compile Ceylon programs</a>. If anyone is interested in taking these forward,
+<a href='get-involved.html'>get in touch</a>!
+</dd>
 <dt>Oct 2011</dt>
 <dd>
 The Sugar project announced <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4627'>Sweets Zero Install based Package Management System</a> (Sugar is a desktop environment designed for children), originally developed for the One Laptop per Child XO-1 netbook. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4643'>0install 1.4</a> was released, adding support for MacPorts dependencies. It also fixes a number of bugs.
