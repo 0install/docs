@@ -145,12 +145,29 @@
     </p>
   </dd>
 
-  <dt>Run without root</dt>
+  <dt>Run without granting root privileges</dt>
   <dd>
     <p>
-      Run new applications on your system without root privileges. 0install does
-      <b>not</b> write to any of the traditional software directories like
-      <b>/usr/bin</b> or <b>/usr/lib</b>. Instead it uses the cache directories.
+      When installing a package, most installation systems execute pre- and
+      post-install scripts inside the package as root, giving the package full
+      access to your machine. Even if they didn't, the fact that the package can unpack
+      files to directories such as <b>/usr/bin</b> or <b>/usr/lib</b> effectively gives
+      them root access anyway.
+    </p>
+    <p>
+      By contrast, when 0install installs (caches) a package, it does not run any code from
+      the pacakge and it does not write to any of the traditional software
+      directories like <b>/usr/bin</b> or <b>/usr/lib</b>. Instead it simply
+      puts each unpacked archive into its own directory.
+    </p>
+  </dd>
+
+  <dt>Run without being root</dt>
+  <dd>
+    <p>
+      Since installing software with 0install does not allow it to affect the system as a whole,
+      there is no need to restrict it to users with root privileges. Therefore, there is no need to
+      give users root privileges just so that they can install software.
     </p>
   </dd>
 
