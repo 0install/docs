@@ -345,16 +345,16 @@ This diagram shows some of the main Python objects in the Zero Install software:
 </p>
 
 <p style='text-align: center'>
- <img width="645" height="565" src="UML/injector-objects.png" alt="Object diagram"/>
+ <img width="655" height="575" src="UML/injector-objects.png" alt="Object diagram"/>
 </p>
 
 <p>
-The <b>0launch</b> command is implemented by the <b>cli</b> module. This uses a <b>Policy</b> to
+The <b>0install</b> command is implemented by the <b>cmd</b> module. This uses a <b>Driver</b> to
 select (and possibly download) a set of components (programs and libraries), which it then runs using
 the <b>run</b> module.</p>
 
 <p>
-The <b>Policy</b> uses a <b>Solver</b> to select a set of implementations suitable for the current
+The <b>Driver</b> uses a <b>Solver</b> to select a set of implementations suitable for the current
 <b>Architecture</b> (e.g. "Linux-i686"). It uses a <b>Fetcher</b> to download any missing or out-of-date
 feeds. Downloads are managed by a <b>Handler</b>, which interacts with the user to display progress
 and to confirm any new keys. Once a set of implementations has been chosen, the
