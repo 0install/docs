@@ -36,8 +36,8 @@ href="http://sourceforge.net/project/showfiles.php?group_id=76468&amp;package_id
 download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2</b>
-$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2.sig</b>
+$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.5/zeroinstall-injector-1.5.tar.bz2</b>
+$ <b>wget http://downloads.sourceforge.net/project/zero-install/injector/1.5/zeroinstall-injector-1.5.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -48,8 +48,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
-$ <b>gpg zeroinstall-injector-1.4.1.tar.bz2.sig</b>
-gpg: Signature made Sun Oct 16 10:50:00 2011 BST using RSA key ID CA74D8BA
+$ <b>gpg zeroinstall-injector-1.5.tar.bz2.sig</b>
+gpg: Signature made Thu 29 Dec 2011 12:21:10 GMT using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -67,8 +67,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xjf zeroinstall-injector-1.4.1.tar.bz2</b>
-$ <b>cd zeroinstall-injector-1.4.1</b>
+$ <b>tar xjf zeroinstall-injector-1.5.tar.bz2</b>
+$ <b>cd zeroinstall-injector-1.5</b>
 </pre>
 
 <table class='split'>
