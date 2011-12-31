@@ -112,7 +112,7 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 1.5 (Nov 2011)</h4>
+<h4>Version 1.6 (Jan 2012)</h4>
 
 <ul>
   <li>HTTP connection pooling, rate limiting and DNS caching</li>
