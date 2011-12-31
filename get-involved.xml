@@ -27,6 +27,12 @@ Also, asking software authors if they'd be interested in publishing a feed would
 
 <h3>Become a 0install developer</h3>
 <p>
-There's a list of features waiting to be implemented on the <a href='roadmap.html'>roadmap page</a>.
+There's a list of features waiting to be implemented on the <a href='roadmap.html'>roadmap page</a>. To understand the system, some good starting points are:
 </p>
+<ul>
+  <li><a href='using-git.html'>Getting the code using Git</a></li>
+  <li><a href='interface-spec.html'>The feed file format specification</a></li>
+  <li><a href='injector-design.html'>The design of 0install</a> (includes a diagram showing the main objects at the end).</li>
+  <li><a href='api-example.html'>API example</a> (a simple example showing how to use the Python API).</li>
+</ul>
 </html>
