@@ -36,7 +36,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 
   <group main="bin/inkscape">
-    <requires interface="http://0install.net/2006/interfaces/GTKmm-dev.xml">
+    <requires interface="http://repo.roscidus.com/lib/gtkmm">
       <environment insert="lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <group arch="Linux-i386">
@@ -74,7 +74,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk8BfY0ACgkQBSn9tx+xORDbBQCfYZWko9e0VBgxpHZesySmFNDHLhIAn3VSheJe
-Hhq51a+rxAp0kvrZm1Vk
+iEYEABECAAYFAk8BgBkACgkQBSn9tx+xORDgtQCfTEDrjXoIjQFOW6Gv2FLCq2ajojwAn26epO1x
+RaeZa3f5aDHce00NW0hh
 
 -->
