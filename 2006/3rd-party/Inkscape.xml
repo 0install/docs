@@ -39,6 +39,9 @@ user and developer community by using open, community-oriented development.</des
     <requires interface="http://repo.roscidus.com/lib/gtkmm">
       <environment insert="lib" name="LD_LIBRARY_PATH"/>
     </requires>
+    <requires interface="http://repo.roscidus.com/lib/gc">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
     <group arch="Linux-i386">
       <implementation id="sha1new=c1a1484b75a85307aedfbbe9e58ebc4163f7ee71" released="2008-05-10" stability="stable" version="0.46">
 	<archive extract="inkscape-linux-i486-0.46" href="http://downloads.sourceforge.net/zero-install/inkscape-linux-i486-0.46.tar.bz2" size="14299779" type="application/x-bzip-compressed-tar"/>
@@ -74,7 +77,7 @@ user and developer community by using open, community-oriented development.</des
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk8BgBkACgkQBSn9tx+xORDgtQCfTEDrjXoIjQFOW6Gv2FLCq2ajojwAn26epO1x
-RaeZa3f5aDHce00NW0hh
+iEYEABECAAYFAk8BlIgACgkQBSn9tx+xORDG9QCfXHqiSAlbkPjnbX0A97uA6vBmjB0AoInfhZxB
+rm+BzZnpQW8i4zk38zX7
 
 -->
