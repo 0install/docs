@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Dec 2011</dt>
+<dd>
+Notable releases this month include the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4745'>Windows Publishing Tools (alpha)</a>, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4746'>0install 1.4.3 for Windows</a>, and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4754'>0install 1.5</a>.
+</dd>
 <dt>Nov 2011</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4722'>0install 1.4 for Windows</a> released! As well as bringing the new features from 1.4 to Windows users, this also adds better Windows integration: a "My applications" list, desktop integration with start menu, file types, etc, command-line aliases (0alias), and synchronization between multiple machines (0install sync).
