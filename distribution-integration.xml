@@ -5,6 +5,19 @@
 
 <h2>Distribution integration</h2>
 
+<p><strong>Supported distributions:</strong></p>
+<ul>
+  <li><b>Arch</b>: Arch Linux - since 1.6</li>
+  <li><b>Debian</b>: dpkg-based (Debian, Mint, Ubuntu, etc) - since 0.28</li>
+  <li><b>Ports</b>: FreeBSD - since 0.47</li>
+  <li><b>Gentoo</b>: Gentoo - since 0.45</li>
+  <li><b>MacPorts</b>: Mac OS X (ports) - since 1.4</li>
+  <li><b>RPM</b>: rpm-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31</li>
+  <li><b>Slack</b>: Slackware - since 0.48</li>
+  <li><b>(unnamed)</b>: Windows (detects native Python and Java) - in mainline since 1.5</li>
+  <li><b>Adding a new one</b>: edit <a href='python-api/html/zeroinstall.injector.distro-module.html'>distro.py</a></li>
+</ul>
+
 <p>
 If you have already installed a package using your distribution's installer then Zero install can use
 that instead of downloading a second copy using Zero Install. It can also use <a href='http://www.packagekit.org/'>PackageKit</a> to install them, if the user is authorised.
@@ -55,10 +68,6 @@ Two methods are available to integrate Zero Install packages with distribution o
   will query your distribution's package manager to see if a package with this name is already installed. If so,
   that version will be considered as another candidate, with a stability rating
   of "packaged" (which is ranked between "stable" and "preferred").
-  </p><p>
-  Zero Install can get package information from Debian-based systems (including Ubuntu, etc), RPM-based systems,
-  Slackware, Gentoo and FreeBSD Ports at present. Adding support for extra packaging systems is
-  quite easy (see <a href='python-api/html/zeroinstall.injector.distro-module.html'>distro.py</a>).
   </p>
 
   <p>
