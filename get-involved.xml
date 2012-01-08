@@ -41,8 +41,8 @@ There's a list of features waiting to be implemented on the <a href='roadmap.htm
 <dl>
   <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4749/focus=4750'>Using 0install for CMS's</a></dt>
   <dd>Many content management systems don't provide good support for updates of the system or plugins, dependency handling etc. 0install can do this quite easily (e.g. see the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4718/focus=4719'>Drupal integration</a>), but someone needs to try it with a larger selection of plugins, test it, and discuss it with the relevant CMS community.</dd>
-  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4712'>Arch Linux native package support</a></dt>
-  <dd>Allow 0install to detect native Arch Linux packages that are already installed, rather than downloading a second copy of common libraries. This should be a fairly simple matter of copying the existing code for supporting e.g. Slackware and modifying it a little.</dd>
+  <dt><del><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4712'>Arch Linux native package support</a></del></dt>
+  <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4770'>Done!</a></dd>
 </dl>
 
 <p>And a few bigger projects:</p>
