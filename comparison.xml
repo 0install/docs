@@ -230,8 +230,8 @@ Maven 2.0 and 0install:
 </p>
 <ul>
 <li>
-The <b>pom.xml</b> files are not signed, as they are not fetched by
-maven. Only implementations are downloaded.
+The <b>pom.xml</b> files are not signed. An attacker can therefore cause modified
+POM files to be downloaded.
 </li>
 <li>
 There is no digest of the downloads in the POM file, so no security checks
