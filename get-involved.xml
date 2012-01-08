@@ -35,4 +35,26 @@ There's a list of features waiting to be implemented on the <a href='roadmap.htm
   <li><a href='injector-design.html'>The design of 0install</a> (includes a diagram showing the main objects at the end).</li>
   <li><a href='api-example.html'>API example</a> (a simple example showing how to use the Python API).</li>
 </ul>
+<p>
+  Some interesting possible starter projects:
+</p>
+<dl>
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4749/focus=4750'>Using 0install for CMS's</a></dt>
+  <dd>Many content management systems don't provide good support for updates of the system or plugins, dependency handling etc. 0install can do this quite easily (e.g. see the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4718/focus=4719'>Drupal integration</a>), but someone needs to try it with a larger selection of plugins, test it, and discuss it with the relevant CMS community.</dd>
+  <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4712'>Arch Linux native package support</a></dt>
+  <dd>Allow 0install to detect native Arch Linux packages that are already installed, rather than downloading a second copy of common libraries. This should be a fairly simple matter of copying the existing code for supporting e.g. Slackware and modifying it a little.</dd>
+</dl>
+
+<p>And a few bigger projects:</p>
+
+<dl>
+  <dt><a href='http://repo.roscidus.com/'>Improve the UI for repo.roscidus</a></dt>
+  <dd>This site provides feeds for many well-known packages, some generated automatically from Debian packages, others uploaded manually. The site is currently maintained by editing HTML files manually and it's hard for multiple people to work on it at once. Some kind of system that lets a team manage groups of feeds easily would be much better. This task isn't all that easy, but it doesn't require any deep knowledge of 0install.</dd>
+
+  <dt><a href='0bootstrap.html'>Make first-time use easier</a></dt>
+  <dd>Users without 0install should still be able to download and run 0install programs easily, in order to bootstrap adoption.</dd>
+
+  <dt><a href='roadmap.html'>Anything on the roadmap</a></dt>
+  <dd>Lots of interesting ideas here.</dd>
+</dl>
 </html>
