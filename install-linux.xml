@@ -23,7 +23,7 @@
     <p><strong>Note:</strong> do not install the -test RPMs.</p></li>
   <li id='redhat'>
     <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPM</a> (0.35)<br/>
-    <a href='http://download.fedora.redhat.com/pub/epel/6/i386/zeroinstall-injector-0.53-1.el6.noarch.rpm'>RHEL 6 RPM</a> (0.53)
+    <a href='http://download.fedora.redhat.com/pub/epel/6/i386/zeroinstall-injector-1.2-1.el6.noarch.rpm'>RHEL 6 RPM</a> (1.2)
   </li>
 </ul>
 </dd>
