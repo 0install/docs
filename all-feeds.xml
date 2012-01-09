@@ -370,11 +370,11 @@ transforms or DCT/DST). ...</feed>
 <feed uri="http://afb.users.sourceforge.net/zero-install/interfaces/firefox.xml" name="Mozilla Firefox" summary="Web Browser" icon="feed_icons/firefox.png" width="48" height="48" homepage="http://www.mozilla.com/en-US/products/firefox/" category="Network">The award-winning Firefox Web browser has security, speed and new features
 that will change the way you use the Web. Don't settle for anything less.</feed>
 
-<feed uri="http://silvalauinger.de/0install/Network/de-DE/Firefox.xml" name="Firefox" summary="Webbrowser" icon="feed_icons/Firefox.png" width="64" height="64" homepage="http://www.mozilla-europe.org/de/firefox/" category="Network">Der preisgekrönte Webbrowser Firefox bietet Sicherheit, Geschwindigkeit und
+<feed uri="http://silvalauinger.de/0install/Network/de-DE/Firefox.xml" name="Firefox" summary="Webbrowser" icon="feed_icons/Firefox.xml.png" width="64" height="64" homepage="http://www.mozilla-europe.org/de/firefox/" category="Network">Der preisgekrönte Webbrowser Firefox bietet Sicherheit, Geschwindigkeit und
 neue Funktionen, die die Art und Weise, wie Sie das Web nutzen, verändern
 werden. Entscheiden Sie sich für keinen anderen.</feed>
 
-<feed uri="http://silvalauinger.de/0install/Network/en-US/Firefox.xml" name="Firefox" summary="Webbrowser" icon="feed_icons/Firefox.png" width="64" height="64" homepage="http://www.mozilla.com/en/" category="Network">The award-winning Firefox Web browser has security, speed and new features that
+<feed uri="http://silvalauinger.de/0install/Network/en-US/Firefox.xml" name="Firefox" summary="Webbrowser" icon="feed_icons/Firefox.xml.png" width="64" height="64" homepage="http://www.mozilla.com/en/" category="Network">The award-winning Firefox Web browser has security, speed and new features that
 will change the way you use the Web. Don’t settle for anything less.</feed>
 
 <feed uri="http://services.sugarlabs.org/flex" name="Flex" summary="GNU lexical analyser generator" icon="tango/applications-system.png" width="48" height="48" homepage="http://flex.sourceforge.net/" category="Library">GNU lexical analyser generator</feed>
