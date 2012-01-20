@@ -19,6 +19,8 @@ content is shareable. Therefore:
 <li>If your program doesn't (at a minimum) allow <k>unlimited redistribution of unmodified binaries</k>, then DO NOT distribute it using Zero Install!</li>
 </ul>
 
+<p>TODO: this is overly restrictive. There should be a way to indicate that a package cannot be redistributed.</p>
+
 <p>
 If you want to implement some restrictions (e.g. "you must pay before using this program") then you can require a license key to be entered to make the
 program fully functional, for example. The license key doesn't go in the shared cache and so will not be shared automatically.
@@ -58,6 +60,24 @@ unsigned feed which you felt confident had not been modified by a third-party.
 <p>
 Each piece of software is licensed separately. Please consult the documentation page for the program you are interested in for details.
 </p>
+
+<h4>Using Zero Install to distribute commercial / closed source software</h4>
+
+<p>
+  The core software (0install) is released under the terms of the <a href='http://www.opensource.org/licenses/lgpl-2.1.php'>GNU Lesser General Public License</a>. The tools are mostly LGPL or <a href='http://www.opensource.org/licenses/gpl-2.0.php'>GPL</a>. In general, this shouldn't cause any problems for you:
+</p>
+
+<ul>
+  <li><p>Normally with 0install, you distribute your software by writing an XML file describing it and publishing that on your web-site. Users can use any client they like to fetch your software using this XML description. If they happen to choose our LGPL software to do this, it has no effect on you. You are not distributing our software and, therefore, you don't need a license to distribute it. Therefore, there is no need to agree to any of the licensing terms.</p></li>
+  <li><p>Merely using GPL tools (e.g. <a href='packaging-binaries.html'>0publish-gui</a>) to produce the XML file does not mean we have any rights over your software (but see note above; we will assume that we can mirror your XML feed unless you make it clear that you don't want that).</p></li>
+  <li><p>If you are distributing our software with yours, then you do need to follow the license. The main thing is to keep the two bits somewhat separate: the bundle you are distributing contains our software, under our license, and your software, under your license:</p>
+    <ul>
+      <li><p>Users must be able to see that there are two separate bits. They must be able to modify the 0install part (e.g. to fix bugs), and use the modified version with your software.</p></li>
+      <li><p>Any changes you make to our software must be made available under the same license, so that we can (if we choose) include it in future versions of 0install.</p></li>
+  </ul>
+  <p>In particular, if you simply use <a href='0export.html'>0export</a> to create an installer containing 0install and your code then there is no problem. 0export unpacks the different components to different directories.</p></li>
+  <li><p>If you are actually trying to <i>write</i> an installer (i.e. a competitor to 0install), and you want to use our code to do that, then the license is likely to be an issue for you. In that case, you can only use our code as part of your program if your program is released under the same license terms.</p></li>
+ </ul>
 
 <h3>Privacy</h3>
 
