@@ -8,11 +8,13 @@ To use Zero Install, you will need:
 </p>
 
 <ul>
-<li><a href='http://www.python.org/'>Python</a> (version 2.5 or later is needed).</li>
+<li><a href='http://www.python.org/'>Python</a> (version 2.6 or later is needed).</li>
 <li><a href='http://www.gnupg.org/'>GnuPG</a> (to check the digital signatures).</li>
 <li><a href='http://www.gtk.org/'>GObject/GTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
 <li><a href='http://www.pygtk.org/'>PyGObject/PyGTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
 </ul>
+
+<p>Note: the last version to support Python 2.5 was 0install 1.0</p>
 
 <p>
 The easiest way of installing Zero Install and its requirements is by using a &#8220;package<br />
@@ -24,6 +26,9 @@ or for its BSD sub-system <a href='#darwin'>Darwin</a> (using X11) by using eith
 
 <p>Currently using MacPorts, Fink or JHBuild all require compiling from source code,<br />
 so if you want to get started quickly the easiest way is the Bundle: <a href='http://downloads.sourceforge.net/project/zero-install/injector/1.5/ZeroInstall.pkg'>ZeroInstall.pkg</a></p>
+
+<p>The bundle installs GnuPG and PyGTK (including PyGObject) and their dependencies,<br />
+for Mac OS X 10.5 or later using Python 2.6 (download it from <a href="http://www.python.org/download/releases/2.6.6/">python.org</a> if needed).</p>
 
 <quicklinks>
   <link href='http://downloads.sourceforge.net/project/zero-install/injector/1.5/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
