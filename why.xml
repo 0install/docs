@@ -47,7 +47,10 @@ Eicher, Frank Richter, Mark Seaborn, Michel Alexandre Salim, Rene
 Lopez, Thomas Leonard, Tim Cuthbertson and Tim Diels.
 </p><p>
 Hundreds of packages are currently available and you can easily
-<a href='dev.html'>publish your own programs</a>.
+<a href='dev.html'>publish your own programs</a>. Zero Install itself
+is available from the official repositories of most Linux distributions
+(including Arch Linux, Debian, Ubuntu, Fedora, OpenSUSE and Gentoo) as well as FreeBSD
+Ports and MacPorts.
 </p>
 
 <h3>Why 0install?</h3>
