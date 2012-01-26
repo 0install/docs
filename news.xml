@@ -16,7 +16,7 @@ We also created some demo packages showing how 0install can be used to <a href='
 </dd>
 <dt>Oct 2011</dt>
 <dd>
-The Sugar project announced <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4627'>Sweets Zero Install based Package Management System</a> (Sugar is a desktop environment designed for children), originally developed for the One Laptop per Child XO-1 netbook. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4643'>0install 1.4</a> was released, adding support for MacPorts dependencies. It also fixes a number of bugs.
+The Sugar project announced <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4627'>Sweets Zero Install based Package Management System</a> (Sugar is a desktop environment designed for children, originally developed for the One Laptop per Child XO-1 netbook). <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4643'>0install 1.4</a> was released, adding support for MacPorts dependencies. It also fixes a number of bugs.
 </dd>
 <dt>Sep 2011</dt>
 <dd>
