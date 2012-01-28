@@ -65,7 +65,8 @@ HTML = index.php \
        using-git.html \
        virtual.html \
        walkthrough.html \
-       why.html
+       why.html \
+       why-not.html
 
 all: htmlfiles
 	(ls *.html; find python-api -name '*.html') | sed 's!^\(\./\)\?!http://0install.net/!' | grep -v /google > sitemap.txt

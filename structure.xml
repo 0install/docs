@@ -4,6 +4,7 @@
     <item base="why" label="About 0install">
       <item base="perspectives" label="Perspectives"/>
       <item base="comparison" label="Comparison"/>
+      <item base="why-not" label="Why not?"/>
       <!-- <item base='survey' label='Survey results'/> -->
     </item>
 
