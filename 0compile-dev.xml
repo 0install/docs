@@ -34,25 +34,41 @@ adding binaries, except that you give <b>src</b> as the machine (CPU) type:
 </p>
 
 <pre>
-&lt;implementation
-  arch="*-src"
-  id="."
-  version="0.1-pre"
-  xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"
-  compile:command="make -f ${SRCDIR}/Makefile"/>
+&lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre">
+  &lt;command <b>name='compile'</b> path='Makefile'>
+    &lt;runner interface='http://repo.roscidus.com/devel/make'>
+      &lt;arg>-f&lt;/arg>
+    &lt;/runner>
+  &lt;/command>
+&lt;/implementation>
 </pre>
+
+<p>The job of the <b>compile</b> command is to call the actual build system.
+It is executed inside the <b>build</b> directory (<b>$BUILDDIR</b>).
+It must compile the source in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>.
+The path to the generated feed for the new binary is <b>$BINARYFEED</b>, if you need it during the build.
+</p>
+
+<p>
+Instead of giving a &lt;runner&gt;, you can instead give a shell command, like this:
+</p>
+
+<pre>
+  &lt;implementation arch="*-src" id="." version="0.1-pre"
+    <b>xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"
+    compile:command="make -f ${SRCDIR}/Makefile"</b>/>
+</pre>
+
+<p>
+However, the first form (with &lt;command name='compile'>) is preferred.
+If the command starts to get complicated, you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute to the command to run the script.
+</p>
 
 <p>
 There are also some extra attributes you can add to the <b>implementation</b> element:
 </p>
 
 <dl>
- <dt>compile:command</dt>
- <dd>This must be present. Its value is a shell command, executed inside the <b>build</b> directory. It must compile the source
- in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>. If this command starts to get complicated,
- you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute
- to the command to run the script. The path to the generated feed for the new binary is <b>$BINARYFEED</b>, if you need it during the build.</dd>
-
  <dt>compile:binary-main</dt>
  <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary feed that is created. If it is not given, then
  the binary created cannot be executed (e.g., it is a library).</dd>
