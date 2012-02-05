@@ -4,6 +4,18 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jan 2012</dt>
+<dd>
+Windows 0install versions
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4764'>1.5</a>,
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4847'>1.5.1</a>, and
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4984'>1.5.2</a> were releaed. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4767/focus=4771'>ArchLinux native package</a> support was merged. There's a new <a href='why-not.html'>Why not 0install?</a> page, recording feedback from projects that didn't decide to use 0install. Interesting discussions on the mailing list included
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4867'>using 0install for a distribution's main package manager</a>,
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4793'>using 0install as a plugin manager</a>,
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4891'>comparing 0install and virtualenv</a> and
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4896/focus=4916'>using 0install without a GUI</a>.
+
+</dd>
 <dt>Dec 2011</dt>
 <dd>
 Notable releases this month include the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4745'>Windows Publishing Tools (alpha)</a>, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4746'>0install 1.4.3 for Windows</a>, and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4754'>0install 1.5</a>.
