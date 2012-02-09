@@ -202,9 +202,7 @@ version using your normal package manager.
 I'm not providing a service. You distribute software by hosting some files on
 your own web server. The only centralised URLs are the default mirror site and
 the default GPG key information server, both of which are optional.
-The core software is all LGPL or GPL. Of course, you're welcome to
-<a href='http://sourceforge.net/developer/user_donations.php?user_id=40461'>send me
-money</a> if you want ;-)
+The core software is all LGPL or GPL.
 </p>
 
 </dd>
