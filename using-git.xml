@@ -8,7 +8,7 @@
 <p>
 If you want to work on the code, or test a fix that has just been made,
 you'll want to get the latest developer version. We use Git for version
-control, so make sure you have that. You'll also need 'gettext' to build
+control, so make sure you have that. You'll also need '<a href='http://www.gnu.org/software/gettext/'>gettext-tools</a>' to build
 the translations.
 </p>
 
