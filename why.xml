@@ -21,7 +21,7 @@ interfere with those provided by the distribution.
 or zip archives can be used. Instead, it defines an XML metadata
 format to describe these packages and the dependencies between them. A
 single metadata file can be used on multiple platforms (e.g. Ubuntu,
-Debian, Fedora, FreeBSD, Mac OS X and Windows), assuming binary or
+Debian, Fedora, openSUSE, Mac OS X and Windows), assuming binary or
 source archives are available that work on those systems.
 </p><p>
 0install also has some interesting features not often found in
@@ -49,8 +49,8 @@ Lopez, Thomas Leonard, Tim Cuthbertson and Tim Diels.
 Hundreds of packages are currently available and you can easily
 <a href='dev.html'>publish your own programs</a>. Zero Install itself
 is available from the official repositories of most Linux distributions
-(including Arch Linux, Debian, Ubuntu, Fedora, OpenSUSE and Gentoo) as well as FreeBSD
-Ports and MacPorts.
+(including Arch Linux, Debian, Ubuntu, Fedora, openSUSE and Gentoo) as well as
+MacPorts.
 </p>
 
 <h3>Why 0install?</h3>

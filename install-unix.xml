@@ -5,7 +5,10 @@
 
 <dl>
 <dt>FreeBSD</dt>
-<dd><a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)</dd>
+<dd><a href='http://www.freshports.org/devel/zeroinstall-injector/'>/usr/ports/devel/zeroinstall-injector</a> (Dylan Cochran)<br/>
+  <strong>2011-12-01</strong> FreeBSD has removed 0install from ports in order to promote the use of their new PBI system, so you
+  should <a href='install-source.html'>install from source</a> instead.
+</dd>
 
 <dt>Solaris</dt>
 <dd>The injector has been tested on Solaris and works fine. Use <a href='install-source.html'>the source package</a> to install.</dd>
