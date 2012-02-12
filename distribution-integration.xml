@@ -8,6 +8,7 @@
 <p><strong>Supported distributions:</strong></p>
 <ul>
   <li><b>Arch</b>: Arch Linux - since 1.6</li>
+  <li><b>Cygwin</b>: Cygwin - since 1.7</li>
   <li><b>Debian</b>: dpkg-based (Debian, Mint, Ubuntu, etc) - since 0.28</li>
   <li><b>Ports</b>: FreeBSD - since 0.47</li>
   <li><b>Gentoo</b>: Gentoo - since 0.45</li>
