@@ -121,7 +121,7 @@ Created directory GNU-Hello
 </pre>
 
 <p>
-<b>0compile</b> will run <b>0launch --source</b> to select a
+<b>0compile</b> will run <b>0install select --source</b> to select a
 suitable version of the source code and download it. It will also locate and
 download any dependencies (e.g. build tools or header files) the source may
 have. It will download the <b>make</b> utility in this case, or use your distribution's
@@ -221,7 +221,7 @@ rebuilding faster.
 
 <p>
 For future reference, there is also a <b>gnu-hello-linux-x86_64/0install/build-environment.xml</b> file.
-This is a selections file, as produced by <b>0launch --source --get-selections</b>, but with a few extra
+This is a selections file, as produced by <b>0install select --source --xml</b>, but with a few extra
 details of the build added, including the hostname of the machine used for the
 build, a timestamp and your username. You can use this to rebuild later with the same
 environment (e.g. using this exact version of "make"). The file is written before the build

@@ -149,7 +149,7 @@ signed the feeds to your key-ring.</li>
 is added to the trusted list for the feed's domain. This allows checking for updates
 in future without confirming the keys. If the user already has a newer version of the
 feed, the import has no effect.</li>
-<li>Chooses a set of implementations (<b>0launch --get-selections URI</b>) in
+<li>Chooses a set of implementations (<b>0install select --xml URI</b>) in
 minimal network use mode and with the implementations in the setup.sh available.</li>
 <li>Copies any selected implementations into the system or user's cache (<b>~/.cache/0install.net/implementations</b>).</li>
 <li>Runs the program (<b>0launch --offline URI</b>).</li>
