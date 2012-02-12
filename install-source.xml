@@ -49,7 +49,7 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
 $ <b>gpg zeroinstall-injector-1.6.tar.bz2.sig</b>
-gpg: Signature made Thu 29 Dec 2011 12:21:10 GMT using RSA key ID CA74D8BA
+gpg: Signature made Sun 12 Feb 2012 12:05:50 GMT using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
