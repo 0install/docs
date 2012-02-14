@@ -150,10 +150,7 @@
 	    	   alt="Valid XHTML 1.0!" height="31" width="88"/>
 	    </a>
 	    -->
-	    <a href="http://sourceforge.net/projects/zero-install">
-	      <img width="88" height="31" alt="SF logo"
-     	       src="http://sourceforge.net/sflogo.php?group_id=7023&amp;type=1"/>
-	    </a>
+	    <a href="http://sourceforge.net/projects/zero-install"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=76468&amp;type=11" width="120" height="30" alt="SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
 	  </span>
 	</div>
 	  </td>
