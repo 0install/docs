@@ -60,7 +60,7 @@ Instead of giving a &lt;runner&gt;, you can instead give a shell command, like t
 </pre>
 
 <p>
-However, the first form (with &lt;command name='compile'>) is preferred.
+However, the first form (with &lt;command name='compile'>) is preferred (and will be necessary if you want to support Windows, once Windows works with 0compile).
 If the command starts to get complicated, you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute to the command to run the script.
 </p>
 
