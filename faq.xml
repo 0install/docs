@@ -508,6 +508,20 @@ for details.</p>
 
 </dd>
 
+<dt>How do I install a library?</dt>
+<dd>
+<p>
+You don't install libraries directly; instead, each program which depends on the
+library must specify this dependency in its XML feed. In this way, every program sees a version
+of the library with which it is compatible. The only programs which will
+"see" a 0install library are those programs which specify a dependency on it.
+</p>
+<p>
+Note: if the program <i>does</i> specify the dependency, and you just want to make it use a particular
+version of the library, see the next question...
+</p>
+</dd>
+
 <dt>How can I run my own version of something, instead of downloading a released version?</dt>
 <dd>
 
