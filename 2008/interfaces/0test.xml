@@ -8,16 +8,13 @@ Use 0test to run the unit tests for a Zero Install program. You can use this to
 test released versions or developer snapshots. You can give a selection of
 versions to test, and you can test against different versions of dependencies to
 create a matrix of test results.</description>
-
   <homepage>http://0install.net/0test.html</homepage>
-
   <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
     <!-- Update the copy of the version number -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; multi-tester</release:action>
   </release:management>
   <category>Development</category>
   <needs-terminal/>
-
   <group license="OSI Approved :: GNU General Public License v2" main="multi-tester">
     <implementation id="sha1new=e74e52960c6c6e6ee602807a92636bc06dfb0ea0" main="multi-tester" released="2008-11-06" stability="stable" version="0.1">
       <archive extract="0test-0.1" href="http://surfnet.dl.sourceforge.net/sourceforge/zero-install/0test-0.1.tar.bz2" size="8971"/>
@@ -28,60 +25,61 @@ create a matrix of test results.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version before="0.53" not-before="0.46"/>
-      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
-    </requires>
+        <version before="0.53" not-before="0.46"/>
+        <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=68b8237cb26db334551379db52487a035906a49e" main="0test" released="2010-06-19" self-test="test0test.py" stability="stable" version="0.3">
-      <manifest-digest sha256="4b201ec31af16c8bec86295cc18a43d7568dc0f4af02d4dcd9bedc1b395201d6"/>
-      <archive extract="0test-0.3" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3/0test-0.3.tar.bz2" size="11445"/>
-    </implementation>
+        <manifest-digest sha256="4b201ec31af16c8bec86295cc18a43d7568dc0f4af02d4dcd9bedc1b395201d6"/>
+        <archive extract="0test-0.3" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3/0test-0.3.tar.bz2" size="11445"/>
+      </implementation>
       <implementation id="sha1new=9a3689f6830544a91b49f7484577d3b9a51a7273" main="0test" released="2010-10-28" self-test="test0test.py" stability="stable" version="0.3.1">
-      <manifest-digest sha256="e37e2ee81aa365b7f403f069d96aba0d1eaa44e2220ec04052d5550ebf093506"/>
-      <archive extract="0test-0.3.1" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3.1/0test-0.3.1.tar.bz2" size="11580"/>
-    </implementation>
+        <manifest-digest sha256="e37e2ee81aa365b7f403f069d96aba0d1eaa44e2220ec04052d5550ebf093506"/>
+        <archive extract="0test-0.3.1" href="http://downloads.sourceforge.net/project/zero-install/0test/0.3.1/0test-0.3.1.tar.bz2" size="11580"/>
+      </implementation>
     </group>
+
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version before="0.53" not-before="0.51"/>
-      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
-    </requires>
+        <version before="0.53" not-before="0.51"/>
+        <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=73c6c68ded77ac26a286fab9164df6b97359de6f" main="0test" released="2010-12-11" stability="stable" version="0.4">
-      <manifest-digest sha256="8a0de00bb6a9ec0fef763fc2b39379d1f5db572d50c2e235c04f872a88e1bc3b"/>
-      <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12261"/>
-    </implementation>
+        <manifest-digest sha256="8a0de00bb6a9ec0fef763fc2b39379d1f5db572d50c2e235c04f872a88e1bc3b"/>
+        <archive extract="0test-0.4" href="http://downloads.sourceforge.net/project/zero-install/0test/0.4/0test-0.4.tar.bz2" size="12261"/>
+      </implementation>
     </group>
+
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.52"/>
-      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
-    </requires>
+        <version not-before="0.52"/>
+        <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+      </requires>
       <command name="test" path="test0test.py"/>
       <implementation id="sha1new=00127c13229be2d757fe482d3ccbbb34229dfa4f" main="0test" released="2011-03-15" stability="stable" version="0.5">
-      <manifest-digest sha256="ba586eb43abdb01bf92c0a7e58d5af54828b2bdc03faf873786a0a1c7ecab809"/>
-      <archive extract="0test-0.5" href="http://downloads.sourceforge.net/project/zero-install/0test/0.5/0test-0.5.tar.bz2" size="12340"/>
-    </implementation>
-      <group>
+        <manifest-digest sha256="ba586eb43abdb01bf92c0a7e58d5af54828b2bdc03faf873786a0a1c7ecab809"/>
+        <archive extract="0test-0.5" href="http://downloads.sourceforge.net/project/zero-install/0test/0.5/0test-0.5.tar.bz2" size="12340"/>
+      </implementation>
+      <group main="0test">
         <command name="test" path="test0test.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+          <runner interface="http://repo.roscidus.com/python/python">
+            <version before="3"/>
+          </runner>
+        </command>
         <command name="run" path="0test">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
-        <implementation id="sha1new=b6e0d1b247ae7f6a57cfb2fc4f74786d4b196b3f" main="0test" released="2011-08-01" version="0.6">
-      <manifest-digest sha256="86c7057a2907da18304d85044f8a36b99d5ceb57dffa229a6ce6f3e35ff898bd"/>
-      <archive extract="0test-0.6" href="http://downloads.sourceforge.net/project/zero-install/0test/0.6/0test-0.6.tar.bz2" size="12582"/>
-    </implementation>
+          <runner interface="http://repo.roscidus.com/python/python">
+            <version before="3"/>
+          </runner>
+        </command>
+        <implementation id="sha1new=b6e0d1b247ae7f6a57cfb2fc4f74786d4b196b3f" released="2011-08-01" version="0.6">
+          <manifest-digest sha256="86c7057a2907da18304d85044f8a36b99d5ceb57dffa229a6ce6f3e35ff898bd"/>
+          <archive extract="0test-0.6" href="http://downloads.sourceforge.net/project/zero-install/0test/0.6/0test-0.6.tar.bz2" size="12582"/>
+        </implementation>
       </group>
     </group>
   </group>
-
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk43AVcACgkQrgeCgFmlPMFUfACfegc/KFNQ6+d/iVHeygNdNPcIpkUAn2Fssn4v
-mcSGNMSoVRebeC9nSYhh
+iEYEABECAAYFAk9FKGIACgkQrgeCgFmlPMHzOACfe3UD3ge+UWssgT24VsKpnG2RPmwAn3OUyk/1
+eIVPzUFkfNOG/EqjlFyB
 
 -->
