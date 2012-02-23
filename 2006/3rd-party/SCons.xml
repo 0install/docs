@@ -22,6 +22,11 @@ and scanner objects.</description>
   <needs-terminal/>
 
   <group license="OSI Approved :: MIT/X Consortium License" main="scons.py">
+    <command name="run" path="scons.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3" not-before="2.4"/>
+      </runner>
+    </command>
     <implementation id="sha1=4a12f3ecc173b779cda1ece201e08616d2c11758" released="2006-05-06" stability="stable" version="0.96.92">
       <archive href="http://heanet.dl.sourceforge.net/sourceforge/scons/scons-local-0.96.92.tar.gz" size="249688" type="application/x-compressed-tar"/>
     </implementation>
@@ -38,7 +43,7 @@ and scanner objects.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3gt24ACgkQBSn9tx+xORAMegCfWUubWZu5qZnS6YWk4iUXMSvb1AIAn0uvA989
-ol57+U7i1UcQiCHajXG2
+iEYEABECAAYFAk9GqSkACgkQBSn9tx+xORBuzwCfQnKwRya1mEVia2aZLdI/6yYoRg4An25FVOaj
+kWQBJd/27yV7sheZMump
 
 -->
