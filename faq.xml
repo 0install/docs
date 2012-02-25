@@ -317,6 +317,16 @@ slashpackage</a> or <a href='http://www.w3.org/TR/NOTE-OSD'>The Open Software De
 project.</p>
 
 </dd>
+  <dt>What's the relationship between the 0install and 0launch commands?</dt>
+  <dd>
+    <p>
+    0launch is older. It was originally intended to be used just for running things, but we ended up
+    adding a load of other options to it (e.g. "0launch --import") and it got a bit messy.
+  </p>
+  <p>
+    0install provides a cleaner, newer interface using sub-commands. "0launch URI" is equivalent to "0install run URI". In general, using "0launch" as anything other than a short form of "0install run" is deprecated and you should use "0install" instead.
+  </p>
+  </dd>
 </dl>
 
 </div>
