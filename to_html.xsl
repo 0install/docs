@@ -68,6 +68,7 @@
       <head>
         <link rel="alternate" type="application/rss+xml" title="Thomas Leonard's blog" href="http://roscidus.com/desktop/blog/1/feed" />
         <link rel='stylesheet' type='text/css' href='style.css' />
+        <link rel="shortcut icon" href="http://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon"/>
         <title>0install: <xsl:value-of select='document("structure.xml")/layout//item[concat(@base, ".html") = $file]/@label'/></title>
       </head>
 
