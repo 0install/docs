@@ -20,6 +20,10 @@ This page lists some example code packages which you can use as templates when c
 
 <dt><a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-java'>hello-java</a></dt>
 <dd>A Java program, built using SCons. Gets SCons, the Java JDK and the Java JRE through 0install.</dd>
+
+<dt><a href='http://afb.users.sourceforge.net/zero-install/interfaces/testbin-cmake.xml'>testbin-cmake</a> (experimental)</dt>
+<dd>A C program built using CMake. Note: CMake support is still experimental. The current CMake release (2.8.7) doesn't work with pathnames that contain the "=" character (which all 0install cached implementations do), so dup-src used to avoid this (see <a href='http://www.cmake.org/Bug/view.php?id=12934'>bug #12934</a>). An alternative is to make a symlink to the real source code as the first step of the build. Also, the location of the cmake 0install feed is likely to change at some point.
+</dd>
 </dl>
 
 </html>
