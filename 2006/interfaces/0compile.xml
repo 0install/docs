@@ -18,6 +18,8 @@ For a full tutorial, see 0compile's homepage.</description>
   <homepage>http://0install.net/0compile.html</homepage>
   <category>Development</category>
 
+  <needs-terminal/>
+
   <group main="0compile">
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
       <archive extract="0compile-0.1" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.1/0compile-0.1.tar.bz2" size="15393"/>
@@ -261,7 +263,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk7RQPkACgkQrgeCgFmlPMHVJACfffOOQuipMUCQ16FqC95luKNssQgAnjZAdT3K
-RwuRZIKGJVa7PTq7U/Jr
+iEYEABECAAYFAk9czsYACgkQrgeCgFmlPMEDegCfXobp0y+Vd9FcXz5ncuOCwzrsgWEAnRUGk5YS
+qbkgS9ykXA9S1qvnpect
 
 -->
