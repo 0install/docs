@@ -92,8 +92,24 @@ $ gpg --import <b>AE07828059A53CC1</b>.gpg
 
 <p>
 This all tells you that the XML file was created by the owner of the key and hasn't been tampered with.
-How you decide to trust the key itself is up to you, but if nothing else you should at least make a note
-of which key was used so you can ensure it's the same later, when you check for updates.
+How you decide to trust the key itself is up to you, but one way is to check it using the default key information server:
+</p>
+
+<pre>
+$ gpg --with-colons --fingerprint <b>AE07828059A53CC1</b> | grep fpr
+fpr:::::::::<b>92429807C9853C0744A68B9AAE07828059A53CC1</b>:
+$ wget -qO - https://keylookup.appspot.com/key/<b>92429807C9853C0744A68B9AAE07828059A53CC1</b>
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;key-lookup>
+  &lt;item vote="<b>good</b>"><b>Thomas Leonard created Zero Install and ROX.
+    This key is used to sign updates to the injector; you should accept it.</b>
+  &lt;/item>
+  &lt;item vote="<b>good</b>"><b>This key belongs to a Debian Maintainer.</b>&lt;/item>
+&lt;/key-lookup>
+</pre>
+
+<p>
+In any case, you should make a note of which key was used so you can ensure it's the same later, when you check for updates.
 </p>
 
 </security>
