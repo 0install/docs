@@ -254,16 +254,40 @@ For a full tutorial, see 0compile's homepage.</description>
 	<version before="3"/>
       </runner>
     </command>
-      <implementation id="sha1new=9da1b68e7af8fd6dac3430fb192f3a9719f94d78" released="2011-11-26" version="0.26">
+      <implementation id="sha1new=9da1b68e7af8fd6dac3430fb192f3a9719f94d78" released="2011-11-26" stability="stable" version="0.26">
       <manifest-digest sha256="5e7e9cbb030ace57bea53f82fe7dbc842c728f133fa615cf3e655c21066c9b1f"/>
       <archive extract="0compile-0.26" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.26/0compile-0.26.tar.bz2" size="34085"/>
+    </implementation>
+    </group>
+    <group>
+      <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+    </requires>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1.5-post"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+      <command name="test" path="tests/testcompile.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <command name="run" path="0compile">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <implementation id="sha1new=a7a59b90d847131dac95a5c0d3993ca53872f8e5" released="2012-03-18" version="0.27">
+      <manifest-digest sha256="d3795aec5d1c2f5b61bf1d8ea25a79c2a44ace4edc28c590d1c81103ffd36e55"/>
+      <archive extract="0compile-0.27" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.27/0compile-0.27.tar.bz2" size="34647"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk9czsYACgkQrgeCgFmlPMEDegCfXobp0y+Vd9FcXz5ncuOCwzrsgWEAnRUGk5YS
-qbkgS9ykXA9S1qvnpect
+iEYEABECAAYFAk9mT/0ACgkQrgeCgFmlPMGrsgCgyn1y3JGJdlZE8TfsICvimH1uWdcAn2Y2P/I5
+DJV3BMuOHC1JzC7GCaia
 
 -->
