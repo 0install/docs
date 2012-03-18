@@ -13,6 +13,19 @@
   <li><a href='0release.html'>0release</a> can automatically compile binaries for your software during the release process.</li>
 </ul>
 
+<p>
+  There are two common situations:
+</p>
+
+<ul>
+  <li>You already have a source tarball somewhere and you want to publish an XML feed saying how to download and compile it (ideally, no changes should be needed to support 0install). For this, you should first read the <a href='packaging-binaries.html'>Guide to packaging binaries</a>.</li>
+  <li>You have a development checkout (e.g. a Git clone or similar) and you want to say how to compile it. For this, you should first read the page about <a href='local-feeds.html'>local feeds</a>.</li>
+</ul>
+
+<p>
+  In either case, to add source code to a feed we will create an &lt;implementation&gt; with a machine (CPU) type of "src" and a "compile" command instead of a "run" command. The instructions below show how to do this.
+</p>
+
 <h2>Contents</h2>
 
 <toc level='h2'/>

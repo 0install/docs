@@ -43,6 +43,7 @@ HTML = index.php \
        install-windows.html \
        interface-spec.html \
        legal.html \
+       local-feeds.html \
        make-headers.html \
        manifest-spec.html \
        news.html \

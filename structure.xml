@@ -49,6 +49,7 @@
     <item base='packagers' label='For packagers'>
       <item base='injector-packagers' label='Packaging guide'>
 	<item base='packaging-concepts' label='Concepts'/>
+	<item base='local-feeds' label='Local feeds'/>
 	<item base='packaging-binaries' label='Packaging binaries'/>
 	<item base='package-scons' label='0publish tutorial'/>
 	<item base='injector-find' label='Example: Find'/>

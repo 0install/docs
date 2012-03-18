@@ -72,7 +72,7 @@ handle new releases brings several advantages over doing it manually:
 <h2>Preparing your source repository</h2>
 
 <p>
-You'll need a <i>local feed</i> within your source directory (under version
+You'll need a <a href='local-feeds.html'>local feed</a> within your source directory (under version
 control). This contains the same information as a normal published feed would
 (name, description, dependencies, etc). The only differences are:
 </p>
