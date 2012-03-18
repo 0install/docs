@@ -193,7 +193,7 @@ python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build</pre>
 
 <h2>Examples</h2>
 
-<p>Anders F Björklund has created a set of <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4273'>example source feeds</a>. There are also some <a href='templates.html'>template projects</a> which can be used as a starting point for publishing your own software.</p>
+<p>There are some <a href='templates.html'>template projects</a> which can be used as a starting point for publishing your own software for various languages and build systems.</p>
 
 <h2>Further reading</h2>
 
