@@ -6,7 +6,7 @@
 <dl>
 <dt>Feb/Mar 2012</dt>
 <dd>
-Windows 0install <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4984'>1.5.2</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5102'>1.5.3</a> were released, with a new Sync setup wizard and support for adding aliases in the GUI. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5174'>0install 1.6</a> was released (also for <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/5259'>Windows</a>), adding support for depending on Cygwin packages and a work-around for another Python SSL problem.
+Windows 0install <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4984'>1.5.2</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5102'>1.5.3</a> were released, with a new Sync setup wizard and support for adding aliases in the GUI. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5174'>0install 1.6</a> was released (also for <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/5259'>Windows</a>) with a work-around for another Python SSL problem.
 On the mailing list, there was lots of discussion about <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4953'>using cmake with 0install</a> (we now have an <a href='templates.html'>example cmake package</a>) and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>dealing with incompatible ABIs for C++ programs</a>. <a href='0compile.html'>0compile</a> now <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5329'>works on Windows</a>.
 </dd>
 <dt>Jan 2012</dt>
