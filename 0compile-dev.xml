@@ -52,6 +52,10 @@ adding binaries, except that you give <b>src</b> as the machine (CPU) type:
 &lt;/implementation>
 </pre>
 
+<p>
+  Note: you only need to use <b>arch='*-src'</b> to publish implementations for things that need to be compiled. Shell scripts, etc should not be marked as source code; use <b>arch="*-*"</b> instead (which is the default anyway if <b>arch</b> is not given). For header files (-dev packages), there will often be a source implementation that generates the header files, but the resulting headers are not source (and will often be architecture-specific, e.g. "Linux-i386").
+</p>
+
 <p>The job of the <b>compile</b> command is to call the actual build system.
 It is executed inside the <b>build</b> directory (<b>$BUILDDIR</b>).
 It must compile the source in <b>$SRCDIR</b>, putting the final result (ready for distribution) in <b>$DISTDIR</b>.
