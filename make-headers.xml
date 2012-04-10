@@ -151,14 +151,18 @@ To fix this, a Zero Install -dev package can specify the mappings from library n
 to major version numbers, like this:
 </p>
 
-<pre>&lt;implementation arch='*-src' compile:lib-mappings="glade:0 foo:1" ... /&gt;</pre>
+<pre>
+&lt;interface uri='.../libfoo-dev'&gt;
+  ...
+  &lt;implementation compile:lib-mappings="foo:1" ... /&gt;</pre>
 
 <p>
 When 0compile compiles anything that depends on this -dev package, it searches
-for libglade.so.0 and libfoo.so.1 (provided by the distribution) in the library
-search path and creates symlinks to them named libglade.so and libfoo.so in a
+for libfoo.so.1 (provided by the distribution) in the library
+search path and creates a symlink to it named libfoo.so in a
 temporary directory, which it adds to the search path. Programs should then
-compile correctly without modifications.
+compile correctly without modifications. Multiple mappings can be given in the
+attribute, separated by spaces.
 </p>
 
 <p>

@@ -88,6 +88,9 @@ typically a read-only directory when using Zero Install. In this case, set
 <b>compile:dup-src='true'</b> and 0compile will copy everything in $SRCDIR
 into 'build' before building.</dd>
 
+ <dt>compile:binary-lib-mappings (binary library major mappings)</dt>
+ <dd>This is needed if you want to use 0install to compile a -dev package (containing header files) that works with a distribution-provided runtime package; see <a href='make-headers.html'>MakeHeaders</a> for details.</dd>
+
 </dl>
 
 <h2>Customising the binary implementation</h2>
