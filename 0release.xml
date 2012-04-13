@@ -473,4 +473,32 @@ expand when the command is later executed.
   These instructions are correct for sf.net as of 2009-08-15.
 </p>
 
+<h2>Do I need to keep the releases directory?</h2>
+
+<p>
+  It's best to keep the releases directory:
+</p>
+
+<ul>
+  <li>You want to keep the make-release script so you don't have to write
+it again each time.</li>
+
+<li>You need the master feed so that 0release can add new versions to it, rather than creating a new feed each time. However, you can get the latest version of the feed from the cache (or directly from the web) if you lose the local copy.
+</li>
+
+<li>Keeping the previous archive allows diffing against it as an extra check when making a new release.</li>
+</ul>
+
+<p>
+So, there's nothing too critical in the directory, but it's easiest to keep everything.
+</p>
+
+<p>
+TODO: 0release should compare the local copy of the feed with the one on the web and warn if the local one is missing or out of sync. This would also be useful for allowing several people to publish new releases for a single feed easily.
+</p>
+
+<p>
+TODO: 0release should also be able to diff against the previous version using the cache (downloading the archive if missing), rather than relying on the previous archive being in the releases directory.
+</p>
+
 </html>
