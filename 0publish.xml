@@ -13,6 +13,8 @@ as much as possible of it. The <b>0publish</b> command provides a set of useful 
 for feed files which you can integrate into your release scripts.
 </p>
 
+</program>
+
 <p>
 If you're looking for a graphical environment instead, see <b>0publish-gui</b> in <a
 href='injector-packagers.html'>the packaging guide</a>.
@@ -23,8 +25,6 @@ Note: <a href='0release.html'>0release</a> provides a more complete solution
 for managing releases (0release uses 0publish internally, but also handles many
 other aspects of making releases for you).
 </p>
-
-</program>
 
 <toc level='h2'/>
 
@@ -49,13 +49,8 @@ program (assuming you use <b>0publish</b> as part of the build process).
 </p>
 
 <p>
-<a href='package-scons.html'>SCons packaging tutorial</a> shows many examples
-of using <b>0publish</b>. For a full real-life example of a build script that
-uses <b>0publish</b>, look at <a href='http://svn.sourceforge.net/viewcvs.cgi/rox/trunk/rox-release/rox-release?view=markup'>rox-release</a>.
-</p>
-
-<p>
-Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.html'>packaging ROX-Filer</a>.
+The <a href='package-scons.html'>SCons packaging tutorial</a> shows many examples
+of using <b>0publish</b>.
 </p>
 
 <h2>0publish reference</h2>
@@ -96,5 +91,16 @@ Note: the ROX-Filer packaging example has moved to here: <a href='package-rox.ht
   <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
   <dt>-V, --version</dt><dd>Display version information.</dd>
 </dl>
+
+<h2>FAQ</h2>
+
+<h3>gpg: signing failed: secret key not available</h3>
+
+<p>
+  By default, 0publish tries to sign the new version of the feed using the same key that
+  signed the old version. You will get this error if you don't have this key (e.g. because
+  someone else signed the old version). In that case, use <b>-k</b> to specify they key
+  you want to use instead.
+</p>
 
 </html>
