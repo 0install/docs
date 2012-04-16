@@ -70,16 +70,20 @@ create a matrix of test results.</description>
             <version before="3"/>
           </runner>
         </command>
-        <implementation id="sha1new=b6e0d1b247ae7f6a57cfb2fc4f74786d4b196b3f" released="2011-08-01" version="0.6">
+        <implementation id="sha1new=b6e0d1b247ae7f6a57cfb2fc4f74786d4b196b3f" released="2011-08-01" stability="stable" version="0.6">
           <manifest-digest sha256="86c7057a2907da18304d85044f8a36b99d5ceb57dffa229a6ce6f3e35ff898bd"/>
           <archive extract="0test-0.6" href="http://downloads.sourceforge.net/project/zero-install/0test/0.6/0test-0.6.tar.bz2" size="12582"/>
         </implementation>
+        <implementation id="sha1new=7ec08b366d3d63c55426f6bce96bbf7e000f8a46" released="2012-04-16" version="0.7">
+      <manifest-digest sha256="d843a1fa565e655052c0611f88c9c1a8aed24cecb5ddd5f15475812e40fb81df"/>
+      <archive extract="0test-0.7" href="http://downloads.sourceforge.net/project/zero-install/0test/0.7/0test-0.7.tar.bz2" size="12797"/>
+    </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk9FKGIACgkQrgeCgFmlPMHzOACfe3UD3ge+UWssgT24VsKpnG2RPmwAn3OUyk/1
-eIVPzUFkfNOG/EqjlFyB
+iEYEABECAAYFAk+MVm0ACgkQrgeCgFmlPMFY/QCeJfd3X2aajm5xZqeryY6aI8DdiJUAni7WdPtY
+GJPxfq0qtEYK0ctXSw1i
 
 -->
