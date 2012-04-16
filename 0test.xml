@@ -53,10 +53,10 @@ You can specify a particular set of versions to test:
 </p>
 
 <pre>
-$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.20 0.21</b>
+$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.26 0.27</b>
 Passed
- - 0compile v0.20, ZeroInstall-Injector v0.51.1, 0publish v0.18, ROX-Lib2 v2.0.6
- - 0compile v0.21, ZeroInstall-Injector v0.51.1, 0publish v0.18, ROX-Lib2 v2.0.6
+ - ZeroInstall-Injector v1.7 0compile v0.26, ROX-Lib2 v2.0.6, python v2.7.3, 0publish v0.20
+ - ZeroInstall-Injector v1.7 0compile v0.27, ROX-Lib2 v2.0.6, python v2.7.3, 0publish v0.20
 None skipped
 None failed
 </pre>
@@ -128,11 +128,21 @@ one for you).
 If you specify a test matrix with more than two dimensions, 0test will generate a series of tables.
 </p>
 
+<h2>Passing test arguments</h2>
+
+<p>
+  You can pass extra arguments to the test command, but you must put them after '--' to stop 0test interpreting them as arguments or versions. e.g. to run 0test on itself with verbose output:
+</p>
+
+<pre>
+  $ <b>0test alias:0test -- -v</b>
+</pre>
+
 <h2>Specifying a test command</h2>
 
 <p>
-  The <b>--test-command</b> option can be used to run the command of your choice, rather than the test
-  command given in the feed's <b>self-test</b> attribute. The path of the program's main executable is available as $1 (or the root directory of the package if there is no 'main').
+  The <b>--test-command</b> option can be used to run the shell command of your choice, rather than the test
+  command given in the feed's <b>self-test</b> attribute. The command that would be executed if the implemention were run normally is available as $*.
 </p>
     
 <p>
@@ -140,7 +150,7 @@ If you specify a test matrix with more than two dimensions, 0test will generate 
   ROX-Filer:
 </p>
     
-<pre>$ <b>0test -t '$1 --version > /dev/null' \
+<pre>$ <b>0test -t '$* --version > /dev/null' \
     http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9</b>
 Passed
  - ROX-Filer v2.8
@@ -150,8 +160,7 @@ None failed
 </pre>
 
 <p>
-  Known issue: 0test can currently only select versions with a "run" command (even though you're
-  overriding it with your own command). This will be fixed when 0launch 0.52 is released.
+  You can use <b>--command</b> to select a different &lt;command&gt;. By default, the command used is "test" when run normally, or "run" when using <b>-t</b>. You can also set this to the empty string to select no command (useful with libraries). In that case, $1 is the directory itself rather than the command.
 </p>
 
 <h2>Test-only dependencies</h2>
