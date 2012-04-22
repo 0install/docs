@@ -74,6 +74,7 @@ namespace):
 
   [group] *
   [implementation] *
+  [entry-point] *
 
 &lt;/interface&gt;
 </pre>
@@ -801,6 +802,50 @@ version as buggy only affects people who have explicitly stated that they <b>don
 want to use the latest version, but would prefer to use an older release to
 save network use.
 </p>
+
+
+<h2>Entry points</h2>
+
+<p>
+Entry points allow you to associate additional information with &lt;command&gt; names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the desktop integration system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.
+</p>
+
+<p>
+Entry points are top-level elements and, unlike commands, are not associated with any specific implementation or group. One entry point represents all commands in all implementations that carry the same name. An entry point has this syntax:
+</p>
+
+<pre>
+  &lt;entry-point
+	      command='...'
+	      binary-name='...' ? &gt;
+    &lt;needs-terminal/&gt; ?
+    &lt;name&gt;...&lt;/name&gt; ?
+    &lt;summary&gt;...&lt;/summary&gt; ?
+    &lt;description&gt;...&lt;/description&gt; ?
+    &lt;icon type='...' href='...'/&gt; *
+  &lt;/group&gt;
+</pre>
+
+<dt>command</dt>
+<dd>the name of the command this entry point represents</dd>
+
+<dt>binary-name</dt>
+<dd>the canonical name of the binary supplying the command (without file extensions); this is used to suggest suitable alias names.</dd>
+
+<dt>&lt;needs-terminal&gt;</dt>
+<dd>if present, this element indicates that the command represented by this entry point requires a terminal in order to run.</dd>
+
+<dt>&lt;name&gt;</dt>
+<dd>user-friendly name for the command. If not present, the value of the <b>command</b> attribute is used instead.</dd>
+
+<dt>&lt;summary&gt;</dt>
+<dd>a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
+
+<dt>&lt;description&gt;</dt>
+<dd>a full description, which can be several paragraphs long</dd>
+
+<dt>&lt;icon&gt;</dt>
+<dd>an icon to represent the command; this is used when creating menu entries.</dd>
 
 
 <h2>Metadata</h2>
