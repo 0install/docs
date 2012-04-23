@@ -61,7 +61,7 @@ of using <b>0publish</b>.
 
 <dl>
   <dt>-h, --help</dt><dd>Show help message and exit.</dd>
-  <dt>-a FEED, --add-from=FEED</dt><dd>add the implementation(s) in FEED to this one, putting them in the most sensible &lt;group&gt; (so as to minimise duplication of requirements, etc).</dd>
+  <dt>-a FEED, --add-from=FEED</dt><dd>Add the implementation(s) in FEED to this one, putting them in the most sensible &lt;group&gt; (so as to minimise duplication of requirements, etc).</dd>
   <dt>--add-types</dt><dd>add missing MIME-type attributes.</dd>
   <dt>--add-version=VERSION</dt><dd>Add a new implementation (use with <b>--archive-url</b>, etc).</dd>
   <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
