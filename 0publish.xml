@@ -61,6 +61,7 @@ of using <b>0publish</b>.
 
 <dl>
   <dt>-h, --help</dt><dd>Show help message and exit.</dd>
+  <dt>-a FEED, --add-from=FEED</dt><dd>add the implementation(s) in FEED to this one, putting them in the most sensible &lt;group&gt; (so as to minimise duplication of requirements, etc).</dd>
   <dt>--add-types</dt><dd>add missing MIME-type attributes.</dd>
   <dt>--add-version=VERSION</dt><dd>Add a new implementation (use with <b>--archive-url</b>, etc).</dd>
   <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
@@ -74,7 +75,7 @@ of using <b>0publish</b>.
   <dt>-g, --gpgsign</dt><dd>Add a GPG signature block. Deprecated; use --xmlsign instead.</dd>
   <dt>-kKEY, --key=KEY</dt><dd>Key to use for signing (if you have more than one, or if you want to
   resign with a different key).</dd>
-  <dt>-lLOCAL, --local=LOCAL</dt><dd>Create or update a feed from another feed.</dd>
+  <dt>-lLOCAL, --local=LOCAL</dt><dd>Deprecated; use --add-from instead.</dd>
   <dt>--manifest-algorithm=ALG</dt><dd>Select the algorithm to use for manifest digests.</dd>
   <dt>--set-id=DIGEST</dt><dd>Set the implementation ID.
   Note: it's usually easier to use the <b>--archive-*</b> options, since they calculate the digest for you.</dd>
