@@ -806,6 +806,8 @@ save network use.
 
 <h2>Entry points</h2>
 
+<p>(only used on the Windows version currently)</p>
+
 <p>
 Entry points allow you to associate additional information with &lt;command&gt; names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the desktop integration system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.
 </p>
