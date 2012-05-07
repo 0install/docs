@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>May 2012</dt>
+<dd>
+Dave Abrahams will be giving a talk: <a href='http://cppnow.org/session/cmake-modularization-and-ryppl-developer-preview/'>CMake, Modularization and Ryppl Developer Preview</a> at C++Now! 2012. <a href='http://ryppl.org/'>Ryppl</a> aims "to create the conditions for a portable, modular C++ software ecosystem", using 0install to manage build dependencies.<br/>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5493'>0install 1.7 released</a> [ <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5726'>Windows version</a> ], adding support for Cygwin packages, the new &lt;replaced-by&gt; element and &lt;command&gt; elements for &lt;package-implementation&gt;s.
+</dd>
 <dt>Apr 2012</dt>
 <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5443'>0compile 0.27 released</a>, with Windows support and various bugfixes and improvements. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5451'>0install 1.6.1 for Windows released</a>, which adds new options to GUI (update policy, cache directories, trusted keys), preserves the error level when launching applications via aliases, has improved behavior of the application list when under high load, fixes the application list to work in portable mode, and does not perform update checks when no network connections are detected, as well as fixing various bugs.</dd>
 <dt>Feb/Mar 2012</dt>
