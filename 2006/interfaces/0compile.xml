@@ -58,112 +58,112 @@ For a full tutorial, see 0compile's homepage.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.28"/>
-      <environment insert="" mode="prepend" name="PYTHONPATH"/>
-    </requires>
-      <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" stability="stable" version="0.10">
-      <archive extract="0compile-0.10" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.10/0compile-0.10.tar.bz2" size="22979"/>
-    </implementation>
-    </group>
-    <group>
-      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-        <version not-before="0.28"/>
-        <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+	<version not-before="0.28"/>
+	<environment insert="" mode="prepend" name="PYTHONPATH"/>
       </requires>
-      <implementation id="sha1new=6db70a83b92238fe86e444f3cd3bb7433772e150" released="2008-02-16" self-test="tests/testcompile.py" version="0.11">
-        <archive extract="0compile-0.11" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.11/0compile-0.11.tar.bz2" size="23132"/>
+      <implementation id="sha1new=f3f7960dfd96370bd2b877214fda7ded062d70ef" released="2007-12-24" self-test="tests/testcompile.py" stability="stable" version="0.10">
+	<archive extract="0compile-0.10" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.10/0compile-0.10.tar.bz2" size="22979"/>
       </implementation>
     </group>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.32"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="0.28"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
+      <implementation id="sha1new=6db70a83b92238fe86e444f3cd3bb7433772e150" released="2008-02-16" self-test="tests/testcompile.py" version="0.11">
+	<archive extract="0compile-0.11" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.11/0compile-0.11.tar.bz2" size="23132"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+	<version not-before="0.32"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=0f168b154be3d28eb5c94de52742556d29ff5048" released="2008-02-23" self-test="tests/testcompile.py" stability="stable" version="0.12">
-      <archive extract="0compile-0.12" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.12/0compile-0.12.tar.bz2" size="23741"/>
-    </implementation>
+	<archive extract="0compile-0.12" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.12/0compile-0.12.tar.bz2" size="23741"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.37"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="0.37"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=e6ca330bc7f82f9e3d52434d6829a486393aaad7" released="2008-12-06" self-test="tests/testcompile.py" stability="stable" version="0.13">
-      <archive extract="0compile-0.13" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.13/0compile-0.13.tar.bz2" size="24283"/>
-    </implementation>
+	<archive extract="0compile-0.13" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.13/0compile-0.13.tar.bz2" size="24283"/>
+      </implementation>
       <implementation id="sha1new=804c80c539e29b7750dd816ec6c734cfb42447ab" released="2009-01-01" self-test="tests/testcompile.py" stability="stable" version="0.14">
-      <archive extract="0compile-0.14" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.14/0compile-0.14.tar.bz2" size="25548"/>
-    </implementation>
+	<archive extract="0compile-0.14" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.14/0compile-0.14.tar.bz2" size="25548"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version before="0.42" not-before="0.40"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version before="0.42" not-before="0.40"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=66f18fb05805524d58bde28865063a001303b73e" released="2009-04-20" self-test="tests/testcompile.py" stability="stable" version="0.15">
-      <archive extract="0compile-0.15" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.15/0compile-0.15.tar.bz2" size="28071"/>
-    </implementation>
+	<archive extract="0compile-0.15" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.15/0compile-0.15.tar.bz2" size="28071"/>
+      </implementation>
       <implementation id="sha1new=614643cbee8749fb214cfa2fc7cf604e6ff8486b" released="2009-05-05" self-test="tests/testcompile.py" stability="stable" version="0.16">
-      <archive extract="0compile-0.16" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.16/0compile-0.16.tar.bz2" size="28100"/>
-    </implementation>
+	<archive extract="0compile-0.16" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.16/0compile-0.16.tar.bz2" size="28100"/>
+      </implementation>
       <implementation id="sha1new=040da89786e7c1fdaf3067d50e956f2afe46c726" released="2009-06-16" self-test="tests/testcompile.py" stability="stable" version="0.17">
-      <manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
-      <archive extract="0compile-0.17" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.17/0compile-0.17.tar.bz2" size="29159"/>
-    </implementation>
+	<manifest-digest sha256="9f64cd3c97c5645e6b79d4c9955b09f1a2435f3540675e5ecd7c35da16c7724e"/>
+	<archive extract="0compile-0.17" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.17/0compile-0.17.tar.bz2" size="29159"/>
+      </implementation>
       <implementation id="sha1new=b44757b155ebf0de8343ecbdf18563e9e5d2c29f" released="2009-06-27" self-test="tests/testcompile.py" stability="stable" version="0.18">
-      <manifest-digest sha256="feba92a479210a34ed911470de3fd054a2e03ae2ac6ece032ad7ae44eb5adc90"/>
-      <archive extract="0compile-0.18" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.18/0compile-0.18.tar.bz2" size="32053"/>
-    </implementation>
+	<manifest-digest sha256="feba92a479210a34ed911470de3fd054a2e03ae2ac6ece032ad7ae44eb5adc90"/>
+	<archive extract="0compile-0.18" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.18/0compile-0.18.tar.bz2" size="32053"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.41"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="0.41"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=dc0f2399f093f06101a40874f08e80f3aa6c2957" released="2010-01-31" self-test="tests/testcompile.py" stability="stable" version="0.19">
-      <manifest-digest sha256="81faaa77d0c38589f705c5ea47e78d63c55b0638284986b1b24877a258ad224d"/>
-      <archive extract="0compile-0.19" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.19/0compile-0.19.tar.bz2" size="32106"/>
-    </implementation>
+	<manifest-digest sha256="81faaa77d0c38589f705c5ea47e78d63c55b0638284986b1b24877a258ad224d"/>
+	<archive extract="0compile-0.19" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.19/0compile-0.19.tar.bz2" size="32106"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.47"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="0.47"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=f7529b4576ada29fcab3161cf40b8389203ba952" released="2010-05-01" self-test="tests/testcompile.py" stability="stable" version="0.19.1">
-      <manifest-digest sha256="6534ca8277176c489dc8e7f13a5bc209df1a2be69cc97e892fd1459d23303fc2"/>
-      <archive extract="0compile-0.19.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.19.1/0compile-0.19.1.tar.bz2" size="32138"/>
-    </implementation>
+	<manifest-digest sha256="6534ca8277176c489dc8e7f13a5bc209df1a2be69cc97e892fd1459d23303fc2"/>
+	<archive extract="0compile-0.19.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.19.1/0compile-0.19.1.tar.bz2" size="32138"/>
+      </implementation>
       <implementation id="sha1new=bcb167c80f668a94837ab6a1f64dc0fa8e711ca8" released="2010-05-29" self-test="tests/testcompile.py" stability="stable" version="0.20">
-      <manifest-digest sha256="9a5b64b9230167553c4c0dce6144741e6f438bda955c4ef274517aad9c9eec30"/>
-      <archive extract="0compile-0.20" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.20/0compile-0.20.tar.bz2" size="32211"/>
-    </implementation>
+	<manifest-digest sha256="9a5b64b9230167553c4c0dce6144741e6f438bda955c4ef274517aad9c9eec30"/>
+	<archive extract="0compile-0.20" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.20/0compile-0.20.tar.bz2" size="32211"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version before="1.0-rc1" not-before="0.48"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version before="1.0-rc1" not-before="0.48"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=ba9cfb154f8faace2522e348070531f2911f55d3" released="2010-06-24" self-test="tests/testcompile.py" stability="stable" version="0.21">
-      <manifest-digest sha256="b94e68d8f2b361aeefa0ba04220d4e714f87035a88befdcbc7e9ba70a5da1ab0"/>
-      <archive extract="0compile-0.21" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.21/0compile-0.21.tar.bz2" size="32249"/>
-    </implementation>
+	<manifest-digest sha256="b94e68d8f2b361aeefa0ba04220d4e714f87035a88befdcbc7e9ba70a5da1ab0"/>
+	<archive extract="0compile-0.21" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.21/0compile-0.21.tar.bz2" size="32249"/>
+      </implementation>
       <implementation id="sha1new=6b48010159063486cbbb18d8cab1c7dec92ee704" released="2011-02-02" self-test="tests/testcompile.py" stability="stable" version="0.22">
-      <manifest-digest sha256="ea402164123fa8cd24a7c7b9b628828ad81240a399c788c339c5f833f7a0ccd0"/>
-      <archive extract="0compile-0.22" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.22/0compile-0.22.tar.bz2" size="32882"/>
-    </implementation>
+	<manifest-digest sha256="ea402164123fa8cd24a7c7b9b628828ad81240a399c788c339c5f833f7a0ccd0"/>
+	<archive extract="0compile-0.22" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.22/0compile-0.22.tar.bz2" size="32882"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
@@ -203,95 +203,121 @@ For a full tutorial, see 0compile's homepage.</description>
 	<archive extract="0compile-0.24" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24/0compile-0.24.tar.bz2" size="33488"/>
       </implementation>
       <implementation id="sha1new=a5c2b51f5f2ceb68140b5b808d0943ed7e9c80ea" released="2011-04-29" stability="stable" version="0.24.1">
-      <manifest-digest sha256="962a7d81d83a9e646e636b3d77afa0dd01ad3d25932ead8dfdce99cb3f3a737a"/>
-      <archive extract="0compile-0.24.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24.1/0compile-0.24.1.tar.bz2" size="33774"/>
-    </implementation>
+	<manifest-digest sha256="962a7d81d83a9e646e636b3d77afa0dd01ad3d25932ead8dfdce99cb3f3a737a"/>
+	<archive extract="0compile-0.24.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24.1/0compile-0.24.1.tar.bz2" size="33774"/>
+      </implementation>
       <implementation id="sha1new=305701e73ce700f2149c94af42a984146ae46738" released="2011-05-11" stability="stable" version="0.24.2">
-      <manifest-digest sha256="101b60986ca15f0bb74a9822c0a58fd7b601537961944c99a1cf5af809d3ead2"/>
-      <archive extract="0compile-0.24.2" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24.2/0compile-0.24.2.tar.bz2" size="33894"/>
-    </implementation>
+	<manifest-digest sha256="101b60986ca15f0bb74a9822c0a58fd7b601537961944c99a1cf5af809d3ead2"/>
+	<archive extract="0compile-0.24.2" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.24.2/0compile-0.24.2.tar.bz2" size="33894"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version before="1.4" not-before="1.2"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version before="1.4" not-before="1.2"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <command name="test" path="tests/testcompile.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <command name="run" path="0compile">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <implementation id="sha1new=11801967303bb2ba6b7d5dfe228ac47f1ad58b78" released="2011-08-19" stability="stable" version="0.25">
-      <manifest-digest sha256="db3a2e0e985c716c0095e6521b96dcf8a812e08dabda94f8099be34f4686bb46"/>
-      <archive extract="0compile-0.25" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.25/0compile-0.25.tar.bz2" size="33985"/>
-    </implementation>
+	<manifest-digest sha256="db3a2e0e985c716c0095e6521b96dcf8a812e08dabda94f8099be34f4686bb46"/>
+	<archive extract="0compile-0.25" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.25/0compile-0.25.tar.bz2" size="33985"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="1.2"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="1.2"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <command name="test" path="tests/testcompile.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <command name="run" path="0compile">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <implementation id="sha1new=9da1b68e7af8fd6dac3430fb192f3a9719f94d78" released="2011-11-26" stability="stable" version="0.26">
-      <manifest-digest sha256="5e7e9cbb030ace57bea53f82fe7dbc842c728f133fa615cf3e655c21066c9b1f"/>
-      <archive extract="0compile-0.26" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.26/0compile-0.26.tar.bz2" size="34085"/>
-    </implementation>
+	<manifest-digest sha256="5e7e9cbb030ace57bea53f82fe7dbc842c728f133fa615cf3e655c21066c9b1f"/>
+	<archive extract="0compile-0.26" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.26/0compile-0.26.tar.bz2" size="34085"/>
+      </implementation>
     </group>
     <group>
       <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
       <requires interface="http://0install.net/2006/interfaces/0publish">
-      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
-    </requires>
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="1.5-post"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
+	<version not-before="1.5-post"/>
+	<environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+      </requires>
       <command name="test" path="tests/testcompile.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <command name="run" path="0compile">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
       <implementation id="sha1new=a7a59b90d847131dac95a5c0d3993ca53872f8e5" released="2012-03-18" stability="stable" version="0.27">
-      <manifest-digest sha256="d3795aec5d1c2f5b61bf1d8ea25a79c2a44ace4edc28c590d1c81103ffd36e55"/>
-      <archive extract="0compile-0.27" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.27/0compile-0.27.tar.bz2" size="34647"/>
-    </implementation>
+	<manifest-digest sha256="d3795aec5d1c2f5b61bf1d8ea25a79c2a44ace4edc28c590d1c81103ffd36e55"/>
+	<archive extract="0compile-0.27" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.27/0compile-0.27.tar.bz2" size="34647"/>
+      </implementation>
       <implementation id="sha1new=f6bae36f42cb8f8a86b2670e79993a6e229f6a7c" released="2012-05-02" stability="stable" version="0.28">
-      <manifest-digest sha256="9b984955f7c00db7c15b6f3c62d9d8bd7b8ef8c02def198f77e0cc3d0edbf801"/>
-      <archive extract="0compile-0.28" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.28/0compile-0.28.tar.bz2" size="34643"/>
-    </implementation>
+	<manifest-digest sha256="9b984955f7c00db7c15b6f3c62d9d8bd7b8ef8c02def198f77e0cc3d0edbf801"/>
+	<archive extract="0compile-0.28" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.28/0compile-0.28.tar.bz2" size="34643"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib" use="testing"/>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+	<environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+      </requires>
+      <command name="test" path="tests/testcompile.py">
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
+      <command name="run" path="0compile">
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <version before="3"/>
+	</runner>
+      </command>
+      <group>
+	<requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+	  <version not-before="1.7"/>
+	  <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+	</requires>
+	<implementation id="sha1new=3d442af89f6ab22958860ab2cadb4a0f94e3643b" released="2012-05-12" version="0.29">
+	  <manifest-digest sha256="9532346597d5df2aa2b260ddddd68f92be1b706ed0f1c22232cd4cd6170279e7"/>
+	  <archive extract="0compile-0.29" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.29/0compile-0.29.tar.bz2" size="34717"/>
+	</implementation>
+      </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk+oEpEACgkQrgeCgFmlPMHnkQCdHxMoHr/DzFuVnDs8RFTi+wbaG08AoLk42xq7
-NodSGgbC9QC8kXFnF3gO
+iEYEABECAAYFAk+uTSYACgkQrgeCgFmlPMEhsACgg222Y6r51ns57KF7Vdo0I5r8n/EAnRD8tHRE
+ZYzWMAJN65MluUplBR05
 
 -->
