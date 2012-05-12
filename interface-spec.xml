@@ -107,7 +107,7 @@ not be upper-case unless it is a proper noun (e.g. "cures all ills")</dd>
 these limits (e.g. arch='*-src' means that there is no point fetching this feed
 unless you are looking for source code). See the &lt;implementation&gt; element
 for a description of the values of these attributes.</dd>
-<dt>&lt;feed-for&gt;</dt> <dd>the implementations in this feed are implementations of the given interface. This is used when adding a third-party feed.</dd>
+<dt>&lt;feed-for&gt;</dt> <dd>the implementations in this feed are implementations of the given interface. This is used when adding an optional extra feed to an interface with "0install add-feed" (e.g. a <a href='local-feeds.html'>local feed</a> for a development version).</dd>
 <dt>&lt;replaced-by&gt;</dt> <dd>this feed's interface (the one in the root element's <b>uri</b> attribute) has been replaced by the given interface. Any references to the old URI should be updated to use the new one.</dd>
 
 </dl>
