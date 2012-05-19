@@ -10,13 +10,16 @@
   should <a href='install-source.html'>install from source</a> instead.
 </dd>
 
+<dt>Mac OS X</dt>
+<dd>See the <a href='install-mac.html'>Mac OS X installation page.</a></dd>
+
 <dt>Solaris</dt>
-<dd>The injector has been tested on Solaris and works fine. Use <a href='install-source.html'>the source package</a> to install.</dd>
+<dd>0install has been tested on Solaris and works fine. Use <a href='install-source.html'>the source package</a> to install.</dd>
 </dl>
 
 <p>
-If an injector package for your distribution is listed above, install that and then <a href='users.html'>try using it</a>!
-Otherwise, <a href='install-source.html'>get the source package</a> instead!
+If a  package for your distribution is listed above, install that and then <a href='users.html'>try using it</a>!
+Otherwise, <a href='install-source.html'>get the source package</a> instead.
 </p>
 
 <quicklinks>
