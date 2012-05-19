@@ -9,11 +9,11 @@
   feed is the unique identifier of the application.
 </p>
 <p>
-  For example, ClanBomber is a 0install application, it has 
-  <a href='http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml'>this
+  For example, OpenTTD is available via 0install, it has 
+  <a href='http://repo.roscidus.com/games/openttd'>this
   feed file</a> and it is uniquely identified as
-  <a href='http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml'>
-  http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml</a>.
+  <a href='http://repo.roscidus.com/games/openttd'>
+  http://repo.roscidus.com/games/openttd</a>.
 </p>
 <p>
   To get a 0install application:
@@ -23,19 +23,19 @@
         Find a program you want to run on the web:
       </p>
       <p>
-        <img src='screens/find-url.png' alt='' width='400' height='313'/>
+        <img src='screens/find-url.png' alt='' width='400' height='314'/>
       </p>
     </li>
     <li>
       <p>
         Either launch it directly:
       </p>
-      <pre>$ <b>0launch http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml</b></pre>
+      <pre>$ <b>0launch http://repo.roscidus.com/games/openttd</b></pre>
       <p>
         Or <a href='user-guide-shortcuts.html'>generate a shortcut</a> to launch it later:
       </p>
       <p>
-        <img src='screens/add-url.png' alt='' width='400' height='289'/>
+        <img src='screens/add-url.png' alt='' width='400' height='364'/>
       </p>
     </li>
   </ol>

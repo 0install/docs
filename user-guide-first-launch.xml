@@ -11,39 +11,26 @@
 </p>
 
 <pre>
-  $ 0launch http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml
+  $ 0launch http://repo.roscidus.com/games/openttd
 </pre>
 
 <table class='howitworks'>
- <tr><th colspan='2'>1. Confirm the keys</th></tr>
+ <tr><th colspan='2'>1. Click Download</th></tr>
  <tr>
-  <td class='image'><img src='screens/confirm-key.png' alt='' width='400' height='323'/></td>
+  <td class='image'><img src='screens/find-libraries.png' alt='' width='400' height='263'/></td>
   <td>
-      <p>Zero Install downloads information about the program from the given address.</p>
-      <p>It checks that the information is signed using a GPG key you trust, confirming first if not.
-      Even if you don't know about this key yet, it may provide a hint if it's in our database.</p>
-    <p>[ Note: newer versions skip this confirmation for keys in the database. You can set
-      it to confirm all keys in the Preferences dialog if you prefer the old behaviour. ]</p>
+  <p>The downloaded file says that <b>OpenTTD</b> requires various libraries (Freetype2, SDL, libgcc1, etc).
+Each library is identified by a web address (URL) in the same way that the main <b>OpenTTD</b> program was.
+0install downloads information about them in the same way and selects a compatible set of versions.
+The window displays a dialog box showing the program and all required libraries. Click <b>Download</b>.</p>
   </td>
  </tr>
 
- <tr><th colspan='2'>2. Download the files</th></tr>
+ <tr><th colspan='2'>2. Wait for the download to finish</th></tr>
  <tr>
-  <td class='image'><img src='screens/find-libraries.png' alt='' width='400' height='264'/></td>
+  <td class='image'><img src='screens/download-foo.png' alt='' width='400' height='336'/></td>
   <td>
-  <p>The downloaded file says that <b>ClanBomber</b> requires various libraries (SDL, libpng, etc).
-Each library is identified by a web address (URL) in the same way that the main <b>ClanBomber</b> program was.
-Zero Install downloads information about them in the same way. Since they may
-be written by different people and be on different sites, you may be asked to confirm more keys. The window
-displays a dialog box showing the program and all required libraries. Click <b>Download</b>.</p>
-  </td>
- </tr>
-
- <tr><th colspan='2'>3. Wait for the download to finish</th></tr>
- <tr>
-  <td class='image'><img src='screens/download-foo.png' alt='' width='400' height='349'/></td>
-  <td>
-  <p>Zero Install now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
+  <p>0install now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, 
 rpm and deb). It unpacks each one into its own directory and
 checks its contents against the <i>cryptographic digest</i>
 given in the (signed) feed file. If the archive has been changed since the feed was signed,
