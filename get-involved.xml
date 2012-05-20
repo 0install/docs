@@ -11,13 +11,14 @@ The Zero Install project is run by volunteers, and we're always happy to have ne
 Here are some suggestions for things you might like to try:
 </p>
 
+<toc level='h3'/>
 
-<h3>Creating packages</h3>
+<h3>Create packages</h3>
 <p>
 If you've written some programs of your own, try <a href='injector-packagers.html'>making feeds for them</a>. Report your experiences, bugs found and suggestions to the mailing list.
 </p>
 
-<h3>Evangelism</h3>
+<h3>Evangelise</h3>
 <p>
 Zero Install has been working since 2003, but still many people haven't even heard of us. Writing articles for blogs, news sites, etc would be a great help. Let us know on the mailing list if an article gets published - we're always interested in feedback.
 </p>
@@ -25,7 +26,12 @@ Zero Install has been working since 2003, but still many people haven't even hea
 Also, asking software authors if they'd be interested in publishing a feed would be really useful.
 </p>
 
-<h3>Become a 0install developer</h3>
+<h3>Translate into other languages</h3>
+<p>
+  You can create or update a translation <a href='using-git.html'>using our Git repository</a>, or on the web at our <a href='https://www.transifex.net/projects/p/zeroinstall-injector/'>Transifex</a> project.
+</p>
+
+<h3>Work on the code</h3>
 <p>
 There's a list of features waiting to be implemented on the <a href='roadmap.html'>roadmap page</a>. To understand the system, some good starting points are:
 </p>

@@ -112,6 +112,9 @@ Finally, to make a patch file ready to send to the <a href='support.html'>mailin
 
 <h2>Making a new translation</h2>
 
+<p>Note: if you prefer, you can also use the <a href='https://www.transifex.net/projects/p/zeroinstall-injector/'>Transifex web interface</a> to work on translations.
+</p>
+
 <p>The steps are:</p>
 
 <ol>
