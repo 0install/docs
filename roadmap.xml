@@ -86,7 +86,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>The &lt;runner&gt; element allows specifying the interpreter.</li>
 </ul>
 
-<h4>2011 (versions 0.52 onwards)</h4>
+<h4>2011 (versions 0.52 to 1.5)</h4>
 
 <ul>
   <li>The "0install" command.</li>
@@ -97,11 +97,24 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3915'>Improved Python support</a>.</li>
   <li><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4186'>0install 1.0 final!</a></li>
   <li>&lt;environment separator=...&gt; attribute</li>
-  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a></li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a> (but didn't work reliably until 1.7)</li>
   <li>&lt;executable-in-var> and &lt;executable-in-path> bindings</li>
   <li>Use threads instead of sub-processes for downloads (more efficient)</li>
   <li>Update to network-manager 0.9 API</li>
   <li>MacPorts distribution support</li>
+</ul>
+
+<h4>2012 (versions 1.6 onwards)</h4>
+<ul>
+  <li>Arch distribution support.</li>
+  <li>Explicit "file:" prefix for interface URIs.</li>
+  <li>Optional dependencies work (introduced in 1.2 but buggy).</li>
+  <li>Cygwin distribution support.</li>
+  <li>&lt;replaced-by&gt; element.</li>
+  <li>&lt;command&gt; inside &lt;package-implementation&gt;.</li>
+  <li>"Explain this decision" feature.</li>
+  <li>"POSIX" architecture (everything except Windows).</li>
+  <li>Limits on the number of concurrent connections to a site.</li>
 </ul>
 
 
@@ -112,10 +125,14 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 1.6 (Jan 2012)</h4>
+<h4>Soon (maybe)</h4>
 
 <ul>
-  <li>HTTP connection pooling, rate limiting and DNS caching</li>
+  <li>Replace aliases with <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5896'>apps</a> (initial support merged; will be in 1.9).</li>
+  <li>Better Windows support from Python (so tools like 0compile work out of the box).</li>
+  <li>HTTP connection pooling, pipelining and DNS caching (rate limiting is now in).</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
+  <li>Stop using "=" in pathnames; cmake can't cope with them.</li>
 </ul>
 
 <h4>Version 2.x</h4>
@@ -137,15 +154,8 @@ Add a free-text search engine for names and descriptions
 of locally cached feeds, to enable quick off-line searching.
 </dd>
 
-<dt>Add missing features to Windows version</dt>
-<dd>e.g. 0alias and other features available in the Linux version</dd>
-
 <dt>Custom bug-report address</dt>
 <dd>A feed should be able to specify where bug reports are to be sent. Currently, they all go to the 0install project itself.</dd>
-
-<dt>Caching of solver results (for speed)</dt>
-<dd>On less powerful machines (e.g. OLPC laptops) we can save CPU time by remembering which versions we selected rather than recalculating
-  every time a program is executed.</dd>
 
 <dt>Support for services</dt>
 <dd>e.g. a 0service command that integrates with systemd</dd>
