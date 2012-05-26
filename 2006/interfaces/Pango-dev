@@ -45,16 +45,23 @@ text, with an emphasis on internationalization.</description>
       <archive extract="pango-headers-1.4.1.2" href="http://downloads.sourceforge.net/zero-install/pango-headers-1.4.1.2.tar.bz2" size="19078"/>
       <manifest-digest sha1new="73e83919220add4846b2affbd985bd0c0fd8c279"/>
     </implementation>
-    <implementation id="sha1new=8d4f953df046d6a94ae0700e51faee559d428880" released="2008-03-02" stability="stable" version="1.10.4">
-      <archive extract="pango-dev-linux-x86_64-1.10.4" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.10.4.tar.bz2" size="182394"/>
-    </implementation>
-    <implementation id="sha1new=f44d77837d6bacf78e638bc4acb50493fab7e9e8" released="2008-05-10" stability="stable" version="1.20.2">
-        <archive extract="pango-dev-linux-x86_64-1.20.2" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.20.2.tar.bz2" size="194688" type="application/x-bzip-compressed-tar"/>
+
+    <group>
+      <requires interface="http://repo.roscidus.com/lib/cairo-dev">
+	<environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
+      </requires>
+      <implementation id="sha1new=8d4f953df046d6a94ae0700e51faee559d428880" released="2008-03-02" stability="stable" version="1.10.4">
+	<archive extract="pango-dev-linux-x86_64-1.10.4" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.10.4.tar.bz2" size="182394"/>
       </implementation>
+      <implementation id="sha1new=f44d77837d6bacf78e638bc4acb50493fab7e9e8" released="2008-05-10" stability="stable" version="1.20.2">
+	<archive extract="pango-dev-linux-x86_64-1.20.2" href="http://downloads.sourceforge.net/zero-install/pango-dev-linux-x86_64-1.20.2.tar.bz2" size="194688" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    </group>
+
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk1NYjoACgkQrgeCgFmlPMFvdACfQBxCYbt95zgL+BSK/DlfnFbBIW4AoNo1eVJl
-9pbrYCIMdZctI+CAhINE
+iEYEABECAAYFAk/A8TgACgkQrgeCgFmlPMEgowCfXGQ+JBYurv6YLVOPwNn+zzi/3BMAn3nbcgPm
+vmY/f6E3pyXOe07awT2e
 
 -->
