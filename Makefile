@@ -16,6 +16,7 @@ HTML = index.php \
        comparison.html \
        deb2zero.html \
        dev.html \
+       dev-site.html \
        distribution-integration.html \
        doc.html \
        ebox.html \

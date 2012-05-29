@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+
+<h2>Developers: the 0install web-site</h2>
+
+<p>
+  The 0install.net site is held in a Git repository. If you want to work on it, you can
+  clone it like this:
+</p>
+
+<pre>
+  git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/htdocs
+</pre>
+
+<p>
+  Run 'make' to generate the .html files from the .xml ones. The XML syntax is basically
+  HTML, but an XSLT stylesheet generates the navigation.
+</p>
+
+<p>
+  To add a new page:
+</p>
+
+<ul>
+  <li>Copy one of the existing .xml files to create the new page.</li>
+  <li>Add it to the Makefile so it gets built.</li>
+  <li>Add it to structure.xml to put it in the navigation.</li>
+  <li>Add it to Git with "git add page.xml".</li>
+</ul>
+
+<p>
+  To update the actual site:
+</p>
+
+<ul>
+  <li>If you don't have admin access, send a patch / pull request to the <a href='support.html'>mailing list</a>.</li>
+  <li>If you have shell and Git access, push your changes to the repository and then run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
+    <pre>ssh -o PasswordAuthentication=false \
+      <b>username</b>,zero-install@shell.sourceforge.net \
+      /home/project-web/zero-install/update-from-git</pre>
+  </li>
+</ul>
+
+</html>

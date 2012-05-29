@@ -28,6 +28,11 @@
  <dd>
   A more detailed description of the design of Zero Install.
  </dd>
+
+ <dt><a href='dev-site.html'>The web-site</a></dt>
+ <dd>
+   How to make changes to the 0install.net web-site.
+ </dd>
 </dl>
 
 <h3>The Python API</h3>
