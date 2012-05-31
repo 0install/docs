@@ -34,11 +34,14 @@
 
 <ul>
   <li>If you don't have admin access, send a patch / pull request to the <a href='support.html'>mailing list</a>.</li>
-  <li>If you have shell and Git access, push your changes to the repository and then run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
+  <li>If you have shell and Git access:
+    <ol><li>Push your changes to the repository's master branch:<pre>git push origin master</pre></li>
+	<li>Run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
     <pre>ssh -o PasswordAuthentication=false \
       <b>username</b>,zero-install@shell.sourceforge.net \
       /home/project-web/zero-install/update-from-git</pre>
-  </li>
+</li></ol>
+</li>
 </ul>
 
 </html>
