@@ -43,7 +43,7 @@ Or, if you have write access (and you've <a href='https://sourceforge.net/accoun
   <li>If you have shell and Git access:
     <ol>
         <li>Make sure you're using the SSH writable repository location (not git:).</li>
-        <li>Push your changes to the repository's master branch:<pre>git push origin master</pre></li>
+        <li>Push your changes to the repository's <b>master</b> (not "live") branch:<pre>git push origin master</pre></li>
 	<li>Run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
     <pre>ssh -o PasswordAuthentication=false \
       <b>username</b>,zero-install@shell.sourceforge.net \
