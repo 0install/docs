@@ -12,6 +12,12 @@
   git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/htdocs
 </pre>
 
+Or, if you have write access (and you've <a href='https://sourceforge.net/account/services'>registered your SSH key</a> with sf.net):
+
+<pre>
+  git clone <b>username</b>@zero-install.git.sourceforge.net:/gitroot/zero-install/htdocs
+</pre>
+
 <p>
   Run 'make' to generate the .html files from the .xml ones. The XML syntax is basically
   HTML, but an XSLT stylesheet generates the navigation.
@@ -35,7 +41,9 @@
 <ul>
   <li>If you don't have admin access, send a patch / pull request to the <a href='support.html'>mailing list</a>.</li>
   <li>If you have shell and Git access:
-    <ol><li>Push your changes to the repository's master branch:<pre>git push origin master</pre></li>
+    <ol>
+        <li>Make sure you're using the SSH writable repository location (not git:).</li>
+        <li>Push your changes to the repository's master branch:<pre>git push origin master</pre></li>
 	<li>Run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
     <pre>ssh -o PasswordAuthentication=false \
       <b>username</b>,zero-install@shell.sourceforge.net \
