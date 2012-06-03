@@ -42,6 +42,27 @@ http://creativecommons.org/licenses/by-sa/2.5/
 								</div>
 
 								<dl>
+									<xsl:if test="zi:replaced-by">
+										<dt>This interface is obsolete!</dt>
+										<dd>
+										<p class="yourinfo">
+											Please use this one instead:
+										</p>
+											<ul>
+												<xsl:for-each select="zi:replaced-by">
+													<li>
+														<a>
+															<xsl:attribute name="href">
+																<xsl:value-of select="@interface"/>
+															</xsl:attribute>
+															<xsl:value-of select="@interface"/>
+														</a>
+													</li>
+												</xsl:for-each>
+											</ul>
+										</dd>
+									</xsl:if>
+
 									<xsl:if test="zi:feed-for">
 										<dt>Interface</dt>
 										<dd>
