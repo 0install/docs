@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import with_statement
 from zeroinstall.injector.config import load_config
 from zeroinstall.injector.namespaces import XMLNS_IFACE
 from zeroinstall.support import tasks
