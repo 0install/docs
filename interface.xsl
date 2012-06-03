@@ -42,6 +42,27 @@ http://creativecommons.org/licenses/by-sa/2.5/
 								</div>
 
 								<dl>
+									<xsl:if test="zi:feed-for">
+										<dt>Interface</dt>
+										<dd>
+										<p class="yourinfo">
+											In most cases, you should use the interface URI instead of this feed's URI.
+										</p>
+											<ul>
+												<xsl:for-each select="zi:feed-for">
+													<li>
+														<a>
+															<xsl:attribute name="href">
+																<xsl:value-of select="@interface"/>
+															</xsl:attribute>
+															<xsl:value-of select="@interface"/>
+														</a>
+													</li>
+												</xsl:for-each>
+											</ul>
+										</dd>
+									</xsl:if>
+
 									<xsl:apply-templates mode="dl" select="*|@*"/>
 
 									<dt>Required libraries</dt>
@@ -73,6 +94,26 @@ http://creativecommons.org/licenses/by-sa/2.5/
 										</xsl:choose>
 									</dd>
 
+									<xsl:if test="zi:feed">
+										<dt>Other feeds for this interface:</dt>
+										<dd>
+											<p class="yourinfo">
+												(Zero Install will also check these feeds when deciding which version to use)
+											</p>
+											<ul>
+												<xsl:for-each select="zi:feed">
+													<li>
+														<a>
+															<xsl:attribute name="href">
+																<xsl:value-of select="@src"/>
+															</xsl:attribute>
+															<xsl:value-of select="@src"/>
+														</a>
+													</li>
+												</xsl:for-each>
+											</ul>
+										</dd>
+									</xsl:if>
 
 									<dt>Available versions</dt>
 									<dd>
