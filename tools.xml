@@ -12,6 +12,12 @@
 <h3>Publishing and updating feeds</h3>
 
 <dl>
+ <dt><a href='http://gfxmonk.net/dist/0install/0downstream.xml'>0publish</a></dt>
+ <dd>
+   <b>0downstream</b> can be used to automatically create and update feed files
+   for an existing open source project page on a site like github, pypi or rubygems.org.
+ </dd>
+
  <dt><a href='0publish.html'>0publish</a></dt>
  <dd>
   <b>0publish</b> edits feed files in place. It loads the file, transforms
