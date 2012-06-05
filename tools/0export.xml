@@ -49,7 +49,7 @@ still shared between users, and will get updates over the web where possible.</d
   </group>
   <group>
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.52"/>
+      <version before="1.4" not-before="0.52"/>
       <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
     </requires>
     <implementation doc-dir="doc" id="sha1new=c411762dc29344ee800f72895962cec1b80884bc" license="OSI Approved :: GNU General Public License v3" main="0export" released="2011-01-27" self-test="test.py" stability="stable" version="0.3">
@@ -60,7 +60,7 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk3YzToACgkQrgeCgFmlPMH9ZQCgqF7ctKB8Kol6MZkaUtPM7oniMUIAnA5n8cRw
-SMsYeN7OlA36f1smxE79
+iEYEABECAAYFAk/N9zIACgkQrgeCgFmlPMEeWgCguPcLkZ8eJ6BWuZPP0lKXs1P47BMAoKhTHTfS
+OflnUE2j4FbsAgDo+B1N
 
 -->
