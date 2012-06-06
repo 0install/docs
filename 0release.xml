@@ -183,6 +183,10 @@ be shared by other developers.</li>
 </ul>
 
 <p>
+  <strong>Warning:</strong> Do not put make-release under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake in e.g. the upload command and then fix it, 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
+</p>
+
+<p>
 Open the file in a text editor. There are five settings, with comments explaining what is needed.
 The only one you need to set is the first (<b>ARCHIVE_DIR_PUBLIC_URL</b>), which is where people
 will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
