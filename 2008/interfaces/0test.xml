@@ -51,7 +51,7 @@ create a matrix of test results.</description>
 
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-        <version not-before="0.52"/>
+        <version before="1.8-post" not-before="0.52"/>
         <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
       </requires>
       <command name="test" path="test0test.py"/>
@@ -83,7 +83,7 @@ create a matrix of test results.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk+MVm0ACgkQrgeCgFmlPMFY/QCeJfd3X2aajm5xZqeryY6aI8DdiJUAni7WdPtY
-GJPxfq0qtEYK0ctXSw1i
+iEYEABECAAYFAk/TVSsACgkQrgeCgFmlPME6sQCeLjdSNXONi1iPEg8RTEmzXYRvpGEAoMsqs2cp
+DRN7xhamNZbJ8f+4D7pR
 
 -->
