@@ -101,12 +101,16 @@ packagers.html.</description>
       <manifest-digest sha256="24533dcef144809ec544f5a52777e6d4316b4a0a207b75a7c0ef9765366dc219"/>
       <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899" type="application/x-bzip-compressed-tar"/>
     </implementation>
+        <implementation id="sha1new=016292b34ba6650bc78f9e2bea7fb80c23ae2f65" released="2012-06-09" version="0.21">
+      <manifest-digest sha256="b4dd722eaa2fb9b435bd185708c04d7add87c0575a1bf3c6d5226e304f89f78b"/>
+      <archive extract="0publish-0.21" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.21/0publish-0.21.tar.bz2" size="25378"/>
+    </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk9czuYACgkQrgeCgFmlPMFnuwCffyNYHbE9dS/4Sgzn2B58c+TVCw4An1K/WbhS
-R3dbFdBx8Q6a8qgLUSrV
+iEYEABECAAYFAk/TUzcACgkQrgeCgFmlPMExxACffyEzK23K8glpVShXZhKIbLpaqFcAoNE1IcUt
++gn1d2LwyTCuuyWdEHQ7
 
 -->
