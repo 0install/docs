@@ -145,6 +145,11 @@ requires first uninstalling another.</description>
 	<version before="3"/>
       </runner>
     </command>
+    <command name="0install" path="0install">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
     <implementation id="sha1new=a68ca4ff155e7c421259928bc3119ac9725f9160" released="2011-04-29" stability="stable" version="1.0-rc1">
       <manifest-digest sha256="c515378dd31c6d31051829c4cdde079c3d9dd3d124dda076e0189c52b1ce0e98"/>
       <archive extract="zeroinstall-injector-1.0-rc1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0-rc1/zeroinstall-injector-1.0-rc1.tar.bz2" size="324263"/>
@@ -216,7 +221,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk+3bQUACgkQrgeCgFmlPMFE3QCffvFCmxWh1oAPvHRFWDWg0RQUQtAAn0R5SftG
-q13IHPCN349bF36FhY3G
+iEYEABECAAYFAk/TDo4ACgkQrgeCgFmlPMGi0wCeIe3cBeqYPfJdK0TbsDEBPHK6mH8AmwfNit5K
+IYIIof/fOqVQDerFSFwU
 
 -->
