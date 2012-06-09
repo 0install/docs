@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jun 2012</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5866'>0install 1.8 was released</a>, including an "Explain this decision" feature to find out why a particular version wasn't chosen, a new "POSIX" architecture (which matches everything except Windows) and per-site rate limiting for downloads. We now have a <a href='https://www.transifex.net/projects/p/zeroinstall-injector/'>Transifex project for web-based translations</a>. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5905'>0install 1.7.1 for Windows</a> was released.
+In the Git version, we added experimental <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/5826'>app support</a>, which is intended to replace aliases. Apps store their selections, which means they start faster and you can see <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/5932'>what changed</a> after an update. The new <a href='https://github.com/gfxmonk/0downstream'>0downstream</a> makes it easy to generate feeds and keep them up to date based on an existing upstream project.
+</dd>
 <dt>May 2012</dt>
 <dd>
 Dave Abrahams will be giving a talk: <a href='http://cppnow.org/session/cmake-modularization-and-ryppl-developer-preview/'>CMake, Modularization and Ryppl Developer Preview</a> at C++Now! 2012. <a href='http://ryppl.org/'>Ryppl</a> aims "to create the conditions for a portable, modular C++ software ecosystem", using 0install to manage build dependencies.<br/>
