@@ -1,25 +1,26 @@
 <?xml version="1.0" ?>
 <list>
-  <feed height="48" homepage="http://www.mozilla.com/products/firefox/" icon="feed_icons/firefox.png" name="Mozilla Firefox" summary="Web Browser" uri="http://afb.users.sourceforge.net/zero-install/interfaces/firefox.xml" width="48">The award-winning Firefox Web browser has security, speed and new features that
-will change the way you use the Web. Don't settle for anything less.  </feed>
-  <feed height="36" homepage="http://www.nongnu.org/clanbomber/" icon="feed_icons/ClanBomber.png" name="ClanBomber" summary="Blow away your opponents" uri="http://www.nongnu.org/clanbomber/zeroinstall/ClanBomber.xml" width="48">The goal of clanbomber is to blow away your opponents using bombs, but avoid
-being blown up yourself.  </feed>
+  <feed height="48" homepage="http://www.openttd.org" icon="feed_icons/openttd.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">OpenTTD is an open source clone of the Microprose game &quot;Transport Tycoon
+Deluxe&quot;, a popular game originally written by Chris Sawyer. It attempts to mimic
+the original game as closely as possible while extending it with new features.</feed>
   <feed height="47" homepage="http://rox.sourceforge.net/desktop/ROX-Filer" icon="feed_icons/ROX-Filer.png" name="ROX-Filer" summary="fast and powerful file manager" uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" width="47">ROX-Filer is a fast and powerful graphical file manager. It has full drag-and-
 drop support and background file operations, and is highly configurable. It can
 also act as a pinboard, allowing you to pin frequently used files to the desktop
-background.  </feed>
+background.</feed>
+  <feed height="47" homepage="http://rox.sourceforge.net/desktop/Archive" icon="feed_icons/Archive.png" name="Archive" summary="create or read archive files" uri="http://rox.sourceforge.net/2005/interfaces/Archive" width="47">You can use Archive to compress a directory or file into a single, smaller file
+(which can be stored, emailed, etc).
+
+You can also use it to extract a compressed archive back into a file or
+directory structure.</feed>
   <feed height="48" homepage="http://www.blender.org" icon="feed_icons/Blender.png" name="Blender" summary="a versatile 3D animation creation suite" uri="http://0install.net/2007/3rd-party/Blender.xml" width="48">Blender is a fully integrated 3D animation suite for use in animation, still
 graphics, scientific and engineering visualization, and game content creation.
 
 It includes tools for modeling, texturing (node based materials or uv mapped),
-uv mapping, ...  </feed>
-  <feed height="48" homepage="http://www.openttd.org" icon="feed_icons/openttd.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">OpenTTD is an open source clone of the Microprose game &quot;Transport Tycoon
-Deluxe&quot;, a popular game originally written by Chris Sawyer. It attempts to mimic
-the original game as closely as possible while extending it with new features.  </feed>
-  <feed height="50" homepage="http://gcompris.net/" icon="feed_icons/gcompris.png" name="GCompris" summary="Full featured educational application for children from 2 to 10" uri="http://services.sugarlabs.org/gcompris" width="50">Full featured educational application for children from 2 to 10  </feed>
+uv mapping, ...</feed>
+  <feed height="50" homepage="http://gcompris.net/" icon="feed_icons/gcompris.png" name="GCompris" summary="Full featured educational application for children from 2 to 10" uri="http://services.sugarlabs.org/gcompris" width="50">Full featured educational application for children from 2 to 10</feed>
   <feed height="48" homepage="http://www.solfege.org" icon="feed_icons/solfege.png" name="solfege" summary="free ear training software" uri="http://www.solfege.org/zeroinstall/solfege.xml" width="48">Solfege is a free ear training program written in python using gtk+ and
 
 PyGTK.  Solfege is expected to work on any OS where python, gtk+ and
 
-pygtk are ported, but some adjustments might be necessary.  </feed>
+pygtk are ported, but some adjustments might be necessary.</feed>
 </list>
