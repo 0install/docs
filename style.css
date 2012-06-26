@@ -211,6 +211,7 @@ td.sidebar h2 {
 }
 
 td.sidebar {
+	border-radius: 0 1em 0 0;
 	-moz-border-radius: 0 1em 0 0;
 	-webkit-border-radius: 0 1em 0 0;
 	vertical-align: top;
@@ -390,6 +391,7 @@ div.quicklinks a {
 	display:table-cell;
 	color: blue;
 	min-width: 6em;
+	border-radius: 1em;
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 	width: 25%;
@@ -480,6 +482,7 @@ td.teaser a {
 }
 
 div.program {
+	border-radius: 1em;
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 	float: right;
