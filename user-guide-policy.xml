@@ -211,7 +211,7 @@ other versions, unless they're not cached and you are in Off-line mode.
 </p>
 
 <quicklinks>
-  <link href='user-guide-shortcuts.html' img='tango/go-prev.png'>Go back</link>
+  <link href='user-guide-apps.html' img='tango/go-prev.png'>Go back</link>
   <link href='user-guide-cache.html' img='tango/go-next.png'>Continue</link>
 </quicklinks>
  

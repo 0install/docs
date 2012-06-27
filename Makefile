@@ -29,6 +29,7 @@ HTML = index.php \
        user-guide-intro.html \
        user-guide-policy.html \
        user-guide-shortcuts.html \
+       user-guide-apps.html \
        injector-design.html \
        injector-feeds.html \
        injector-find.html \
