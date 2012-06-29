@@ -177,35 +177,32 @@ case).
 
 <p>
 Note that the command installs to the
-<b>gnu-hello-linux-x86_64</b> directory rather than to the usual <b>/usr/local</b>. In fact, if you have
-<a href='http://plash.beasts.org/'>plash</a> installed, the command is run in a
-sandbox with very limited write permissions. [ update: Plash support is temporarily disabled by default while a few issues are worked out; set $USE_PLASH_0COMPILE to turn it on again ]
+<b>gnu-hello-linux-x86_64</b> directory rather than to the usual <b>/usr/local</b>.
 </p>
 
 <p>
 Assuming the build is successful, <b>gnu-hello-linux-x86_64</b> will contain the final result,
-including a handy <b>gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b> local feed file, which you can use to
-run the new binary:
+including a handy <b>gnu-hello-linux-x86_64/0install/feed.xml</b> local feed file, which you can use to
+run the new binary (note: this used to be <b>gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b> on older versions of 0compile):
 </p>
 
 <pre>
-$ <b>0launch gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
+$ <b>0launch gnu-hello-linux-x86_64/0install/feed.xml</b>
 Hello, world!
 </pre>
 
 <p>
 In fact, since <b>GNU-Hello</b> doesn't list any run-time dependencies, we could have just run
 the <b>gnu-hello-linux-x86_64/bin/hello</b> binary directly in this case. For more complex programs,
-the feed file will be useful. You can also pass it to <b>0launch
---feed</b> to register the new binary under the program's normal URI:
+the feed file will be useful. You can also pass it to <b>0install add-feed</b>
+to register the new binary under the program's normal URI:
 </p>
 
 <pre>
 $ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
-Can't find all required implementations:
-- &lt;Interface http://0install.net/tests/GNU-Hello.xml> -> None
+Interface 'http://0install.net/tests/GNU-Hello.xml' has no usable implementations
 
-$ <b>0launch --feed gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
+$ <b>0install add-feed gnu-hello-linux-x86_64/0install/feed.xml</b>
 1) Add as feed for 'http://0install.net/tests/GNU-Hello.xml'
 
 $ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
@@ -257,7 +254,7 @@ wq</b>
 
 <pre>
 $ <b>0compile build</b>
-$ <b>0launch gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b>
+$ <b>0launch gnu-hello-linux-x86_64/0install/feed.xml</b>
 Goodbye, world!
 </pre>
 
