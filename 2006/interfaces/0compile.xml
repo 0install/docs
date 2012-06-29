@@ -307,17 +307,27 @@ For a full tutorial, see 0compile's homepage.</description>
 	  <version before="1.8-post" not-before="1.7"/>
 	  <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
 	</requires>
-	<implementation id="sha1new=3d442af89f6ab22958860ab2cadb4a0f94e3643b" released="2012-05-12" version="0.29">
+	<implementation id="sha1new=3d442af89f6ab22958860ab2cadb4a0f94e3643b" released="2012-05-12" stability="stable" version="0.29">
 	  <manifest-digest sha256="9532346597d5df2aa2b260ddddd68f92be1b706ed0f1c22232cd4cd6170279e7"/>
 	  <archive extract="0compile-0.29" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.29/0compile-0.29.tar.bz2" size="34717"/>
 	</implementation>
+      </group>
+      <group>
+        <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1.9"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+        <implementation id="sha1new=911a3585d088cfa6d7226db5cd243dab437ffa16" released="2012-06-29" version="0.30">
+      <manifest-digest sha256="4a3435b0403facde2d92cc8ceb816b8c9f5cbcfb8a5e31c4861d7ac57e0494ee"/>
+      <archive extract="0compile-0.30" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.30/0compile-0.30.tar.bz2" size="35447"/>
+    </implementation>
       </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk/TTxQACgkQrgeCgFmlPMEY7QCfQJlTPtkHhVUHamN50DvIcJjYVgYAoNRPBCaR
-wcBXgjodnbSJ1zDDx2zh
+iEYEABECAAYFAk/tRsgACgkQrgeCgFmlPMF6egCfaDLqI02fv+amxsOcdVN6rf6ShZMAoIKErY6L
+sbWph1tqlnGtU4B+SZyf
 
 -->
