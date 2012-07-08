@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jul 2012</dt>
+<dd>
+<a href='http://news.gmane.org/find-root.php?message_id=%3cCAG4opy%2d53FFuxqy%5fAz%2bYfFaPPHdDZOtUH%2br89%2byD9D60S%5f3CDw%40mail.gmail.com%3e'>0install 1.9 released</a>: new features include <a href='http://0install.net/user-guide-apps.html'>app support</a>, better support for locally-compiled binaries, and improved support for Python 0install tools on Windows (e.g. 0compile).
+Other new releases this month include <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5978'>0publish 0.21</a>, <a href='http://news.gmane.org/find-root.php?message_id=%3c008601cd4d6a%24be047e10%243a0d7a30%24%40eicher.net%3e'>Windows 0install 1.8</a> and <a href='http://news.gmane.org/find-root.php?message_id=%3c002a01cd5138%241fc4c4e0%245f4e4ea0%24%40eicher.net%3e'>1.8.1</a>, and <a href='http://news.gmane.org/find-root.php?message_id=%3cCAG4opy9S2MgUkX1U7MCjsbZY2wEJXQ%3dvLqHxG%5fbbuVUBq%5fpkAQ%40mail.gmail.com%3e'>0compile 0.30</a>.
+</dd>
 <dt>Jun 2012</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5866'>0install 1.8 was released</a>, including an "Explain this decision" feature to find out why a particular version wasn't chosen, a new "POSIX" architecture (which matches everything except Windows) and per-site rate limiting for downloads. We now have a <a href='https://www.transifex.net/projects/p/zeroinstall-injector/'>Transifex project for web-based translations</a>. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5905'>0install 1.7.1 for Windows</a> was released.
