@@ -477,22 +477,25 @@ An implementation can also be created by following a &lt;recipe&gt;:
 
 <pre>
   &lt;recipe&gt;
-    &lt;archive ...&gt; +
+    ( &lt;archive ...&gt; | &lt;rename ...&gt; ) +
   &lt;/recipe&gt;
 </pre>
 
 <p>
 In this case, each child element of the recipe represents a step. To get an implementation by following a recipe,
 a new empty directory is created and then all of the steps are performed in sequence. The resulting directory
-must have the digest given in the implementation's <b>id</b>. A recipe containing only a single archive is equivalent
-to just specifying the archive on its own (except that recipes aren't supported prior to version 0.20 of 0install).
+must have the digest given in the implementation's &lt;manifest-digest&gt;. A recipe containing only a single archive is equivalent
+to just specifying the archive on its own.
 If a recipe contains an unrecognised element then the whole recipe must be ignored.
 </p>
 
-<p>
-The only type of step supported is an &lt;archive&gt;, which causes the named
-archive to be fetched and unpacked over the top of whatever is currently in the temporary directory.
-</p>
+<dl>
+  <dt>&lt;archive ...&gt;</dt>
+  <dd>Causes the named archive to be fetched and unpacked over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
+
+  <dt>&lt;rename source='...' dest='...'&gt;</dt>
+  <dd>Renames or moves a file or directory. It is an error if the source or destination are outside the implementation.</dd>
+</dl>
 
 <p>
 Note: A recipe is generally only useful for patching existing archives without having to host the complete result
@@ -538,10 +541,25 @@ or "<b>recommended</b>" (no version is also an option, although selecting a
 version is preferable to not selecting one).
 </p>
 
+<p>
+  A &lt;restricts&gt; element (0install >= 1.10) can be used to apply constraints without creating a dependency:
+</p>
+
+<pre>
+  &lt;restricts
+	interface='...' &gt;
+    [ constraints ] *
+  &lt;/restricts&gt;
+</pre>
+
+<p>
+  Internally, &lt;restricts&gt; behaves much like &lt;requires importance='recommended'&gt;, except that it doesn't try to cause the interface to be selected at all.
+</p>
+
 <h2>Constraints</h2>
 
 <p>
-Constraints appear inside &lt;requires&gt; elements. They restrict the set of versions from which
+Constraints appear inside &lt;requires&gt;, &lt;restricts&gt; and &lt;runner&gt; elements. They restrict the set of versions from which
 0install may choose an implementation.
 </p>
 
