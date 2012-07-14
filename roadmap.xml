@@ -115,6 +115,8 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>"Explain this decision" feature.</li>
   <li>"POSIX" architecture (everything except Windows).</li>
   <li>Limits on the number of concurrent connections to a site.</li>
+  <li>Support for <a href='user-guide-apps.html'>apps</a>.</li>
+  <li>Better Windows support from Python (so tools like 0compile work out of the box).</li>
 </ul>
 
 
@@ -128,11 +130,10 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 <h4>Soon (maybe)</h4>
 
 <ul>
-  <li>Replace aliases with <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5896'>apps</a> (initial support merged; will be in 1.9).</li>
-  <li>Better Windows support from Python (so tools like 0compile work out of the box).</li>
   <li>HTTP connection pooling, pipelining and DNS caching (rate limiting is now in).</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
-  <li>Stop using "=" in pathnames; cmake can't cope with them.</li>
+  <li>Stop using "=" in pathnames; cmake can't cope with them (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6097'>merged</a>; will be in 1.10)</li>
+  <li>Mirrors for archives (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6103'>merged</a>; will be in 1.10)</li>
 </ul>
 
 <h4>Version 2.x</h4>
@@ -140,7 +141,7 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 <dl class='roadmap'>
 
 <dt>More flexible &lt;recipe&gt;s</dt>
-<dd>e.g. applying patch files, unpacking nested archives.</dd>
+<dd>e.g. applying patch files, unpacking nested archives (renaming is now merged; will be in 1.10)</dd>
 
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store style interface</a></dt>
 <dd>
@@ -184,11 +185,6 @@ requires it).
 <dd>0install currently only manages code, not configuration. It is assumed that programs look in ~/.config and similar places for this.
 0install should have support for multiple instances (configurations / profiles) for any program. This will be needed for sandboxing anyway.
 </dd>
-
-<dt>Mirrors for archives</dt>
-<dd>If a download site is unavailable, switch to another mirror. Support sf.net mirror system, custom mirror
-systems, coral cache, etc. May need to show sponsor logos during the download.
-See also: <a href='http://www.metalinker.org/'> Metalink</a></dd>
 
 <dt>Lazy dependencies</dt>
 <dd>
