@@ -222,6 +222,17 @@
     </dl>
   </xsl:template>
 
+  <xsl:template name='contents-entry'>
+    <xsl:choose>
+      <xsl:when test='@id'>
+	<a href="#{@id}"><xsl:value-of select='.'/></a>
+      </xsl:when>
+      <xsl:otherwise>
+	<a href="#{generate-id()}"><xsl:value-of select='.'/></a>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match='*[name() = "toc"]'>
     <xsl:variable name='level'><xsl:value-of select='@level'/></xsl:variable>
 
@@ -233,10 +244,10 @@
             <li><xsl:value-of select='.'/>
 	      <ol>
                 <xsl:for-each select='../*[name() = $level]'>
-                  <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+                  <li><xsl:call-template name='contents-entry'/></li>
                 </xsl:for-each>
                 <xsl:for-each select='../*[name() = "dl"]/*[name() = $level]'>
-                  <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+                  <li><xsl:call-template name='contents-entry'/></li>
                 </xsl:for-each>
 	      </ol>
 	    </li>
@@ -246,7 +257,7 @@
       <xsl:otherwise>
         <ol class='toc'>
         <xsl:for-each select='following::*[name() = $level]'>
-          <li><a href="#{generate-id()}"><xsl:value-of select='.'/></a></li>
+          <li><xsl:call-template name='contents-entry'/></li>
         </xsl:for-each>
         </ol>
       </xsl:otherwise>
