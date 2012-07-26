@@ -223,9 +223,13 @@ requires first uninstalling another.</description>
         <command name="0install" path="0install">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-        <implementation id="sha1new=f6afe0d60d550f2b0caab1b0300254cae746082f" released="2012-06-27" version="1.9">
+        <implementation id="sha1new=f6afe0d60d550f2b0caab1b0300254cae746082f" released="2012-06-27" stability="stable" version="1.9">
       <manifest-digest sha256="27fd963cc5dc04ec433f953a6f9fb8d265a19725c4fa60885ff5d12735364ee0"/>
       <archive extract="zeroinstall-injector-1.9" href="http://downloads.sourceforge.net/project/zero-install/injector/1.9/zeroinstall-injector-1.9.tar.bz2" size="381721"/>
+    </implementation>
+        <implementation id="sha1new=9262cdbae119117aceda1e2a47a5eea6c80df9c4" released="2012-07-26" version="1.10">
+      <manifest-digest sha256="85fec6f5aa8b24d0692ddf462130e09398748948fe2c3d15e02094c1213189e9"/>
+      <archive extract="zeroinstall-injector-1.10" href="http://downloads.sourceforge.net/project/zero-install/injector/1.10/zeroinstall-injector-1.10.tar.bz2" size="385755"/>
     </implementation>
       </group>
     </group>
@@ -233,7 +237,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk/qpMkACgkQrgeCgFmlPMF0rACfXbcMa1JdoGQK0TE3qw3r3g0V7sQAoIhVehPP
-aK7dHmjrG3AGBNqh7SHk
+iEYEABECAAYFAlAQ0x8ACgkQrgeCgFmlPMEq5ACfco0ao7a457AlfU2K8o/RYMqJrmoAn1ofwg4B
+mZTFar+tj2HHLxP4nzp+
 
 -->
