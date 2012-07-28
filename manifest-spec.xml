@@ -10,7 +10,7 @@
 
 <p>
 Zero Install <i>implementations</i> are directory trees identified by an
-algorithm name (e.g., "sha1"), and digest of their contents calculated using
+algorithm name (e.g., "sha256"), and digest of their contents calculated using
 that algorithm. Adding, deleting, renaming or modifying any file in a tree will
 change its digest. It should be infeasibly difficult to generate a new tree
 with the same digest as a given tree. Thus, if you know the digest of the
@@ -23,44 +23,32 @@ This document describes how a digest is calculated from a directory tree.
 </p>
 
 <p>
-Changes to this document (and to the rest of the web-site) are tracked using subversion. To view
-the change log:
+Changes to this document (and to the rest of the web-site) are <a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/htdocs;a=history;f=manifest-spec.xml;hb=HEAD'>tracked using Git</a>.
 </p>
-
-<pre>
-$ svn log https://zero-install.svn.sourceforge.net/svnroot/zero-install/trunk/htdocs/manifest-spec.xml
-</pre>
 
 
 <h3>Algorithms</h3>
 
 <p>
 There are several different algorithms that can be used to generate a digest from a directory
-tree, so an implementation's identifier takes the form:
-</p>
-
-<pre>
-algorithm "=" value
-</pre>
-
-<p>
+tree, so an implementation's identifier includes the algorithm.
 This allows new algorithms to be added easily if weaknesses are discovered in older ones.
 The currently supported algorithms are:
 </p>
 
 <dl>
-<dt>sha1</dt><dd>This is supported by all versions of the injector. Its
-manifest format is slightly different to the format used with the other algorithms as it
-is older.</dd>
-<dt>sha1new</dt><dd>Supported from version 0.20. This is the same hash as <b>sha1</b> but with
+<dt>sha1=XXX</dt><dd>This is supported by all versions of 0install. It
+is less secure than the format used with the other algorithms.</dd>
+<dt>sha1new=XXX</dt><dd>Supported from version 0.20. This is the same hash as <b>sha1</b> but with
 the new manifest format.</dd>
-<dt>sha256</dt><dd>Supported from version 0.20 and also requires the <b>hashlib</b> Python module
-to be installed. This should be the most secure.</dd>
+<dt>sha256=XXX</dt><dd>Supported from version 0.20 and also requires the <b>hashlib</b> Python module
+to be installed.</dd>
+<dt>sha256new_XXX</dt><dd>Supported from version 1.10. This is the same as <b>sha256</b>, except that the final digest is <a href='http://en.wikipedia.org/wiki/Base32'>base32-encoded</a> (without padding) to make it a bit shorter, and the separator character is "_" rather than "=", as pathnames containing "=" cause problems for some programs.</dd>
 </dl>
 
 <p>
 When checking a new tree (e.g., that has just been downloaded from the net and
-unpacked), the injector generates a 'manifest' file. The manifest lists every
+unpacked), 0install generates a 'manifest' file. The manifest lists every
 file, directory and symlink in the tree, and gives the digest of each file's
 content. Here is a sample manifest file for a tree containing two files
 (<b>README</b> and <b>src/main.c</b>) and using the <b>sha1</b> algorithm (you can use
@@ -96,7 +84,7 @@ b848561cd89be1b806ee00008a503c63eb4ad56e
 </pre>
 
 <p>
-When the injector adds a new archive to the cache, the top-level
+When 0install adds a new archive to the cache, the top-level
 directory is renamed to this final digest (so the <b>main.c</b> above would be
 stored as <b>.../sha1=b848561cd89be1b806ee00008a503c63eb4ad56e/src/main.c</b>,
 for example).
