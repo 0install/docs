@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Aug 2012</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6109'>0install 1.10 released</a>. This release adds support for Python 3, PyGObject, and GTK 3 (while continuing to support Python 2, PyGTK, and GTK 2); a new directory naming scheme supports cmake and other programs that can't cope with "=" characters in pathnames; the new &lt;restricts> element allows adding version constraints without creating a dependency; and the new &lt;rename> recipe step allows renaming files and directories when unpacking.
+</dd>
 <dt>Jul 2012</dt>
 <dd>
 <a href='http://news.gmane.org/find-root.php?message_id=%3cCAG4opy%2d53FFuxqy%5fAz%2bYfFaPPHdDZOtUH%2br89%2byD9D60S%5f3CDw%40mail.gmail.com%3e'>0install 1.9 released</a>: new features include <a href='http://0install.net/user-guide-apps.html'>app support</a>, better support for locally-compiled binaries, and improved support for Python 0install tools on Windows (e.g. 0compile).
