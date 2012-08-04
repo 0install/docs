@@ -12,18 +12,16 @@
   <p>Newer versions are also available from the <a href='http://download.opensuse.org/repositories/home:/talex5/'>build service</a>.</p>
   </li>
   <li id='mandriva'>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010/noarch/'>Mandriva 2010 RPMs</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2010.1/noarch/'>Mandriva 2010.1 RPMs</a></li>
+    <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2011/noarch/'>Mandriva 2011 RPMs</a></li>
   <li id='suse'><p><b>OpenSUSE</b> - a package is now available from the main repository (since OpenSUSE 12.1):</p>
     <p><a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;baseproject=openSUSE%3A12.1&amp;lang=en&amp;exclude_debug=true#'>Package in the OpenSUSE distribution</a></p>
     <p>For older systems:</p>
     <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-6.1sle11.i586.rpm'>SLE 11 RPM</a><br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/openSUSE_11.3/noarch/'>OpenSUSE 11.3 RPMs</a><br/>
-    <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-1suse.noarch.rpm'>OpenSUSE 11.4 RPMs</a>
-    <p><strong>Note:</strong> do not install the -test RPMs.</p></li>
+    <a href='https://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0-1suse.noarch.rpm'>OpenSUSE 11.4 RPM</a>
+  </li>
   <li id='redhat'>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/RHEL_5/noarch/'>RHEL 5 RPM</a> (0.35)<br/>
-    <a href='http://download.opensuse.org/repositories/home:/talex5/RedHat_RHEL-6/noarch/'>RHEL 6 RPM</a> (1.5)
+    <a href='http://sourceforge.net/projects/zero-install/files/injector/0.35/zeroinstall-injector-0.35-4.1-RHEL5.noarch.rpm/download'>RHEL 5 RPM</a> (0.35)<br/>
+    <a href='http://sourceforge.net/projects/zero-install/files/injector/1.10/zeroinstall-injector-1.10-50.1-RHEL6.noarch.rpm/download'>RHEL 6 RPM</a> (1.10)
     <p>A package is available in the <a href='http://fedoraproject.org/wiki/EPEL'>Fedora Extra Packages for Enterprise Linux (EPEL)</a>:</p>
   <pre># <b>yum install zeroinstall-injector</b></pre>
   </li>
@@ -53,7 +51,7 @@
     <b>Arch Linux</b> <a href='http://aur.archlinux.org/packages.php?ID=2676'>zeroinstall-injector</a> is available with Arch Linux.
   </li>
   <li id='slackware'>
-    <b>Slackware</b> packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a></li>
+    <b>Slackware</b> packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a> (out-of-date)</li>
   <li id='gentoo'><b>Gentoo</b> <a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage (the version, 0.49, is very old though).</li>
 </ul>
 </dd>
