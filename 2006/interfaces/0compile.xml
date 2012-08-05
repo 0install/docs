@@ -314,7 +314,7 @@ For a full tutorial, see 0compile's homepage.</description>
       </group>
       <group>
         <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="1.9"/>
+      <version before="1.10" not-before="1.9"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
         <implementation id="sha1new=911a3585d088cfa6d7226db5cd243dab437ffa16" released="2012-06-29" stability="stable" version="0.30">
@@ -337,7 +337,7 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlAdW+wACgkQrgeCgFmlPMGZMwCgzsQF6hTCvaGs6yZCTwstuyrceKoAoLHRKwQM
-IStlUg1JHH+Fc5dlXYaZ
+iEYEABECAAYFAlAehL0ACgkQrgeCgFmlPMEySwCgq5+hb0wtAPMZQ3KuyACXkpIpFoMAoKQ7h9Zf
+jkO+hcAc7L8nukqXkMHu
 
 -->
