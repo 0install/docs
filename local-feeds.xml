@@ -88,7 +88,8 @@ This will work on Linux, MacOS X, Windows, etc.
   <li>Compile source code using <a href='0compile-dev.html'>0compile</a>.</li>
   <li>Make a release using <a href='0release.html'>0release</a>.</li>
   <li>Test against different versions of dependencies using <a href='0test.html'>0test</a>.</li>
-  <li>See some <a href='templates.html'>example templates</a> for projects in different languages and using various build systems.</li>
 </ul>
+
+<p>See the <a href='templates.html'>example templates</a> for projects in different languages and using various build systems.</p>
 
 </html>

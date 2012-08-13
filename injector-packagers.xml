@@ -46,7 +46,7 @@
   <dt>... create an XML file describing my own software</dt>
   <dd>
     <ul>
-      <li>Read the <a href='0release.html'>0release</a> documentation, which shows how to add a local feed to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.</li>
+      <li>Read the <a href='0release.html'>0release</a> documentation, which shows how to add a <a href='local-feeds.html'>local feed</a> to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.</li>
       <li>Have a look at the <a href='templates.html'>template projects</a> for examples in various programming languages (Python, Java, C).</li>
     </ul>
   </dd>
