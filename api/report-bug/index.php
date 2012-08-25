@@ -12,11 +12,11 @@ if (!isset($uri, $body)) {
 
 require('Mail.php');
 
-$recipients = "talex5@gmail.com";
+$recipient = "zero-install-bugs@lists.sourceforge.net";
 
 $headers = array (
     'From' => 'bugs@0install.net',
-    'To' => join(', ', $recipients),
+    'To' => $recipient,
     'Subject' => "Bug in $uri",
 );
 
@@ -29,7 +29,7 @@ $mail_object =& Mail::factory('smtp',
         //'debug' => true, # uncomment to enable debugging
     ));
 
-$result = $mail_object->send($recipients, $headers, $body);
+$result = $mail_object->send($recipient, $headers, $body);
 
 if ($result === true) {
   echo("Bug report email sent");
