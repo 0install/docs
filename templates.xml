@@ -8,17 +8,17 @@ This page lists some example code packages which you can use as templates when c
 </p>
 
 <dl>
-  <dt><a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-python'>hello-python</a></dt>
+  <dt><a href='https://github.com/0install/hello-python'>hello-python</a></dt>
 <dd>A simple Python program. Depends on Python 2.x using 0install. See the <a href='0release.html'>0release tutorial</a> for more information.</dd>
 
 <dt><a href='http://repo.or.cz/w/0release.git?a=blob;f=tests/c-prog.tgz;h=ae1f06864c70f65fdef5a00065fb82eec809d6dc;hb=a7bce06b6494407b2d80124c65f13493e3b44378'>c-prog</a></dt>
 <dd>A simple C program. Shows how to make a source package that can be used by <a href='0compile.html'>0compile</a> to create a binary release. See <a href='0release-binaries.html'>0release: binaries</a> for details.
 </dd>
 
-<dt><a href='http://0install.net/tests/Hello-scons.xml'>hello-scons</a></dt>
+<dt><a href='https://github.com/0install/hello-scons'>hello-scons</a></dt>
 <dd>Another C program, but this time using SCons instead of Make as the build tool. See <a href='0compile-scons.html'>0compile: Scons</a> for details.</dd>
 
-<dt><a href='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-java'>hello-java</a></dt>
+<dt><a href='https://github.com/0install/hello-java'>hello-java</a></dt>
 <dd>A Java program, built using SCons. Gets SCons, the Java JDK and the Java JRE through 0install.</dd>
 
 <dt><a href='http://afb.users.sourceforge.net/zero-install/interfaces/testbin-cmake.xml'>testbin-cmake</a> (experimental)</dt>

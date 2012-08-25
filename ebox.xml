@@ -4,7 +4,7 @@
 <program name='ebox'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/tests/ebox.xml'
-	 git='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/ebox;a=summary'
+	 git='https://github.com/0install/ebox'
 	 license='GNU Lesser General Public License'>
 
 <p>

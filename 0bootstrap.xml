@@ -3,7 +3,7 @@
 
 <program name='0bootstrap'
 	 author='Thomas Leonard'
-	 git='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/bootstrap'
+	 git='https://github.com/0install/0bootstrap'
 	 feed='http://0install.net/tools/0bootstrap.xml'
 	 license='GNU General Public License'>
 

@@ -9,13 +9,13 @@
 </p>
 
 <pre>
-  git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/htdocs
+  git clone git://git.code.sf.net/p/zero-install/code htdocs
 </pre>
 
 Or, if you have write access (and you've <a href='https://sourceforge.net/account/services'>registered your SSH key</a> with sf.net):
 
 <pre>
-  git clone <b>username</b>@zero-install.git.sourceforge.net:/gitroot/zero-install/htdocs
+  git clone ssh://<b>username</b>@git.code.sf.net/p/zero-install/code htdocs
 </pre>
 
 <p>

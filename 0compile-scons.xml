@@ -4,7 +4,7 @@
 <program name='Hello-scons'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/tests/Hello-scons.xml'
-	 git='http://zero-install.git.sourceforge.net/git/gitweb.cgi?p=zero-install/hello-scons'
+	 git='https://github.com/0install/hello-scons'
 	 license='Public domain'>
 
 <p>
