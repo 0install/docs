@@ -34,6 +34,8 @@ different to subscribing to get emails.</li>
 
 <h2 id='bugs'>Bug tracker</h2>
 
+<p><strong>2012-08-25 : Notice : </strong>We have just upgraded to the new sf.net project format, which has broken 0install's integrated bug-reporting feature. Bug reports sent from the software appear to be delivered, but they are not. A fix will be in 0install 1.11 - sorry!</p>
+
 <p>Bugs can also be filed on the bug tracker. However, it's best to post
 non-trivial bugs to the mailing list too, as more people will see them
 there.</p>
