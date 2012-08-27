@@ -227,17 +227,37 @@ requires first uninstalling another.</description>
       <manifest-digest sha256="27fd963cc5dc04ec433f953a6f9fb8d265a19725c4fa60885ff5d12735364ee0"/>
       <archive extract="zeroinstall-injector-1.9" href="http://downloads.sourceforge.net/project/zero-install/injector/1.9/zeroinstall-injector-1.9.tar.bz2" size="381721"/>
     </implementation>
-        <implementation id="sha1new=9262cdbae119117aceda1e2a47a5eea6c80df9c4" released="2012-07-26" version="1.10">
+        <implementation id="sha1new=9262cdbae119117aceda1e2a47a5eea6c80df9c4" released="2012-07-26" stability="stable" version="1.10">
       <manifest-digest sha256="85fec6f5aa8b24d0692ddf462130e09398748948fe2c3d15e02094c1213189e9"/>
       <archive extract="zeroinstall-injector-1.10" href="http://downloads.sourceforge.net/project/zero-install/injector/1.10/zeroinstall-injector-1.10.tar.bz2" size="385755"/>
     </implementation>
       </group>
     </group>
+    <group>
+      <requires interface="http://repo.roscidus.com/security/gnupg">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+      <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<arg>-tt</arg>
+      </runner>
+    </command>
+      <command name="0install" path="0install">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
+      <command name="run" path="0launch">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
+      <implementation id="sha1new=90d3c1ae214c39eb0af89b31cfd9fd65fd2aa7e6" released="2012-08-27" version="1.11">
+      <manifest-digest sha256="9bf954fb24fa1e7a3d38e7182ae7744901930ef72f6f5846ada849ca6aa19fba"/>
+      <archive extract="zeroinstall-injector-1.11" href="http://downloads.sourceforge.net/project/zero-install/injector/1.11/zeroinstall-injector-1.11.tar.bz2" size="391601"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlAQ0x8ACgkQrgeCgFmlPMEq5ACfco0ao7a457AlfU2K8o/RYMqJrmoAn1ofwg4B
-mZTFar+tj2HHLxP4nzp+
+iEYEABECAAYFAlA7KyAACgkQrgeCgFmlPMF9wACg1Az9AlUmBZM5SQajNF9VKQogyT4AoMBJHsU8
+aT6jGrUIlKjVYFHxW0H8
 
 -->
