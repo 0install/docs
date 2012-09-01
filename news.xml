@@ -4,6 +4,13 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Sep 2012</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6268'>0install 1.11 released</a>. This version includes much improved support for detecting native Java packages (on Debian, Ubuntu, Fedora, OpenSUSE and Mac OS X). The Debian package has been split into graphical and headless packages, which greatly reduces the number of dependencies needed when installing on headless servers - but <a href='http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=685998'>we need a sponsor from Debian to approve the change</a>.
+<a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/6170'>Support for Haskell packages</a> has been improved. 
+Interesting discussions continued about the planned <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6202'>&lt;linkage&gt;/&lt;feature&gt;</a> system for supporting incompatible ABIs and about <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6197'>support for services</a>.
+Finally, many of the 0install Git repositories have moved to <a href='https://github.com/0install'>our new GitHub organisation</a> - please update your clones!
+</dd>
 <dt>Aug 2012</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6109'>0install 1.10 released</a>. This release adds support for Python 3, PyGObject, and GTK 3 (while continuing to support Python 2, PyGTK, and GTK 2); a new directory naming scheme supports cmake and other programs that can't cope with "=" characters in pathnames; the new &lt;restricts> element allows adding version constraints without creating a dependency; and the new &lt;rename> recipe step allows renaming files and directories when unpacking.
