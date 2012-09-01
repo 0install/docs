@@ -68,7 +68,7 @@ Each piece of software is licensed separately. Please consult the documentation 
 </p>
 
 <ul>
-  <li><p>Normally with 0install, you distribute your software by writing an XML file describing it and publishing that on your web-site. Users can use any client they like to fetch your software using this XML description. If they happen to choose our LGPL software to do this, it has no effect on you. You are not distributing our software and, therefore, you don't need a license to distribute it. Therefore, there is no need to agree to any of the licensing terms.</p></li>
+  <li><p>Normally with 0install, you distribute your software by writing an XML file describing it and publishing that on your web-site. Users can use any client they like to fetch your software using this XML description. If they happen to choose our LGPL software to do this, it has no effect on you.</p></li>
   <li><p>Merely using GPL tools (e.g. <a href='packaging-binaries.html'>0publish-gui</a>) to produce the XML file does not mean we have any rights over your software (but see note above; we will assume that we can mirror your XML feed unless you make it clear that you don't want that).</p></li>
   <li><p>If you are distributing our software with yours, then you do need to follow the license. The main thing is to keep the two bits somewhat separate: the bundle you are distributing contains our software, under our license, and your software, under your license:</p>
     <ul>
@@ -76,7 +76,8 @@ Each piece of software is licensed separately. Please consult the documentation 
       <li><p>Any changes you make to our software must be made available under the same license, so that we can (if we choose) include it in future versions of 0install.</p></li>
   </ul>
   <p>In particular, if you simply use <a href='0export.html'>0export</a> to create an installer containing 0install and your code then there is no problem. 0export unpacks the different components to different directories.</p></li>
-  <li><p>If you are actually trying to <i>write</i> an installer (i.e. a competitor to 0install), and you want to use our code to do that, then the license is likely to be an issue for you. In that case, you can only use our code as part of your program if your program is released under the same license terms.</p></li>
+<li><p>If you are actually trying to <i>write</i> an installer (i.e. a competitor to 0install), and you want to use our code to do that, then the license is likely to be an issue for you. In that case, you can only use our code as part of your program if your program is released under the same license terms.</p>
+  <p>On the other hand, if you're just using 0install as a library (e.g. you're writing a GUI which uses 0install internally, but as a separate component) then you can use your own license for your code (but see the previous point).</p></li>
  </ul>
 
 <h3>Privacy</h3>
