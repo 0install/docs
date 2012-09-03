@@ -92,7 +92,7 @@ can help you to create new releases easily.</description>
 	<version before="3"/>
       </runner>
     </command>
-      <implementation id="sha1new=56e8a61871441490dc2eeaecf4b2c7038f9aebda" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2011-04-18" version="0.13">
+      <implementation id="sha1new=56e8a61871441490dc2eeaecf4b2c7038f9aebda" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2011-04-18" stability="stable" version="0.13">
       <manifest-digest sha256="f4e6b896f72c026675b1e7f5d1cf31e5870b69feafbdd5bbdc9c47e9b2adb9cc"/>
       <archive extract="0release-0.13" href="http://downloads.sourceforge.net/project/zero-install/0release/0.13/0release-0.13.tar.bz2" size="54887"/>
     </implementation>
@@ -101,7 +101,7 @@ can help you to create new releases easily.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk2sfHgACgkQrgeCgFmlPMHVqACfaGYT3RoJX5QDbe8UmWHeXLUS/csAoJqREgOo
-nqm0ev2wCaLwirO4ilLK
+iEYEABECAAYFAlBEUW8ACgkQrgeCgFmlPMHlYwCfYyCzcXQeHJsQoNujMk+JngrEu5kAnRwbzgQl
+Hf7R9Qo+oUDUPdGstOq5
 
 -->
