@@ -13,7 +13,7 @@ function get_download_html() {
 		"Ubuntu" => "apt:zeroinstall-injector",
 		"Debian" => "install-linux.html#debian",
 		"FreeBSD" => "install-unix.html#freebsd",
-		"Mac OS X" => "http://downloads.sourceforge.net/project/zero-install/injector/1.7/ZeroInstall.pkg",
+		"Mac OS X" => "http://downloads.sourceforge.net/project/zero-install/injector/1.11/ZeroInstall.pkg",
 		"SUSE" => "install-linux.html#suse",
 		"Fedora" => "install-linux.html#fedora",
 		"Mandriva" => "install-linux.html#mandriva",
