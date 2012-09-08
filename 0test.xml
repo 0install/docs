@@ -128,6 +128,36 @@ one for you).
 If you specify a test matrix with more than two dimensions, 0test will generate a series of tables.
 </p>
 
+<h2>Other ways to specify versions</h2>
+
+<p>
+As well as passing simple version numbers, you can also allow 0test to choose a suitable version given some constraints. This is useful in test scripts:
+</p>
+
+<dl>
+<dt>Ranges</dt>
+<dd>You can use "," to give a range of possible versions. This is useful with native packages where you don't know the exact version. For example, to test against any Python version 2.6.x (2.6 &lt;= version &lt; 2.7):
+<pre>
+$ 0test prog.xml http://repo.roscidus.com/python/python 2.6,2.7
+Passed
+ - prog 0.1, python v2.6.8-0.2
+</pre>
+</dd>
+<dt>%nonlocal</dt>
+<dd>
+Don't select a local (i.e. unreleased) version to test against:
+<pre>
+$ 0test prog.xml
+Passed
+ - prog 0.1, lib <b>v1.11-post</b>
+
+$ 0test prog.xml http://example.com/lib <b>%nonlocal</b>
+Passed
+ - prog 0.1, lib <b>v1.11</b>
+</pre>
+</dd>
+</dl>
+
 <h2>Passing test arguments</h2>
 
 <p>
