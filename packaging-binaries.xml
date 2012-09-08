@@ -51,7 +51,7 @@ This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using 
 </p>
 
 <div class='note'>
-  Windows users: the <a href='http://0install.de/feeds/ZeroInstall_Tools.xml'>Zero Install Publishing tools</a> is a .NET equivalent of 0publish-GUI.
+  Windows users: the <a href='http://0install.de/feeds/ZeroInstall_Tools.xml'>Zero Install Publishing tools</a> is a .NET equivalent of 0publish-GUI. [ <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/6290'>instructions</a> ]
 </div>
 
 <p>
