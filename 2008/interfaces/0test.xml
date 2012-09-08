@@ -87,7 +87,7 @@ create a matrix of test results.</description>
     </requires>
       <command name="test" path="test0test.py">
       <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
+	<version before="3" not-before="2.7"/>
       </runner>
       <requires interface="http://0install.net/2006/interfaces/0publish">
 	<version before="0.21-post" not-before="0.21"/>
@@ -107,7 +107,7 @@ create a matrix of test results.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBLEcoACgkQrgeCgFmlPMEMUQCgrEo2xBvqQq+ETjZHk19ovoXvAS8AoLQN0QMu
-plgP49g2gBg6z2zYXib3
+iEYEABECAAYFAlBLE5AACgkQrgeCgFmlPMG6oQCfcZsqIBHpbdunMwpTml8OkoMPGIIAn2SSOvOY
+gUHbKycoBXdwDsKHL7eE
 
 -->
