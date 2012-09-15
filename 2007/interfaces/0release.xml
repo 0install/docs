@@ -98,10 +98,39 @@ can help you to create new releases easily.</description>
     </implementation>
     </group>
   </group>
+  <group>
+    <requires interface="http://0install.net/2006/interfaces/0publish">
+      <version not-before="0.17"/>
+      <environment insert="0publish" mode="replace" name="0PUBLISH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1.6"/>
+      <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
+    </requires>
+    <requires interface="http://0install.net/2008/interfaces/0test.xml">
+      <version not-before="0.4-post"/>
+      <environment insert="0test" mode="replace" name="0TEST"/>
+    </requires>
+    <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+      <executable-in-path name="0release"/>
+    </command>
+    <command name="run" path="0release">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <implementation id="sha1new=4ec87241cc6e72c0bc7f68f6a3f9409727473a64" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2012-09-15" version="0.14">
+      <manifest-digest sha256="f2d351c651fa4c7f9031f7675ea2c42faa3a4265791ea417980fb36e4551ec9d"/>
+      <archive extract="0release-0.14" href="http://downloads.sourceforge.net/project/zero-install/0release/0.14/0release-0.14.tar.bz2" size="55026"/>
+    </implementation>
+  </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBEUW8ACgkQrgeCgFmlPMHlYwCfYyCzcXQeHJsQoNujMk+JngrEu5kAnRwbzgQl
-Hf7R9Qo+oUDUPdGstOq5
+iEYEABECAAYFAlBUSmYACgkQrgeCgFmlPMHC6QCfXkAaBoyUOHa0zOWTfCLy/lisD8QAoIIC/qLF
+1ZAf4dZtb3CfxykBaieN
 
 -->
