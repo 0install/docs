@@ -117,6 +117,12 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>Limits on the number of concurrent connections to a site.</li>
   <li>Support for <a href='user-guide-apps.html'>apps</a>.</li>
   <li>Better Windows support from Python (so tools like 0compile work out of the box).</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6097'>Support for programs such as cmake that can't cope with "=" in pathnames</a>.</li>
+  <li>Support for Python 3 and GTK 3 (in addition to Python 2 and GTK 2).</li>
+  <li>The &lt;restricts&gt; element.</li>
+  <li>The recipe &lt;rename&gt; step type.</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6103'>Mirrors for archives</a>.</li>
+  <li>Support for headless servers (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6297'>0install-core</a> package).</li>
 </ul>
 
 
@@ -130,18 +136,20 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 <h4>Soon (maybe)</h4>
 
 <ul>
-  <li>HTTP connection pooling, pipelining and DNS caching (rate limiting is now in).</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
-  <li>Stop using "=" in pathnames; cmake can't cope with them (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6097'>merged</a>; will be in 1.10)</li>
-  <li>Mirrors for archives (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6103'>merged</a>; will be in 1.10)</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6276'>Alternatives for dependencies</a>.</li>
+  <li><a href='user-guide-apps.html'>App support</a> for XDG launchers.</li>
 </ul>
 
 <h4>Version 2.x</h4>
 
 <dl class='roadmap'>
 
+<dt>HTTP connection pooling, pipelining and DNS caching</dt>
+<dd>Rate limiting is already supported, but further performance improvements are still possible.</dd>
+
 <dt>More flexible &lt;recipe&gt;s</dt>
-<dd>e.g. applying patch files, unpacking nested archives (renaming is now merged; will be in 1.10)</dd>
+<dd>e.g. applying patch files, unpacking nested archives</dd>
 
 <dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3733'>An app-store style interface</a></dt>
 <dd>
@@ -159,10 +167,13 @@ of locally cached feeds, to enable quick off-line searching.
 <dd>A feed should be able to specify where bug reports are to be sent. Currently, they all go to the 0install project itself.</dd>
 
 <dt>Support for services</dt>
-<dd>e.g. a 0service command that integrates with systemd</dd>
+<dd>e.g. a 0service command that integrates with systemd. Juju support is currently under development.</dd>
 
-<dt>More sandboxing demos</dt>
-<dd>Show integration with e.g. Rainbow, Plash or LXC, in addition to the current <a href='ebox.html'>E support</a>.</dd>
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Sandboxing</a></dt>
+<dd>
+Provide better integration with sandboxing systems such as Rainbow, <a href='http://plash.beasts.org/'>Plash</a> or LXC. Sandboxed software must still
+be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion. <a href='ebox.html'>EBox</a> shows how this integration can work.
+</dd>
 
 <dt>Better desktop integration</dt>
 <dd>e.g. a better Firefox plugin, XFCE support.</dd>
@@ -218,11 +229,6 @@ we could just download a delta to the next version rather than getting everythin
 these deltas automatically. Rsync may also be an option for some sites.
 </dd>
 
-<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1285/focus=1285'>Sandboxing</a></dt>
-<dd>
-Provide better integration with sandboxing systems such as <a href='http://plash.beasts.org/'>Plash</a>. Sandboxed software must still
-be able to run other programs through Zero Install, adding them to the cache as needed in a secure fashion. <a href='ebox.html'>EBox</a> shows how this integration can work.
-</dd>
 </dl>
 
 <h4>Other possible features</h4>
