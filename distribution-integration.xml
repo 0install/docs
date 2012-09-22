@@ -9,13 +9,14 @@
 <ul>
   <li><b>Arch</b>: Arch Linux - since 1.6</li>
   <li><b>Cygwin</b>: Cygwin - since 1.7</li>
+  <li><b>Darwin</b>: (detects native Java) - since 1.11</li>
   <li><b>Debian</b>: dpkg-based (Debian, Mint, Ubuntu, etc) - since 0.28</li>
-  <li><b>Ports</b>: FreeBSD - since 0.47</li>
   <li><b>Gentoo</b>: Gentoo - since 0.45</li>
-  <li><b>MacPorts</b>: Mac OS X (ports) - since 1.4</li>
-  <li><b>RPM</b>: rpm-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31</li>
+  <li><b>MacPorts</b>: Mac OS X (ports) - since 1.4 (also extends "Darwin")</li>
+  <li><b>Ports</b>: FreeBSD - since 0.47</li>
+  <li><b>RPM</b>: RPM-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31</li>
   <li><b>Slack</b>: Slackware - since 0.48</li>
-  <li><b>(unnamed)</b>: Windows (detects native Python and Java) - in mainline since 1.5</li>
+  <li><b>Windows</b>: Windows (detects native Python and Java) - in mainline since 1.5</li>
   <li><b>Adding a new one</b>: edit <a href='python-api/html/zeroinstall.injector.distro-module.html'>distro.py</a></li>
 </ul>
 

@@ -381,16 +381,9 @@ of the interface. If <b>main</b> is given then it must be an absolute path.
 If the <b>distributions</b> attribute is present then it is a space-separated list of distribution names
 where this element applies. 0launch >= 0.45 ranks the &lt;package-implementation&gt; elements according
 to how well they match the host distribution and then only uses the best match (or matches, if several get
-the same score). Only these distribution names are supported currently, and they are case-sensitive:
+the same score). See <a href='distribution-integration.html'>Distribution integration</a> for a list of
+supported distributions.
 </p>
-
-<ul>
-  <li>RPM (all RPM-based distributions)</li>
-  <li>Debian (all Debian-based distributions)</li>
-  <li>Gentoo</li>
-  <li>Slack (Slackware)</li>
-  <li>Ports (FreeBSD Ports)</li>
-</ul>
 
 <p>
 Earlier versions of 0launch ignore the <b>distributions</b> attribute and process all of the elements.
