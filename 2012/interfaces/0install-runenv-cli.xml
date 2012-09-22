@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0install-runenv-cli</name>
+  <summary>0install .NET helper for Windows</summary>
+  <description>
+    When 0install needs to add a new program to %PATH% on Windows, it uses this
+    package to creates a .NET launcher application.
+</description>
+
+  <homepage>http://0install.net/</homepage>
+  <category>System</category>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation id="sha1new=bb0491587ded1ab073834cd5783b332793f7cf7c" released="2012-09-22" version="1.12">
+      <manifest-digest sha256="81d551e211179d244364a87bafb708036e0028bf6716e2cc802c8e17a4aa9144"/>
+      <archive extract="0install-runenv-cli-1.12" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/1.12/0install-runenv-cli-1.12.tar.bz2" size="4837"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABCAAGBQJQXfknAAoJEAcTP5bKdNi6Fu4H/3KZYv/In2Gt5Gzi92Xr2kN6lyvjJFHaolrS
+sdwgL4nILqtRuwgghzKEATRorrygcKD4VDtYRbijjYqraWKS4q3L3JAHfGvR605ZFm/6iXCgy6ll
+P0vtqP26MysZGfy0XwkqA0Lj2B75y8XLsbuseWPv9XtgL00xM+9/1cvRL5+Qq8LUQTnRJ7Z/KxaE
+FI+dCFRz3TNn0XlbzRts8ooGcMY1S579bEH8bPFj0H8jVKu6syhRfju6dWYrC03ae8O+MwkarI8O
+MXWV8JvUT/seUz1N+D5hyzMwSuQSEBCIYVPA1vd1FFjUsLCDrjGyRDhk1sQ6hzg20Ll8H1NJqTQN
+lw4=
+
+-->
