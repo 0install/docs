@@ -509,6 +509,7 @@ suitable implementation, downloading one if required.
   &lt;requires
 	interface='...'
 	importance='...' ?
+	os='...' ?
 	use='...' ? &gt;
     [ constraints ] *
     [ bindings ] *
@@ -532,6 +533,11 @@ The <b>importance</b> attribute (0install >= 1.1) can be either
 "<b>essential</b>" (the default; a version of this dependency must be selected)
 or "<b>recommended</b>" (no version is also an option, although selecting a
 version is preferable to not selecting one).
+</p>
+
+<p>
+  The <b>os</b> attribute (0install >= 1.12) can be used to indicate that the dependency only applies to the given OS (e.g. <b>os="Windows"</b> for
+  dependencies only needed on Windows systems).
 </p>
 
 <p>
