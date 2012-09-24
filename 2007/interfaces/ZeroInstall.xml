@@ -248,16 +248,25 @@ requires first uninstalling another.</description>
       <command name="run" path="0launch">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-      <implementation id="sha1new=90d3c1ae214c39eb0af89b31cfd9fd65fd2aa7e6" released="2012-08-27" version="1.11">
+      <implementation id="sha1new=90d3c1ae214c39eb0af89b31cfd9fd65fd2aa7e6" released="2012-08-27" stability="stable" version="1.11">
       <manifest-digest sha256="9bf954fb24fa1e7a3d38e7182ae7744901930ef72f6f5846ada849ca6aa19fba"/>
       <archive extract="zeroinstall-injector-1.11" href="http://downloads.sourceforge.net/project/zero-install/injector/1.11/zeroinstall-injector-1.11.tar.bz2" size="391601"/>
     </implementation>
+      <group>
+        <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
+      <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
+    </requires>
+        <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" version="1.12">
+      <manifest-digest sha256="304e7110ed87ebedf8cae873f1e3d20ec12c5d3a3444e1eb9c8aba1f3be366a7"/>
+      <archive extract="0install-1.12" href="http://downloads.sourceforge.net/project/zero-install/0install/1.12/0install-1.12.tar.bz2" size="389779"/>
+    </implementation>
+      </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlA7KyAACgkQrgeCgFmlPMF9wACg1Az9AlUmBZM5SQajNF9VKQogyT4AoMBJHsU8
-aT6jGrUIlKjVYFHxW0H8
+iEYEABECAAYFAlBgSg4ACgkQrgeCgFmlPMGdgQCgjKNmxpHK8ZnU4ANymAs35MIq4m4AoNoPn6Mb
+ww3bwGlufhtf70KjbZO6
 
 -->
