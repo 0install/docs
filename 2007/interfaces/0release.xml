@@ -126,11 +126,15 @@ can help you to create new releases easily.</description>
       <manifest-digest sha256="f2d351c651fa4c7f9031f7675ea2c42faa3a4265791ea417980fb36e4551ec9d"/>
       <archive extract="0release-0.14" href="http://downloads.sourceforge.net/project/zero-install/0release/0.14/0release-0.14.tar.bz2" size="55026"/>
     </implementation>
+    <implementation id="sha1new=0c782acf661cfde11ea1174baf70a143f237bea1" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2012-09-24" version="0.14.1">
+      <manifest-digest sha256="2bb1cc0c4b40ef4a5bdda0a89d3a63c24e40572f87528b67280b6d2cefdc33c2"/>
+      <archive extract="0release-0.14.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.14.1/0release-0.14.1.tar.bz2" size="55257"/>
+    </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBgKhMACgkQrgeCgFmlPMEAFwCeP8/EiWdpQqFrCy7ZPGDpNodhZQYAn27BGCU0
-YbAiAhprtugWDnPGyLu7
+iEYEABECAAYFAlBgKsMACgkQrgeCgFmlPMG7uQCfZYUrfLuExyVxaN3sZCrYuN0kuykAoL3/mn7g
+hrZZJBF4phHZNNubPUHj
 
 -->
