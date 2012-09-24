@@ -34,15 +34,14 @@ different to subscribing to get emails.</li>
 
 <h2 id='bugs'>Bug tracker</h2>
 
-<p><strong>2012-08-25 : Notice : </strong>We have just upgraded to the new sf.net project format, which has broken 0install's integrated bug-reporting feature. Bug reports sent from the software appear to be delivered, but they are not. A fix will be in 0install 1.11 - sorry!</p>
+<p><strong>2012-08-25 : Notice : </strong>Due to a recent new sf.net upgrade, versions of 0install before 1.11 cannot submit bug reports using the built-in bug reporter - reports appear to be delivered, but they are not. Please use 0install 1.11 or later. Sorry!</p>
 
 <p>Bugs can also be filed on the bug tracker. However, it's best to post
 non-trivial bugs to the mailing list too, as more people will see them
 there.</p>
 
 <ul>
-<li><a href="https://sourceforge.net/p/zero-install/bugs/">View open bugs</a></li>
-<li><a href="https://sourceforge.net/p/zero-install/bugs/new/">Submit a new bug</a> (you'll need to log in or register)</li>
+  <li><a href='https://github.com/0install/0install/issues'>New issuer tracker on GitHub</a></li>
 </ul>
 
 <h2 id='IRC'>IRC</h2>
