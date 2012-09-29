@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Oct 2012</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6284'>0install 1.11 for Windows</a> (and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6308'>1.11.1</a>) released, including support for Windows 8 and higher monitor DPI values. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6293'>0test 0.8</a> adds some options to make it easier to test a large collection of programs at once. A new Debian package, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6297'>0install-core</a>, is now available for use on servers.
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6334'>0install 1.12</a> was released, adding OS-specific dependencies, the "0install man" command, dependencies for &lt;package-implementation&gt;, and a bug-fix to the PackageKit support.
+</dd>
 <dt>Sep 2012</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6268'>0install 1.11 released</a>. This version includes much improved support for detecting native Java packages (on Debian, Ubuntu, Fedora, OpenSUSE and Mac OS X). The Debian package has been split into graphical and headless packages, which greatly reduces the number of dependencies needed when installing on headless servers - but <a href='http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=685998'>we need a sponsor from Debian to approve the change</a>.
