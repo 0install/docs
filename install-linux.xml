@@ -40,7 +40,7 @@
 <pre>$ <b>sudo apt-get install zeroinstall-injector</b></pre>
 <p>You can also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
 </li>
-  <li id='knoppix'><b>Knoppix</b> 5 works using the Debian package; use <b>apt-get update; apt-get install -f</b> to fetch the dependencies</li>
+<li id='knoppix'><b>Knoppix</b>, <b>Mint</b>, etc: see instructions for Debian.</li>
 </ul>
 
 <p><strong>Use on headless servers:</strong> If used on headless servers, the Debian packages above pull in a lot of GUI dependencies (~100 MB) which aren't needed. To avoid this, this is <a href='https://launchpad.net/~tal-it-innovation/+archive/ppa'>a PPA</a> with separate core and GUI packages, which can be used as follows (on Debian and Ubuntu):</p>
