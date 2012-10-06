@@ -185,11 +185,6 @@ the closest ancestor &lt;group&gt; which defines it):
  <dt>version</dt>
  <dd>The version number. See the version numbers section below for more details.</dd>
 
- <dt>version-modifier (deprecated)</dt>
- <dd>A string to be appended to the version. The purpose of this is to allow complex version numbers (such as
- "1.0-rc2") without breaking older versions of 0install (before 0.24), which only support dot-separated
- lists of integers.</dd>
-
  <dt>main (deprecated)</dt>
  <dd>The relative path of an executable inside the implementation that should be executed by default
  when the interface is run. If an implementation has no <b>main</b> setting, then it cannot be executed
@@ -763,10 +758,8 @@ version) to an interface should be handled by creating a new interface URI. Eg:
 </ul>
 
 <p>
-Note that version numbers containing dash characters are not supported before version 0.24 of
-0install. To create feeds that still work with older versions, you can use the
-<b>version-modifier</b> attribute. E.g., use <b>version='1' version-modifier='-pre'</b> instead
-of <b>version='1-pre'</b>. Older versions will silently ignore this attribute.
+Note that version numbers containing dash characters were not supported before version 0.24 of
+0install and so a <b>version-modifier</b> attribute was added to allow new-style versions to be added without breaking older versions. This should no longer be used.
 </p>
 
 <h2 id='stability'>Stability</h2>
