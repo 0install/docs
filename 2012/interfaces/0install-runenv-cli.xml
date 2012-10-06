@@ -12,19 +12,23 @@
   <category>System</category>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
-    <implementation id="sha1new=bb0491587ded1ab073834cd5783b332793f7cf7c" released="2012-09-22" version="1.12">
+    <implementation id="sha1new=bb0491587ded1ab073834cd5783b332793f7cf7c" released="2012-09-22" stability="stable" version="1.12">
       <manifest-digest sha256="81d551e211179d244364a87bafb708036e0028bf6716e2cc802c8e17a4aa9144"/>
       <archive extract="0install-runenv-cli-1.12" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/1.12/0install-runenv-cli-1.12.tar.bz2" size="4837"/>
+    </implementation>
+    <implementation id="sha1new=b86cd8995adf636b5bc0c7bdae789f18db76d7df" released="2012-10-06" version="1.13">
+      <manifest-digest sha256="a702e205ed32c0a960b4ae4605eec42cfa818f489815cf340012cb5f47fb6441"/>
+      <archive extract="0install-runenv-cli-1.13" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/1.13/0install-runenv-cli-1.13.tar.bz2" size="5695"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJQXfknAAoJEAcTP5bKdNi6Fu4H/3KZYv/In2Gt5Gzi92Xr2kN6lyvjJFHaolrS
-sdwgL4nILqtRuwgghzKEATRorrygcKD4VDtYRbijjYqraWKS4q3L3JAHfGvR605ZFm/6iXCgy6ll
-P0vtqP26MysZGfy0XwkqA0Lj2B75y8XLsbuseWPv9XtgL00xM+9/1cvRL5+Qq8LUQTnRJ7Z/KxaE
-FI+dCFRz3TNn0XlbzRts8ooGcMY1S579bEH8bPFj0H8jVKu6syhRfju6dWYrC03ae8O+MwkarI8O
-MXWV8JvUT/seUz1N+D5hyzMwSuQSEBCIYVPA1vd1FFjUsLCDrjGyRDhk1sQ6hzg20Ll8H1NJqTQN
-lw4=
+iQEcBAABCAAGBQJQb+6BAAoJEAcTP5bKdNi64VkH/ROcHffGz9v+OIqc2T3dvufYQP6ylV99vWV2
+C5wrDKqb96gcfwWthejZ+AD3NCux5qeJLT9UH13eyvPzW7GKhF3jecO1OybgYcjPlG/K75Fg2pXO
+KK9d16J9D+v82dOGEVVm+CiSzec9J2Id7dJB2AxINFH/tSCad5A6/DxLoH3LkmKE5GuM+mIiYzcG
+UcPi9mOIv1H7eqfoAY3BQrHn63cppJkoUqEebsy4JkOBxas5REu3LyJtl6X1KJOmttJ2NECi28Jo
+CLG0hSkgIUZUD9ixX3nS7MjaTvlob3n+p41f6ni6RbGxdQNtYytDciSxWt6VTCicu+o7qjkwtLmf
+6zU=
 
 -->
