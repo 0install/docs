@@ -224,7 +224,7 @@ the closest ancestor &lt;group&gt; which defines it):
  which will make it available on any OS or CPU. If missing, the default is <b>*-*</b>. See also: <a href='#archs'>Valid architecture names</a>.</dd>
 
  <dt>license</dt>
- <dd>License terms (typically a <a href='http://catb.org/~esr/trove/'>Trove</a> category, as used on sf.net).</dd>
+ <dd>License terms. This is typically a <a href='http://catb.org/~esr/trove/'>Trove</a> category. See <a href='http://pypi.python.org/pypi?%3Aaction=list_classifiers'>the PyPI list</a> for some examples (the leading "License :: " is not included).</dd>
 </dl>
 
 <p>
