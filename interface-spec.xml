@@ -120,13 +120,14 @@ A group has this syntax:
 
 <pre>
   &lt;group
-  	version='...' ?
-       	released='...' ?
+	version='...' ?
+	released='...' ?
 	main='...' ?
 	self-test='...' ?
 	doc-dir='...' ?
 	license='...' ?
-        stability='...' ?
+	released='...' ?
+	stability='...' ?
 	langs='...' ?
         arch='...' ? &gt;
     [requires] *
@@ -153,17 +154,9 @@ the closest ancestor &lt;group&gt; which defines it):
 
 <pre>
   &lt;implementation
+	[all &lt;group&gt; attributes]
 	id='...'
-	local-path='...' ?
-  	version='...' ?
-  	version-modifier='...' ?
-	main='...' ?
-	self-test='...' ?
-	doc-dir='...' ?
-  	released='...' ?
-	stability='...' ?
-	langs='...' ?
-	arch='...' ? &gt;
+	local-path='...' ? &gt;
     &lt;manifest-digest [digest] * /> *
     [command] *
     [retrieval-method] *
