@@ -654,3 +654,13 @@ dl.roadmap dt {
 dl.roadmap dd {
   padding-top: .4em;
 }
+
+table.fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+table.fixed pre {
+  overflow-x: auto;
+}
+

@@ -233,6 +233,13 @@
     </xsl:choose>
   </xsl:template>
 
+  <xsl:template match='*[name() = "pre-scrolled"]'>
+    <!-- hack to stop the page width growing -->
+    <table class='fixed'>
+      <td><pre><xsl:apply-templates/></pre></td>
+    </table>
+  </xsl:template>
+
   <xsl:template match='*[name() = "toc"]'>
     <xsl:variable name='level'><xsl:value-of select='@level'/></xsl:variable>
 

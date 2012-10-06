@@ -3,69 +3,128 @@
 
 <h2>Trouble-shooting</h2>
 
+<toc level='h2'/>
+
+<h2>0install doesn't select any versions / the expected versions</h2>
+
+<div class='note'>Note: reporting the reasons for failed selections improved a lot in 0install 1.13, so try with that (currently only available from Git) if you have trouble.</div>
+
+<p>If 0install cannot find a compatible set of versions for a program, you may see an error like this:</p>
+
+<img src='screens/problem.png' width='543' height='336' alt='A problem' class='figure'/>
+
+<p>Or, if not using the GUI, like this:</p>
+
+<pre-scrolled>
+Can't find all required implementations:
+- http://repo.roscidus.com/java/swt -> <b>(problem)</b>
+    http://www.serscis.eu/0install/serscis-access-modeller 0.15.1 requires 3.7 &lt;= version
+- http://repo.roscidus.com/utils/graphviz -> 2.28.0-3.2.3 (package:rpm:graphviz:2.28.0-3.2.3:i586)
+- http://repo.roscidus.com/java/openjdk-jre -> 6.18-1.8.7-2 (sha1new=6b7c9f98bd1d8bec5bbb5ddb41271c862c8e8529)
+- http://repo.roscidus.com/java/iris -> 0.6.0 (sha1new=daf7bfada93ec758baeef1c714f3239ce0a5a462)
+- http://www.serscis.eu/0install/serscis-access-modeller -> 0.15.1 (sha1new=7899dbe75c1c332c4e70f272b2d76026714392a6)
+    User requested 0.10 &lt;= version
+</pre-scrolled>
+
+<p>
+  To find the cause, start by double-clicking on "<span style='color: black; background: #faa'>(problem)</span>" in the GUI to get the list of available versions for that component. Right-click over the version you think it should have chosen and choose "Explain this decision" from the menu:
+</p>
+
+<img src='screens/explain.png' width='685' height='533' alt='Explain this decision' class='figure'/>
+
+<p>
+  In this example, the user requested serscis-access-modeller >= 0.10 and all such versions needed SWT >= 3.7 so there was no possible selection (note: this conflict was invented for the sake of this tutorial). The line "User requested implementation ..." shows the version which was selected from the list; the solver was constrained to choose this version.
+</p>
+
+<p>There are several common causes:</p>
+
 <dl>
-<dt>ImportError: No module named pygtk</dt>
-<dd>You need to install the <i>python-gtk2</i> package (the name may vary on different
-distributions; <i>python-gnome2</i> is another possibility.</dd>
-<dt>ImportError: cannot import name cli</dt>
-<dd>You've probably just upgraded your system from Python 2.3 to Python 2.4 (or similar). Simply
-<a href='injector.html'>install the injector</a> again to fix it.</dd>
+  <dt>There is no binary for your platform</dt>
+  <dd>(e.g. you are using 32-bit Windows, but there are only binaries for 64-bit Linux). In this case, you can use 0install to compile a new binary from source (if source is provided in the feed). See <a href='0compile.html'>0compile</a> for details. If no source is provided, you will need to go to the project's web-site and compile manually.</dd>
+  <dt>The dependency is only provided by distribution packages, and your distribution isn't listed</dt>
+  <dd>Have a look at the feed's XML (View Page Source in your browser) to see if your distribution package is listed. See <a href='distribution-integration.html'>Distribution Integration</a> for details.</dd>
 </dl>
 
 <p>
-If the injector isn't doing what you expect, run it with logging turned up
+  Sometimes, the failure to select a version is due to complex inter-dependencies between components. If a valid set of versions exists, 0install will always find it, but if no valid set exists then it can be hard for it to explain why. Rather that showing a proof that none of the billions of possible combinations is valid, 0install tries to find the best example of a failed selection to show you. It works like this:
+</p>
+
+<ol>
+  <li>When the solve fails, 0install switches to debug mode and runs the solve again.</li>
+  <li>Debug mode adds a fake implementation of each component. This fake version is fully compatible with everything, but less preferable than all the real versions (so it will only be selected if there is no other option).</li>
+  <li>This always results in a "solution", but whenever a fake implementations is selected it is reported as "(problem)", as shown above.</li>
+</ol>
+
+<p>
+This is quite good at suggesting where the fault is, but the problem may be elsewhere. For example, if a program has versions available for Python 3 and Python 2, and you only have Python 2, then 0install should select the Python 2 version. But if it can't find any valid selections (because some other library required for the Python 2 version is missing), then it might report that the lack of Python 3 is the issue (when, in fact, that's just one possible way of fixing the problem).
+</p>
+
+<h2>ImportError: No module named pygtk</h2>
+<dd>You need to install the <i>python-gtk2</i> package (the name may vary on different
+distributions; <i>python-gnome2</i> is another possibility.</dd>
+
+<h2>Debugging hints</h2>
+
+<p>
+If 0install isn't doing what you expect, run it with logging turned up
 using either <b>-v</b> (verbose) or <b>-vv</b> (very verbose!). Use <b>-c</b>
 to prevent it switching to GUI mode too. Eg:
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>0launch -vvc http://rox.sourceforge.net/2005/interfaces/Edit</b>
-INFO:root:Running 0launch 0.37 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.5.2 (r252:60911, Oct  5 2008, 19:29:17) 
-[GCC 4.3.2]
-DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/Edit
-DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;
-  from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
-DEBUG:root:Supported systems: '{None: 2, 'Linux': 1}'
-DEBUG:root:Supported processors: '{None: 5, 'x86_64': 0, 'i586': 2, 'i486': 3, 'i686': 1, 'i386': 4}'
-DEBUG:root:Solve! root = http://rox.sourceforge.net/2005/interfaces/Edit
-DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/Edit&gt;), with feeds: []
-DEBUG:root:Processing feed http://rox.sourceforge.net/2005/interfaces/Edit
-DEBUG:root:Will use implementation sha1=329e6c0191f65ef2996b49837d04c4cfe6934758 (version 2.0)
-DEBUG:root:Considering dependency &lt;Dependency on http://rox.sourceforge.net/2005/interfaces/ROX-Lib;
-  bindings: [&lt;environ PYTHONPATH prepend ROX-Lib2/python&gt;][]&gt;
-DEBUG:root:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-DEBUG:root:Loading cached information for &lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;
-  from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
-DEBUG:root:get_best_implementation(&lt;Interface http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt;), with feeds: []
-DEBUG:root:Processing feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-DEBUG:root:Will use implementation sha1new=9c116df3689d60df58925a7c634064ac2394f696 (version 2.0.5)
-DEBUG:root:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib&gt; is 0.01 hours
-DEBUG:root:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/Edit&gt; is 0.01 hours
-INFO:root:PYTHONPATH=/home/me/.cache/0install.net/implementations/sha1new=9c116df3689d60df58925a7c634064ac2394f696/ROX-Lib2/python
-INFO:root:Executing: /home/me/.cache/0install.net/implementations/sha1=329e6c0191f65ef2996b49837d04c4cfe6934758/Edit/AppRun
-</pre>
+INFO:root:Running 0launch 1.12 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.7.3 (default, Aug 26 2012, 11:57:48) 
+[GCC 4.7.1]
+INFO:0install:Loading configuration from /home/me/.config/0install.net/injector/global
+DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/Edit from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+INFO:0install:Note: @main on document element is deprecated in &lt;Feed http://rox.sourceforge.net/2005/interfaces/Edit>
+DEBUG:0install:Supported systems: '{None: 3, 'POSIX': 2, 'Linux': 1}'
+DEBUG:0install:Supported processors: '{'x86_64': 0, 'i586': 2, 'i486': 3, 'i686': 1, 'i386': 4, None: 5}'
+DEBUG:0install:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/Edit from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+INFO:0install:Note: @main on document element is deprecated in &lt;Feed http://rox.sourceforge.net/2005/interfaces/Edit>
+DEBUG:0install:Processing feed http://rox.sourceforge.net/2005/interfaces/Edit
+DEBUG:0install:Location of 'implementation-dirs' config file being used: 'None'
+DEBUG:0install:Added system store '/var/cache/0install.net/implementations'
+DEBUG:0install:Initialising new interface object for http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/ROX-Lib from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
+INFO:0install:Note: @main on document element is deprecated in &lt;Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib>
+DEBUG:0install:Processing feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib
+DEBUG:0install:Initialising new interface object for http://repo.roscidus.com/python/python
+DEBUG:0install:Loading cached information for http://repo.roscidus.com/python/python from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython
+DEBUG:0install:Processing feed http://repo.roscidus.com/python/python
+DEBUG:0install:Skipping '&lt;Feed from http://0install.de/feeds/Python.xml>'; unsupported architecture Windows-None
+DEBUG:0install:Processing feed http://repo.roscidus.com/python/python/upstream.xml
+DEBUG:0install:Loading cached information for http://repo.roscidus.com/python/python/upstream.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython%2fupstream.xml
+DEBUG:0install:Is feed-for http://repo.roscidus.com/python/python
+DEBUG:0install:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib> is 273.80 hours
+DEBUG:0install:Staleness for &lt;Feed http://repo.roscidus.com/python/python> is 273.80 hours
+DEBUG:0install:Staleness for &lt;Feed http://repo.roscidus.com/python/python/upstream.xml> is 273.80 hours
+DEBUG:0install:Staleness for &lt;Feed http://rox.sourceforge.net/2005/interfaces/Edit> is 273.80 hours
+INFO:0install:PYTHONPATH=/var/cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e/ROX-Lib2/python
+INFO:0install:Executing: [u'/usr/bin/python2.7', u'/var/cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9/Edit/AppRun']
+</pre-scrolled>
+
+<h2>Download problems / proxies / HTTP errors</h2>
 
 <p>
 Here are some known problems, and their solutions:
 </p>
 
 <ul>
- <li><a href="http://news.gmane.org/find-root.php?message_id=%3c437318D8.1050604%40antplc.com%3e">Forbidden: header 'Content-Type' value denied</a> (firewall mis-configuration)</li>
- <li><a href="http://news.gmane.org/find-root.php?message_id=%3c43775ABB.8060601%40hayber.us%3e">Failed to extract archive; exit code 512</a> (incorrect environment setting)</li>
  <li><a href="http://news.gmane.org/find-root.php?message_id=%3c76ebe6440511150110t3eb4f4e5p98c59f96b1c8ae5e%40mail.gmail.com%3e">TypeError: iterable argument required</a> (badly formed http_proxy setting)</li>
- <li><a href="http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/1279/focus=1279">gpg: no valid OpenPGP data found</a> (check proxy configuration and 0launch version)</li>
 </ul>
 
 <p>
 If you get other download errors, try fetching the failing URL using wget, e.g.:
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>0launch http://...</b>
 Error downloading 'http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.16.tgz':
 HTTP Error 403: Forbidden: header 'Content-Type' value denied
 $ <b>wget http://...</b>
-</pre>
+</pre-scrolled>
 
 <p>
 If wget also fails, try opening the URL in your web browser. If one of these works, but 0launch
@@ -78,6 +137,8 @@ and ensure that <b>http_proxy</b> is set correctly, e.g.:
 $ <b>export http_proxy=http://myproxy.server:444</b>
 $ <b>0launch http://...</b>
 </pre>
+
+<h2>Other problems</h2>
 
 <p>
 If you still have problems, please <a href='support.html'>write to the mailing
