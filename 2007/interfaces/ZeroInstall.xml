@@ -254,8 +254,9 @@ requires first uninstalling another.</description>
     </implementation>
       <group>
         <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
-      <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-    </requires>
+	  <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
+	  <version before="1.12.1"/>
+	</requires>
         <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" version="1.12">
       <manifest-digest sha256="304e7110ed87ebedf8cae873f1e3d20ec12c5d3a3444e1eb9c8aba1f3be366a7"/>
       <archive extract="0install-1.12" href="http://downloads.sourceforge.net/project/zero-install/0install/1.12/0install-1.12.tar.bz2" size="389779"/>
@@ -266,7 +267,7 @@ requires first uninstalling another.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBgSg4ACgkQrgeCgFmlPMGdgQCgjKNmxpHK8ZnU4ANymAs35MIq4m4AoNoPn6Mb
-ww3bwGlufhtf70KjbZO6
+iEYEABECAAYFAlBxwQYACgkQrgeCgFmlPMHRFgCgzH4Wo1PEUmvI+7CWlIGD5h4IPPgAoKFw4oJQ
+5BCTD6pWtnwjJP7BJ29V
 
 -->
