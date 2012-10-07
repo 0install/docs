@@ -102,16 +102,35 @@ packagers.html.</description>
 	  <manifest-digest sha256="24533dcef144809ec544f5a52777e6d4316b4a0a207b75a7c0ef9765366dc219"/>
 	  <archive extract="0publish-0.20" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.20/0publish-0.20.tar.bz2" size="24899" type="application/x-bzip-compressed-tar"/>
 	</implementation>
-	<implementation id="sha1new=016292b34ba6650bc78f9e2bea7fb80c23ae2f65" released="2012-06-09" version="0.21">
+	<implementation id="sha1new=016292b34ba6650bc78f9e2bea7fb80c23ae2f65" released="2012-06-09" stability="stable" version="0.21">
 	  <manifest-digest sha256="b4dd722eaa2fb9b435bd185708c04d7add87c0575a1bf3c6d5226e304f89f78b"/>
 	  <archive extract="0publish-0.21" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.21/0publish-0.21.tar.bz2" size="25378"/>
 	</implementation>
       </group>
     </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+      <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <command name="run" path="0publish">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <implementation id="sha1new=f9414e8db10857f3ce01e2e395f0b2d659d62245" released="2012-10-07" version="0.22">
+      <manifest-digest sha256="003dd16a2fc0cf2aec01d32ba36d8912c9bf9cc6c1b0d90159fa3a8b874d0a41"/>
+      <archive extract="0publish-0.22" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.22/0publish-0.22.tar.bz2" size="25581"/>
+    </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlA7fxYACgkQrgeCgFmlPMFX2QCgv+xOloucWyFKWxrKwZdnkJNeR9AAoM8QwKDd
-3kx2m4XFrQ+ysU42weFI
+iEYEABECAAYFAlBxV3YACgkQrgeCgFmlPMGL9gCfSlhlt0yOeNLDWmzddZxFnrmKUb4An3GODqcB
+4njifqu+KgM3qpsDt1p1
 
 -->
