@@ -497,6 +497,7 @@ suitable implementation, downloading one if required.
   &lt;requires
 	interface='...'
 	importance='...' ?
+	version='...' ?
 	os='...' ?
 	use='...' ? &gt;
     [ constraints ] *
@@ -524,6 +525,10 @@ version is preferable to not selecting one).
 </p>
 
 <p>
+The <b>version</b> attribute (0install >= 1.13) provides a quick way to specify the permitted versions. See the <a href='#constraints'>Constraints</a> section below.
+</p>
+
+<p>
   The <b>os</b> attribute (0install >= 1.12) can be used to indicate that the dependency only applies to the given OS (e.g. <b>os="Windows"</b> for
   dependencies only needed on Windows systems).
 </p>
@@ -543,7 +548,7 @@ version is preferable to not selecting one).
   Internally, &lt;restricts&gt; behaves much like &lt;requires importance='recommended'&gt;, except that it doesn't try to cause the interface to be selected at all.
 </p>
 
-<h2>Constraints</h2>
+<h2 id='constraints'>Constraints</h2>
 
 <p>
 Constraints appear inside &lt;requires&gt;, &lt;restricts&gt; and &lt;runner&gt; elements. They restrict the set of versions from which
@@ -566,6 +571,29 @@ Constraints appear inside &lt;requires&gt;, &lt;restricts&gt; and &lt;runner&gt;
 
 <p>For example, <b>&lt;version not-before='2.4' before='2.6'&gt;</b> allows any of these
 versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
+</p>
+
+<p>
+Since 0install 1.13, it is also possible to use a <b>version</b> attribute on the dependency directly. This provides a shorter and more flexible way to specify versions.
+The attribute's value is a list of ranges, separated by "|", any of which may match.
+For example:
+</p>
+
+<pre>
+&lt;restricts interface='http://repo.roscidus.com/python/python'
+           version='2.6..!3 | 3.2.2..'/>
+</pre>
+
+<p>
+This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
+</p>
+
+<p>
+Each range is in the form "START..!END". The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted. A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.
+</p>
+
+<p>
+Note: to support older versions of 0install, it is preferable to use the &lt;version&gt; element instead where possible.
 </p>
 
 <h2>Bindings</h2>
