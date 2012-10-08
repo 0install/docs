@@ -979,7 +979,7 @@ Valid values for CPU include:
 
 <p>
   To make it possible to use newer features in a feed without breaking older versions of 0install, the <b>if-0install-version</b> attribute may
-  be placed on any element to indicate that the element should only be processed by the specified versions. For example:
+  be placed on any element to indicate that the element should only be processed by the specified versions of 0install. For example:
 </p>
 
 <pre>
@@ -990,8 +990,9 @@ Valid values for CPU include:
 </pre>
 
 <p>
-  In this example, 0install 1.14 and later will see &lt;new-element>, while older versions see &lt;fallback>. However, 0install versions before
-  1.13 ignore this attribute and process all elements.
+  In this example, 0install 1.14 and later will see &lt;new-element>, while older versions see &lt;fallback>. The syntax is as described in <a href='#constraints'>Constraints</a>.</p>
+
+<p>However, 0install versions before 1.13 ignore this attribute and process all elements.
 </p>
 
 <h2>Future plans</h2>
