@@ -975,14 +975,30 @@ Valid values for CPU include:
   <li>x86_64</li>
 </ul>
 
+<h2 id='if-0install-version'>The if-0install-version attribute</h2>
+
+<p>
+  To make it possible to use newer features in a feed without breaking older versions of 0install, the <b>if-0install-version</b> attribute may
+  be placed on any element to indicate that the element should only be processed by the specified versions. For example:
+</p>
+
+<pre>
+  &lt;group&gt;
+    &lt;new-element if-0install-version='1.14..'/>
+    &lt;fallback if-0install-version='..!1.14'/>
+  &lt;/group&gt;
+</pre>
+
+<p>
+  In this example, 0install 1.14 and later will see &lt;new-element>, while older versions see &lt;fallback>. However, 0install versions before
+  1.13 ignore this attribute and process all elements.
+</p>
+
 <h2>Future plans</h2>
 
 <ul>
  <li>The extra meta-data elements need to be better specified.</li>
- <li>In addition to &lt;version&gt;, it should be possible to specifically exclude certain versions or ranges
- of versions so you can say, for example: "2.0 &lt;= version &lt; 3 and version != 2.57".</li>
  <li>As well as before and not-before, we should support after and not-after.</li>
- <li>Additional &lt;recipe&gt; step types should be supported, such as &lt;apply-patch&gt;.</li>
  <li>It should be possible to give a delta (binary patch) against a previous version, to make upgrading
  quicker.</li>
  <li>It should be possible to scope bindings. For example, when a DTP package requires a clipart package, the
