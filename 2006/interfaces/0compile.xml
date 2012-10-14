@@ -324,20 +324,20 @@ For a full tutorial, see 0compile's homepage.</description>
       </group>
       <group>
         <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="1.10"/>
-      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
-    </requires>
-        <implementation id="sha1new=a0348dcec427c0ac62f6c13ddad5ebe3be1221bf" released="2012-08-04" version="0.31">
-      <manifest-digest sha256="8e2e112678fb30682522eaef126e3a3e8e8e3d7b879c57cf483f000cc724764d"/>
-      <archive extract="0compile-0.31" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.31/0compile-0.31.tar.bz2" size="35481"/>
-    </implementation>
+	  <version before="1.12-post" not-before="1.10"/>
+	  <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+	</requires>
+	<implementation id="sha1new=a0348dcec427c0ac62f6c13ddad5ebe3be1221bf" released="2012-08-04" version="0.31">
+	  <manifest-digest sha256="8e2e112678fb30682522eaef126e3a3e8e8e3d7b879c57cf483f000cc724764d"/>
+	  <archive extract="0compile-0.31" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.31/0compile-0.31.tar.bz2" size="35481"/>
+	</implementation>
       </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlAehL0ACgkQrgeCgFmlPMEySwCgq5+hb0wtAPMZQ3KuyACXkpIpFoMAoKQ7h9Zf
-jkO+hcAc7L8nukqXkMHu
+iEYEABECAAYFAlB6uDwACgkQrgeCgFmlPME27ACfTU5B/B3v+18wv+Zr086stAFEaL4AoKkVzaH6
+iwnSFKh8AvdN7G8F3dm0
 
 -->
