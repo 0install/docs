@@ -21,12 +21,12 @@ To install these on Ubuntu, open a terminal emulator and run this command:
 <p>(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)</p>
 
 <p>Click on the <b>SCM</b> link on any program's page to see its Git page
-(for example, <a href='http://repo.or.cz/w/zeroinstall.git'>zeroinstall.git</a> for Zero Install itself).
+(for example, <a href='https://github.com/0install/0install'>0install.git</a> for 0install itself).
 The link for cloning is displayed there; use it like this:</p>
 
 <pre>
-$ git clone git://repo.or.cz/zeroinstall.git
-$ cd zeroinstall
+$ git clone git@github.com:0install/0install.git
+$ cd 0install
 </pre>
 
 <p>
