@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Nov 2012</dt>
+<dd>
+We have added <a href='injector-trouble.html'>much improved solver diagnostics</a> to 0install - instead of just telling you which components it failed to select, it now explains why none of the versions was suitable. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6392'>0install 1.12.1 for Windows was released</a>, bringing over several new features from the pure-Python version and fixing a number of bugs. Discussion about <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6443'>ABI annotations</a> (e.g. for C++ programs) continued on the list.
+</dd>
 <dt>Oct 2012</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6284'>0install 1.11 for Windows</a> (and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6308'>1.11.1</a>) released, including support for Windows 8 and higher monitor DPI values. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6293'>0test 0.8</a> adds some options to make it easier to test a large collection of programs at once. A new Debian package, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6297'>0install-core</a>, is now available for use on servers.
