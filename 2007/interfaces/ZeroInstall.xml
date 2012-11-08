@@ -160,114 +160,113 @@ requires first uninstalling another.</description>
     </implementation>
     <group>
       <requires interface="http://repo.roscidus.com/python/python">
-      <version before="3" not-before="2.6"/>
-    </requires>
+	<version before="3" not-before="2.6"/>
+      </requires>
       <command name="test" path="tests/testall.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<arg>-tt</arg>
-      </runner>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python">
+	  <arg>-tt</arg>
+	</runner>
+      </command>
       <command name="run" path="0launch">
-      <runner interface="http://repo.roscidus.com/python/python"/>
-    </command>
+	<runner interface="http://repo.roscidus.com/python/python"/>
+      </command>
       <implementation id="sha1new=26fcb8d1d2cec6cacbe2dec64b217e54e252daf1" released="2011-06-25" stability="stable" version="1.1">
-      <manifest-digest sha256="22eef9f243ca417ad5550eb21b0e25d413a71764007afafc983ec6eab3c59704"/>
-      <archive extract="zeroinstall-injector-1.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.1/zeroinstall-injector-1.1.tar.bz2" size="325809"/>
-    </implementation>
+	<manifest-digest sha256="22eef9f243ca417ad5550eb21b0e25d413a71764007afafc983ec6eab3c59704"/>
+	<archive extract="zeroinstall-injector-1.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.1/zeroinstall-injector-1.1.tar.bz2" size="325809"/>
+      </implementation>
       <group>
-        <command name="test" path="tests/testall.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<arg>-tt</arg>
-      </runner>
-    </command>
-        <command name="run" path="0launch">
-      <runner interface="http://repo.roscidus.com/python/python"/>
-    </command>
-    <implementation id="sha1new=7d1ecfbd76a42d56f029f9d0c72e4ac26c8561de" released="2011-07-23" stability="stable" version="1.2">
-      <manifest-digest sha256="0c2e5652706c6e6806a1d9b13779d6ae1c8eb91fe2bd65b53c871d93d08e9cfd"/>
-      <archive extract="zeroinstall-injector-1.2" href="http://downloads.sourceforge.net/project/zero-install/injector/1.2/zeroinstall-injector-1.2.tar.bz2" size="328458"/>
-    </implementation>
+	<command name="test" path="tests/testall.py">
+	  <runner interface="http://repo.roscidus.com/python/python">
+	    <arg>-tt</arg>
+	  </runner>
+	</command>
+	<command name="run" path="0launch">
+	  <runner interface="http://repo.roscidus.com/python/python"/>
+	</command>
+	<implementation id="sha1new=7d1ecfbd76a42d56f029f9d0c72e4ac26c8561de" released="2011-07-23" stability="stable" version="1.2">
+	  <manifest-digest sha256="0c2e5652706c6e6806a1d9b13779d6ae1c8eb91fe2bd65b53c871d93d08e9cfd"/>
+	  <archive extract="zeroinstall-injector-1.2" href="http://downloads.sourceforge.net/project/zero-install/injector/1.2/zeroinstall-injector-1.2.tar.bz2" size="328458"/>
+	</implementation>
       </group>
       <implementation id="sha1new=8056a5697cfb51590d7b4e5dfefe82c8f528251c" released="2011-09-18" stability="stable" version="1.3">
-      <manifest-digest sha256="e31bfde49a3934cb732f612749fede837f12ca061d5de50c9c9feb3adac6694b"/>
-      <archive extract="zeroinstall-injector-1.3" href="http://downloads.sourceforge.net/project/zero-install/injector/1.3/zeroinstall-injector-1.3.tar.bz2" size="369966"/>
-    </implementation>
+	<manifest-digest sha256="e31bfde49a3934cb732f612749fede837f12ca061d5de50c9c9feb3adac6694b"/>
+	<archive extract="zeroinstall-injector-1.3" href="http://downloads.sourceforge.net/project/zero-install/injector/1.3/zeroinstall-injector-1.3.tar.bz2" size="369966"/>
+      </implementation>
       <implementation id="sha1new=ba388b417f5fc9a08cc3b163ec56335034c431ac" released="2011-10-16" version="1.4">
-      <manifest-digest sha256="240cd0e254ce83d404e034a7b73d15ddd1faee3ee7ad601b3bce8abc18461c07"/>
-      <archive extract="zeroinstall-injector-1.4" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2" size="370786"/>
-    </implementation>
+	<manifest-digest sha256="240cd0e254ce83d404e034a7b73d15ddd1faee3ee7ad601b3bce8abc18461c07"/>
+	<archive extract="zeroinstall-injector-1.4" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4/zeroinstall-injector-1.4.tar.bz2" size="370786"/>
+      </implementation>
       <implementation id="sha1new=9c0227dd0d824b1176bf6eec84e891ae05830554" released="2011-10-16" stability="stable" version="1.4.1">
-      <manifest-digest sha256="996b4d6af37cb08fe7c2ef191ae5814ad9a8b203fbc0880d34f6cd5bc787b805"/>
-      <archive extract="zeroinstall-injector-1.4.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2" size="371079"/>
-    </implementation>
+	<manifest-digest sha256="996b4d6af37cb08fe7c2ef191ae5814ad9a8b203fbc0880d34f6cd5bc787b805"/>
+	<archive extract="zeroinstall-injector-1.4.1" href="http://downloads.sourceforge.net/project/zero-install/injector/1.4.1/zeroinstall-injector-1.4.1.tar.bz2" size="371079"/>
+      </implementation>
       <implementation id="sha1new=92dde35a6e251c10e371663d5d6e3c6fd619af3b" released="2011-12-29" stability="stable" version="1.5">
-      <manifest-digest sha256="a63fb708b2357ee95df83c6792e8f9f36411cf3857dd684983c68e24c948f4d7"/>
-      <archive extract="zeroinstall-injector-1.5" href="http://downloads.sourceforge.net/project/zero-install/injector/1.5/zeroinstall-injector-1.5.tar.bz2" size="372202"/>
-    </implementation>
+	<manifest-digest sha256="a63fb708b2357ee95df83c6792e8f9f36411cf3857dd684983c68e24c948f4d7"/>
+	<archive extract="zeroinstall-injector-1.5" href="http://downloads.sourceforge.net/project/zero-install/injector/1.5/zeroinstall-injector-1.5.tar.bz2" size="372202"/>
+      </implementation>
       <implementation id="sha1new=222ac02956b829f00ddb6783baf4a5c263837ac1" released="2012-02-12" stability="stable" version="1.6">
-      <manifest-digest sha256="6f16b84e1bc8e31800583d173b71ffa6ce58c10eef3e29f2430766161c306c87"/>
-      <archive extract="zeroinstall-injector-1.6" href="http://downloads.sourceforge.net/project/zero-install/injector/1.6/zeroinstall-injector-1.6.tar.bz2" size="374950"/>
-    </implementation>
+	<manifest-digest sha256="6f16b84e1bc8e31800583d173b71ffa6ce58c10eef3e29f2430766161c306c87"/>
+	<archive extract="zeroinstall-injector-1.6" href="http://downloads.sourceforge.net/project/zero-install/injector/1.6/zeroinstall-injector-1.6.tar.bz2" size="374950"/>
+      </implementation>
       <implementation id="sha1new=36fc21da051fefa7b399b89a836803be6467dbc4" released="2012-04-06" stability="stable" version="1.7">
-      <manifest-digest sha256="8e9666cb961144728b8cacbb4e3139ab00ba4d9546cba5ff3657d016dd7b014b"/>
-      <archive extract="zeroinstall-injector-1.7" href="http://downloads.sourceforge.net/project/zero-install/injector/1.7/zeroinstall-injector-1.7.tar.bz2" size="375817"/>
-    </implementation>
+	<manifest-digest sha256="8e9666cb961144728b8cacbb4e3139ab00ba4d9546cba5ff3657d016dd7b014b"/>
+	<archive extract="zeroinstall-injector-1.7" href="http://downloads.sourceforge.net/project/zero-install/injector/1.7/zeroinstall-injector-1.7.tar.bz2" size="375817"/>
+      </implementation>
       <implementation id="sha1new=666c5957f9568402d166f582ad96c5b59f2d2693" released="2012-05-19" stability="stable" version="1.8">
-      <manifest-digest sha256="aa5cf92c17356cdbda0f61ad581f2808435107447ce68441f508acbe3509eaab"/>
-      <archive extract="zeroinstall-injector-1.8" href="http://downloads.sourceforge.net/project/zero-install/injector/1.8/zeroinstall-injector-1.8.tar.bz2" size="377536"/>
-    </implementation>
-      <group>
-        <requires interface="http://repo.roscidus.com/security/gnupg">
+	<manifest-digest sha256="aa5cf92c17356cdbda0f61ad581f2808435107447ce68441f508acbe3509eaab"/>
+	<archive extract="zeroinstall-injector-1.8" href="http://downloads.sourceforge.net/project/zero-install/injector/1.8/zeroinstall-injector-1.8.tar.bz2" size="377536"/>
+      </implementation>
+    </group>
+  </group>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
+    <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
-        <command name="0install" path="0install">
+
+    <command name="run" path="0launch">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-        <implementation id="sha1new=f6afe0d60d550f2b0caab1b0300254cae746082f" released="2012-06-27" stability="stable" version="1.9">
+    <command name="0install" path="0install">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
+    <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<arg>-tt</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha1new=f6afe0d60d550f2b0caab1b0300254cae746082f" released="2012-06-27" stability="stable" version="1.9">
+      <requires interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </requires>
       <manifest-digest sha256="27fd963cc5dc04ec433f953a6f9fb8d265a19725c4fa60885ff5d12735364ee0"/>
       <archive extract="zeroinstall-injector-1.9" href="http://downloads.sourceforge.net/project/zero-install/injector/1.9/zeroinstall-injector-1.9.tar.bz2" size="381721"/>
     </implementation>
-        <implementation id="sha1new=9262cdbae119117aceda1e2a47a5eea6c80df9c4" released="2012-07-26" stability="stable" version="1.10">
+    <implementation id="sha1new=9262cdbae119117aceda1e2a47a5eea6c80df9c4" released="2012-07-26" stability="stable" version="1.10">
       <manifest-digest sha256="85fec6f5aa8b24d0692ddf462130e09398748948fe2c3d15e02094c1213189e9"/>
       <archive extract="zeroinstall-injector-1.10" href="http://downloads.sourceforge.net/project/zero-install/injector/1.10/zeroinstall-injector-1.10.tar.bz2" size="385755"/>
     </implementation>
-      </group>
-    </group>
-    <group>
-      <requires interface="http://repo.roscidus.com/security/gnupg">
-      <executable-in-var name="ZEROINSTALL_GPG"/>
-    </requires>
-      <command name="test" path="tests/testall.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<arg>-tt</arg>
-      </runner>
-    </command>
-      <command name="0install" path="0install">
-      <runner interface="http://repo.roscidus.com/python/python"/>
-    </command>
-      <command name="run" path="0launch">
-      <runner interface="http://repo.roscidus.com/python/python"/>
-    </command>
-      <implementation id="sha1new=90d3c1ae214c39eb0af89b31cfd9fd65fd2aa7e6" released="2012-08-27" stability="stable" version="1.11">
+    <implementation id="sha1new=90d3c1ae214c39eb0af89b31cfd9fd65fd2aa7e6" released="2012-08-27" stability="stable" version="1.11">
       <manifest-digest sha256="9bf954fb24fa1e7a3d38e7182ae7744901930ef72f6f5846ada849ca6aa19fba"/>
       <archive extract="zeroinstall-injector-1.11" href="http://downloads.sourceforge.net/project/zero-install/injector/1.11/zeroinstall-injector-1.11.tar.bz2" size="391601"/>
     </implementation>
-      <group>
-        <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
-	  <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-	  <version before="1.12.1"/>
-	</requires>
-        <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" version="1.12">
-      <manifest-digest sha256="304e7110ed87ebedf8cae873f1e3d20ec12c5d3a3444e1eb9c8aba1f3be366a7"/>
-      <archive extract="0install-1.12" href="http://downloads.sourceforge.net/project/zero-install/0install/1.12/0install-1.12.tar.bz2" size="389779"/>
-    </implementation>
-      </group>
+
+    <group>
+      <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
+	<environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
+	<version before="1.12.1"/>
+      </requires>
+      <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" version="1.12">
+	<manifest-digest sha256="304e7110ed87ebedf8cae873f1e3d20ec12c5d3a3444e1eb9c8aba1f3be366a7"/>
+	<archive extract="0install-1.12" href="http://downloads.sourceforge.net/project/zero-install/0install/1.12/0install-1.12.tar.bz2" size="389779"/>
+      </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBxwQYACgkQrgeCgFmlPMHRFgCgzH4Wo1PEUmvI+7CWlIGD5h4IPPgAoKFw4oJQ
-5BCTD6pWtnwjJP7BJ29V
+iEYEABECAAYFAlCbbCUACgkQrgeCgFmlPME1ZgCfevYEO11FouB4Hc7GhlpMPMBGbW8AoJEb9zeo
+XFyFxnXPBCLhXUmSzgoQ
 
 -->
