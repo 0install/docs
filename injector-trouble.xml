@@ -7,7 +7,7 @@
 
 <h2>0install doesn't select any versions / the expected versions</h2>
 
-<div class='note'>Note: reporting the reasons for failed selections improved a lot in 0install 1.13, so try with that (currently only <a href='using-git.html'>available from Git</a>) if you have trouble.</div>
+<div class='note'>Note: reporting the reasons for failed selections improved a lot in 0install 1.13, so please upgrade to that first if you have trouble.</div>
 
 <p>If 0install cannot find a compatible set of versions for a program, you may see an error like this:</p>
 
