@@ -257,16 +257,26 @@ requires first uninstalling another.</description>
 	<environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
 	<version before="1.12.1"/>
       </requires>
-      <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" version="1.12">
+      <implementation id="sha1new=1b2eeda9ae2220fd68df12d0c8877ac5b5c91720" released="2012-09-24" stability="stable" version="1.12">
 	<manifest-digest sha256="304e7110ed87ebedf8cae873f1e3d20ec12c5d3a3444e1eb9c8aba1f3be366a7"/>
 	<archive extract="0install-1.12" href="http://downloads.sourceforge.net/project/zero-install/0install/1.12/0install-1.12.tar.bz2" size="389779"/>
       </implementation>
+    </group>
+    <group>
+      <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
+      <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
+      <version not-before="1.12.1"/>
+    </requires>
+      <implementation id="sha1new=bad7ab2fed8cbd60e18da0eea476ba4f4e97629d" released="2012-11-10" version="1.13">
+      <manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
+      <archive extract="0install-1.13" href="http://downloads.sourceforge.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2" size="399197"/>
+    </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlCbbCUACgkQrgeCgFmlPME1ZgCfevYEO11FouB4Hc7GhlpMPMBGbW8AoJEb9zeo
-XFyFxnXPBCLhXUmSzgoQ
+iEYEABECAAYFAlCeOQEACgkQrgeCgFmlPMEcAwCfUDjKsilpeIVS6jybmygPX52YfU8AoJQh8ft7
+/Yuh1DZaeSQtPAFDg27p
 
 -->
