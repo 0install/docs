@@ -123,6 +123,10 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>The recipe &lt;rename&gt; step type.</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6103'>Mirrors for archives</a>.</li>
   <li>Support for headless servers (<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6297'>0install-core</a> package).</li>
+  <li><a href='injector-trouble.html'>Improved diagnostics</a> when a solve fails.</li>
+  <li>The 'if-0install-version' attribute.</li>
+  <li>The --version EXPR and --version-for URI EXPR command-line options.</li>
+  <li>Disjoint version ranges (e.g. "2.6..!3 | 3.2.2..").</li>
 </ul>
 
 
@@ -133,7 +137,7 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Soon (maybe)</h4>
+<h4>Version 2.0 (Feb 2013)</h4>
 
 <ul>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
@@ -141,7 +145,7 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
   <li><a href='user-guide-apps.html'>App support</a> for XDG launchers.</li>
 </ul>
 
-<h4>Version 2.x</h4>
+<h4>Version 3.0</h4>
 
 <dl class='roadmap'>
 
