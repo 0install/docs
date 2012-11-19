@@ -12,12 +12,11 @@
 This means that once one machine on your local network has downloaded something, other machines can get
 it directly from the first one.
 </p>
-
-<p>
-This program is new and experimental.
-</p>
-
 </program>
+
+<div class='note'>
+  <strong>This program is an experimental proof-of-concept.</strong> It currently requires a modified version of 0install, which can be found in the <a href='https://github.com/0install/0install/tree/peer2peer'>peer2peer</a> branch. This branch is now very out-of-date. If you'd like to take over this project, please <a href='support.html'>get in touch</a>!
+</div>
 
 <p class='diagram'>
   <img src='screens/p2p.png' width='722' height='329' alt='Screenshot'/>
@@ -29,11 +28,11 @@ This program is new and experimental.
 To try it out, run this command on one machine:
 </p>
 
-<pre>machine1 $ <b>0launch http://0install.net/2008/interfaces/0share.xml</b>
+<pre-scrolled>machine1 $ <b>0launch http://0install.net/2008/interfaces/0share.xml</b>
 INFO:root:0share started and listening for requests...
 INFO:root:Serving implementations from Store '/home/me/.cache/0install.net/implementations'
 INFO:root:Serving implementations from Store '/var/cache/0install.net/implementations'
-</pre>
+</pre-scrolled>
 
 <p>
 On another machine on the same network, run this command, replacing <b>DIGEST</b> with the digest
@@ -41,8 +40,8 @@ of a program installed on the first machine (e.g. the name of a subdirectory of
 /var/cache/0install.net/implementations/). The digest will be in the program's feed file.
 </p>
 
-<pre>machine2 $ <b>0launch http://0install.net/2008/interfaces/0share.xml -f DIGEST</b>
-</pre>
+<pre-scrolled>machine2 $ <b>0launch http://0install.net/2008/interfaces/0share.xml -f DIGEST</b>
+</pre-scrolled>
 
 <p>
 The second machine will broadcast a request (to UDP port 38339) to see if anyone has the
@@ -50,23 +49,23 @@ given implementation. The first machine should respond. The second machine will 
 from the first:
 </p>
 
-<pre>machine2 $ <b>./0share -f sha1new=84e37424bbb87a077e25cec87d3c668f12726817</b>
+<pre-scrolled>machine2 $ <b>./0share -f sha1new=84e37424bbb87a077e25cec87d3c668f12726817</b>
 INFO:root:Broadcasting query for ['sha1new=84e37424bbb87a077e25cec87d3c668f12726817'] on local network...
 192.168.2.1 has sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Connecting to 192.168.2.1 to request sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Caching new implementation (digest sha1new=84e37424bbb87a077e25cec87d3c668f12726817)
-Success</pre>
+Success</pre-scrolled>
 
 <p>
 The requested version should now be in machine2's cache. On the source machine, you should see something like:
 </p>
 
-<pre>INFO:root:Request from ('192.168.2.2', 53182): '0share\nsha1new=84e37424bbb87a077e25cec87d3c668f12726817'
+<pre-scrolled>INFO:root:Request from ('192.168.2.2', 53182): '0share\nsha1new=84e37424bbb87a077e25cec87d3c668f12726817'
 INFO:root:Yes, we have sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Sending reply...
 INFO:root:GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 machine2 - - [13/Dec/2008 21:52:49] "GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817 HTTP/1.1" 200 -
-</pre>
+</pre-scrolled>
 
 <h2>Debugging</h2>
 
@@ -93,21 +92,21 @@ You'll probably want to run 0share without write access anywhere (for security),
 create a new user for that and try running it:
 </p>
 
-<pre>$ <b>sudo adduser --system zeroshare</b>
-$ <b>sudo su zeroshare -s /usr/bin/env -- 0launch -vc http://0install.net/2008/interfaces/0share.xml</b></pre>
+<pre-scrolled>$ <b>sudo adduser --system zeroshare</b>
+$ <b>sudo su zeroshare -s /usr/bin/env -- 0launch -vc http://0install.net/2008/interfaces/0share.xml</b></pre-scrolled>
 
 <p>
 You can then add a line to your crontab file to make it start on boot:
 </p>
 
-<pre>
+<pre-scrolled>
 @reboot zeroshare 0launch -vc http://0install.net/2008/interfaces/0share.xml 2>&amp;1 >/dev/null
-</pre>
+</pre-scrolled>
 
 <h2>Using with 0launch</h2>
 
 <p>
-As this is experimental, you'll need to use the <a href='http://repo.or.cz/w/zeroinstall.git?a=shortlog;h=refs/heads/peer2peer'>peer2peer branch</a> of Zero Install.
+As this is experimental, you'll need to use the <a href='https://github.com/0install/0install/tree/peer2peer'>peer2peer branch</a> of 0install.
 In that branch, P2P support is turned on when using the GUI for downloads.
 </p>
 
