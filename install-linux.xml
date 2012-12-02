@@ -49,7 +49,7 @@
 echo "deb http://ppa.launchpad.net/tal-it-innovation/ppa/ubuntu precise main" \
    >> /etc/apt/sources.list
 apt-get update
-apt-get install 0install-core
+apt-get install --no-install-recommends 0install-core
 </pre>
 <p>Unfortunately, we cannot unload these packages to the main Debian archvie until after Debian 7 is released.</p>
 </dd>
