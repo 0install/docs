@@ -341,13 +341,17 @@ For a full tutorial, see 0compile's homepage.</description>
       <manifest-digest sha256="9fb22ebd68d5936cd153e79515ba6c40e115aea28cf7298821c6e89131b58ad5"/>
       <archive extract="0compile-0.32" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.32/0compile-0.32.tar.bz2" size="35908"/>
     </implementation>
+        <implementation id="sha1new=67fb0e35680d5385e423cde05ed06ad625a0ac8b" released="2012-12-21" version="0.32.1">
+      <manifest-digest sha256new="AV5PSVJDZFOVC6BJQBFWFTJMACZR4J6IXKQ3OXNVZE6CS7JSRXGA"/>
+      <archive extract="0compile-0.32.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/0.32.1/0compile-0.32.1.tar.bz2" size="36070"/>
+    </implementation>
       </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlCejAEACgkQrgeCgFmlPMFLDACdGWNkxA5fgDjM5k5stbJGfdAzL1sAoJjlSxW6
-Ecn1vOCyyDLa6hzVcLZ+
+iEYEABECAAYFAlDUZOgACgkQrgeCgFmlPMFokQCgtp0MxzjkBcA9gAmJt21t300kglUAoLXnmdPw
+AYbVxhi6kb5lQgK5U6ts
 
 -->
