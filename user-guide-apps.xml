@@ -4,8 +4,7 @@
 <h2>Using Apps</h2>
 
 <p>
-  Apps are an experimental feature introduced in 0install 1.9.
-  Apps work a bit like aliases, e.g.
+  Apps (introduced in 0install 1.9) work a bit like aliases, e.g.
 </p>
 
 <pre>
@@ -61,6 +60,11 @@ http://repo.roscidus.com/security/gnupg: new -> 1.4.12-4
 To run using the previous selections, use:
 0install run /home/tal/.config/0install.net/apps/0publish/selections-2012-06-16.xml
 </pre>
+
+<p>
+  Starting with 0install 1.14, 0alias is deprecated, and trying to add an alias will
+  add an app instead.
+</p>
 
 <h3>Planned features</h3>
 
