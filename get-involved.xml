@@ -28,7 +28,7 @@ Also, asking software authors if they'd be interested in publishing a feed would
 
 <h3>Translate into other languages</h3>
 <p>
-  You can create or update a translation <a href='using-git.html'>using our Git repository</a>, or on the web at our <a href='https://www.transifex.net/projects/p/zeroinstall-injector/'>Transifex</a> project.
+  You can create or update a translation <a href='using-git.html'>using our Git repository</a>, or on the web at our <a href='https://www.transifex.net/projects/p/0install/'>Transifex</a> project.
 </p>
 
 <h3>Work on the code</h3>
