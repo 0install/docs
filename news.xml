@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jan 2013</dt>
+<dd>
+  <a href='http://news.gmane.org/find-root.php?message_id=%3c001501cdd2ff%2467239110%24356ab330%24%40eicher.net%3e'>0install 1.13.1 for Windows</a> was released, fixing a few bugs. Updates commited to Git include support for the new PackageKit API and a new and improved dry-run mode, although 1.14 has not yet been released. After 1.14, 0install should enter feature-freeze until the 2.0 release. Please help us <a href='using-git.html'>translate 0install into other languages</a> too!
+</dd>
 <dt>Dec 2012</dt>
 <dd>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6520'>0install 1.13 released</a>, featuring <a href='injector-trouble.html'>improved diagnostics</a> when a solve fails (or fails to select the expected version), support for marking different XML elements as applying to different versions of 0install (to help with backwards compatibility), new options for specifying the desired version of the program of any of its libraries (<tt>--version</tt> and <tt>--version-for</tt>) and a syntax for specifying disjoint version ranges. The naming scheme for locally-compiled packages has been improved to avoid using characters which cause trouble for cmake and other programs. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6521'>0compile 0.32</a> was released, with support for the new naming scheme, the ability to use the new diagnostics when compiling, and more intelligence in the autocompile logic to prevent loops. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6545'>0install 1.13 for Windows</a> was released, adding support for custom catalog sources, sharing the cache between users, and machine-wide desktop integration.
