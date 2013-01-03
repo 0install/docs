@@ -43,16 +43,28 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
       <manifest-digest sha256="1253c1c15f3f3966964cd3338cc543f8eb143859b9754d7816e12dad35098512"/>
       <archive extract="feedlint-0.6" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.6/feedlint-0.6.tar.bz2" size="10590"/>
     </implementation>
-      <implementation id="sha1new=5aada130cb79d93a6d89c8dae07c05d944d9f7eb" released="2012-03-21" version="0.7">
+      <implementation id="sha1new=5aada130cb79d93a6d89c8dae07c05d944d9f7eb" released="2012-03-21" stability="stable" version="0.7">
       <manifest-digest sha256="bf427a20727a3f85d27952067658b37e3bf891276f40aaa758b153bfcd4f7af2"/>
       <archive extract="feedlint-0.7" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.7/feedlint-0.7.tar.bz2" size="10584"/>
     </implementation>
+      <group>
+        <command name="test" path="feedlint">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+      <arg>FeedLint.xml</arg>
+    </command>
+        <implementation id="sha1new=aaccd681c51063f5204dbcfdccfbe7399b80ce3a" released="2013-01-03" version="0.8">
+      <manifest-digest sha256new="6UJU2DP4PTM55WLXHSUUOMADWA7UV7CXW22OFFEAKZZEHF5LDOTQ"/>
+      <archive extract="feedlint-0.8" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.8/feedlint-0.8.tar.bz2" size="10953"/>
+    </implementation>
+      </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk9qI6oACgkQrgeCgFmlPMFV+gCgiuIKM41mx0nmS75Teip8U50cp+kAoMsUySY1
-oCyDlWgKd1HKC/FyYpy0
+iEYEABECAAYFAlDl0wYACgkQrgeCgFmlPMEnlQCgj7qS7D8jxAtHZtaPCxHP3UOrQqYAnAhb+Mzl
+YxpOfklpa/JELKcLgHIV
 
 -->
