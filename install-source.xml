@@ -10,6 +10,7 @@
 <p>
 Installing from source. 0install is written entirely in Python, so installing from source is quite simple.
 </p>
+</program>
 
 <p>
 To use 0install, you will need the following (these are installed on most Linux systems by default):
@@ -32,7 +33,6 @@ To use 0install, you will need the following (these are installed on most Linux 
 <li>If using <b>Python 3</b>: GTK3, including the GIRepository bindings (gir1.2-gtk-3.0).</li>
 <li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
 </ul>
-</program>
 
 <p>
 If you are looking for a package, try the <a href='injector.html'>main downloads page</a>.
@@ -46,8 +46,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2.sig</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -58,8 +58,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
-$ <b>gpg 0install-1.13.tar.bz2.sig</b>
-gpg: Signature made Sat 10 Nov 2012 11:28:15 GMT using RSA key ID CA74D8BA
+$ <b>gpg 0install-1.14.tar.bz2.sig</b>
+gpg: Signature made Mon 14 Jan 2013 11:38:02 GMT using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -77,8 +77,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xjf 0install-1.13.tar.bz2</b>
-$ <b>cd 0install-1.13</b>
+$ <b>tar xjf 0install-1.14.tar.bz2</b>
+$ <b>cd 0install-1.14</b>
 </pre>
 
 <table class='split'>
@@ -115,8 +115,7 @@ on Ubuntu at least.
 </dl>
 
 <p>
-You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it,
-<b>0alias</b>, which lets you use short names instead of URLs, and
+You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
 <b>0install</b>, which provides access to other features.
 </p>
 
