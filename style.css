@@ -664,3 +664,6 @@ table.fixed pre {
   overflow-x: auto;
 }
 
+:target {
+  background: yellow;
+}
