@@ -59,11 +59,61 @@ Can't find all required implementations:
 This is quite good at suggesting where the fault is, but the problem may be elsewhere. For example, if a program has versions available for Python 3 and Python 2, and you only have Python 2, then 0install should select the Python 2 version. But if it can't find any valid selections (because some other library required for the Python 2 version is missing), then it might report that the lack of Python 3 is the issue (when, in fact, that's just one possible way of fixing the problem).
 </p>
 
+<h2 id='env-vars'>Why is this environment variable set?</h2>
+
+<p>
+When you run a program, each component (library) can ask for certain environment variables to be set (this only affects the program being run, not all programs). If variables are being set incorrectly, you'll need to track down why. e.g.
+</p>
+
+<pre>
+$ <b>sam</b>
+Picked up _JAVA_OPTIONS: -XstartOnFirstThread
+Unrecognized option: -XstartOnFirstThread
+Could not create the Java virtual machine.
+</pre>
+
+<p>
+To debug this, ask 0install to output the selections as XML and look for the setting inside it. xmllint is useful to format the XML nicely:
+</p>
+
+<pre>
+$ <b>0install select --xml sam | xmllint --format - > selections.xml</b>
+</pre>
+
+<p>
+(if "sam" is an old-style alias rather than an app, use "alias:sam" instead)
+</p>
+
+<p>
+In this case, we find the selections.xml document contains:
+</p>
+
+<pre>
+  &lt;selection arch="MacOSX-x86_64" version="3.6.1"
+             interface="http://repo.roscidus.com/java/swt" ...>
+    ...
+    &lt;environment mode="prepend" name="_JAVA_OPTIONS"
+                 separator=" " value="-XstartOnFirstThread"/>
+  &lt;/selection>
+</pre>
+
+<p>
+This tells us that the OS X implementation of version 3.6.1 of the SWT library requested this setting. To test whether this is the problem, remove the &lt;environment&gt; element and try running it:
+</p>
+
+<pre>
+$ <b>0install run selections.xml</b>
+</pre>
+
+<p>
+Having identified the problem, you can now file a bug report against the SWT feed.
+</p>
+
 <h2>ImportError: No module named pygtk</h2>
 <dd>You need to install the <i>python-gtk2</i> package (the name may vary on different
 distributions; <i>python-gnome2</i> is another possibility.</dd>
 
-<h2>Debugging hints</h2>
+<h2 id='verbose'>Verbose logging</h2>
 
 <p>
 If 0install isn't doing what you expect, run it with logging turned up
