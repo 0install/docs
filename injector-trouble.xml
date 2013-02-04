@@ -52,7 +52,7 @@ Can't find all required implementations:
 <ol>
   <li>When the solve fails, 0install switches to debug mode and runs the solve again.</li>
   <li>Debug mode adds a fake implementation of each component. This fake version is fully compatible with everything, but less preferable than all the real versions (so it will only be selected if there is no other option).</li>
-  <li>This always results in a "solution", but whenever a fake implementations is selected it is reported as "(problem)", as shown above.</li>
+  <li>This always results in a "solution", but whenever a fake implementation is selected it is reported as "(problem)", as shown above.</li>
 </ol>
 
 <p>
