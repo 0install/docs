@@ -4,6 +4,12 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Feb 2013</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6629'>0install 1.14 was released</a>, with support for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6627/focus=6628'>Tab-complation in bash and zsh</a>, the new PackageKit API, a much-improved --dry-run option, and a "0install show" command to show the current selections for an app. 0alias is now deprecated and creates new-style <a href='user-guide-apps.html'>apps</a> instead.
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6641'>0install 1.14 for Windows was released</a>.
+The new <a href='http://gfxmonk.net/dist/0install/0env.xml'>0env</a> tool makes it easy to step into a shell session with a particular library available.
+</dd>
 <dt>Jan 2013</dt>
 <dd>
   <a href='http://news.gmane.org/find-root.php?message_id=%3c001501cdd2ff%2467239110%24356ab330%24%40eicher.net%3e'>0install 1.13.1 for Windows</a> was released, fixing a few bugs. Updates commited to Git include support for the new PackageKit API and a new and improved dry-run mode, although 1.14 has not yet been released. After 1.14, 0install should enter feature-freeze until the 2.0 release. Please help us <a href='using-git.html'>translate 0install into other languages</a> too!
