@@ -8,6 +8,7 @@
   </description>
 
   <implementation e:main="edit.e-swt" id="sha1new=f3776e8df02377a185363eb589bccd96898262cb" released="2010-08-07" version="0.1">
+    <command name="org.erights/rune" path="edit.e-swt"/>
     <requires interface="http://0install.net/tests/ebox-help.xml">
       <environment insert="" name="help"/>
     </requires>
@@ -17,7 +18,7 @@
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxdVAUACgkQrgeCgFmlPMGPCQCfcwBYaBcxPrgN5F4w6t1oVGZ/k/YAoL/3ytwy
-KoCuSld83/bf9SMfedvp
+iEYEABECAAYFAlESmCEACgkQrgeCgFmlPMH3UACg1af4knbqZ0iTXcWGt6HGcZbWJToAoKn9i4gH
+qROVrC8GR+pFMJiDZ/G6
 
 -->
