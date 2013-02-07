@@ -300,6 +300,7 @@ network.
     [requires] *
     [runner] ?
     &lt;arg&gt; ... &lt;/arg&gt; *
+    &lt;for-each item-from='...' separator='...'? &gt; ... &lt;/for-each&gt; *
   &lt;/command&gt;
 </pre>
 
@@ -313,6 +314,10 @@ network.
 
 <p>
   Additional arguments can be passed using the &lt;arg&gt; element. Within an argument, "${name}" is expanded to the value of the corresponding environment variable. These arguments are passed to the program before any arguments specified by the user.
+</p>
+
+<p>
+  If an environment variable should be expanded to multiple arguments, use &lt;for-each&gt;. The variable in the 'item-from' attribute is split using the given separator (which defaults to the OS path separator, ":" on POSIX and ";" on Windows) and the arguments inside the element are added for each item. The current item is available as "${item}". If the variable given in 'item-from' is not set or is empty, no arguments are added. See below for an example. Versions of 0install before 1.15 ignore &lt;for-each&gt; elements and their contents.
 </p>
 
 <p>
@@ -338,12 +343,15 @@ network.
       &lt;runner interface='http://repo.roscidus.com/e/e-core'&gt;
         &lt;arg&gt;-cpa&lt;/arg&gt;
         &lt;arg&gt;$SWT_JAR&lt;/arg&gt;
+	&lt;for-each item-from="EXTRA_E_OPTIONS" separator=" ">
+	  &lt;arg>${item}&lt;/arg>
+	&lt;/for-each>
       &lt;/runner&gt;
     &lt;/command&gt;
 </pre>
 
 <p>
-  In this case, 0launch will run the command <b>/path/to/e-interpreter -cpa /path/to/swt.jar /path/to/causeway.e-swt</b>.
+  In this case, 0install will run the equivalent of <b>/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt</b>.
 </p>
 
 <h2>Package implementations</h2>
