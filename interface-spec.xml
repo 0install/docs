@@ -45,7 +45,7 @@ be confused if you see it used this way.
 <h2>Contents</h2>
 <toc level='h2'/>
 
-<h2>Introduction</h2>
+<h2 id='intro'>Introduction</h2>
 
 <p>
 Feed files are introduced in the <a href='injector-packagers.html'>packager's guide</a>.
@@ -112,7 +112,7 @@ for a description of the values of these attributes.</dd>
 
 </dl>
 
-<h2>Groups</h2>
+<h2 id='groups'>Groups</h2>
 
 <p>
 A group has this syntax:
@@ -145,7 +145,7 @@ can be overridden there. All dependencies ("requires"), bindings and commands ar
 dependencies and bindings to the list, but cannot remove anything).
 </p>
 
-<h2>Implementations</h2>
+<h2 id='implementations'>Implementations</h2>
 
 <p>
 An implementation has this syntax (an unspecified argument is inherited from
@@ -285,7 +285,7 @@ network.
   <li>If you have a local implementation then set both id and local-path to the pathname.</li>
 </ul>
 
-<h2>Commands</h2>
+<h2 id='commands'>Commands</h2>
 
 <p>
   The <b>main</b> attribute above provides a simple way to say how to run this implementation. The
@@ -354,7 +354,7 @@ network.
   In this case, 0install will run the equivalent of <b>/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt</b>.
 </p>
 
-<h2>Package implementations</h2>
+<h2 id='package-implementation'>Package implementations</h2>
 
 <p>
 This element names a distribution-provided package which, if present, is a valid
@@ -404,7 +404,7 @@ Support for distribution packages was added in version 0.28 of 0install. Earlier
 this element.
 </p>
 
-<h2>Retrieval methods</h2>
+<h2 id='retrieval-methods'>Retrieval methods</h2>
 
 <p>
 A retrieval method is a way of getting an implementation.
@@ -493,7 +493,7 @@ yourself. Normally, if your program requires files from several different packag
 choose the versions and upgrade them individually.
 </p>
 
-<h2>Dependencies</h2>
+<h2 id='dependencies'>Dependencies</h2>
 
 <p>
 A &lt;requires&gt; element means that every implementation within the same group (including nested
@@ -604,7 +604,7 @@ Each range is in the form "START..!END". The range matches versions where START 
 Note: to support older versions of 0install, it is preferable to use the &lt;version&gt; element instead where possible.
 </p>
 
-<h2>Bindings</h2>
+<h2 id='bindings'>Bindings</h2>
 
 <p>
 Bindings specify how the chosen implementation is made known to the running program. Bindings
@@ -843,7 +843,7 @@ save network use.
 </p>
 
 
-<h2>Entry points</h2>
+<h2 id='entry-points'>Entry points</h2>
 
 <p>(only used on the Windows version currently)</p>
 
@@ -889,7 +889,7 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 <dd>an icon to represent the command; this is used when creating menu entries.</dd>
 
 
-<h2>Metadata</h2>
+<h2 id='metadata'>Metadata</h2>
 
 <p>
 All elements can contain extension elements, provided they are not in the Zero
@@ -928,7 +928,7 @@ available (released) and requires (requires).
 The source element may be used in future to record the source used to build this implementation.
 </p>
 
-<h2>Digital signatures</h2>
+<h2 id='signatures'>Digital signatures</h2>
 
 <p>
 When a feed is downloaded from the web, it must contain a digital signature.
@@ -954,7 +954,7 @@ Local interfaces are plain XML, although having an XML signature block is no pro
 will be ignored as a normal XML comment.
 </p>
 
-<h2>Valid architecture names</h2>
+<h2 id='arch-names'>Valid architecture names</h2>
 
 <p id='archs'>The <b>arch</b> attribute is a value in the form "OS-CPU". The values come from the <b>uname</b> system call, but
 there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:</p>
@@ -1003,7 +1003,7 @@ Valid values for CPU include:
 <p>However, 0install versions before 1.13 ignore this attribute and process all elements.
 </p>
 
-<h2>Future plans</h2>
+<h2 id='future'>Future plans</h2>
 
 <ul>
  <li>The extra meta-data elements need to be better specified.</li>
