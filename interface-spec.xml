@@ -507,6 +507,7 @@ suitable implementation, downloading one if required.
 	importance='...' ?
 	version='...' ?
 	os='...' ?
+	distribution='...' ?
 	use='...' ? &gt;
     [ constraints ] *
     [ bindings ] *
@@ -537,6 +538,10 @@ The <b>version</b> attribute (0install >= 1.13) provides a quick way to specify 
 </p>
 
 <p>
+The <b>distribution</b> attribute (0install >= 1.15) can be used to require the selected implementation to be from the given distribution. For example, a Python library available through MacPorts can only be used with a version of Python which is also from MacPorts. The value of this attribute is a space-separated list of distribution names. In addition to the <a href='distribution-integration.html'>official list of distribution names</a>, the special value "0install" may be used to require an implementation provided by 0instal (i.e. one not provided by a &lt;package-implementation&gt;).
+</p>
+
+<p>
   The <b>os</b> attribute (0install >= 1.12) can be used to indicate that the dependency only applies to the given OS (e.g. <b>os="Windows"</b> for
   dependencies only needed on Windows systems).
 </p>
@@ -547,7 +552,10 @@ The <b>version</b> attribute (0install >= 1.13) provides a quick way to specify 
 
 <pre>
   &lt;restricts
-	interface='...' &gt;
+	interface='...'
+	version='...' ?
+	os='...' ?
+	distribution='...' ? &gt;
     [ constraints ] *
   &lt;/restricts&gt;
 </pre>
