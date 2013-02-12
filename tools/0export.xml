@@ -59,7 +59,7 @@ still shared between users, and will get updates over the web where possible.</d
   </group>
   <group>
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="1.8"/>
+      <version before="1.13" not-before="1.8"/>
       <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
     </requires>
     <command name="test" path="test.py">
@@ -80,7 +80,7 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk/N9+QACgkQrgeCgFmlPME7EACfQPcEL4tb06h16t0NY9WVqqwqFoYAn0Rr/2Ng
-VlQIe2VW8D3e0jKuIcG5
+iEYEABECAAYFAlEaXUQACgkQrgeCgFmlPMEOWQCcCBP3Ya5Th7HfPD8bGpny6rFDiDAAnA9wqH5Z
+onh47zWm627wRHXsWeuZ
 
 -->
