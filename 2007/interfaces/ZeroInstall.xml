@@ -264,16 +264,23 @@ interfere with those provided by the distribution.
       <manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
       <archive extract="0install-1.13" href="http://downloads.sourceforge.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2" size="399197"/>
     </implementation>
-      <implementation id="sha1new=4abc260823d17f277a956ba968d9971ba2afa3ef" released="2013-01-14" version="1.14">
+      <implementation id="sha1new=4abc260823d17f277a956ba968d9971ba2afa3ef" released="2013-01-14" stability="stable" version="1.14">
       <manifest-digest sha256new="FOGTP26G26DZHEXXPPFXLEBO2Q6TUHGRTSVJ5ZCOAUGKVSZROIVQ"/>
       <archive extract="0install-1.14" href="http://downloads.sourceforge.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2" size="412052"/>
     </implementation>
+      <group>
+        <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+        <implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" version="1.15">
+      <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
+      <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
+    </implementation>
+      </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEaXgkACgkQrgeCgFmlPME5DgCfUYp+uortzBWC4+9AsNEtfFOfZFcAoKPhup0D
-tD6SBRWX3zUEx2mKhIjl
+iEYEABECAAYFAlEaYmoACgkQrgeCgFmlPMGGEACgvr2INVN0ffKovgfKmH/cFy3ZvlEAoJYgoXmU
+j+YZim+P+H+/Wwu54XlJ
 
 -->
