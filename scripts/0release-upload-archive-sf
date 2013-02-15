@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 import os, sys, subprocess
 if len(sys.argv) < 3:
 	raise Exception("Usage: RELEASE_VERSION=... %s project app file..." % sys.argv[0])

@@ -16,38 +16,38 @@ can help you to create new releases easily.</description>
       <environment insert="0publish" mode="replace" name="0PUBLISH"/>
     </requires>
     <implementation id="sha1new=3cbab8149d25e4bdc00056726a7ed97b2aa43f9c" released="2007-11-10" stability="stable" version="0.1">
-      <archive extract="0release-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.1.tar.bz2" size="14643"/>
+      <archive extract="0release-0.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.1/0release-0.1.tar.bz2" size="14643"/>
     </implementation>
     <implementation id="sha1new=3f7e135e96ac04f5779313e60b5a9ec3a11f7c86" released="2007-11-18" stability="stable" version="0.2">
-      <archive extract="0release-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.2.tar.bz2" size="15757"/>
+      <archive extract="0release-0.2" href="http://downloads.sourceforge.net/project/zero-install/0release/0.2/0release-0.2.tar.bz2" size="15757"/>
     </implementation>
     <implementation id="sha1new=6c5c1c80426a3ecac80680e27c1adc4855f1ca24" released="2007-11-18" stability="stable" version="0.3">
-      <archive extract="0release-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.3.tar.bz2" size="15963"/>
+      <archive extract="0release-0.3" href="http://downloads.sourceforge.net/project/zero-install/0release/0.3/0release-0.3.tar.bz2" size="15963"/>
     </implementation>
     <implementation id="sha1new=7f9605bc10edf28d31399d97e1f54e6862ff8fbb" released="2007-11-18" self-test="tests/testrelease.py" stability="stable" version="0.4">
-      <archive extract="0release-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.4.tar.bz2" size="27460"/>
+      <archive extract="0release-0.4" href="http://downloads.sourceforge.net/project/zero-install/0release/0.4/0release-0.4.tar.bz2" size="27460"/>
     </implementation>
     <implementation id="sha1new=f2b5fd0b0b3b14c489aee6ca2b8d73f2ea1baa7c" released="2007-11-25" self-test="tests/testrelease.py" stability="stable" version="0.5">
-      <archive extract="0release-0.5" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.5.tar.bz2" size="27639"/>
+      <archive extract="0release-0.5" href="http://downloads.sourceforge.net/project/zero-install/0release/0.5/0release-0.5.tar.bz2" size="27639"/>
     </implementation>
     <implementation id="sha1new=6295c217fc5ee80dd8797bb68f728ae33a86eb26" released="2007-11-30" self-test="tests/testall.py" stability="stable" version="0.6">
-      <archive extract="0release-0.6" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.6.tar.bz2" size="30064"/>
+      <archive extract="0release-0.6" href="http://downloads.sourceforge.net/project/zero-install/0release/0.6/0release-0.6.tar.bz2" size="30064"/>
     </implementation>
     <implementation id="sha1new=c8dd31aea0b1c69c1b3ffd2270bec6ff725563a4" released="2008-05-04" self-test="tests/testall.py" stability="stable" version="0.7">
-      <archive extract="0release-0.7" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.7.tar.bz2" size="30225"/>
+      <archive extract="0release-0.7" href="http://downloads.sourceforge.net/project/zero-install/0release/0.7/0release-0.7.tar.bz2" size="30225"/>
     </implementation>
     <implementation id="sha1new=511a56893691d75f66acef9d56abea23962e9eab" released="2008-06-14" self-test="tests/testall.py" stability="stable" version="0.8">
-      <archive extract="0release-0.8" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.8.tar.bz2" size="30350"/>
+      <archive extract="0release-0.8" href="http://downloads.sourceforge.net/project/zero-install/0release/0.8/0release-0.8.tar.bz2" size="30350"/>
     </implementation>
     <implementation id="sha1new=6428caafecb773c291da7f8987f4e711dd7d00e2" released="2009-05-03" self-test="tests/testall.py" version="0.9">
-      <archive extract="0release-0.9" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.9.tar.bz2" size="53436"/>
+      <archive extract="0release-0.9" href="http://downloads.sourceforge.net/project/zero-install/0release/0.9/0release-0.9.tar.bz2" size="53436"/>
     </implementation>
     <implementation id="sha1new=5a19b21a3c4e62871ff18cf9355ccfd91f987ce9" released="2009-05-04" self-test="tests/testall.py" version="0.10">
-      <archive extract="0release-0.10" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.tar.bz2" size="53961"/>
+      <archive extract="0release-0.10" href="http://downloads.sourceforge.net/project/zero-install/0release/0.10/0release-0.10.tar.bz2" size="53961"/>
     </implementation>
     <implementation id="sha1new=1d20091466927b1b7444e6af71425fe39ca3c14e" released="2009-05-09" self-test="tests/testall.py" stability="stable" version="0.10.1">
       <manifest-digest sha256="42bf498b09b730f6a51034ef5fbd4221488bc7874088722828186c7b7d89a7da"/>
-      <archive extract="0release-0.10.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/0release-0.10.1.tar.bz2" size="53939"/>
+      <archive extract="0release-0.10.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.10.1/0release-0.10.1.tar.bz2" size="53939"/>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -165,7 +165,7 @@ can help you to create new releases easily.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEeKvcACgkQrgeCgFmlPMEYJwCbBzuYXVKLZASrsLxiVZ4Pk7VawpYAn3uijFDA
-2bXJp9bfStZOFB/Oks4E
+iEYEABECAAYFAlEeK7IACgkQrgeCgFmlPMG1WACgkJzFcAx8Z+NYzrbj6iWJBXGGp2AAn2/SewnL
+zSfjiOxZB1kqwt5d8S7z
 
 -->
