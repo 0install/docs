@@ -135,9 +135,8 @@ $ <b>sha1sum /bin/ls</b>
   <li><a href='injector.html'>Install 0launch version 0.30</a> or later.</li>
   <li>Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
 <pre>
-# adduser --system zeroinst
+# useradd -d /var/cache/0install.net --system zeroinst
 </pre>
-<p>Note: on systems without <b>adduser</b> try <b>useradd</b> instead.</p>
 </li>
   <li>Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
 <pre>
