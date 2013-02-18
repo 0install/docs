@@ -10,9 +10,13 @@
 
   <homepage>http://0install.net/pkg2zero.html</homepage>
   <category>Development</category>
+  <implementation id="sha1new=c2f3063311e16fc67345434b94ede109d31cf416" released="2013-02-18" version="0.7">
+      <manifest-digest sha256new="XZ3VPKVUFX4QPFKB6GWW5RGRYEJHIF56KDL4FHE73P5N2N4MCUGQ"/>
+      <archive extract="pkg2zero-testdata-0.7" href="http://downloads.sourceforge.net/project/zero-install/pkg2zero-testdata/0.7/pkg2zero-testdata-0.7.tar.bz2" size="7291089"/>
+    </implementation>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAksACwAACgkQrgeCgFmlPMGzpQCgrJ89l4KQ8qRHgA26IUdAVm5Huv4AoLc0wIzF
-Lxqj/5QDQpGiqCIHGcAJ
+iEYEABECAAYFAlEiW14ACgkQrgeCgFmlPMFg5QCeNBIbFo5ymX8oGOIhh9tVlBAesl8AoNcK4azA
+N4GT/4jqoFK24+N9imQj
 
 -->
