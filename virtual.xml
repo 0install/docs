@@ -9,6 +9,8 @@ packages between virtual machines. That is, the package is downloaded and stored
 but all virtual machines can run it.
 </p>
 
+<toc level='h2'/>
+
 <h2>VirtualBox</h2>
 
 <p>
@@ -44,5 +46,31 @@ that passes the directory to the host for verification.</p></li>
 <li><p>Because Zero Install packages are named by their digest, there are no problems with sharing a single cache between different architectures (whether virtual machines or physical machines with a network
 file-system). Packages that can be shared will be shared automatically, packages that can't will co-exist peacefully.</p></li>
 </ol>
+
+<h2>Vagrant</h2>
+
+<p><a href='http://www.vagrantup.com/'>Vagrant</a> is a tool for managing virtual development environments.</p>
+
+<p>In your Vagrantfile, use something like this:</p>
+
+<pre>
+Vagrant::Config.run do |config|
+  [...]
+  config.vm.share_folder "host-cache",
+			 "/var/cache/0install.net/implementations",
+			 "/var/cache/0install.net/implementations"
+
+  # This next bit is convenient but less secure...
+  config.vm.customize ["setextradata", :id,
+	"VBoxInternal2/SharedFoldersEnableSymlinksCreate/shared-guest-cache", "1"]
+  config.vm.share_folder "shared-guest-cache",
+	"/home/vagrant/.cache/0install.net/implementations",
+	"/home/me/.cache/shared-vagrant-guest-cache"
+end
+</pre>
+
+<p>
+Here, the VMs will have read-only access to the host's cache (assuming you've set up <a href='sharing.html'>sharing</a> on the host), plus read-write access to a cache shared between the guests. Note that a malicious guest can corrupt this cache, and thus affect other VMs using it.
+</p>
 
 </html>
