@@ -47,9 +47,13 @@ that passes the directory to the host for verification.</p></li>
 file-system). Packages that can be shared will be shared automatically, packages that can't will co-exist peacefully.</p></li>
 </ol>
 
+<p>
+  Warning: Older versions of the VirtualBox guest additions have problems with symlinks in shared folders. If you allow guests to write to a shared cache on the host, you may get the error "<b>Incorrect manifest -- archive is corrupted</b>", even though the archive is actually OK. Guest additions 4.0.4 is known to not work. Version 4.2.0 seems fine.
+</p>
+
 <h2>Vagrant</h2>
 
-<p><a href='http://www.vagrantup.com/'>Vagrant</a> is a tool for managing virtual development environments.</p>
+<p><a href='http://www.vagrantup.com/'>Vagrant</a> is a tool for managing virtual development environments using VirtualBox.</p>
 
 <p>In your Vagrantfile, use something like this:</p>
 
@@ -61,16 +65,22 @@ Vagrant::Config.run do |config|
 			 "/var/cache/0install.net/implementations"
 
   # This next bit is convenient but less secure...
+
   config.vm.customize ["setextradata", :id,
-	"VBoxInternal2/SharedFoldersEnableSymlinksCreate/shared-guest-cache", "1"]
+  	"VBoxInternal2/SharedFoldersEnableSymlinksCreate/shared-guest-cache", "1"]
   config.vm.share_folder "shared-guest-cache",
-	"/home/vagrant/.cache/0install.net/implementations",
-	"/home/me/.cache/shared-vagrant-guest-cache"
+  	"/home/vagrant/.cache/0install.net/implementations",
+  	"/home/me/.cache/shared-vagrant-guest-cache"
 end
 </pre>
 
 <p>
-Here, the VMs will have read-only access to the host's cache (assuming you've set up <a href='sharing.html'>sharing</a> on the host), plus read-write access to a cache shared between the guests. Note that a malicious guest can corrupt this cache, and thus affect other VMs using it.
+  Change the "/home/me/.cache/shared-vagrant-guest-cache" line to the path where you want to store the shared cache on the host.
+  Ensure you have version 4.2.0 or later of the guest additions installed, or symlinks might not work.
+</p>
+
+<p>
+Here, the VMs will have read-only access to the host's cache (assuming you've set up <a href='sharing.html'>sharing</a> on the host), plus read-write access to a cache shared between the guests. Note that a malicious guest can corrupt this cache, and thus affect other VMs using it. However, assuming non-malicious guests, there is no problem sharing the cache between different VM types (e.g. Debian, Fedora, 32-bit, 64-bit, etc).
 </p>
 
 </html>
