@@ -11,7 +11,7 @@ but all virtual machines can run it.
 
 <toc level='h2'/>
 
-<h2>VirtualBox</h2>
+<h2 id='virtualbox'>VirtualBox</h2>
 
 <p>
 <a href='http://www.virtualbox.org/'>VirtualBox</a> is a popular free (GPL) virtualisation system. To share your
@@ -51,7 +51,7 @@ file-system). Packages that can be shared will be shared automatically, packages
   Warning: Older versions of the VirtualBox guest additions have problems with symlinks in shared folders. If you allow guests to write to a shared cache on the host, you may get the error "<b>Incorrect manifest -- archive is corrupted</b>", even though the archive is actually OK. Guest additions 4.0.4 is known to not work. Version 4.2.0 seems fine.
 </p>
 
-<h2>Vagrant</h2>
+<h2 id='vagrant'>Vagrant</h2>
 
 <p><a href='http://www.vagrantup.com/'>Vagrant</a> is a tool for managing virtual development environments using VirtualBox.</p>
 
