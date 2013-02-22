@@ -59,27 +59,20 @@ $ <b>0launch http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.x
   specified: one to start the builder (optional), one the actually do the build, and one to shutdown the builder (optional). Here is an example configuration:
 </p>
 
-<pre>
+<pre-scrolled>
 [global]
 builders = host, freebsd
 
 [builder-host]
-build = 0launch --not-before 0.10 http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
+build = 0launch http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
 
-[builder-freebsd]
-start = VBoxManage startvm "FreeBSD" --type vrdp
-build = build-on-vm 2222 "$@"
-stop = VBoxManage controlvm "FreeBSD" savestate
-</pre>
+[builder-precise32]
+build = build-on-vm precise32-build-slave
+</pre-scrolled>
 
 <p>
-  This defines two builders named "host" and "freebsd". "host" simply runs 0release in build-slave mode on the local machine (in fact, you don't need to specify this section
-  because it exists by default). The "freebsd" builder runs some other scripts which bring up a VirtualBox virtual machine, submit the build to it, and then shut it down again.
-</p>
-
-<p>
-  The reason for having separate start/build/stop commands is simply to make error handling easier. If the <b>start</b> command succeeds then the <b>stop</b> command will always be run, even if the <b>build</b>
-  command fails. If <b>start</b> fails, the other commands are not run.
+  This defines two builders named "host" and "precise32". "host" simply runs 0release in build-slave mode on the local machine (in fact, you don't need to specify this section
+  because it exists by default). The "precise32" builder run a script (see <a href='#vagrant'>below</a>) to bring up a VirtualBox virtual machine, submit the build to it, and then shut it down again.
 </p>
 
 <h3>The build command</h3>
@@ -105,32 +98,68 @@ stop = VBoxManage controlvm "FreeBSD" savestate
   <li>Copy the results (the binary feed and archive) back to the local system.</li>
 </ol>
 
+<h2 id='vagrant'>Setting up a Vagrant build slave</h2>
+
 <p>
-  For example, the <b>build-on-vm</b> script might look like this:
+  First, we'll need to create a "box" with the build system. <a href='http://docs.vagrantup.com/'>Create a Vagrantfile</a> for the new box, e.g.
 </p>
 
 <pre>
-#!/bin/sh -e
-PORT="$1"
-shift
-LOGIN="builder@localhost"
-
-while true; do
-  ssh -p $PORT $LOGIN 'rm -rf build; mkdir build' &amp;&amp; break
-  echo Waiting for VM to be ready...
-  sleep 2
-done
-
-ssh -p $PORT $LOGIN 'ntpdate your.server.here'  # Avoid clock-skew problems
-
-scp -P $PORT "$1" "$2" ${LOGIN}:build/
-ssh -p $PORT $LOGIN 'cd build &amp;&amp; 0launch -v --not-before 0.10 \
-  http://0install.net/2007/interfaces/0release.xml -v --build-slave "$@"' "$@"
-scp -P $PORT "${LOGIN}:build/*" .
+Vagrant::Config.run do |config|
+  config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+end
 </pre>
 
 <p>
-  This assumes that the virtual machine is listening on some port which is forwarded to port 22 in the guest, and has a user named "builder".
+  The bring the machine up and install the basic build environment. The only
+  package required by 0release is 0install itself, but you must also install
+  any system packages that are needed by the software to be built (i.e. those
+  which can't be installed by 0install automatically):
+</p>
+
+<pre>
+vagrant up
+vagrant ssh -c 'sudo apt-get update &amp;&amp; 
+  sudo apt-get install -y zeroinstall-injector build-essential &amp;&amp;
+  mkdir -p ~vagrant/.cache/0install.net'
+</pre>
+
+<p>
+  Now package the VM into a new box and add it.
+  You might wish to create a Vagrantfile.pkg to enable a shared 0install cache (see <a href='virtual.html#vagrant'>Sharing / Vagrant</a>).
+</p>
+
+<pre>
+vagrant package --vagrantfile Vagrantfile.pkg
+vagrant box add precise32-build-slave package.box
+</pre>
+
+<p>
+  Create the <b>build-on-vm</b> script, make it executable, and place it in your $PATH (on the host):
+</p>
+
+<pre>
+#!/bin/bash
+set -eux
+
+if [ -f Vagrantfile ]; then
+  vagrant destroy -f &amp;&amp; rm Vagrantfile
+fi
+
+vagrant init "$1"
+shift
+vagrant up
+vagrant ssh-config > .ssh-config
+ssh -F .ssh-config default \
+  'cd /vagrant &amp;&amp; 0launch --not-before 0.10 \
+     http://0install.net/2007/interfaces/0release.xml \
+     --build-slave "$@"' "$@" &amp;&amp; \
+  vagrant destroy -f &amp;&amp; rm Vagrantfile
+</pre>
+
+<p>
+You can then use it in your <b>builders.conf</b>, as above.
 </p>
 
 </html>
