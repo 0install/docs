@@ -92,4 +92,9 @@ This will work on Linux, MacOS X, Windows, etc.
 
 <p>See the <a href='templates.html'>example templates</a> for projects in different languages and using various build systems.</p>
 
+<quicklinks>
+  <link href='packaging-concepts.html' img='tango/go-prev.png'>Go back</link>
+  <link href='packaging-binaries.html' img='tango/go-next.png'>Continue</link>
+</quicklinks>
+
 </html>
