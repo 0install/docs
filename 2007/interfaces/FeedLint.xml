@@ -54,7 +54,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
       </runner>
       <arg>FeedLint.xml</arg>
     </command>
-        <implementation id="sha1new=aaccd681c51063f5204dbcfdccfbe7399b80ce3a" released="2013-01-03" version="0.8">
+        <implementation id="sha1new=aaccd681c51063f5204dbcfdccfbe7399b80ce3a" released="2013-01-03" stability="stable" version="0.8">
       <manifest-digest sha256new="6UJU2DP4PTM55WLXHSUUOMADWA7UV7CXW22OFFEAKZZEHF5LDOTQ"/>
       <archive extract="feedlint-0.8" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.8/feedlint-0.8.tar.bz2" size="10953"/>
     </implementation>
@@ -64,7 +64,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlDl0wYACgkQrgeCgFmlPMEnlQCgj7qS7D8jxAtHZtaPCxHP3UOrQqYAnAhb+Mzl
-YxpOfklpa/JELKcLgHIV
+iEYEABECAAYFAlEo9l4ACgkQrgeCgFmlPMH6sACdF1jBHWyrehfSughmUtRFd2ZOjsoAn2FbRca3
+hT/z/UUsFe+Wq1WJJKf5
 
 -->
