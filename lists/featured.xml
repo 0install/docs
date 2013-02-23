@@ -7,7 +7,7 @@ the original game as closely as possible while extending it with new features.</
 drop support and background file operations, and is highly configurable. It can
 also act as a pinboard, allowing you to pin frequently used files to the desktop
 background.</feed>
-  <feed height="47" homepage="http://rox.sourceforge.net/desktop/Archive" icon="feed_icons/Archive.png" name="Archive" summary="create or read archive files" uri="http://rox.sourceforge.net/2005/interfaces/Archive" width="47">You can use Archive to compress a directory or file into a single, smaller file
+  <feed height="47" homepage="http://rox.sourceforge.net/desktop/Archive.html" icon="feed_icons/Archive.png" name="Archive" summary="create or read archive files" uri="http://rox.sourceforge.net/2005/interfaces/Archive" width="47">You can use Archive to compress a directory or file into a single, smaller file
 (which can be stored, emailed, etc).
 
 You can also use it to extract a compressed archive back into a file or

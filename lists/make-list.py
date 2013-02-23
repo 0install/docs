@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 from __future__ import with_statement
 from zeroinstall.injector.config import load_config
 from zeroinstall.injector.namespaces import XMLNS_IFACE
 from zeroinstall.support import tasks
 
+from PIL import Image
 import sys, os, codecs, urllib, shutil, subprocess
 from xml.dom import minidom
 
@@ -45,17 +46,7 @@ def get_icon(elem, iface):
 		full_icon_path = os.path.join(top_dir, icon_path)
 		print "No icon for", uri, name
 	
-	icon_meta = {}
-	child = subprocess.Popen(["pngmeta", "--all", "--", full_icon_path], stdout = subprocess.PIPE)
-	stdout, _ = child.communicate()
-	child.wait()
-	for line in stdout.split('\n'):
-		if ':' in line:
-			key, value = line.split(':', 1)
-			icon_meta[key] = value
-
-	width = int(icon_meta['image-width'])
-	height = int(icon_meta['image-height'])
+	width, height = Image.open(open(full_icon_path)).size
 
 	if width > MAX_ICON_SIZE or height > MAX_ICON_SIZE:
 		scale = float(MAX_ICON_SIZE) / max(width, height)
@@ -69,19 +60,21 @@ def get_icon(elem, iface):
 
 def add_details(elem, iface):
 	elem.setAttribute('uri', iface.uri)
-	elem.setAttribute('name', iface.name)
-	elem.setAttribute('summary', iface.summary)
+
+	main_feed = config.iface_cache.get_feed(iface.uri)
+	elem.setAttribute('name', main_feed.name)
+	elem.setAttribute('summary', main_feed.summary)
 
 	get_icon(elem, iface)
 
 	homepage = None
-	for child in iface.get_metadata(XMLNS_IFACE, 'homepage'):
+	for child in main_feed.get_metadata(XMLNS_IFACE, 'homepage'):
 		homepage = child.content
 		break
 	if homepage:
 		elem.setAttribute('homepage', homepage)
 
-	description = iface.description
+	description = main_feed.description
 	if len(description) > MAX_TEASER_LENGTH:
 		description = description[:MAX_TEASER_LENGTH - 3]
 		description = description[:description.rindex(' ')]
@@ -99,6 +92,10 @@ def get_details(uris):
 		add_details(feed, iface)
 		root.appendChild(feed)
 	return doc
+
+if len(sys.argv) < 2:
+	print >>sys.stderr, "usage: make-list.py x.lst"
+	sys.exit(1)
 
 for f in sys.argv[1:]:
 	assert f.endswith('.lst'), 'Not a list file: %s' % f
