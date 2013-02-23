@@ -1,6 +1,13 @@
+http://0install.de/feeds/NetBeans_All.xml
+http://0install.de/feeds/FileZilla.xml
+http://0install.de/feeds/KeePass_Pro.xml
+http://0install.de/feeds/Mediathek.xml
+http://0install.de/feeds/Apache_Maven.xml
+http://0install.de/feeds/Scala.xml
+http://0install.de/feeds/IronPython.xml
+http://0install.de/feeds/Boo.xml
 http://repo.roscidus.com/games/openttd
 http://rox.sourceforge.net/2005/interfaces/ROX-Filer
 http://rox.sourceforge.net/2005/interfaces/Archive
 http://0install.net/2007/3rd-party/Blender.xml
-http://services.sugarlabs.org/gcompris
 http://www.solfege.org/zeroinstall/solfege.xml

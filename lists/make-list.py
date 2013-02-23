@@ -39,7 +39,7 @@ def get_icon(elem, iface):
 		if cached_icon:
 			shutil.copyfile(cached_icon, full_icon_path)
 			have_icon = True
-			os.system("svn add '%s'" % full_icon_path)
+			os.system("git add '%s'" % full_icon_path)
 			
 	if not have_icon:
 		icon_path = 'tango/applications-system.png'
@@ -62,8 +62,9 @@ def add_details(elem, iface):
 	elem.setAttribute('uri', iface.uri)
 
 	main_feed = config.iface_cache.get_feed(iface.uri)
+	assert main_feed.name, iface.uri
 	elem.setAttribute('name', main_feed.name)
-	elem.setAttribute('summary', main_feed.summary)
+	elem.setAttribute('summary', main_feed.summary.encode('utf-8'))
 
 	get_icon(elem, iface)
 
@@ -74,12 +75,12 @@ def add_details(elem, iface):
 	if homepage:
 		elem.setAttribute('homepage', homepage)
 
-	description = main_feed.description
+	description = unicode(main_feed.description or '(no description)')
 	if len(description) > MAX_TEASER_LENGTH:
 		description = description[:MAX_TEASER_LENGTH - 3]
 		description = description[:description.rindex(' ')]
 		description += ' ...'
-	description_elem = elem.ownerDocument.createTextNode(description)
+	description_elem = elem.ownerDocument.createTextNode(description.encode('utf-8'))
 	elem.appendChild(description_elem)
 
 def get_details(uris):
@@ -89,6 +90,7 @@ def get_details(uris):
 	for uri in uris:
 		feed = doc.createElement('feed')
 		iface = config.iface_cache.get_interface(uri)
+		#subprocess.check_call(["0install", "select", "--", uri])
 		add_details(feed, iface)
 		root.appendChild(feed)
 	return doc
@@ -103,6 +105,6 @@ for f in sys.argv[1:]:
 	interfaces = [line.strip() for line in open(f)]
 	doc = get_details(interfaces)
 	results = stem + '.xml'
-	with open(results, 'w') as s:
-		doc.writexml(s, newl='\n', addindent='  ')
+	with open(results, 'wb') as s:
+		doc.writexml(s, newl='\n', addindent='  ', encoding='utf-8')
 	print "Wrote", results
