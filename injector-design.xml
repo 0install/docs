@@ -163,7 +163,7 @@ according to rules specified by the user:
 
 <p>
 Zero Install uses a SAT solver with conflict-driven learning to find the optimal solution
-quickly. See <a href='http://roscidus.com/desktop/node/954'>The Zero Install SAT Solver</a>
+quickly. See <a href='solver.html'>The 0install SAT Solver</a>
 for details.
 </p>
 

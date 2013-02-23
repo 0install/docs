@@ -60,6 +60,7 @@ HTML = index.php \
        roadmap.html \
        servers.html \
        sharing.html \
+       solver.html \
        support.html \
        survey.html \
        templates.html \

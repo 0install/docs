@@ -64,6 +64,7 @@
       <item base='get-involved' label='Get involved'/>
       <item base='using-git' label='Using Git'/>
       <item base='injector-design' label='Design'/>
+      <item base='solver' label='The Solver'/>
 
       <item base='python-api/html/index' label='Python API'/>
       <item base='api-example' label='API example'/>
