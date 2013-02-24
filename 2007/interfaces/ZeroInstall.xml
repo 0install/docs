@@ -270,9 +270,13 @@ interfere with those provided by the distribution.
     </implementation>
       <group>
         <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-        <implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" version="1.15">
+        <implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" stability="stable" version="1.15">
       <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
       <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
+    </implementation>
+        <implementation id="sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da" released="2013-02-24" version="1.16">
+      <manifest-digest sha256new="JFDXPV7MTB3DFKOCISH7U4BTTRQRBFIER4JMJ3X52ZSOXHOBN6YA"/>
+      <archive extract="0install-1.16" href="http://downloads.sourceforge.net/project/zero-install/0install/1.16/0install-1.16.tar.bz2" size="414434"/>
     </implementation>
       </group>
     </group>
@@ -280,7 +284,7 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEaYmoACgkQrgeCgFmlPMGGEACgvr2INVN0ffKovgfKmH/cFy3ZvlEAoJYgoXmU
-j+YZim+P+H+/Wwu54XlJ
+iEYEABECAAYFAlEqJDwACgkQrgeCgFmlPMGqlwCeLvlF43pegT3MUCOtmlIkLexUZe8AoMu5gzi8
+bN88X7BWS2PC2EH1i+7s
 
 -->
