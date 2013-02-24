@@ -287,6 +287,14 @@
 	    <xsl:if test='@homepage'>
 	      <a href='{@homepage}'>Home page</a>
 	    </xsl:if>
+	    <p>Platforms:
+	      <xsl:for-each select='archs/arch'>
+		<b><xsl:value-of select='@name'/></b>
+		<xsl:if test="position() != last()">
+		  <xsl:text>, </xsl:text>
+		</xsl:if>
+	      </xsl:for-each>
+	    </p>
 	  </td>
 	</tr>
       </xsl:for-each>

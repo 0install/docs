@@ -1,34 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
-  <feed height="64" homepage="http://www.netbeans.org/" icon="feed_icons/NetBeans_All.png" name="NetBeans All" summary="A multi-language software development environment" uri="http://0install.de/feeds/NetBeans_All.xml" width="64">NetBeans is a multi-language integrated development environment.</feed>
-  <feed height="64" homepage="http://filezilla-project.org/" icon="feed_icons/FileZilla.png" name="FileZilla" summary="cross-platform FTP, FTPS and SFTP client" uri="http://0install.de/feeds/FileZilla.xml" width="64">FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.</feed>
-  <feed height="64" homepage="http://keepass.info/" icon="feed_icons/KeePass_Pro.png" name="KeePass Professional" summary="free open source password manager" uri="http://0install.de/feeds/KeePass_Pro.xml" width="64">KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master ...</feed>
-  <feed height="45" homepage="http://zdfmediathk.sourceforge.net/" icon="feed_icons/Mediathek.png" name="MediathekView" summary="Mediatheksammlung der öffentlich-rechtlichen Sender." uri="http://0install.de/feeds/Mediathek.xml" width="45">Das Programm durchsucht die Mediathek verschiedener Sender (ARD, ZDF, Arte, 3Sat, MDR, NDR, ORF, SF), lädt Beiträge mit einem Programm eigener Wahl und kann Themen als Abos anlegen und neue Beiträge automatisch downloaden. Es gibt auch eine ...</feed>
-  <feed height="48" homepage="http://maven.apache.org/" icon="tango/applications-system.png" name="Apache Maven" summary="A software project management and comprehension tool" uri="http://0install.de/feeds/Apache_Maven.xml" width="48">(no description)</feed>
-  <feed height="64" homepage="http://www.scala-lang.org/" icon="feed_icons/Scala.png" name="Scala" summary="functional and object-oriented programming language" uri="http://0install.de/feeds/Scala.xml" width="64">Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</feed>
-  <feed height="32" homepage="http://ironpython.net/" icon="feed_icons/IronPython.png" name="IronPython" summary="implementation of Python running under .NET/Mono" uri="http://0install.de/feeds/IronPython.xml" width="32">IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes ...</feed>
-  <feed height="64" homepage="http://boo.codehaus.org/" icon="feed_icons/Boo.png" name="Boo" summary="object-oriented, statically typed, general-purpose programming language" uri="http://0install.de/feeds/Boo.xml" width="64">Boo is an object-oriented, statically typed, general-purpose programming language based on the Common Language Infrastructure and using a Python-inspired syntax.</feed>
-  <feed height="48" homepage="http://www.openttd.org" icon="feed_icons/openttd.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">OpenTTD is an open source clone of the Microprose game &quot;Transport Tycoon
+  <feed height="64" homepage="http://www.netbeans.org/" icon="feed_icons/NetBeans_All.png" name="NetBeans All" summary="A multi-language software development environment" uri="http://0install.de/feeds/NetBeans_All.xml" width="64">
+    NetBeans is a multi-language integrated development environment.
+    <archs>
+      <arch name="Darwin"/>
+      <arch name="Linux"/>
+      <arch name="Solaris"/>
+      <arch name="Windows"/>
+    </archs>
+  </feed>
+  <feed height="64" homepage="http://filezilla-project.org/" icon="feed_icons/FileZilla.png" name="FileZilla" summary="cross-platform FTP, FTPS and SFTP client" uri="http://0install.de/feeds/FileZilla.xml" width="64">
+    FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+    <archs>
+      <arch name="Linux-i586"/>
+      <arch name="Linux-x86_64"/>
+      <arch name="MacOSX-i686"/>
+      <arch name="MacOSX-ppc"/>
+      <arch name="Source code"/>
+      <arch name="Windows"/>
+    </archs>
+  </feed>
+  <feed height="64" homepage="http://keepass.info/" icon="feed_icons/KeePass_Pro.png" name="KeePass Professional" summary="free open source password manager" uri="http://0install.de/feeds/KeePass_Pro.xml" width="64">
+    KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master ...
+    <archs>
+      <arch name="Any"/>
+      <arch name="Source code"/>
+    </archs>
+  </feed>
+  <feed height="45" homepage="http://zdfmediathk.sourceforge.net/" icon="feed_icons/Mediathek.png" name="MediathekView" summary="Mediatheksammlung der öffentlich-rechtlichen Sender." uri="http://0install.de/feeds/Mediathek.xml" width="45">
+    Das Programm durchsucht die Mediathek verschiedener Sender (ARD, ZDF, Arte, 3Sat, MDR, NDR, ORF, SF), lädt Beiträge mit einem Programm eigener Wahl und kann Themen als Abos anlegen und neue Beiträge automatisch downloaden. Es gibt auch eine ...
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="48" homepage="http://maven.apache.org/" icon="tango/applications-system.png" name="Apache Maven" summary="A software project management and comprehension tool" uri="http://0install.de/feeds/Apache_Maven.xml" width="48">
+    (no description)
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="64" homepage="http://www.scala-lang.org/" icon="feed_icons/Scala.png" name="Scala" summary="functional and object-oriented programming language" uri="http://0install.de/feeds/Scala.xml" width="64">
+    Scala is a functional and object-oriented programming language based on the Java Virtual Machine.
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="32" homepage="http://ironpython.net/" icon="feed_icons/IronPython.png" name="IronPython" summary="implementation of Python running under .NET/Mono" uri="http://0install.de/feeds/IronPython.xml" width="32">
+    IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes ...
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="64" homepage="http://boo.codehaus.org/" icon="feed_icons/Boo.png" name="Boo" summary="object-oriented, statically typed, general-purpose programming language" uri="http://0install.de/feeds/Boo.xml" width="64">
+    Boo is an object-oriented, statically typed, general-purpose programming language based on the Common Language Infrastructure and using a Python-inspired syntax.
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="48" homepage="http://www.openttd.org" icon="feed_icons/openttd.png" name="OpenTTD" summary="Open Source clone of Transport Tycoon Deluxe" uri="http://repo.roscidus.com/games/openttd" width="48">
+    OpenTTD is an open source clone of the Microprose game &quot;Transport Tycoon
 Deluxe&quot;, a popular game originally written by Chris Sawyer. It attempts to mimic
-the original game as closely as possible while extending it with new features.</feed>
-  <feed height="47" homepage="http://rox.sourceforge.net/desktop/ROX-Filer" icon="feed_icons/ROX-Filer.png" name="ROX-Filer" summary="fast and powerful file manager" uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" width="47">ROX-Filer is a fast and powerful graphical file manager. It has full drag-and-
+the original game as closely as possible while extending it with new features.
+    <archs>
+      <arch name="Linux-i686"/>
+      <arch name="Linux-x86_64"/>
+      <arch name="MacOSX"/>
+    </archs>
+  </feed>
+  <feed height="47" homepage="http://rox.sourceforge.net/desktop/ROX-Filer" icon="feed_icons/ROX-Filer.png" name="ROX-Filer" summary="fast and powerful file manager" uri="http://rox.sourceforge.net/2005/interfaces/ROX-Filer" width="47">
+    ROX-Filer is a fast and powerful graphical file manager. It has full drag-and-
 drop support and background file operations, and is highly configurable. It can
 also act as a pinboard, allowing you to pin frequently used files to the desktop
-background.</feed>
-  <feed height="47" homepage="http://rox.sourceforge.net/desktop/Archive.html" icon="feed_icons/Archive.png" name="Archive" summary="create or read archive files" uri="http://rox.sourceforge.net/2005/interfaces/Archive" width="47">You can use Archive to compress a directory or file into a single, smaller file
+background.
+    <archs>
+      <arch name="FreeBSD-i386"/>
+      <arch name="Linux-i486"/>
+      <arch name="Linux-ppc"/>
+      <arch name="Linux-x86_64"/>
+      <arch name="Source code"/>
+    </archs>
+  </feed>
+  <feed height="47" homepage="http://rox.sourceforge.net/desktop/Archive.html" icon="feed_icons/Archive.png" name="Archive" summary="create or read archive files" uri="http://rox.sourceforge.net/2005/interfaces/Archive" width="47">
+    You can use Archive to compress a directory or file into a single, smaller file
 (which can be stored, emailed, etc).
 
 You can also use it to extract a compressed archive back into a file or
-directory structure.</feed>
-  <feed height="48" homepage="http://www.blender.org" icon="feed_icons/Blender.png" name="Blender" summary="a versatile 3D animation creation suite" uri="http://0install.net/2007/3rd-party/Blender.xml" width="48">Blender is a fully integrated 3D animation suite for use in animation, still
+directory structure.
+    <archs>
+      <arch name="Any"/>
+    </archs>
+  </feed>
+  <feed height="48" homepage="http://www.blender.org" icon="feed_icons/Blender.png" name="Blender" summary="a versatile 3D animation creation suite" uri="http://0install.net/2007/3rd-party/Blender.xml" width="48">
+    Blender is a fully integrated 3D animation suite for use in animation, still
 graphics, scientific and engineering visualization, and game content creation.
 
 It includes tools for modeling, texturing (node based materials or uv mapped),
-uv mapping, ...</feed>
-  <feed height="50" homepage="http://gcompris.net/" icon="feed_icons/gcompris.png" name="GCompris" summary="Full featured educational application for children from 2 to 10" uri="http://services.sugarlabs.org/gcompris" width="50">Full featured educational application for children from 2 to 10</feed>
-  <feed height="48" homepage="http://www.solfege.org" icon="feed_icons/solfege.png" name="solfege" summary="free ear training software" uri="http://www.solfege.org/zeroinstall/solfege.xml" width="48">Solfege is a free ear training program written in python using gtk+ and
+uv mapping, ...
+    <archs>
+      <arch name="FreeBSD-i386"/>
+      <arch name="FreeBSD-x86_64"/>
+      <arch name="Linux-i386"/>
+      <arch name="Linux-i686"/>
+      <arch name="Linux-x86_64"/>
+      <arch name="MacOSX-i386"/>
+      <arch name="MacOSX-ppc"/>
+      <arch name="MacOSX-x86_64"/>
+      <arch name="Windows-i386"/>
+      <arch name="Windows-x86_64"/>
+    </archs>
+  </feed>
+  <feed height="48" homepage="http://www.solfege.org" icon="feed_icons/solfege.png" name="solfege" summary="free ear training software" uri="http://www.solfege.org/zeroinstall/solfege.xml" width="48">
+    Solfege is a free ear training program written in python using gtk+ and
 
 PyGTK.  Solfege is expected to work on any OS where python, gtk+ and
 
-pygtk are ported, but some adjustments might be necessary.</feed>
+pygtk are ported, but some adjustments might be necessary.
+    <archs>
+      <arch name="Linux-i386"/>
+      <arch name="Linux-x86_64"/>
+    </archs>
+  </feed>
 </list>

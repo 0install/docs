@@ -83,6 +83,32 @@ def add_details(elem, iface):
 	description_elem = elem.ownerDocument.createTextNode(description.encode('utf-8'))
 	elem.appendChild(description_elem)
 
+	# (note: we could miss some if feeds for other platforms aren't cached)
+	archs = set()
+	for impl in config.iface_cache.get_implementations(iface):
+		archs.add(impl.arch or '*-*')
+
+	pretty_archs = []
+	for arch in archs:
+		if arch == '*-*':
+			arch = 'Any'
+		elif arch == '*-src':
+			arch = 'Source code'
+		elif arch.endswith('-*'):
+			arch = arch[:-2]
+		elif not arch.endswith('-src'):
+			os, cpu = arch.split('-')
+			if (os + '-*') in archs or '*-*' in archs:
+				continue
+		pretty_archs.append(arch)
+
+	archs_elem = elem.ownerDocument.createElement('archs')
+	elem.appendChild(archs_elem)
+	for arch in sorted(pretty_archs):
+		arch_elem = elem.ownerDocument.createElement('arch')
+		archs_elem.appendChild(arch_elem)
+		arch_elem.setAttribute('name', arch)
+
 def get_details(uris):
 	doc = minidom.parseString("<list/>")
 	root = doc.documentElement
