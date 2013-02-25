@@ -99,7 +99,7 @@ create a matrix of test results.</description>
 	<version before="3"/>
       </runner>
     </command>
-      <implementation id="sha1new=2835ad831082adeb7ae0b2ce29f8bfbff9e8deb8" main="0test" released="2012-09-08" version="0.8">
+      <implementation id="sha1new=2835ad831082adeb7ae0b2ce29f8bfbff9e8deb8" main="0test" released="2012-09-08" stability="stable" version="0.8">
       <manifest-digest sha256="9e1042f41e1bce2f6afded906501647d92c1672500e4c3ab644e7b158e4fd9de"/>
       <archive extract="0test-0.8" href="http://downloads.sourceforge.net/project/zero-install/0test/0.8/0test-0.8.tar.bz2" size="12790"/>
     </implementation>
@@ -107,7 +107,7 @@ create a matrix of test results.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlBLE5AACgkQrgeCgFmlPMG6oQCfcZsqIBHpbdunMwpTml8OkoMPGIIAn2SSOvOY
-gUHbKycoBXdwDsKHL7eE
+iEYEABECAAYFAlErY9AACgkQrgeCgFmlPMGAnACgg8El3I1sBURx/exyrbUB7am913cAn07N+nuU
+DU79Xloqz1QXgt0ANC/e
 
 -->
