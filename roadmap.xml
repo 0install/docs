@@ -19,7 +19,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
 
 <p>
   Zero Install was created in 2003 as a distributed network filesystem. In 2005, it was redesigned to the current "injector" system. Feed files from version 0.2
-  can still be run using the current (0.51) version.
+  can still be run using the current version.
 </p>
 
 <h4>2006 (versions 0.18 to 0.24)</h4>
@@ -55,7 +55,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
 <ul>
   <li><a href='http://roscidus.com/0mirror/'>Mirrors for feeds</a>.</li>
   <li>Manage applications added to the menu (GNOME and KDE).</li>
-  <li>Multi-arch support</li>
+  <li>Multi-arch support.</li>
 </ul>
 
 <h4>2009 (versions 0.38 to 0.43)</h4>
@@ -78,7 +78,7 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>Specify distribution name in &lt;package-implementation&gt;.</li>
   <li>Support for multiple hash algorithms for a single implementation.</li>
   <li>Added 'local-path' attribute.</li>
-  <li><a href='http://roscidus.com/desktop/node/954'>SAT solver</a> handles complex version requirements.</li>
+  <li><a href='solver.html'>SAT solver</a> handles complex version requirements.</li>
   <li>Select implementations based on user's locale.</li>
   <li>Support for PackageKit (prompt the user to install distribution packages where necessary).</li>
   <li>Initial Windows support.</li>
@@ -96,15 +96,15 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3584/focus=3821'>A Mac OS X binary package</a>.</li>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3915'>Improved Python support</a>.</li>
   <li><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/4186'>0install 1.0 final!</a></li>
-  <li>&lt;environment separator=...&gt; attribute</li>
-  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a> (but didn't work reliably until 1.7)</li>
-  <li>&lt;executable-in-var> and &lt;executable-in-path> bindings</li>
-  <li>Use threads instead of sub-processes for downloads (more efficient)</li>
-  <li>Update to network-manager 0.9 API</li>
-  <li>MacPorts distribution support</li>
+  <li>&lt;environment separator=...&gt; attribute.</li>
+  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/4252'>Optional dependencies</a> (but didn't work reliably until 1.7).</li>
+  <li>&lt;executable-in-var> and &lt;executable-in-path> bindings.</li>
+  <li>Use threads instead of sub-processes for downloads (more efficient).</li>
+  <li>Update to network-manager 0.9 API.</li>
+  <li>MacPorts distribution support.</li>
 </ul>
 
-<h4>2012 (versions 1.6 onwards)</h4>
+<h4>2012 (versions 1.6 to 1.14)</h4>
 <ul>
   <li>Arch distribution support.</li>
   <li>Explicit "file:" prefix for interface URIs.</li>
@@ -129,6 +129,15 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>Disjoint version ranges (e.g. "2.6..!3 | 3.2.2..").</li>
 </ul>
 
+<h4>2013 (versions 1.15 onwards)</h4>
+
+<ul>
+  <li>Shell tab-completion.</li>
+  <li>"0install show" command.</li>
+  <li>&lt;requires distribution='...'&gt;.</li>
+  <li>&lt;for-each&gt; for argument expansion.</li>
+</ul>
+
 
 <h3>Current and future plans</h3>
 
@@ -138,6 +147,12 @@ work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
 <h4>Version 2.0 (Feb 2013)</h4>
+
+<p>
+  All 2.0 features are implemented. Testing and bug-fixes only now.
+</p>
+
+<h4>Next after 2.0 (2013)</h4>
 
 <ul>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
