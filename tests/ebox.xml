@@ -38,7 +38,7 @@ Zero Install.</description>
     <manifest-digest sha256="cee5446da38955ce5f6c483512797d2891bb07d06835e28bc8487a41facaa821"/>
     <archive extract="ebox-0.3" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.3/ebox-0.3.tar.bz2" size="14237"/>
   </implementation>
-  <implementation id="sha1new=56d616bceb324eea3b436f76ecb3fe8239a94969" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2013-02-26" version="0.4">
+  <implementation id="sha1new=56d616bceb324eea3b436f76ecb3fe8239a94969" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2013-02-26" stability="stable" version="0.4">
     <command name="run" path="ebox.py">
       <runner interface="http://repo.roscidus.com/python/python">
 	<version before="3"/>
@@ -57,7 +57,7 @@ Zero Install.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs894ACgkQrgeCgFmlPMHzJgCfdWu9lXdnwnXd26I6lrhT73Tf634An09Y3sH6
-yySEFUUgBfcKOtkVc14v
+iEYEABECAAYFAlEs9GYACgkQrgeCgFmlPMGtPgCcCGn91A4lw+G5UkBHo/lz8p1yUAIAoIgiQ2Kf
+GM+AYZVxMY6zD6tPWnnN
 
 -->
