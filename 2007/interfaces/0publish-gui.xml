@@ -67,16 +67,39 @@ these feeds.</description>
         <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
-        <implementation id="sha1new=f84b92ef9ef0dda120135741a8fc35aa774401e3" released="2012-01-16" version="0.12">
+        <implementation id="sha1new=f84b92ef9ef0dda120135741a8fc35aa774401e3" released="2012-01-16" stability="stable" version="0.12">
       <manifest-digest sha256="0f327347150bc9ab216990f51bf920dd122d66f18e0da163d9ea31a675472ef6"/>
       <archive extract="0publish-gui-0.12" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.12/0publish-gui-0.12.tar.bz2" size="32747"/>
     </implementation>
       </group>
     </group>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+    <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
+      <version not-before="2.0.5"/>
+      <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
+    </requires>
+    <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <command name="run" path="0publish-gui">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <implementation id="sha1new=f240ceae2e0f7d86cc418de5a1223784e397a1d1" license="OSI Approved :: GNU General Public License (GPL)" main="0publish-gui" released="2013-02-26" version="0.13">
+      <manifest-digest sha256new="5TRTODN2KPK2KEQKDEDVMVLMLNNKJCCTS5ICGBQ4EK3WAYHQ3UDQ"/>
+      <archive extract="0publish-gui-0.13" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.13/0publish-gui-0.13.tar.bz2" size="32633"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk8UX+YACgkQrgeCgFmlPMHh1gCfURrYiGMLeVnMGpyM3aYm6+ui/dsAnA1RWcGF
-8XwQldJtr3s7BFPYHpo4
+iEYEABECAAYFAlEs+jUACgkQrgeCgFmlPMF51ACeOH5euRqv/560yWL78COp8JOw7MkAn1oHSE+O
+vh8fIT2kMiJXu+c9yys9
 
 -->
