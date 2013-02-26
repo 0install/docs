@@ -77,10 +77,30 @@ still shared between users, and will get updates over the web where possible.</d
       <archive extract="0export-0.4" href="http://downloads.sourceforge.net/project/zero-install/0export/0.4/0export-0.4.tar.bz2" size="22210"/>
     </implementation>
   </group>
+  <group>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1.8"/>
+      <environment insert="" mode="replace" name="0EXPORT_ZEROINSTALL"/>
+    </requires>
+    <command name="test" path="test.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <command name="run" path="0export">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <implementation doc-dir="doc" id="sha1new=157d678a42899e28d057f32fce2e475e21ddfde3" license="OSI Approved :: GNU General Public License v3" main="0export" released="2013-02-26" version="0.5">
+      <manifest-digest sha256new="BTHEX5AYPF65FMTAQT7FAPE225U347TUCWYUA56QFEDFVZHPRSHQ"/>
+      <archive extract="0export-0.5" href="http://downloads.sourceforge.net/project/zero-install/0export/0.5/0export-0.5.tar.bz2" size="22281"/>
+    </implementation>
+  </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs6pwACgkQrgeCgFmlPMEoBgCgk6OoX4qnQzqqSudnkpxIzBRkJewAn3eHXq/q
-yplukMJBC87ztY3UizW6
+iEYEABECAAYFAlEs7hcACgkQrgeCgFmlPMFCGQCdG4h9O6sdbeJaFT598HRvpuiM700AoL2avALL
+PeOVk2s7UhjvlK6zylVq
 
 -->
