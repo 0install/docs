@@ -15,20 +15,20 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
   <group license="OSI Approved :: GNU General Public License (GPL)" main="feedlint">
     <implementation id="sha1new=5a8436dd1e7272cae7e3e916bf1564aaef6c0ae1" released="2007-06-02" stability="stable" version="0.1">
-      <archive extract="feedlint-0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.1.tar.bz2" size="8442"/>
+      <archive extract="feedlint-0.1" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.1/feedlint-0.1.tar.bz2" size="8442" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=e6731132594dd536ecee432b116e88f549eb1303" released="2007-06-03" stability="stable" version="0.2">
-      <archive extract="feedlint-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.2.tar.bz2" size="9686"/>
+      <archive extract="feedlint-0.2" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.2/feedlint-0.2.tar.bz2" size="9686" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=c991f84fcb4461d2a8980dc5854f12a10b1f8fbf" released="2007-07-28" stability="stable" version="0.3">
-      <archive extract="feedlint-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.3.tar.bz2" size="10101"/>
+      <archive extract="feedlint-0.3" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.3/feedlint-0.3.tar.bz2" size="10101" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=10557be412c997eb06e0b7ab315addfd36ef0883" released="2007-11-20" stability="stable" version="0.4">
-      <archive extract="feedlint-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/feedlint-0.4.tar.bz2" size="10283"/>
+      <archive extract="feedlint-0.4" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.4/feedlint-0.4.tar.bz2" size="10283" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=27b3e4b6a6532ef825830626095ef41270ae90bb" released="2011-01-11" stability="stable" version="0.5">
       <manifest-digest sha256="ad7c026dad97ca1878c1a56a3ad28b984f4be60e3def27bc8d4be8c461970e2e"/>
-      <archive extract="feedlint-0.5" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.5/feedlint-0.5.tar.bz2" size="10411"/>
+      <archive extract="feedlint-0.5" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.5/feedlint-0.5.tar.bz2" size="10411" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -41,11 +41,11 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
     </command>
       <implementation id="sha1new=baf3376cb2cedc384e8ecf8626f3abb3a9669ff2" released="2011-09-29" stability="stable" version="0.6">
       <manifest-digest sha256="1253c1c15f3f3966964cd3338cc543f8eb143859b9754d7816e12dad35098512"/>
-      <archive extract="feedlint-0.6" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.6/feedlint-0.6.tar.bz2" size="10590"/>
+      <archive extract="feedlint-0.6" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.6/feedlint-0.6.tar.bz2" size="10590" type="application/x-bzip-compressed-tar"/>
     </implementation>
       <implementation id="sha1new=5aada130cb79d93a6d89c8dae07c05d944d9f7eb" released="2012-03-21" stability="stable" version="0.7">
       <manifest-digest sha256="bf427a20727a3f85d27952067658b37e3bf891276f40aaa758b153bfcd4f7af2"/>
-      <archive extract="feedlint-0.7" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.7/feedlint-0.7.tar.bz2" size="10584"/>
+      <archive extract="feedlint-0.7" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.7/feedlint-0.7.tar.bz2" size="10584" type="application/x-bzip-compressed-tar"/>
     </implementation>
       <group>
         <command name="test" path="feedlint">
@@ -56,7 +56,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
     </command>
         <implementation id="sha1new=aaccd681c51063f5204dbcfdccfbe7399b80ce3a" released="2013-01-03" stability="stable" version="0.8">
       <manifest-digest sha256new="6UJU2DP4PTM55WLXHSUUOMADWA7UV7CXW22OFFEAKZZEHF5LDOTQ"/>
-      <archive extract="feedlint-0.8" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.8/feedlint-0.8.tar.bz2" size="10953"/>
+      <archive extract="feedlint-0.8" href="http://downloads.sourceforge.net/project/zero-install/FeedLint/0.8/feedlint-0.8.tar.bz2" size="10953" type="application/x-bzip-compressed-tar"/>
     </implementation>
       </group>
     </group>
@@ -64,7 +64,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEo9l4ACgkQrgeCgFmlPMH6sACdF1jBHWyrehfSughmUtRFd2ZOjsoAn2FbRca3
-hT/z/UUsFe+Wq1WJJKf5
+iEYEABECAAYFAlEs9mQACgkQrgeCgFmlPMGJ1wCgqxY4GiBxZGjv95lctnufp7Bj4hAAnjPLMsqW
+kpE7UjzGGFH670VSfdsl
 
 -->
