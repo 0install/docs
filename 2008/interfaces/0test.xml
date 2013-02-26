@@ -104,10 +104,35 @@ create a matrix of test results.</description>
       <archive extract="0test-0.8" href="http://downloads.sourceforge.net/project/zero-install/0test/0.8/0test-0.8.tar.bz2" size="12790"/>
     </implementation>
     </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1.13"/>
+      <environment insert="" mode="replace" name="0TEST_ZEROINSTALL"/>
+    </requires>
+      <command name="test" path="test0test.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+	<!-- (we just need to make sure it's not a snapshot version) -->
+	<version before="0.23-post" not-before="0.23"/>
+	<executable-in-path name="0publish"/>
+      </requires>
+    </command>
+      <command name="run" path="0test">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <implementation id="sha1new=360035ae53da4ad5bc0410e143cc3a30ff424092" main="0test" released="2013-02-26" version="0.9">
+      <manifest-digest sha256new="A4XKENP7I6WFAWEYFAFWMAZATCSJLS62XB6J2ZZV5KWS2OET2ZNQ"/>
+      <archive extract="0test-0.9" href="http://downloads.sourceforge.net/project/zero-install/0test/0.9/0test-0.9.tar.bz2" size="12900"/>
+    </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlErY9AACgkQrgeCgFmlPMGAnACgg8El3I1sBURx/exyrbUB7am913cAn07N+nuU
-DU79Xloqz1QXgt0ANC/e
+iEYEABECAAYFAlEs5jwACgkQrgeCgFmlPMF4OgCfdN/5jgNiSzbvha/yX4Q5BUy5j74Anj0TMCl7
+eidQCYPYshZiOKbjKzy/
 
 -->
