@@ -27,7 +27,7 @@ Zero Install.</description>
     <manifest-digest sha256="91708961614b48801e204a6039a0ee6133cad6ba06dbd98e351a146db312166c"/>
     <archive extract="ebox-0.2" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.2/ebox-0.2.tar.bz2" size="14235"/>
   </implementation>
-  <implementation id="sha1new=feea8092cb45dbcbcf66a753e7b2267a5eecf7f8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2010-08-08" version="0.3">
+  <implementation id="sha1new=feea8092cb45dbcbcf66a753e7b2267a5eecf7f8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2010-08-08" stability="stable" version="0.3">
     <requires interface="http://repo.roscidus.com/e/e-swt">
       <environment insert="rune" name="EBOX_RUNE"/>
     </requires>
@@ -38,10 +38,26 @@ Zero Install.</description>
     <manifest-digest sha256="cee5446da38955ce5f6c483512797d2891bb07d06835e28bc8487a41facaa821"/>
     <archive extract="ebox-0.3" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.3/ebox-0.3.tar.bz2" size="14237"/>
   </implementation>
+  <implementation id="sha1new=56d616bceb324eea3b436f76ecb3fe8239a94969" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="ebox.py" released="2013-02-26" version="0.4">
+    <command name="run" path="ebox.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <requires interface="http://repo.roscidus.com/e/e-swt">
+      <environment insert="rune" name="EBOX_RUNE"/>
+    </requires>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="1"/>
+      <environment insert="" mode="replace" name="EBOX_ZEROINSTALL"/>
+    </requires>
+    <manifest-digest sha256new="X6KGBDEWL3SADN7TLCGSVLEBM6UXMUW6TNT2WIDVPHPZAF6JLGCA"/>
+    <archive extract="ebox-0.4" href="http://downloads.sourceforge.net/project/zero-install/ebox/0.4/ebox-0.4.tar.bz2" size="14381"/>
+  </implementation>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkz77t8ACgkQrgeCgFmlPMFKEwCfRsrma6joL0kqV5VxV5/tpcvRP20Ani/WzCXL
-8uD8iuY8HIEhIJSEXpyr
+iEYEABECAAYFAlEs894ACgkQrgeCgFmlPMHzJgCfdWu9lXdnwnXd26I6lrhT73Tf634An09Y3sH6
+yySEFUUgBfcKOtkVc14v
 
 -->
