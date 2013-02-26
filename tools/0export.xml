@@ -72,7 +72,7 @@ still shared between users, and will get updates over the web where possible.</d
 	<version before="3"/>
       </runner>
     </command>
-    <implementation doc-dir="doc" id="sha1new=658b1883653871d635e792e3e2154b7647f5822c" license="OSI Approved :: GNU General Public License v3" main="0export" released="2012-06-05" version="0.4">
+    <implementation doc-dir="doc" id="sha1new=658b1883653871d635e792e3e2154b7647f5822c" license="OSI Approved :: GNU General Public License v3" main="0export" released="2012-06-05" stability="stable" version="0.4">
       <manifest-digest sha256="e9c2d4e17bafa24f34a5c0ca1476634a66c74071db56515c7ab7f33d1bdc80f2"/>
       <archive extract="0export-0.4" href="http://downloads.sourceforge.net/project/zero-install/0export/0.4/0export-0.4.tar.bz2" size="22210"/>
     </implementation>
@@ -80,7 +80,7 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEaXUQACgkQrgeCgFmlPMEOWQCcCBP3Ya5Th7HfPD8bGpny6rFDiDAAnA9wqH5Z
-onh47zWm627wRHXsWeuZ
+iEYEABECAAYFAlEs6pwACgkQrgeCgFmlPMEoBgCgk6OoX4qnQzqqSudnkpxIzBRkJewAn3eHXq/q
+yplukMJBC87ztY3UizW6
 
 -->
