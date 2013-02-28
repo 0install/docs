@@ -18,6 +18,7 @@
   </item>
 
   <item base='news' label="News">
+    <!--<item base="0install-2.0" label="0install 2.0"/>-->
     <item base="roadmap" label="Roadmap"/>
   </item>
   

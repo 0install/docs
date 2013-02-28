@@ -5,6 +5,7 @@ HTML = index.php \
        0compile.html \
        0compile-scons.html \
        0export.html \
+       0install-2.0.html \
        0mirror.html \
        0publish.html \
        0release-binaries.html \

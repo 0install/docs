@@ -108,7 +108,7 @@ these limits (e.g. arch='*-src' means that there is no point fetching this feed
 unless you are looking for source code). See the &lt;implementation&gt; element
 for a description of the values of these attributes.</dd>
 <dt>&lt;feed-for&gt;</dt> <dd>the implementations in this feed are implementations of the given interface. This is used when adding an optional extra feed to an interface with "0install add-feed" (e.g. a <a href='local-feeds.html'>local feed</a> for a development version).</dd>
-<dt>&lt;replaced-by&gt;</dt> <dd>this feed's interface (the one in the root element's <b>uri</b> attribute) has been replaced by the given interface. Any references to the old URI should be updated to use the new one.</dd>
+<dt id='replaced-by'>&lt;replaced-by&gt;</dt> <dd>this feed's interface (the one in the root element's <b>uri</b> attribute) has been replaced by the given interface. Any references to the old URI should be updated to use the new one.</dd>
 
 </dl>
 
@@ -366,6 +366,9 @@ implementation of this interface. The syntax is:
     package='...'
     distributions='...' ?
     main='...' ? &gt;
+    [command] *
+    [requires] *
+  &lt;/package-implementation>
 </pre>
 
 <p>
@@ -459,6 +462,8 @@ some self-extracting archives which are made up of a shell script followed by a
 normal archive in a single file. If missing, it defaults to 0. The value in the
 <b>size</b> attribute does not include the skipped bytes.
 </p>
+
+<h3 id='recipe'>Recipes</h3>
 
 <p>
 An implementation can also be created by following a &lt;recipe&gt;:
@@ -625,7 +630,7 @@ itself.
   <img src='UML/zero-install-binding.png' width='425' height='225' alt='Binding classes'/>
 </p>
 
-<h3>Environment bindings</h3>
+<h3 id='environment'>Environment bindings</h3>
 
 <pre>
     &lt;environment
@@ -684,7 +689,7 @@ needed with them:
 <dt>XDG_DATA_DIRS</dt><dd>/usr/local/share:/usr/share</dd>
 </dl>
 
-<h3>Executable bindings</h3>
+<h3 id='executable'>Executable bindings</h3>
 
 <p>
   These both require 0install >= 1.2.
