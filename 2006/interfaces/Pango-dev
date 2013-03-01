@@ -35,8 +35,7 @@ text, with an emphasis on internationalization.</description>
 
   <group compile:lib-mappings="pangoxft-1.0:0 pangox-1.0:0 pango-1.0:0 pangoft2-1.0:0 pangocairo-1.0:0">
     <implementation id="sha1=3c2369a812c55063e3e62053c24bd65e3e35ad7f" released="2006-05-01" stability="stable" version="1.4.1">
-
-      <archive extract="pango-headers-1.4.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/pango-headers-1.4.1.tar.bz2" size="19037"/>
+      <archive extract="pango-headers-1.4.1" href="http://downloads.sourceforge.net/project/zero-install/Pango/1.4.1/pango-headers-1.4.1.tar.bz2" size="19037" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=bb06cc5a9c9d15fe29581d2d8a5545657f324e73" stability="stable" version="1.4.1.1">
       <archive extract="pango-headers-1.4.1.1" href="http://downloads.sourceforge.net/zero-install/pango-headers-1.4.1.1.tar.bz2" size="19062"/>
@@ -61,7 +60,7 @@ text, with an emphasis on internationalization.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk/A8TgACgkQrgeCgFmlPMEgowCfXGQ+JBYurv6YLVOPwNn+zzi/3BMAn3nbcgPm
-vmY/f6E3pyXOe07awT2e
+iEYEABECAAYFAlEwlPIACgkQrgeCgFmlPMHMBQCePhUZI6+iuUEL7+1o/q+NA10QMjYAn1n9Wydu
+IaeD/wZpn8dnEghy2CLO
 
 -->

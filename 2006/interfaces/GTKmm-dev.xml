@@ -10,11 +10,11 @@ applications that use the GTK, ATK or Pango libraries..</description>
   <group compile:lib-mappings="gtkmm-2.4:1 gdkmm-2.4:1 atkmm-1.6:1 pangomm-1.4:1">
     <implementation id="sha1=02b1ddcdcc54cff44bc48951249609df5d0afe9f" released="2006-06-24" stability="stable" version="2.4.11">
     
-      <archive extract="gtkmm-headers-2.4.11" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtkmm-headers-2.4.11.tar.bz2" size="292375"/>
+      <archive extract="gtkmm-headers-2.4.11" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.11/gtkmm-headers-2.4.11.tar.bz2" size="292375" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="46d5a63b0d2be0b94de2ed27b0a88e7dba3978e8"/>
     </implementation>
     <implementation id="sha1new=6f476e3e2ad00148ee32a3c4e36ecf6d71933e58" released="2008-05-10" version="2.12.7">
-      <archive extract="gtkmm-dev-linux-x86_64-2.12.7" href="http://dfn.dl.sourceforge.net/sourceforge/zero-install/gtkmm-dev-linux-x86_64-2.12.7.tar.bz2" size="396941"/>
+      <archive extract="gtkmm-dev-linux-x86_64-2.12.7" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/gtkmm-dev-linux-x86_64-2.12.7.tar.bz2" size="396941" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
   <group arch="*-src" compile:binary-lib-mappings="gtkmm-2.4:1 gdkmm-2.4:1 atkmm-1.6:1 pangomm-1.4:1" compile:command="&quot;$BUILD_COMMAND&quot;">
@@ -31,7 +31,7 @@ applications that use the GTK, ATK or Pango libraries..</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkl8dREACgkQrgeCgFmlPMF8OACfYpDArRdbcbSbshqHZ/cm+h/WpTAAoJyC8h8s
-FHd1zuEMuIWE1P7UJ/Vz
+iEYEABECAAYFAlEwlgMACgkQrgeCgFmlPMFKiQCdHrq+uhzZ8YplAHPVLZEb+WPCKrkAoMlRHr1Y
+eS/7YyHZ9G3JWOqDiO8A
 
 -->

@@ -39,11 +39,11 @@ the GTK dependencies to the source interface file.</description>
     </requires>
 
     <implementation id="sha1=f6b0e789dbb241500a223b3ad52667670203fde1" released="2006-06-03" stability="stable" version="0.1">
-      <archive extract="gtk2.4-0.1" href="http://puzzle.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.1.tgz" size="1261"/>
+      <archive extract="gtk2.4-0.1" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk2.4-0.1.tgz" size="1261" type="application/x-compressed-tar"/>
     </implementation>
 
     <implementation id="sha1=4b4a4b26d15533020ce81979607d563202677118" released="2006-06-04" stability="stable" version="0.2">
-      <archive extract="gtk2.4-0.2" href="http://umn.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.2.tgz" size="1923"/>
+      <archive extract="gtk2.4-0.2" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk2.4-0.2.tgz" size="1923" type="application/x-compressed-tar"/>
     </implementation>
 
     <group>
@@ -57,10 +57,10 @@ the GTK dependencies to the source interface file.</description>
         <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
       </requires>
       <implementation id="sha1=994d703b1faede1bfa2e97f063b80c15016c114c" released="2006-06-24" stability="stable" version="0.3">
-        <archive extract="gtk2.4-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk2.4-0.3.tar.bz2" size="2153"/>
+        <archive extract="gtk2.4-0.3" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk2.4-0.3.tar.bz2" size="2153" type="application/x-bzip-compressed-tar"/>
       </implementation>
       <implementation id="sha1=710455966211e583a4400f923fc75ede576fe31e" released="2006-11-26" stability="stable" version="0.4">
-        <archive extract="gtk-2.4-0.4" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-2.4-0.4.tar.bz2" size="2333"/>
+        <archive extract="gtk-2.4-0.4" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk-2.4-0.4.tar.bz2" size="2333" type="application/x-bzip-compressed-tar"/>
         <manifest-digest sha1new="710455966211e583a4400f923fc75ede576fe31e"/>
       </implementation>
     </group>
@@ -68,7 +68,7 @@ the GTK dependencies to the source interface file.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkl8dRQACgkQrgeCgFmlPMEKWgCcDS/wOMBxlo3AGOWiWqmXLs1SmDUAoMLgy/HZ
-k7SJIz9bMITnFVJr9BuZ
+iEYEABECAAYFAlEwlyMACgkQrgeCgFmlPMEfqgCfTGMP1x3/SU9L2+zNyBiOwmjCYoAAnj9S/8DU
+yLUpfWB6jUI7XcGmOyxu
 
 -->

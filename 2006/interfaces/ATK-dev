@@ -9,14 +9,14 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
 
   <group compile:lib-mappings="atk-1.0:0">
     <implementation id="sha1=6e6dd1f47a5393b7a6dc2af04d755cb6ee1bcb6a" released="2006-05-06" stability="stable" version="1.8.0">
-      <archive extract="atk-headers-1.8.0" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.tar.bz2" size="18208"/>
+      <archive extract="atk-headers-1.8.0" href="http://downloads.sourceforge.net/project/zero-install/ATK/1.8.0/atk-headers-1.8.0.tar.bz2" size="18208" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=4ccf2ed4da6ec5052de7ca4b548e36bd7fc16be4" released="2006-05-10" stability="stable" version="1.8.0.1">
-      <archive extract="atk-headers-1.8.0.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/atk-headers-1.8.0.1.tar.bz2" size="18256"/>
+      <archive extract="atk-headers-1.8.0.1" href="http://downloads.sourceforge.net/project/zero-install/ATK/1.8.0/atk-headers-1.8.0.1.tar.bz2" size="18256" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="b2d44ce6995389dbcc09cf5df6c613839f63124f"/>
     </implementation>
     <implementation id="sha1new=61d0238880a8770123436e5ef5dc29243a80822c" released="2008-05-10" version="1.22.0">
-      <archive extract="atk-dev-linux-x86_64-1.22.0" href="http://downloads.sourceforge.net/zero-install/atk-dev-linux-x86_64-1.22.0.tar.bz2" size="25376"/>
+      <archive extract="atk-dev-linux-x86_64-1.22.0" href="http://downloads.sourceforge.net/zero-install/atk-dev-linux-x86_64-1.22.0.tar.bz2" size="25376" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 
@@ -31,7 +31,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkl8dRAACgkQrgeCgFmlPMEEGgCgqh1McagQrGIwJvyAZchKFajClQwAoNT8+oJa
-jM2Qr02w19FpgkTXeScA
+iEYEABECAAYFAlEwmKsACgkQrgeCgFmlPMHBNwCfbFwZ3TaOnTwzviNo/KJDptvbo5AAniN1oRVl
+iNxTeqWwQWoe0fjoFFNU
 
 -->

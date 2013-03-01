@@ -11,10 +11,10 @@ that use the GTK+ library.</description>
   <group compile:lib-mappings="gtk-x11-2.0:0 gdk-x11-2.0:0 gdk_pixbuf-2.0:0">
     <implementation id="sha1=c56e3783e3b62b329216bde10a4f72e0f530d19b" released="2006-04-01" stability="stable" version="2.4.14">
 
-      <archive extract="gtk-headers-2.4.14" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.tar.bz2" size="157933"/>
+      <archive extract="gtk-headers-2.4.14" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk-headers-2.4.14.tar.bz2" size="157933" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1=1ea02e0ff9ee9eae327d64803846b38904ab9a23" stability="stable" version="2.4.14.1">
-      <archive extract="gtk-headers-2.4.14.1" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/gtk-headers-2.4.14.1.tar.bz2" size="157929"/>
+      <archive extract="gtk-headers-2.4.14.1" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.14/gtk-headers-2.4.14.1.tar.bz2" size="157929" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="fb70e59085d4eb9f5ec3978766c252e4c987b3d8"/>
     </implementation>
     <group>
@@ -58,7 +58,7 @@ that use the GTK+ library.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAknGAGEACgkQrgeCgFmlPME9UgCguG1E2RPbBhdujVm7KGZapLxbdzUAn3qviz00
-2GM+NPiBzRlpROAYAG9V
+iEYEABECAAYFAlEwlnwACgkQrgeCgFmlPMEc2QCfSZah+Ur+vN5WN/Xhzmup7kiSLwQAn180EOIE
+K+8LuUIveMDAoZWhikjt
 
 -->
