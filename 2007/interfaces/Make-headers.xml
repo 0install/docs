@@ -13,18 +13,18 @@ It also edits any pkg-config .pc files to use a relative path for the prefix.</d
   <category>Development</category>
   <group license="OSI Approved :: GNU General Public License (GPL)" main="make-headers.py">
     <implementation id="sha1new=e64b1263a6ea31faa0d52de0b995538d8e548154" released="2007-03-04" stability="stable" version="0.1">
-      <archive extract="make-headers-0.1" href="http://switch.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.1.tar.bz2" size="7574"/>
+      <archive extract="make-headers-0.1" href="http://downloads.sourceforge.net/project/zero-install/make-headers/0.1/make-headers-0.1.tar.bz2" size="7574" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=7473c004528b51af2ea97671b07067825734a495" released="2008-03-02" version="0.2">
-      <archive extract="make-headers-0.2" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.2.tar.bz2" size="7758"/>
+      <archive extract="make-headers-0.2" href="http://downloads.sourceforge.net/project/zero-install/make-headers/0.2/make-headers-0.2.tar.bz2" size="7758" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=949e623662a2cdb038d989f585b059ddf71d1cf1" released="2008-05-11" stability="stable" version="0.3">
-      <archive extract="make-headers-0.3" href="http://kent.dl.sourceforge.net/sourceforge/zero-install/make-headers-0.3.tar.bz2" size="8496"/>
+      <archive extract="make-headers-0.3" href="http://downloads.sourceforge.net/project/zero-install/make-headers/0.3/make-headers-0.3.tar.bz2" size="8496" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8jgACgkQrgeCgFmlPMFEPgCfSA/QNlyQ8rIiGct2m6RI8EB/Me0AoM7hWgFb
-P9u55Nk4G43yCunDQE1b
+iEYEABECAAYFAlEwmqYACgkQrgeCgFmlPMEmAQCfYJvBx5YR1fr7TXP7dqdwgWylNdQAn322lyHD
+Qw4E9eF+lq7jKaNgFxi5
 
 -->
