@@ -25,10 +25,10 @@ efficient and flexible.</description>
 
     <group>
       <implementation arch="Linux-x86_64" id="sha1new=482fd674b4fb7b1a2afeab610db8b31041368b35" released="2009-02-25" version="0.8.2">
-	<archive extract="python-clutter-linux-x86_64-0.8.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/python-clutter-linux-x86_64-0.8.2.tar.bz2" size="313958"/>
+	<archive extract="python-clutter-linux-x86_64-0.8.2" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/python-clutter-linux-x86_64-0.8.2.tar.bz2" size="313958" type="application/x-bzip-compressed-tar"/>
       </implementation>
       <implementation arch="Linux-i486" id="sha1new=bf61362322a076daed4419aefab6700f12d5b16a" released="2009-02-26" version="0.8.2">
-	<archive extract="python2.5-clutter-linux-i486-0.8.2" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/python2.5-clutter-linux-i486-0.8.2.tar.bz2" size="267041"/>
+	<archive extract="python2.5-clutter-linux-i486-0.8.2" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/python2.5-clutter-linux-i486-0.8.2.tar.bz2" size="267041" type="application/x-bzip-compressed-tar"/>
       </implementation>
     </group>
 
@@ -38,7 +38,7 @@ efficient and flexible.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkmm44EACgkQBSn9tx+xORDqbACePPho+XHhjyuYxdLg9W1LuY3GhDIAoIq7gIHt
-f+DYb0mIfGwLiT0idua1
+iEYEABECAAYFAlEwmhwACgkQBSn9tx+xORA5MgCfeS1wOIc9Vtq2BZqzk9/6JoElztkAniPVJSPm
+XegRIAIuOimYGRHTdXfA
 
 -->

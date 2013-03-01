@@ -16,7 +16,7 @@ This package allows embedding a Clutter stage inside a GTK window.</description>
   <homepage>http://www.clutter-project.org/</homepage>
   <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="doc" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
     <implementation id="sha1new=666fe8579646c68ad79c7ffe24aacd2a52baf011" released="2009-06-23" version="0.8.3" version-modifier="-1">
-      <archive extract="clutter-gtk-0.8.3" href="http://master.dl.sourceforge.net/sourceforge/zero-install/clutter-gtk-0.8.3-1.tar.bz2" size="286317" type="application/x-bzip-compressed-tar"/>
+      <archive extract="clutter-gtk-0.8.3" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/clutter-gtk-0.8.3-1.tar.bz2" size="286317" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
       <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
@@ -24,11 +24,11 @@ This package allows embedding a Clutter stage inside a GTK window.</description>
   </group>
   <implementation arch="Linux-x86_64" id="sha1new=04c967e0f773829fb2a294a7ee806c402f492664" released="2009-06-25" version="0.8.3-1">
       <manifest-digest sha256="bf2090d8e8a0c24bc78a4edba26408d2259e745e451ba893ab6fa3947ac5433e"/>
-      <archive extract="clutter-gtk-linux-x86_64-0.8.3-1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/clutter-gtk-linux-x86_64-0.8.3-1.tar.bz2" size="51420"/>
+      <archive extract="clutter-gtk-linux-x86_64-0.8.3-1" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/clutter-gtk-linux-x86_64-0.8.3-1.tar.bz2" size="51420" type="application/x-bzip-compressed-tar"/>
     </implementation>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpDx1QACgkQBSn9tx+xORBzrgCePefhfzVHvz1ZdwZB3Yk9KhS4J7gAnRGX9szb
-M0zrsevfh7wboCaOdo/X
+iEYEABECAAYFAlEwmgQACgkQBSn9tx+xORCvoACeJPvr7y2NNISF8RVsPTb4BJeYVTMAnj2vyFrP
+uidEyTG6+S4Gh4kNAz2E
 
 -->

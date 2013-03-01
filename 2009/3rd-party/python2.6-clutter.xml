@@ -16,7 +16,7 @@ efficient and flexible.</description>
 
     <group arch="*-src" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" doc-dir="docs">
       <implementation id="sha1new=26463f17d7d11fea15695df62d472e85f9b54ae8" released="2009-06-24" version="0.8.2" version-modifier="-1">
-        <archive extract="pyclutter-0.8.2" href="http://master.dl.sourceforge.net/sourceforge/zero-install/pyclutter-0.8.2-1.tar.bz2" size="400521" type="application/x-bzip-compressed-tar"/>
+        <archive extract="pyclutter-0.8.2" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/pyclutter-0.8.2-1.tar.bz2" size="400521" type="application/x-bzip-compressed-tar"/>
       </implementation>
       <requires interface="http://0install.net/2009/3rd-party/clutter.xml">
 	<environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
@@ -28,7 +28,7 @@ efficient and flexible.</description>
 
     <implementation arch="Linux-x86_64" id="sha1new=7c47ad679f6c0a7052689e65d6c335c623f29c24" released="2009-06-25" version="0.8.2-1">
       <manifest-digest sha256="0a9aef881fcdac9eabd3b3b233f127aee2726807a7bf0092ebd9fa18bf686b06"/>
-      <archive extract="python-clutter-linux-x86_64-0.8.2-1" href="http://osdn.dl.sourceforge.net/sourceforge/zero-install/python-clutter-linux-x86_64-0.8.2-1.tar.bz2" size="333473"/>
+      <archive extract="python-clutter-linux-x86_64-0.8.2-1" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/python-clutter-linux-x86_64-0.8.2-1.tar.bz2" size="333473" type="application/x-bzip-compressed-tar"/>
     </implementation>
 
     <requires compile:include-binary="true" interface="http://0install.net/2009/3rd-party/clutter.xml">
@@ -40,7 +40,7 @@ efficient and flexible.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkpDyNEACgkQBSn9tx+xORDHUQCdGPgphsmyrvGV+kAmquMHurptHNQAn25Ug/Ag
-H3kgnrkPbh8WsbkeXWcr
+iEYEABECAAYFAlEwmh8ACgkQBSn9tx+xORC8jQCcCvcAP6avRGi1KSIokxl1qRbJrFAAn1b0NnCu
+W4LS1zSHg63qz+ZMMyCo
 
 -->
