@@ -213,6 +213,8 @@ interfere with those provided by the distribution.
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
+    <restricts interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2.."/>
+
     <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
@@ -257,34 +259,34 @@ interfere with those provided by the distribution.
     </group>
     <group>
       <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
-      <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-      <version not-before="1.12.1"/>
-    </requires>
+	<environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
+	<version not-before="1.12.1"/>
+      </requires>
       <implementation id="sha1new=bad7ab2fed8cbd60e18da0eea476ba4f4e97629d" released="2012-11-10" stability="stable" version="1.13">
-      <manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
-      <archive extract="0install-1.13" href="http://downloads.sourceforge.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2" size="399197"/>
-    </implementation>
+	<manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
+	<archive extract="0install-1.13" href="http://downloads.sourceforge.net/project/zero-install/0install/1.13/0install-1.13.tar.bz2" size="399197"/>
+      </implementation>
       <implementation id="sha1new=4abc260823d17f277a956ba968d9971ba2afa3ef" released="2013-01-14" stability="stable" version="1.14">
-      <manifest-digest sha256new="FOGTP26G26DZHEXXPPFXLEBO2Q6TUHGRTSVJ5ZCOAUGKVSZROIVQ"/>
-      <archive extract="0install-1.14" href="http://downloads.sourceforge.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2" size="412052"/>
-    </implementation>
+	<manifest-digest sha256new="FOGTP26G26DZHEXXPPFXLEBO2Q6TUHGRTSVJ5ZCOAUGKVSZROIVQ"/>
+	<archive extract="0install-1.14" href="http://downloads.sourceforge.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2" size="412052"/>
+      </implementation>
       <group>
-        <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-        <implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" stability="stable" version="1.15">
-      <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
-      <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
-    </implementation>
-        <implementation id="sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da" released="2013-02-24" version="1.16">
-      <manifest-digest sha256new="JFDXPV7MTB3DFKOCISH7U4BTTRQRBFIER4JMJ3X52ZSOXHOBN6YA"/>
-      <archive extract="0install-1.16" href="http://downloads.sourceforge.net/project/zero-install/0install/1.16/0install-1.16.tar.bz2" size="414434"/>
-    </implementation>
+	<requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+	<implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" stability="stable" version="1.15">
+	  <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
+	  <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
+	</implementation>
+	<implementation id="sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da" released="2013-02-24" version="1.16">
+	  <manifest-digest sha256new="JFDXPV7MTB3DFKOCISH7U4BTTRQRBFIER4JMJ3X52ZSOXHOBN6YA"/>
+	  <archive extract="0install-1.16" href="http://downloads.sourceforge.net/project/zero-install/0install/1.16/0install-1.16.tar.bz2" size="414434"/>
+	</implementation>
       </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEqJDwACgkQrgeCgFmlPMGqlwCeLvlF43pegT3MUCOtmlIkLexUZe8AoMu5gzi8
-bN88X7BWS2PC2EH1i+7s
+iEYEABECAAYFAlEwkUwACgkQrgeCgFmlPMEcPQCdEy/k6ebnMWW+MHTep0k3Y2+trPwAnjo5O/hG
+smVTj/lOid5zK8sJfC9A
 
 -->
