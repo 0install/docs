@@ -41,10 +41,11 @@ downloading newer versions of libraries where necessary, without
 interfering with the versions of those libraries installed by their
 distribution, which continue to be used for other software.
 </p><p>
-Started in 2003, 0install is developed by volunteers from around the
-world; contributors include Aleksey Lim, Anders F Björklund, Bastian
-Eicher, Frank Richter, Mark Seaborn, Michel Alexandre Salim, Rene
-Lopez, Thomas Leonard, Tim Cuthbertson and Tim Diels.
+Started in 2003, 0install is developed by volunteers from around the world;
+contributors include Aleksey Lim, Anders F Björklund, Bastian Eicher, Chris
+Leick, Daniel Tschan, Dave Abrahams, Frank Richter, Mark Seaborn, Michel
+Alexandre Salim, Pino Toscano, Rene Lopez, Thomas Leonard, Tim Cuthbertson and
+Tim Diels.
 </p><p>
 Hundreds of packages are currently available and you can easily
 <a href='dev.html'>publish your own programs</a>. Zero Install itself

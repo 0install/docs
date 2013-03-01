@@ -17,6 +17,15 @@ updates and digital signatures. It is intended to complement, rather than
 replace, the operating system's package management. 0install packages never
 interfere with those provided by the distribution.
 </p>
+
+<p>
+Zero Install is available from the official repositories of most Linux distributions
+(including Debian, Fedora, Gentoo, Mint, OpenSUSE and Ubuntu), from MacPorts or as a
+self-contained bundle on OS X, and there is a .NET Windows frontend. On other platforms,
+it can be installed easily from source.
+See the <a href='injector.html'>Downloads page</a> for details.
+</p>
+
 <p>
 See <a href='why.html'>About 0install</a> for more information.
 </p>
@@ -30,7 +39,7 @@ packages as dependencies was extended and now covers Arch Linux, Cygwin, Darwin,
 </p>
 
 <p>
-<a href='http://www.ryppl.org/'>The Ryppl project</a> is using 0install as the package manager for a modular C++ system, starting with a modularised C++ Boost library. This has driven many of the enhancements, such as support compiling 0install packages on Windows. We hope that 0install will one day replace many of the language-specific packaging systems currently in use.
+<a href='http://www.ryppl.org/'>The Ryppl project</a> is using 0install as the package manager for a modular C++ build system, starting with a modularised C++ Boost library. This has driven many of the enhancements in 2.0, such as support compiling 0install packages on Windows. We hope that 0install will one day replace many of the language-specific packaging systems currently in use.
 </p>
 
 <h3>Extensions to the XML feed format</h3>
@@ -80,12 +89,6 @@ This allows any version from 2.6 up to (but excluding) 3, or version 3.2 or late
 However, the previous syntax using &lt;version> should be used where possible, since it works with all versions of 0install.
 </dd>
 
-<dt>Custom path separators in environment bindings</dt>
-
-<dd>The path separator can now be specified in environment bindings (previously, it was either ":" or ";", depending on the platform):
-<pre>&lt;<a href='interface-spec.html#environment'>environment</a> name='OPTIONS' value='foo' separator=','></pre>
-</dd>
-
 <dt>Executable bindings</dt>
 <dd>Two new bindings make it easy to depend on executable commands (not just on libraries). This is necessary on Windows, since it doesn't support #! lines, but it is also useful on other platforms. For example, if a program requires the "make" command in $PATH:
 <pre>
@@ -99,6 +102,12 @@ Or, if it requires the make command in $MAKE:
   &lt;<a href='interface-spec.html#executable'>executable-in-var</a> name='MAKE'/>
 &lt;/requires>
 </pre>
+</dd>
+
+<dt>Custom path separators in environment bindings</dt>
+
+<dd>The path separator can now be specified in environment bindings (previously, it was either ":" or ";", depending on the platform):
+<pre>&lt;<a href='interface-spec.html#environment'>environment</a> name='OPTIONS' value='foo' separator=','></pre>
 </dd>
 
 <dt>Replaced interfaces</dt>
@@ -261,7 +270,7 @@ suggests turning on help_with_testing if that might help.
 
 <dt>Mirroring of archives</dt>
 <dd>0install 1.0 can use a <a href='0mirror.html'>mirror service</a> as a
-fallback to get the XML feeds; in 0install 2.0 it can also use the mirror
+fallback to get the XML feeds; 0install 2.0 can also use the mirror
 to get missing archives.
 Note however that our default public mirror server does not actually mirror any
 archives by default.
@@ -297,6 +306,24 @@ problems for some networks and servers.
 </li>
 </ul>
 
+<h3>Updates to related tools</h3>
+
+<dl>
+  <dt>0compile</dt>
+  <dd><a href='0compile.html'>0compile</a> now works on Windows, not just POSIX systems. It gained support for &lt;command name='compile'> to give the compile command, allowing the use of &lt;runner>. It also now allows you to provide a template for the binary's XML.</dd>
+
+  <dt>0downstream</dt>
+  <dd>The new <a href="https://github.com/gfxmonk/0downstream">0downstream</a> tool makes it easy to generate feeds and keep them up to date based on an existing upstream project.</dd>
+
+  <dt>0env</dt>
+  <dd>The new <a href="http://gfxmonk.net/dist/0install/0env.xml">0env</a> tool makes it easy to step into a shell session with a particular library available.</dd>
+
+  <dt>0install for Windows</dt>
+  <dd>The <a href='http://0install.de/'>Windows port</a> has also been very active; see the separate <a href='http://0install.de/news/?lang=en'>Windows version news page</a> for details.</dd>
+
+  <dt>Packaging guide</dt>
+  <dd>The <a href='injector-packagers.html'>Packaging guide</a> has been improved and a set of <a href='templates.html'>template projects</a> have been created to help developers learn to use 0install.</dd>
+</dl>
 
 </div>
 
