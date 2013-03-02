@@ -92,14 +92,14 @@ these feeds.</description>
 	<version before="3"/>
       </runner>
     </command>
-    <implementation id="sha1new=f240ceae2e0f7d86cc418de5a1223784e397a1d1" license="OSI Approved :: GNU General Public License (GPL)" main="0publish-gui" released="2013-02-26" version="0.13">
+    <implementation id="sha1new=f240ceae2e0f7d86cc418de5a1223784e397a1d1" license="OSI Approved :: GNU General Public License (GPL)" main="0publish-gui" released="2013-02-26" stability="buggy" version="0.13">
       <manifest-digest sha256new="5TRTODN2KPK2KEQKDEDVMVLMLNNKJCCTS5ICGBQ4EK3WAYHQ3UDQ"/>
       <archive extract="0publish-gui-0.13" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.13/0publish-gui-0.13.tar.bz2" size="32633"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs+jUACgkQrgeCgFmlPMF51ACeOH5euRqv/560yWL78COp8JOw7MkAn1oHSE+O
-vh8fIT2kMiJXu+c9yys9
+iEYEABECAAYFAlExzfMACgkQrgeCgFmlPME6OACgrvu7bNili3t0U+1jZNmi8gu09AMAn1Is7AVQ
+OvZIYUppOxCfFTQrZcAj
 
 -->
