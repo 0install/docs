@@ -424,6 +424,25 @@ any of these elements would be useful in Zero Install feed files.
 </p>
 </dd>
 
+<dt>Environment modules</dt>
+<dd><p>
+The <a href='http://modules.sourceforge.net/'>Environment Modules</a> package provides
+for the dynamic modification of a user's environment via modulefiles.  Each modulefile
+contains the information needed to configure the shell for an application. Typically
+modulefiles instruct the module command to alter or set shell environment variables
+such as PATH, MANPATH, etc. To be able to load ("install") software, it must first be
+installed under the $MODULESHOME directory which is in <tt>/usr/local/Modules</tt> or
+a shared network filesystem. It is also possible to install it in <tt>~/.local</tt>
+without root permissions, but then the modules can't be shared (due to different $HOME).
+</p>
+
+<p>
+The module(1) command doesn't provide a method to share or distribute the applications.
+Many take advantage of transparent remote network filesystem access such as NFS and
+AFS. Some use tools like rdist(1) and rsync(1) to duplicate software within a network.
+</p>
+</dd>
+
 </dl>
 
 <p>
