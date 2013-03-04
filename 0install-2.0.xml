@@ -9,33 +9,64 @@
 <h3>About 0install</h3>
 
 <p>
-Zero Install is a decentralised cross-platform software installation system
-available under the LGPL. It allows software developers to publish programs
-directly from their own web-sites, while supporting features familiar from
-centralised distribution repositories such as shared libraries, automatic
-updates and digital signatures. It is intended to complement, rather than
-replace, the operating system's package management. 0install packages never
+Zero Install is a decentralised cross-platform software
+installation system available under the LGPL. It allows software
+developers to publish programs directly from their own web-sites,
+while supporting features familiar from centralised distribution
+repositories such as shared libraries, automatic updates and digital
+signatures. It is intended to complement, rather than replace, the
+operating system's package management. 0install packages never
 interfere with those provided by the distribution.
 </p>
-
+<p style='float: right; padding-left: 1em;'>
+  <a href='injector-feeds.html'><img width="263" height="364" src="screens/manage-apps-narrow.png" alt='0desktop --manage'/></a>
+</p>
 <p>
-Zero Install is available from the official repositories of most Linux distributions
-(including Debian, Fedora, Gentoo, Mint, OpenSUSE and Ubuntu), from MacPorts or as a
-self-contained bundle on OS X, and there is a .NET Windows frontend. On other platforms,
-it can be installed easily from source.
+0install does not define a new packaging format; unmodified tarballs
+or zip archives can be used. Instead, it defines an XML metadata
+format to describe these packages and the dependencies between them. A
+single metadata file can be used on multiple platforms (e.g. Ubuntu,
+Debian, Fedora, openSUSE, Mac OS X and Windows), assuming binary or
+source archives are available that work on those systems.
+</p><p>
+0install also has some interesting features not often found in
+traditional package managers. For example, while it will share
+libraries whenever possible, it can always install multiple versions
+of a package in parallel when there are conflicting requirements.
+Installation is always side-effect-free (each package is unpacked to
+its own directory and will not touch shared directories such as
+/usr/bin), making it ideal for use with sandboxing technologies and
+virtualisation.
+</p><p>
+The XML file describing the program's requirements can also be
+included in a source-code repository, allowing full dependency
+handling for unreleased developer versions. For example, a user can
+clone a Git repository and build and test the program, automatically
+downloading newer versions of libraries where necessary, without
+interfering with the versions of those libraries installed by their
+distribution, which continue to be used for other software.
+</p><p>
+Started in 2003, 0install is developed by volunteers from around the world;
+contributors include Aleksey Lim, Anders F Björklund, Bastian Eicher, Chris
+Leick, Daniel Tschan, Dave Abrahams, Frank Richter, Mark Seaborn, Michel
+Alexandre Salim, Pino Toscano, Rene Lopez, Thomas Leonard, Tim Cuthbertson and
+Tim Diels.
+</p><p>
+More than one thousand packages are currently available and you can easily
+<a href='packagers.html'>publish your own programs</a>. Zero Install itself
+is available from the official repositories of most Linux distributions
+(including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu) as well as
+MacPorts.
 See the <a href='injector.html'>Downloads page</a> for details.
 </p>
 
-<p>
-See <a href='why.html'>About 0install</a> for more information.
-</p>
 
 <h3>Overview of changes in 2.0</h3>
 
 <p>
 0install 2.0 brings many enhancements to the XML metadata syntax used to describe packages and their
 dependencies, allowing a more precise specification of their requirements. Support for using distribution-provided
-packages as dependencies was extended and now covers Arch Linux, Cygwin, Darwin, Debian, Fink, FreeBSD Ports, Gentoo, MacPorts, Mint, OpenSUSE, Red Hat, Slackware and Windows. The 0install software now supports <i>apps</i>, an easier way to manage 0install applications, improved diagnostics when no compatible versions can be selected, improved usability, and better support for use on headless servers.
+packages as dependencies was extended and now covers Arch Linux, Cygwin, Darwin, Debian, Fink, FreeBSD Ports, Gentoo, MacPorts, Mint, openSUSE, Red Hat, Slackware and Windows. The 0install software now supports <i>apps</i>, an easier way to manage 0install applications, improved diagnostics when no compatible versions can be selected, improved usability, and better support for use on headless servers.
 </p>
 
 <p>
@@ -102,6 +133,8 @@ Or, if it requires the make command in $MAKE:
   &lt;<a href='interface-spec.html#executable'>executable-in-var</a> name='MAKE'/>
 &lt;/requires>
 </pre>
+As always, these declarations only affect the program being run (they do not
+put "make" into /usr/bin, ~/bin or similar).
 </dd>
 
 <dt>Custom path separators in environment bindings</dt>
@@ -160,7 +193,7 @@ to depend on <a href='distribution-integration.html'>native packages</a> from th
 </p>
 
 <ul>
-<li>Improved support for detecting native Java packages (on Arch, Debian, OpenSUSE, Fedora, OS X and Windows).</li>
+<li>Improved support for detecting native Java packages (on Arch, Debian, openSUSE, Fedora, OS X and Windows).</li>
 
 <li>Support for detecting .NET Framework installations on Windows.</li>
 
@@ -227,7 +260,7 @@ $ 0install add edit-py27 http://rox.sourceforge.net/2005/interfaces/Edit \
 
 <dt>Diagnostics</dt>
 <dd>
-A major new feature in 2.0 is the hugely improved <a href='injector-trouble.html'>diagnostics</a> when a
+0install 2.0 provides hugely improved <a href='injector-trouble.html'>diagnostics</a> when a
 solve fails (or fails to select the expected version).
 </dd>
 

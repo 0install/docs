@@ -4,7 +4,7 @@
 <h2>About 0install</h2>
 
 <p>
-Zero Install is a decentralised cross-distribution software
+Zero Install is a decentralised cross-platform software
 installation system available under the LGPL. It allows software
 developers to publish programs directly from their own web-sites,
 while supporting features familiar from centralised distribution
@@ -47,10 +47,10 @@ Leick, Daniel Tschan, Dave Abrahams, Frank Richter, Mark Seaborn, Michel
 Alexandre Salim, Pino Toscano, Rene Lopez, Thomas Leonard, Tim Cuthbertson and
 Tim Diels.
 </p><p>
-Hundreds of packages are currently available and you can easily
-<a href='dev.html'>publish your own programs</a>. Zero Install itself
+More than one thousand packages are currently available and you can easily
+<a href='packagers.html'>publish your own programs</a>. Zero Install itself
 is available from the official repositories of most Linux distributions
-(including Arch Linux, Debian, Ubuntu, Fedora, openSUSE and Gentoo) as well as
+(including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu) as well as
 MacPorts.
 </p>
 
