@@ -2,7 +2,9 @@
 <html>
 
 <div>
-<h2>0install 2.0 - DRAFT release notes</h2>
+<h2>0install 2.0 release notes</h2>
+
+<p>2013-03-05</p>
 
 <toc level='h3'/>
 
@@ -55,7 +57,7 @@ Tim Diels.
 More than one thousand packages are currently available and you can easily
 <a href='packagers.html'>publish your own programs</a>. Zero Install itself
 is available from the official repositories of most Linux distributions
-(including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu) as well as
+(including Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu) as well as
 MacPorts.
 See the <a href='injector.html'>Downloads page</a> for details.
 </p>
