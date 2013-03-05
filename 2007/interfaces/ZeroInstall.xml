@@ -276,17 +276,21 @@ interfere with those provided by the distribution.
 	  <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
 	  <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
 	</implementation>
-	<implementation id="sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da" released="2013-02-24" version="1.16">
+	<implementation id="sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da" released="2013-02-24" stability="stable" version="1.16">
 	  <manifest-digest sha256new="JFDXPV7MTB3DFKOCISH7U4BTTRQRBFIER4JMJ3X52ZSOXHOBN6YA"/>
 	  <archive extract="0install-1.16" href="http://downloads.sourceforge.net/project/zero-install/0install/1.16/0install-1.16.tar.bz2" size="414434"/>
 	</implementation>
+        <implementation id="sha1new=3fa607f49966f7eb00682336a4391c78d13a3d8b" released="2013-03-05" version="2.0">
+      <manifest-digest sha256new="GE4YXZOF3JWCUJXID2N6U7PL66CUTH2WAXOTWIA7J6BJFYROCMFQ"/>
+      <archive extract="0install-2.0" href="http://downloads.sourceforge.net/project/zero-install/0install/2.0/0install-2.0.tar.bz2" size="414021"/>
+    </implementation>
       </group>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEwkUwACgkQrgeCgFmlPMEcPQCdEy/k6ebnMWW+MHTep0k3Y2+trPwAnjo5O/hG
-smVTj/lOid5zK8sJfC9A
+iEYEABECAAYFAlE1zXoACgkQrgeCgFmlPMHOcQCgpucquSmJagr9oRdXGsipk7sQQLoAoN7+56LK
+bUaBVVJPgAbmP1IOXLc8
 
 -->
