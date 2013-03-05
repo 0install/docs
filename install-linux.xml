@@ -19,6 +19,8 @@ Otherwise, <a href='install-source.html'>get the source package instead</a>.
 <p>Zero Install is part of the main Debian archive, so you can get it with:</p>
 <pre># <b>apt-get install zeroinstall-injector</b></pre>
 
+<p><b>Ubuntu 12.04 LTS</b>: you may find a newer version works better: the <a href='http://packages.ubuntu.com/raring/zeroinstall-injector'>Raring .deb</a> works fine.</p>
+
 <p>You may also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
 
 <p><strong>Use on headless servers:</strong> If used on headless servers, the Debian packages above pull in a lot of GUI dependencies (~100 MB) which aren't needed. To avoid this, there is <a href='https://launchpad.net/~tal-it-innovation/+archive/ppa'>a PPA</a> with separate core and GUI packages, which can be used as follows (on Debian and Ubuntu):</p>
