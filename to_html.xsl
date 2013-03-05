@@ -121,7 +121,7 @@
 	
         <div class='footer'>
 	 <p>
-	    Web-site &#169; Copyright 2003-2012 Thomas Leonard and others<br/>
+	    Web-site &#169; Copyright 2003-2013 Thomas Leonard and others<br/>
 	  </p>
 	  <p>
 	    Permission is granted to use the site (excluding the software,
