@@ -17,7 +17,7 @@ To use 0install, you will need the following (these are installed on most Linux 
 </p>
 
 <ul>
-  <li><a href="http://python.org">Python</a> (version 2.6, 2.7 or 3.2).</li>
+  <li><a href="http://python.org">Python</a> (version 2.6, 2.7 or 3.2+).</li>
 <li><a href="https://live.gnome.org/PyGObject/">PyGObject</a> (this is a dependency of PyGTK, but is also available separately).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
 </ul>
