@@ -19,6 +19,7 @@ Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</descri
   <!-- <icon href='http://site/icon.png' type='image/png'/> -->
 
   <package-implementation package="libfreetype6"/>
+  <package-implementation distributions="Arch" package="freetype2"/>
 
   <!-- Fedora -->
   <package-implementation distributions="RPM" package="freetype"/>
@@ -40,7 +41,7 @@ Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</descri
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlE3IDwACgkQrgeCgFmlPMH79ACgw9johqU125lUlJpgTXqbetlI3NkAnRbQ+3Zt
-hoPgQQ11MmUZ5mtUucY2
+iEYEABECAAYFAlE3IS0ACgkQrgeCgFmlPMEOAgCgm/DGq+EGaB4tFSEgOfXiTvvuJAwAn0ZZLwxB
+pZLKsnddgxub9YYr30WD
 
 -->
