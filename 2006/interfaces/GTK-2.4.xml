@@ -21,6 +21,11 @@ the GTK dependencies to the source interface file.</description>
   <category>Development</category>
 
   <group main="gtk-2.4">
+    <command name="run" path="gtk-2.4">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
     <requires interface="http://0install.net/2006/interfaces/GTK-dev">
       <version before="2.5" not-before="2.4"/>
       <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
@@ -68,7 +73,7 @@ the GTK dependencies to the source interface file.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEwlyMACgkQrgeCgFmlPMEfqgCfTGMP1x3/SU9L2+zNyBiOwmjCYoAAnj9S/8DU
-yLUpfWB6jUI7XcGmOyxu
+iEYEABECAAYFAlE4aTYACgkQrgeCgFmlPMFMcgCgwmdFHhGvYTs4hW3IXtSq8IdsaSoAoJx151YX
+7l2xCBYFHi3HPOJdj2mJ
 
 -->
