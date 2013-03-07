@@ -6,7 +6,7 @@
 <dl>
 <dt>Mar 2013</dt>
 <dd>
-  <p><a href='0install-2.0.html'>0install 2.0 released</a>! [ <a href='http://linux.slashdot.org/story/13/03/05/1455249/0install-reaches-20'>Slashdot</a> | <a href='http://www.osnews.com/story/26832/0install_2_0_released'>OSNews</a> | <a href='http://www.pro-linux.de/news/1/19532/zero-install-20-veroeffentlicht.html'>Pro-Linux.de</a> ]</p>
+  <p><a href='0install-2.0.html'>0install 2.0 released</a>! [ <a href='http://linux.slashdot.org/story/13/03/05/1455249/0install-reaches-20'>Slashdot</a> | <a href='http://www.osnews.com/story/26832/0install_2_0_released'>OSNews</a> | <a href='http://www.pro-linux.de/news/1/19532/zero-install-20-veroeffentlicht.html'>Pro-Linux.de</a> | <a href='http://www.linux.org.ru/news/opensource/8928774'>linux.org.ru</a> ]</p>
   <p>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6686'>0install 1.15</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6730'>0install 1.16</a> were released, adding the ability to restrict a dependency to a native or non-native version and a for-each syntax for expanding an environment variable into multiple arguments (these were needed on OS X to support Python and Java properly), and fixing a number of minor bugs in preparation for the 2.0 release.
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6668'>0install 1.14.1 for Windows</a> was released, adding the "update-apps" command and fixing some bugs.
