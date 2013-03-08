@@ -126,15 +126,19 @@ packagers.html.</description>
       <manifest-digest sha256="003dd16a2fc0cf2aec01d32ba36d8912c9bf9cc6c1b0d90159fa3a8b874d0a41"/>
       <archive extract="0publish-0.22" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.22/0publish-0.22.tar.bz2" size="25581"/>
     </implementation>
-      <implementation id="sha1new=94e27cdfb3b5f8c7ffa4b8443261707cd3a53ab1" released="2013-02-25" version="0.23">
+      <implementation id="sha1new=94e27cdfb3b5f8c7ffa4b8443261707cd3a53ab1" released="2013-02-25" stability="stable" version="0.23">
       <manifest-digest sha256new="PJ7XV7EUN3DNYDSLA67MJBCVVR4OFYOMFZWCZWNL7P2J7IZSSY4Q"/>
       <archive extract="0publish-0.23" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.23/0publish-0.23.tar.bz2" size="25646"/>
+    </implementation>
+      <implementation id="sha1new=078330f7f927f7c10a6d81cd913deb5903391ef2" released="2013-03-08" version="0.24">
+      <manifest-digest sha256new="H6C6UE3W6NBSIBATVESQ5YXSA4AKVVA7X3OCRXBEPZP24ET7R3IA"/>
+      <archive extract="0publish-0.24" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.24/0publish-0.24.tar.bz2" size="26530"/>
     </implementation>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlErZSIACgkQrgeCgFmlPMGrEQCgrlcypgAM/5iouyvj5u/SQqQZlc4An0VS70f2
-gtSb3IlMW+D0kmwa1R98
+iEYEABECAAYFAlE6K7UACgkQrgeCgFmlPMFz3wCfX3Teq575lRadDz7+2lWFoxqCLggAniEOIyHW
+YTttj+VWtU2mq6RDbJbW
 
 -->
