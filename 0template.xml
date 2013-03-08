@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<program name='0template'
+	 author='Thomas Leonard'
+	 git='https://github.com/0install/0template'
+	 license='GNU Lesser General Public License'>
+
+<p>
+<b>0template</b> creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
+</p>
+</program>
+
+<div class='figure'>
+<img src='diagrams/0template.png' width='443' height='491' alt='0template workflow' style='padding: .5em'/>
+</div>
+
+<p>
+  That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with 0publish.
+</p>
+
+<p>
+  0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using <a href='0release.html'>0release</a> instead.
+</p>
+
+<toc level='h2'/>
+
+<h2>Installation</h2>
+
+<p>
+To get it (Git only at the moment):
+</p>
+
+<pre-scrolled>
+$ git clone git://github.com/0install/0template.git
+$ 0install add 0template 0template/0template.xml
+</pre-scrolled>
+
+<h2>Creating the template</h2>
+
+<p>
+To start, run it with a non-existent file and it will offer to create it:
+</p>
+
+<pre-scrolled>
+$ 0template myprog.xml.template
+'myprog.xml.template' does not exist; creating new template.
+
+Does your program need to be compiled before it can be used?
+
+1) Generate a source template (e.g. for compiling C source code)
+2) Generate a binary template (e.g. for a pre-compiled binary or script)
+
+> 2
+
+Writing myprog.xml.template
+</pre-scrolled>
+
+<p>
+Then edit the generated <b>myprog.xml.template</b> to taste. A minimal example would be:
+</p>
+
+<pre-scrolled>
+&lt;?xml version="1.0"?>
+&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  &lt;name>myprog&lt;/name>
+  &lt;summary>does useful stuff&lt;/summary>
+
+  &lt;group>
+    &lt;command name="run" path="myprog"/>
+
+    &lt;implementation version="{version}">
+      &lt;manifest-digest/>
+      &lt;archive href="http://example.com/downloads/myprog-{version}.zip"/>
+    &lt;/implementation>
+  &lt;/group>
+&lt;/interface>
+</pre-scrolled>
+
+<p>
+  You would typically want to add any dependencies here too. See the <a href='interface-spec.html'>feed specification</a> for details.
+</p>
+
+<p>
+Note: You can also use 0template to create a <a href='local-feeds.html'>local feed</a> to run a Git checkout, rather than an archive on the web. In that case, just don't use the ".template" extension, and it will generate a feed rather than a template.
+</p>
+
+<h2>Using the template</h2>
+
+<p>
+To generate the XML for a particular version, run 0template on it and provide the template parameters ("version" in this example), e.g.
+</p>
+
+<pre-scrolled>
+$ 0template myprog.xml.template version=1.0
+Downloading http://example.com/downloads/myprog-1.0.zip to ./myprog-1.0.zip
+Writing myprog-1.0.xml
+</pre-scrolled>
+
+<p>
+You now have a feed with the appropriate details filled in:
+</p>
+
+<pre-scrolled>
+&lt;?xml version="1.0"?>
+&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  &lt;name>myprog&lt;/name>
+  &lt;summary>does useful stuff&lt;/summary>
+
+  &lt;group>
+    &lt;command name="run" path="myprog"/>
+
+    &lt;implementation id="sha1new=67ba178ed33b292efa5ab364d01a8fc13fe9eba3" version="1.0">
+      &lt;manifest-digest sha256new="FBXDJXLMHAPCRNZ5XOQTVYQHD6VP7CZAZ2UKCCV5UYE27C752GIQ"/>
+      &lt;archive extract="myprog-1.0" href="http://example.com/downloads/myprog-1.0.zip" size="352"/>
+    &lt;/implementation>
+  &lt;/group>
+&lt;/interface>
+</pre-scrolled>
+
+<p>
+  Specifically, 0template fills in these values:
+</p>
+
+<ul>
+  <li>All "{...}" text is expanded with the values you provided on the command-line.</li>
+  <li>The archive is downloaded to the directory containing the feed, if it's not already there.</li>
+  <li>The <b>size</b> attribute is set to the size of the archive.</li>
+  <li>The <b>extract</b> attribute is set to the single top-level directory in the archive, if it has one.</li>
+  <li>The <b>id</b> is set to the sha1new digest of the archive.</li>
+  <li>Any empty attributes of <b>manifest-digest</b> are filled in with the calculated digests. If there are no attributes, a <b>sha256new</b> digest is added.</li>
+</ul>
+
+<p>
+  You can now test this feed using e.g.
+</p>
+
+<pre-scrolled>
+  $ 0launch myprog-1.0.xml
+</pre-scrolled>
+
+<p>Or, for source feeds:</p>
+
+<pre-scrolled>
+  $ 0compile autocompile myprog-1.0.xml
+</pre-scrolled>
+
+<p>
+Once you are happy with it, you can add it to
+the master feed (which contains all versions) using 0publish. e.g.
+</p>
+
+<pre-scrolled>
+0publish --add-from myprog-1.2.xml ~/public_html/myprog.xml
+</pre-scrolled>
+
+<p>
+  That will also create myprog.xml for you first if it doesn't yet exist, provided you specified a &lt;feed-for&gt; in your template.
+</p>
+
+</html>

@@ -92,6 +92,7 @@
 	<item base='0release-binaries' label='Compiled binaries'/>
       </item>
       <item base='0share' label='0share'/>
+      <item base='0template' label='0template'/>
       <item base='0test' label='0test'/>
     </item>
 

@@ -40,6 +40,13 @@ number and release date, tagging the release in your version control system and 
    quickly publishing simple packages.
  </dd>
 
+ <dt><a href='0template.html'>0template</a></dt>
+ <dd>
+   <b>0template</b> generates the XML for one version of a program from a template. It is
+   a useful replacement for <b>0downstream</b> for more complex programs (e.g. source code
+   that must be compiled or programs with dependencies).
+ </dd>
+
  <dt><a href='pkg2zero.html'>pkg2zero</a></dt>
  <dd>
 <b>pkg2zero</b> publishes a Debian or RPM package in a Zero Install feed.
