@@ -36,6 +36,11 @@ $ git clone git://github.com/0install/0template.git
 $ 0install add 0template 0template/0template.xml
 </pre-scrolled>
 
+<p>
+  Note that 0template uses Python 3, so you might need to install some extra packages to
+  make it work. e.g. on Ubuntu 0install will prompt you to <b>apt-get install python3 python3-gi</b>.
+</p>
+
 <h2>Creating the template</h2>
 
 <p>
