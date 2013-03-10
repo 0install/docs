@@ -114,8 +114,10 @@ plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.
 
 <h3>By project</h3>
 
+<toc level='dt'/>
+
 <dl class='spaced'>
-<dt>Java Web Start</dt>
+<dt id='JWS'>Java Web Start</dt>
 <dd>
 <p>
 Sun have developed a similar system to Zero Install,
@@ -125,7 +127,7 @@ equivalent called <a href='http://msdn2.microsoft.com/en-us/library/t71a733d(VS.
 </p>
 </dd>
 
-<dt>Konvalo</dt>
+<dt id='Konvalo'>Konvalo</dt>
 <dd>
 <p>
 Konvalo was a very similar idea to the old Zero Install filesystem, but
@@ -144,7 +146,7 @@ to be removed.
 </p>
 </dd>
 
-<dt>Klik</dt>
+<dt id='Klik'>Klik</dt>
 
 <dd>
 <p>
@@ -217,7 +219,7 @@ to be relocatable in the first place.</li>
 
 </dd>
 
-<dt>Maven</dt>
+<dt id='Maven'>Maven</dt>
 
 <dd>
 <p>
@@ -255,7 +257,7 @@ of a library's header files to ensure greater compatibility.
 </p>
 </dd>
 
-<dt>Autopackage</dt>
+<dt id='Autopackage'>Autopackage</dt>
 <dd>
 <p>
 Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
@@ -288,7 +290,7 @@ but many do.
 
 </dd>
 
-<dt>EDOS / Mancoosi</dt>
+<dt id='EDOS'>EDOS / Mancoosi</dt>
 
 <dd>
 <p>
@@ -307,7 +309,7 @@ from the event.
 </p>
 </dd>
 
-<dt>Nix</dt>
+<dt id='Nix'>Nix</dt>
 
 <dd>
 <p>
@@ -390,7 +392,7 @@ support <a href='sharing.html'>sharing</a>.
 
 </dd>
 
-<dt>OSTree</dt>
+<dt id='OSTree'>OSTree</dt>
 
 <dd>
   <a href='https://live.gnome.org/OSTree'>OSTree</a> describes itself as "git
@@ -402,7 +404,7 @@ support <a href='sharing.html'>sharing</a>.
   application dependency (which can optionally, of course, be provided by the OS).
 </dd>
 
-<dt>Glick 2</dt>
+<dt id='Glick'>Glick 2</dt>
 
 <dd>
   <a href='http://people.gnome.org/~alexl/glick2/'>Glick 2</a> has essentially the same
@@ -414,7 +416,7 @@ support <a href='sharing.html'>sharing</a>.
   binding, but few applications are non-relocatable these days.
 </dd>
 
-<dt>DOAP: Description of a Project</dt>
+<dt id='DOAP'>DOAP: Description of a Project</dt>
 <dd><p>
 <a href='http://usefulinc.com/doap/'>DOAP</a> is a project to create an
 XML/RDF vocabulary to describe open source projects. We should investigate whether
