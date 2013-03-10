@@ -390,6 +390,18 @@ support <a href='sharing.html'>sharing</a>.
 
 </dd>
 
+<dt>OSTree</dt>
+
+<dd>
+  <a href='https://live.gnome.org/OSTree'>OSTree</a> describes itself as "git
+  for operating system binaries". It shares many goals with 0install (multiple
+  versions of libraries can coexist on one system and you can roll-back easily).
+  While 0install focuses on applications and their libraries, OSTree focuses on
+  the OS itself. However, there is quite a bit of overlap. For example, OSTree
+  considers GTK+ to be an OS library, while 0install might consider it to be an
+  application dependency (which can optionally, of course, be provided by the OS).
+</dd>
+
 <dt>Glick 2</dt>
 
 <dd>
