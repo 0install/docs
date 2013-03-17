@@ -14,6 +14,9 @@ simulator), rendering, node based compositing, and non linear video editing, as
 well as an integrated game engine for real-time interactive 3D, and game
 creation and playback with cross-platform compatibility.</description>
   <homepage>http://www.blender.org</homepage>
+
+  <feed src="http://0install.de/feeds/Blender.xml"/>
+
   <icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/>
   <category>Video</category>
   <group arch="Linux-i386" license="OSI Approved :: GNU General Public License (GPL)" main="blender">
@@ -60,11 +63,11 @@ creation and playback with cross-platform compatibility.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJN2jIiAAoJEAcTP5bKdNi6H9cIAImE4Xl5PcRGyIAOZsPMiSdW5v8ei7ualw81
-ZAcAyqK5Wl4YtFg6ngMAdXFv93vL6HLO/RVtlO7FcNaOZMm1nyaz5eIv2wGsysp2b7voNe0bz80+
-Wx0BkgFYnTjhXRcD7a7lohStFYM3+bNujolI9Ncky8JoxOD//F9BwCiV1/o4elVo9inFwxnbyazk
-NDHtJb2GdVneH3OtADyPAaM/oHGHwX7s6zPpCTDtpXdZ34OvgzRI+SZYTb23JnTlTBlRHY/MpaCT
-VhR/owgykEAthwVf9N0f+YZc7mWivrOs1jS+9nr3G02Lzl0lMHdt21YtRR80DfxaMarnkHhjIFfo
-d50=
+iQEcBAABCAAGBQJRRZE+AAoJEAcTP5bKdNi6ZcsH/j2RkItfq3WqBpKBlhGTaM8gqkcdAw8cpgJx
+GesbO/iNh41tVWcxJV2z3mQWMp6zhSJNTpLIMfOqgPHbQZKJrMQvFb/XoheXRsBJ21aUw7GkYGml
+C2fUCRW9BFFr1Sq5C4q82kL3rlD/hcGfX3bUobCldC7JD7po5IgoupHG0X8aSGbrK4ZM+enYP99i
+hbM1izbJS5eLBfQ+MN0o7z3cLvyftNmaghmWraLdeAFBkmAyVj052H2XTqUdH7FYzLIsVI11nfRL
+G8fEbcL31DnLVsYP7n7QZ2Upoq13Shr/ITGn4rCvzsWyvWpVLHxwHB4iKyy6Tpw/qdcpNBp9nNDo
+FVw=
 
 -->
