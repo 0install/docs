@@ -409,7 +409,30 @@ For more information, see <a href='0release-phases.html'>release phases</a>.
 If your program needs to be compiled, see <a href='0release-binaries.html'>Releasing binaries</a>.
 </p>
 
-<h2>Unpublishing a release</h2>
+<h2 id='aborting'>Aborting a release</h2>
+
+<p>
+  You can abort a release easily at any point before the Publish step. Once you select <b>Publish</b>,
+  externally-visible changes start to be made (e.g. archives are uploaded to your file-server).
+
+  <dl>
+    <dt>To abort before publishing</dt>
+    <dd>Just select <b>Fail</b> from the menu. This deletes the
+      <b>release-status</b> file (which you could also do manually). To avoid
+      confusion, selecting <b>Fail</b> also removes the temporary release
+      branch from Git and renames the release directory (to <b>$version~</b>) to
+      make it clear that they're not being used.
+    </dd>
+
+    <dt>To abort after publishing has started</dt>
+    <dd>
+      Follow the steps in <a href='#unpublishing'>Unpublishing a release</a> below to undo
+      any publicly visible changes. Then delete the <b>release-status</b> file.
+    </dd>
+  </dl>
+</p>
+
+<h2 id='unpublishing'>Unpublishing a release</h2>
 
 <p>
 So, you didn't test the release properly, and now you want to pull it down, eh?
