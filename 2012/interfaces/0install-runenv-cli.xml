@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>0install-runenv-cli</name>
   <summary>0install .NET helper for Windows</summary>
   <description>
@@ -16,19 +16,32 @@
       <manifest-digest sha256="81d551e211179d244364a87bafb708036e0028bf6716e2cc802c8e17a4aa9144"/>
       <archive extract="0install-runenv-cli-1.12" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/1.12/0install-runenv-cli-1.12.tar.bz2" size="4837"/>
     </implementation>
-    <implementation id="sha1new=b86cd8995adf636b5bc0c7bdae789f18db76d7df" released="2012-10-06" version="1.13">
+    <implementation id="sha1new=b86cd8995adf636b5bc0c7bdae789f18db76d7df" released="2012-10-06" stability="stable" version="1.13">
       <manifest-digest sha256="a702e205ed32c0a960b4ae4605eec42cfa818f489815cf340012cb5f47fb6441"/>
       <archive extract="0install-runenv-cli-1.13" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/1.13/0install-runenv-cli-1.13.tar.bz2" size="5695"/>
     </implementation>
+    <group>
+      <command name="compile" shell-command="mcs &quot;$SRCDIR/runenv.cli.cs&quot; -out:&quot;$DISTDIR/runenv.cli.template&quot;">
+      <compile:implementation arch="*-*"/>
+    </command>
+      <implementation arch="*-src" id="sha1new=80c76895c3ba81f6d94e78c936d2c5b8b4d3d96b" released="2013-03-18" version="2.0.2">
+      <manifest-digest sha256new="H3ARQQ3OW2K6YGBWVBG3X5R6DL6534ZQ6WYMRJZM4UIKHYH6XHSQ"/>
+      <archive extract="0install-runenv-cli-2.0.2" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/2.0.2/0install-runenv-cli-2.0.2.tar.bz2" size="3503"/>
+    </implementation>
+    </group>
   </group>
+  <implementation id="sha1new=78f12032eb296233909aa5f6ec4aae8cbb9c121a" released="2013-03-18" version="2.0.2">
+      <manifest-digest sha256new="XMEYQHKYT7CNDYAWDQHGDIDJK2QORBV5KRFQX6BQ7RNXTANR6PGQ"/>
+      <archive extract="0install-runenv-cli-bin-2.0.2" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/2.0.2/0install-runenv-cli-bin-2.0.2.tar.bz2" size="3554"/>
+    </implementation>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJQb+6BAAoJEAcTP5bKdNi64VkH/ROcHffGz9v+OIqc2T3dvufYQP6ylV99vWV2
-C5wrDKqb96gcfwWthejZ+AD3NCux5qeJLT9UH13eyvPzW7GKhF3jecO1OybgYcjPlG/K75Fg2pXO
-KK9d16J9D+v82dOGEVVm+CiSzec9J2Id7dJB2AxINFH/tSCad5A6/DxLoH3LkmKE5GuM+mIiYzcG
-UcPi9mOIv1H7eqfoAY3BQrHn63cppJkoUqEebsy4JkOBxas5REu3LyJtl6X1KJOmttJ2NECi28Jo
-CLG0hSkgIUZUD9ixX3nS7MjaTvlob3n+p41f6ni6RbGxdQNtYytDciSxWt6VTCicu+o7qjkwtLmf
-6zU=
+iQEcBAABCAAGBQJRRyzoAAoJEAcTP5bKdNi6vaYH/30qnQ12M9k9Jw8DNz3DA4+Us3nle/ijkJaF
+/Qw40Lv7WOCX5hRhiP077pGLqD7lB+p/Z8Si2C2bQX1y0/D+RRjEfMNH7sINsp62xhv/b4t0oNWM
+b6asirS0jroDTlAxbj3TD0/72g+OXf2Eop2t5h+04T27Lx6OywQ/MmmXi4QZYTC6YDON8D+qAkS8
+W/ft1yc/ZPT7l/nW1gRhV5a+qXX8z7+SOhm/CaScGYmYoZsWiy+3fyE75LlRuIkyEAfwtiKst89N
+/1Dck4Cd1xNVog0XJLO53/obFn1BIg5+r01zlnJS10mvXqenIir9BJFhM4qlTcqCFu6StPeGJHFG
+EWQ=
 
 -->
