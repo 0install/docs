@@ -260,7 +260,7 @@ interfere with those provided by the distribution.
     <group>
       <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
 	<environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-	<version not-before="1.12.1"/>
+	<version before="2" not-before="1.12.1"/>
       </requires>
       <implementation id="sha1new=bad7ab2fed8cbd60e18da0eea476ba4f4e97629d" released="2012-11-10" stability="stable" version="1.13">
 	<manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
@@ -290,7 +290,7 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlE1zXoACgkQrgeCgFmlPMHOcQCgpucquSmJagr9oRdXGsipk7sQQLoAoN7+56LK
-bUaBVVJPgAbmP1IOXLc8
+iEYEABECAAYFAlFG4/IACgkQrgeCgFmlPMHECgCfY2gsEBqZYkCom1H6zh2lA5SRgQMAoNEwHft8
+IfJqwLm4IhqJigUBTM++
 
 -->
