@@ -466,6 +466,21 @@ normal archive in a single file. If missing, it defaults to 0. The value in the
 <b>size</b> attribute does not include the skipped bytes.
 </p>
 
+<p>
+  You can also fetch individual files (0install >= 2.1). This is useful for e.g. jar files, which are typically not unpacked:
+</p>
+
+<pre id='file'>
+    &lt;file
+      href='...'
+      size='...'
+      dest='...' /&gt;
+</pre>
+
+<p>
+  The file is downloaded from <b>href</b>, must be of the given <b>size</b>, and is placed within the implementation directory as <b>dest</b>.
+</p>
+
 <h3 id='recipe'>Recipes</h3>
 
 <p>
@@ -474,7 +489,7 @@ An implementation can also be created by following a &lt;recipe&gt;:
 
 <pre>
   &lt;recipe&gt;
-    ( &lt;archive ...&gt; | &lt;rename ...&gt; | &lt;remove ...&gt; ) +
+    ( &lt;archive ...&gt; | &lt;file ...&gt; | &lt;rename ...&gt; | &lt;remove ...&gt; ) +
   &lt;/recipe&gt;
 </pre>
 
@@ -489,6 +504,9 @@ If a recipe contains an unrecognised element then the whole recipe must be ignor
 <dl>
   <dt>&lt;archive ...&gt;</dt>
   <dd>Causes the named archive to be fetched and unpacked over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
+
+  <dt>&lt;file ...&gt;</dt>
+  <dd>Causes the named file to be fetched and saved over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
 
   <dt>&lt;rename source='...' dest='...'&gt;</dt>
   <dd>Renames or moves a file or directory. It is an error if the source or destination are outside the implementation.</dd>
