@@ -418,7 +418,7 @@ A retrieval method is a way of getting an implementation.
 </p>
 
 <p>
-The simplest retrieval method is the &lt;archive&gt; element:
+The most common retrieval method is the &lt;archive&gt; element:
 </p>
 
 <pre id='retrievalmethods'>
@@ -426,6 +426,7 @@ The simplest retrieval method is the &lt;archive&gt; element:
       href='...'
       size='...'
       extract='...' ?
+      dest='...' ?
       type='...' ?
       start-offset='...' ? /&gt;
 </pre>
@@ -434,7 +435,9 @@ The simplest retrieval method is the &lt;archive&gt; element:
 This states that an archive may be downloaded from the address given in the <b>href</b> attribute. The archive must
 have the given <b>size</b> or it will be rejected. When unpacked (either the subdirectory named in the <b>extract</b>
 attribute, or the whole archive if it is not present), the resulting tree will generate a manifest with the secure hash
-value given as the implementation's <b>id</b>.
+value given as the implementation's <b>id</b>. If <b>dest</b> is given (0install >= 2.1), then the archive is unpacked
+to the specified subdirectory. It is an error to specify a target outside of the implementation directory (e.g.
+"../foo" or attempting to follow a symlink that points out of the implementation).
 </p>
 
 <p>
@@ -471,7 +474,7 @@ An implementation can also be created by following a &lt;recipe&gt;:
 
 <pre>
   &lt;recipe&gt;
-    ( &lt;archive ...&gt; | &lt;rename ...&gt; ) +
+    ( &lt;archive ...&gt; | &lt;rename ...&gt; | &lt;remove ...&gt; ) +
   &lt;/recipe&gt;
 </pre>
 
@@ -489,6 +492,9 @@ If a recipe contains an unrecognised element then the whole recipe must be ignor
 
   <dt>&lt;rename source='...' dest='...'&gt;</dt>
   <dd>Renames or moves a file or directory. It is an error if the source or destination are outside the implementation.</dd>
+
+  <dt>&lt;remove path='...'&gt;</dt>
+  <dd>Delete the file or directory from the implementation (0install >= 2.1). It is an error if the path is outside the implementation.</dd>
 </dl>
 
 <p>
