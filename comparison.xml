@@ -427,7 +427,7 @@ any of these elements would be useful in Zero Install feed files.
 <dt>Environment modules</dt>
 <dd><p>
 The <a href='http://modules.sourceforge.net/'>Environment Modules</a> package provides
-for the dynamic modification of a user's environment via modulefiles.  Each modulefile
+for the dynamic modification of a user's environment via modulefiles. Each modulefile
 contains the information needed to configure the shell for an application. Typically
 modulefiles instruct the module command to alter or set shell environment variables
 such as PATH, MANPATH, etc. To be able to load ("install") software, it must first be
@@ -437,9 +437,12 @@ without root permissions, but then the modules can't be shared (due to different
 </p>
 
 <p>
-The module(1) command doesn't provide a method to share or distribute the applications.
-Many take advantage of transparent remote network filesystem access such as NFS and
-AFS. Some use tools like rdist(1) and rsync(1) to duplicate software within a network.
+The module(1) command doesn't provide a method to share or distribute the applications,
+so modulefiles typically take advantage of transparent remote network
+filesystem access such as NFS and AFS. 0install can also be used in this way,
+with <a href='local-feeds.html'>local feeds</a> taking the place of the
+modulefiles and giving the path of the software on the network file-system
+rather than a URL from which it can be downloaded.
 </p>
 </dd>
 
