@@ -651,7 +651,7 @@ itself.
 </p>
 
 <p class='uml'>
-  <img src='UML/zero-install-binding.png' width='425' height='225' alt='Binding classes'/>
+  <img src='UML/zero-install-binding.png' width='565' height='225' alt='Binding classes'/>
 </p>
 
 <h3 id='environment'>Environment bindings</h3>
@@ -763,6 +763,39 @@ needed with them:
 <p>
   Implementation note: On POSIX systems, 0install will create a shell script under ~/.cache/0install.net/injector/executables and pass the path of this script. 
 </p>
+
+<h3 id='generic-bindings'>Generic bindings</h3>
+
+<p>
+  Custom bindings can be specified using the &lt;binding&gt; element (0install >= 2.1). 0install will not know how to run a program using custom bindings itself, but it will include them in any selections documents it creates, which can then be executed by your custom code. The syntax is:
+</p>
+
+<pre>
+&lt;binding
+    path='...' ?
+    command='...' ?
+    ... &gt;
+  ...
+&lt;/binding&gt;
+</pre>
+
+<p>
+  If <b>command</b> is given, then 0install will select the given &lt;command&gt; within the implementation (which may cause additional dependencies and bindings to be selected). Otherwise, no command is selected.
+</p>
+
+<p>
+  Any additional attributes and child elements are not processed, but are just passed through. If your binding needs a path within the selected implemention, it is suggested that the <b>path</b> attribute be used for this. Other attributes and child elements should be namespaced to avoid collisions.
+</p>
+
+<p>
+  For example, the <a href='ebox.html'>EBox</a> application launcher allows each code module to specify its dependencies, which are then available in the module's scope as <i>getters</i>. The ebox-edit application depends on the help library like this:
+</p>
+
+<pre>
+&lt;requires interface="http://0install.net/tests/ebox-help.xml">
+  &lt;binding e:getter='help'/>
+&lt;/requires>
+</pre>
 
 <h2 id='versions'>Versions</h2>
 
