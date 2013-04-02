@@ -414,7 +414,7 @@ A retrieval method is a way of getting an implementation.
 </p>
 
 <p class='uml'>
-  <img src='UML/zero-install-retr.png' width='205' height='385' alt='Retrieval method classes'/>
+  <img src='UML/zero-install-retr.png' width='485' height='415' alt='Retrieval method classes'/>
 </p>
 
 <p>
@@ -506,10 +506,10 @@ If a recipe contains an unrecognised element then the whole recipe must be ignor
   <dd>Causes the named archive to be fetched and unpacked over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
 
   <dt>&lt;file ...&gt;</dt>
-  <dd>Causes the named file to be fetched and saved over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
+  <dd>Causes the named file to be fetched and saved over the top of whatever is currently in the temporary directory (0install >= 2.1). It supports the same attributes as when used outside of a recipe.</dd>
 
   <dt>&lt;rename source='...' dest='...'&gt;</dt>
-  <dd>Renames or moves a file or directory. It is an error if the source or destination are outside the implementation.</dd>
+  <dd>Renames or moves a file or directory (0install >= 1.10). It is an error if the source or destination are outside the implementation.</dd>
 
   <dt>&lt;remove path='...'&gt;</dt>
   <dd>Delete the file or directory from the implementation (0install >= 2.1). It is an error if the path is outside the implementation.</dd>
