@@ -4,14 +4,17 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Apr 2013</dt>
+<dd>
+  <p><a href='0install-2.0.html'>0install 2.0 released</a>! [ <a href='http://linux.slashdot.org/story/13/03/05/1455249/0install-reaches-20'>Slashdot</a> | <a href='http://www.osnews.com/story/26832/0install_2_0_released'>OSNews</a> | <a href='http://www.pro-linux.de/news/1/19532/zero-install-20-veroeffentlicht.html'>Pro-Linux.de</a> | <a href='http://www.linux.org.ru/news/opensource/8928774'>linux.org.ru</a> | <a href='http://lwn.net/Articles/541676/'>lwn.net</a> ]<br/>
+  <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6780'>0install 2.0 for Windows</a>.</p>
+  <p>In other news, the new <a href='http://0install.net/0template.html'>0template</a> tool provides an easy way to make source and binary feeds for published software. It should be easier to use than 0publish, especially for scripts. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6777'>0publish 0.24 and 0publish-gui 0.14</a> were released, with some bug-fixes. A proof-of-concept for <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6805'>supporting overlays on Linux</a> was created.</p>
+</dd>
 <dt>Mar 2013</dt>
 <dd>
-  <p><a href='0install-2.0.html'>0install 2.0 released</a>! [ <a href='http://linux.slashdot.org/story/13/03/05/1455249/0install-reaches-20'>Slashdot</a> | <a href='http://www.osnews.com/story/26832/0install_2_0_released'>OSNews</a> | <a href='http://www.pro-linux.de/news/1/19532/zero-install-20-veroeffentlicht.html'>Pro-Linux.de</a> | <a href='http://www.linux.org.ru/news/opensource/8928774'>linux.org.ru</a> | <a href='http://lwn.net/Articles/541676/'>lwn.net</a> ]</p>
-  <p>
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6686'>0install 1.15</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6730'>0install 1.16</a> were released, adding the ability to restrict a dependency to a native or non-native version and a for-each syntax for expanding an environment variable into multiple arguments (these were needed on OS X to support Python and Java properly), and fixing a number of minor bugs in preparation for the 2.0 release.
 <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6668'>0install 1.14.1 for Windows</a> was released, adding the "update-apps" command and fixing some bugs.
 Mailing list discussions included the use of <a href='http://search.gmane.org/?query=Felix&amp;author=&amp;group=gmane.comp.file-systems.zero-install.devel&amp;sort=revdate&amp;DEFAULTOP=and&amp;xP=felix&amp;xFILTERS=Gcomp.file-systems.zero-install.devel---A'>0install as a package manager for the Felix language</a> and the use of <a href='http://search.gmane.org/?query=Vagrant&amp;author=&amp;group=gmane.comp.file-systems.zero-install.devel&amp;sort=revdate&amp;DEFAULTOP=and&amp;xP=felix&amp;xFILTERS=Gcomp.file-systems.zero-install.devel---A'>Vagrant VMs</a> with 0install.
-</p>
 </dd>
 <dt>Feb 2013</dt>
 <dd>
