@@ -17,8 +17,8 @@ To use 0install, you will need the following (these are installed on most Linux 
 </p>
 
 <ul>
-  <li><a href="http://python.org">Python</a> (version 2.6, 2.7 or 3.2+).</li>
-<li><a href="https://live.gnome.org/PyGObject/">PyGObject</a> (this is a dependency of PyGTK, but is also available separately).</li>
+<li><a href="http://python.org">Python</a> (version 2.6, 2.7 or 3.2+).</li>
+<li><a href="https://live.gnome.org/PyGObject/">PyGObject</a> (this is a dependency of PyGTK, but is also available separately). If PyGObject is not available, 0install can use <a href='http://code.google.com/p/tulip/'>Tulip</a> instead (which is pure Python, but requires Python >= 3.3).</li>
 <li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
 </ul>
 
@@ -46,8 +46,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.0/0install-2.0.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.0/0install-2.0.tar.bz2.sig</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.1/0install-2.1.tar.bz2</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.1/0install-2.1.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -58,8 +58,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
-$ <b>gpg 0install-2.0.tar.bz2.sig</b>
-gpg: Signature made 2013-03-05T10:54:15 GMT using RSA key ID CA74D8BA
+$ <b>gpg 0install-2.1.tar.bz2.sig</b>
+gpg: Signature made 2013-04-03T10:13:26 BST using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -77,8 +77,8 @@ some other source of information).
 You should now extract the archive, and change directory inside it:
 </p>
 <pre>
-$ <b>tar xjf 0install-2.0.tar.bz2</b>
-$ <b>cd 0install-2.0</b>
+$ <b>tar xjf 0install-2.1.tar.bz2</b>
+$ <b>cd 0install-2.1</b>
 </pre>
 
 <table class='split'>

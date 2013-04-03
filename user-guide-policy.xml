@@ -20,29 +20,18 @@
 <h3>General policy settings</h3>
 
 <p>
-  You can change the policy settings using the Preferences dialog. There are
-  multiple ways to opening the Preferences dialog:
+  You can change the policy settings using the Preferences dialog. To open it:
 </p>
-<ul>
-  <li>
-    <p>Run 0launch with the --gui option</p>
-    <pre>$ <b>0launch --gui</b></pre>
-  </li>
-  <li>
-    <p>Run 0alias with a shortcut you made as first argument, then click Preferences</p>
-    <pre>$ <b>0alias rox-edit</b></pre>
-  </li>
-  <li>
-    <p>
-      If you use the GNOME/KDE menu: choose <b>Zero Install -> Manage
-        Applications</b> from the <b>Applications</b> menu, click on the
-      edit properties icon next to an application and click Preferences:
-    </p>
-    <p style='text-align: center'>
-      <img width="457" height="364" src="screens/manage-apps.png" alt='0desktop --manage'/>
-    </p>
-  </li>
-</ul>
+<pre>$ <b>0install config</b></pre>
+
+<p>
+  If you use the GNOME/KDE menu: choose <b>Zero Install -> Manage
+    Applications</b> from the <b>Applications</b> menu, click on the
+  edit properties icon next to an application and click Preferences:
+</p>
+<p style='text-align: center'>
+  <img width="457" height="364" src="screens/manage-apps.png" alt='0desktop --manage'/>
+</p>
 
 <p>
 You can affect which versions are chosen by changing your policy. Three aspects
@@ -113,8 +102,10 @@ but any changes made to the policy are not reversed.
         <pre>$ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b></pre>
       </li>
       <li>
-        <p>Run 0alias with a shortcut you made as first argument</p>
+	<p>Run 0alias/0install with a shortcut you made as first argument</p>
         <pre>$ <b>0alias rox-edit</b></pre>
+	<p>or (for apps)</p>
+        <pre>$ <b>0install update rox-edit</b></pre>
       </li>
       <li>
         <p>
