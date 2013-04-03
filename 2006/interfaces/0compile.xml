@@ -354,18 +354,48 @@ For a full tutorial, see 0compile's homepage.</description>
 	<executable-in-path name="make"/>
       </requires>
     </command>
-          <implementation id="sha1new=2db5015291cfdedc8d2cf3be11b7b865b27fc259" released="2013-02-26" version="1.0">
+          <implementation id="sha1new=2db5015291cfdedc8d2cf3be11b7b865b27fc259" released="2013-02-26" stability="stable" version="1.0">
       <manifest-digest sha256new="JVBP6RCR3JVWBOBYLB7HOYFDV2FXGMUPDW4GCMZY7U2KHVUFFWYA"/>
       <archive extract="0compile-1.0" href="http://downloads.sourceforge.net/project/zero-install/0compile/1.0/0compile-1.0.tar.bz2" size="36120"/>
     </implementation>
         </group>
       </group>
     </group>
+    <group>
+      <requires interface="http://0install.net/2006/interfaces/0publish">
+      <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
+    </requires>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <version not-before="2.1"/>
+      <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
+    </requires>
+      <requires interface="http://repo.roscidus.com/utils/bash" os="Windows">
+      <executable-in-var name="0COMPILE_BASH"/>
+    </requires>
+      <command name="test" path="tests/testcompile.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+      <requires interface="http://repo.roscidus.com/devel/make">
+	<executable-in-path name="make"/>
+      </requires>
+      <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib"/>
+    </command>
+      <command name="run" path="0compile">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+      <implementation id="sha1new=5d11d6a774f261b408f3c57dce8819481d842f90" released="2013-04-03" version="1.1">
+      <manifest-digest sha256new="O3KHHM43T7KI3NPRZ4BJOFERQ2TI4J525ZU55GM5CW4K5QPM5NIQ"/>
+      <archive extract="0compile-1.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/1.1/0compile-1.1.tar.bz2" size="36103"/>
+    </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs6IAACgkQrgeCgFmlPMGonACgjjrgGpKXywwa5c716hZ1PDkOb7oAn307K/sv
-rVE6N65JNiQWYRRraVLH
+iEYEABECAAYFAlFcH6cACgkQrgeCgFmlPMGwIwCgy/9oiiwWlmNV3kuokrxNXk+HpcQAoI0s9w4T
+mZLcpJ+FcW13Pkm7FMfS
 
 -->
