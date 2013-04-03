@@ -39,6 +39,10 @@ adding binaries, except that you give <b>src</b> as the machine (CPU) type:
 </p>
 
 <p>
+  (if you want to script this process, take a look at <a href='0template.html'>0template</a>)
+</p>
+
+<p>
   You can also edit the XML directly, which gives more control. A minimal source implementation might look like this:
 </p>
 
@@ -63,19 +67,21 @@ The path to the generated feed for the new binary is <b>$BINARYFEED</b>, if you 
 </p>
 
 <p>
-Instead of giving a &lt;runner&gt;, you can instead give a shell command, like this:
+  Instead of giving a &lt;runner&gt;, you may prefer to use a shell command. This is useful if you need to run more than one command. However, if the command starts to get complicated, you should move it to a script, either inside the main source archive or in a separate dependency, and just set this attribute to the command to run the script):
 </p>
 
 <pre>
-  &lt;implementation arch="*-src" id="." version="0.1-pre"
-    <b>xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile"
-    compile:command="make -f ${SRCDIR}/Makefile"</b>/>
+&lt;implementation arch="*-src" id="." version="0.1-pre"&gt;
+  &lt;command name='compile'
+    <b>shell-command='&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install'</b>/>
+
+  &lt;requires interface='http://repo.roscidus.com/devel/make'>
+    &lt;executable-in-path name='make'/>
+  &lt;/requires>
+&lt;/implementation&gt;
 </pre>
 
-<p>
-However, the first form (with &lt;command name='compile'>) is preferred (and necessary if you want to support Windows).
-If the command starts to get complicated, you should move it to a script (either inside the main source archive or in a separate dependency) and just set this attribute to the command to run the script.
-</p>
+<div class='note'>2013-04-03: starting with 0compile 1.1, this even works on Windows (it uses win-bash).</div>
 
 <p>
 There are also some extra attributes you can add to the <b>implementation</b> element:
@@ -83,8 +89,7 @@ There are also some extra attributes you can add to the <b>implementation</b> el
 
 <dl>
  <dt>compile:binary-main</dt>
- <dd>This optional attribute gives the value of the <b>main</b> attribute on the binary feed that is created. If it is not given, then
- the binary created cannot be executed (e.g., it is a library).</dd>
+ <dd>Deprecated. Use &lt;compile:implementation&gt; instead (see below).</dd>
 
  <dt>compile:dup-src</dt>
  <dd>Some programs insist on creating files in their source directory, which is
@@ -100,12 +105,15 @@ into 'build' before building.</dd>
 <h2>Customising the binary implementation</h2>
 
 <p>
-  Starting from 0compile 0.23, you can specify a template &lt;implementation&gt; for the binary. You can use this, for example, to add &lt;command&gt; elements to it. Here's a more complex example for a Java program:
+  You can specify a template &lt;implementation&gt; for the binary using &lt;compile:implementation&gt;. You can use this, for example, to add &lt;command&gt; elements to it. Here's a more complex example for a Java program:
 </p>
 
 <pre>
-  &lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre" <b>compile:min-version='0.24'</b>>
-  <b>&lt;command name="compile" path="src/Makefile"></b>
+  ... xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile" ...
+
+  &lt;implementation <b>arch="*-src"</b> id="." version="0.1-pre">
+
+    <b>&lt;command name="compile" path="src/Makefile"></b>
       &lt;runner interface='http://repo.roscidus.com/devel/make'>
         &lt;arg>-f&lt;/arg>
       &lt;/runner>
@@ -114,13 +122,14 @@ into 'build' before building.</dd>
         &lt;environment name='CLASSPATH' insert='.'/>
         &lt;requires interface="http://repo.roscidus.com/utils/graphviz"/>
         <b>&lt;command name='run'></b>
-          &lt;runner interface='http://repo.roscidus.com/java/openjdk-6-jre'/>
+          &lt;runner interface='http://repo.roscidus.com/java/openjdk-jre'/>
           &lt;arg>com.example.MainClass&lt;/arg>
         &lt;/command>
       &lt;/compile:implementation>
     &lt;/command>
+
     &lt;requires interface="http://repo.roscidus.com/java/iris" compile:include-binary='true'/>
-    &lt;requires interface="http://repo.roscidus.com/java/openjdk-6-jdk">
+    &lt;requires interface="http://repo.roscidus.com/java/openjdk-jdk">
       &lt;environment name='PATH' insert='bin'/>
     &lt;/requires>
   &lt;/implementation>
@@ -130,34 +139,24 @@ into 'build' before building.</dd>
 
 <dl>
   <dt>arch="*-src"</dt><dd>tells us that the root &lt;implementation&gt; describes some source code.</dd>
-  <dt>compile:min-version</dt><dd>requires 0compile >= 0.24 to use the template feature.</dd>
-  <dt>&lt;command name='compile'&gt;</dt><dd>this replaces the old <b>compile:command</b> attribute described above.</dd>
   <dt>&lt;compile:implementation&gt;</dt><dd>this is the template for the implementation that will be created by the compile.</dd>
   <dt>arch='*-*'</dt><dd>indicates that the generated binary is platform independent (Java bytecode).</dd>
   <dt>&lt;command name='run'&gt;</dt><dd>says how to run the resulting binary (by using the Java runtime).</dd>
 </dl>
 
-<h2>Adding run-time dependencies</h2>
+<p>The dependencies are:</p>
 
-<p>
-By default, the feed created for the new binary doesn't have any dependencies. There are three ways to add them:
-</p>
+<dl>
+<dt>graphviz and openjdk-jre</dt>
+<dd>only used at run-time (since they occur inside the &lt;compile:implementation&gt;).</dd>
 
-<ul>
-<li>You can annotate any &lt;requires&gt; element in your source feed with the 'include-binary' attribute. This
-causes the dependency to appear in the generated binary's feed, in addition to being made available at
-compile-time. e.g.
-<pre>
-    &lt;requires <b>compile:include-binary='true'</b> interface="http://my/library"&gt;
-      &lt;environment insert="lib" name="MY_LIBRARY_DIR" mode="replace"/&gt;
-    &lt;/requires&gt;
-</pre>
-</li>
-<li>You can use the template feature described above.</li>
-<li>
-You can edit the feed XML file directly during the build (it's in the <b>$DISTDIR/0install</b> directory).
-</li>
-</ul>
+<dt>openjdk-jdk</dt>
+<dd>only used at compile-time (occurs directly inside the source &lt;implementation&gt;).</dd>
+
+<dt>iris</dt>
+<dd>used at compile-time and at run-time (has compile:include-binary attribute).</dd>
+</dl>
+
 
 <h2>Tips</h2>
 
