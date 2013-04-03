@@ -3,12 +3,10 @@
 
 <div>
 
-<p>Imagine a world where ...</p>
-
 <table class='picturebullets' style='margin: 0px'>
  <tr class='summary'>
   <td class='image'><img src='tango/applications-internet.png' alt='' width='48' height='48'/></td>
-  <td><h3>... anyone can distribute software</h3>
+  <td><h3>Anyone can distribute software</h3>
     <p>If you have a web-site, you can distribute your software;<br/>
       Create <k>one package</k> that <k>works everywhere</k>;<br/>
       With <k>dependency handling</k> and <k>automatic updates</k>;<br/>
@@ -18,16 +16,16 @@
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/secure.png' alt='' width='48' height='48'/></td>
-  <td><h3>... security is central</h3>
-    <p>Users don't need <k>administrator</k> access just to <k>install a word-processor</k>;<br/>
+  <td><h3>Security is central</h3>
+    <p>Installing a <k>word-processor</k> doesn't grant it <k>administrator access</k>;<br/>
       <k>Digital signatures</k> are always checked before new software is run;<br/>
       Users <k>share libraries</k> without having to trust each other;<br/>
-      Use of <k>sandboxes</k> and <k>virtualisation</k> is routine</p>
+      Use with <k>sandboxes</k> and <k>virtualisation</k> is easy</p>
   </td>
  </tr>
  <tr class='summary'>
   <td class='image'><img src='tango/Emblem-person-blue.png' alt='' width='48' height='48'/></td>
-  <td><h3>... you control your own computer</h3>
+  <td><h3>You control your own computer</h3>
       <p>
       You don't have to <k>guess</k> what happens during installation;<br/>
       Mix and match <k>stable</k> and <k>experimental</k> programs on a single system
@@ -37,7 +35,7 @@
 </table>
 
 <p>Zero Install is a <k>decentralised cross-distribution software installation
-  system</k>. Other features include full support for <k>shared libraries</k>, <k>sharing
+  system</k>. Other features include full support for <k>shared libraries</k> (with a SAT solver for dependency resolution), <k>sharing
   between users</k>, and <k>integration with native platform package managers</k>. It supports
   both <k>binary and source packages</k>, and works on <k>Linux</k>, <k>Mac OS X</k>, <k>Unix</k>
   and <k>Windows</k> systems. It is fully <k>Open Source</k>.</p>
