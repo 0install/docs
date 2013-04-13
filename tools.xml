@@ -51,6 +51,9 @@ number and release date, tagging the release in your version control system and 
  <dd>
 <b>pkg2zero</b> publishes a Debian or RPM package in a Zero Install feed.
  </dd>
+
+ <dt><a href='http://0install.de/feeds/ZeroInstall_Tools.xml'>Zero Install Publishing tools (.NET)</a></dt>
+ <dd>A .NET equivalent of 0publish-GUI (e.g. for Windows).</dd>
 </dl>
 
 <h3>Compiling</h3>
