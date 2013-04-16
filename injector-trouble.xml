@@ -59,6 +59,38 @@ Can't find all required implementations:
 This is quite good at suggesting where the fault is, but the problem may be elsewhere. For example, if a program has versions available for Python 3 and Python 2, and you only have Python 2, then 0install should select the Python 2 version. But if it can't find any valid selections (because some other library required for the Python 2 version is missing), then it might report that the lack of Python 3 is the issue (when, in fact, that's just one possible way of fixing the problem).
 </p>
 
+<p>
+  To investigate further, you can use the <b>--version-for</b> option to fix the versions of multiple components. For example, to find out why you can't run 0compile 1.1 with 0publish 0.20 and 0install 2.1:
+</p>
+
+<pre-scrolled>
+$ <b>0install select -c http://0install.net/2006/interfaces/0compile.xml
+  --version 1.1 \
+  --version-for http://0install.net/2006/interfaces/0publish 0.20 \
+  --version-for http://0install.net/2007/interfaces/ZeroInstall.xml 2.1</b>
+Can't find all required implementations:
+- http://0install.net/2006/interfaces/0compile.xml -> 1.1 (sha1new=5d11d6a774f261b408f3c57dce8819481d842f90)
+    User requested version 1.1
+- http://0install.net/2006/interfaces/0publish -> 0.20 (sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43)
+    User requested version 0.20
+- http://0install.net/2007/interfaces/ZeroInstall.xml -> (problem)
+    http://0install.net/2006/interfaces/0compile.xml 1.1 requires 2.1 &lt;= version
+    http://0install.net/2006/interfaces/0publish 0.20 requires version &lt; 1.11-post
+    User requested version 2.1
+    No usable implementations satisfy the restrictions:
+      /home/tal/Projects/zero-install/0install (2.1-post): Incompatible with user-specified requirements
+      sha1new=4f860b217bb94723ad6af9062d25dc7faee6a7ae (2.1): incompatible with restrictions
+      sha1new=3fa607f49966f7eb00682336a4391c78d13a3d8b (2.0): Incompatible with user-specified requirements
+      sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da (1.16): Incompatible with user-specified requirements
+      sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8 (1.15): Incompatible with user-specified requirements
+      ...
+- http://repo.roscidus.com/python/python -> 2.7.3-4 (package:arch:python2:2.7.3-4:x86_64)
+</pre-scrolled>
+
+<p>
+Here, we can see that 0publish 0.20 requires an old version of 0install, while 0compile 1.1 requires a newer one.
+</p>
+
 <h2 id='env-vars'>Why is this environment variable set?</h2>
 
 <p>
@@ -123,7 +155,7 @@ to prevent it switching to GUI mode too. Eg:
 
 <pre-scrolled>
 $ <b>0launch -vvc http://rox.sourceforge.net/2005/interfaces/Edit</b>
-INFO:root:Running 0launch 1.12 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.7.3 (default, Aug 26 2012, 11:57:48) 
+INFO:root:Running 0launch 1.12 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.7.3 (default, Aug 26 2012, 11:57:48)
 [GCC 4.7.1]
 INFO:0install:Loading configuration from /home/me/.config/0install.net/injector/global
 DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/Edit from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
