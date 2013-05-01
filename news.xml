@@ -4,6 +4,17 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>May 2013</dt>
+<dd>
+<p>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6827'>0install 2.1 released</a>: new features include the "0install search" command (to search for programs on the Internet), support for win-bash (which means that using a shell command as the 0compile build command now works on all platforms), a &lt;remove&gt; recipe step, a generic &lt;binding&gt; element (for custom bindings), support for .xz compressed Debian archives, and support for Python 3's Tulip mainloop (as an alternative to GLib). <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6833'>0install 2.1 for Windows</a> was released, including support for &lt;file&gt; (single-file) downloads (the non-Windows 2.1 release's &lt;file&gt; support is buggy; it will be fixed in 2.2).</p>
+<p>
+Development has started on <a href='https://github.com/0install/0repo'>0repo</a>, a tool to make publishing and managing a collection of feeds simpler. Feedback from alpha testers welcome!
+</p>
+<p>
+A new <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6867'>Maven integration service</a> is now up and ready for testing - this provides automatically-generated 0install feeds for Maven jars (note: requires working &lt;file&gt; support).
+</p>
+</dd>
 <dt>Apr 2013</dt>
 <dd>
   <p><a href='0install-2.0.html'>0install 2.0 released</a>! [ <a href='http://linux.slashdot.org/story/13/03/05/1455249/0install-reaches-20'>Slashdot</a> | <a href='http://www.osnews.com/story/26832/0install_2_0_released'>OSNews</a> | <a href='http://www.pro-linux.de/news/1/19532/zero-install-20-veroeffentlicht.html'>Pro-Linux.de</a> | <a href='http://www.linux.org.ru/news/opensource/8928774'>linux.org.ru</a> | <a href='http://lwn.net/Articles/541676/'>lwn.net</a> ]<br/>
