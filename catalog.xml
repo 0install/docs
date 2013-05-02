@@ -39,7 +39,12 @@ animated graphical user interfaces.
 Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
 platforms) for rendering but with an API which hides the underlying GL
 complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/tools/0export.xml"><name>0export</name><summary>create self-installing bundles for distribution on CD</summary><description>
+efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/tools/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description><homepage>http://0install.net/0repo.html</homepage></interface><interface uri="http://0install.net/tools/0export.xml"><name>0export</name><summary>create self-installing bundles for distribution on CD</summary><description>
 It is sometimes useful to bundle a program and its libraries together
 on a CD (for example) so that it can be used on machines without a network
 connection, or where the network is very slow. It is also useful for archival

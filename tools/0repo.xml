@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="http://0install.net/tools/0repo.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0repo</name>
+  <summary>manage a repository of 0install feeds</summary>
+  <description>
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description>
+  <homepage>http://0install.net/0repo.html</homepage>
+
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
+    <!-- Update the copy of the version number in the code -->
+    <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; 0repo.py</release:action>
+  </release:management>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0repo.py">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
+
+    <command name="test" path="tests/test0repo.py">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+      <executable-in-path name="0repo"/>
+    </command>
+
+    <requires interface="http://repo.roscidus.com/python/python">
+      <version before="3" not-before="2.7"/>
+    </requires>
+
+    <requires interface="http://0install.net/2006/interfaces/0publish">
+      <executable-in-var name="ZEROPUBLISH"/>
+    </requires>
+
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+      <version not-before="2.2"/>
+    </requires>
+
+    <implementation id="sha1new=87a6ec74b7fc22b297dced639bbbdb45f7452c0f" released="2013-05-02" version="0.1">
+      <manifest-digest sha256new="KCJ4HFOGZTOVKRR4YATFT2CUKQNFLHMC5WICUT75NC2MA2OQPV4A"/>
+      <archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42165"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABCAAGBQJRgon4AAoJEAcTP5bKdNi6/+8H/ArDH9m9qq1cuyXy0JJyjhjHxbfTFQ4rd5rY
+B3H4iezXvfvcxiSmiX1Fkgci/vLI8fcNUHFwNVlI5CL1/ID6EitqSnnFTfeJMxO6Bh9jhYEqxE7F
+41cHkxB+O6ScCqVz0sj+Xm+AruGdgT0/pp+Q+B+0co+mh4bwYxORLxg1oAEX/Dil0ar6a8caFE96
+VZdQPDDvzgUxOr32N674wyy9ZYorBCbQ+Ihl9NiM9OA+RX+T4Zklj9/t55Cqh3G0vvIaG+elM8dJ
+kA3AmvF/Y09o5MMSWf+yP+eNEf8bt5HRUvN2IqXxgFz9p1dPxZHLkk98Q9hTF7zebsFmMPNPCALI
+bvM=
+
+-->
