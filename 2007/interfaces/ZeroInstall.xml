@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/interfaces/ZeroInstall.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0install</name>
   <summary>decentralised installation system</summary>
@@ -292,16 +292,24 @@ interfere with those provided by the distribution.
       <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
       <version not-before="2.0.2"/>
     </requires>
-      <implementation id="sha1new=4f860b217bb94723ad6af9062d25dc7faee6a7ae" released="2013-04-03" version="2.1">
+      <implementation id="sha1new=4f860b217bb94723ad6af9062d25dc7faee6a7ae" released="2013-04-03" stability="stable" version="2.1">
       <manifest-digest sha256new="GT7DMOHJ5UPT6H4R5EP3YKSW7M6DIR6CWEIOH3EH5KSSSS57AA6A"/>
       <archive extract="0install-2.1" href="http://downloads.sourceforge.net/project/zero-install/0install/2.1/0install-2.1.tar.bz2" size="419419"/>
+    </implementation>
+      <implementation id="sha1new=bd5750c6111fb3bcc299c3ceab4dc98a98cc07e6" released="2013-05-02" version="2.2">
+      <manifest-digest sha256new="W4OFG5KSAPKA3BHSHPCLL76WHIKXZ36J4Z5DAUF656GEUVOOT3VQ"/>
+      <archive extract="0install-2.2" href="http://downloads.sourceforge.net/project/zero-install/0install/2.2/0install-2.2.tar.bz2" size="419579"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlFb8Q8ACgkQrgeCgFmlPMGnGgCgtAtCZLOrWZ237+eCarqfKObUAMIAn2IReR3I
-MWt2QNfgfZNjI5Pv0+R/
+iQEcBAABCAAGBQJRgmVmAAoJEAcTP5bKdNi64AcH/RcZj+pnPV/hpRgb+UCPdftkeo6QOriutxYE
+zABkZ+R6E31I7uVtkYo4yESy3vwB0rBg+LAyWF75A69nXUnKZqBJycAD5gJqKUkqYXT7eRt5KLiI
+7cfPzeHdfVLDuysnnJFu0gNDvbfVFdYKbhl0UWzQy4Bk7PBvHPWpFBfs0Un7cRO3egC5fLs1WABj
+KBHjTa4abEG7q6WducqQeWFF7Oz2NT1TfNJjPuKf0Eah/QSYGi6nuU7JDJYzRbTpjtvJggtxFgkg
+YwEIApGmjE2g1dJoZcWfWgeuvbz5Xt0ygkEfl41pTIMeiE3VKu2jZK6vHQSrFe6WcZExpha15wxk
+7L0=
 
 -->
