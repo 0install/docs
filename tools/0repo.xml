@@ -39,19 +39,19 @@
       <version not-before="2.2"/>
     </requires>
 
-    <implementation id="sha1new=87a6ec74b7fc22b297dced639bbbdb45f7452c0f" released="2013-05-02" version="0.1">
-      <manifest-digest sha256new="KCJ4HFOGZTOVKRR4YATFT2CUKQNFLHMC5WICUT75NC2MA2OQPV4A"/>
-      <archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42165"/>
+    <implementation id="sha1new=83e04487e2691fc722be397d673bd284bd09723d" released="2013-05-02" version="0.1">
+      <manifest-digest sha256new="TRQFEPTMXP7NMDA53PKEATAI5AZ7ALMLXRVNWVZ5S7V4KWDWE4UA"/>
+      <archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42276"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRgon4AAoJEAcTP5bKdNi6/+8H/ArDH9m9qq1cuyXy0JJyjhjHxbfTFQ4rd5rY
-B3H4iezXvfvcxiSmiX1Fkgci/vLI8fcNUHFwNVlI5CL1/ID6EitqSnnFTfeJMxO6Bh9jhYEqxE7F
-41cHkxB+O6ScCqVz0sj+Xm+AruGdgT0/pp+Q+B+0co+mh4bwYxORLxg1oAEX/Dil0ar6a8caFE96
-VZdQPDDvzgUxOr32N674wyy9ZYorBCbQ+Ihl9NiM9OA+RX+T4Zklj9/t55Cqh3G0vvIaG+elM8dJ
-kA3AmvF/Y09o5MMSWf+yP+eNEf8bt5HRUvN2IqXxgFz9p1dPxZHLkk98Q9hTF7zebsFmMPNPCALI
-bvM=
+iQEcBAABCAAGBQJRgpw8AAoJEAcTP5bKdNi6GQwH/Ak00o59H+U0sNP3mYoSiqS0WZfq50wLb/7U
+Al+6fRRl81Yy22/8gOhkBxYN1zXSjdJEvaSjwxKL2SEozyoldRKVbPLA2C+nyND/QcjjUrjlKAhk
+/FPdSQXx8GswRzB2iElSi2Cqpk1HtBz6p5zH1GlXXRXmRQ8Cg5Dd6bNpVEw6lDa7gmu0nu5dmeiD
+o97XnKonV9fBF88qN86EOHN0VE/b2CtqXEzq0YQ68IoWGGwuldhoypwnxU3LPFuISL3WC8cFSEQ5
+CO3hzShwZIWA+wa4gHPGMtdAwSXiuOh5Qdp18YIkeEQXAwLkbFSuIklXrmFi71nYFxs1p1PeQ58f
+vmI=
 
 -->
