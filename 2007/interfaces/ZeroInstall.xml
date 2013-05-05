@@ -298,18 +298,18 @@ interfere with those provided by the distribution.
     </implementation>
       <implementation id="sha1new=bd5750c6111fb3bcc299c3ceab4dc98a98cc07e6" released="2013-05-02" version="2.2">
       <manifest-digest sha256new="W4OFG5KSAPKA3BHSHPCLL76WHIKXZ36J4Z5DAUF656GEUVOOT3VQ"/>
-      <archive extract="0install-2.2" href="http://downloads.sourceforge.net/project/zero-install/0install/2.2/0install-2.2.tar.bz2" size="419579"/>
+      <archive extract="0install-2.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.2/0install-2.2.tar.bz2" size="419579"/>
     </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRgmVmAAoJEAcTP5bKdNi64AcH/RcZj+pnPV/hpRgb+UCPdftkeo6QOriutxYE
-zABkZ+R6E31I7uVtkYo4yESy3vwB0rBg+LAyWF75A69nXUnKZqBJycAD5gJqKUkqYXT7eRt5KLiI
-7cfPzeHdfVLDuysnnJFu0gNDvbfVFdYKbhl0UWzQy4Bk7PBvHPWpFBfs0Un7cRO3egC5fLs1WABj
-KBHjTa4abEG7q6WducqQeWFF7Oz2NT1TfNJjPuKf0Eah/QSYGi6nuU7JDJYzRbTpjtvJggtxFgkg
-YwEIApGmjE2g1dJoZcWfWgeuvbz5Xt0ygkEfl41pTIMeiE3VKu2jZK6vHQSrFe6WcZExpha15wxk
-7L0=
+iQEcBAABCAAGBQJRhj8zAAoJEAcTP5bKdNi6IIkH/iwBd8ai7BjbHPMgaoDsICjclNg7wnhnO7lG
+FhKKFzeVIzdwX6jQacLYtodkOEa0gKCfRZ+iRqKZ+vh8TKxUdrHbYpz+LnwOu161gE/enEnXtZ4E
+ErosIoeMnwCw79cHjPKVP+kkqhoZDue73EPey3pgXkfKK0bzGLjOOiQBTA2Sl5Fdkj8uPay1iPPf
+OVDBQpzysApRIYaPcBsxukhu9Osr21DalfRG6M0SxfiWdM+1mgx7J+LrQiSmBI95xK4oK8RmPzqr
+69S2uP+NNYR5qcckHwgSziaDDOaldGFyUlAQVBfPV3DlAqP6xtQbrlnR4MlavBDgE6LJQuk0+NFp
+W4U=
 
 -->
