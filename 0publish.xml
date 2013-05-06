@@ -16,15 +16,24 @@ for feed files which you can integrate into your release scripts.
 </program>
 
 <p>
-If you're looking for a graphical environment instead, see <b>0publish-gui</b> in <a
-href='injector-packagers.html'>the packaging guide</a>.
+  However, <strong>0publish is somewhat deprecated</strong>:
 </p>
 
-<p>
-Note: <a href='0release.html'>0release</a> provides a more complete solution
-for managing releases (0release uses 0publish internally, but also handles many
+<ul>
+<li>
+If you're looking for a graphical environment instead, see <b>0publish-gui</b> in <a
+href='injector-packagers.html'>the packaging guide</a>.
+</li>
+<li>
+To add a new version of a program to a feed, consider using <a href='0template.html'>0template</a>
+to generate the XML for the new version and <a href='0repo.html'>0repo</a> to add it to the master feed.
+</li>
+<li>
+<a href='0release.html'>0release</a> provides a more complete solution
+for managing releases (0release uses 0publish or 0repo internally, but also handles many
 other aspects of making releases for you).
-</p>
+</li>
+</ul>
 
 <toc level='h2'/>
 

@@ -12,11 +12,11 @@
 </program>
 
 <div class='figure'>
-<img src='diagrams/0template.png' width='443' height='491' alt='0template workflow' style='padding: .5em'/>
+<img src='diagrams/0template.png' width='492' height='341' alt='0template workflow' style='padding: .5em'/>
 </div>
 
 <p>
-  That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with 0publish.
+  That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with <a href='0repo.html'>0repo</a>.
 </p>
 
 <p>
@@ -136,26 +136,22 @@ You now have a feed with the appropriate details filled in:
 </p>
 
 <pre-scrolled>
-  $ 0launch myprog-1.0.xml
+$ 0launch myprog-1.0.xml
 </pre-scrolled>
 
 <p>Or, for source feeds:</p>
 
 <pre-scrolled>
-  $ 0compile autocompile myprog-1.0.xml
+$ 0compile autocompile myprog-1.0.xml
 </pre-scrolled>
 
 <p>
 Once you are happy with it, you can add it to
-the master feed (which contains all versions) using 0publish. e.g.
+the master feed (which contains all versions) using <a href='0repo.html'>0repo</a>. e.g.
 </p>
 
 <pre-scrolled>
-0publish --add-from myprog-1.2.xml ~/public_html/myprog.xml
+$ 0repo add myprog-1.2.xml
 </pre-scrolled>
-
-<p>
-  That will also create myprog.xml for you first if it doesn't yet exist, provided you specified a &lt;feed-for&gt; in your template.
-</p>
 
 </html>
