@@ -98,25 +98,25 @@ A minimal Hello World example is available for testing. You can check it out lik
 version control system:
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>git clone git://github.com/0install/hello-python.git</b>
-</pre>
+</pre-scrolled>
 
 <p>
 To check that you can run it, use <a href='injector.html'>0launch</a> on the feed:
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>cd hello-python</b>
 $ <b>0launch HelloWorld.xml</b>
 Hello World!
-</pre>
+</pre-scrolled>
 
 <p>
 HelloWorld.xml is the local feed. Its contents look like this:
 </p>
 
-<pre>&lt;?xml version="1.0" ?>
+<pre-scrolled>&lt;?xml version="1.0" ?>
 &lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   &lt;name><b>HelloWorld</b>&lt;/name>
   &lt;summary><b>minimal demonstration package for 0release</b>&lt;/summary>
@@ -137,7 +137,7 @@ HelloWorld.xml is the local feed. Its contents look like this:
     &lt;/command>
   &lt;/implementation>
 &lt;/interface>
-</pre>
+</pre-scrolled>
 
 <p>
 Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published. If you want to follow this tutorial,
@@ -159,7 +159,7 @@ directory. Create the directory now and then run <b>0release</b> inside it,
 giving it the location of your local feed.
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>mkdir -p ~/releases/hello</b>
 $ <b>cd ~/releases/hello</b>
 $ <b>0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml</b>
@@ -168,7 +168,7 @@ Success - created script:
  ~/releases/hello/make-release
 Now edit it with your local settings.
 Then, create new releases by running it.
-</pre>
+</pre-scrolled>
 
 <p>
 This will create a single executable file in the directory, called <b>make-release</b>.
@@ -186,15 +186,33 @@ be shared by other developers.</li>
   <strong>Warning:</strong> Do not put make-release under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake in e.g. the upload command and then fix it, 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
 </p>
 
+<h3>Use with 0repo</h3>
+
+<p>0release >= 0.15 contains support for the new <a href='0repo.html'>0repo</a> repository management
+system. If you use this, most of the settings in the <b>make-release</b> file can be removed. For
+example, the complete configuration for 0release itself (0install.net uses 0repo) is:
+</p>
+
+<pre-scrolled>
+#!/bin/sh
+cd `dirname "$0"`
+exec 0launch http://0install.net/2007/interfaces/0release.xml \
+  --release /home/tal/Projects/zero-install/0release/0release.xml \
+  --public-scm-repository=origin \
+  "$@"
+</pre-scrolled>
+
+<h3>Use without 0repo (deprecated)</h3>
+
 <p>
 Open the file in a text editor. There are five settings, with comments explaining what is needed.
 The only one you need to set is the first (<b>ARCHIVE_DIR_PUBLIC_URL</b>), which is where people
 will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
 </p>
 
-<pre>
+<pre-scrolled>
 ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/zero-install/hello/$RELEASE_VERSION'
-</pre>
+</pre-scrolled>
 
 <p>
 Note that $RELEASE_VERSION is used because SourceForge puts each archive in a different directory,
@@ -202,9 +220,9 @@ whose name is the version number. If you put all your archives in a single direc
 need this. e.g. you could use:
 </p>
 
-<pre>
+<pre-scrolled>
 ARCHIVE_DIR_PUBLIC_URL='http://localhost/~me/testing'
-</pre>
+</pre-scrolled>
 
 <p>
 The other settings allow 0release to push files to the remote server automatically, but you can
@@ -217,20 +235,20 @@ leave them as they are and do it manually if you prefer.
 When you want to make a new release, simply run the <b>make-release</b> script, like this:
 </p>
 
-<pre>
+<pre-scrolled>
 $ <b>cd ~/releases/hello</b>
 $ <b>./make-release</b>
 Releasing HelloWorld
 Snapshot version is 0.1-pre
 Version number for new release [0.1]:
-</pre>
+</pre-scrolled>
 
 <p>
 You are prompted to enter the version number for the new release. You can just press Return to accept the
 default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). It then prints:
 </p>
 
-<pre>Releasing version 0.1
+<pre-scrolled>Releasing version 0.1
 HEAD is now at 387535a Updated feed-for to localhost for testing
 SKIPPING unit tests for ~/releases/hello/0.1/helloworld-0.1 (no 'self-test' attribute set)
 Wrote source feed as helloworld-0.1.xml
@@ -244,7 +262,7 @@ P) Publish candidate (accept)
 F) Fail candidate (untag)
 (you can also hit CTRL-C and resume this script when done)
 Publish/Fail:
-</pre>
+</pre-scrolled>
 
 <p>
 0release has now created a candidate archive for you to examine. You might like
@@ -289,9 +307,9 @@ branch (not on the "0release-tmp" branch, which will be discarded if you fail th
 We'll just check that the release works:
 </p>
 
-<pre>$ <b>0launch 0.1/helloworld-0.1/HelloWorld.xml</b>
+<pre-scrolled>$ <b>0launch 0.1/helloworld-0.1/HelloWorld.xml</b>
 Hello World!
-</pre>
+</pre-scrolled>
 
 <p>
 Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail
@@ -304,12 +322,12 @@ The temporary files (<b>release-status</b> and the extracted
 your GPG passphrase to sign the release (use <b>--key</b> if you don't want to use the default key).
 </p>
 
-<pre>Tagged as v0.1
+<pre-scrolled>Tagged as v0.1
 HEAD is now at 07f3c9e Start development series 0.1-post
 Deleted branch 0release-tmp.
 Changing key from 'None' to '<i>YOUR-KEY</i>'
 Exported public key as '~/releases/hello/<i>YOUR-KEY</i>.gpg'
-</pre>
+</pre-scrolled>
 
 <p>
 A new file then appears: <b>HelloWorld.xml</b>. This is
@@ -341,7 +359,7 @@ If you didn't set an upload command in the make-release configuration file,
 0release will prompt you to upload the files now:
 </p>
 
-<pre>
+<pre-scrolled>
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload required
 
@@ -349,29 +367,29 @@ Upload 0.1/helloworld-0.1.tar.bz2 as
   http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2
 No upload command is set => please upload the archive manually now
 Press Return once the archive is uploaded.
-</pre>
+</pre-scrolled>
 
 <p>
 Copy the archive (<b>helloworld-0.1.tar.bz2</b>)
 to your web-server. When you press Return, 0release will check that the archive was uploaded
 correctly:
 </p>
-<pre>Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
+<pre-scrolled>Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
 
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload has been checked (exists and has correct size)
-</pre>
+</pre-scrolled>
 
 <p>
 Finally, it will prompt you to upload the feed and the new Git commits:
 </p>
 
-<pre>
+<pre-scrolled>
 Upload ~/releases/hello/HelloWorld.xml into http://0install.net/tests
 NOTE: No feed upload command set => you'll have to upload them yourself!
 Push changes to public SCM repository...
 NOTE: No public repository set => you'll have to push the tag and trunk yourself.
-</pre>
+</pre-scrolled>
 
 <p>
 After uploading <b>HelloWorld.xml</b> (to the URL you put in the feed-for) and <b>&lt;KEYID&gt;.gpg</b>
@@ -379,10 +397,10 @@ After uploading <b>HelloWorld.xml</b> (to the URL you put in the feed-for) and <
 chose at the start:
 </p>
 
-<pre>
+<pre-scrolled>
 $ 0launch http://localhost/~me/testing/HelloWorld.xml
 Hello World!
-</pre>
+</pre-scrolled>
 
 <p>
 You can edit <b>make-release</b> to set some commands to automatically upload the files and to
@@ -393,9 +411,9 @@ push the branch and tag ("master" and "v0.1" in this case) to your public Git re
 Tip: to check that all files are present, use <a href='feedlint.html'>FeedLint</a>:
 </p>
 
-<pre>
+<pre-scrolled>
 $ 0launch http://0install.net/2007/interfaces/FeedLint.xml http://localhost/~me/testing/HelloWorld.xml
-</pre>
+</pre-scrolled>
 
 <h2>Customising the release process</h2>
 
@@ -484,12 +502,12 @@ Delete the tarball from your server.
 <ol>
   <li>Put the script in your $PATH as <b>0release-upload-archive-sf</b>.</li>
   <li>Edit it to contain your sf.net username, not mine (the line <b>user = 'tal197'</b>)</li>
-  <li>In your <b>make-release</b> script, use these settings:<pre>
+  <li>In your <b>make-release</b> script, use these settings:<pre-scrolled>
 PROJECT=<b>zero-install</b>
 PROGRAM=<b>0release</b>
 ARCHIVE_DIR_PUBLIC_URL="http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/"'$RELEASE_VERSION'
 ARCHIVE_UPLOAD_COMMAND="0release-upload-archive-sf $PROJECT $PROGRAM "'"$@"'
-</pre>
+</pre-scrolled>
 The tricky quoting is because $PROJECT and $PROGRAM expand when the script is read, but $RELEASE_VERSION and "$@"
 expand when the command is later executed.
   </li>
