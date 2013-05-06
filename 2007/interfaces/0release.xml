@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/interfaces/0release.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0release</name>
   <summary>manage new releases with Zero Install</summary>
@@ -51,17 +51,17 @@ can help you to create new releases easily.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="0.40"/>
-      <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
-    </requires>
+        <version not-before="0.40"/>
+        <environment insert="" mode="replace" name="0RELEASE_ZEROINSTALL"/>
+      </requires>
       <implementation id="sha1new=346e2a055dfb9f6a86a3ebf8c159535525c537ae" released="2009-08-15" self-test="tests/testall.py" version="0.11">
-      <manifest-digest sha256="e247293a2b4228d749a1d9d51884f2d4761b701a61f79358c980c9c090bcded6"/>
-      <archive extract="0release-0.11" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11/0release-0.11.tar.bz2" size="54206"/>
-    </implementation>
+        <manifest-digest sha256="e247293a2b4228d749a1d9d51884f2d4761b701a61f79358c980c9c090bcded6"/>
+        <archive extract="0release-0.11" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11/0release-0.11.tar.bz2" size="54206"/>
+      </implementation>
       <implementation id="sha1new=6f8c8c1083981e1dfbcc4191af82aa3e554a4921" released="2009-11-15" self-test="tests/testall.py" stability="stable" version="0.11.1">
-      <manifest-digest sha256="c0c505dd7a02d28db6cb0e0d00be7aca9eec0d241293a8e7ce9ec5812c6bc07e"/>
-      <archive extract="0release-0.11.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11.1/0release-0.11.1.tar.bz2" size="54181"/>
-    </implementation>
+        <manifest-digest sha256="c0c505dd7a02d28db6cb0e0d00be7aca9eec0d241293a8e7ce9ec5812c6bc07e"/>
+        <archive extract="0release-0.11.1" href="http://downloads.sourceforge.net/project/zero-install/0release/0.11.1/0release-0.11.1.tar.bz2" size="54181"/>
+      </implementation>
     </group>
   </group>
   <group>
@@ -79,23 +79,23 @@ can help you to create new releases easily.</description>
     </implementation>
     <group>
       <requires interface="http://0install.net/2008/interfaces/0test.xml">
-      <version not-before="0.4-post"/>
-      <environment insert="0test" mode="replace" name="0TEST"/>
-    </requires>
+        <version not-before="0.4-post"/>
+        <environment insert="0test" mode="replace" name="0TEST"/>
+      </requires>
       <command name="test" path="tests/testall.py">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+        <runner interface="http://repo.roscidus.com/python/python">
+          <version before="3"/>
+        </runner>
+      </command>
       <command name="run" path="0release">
-      <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
-      </runner>
-    </command>
+        <runner interface="http://repo.roscidus.com/python/python">
+          <version before="3"/>
+        </runner>
+      </command>
       <implementation id="sha1new=56e8a61871441490dc2eeaecf4b2c7038f9aebda" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2011-04-18" stability="stable" version="0.13">
-      <manifest-digest sha256="f4e6b896f72c026675b1e7f5d1cf31e5870b69feafbdd5bbdc9c47e9b2adb9cc"/>
-      <archive extract="0release-0.13" href="http://downloads.sourceforge.net/project/zero-install/0release/0.13/0release-0.13.tar.bz2" size="54887"/>
-    </implementation>
+        <manifest-digest sha256="f4e6b896f72c026675b1e7f5d1cf31e5870b69feafbdd5bbdc9c47e9b2adb9cc"/>
+        <archive extract="0release-0.13" href="http://downloads.sourceforge.net/project/zero-install/0release/0.13/0release-0.13.tar.bz2" size="54887"/>
+      </implementation>
     </group>
   </group>
   <group>
@@ -113,13 +113,13 @@ can help you to create new releases easily.</description>
     </requires>
     <command name="test" path="tests/testall.py">
       <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
+        <version before="3"/>
       </runner>
       <executable-in-path name="0release"/>
     </command>
     <command name="run" path="0release">
       <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
+        <version before="3"/>
       </runner>
     </command>
     <implementation id="sha1new=4ec87241cc6e72c0bc7f68f6a3f9409727473a64" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2012-09-15" version="0.14">
@@ -148,24 +148,55 @@ can help you to create new releases easily.</description>
     </requires>
     <command name="test" path="tests/testall.py">
       <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
+        <version before="3"/>
       </runner>
       <executable-in-path name="0release"/>
     </command>
     <command name="run" path="0release">
       <runner interface="http://repo.roscidus.com/python/python">
-	<version before="3"/>
+        <version before="3"/>
       </runner>
     </command>
     <implementation id="sha1new=a795fbb8216165ef5af7287291895fa52aed8f22" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0release" released="2013-02-15" version="0.14.2">
       <manifest-digest sha256new="ZZFWCM36NM4YR3MKLGQVCLSNYKITZYBNIBYWUJEXJ3PXETDBP6FA"/>
       <archive extract="0release-0.14.2" href="http://downloads.sourceforge.net/project/zero-install/0release/0.14.2/0release-0.14.2.tar.bz2" size="55318"/>
     </implementation>
+    <group main="0release">
+      <requires interface="http://repo.roscidus.com/python/python">
+        <version before="3"/>
+      </requires>
+      <requires interface="http://0install.net/tools/0repo.xml">
+        <environment insert="." mode="replace" name="RELEASE_0REPO"/>
+        <version not-before="0.2"/>
+      </requires>
+      <requires interface="http://0install.net/2006/interfaces/0compile.xml">
+        <version not-before="0.30"/>
+        <executable-in-var name="0COMPILE"/>
+      </requires>
+      <command name="test" path="tests/testall.py">
+        <runner interface="http://repo.roscidus.com/python/python"/>
+        <executable-in-path name="0release"/>
+        <requires interface="http://repo.roscidus.com/devel/make">
+          <executable-in-path name="make"/>
+        </requires>
+      </command>
+      <command name="run" path="0release">
+        <runner interface="http://repo.roscidus.com/python/python"/>
+      </command>
+      <implementation id="sha1new=fe5d960622a39bd4be2f78c9f4bc64fd90cc9492" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-05-06" version="0.15">
+        <manifest-digest sha256new="ONLXPNQXHTD2W5ZEO52PGO5VM4V4BNQ4CWEUJ3N2IOEI644LZWMQ"/>
+        <archive extract="0release-0.15" href="https://downloads.sourceforge.net/project/zero-install/0release/0.15/0release-0.15.tar.bz2" size="56746"/>
+      </implementation>
+    </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEeK7IACgkQrgeCgFmlPMG1WACgkJzFcAx8Z+NYzrbj6iWJBXGGp2AAn2/SewnL
-zSfjiOxZB1kqwt5d8S7z
+iQEcBAABCAAGBQJRh7ThAAoJEAcTP5bKdNi6BMYH/0zhwlo+9/+x0C2+2T+fsklevaXMFSqClBb/
+BJiLzzJhb0/EQXPZ/XfHck3qM1mdfEioYVRzwnqKPe6NrOurO08LQ/KpuEjHTMKnlNfyeoBMv3Cp
+pEpzHJQlwLZpnafuJ0e6LUbY95JsZrCPBunSsZe+eVXgW0PRGrXsOkj8VH+gIX2HVXWyDij2gbCs
+c9CNsaEDfhWDciZJTiuRfvPFZ4JYPpLnM0BEEOhK45JsVwJYqTDMomGofLqzK10QUvml32nwc/hY
+GkBoySnjwBtUT5rDldaMz8TXU4yOqu+KPbwOn/yfT8zbXnfuPmunFbmCdYlwErUyknybhK6i1gTN
+GOY=
 
 -->
