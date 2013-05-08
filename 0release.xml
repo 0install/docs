@@ -94,7 +94,7 @@ dependencies.
 </p>
 
 <p>
-A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git.or.cz/'>Git</a>
+A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git-scm.com/'>Git</a>
 version control system:
 </p>
 
@@ -259,7 +259,7 @@ Candidate release archive: helloworld-0.1.tar.bz2
 
 Please check candidate and select an action:
 P) Publish candidate (accept)
-F) Fail candidate (untag)
+F) Fail candidate (delete release-status file)
 (you can also hit CTRL-C and resume this script when done)
 Publish/Fail:
 </pre-scrolled>
@@ -353,6 +353,13 @@ and deleted the temporary files.
 </p>
 
 <h2>Uploading the files</h2>
+
+<p><strong>Note: Uploading directly with 0release is deprecated:</strong> Consider using
+<a href='0repo.html'>0repo</a> instead to upload the files. That way,
+if you publish several different programs on your site you only have
+to configure things once. To use 0release with 0repo, just do "0repo register"
+so that 0release can find the repository to use.
+</p>
 
 <p>
 If you didn't set an upload command in the make-release configuration file,
