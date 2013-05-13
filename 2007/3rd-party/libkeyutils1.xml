@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libkeyutils1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libkeyutils1</name>
   <summary>Linux Key Management Utilities (library)</summary>
@@ -12,17 +12,21 @@ This package provides a wrapper library for the key management facility system
 calls.</description>
   <package-implementation package="libkeyutils1"/>
   <group arch="Linux-i386">
-    <implementation id="sha1new=101115a6a764902d168c316323947528965b341d" released="2009-09-25" version="1.2-9">
+    <implementation id="sha1new=101115a6a764902d168c316323947528965b341d" released="2009-09-25" stability="stable" version="1.2-9">
       <archive href="http://ftp.debian.org/debian/pool/main/k/keyutils/libkeyutils1_1.2-9_i386.deb" size="5584"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=504cc74c534cbc607499e5bc5908e8fab1c2a43a" released="2009-09-25" version="1.2-9">
+    <implementation arch="Linux-x86_64" id="sha1new=504cc74c534cbc607499e5bc5908e8fab1c2a43a" released="2009-09-25" stability="stable" version="1.2-9">
       <archive href="http://ftp.debian.org/debian/pool/main/k/keyutils/libkeyutils1_1.2-9_amd64.deb" size="5984"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DpMACgkQBSn9tx+xORCa1ACfboBQc1vFoBW6K1e2NAC0YY+xbXoAoJDoN0Hq
-5ZB38VOBHKTE74huwazY
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6ijcH/0YBy27v4pnHKwKdVK3bu5S2ir88kPXmKsVM
++0uSIyTTCI22dp/hX23ajhkTfAV3gycfdNZsjZP7JOJLxnCOveZGIgwAaoSen6nJIcAt2d3BAc4y
+9UiFHfapAJe7/mbajRVhKwsYncUUx7QdKZfNYyUc6Km7bNLGFBMINaRIwW5AmWAuhATZ5Zn8o4xm
+ze1VDLS/YHM3Qgm8Kx+W3WcBetAqUMSSWytdFnuYLyQP3Ep+YQJ6M2b/yE3wv2lfLBhKyLz4Pf8e
+Lh2f8PsB1UuK4wEMrQYJM0JUHsNPzOd1JLPz4OsbIM69/s8a8EjQfkNbjBFV2uehWZPhtL4+CRfS
+jLs=
 
 -->

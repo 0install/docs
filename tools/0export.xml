@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
 <interface uri="http://0install.net/tools/0export.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0export</name>
   <summary>create self-installing bundles for distribution on CD</summary>
@@ -92,7 +92,7 @@ still shared between users, and will get updates over the web where possible.</d
 	<version before="3"/>
       </runner>
     </command>
-    <implementation doc-dir="doc" id="sha1new=157d678a42899e28d057f32fce2e475e21ddfde3" license="OSI Approved :: GNU General Public License v3" main="0export" released="2013-02-26" version="0.5">
+    <implementation doc-dir="doc" id="sha1new=157d678a42899e28d057f32fce2e475e21ddfde3" license="OSI Approved :: GNU General Public License v3" main="0export" released="2013-02-26" stability="stable" version="0.5">
       <manifest-digest sha256new="BTHEX5AYPF65FMTAQT7FAPE225U347TUCWYUA56QFEDFVZHPRSHQ"/>
       <archive extract="0export-0.5" href="http://downloads.sourceforge.net/project/zero-install/0export/0.5/0export-0.5.tar.bz2" size="22281"/>
     </implementation>
@@ -100,7 +100,11 @@ still shared between users, and will get updates over the web where possible.</d
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs7hcACgkQrgeCgFmlPMFCGQCdG4h9O6sdbeJaFT598HRvpuiM700AoL2avALL
-PeOVk2s7UhjvlK6zylVq
+iQEcBAABCAAGBQJRkLPHAAoJEAcTP5bKdNi61McH/Amzp/S/pVC/b9iSo2OeMTqTIONEJHKemp15
+E2zPZjFPWLy9oSZiBE6MPWLKq7DlgoeLLg0k91/QVp35zFeIIX/nX89b2JrPAqtH4LaiV8kStf22
+QK7Zp/3RUFGNtnPIsphec0EKumLBli2biA5L8WtEYlr25/hNmnFh9LBgRlh7zrDveCRyHMAQFPd4
+J0YeZFhfr+OWtLbn7k/gsJ4DfwFUtX8YKTINmGH9V5WfxmiziM7L6oDaET69ywinuONCcz2JCl1X
+XOICOUdy4PUDV9KzxpCw2AmifJUXz+1GhsbFEWqQpfuedv0fUL5GnWPywGuQ2vB3AH5os2UF6rgU
+GDQ=
 
 -->

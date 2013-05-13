@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/ATK-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>ATK-dev</name>
   <summary>headers for compiling ATK applications</summary>
@@ -15,7 +15,7 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
       <archive extract="atk-headers-1.8.0.1" href="http://downloads.sourceforge.net/project/zero-install/ATK/1.8.0/atk-headers-1.8.0.1.tar.bz2" size="18256" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="b2d44ce6995389dbcc09cf5df6c613839f63124f"/>
     </implementation>
-    <implementation id="sha1new=61d0238880a8770123436e5ef5dc29243a80822c" released="2008-05-10" version="1.22.0">
+    <implementation id="sha1new=61d0238880a8770123436e5ef5dc29243a80822c" released="2008-05-10" stability="stable" version="1.22.0">
       <archive extract="atk-dev-linux-x86_64-1.22.0" href="http://downloads.sourceforge.net/zero-install/atk-dev-linux-x86_64-1.22.0.tar.bz2" size="25376" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
@@ -31,7 +31,11 @@ that use the ATK library. ATK is an Accessibility Toolkit.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEwmKsACgkQrgeCgFmlPMHBNwCfbFwZ3TaOnTwzviNo/KJDptvbo5AAniN1oRVl
-iNxTeqWwQWoe0fjoFFNU
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6nicH/j3UjE0K2+91bSPHLdgiut4++AUGKrw5xt2g
+6sfXhjIx0tRBb7uFpJhVMXKuWZMEdVbGPlni9s0G5bHmGIflnfiZJXXYWPJWrQuftU1IPAj/GE0S
+0RmzYlIx4aqYTgpDYMMldlH5Nf7NgtZfr2jgcHvPbWndwH5ky3bZy2+3qIvKmfNWqSGNVxAzGyk7
+hB2DxcqZJh8JApXdiPGNdtgifHzaZUDCD3CJsEhakA4yf/XzIxx9eJEpXTjHN4Gzo2GbXYZQoZh+
+d+EwUTUNeah9tnocGIFIeMiTjQRvuuZF73GKGS/0DCmDJMov3+7cHO4boY5SvmzLUidjUMGCaQw6
+xKs=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/Pango-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Pango-dev</name>
   <summary>headers for compiling Pango applications</summary>
@@ -27,7 +27,7 @@ text, with an emphasis on internationalization.</description>
         <environment insert="lib/pkgconfig" mode="prepend" name="PKG_CONFIG_PATH"/>
         <environment insert="bin" mode="prepend" name="PATH"/>
       </requires>
-      <implementation id="sha1new=b359f1b41ad3da0855777034eaf0199259690b9f" released="2008-05-10" version="1.20.2">
+      <implementation id="sha1new=b359f1b41ad3da0855777034eaf0199259690b9f" released="2008-05-10" stability="stable" version="1.20.2">
         <archive extract="pango-1.20.2" href="http://ftp.gnome.org/pub/gnome/sources/pango/1.20/pango-1.20.2.tar.bz2" size="1414871" type="application/x-bzip-compressed-tar"/>
       </implementation>
     </group>
@@ -60,7 +60,11 @@ text, with an emphasis on internationalization.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEwlPIACgkQrgeCgFmlPMHMBQCePhUZI6+iuUEL7+1o/q+NA10QMjYAn1n9Wydu
-IaeD/wZpn8dnEghy2CLO
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6tsIH/RYRuXAxQA5yNW9v1g2tbKjx1NyVpmWul6Nv
+A/WkB8KfwVbpVFYX11fOwrBvtoGTGNqcBSYT5AMkaqUy0SrReXouMYUhKNlkmHvfMDI7tg3d/tJl
+W+0iru3OpdM1v0GzILGUPJxEc99OMRofWwNSctVgwV96eHPenn6ABWNJz5+/rWiKb+RGX3gEiSsl
+EB69hDKgNVWtPv1zjenNn60mMbVwo2mDWwQFhbTCz9UJufZ3f7icYVFleEa9QUq2Dl2EX9qNqi2e
+UucVPVn9q/+S0dyq6/CU13PVJDX1wBla7cyTWiCn/m090Q7bkRvSR79nNMq6ZXeuI56oR7/wR7Z7
+KPY=
 
 -->

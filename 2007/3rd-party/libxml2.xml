@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libxml2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libxml2</name>
   <summary>GNOME XML library</summary>
@@ -18,14 +18,18 @@ This feed is deprecated; use http://repo.roscidus.com/lib/xml2 instead.
   <package-implementation package="libxml2"/>
   <feed src="http://repo.roscidus.com/lib/xml2"/>
   <group arch="Linux-i386">
-    <implementation id="sha1new=73b4b856409f289ef29eac5d582ba1b724026ee5" released="2009-09-25" version="2.6.32">
+    <implementation id="sha1new=73b4b856409f289ef29eac5d582ba1b724026ee5" released="2009-09-25" stability="stable" version="2.6.32">
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=e896b1790a73224437132f487a883cb547df3672" released="2009-09-25" version="2.6.32">
+    <implementation arch="Linux-x86_64" id="sha1new=e896b1790a73224437132f487a883cb547df3672" released="2009-09-25" stability="stable" version="2.6.32">
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk50gQ4ACgkQBSn9tx+xORDLLQCeMK3DjQDWyBLVwkbYBas7OC4Nf6IAn1S7uE1T
-b/f626DeX3mgxWmgaIT5
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6qFkH+waFMzG27GclXLTy12wgo6oZLeSsFbpFKhgk
+3UhQ+CJulQSvTLoFoMrz1uXKRTxz1Bvj8qRGca3CPdMWTazPwO1BJpMHe4SvifBFH+oQHyx6Yr9e
+H8GgLvSNgwkhvJE9LcN4VP+faUEFfofujdQWZJw2ynL9CCOqe4lCNua0r++zLPsvo6jA3GpURe7V
++u7ZS3/NOxy+VPdx9os1MBcsNAA/7vMQccP5U7J/SLpZfFSSriIMYbUYVrB45Z2Y7irkclo6rIgb
+3y/8Zcph3uK1YVlJc0/7e+aRxgsJk/+rEhr5jN3AjVetlLlkChgVhf+gMDuDRWuqLNzPjzBpt9va
+oy4=
 
 -->

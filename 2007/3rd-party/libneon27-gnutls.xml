@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libneon27-gnutls.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libneon27-gnutls</name>
   <summary>An HTTP and WebDAV client library (GnuTLS enabled)</summary>
@@ -42,17 +42,21 @@ Current features:
     <requires interface="http://0install.net/2007/3rd-party/libxml2.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation id="sha1new=4a15b053a362d5c29d09b0fbd59acaef931cb82b" released="2009-09-25" version="0.28.2-6.1">
+    <implementation id="sha1new=4a15b053a362d5c29d09b0fbd59acaef931cb82b" released="2009-09-25" stability="stable" version="0.28.2-6.1">
       <archive href="http://ftp.debian.org/debian/pool/main/n/neon27/libneon27-gnutls_0.28.2-6.1_i386.deb" size="114736"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=000d1426b3ef92bbfb3c8655e9e324aa1c8a24a3" released="2009-09-25" version="0.28.2-6.1">
+    <implementation arch="Linux-x86_64" id="sha1new=000d1426b3ef92bbfb3c8655e9e324aa1c8a24a3" released="2009-09-25" stability="stable" version="0.28.2-6.1">
       <archive href="http://ftp.debian.org/debian/pool/main/n/neon27/libneon27-gnutls_0.28.2-6.1_amd64.deb" size="120762"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DpgACgkQBSn9tx+xORB1JwCfTRVxZi4DwcvwUPR5RjeE8F7nZmEAni0Rm7Pj
-5bKhJTNFXI2ug7therz9
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6DhoH/1yaLSe133oHWeY9ArZVtdllfDzwWItgtIqF
+XmAk8sCTzO7YfvVj9dNHNNRWCiMen1XdIFqUln6KQ/KkDSCwyv/D+hSqHc1wlJ/kCRBMajZ+7iAg
+e2cI9Xt3+TaVau00iZG2Pt3oaNXImzKFjFUGALjiyzr7owMkxIeA994WJA7543YrpoZILHHofs86
+YzCLOJGTJx7lWQRBVMhQPN+UAGq5gZ8iEVHdJ0a4J7yuXWFuo7LAAHtxaOJah3QlbzbLbcGREhuV
+W6xj3HZZ7mXUnRKmJDfmg7/ml1E8BuEiPIE/fDIZolM/FRgrDLGzBw0c9Ji1Hzlk91LmiE8x4fN5
+1zM=
 
 -->

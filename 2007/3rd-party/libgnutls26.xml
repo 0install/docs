@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libgnutls26.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libgnutls26</name>
   <summary>the GNU TLS library - runtime library</summary>
@@ -25,17 +25,21 @@ This package contains the runtime libraries.</description>
     <requires interface="http://0install.net/2008/3rd-party/libtasn1-3.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation id="sha1new=923fe401fb3809ce60198681c688673280e84437" released="2009-09-25" version="2.4.2-6">
+    <implementation id="sha1new=923fe401fb3809ce60198681c688673280e84437" released="2009-09-25" stability="stable" version="2.4.2-6">
       <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls26/libgnutls26_2.4.2-6+lenny1_i386.deb" size="457306"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=3f5bc528fca2a0702d297f356ac08f34428cd7cb" released="2009-09-25" version="2.4.2-6">
+    <implementation arch="Linux-x86_64" id="sha1new=3f5bc528fca2a0702d297f356ac08f34428cd7cb" released="2009-09-25" stability="stable" version="2.4.2-6">
       <archive href="http://ftp.debian.org/debian/pool/main/g/gnutls26/libgnutls26_2.4.2-6+lenny1_amd64.deb" size="505908"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DoYACgkQBSn9tx+xORAVWQCfUgnbIo2nEFL+7CWnQVXmYBlEX0AAnRF3E2Mc
-JO8l/M5MI3+JCdBKAiPl
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6lREH/RMV3vEv4CQ2UxRPFABkvCDACvT4gIBJccLC
+tsgwMIdJJHvDTz3tpf1TwF2+avmzZMHc4sSFHFhE9Jx6DQ5xL7fWGIXx2dQy2tLOSBc80WDUsngo
+FAz7rRyQ/2pPfb9NAe4m4J2T9Qs/oL9fWg+BpRmpuv+QgD0gymObonskllPak9ctWh2XBZ8gr/6J
+k1IEjSvqW/v0YjfzMQUONSXTkRBx+GNgDpz9tWYjzPrRj0T4bFYnA/WwcSiX9X5eW8a6IHCW9jwC
+AAJHQU4F/hgXpWkKJZ8utOsp4H+lgBfwWqO6HByPT7svp6F0JkRikZD9CC5peGA5Mu9dhX9DHGWa
+mKI=
 
 -->

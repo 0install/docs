@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libaprutil1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libaprutil1</name>
   <summary>the Apache Portable Runtime Utility Library</summary>
@@ -53,16 +53,20 @@ access, xml parsing, and other useful functionality.</description>
     <requires interface="http://0install.net/2007/3rd-party/libuuid1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation arch="Linux-i386" id="sha1new=1a9e0221797936c51a35c3ef5ca160908ca81f58" released="2009-09-25" version="1.2.12">
+    <implementation arch="Linux-i386" id="sha1new=1a9e0221797936c51a35c3ef5ca160908ca81f58" released="2009-09-25" stability="stable" version="1.2.12">
       <archive href="http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.12+dfsg-8+lenny4_i386.deb" size="73814"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=8f50495c07d0ae826bcd70c846223837695dadb4" released="2009-09-25" version="1.2.12">
+    <implementation arch="Linux-x86_64" id="sha1new=8f50495c07d0ae826bcd70c846223837695dadb4" released="2009-09-25" stability="stable" version="1.2.12">
       <archive href="http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.2.12+dfsg-8+lenny4_amd64.deb" size="80046"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DoAACgkQBSn9tx+xORCL2ACcDX18Smh9mSY7FPnJy4yE2fiDgk4An1D0ZrVO
-K0YbQXSIhhkNbj7FNA36
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6zvIH/iIxMHMjvRhVo3qwIdKb3uYZa/s0xrhKyYzX
+kdUu49GHVy0ii+StRDmTcZn3cHp4lZ0Gb8ohkcwfLAkLQLBASxk9LMdkp+njHRWWFs792DZ+JaNg
+DkZoAjxVoE90v8E1BTv+N/uNB4z5s29Prwxoo3lmDdGY7so2L5oriiRnmz2/JeWkMXe1x/L8WoRx
+Cc5Rwy3zg4TjMI8J2eddRNNRbbfzr67M6dhnE212KVrU3tVyyV5hwg6P1qeEEIg5cfXTQrTKlhC5
+UejsHJIO6WAwyCYn259Y7ahYmYh44DmWSRcV95wekQlnNzxVvWx5ZCCI/kEaVdz3S7mw/CtP3P3t
+Zpg=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2008/3rd-party/libvorbisfile3.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libvorbisfile3</name>
   <summary>The Vorbis General Audio Compression Codec</summary>
@@ -11,17 +11,21 @@ The Vorbisfile library provides a convenient high-level API for decoding
 and basic manipulation of all Vorbis I audio streams.</description>
   <package-implementation package="libvorbisfile3"/>
   <group arch="Linux-i386">
-    <implementation id="sha1new=006bbd812b88aea47b607dab742842caabd18493" released="2008-08-17" version="1.1.2">
+    <implementation id="sha1new=006bbd812b88aea47b607dab742842caabd18493" released="2008-08-17" stability="stable" version="1.1.2">
       <archive href="http://ftp.debian.org/debian/pool/main/libv/libvorbis/libvorbisfile3_1.1.2.dfsg-1.4_i386.deb" size="18884"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=02ad5dc930f4ef4a73278480c1c488cc625fcfdf" released="2008-08-17" version="1.1.2">
+    <implementation arch="Linux-x86_64" id="sha1new=02ad5dc930f4ef4a73278480c1c488cc625fcfdf" released="2008-08-17" stability="stable" version="1.1.2">
       <archive href="http://ftp.debian.org/debian/pool/main/libv/libvorbis/libvorbisfile3_1.1.2.dfsg-1.4_amd64.deb" size="17790"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIqDduBSn9tx+xORARAjB6AKCJ0NO0RPs5nImTwhsTltXXl8s85QCfV4tsFz5I/ha/VY49
-j8XeLpoNeUA=
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6rDYIAKRftqj1KNAc6M6+qIXc/2salKQEkvlPdw3P
+IeCd/VRBulK9HaH0ULgNbpEr5Tc5ll6LaywKhmhyse/PxwxQB0Zk4IDPdngRmbHE+hP9t4nuLr8S
+HFv0j9DzukJkDQYJFlz8udbF1oUmNrlRJvru9bJS0RvAhcJrVLfsdNSrtd+noFlX3wibUnippt8c
+lh6ndvOWzx4Y1jaDpMvGqH54+jg7ThrCXRJE21ZASWESHnLfDUiI1yvByH12LlqzlUPi5wLCFmrf
++kFF9ScU+ZBOMD7/6Ff4OSSeQ2e4tvz4zjQ7qDaZCLvZgan5IvKm34rjOazL8XrdoEyQ8/71nFxG
+yP4=
 
 -->

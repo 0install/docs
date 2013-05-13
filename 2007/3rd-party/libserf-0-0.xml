@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libserf-0-0.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libserf-0-0</name>
   <summary>high-performance asynchronous HTTP client library</summary>
@@ -22,17 +22,21 @@ operation.</description>
     <requires interface="http://0install.net/2007/3rd-party/libuuid1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation id="sha1new=d3048e9f9fdfc3341bfd7b66e29e925fa2618905" released="2009-09-25" version="0.2.0-1">
+    <implementation id="sha1new=d3048e9f9fdfc3341bfd7b66e29e925fa2618905" released="2009-09-25" stability="stable" version="0.2.0-1">
       <archive href="http://ftp.debian.org/debian/pool/main/s/serf/libserf-0-0_0.2.0-1_i386.deb" size="31158"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=e93a8d7e9ce90922a390bfcf5ae406f78fb4ef66" released="2009-09-25" version="0.2.0-1">
+    <implementation arch="Linux-x86_64" id="sha1new=e93a8d7e9ce90922a390bfcf5ae406f78fb4ef66" released="2009-09-25" stability="stable" version="0.2.0-1">
       <archive href="http://ftp.debian.org/debian/pool/main/s/serf/libserf-0-0_0.2.0-1_amd64.deb" size="34398"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DpwACgkQBSn9tx+xORD2fwCdESS6wxGWXWhedrW/ieFLAhY4blEAmgMVrT5a
-+dUUJ4yccawe/ZlErngu
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6fCIH+wekLud4MJj096vQR+d4oCsOfjdv3QHjTeHt
+tQSSlPg4Ef0/X0PG7qUBQLHMdxpbBrZhNGqoSjYHuBeDQLLSrO1+evIzfDsVic+D2k1Ar2hq5n0W
+8XRFrfi80t0rpxfoF7IjIYTHyc/cyHjhdvhjUUakxYQtaeL8eLoEOpRH+hMrHdWwTYDhmS4rewOG
+FCSKCyiYbdWOnnfkJMlg2JxZhfZN3E1QABKv3WxOV2D4b8tilc/h+YZLazi7RSl1Ljn52Wsyz0cw
+PCH7vzC8esWHQHSK2jVOIvxrzSOGX1JG9YUc9DgmJ35JtlIc67LrUuz/z24QlLhVUzMeXhja0p7u
+C1I=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/3rd-party/SCons.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>SCons</name>
   <summary>a software construction tool</summary>
@@ -36,14 +36,18 @@ and scanner objects.</description>
     <implementation id="sha1new=716e6fd4a2a9dc63a54ca3403aed960f28768181" released="2010-05-09" stability="stable" version="1.3.0">
       <archive href="https://downloads.sourceforge.net/project/zero-install/3rd-party/scons-local-1.3.0.d20100501.tar.bz2" size="316776" type="application/x-bzip-compressed-tar"/>
     </implementation>
-    <implementation id="sha1new=86311df9d410de36d75bc51762d2927f2f045ebf" released="2011-05-28" version="2.0.1">
+    <implementation id="sha1new=86311df9d410de36d75bc51762d2927f2f045ebf" released="2011-05-28" stability="stable" version="2.0.1">
       <archive href="http://downloads.sourceforge.net/project/scons/scons-src/2.0.1/scons-local-2.0.1.tar.gz" size="389396" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk9GqSkACgkQBSn9tx+xORBuzwCfQnKwRya1mEVia2aZLdI/6yYoRg4An25FVOaj
-kWQBJd/27yV7sheZMump
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6AWQH/2+oZWuesE7aCOck8rJ4YjGjUhePiTH6whbp
+EA3FIKk54YTpc1sOVODb8mHwMa3sjKo+k9rv0sr2PUG197FBNCpb3dFDJlUeYaIwbNzyynyxssBO
+Ie6kaN51apb2ixEFo3kPk/1qeLk76m8WJT6zCp8MVJBLoe1DmmWgo4dMq8tg+I6wqIlCtJ3cqvK+
+M3k4kOiE2LNOfmYUF2srZ0vv8pTYouxAFC4j1frK3piV11O2jzUjOpZhVzCDWbJRajwwU8XO31C/
+3pwHGIpxA+mzwOdwY2nOS6IqVEYlPRD1NirTVE4KlLdhuwO3YvLuGYvoEU1E4uBOVI3EgTfemAgo
+R4E=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/interfaces/0publish-gui.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0publish-gui</name>
   <summary>GTK editor for Zero Install feeds</summary>
@@ -96,14 +96,18 @@ these feeds.</description>
       <manifest-digest sha256new="5TRTODN2KPK2KEQKDEDVMVLMLNNKJCCTS5ICGBQ4EK3WAYHQ3UDQ"/>
       <archive extract="0publish-gui-0.13" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.13/0publish-gui-0.13.tar.bz2" size="32633"/>
     </implementation>
-    <implementation id="sha1new=30f9442fcea663f0c19078e031d31698cc928fa2" license="OSI Approved :: GNU General Public License (GPL)" released="2013-03-08" version="0.14">
+    <implementation id="sha1new=30f9442fcea663f0c19078e031d31698cc928fa2" license="OSI Approved :: GNU General Public License (GPL)" released="2013-03-08" stability="stable" version="0.14">
       <manifest-digest sha256new="DAN5QUVXBAISQGMY7SLLXSB65Y3IN2POYIKNBUU4YNQVOMSVLPWA"/>
       <archive extract="0publish-gui-0.14" href="http://downloads.sourceforge.net/project/zero-install/0publish-gui/0.14/0publish-gui-0.14.tar.bz2" size="32708"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlE5qsEACgkQrgeCgFmlPMHjrgCgn76E8115IqRgb5l8zzYEoqQLyjMAn2AA9+UF
-7M68AORcyddP8cpjbOg2
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6cfoIAJwKrGTiaQr6kPtgdIk9CZFDton9b/9q28fe
+RyWjXT+s9JxoJAn4OCeFThTEDC7MdBw22sJpNYpQXq+MhzWBe1ZVpqYWwUD8+AAvYMISJiKXSfNp
+ZroNNHvxIMTn9h7x1MwE+gSv4MoMx8l+g3wmaxZP7wHUs0B1khD4TWrmxIT+e2PMgAhKDVgpMjfV
+hgv5iFOSFJTGXb4QTAJNkMWdLfL/w0ze16sA1InEr7iFfXgaI79ZngpOvOEpGD3B1g7qIuTEi6XM
+aSxUHvig4H+q3wZC4rMFGbmxfu82Wgb3Sb5d+lx7GA36hIofgRqOq4em0QNj6gh0YAlQum2W38ef
+KtM=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libsasl2-2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libsasl2-2</name>
   <summary>Cyrus SASL - authentication abstraction library</summary>
@@ -22,17 +22,21 @@ you must install some of the libsasl2-modules* packages.</description>
     <requires interface="http://0install.net/2007/3rd-party/libdb4.6.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation id="sha1new=eb8215753fa6ed28bab588f8e6b59f75ea621ddd" released="2009-09-25" version="2.1.22">
+    <implementation id="sha1new=eb8215753fa6ed28bab588f8e6b59f75ea621ddd" released="2009-09-25" stability="stable" version="2.1.22">
       <archive href="http://ftp.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.22.dfsg1-23+lenny1_i386.deb" size="105514"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=ce00944b323777c892c8e6dc8e7bee28072f3104" released="2009-09-25" version="2.1.22">
+    <implementation arch="Linux-x86_64" id="sha1new=ce00944b323777c892c8e6dc8e7bee28072f3104" released="2009-09-25" stability="stable" version="2.1.22">
       <archive href="http://ftp.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.22.dfsg1-23+lenny1_amd64.deb" size="114804"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DooACgkQBSn9tx+xORBf7wCfSLx+e7p3kAoFuNIoyig4RQXa/LkAn1G2WlaM
-kyJ6CZCK4tsyMo+AqHp+
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6RaQIAK7fqaa29fa8h4Ml5XtI8t7kfbZ5J8fsIyrI
+pEUensM3bXLn+B7RNc77d02GFuB7gZeJnql8z9MqURo0UCt4KAxb4QfsS8Rs6wxOr8uuMwnbRmrk
+awxslZJ+xMoYcqIhlMjDvI5p61iXwYPKWAJGM1bJdkrdtLGp6kUPaZ0id8/iqzHm9jXtMl8EjlAx
+MAiltbvtPYI2zvjQEk0AZ46HXnB/R7mFs8D/OqBQd5ksLxmo/semw8Y6bqRbC76eBA3vMf+8rAKq
+aJcEH9kVeRC/cWvwkSucRxxFwj8wjHBzBJZVW2rHSysL8b2D81REQ1XNkWmdq7sXpPCXlN9RFzIW
+LXc=
 
 -->

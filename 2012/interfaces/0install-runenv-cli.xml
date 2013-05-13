@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>0install-runenv-cli</name>
   <summary>0install .NET helper for Windows</summary>
@@ -24,24 +24,24 @@
       <command name="compile" shell-command="mcs &quot;$SRCDIR/runenv.cli.cs&quot; -out:&quot;$DISTDIR/runenv.cli.template&quot;">
       <compile:implementation arch="*-*"/>
     </command>
-      <implementation arch="*-src" id="sha1new=80c76895c3ba81f6d94e78c936d2c5b8b4d3d96b" released="2013-03-18" version="2.0.2">
+      <implementation arch="*-src" id="sha1new=80c76895c3ba81f6d94e78c936d2c5b8b4d3d96b" released="2013-03-18" stability="stable" version="2.0.2">
       <manifest-digest sha256new="H3ARQQ3OW2K6YGBWVBG3X5R6DL6534ZQ6WYMRJZM4UIKHYH6XHSQ"/>
       <archive extract="0install-runenv-cli-2.0.2" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/2.0.2/0install-runenv-cli-2.0.2.tar.bz2" size="3503"/>
     </implementation>
     </group>
   </group>
-  <implementation id="sha1new=78f12032eb296233909aa5f6ec4aae8cbb9c121a" released="2013-03-18" version="2.0.2">
+  <implementation id="sha1new=78f12032eb296233909aa5f6ec4aae8cbb9c121a" released="2013-03-18" stability="stable" version="2.0.2">
       <manifest-digest sha256new="XMEYQHKYT7CNDYAWDQHGDIDJK2QORBV5KRFQX6BQ7RNXTANR6PGQ"/>
       <archive extract="0install-runenv-cli-bin-2.0.2" href="http://downloads.sourceforge.net/project/zero-install/runenv-cli/2.0.2/0install-runenv-cli-bin-2.0.2.tar.bz2" size="3554"/>
     </implementation>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRRyzoAAoJEAcTP5bKdNi6vaYH/30qnQ12M9k9Jw8DNz3DA4+Us3nle/ijkJaF
-/Qw40Lv7WOCX5hRhiP077pGLqD7lB+p/Z8Si2C2bQX1y0/D+RRjEfMNH7sINsp62xhv/b4t0oNWM
-b6asirS0jroDTlAxbj3TD0/72g+OXf2Eop2t5h+04T27Lx6OywQ/MmmXi4QZYTC6YDON8D+qAkS8
-W/ft1yc/ZPT7l/nW1gRhV5a+qXX8z7+SOhm/CaScGYmYoZsWiy+3fyE75LlRuIkyEAfwtiKst89N
-/1Dck4Cd1xNVog0XJLO53/obFn1BIg5+r01zlnJS10mvXqenIir9BJFhM4qlTcqCFu6StPeGJHFG
-EWQ=
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6LGsH/3h0wQeUhNqa14i/4nbolOWCgHWugefVYnum
+fUyW36KsRANgg6z5RbBlis6y+ydwE05WTsOI1H5V9gutyDv7YEXDrw7pvZ1o7hTbhUfNi/DfIX60
+RSwxUIW5RBCCrq0ABc7lPhRNRTK5q0OCo+bTh5rNd1LOeDJ/BYgaxs0jBanCg9cGh+OJM3yOtsqY
+yskYVGwV5KDx+JFl8KpuuMqokWHBXVGSLQlBFDNJ+PCZlKcpXVvBB/eWcyfFA7xq9/It3kXUPdZs
+DOUg/kmWuOsptrZfbGZJT+rlmw2Xo6saZzi1pWrhJOtXb6ySuhjXC8hainUHyWejQqOwq8T92GBs
+Jt4=
 
 -->

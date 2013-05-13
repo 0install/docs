@@ -1,18 +1,22 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2008/linux-ppc/GLib-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GLib-dev</name>
   <summary>headers for compiling GLib applications</summary>
   <description>These are the GLib header files. They are required when compiling applications
 that use the GLib library.</description>
   <group arch="Linux-ppc">
-    <implementation id="sha1new=11ccd3f6690791096e608143c057b042321b12b4" released="2008-01-21" version="2.4.8">
+    <implementation id="sha1new=11ccd3f6690791096e608143c057b042321b12b4" released="2008-01-21" stability="stable" version="2.4.8">
       <archive extract="glib-dev-linux-ppc-2.4.8" href="http://downloads.sourceforge.net/project/zero-install/GLib/2.4.8/glib-dev-linux-ppc-2.4.8.tar.bz2" size="60928"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAk2vC08ACgkQrgeCgFmlPMFvsgCgqywt3/Bc4ER5qqM7gISWyI1if9sAoIKJgYut
-e/zX7YcC8sW0GQKd6Rwu
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6gSsH/RDwYEjUly9ND55MXaA1tTvB4iDRWA62nEjG
+h41OCuF3QO7V4TQ79+l2d1/OM1x3cNt8cDFKZMMF1LFgYj1qGR6b4GUJfWlyzyyo3N4fQdxKZ7Td
+EljboGXsBpdISDMFwGhwHK+qtU+ONgqZAkmQeZkuTYVNqc6Q2Rz/9JO+A5GDgzJB2x+m+6Hz6Nuq
+NyZyjViu6P6KE3dcMxRLZi/Cwpv2qyi3NzH9f1pKIsxa2Ymbe6hN3de/RT+MkapW4hdwwPAOOwwz
+hqBE1DARhDG/jci+Kx1PLgzbvf2TBiChDwEvxD0iMari5jJmpu+m949e9B3py7nbYC5CkiXVLAB6
+3iE=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/0compile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0compile</name>
   <summary>create a binary release from source code</summary>
@@ -386,7 +386,7 @@ For a full tutorial, see 0compile's homepage.</description>
 	<version before="3"/>
       </runner>
     </command>
-      <implementation id="sha1new=5d11d6a774f261b408f3c57dce8819481d842f90" released="2013-04-03" version="1.1">
+      <implementation id="sha1new=5d11d6a774f261b408f3c57dce8819481d842f90" released="2013-04-03" stability="stable" version="1.1">
       <manifest-digest sha256new="O3KHHM43T7KI3NPRZ4BJOFERQ2TI4J525ZU55GM5CW4K5QPM5NIQ"/>
       <archive extract="0compile-1.1" href="http://downloads.sourceforge.net/project/zero-install/0compile/1.1/0compile-1.1.tar.bz2" size="36103"/>
     </implementation>
@@ -395,7 +395,11 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlFcH6cACgkQrgeCgFmlPMGwIwCgy/9oiiwWlmNV3kuokrxNXk+HpcQAoI0s9w4T
-mZLcpJ+FcW13Pkm7FMfS
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6o80H/iMB8zz/RwhlS4pxnduLZFw3GHgxHa14S0VN
+9FY9pIdRFF4koSnRfNvtf00+JBBjAahjYi6lBqHD4rylf51nSCea1PdMkgEvY9jItPgJxLvVQPtE
++kqUhyJRS6OW39aivRCBH3st+5Qrw/0crL40YC24oji+y54bGLmrSZciehFMaYJa1EqBRltTKg15
+iC7pP6r3olK5fiLTub4R+oONUZWXhD120ekRBdenpsFL/G50sSGGZ5kxr8kyxZRPrSCkAsdB+rKO
+v82cRMSofAnLpupgqovbRCts6u4dQj6Bvkr10BwYAbNJHccKkPyB4GIDoD+zgR2LwvFisLywcVqa
+ak4=
 
 -->

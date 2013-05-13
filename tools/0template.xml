@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
 <interface uri="http://0install.net/tools/0template.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0template</name>
   <summary>utility to make creating feeds easier</summary>
@@ -34,7 +34,7 @@
       <version not-before="2.0"/>
     </requires>
 
-    <implementation id="sha1new=dec3cbacde62afc57cca4c111b4a85ba3f030df3" released="2013-03-09" version="0.1">
+    <implementation id="sha1new=dec3cbacde62afc57cca4c111b4a85ba3f030df3" released="2013-03-09" stability="stable" version="0.1">
       <manifest-digest sha256new="TPC5QVL4RVSCQ43OPTG6NMMFFNY6CW4FXCIMTAPWSYSNB2HC6DKQ"/>
       <archive extract="0template-0.1" href="http://downloads.sourceforge.net/project/zero-install/0template/0.1/0template-0.1.tar.bz2" size="14210"/>
     </implementation>
@@ -42,11 +42,11 @@
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRO0w6AAoJEAcTP5bKdNi66AEH/1zMNn5Q/4ReC1C/lmIbCp80DHmd91F5d0I7
-YyPhc/s5N00DH923bAOX+ZPpxK+6S+1ca1PXdQf1rqbRgdUhJCpypMrA01Yc5F+NO0plhg0devN7
-S5D4kR3gmjVfjSXUbpM47Wihd+iEepkg37shfSbQotKHda6cYAJlp0te1/K1RyjBeSwzjuLkHKRW
-QPLVix8Eb2nOs0NcbtySMcWSsnpgbF1214WmNFuTdbEox1GYEJbIKX/ubWS7IV1qmZMttmnV05Yl
-s0mQG4HuyQeR4u08yH0CZN6oJ7yzhaVrgL+FT9f5pZNlQrcXbzMQN0RzjqBE6VmNM7/kRPuyw4pn
-8Gk=
+iQEcBAABCAAGBQJRkLPHAAoJEAcTP5bKdNi6WlUH/2I6EY3aLiH9HacgY+0NEOh4DM2A8SyqUKr5
+LwkUsXknVHbpWVDqskOzMAk3l3ME8ujiWi1006yBHG12X/x+6saehUwIShvjcp12rwQ5MdYkrPIC
+6NNKgpSotZcSFsUm9/MCOwW5p+0ZsuzV2+HFxySFd0hPZ+pKLNeN4XmLwhVAsor1YpC77aXIo4RK
+SGZJA66Bmi9X4UtdBrL7SK7FCQENJXyuUuYF0ciRo0HjQsa9B/8Ab1mSPsRxy1W+6GO+fGosoT/d
+caY0JTCaQTqZoSzf3i73tGuMI8Ca9HdH8JJ9ZlQ33eun+bLhYV9M7ef4Vk8+1K48ssRM/Gfq3n6C
+PPw=
 
 -->

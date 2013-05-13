@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/GTKmm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>GTKmm-dev</name>
   <summary>headers for compiling C++ GTK applications</summary>
@@ -13,7 +13,7 @@ applications that use the GTK, ATK or Pango libraries..</description>
       <archive extract="gtkmm-headers-2.4.11" href="http://downloads.sourceforge.net/project/zero-install/GTK/2.4.11/gtkmm-headers-2.4.11.tar.bz2" size="292375" type="application/x-bzip-compressed-tar"/>
       <manifest-digest sha1new="46d5a63b0d2be0b94de2ed27b0a88e7dba3978e8"/>
     </implementation>
-    <implementation id="sha1new=6f476e3e2ad00148ee32a3c4e36ecf6d71933e58" released="2008-05-10" version="2.12.7">
+    <implementation id="sha1new=6f476e3e2ad00148ee32a3c4e36ecf6d71933e58" released="2008-05-10" stability="stable" version="2.12.7">
       <archive extract="gtkmm-dev-linux-x86_64-2.12.7" href="http://downloads.sourceforge.net/project/zero-install/3rd-party/0/gtkmm-dev-linux-x86_64-2.12.7.tar.bz2" size="396941" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
@@ -31,7 +31,11 @@ applications that use the GTK, ATK or Pango libraries..</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEwlgMACgkQrgeCgFmlPMFKiQCdHrq+uhzZ8YplAHPVLZEb+WPCKrkAoMlRHr1Y
-eS/7YyHZ9G3JWOqDiO8A
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6O5YH/j3oQuUnAlIsELZPUjHPZ48fridxCF9TJ4R5
+Q3TnW9yQeQubmWrCrCK47us+Svcy4s/Y3vj7575bJBeJSl8A/GHMIsqMLtrgI1oOA/wsIbK0LN1O
+1ifNbUaJ/3hfNbOVBY2FTCrSGc39tpgfDF/9BwZkpkorB97gTk014qF0CswGEWFooYxLhM/6Fm1Q
+C22QWBPQAdn+1E737yqG37d9zRqdsWn96W9/bkheP+uKlZiIP+T2453o7iOuvF1hxuJl6pXc6i3s
+Hp4N2MX2N5nhkAiBBjgWSh5iw47pBCCBH2tEuDtfSaIgMFt8VHxtv9Lmzs1H5GwLYXeDfz4bVNke
+Oeg=
 
 -->

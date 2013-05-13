@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/mysql-common.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>mysql-common</name>
   <summary>MySQL database common files</summary>
@@ -12,14 +12,18 @@ This package includes files needed by all versions of the client library
 (e.g. /etc/mysql/my.cnf).</description>
   <package-implementation package="mysql-common"/>
   <group arch="Linux-*">
-    <implementation id="sha1new=6e97b5e5263f98081e56b13691fff0813781699f" released="2009-09-25" version="5.0.51">
+    <implementation id="sha1new=6e97b5e5263f98081e56b13691fff0813781699f" released="2009-09-25" stability="stable" version="5.0.51">
       <archive href="http://ftp.debian.org/debian/pool/main/m/mysql-dfsg-5.0/mysql-common_5.0.51a-24+lenny2_all.deb" size="60754"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DiIACgkQBSn9tx+xORA9HgCgkzn2ksORR6ylfe45fWADmM5TIdsAoIowLoC8
-AIUD0QY467juvQN++A/4
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6bkYH/3WK6mDA1hbfhuY3yUbjQGjQN/qj5/M67Xft
+NR1JqbkXO9p49h3cTTH8+8GwHVOotAB9rqS27IV9RVxk8pDM+MAWhevI9xQbFZmgYNjAQM8YohNV
+8PU+NFr8c5KwGXnk1aVXeS/+fzfXrJA6BmOv3EVCWWyYKEaBokgK5sHs+pnUQzlbEkZ+LRIxvwTX
+XIf9OE9wRj913hUr/avGqaW0oEcXZ+vr6FyOxAFnWmxvv3qnIkn3/15eKIooLSCtd16IQyFrFyO3
+tZizoCGNhOw0O956l1sZnrSdEqy9SFoezpLtdcQBmZ5iOztOQwS/973PLnP0gSjmOBowOTzuigKe
+Jm8=
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 
   <name>0publish</name>
@@ -130,7 +130,7 @@ packagers.html.</description>
       <manifest-digest sha256new="PJ7XV7EUN3DNYDSLA67MJBCVVR4OFYOMFZWCZWNL7P2J7IZSSY4Q"/>
       <archive extract="0publish-0.23" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.23/0publish-0.23.tar.bz2" size="25646"/>
     </implementation>
-      <implementation id="sha1new=078330f7f927f7c10a6d81cd913deb5903391ef2" released="2013-03-08" version="0.24">
+      <implementation id="sha1new=078330f7f927f7c10a6d81cd913deb5903391ef2" released="2013-03-08" stability="stable" version="0.24">
       <manifest-digest sha256new="H6C6UE3W6NBSIBATVESQ5YXSA4AKVVA7X3OCRXBEPZP24ET7R3IA"/>
       <archive extract="0publish-0.24" href="http://downloads.sourceforge.net/project/zero-install/0publish/0.24/0publish-0.24.tar.bz2" size="26530"/>
     </implementation>
@@ -138,7 +138,11 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlE6K7UACgkQrgeCgFmlPMFz3wCfX3Teq575lRadDz7+2lWFoxqCLggAniEOIyHW
-YTttj+VWtU2mq6RDbJbW
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6PkcIAIzmqImEK3u8+6iBniqjWO2wqmvBQNN0gBEi
+OGC/rttA2QYqHybjBiJqQJVHRYMsFUlCHkiIEcmykCbAXO3iGnTKUkCSFhBxkKXcjlMxAlPe7lOm
+b3/7jUpbotRbHKK5AF6jjBqex48JDTB3qH1n/JiTQYq6floaB5k1MqcVj5soeLUVmJktesDxEfN+
+PD/wZJlMJqoqObmW+UEtvpnAbAayiCmHIajueTCXMRn0NZbgrk45o9sKZ0XD4KCbztjggjvFSE2f
+6dMbSitR2x8o6zXww/CqMwlQtB7naJa/YOCMW1OsOGlyV5ogGdnvBchtXdyTuIjgxUiPyj2WYIa6
+Iko=
 
 -->

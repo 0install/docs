@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2006/3rd-party/GDC.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GDC</name>
   <summary>D Compiler for GCC</summary>
@@ -33,7 +33,7 @@ and Java.</description>
     <implementation id="sha1new=bdc73b49b8534529b8c1de2d794a8305759b0baa" released="2007-02-10" stability="stable" version="0.22">
       <archive extract="gdc" href="http://ovh.dl.sourceforge.net/sourceforge/dgcc/gdc-0.22-i686-linux-gcc-4.1.1.tar.bz2" size="2802654" type="application/x-bzip-compressed-tar"/>
     </implementation>
-      <implementation arch="*-i686" id="sha1new=7ff08ee85c828f745a17c00acb67f5e0c09e9285" released="2008-07-13" version="0.24">
+      <implementation arch="*-i686" id="sha1new=7ff08ee85c828f745a17c00acb67f5e0c09e9285" released="2008-07-13" stability="stable" version="0.24">
       <archive extract="gdc" href="http://kent.dl.sourceforge.net/sourceforge/dgcc/gdc-0.24-i686-linux-gnu-gcc-4.1.2.tar.bz2" size="2984616" type="application/x-bzip-compressed-tar"/>
     </implementation>
   </group>
@@ -45,7 +45,11 @@ and Java.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAklX8dQACgkQBSn9tx+xORCf1QCfXq/YizmG7Z5k26JHZudbCi2MPiIAoIUBl04R
-hzyMO6daKCoh0ZCrzECt
+iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6Ss4IAJ4VK6db/pcd5vUkNbc9aLR9NUhR1XczWJOl
+8xrixOGDVm4lO6hw0kl7yKZ7zEtpqwm8JYDbnqQMIOxPc9rBcHrrjBx5BRbVp+5EGu0ENhomfDks
+W2N+i1EOpdt+rd21rzbew1J4eyQAXyh5SIz1d91SoQl+oxpG+IgsvkfO6SjgtrKxSdwaPQRp2QUR
+OU3lRU61c5yplsZTf5Icv10OTBWQ8bu/fVw33oK9ZLfDfjz+1dshGSvNggrNFyJMOUVketw5jzz4
+d9k0UbjWGALax3FHOalRGKoSnVIc4oA+l3R/wPjhROBHoR5rgk7lpEAMqxf6LWRZPJk261+zbs4z
+/pE=
 
 -->

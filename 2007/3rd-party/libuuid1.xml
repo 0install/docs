@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libuuid1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libuuid1</name>
   <summary>universally unique id library</summary>
@@ -7,17 +7,21 @@
 See RFC 4122 for more information.</description>
   <package-implementation package="libuuid1"/>
   <group arch="Linux-i386">
-    <implementation id="sha1new=2287c7ae9286c0d8b6261f0db24c703901da3cb4" released="2009-09-25" version="1.41.3-1">
+    <implementation id="sha1new=2287c7ae9286c0d8b6261f0db24c703901da3cb4" released="2009-09-25" stability="stable" version="1.41.3-1">
       <archive href="http://ftp.debian.org/debian/pool/main/e/e2fsprogs/libuuid1_1.41.3-1_i386.deb" size="44928"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=e5276528ee0c4bacf81b69ed1c74e4cd8a1ac17d" released="2009-09-25" version="1.41.3-1">
+    <implementation arch="Linux-x86_64" id="sha1new=e5276528ee0c4bacf81b69ed1c74e4cd8a1ac17d" released="2009-09-25" stability="stable" version="1.41.3-1">
       <archive href="http://ftp.debian.org/debian/pool/main/e/e2fsprogs/libuuid1_1.41.3-1_amd64.deb" size="45254"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9Dn8ACgkQBSn9tx+xORAt5ACeIEJaY7l9U/MtjdhU8F5d5rBAV1gAmgLwXFtS
-zjqiPjKzxsRB/RUMuIqu
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6rqoH/j3dIWjp6X4+IcVP+UhjlylHemCBH+fEIZgD
+HhQmsqirduMasEXSKVXMlFFsuPmMs0z6i0hDkC8YEuT0VvvBQhc/GgmN8tsx4DZI6S/JKb3Afo0/
+i1ZKdd+CFzHN//SIc4nRojGRSQNyzfo5or4A9Y5/2QGEVqHRkQNuLbyrITyJUIDwtIogSyGB0aHd
++LnOxJ2ogw4Ypgp+Uc6MnCO/oVmA0GTtV0YfbY22xm8QzLlEDIVVV91O1nRYfoIANlTsOxrjxeNG
+D/uJGSLebyLboytdVUZwdMpodDd+n3Vu8rVFt57RLT3KW+BemscbCrkGHMWODikgN0/uuzV6h1s5
+VTA=
 
 -->

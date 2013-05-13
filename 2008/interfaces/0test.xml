@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2008/interfaces/0test.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0test</name>
   <summary>test Zero Install programs</summary>
@@ -124,7 +124,7 @@ create a matrix of test results.</description>
 	<version before="3"/>
       </runner>
     </command>
-      <implementation id="sha1new=360035ae53da4ad5bc0410e143cc3a30ff424092" main="0test" released="2013-02-26" version="0.9">
+      <implementation id="sha1new=360035ae53da4ad5bc0410e143cc3a30ff424092" main="0test" released="2013-02-26" stability="stable" version="0.9">
       <manifest-digest sha256new="A4XKENP7I6WFAWEYFAFWMAZATCSJLS62XB6J2ZZV5KWS2OET2ZNQ"/>
       <archive extract="0test-0.9" href="http://downloads.sourceforge.net/project/zero-install/0test/0.9/0test-0.9.tar.bz2" size="12900"/>
     </implementation>
@@ -132,7 +132,11 @@ create a matrix of test results.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlEs5jwACgkQrgeCgFmlPMF4OgCfdN/5jgNiSzbvha/yX4Q5BUy5j74Anj0TMCl7
-eidQCYPYshZiOKbjKzy/
+iQEcBAABCAAGBQJRkLPHAAoJEAcTP5bKdNi6DsgH/2SYGOUP26Ub7ME/OUK6F8y1VEES1mU4bYw+
++gx9SlMoPaHsSmQ1xu9eepwYCRobcShVSb6pG1+Xd0mzwUtlKqyBkVhh2w3yDoXxVVLscnNTXETi
+53u8Ds8EE0yqQwjteAO+bbhG2mcoD9RTLe357app+MwZ1JE+DsiLNeSJJmnEtQSUBkJuTqNf6ejP
++rXvSYdWOXYZiihuJaj7YFwCIRmaCIZA8+mUwB9QB/EzgQjK4AsiMKFzVZmVvqqB42ixyDsY+iXF
+SzUhG2c28a3CIi9FA+5HkBHgQsvXHsQMJiGEoMZoeeA1HxCTiS85ECvZxUpG5Whm2OyVkvMrdVRL
+wcw=
 
 -->

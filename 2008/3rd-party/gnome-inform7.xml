@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>gnome-inform7</name>
   <summary>GNOME port of the Inform 7 IDE</summary>
@@ -12,12 +12,12 @@ writing interactive fiction (also known as text adventures.)</description>
   <homepage>http://sourceforge.net/projects/gnome-inform7</homepage>
   <group main="usr/bin/gnome-inform7">
     <group arch="Linux-i486">
-      <implementation id="sha1new=6bcbf2e684b227711d7174b00d6348a0180a9a8e" released="2008-08-22" version="5">
+      <implementation id="sha1new=6bcbf2e684b227711d7174b00d6348a0180a9a8e" released="2008-08-22" stability="stable" version="5">
         <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_i386.deb" size="8626954" type="application/x-deb"/>
       </implementation>
     </group>
     <group arch="Linux-x86_64">
-      <implementation id="sha1new=45f0cc694ce7985798a43f84da0dee8d9c8d2e86" released="2008-05-26" version="5">
+      <implementation id="sha1new=45f0cc694ce7985798a43f84da0dee8d9c8d2e86" released="2008-05-26" stability="stable" version="5">
         <archive href="http://garr.dl.sourceforge.net/sourceforge/gnome-inform7/gnome-inform7_5T18_amd64.deb" size="8615456"/>
       </implementation>
     </group>
@@ -26,7 +26,11 @@ writing interactive fiction (also known as text adventures.)</description>
 
 </interface>
 <!-- Base64 Signature
-iD8DBQBIryasBSn9tx+xORARAkEgAJ9h0YUPtAC7t4zCAWZ36cZx8FgKWQCcClxgD5RazkMbQpXF
-5alND+d3b7w=
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6aZMH/RNPszH6n23nFgpfqlHE5+QznnopH3aBryev
+4jrwjSOXgFQmn2DZnspF+vBlhFMGlmm7tqfOcKn0siXYo7nvx0tn165mldLWitQWu8nwd/0T02LD
+zGAgmFFhScOF1018z1MRdPS0VPCzMZiUArNap1dbuqANaCML7SWqRldscbb0bWxp6pzHp/8AWaAp
+GkwV3iicXjkr0Dji3J5le7GR+6TFImBUFXnaRRx9NgNpSWB+MOY6rEcLeppNPOqxnTMLSeCSVAhQ
+FxiSp6m5FE1P6Z2RjfSps5oASp89HVdFJ/xgM3uc11el9hNMn5zoiRBAkoLnLWNaW1KHiSp623vE
+O3M=
 
 -->

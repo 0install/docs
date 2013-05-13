@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libmysqlclient15off.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libmysqlclient15off</name>
   <summary>MySQL database client library</summary>
@@ -14,17 +14,21 @@ This package includes the client library.</description>
     <requires interface="http://0install.net/2007/3rd-party/mysql-common.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation id="sha1new=3ab5b7c97734104685866b4f4d3b89fb71d87468" released="2009-09-25" version="5.0.51">
+    <implementation id="sha1new=3ab5b7c97734104685866b4f4d3b89fb71d87468" released="2009-09-25" stability="stable" version="5.0.51">
       <archive href="http://ftp.debian.org/debian/pool/main/m/mysql-dfsg-5.0/libmysqlclient15off_5.0.51a-24+lenny2_i386.deb" size="1859180"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=74d2ad6a90a774ad97e691af3d74b82ad9aa7ad3" released="2009-09-25" version="5.0.51">
+    <implementation arch="Linux-x86_64" id="sha1new=74d2ad6a90a774ad97e691af3d74b82ad9aa7ad3" released="2009-09-25" stability="stable" version="5.0.51">
       <archive href="http://ftp.debian.org/debian/pool/main/m/mysql-dfsg-5.0/libmysqlclient15off_5.0.51a-24+lenny2_amd64.deb" size="1905520"/>
     </implementation>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9Do0ACgkQBSn9tx+xORDl0ACeLcnHH7/SEJLSe17L7qM+VL+aXNkAnj9teiUB
-Rsx7e0aiPVloKIIsHfrh
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6A/EH/2HSBggiwEY/s5lb4DlQJgOtWYmU6zQQdiWn
+9b8dogfAoABXn+y/EA1+aWb5tA6GkoACCeVcNRiZLZ/JMoruXSlby9VI0t5jOuzSqBXW0dU3j4am
+OqRY6Qjnzko1zLwz5egu3ICEADpPACaR90wdb2dmVyM6X1YkgDohCjYCkneK4qlL438vXLFi4y9s
+KySkoNHo1zR2vAHaKB2MG3gXbsd38RUe1KKV4MM9ZctPlHLWai7/h1dcB8/jp7gzxGkQWapVhZv0
+2fIf23TD1/JfFy9uZIDp5m8Lg/jsbkErdn8Y3l41oy9IfQQoyqDa0+mPnreJ4SFQVQpTKR2gXpEa
+Prk=
 
 -->

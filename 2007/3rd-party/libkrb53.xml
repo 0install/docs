@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libkrb53.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libkrb53</name>
   <summary>MIT Kerberos runtime libraries</summary>
@@ -23,16 +23,20 @@ clients.</description>
     <requires interface="http://0install.net/2007/3rd-party/libkeyutils1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <implementation arch="Linux-i386" id="sha1new=97f09ac5e76740286a4471e6f8a2dc4d565879e4" released="2009-09-25" version="1.6">
+    <implementation arch="Linux-i386" id="sha1new=97f09ac5e76740286a4471e6f8a2dc4d565879e4" released="2009-09-25" stability="stable" version="1.6">
       <archive href="http://ftp.debian.org/debian/pool/main/k/krb5/libkrb53_1.6.dfsg.4~beta1-5lenny1_i386.deb" size="481306"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=0ce815ff554a95fa0857d987baeb6a7d3d361aec" released="2009-09-25" version="1.6">
+    <implementation arch="Linux-x86_64" id="sha1new=0ce815ff554a95fa0857d987baeb6a7d3d361aec" released="2009-09-25" stability="stable" version="1.6">
       <archive href="http://ftp.debian.org/debian/pool/main/k/krb5/libkrb53_1.6.dfsg.4~beta1-5lenny1_amd64.deb" size="519406"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkq9DpIACgkQBSn9tx+xORB0oQCfZ5RLBGMM7wetbHfimu9qA6yVkNIAnRqAVRUU
-z49qrDrLzjpexxm5YKvV
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6pWEH/3x5npSdlHiA4XuKVjVNSP2/9qEy9n/NIwm3
+Rx4dkXAuwxqfZaLVjvdgCVbMPGrKM8dG7RTSfPn3rJuaUAWIwkRyzChbRkEHuhVTbQZbxea+sPh4
++C5cuo++l19IAQeT69J/iX6kcXs7sLo1BnaAR4oKbvQ/ZFVz7MUT6csb6J6xRudYXk+15GbtzJve
+pWBKvQbnjCBiUjHeUGA2ufqZu7ASrvYFSG17PAhFaiUAwm+LsJRNwvCzfWz1yutS5MQn2Glfn531
+KHQt+PC9WnPzmx3+d7taB6JGuNdQ40xS06d5p1YE3O4IbOfKox02mSrXWW9bo7XiW/TP00dajyRN
+WEA=
 
 -->

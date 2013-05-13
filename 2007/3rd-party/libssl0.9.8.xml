@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
 <interface uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libssl0.9.8</name>
   <summary>SSL shared libraries</summary>
@@ -9,7 +9,7 @@ telnet-ssl and openssh.
 
 It is part of the OpenSSL implementation of SSL.</description>
   <group arch="Linux-i386">
-    <implementation id="sha1new=785824ea49084092cca4c82c3edac4704bb2bee6" released="2010-03-13" version="0.9.8-15.6">
+    <implementation id="sha1new=785824ea49084092cca4c82c3edac4704bb2bee6" released="2010-03-13" stability="stable" version="0.9.8-15.6">
       <archive href="http://repo.roscidus.com/lib/ssl/libssl0.9.8-i386-0.9.8g-15+lenny6.tar.bz2" size="2970316" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation arch="Linux-i386" id="sha1new=6cd837dbcfc6e2efa912506c0ae72b12ef9f1bf8" released="2007-01-20" stability="insecure" version="0.9.8">
@@ -20,7 +20,7 @@ It is part of the OpenSSL implementation of SSL.</description>
     </implementation>
   </group>
   <group arch="Linux-x86_64">
-    <implementation id="sha1new=6386a02aaaa373ffae2e9a917508d1417478ae43" released="2010-03-13" version="0.9.8-15.6">
+    <implementation id="sha1new=6386a02aaaa373ffae2e9a917508d1417478ae43" released="2010-03-13" stability="stable" version="0.9.8-15.6">
       <archive href="http://repo.roscidus.com/lib/ssl/libssl0.9.8-amd64-0.9.8g-15+lenny6.tar.bz2" size="962209" type="application/x-bzip-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=57a8221e9590546671984a120705d00d95d0c74f" released="2009-09-25" version="0.9.8-15.3">
@@ -28,7 +28,11 @@ It is part of the OpenSSL implementation of SSL.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkucEUAACgkQBSn9tx+xORDBywCggLbpOFieffR2JVU7HxhHKcWms5cAn1kGiwOY
-g4g4CjipK6zo7uqAhnBK
+iQEcBAABCAAGBQJRkLPIAAoJEAcTP5bKdNi6acIIAI8DCvt5MQU3muziwvQW31kAGdtOxl2heUmH
+eMEPwSgQ3LQc7yYkWwtTlKdXuafaE9qJYjvkS+aBcnycZIF9qSqmWHlCEtedyNL+mlHwt+ATkYPH
+4zTyaRnwDkn5WDTsRZoaScHg7gt7sbYugTrRhIivOVXeuwjE2lOzaEvWYq6SVst+YkInKWYJibAg
+KZ3JLg6IF7l5ylK6gWBS3HOjshxMxQkCPQjn+KOsjHH8GRK32E2i6GNg+JB/bKn0SrG436FKHZaE
+WAmWdyTwihtcvKAB87bk9VAuN50bkuRBWY/c1t8OnXnI0w3rCNnzXuKEIBeEgY7q2fzdu1tdewkE
+FwU=
 
 -->
