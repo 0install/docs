@@ -16,93 +16,86 @@ be a 'pass') but it should give the general idea.
 
 <table class='matrix'>
  <tr><th>Feature</th>					<th>Source tarball</th>	<th><a href='http://www.debian.org/doc/manuals/apt-howto/index.en.html'>APT</a></th>
- 													<th><a href='http://autopackage.org'>Autopackage</a></th>
+													<th><a href='http://listaller.tenstral.net/'>Listaller</a></th>
 															<th><a href='http://java.sun.com/products/javawebstart/'>Java WS</a></th>
 																		<th><a href='injector.html'>Zero Install</a></th></tr>
 
  <tr><th>Users can install software</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
- <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
- <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<no/>		<yes/>			<yes/></tr>
- <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Dependencies handled automatically</th>	<no/>			<yes/>			<td>Distro only</td>		<yes/>			<yes/></tr>
+ <tr><th>Automatic upgrading</th>			<no/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
+ <tr><th>Libraries shared between programs</th>		<yes/>			<yes/>			<td>Distro only</td>		<yes/>			<yes/></tr>
  <tr><th>Downloads shared between users</th>		<no/>			<td>No user downloads</td><no/>		<no/>			<yes><a href='sharing.html'>Yes</a></yes></tr>
  <tr><th>Multiple versions coexist</th>			<yes/>			<no/>			<no/>		<no/>			<yes/></tr>
  <tr><th>Uninstall</th>					<td>Sometimes</td>	<yes/>			<yes/>		<yes>(cache)</yes>	<yes>(cache)</yes></tr>
- <tr><th>Digital signatures</th>			<no/>			<yes/>			<no/>		<td>Only one</td>	<yes/></tr>
- <tr><th>Conflict-free</th>				<no/>			<no/>			<no/>		<yes/>			<yes/></tr>
+ <tr><th>Digital signatures</th>			<no/>			<yes/>			<yes/>		<td>Only one</td>	<yes/></tr>
+ <tr><th>Conflict-free</th>				<no/>			<no/>			<yes/>		<yes/>			<yes/></tr>
  <tr><th>Decentralised</th>				<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
  <tr><th>Non-root install of system</th>		<yes/>			<no/>			<yes/>		<yes/>			<yes/></tr>
  <tr><th>All programming languages</th>			<yes/>			<yes/>			<yes/>		<no>Only Java</no>	<yes/></tr>
- <tr><th>Supports sandboxing</th>			<no/>			<no/>			<no/>		<yes/>			<yes/></tr>
+ <tr><th>Supports sandboxing</th>			<no/>			<no/>			<yes/>		<yes/>			<yes/></tr>
  <tr><th>Usable when off-line</th>			<yes/>			<yes/>			<yes/>		<yes/>			<yes/></tr>
- <tr><th>Thousands of packages available</th>		<yes/>			<yes/>			<no/>		<td>Unknown</td>	<no/></tr>
+ <tr><th>Thousands of packages available</th>		<yes/>			<yes/>			<no/>		<td>Unknown</td>	<no>~1500</no></tr>
 
 </table>
 
 <h4>Explanation of features</h4>
 
 <dl>
- <dt>Users can install software</dt>		
- <dd>A user without root privileges can install software using this system (without unreasonable extra effort).</dd>
- 
- <dt>Dependencies handled automatically</dt>	
- <dd>If a program requires some library to function, the system will locate, download and install the library too.</dd>
+ <dt>Users can install software</dt>
+ <dd>A normal user without special privileges can install software using this system (without unreasonable extra effort).</dd>
 
- <dt>Automatic upgrading</dt>			
+ <dt>Dependencies handled automatically</dt>
+ <dd>If a program requires some library to function, the system will locate, download and install the library too.<br/>
+ Listaller packages can depend on distribution-provided packages but not on other Listaller packages.</dd>
+
+ <dt>Automatic upgrading</dt>
  <dd>The system can check for and install upgrades automatically or at the operator's request. User does not have to
  perform a full install operation manually on each package.</dd>
- 
+
  <dt>Libraries shared between programs</dt>
  <dd>If two programs use the same library, the library is only downloaded and stored once. Upgrading a library will
  benefit all programs that use it.</dd>
- 
- <dt>Downloads shared between users</dt>		
+
+ <dt>Downloads shared between users</dt>
  <dd>If two users install/use the same program, it is only downloaded once and stored once.<br/>
  See <a href='sharing.html'>Sharing</a> for how to set this up with Zero Install.
  </dd>
- 
+
  <dt>Multiple versions coexist</dt>
  <dd>Two versions of a program or library can be installed at the same time, and the user can choose which one to run.</dd>
 
  <dt>Uninstall</dt>
  <dd>Programs can be cleanly removed from the system easily (reversing the effects of the install).</dd>
- 
- <dt>Signatures</dt>				
+
+ <dt>Signatures</dt>
  <dd>Software comes with a digital signature, which is checked automatically by the system.<br/>
  Note: Java Web-Start requires all components to be signed with the same key.
  </dd>
- 
+
  <dt>Conflict-free</dt>
  <dd>If program A requires an old version of a library, and program B requires a new version, A and B can both be installed and
- used at the same time. The system will never refuse to install one program because some other program is installed.</dd>
- 
+ used at the same time. The system will never refuse to install one program because some other program is installed.
+ Listaller and 0install can both depend on native distribution packages, which may conflict, but their own packages do not.
+ 0install will avoid such problems as long as a suitable version of the dependency is also available as a 0install package.
+ </dd>
+
  <dt>Decentralised</dt>
  <dd>A program packaged for this system can be installed easily, without having to be in some special centralised repository.<br/>
  Notes: Debian allows extra repositories to be added, but this is a manual
  step, requires root access, and is a considerable security risk.</dd>
- 
- <dt>Non-root install of system</dt>		
+
+ <dt>Non-root install of system</dt>
  <dd>The packaging system itself can be easily installed without administrator privileges, and the normal selection of
  software will be available.</dd>
 
- <dt>All programming languages</dt>			
+ <dt>All programming languages</dt>
  <dd>All types of program can be accessed using this system.</dd>
 
  <dt>Supports sandboxing</dt>
  <dd>If you have a way of running an application in a sandboxed environment (e.g., a Java virtual machine), then the
  installation system will let you install and run the program without forcing you to run any of the downloaded
  code outside of the sandbox.<br/>
- The easiest way to get sandboxing with the injector is to run it twice: once in download-only mode with write
- access to the cache, and then again in offline mode with read-only access to actually run the program. To control
- access, you can use a program such as <a href='http://plash.beasts.org/'>Plash</a>, e.g.:
- <pre>plash$ <b>!!0launch --download-only 'http://0install.net/2006/interfaces/0publish'</b>
-plash$ <b>0launch --offline 'http://0install.net/2006/interfaces/0publish' + ~/.cache ~/.config</b></pre>
- This downloads and runs the <a href='0publish.html'>0publish</a> program
- (which will display its help message) without granting it write access to
- anything. Even if it contained a bug which made it try to delete all your
- files, plash should prevent it from doing any harm. If you use it to process a
- file, you can give it write access to just that file by using <b>=></b> in the
- normal plash manner. In future versions, this should all be made automatic, so
- you don't have to run <b>0launch</b> twice.
+ See the <a href='ebox.html'>EBox sandboxing demo</a> for an example of using 0install in this way.
  </dd>
 
  <dt>Usable when off-line</dt>
@@ -150,7 +143,7 @@ to be removed.
 
 <dd>
 <p>
-<a href='http://en.wikipedia.org/wiki/Klik_%28packaging_method%29'>Klik</a> allows users to install software by clicking on 
+<a href='http://en.wikipedia.org/wiki/Klik_%28packaging_method%29'>Klik</a> allows users to install software by clicking on
 links in web-pages (or even just by looking at a web page). Like Zero Install, it stores
 each package in its own directory and sets environment variables to let it run.
 There is a central server which sends shell scripts to clients; executing the
@@ -257,12 +250,12 @@ of a library's header files to ensure greater compatibility.
 </p>
 </dd>
 
-<dt id='Autopackage'>Autopackage</dt>
+<dt id='Autopackage'>Autopackage / Listaller</dt>
 <dd>
 <p>
 Like Zero Install, <a href='http://autopackage.org/'>Autopackage</a> aims to
 let users install software and to make software distribution decentralised.
-The work done by the Autopackage developers to make packages relocatable is 
+The work done by the Autopackage developers to make packages relocatable is
 necessary for Zero Install too. Some differences between this and
 Zero Install:
 </p>
@@ -286,7 +279,9 @@ installation (the package is treated as a normal archive), so not all packages w
 but many do.
 </p>
 
-<p>Autopackage is no longer maintained, but has merged with the <a href='http://listaller.tenstral.net/'>Listaller project</a>.</p>
+<p>Autopackage is no longer maintained, but has merged with the <a href='http://listaller.tenstral.net/'>Listaller project</a>. The Listaller
+project has also taken over the <a href='http://listaller.tenstral.net/docs/doc/app-development.html'>tools for making relocatable applications</a>, which
+may be useful for making 0install packages too.</p>
 
 </dd>
 
