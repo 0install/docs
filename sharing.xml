@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html lang="en">
 
+  <div class='note'>A change in 0install 2.1 accidentally disabled writing to the shared cache (packages will always be installed to the user's home directory, even when sharing has been enabled). This has been fixed in Git and will be working again in 2.3.</div>
+
 <h2>Sharing downloads between users</h2>
 
  <p>
