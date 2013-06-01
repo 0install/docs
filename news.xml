@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Jun 2013</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6876'>0install 2.2 released</a> with some bugfixes and performance improvements. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6878/focus=6885'>0repo 0.1 and 0.2 released</a> - this software is now being used to manage the 0install.net feeds. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6886'>0release 0.15 released</a>, providing integration with 0repo. <a href='http://thread.gmane.org/gmane.linux.ubuntu.devel/37162/focus=37228'>Canonical discuss using 0install in Ubuntu</a>. We're also looking at implementing 0install in some other language - <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6912/focus=6941'>Thoughts on a faster, smaller zeroinstall-core</a> contains benchmarks of various proposed languages (ATS, Haskell, OCaml, Rust, C# and Python).
+</dd>
 <dt>May 2013</dt>
 <dd>
 <p>
