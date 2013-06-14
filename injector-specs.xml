@@ -12,6 +12,15 @@ and details about how to get them, how to check that they are authentic, how to 
 they depend on.
 </dd>
 
+<dt><a href='selections-spec.html'>Selections files</a></dt>
+<dd>
+This document describes the format of 0install's XML selections documents. A
+selections document contains all the information needed to launch a program.
+0install generates a selections document by collecting information from
+multiple feeds and then running a solver to choose the best combination of
+components.
+</dd>
+
 <dt><a href='manifest-spec.html'>Manifest files</a></dt>
 <dd>
 Zero Install implementations are directory trees identified by an
