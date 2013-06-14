@@ -99,6 +99,7 @@
 
     <item base='injector-specs' label='Specifications'>
       <item base='interface-spec' label='Feed files'/>
+      <item base='selections-spec' label='Selections files'/>
       <item base='manifest-spec' label='Manifests'/>
     </item>
 

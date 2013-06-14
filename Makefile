@@ -61,6 +61,7 @@ HTML = index.php \
        perspectives.html \
        pkg2zero.html \
        roadmap.html \
+       selections-spec.html \
        servers.html \
        sharing.html \
        solver.html \
