@@ -366,7 +366,7 @@ For a full tutorial, see 0compile's homepage.</description>
       <environment insert="0publish" mode="replace" name="0COMPILE_0PUBLISH"/>
     </requires>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-      <version not-before="2.1"/>
+      <version before="2.3-post" not-before="2.1"/>
       <environment insert="" mode="replace" name="0COMPILE_ZEROINSTALL"/>
     </requires>
       <requires interface="http://repo.roscidus.com/utils/bash" os="Windows">
@@ -395,11 +395,11 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRkLPJAAoJEAcTP5bKdNi6o80H/iMB8zz/RwhlS4pxnduLZFw3GHgxHa14S0VN
-9FY9pIdRFF4koSnRfNvtf00+JBBjAahjYi6lBqHD4rylf51nSCea1PdMkgEvY9jItPgJxLvVQPtE
-+kqUhyJRS6OW39aivRCBH3st+5Qrw/0crL40YC24oji+y54bGLmrSZciehFMaYJa1EqBRltTKg15
-iC7pP6r3olK5fiLTub4R+oONUZWXhD120ekRBdenpsFL/G50sSGGZ5kxr8kyxZRPrSCkAsdB+rKO
-v82cRMSofAnLpupgqovbRCts6u4dQj6Bvkr10BwYAbNJHccKkPyB4GIDoD+zgR2LwvFisLywcVqa
-ak4=
+iQEcBAABCAAGBQJR5CaTAAoJEAcTP5bKdNi6zycH/07pCw0BEoiekP5NeyGG6S1CGcgYuqt3FREB
+IDgYyCIfHn9QTuM/0ngGvWUJnd3yko/3JabVSBWqNFhfiECo7UYpoS5GqUWFb5Zm4AsJIFWFp4Nu
+9a0EVM0EFiu/s9h7toIkvQAZIpCMAEQt5eWFeKNWrAFFUA0T4xQtoGnNQOnT8qDlSnLUj5QUwgVm
+ugXJ9/SdQOasmVMOrbbiP5YDFmHgSx1fqfPoPSzs0rQH6iSPpMh6cJUfyPbiRzrwJFQchaYLzvf8
+y7ZHQ8aL+N0t0cU+u0Iq94bTozQzkXruJEmopPAe4ba3CggZtvbH5ZzDYPpBEi4zzTIFWbk4y2mu
+DD8=
 
 -->
