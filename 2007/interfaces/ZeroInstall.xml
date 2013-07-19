@@ -307,16 +307,20 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="URDXZMYJC77NBYLBMGHO7HG47DNIW6Q4GEMRQOFU2KC23PEA6NNA"/>
         <archive extract="0install-2.3.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.1/0install-2.3.1.tar.bz2" size="447295"/>
       </implementation>
+      <implementation id="sha1new=5bd6365e17d2fef044d50549eb06d9686ff6a31b" released="2013-07-19" version="2.3.2">
+        <manifest-digest sha256new="6IJV3BCOXNJLC3ORE4XSFUPRLQVFNM73NGPHTH5RKXMVYD5F4P7A"/>
+        <archive extract="0install-2.3.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.2/0install-2.3.2.tar.bz2" size="447193"/>
+      </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJR3QaMAAoJEAcTP5bKdNi66E4IAK5PtyQrJtRYk08H9Aai1BVr5zB8q1GGGpQN
-9OkEXkD6X0HtEtj/gt/+KiYPgu4iAoRdHnnOGm9qDF/pSVf+/7KemySqqEwHrt00kHZOpFL5EMfy
-lxF/96LRfj8NNFm7H7Z3R5ugVaNRv5FGDvwNLolZMqeXaUdmRFK6VLgAmOq+ZqxHv/dwYxtxEeGU
-4dQDYtTMEo9nKy2jbePoZjIeynhdYhi6SnZLEBFeUl08B+6hze93LOa9/UWfYD4IFoK2wl0KVCaK
-vjEdsjtRBTQYMin3S5L4lsk0yKg3Rsm+lIigeb1Qh2aiMC87eHoZNGptp57RySurQg537FELJXsI
-U3A=
+iQEcBAABCAAGBQJR6T8zAAoJEAcTP5bKdNi6LM8H/RIv7Y/WvVIK37QfiY0+LRo9G0jWSuVC9tL4
+HzExCrjbFEBvrJ/JQPBKI2iaWW5gug3S0idXmmkpTSZDIlEjE4nP5VMu6CfQJI/trIQhHp+Lb/6i
+PkvSJMGVhRdBOvnuweY3/d31RhAWRsEZgScAkoSD57XKhHaHRdlt7h6rzkSaiSqHODNWP1u8eyaq
+6w1DNMiS+a893bMPqVi9KBDy1wqTQ8IWNYzP3VzPJuF5SKoklg+Oq8hOa4N+A5M0uzCVSXZYqoaU
+I1PBJpjTNkBveB3gAikZQ1Ark5JXDW7b4vOeBAOzPJ/d6b00KAbtbd0uAfGWg4qIoeAu34jjLuSF
+rJ0=
 
 -->
