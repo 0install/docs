@@ -23,13 +23,17 @@
       <archive extract="0install-windows-support-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install-windows-support/2.4/0install-windows-support-2.4.tar.bz2" size="11244"/>
     </implementation>
   </group>
+  <implementation arch="Windows-x86_64" id="sha1new=0241096d7e98a547ecb4dd8d59c23b9b8ad24694" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-07-20" version="2.4">
+    <manifest-digest sha256new="24V3K4UF3SNFJI2QVF3A52PXQWG7UGTHT6OUYDHPDE665ETVCPBA"/>
+    <archive extract="0install-windows-support-windows-x86_64-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install-windows-support/2.4/0install-windows-support-windows-x86_64-2.4.tar.bz2" size="427500"/>
+  </implementation>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJR6rmnAAoJEAcTP5bKdNi6HBIIAI/DoQuHDI6xkClHM64i3fpXo6BMmAtvThjT
-94p4goYJzNc6O/S7wZc0uUanRStpRDR1RUDK9AF+xORlEW4EpTxcdengEiH1bsFak7iihwWq6nXt
-1KaXyWx6uIWOYB5mM7RAL872dUNuzApiorl+kppmfDBsZ3hHLWeTyPKpL8LDqW0MLrFBEOEsnL0b
-55grTxoi6La8rtFmnORTxNWrqDGdKi0nmJyxrstPz75693p+UbBPsgqnPDXrgOGz/kJvqPa1hVAl
-P5vNkgE0xpjHqEqJX84M8PXq8EwEkT3CBTjBGwR7SmvTIyECc9qrnBkC+cUjhigW/zNIdt6fOsn/
-Xe4=
+iQEcBAABCAAGBQJR6ro9AAoJEAcTP5bKdNi6KKQH/iLBSzjQJfTaE5sGoQuMvWmCtEOohpGnp/RS
+Yq4bbmPq1FtsVlde+s6eqO4Wcz/mCL3W0YWWcKIqwjk2/pla6mPInqQ9PEWQC9f8Q7hWPRGnoocX
+ShxfUyLWFGHrB9OuIt+7LKQU1JIkaOV+FyIhU+mMSY0LKqCiqzOiq8Ay0jn0ngki3w/ESDKN0jDd
+hyojUWqTvsIDGk41PWlXjjCrZbBlu9pTRfkyltzYbNnZZ0rjkx/2ztqko2KCYxg74ejrVf+pI1BP
+Aw8+7pSpkp4luTjh4yN0kXwxM3pSlWqx6mNwSJqukpOVnCMiV8NKscHXrTHp+2Md03qE5owoL/JB
+ucA=
 
 -->
