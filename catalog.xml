@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="http://0install.net/2009/interfaces/pkg2zero.xml"><name>pkg2zero</name><summary>create Zero Install feeds from Debian and RPM packages</summary><description>
+<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="http://0install.net/2013/interfaces/0install-windows-support.xml"><name>0install-windows-support</name><summary>support for 0install on Windows</summary><homepage>http://0install.net/</homepage></interface><interface uri="http://0install.net/2009/interfaces/pkg2zero.xml"><name>pkg2zero</name><summary>create Zero Install feeds from Debian and RPM packages</summary><description>
 Zero Install is a decentralised installation system. Meta-data about each
 package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
 files and downloads and runs the programs. The feed files can be created

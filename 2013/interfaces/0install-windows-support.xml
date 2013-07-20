@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../../resources/feed.xsl'?>
+<interface uri="http://0install.net/2013/interfaces/0install-windows-support.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0install-windows-support</name>
+  <summary>support for 0install on Windows</summary>
+
+  <homepage>http://0install.net/</homepage>
+
+  <group arch="*-src" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <restricts interface="http://repo.roscidus.com/ocaml/ocaml-runtime">
+      <version before="4.1" not-before="4.0"/>
+    </restricts>
+
+    <command name="compile">
+      <runner interface="http://repo.roscidus.com/devel/make">
+        <arg>-f</arg>
+        <arg>${SRCDIR}/Makefile</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha1new=edd69be32f0ccb7583bd043b12c1b4dc5739b1d0" released="2013-07-20" version="2.4">
+      <manifest-digest sha256new="7KZ4SUJAK66KC76TFQCB5IGERQAKT3QQD2WDPOW5THEMNSGVXIQQ"/>
+      <archive extract="0install-windows-support-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install-windows-support/2.4/0install-windows-support-2.4.tar.bz2" size="11244"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABCAAGBQJR6rmnAAoJEAcTP5bKdNi6HBIIAI/DoQuHDI6xkClHM64i3fpXo6BMmAtvThjT
+94p4goYJzNc6O/S7wZc0uUanRStpRDR1RUDK9AF+xORlEW4EpTxcdengEiH1bsFak7iihwWq6nXt
+1KaXyWx6uIWOYB5mM7RAL872dUNuzApiorl+kppmfDBsZ3hHLWeTyPKpL8LDqW0MLrFBEOEsnL0b
+55grTxoi6La8rtFmnORTxNWrqDGdKi0nmJyxrstPz75693p+UbBPsgqnPDXrgOGz/kJvqPa1hVAl
+P5vNkgE0xpjHqEqJX84M8PXq8EwEkT3CBTjBGwR7SmvTIyECc9qrnBkC+cUjhigW/zNIdt6fOsn/
+Xe4=
+
+-->
