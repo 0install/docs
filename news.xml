@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+<dt>Aug 2013</dt>
+<dd>
+<a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7020'>0install 2.3</a> was released, with the new OCaml front-end to make launching apps much faster, tab completion for the Fish shell and support for relative archive paths in local feeds (this is useful for testing). <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7095'>0install 2.3 for Windows</a> was released, with a new per-user installer for use without administrator permissions. Since the release, we have been porting more of the code to OCaml: Tab-completion is now converted and therefore much more responsive. Other discussions included the announcement of <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7088'>an updated Firefox plugin</a> and plans for a web-based <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7093'>Zero Install Market</a>.
+</dd>
 <dt>Jul 2013</dt>
 <dd>
   To improve the speed of 0install, we looked at some candididate languages to replace Python: ATS, C#, Go, Haskell, OCaml, Python and Rust. See <a href='http://roscidus.com/blog/blog/2013/06/09/choosing-a-python-replacement-for-0install/'>Round 1</a> and
