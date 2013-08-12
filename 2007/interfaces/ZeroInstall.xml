@@ -307,20 +307,24 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="URDXZMYJC77NBYLBMGHO7HG47DNIW6Q4GEMRQOFU2KC23PEA6NNA"/>
         <archive extract="0install-2.3.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.1/0install-2.3.1.tar.bz2" size="447295"/>
       </implementation>
-      <implementation id="sha1new=5bd6365e17d2fef044d50549eb06d9686ff6a31b" released="2013-07-19" version="2.3.2">
+      <implementation id="sha1new=5bd6365e17d2fef044d50549eb06d9686ff6a31b" released="2013-07-19" stability="stable" version="2.3.2">
         <manifest-digest sha256new="6IJV3BCOXNJLC3ORE4XSFUPRLQVFNM73NGPHTH5RKXMVYD5F4P7A"/>
         <archive extract="0install-2.3.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.2/0install-2.3.2.tar.bz2" size="447193"/>
+      </implementation>
+      <implementation id="sha1new=ab75d33948374ec0bf5dd7b00239f8f98a439e44" released="2013-08-12" version="2.3.3">
+        <manifest-digest sha256new="DQ5LNKJ5NVYFL5UQWV7S2NLHWI4TUXDZCZZI65L5YKHEHNVNVSLA"/>
+        <archive extract="0install-2.3.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.3/0install-2.3.3.tar.bz2" size="446962"/>
       </implementation>
     </group>
   </group>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJR6T8zAAoJEAcTP5bKdNi6LM8H/RIv7Y/WvVIK37QfiY0+LRo9G0jWSuVC9tL4
-HzExCrjbFEBvrJ/JQPBKI2iaWW5gug3S0idXmmkpTSZDIlEjE4nP5VMu6CfQJI/trIQhHp+Lb/6i
-PkvSJMGVhRdBOvnuweY3/d31RhAWRsEZgScAkoSD57XKhHaHRdlt7h6rzkSaiSqHODNWP1u8eyaq
-6w1DNMiS+a893bMPqVi9KBDy1wqTQ8IWNYzP3VzPJuF5SKoklg+Oq8hOa4N+A5M0uzCVSXZYqoaU
-I1PBJpjTNkBveB3gAikZQ1Ark5JXDW7b4vOeBAOzPJ/d6b00KAbtbd0uAfGWg4qIoeAu34jjLuSF
-rJ0=
+iQEcBAABCAAGBQJSCPUwAAoJEAcTP5bKdNi6MlYH/1Dj1MikKCHGXuEazo8LrBsG2J97l+IBkSPz
+W/TuWyLRHEYgmOCnOFo85mxv564IgBZ+xb2Zj/0YBd85WJGexSUWO7GmZrMrHQji1VolUvAXQKJb
+dOEDUhE1xbkpUgsTOFuZDmxIZZIFEaxLWIZspd5Azt+B+Y7soA3+ApKVdI50SK9K92brGJfoV6Wy
+OgoiBYejO0TyywgqBZFL4RGsdswAtBKB/U84TwxtX28TjOmMnv+8XzcGMSN+Q+3aWyYP0EYDbmzB
+Buuc0LwjrXo5Ll6lQnlqXAVpDxh+HaKz3VUHp8gFFYLwImi5DT0WkZuef+zrNnfLXWltCi+hyvGA
+UhY=
 
 -->
