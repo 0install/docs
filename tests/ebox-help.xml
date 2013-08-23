@@ -7,14 +7,14 @@
     This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
   </description>
 
-  <implementation id="sha1new=1db56ca6953f092628d0f7681dcf07a2a0c80a96" released="2010-08-07" version="0.1">
+  <implementation id="sha1new=1db56ca6953f092628d0f7681dcf07a2a0c80a96" license="OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)" released="2010-08-07" version="0.1">
     <manifest-digest sha256="0ef43df6ba60f61e281b8fac4fed78d766f92a72d5b843df56c67e34851f3a07"/>
     <archive extract="ebox-help-0.1" href="http://downloads.sourceforge.net/project/zero-install/ebox-help/0.1/ebox-help-0.1.tar.bz2" size="1326"/>
   </implementation>
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAkxdU+8ACgkQrgeCgFmlPMHzxwCgsGIj5NSuZ5b2Rr32J3Sl74c6HcAAoJDSPVjm
-6FNf/Kgu1Bx0EGHrVOT4
+iEYEABECAAYFAlIXJAEACgkQrgeCgFmlPMGZYACdFIdI5VfqKB+hjBNKwT3pkzbG88kAni5oBkFP
+pvZXHvYEDLXTUeUpGPg8
 
 -->

@@ -157,7 +157,17 @@ This package provides the git main components with minimal dependencies.
 Additional functionality, e.g. a graphical user interface and revision
 tree visualizer, tools for interoperating with other VCS's, or a web
 interface, is provided as separate git* packages.</description><category>Development</category></interface><interface uri="http://0install.net/2008/linux-ppc/GLib-dev.xml"><name>GLib-dev</name><summary>headers for compiling GLib applications</summary><description>These are the GLib header files. They are required when compiling applications
-that use the GLib library.</description></interface><interface uri="http://0install.net/2007/interfaces/FeedLint.xml"><name>FeedLint</name><summary>check your Zero Install feeds</summary><description>
+that use the GLib library.</description></interface><interface uri="http://0install.net/tests/ebox-chat.xml"><name>ebox-chat</name><summary>sandboxed chat program</summary><description>
+    EBox-Chat is a demonstration chat client. It allows secure two-way text-based communication with another instance of itself.
+    It is designed to be installed using the ebox demonstration sandboxing system.
+  </description></interface><interface uri="http://0install.net/tests/ebox.xml"><name>ebox</name><summary>instance manager for E programs</summary><description>
+ebox installs instances of E programs. Each program runs with access, by
+default, only to its own instance directory. The code is separate; managed by
+Zero Install.</description></interface><interface uri="http://0install.net/tests/ebox-edit.xml"><name>edit</name><summary>E text editor</summary><description>
+    This is a very simple proof-of-concept text editor that can be confined using the EBox sandbox system.
+  </description></interface><interface uri="http://0install.net/tests/ebox-help.xml"><name>ebox-help</name><summary>EBox help viewer</summary><description>
+    This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
+  </description></interface><interface uri="http://0install.net/2007/interfaces/FeedLint.xml"><name>FeedLint</name><summary>check your Zero Install feeds</summary><description>
 FeedLint is a tool for Zero Install feed authors. It checks that your Zero
 Install feed can be downloaded, that it is valid and that all the links in it
 still work.
@@ -605,11 +615,11 @@ to design the 3D UI as a best of both worlds from old to new: It lets you rotate
 the view, zoom in/out, view special effects, etc. On the other hand I've always
 liked the old-school isometric games like Exult or Woodward</description><homepage>http://scourge.sourceforge.net/</homepage><category>Game</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJR8jRiAAoJEAcTP5bKdNi6ytgH/jQa76r4ks5GpAW8rw4bKk6nxpUoj3tciB5Y
-mHEnhbp5mslXvmnBvILMX/Tft+Kracg+Mxc0ZFblp9VIDD3SfvhaheXmm4NgRheqO7Os9ZbbbGJd
-WDsI270tZ9ZynH2a26zaUavglIYL/xzrLHQQmqF9q+ZPMId765dG4ej7y/X2yNJiBnsRZ3XOnKhO
-vDdxM7SHCGjStE1ZDBbnKwgmHLM1jzWrT0BQdzbiNA5X5RH21y8pkzgaML71guGui7zp5aorGJv+
-81A0YHjs5my2mXE7ShAZG172jQlTP3Ae6JI9xf8ieKfqWex7KbyUDOV5JwCkeCmOUTXzTdBdw6+l
-Ijg=
+iQEcBAABCAAGBQJSFyQUAAoJEAcTP5bKdNi6MJ4IAJF5E6s9aqcQSuqMl7wAVmSA5KxMjKiySJWv
+Xua3GMwrBxbZ8Q8G2w5xexzq/4/NwIDzY8IFW8MSYyjIhhoPYGg1xpp6x31GQzJAOqq3jU2UXW8a
+JQremEyHzuYUnZy6tFrVDoE4ny5gbDDVQ3rg5uqAIEYAF2rkp3ctu7kvsfZQ86QDumu3GuKE58FD
+NhO81jh7lUAMgvA1Rl9eLFGqO1K1IYh8LJRXAtlkKVgI8A01qi35yY8RExD64sdp2Yx/A07MsTmp
+EHr8Fw8PLnltxEfkPK5l47EJKIT4eav6P1L05GypKl9J8wkKDC+A7mdqmFr4rnUmgIquws8cJMuA
++bE=
 
 -->

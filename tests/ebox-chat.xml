@@ -8,7 +8,7 @@
     It is designed to be installed using the ebox demonstration sandboxing system.
   </description>
 
-  <implementation e:main="boxchat.e-swt" id="sha1new=7e3f40140ab94b32d31808641e2872c36c5c2c73" released="2010-08-07" version="0.1">
+  <implementation e:main="boxchat.e-swt" id="sha1new=7e3f40140ab94b32d31808641e2872c36c5c2c73" license="OSI Approved :: GNU General Public License v2 or later (GPLv2+)" released="2010-08-07" version="0.1">
     <command name="org.erights/rune" path="boxchat.e-swt"/>
     <requires interface="http://0install.net/tests/ebox-help.xml">
       <environment insert="" name="help"/>
@@ -19,7 +19,7 @@
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlESmNAACgkQrgeCgFmlPMGd1QCgmOUAS5P/IfEyN4Y1hTnpiiRkTFgAoL9Ofibf
-wQZjp87TEMo/t020P5IS
+iEYEABECAAYFAlIXIzkACgkQrgeCgFmlPME+NwCgop+nzrOgWGN/tzFqsWRvuR1VO1MAnRF0ya53
+1rcuFkJt6KtxTQBMTFsi
 
 -->
