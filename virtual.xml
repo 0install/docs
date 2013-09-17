@@ -74,6 +74,26 @@ Vagrant::Config.run do |config|
 end
 </pre>
 
+<p>or, for later versions:</p>
+
+<pre>
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  [...]
+  config.vm.synced_folder "/var/cache/0install.net/implementations",
+			  "/var/cache/0install.net/implementations"
+
+  # This next bit is convenient but less secure...
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["setextradata", :id,
+	  "VBoxInternal2/SharedFoldersEnableSymlinksCreate/shared-guest-cache", "1"]
+  end
+
+  config.vm.synced_folder "/home/me/.cache/shared-vagrant-guest-cache",
+			  "/home/vagrant/.cache/0install.net/implementations"
+end
+</pre>
+
 <p>
   Change the "/home/me/.cache/shared-vagrant-guest-cache" line to the path where you want to store the shared cache on the host.
   Ensure you have version 4.2.0 or later of the guest additions installed, or symlinks might not work.
