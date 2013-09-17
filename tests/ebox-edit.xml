@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
 <interface uri="http://0install.net/tests/ebox-edit.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:e="http://erights.org/0install">
   <name>edit</name>
   <summary>E text editor</summary>
@@ -7,7 +7,7 @@
     This is a very simple proof-of-concept text editor that can be confined using the EBox sandbox system.
   </description>
 
-  <implementation e:main="edit.e-swt" id="sha1new=f3776e8df02377a185363eb589bccd96898262cb" license="OSI Approved :: GNU General Public License v2 or later (GPLv2+)" released="2010-08-07" version="0.1">
+  <implementation e:main="edit.e-swt" id="sha1new=f3776e8df02377a185363eb589bccd96898262cb" license="OSI Approved :: GNU General Public License v2 or later (GPLv2+)" released="2010-08-07" stability="stable" version="0.1">
     <command name="org.erights/rune" path="edit.e-swt"/>
     <requires interface="http://0install.net/tests/ebox-help.xml">
       <environment insert="" name="help"/>
@@ -18,7 +18,11 @@
 
 </interface>
 <!-- Base64 Signature
-iEYEABECAAYFAlIXI+IACgkQrgeCgFmlPMHubACfaarzjGDsMewarnnXEPt6XLQCD/QAoIJKY3gM
-qvnGF5dJNEMLrJ/PojC/
+iQEcBAABCAAGBQJSOHVyAAoJEAcTP5bKdNi6UFcH/inAYUkibOmpGfR4CmOI+2eeQR+e853ff5vz
+B/HUP/rlPs8nwze8Slz/fhFTO7hK4eEHW0BSQtlcc+G5WMrTCusiaSWS+jyFde6qLueHZ9de4K/O
+btP8IU5jdeUVy9ZN6o/IWwKINEaOZO4PlDskkmDB5CQnwBzE73WFR+YJcDr8Q6DMWl+9Rar+iZ6v
+liWnutSndOptwLIqZwi0SgKHlcg5ma64FSl80ETpnvaknBHDdL4DNARY/l2dnGmW+3zthQy5M7SM
+IyDggT6syhn35dYuAdwtmFPRPqnrDO6vG0KjNOLweeP2YXQ8BAwe63+hrCw1F0TVxRUZ0SbLM/lD
+2+A=
 
 -->

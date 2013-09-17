@@ -183,7 +183,7 @@ can help you to create new releases easily.</description>
       <command name="run" path="0release">
         <runner interface="http://repo.roscidus.com/python/python"/>
       </command>
-      <implementation id="sha1new=fe5d960622a39bd4be2f78c9f4bc64fd90cc9492" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-05-06" version="0.15">
+      <implementation id="sha1new=fe5d960622a39bd4be2f78c9f4bc64fd90cc9492" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-05-06" stability="stable" version="0.15">
         <manifest-digest sha256new="ONLXPNQXHTD2W5ZEO52PGO5VM4V4BNQ4CWEUJ3N2IOEI644LZWMQ"/>
         <archive extract="0release-0.15" href="https://downloads.sourceforge.net/project/zero-install/0release/0.15/0release-0.15.tar.bz2" size="56746"/>
       </implementation>
@@ -192,11 +192,11 @@ can help you to create new releases easily.</description>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRh7ThAAoJEAcTP5bKdNi6BMYH/0zhwlo+9/+x0C2+2T+fsklevaXMFSqClBb/
-BJiLzzJhb0/EQXPZ/XfHck3qM1mdfEioYVRzwnqKPe6NrOurO08LQ/KpuEjHTMKnlNfyeoBMv3Cp
-pEpzHJQlwLZpnafuJ0e6LUbY95JsZrCPBunSsZe+eVXgW0PRGrXsOkj8VH+gIX2HVXWyDij2gbCs
-c9CNsaEDfhWDciZJTiuRfvPFZ4JYPpLnM0BEEOhK45JsVwJYqTDMomGofLqzK10QUvml32nwc/hY
-GkBoySnjwBtUT5rDldaMz8TXU4yOqu+KPbwOn/yfT8zbXnfuPmunFbmCdYlwErUyknybhK6i1gTN
-GOY=
+iQEcBAABCAAGBQJSOHVyAAoJEAcTP5bKdNi6si4IAIco8xf7LcXzRohCTDt5OjF7reQqztfxz9LC
+S/uNtZYRhNr68mvtrDNR6b0RJ5uKecjK2Bm872BdEeKQ8dWuTw6iEvfpi9dDHlMkxP5u2dTOxym5
+Y4fby+eOnhg05hfPo4cGrIcWtf2dxsD70a3DHRi55aaPojQfGRg/brAiXDVWzTYHePJCMaAAstsR
+7mllIn4fikD7EaGe20dSG3YXvTC6/Ku3MvnYjyzQjxGBpW4Ojy8xM+AT9fi0SzBVzJj7i2g4V2OX
+hY+jdNp69j4FMLXaj2EXhJm8yTGpTNZunLoPcUuqfdjiiMFJI5quqvw2QP+eNeKjb5SAGSWImwso
+P00=
 
 -->
