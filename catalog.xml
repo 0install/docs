@@ -39,7 +39,15 @@ animated graphical user interfaces.
 Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
 platforms) for rendering but with an API which hides the underlying GL
 complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/tools/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
+efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/tools/0install.xml"><name>0install</name><summary>decentralised installation system</summary><description>
+Zero Install is a decentralised cross-platform software installation
+system available under the LGPL. It allows software developers to publish
+programs directly from their own web-sites, while supporting features familiar
+from centralised distribution repositories such as shared libraries, automatic
+updates and digital signatures. It is intended to complement, rather than
+replace, the operating system's package management. 0install packages never
+interfere with those provided by the distribution.
+</description><homepage>http://0install.net/</homepage><icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="http://0install.net/tools/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
     0repo allows a group of developers to publish a set of feeds. It can be
     used by a single developer, generating a set of static files to publish on
     a web-server, or as a service which accepts signed updates from a group
@@ -615,11 +623,11 @@ to design the 3D UI as a best of both worlds from old to new: It lets you rotate
 the view, zoom in/out, view special effects, etc. On the other hand I've always
 liked the old-school isometric games like Exult or Woodward</description><homepage>http://scourge.sourceforge.net/</homepage><category>Game</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSFyQUAAoJEAcTP5bKdNi6MJ4IAJF5E6s9aqcQSuqMl7wAVmSA5KxMjKiySJWv
-Xua3GMwrBxbZ8Q8G2w5xexzq/4/NwIDzY8IFW8MSYyjIhhoPYGg1xpp6x31GQzJAOqq3jU2UXW8a
-JQremEyHzuYUnZy6tFrVDoE4ny5gbDDVQ3rg5uqAIEYAF2rkp3ctu7kvsfZQ86QDumu3GuKE58FD
-NhO81jh7lUAMgvA1Rl9eLFGqO1K1IYh8LJRXAtlkKVgI8A01qi35yY8RExD64sdp2Yx/A07MsTmp
-EHr8Fw8PLnltxEfkPK5l47EJKIT4eav6P1L05GypKl9J8wkKDC+A7mdqmFr4rnUmgIquws8cJMuA
-+bE=
+iQEcBAABCAAGBQJSOIZRAAoJEAcTP5bKdNi6yxUH/RS17Lru3FYXILsWLrDSYj3PN4VQsbRJC1gw
+rpDHvuTlPWgWgY8SrYx+lf8qb58nWicp9P0z/Q8N1ONP2S9vwmnDNxvm9ygi1R0XMaMRXVBtdArR
+8gn3xtmkfn5IlphZ/bgQ2HQDsvP2a9m/krGwlV5wpX5VYI9PDueC0CpEo9Z0EEyPh4eyBxkzTWeb
+bBoEwjcBTA7bDwepapdtsQci9V8xtG8CJcdQ3IyLNCuq+L8O0USBES/n3NSdXIdipcRFuPakTcGi
+hQIWDbggpdf9/Vcu1cfOuUfdVqX7LsuCR1aooDk0ffPer7cHvsaFvbWIixyfgXox9W2mCaMu1SiZ
+rB4=
 
 -->

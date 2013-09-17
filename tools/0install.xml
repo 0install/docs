@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="http://0install.net/tools/0install.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>0install</name>
+  <summary>decentralised installation system</summary>
+  <description>
+Zero Install is a decentralised cross-platform software installation
+system available under the LGPL. It allows software developers to publish
+programs directly from their own web-sites, while supporting features familiar
+from centralised distribution repositories such as shared libraries, automatic
+updates and digital signatures. It is intended to complement, rather than
+replace, the operating system's package management. 0install packages never
+interfere with those provided by the distribution.
+</description>
+
+  <homepage>http://0install.net/</homepage>
+
+  <icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/>
+  <category>System</category>
+
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release"><!-- Update the copy of the version number -->
+    <release:update-version path="ocaml/zeroinstall/about.ml">^let version = &quot;(.*)&quot;$</release:update-version>
+    <release:update-version path="zeroinstall/__init__.py">^version = '(.*)'$</release:update-version>
+    <release:update-version path="zeroinstall/gui/gui.py">^version = '(.*)'$</release:update-version>
+    <release:action phase="generate-archive">rm .gitignore; make translations</release:action>
+  </release:management>
+
+  <group arch="*-src" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="compile">
+      <runner interface="http://repo.roscidus.com/devel/make">
+        <arg>-f</arg>
+        <arg>${SRCDIR}/Makefile</arg>
+        <arg>SRCDIR=${SRCDIR}</arg>
+        <arg>BUILDDIR=${BUILDDIR}</arg>
+        <arg>DISTDIR=${DISTDIR}</arg>
+      </runner>
+
+      <compile:implementation main="files/0install">
+        <command name="run" path="files/0install"/>
+
+        <requires interface="http://repo.roscidus.com/security/gnupg">
+          <executable-in-var name="ZEROINSTALL_GPG"/>
+        </requires>
+
+        <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
+          <executable-in-var name="ZEROINSTALL_PYTHON"/>
+        </requires>
+
+        <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+      </compile:implementation>
+    </command>
+<!-- Need to add support to 0test for testing source code.
+    <command name="test" path="tests/testall.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<arg>-tt</arg>
+      </runner>
+    </command>
+    -->
+
+    <implementation id="sha1new=ee62f6d43707939a1b01b119dbb36f9bd898f777" released="2013-09-17" version="2.4-rc1">
+      <manifest-digest sha256new="ZYOCNDUCBCJN3KDCN6MCUZSSVEZ5244YWMCSPFLDZEPHAWU2NL3Q"/>
+      <archive extract="0install-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-2.4-rc1.tar.bz2" size="536288"/>
+    </implementation>
+  </group>
+  <implementation arch="Linux-x86_64" id="sha1new=034b781e3772109efc894a1ef7d3475b5fcc9d44" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
+    <command name="run" path="files/0install"/>
+    <requires interface="http://repo.roscidus.com/security/gnupg">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
+      <executable-in-var name="ZEROINSTALL_PYTHON"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+    <manifest-digest sha256new="MXT7VBBYGWINYW744QKH63HTE6TGPVDY2EPRO75MHFT32CDYOWFA"/>
+    <archive extract="0install-linux-x86_64-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-x86_64-2.4-rc1.tar.bz2" size="1107894"/>
+  </implementation>
+  <implementation arch="Linux-i486" id="sha1new=574c32de5113950a0afd8920704daeb4c4dbe90a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
+    <command name="run" path="files/0install"/>
+    <requires interface="http://repo.roscidus.com/security/gnupg">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
+      <executable-in-var name="ZEROINSTALL_PYTHON"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+    <manifest-digest sha256new="2M4BNTP6AG3JVKSUMFM56FAE3ED63O523COO2U6JWUNJTKQYM72Q"/>
+    <archive extract="0install-linux-i486-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-i486-2.4-rc1.tar.bz2" size="914043"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iQEcBAABCAAGBQJSOIZRAAoJEAcTP5bKdNi6seMH/RmC52wss8bPyNlrx3IrXHoYWPrdSfvBlmQ1
+RxvyJZEvPTIkxWpmbZ4rOq6R7xyzGfxvkFv/6aXKgE46Xu1V/H8d4Styzvd6ZEN8NWlzrBOU80XG
+ZA5pqQGbWMwgnFTUVoPxdyXJ3R5YMnXhR+PmSRbSG5CoHD/hwX8zgp3ayFL+fLw31hZd5b9go5FU
+//6znJsHGi5lj1zhmH0wCNPSeXiPYJHnmfNtMf9owfnfq1Zhn7ftnzSmNPb7wG+NGl1mu10NANCq
+lzPrksmkJuP4w3ebX2YXTczMdZA3goYQU2BaMQeB3+7NYnyyqNtpyb4RLhIiXwP+KwFp06w7j/90
+x38=
+
+-->
