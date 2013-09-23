@@ -8,34 +8,15 @@
 	 license='GNU Lesser General Public License'>
 
 <p>
-Installing from source. 0install is written entirely in Python, so installing from source is quite simple.
+  <strong>This is the newer (but less tested) OCaml/Python hybrid version of 0install.</strong>
+  There is also an older <a href='install-python.html'>pure Python version</a> (slower, but very mature).
+  Both versions have exactly the same features and interface.
 </p>
 </program>
 
 <p>
-To use 0install, you will need the following (these are installed on most Linux systems by default):
-</p>
-
-<ul>
-<li><a href="http://python.org">Python</a> (version 2.6, 2.7 or 3.2+).</li>
-<li><a href="https://live.gnome.org/PyGObject/">PyGObject</a> (this is a dependency of PyGTK, but is also available separately). If PyGObject is not available, 0install can use <a href='http://code.google.com/p/tulip/'>Tulip</a> instead (which is pure Python, but requires Python >= 3.3).</li>
-<li><a href="http://www.gnupg.org/">GnuPG</a> (to check the digital signatures).</li>
-</ul>
-
-<p>Note: the last version to support Python 2.5 was 0install 1.0.</p>
-
-<p>
-  For the optional (but recommended) GUI:
-</p>
-
-<ul>
-<li>If using <b>Python 2</b>: <a href="http://freshmeat.net/projects/pygtk/?branch_id=12503">PyGTK 2.12</a> or later.</li>
-<li>If using <b>Python 3</b>: GTK3, including the GIRepository bindings (gir1.2-gtk-3.0).</li>
-<li><a href="http://portland.freedesktop.org/wiki/">xdg-utils</a> (optional; GNOME and KDE desktop integration).</li>
-</ul>
-
-<p>
-If you are looking for a package, try the <a href='injector.html'>main downloads page</a>.
+  If you are looking for a package, try the <a href='injector.html'>main downloads page</a>. There are also
+  some pre-compiled <a href='http://0install.net/tools/0install.xml'>generic Linux binaries</a> available.
 </p>
 
 <h2>Instructions</h2>
@@ -46,8 +27,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.3.3/0install-2.3.3.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.3.3/0install-2.3.3.tar.bz2.sig</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.4/0install-2.4.tar.bz2</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.4/0install-2.4.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -58,7 +39,7 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
-$ <b>gpg 0install-2.3.3.tar.bz2.sig</b>
+$ <b>gpg 0install-2.4.tar.bz2.sig</b>
 gpg: Signature made 2013-08-12T15:46:03 BST using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
@@ -74,12 +55,18 @@ some other source of information).
 </p>
 
 <p>
-You should now extract the archive, and change directory inside it:
+  You'll probably need to install some OCaml dependencies before you can build.
+  See the <a href='https://github.com/0install/0install/blob/b2.4/README.md'>README</a> for details.
+  You should then extract the archive, change directory inside it and build:
 </p>
 <pre>
-$ <b>tar xjf 0install-2.3.3.tar.bz2</b>
-$ <b>cd 0install-2.3.3</b>
+$ <b>tar xjf 0install-2.4.tar.bz2</b>
+$ <b>cd 0install-2.4</b>
+$ <b>make</b>
 </pre>
+
+<p>
+</p>
 
 <table class='split'>
  <col id="col1"/>
@@ -87,14 +74,14 @@ $ <b>cd 0install-2.3.3</b>
  <tr>
   <td>
   <p>For a normal install, either su to root, install, and exit from root, or use sudo:</p>
-<pre>$ <b>sudo python setup.py install</b>
+<pre>$ <b>sudo make install</b>
 </pre>
  </td><td>
 <p>
 If you don't have the root password, use this command.
 You'll need to make sure that ~/bin is in $PATH in this case.
 </p>
-<pre>$ <b>python setup.py install --home ~ --install-data ~/.local</b>
+<pre>$ <b>make install_home</b>
 $ <b>export PATH=$HOME/bin:$PATH</b>
 </pre>
 <p>
@@ -105,23 +92,10 @@ on Ubuntu at least.
  </tr>
 </table>
 
-<dl>
-<dt>choosing the Python version</dt>
-<dd>The installed scripts will use whichever version of python you used for the install. e.g. use "<b>python3 setup.py ...</b>" if you want to force Python 3.</dd>
-<dt>error: invalid Python installation: unable to open /usr/lib/python2.X/config/Makefile</dt>
-<dd>You need to install the <i>python-dev</i> package, not just <i>python</i>.</dd>
-<dt>package init file 'zeroinstall/0launch-gui/__init__.py' not found (or not a regular file)</dt>
-<dd>This is just a warning and is harmless.</dd>
-</dl>
-
 <p>
 You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
 <b>0install</b>, which provides access to other features.
 </p>
-
-<div class='note'>Note (mainly for packagers): there is an optional OCaml front-end, which makes starting
-  applications (and tab-completion) faster. Do "make ocaml" before installing to get that. You'll need to
-  install OCaml and various extra library packages to build this.</div>
 
 <quicklinks>
   <link href='users.html' img='tango/go-next.png'>Continue to tutorial</link>
