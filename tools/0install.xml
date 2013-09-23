@@ -65,7 +65,8 @@ interfere with those provided by the distribution.
       <archive extract="0install-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-2.4.tar.bz2" size="536065"/>
     </implementation>
   </group>
-  <implementation arch="Linux-x86_64" id="sha1new=034b781e3772109efc894a1ef7d3475b5fcc9d44" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
+
+  <group>
     <command name="run" path="files/0install"/>
     <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
@@ -74,52 +75,30 @@ interfere with those provided by the distribution.
       <executable-in-var name="ZEROINSTALL_PYTHON"/>
     </requires>
     <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-    <manifest-digest sha256new="MXT7VBBYGWINYW744QKH63HTE6TGPVDY2EPRO75MHFT32CDYOWFA"/>
-    <archive extract="0install-linux-x86_64-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-x86_64-2.4-rc1.tar.bz2" size="1107894"/>
-  </implementation>
-  <implementation arch="Linux-i486" id="sha1new=574c32de5113950a0afd8920704daeb4c4dbe90a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
-    <command name="run" path="files/0install"/>
-    <requires interface="http://repo.roscidus.com/security/gnupg">
-      <executable-in-var name="ZEROINSTALL_GPG"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
-      <executable-in-var name="ZEROINSTALL_PYTHON"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-    <manifest-digest sha256new="2M4BNTP6AG3JVKSUMFM56FAE3ED63O523COO2U6JWUNJTKQYM72Q"/>
-    <archive extract="0install-linux-i486-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-i486-2.4-rc1.tar.bz2" size="914043"/>
-  </implementation>
-  <implementation arch="Linux-x86_64" id="sha1new=82031d723834a8020ab08ed310f4bfba6c494702" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-23" version="2.4">
-    <command name="run" path="files/0install"/>
-    <requires interface="http://repo.roscidus.com/security/gnupg">
-      <executable-in-var name="ZEROINSTALL_GPG"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
-      <executable-in-var name="ZEROINSTALL_PYTHON"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-    <manifest-digest sha256new="MZNWI4YSYUJXT4LMGBSJTTCPZEATQDPSL3LVWUKA436IZCSTYTLA"/>
-    <archive extract="0install-linux-x86_64-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-x86_64-2.4.tar.bz2" size="1108437"/>
-  </implementation>
-  <implementation arch="Linux-i486" id="sha1new=f67dbeb27d36257e2af0e29e786f2f86ffaa8f56" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-23" version="2.4">
-    <command name="run" path="files/0install"/>
-    <requires interface="http://repo.roscidus.com/security/gnupg">
-      <executable-in-var name="ZEROINSTALL_GPG"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..">
-      <executable-in-var name="ZEROINSTALL_PYTHON"/>
-    </requires>
-    <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-    <manifest-digest sha256new="S7NTYZ3GMGEW7VWGYDFX6GWFJSWQTCW6FOTUWT35DIM33B3HBXLQ"/>
-    <archive extract="0install-linux-i486-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-i486-2.4.tar.bz2" size="912661"/>
-  </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=034b781e3772109efc894a1ef7d3475b5fcc9d44" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
+      <manifest-digest sha256new="MXT7VBBYGWINYW744QKH63HTE6TGPVDY2EPRO75MHFT32CDYOWFA"/>
+      <archive extract="0install-linux-x86_64-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-x86_64-2.4-rc1.tar.bz2" size="1107894"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=574c32de5113950a0afd8920704daeb4c4dbe90a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-17" version="2.4-rc1">
+      <manifest-digest sha256new="2M4BNTP6AG3JVKSUMFM56FAE3ED63O523COO2U6JWUNJTKQYM72Q"/>
+      <archive extract="0install-linux-i486-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-i486-2.4-rc1.tar.bz2" size="914043"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=82031d723834a8020ab08ed310f4bfba6c494702" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-23" version="2.4">
+      <manifest-digest sha256new="MZNWI4YSYUJXT4LMGBSJTTCPZEATQDPSL3LVWUKA436IZCSTYTLA"/>
+      <archive extract="0install-linux-x86_64-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-x86_64-2.4.tar.bz2" size="1108437"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=f67dbeb27d36257e2af0e29e786f2f86ffaa8f56" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-09-23" version="2.4">
+      <manifest-digest sha256new="S7NTYZ3GMGEW7VWGYDFX6GWFJSWQTCW6FOTUWT35DIM33B3HBXLQ"/>
+      <archive extract="0install-linux-i486-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-i486-2.4.tar.bz2" size="912661"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSQHhwAAoJEAcTP5bKdNi6z5IH/3/L1zH8BOChPJSSsy0MPvfeqQFbMQDZSCKc
-eSM2A0HPj21lAZ6XjUFvuAyY5L7KJ5wT1zgkPpwSFG3BpgPAToDiZCJVQhsUvFM3tKw7kbDu4zZS
-+HVG0MWYm4iTVBnf1l30JCMZxEQymqgU5ojfWdbRjMNLcwULxedk00qI0X0Tx80eSZTNdFMxHpxD
-ob3fazfWIIebW0aLz0XbDw5Bb/TtyZtUT3Oz7nf0lkn/EEpPaWa7dyoQxzQfzNB5EVnbnCF9B72r
-OTP4JFe3ZaBvsH31jNwRwIFMMsDhvsEdyELzpn4Kk6tcxljOhglmKJsDoSW+gS3vroIOIfNQyEeT
-fFA=
+iQEcBAABCAAGBQJSQHkOAAoJEAcTP5bKdNi6GdUIAKUy4UNhw4Q9HVS1U+iMiJIbQopiQM3qGyiD
+6mkHQT02cmnQcpLKOeeDK/55NiyMoOt0RVduAJZ78+t74+H3T5VtS+n7o88k3Ghbo77Okws97spm
+WgVzpXqMZUjD/cWTpmVFUX1HNMNXFYgFULWF+X3OvP/QgFVUT+g8vYQ7XFpSc8sR/mdppLV4Tkpp
+nFc1jdCqNCFA0JkTRU1/IZQ4JHqqlKAbi4DuKMP6a1Ik7NmMNHP5djf1tkWw9sO7coqQgW78VKRV
+bT2D8ohsDeFLQKmXtCNezYUjzUKzvObSKnof6gtJmduCIYJuDgYXEWfgL5tkrr8BRsqeMAUA/FRm
+ch4=
 
 -->
