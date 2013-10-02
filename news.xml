@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Oct 2013</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7181'>0install 2.4</a> released. The main new feature is that a large amount of code (more than 10,000 lines) has been converted from Python to OCaml, giving a large (~10x) speedup in many cases. New features include local paths in &lt;file&gt; elements (useful for testing things locally) and tab-complation for 0launch. For people wanting to work on it, see this <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7163'>overview of the new code</a>. The next step is to migrate the download code to OCaml.</dd>
   <dt>Sep 2013</dt>
   <dd>
   <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7119'>0install 2.3.3</a> released. This is a minor bug-fix release, while most of the effort goes to making <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7080/focus=7152'>progress on the new OCaml version</a>. The <a href='https://github.com/0install/pom2feed'>Zero Install Maven Integration project</a> is now available on GitHub.</dd>
