@@ -56,7 +56,7 @@ some other source of information).
 
 <p>
   You'll probably need to install some OCaml dependencies before you can build.
-  See the <a href='https://github.com/0install/0install/blob/b2.4.1/README.md'>README</a> for details.
+  See the <a href='https://github.com/0install/0install/blob/b2.4/README.md'>README</a> for details.
   You should then extract the archive, change directory inside it and build:
 </p>
 <pre>
