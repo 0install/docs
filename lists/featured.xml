@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
+  <feed height="48" homepage="http://armagetronad.org" icon="feed_icons/armagetronad.png" name="Armagetron Advanced" summary="Tron clone in 3D" uri="http://simamo.de/0install/armagetronad.xml" width="48">
+    Dumping cores since 2000.
+
+Armagetron Advanced is a lightcylce game with multiplayer focus.
+
+You ride a lightcycle, which leaves a trail of pure energy behind it. Crashing
+into your own trail or that of another player is quite fatal. Battle with ...
+    <archs>
+      <arch name="Linux-i486"/>
+      <arch name="Linux-x86_64"/>
+      <arch name="Windows"/>
+    </archs>
+  </feed>
   <feed height="64" homepage="http://www.netbeans.org/" icon="feed_icons/NetBeans_All.png" name="NetBeans All" summary="A multi-language software development environment" uri="http://0install.de/feeds/NetBeans_All.xml" width="64">
     NetBeans is a multi-language integrated development environment.
     <archs>
