@@ -72,9 +72,13 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="RKQNFEVKW4TV4ZO5EQTQ5YDOHW2JFIJEJIRTNQVOFMC6LINZYJFA"/>
       <archive extract="0install-2.5-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5-rc1/0install-2.5-rc1.tar.bz2" size="538728"/>
     </implementation>
+    <implementation id="sha1new=d45534ad48fcddaed93d6be261363d0f07c96b70" released="2013-10-30" version="2.5">
+      <manifest-digest sha256new="EKHL6O3K226KMHIQIRCGW4XWCYADVKIIRLLKNZVRIF3DSFXGQB2A"/>
+      <archive extract="0install-2.5" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5/0install-2.5.tar.bz2" size="539001"/>
+    </implementation>
   </group>
 
-  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
     <command name="run" path="files/0install"/>
     <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
@@ -83,46 +87,54 @@ interfere with those provided by the distribution.
       <executable-in-var name="ZEROINSTALL_PYTHON"/>
     </requires>
     <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
-    <implementation arch="Linux-x86_64" id="sha1new=034b781e3772109efc894a1ef7d3475b5fcc9d44" main="files/0install" released="2013-09-17" version="2.4-rc1">
+    <implementation arch="Linux-x86_64" id="sha1new=034b781e3772109efc894a1ef7d3475b5fcc9d44" released="2013-09-17" version="2.4-rc1">
       <manifest-digest sha256new="MXT7VBBYGWINYW744QKH63HTE6TGPVDY2EPRO75MHFT32CDYOWFA"/>
       <archive extract="0install-linux-x86_64-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-x86_64-2.4-rc1.tar.bz2" size="1107894"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=574c32de5113950a0afd8920704daeb4c4dbe90a" main="files/0install" released="2013-09-17" version="2.4-rc1">
+    <implementation arch="Linux-i486" id="sha1new=574c32de5113950a0afd8920704daeb4c4dbe90a" released="2013-09-17" version="2.4-rc1">
       <manifest-digest sha256new="2M4BNTP6AG3JVKSUMFM56FAE3ED63O523COO2U6JWUNJTKQYM72Q"/>
       <archive extract="0install-linux-i486-2.4-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4-rc1/0install-linux-i486-2.4-rc1.tar.bz2" size="914043"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=82031d723834a8020ab08ed310f4bfba6c494702" main="files/0install" released="2013-09-23" version="2.4">
+    <implementation arch="Linux-x86_64" id="sha1new=82031d723834a8020ab08ed310f4bfba6c494702" released="2013-09-23" version="2.4">
       <manifest-digest sha256new="MZNWI4YSYUJXT4LMGBSJTTCPZEATQDPSL3LVWUKA436IZCSTYTLA"/>
       <archive extract="0install-linux-x86_64-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-x86_64-2.4.tar.bz2" size="1108437"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=f67dbeb27d36257e2af0e29e786f2f86ffaa8f56" main="files/0install" released="2013-09-23" version="2.4">
+    <implementation arch="Linux-i486" id="sha1new=f67dbeb27d36257e2af0e29e786f2f86ffaa8f56" released="2013-09-23" version="2.4">
       <manifest-digest sha256new="S7NTYZ3GMGEW7VWGYDFX6GWFJSWQTCW6FOTUWT35DIM33B3HBXLQ"/>
       <archive extract="0install-linux-i486-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4/0install-linux-i486-2.4.tar.bz2" size="912661"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=be364aee8f7a0f95c4fdbfc85319f6681c060bb4" main="files/0install" released="2013-10-06" version="2.4.1">
+    <implementation arch="Linux-x86_64" id="sha1new=be364aee8f7a0f95c4fdbfc85319f6681c060bb4" released="2013-10-06" version="2.4.1">
       <manifest-digest sha256new="IK7TCDX6O3NFH4DN6QWHJGB3UCAKFSXR5AQLGN2SVLAPGT2OSG4Q"/>
       <archive extract="0install-linux-x86_64-2.4.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4.1/0install-linux-x86_64-2.4.1.tar.bz2" size="1110172"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=a802b47b29e9c8458ffd01ded0d13fbe1e444373" main="files/0install" released="2013-10-06" version="2.4.1">
+    <implementation arch="Linux-i486" id="sha1new=a802b47b29e9c8458ffd01ded0d13fbe1e444373" released="2013-10-06" version="2.4.1">
       <manifest-digest sha256new="C6XNP4CWED26KEXKHMSO3Z7BHGQTVSQQ6TCKMDPDAPZ6QRMBITJA"/>
       <archive extract="0install-linux-i486-2.4.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.4.1/0install-linux-i486-2.4.1.tar.bz2" size="913282"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=9df4e5cd556ddd5b57f35d22a39ee7b16108dcee" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-10-14" version="2.5-rc1">
+    <implementation arch="Linux-x86_64" id="sha1new=9df4e5cd556ddd5b57f35d22a39ee7b16108dcee" released="2013-10-14" version="2.5-rc1">
       <manifest-digest sha256new="DPS4T5DKISPVADRD4HEATLFBVZSXHCF5ICLS5MDBWLBJJGXQAUZQ"/>
       <archive extract="0install-linux-x86_64-2.5-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5-rc1/0install-linux-x86_64-2.5-rc1.tar.bz2" size="1263862"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=333114c2b3660417d5e991c5d6063101b5cc018b" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install" released="2013-10-14" version="2.5-rc1">
+    <implementation arch="Linux-i486" id="sha1new=333114c2b3660417d5e991c5d6063101b5cc018b" released="2013-10-14" version="2.5-rc1">
       <manifest-digest sha256new="J2L7WR3IHHIP4NRM5E5UZL63AQHDB5UNMIXCMSALTWHPJUY5IW4A"/>
       <archive extract="0install-linux-i486-2.5-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5-rc1/0install-linux-i486-2.5-rc1.tar.bz2" size="1051147"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0a139fb60a5e04b5a952d0bead837246ce64846e" released="2013-10-30" version="2.5">
+      <manifest-digest sha256new="KIBP2R5AA7PQO44V4ZQ35CX5CKFQFDMRT7RPJ2CWF4D4O7L46PCQ"/>
+      <archive extract="0install-linux-x86_64-2.5" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5/0install-linux-x86_64-2.5.tar.bz2" size="1263500"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=fcc381d29ffaefd8a5a6f9595754b326c691ebfa" released="2013-10-30" version="2.5">
+      <manifest-digest sha256new="7VTXLH3A2WWJZP6MXT2JFA2ZSLZAELCN4GU2VKBKCITLRBJAQDKQ"/>
+      <archive extract="0install-linux-i486-2.5" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5/0install-linux-i486-2.5.tar.bz2" size="1051280"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSW/O2AAoJEAcTP5bKdNi6aOkH/RgsajoeJTAi6Z/ifEB86hdJbXrO0KJWjQoN
-L7+td4YOQEto6XkDvaRStrvRPYWgJeZ8KRgeqeFanTlJTiZPBj+kyO+YALE7PWatUUg3Xl7+LL3W
-LVEMTDYXiQ/wjCCD7pm/S0octRxRKBV6yWsBGRIde1ED76RbEj5zOLE8R2UgjEeLZmT646LkyuqJ
-niVTHR59MSGqHne5VGPyZTk/rkCG32xNfvArdXsKFomyycOUbAx3EussABtIWvkEsPBQtJ4D7W72
-39KVaf0TMkNbWQhLLy0OVH3PsYcBsNu436Ul9JacpaskG7BiksljyKrJ+7v9oEozK8k2BgOw09VW
-R5M=
+iQEcBAABCAAGBQJScTFpAAoJEAcTP5bKdNi6Ck4IAJaiyOuumNljGAeAKEuTUW7WD+f8Ye7xuQNz
+z46tdZQMBKb0Q34gEkLqmzgDQm56QxsoZHDac5NIA1dmDidMbALylxSth8JObMmsIMNl9rpOP9k5
+AaXu8l1YAOe3LdB4F9ERUeh1LW7Qrkk9XQUG2fbe5ytirG7fjkkahXzwhZCc742U+KAAh9Vvlree
+VWw9oNmJBkeIX533mDvY+S3k8bDlUdNZ3yDkVtmVArXmfatxKtL3XuiJsoNdChG56S6wbheBs/ID
+3peY3DqgpbeS4lIsKjgepJzl1Oim2/OSbbMu7ATy4Ix0HYgHyf7DN0R9OsWGvtzIQ1q9ehxIbgn6
+P3I=
 
 -->
