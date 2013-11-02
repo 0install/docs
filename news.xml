@@ -4,6 +4,9 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Nov 2013</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7199'>0install 2.5</a> released, continuing the work of porting the code to OCaml (17,000 lines of code now). The main remaining tasks at this point are the GUI and the native package-manager integration. For these, the OCaml code still falls back to using the old Python code. See the <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7186/focus=7197'>Porting progress</a> thread for details.
+  </dd>
   <dt>Oct 2013</dt>
   <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7181'>0install 2.4</a> released. The main new feature is that a large amount of code (more than 10,000 lines) has been converted from Python to OCaml, giving a large (~10x) speedup in many cases. New features include local paths in &lt;file&gt; elements (useful for testing things locally) and tab-complation for 0launch. For people wanting to work on it, see this <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7163'>overview of the new code</a>. The next step is to migrate the download code to OCaml.</dd>
   <dt>Sep 2013</dt>
