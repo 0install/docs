@@ -76,6 +76,10 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="EKHL6O3K226KMHIQIRCGW4XWCYADVKIIRLLKNZVRIF3DSFXGQB2A"/>
       <archive extract="0install-2.5" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5/0install-2.5.tar.bz2" size="539001"/>
     </implementation>
+    <implementation id="sha1new=79229bf76d082f6fd730ff1d5edf6aa4d630817a" released="2013-11-02" version="2.5.1">
+      <manifest-digest sha256new="XKBANAHTUKMO2SWPGXEXHJCOEQX77HUXD6P2X2Q3TGPURSUR7IVA"/>
+      <archive extract="0install-2.5.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5.1/0install-2.5.1.tar.bz2" size="538687"/>
+    </implementation>
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
@@ -127,14 +131,22 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="7VTXLH3A2WWJZP6MXT2JFA2ZSLZAELCN4GU2VKBKCITLRBJAQDKQ"/>
       <archive extract="0install-linux-i486-2.5" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5/0install-linux-i486-2.5.tar.bz2" size="1051280"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=97294c5462a8b29bed0e04a72e65abffd48a55ab" released="2013-11-02" version="2.5.1">
+      <manifest-digest sha256new="WNGUYDDHYDKOOCMSTWWOUWMREI5E3B6HW7UJ7MXCDGDCCTLZTG7A"/>
+      <archive extract="0install-linux-x86_64-2.5.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5.1/0install-linux-x86_64-2.5.1.tar.bz2" size="1263912"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=b6bfc28081d714e6eadce57fc7e49ba115c738e9" released="2013-11-02" version="2.5.1">
+      <manifest-digest sha256new="UHEZTG55A2JJCO6E56GS44YZJRUXIPTAGIOHWFJEZ6KFU4DYY4EA"/>
+      <archive extract="0install-linux-i486-2.5.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5.1/0install-linux-i486-2.5.1.tar.bz2" size="1050653"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJScTFpAAoJEAcTP5bKdNi6Ck4IAJaiyOuumNljGAeAKEuTUW7WD+f8Ye7xuQNz
-z46tdZQMBKb0Q34gEkLqmzgDQm56QxsoZHDac5NIA1dmDidMbALylxSth8JObMmsIMNl9rpOP9k5
-AaXu8l1YAOe3LdB4F9ERUeh1LW7Qrkk9XQUG2fbe5ytirG7fjkkahXzwhZCc742U+KAAh9Vvlree
-VWw9oNmJBkeIX533mDvY+S3k8bDlUdNZ3yDkVtmVArXmfatxKtL3XuiJsoNdChG56S6wbheBs/ID
-3peY3DqgpbeS4lIsKjgepJzl1Oim2/OSbbMu7ATy4Ix0HYgHyf7DN0R9OsWGvtzIQ1q9ehxIbgn6
-P3I=
+iQEcBAABCgAGBQJSdX56AAoJEAcTP5bKdNi6QvEIAJEbwZD3fIfvna7ru8VfImBN1HC5IHb1Kly0
+6QZmk6NkD7i0Y2Q54VZlaW5VMKmHInr+f2CPSrpd7WJvtOh+gBY1XigXQOVtp4fiPVM/DxpRYpBG
+LzLGPqZmXzW1i2widxh0Ug0ZNdpLcA4WXTntV4mG5WY9f/hXDA6EoQ9W6NK3nTnm8NDdI8LzZIDB
+44/QD1MYX9UEZSWmKSmhT5FMQulryrQVke5vua6leEBdYXjeoLMGJ+N4PNQ+t3H9vJXa5L41eVzx
+oRHlncS3vh8xuGYUDgYNV9bqW/7DoUscatHMrHLufQTRb2jBiwmcKi8MnaqbFBOvdNov9ksOIK1A
+72o=
 
 -->
