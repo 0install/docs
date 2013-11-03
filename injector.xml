@@ -22,7 +22,7 @@ Select your platform from the list below. If your system isn't listed, choose <i
 
 <ul>
  <li><a href='install-linux.html'>Linux</a> (packages for various distributions)</li>
- <li><a href='install-mac.html'>Mac OS X</a> (MacPorts, Fink, JHBuild, Bundle)</li>
+ <li><a href='install-osx.html'>OS X</a></li>
  <li><a href='install-source.html'>Source</a> (install with Python distutils)</li>
  <li><a href='install-unix.html'>Unix</a> (FreeBSD, Solaris)</li>
  <li><a href='install-windows.html'>Windows</a></li>

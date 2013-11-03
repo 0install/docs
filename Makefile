@@ -43,6 +43,7 @@ HTML = index.php \
        injector-trouble.html \
        install-linux.html \
        install-mac.html \
+       install-osx.html \
        install-source.html \
        install-python.html \
        install-unix.html \

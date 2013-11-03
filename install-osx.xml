@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html lang="en">
+
+<h2>Installation : OS X</h2>
+
+<p>
+  <strong>This is the newer (but less tested) OCaml/Python hybrid version of 0install.</strong><br/>
+  There is also an older <a href='install-mac.html'>pure Python version</a> (slower, but very mature).<br/>
+  Both versions have exactly the same features and interface.
+</p>
+
+<p>
+To use Zero Install, you will need:
+</p>
+
+<ul>
+<li><a href='http://www.gnupg.org/'>GnuPG</a> (to check the digital signatures).</li>
+<li><a href='http://www.python.org/'>Python</a> (version 2.6 or later is needed).</li>
+<li><a href='http://www.gtk.org/'>GObject/GTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
+<li><a href='http://www.pygtk.org/'>PyGObject/PyGTK</a> (2.12 or later needed for <acronym title="Command Line Interface">CLI</acronym>/<acronym title="Graphic User Interface">GUI</acronym>).</li>
+</ul>
+
+<p>
+To build Zero Install from source code, you will also need:
+</p>
+
+<ul>
+<li><a href='https://developer.apple.com/technologies/tools/'>Developer Tools</a> (including Command Line Tools, X11)</li>
+<li><a href='https://www.gnu.org/software/gettext/'>GNU gettext</a> (only "gettext-tools", not "gettext-runtime")</li>
+<li><a href='http://www.ocaml.org/'>OCaml</a></li>
+<li><a href='http://opam.ocamlpro.com/'>OPAM</a></li>
+</ul>
+
+<p>
+The easiest way of installing Zero Install and its requirements is by using a &#8220;package<br />
+manager&#8221;, to handle building both it and the dependencies (mentioned above) for you.
+</p>
+
+<p>Or you can use the pre-compiled package bundle, which installs GnuPG and PyGTK<br />(including PyGObject)
+and their dependencies, for Mac OS X 10.6 and later versions.</p>
+
+<p><i>Note:</i> The binary package of 0install requires a 64-bit Intel processor (x86_64) to run.</p>
+
+<quicklinks>
+  <link href='http://downloads.sourceforge.net/project/zero-install/0install/2.5/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
+</quicklinks>
+
+<h3 id='source'>Source installation</h3>
+
+<p>
+<img src='screens/0install-gui-gtk-x11.png' alt='' width='656' height='326' />
+</p>
+
+<p>Install the Developer Tools:</p>
+
+<ul>
+<li><a href='https://developer.apple.com/xcode/'>Xcode</a></li>
+<li><a href='http://xquartz.macosforge.org/'>Xquartz</a></li>
+</ul>
+
+<p>Install <a href="http://brew.sh">homebrew</a> using git:</p>
+
+<pre>
+$ git clone https://github.com/mxcl/homebrew ~/homebrew
+$ export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
+</pre>
+
+<p>Install build dependencies:</p>
+<pre>
+$ brew install gettext gnupg
+$ brew install python pygtk
+  # the gettext tools are not linked with homebrew:
+$ alias msgfmt='`brew --prefix gettext`/bin/msgfmt'
+</pre>
+
+<p>Install OCaml and OPAM:</p>
+<pre>
+$ brew install ocaml opam
+$  opam init
+$  eval `opam config env`
+$ opam install yojson xmlm ounit lwt extlib ssl ocurl
+</pre>
+
+<p>All the opam dependencies will be installed to <tt>~/.opam</tt> ($OPAMROOT)</p>
+
+<p>Finally, install 0install itself - using instructions found on <a href='install-source.html'>Source</a>.</p>
+
+<h3 id='bundle'>Bundle installation</h3>
+
+<p>
+<img src='screens/0install-gui-gtk-quartz.png' alt='' width='656' height='326' />
+</p>
+
+<p>
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/0install/2.5/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(Mac_OS_X)'>Installer.app</a>, which will use system <i>python</i> and install requirements like <i>GnuPG.pkg</i> and <i>PyGTK.pkg</i>:
+</p>
+
+<pre>$ <b>sudo installer -pkg ZeroInstall.pkg -target /</b></pre>
+
+<h3>After the installation</h3>
+<p>
+You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it,
+and <b>0install</b>, which provides access to other features.
+</p>
+
+<pre>
+$ <b>0launch</b> <i>URI</i>
+</pre>
+
+<h2>Work in Progress</h2>
+
+<p>
+Once a native OS X interface is available, this process will become much simpler...<br/>
+It will also blend in more with the desktop than what the current GTK interface does.
+</p>
+
+<p>
+But it should work OK already. If you'd like to help us make it work better, <a href='support.html'>get in touch!</a><br />
+Note that <b>0desktop</b> only works for GNOME/KDE/etc, for Finder you use <a href='http://afb.users.sourceforge.net/zero-install/interfaces/AddApp.xml'><i>AddApp.app</i></a>...
+</p>
+
+<quicklinks>
+  <link href='users.html' img='tango/go-next.png'>Continue to tutorial</link>
+</quicklinks>
+
+</html>
