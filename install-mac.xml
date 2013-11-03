@@ -4,6 +4,12 @@
 <h2>Installation : Mac OS X</h2>
 
 <p>
+  <strong>This is the older (but better tested) version of 0install.</strong><br/>
+  Consider trying the newer <a href='install-osx.html'>OCaml version</a> (faster, but less well tested).<br/>
+  0install 1.16 is written entirely in Python, so installing from source is quite simple.
+</p>
+
+<p>
 To use Zero Install, you will need:
 </p>
 
