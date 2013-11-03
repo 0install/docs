@@ -50,8 +50,7 @@ Tim Diels.
 More than one thousand packages are currently available and you can easily
 <a href='packagers.html'>publish your own programs</a>. Zero Install itself
 is available from the official repositories of most Linux distributions
-(including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu) as well as
-MacPorts.
+(including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu).
 </p>
 
 <h3>Why 0install?</h3>
