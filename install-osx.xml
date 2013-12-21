@@ -61,7 +61,7 @@ and their dependencies, for Mac OS X 10.6 and later versions.</p>
 <p>Install <a href="http://brew.sh">homebrew</a> using git:</p>
 
 <pre>
-$ git clone https://github.com/mxcl/homebrew ~/homebrew
+$ git clone https://github.com/Homebrew/homebrew.git ~/homebrew
 $ export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 </pre>
 
