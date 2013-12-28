@@ -80,6 +80,29 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="XKBANAHTUKMO2SWPGXEXHJCOEQX77HUXD6P2X2Q3TGPURSUR7IVA"/>
       <archive extract="0install-2.5.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5.1/0install-2.5.1.tar.bz2" size="538687"/>
     </implementation>
+    <group>
+      <command name="compile">
+        <runner interface="http://repo.roscidus.com/devel/make">
+          <arg>-f</arg>
+          <arg>${SRCDIR}/Makefile</arg>
+          <arg>SRCDIR=${SRCDIR}</arg>
+          <arg>BUILDDIR=${BUILDDIR}</arg>
+          <arg>DISTDIR=${DISTDIR}</arg>
+        </runner>
+
+        <compile:implementation main="files/0install">
+          <command name="run" path="files/0install"/>
+
+          <requires interface="http://repo.roscidus.com/security/gnupg">
+            <executable-in-var name="ZEROINSTALL_GPG"/>
+          </requires>
+        </compile:implementation>
+      </command>
+      <implementation id="sha1new=856d0c34771ff4866a3604a7129521668ddd35e3" released="2013-12-28" version="2.6-rc1">
+        <manifest-digest sha256new="4U6REKAQ2TCUUVF3D4FTGHBV6B2GALDRET7ILJPMVPPKNCD43VOQ"/>
+        <archive extract="0install-2.6-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc1/0install-2.6-rc1.tar.bz2" size="483853"/>
+      </implementation>
+    </group>
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
@@ -140,13 +163,27 @@ interfere with those provided by the distribution.
       <archive extract="0install-linux-i486-2.5.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.5.1/0install-linux-i486-2.5.1.tar.bz2" size="1050653"/>
     </implementation>
   </group>
+  <group main="files/0install">
+    <requires interface="http://repo.roscidus.com/security/gnupg">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+    <command name="run" path="files/0install"/>
+    <implementation arch="Linux-x86_64" id="sha1new=6c8b0a0b9835ac10b1ebd96636d396f43ee1a48a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-12-28" version="2.6-rc1">
+      <manifest-digest sha256new="WEM3KBKREEV5T22IU7IOBAK3T4FI3VGZE3FDQ6MPK5DC6KQRZIBQ"/>
+      <archive extract="0install-linux-x86_64-2.6-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc1/0install-linux-x86_64-2.6-rc1.tar.bz2" size="3046824"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=e9c5fc490b499c2809884ee3d0eafb4a207cdd19" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-12-28" version="2.6-rc1">
+      <manifest-digest sha256new="WJL45FG4BSOXPXPXFE3L6A7SBOIULAG2SEYYERPDTDPY3LIOCV7A"/>
+      <archive extract="0install-linux-i486-2.6-rc1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc1/0install-linux-i486-2.6-rc1.tar.bz2" size="2844534"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJSdX56AAoJEAcTP5bKdNi6QvEIAJEbwZD3fIfvna7ru8VfImBN1HC5IHb1Kly0
-6QZmk6NkD7i0Y2Q54VZlaW5VMKmHInr+f2CPSrpd7WJvtOh+gBY1XigXQOVtp4fiPVM/DxpRYpBG
-LzLGPqZmXzW1i2widxh0Ug0ZNdpLcA4WXTntV4mG5WY9f/hXDA6EoQ9W6NK3nTnm8NDdI8LzZIDB
-44/QD1MYX9UEZSWmKSmhT5FMQulryrQVke5vua6leEBdYXjeoLMGJ+N4PNQ+t3H9vJXa5L41eVzx
-oRHlncS3vh8xuGYUDgYNV9bqW/7DoUscatHMrHLufQTRb2jBiwmcKi8MnaqbFBOvdNov9ksOIK1A
-72o=
+iQEcBAABCgAGBQJSvvjRAAoJEAcTP5bKdNi6eDMH+gMQWHfGd2oC4FlFuKlXxhDfVSz73XkGMcWQ
+LPAdTkZh+T8/QtmfoguoZhZfUHA6pPO2hiRVuslyR2rpSkzuNTmr6ZszeyieTb4DSpE9jr+NTpTa
+VJ5xEmyUGOnkUks+XfZXEh17OkLnGooU0amGHZzvbx4WEA4CwBNe0gJBWWZfJlB1nzOfWxankNAb
+2k4pRGehKQM84XG8zoSVJdb4GvxwIel5SjctsPqW7oZb5M/QOatcxp9LiNP7tCnt9iBtbI9uar2w
+5oJLkR/TuBt26nA+m0az15XIAv9dMlY+RLsZ4zc8LdHQEiUCxkAArsJkbD4HcQY4qDGGsIkoWFi2
+mok=
 
 -->
