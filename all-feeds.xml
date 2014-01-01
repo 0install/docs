@@ -365,7 +365,7 @@ The download handler is defined in the ...</feed>
 complex data (as well as of even/odd data, i.e. the discrete cosine/sine
 transforms or DCT/DST). ...</feed>
 
-<feed uri="http://permanent.samuel.dionne-riel.com/0install/filezilla/filezilla.xml" name="Filezilla" summary="FTP client" icon="feed_icons/filezilla.png" width="48" height="48" homepage="http://filezilla-project.org/index.php" category="Network">Filezilla lets you transfer files over the FTP, SFTP, FTPS and FTPES protocols.</feed>
+<feed uri="http://permanent.samuel.dionne-riel.com/0install/filezilla/filezilla.xml" name="Filezilla" summary="FTP client" icon="feed_icons/filezilla.xml.png" width="48" height="48" homepage="http://filezilla-project.org/index.php" category="Network">Filezilla lets you transfer files over the FTP, SFTP, FTPS and FTPES protocols.</feed>
 
 <feed uri="http://afb.users.sourceforge.net/zero-install/interfaces/firefox.xml" name="Mozilla Firefox" summary="Web Browser" icon="feed_icons/firefox.png" width="48" height="48" homepage="http://www.mozilla.com/en-US/products/firefox/" category="Network">The award-winning Firefox Web browser has security, speed and new features
 that will change the way you use the Web. Don't settle for anything less.</feed>
