@@ -67,10 +67,26 @@ $ export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH
 
 <p>Install build dependencies:</p>
 <pre>
-$ brew install gettext gnupg
-$ brew install python pygtk
-  # the gettext tools are not linked with homebrew:
-$ alias msgfmt='`brew --prefix gettext`/bin/msgfmt'
+$ brew install gettext
+$ brew install wget
+$ brew install gnupg
+$ brew install glib
+$ brew install gtk+    <i># &lt;-- optional, for GUI</i>
+</pre>
+
+<p>Fix homebrew shortcomings:</p>
+<pre>
+  <i># the gettext-tools are not linked with homebrew:</i>
+$ export PATH="`brew --prefix gettext`/bin:$PATH"
+  <i># the X11 libraries are not found by homebrew:</i>
+$ export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
+</pre>
+
+<p>Install Python (now optional):</p>
+<pre>
+$ brew install python
+$ brew install pygobject
+$ brew install pygtk    <i># &lt;-- optional, for GUI</i>
 </pre>
 
 <p>Install OCaml and OPAM:</p>
@@ -79,11 +95,18 @@ $ brew install ocaml opam
 $  opam init
 $  eval `opam config env`
 $ opam install yojson xmlm ounit lwt extlib ssl ocurl
+$ opam install lablgtk  <i># &lt;-- optional, for GUI</i>
 </pre>
 
 <p>All the opam dependencies will be installed to <tt>~/.opam</tt> ($OPAMROOT)</p>
 
-<p>Finally, install 0install itself - using instructions found on <a href='install-source.html'>Source</a>.</p>
+<p>Finally, install 0install itself - using the instructions in <a href='install-source.html'>the source package</a>.</p>
+<pre>
+$ git clone https://github.com/0install/0install.git
+$ cd 0install
+$ make &amp;&amp; make install_home
+$ export PATH=$HOME/bin:$PATH
+</pre>
 
 <h3 id='bundle'>Bundle installation</h3>
 
