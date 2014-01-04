@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jan 2014</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7259'>0install 2.6-rc1 released</a>. 0install 2.6 completes the transition from Python to OCaml. There is no remaining Python code in 0install and, therefore, no need to have Python installed in order to build or run it. However, there are some problems using the GTK plugin on OS X - see the thread for details. There's also another blog post in my series for people wanting to get up to speed on OCaml:
+    <a href='http://roscidus.com/blog/blog/2013/12/20/polymorphism-for-beginners/'>Polymorphism for Beginners</a>.
+  </dd>
   <dt>Dec 2013</dt>
   <dd>
     <p>
