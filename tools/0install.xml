@@ -106,6 +106,10 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="M4KMINYW7QPXQHIELLF2QNQWGTLDQ5KG6KL6E3YWKKXX2VZ3DFAQ"/>
         <archive extract="0install-2.6-rc2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc2/0install-2.6-rc2.tar.bz2" size="484777"/>
       </implementation>
+      <implementation id="sha1new=fb7749d8f51a5574ae3af29ff583b958654a0ede" released="2014-01-09" version="2.6-rc3">
+        <manifest-digest sha256new="IKGMY6Z4R7DLOAFR34VALE662RFIEL2772RXBF4I5JEGJGVVWRAA"/>
+        <archive extract="0install-2.6-rc3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc3/0install-2.6-rc3.tar.bz2" size="484151"/>
+      </implementation>
     </group>
   </group>
 
@@ -188,14 +192,22 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="7E53AOWLFD3AH5KEWJWSI45I4C47NHZ553TM4LQKLV76F2ZXPIUQ"/>
       <archive extract="0install-linux-i486-2.6-rc2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc2/0install-linux-i486-2.6-rc2.tar.bz2" size="3325423"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=493df97360fe8472e598c9eaa7c26e7c36b9306b" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-01-09" version="2.6-rc3">
+      <manifest-digest sha256new="XBH32RLRWOXKRBDE7RA4L357CHREDW4FHU6BMZWB3F465S3RQQOA"/>
+      <archive extract="0install-linux-x86_64-2.6-rc3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc3/0install-linux-x86_64-2.6-rc3.tar.bz2" size="3543875"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=65e0f1a01c03aa9432d1ff50987ee2fa40118184" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-01-09" version="2.6-rc3">
+      <manifest-digest sha256new="OQWHQAGLPMORJAOW6M4FM4BBH4PUHRSDS6QSHYQTRNITUCEHFFVQ"/>
+      <archive extract="0install-linux-i486-2.6-rc3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc3/0install-linux-i486-2.6-rc3.tar.bz2" size="3325240"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJSytqrAAoJEAcTP5bKdNi6SoUH/1qfIWNMx4MDon9V/BVwuYlrQFmFTp5DdQzo
-EIjq1ySacOn5aiIM0HSQbQ+CuqkaM7p1nQFTFfZErapSJxq2PXDLRfwetI/mvaqnq2fLcWYzuw3A
-hPPu+iTzxnftsSMFR343b3ykG7Dj7qQ8EM85DLoDd9hCJh7qA8XQsG0D8XiSOTP5sFDVU5OKASp+
-QvxB7tmS7tngMM9B2d9FOdFKNgmirfSN+vBN+HGYYu1Cyy8dcECRZc+5N2/ShXylihiECM2S64fZ
-dG96gjmE+3aTkigsNpt3NtYkuXjryfJAfwKYcyhrIfsccsusUAMcy6CfSd090iHzACW72k/7z+Yg
-lPY=
+iQEcBAABCgAGBQJSztPsAAoJEAcTP5bKdNi6+W0IAJcsCJOfRbe0fBYzaKG9VBX65+UBi5RFunmh
+dhseF2bQ2zxDyFTm/1Vov427KassRChuo/PQYzcwbmLjm/ST9IZufpfR/Ty47j4WT42SNews3E1D
+PuuYI2AZ4faNz5aHQKub3oTdXkQIHdkeHNul3tystnGhG+CEMeuAPY11AEX9H67XqtXIpLBXDg0Z
+RhSkRZhOKkdRUXyMdWU4WNs04da0GGmN8NLIi5LM3jkSYbrUExne5mvwrntxWdRobVXZN0g/5Oay
+KC9X6a8SxbMdGCzrt4dxoH883lIwhC30VNzaBR3tifzqHMDNyKUiM04dzF6kZ8oDB/bTsMVOO9zX
+028=
 
 -->
