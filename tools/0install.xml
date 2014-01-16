@@ -110,6 +110,10 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="IKGMY6Z4R7DLOAFR34VALE662RFIEL2772RXBF4I5JEGJGVVWRAA"/>
         <archive extract="0install-2.6-rc3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc3/0install-2.6-rc3.tar.bz2" size="484151"/>
       </implementation>
+      <implementation id="sha1new=7fb651be617a492458dd186e3808cbebc808fd8e" released="2014-01-16" version="2.6-rc4">
+        <manifest-digest sha256new="QALMYUUU7ZBHQ2SZRUIUPBIPDZV45IGE6JOWXWBAVDTMSQUVNYDQ"/>
+        <archive extract="0install-2.6-rc4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc4/0install-2.6-rc4.tar.bz2" size="484926"/>
+      </implementation>
     </group>
   </group>
 
@@ -200,14 +204,22 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="OQWHQAGLPMORJAOW6M4FM4BBH4PUHRSDS6QSHYQTRNITUCEHFFVQ"/>
       <archive extract="0install-linux-i486-2.6-rc3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc3/0install-linux-i486-2.6-rc3.tar.bz2" size="3325240"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2cbb211d7978b5df662efdec1fc3e8551dcdad78" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-01-16" version="2.6-rc4">
+      <manifest-digest sha256new="CF4QROYUUMPEDY5FJCRFQ6SEFUALQAHHKJA53BKGJIU56TRXANAQ"/>
+      <archive extract="0install-linux-x86_64-2.6-rc4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc4/0install-linux-x86_64-2.6-rc4.tar.bz2" size="3553248"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=6ff0112cf872d532425f4210961f29a880a4f010" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-01-16" version="2.6-rc4">
+      <manifest-digest sha256new="OSWR5GBG3QZCNOVVAHHVNHNM65NFBVYCMOQLB3YHKGHDHLYBYYOA"/>
+      <archive extract="0install-linux-i486-2.6-rc4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc4/0install-linux-i486-2.6-rc4.tar.bz2" size="3332014"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJSztPsAAoJEAcTP5bKdNi6+W0IAJcsCJOfRbe0fBYzaKG9VBX65+UBi5RFunmh
-dhseF2bQ2zxDyFTm/1Vov427KassRChuo/PQYzcwbmLjm/ST9IZufpfR/Ty47j4WT42SNews3E1D
-PuuYI2AZ4faNz5aHQKub3oTdXkQIHdkeHNul3tystnGhG+CEMeuAPY11AEX9H67XqtXIpLBXDg0Z
-RhSkRZhOKkdRUXyMdWU4WNs04da0GGmN8NLIi5LM3jkSYbrUExne5mvwrntxWdRobVXZN0g/5Oay
-KC9X6a8SxbMdGCzrt4dxoH883lIwhC30VNzaBR3tifzqHMDNyKUiM04dzF6kZ8oDB/bTsMVOO9zX
-028=
+iQEcBAABCgAGBQJS2BElAAoJEAcTP5bKdNi6tP4IAKcTkM5slVvK3PUI/7BDQ9g5j/rlT6RBd8cR
+7k3URRMtqxvEYanurD6r46hMuNeY4rONKsIbOkxTLToNlbSrrQOLIsmtivRsRz4RyPhq3X6CwQpc
+1lbcs0VCwXvHGKJa7J/LKAXMd0FTey+2BAdA94rjY50VyhIUXNvZnQgzMFYABG6SNaIHNrK1nFZM
+mLnWDeyVQhPb6EdMB4Kgjz7Esvis+/ee2Nh2zUIKAdjYyB44ulEc0ChDeDGVEFm4R3T/ZTUO5Icd
+MldCdWqAfj9/XPR1f1c9Ru9yW8NgFu8G4Rj4gssOf6af5njl3biOIQVzoj9uZacJQepOiR/jEXSl
+WuI=
 
 -->
