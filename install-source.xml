@@ -8,15 +8,14 @@
 	 license='GNU Lesser General Public License'>
 
 <p>
-  <strong>This is the newer (but less tested) OCaml/Python hybrid version of 0install.</strong>
+  <strong>This is the newer (but less tested) OCaml version of 0install.</strong>
   There is also an older <a href='install-python.html'>pure Python version</a> (slower, but very mature).
-  Both versions have exactly the same features and interface.
+  The OCaml version is completely backwards compatible with the Python version.
 </p>
 </program>
 
 <p>
-  If you are looking for a package, try the <a href='injector.html'>main downloads page</a>. There are also
-  some pre-compiled <a href='http://0install.net/tools/0install.xml'>generic Linux binaries</a> available.
+  If you are looking for a package or the generic binaries, try the <a href='injector.html'>main downloads page</a>.
 </p>
 
 <h2>Instructions</h2>
@@ -27,8 +26,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.5.1/0install-2.5.1.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.5.1/0install-2.5.1.tar.bz2.sig</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.6/0install-2.6.tar.bz2</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.6/0install-2.6.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -39,8 +38,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu CA74D8BA</b>
-$ <b>gpg 0install-2.5.1.tar.bz2.sig</b>
-gpg: Signature made 2013-11-02T22:36:13 GMT using RSA key ID CA74D8BA
+$ <b>gpg 0install-2.6.tar.bz2.sig</b>
+gpg: Signature made 2014-01-19T20:49:52 GMT using RSA key ID CA74D8BA
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@gmail.com>"
 gpg: Good signature from "Thomas Leonard &lt;XXXXX@users.sourceforge.net&gt;"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -56,12 +55,12 @@ some other source of information).
 
 <p>
   You'll probably need to install some OCaml dependencies before you can build.
-  See the <a href='https://github.com/0install/0install/blob/b2.5/README.md'>README</a> for details.
+  See the <a href='https://github.com/0install/0install/blob/b2.6/README.md'>README</a> for details.
   You should then extract the archive, change directory inside it and build:
 </p>
 <pre>
-$ <b>tar xjf 0install-2.5.1.tar.bz2</b>
-$ <b>cd 0install-2.5.1</b>
+$ <b>tar xf 0install-2.6.tar.bz2</b>
+$ <b>cd 0install-2.6</b>
 $ <b>make</b>
 </pre>
 
@@ -93,8 +92,7 @@ on Ubuntu at least.
 </table>
 
 <p>
-You now have some new commands: <b>0launch</b>, which takes the URL of a program and runs it, and
-<b>0install</b>, which provides access to other features.
+You now have a new <b>0install</b> command...
 </p>
 
 <quicklinks>

@@ -7,7 +7,7 @@
 
 <p>
 If a package for your distribution is listed above, install that and then <a href='users.html'>try using it</a>!
-Otherwise, <a href='install-source.html'>get the source package instead</a>.
+Otherwise, <a href='install-source.html'>get the source package instead</a> or try the <a href='#generic'>generic binaries</a>.
 </p>
 
 <h3 id='arch'>Arch Linux</h3>
@@ -71,6 +71,25 @@ A <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>packag
 <h3 id='slackware'>Slackware</h3>
 
 <p>Slackware packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a> (out-of-date).</p>
+
+<h3 id='generic'>Generic binaries</h3>
+
+<p>
+ There are some pre-compiled <a href='http://0install.net/tools/0install.xml'>generic binaries</a> available. These
+ work on Linux-x86 (32-bit Linux), Linux-x86_64 (64-bit Linux), and Linux-armv6l (Raspberry Pi with Raspbian).</p>
+
+<p>
+  Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside. You'll need libcurl installed (most systems have it by default).
+</p>
+
+<p>
+ Fedora users may need to create a couple of symlinks to work around some incorrect library version numbers on their systems, e.g. (adjust "lib64" as necessary):
+</p>
+
+<pre>
+$ <b>sudo ln -s libssl.so.10 /usr/lib64/libssl.so.1.0.0</b>
+$ <b>sudo ln -s libcrypto.so.10 /usr/lib64/libcrypto.so.1.0.0</b>
+</pre>
 
 <quicklinks>
   <link href='users.html' img='tango/go-next.png'>Continue to tutorial</link>
