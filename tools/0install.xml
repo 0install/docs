@@ -114,6 +114,10 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="QALMYUUU7ZBHQ2SZRUIUPBIPDZV45IGE6JOWXWBAVDTMSQUVNYDQ"/>
         <archive extract="0install-2.6-rc4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc4/0install-2.6-rc4.tar.bz2" size="484926"/>
       </implementation>
+      <implementation id="sha1new=88f0c7745fb44707fc268e3b980bc29084e299d7" released="2014-01-19" version="2.6">
+        <manifest-digest sha256new="PULRJETDYOEZM5X62EIOQKSBMNYTR5RNOWIL4VOYWDCA7RW773PA"/>
+        <archive extract="0install-2.6" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6/0install-2.6.tar.bz2" size="484653"/>
+      </implementation>
     </group>
   </group>
 
@@ -216,14 +220,26 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="F2QVQSFLOJRMN5EHQ2TUYTMQTNH3Y6UI72LAJKFV5DBG2GEBY3RQ"/>
       <archive extract="0install-darwin-x86_64-2.6-rc4" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6-rc4/0install-darwin-x86_64-2.6-rc4.tar.bz2" size="2773072"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=954e72d47870e761875fa7e46551df54def6b1fd" released="2014-01-19" version="2.6">
+      <manifest-digest sha256new="OVUCKLIH4A4F5W7XBIP2D5GXCXLDRPL6OD6DUJU4GFVST6MKESWQ"/>
+      <archive extract="0install-linux-x86_64-2.6" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6/0install-linux-x86_64-2.6.tar.bz2" size="3552442"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=7d2779eb1f2202c58b6cf802cb866f650a8511c3" released="2014-01-19" version="2.6">
+      <manifest-digest sha256new="WDSFLMWOKMZ5QA67RFNXVBQ42AXQ6ZQ6LTXE6BFQXLRO5ZNNZAUA"/>
+      <archive extract="0install-linux-i486-2.6" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6/0install-linux-i486-2.6.tar.bz2" size="3331632"/>
+    </implementation>
+    <implementation arch="Linux-armv6l" id="sha1new=4fd3782e34c6355ecd01b9f81136c6700de89b1d" released="2014-01-19" version="2.6">
+      <manifest-digest sha256new="DN45HGK2P52AW5WKFEKNTAUG76ON5LDC2XNIHGLS2SBK2JDRDSTQ"/>
+      <archive extract="0install-linux-armv6l-2.6" href="https://downloads.sourceforge.net/project/zero-install/0install/2.6/0install-linux-armv6l-2.6.tar.bz2" size="3594277"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJS2sCCAAoJEAcTP5bKdNi6mfsH/1QC3fynv5AjeFnNbatB37BvtFTGK4JumD8G
-9CxBrZe/Wj1E0U0u7BiZwW/wLdlL/xCyCtlRvVrwbIefjXu12HpFJ497iZnbKAT11FRacVTqgBu5
-AhkBdKUAtYAi232mugW3gqaH6G9F3alJ2vMga2cu2y7kZ+aJZLV9nKZSwcPTX0qNdCJbzA9lxnbd
-0YWY7YNMIL5FWW/GmZrgDLNm4s8blmUPfWPWdmYo3iaVraq1XjWbqSbx2HMhtUQyhfMVHbPhaZh6
-WcjSWc5io4To/FvAAZDDGsTO5Hd2rdnBfKLMnvvr/1t6sxNmXleX8q4VfclLHobdyQqufTs5NwNU
-RWA=
+iQEcBAABCgAGBQJS3CWXAAoJEAcTP5bKdNi6ud0H/2kR8UFyBejGCxeNEuW3lPtuV6C6v3YZpMc+
+g34oNfPVO82NkjZQVrot2YIiigsSYRgFpt3trJJB1WoPXVhppljIZ9PDu4K3noDlsgHoLASo3/a5
+iJNsfzSMXdyNLF10iw/blUmnRUMSVECymv0JUeOAfum+l71OinSPXmN/xjmmheNTSOyl0kTFfiRC
+xBFJaiWSsuvyWvdEeadL+XfqhB6/wjqgaNaWcsv73apfzCsOiKPe9qOn/E8vbwKqi8Lu62OxZwlW
+XgGmV1lrZo3oaQ9mvnMtLguQZW/gQ0q5qAJE4q8xwEpNw9FsjulPSgoe0DWJdI+lDm5mOM9Onyb9
+17M=
 
 -->
