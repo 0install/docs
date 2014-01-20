@@ -94,7 +94,7 @@ $ brew install pygtk    <i># &lt;-- optional, for GUI</i>
 $ brew install ocaml opam
 $  opam init
 $  eval `opam config env`
-$ opam install yojson xmlm ounit lwt extlib ssl ocurl
+$ opam install yojson xmlm ounit react lwt extlib ssl ocurl
 $ opam install lablgtk  <i># &lt;-- optional, for GUI</i>
 </pre>
 
