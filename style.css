@@ -116,6 +116,12 @@ pre {
 	padding: 0.2cm;
 }
 
+pre.maybe {
+	background: #eee;
+	color: black;
+	padding: 0.2cm;
+}
+
 div.heading img {
 	margin: .3em;
 }

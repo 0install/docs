@@ -58,9 +58,9 @@ and their dependencies, for Mac OS X 10.6 and later versions.</p>
 <li><a href='http://xquartz.macosforge.org/'>Xquartz</a></li>
 </ul>
 
-<p>Install <a href="http://brew.sh">homebrew</a> using git:</p>
+<p>Install <a href="http://brew.sh">homebrew</a> using git, if needed:</p>
 
-<pre>
+<pre class='maybe'>
 $ git clone https://github.com/Homebrew/homebrew.git
 $ export PATH=$PWD/homebrew/bin:$PWD/homebrew/sbin:$PATH
 </pre>
@@ -91,13 +91,18 @@ $ brew install pygtk    <i># &lt;-- optional, for GUI</i>
 
 <p>Install OCaml and OPAM:</p>
 <pre>
-$ brew install ocaml opam
+$ brew install ocaml
+$ brew install opam
+</pre>
+
+<p>Initialize the OPAM root, if needed:</p>
+<pre class='maybe'>
+$ export OPAMROOT=$PWD/opamroot
+$ opam init
 </pre>
 
 <p>Install OPAM packages:</p>
 <pre>
-$ export OPAMROOT=$PWD/opamroot
-$ opam init
 $ eval `opam config env`
 $ opam install yojson xmlm ounit react lwt extlib ssl ocurl
 $ opam install lablgtk  <i># &lt;-- optional, for GUI</i>
