@@ -26,47 +26,61 @@
 
     <group>
       <command name="test" path="tests/test0repo.py">
-	<runner interface="http://repo.roscidus.com/python/python"/>
-	<executable-in-path name="0repo"/>
+        <runner interface="http://repo.roscidus.com/python/python"/>
+        <executable-in-path name="0repo"/>
       </command>
 
       <requires interface="http://0install.net/2006/interfaces/0publish">
-	<executable-in-var name="ZEROPUBLISH"/>
+        <executable-in-var name="ZEROPUBLISH"/>
       </requires>
 
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-	<environment insert="" mode="prepend" name="PYTHONPATH"/>
-	<version before="2.2-post" not-before="2.2"/>
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version before="2.2-post" not-before="2.2"/>
       </requires>
 
       <implementation id="sha1new=83e04487e2691fc722be397d673bd284bd09723d" released="2013-05-02" version="0.1">
-	<manifest-digest sha256new="TRQFEPTMXP7NMDA53PKEATAI5AZ7ALMLXRVNWVZ5S7V4KWDWE4UA"/>
-	<archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42276"/>
+        <manifest-digest sha256new="TRQFEPTMXP7NMDA53PKEATAI5AZ7ALMLXRVNWVZ5S7V4KWDWE4UA"/>
+        <archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42276"/>
       </implementation>
     </group>
 
     <group>
       <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
-	<environment insert="" mode="prepend" name="PYTHONPATH"/>
-	<version before="2.2-post" not-before="2.2"/>
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version before="2.2-post" not-before="2.2"/>
       </requires>
       <command name="test" path="tests/runall.py">
-	<runner interface="http://repo.roscidus.com/python/python"/>
-	<executable-in-path name="0repo"/>
+        <runner interface="http://repo.roscidus.com/python/python"/>
+        <executable-in-path name="0repo"/>
       </command>
       <implementation id="sha1new=dd216a0f13d28e3559040673748375eeb3892274" released="2013-05-05" stability="stable" version="0.2">
-	<manifest-digest sha256new="GQP2DQNZV3T6NVFU6EEPXE6GNR2PZ2YMWPM5NN64GW3N2EVH4YSA"/>
-	<archive extract="0repo-0.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.2/0repo-0.2.tar.bz2" size="52074"/>
+        <manifest-digest sha256new="GQP2DQNZV3T6NVFU6EEPXE6GNR2PZ2YMWPM5NN64GW3N2EVH4YSA"/>
+        <archive extract="0repo-0.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.2/0repo-0.2.tar.bz2" size="52074"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version not-before="2.2-post"/>
+      </requires>
+      <command name="test" path="tests/runall.py">
+        <runner interface="http://repo.roscidus.com/python/python"/>
+        <executable-in-path name="0repo"/>
+      </command>
+      <implementation id="sha1new=3b8029c925e7e9d1543ec252065ee6f337e7987d" released="2014-01-20" version="0.3">
+        <manifest-digest sha256new="X6EYKYV4E5GAXHMNI47Y46BYSCUUV5GEE4BR4MZFCACU4BN3U6OA"/>
+        <archive extract="0repo-0.3" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.3/0repo-0.3.tar.bz2" size="54945"/>
       </implementation>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSOHVyAAoJEAcTP5bKdNi6JCIH/jZ5jD5JGpt8QsUnouB/4SlrqXoC4IbBAZ8p
-qZ9W5tyz+gxya5hzqGbV3E6I/QquavOo/qpnW/UluP3hIQF4j3GzxXw/lDKkEMMAZHvfaluqT2j8
-gY1aWmP8G27Q2/PyiZmZHhsPvBynY6cdTljxnPWT47yD6U92V9xfhIXzmK4iHsvP9a2Fdirk8rVw
-dFnzyTkhMcqsNMR8WOGKNYMpEivkySx7EFHs0jbsJxZA93bO8kZkna5z39pvJuH13tyDviDxYi/a
-JeccPs7fPqUZ4iamvpwdSYBKFElTr+9kYejJ4b0q/yP2Rmhhd2phccnzQ1zWoKPcpL3fvRQCXnwd
-Qtw=
+iQEcBAABCgAGBQJS3R2GAAoJEAcTP5bKdNi6CVsH/2rBmdkoW5MckZNdSow8psPl4LHOulV63T+u
+7m7DOhy96U19JKv7124gF9JagzlwbWO7pd4JdrrRKI/YpmqtKf5CcovW9lIZ0doWdVrhZOZtOKJx
+rUEpkrl8Sqf/+zjXu9TjNGNrNRxvK5JbbmuWRBe+wygCtBDEl6//yA7O2J/5AwgIj8YeZY52QTcF
+O6wo6HAgLIuyfRAkVefoB87BVnT1NjJpfB4D2CtjDbKHMQkQ3o2ZP2oDF6DOMK7Q+jAFMoN+JJei
+ghbFyr0kvf9qp/18bV54p4rxzyEurOk/KshW+PfRUY1NlBQmmM7GZDdEi549z0N3ec8ELvrgMyLA
+hs8=
 
 -->
