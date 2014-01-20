@@ -129,15 +129,27 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li>Disjoint version ranges (e.g. "2.6..!3 | 3.2.2..").</li>
 </ul>
 
-<h4>2013 (versions 1.15 onwards)</h4>
+<h4>2013 (versions 1.15 to 2.5)</h4>
 
 <ul>
   <li>Shell tab-completion.</li>
   <li>"0install show" command.</li>
   <li>&lt;requires distribution='...'&gt;.</li>
   <li>&lt;for-each&gt; for argument expansion.</li>
+  <li><a href='0install-2.0.html'>0install 2.0 released!</a></li>
+  <li>"0install search" command (searches the default mirror).</li>
+  <li>&lt;remove&gt; recipe step.</li>
+  <li>&lt;binding&gt; for custom bindings.</li>
+  <li>.xz compressed archives.</li>
+  <li>Relative archive paths in local feeds.</li>
+  <li><a href='http://roscidus.com/blog/blog/2013/06/09/choosing-a-python-replacement-for-0install/'>Rewrite in OCaml</a> (fully compatible but 10x faster).</li>
 </ul>
 
+<h4>2014 (versions 2.6 onwards)</h4>
+
+<ul>
+<li>OCaml port completed.</li>
+</ul>
 
 <h3>Current and future plans</h3>
 
@@ -146,13 +158,7 @@ This is a rough roadmap. Times are just estimates, subject to people being able 
 work on things. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Version 2.0 (Feb 2013)</h4>
-
-<p>
-  All 2.0 features are implemented. Testing and bug-fixes only now.
-</p>
-
-<h4>Next after 2.0 (2013)</h4>
+<h4>Next (maybe)</h4>
 
 <ul>
   <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
