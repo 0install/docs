@@ -115,7 +115,8 @@ $ export PATH=$HOME/bin:$PATH
 </p>
 
 <p>
-You can install the <a href='http://downloads.sourceforge.net/project/zero-install/0install/2.5/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(OS_X)'>Installer.app</a>, which will use system <i>python</i> and install requirements like <i>GnuPG.pkg</i> and <i>PyGTK.pkg</i>:
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/0install/2.5/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(OS_X)'>Installer.app</a>,
+which will use system <i>python</i> and install requirements like <a href="http://downloads.sourceforge.net/project/macpkg/GnuPG/1.4.16/GnuPG.pkg">GnuPG.pkg</a> and <a href="http://downloads.sourceforge.net/project/macpkg/PyGTK/2.24.0/PyGTK.pkg">PyGTK.pkg</a>:
 </p>
 
 <pre>$ <b>sudo installer -pkg ZeroInstall.pkg -target /</b></pre>
