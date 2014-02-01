@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Feb 2014</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7310'>0install 2.6 released</a>, completing the Python to OCaml transition. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7311'>0repo 0.3</a> released (0repo provides an easy way to manage the software you publish, generating the files needed to upload to your web-server). Brian Shannon has created a <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7318'>Marketplace web-app</a> and is looking for feedback.
+  </dd>
   <dt>Jan 2014</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7259'>0install 2.6-rc1 released</a>. 0install 2.6 completes the transition from Python to OCaml. There is no remaining Python code in 0install and, therefore, no need to have Python installed in order to build or run it. However, there are some problems using the GTK plugin on OS X - see the thread for details. There's also another blog post in my series for people wanting to get up to speed on OCaml:
