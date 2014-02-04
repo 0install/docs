@@ -18,22 +18,22 @@
       </runner>
     </command>
 
-    <implementation id="sha1new=edd69be32f0ccb7583bd043b12c1b4dc5739b1d0" released="2013-07-20" version="2.4">
+    <implementation id="sha1new=edd69be32f0ccb7583bd043b12c1b4dc5739b1d0" released="2013-07-20" stability="stable" version="2.4">
       <manifest-digest sha256new="7KZ4SUJAK66KC76TFQCB5IGERQAKT3QQD2WDPOW5THEMNSGVXIQQ"/>
       <archive extract="0install-windows-support-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install-windows-support/2.4/0install-windows-support-2.4.tar.bz2" size="11244"/>
     </implementation>
   </group>
-  <implementation arch="Windows-i386" id="sha1new=0241096d7e98a547ecb4dd8d59c23b9b8ad24694" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-07-20" version="2.4">
+  <implementation arch="Windows-i386" id="sha1new=0241096d7e98a547ecb4dd8d59c23b9b8ad24694" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-07-20" stability="stable" version="2.4">
     <manifest-digest sha256new="24V3K4UF3SNFJI2QVF3A52PXQWG7UGTHT6OUYDHPDE665ETVCPBA"/>
     <archive extract="0install-windows-support-windows-x86_64-2.4" href="https://downloads.sourceforge.net/project/zero-install/0install-windows-support/2.4/0install-windows-support-windows-x86_64-2.4.tar.bz2" size="427500"/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJR6tt2AAoJEAcTP5bKdNi62dsH/0u8x4O9TWWS86p6MpVVcnsw3PSVY09v8T1C
-lAwkGk6aD9Z3KJN10rKSo84q4rd+Z50BU5egJQktSGlGx7L/5ka1sSbHLkAMtjTA35IvaUBeN6m6
-hE+u6W0p29g70nR4Jfm5Fc2S+dd9WTD+L3AZqlKSEBFOyoKC0CbovExjZQ2X56+ug3Qho93JfQir
-bXxSu46Crj9QAL+Iz8haDxs/zGxBwyLw1KyB672UnkhK2+zbKeAFdbOfiNPiKDVVZCHQpI1igD2W
-9cH4k3bkMgviDRNIwu0fph41cBrGjCEzXXFMaMkVrVeuv56Am5pbIvDUQntQRzc9qvNMtrz6KudV
-fO8=
+iQEcBAABCgAGBQJS8R6lAAoJEAcTP5bKdNi6Q6AIAKGpb9PNylceHo6brwMOokQtzEXlZgE/lLTl
+LHeWqC39GGTqzq9UsZiEhD8Mz+HtAK0M8KoEyu09C2K9dzBf/eOqn7R1O2YBqRV0O4hONbMmdnfN
+PbP1dJLOwZA3ty31x8Wg2OD69CJS2ZMNpCDKmRweM8BHdqXyURazo+VQKd8o3q91YUeg29GpDuVX
+r1iTEG1uFoFtDEumK3DV8vLLiI4e93toSnJ8tkfA8WqdwDpJ6m2EExMcYd8U1Wm3pyeNuDQHJtpZ
+xWlxMJUUhYiEnFbibMfpqCR6xyJz0vkpYMl1l3hYbLVpKv32fh0Qx7yqindqGa9qaLMqIRlx7W8u
+28g=
 
 -->

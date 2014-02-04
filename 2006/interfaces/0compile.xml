@@ -424,7 +424,7 @@ For a full tutorial, see 0compile's homepage.</description>
         <manifest-digest sha256new="DKAPFUZWO2WCRXHKJNNPQJX2OIM5RU6P3OCY7G54WU4MS6WO4PBQ"/>
         <archive extract="0compile-1.2" href="https://downloads.sourceforge.net/project/zero-install/0compile/1.2/0compile-1.2.tar.bz2" size="36101"/>
       </implementation>
-      <implementation id="sha1new=f05242307048f818655d0d784e23225fba80ca09" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-10-15" version="1.3">
+      <implementation id="sha1new=f05242307048f818655d0d784e23225fba80ca09" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2013-10-15" stability="stable" version="1.3">
         <manifest-digest sha256new="V3EKZQ5AWLF64GJ6QZ5AQLZEWV7ZWONFZ6JNC4DE2RUIBXEBJ2CQ"/>
         <archive extract="0compile-1.3" href="https://downloads.sourceforge.net/project/zero-install/0compile/1.3/0compile-1.3.tar.bz2" size="36280"/>
       </implementation>
@@ -433,11 +433,11 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSXQvUAAoJEAcTP5bKdNi6FuYH/jVoP4fvgEE9ocGYW6q+CnUx9rJKxzfnx+6o
-qeY+BJeWOfXDkDi6pRNzfxdGUGQtKpLxF4PUj8tNJcexaZiWl7eioq+pcrcJezcAkUWd1lc21kvR
-v9FGe71dSAHHZhryQrh4ZEUoQn+T6fCxPb3vpmOqXC0qxJwvgXE/2j9XTr4Goxv5v7zCYs385Me7
-4cbQjOU0oyClrcZPjYr0Qppzn7nnXvNH2iC4jbTJ+Mv7C7+SuOwFt0rJjCsZu9Qn9xPvMHwnJ3Zi
-YPVDIA+/bhsdnP89uWRPwXOfly2fPaIM/RQbO1DISWn3T3+jUWOzrLS65maAyJPofvaXoqSOsEkM
-tW8=
+iQEcBAABCgAGBQJS8R6lAAoJEAcTP5bKdNi6Q8cH/A0rzSevkTVnT95iqc+mpo94nt22jjrZDSgB
+/kpZxIcurFaqyVtIs9SO+GFLAmTIju32zQhAqmbICCCwGHA3b+o4wPL2TQnSEbdqru2NJ3sBORf9
+f9FRK4HsdVCT5wVzVAGFaF/SZddMiXBIMbkqbac8ifN+h1mGvhA4wgEgm8OGtebkUkRxoqquNdos
+p+IGcIcpsC/huyFgzk8AWk9uxjcfKKsDRuCiJKE+KE+LG/Xl9iLyrQFCkKzA0076Pdxe66rSHPt1
+A+lsRQMijMbBZn20zfibtmq9fULqOurYOr9PcH6VUDflUgykdbdXFi9CpEBUnFp1Nn1lNqGb1GNu
+MeQ=
 
 -->
