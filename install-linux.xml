@@ -32,7 +32,7 @@ apt-get update
 apt-get install 0install-core --no-install-recommends
 </pre>
 
-<p>Unfortunately, we cannot unload these packages to the main Debian archvie until after Debian 7 is released.</p>
+<p>We have been trying to get Debian to use this version since Aug 2012. Current status (as of 2014-02-04): the package has made it to the NEW queue, but is stuck there waiting for further approval.</p>
 
 <h3 id='fedora'>Fedora</h3>
 A <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
@@ -41,18 +41,12 @@ A <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>packag
 
 <h3 id='gentoo'>Gentoo</h3>
 
-<p><a href='http://gentoo-portage.com/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Portage (the version, 0.49, is very old though).</p>
-
-<h3 id='mandriva'>Mandriva</h3>
-
-<p>
-  <a href='http://download.opensuse.org/repositories/home:/talex5/Mandriva_2011/noarch/'>Mandriva 2011 RPMs</a>
-</p>
+<p><a href='http://packages.gentoo.org/package/rox-base/zeroinstall-injector'>zeroinstall-injector</a> is in Gentoo (the version, 1.11, is very old though).</p>
 
 <h3 id='suse'>OpenSUSE</h3>
 
 <p>A package is available from the main repository (since OpenSUSE 12.1):</p>
-  <p><a href='http://software.opensuse.org/search?q=zeroinstall-injector&amp;baseproject=openSUSE%3A12.1&amp;lang=en&amp;exclude_debug=true#'>Package in the OpenSUSE distribution</a></p>
+  <p><a href='http://software.opensuse.org/package/zeroinstall-injector'>Package in the OpenSUSE distribution</a></p>
   <p>For older systems:</p>
 
   <ul>
