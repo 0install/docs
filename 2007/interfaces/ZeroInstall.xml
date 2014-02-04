@@ -18,8 +18,6 @@ interfere with those provided by the distribution.
   <icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/>
   <category>System</category>
 
-  <package-implementation main="/usr/bin/0launch" package="zeroinstall-injector"/>
-
   <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release"><!-- Update the copy of the version number -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; zeroinstall/__init__.py</release:action>
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; zeroinstall/0launch-gui/gui.py</release:action>
@@ -320,11 +318,11 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSOHVyAAoJEAcTP5bKdNi6Q2kH/jOJDAkLnoBBiqtIpcgAJvc6N+Z3/wMB6pEu
-0ZGsWlFk84ErSc0ihevym3eybhrQF9dQzG3XxPDPRpddZrhh4/DtUxxv4MSYEldp7AcltVMDkEp/
-jFuL+uNs1mr5IfBNKr1bWhAEO57fFPc/4MwYsNMXijqfSe/a17Vi2B1/aNAKxH0dBaF2E+DNfSdb
-DrmM3T6IzpPtUY63TI6LM3F3FKIsjEzPrFb0jOXx2CwJCrhUUjpUgmsAOs+e5J7v/1gYIa1pGbfj
-YwxmIN+BotV9pLA2nmiFEFLAhxBNY8VWS/ETe6gptERyat3OKARIx/mG6O2U5T46Yn6rb529yAQY
-ExQ=
+iQEcBAABCgAGBQJS8R2OAAoJEAcTP5bKdNi6AkUIAJXXwKnjDAebDcm6rVLzCURiWaAUZTxxC4Sv
+mWbDWoBO2XZjUoxicISiIhfrOHlvetCGaV97sonpKHLuuSkA0OAXrWZUqOtECym2c8v9ZBlSh0BE
+KIruJuUw3cbHBTTv0VCMNba1zAlBJOnoWlLSIt0UVDYuf9NNJ/1o4vDX1TAcMtsm0VO/e4L4NaTC
+/lUUzcZYRfruEWoJGwzl+pLcu7KWbie5WXgFywNOuDG+jlxUvmDjHOr1JFq31xmarkObJW5R4PHg
+9mrTuGLkBdFCFzYuSIiQFg7ZccqdNmN3oPMgrHab90oXg6dz5k+rODhORzW7H79wMvG8FawZKMUR
+Imw=
 
 -->
