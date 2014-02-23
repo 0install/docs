@@ -35,9 +35,12 @@ apt-get install 0install-core --no-install-recommends
 <p>We have been trying to get Debian to use this version since Aug 2012. Current status (as of 2014-02-04): the package has made it to the NEW queue, but is stuck there waiting for further approval.</p>
 
 <h3 id='fedora'>Fedora</h3>
-A <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>package</a> is in Fedora (thanks to Michel Alexandre Salim), so just do:
+Packages are in Fedora (thanks to Michel Alexandre Salim), so just do:
+<pre># <b>yum install 0install</b></pre>
+for the <a href='https://admin.fedoraproject.org/updates/search/0install'>new OCaml RPM</a>, or:
 <pre># <b>yum install zeroinstall-injector</b></pre>
-<p>Newer versions are also available from the <a href='http://download.opensuse.org/repositories/home:/talex5/'>build service</a>.</p>
+for the <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>older Python RPM</a> .
+<!-- <p>Newer versions are also available from the <a href='http://download.opensuse.org/repositories/home:/talex5/'>build service</a>.</p>-->
 
 <h3 id='gentoo'>Gentoo</h3>
 
