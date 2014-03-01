@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Mar 2014</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7322'>0install 2.6.1</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7345'>2.6.2</a> were released, allowing building byte-code for systems without a native OCaml compiler and fixing a bug on RPM-based systems handling distribution packages with very large version numbers. There are now <a href='https://aur.archlinux.org/packages.php?ID=2676'>Arch</a> and <a href='https://admin.fedoraproject.org/updates/search/0install'>Fedora</a> packages of the new OCaml version, though the Debian package is <a href='http://packages.qa.debian.org/z/zeroinstall-injector.html'>still stuck in NEW</a>.</dd>
   <dt>Feb 2014</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7310'>0install 2.6 released</a>, completing the Python to OCaml transition. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7311'>0repo 0.3</a> released (0repo provides an easy way to manage the software you publish, generating the files needed to upload to your web-server). Brian Shannon has created a <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7318'>Marketplace web-app</a> and is looking for feedback.
