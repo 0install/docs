@@ -69,6 +69,7 @@
       <item base='injector-design' label='Design'/>
       <item base='solver' label='The Solver'/>
 
+      <item base='json-api' label='JSON API'/>
       <item base='python-api/html/index' label='Python API'/>
       <item base='api-example' label='API example'/>
 

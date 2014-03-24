@@ -15,6 +15,7 @@ HTML = index.php \
        0template.html \
        0repo.html \
        0test.html \
+       json-api.html \
        api-example.html \
        comparison.html \
        deb2zero.html \
