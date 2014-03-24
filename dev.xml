@@ -45,6 +45,10 @@
 </p>
 
 <dl>
+ <dt><a href='json-api.html'>JSON API</a></dt>
+ <dd>
+   How to use 0install's functions from other programs via JSON.
+ </dd>
  <dt><a href='python-api/html/index.html'>Python API</a></dt>
  <dd>
    The reference documentation, generated automatically from the source code.
