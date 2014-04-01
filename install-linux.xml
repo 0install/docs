@@ -67,7 +67,7 @@ for the <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>
 
 <h3 id='slackware'>Slackware</h3>
 
-<p>Slackware packages are available from <a href='http://slackbuilds.org/repository/13.1/system/zeroinstall-injector/'>slackbuilds.org</a> (out-of-date).</p>
+<p>Slackware packages are available from <a href='http://slackbuilds.org/repository/14.1/system/zeroinstall-injector/'>slackbuilds.org</a>.</p>
 
 <h3 id='generic'>Generic binaries</h3>
 
