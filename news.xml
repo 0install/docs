@@ -4,6 +4,12 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2014</dt>
+  <dd>
+    <p>0install <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7368'>2.4</a>, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7387'>2.5</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7390'>2.5.1</a> for Windows released: new support for CAB and MSI archives, '0store verify' and '0store audit' now offer to automatically remove damaged implementations, new '0store purge' command removes all implementations from the cache (useful when uninstalling, manual deleting is difficult due to ACLs), new '0install central' command opens the main GUI (same as ZeroInstall.exe), fixed extraction of TAR archives with long path names. Work has also started on integrating the new OCaml solver with the .NET code.</p>
+    <p>We've been working to make the new OCaml binary more portable by <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7358'>using dlopen to access libssl</a>, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7362/focus=7365'>disabling GLib integration</a> until the GTK plugin is actually used, and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7358/focus=7380'>testing ocurl's new Lwt support</a>.</p>
+   <p>The new <a href='json-api.html'>0install JSON API</a> is now documented.</p>
+  </dd>
   <dt>Mar 2014</dt>
   <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7322'>0install 2.6.1</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7345'>2.6.2</a> were released, allowing building byte-code for systems without a native OCaml compiler and fixing a bug on RPM-based systems handling distribution packages with very large version numbers. There are now <a href='https://aur.archlinux.org/packages.php?ID=2676'>Arch</a> and <a href='https://admin.fedoraproject.org/updates/search/0install'>Fedora</a> packages of the new OCaml version, though the Debian package is <a href='http://packages.qa.debian.org/z/zeroinstall-injector.html'>still stuck in NEW</a>.</dd>
   <dt>Feb 2014</dt>
