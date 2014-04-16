@@ -21,18 +21,8 @@ Otherwise, <a href='install-source.html'>get the source package instead</a> or t
 
 <p><b>Ubuntu 12.04 LTS</b>: you may find a newer version works better: the <a href='http://packages.ubuntu.com/raring/zeroinstall-injector'>Raring .deb</a> works fine.</p>
 
-<p>You may also install your distribution's version by <a class='button' href='apt:zeroinstall-injector'>clicking here</a>.</p>
-
-<p><strong>Use on headless servers:</strong> If used on headless servers, the Debian packages above pull in a lot of GUI dependencies (~100 MB) which aren't needed. To avoid this, there is <a href='https://launchpad.net/~tal-it-innovation/+archive/ppa'>a PPA</a> with separate core and GUI packages, which can be used as follows (on Debian and Ubuntu):</p>
-<pre>apt-key adv --keyserver hkp://keyserver.ubuntu.com:80/ \
- --recv FA7EE6962EA1EE2BC2BCF43BFA1C88090D3A39C1
-echo "deb http://ppa.launchpad.net/tal-it-innovation/ppa/ubuntu precise main" \
- >> /etc/apt/sources.list
-apt-get update
-apt-get install 0install-core --no-install-recommends
-</pre>
-
-<p>We have been trying to get Debian to use this version since Aug 2012. Current status (as of 2014-02-04): the package has made it to the NEW queue, but is stuck there waiting for further approval.</p>
+<p>On Debian/unstable (since 2014-04-16), there is a "0install-core" package. This doesn't depend on any GUI components, which makes it more suitable for headless servers or small VMs. To install with minimal dependencies:</p>
+<pre># <b>apt-get install 0install-core --no-install-recommends</b></pre>
 
 <h3 id='fedora'>Fedora</h3>
 Packages are in Fedora (thanks to Michel Alexandre Salim), so just do:
