@@ -95,7 +95,7 @@ $ brew install pygtk    <i># &lt;-- optional, for GUI</i>
 <p>Install OCaml and OPAM:</p>
 <pre>
 $ brew install ocaml
-$ brew install opam
+$ brew install opam --without-aspcud
 </pre>
 
 <p>Initialize the OPAM root, if needed:</p>
