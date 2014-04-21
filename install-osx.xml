@@ -83,6 +83,8 @@ $ brew install gtk+    <i># &lt;-- optional, for GUI</i>
 $ export PATH="`brew --prefix gettext`/bin:$PATH"
   <i># the X11 libraries are not found by homebrew:</i>
 $ export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
+  <i># the libpng library is not found by homebrew:</i>
+$ export PKG_CONFIG_PATH="`brew --prefix libpng`/lib/pkgconfig:$PKG_CONFIG_PATH"
 </pre>
 
 <p>Install Python (now optional):</p>
