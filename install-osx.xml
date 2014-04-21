@@ -72,7 +72,6 @@ $ export PATH=$PWD/homebrew/bin:$PWD/homebrew/sbin:$PATH
 <p>Install build dependencies:</p>
 <pre>
 $ brew install gettext
-$ brew install wget
 $ brew install gnupg
 $ brew install glib
 $ brew install gtk+    <i># &lt;-- optional, for GUI</i>
