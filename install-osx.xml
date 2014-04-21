@@ -67,6 +67,8 @@ To be able to run the python fallback on later versions, that have python2.7 as 
 <pre class='maybe'>
 $ git clone https://github.com/Homebrew/homebrew.git
 $ export PATH=$PWD/homebrew/bin:$PWD/homebrew/sbin:$PATH
+  <i># the X11 libraries are not found by homebrew:</i>
+$ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 </pre>
 
 <p>Install build dependencies:</p>
@@ -81,8 +83,6 @@ $ brew install gtk+    <i># &lt;-- optional, for GUI</i>
 <pre>
   <i># the gettext-tools are not linked with homebrew:</i>
 $ export PATH="`brew --prefix gettext`/bin:$PATH"
-  <i># the X11 libraries are not found by homebrew:</i>
-$ export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
   <i># the libpng library is not found by homebrew:</i>
 $ export PKG_CONFIG_PATH="`brew --prefix libpng`/lib/pkgconfig:$PKG_CONFIG_PATH"
 </pre>
