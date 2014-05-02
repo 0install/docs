@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>May 2014</dt>
+  <dd>
+    In Debian, the old zeroinstall-injector package has been replaced by separate <b>0install</b> and <b>0install-core</b> packages. The <b>0install-core</b> package doesn't include the GTK GUI, which is very useful on headless servers because it doesn't pull in the whole GUI stack. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7398'>0install 2.6 for Windows</a> was released. There are now NuGet packages, allowing 3rd party .NET developers to integrate Zero Install functionality into their applications. There's a <a href='https://github.com/Homebrew/homebrew/pull/28771'>new 0install Homebrew package</a> for OS X users.
+  </dd>
   <dt>Apr 2014</dt>
   <dd>
     <p>0install <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7368'>2.4</a>, <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7387'>2.5</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7390'>2.5.1</a> for Windows released: new support for CAB and MSI archives, '0store verify' and '0store audit' now offer to automatically remove damaged implementations, new '0store purge' command removes all implementations from the cache (useful when uninstalling, manual deleting is difficult due to ACLs), new '0install central' command opens the main GUI (same as ZeroInstall.exe), fixed extraction of TAR archives with long path names. Work has also started on integrating the new OCaml solver with the .NET code.</p>
