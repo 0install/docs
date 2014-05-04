@@ -42,7 +42,7 @@
 
 <quicklinks>
   <link href='why.html' img='tango/book.png'>Read more</link>
-  <link href='dev.html' img='tango/applications-development.png'>Developers</link>
+  <link href='packagers.html' img='tango/applications-development.png'>Make packages</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
   <mainlink>@AUTO_DOWNLOAD_HTML@</mainlink>
 </quicklinks>
