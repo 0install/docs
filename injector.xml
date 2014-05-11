@@ -3,7 +3,7 @@
 
 <program name='Zero Install'
 	 author='Thomas Leonard'
-	 git='http://repo.or.cz/w/zeroinstall.git'
+	 git='https://github.com/0install/0install.git'
 	 title='Zero Install: Downloads'
 	 license='GNU Lesser General Public License'>
 
