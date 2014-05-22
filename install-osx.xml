@@ -110,6 +110,16 @@ $ make &amp;&amp; make install_home
 $ export PATH=$HOME/bin:$PATH
 </pre>
 
+<h3 id='generic'>Generic binaries</h3>
+
+<p>
+ There are some pre-compiled <a href='http://0install.net/tools/0install.xml'>generic binaries</a> available.
+ These work on Linux, and on Darwin (OS X).</p>
+
+<p>
+  Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside.
+</p>
+
 <h3 id='bundle'>Homebrew installation</h3>
 
 <p>
