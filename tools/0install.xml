@@ -288,14 +288,18 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="A56ZDDGTTEJIYLZ47PCAJBWHUJU6C32AE62I2SIQPG7ZMDZHIXCQ"/>
       <archive extract="0install-linux-armv6l-2.7" href="https://downloads.sourceforge.net/project/zero-install/0install/2.7/0install-linux-armv6l-2.7.tar.bz2" size="3616393"/>
     </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=0b29e219b50f596fded61274abee8c9463ec0718" released="2014-05-25" version="2.7">
+      <manifest-digest sha256new="SNQ3PKLOCD7UTL32DK5T64XJ4XN4AHACMAKYMGO6OEBO2OUM6XZQ"/>
+      <archive extract="0install-darwin-x86_64-2.7" href="https://downloads.sourceforge.net/project/zero-install/0install/2.7/0install-darwin-x86_64-2.7.tar.bz2" size="2790170"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJTgb2VAAoJEAcTP5bKdNi6ajoH/0xVhc46DgZOVzhfdFsBZuD24W9KjqBnVNlx
-6z0DZf2ET2YbjH49UL/cICCCcQ9fmcqTbtVhMcAgrTpEtwBmeSlghs7+D1pfMY8ZIvYjb8xa9UEQ
-Oe87U7/DPZ0mO7uioDPmNfCfgaOhuH2svGNZn+CDXCxE1mnmyJvblJVQZGqyHeo770qSIs+XxZMy
-cKaKWETGR99n4kyAnHuxOg/FLjdlEPaidXuy+am1AWfJX6g7Fh/3IY9PbSpGVca19whPIjw3KSpy
-KEIEJBOoZMD0IDlzETQyt4nD5bwLM2AA+4DIDBTg8RRj2tWJvKtOicYtK1SsPZdn1ydxsCQH9PuN
-u+c=
+iQEcBAABCgAGBQJTgfbpAAoJEAcTP5bKdNi6bo4H/0ZFX/BQ6nKvPoCl3I5krHK86wPi7AS72/Vj
+dqlLPf0bbseM1n4GSQfkieTCeUekNCyrgwdcR5WJVTBG7iPQt/+jWDrhmvbwk3AEiVQa5LCYXlms
+qNstN+RSpnjv2+tsqoxcupQlGvELOV0WuTXy16b+og0KEDXrI9TpDQd4vZ3uV5cw/g3E5Ma4Rm67
+/JAy94in6t6X5jxRKreELlRAzWGFVIgIJKmGVysuBAOLe0N1cLGOtnR08CcH4vbc4wawNQC/Veit
+3cRSbnTooJmg3qOdRD0DYDo6VMgmHa4K5JhjTDy1toAImZt2ZJqkik2YdWv63tKHYo+4VN6DivKB
+WZc=
 
 -->
