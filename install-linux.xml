@@ -69,15 +69,6 @@ for the <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>
   Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside. You'll need libcurl installed (most systems have it by default).
 </p>
 
-<p>
- Fedora users may need to create a couple of symlinks to work around some incorrect library version numbers on their systems, e.g. (adjust "lib64" as necessary):
-</p>
-
-<pre>
-$ <b>sudo ln -s libssl.so.10 /usr/lib64/libssl.so.1.0.0</b>
-$ <b>sudo ln -s libcrypto.so.10 /usr/lib64/libcrypto.so.1.0.0</b>
-</pre>
-
 <quicklinks>
   <link href='users.html' img='tango/go-next.png'>Continue to tutorial</link>
 </quicklinks>
