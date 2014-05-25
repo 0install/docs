@@ -1,77 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="http://0install.net/2013/interfaces/0install-windows-support.xml"><name>0install-windows-support</name><summary>support for 0install on Windows</summary><homepage>http://0install.net/</homepage></interface><interface uri="http://0install.net/2009/interfaces/pkg2zero.xml"><name>pkg2zero</name><summary>create Zero Install feeds from Debian and RPM packages</summary><description>
+<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml"><name>0install-runenv-cli</name><summary>0install .NET helper for Windows</summary><description>
+    When 0install needs to add a new program to %PATH% on Windows, it uses this
+    package to creates a .NET launcher application.
+</description><homepage>http://0install.net/</homepage><category>System</category></interface><interface uri="http://0install.net/2008/linux-ppc/GLib-dev.xml"><name>GLib-dev</name><summary>headers for compiling GLib applications</summary><description>These are the GLib header files. They are required when compiling applications
+that use the GLib library.</description></interface><interface uri="http://0install.net/2008/interfaces/lzmadec.xml"><name>lzmadec</name><summary>small and fast LZMA decoder</summary><description>
+lzmadec is a small and fast decoder for LZMA compressed files. It is intended to
+work as a drop-in replacement for lzma in situations where available disk space
+is limited, only decoder is needed and the data can be decompressed from the
+standard input to the standard output. This has been achieved by simply ignoring
+all command line arguments except --help.</description><homepage>http://tukaani.org/lzma/</homepage><category>Utility</category></interface><interface uri="http://0install.net/2008/interfaces/deb2zero.xml"><name>deb2zero</name><summary>create Zero Install feeds from Debian packages</summary><description>
 Zero Install is a decentralised installation system. Meta-data about each
 package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
 files and downloads and runs the programs. The feed files can be created
-manually (e.g. using 0publish or 0publish-gui). However, Debian and RPM packages already
+manually (e.g. using 0publish or 0publish-gui). However, Debian packages already
 contain much of the required information. This program extracts the information
-in an existing package and uses it to generate the feed.</description><homepage>http://0install.net/pkg2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2009/interfaces/pkg2zero-testdata.xml"><name>pkg2zero-testdata</name><summary>data for unit-tests</summary><description>
-    These files are needed to run the unit-tests for pkg2zero. As they are
-    quite large, they have their own package.
-  </description><homepage>http://0install.net/pkg2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2009/3rd-party/clutter.xml"><name>clutter</name><summary>creating fast, visually rich and animated graphical user interfaces</summary><description>
-Clutter is an open source software library for creating fast, visually rich and
-animated graphical user interfaces.
+in an existing Debian package and uses it to generate the feed.</description><homepage>http://0install.net/deb2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2008/interfaces/0test.xml"><name>0test</name><summary>test Zero Install programs</summary><description>
+Use 0test to run the unit tests for a Zero Install program. You can use this to
+test released versions or developer snapshots. You can give a selection of
+versions to test, and you can test against different versions of dependencies to
+create a matrix of test results.</description><homepage>http://0install.net/0test.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2008/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
+The Zero Install GUI displays a window showing which versions of various
+components will be used when running a program, and allows you to alter various
+policy settings to affect the selection process. You can use this to mark
+particular versions of libraries as preferred, bugggy, etc.
 
-Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
-platforms) for rendering but with an API which hides the underlying GL
-complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/python2.6-clutter.xml"><name>python-clutter</name><summary>Python bindings for the clutter library</summary><description>
-Clutter is an open source software library for creating fast, visually rich and
-animated graphical user interfaces.
-
-Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
-platforms) for rendering but with an API which hides the underlying GL
-complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/clutter-gtk.xml"><name>clutter-gtk</name><summary>embed clutter in GTK</summary><description>
-Clutter is an open source software library for creating fast, visually rich and
-animated graphical user interfaces.
-
-Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
-platforms) for rendering but with an API which hides the underlying GL
-complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.
-
-This package allows embedding a Clutter stage inside a GTK window.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/python2.5-clutter.xml"><name>python-clutter</name><summary>Python bindings for the clutter library</summary><description>
-Clutter is an open source software library for creating fast, visually rich and
-animated graphical user interfaces.
-
-Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
-platforms) for rendering but with an API which hides the underlying GL
-complexity from the developer. The Clutter API is intended to be easy to use,
-efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/tools/0install.xml"><name>0install</name><summary>decentralised installation system</summary><description>
-Zero Install is a decentralised cross-platform software installation
-system available under the LGPL. It allows software developers to publish
-programs directly from their own web-sites, while supporting features familiar
-from centralised distribution repositories such as shared libraries, automatic
-updates and digital signatures. It is intended to complement, rather than
-replace, the operating system's package management. 0install packages never
-interfere with those provided by the distribution.
-</description><homepage>http://0install.net/</homepage><icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="http://0install.net/tools/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
-    0repo allows a group of developers to publish a set of feeds. It can be
-    used by a single developer, generating a set of static files to publish on
-    a web-server, or as a service which accepts signed updates from a group
-    of developers.
-  </description><homepage>http://0install.net/0repo.html</homepage></interface><interface uri="http://0install.net/tools/0export.xml"><name>0export</name><summary>create self-installing bundles for distribution on CD</summary><description>
-It is sometimes useful to bundle a program and its libraries together
-on a CD (for example) so that it can be used on machines without a network
-connection, or where the network is very slow. It is also useful for archival
-purposes, in case the original web-sites supplying required libraries become
-unavailable.
-
-0export takes the URI of a program and creates a &quot;setup.sh&quot; file; a self-
-extracting archive containing everything needed to run the program. This file
-can be executed on a machine without a network connection to install or run the
-program.
-
-Unlike the bundles created by the related zero2bundle program, programs
-installed using setup.sh are added to the Zero Install cache and are therefore
-still shared between users, and will get updates over the web where possible.</description><homepage>http://0install.net/0export.html</homepage><category>Development</category></interface><interface uri="http://0install.net/tools/0template.xml"><name>0template</name><summary>utility to make creating feeds easier</summary><description>
-    0template takes a template XML file (e.g. with place-holders for the version),
-    fills in the place-holders, and then fills in everything else it can. For example,
-    it will download the archive, fill in the size, calculate the digests, etc.
-  </description><homepage>http://0install.net/0template.html</homepage></interface><interface uri="http://0install.net/2010/interfaces/xzdec.xml"><name>xzdec</name><summary>XZ Decompressor</summary><description>
-xzdec is a liblzma-based decompression-only tool for .xz files.</description><homepage>http://tukaani.org/xz/</homepage><category>Utility</category></interface><interface uri="http://0install.net/2008/interfaces/libxml2-dev.xml"><name>libxml2-dev</name><summary>headers for libxml2</summary><description>
+This program is run automatically by the '0launch' command. If you want to add
+an installer to your desktop menus, you want something like Zero2Desktop
+instead.</description><homepage>http://0install.net/injector.html</homepage></interface><interface uri="http://0install.net/2008/interfaces/libxml2-dev.xml"><name>libxml2-dev</name><summary>headers for libxml2</summary><description>
 Libxml2 is the XML C parser and toolkit developed for the Gnome project (but
 usable outside of the Gnome platform), it is free software available under the
 MIT License. XML itself is a metalanguage to design markup languages, i.e. text
@@ -87,52 +43,12 @@ package is published in a &quot;feed&quot; file.
 Before downloading a package over the internet, 0launch can check to see if any
 nearby machines have a copy, and get it from them instead if so. This will
 normally be much faster. The secure hash from the feed is used to check that the
-software hasn't been modified.</description><homepage>http://0install.net/0share.html</homepage><category>Network</category></interface><interface uri="http://0install.net/2008/interfaces/lzmadec.xml"><name>lzmadec</name><summary>small and fast LZMA decoder</summary><description>
-lzmadec is a small and fast decoder for LZMA compressed files. It is intended to
-work as a drop-in replacement for lzma in situations where available disk space
-is limited, only decoder is needed and the data can be decompressed from the
-standard input to the standard output. This has been achieved by simply ignoring
-all command line arguments except --help.</description><homepage>http://tukaani.org/lzma/</homepage><category>Utility</category></interface><interface uri="http://0install.net/2008/interfaces/deb2zero.xml"><name>deb2zero</name><summary>create Zero Install feeds from Debian packages</summary><description>
-Zero Install is a decentralised installation system. Meta-data about each
-package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
-files and downloads and runs the programs. The feed files can be created
-manually (e.g. using 0publish or 0publish-gui). However, Debian packages already
-contain much of the required information. This program extracts the information
-in an existing Debian package and uses it to generate the feed.</description><homepage>http://0install.net/deb2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2008/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
-The Zero Install GUI displays a window showing which versions of various
-components will be used when running a program, and allows you to alter various
-policy settings to affect the selection process. You can use this to mark
-particular versions of libraries as preferred, bugggy, etc.
-
-This program is run automatically by the '0launch' command. If you want to add
-an installer to your desktop menus, you want something like Zero2Desktop
-instead.</description><homepage>http://0install.net/injector.html</homepage></interface><interface uri="http://0install.net/2008/interfaces/0test.xml"><name>0test</name><summary>test Zero Install programs</summary><description>
-Use 0test to run the unit tests for a Zero Install program. You can use this to
-test released versions or developer snapshots. You can give a selection of
-versions to test, and you can test against different versions of dependencies to
-create a matrix of test results.</description><homepage>http://0install.net/0test.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2008/3rd-party/libmng1.xml"><name>libmng1</name><summary>Multiple-image Network Graphics library</summary><description>The libmng library supports decoding, displaying, encoding, and various
-other manipulations of the Multiple-image Network Graphics (MNG) format
-image files. It uses the zlib compression library, and optionally the
-JPEG library by the Independent JPEG Group (IJG) and/or
-lcms (little cms), a color-management library by Marti Maria Saguar.</description></interface><interface uri="http://0install.net/2008/3rd-party/libsdl-image1.2.xml"><name>libsdl-image1.2</name><summary>image loading library for Simple DirectMedia Layer 1.2</summary><description>This is a simple library to load images of various formats as SDL surfaces.
-This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
-formats.</description></interface><interface uri="http://0install.net/2008/3rd-party/libvorbis0a.xml"><name>libvorbis0a</name><summary>The Vorbis General Audio Compression Codec</summary><description>Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+software hasn't been modified.</description><homepage>http://0install.net/0share.html</homepage><category>Network</category></interface><interface uri="http://0install.net/2008/3rd-party/libvorbisfile3.xml"><name>libvorbisfile3</name><summary>The Vorbis General Audio Compression Codec</summary><description>Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
 general-purpose compressed audio format for audio and music at fixed
 and variable bitrates from 16 to 128 kbps/channel.
 
-The Vorbis library is the primary Ogg Vorbis library.</description></interface><interface uri="http://0install.net/2008/3rd-party/groundhog.xml"><name>groundhog</name><summary>A simple logic game</summary><description>The purpose of this game is to put balls in pockets of the same color
-by manipulating a maze of tubes.
-
-Homepage: http://home-2.consunet.nl/~cb007736/groundhog.html</description><category>Game</category></interface><interface uri="http://0install.net/2008/3rd-party/libtasn1-3.xml"><name>libtasn1-3</name><summary>Manage ASN.1 structures (runtime)</summary><description>Manage ASN1 (Abstract Syntax Notation One) structures.
-The main features of this library are:
-  * on-line ASN1 structure management that doesn't require any C code
-    file generation.
-  * off-line ASN1 structure management with C code file generation
-    containing an array.
-  * DER (Distinguish Encoding Rules) encoding
-  * no limits for INTEGER and ENUMERATED values
-
-This package contains runtime libraries.</description></interface><interface uri="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml"><name>libcurl3-gnutls</name><summary>Multi-protocol file transfer library</summary><description>libcurl is designed to be a solid, usable, reliable and portable
+The Vorbisfile library provides a convenient high-level API for decoding
+and basic manipulation of all Vorbis I audio streams.</description></interface><interface uri="http://0install.net/2008/3rd-party/libcurl3-gnutls.xml"><name>libcurl3-gnutls</name><summary>Multi-protocol file transfer library</summary><description>libcurl is designed to be a solid, usable, reliable and portable
 multi-protocol file transfer library.
 
 SSL support is provided by GnuTLS.
@@ -140,19 +56,27 @@ To enable LDAP support package libldap2-dev is required.
 
 This is the shared version of libcurl.
 
- Homepage: http://curl.haxx.se</description></interface><interface uri="http://0install.net/2008/3rd-party/libvorbisfile3.xml"><name>libvorbisfile3</name><summary>The Vorbis General Audio Compression Codec</summary><description>Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+ Homepage: http://curl.haxx.se</description></interface><interface uri="http://0install.net/2008/3rd-party/libsdl-image1.2.xml"><name>libsdl-image1.2</name><summary>image loading library for Simple DirectMedia Layer 1.2</summary><description>This is a simple library to load images of various formats as SDL surfaces.
+This library currently supports BMP, PPM, PCX, GIF, JPEG, PNG, TIFF, and XPM
+formats.</description></interface><interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml"><name>gnome-inform7</name><summary>GNOME port of the Inform 7 IDE</summary><description>
+GNOME Inform 7 is a GNOME port of the Inform 7 integrated development
+environment for Inform 7. Inform 7 is a &quot;natural&quot; programming language for
+writing interactive fiction (also known as text adventures.)</description><category>Development</category><homepage>http://sourceforge.net/projects/gnome-inform7</homepage></interface><interface uri="http://0install.net/2008/3rd-party/libmng1.xml"><name>libmng1</name><summary>Multiple-image Network Graphics library</summary><description>The libmng library supports decoding, displaying, encoding, and various
+other manipulations of the Multiple-image Network Graphics (MNG) format
+image files. It uses the zlib compression library, and optionally the
+JPEG library by the Independent JPEG Group (IJG) and/or
+lcms (little cms), a color-management library by Marti Maria Saguar.</description></interface><interface uri="http://0install.net/2008/3rd-party/libvorbis0a.xml"><name>libvorbis0a</name><summary>The Vorbis General Audio Compression Codec</summary><description>Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
 general-purpose compressed audio format for audio and music at fixed
 and variable bitrates from 16 to 128 kbps/channel.
 
-The Vorbisfile library provides a convenient high-level API for decoding
-and basic manipulation of all Vorbis I audio streams.</description></interface><interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml"><name>gnome-inform7</name><summary>GNOME port of the Inform 7 IDE</summary><description>
-GNOME Inform 7 is a GNOME port of the Inform 7 integrated development
-environment for Inform 7. Inform 7 is a &quot;natural&quot; programming language for
-writing interactive fiction (also known as text adventures.)</description><category>Development</category><homepage>http://sourceforge.net/projects/gnome-inform7</homepage></interface><interface uri="http://0install.net/2008/3rd-party/libsdl-mixer1.2.xml"><name>libsdl-mixer1.2</name><summary>mixer library for Simple DirectMedia Layer 1.2</summary><description>SDL Mixer is a sample multi-channel audio mixer library. It supports 4
+The Vorbis library is the primary Ogg Vorbis library.</description></interface><interface uri="http://0install.net/2008/3rd-party/libsdl-mixer1.2.xml"><name>libsdl-mixer1.2</name><summary>mixer library for Simple DirectMedia Layer 1.2</summary><description>SDL Mixer is a sample multi-channel audio mixer library. It supports 4
 channels of 16 bit stereo audio, plus a single channel of music, mixed by
 the popular MikMod MOD, Timidity MIDI, and SMPEG MP3 libraries.
 
-URL: http://www.libsdl.org/projects/SDL_mixer/</description></interface><interface uri="http://0install.net/2008/3rd-party/git.xml"><name>git-core</name><summary>fast, scalable, distributed revision control system</summary><description>Git is popular version control system designed to handle very large
+URL: http://www.libsdl.org/projects/SDL_mixer/</description></interface><interface uri="http://0install.net/2008/3rd-party/groundhog.xml"><name>groundhog</name><summary>A simple logic game</summary><description>The purpose of this game is to put balls in pockets of the same color
+by manipulating a maze of tubes.
+
+Homepage: http://home-2.consunet.nl/~cb007736/groundhog.html</description><category>Game</category></interface><interface uri="http://0install.net/2008/3rd-party/git.xml"><name>git-core</name><summary>fast, scalable, distributed revision control system</summary><description>Git is popular version control system designed to handle very large
 projects with speed and efficiency; it is used mainly for various open
 source projects, most notably the Linux kernel.
 
@@ -164,40 +88,29 @@ central server.
 This package provides the git main components with minimal dependencies.
 Additional functionality, e.g. a graphical user interface and revision
 tree visualizer, tools for interoperating with other VCS's, or a web
-interface, is provided as separate git* packages.</description><category>Development</category></interface><interface uri="http://0install.net/2008/linux-ppc/GLib-dev.xml"><name>GLib-dev</name><summary>headers for compiling GLib applications</summary><description>These are the GLib header files. They are required when compiling applications
-that use the GLib library.</description></interface><interface uri="http://0install.net/tests/ebox-chat.xml"><name>ebox-chat</name><summary>sandboxed chat program</summary><description>
-    EBox-Chat is a demonstration chat client. It allows secure two-way text-based communication with another instance of itself.
-    It is designed to be installed using the ebox demonstration sandboxing system.
-  </description></interface><interface uri="http://0install.net/tests/ebox.xml"><name>ebox</name><summary>instance manager for E programs</summary><description>
-ebox installs instances of E programs. Each program runs with access, by
-default, only to its own instance directory. The code is separate; managed by
-Zero Install.</description></interface><interface uri="http://0install.net/tests/ebox-edit.xml"><name>edit</name><summary>E text editor</summary><description>
-    This is a very simple proof-of-concept text editor that can be confined using the EBox sandbox system.
-  </description></interface><interface uri="http://0install.net/tests/ebox-help.xml"><name>ebox-help</name><summary>EBox help viewer</summary><description>
-    This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
-  </description></interface><interface uri="http://0install.net/2007/interfaces/FeedLint.xml"><name>FeedLint</name><summary>check your Zero Install feeds</summary><description>
-FeedLint is a tool for Zero Install feed authors. It checks that your Zero
-Install feed can be downloaded, that it is valid and that all the links in it
-still work.
+interface, is provided as separate git* packages.</description><category>Development</category></interface><interface uri="http://0install.net/2008/3rd-party/libtasn1-3.xml"><name>libtasn1-3</name><summary>Manage ASN.1 structures (runtime)</summary><description>Manage ASN1 (Abstract Syntax Notation One) structures.
+The main features of this library are:
+  * on-line ASN1 structure management that doesn't require any C code
+    file generation.
+  * off-line ASN1 structure management with C code file generation
+    containing an array.
+  * DER (Distinguish Encoding Rules) encoding
+  * no limits for INTEGER and ENUMERATED values
 
-Run this on all your feeds from time-to-time to make sure they still work.</description><homepage>http://0install.net/feedlint.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/Zero2Desktop.xml"><name>Zero2Desktop</name><summary>add Zero Install programs to your Applications menu</summary><description>
+This package contains runtime libraries.</description></interface><interface uri="http://0install.net/2007/interfaces/0release.xml"><name>0release</name><summary>manage new releases with Zero Install</summary><description>
+If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.</description><homepage>http://0install.net/0release.xml</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/Make-headers.xml"><name>Make-headers</name><summary>creates -dev packages</summary><description>
+Given a standard autoconf source package (in $SRCDIR), this script builds it
+(configure --prefix=$DISTDIR &amp;&amp; make install) and then removes files which
+shouldn't be in a -dev package (.so and .la files, etc).
+
+It also edits any pkg-config .pc files to use a relative path for the prefix.</description><homepage>http://0install.net/make-headers.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/Zero2Desktop.xml"><name>Zero2Desktop</name><summary>add Zero Install programs to your Applications menu</summary><description>
 Zero Install provides a way to download and run applications using a full URI to
 identify them. To make applications easier to run you'll want to create a short-
 cut in your desktop environment.
 
 This program creates a freedesktop.org &quot;.desktop&quot; file, which causes the program
-to appear in the GNOME or KDE Applications menus.</description><category>Utility</category><icon href="http://0install.net/feed_icons/Zero2Desktop.png" type="image/png"/></interface><interface uri="http://0install.net/2007/interfaces/Make-headers.xml"><name>Make-headers</name><summary>creates -dev packages</summary><description>
-Given a standard autoconf source package (in $SRCDIR), this script builds it
-(configure --prefix=$DISTDIR &amp;&amp; make install) and then removes files which
-shouldn't be in a -dev package (.so and .la files, etc).
-
-It also edits any pkg-config .pc files to use a relative path for the prefix.</description><homepage>http://0install.net/make-headers.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/0publish-gui.xml"><name>0publish-gui</name><summary>GTK editor for Zero Install feeds</summary><description>
-Publishing a program using Zero Install requires you to create an XML file
-listing the available versions, where to get them, and what other software they
-depend on.
-
-This program provides a simple graphical interface for creating and editing
-these feeds.</description><homepage>http://0install.net/injector-packagers.html</homepage><icon href="http://0install.net/feed_icons/0publish-gui.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
+to appear in the GNOME or KDE Applications menus.</description><category>Utility</category><icon href="http://0install.net/feed_icons/Zero2Desktop.png" type="image/png"/></interface><interface uri="http://0install.net/2007/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
 The Zero Install GUI displays a window showing which versions of various
 components will be used when running a program, and allows you to alter various
 policy settings to affect the selection process. You can use this to mark
@@ -213,80 +126,20 @@ from centralised distribution repositories such as shared libraries, automatic
 updates and digital signatures. It is intended to complement, rather than
 replace, the operating system's package management. 0install packages never
 interfere with those provided by the distribution.
-  </description><homepage>http://0install.net/</homepage><icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="http://0install.net/2007/interfaces/0release.xml"><name>0release</name><summary>manage new releases with Zero Install</summary><description>
-If you have a local feed in the development version of your program, 0release
-can help you to create new releases easily.</description><homepage>http://0install.net/0release.xml</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml"><name>libssl0.9.8</name><summary>SSL shared libraries</summary><description>
-libssl and libcrypto shared libraries needed by programs like apache-ssl,
-telnet-ssl and openssh.
+  </description><homepage>http://0install.net/</homepage><icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="http://0install.net/2007/interfaces/0publish-gui.xml"><name>0publish-gui</name><summary>GTK editor for Zero Install feeds</summary><description>
+Publishing a program using Zero Install requires you to create an XML file
+listing the available versions, where to get them, and what other software they
+depend on.
 
-It is part of the OpenSSL implementation of SSL.</description></interface><interface uri="http://0install.net/2007/3rd-party/libdb4.6.xml"><name>libdb4.6</name><summary>Berkeley v4.6 Database Libraries [runtime]</summary><description>This is the runtime package for programs that use the v4.6 Berkeley
-database library.</description></interface><interface uri="http://0install.net/2007/3rd-party/libaudio2.xml"><name>libaudio2</name><summary>the Network Audio System (NAS)</summary><description>
-The Network Audio System was developed by NCD for playing, recording, and
-manipulating audio data over a network. Like the X Window System, it uses the
-client/server model to separate applications from the specific drivers that
-control audio input and output devices.
+This program provides a simple graphical interface for creating and editing
+these feeds.</description><homepage>http://0install.net/injector-packagers.html</homepage><icon href="http://0install.net/feed_icons/0publish-gui.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2007/interfaces/FeedLint.xml"><name>FeedLint</name><summary>check your Zero Install feeds</summary><description>
+FeedLint is a tool for Zero Install feed authors. It checks that your Zero
+Install feed can be downloaded, that it is valid and that all the links in it
+still work.
 
-This package contains the nas library (libaudio), needed for both remote and
-local output.</description><homepage>http://radscan.com/nas.html</homepage></interface><interface uri="http://0install.net/2007/3rd-party/XdgUtils.xml"><name>XdgUtils</name><summary>cross-desktop integration tools</summary><description>
-Xdg-utils is a set of command line tools that assist applications with a variety
-of desktop integration tasks. About half of the tools focus on tasks commonly
-required during the installation of a desktop application and the other half
-focuses on integration with the desktop environment while the application is
-running. Even if the desktop components of your application are limited to an
-installer, configuration or management tool, Xdg-utils provides you with an easy
-way to enhance the usage experience of your customers by improving the
-integration of these components in the user's environment. Best of all, Xdg-
-utils is provided as open source and free of charge.</description><homepage>http://portland.freedesktop.org</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libpq5.xml"><name>libpq5</name><summary>PostgreSQL C client library</summary><description>libpq is a C library that enables user programs to communicate with
-the PostgreSQL database server. The server can be on another machine
-and accessed through TCP/IP. This version of libpq is compatible
-with servers from PostgreSQL 8.2 or later.
-
-This package contains the run-time library, needed by packages using
-libpq.
-
-PostgreSQL is an object-relational SQL database management system.</description></interface><interface uri="http://0install.net/2007/3rd-party/libaprutil1.xml"><name>libaprutil1</name><summary>the Apache Portable Runtime Utility Library</summary><description>
-APR is Apache's Portable Runtime Library, designed to be a support library that
-provides a predictable and consistent interface to underlying platform-specific
-implementations.
-
-APR Util is a utilities library implemented on top of apr, providing database
-access, xml parsing, and other useful functionality.</description></interface><interface uri="http://0install.net/2007/3rd-party/APBuild.xml"><name>APBuild</name><summary>a suite of portability tools for developers</summary><description>
-In the process of writing autopackage, we've also produced several standalone
-tools, the apbuild programs, that are designed to help Linux developers write
-better software that runs on a wider variety of distributions. They are
-independent of autopackage itself: you can use them even if you don't provide
-your software using the rest of our software.</description><homepage>http://autopackage.org/aptools.html</homepage><category>Development</category><icon href="http://autopackage.org/gnome-devel.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libgnutls26.xml"><name>libgnutls26</name><summary>the GNU TLS library - runtime library</summary><description>gnutls is a portable library which implements the Transport Layer
-Security (TLS) 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
-
-Currently gnutls implements:
- - the TLS 1.0 and SSL 3.0 protocols, without any US-export
-   controlled algorithms
- - X509 Public Key Infrastructure (with several limitations).
- - SRP for TLS authentication.
- - TLS Extension mechanism
-
-This package contains the runtime libraries.</description></interface><interface uri="http://0install.net/2007/3rd-party/libcomerr2.xml"><name>libcomerr2</name><summary>common error description library</summary><description>libcomerr is an attempt to present a common error-handling mechanism to
-manipulate the most common form of error code in a fashion that does not
-have the problems identified with mechanisms commonly in use.</description></interface><interface uri="http://0install.net/2007/3rd-party/libenchant1.xml"><name>libenchant1</name><summary>a wrapper library for various spell checker engines</summary><description>
-Enchant is a generic spell checking library which uses existing spell checker
-engines such as ispell, aspell and myspell as its backends.
-
-Enchant steps in to provide uniformity and conformity on top of these libraries,
-and implement certain features that may be lacking in any individual provider
-library.</description><homepage>http://www.abisource.com/projects/enchant/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/Subversion.xml"><name>Subversion</name><summary>advanced version control system</summary><description>
-Subversion, also known as svn, is a version control system much like the
-Concurrent Versions System (CVS). Version control systems allow many individuals
-(who may be distributed geographically) to collaborate on a set of files
-(typically source code). Subversion has all the major features of CVS, plus
-certain new features that CVS users often wish they had.
-
-This package includes the Subversion client (svn), tools to create a Subversion
-repository (svnadmin) and to make a repository available over a network
-(svnserve).</description><homepage>http://subversion.tigris.org</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/3rd-party/libgucharmap4.xml"><name>libgucharmap4</name><summary>unicode browser widget library</summary><description>
-The libgucharmap library contains a Unicode browser widget; it is most
-prominently used by the &quot;gucharmap&quot; program.
-
-This package contains the shared library.</description><homepage>http://gucharmap.sourceforge.net/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libneon27-gnutls.xml"><name>libneon27-gnutls</name><summary>An HTTP and WebDAV client library (GnuTLS enabled)</summary><description>neon is an HTTP and WebDAV client library, with a C language API.
+Run this on all your feeds from time-to-time to make sure they still work.</description><homepage>http://0install.net/feedlint.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/3rd-party/libsqlite3-0.xml"><name>libsqlite3-0</name><summary>SQLite 3 shared library</summary><description>SQLite is a C library that implements an SQL database engine.
+Programs that link with the SQLite library can have SQL database
+access without running a separate RDBMS process.</description></interface><interface uri="http://0install.net/2007/3rd-party/libneon27-gnutls.xml"><name>libneon27-gnutls</name><summary>An HTTP and WebDAV client library (GnuTLS enabled)</summary><description>neon is an HTTP and WebDAV client library, with a C language API.
 
 WARNING: THE NEON API IS NOT YET STABLE.
 
@@ -310,88 +163,9 @@ Current features:
   * WebDAV metadata support: set and remove properties, query any set ofi
     properties (PROPPATCH/PROPFIND).
   * autoconf macros supplied for easily embedding neon directly inside an
-    application source tree.</description></interface><interface uri="http://0install.net/2007/3rd-party/UserModeLinux.xml"><name>UserModeLinux</name><summary>run Linux inside itself</summary><description>
-User-Mode Linux is a safe, secure way of running Linux versions and Linux
-processes. Run buggy software, experiment with new Linux kernels or
-distributions, and poke around in the internals of Linux, all without risking
-your main Linux setup.
-
-User-Mode Linux gives you a virtual machine that may have more hardware and
-software virtual resources than your actual, physical computer. Disk storage for
-the virtual machine is entirely contained inside a single file on your physical
-machine. You can assign your virtual machine only the hardware access you want
-it to have. With properly limited access, nothing you do on the virtual machine
-can change or damage your real computer, or its software.</description><category>System</category><homepage>http://user-mode-linux.sourceforge.net</homepage><icon href="http://0install.net/feed_icons/UserModeLinux.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libsvn1.xml"><name>libsvn1</name><summary>shared libraries used by Subversion</summary><description>
-This package includes shared libraries to manipulate Subversion (svn)
-repositories and working copies.</description></interface><interface uri="http://0install.net/2007/3rd-party/Mutt.xml"><name>Mutt</name><summary>text-based mail client</summary><description>
-Mutt is a sophisticated text-based Mail User Agent.</description><homepage>http://www.mutt.org/</homepage><category>Network</category><icon href="http://0install.net/feed_icons/Mutt.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libsqlite3-0.xml"><name>libsqlite3-0</name><summary>SQLite 3 shared library</summary><description>SQLite is a C library that implements an SQL database engine.
-Programs that link with the SQLite library can have SQL database
-access without running a separate RDBMS process.</description></interface><interface uri="http://0install.net/2007/3rd-party/Tgif.xml"><name>Tgif</name><summary>interactive 2-D drawing tool</summary><description>
+    application source tree.</description></interface><interface uri="http://0install.net/2007/3rd-party/Tgif.xml"><name>Tgif</name><summary>interactive 2-D drawing tool</summary><description>
 Tgif is an interactive drawing tool that allows the user to draw and manipulate
-objects in the X Window System.</description><homepage>http://bourbon.usc.edu/tgif/</homepage><icon href="http://0install.net/feed_icons/Tgif.png" type="image/png"/><category>Graphics</category></interface><interface uri="http://0install.net/2007/3rd-party/libkeyutils1.xml"><name>libkeyutils1</name><summary>Linux Key Management Utilities (library)</summary><description>Keyutils is a set of utilities for managing the key retention facility in the
-kernel, which can be used by filesystems, block devices and more to gain and
-retain the authorization and encryption keys required to perform secure
-operations.
-
-This package provides a wrapper library for the key management facility system
-calls.</description></interface><interface uri="http://0install.net/2007/3rd-party/libserf-0-0.xml"><name>libserf-0-0</name><summary>high-performance asynchronous HTTP client library</summary><description>serf library is a C-based HTTP client library built upon the Apache
-Portable Runtime (APR) library. It multiplexes connections, running the
-read/write communication asynchronously. Memory copies and
-transformations are kept to a minimum to provide high performance
-operation.</description></interface><interface uri="http://0install.net/2007/3rd-party/libuuid1.xml"><name>libuuid1</name><summary>universally unique id library</summary><description>libuuid generates and parses 128-bit universally unique id's (UUID's).
-See RFC 4122 for more information.</description></interface><interface uri="http://0install.net/2007/3rd-party/libpq4.xml"><name>libpq4</name><summary>PostgreSQL C client library</summary><description>
-libpq is a C library that enables user programs to communicate with the
-PostgreSQL database server. The server can be on another machine and accessed
-through TCP/IP. This version of libpq is compatible with servers from PostgreSQL
-7.3 to 8.1.
-
-This package contains the run-time library, needed by packages using libpq.
-
-PostgreSQL is an object-relational SQL database management system.</description></interface><interface uri="http://0install.net/2007/3rd-party/libmysqlclient15off.xml"><name>libmysqlclient15off</name><summary>MySQL database client library</summary><description>MySQL is a fast, stable and true multi-user, multi-threaded SQL database
-server. SQL (Structured Query Language) is the most popular database query
-language in the world. The main goals of MySQL are speed, robustness and
-ease of use.
-
-This package includes the client library.</description></interface><interface uri="http://0install.net/2007/3rd-party/libdb4.4.xml"><name>libdb4.4</name><summary>Berkeley v4.4 Database Libraries</summary><description>
-This is the runtime package for programs that use the v4.4 Berkeley database
-library.</description></interface><interface uri="http://0install.net/2007/3rd-party/Django.xml"><name>Django</name><summary>the Web framework for perfectionists with deadlines</summary><description>
-Django is a high-level Python Web framework that encourages rapid development
-and clean, pragmatic design.
-
-Developed and used over two years by a fast-moving online-news operation, Django
-was designed to handle two challenges: the intensive deadlines of a newsroom and
-the stringent requirements of the experienced Web developers who wrote it. It
-lets you build high-performing, elegant Web applications quickly.</description><homepage>http://www.djangoproject.com/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libneon26.xml"><name>libneon26</name><summary>an HTTP and WebDAV client library</summary><description>
-Neon is an HTTP and WebDAV client library, with a C language API.
-
-WARNING: THE NEON API IS NOT YET STABLE.
-
-Provides lower-level interfaces to directly implement new HTTP methods, and
-higher-level interfaces so that you don't have to worry about the lower-level
-stuff.</description></interface><interface uri="http://0install.net/2007/3rd-party/libkrb53.xml"><name>libkrb53</name><summary>MIT Kerberos runtime libraries</summary><description>
-Kerberos is a system for authenticating users and services on a network.
-Kerberos is a trusted third-party service. That means that there is a third
-party (the kerberos server) that is trusted by all the entities on the network
-(users and services, usually called &quot;principals&quot;).
-
-This is the MIT reference implementation of Kerberos5.
-
-This package contains the runtime libraries used by applications and Kerberos
-clients.</description></interface><interface uri="http://0install.net/2007/3rd-party/LyX.xml"><name>LyX</name><summary>WYSIWYM(ean) document processor</summary><description>
-LyX is an advanced open source document processor running on many Unix and some
-non-Unix platforms. It is called a &quot;document processor&quot;, because unlike standard
-word processors, LyX encourages an approach to writing based on the structure of
-your documents, not their appearance. LyX lets you concentrate on writing,
-leaving details of visual layout to the software.
-
-LyX automates formatting according to predefined rule sets, yielding consistency
-throughout even the most complex documents. LyX produces high quality,
-professional output -- using LaTeX, an open source, industrial strength
-typesetting engine, in the background.
-
-With LyX, short notes or letters are a snap. LyX really shines, though, when
-composing complex documents like technical documentation, doctoral theses and
-conference proceedings.</description><homepage>http://www.lyx.org</homepage><icon href="http://0install.net/feed_icons/LyX.png" type="image/png"/><category>Office</category></interface><interface uri="http://0install.net/2007/3rd-party/libgnutls13.xml"><name>libgnutls13</name><summary>the GNU TLS library</summary><description>
+objects in the X Window System.</description><homepage>http://bourbon.usc.edu/tgif/</homepage><icon href="http://0install.net/feed_icons/Tgif.png" type="image/png"/><category>Graphics</category></interface><interface uri="http://0install.net/2007/3rd-party/libgnutls13.xml"><name>libgnutls13</name><summary>the GNU TLS library</summary><description>
 gnutls is a portable library which implements the Transport Layer Security (TLS)
 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
 
@@ -405,25 +179,131 @@ Currently gnutls implements:
 
 - TLS Extension mechanism
 
-This package contains the runtime libraries.</description><homepage>http://www.gnu.org/software/gnutls/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libqt-mt3.xml"><name>libqt-mt3</name><summary>Qt GUI Library (threaded runtime version)</summary><description>
-This is the Trolltech Qt library, version 3. It's necessary for applications
-that link against the libqt-mt.so.3, e.g. all KDE3 applications.</description><homepage>http://www.trolltech.com</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libldap-2.4-2.xml"><name>libldap-2.4-2</name><summary>OpenLDAP libraries</summary><description>These are the run-time libraries for the OpenLDAP (Lightweight Directory
-Access Protocol) servers and clients.</description></interface><interface uri="http://0install.net/2007/3rd-party/libxml2.xml"><name>libxml2</name><summary>GNOME XML library</summary><description>XML is a metalanguage to let you design your own markup language.
-A regular markup language defines a way to describe information in
-a certain class of documents (eg HTML). XML lets you define your
-own customized markup languages for many classes of document. It
-can do this because it's written in SGML, the international standard
-metalanguage for markup languages.
+This package contains the runtime libraries.</description><homepage>http://www.gnu.org/software/gnutls/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libgpg-error0.xml"><name>libgpg-error0</name><summary>library for common error values and messages in GnuPG components</summary><description>Library that defines common error values for all GnuPG
+components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+pinentry, SmartCard Daemon and possibly more in the future.</description></interface><interface uri="http://0install.net/2007/3rd-party/libserf-0-0.xml"><name>libserf-0-0</name><summary>high-performance asynchronous HTTP client library</summary><description>serf library is a C-based HTTP client library built upon the Apache
+Portable Runtime (APR) library. It multiplexes connections, running the
+read/write communication asynchronously. Memory copies and
+transformations are kept to a minimum to provide high performance
+operation.</description></interface><interface uri="http://0install.net/2007/3rd-party/libkeyutils1.xml"><name>libkeyutils1</name><summary>Linux Key Management Utilities (library)</summary><description>Keyutils is a set of utilities for managing the key retention facility in the
+kernel, which can be used by filesystems, block devices and more to gain and
+retain the authorization and encryption keys required to perform secure
+operations.
 
-This package provides a library providing an extensive API to handle
-such XML data files.
+This package provides a wrapper library for the key management facility system
+calls.</description></interface><interface uri="http://0install.net/2007/3rd-party/libpq4.xml"><name>libpq4</name><summary>PostgreSQL C client library</summary><description>
+libpq is a C library that enables user programs to communicate with the
+PostgreSQL database server. The server can be on another machine and accessed
+through TCP/IP. This version of libpq is compatible with servers from PostgreSQL
+7.3 to 8.1.
 
-This feed is deprecated; use http://repo.roscidus.com/lib/xml2 instead.
-</description></interface><interface uri="http://0install.net/2007/3rd-party/libgcrypt11.xml"><name>libgcrypt11</name><summary>LGPL Crypto library - runtime library</summary><description>libgcrypt contains cryptographic functions. Many important free
+This package contains the run-time library, needed by packages using libpq.
+
+PostgreSQL is an object-relational SQL database management system.</description></interface><interface uri="http://0install.net/2007/3rd-party/libgnutls26.xml"><name>libgnutls26</name><summary>the GNU TLS library - runtime library</summary><description>gnutls is a portable library which implements the Transport Layer
+Security (TLS) 1.0 and Secure Sockets Layer (SSL) 3.0 protocols.
+
+Currently gnutls implements:
+ - the TLS 1.0 and SSL 3.0 protocols, without any US-export
+   controlled algorithms
+ - X509 Public Key Infrastructure (with several limitations).
+ - SRP for TLS authentication.
+ - TLS Extension mechanism
+
+This package contains the runtime libraries.</description></interface><interface uri="http://0install.net/2007/3rd-party/libssl0.9.8.xml"><name>libssl0.9.8</name><summary>SSL shared libraries</summary><description>
+libssl and libcrypto shared libraries needed by programs like apache-ssl,
+telnet-ssl and openssh.
+
+It is part of the OpenSSL implementation of SSL.</description></interface><interface uri="http://0install.net/2007/3rd-party/libuuid1.xml"><name>libuuid1</name><summary>universally unique id library</summary><description>libuuid generates and parses 128-bit universally unique id's (UUID's).
+See RFC 4122 for more information.</description></interface><interface uri="http://0install.net/2007/3rd-party/libaudio2.xml"><name>libaudio2</name><summary>the Network Audio System (NAS)</summary><description>
+The Network Audio System was developed by NCD for playing, recording, and
+manipulating audio data over a network. Like the X Window System, it uses the
+client/server model to separate applications from the specific drivers that
+control audio input and output devices.
+
+This package contains the nas library (libaudio), needed for both remote and
+local output.</description><homepage>http://radscan.com/nas.html</homepage></interface><interface uri="http://0install.net/2007/3rd-party/XdgUtils.xml"><name>XdgUtils</name><summary>cross-desktop integration tools</summary><description>
+Xdg-utils is a set of command line tools that assist applications with a variety
+of desktop integration tasks. About half of the tools focus on tasks commonly
+required during the installation of a desktop application and the other half
+focuses on integration with the desktop environment while the application is
+running. Even if the desktop components of your application are limited to an
+installer, configuration or management tool, Xdg-utils provides you with an easy
+way to enhance the usage experience of your customers by improving the
+integration of these components in the user's environment. Best of all, Xdg-
+utils is provided as open source and free of charge.</description><homepage>http://portland.freedesktop.org</homepage></interface><interface uri="http://0install.net/2007/3rd-party/Django.xml"><name>Django</name><summary>the Web framework for perfectionists with deadlines</summary><description>
+Django is a high-level Python Web framework that encourages rapid development
+and clean, pragmatic design.
+
+Developed and used over two years by a fast-moving online-news operation, Django
+was designed to handle two challenges: the intensive deadlines of a newsroom and
+the stringent requirements of the experienced Web developers who wrote it. It
+lets you build high-performing, elegant Web applications quickly.</description><homepage>http://www.djangoproject.com/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libneon26.xml"><name>libneon26</name><summary>an HTTP and WebDAV client library</summary><description>
+Neon is an HTTP and WebDAV client library, with a C language API.
+
+WARNING: THE NEON API IS NOT YET STABLE.
+
+Provides lower-level interfaces to directly implement new HTTP methods, and
+higher-level interfaces so that you don't have to worry about the lower-level
+stuff.</description></interface><interface uri="http://0install.net/2007/3rd-party/libdb4.4.xml"><name>libdb4.4</name><summary>Berkeley v4.4 Database Libraries</summary><description>
+This is the runtime package for programs that use the v4.4 Berkeley database
+library.</description></interface><interface uri="http://0install.net/2007/3rd-party/libldap-2.4-2.xml"><name>libldap-2.4-2</name><summary>OpenLDAP libraries</summary><description>These are the run-time libraries for the OpenLDAP (Lightweight Directory
+Access Protocol) servers and clients.</description></interface><interface uri="http://0install.net/2007/3rd-party/Subversion.xml"><name>Subversion</name><summary>advanced version control system</summary><description>
+Subversion, also known as svn, is a version control system much like the
+Concurrent Versions System (CVS). Version control systems allow many individuals
+(who may be distributed geographically) to collaborate on a set of files
+(typically source code). Subversion has all the major features of CVS, plus
+certain new features that CVS users often wish they had.
+
+This package includes the Subversion client (svn), tools to create a Subversion
+repository (svnadmin) and to make a repository available over a network
+(svnserve).</description><homepage>http://subversion.tigris.org</homepage><category>Development</category></interface><interface uri="http://0install.net/2007/3rd-party/libgucharmap4.xml"><name>libgucharmap4</name><summary>unicode browser widget library</summary><description>
+The libgucharmap library contains a Unicode browser widget; it is most
+prominently used by the &quot;gucharmap&quot; program.
+
+This package contains the shared library.</description><homepage>http://gucharmap.sourceforge.net/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libcomerr2.xml"><name>libcomerr2</name><summary>common error description library</summary><description>libcomerr is an attempt to present a common error-handling mechanism to
+manipulate the most common form of error code in a fashion that does not
+have the problems identified with mechanisms commonly in use.</description></interface><interface uri="http://0install.net/2007/3rd-party/libgcrypt11.xml"><name>libgcrypt11</name><summary>LGPL Crypto library - runtime library</summary><description>libgcrypt contains cryptographic functions. Many important free
 ciphers, hash algorithms and public key signing algorithms have been
 implemented:
 arcfour, blowfish, cast5, DSA, DSA2, des, 3DES, elgamal, MD5, rijndael,
-RMD160, RSA, SEED, SHA1, SHA-384, SHA-512, twofish, tiger.</description></interface><interface uri="http://0install.net/2007/3rd-party/libsasl2-2.xml"><name>libsasl2-2</name><summary>Cyrus SASL - authentication abstraction library</summary><description>This is the Cyrus SASL API implementation, version 2.1.
+RMD160, RSA, SEED, SHA1, SHA-384, SHA-512, twofish, tiger.</description></interface><interface uri="http://0install.net/2007/3rd-party/libenchant1.xml"><name>libenchant1</name><summary>a wrapper library for various spell checker engines</summary><description>
+Enchant is a generic spell checking library which uses existing spell checker
+engines such as ispell, aspell and myspell as its backends.
+
+Enchant steps in to provide uniformity and conformity on top of these libraries,
+and implement certain features that may be lacking in any individual provider
+library.</description><homepage>http://www.abisource.com/projects/enchant/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libsvn1.xml"><name>libsvn1</name><summary>shared libraries used by Subversion</summary><description>
+This package includes shared libraries to manipulate Subversion (svn)
+repositories and working copies.</description></interface><interface uri="http://0install.net/2007/3rd-party/Mutt.xml"><name>Mutt</name><summary>text-based mail client</summary><description>
+Mutt is a sophisticated text-based Mail User Agent.</description><homepage>http://www.mutt.org/</homepage><category>Network</category><icon href="http://0install.net/feed_icons/Mutt.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libdb4.6.xml"><name>libdb4.6</name><summary>Berkeley v4.6 Database Libraries [runtime]</summary><description>This is the runtime package for programs that use the v4.6 Berkeley
+database library.</description></interface><interface uri="http://0install.net/2007/3rd-party/APBuild.xml"><name>APBuild</name><summary>a suite of portability tools for developers</summary><description>
+In the process of writing autopackage, we've also produced several standalone
+tools, the apbuild programs, that are designed to help Linux developers write
+better software that runs on a wider variety of distributions. They are
+independent of autopackage itself: you can use them even if you don't provide
+your software using the rest of our software.</description><homepage>http://autopackage.org/aptools.html</homepage><category>Development</category><icon href="http://autopackage.org/gnome-devel.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libldap2.xml"><name>libldap2</name><summary>run-time libraries for the OpenLDAP servers and clients</summary><description>
+These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
+Protocol) servers and clients.</description><homepage>http://www.openldap.org/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/UserModeLinux.xml"><name>UserModeLinux</name><summary>run Linux inside itself</summary><description>
+User-Mode Linux is a safe, secure way of running Linux versions and Linux
+processes. Run buggy software, experiment with new Linux kernels or
+distributions, and poke around in the internals of Linux, all without risking
+your main Linux setup.
+
+User-Mode Linux gives you a virtual machine that may have more hardware and
+software virtual resources than your actual, physical computer. Disk storage for
+the virtual machine is entirely contained inside a single file on your physical
+machine. You can assign your virtual machine only the hardware access you want
+it to have. With properly limited access, nothing you do on the virtual machine
+can change or damage your real computer, or its software.</description><category>System</category><homepage>http://user-mode-linux.sourceforge.net</homepage><icon href="http://0install.net/feed_icons/UserModeLinux.png" type="image/png"/></interface><interface uri="http://0install.net/2007/3rd-party/libkrb53.xml"><name>libkrb53</name><summary>MIT Kerberos runtime libraries</summary><description>
+Kerberos is a system for authenticating users and services on a network.
+Kerberos is a trusted third-party service. That means that there is a third
+party (the kerberos server) that is trusted by all the entities on the network
+(users and services, usually called &quot;principals&quot;).
+
+This is the MIT reference implementation of Kerberos5.
+
+This package contains the runtime libraries used by applications and Kerberos
+clients.</description></interface><interface uri="http://0install.net/2007/3rd-party/libsasl2-2.xml"><name>libsasl2-2</name><summary>Cyrus SASL - authentication abstraction library</summary><description>This is the Cyrus SASL API implementation, version 2.1.
 
 SASL is the Simple Authentication and Security Layer, a method for
 adding authentication support to connection-based protocols. To use
@@ -436,7 +316,40 @@ connection. See RFC 2222 for more information.
 Any of: ANONYMOUS, CRAM-MD5, DIGEST-MD5, GSSAPI (MIT or Heimdal
 Kerberos 5), NTLM, OTP, PLAIN, or LOGIN can be used. If you intend to
 use this package on a server that provides SASL authentication, then
-you must install some of the libsasl2-modules* packages.</description></interface><interface uri="http://0install.net/2007/3rd-party/Blender.xml"><name>Blender</name><summary>a versatile 3D animation creation suite</summary><description>
+you must install some of the libsasl2-modules* packages.</description></interface><interface uri="http://0install.net/2007/3rd-party/LyX.xml"><name>LyX</name><summary>WYSIWYM(ean) document processor</summary><description>
+LyX is an advanced open source document processor running on many Unix and some
+non-Unix platforms. It is called a &quot;document processor&quot;, because unlike standard
+word processors, LyX encourages an approach to writing based on the structure of
+your documents, not their appearance. LyX lets you concentrate on writing,
+leaving details of visual layout to the software.
+
+LyX automates formatting according to predefined rule sets, yielding consistency
+throughout even the most complex documents. LyX produces high quality,
+professional output -- using LaTeX, an open source, industrial strength
+typesetting engine, in the background.
+
+With LyX, short notes or letters are a snap. LyX really shines, though, when
+composing complex documents like technical documentation, doctoral theses and
+conference proceedings.</description><homepage>http://www.lyx.org</homepage><icon href="http://0install.net/feed_icons/LyX.png" type="image/png"/><category>Office</category></interface><interface uri="http://0install.net/2007/3rd-party/mysql-common.xml"><name>mysql-common</name><summary>MySQL database common files</summary><description>MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+server. SQL (Structured Query Language) is the most popular database query
+language in the world. The main goals of MySQL are speed, robustness and
+ease of use.
+
+This package includes files needed by all versions of the client library
+(e.g. /etc/mysql/my.cnf).</description></interface><interface uri="http://0install.net/2007/3rd-party/libqt-mt3.xml"><name>libqt-mt3</name><summary>Qt GUI Library (threaded runtime version)</summary><description>
+This is the Trolltech Qt library, version 3. It's necessary for applications
+that link against the libqt-mt.so.3, e.g. all KDE3 applications.</description><homepage>http://www.trolltech.com</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libaprutil1.xml"><name>libaprutil1</name><summary>the Apache Portable Runtime Utility Library</summary><description>
+APR is Apache's Portable Runtime Library, designed to be a support library that
+provides a predictable and consistent interface to underlying platform-specific
+implementations.
+
+APR Util is a utilities library implemented on top of apr, providing database
+access, xml parsing, and other useful functionality.</description></interface><interface uri="http://0install.net/2007/3rd-party/libmysqlclient15off.xml"><name>libmysqlclient15off</name><summary>MySQL database client library</summary><description>MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+server. SQL (Structured Query Language) is the most popular database query
+language in the world. The main goals of MySQL are speed, robustness and
+ease of use.
+
+This package includes the client library.</description></interface><interface uri="http://0install.net/2007/3rd-party/Blender.xml"><name>Blender</name><summary>a versatile 3D animation creation suite</summary><description>
 Blender is a fully integrated 3D animation suite for use in animation, still
 graphics, scientific and engineering visualization, and game content creation.
 
@@ -445,27 +358,101 @@ uv mapping, rigging and constraints, weight painting, particle systems,
 simulation (fluids, physics, and soft body dynamics and an external crowd
 simulator), rendering, node based compositing, and non linear video editing, as
 well as an integrated game engine for real-time interactive 3D, and game
-creation and playback with cross-platform compatibility.</description><homepage>http://www.blender.org</homepage><icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/><category>Video</category></interface><interface uri="http://0install.net/2007/3rd-party/libldap2.xml"><name>libldap2</name><summary>run-time libraries for the OpenLDAP servers and clients</summary><description>
-These are the run-time libraries for the OpenLDAP (Lightweight Directory Access
-Protocol) servers and clients.</description><homepage>http://www.openldap.org/</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libexpat1.xml"><name>libexpat1</name><summary>XML parsing C library</summary><description>
+creation and playback with cross-platform compatibility.</description><homepage>http://www.blender.org</homepage><icon href="http://0install.net/feed_icons/Blender.png" type="image/png"/><category>Video</category></interface><interface uri="http://0install.net/2007/3rd-party/libexpat1.xml"><name>libexpat1</name><summary>XML parsing C library</summary><description>
 This package contains the runtime, shared library of expat, the C library for
-parsing XML.</description><homepage>http://expat.sourceforge.net</homepage></interface><interface uri="http://0install.net/2007/3rd-party/mysql-common.xml"><name>mysql-common</name><summary>MySQL database common files</summary><description>MySQL is a fast, stable and true multi-user, multi-threaded SQL database
-server. SQL (Structured Query Language) is the most popular database query
-language in the world. The main goals of MySQL are speed, robustness and
-ease of use.
+parsing XML.</description><homepage>http://expat.sourceforge.net</homepage></interface><interface uri="http://0install.net/2007/3rd-party/libxml2.xml"><name>libxml2</name><summary>GNOME XML library</summary><description>XML is a metalanguage to let you design your own markup language.
+A regular markup language defines a way to describe information in
+a certain class of documents (eg HTML). XML lets you define your
+own customized markup languages for many classes of document. It
+can do this because it's written in SGML, the international standard
+metalanguage for markup languages.
 
-This package includes files needed by all versions of the client library
-(e.g. /etc/mysql/my.cnf).</description></interface><interface uri="http://0install.net/2007/3rd-party/libgpg-error0.xml"><name>libgpg-error0</name><summary>library for common error values and messages in GnuPG components</summary><description>Library that defines common error values for all GnuPG
-components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
-pinentry, SmartCard Daemon and possibly more in the future.</description></interface><interface uri="http://0install.net/2007/3rd-party/libapr1.xml"><name>libapr1</name><summary>the Apache Portable Runtime Library</summary><description>
+This package provides a library providing an extensive API to handle
+such XML data files.
+
+This feed is deprecated; use http://repo.roscidus.com/lib/xml2 instead.
+</description></interface><interface uri="http://0install.net/2007/3rd-party/libpq5.xml"><name>libpq5</name><summary>PostgreSQL C client library</summary><description>libpq is a C library that enables user programs to communicate with
+the PostgreSQL database server. The server can be on another machine
+and accessed through TCP/IP. This version of libpq is compatible
+with servers from PostgreSQL 8.2 or later.
+
+This package contains the run-time library, needed by packages using
+libpq.
+
+PostgreSQL is an object-relational SQL database management system.</description></interface><interface uri="http://0install.net/2007/3rd-party/libapr1.xml"><name>libapr1</name><summary>the Apache Portable Runtime Library</summary><description>
 APR is Apache's Portable Runtime Library, designed to be a support library that
 provides a predictable and consistent interface to underlying platform-specific
-implementations.</description></interface><interface uri="http://0install.net/2012/interfaces/0install-runenv-cli.xml"><name>0install-runenv-cli</name><summary>0install .NET helper for Windows</summary><description>
-    When 0install needs to add a new program to %PATH% on Windows, it uses this
-    package to creates a .NET launcher application.
-</description><homepage>http://0install.net/</homepage><category>System</category></interface><interface uri="http://0install.net/2006/interfaces/GTK-dev"><name>GTK-dev</name><summary>headers for compiling GTK applications</summary><description>
-These are the GTK header files. They are required when compiling applications
-that use the GTK+ library.</description><icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/></interface><interface uri="http://0install.net/2006/interfaces/0compile.xml"><name>0compile</name><summary>create a binary release from source code</summary><description>
+implementations.</description></interface><interface uri="http://0install.net/2006/autopackage/armagetronad.xml"><name>armagetronad</name><summary>a Tron clone in 3D</summary><description>
+&quot;A Tron clone in 3D&quot;.
+
+This has been the tagline of Armagetron, since, well, a very long time, and is
+probably the shortest and most accurate description possible. Tron was an arcade
+game based on the movie of the same name, release by Disney in 1982. The
+original game consisted of 4 sub-games, the only one of concern is the 'Light
+Cycles' one, in which the player uses a left/right joystick to control a 'Light
+Cycle' which leaves a wall behind it wherever the cycle it goes, turning only at
+90 degree angles. The player must then get the AI to crash into their wall while
+avoiding hitting the AI's own wall themselves. Those were the humble beginnings
+of Armagetron Advanced's game play, which has now blossomed into 16 player
+mayhem, with highly advanced AI, network game play, and of course all in a 3D
+environment.</description><homepage>http://www.armagetronad.net/</homepage><icon href="http://0install.net/feed_icons/armagetronad.png" type="image/png"/><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/OpenEuclide.xml"><name>OpenEuclide</name><summary>2D geometry software</summary><description>
+OpenEuclide is a 2D geometry software: figures are defined dynamically by
+describing formal geometrical constraints. This project is a basic tool for
+educational or modeling purpose. It is distributed under the GNU GPL licence,
+free and multi-platform (up to now, GNU and windows).</description><homepage>http://coulon.publi.free.fr/openeuclide</homepage><category>Education</category></interface><interface uri="http://0install.net/2006/autopackage/Abiword.xml"><name>abiword</name><summary>AbiWord Word Processor</summary><description>
+AbiWord is a lightweight word processing application.</description><category>Office</category><icon href="http://0install.net/feed_icons/abiword.png" type="image/png"/></interface><interface uri="http://0install.net/2006/autopackage/SCOURGE.xml"><name>S.C.O.U.R.G.E.</name><summary>rogue-like game in the tradition of NetHack and Moria</summary><description>
+S.C.O.U.R.G.E. is a rogue-like game in the fine tradition of NetHack and Moria.
+It sports a graphical front-end, similar to glHack or the Falcon's eye. I tried
+to design the 3D UI as a best of both worlds from old to new: It lets you rotate
+the view, zoom in/out, view special effects, etc. On the other hand I've always
+liked the old-school isometric games like Exult or Woodward</description><homepage>http://scourge.sourceforge.net/</homepage><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/gtkdc.xml"><name>gtkdc</name><summary>client for the Direct Connect network</summary><description>
+A client for the Direct Connect peer-to-peer network inspired by DC++.</description><homepage>http://www.gtkdc.org/</homepage><category>Network</category></interface><interface uri="http://0install.net/2006/autopackage/Lincity.xml"><name>Lincity</name><summary>city simulation game</summary><description>
+Lincity is a city simulation game. You are required to build and maintain a
+city. You must feed, house, provide jobs and goods for your residents. You can
+build a sustainable economy with the help of renewable energy and recycling, or
+you can go for broke and build rockets to escape from a pollution ridden and
+resource starved planet, it's up to you.</description><homepage>http://lincity.sourceforge.net/</homepage><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/sear.xml"><name>sear</name><summary>Sear - a client for Worldforge</summary><description>
+Sear is a client for MMORPGs using the Worldforge system.</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/Solfege.xml"><name>solfege</name><summary>smarten your ears</summary><description>
+Solfege is free music education software. Use it to train your rhythm, interval,
+scale and chord skills. Solfege - Smarten your ears!</description><homepage>http://www.solfege.org</homepage><category>Audio</category></interface><interface uri="http://0install.net/2006/autopackage/Stellarium.xml"><name>Stellarium</name><summary>a beautiful night sky simulator</summary><description>
+Stellarium is a free open source planetarium for your computer. It shows a
+realistic sky in 3D, just like what you see with the naked eye, binoculars or a
+telescope.
+
+It is being used in planetarium projectors. Just set your coordinates and go.</description><homepage>http://www.stellarium.org/</homepage><icon href="http://0install.net/feed_icons/Stellarium.png" type="image/png"/><category>Education</category></interface><interface uri="http://0install.net/2006/autopackage/vdrift.xml"><name>vdrift</name><summary>VDrift</summary><description>
+VDrift is a realistic racing simulation with drifting in mind</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/Supertux.xml"><name>Supertux</name><summary>2D jump'n run sidescroller game</summary><description>
+SuperTux is a classic 2D jump'n run sidescroller game in a style similar to the
+original SuperMario games. The Milestone1 release of SuperTux features 9
+enemies, 26 playable levels, software and OpenGL rendering modes, configurable
+joystick and keyboard input, new music and completly redone graphics. Together
+with a little story, we hope to provide a good gaming experince with this first
+Milestone release.</description><homepage>http://supertux.berlios.de/</homepage><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/opencity.xml"><name>opencity</name><summary>OpenCity Simulation Game</summary><description>
+  OpenCity is a full 3D city simulator game project. It is written in standard
+  C++ with OpenGL and SDL from scratch. It is not intended to be a clone of any
+  famous city simulator from Max*s. So, if you are looking to download a free
+  SimCity 4 like, please forget OpenCity. I work on it at my spare time, I
+  really meant it &quot;my spare time&quot;!
+  </description><homepage>http://www.opencity.info/</homepage><icon href="http://0install.net/feed_icons/opencity.png" type="image/png"/></interface><interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml"><name>GLibmm-dev</name><summary>headers for compiling C++ GLib applications</summary><description>
+These are the glibmm header files. They are required when compiling C++
+applications that use the GLib library.</description></interface><interface uri="http://0install.net/2006/interfaces/GLib-dev"><name>GLib-dev</name><summary>headers for compiling GLib applications</summary><description>
+These are the GLib header files. They are required when compiling applications
+that use the GLib library.</description></interface><interface uri="http://0install.net/2006/interfaces/GTKmm-dev.xml"><name>GTKmm-dev</name><summary>headers for compiling C++ GTK applications</summary><description>
+These are the glibmm header files. They are required when compiling C++
+applications that use the GTK, ATK or Pango libraries..</description></interface><interface uri="http://0install.net/2006/interfaces/GTK-2.4.xml"><name>GTK-2.4</name><summary>set up a GTK 2.4 build environment</summary><description>
+This program runs a command in an environment with PKG_CONFIG_PATH set to
+include the location of the GTK 2.4 and related library headers. By default, it
+runs /bin/sh to give you a shell.
+
+Typical usage is to run this and then configure and build your program from the
+new shell. The resulting binary should work on all systems with GTK 2.4 and
+later.
+
+Note: if you build your program using Zero Install then it's easier to just add
+the GTK dependencies to the source interface file.</description><homepage>http://0install.net</homepage><icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
+The Zero Install GUI displays a window showing which versions of various
+components will be used when running a program, and allows you to alter various
+policy settings to affect the selection process. You can use this to mark
+particular versions of libraries as preferred, bugggy, etc.</description><homepage>http://0install.net/injector.html</homepage></interface><interface uri="http://0install.net/2006/interfaces/0compile.xml"><name>0compile</name><summary>create a binary release from source code</summary><description>
 0compile creates a binary from source code, either for your own use or ready for
 publishing on the web through Zero Install. It can use Zero Install to download
 any build dependencies (compilers, header files, build tools, etc).
@@ -476,28 +463,14 @@ the program in some way.
 If plash is installed, it is used to sandbox the build so that it can't
 accidentally modifiy any files outside of the build directory.
 
-For a full tutorial, see 0compile's homepage.</description><homepage>http://0install.net/0compile.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2006/interfaces/ATK-dev"><name>ATK-dev</name><summary>headers for compiling ATK applications</summary><description>
-These are the ATK header files. They are required when compiling applications
-that use the ATK library. ATK is an Accessibility Toolkit.</description></interface><interface uri="http://0install.net/2006/interfaces/GTKmm-dev.xml"><name>GTKmm-dev</name><summary>headers for compiling C++ GTK applications</summary><description>
-These are the glibmm header files. They are required when compiling C++
-applications that use the GTK, ATK or Pango libraries..</description></interface><interface uri="http://0install.net/2006/interfaces/GLib-dev"><name>GLib-dev</name><summary>headers for compiling GLib applications</summary><description>
-These are the GLib header files. They are required when compiling applications
-that use the GLib library.</description></interface><interface uri="http://0install.net/2006/interfaces/GLibmm-dev.xml"><name>GLibmm-dev</name><summary>headers for compiling C++ GLib applications</summary><description>
-These are the glibmm header files. They are required when compiling C++
-applications that use the GLib library.</description></interface><interface uri="http://0install.net/2006/interfaces/GTK-2.4.xml"><name>GTK-2.4</name><summary>set up a GTK 2.4 build environment</summary><description>
-This program runs a command in an environment with PKG_CONFIG_PATH set to
-include the location of the GTK 2.4 and related library headers. By default, it
-runs /bin/sh to give you a shell.
-
-Typical usage is to run this and then configure and build your program from the
-new shell. The resulting binary should work on all systems with GTK 2.4 and
-later.
-
-Note: if you build your program using Zero Install then it's easier to just add
-the GTK dependencies to the source interface file.</description><homepage>http://0install.net</homepage><icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2006/interfaces/Pango-dev"><name>Pango-dev</name><summary>headers for compiling Pango applications</summary><description>
+For a full tutorial, see 0compile's homepage.</description><homepage>http://0install.net/0compile.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2006/interfaces/GTK-dev"><name>GTK-dev</name><summary>headers for compiling GTK applications</summary><description>
+These are the GTK header files. They are required when compiling applications
+that use the GTK+ library.</description><icon href="http://0install.net/2006/icons/gtk-logo.png" type="image/png"/></interface><interface uri="http://0install.net/2006/interfaces/Pango-dev"><name>Pango-dev</name><summary>headers for compiling Pango applications</summary><description>
 These are the Pango header files. They are required when compiling applications
 that use the Pango library. Pango is a library for laying out and rendering of
-text, with an emphasis on internationalization.</description></interface><interface uri="http://0install.net/2006/interfaces/0publish"><name>0publish</name><summary>utility to make creating injector interfaces easier</summary><description>
+text, with an emphasis on internationalization.</description></interface><interface uri="http://0install.net/2006/interfaces/ATK-dev"><name>ATK-dev</name><summary>headers for compiling ATK applications</summary><description>
+These are the ATK header files. They are required when compiling applications
+that use the ATK library. ATK is an Accessibility Toolkit.</description></interface><interface uri="http://0install.net/2006/interfaces/0publish"><name>0publish</name><summary>utility to make creating injector interfaces easier</summary><description>
 0publish makes creating and modifying injector interface files easier. It can
 create a new commented template for you or edit an existing one.
 
@@ -507,11 +480,7 @@ loading an interface and creates a new one when writing it back out. It will
 also validate the new version before saving it.
 
 A tutorial on 0publish can be found at http://0install.net/injector-
-packagers.html.</description><homepage>http://0install.net/0publish.html</homepage></interface><interface uri="http://0install.net/2006/interfaces/ZeroInstall-GUI.xml"><name>ZeroInstall-GUI</name><summary>graphical interface for the Zero Install injector</summary><description>
-The Zero Install GUI displays a window showing which versions of various
-components will be used when running a program, and allows you to alter various
-policy settings to affect the selection process. You can use this to mark
-particular versions of libraries as preferred, bugggy, etc.</description><homepage>http://0install.net/injector.html</homepage></interface><interface uri="http://0install.net/2006/3rd-party/Inkscape.xml"><name>Inkscape</name><summary>an SVG-based vector drawing application</summary><description>
+packagers.html.</description><homepage>http://0install.net/0publish.html</homepage></interface><interface uri="http://0install.net/2006/3rd-party/Inkscape.xml"><name>Inkscape</name><summary>an SVG-based vector drawing application</summary><description>
 Inkscape is an Open Source vector graphics editor, with capabilities similar to
 Illustrator, Freehand, CorelDraw, or Xara X using the W3C standard Scalable
 Vector Graphics (SVG) file format. Supported SVG features include shapes, paths,
@@ -551,7 +520,14 @@ D is statically typed, and compiles direct to native code. It's multiparadigm:
 supporting imperative, object oriented, and template metaprogramming styles.
 It's a member of the C syntax family, and its look and feel is very close to
 C++'s. For a quick feature comparison, see this comparison of D with C, C++, C#
-and Java.</description><homepage>http://dgcc.sourceforge.net/</homepage><category>Development</category></interface><interface uri="http://0install.net/2006/3rd-party/XaraXtreme.xml"><name>Xara Xtreme</name><summary>cross-platform vector artwork and photocomposition package</summary><description>
+and Java.</description><homepage>http://dgcc.sourceforge.net/</homepage><category>Development</category></interface><interface uri="http://0install.net/2006/3rd-party/Freetype2.xml"><name>Freetype2</name><summary>free, portable library for digital typography</summary><description>
+FreeType 2 is a high-quality and portable font engine that is capable of
+supporting several font formats (be they bitmapped or scalable) through a simple
+and uniform interface. Its design is modular and allows independent &quot;font
+driver&quot; modules to be added, even at runtime, to support additional formats. It
+also provides a high-quality anti-aliasing renderer, an innovative auto-hinting
+engine, and support for the following font formats: TrueType Type1, CID-Type 1,
+Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</description><homepage>http://www.freetype.org/</homepage></interface><interface uri="http://0install.net/2006/3rd-party/XaraXtreme.xml"><name>Xara Xtreme</name><summary>cross-platform vector artwork and photocomposition package</summary><description>
 XaraLX is a vector graphics and photocomposition program. It is primarily a
 vector graphics program, but it also handles photos and drawings. It has an
 easy-to-use and easy-to-learn approach.</description><homepage>http://www.xaralx.org/</homepage><icon href="http://0install.net/feed_icons/XaraXtreme.png" type="image/png"/><category>Graphics</category></interface><interface uri="http://0install.net/2006/3rd-party/SCons.xml"><name>SCons</name><summary>a software construction tool</summary><description>
@@ -564,70 +540,94 @@ It can scan files to detect dependencies automatically and maintain a global
 view of all dependencies in a build tree, and uses MD5 signatures to detect
 changed file contents reliably. Timestamps can be used if you prefer. SCons also
 supports parallel builds and is easily extensible through user-defined builder
-and scanner objects.</description><homepage>http://www.scons.org/</homepage><icon href="http://0install.net/tests/scons-logo.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2006/3rd-party/Freetype2.xml"><name>Freetype2</name><summary>free, portable library for digital typography</summary><description>
-FreeType 2 is a high-quality and portable font engine that is capable of
-supporting several font formats (be they bitmapped or scalable) through a simple
-and uniform interface. Its design is modular and allows independent &quot;font
-driver&quot; modules to be added, even at runtime, to support additional formats. It
-also provides a high-quality anti-aliasing renderer, an innovative auto-hinting
-engine, and support for the following font formats: TrueType Type1, CID-Type 1,
-Multiple Masters Type 1 OpenType/CFF, pure CFF, and CEF Windows FNT/FON.</description><homepage>http://www.freetype.org/</homepage></interface><interface uri="http://0install.net/2006/autopackage/armagetronad.xml"><name>armagetronad</name><summary>a Tron clone in 3D</summary><description>
-&quot;A Tron clone in 3D&quot;.
+and scanner objects.</description><homepage>http://www.scons.org/</homepage><icon href="http://0install.net/tests/scons-logo.png" type="image/png"/><category>Development</category></interface><interface uri="http://0install.net/2010/interfaces/xzdec.xml"><name>xzdec</name><summary>XZ Decompressor</summary><description>
+xzdec is a liblzma-based decompression-only tool for .xz files.</description><homepage>http://tukaani.org/xz/</homepage><category>Utility</category></interface><interface uri="http://0install.net/2013/interfaces/0install-windows-support.xml"><name>0install-windows-support</name><summary>support for 0install on Windows</summary><homepage>http://0install.net/</homepage></interface><interface uri="http://0install.net/tools/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description><homepage>http://0install.net/0repo.html</homepage></interface><interface uri="http://0install.net/tools/0install.xml"><name>0install</name><summary>decentralised installation system</summary><description>
+Zero Install is a decentralised cross-platform software installation
+system available under the LGPL. It allows software developers to publish
+programs directly from their own web-sites, while supporting features familiar
+from centralised distribution repositories such as shared libraries, automatic
+updates and digital signatures. It is intended to complement, rather than
+replace, the operating system's package management. 0install packages never
+interfere with those provided by the distribution.
+</description><homepage>http://0install.net/</homepage><icon href="http://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="http://0install.net/tools/0export.xml"><name>0export</name><summary>create self-installing bundles for distribution on CD</summary><description>
+It is sometimes useful to bundle a program and its libraries together
+on a CD (for example) so that it can be used on machines without a network
+connection, or where the network is very slow. It is also useful for archival
+purposes, in case the original web-sites supplying required libraries become
+unavailable.
 
-This has been the tagline of Armagetron, since, well, a very long time, and is
-probably the shortest and most accurate description possible. Tron was an arcade
-game based on the movie of the same name, release by Disney in 1982. The
-original game consisted of 4 sub-games, the only one of concern is the 'Light
-Cycles' one, in which the player uses a left/right joystick to control a 'Light
-Cycle' which leaves a wall behind it wherever the cycle it goes, turning only at
-90 degree angles. The player must then get the AI to crash into their wall while
-avoiding hitting the AI's own wall themselves. Those were the humble beginnings
-of Armagetron Advanced's game play, which has now blossomed into 16 player
-mayhem, with highly advanced AI, network game play, and of course all in a 3D
-environment.</description><homepage>http://www.armagetronad.net/</homepage><icon href="http://0install.net/feed_icons/armagetronad.png" type="image/png"/><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/Lincity.xml"><name>Lincity</name><summary>city simulation game</summary><description>
-Lincity is a city simulation game. You are required to build and maintain a
-city. You must feed, house, provide jobs and goods for your residents. You can
-build a sustainable economy with the help of renewable energy and recycling, or
-you can go for broke and build rockets to escape from a pollution ridden and
-resource starved planet, it's up to you.</description><homepage>http://lincity.sourceforge.net/</homepage><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/vdrift.xml"><name>vdrift</name><summary>VDrift</summary><description>
-VDrift is a realistic racing simulation with drifting in mind</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/Supertux.xml"><name>Supertux</name><summary>2D jump'n run sidescroller game</summary><description>
-SuperTux is a classic 2D jump'n run sidescroller game in a style similar to the
-original SuperMario games. The Milestone1 release of SuperTux features 9
-enemies, 26 playable levels, software and OpenGL rendering modes, configurable
-joystick and keyboard input, new music and completly redone graphics. Together
-with a little story, we hope to provide a good gaming experince with this first
-Milestone release.</description><homepage>http://supertux.berlios.de/</homepage><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/gtkdc.xml"><name>gtkdc</name><summary>client for the Direct Connect network</summary><description>
-A client for the Direct Connect peer-to-peer network inspired by DC++.</description><homepage>http://www.gtkdc.org/</homepage><category>Network</category></interface><interface uri="http://0install.net/2006/autopackage/OpenEuclide.xml"><name>OpenEuclide</name><summary>2D geometry software</summary><description>
-OpenEuclide is a 2D geometry software: figures are defined dynamically by
-describing formal geometrical constraints. This project is a basic tool for
-educational or modeling purpose. It is distributed under the GNU GPL licence,
-free and multi-platform (up to now, GNU and windows).</description><homepage>http://coulon.publi.free.fr/openeuclide</homepage><category>Education</category></interface><interface uri="http://0install.net/2006/autopackage/opencity.xml"><name>opencity</name><summary>OpenCity Simulation Game</summary><description>
-  OpenCity is a full 3D city simulator game project. It is written in standard
-  C++ with OpenGL and SDL from scratch. It is not intended to be a clone of any
-  famous city simulator from Max*s. So, if you are looking to download a free
-  SimCity 4 like, please forget OpenCity. I work on it at my spare time, I
-  really meant it &quot;my spare time&quot;!
-  </description><homepage>http://www.opencity.info/</homepage><icon href="http://0install.net/feed_icons/opencity.png" type="image/png"/></interface><interface uri="http://0install.net/2006/autopackage/Stellarium.xml"><name>Stellarium</name><summary>a beautiful night sky simulator</summary><description>
-Stellarium is a free open source planetarium for your computer. It shows a
-realistic sky in 3D, just like what you see with the naked eye, binoculars or a
-telescope.
+0export takes the URI of a program and creates a &quot;setup.sh&quot; file; a self-
+extracting archive containing everything needed to run the program. This file
+can be executed on a machine without a network connection to install or run the
+program.
 
-It is being used in planetarium projectors. Just set your coordinates and go.</description><homepage>http://www.stellarium.org/</homepage><icon href="http://0install.net/feed_icons/Stellarium.png" type="image/png"/><category>Education</category></interface><interface uri="http://0install.net/2006/autopackage/Abiword.xml"><name>abiword</name><summary>AbiWord Word Processor</summary><description>
-AbiWord is a lightweight word processing application.</description><category>Office</category><icon href="http://0install.net/feed_icons/abiword.png" type="image/png"/></interface><interface uri="http://0install.net/2006/autopackage/Solfege.xml"><name>solfege</name><summary>smarten your ears</summary><description>
-Solfege is free music education software. Use it to train your rhythm, interval,
-scale and chord skills. Solfege - Smarten your ears!</description><homepage>http://www.solfege.org</homepage><category>Audio</category></interface><interface uri="http://0install.net/2006/autopackage/sear.xml"><name>sear</name><summary>Sear - a client for Worldforge</summary><description>
-Sear is a client for MMORPGs using the Worldforge system.</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/SCOURGE.xml"><name>S.C.O.U.R.G.E.</name><summary>rogue-like game in the tradition of NetHack and Moria</summary><description>
-S.C.O.U.R.G.E. is a rogue-like game in the fine tradition of NetHack and Moria.
-It sports a graphical front-end, similar to glHack or the Falcon's eye. I tried
-to design the 3D UI as a best of both worlds from old to new: It lets you rotate
-the view, zoom in/out, view special effects, etc. On the other hand I've always
-liked the old-school isometric games like Exult or Woodward</description><homepage>http://scourge.sourceforge.net/</homepage><category>Game</category></interface></c:catalog>
+Unlike the bundles created by the related zero2bundle program, programs
+installed using setup.sh are added to the Zero Install cache and are therefore
+still shared between users, and will get updates over the web where possible.</description><homepage>http://0install.net/0export.html</homepage><category>Development</category></interface><interface uri="http://0install.net/tools/0template.xml"><name>0template</name><summary>utility to make creating feeds easier</summary><description>
+    0template takes a template XML file (e.g. with place-holders for the version),
+    fills in the place-holders, and then fills in everything else it can. For example,
+    it will download the archive, fill in the size, calculate the digests, etc.
+  </description><homepage>http://0install.net/0template.html</homepage></interface><interface uri="http://0install.net/tests/ebox.xml"><name>ebox</name><summary>instance manager for E programs</summary><description>
+ebox installs instances of E programs. Each program runs with access, by
+default, only to its own instance directory. The code is separate; managed by
+Zero Install.</description></interface><interface uri="http://0install.net/tests/ebox-help.xml"><name>ebox-help</name><summary>EBox help viewer</summary><description>
+    This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
+  </description></interface><interface uri="http://0install.net/tests/ebox-edit.xml"><name>edit</name><summary>E text editor</summary><description>
+    This is a very simple proof-of-concept text editor that can be confined using the EBox sandbox system.
+  </description></interface><interface uri="http://0install.net/tests/ebox-chat.xml"><name>ebox-chat</name><summary>sandboxed chat program</summary><description>
+    EBox-Chat is a demonstration chat client. It allows secure two-way text-based communication with another instance of itself.
+    It is designed to be installed using the ebox demonstration sandboxing system.
+  </description></interface><interface uri="http://0install.net/2009/interfaces/pkg2zero.xml"><name>pkg2zero</name><summary>create Zero Install feeds from Debian and RPM packages</summary><description>
+Zero Install is a decentralised installation system. Meta-data about each
+package is published in a &quot;feed&quot; file. The Zero Install client reads these feeds
+files and downloads and runs the programs. The feed files can be created
+manually (e.g. using 0publish or 0publish-gui). However, Debian and RPM packages already
+contain much of the required information. This program extracts the information
+in an existing package and uses it to generate the feed.</description><homepage>http://0install.net/pkg2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2009/interfaces/pkg2zero-testdata.xml"><name>pkg2zero-testdata</name><summary>data for unit-tests</summary><description>
+    These files are needed to run the unit-tests for pkg2zero. As they are
+    quite large, they have their own package.
+  </description><homepage>http://0install.net/pkg2zero.html</homepage><category>Development</category></interface><interface uri="http://0install.net/2009/3rd-party/clutter.xml"><name>clutter</name><summary>creating fast, visually rich and animated graphical user interfaces</summary><description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/python2.5-clutter.xml"><name>python-clutter</name><summary>Python bindings for the clutter library</summary><description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/python2.6-clutter.xml"><name>python-clutter</name><summary>Python bindings for the clutter library</summary><description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2009/3rd-party/clutter-gtk.xml"><name>clutter-gtk</name><summary>embed clutter in GTK</summary><description>
+Clutter is an open source software library for creating fast, visually rich and
+animated graphical user interfaces.
+
+Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
+platforms) for rendering but with an API which hides the underlying GL
+complexity from the developer. The Clutter API is intended to be easy to use,
+efficient and flexible.
+
+This package allows embedding a Clutter stage inside a GTK window.</description><homepage>http://www.clutter-project.org/</homepage></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJSOIZRAAoJEAcTP5bKdNi6yxUH/RS17Lru3FYXILsWLrDSYj3PN4VQsbRJC1gw
-rpDHvuTlPWgWgY8SrYx+lf8qb58nWicp9P0z/Q8N1ONP2S9vwmnDNxvm9ygi1R0XMaMRXVBtdArR
-8gn3xtmkfn5IlphZ/bgQ2HQDsvP2a9m/krGwlV5wpX5VYI9PDueC0CpEo9Z0EEyPh4eyBxkzTWeb
-bBoEwjcBTA7bDwepapdtsQci9V8xtG8CJcdQ3IyLNCuq+L8O0USBES/n3NSdXIdipcRFuPakTcGi
-hQIWDbggpdf9/Vcu1cfOuUfdVqX7LsuCR1aooDk0ffPer7cHvsaFvbWIixyfgXox9W2mCaMu1SiZ
-rB4=
+iQEcBAABCgAGBQJTgb2tAAoJEAcTP5bKdNi6g14H+wVoj4ZlzHr6tT1uiJGM2BjnMBiTMbb4Q/rV
+/Z+2cdNBcCgSBLYHx/YSCwKdLNoVb6UkldTPd0lBs+2H0P54VnQs3zvzrCf0ATQ3g7M8vZeGh7QU
+CxqN3lQbDAuARglSnsafKA1460k2+6cHBFx1iMKy5itHElvui51FtM/9668LZ3HhR+xi5ldLrlyn
+yMqjna7fKmcPzezQ0eOg9NKlxcjZgyUGIOG1PGu2stbpMDt6yu0FbK2/2bs4DpMxcj7B3pIABMEV
+SU0PS8++GFD0lDWpOoX74006LlEwdOzGZ00VrWV9yQmazwMcTmfJuXHRBF0uS0Kx5EooKKZwenQE
+EMk=
 
 -->
