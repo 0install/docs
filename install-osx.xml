@@ -40,7 +40,7 @@ PyGTK (includes glib/gtk+) and their dependencies, for Mac OS X 10.6 and later v
 <p><i>Note:</i> The binary package of 0install requires a 64-bit Intel processor (x86_64) to run.</p>
 
 <quicklinks>
-  <link href='http://downloads.sourceforge.net/project/zero-install/0install/2.6.2/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
+  <link href='http://downloads.sourceforge.net/project/zero-install/0install/2.7/ZeroInstall.pkg' img='tango/package-x-generic.png'>Get Zero Install Bundle</link>
 </quicklinks>
 
 <h3 id='source'>Source installation</h3>
@@ -141,7 +141,7 @@ with requirements like <tt>gnupg</tt> and <tt>gtk+</tt>.
 </p>
 
 <p>
-You can install the <a href='http://downloads.sourceforge.net/project/zero-install/0install/2.6.2/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(OS_X)'>Installer.app</a>,
+You can install the <a href='http://downloads.sourceforge.net/project/zero-install/0install/2.7/ZeroInstall.pkg'>ZeroInstall.pkg</a> bundle with <a href='http://en.wikipedia.org/wiki/Installer_(OS_X)'>Installer.app</a>,
 which will install requirements like <a href="http://downloads.sourceforge.net/project/macpkg/GnuPG/1.4.16/GnuPG.pkg">GnuPG.pkg</a> and (optionally) <a href="http://downloads.sourceforge.net/project/macpkg/PyGTK/2.24.0/PyGTK.pkg">PyGTK.pkg</a>:
 </p>
 
