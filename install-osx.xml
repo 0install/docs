@@ -24,6 +24,7 @@ To build Zero Install from source code, you will also need:
 
 <ul>
 <li><a href='https://developer.apple.com/technologies/tools/'>Developer Tools</a> (including Command Line Tools, X11)</li>
+<li><a href='http://pkgconfig.freedesktop.org/'>pkg-config</a></li>
 <li><a href='https://www.gnu.org/software/gettext/'>GNU gettext</a> (only "gettext-tools", not "gettext-runtime")</li>
 <li><a href='http://www.ocaml.org/'>OCaml</a></li>
 <li><a href='http://opam.ocamlpro.com/'>OPAM</a></li>
@@ -64,6 +65,11 @@ $ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 <p>Install build dependencies:</p>
 <pre>
 $ brew install gettext
+$ brew install pkg-config
+</pre>
+
+<p>Install runtime dependencies:</p>
+<pre>
 $ brew install gnupg
 </pre>
 
