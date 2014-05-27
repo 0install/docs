@@ -127,7 +127,7 @@ $ export PATH=$HOME/bin:$PATH
 </p>
 
 <p>
-You can install 0install with <a href="http://brew.sh">Homebrew</a>,
+You can install <a href="https://github.com/Homebrew/homebrew/pull/28771">0install</a> with <a href="http://brew.sh">Homebrew</a>,
 using the (source) "formula" - or a (binary) "bottle" when possible,
 with requirements like <tt>gnupg</tt> and <tt>gtk+</tt>.
 </p>
