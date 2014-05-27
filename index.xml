@@ -37,7 +37,7 @@
 <p>Zero Install is a <k>decentralised cross-distribution software installation
   system</k>. Other features include full support for <k>shared libraries</k> (with a SAT solver for dependency resolution), <k>sharing
   between users</k>, and <k>integration with native platform package managers</k>. It supports
-  both <k>binary and source packages</k>, and works on <k>Linux</k>, <k>Mac OS X</k>, <k>Unix</k>
+  both <k>binary and source packages</k>, and works on <k>Linux</k>, <k>OS X</k>, <k>Unix</k>
   and <k>Windows</k> systems. It is fully <k>Open Source</k>.</p>
 
 <quicklinks>

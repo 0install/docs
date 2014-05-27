@@ -107,7 +107,7 @@
   <dt>Cross-Platform and Cross-Distribution</dt>
   <dd>
     <p>
-      A single 0install package can be used across multiple Linux distributions, Mac OS X,
+      A single 0install package can be used across multiple Linux distributions, OS X,
       Unix and Windows systems (given that the packaged application itself is written to be
       cross-platform as well).
     </p>

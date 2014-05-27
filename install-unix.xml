@@ -10,8 +10,8 @@
   should <a href='install-source.html'>install from source</a> instead.
 </dd>
 
-<dt>Mac OS X</dt>
-<dd>See the <a href='install-mac.html'>Mac OS X installation page.</a></dd>
+<dt>OS X</dt>
+<dd>See the <a href='install-osx.html'>OS X installation page.</a></dd>
 
 <dt>Solaris</dt>
 <dd>0install has been tested on Solaris and works fine. Use <a href='install-source.html'>the source package</a> to install.</dd>
