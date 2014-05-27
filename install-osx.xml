@@ -76,6 +76,7 @@ $ brew install gnupg
 <p>Optionally, install glib/gtk+</p>
 
 <pre>
+  <i># optional, for GUI</i>
 $ brew install glib
 $ brew install gtk+
 </pre>
