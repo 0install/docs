@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jun 2014</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7522'>0install 2.7 released</a>. This contains lots of minor fixes and code cleanups, better binary compatibility (we no longer depend on OpenSSL and don't require GLib unless the GUI is used). Installation on Windows is now much simpler and "0install select" should be working correctly there (unpacking archives requires a .NET helper, however).
+    A new <a href='https://github.com/fhoech/0install-apptemplate/'>Generic OS X application bundle template for 0install applications</a> makes it easy to create an installer for OS X users who don't already have 0install.
+  </dd>
   <dt>May 2014</dt>
   <dd>
     In Debian, the old zeroinstall-injector package has been replaced by separate <b>0install</b> and <b>0install-core</b> packages. The <b>0install-core</b> package doesn't include the GTK GUI, which is very useful on headless servers because it doesn't pull in the whole GUI stack. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7398'>0install 2.6 for Windows</a> was released. There are now NuGet packages, allowing 3rd party .NET developers to integrate Zero Install functionality into their applications. There's a <a href='https://github.com/Homebrew/homebrew/pull/28771'>new 0install Homebrew package</a> for OS X users.
