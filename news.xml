@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jul 2014</dt>
+  <dd>
+    0compile gains support for a <a href='http://sourceforge.net/p/zero-install/mailman/message/32404475/'>"pin-components"</a> attribute, to say that a source implementation can build against different versions of a library, but whichever version is picked, the resulting binary must run with a similar version (e.g. same major.minor components).
+    The <a href='http://roscidus.com/blog/blog/2014/06/06/python-to-ocaml-retrospective/'>Python to OCaml: Retrospective</a> blog post looks back at the now-complete porting work.</dd>
   <dt>Jun 2014</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7522'>0install 2.7 released</a>. This contains lots of minor fixes and code cleanups, better binary compatibility (we no longer depend on OpenSSL and don't require GLib unless the GUI is used). Installation on Windows is now much simpler and "0install select" should be working correctly there (unpacking archives requires a .NET helper, however).
