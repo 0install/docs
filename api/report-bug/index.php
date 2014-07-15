@@ -29,18 +29,18 @@ $mail_object =& Mail::factory('smtp',
         //'debug' => true, # uncomment to enable debugging
     ));
 
-if (preg_match("gpg: no writable keyring found", $body)) {
+if (strpos($body, "gpg: no writable keyring found")) {
     $notes = "\n\n" .
 	"Hint: Check the permissions and ownership of your ~/.gnupg directory. " .
 	"It should be owned by your user (not root), and have permissions rwx------.";
-} else if (preg_match("Fedora release 20", $body)) {
+} else if (strpos($body, "Fedora release 20")) {
     $notes = "\n\n" .
 	"Note: The official Fedora 20 package of 0install has been compiled without " .
 	"D-BUS support. Therefore, 0install will not be able to find missing packages " .
 	"that are only provided by the distribution. You will need to install these " .
 	"manually for now. See https://bugzilla.redhat.com/show_bug.cgi?id=1103476";
 
-    if (preg_match("http://dispcalgui.hoech.net", $body)) {
+    if (strpos($body, "http://dispcalgui.hoech.net")) {
 	$notes .= "\n\ndispcalGUI users should do 'yum install numpy wxPython'";
     }
 } else {
