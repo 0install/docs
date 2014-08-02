@@ -4,6 +4,12 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Aug 2014</dt>
+  <dd>
+    There's a new <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7544'>0bootstrap-php</a> service for creating installation scripts for Windows and Unix for users who don't want to learn about 0install before installing something.
+    The bug reporting tool now <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7538'>offers hints for common problems</a>.
+    Work has started on a <a href='http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/'>queuing service</a> to support <a href='http://0install.net/0repo.html'>0repo</a> repositories for groups (where multiple developers can submit new packages to a shared repository and have them imported by a service).
+  </dd>
   <dt>Jul 2014</dt>
   <dd>
     0compile gains support for a <a href='http://sourceforge.net/p/zero-install/mailman/message/32404475/'>"pin-components"</a> attribute, to say that a source implementation can build against different versions of a library, but whichever version is picked, the resulting binary must run with a similar version (e.g. same major.minor components).
