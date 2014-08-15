@@ -129,12 +129,12 @@ without preventing other programs from upgrading).
 bundles for distribution on CD.</p>
 
 </dd>
-<dt>Why is it called the "injector"?</dt>
+<dt>Why was it called the "injector"?</dt>
 <dd>
 
 <p>
-The name comes from <i>Dependency Injection</i> - see <a href='http://roscidus.com/desktop/node/903'>"The scarily-named Injector"</a>
-for details.
+The name came from <i>Dependency Injection</i> - see <a href='http://roscidus.com/desktop/node/903'>"The scarily-named Injector"</a>
+for details. Now we just call it "0install".
 </p>
 
 </dd>
@@ -230,7 +230,7 @@ versions of programs you don't need anymore:
 
 <p style='text-align: center'>
   <img width="812" height="334" src="injector-cache.png"
-  	alt='Uninstalling programs with the injector'/>
+  	alt='Uninstalling programs'/>
 </p>
 
 <p>
@@ -435,7 +435,7 @@ user has to trust the other user not to have modified his copy, and
 use that.
 </p>
 <p>
-See the <a href='injector-security.html'>injector security issues</a> document
+See the <a href='injector-security.html'>security issues</a> document
 for more information.
 </p>
 
@@ -615,7 +615,7 @@ When the GUI opens, you should see your local feed listed:
 
 <p style='text-align: center'>
 <img width="559" height="315" src="edit-cvs.png"
-     alt='The injector GUI showing the local feed for Edit' />
+     alt='The GUI showing the local feed for Edit' />
 </p>
 
 <p>
@@ -626,7 +626,7 @@ the newest one (which a fresh subversion checkout should be - the version normal
 
 <p style='text-align: center'>
 <img width="472" height="277" src="screens/edit-local.png"
-     alt='The injector GUI showing Edit 2.0-post version selected' />
+     alt='The GUI showing Edit 2.0-post version selected' />
 </p>
 
 <p>
