@@ -75,7 +75,7 @@ type URIs for them?</dt>
 do it. Like the web, you have links to the URIs, and you use the links
 normally.</p>
 <p>
-For example, you can run <b>0alias</b> to let you run programs quickly
+For example, you can run <b>0install add</b> to let you run programs quickly
 from the shell, or
 <a href="http://rox.sourceforge.net/desktop/AddApp">AddApp</a>
 to create graphical launchers, for example.
@@ -555,7 +555,7 @@ Aside: If you don't have Git, just use Zero Install to get it:
 </p>
 
 <pre>
-$ 0alias git http://0install.net/2008/3rd-party/git.xml
+$ 0install add git http://0install.net/2008/3rd-party/git.xml
 </pre>
 </div>
 
@@ -581,7 +581,7 @@ $ 0launch Edit.xml
 </pre>
 
 <p>
-Of course, you could do <b>0alias edit-git Edit.xml</b> to make a command that runs this version
+Of course, you could do <b>0install add edit-git Edit.xml</b> to make a command that runs this version
 easily.
 </p>
 </dd>
