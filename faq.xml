@@ -605,8 +605,8 @@ Feed 'Edit.xml':
 Enter a number, or CTRL-C to cancel [1]:
 
 Feed list for interface 'http://rox.sourceforge.net/2005/interfaces/Edit' is now:
-- /home/tanu/dev/Edit/Edit.xml
-$ <b>0launch -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
+- /home/talex/rox/Edit/Edit.xml
+$ <b>0install select -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
 <p>
