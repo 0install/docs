@@ -42,17 +42,22 @@ By default, everything goes under <b>~/.cache/0install.net/</b>. If you <a href=
 </p>
 
 <p>
-If you want to know where a particular program is, you can use <b>--show</b> (version 0.50 and later), e.g.
+If you want to know where a particular program is, you can use <b>0install select</b>, e.g.
 </p>
 
 <pre>
-$ <b>0launch --show http://rox.sourceforge.net/2005/interfaces/Edit</b>
+$ <b>0install select http://rox.sourceforge.net/2005/interfaces/Edit</b>
 - URI: http://rox.sourceforge.net/2005/interfaces/Edit
-  Version: 2.1
-  Path: /home/me/.cache/0install.net/implementations/sha1new=3ab69dda3902c...034958015aaa
+    Version: 2.2
+  Path: /home/me/.cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9
+
   - URI: http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-    Version: 2.0.6
-    Path: /home/me/.cache/0install.net/implementations/sha256=ccefa7b1873926d...df6d0c06243e
+        Version: 2.0.6
+    Path: /home/me/.cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e
+
+  - URI: http://repo.roscidus.com/python/python
+        Version: 2.7.8-3
+    Path: (package:deb:python2.7:2.7.8-3:x86_64)
 </pre>
 
 <p>
@@ -386,7 +391,7 @@ original sites.
 </p>
 
 <p>
-The <b>0launch --import</b> command lets you import the feed from the
+The <b>0install import</b> command lets you import the feed from the
 new location, and <b>0store</b> allows adding any archive to the cache (provided
 its message digest matches). Because Zero Install simply unpacks an archive
 when installing a package, anyone with that program cached can re-export it (e.g. using
@@ -587,21 +592,19 @@ easily.
 The answer to the last question showed how to run a local version of a program directly, using 0launch
 to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal
 URI (<b>http://rox.sourceforge.net/2005/interfaces/Edit</b>), your version won't show up. To add it,
-use <b>--feed</b>:
+use <b>0install add-feed</b>:
 </p>
 
 <pre>
 $ <b>cd Edit</b>
-$ <b>0launch --feed Edit.xml</b>
+$ <b>0install add-feed Edit.xml</b>
 Feed 'Edit.xml':
-
 1) Add as feed for 'http://rox.sourceforge.net/2005/interfaces/Edit'
 
-Enter a number, or CTRL-C to cancel [1]: 
+Enter a number, or CTRL-C to cancel [1]:
 
-Feed list for interface 'Edit' is now:
-- /home/talex/Projects/Edit/Edit.xml
-
+Feed list for interface 'http://rox.sourceforge.net/2005/interfaces/Edit' is now:
+- /home/tanu/dev/Edit/Edit.xml
 $ <b>0launch -g http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
