@@ -42,23 +42,24 @@ By default, everything goes under <b>~/.cache/0install.net/</b>. If you <a href=
 </p>
 
 <p>
-If you want to know where a particular program is, you can use <b>0install select</b>, e.g.
+If you want to know where a particular program is, you can use <b>0install show</b>, e.g.
 </p>
 
-<pre>
-$ <b>0install select http://rox.sourceforge.net/2005/interfaces/Edit</b>
+<pre-scrolled>
+$ <b>0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
+$ <b>0install show rox-edit</b>
 - URI: http://rox.sourceforge.net/2005/interfaces/Edit
-    Version: 2.2
+  Version: 2.2
   Path: /home/me/.cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9
 
   - URI: http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-        Version: 2.0.6
+    Version: 2.0.6
     Path: /home/me/.cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e
 
   - URI: http://repo.roscidus.com/python/python
-        Version: 2.7.8-3
+    Version: 2.7.8-3
     Path: (package:deb:python2.7:2.7.8-3:x86_64)
-</pre>
+</pre-scrolled>
 
 <p>
 That said, you shouldn't ever need to know where things are cached. If you're relying on this
