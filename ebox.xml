@@ -209,7 +209,7 @@ explained in the <a href='http://wiki.erights.org/wiki/Walnut'>Walnut guide to E
 
 <p>
 Alternatively, you could clone the ebox-help Git repository and modify the library. Register your
-modified library with 0launch (using "0launch --feed ebox-help/help.xml") and run a program that
+modified library with 0launch (using "0install add-feed ebox-help/help.xml") and run a program that
 depends on it. You should find that the library runs in an even more restricted environment; it
 doesn't even get access to the application data!
 </p>
