@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/talex
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://0install.net
+  * I am talex (https://keybase.io/talex) on keybase.
+  * I have a public key with fingerprint DA98 25AE CAD0 8975 7CDA  BD8E 0713 3F96 CA74 D8BA
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "da9825aecad089757cdabd8e07133f96ca74d8ba",
+            "host": "keybase.io",
+            "key_id": "07133f96ca74d8ba",
+            "uid": "c169ef7f219a405638197675d0e58900",
+            "username": "talex"
+        },
+        "service": {
+            "hostname": "0install.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1409299902,
+    "expire_in": 157680000,
+    "prev": "11bc6cfbab90cbaac645de85bcb23e572145b15ddda999571b3fe6d13f10c6aa",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owGbwMvMwMXILmw/7VTJjV2Mpw+8T2IIYTC9Xa2UlJ9SqWRVrZSdCqbSMvPSU4sK
+ijLzSpSslFISLS2MTBNTkxNTDCwszU3Nk1MSk1IsUg3MDY2N0yzNkhPNTVIskhKV
+dJQy8otBOoDGJCUWp+pl5gPFgJz4zBSgKBb1pWCJZEMzy9Q08zQjQ8tEEwNTM2ML
+Q0tzM3PTFINUUwtLAwOQwuLUorzE3FSg6pLEnNQKpVodJaBQWWZyKsjBIHuh0gaZ
+ecVAJTl6eaklQI0FRfkl+cn5OUCZjJKSAiuQxpLKApDK8tSkeKgZ8UmZeSlATwM1
+lKUWFWfm5ylZGQJVJpdkggw1NDGwNLK0tDQw0lFKrSjILEqNzwSpMDU3szAAApA1
+qWVAIw0Nk5LNktOSEpMsDZKTEhOTzUxMU1ItTJOSk4yMU03NjQxNTJMMTVNSgGFq
+aWlqbphknJZqlmJonGZokGyWCAqS4tTCvHwlKxOgMxPTgUYWZ6bnJZaUFqUq1XJ1
+MsqwMDByMbCxMoHijYGLUwAWm5/2cjD0/VrW/TovnfWV3IM7+3V3PTt797m43dcZ
+HdWF8rv3+G+f5KgaZdJfHlqjJSv51OGF1Zu6iOuK5wRXzde3zjKe3Sr4gWdp05W7
+01d6cTlpWN6o/9bqEnNdfsfCwA+Fjg1TVW9NNDlywU+d9fU78cl6Ky5qC7Xsy5Rc
+utC4V4TFRka5TuC05lzNDXoKDlzxez1263J/Y7492UTpeMDHySLcNbfbHy093H3w
+6JUz54+8a2wL+FLJEKGy7qjW77Z4lws5yrc8P2TKpO4LLBa+Ieyz4ItHGZsuv4+T
+1dqSzZlC6zg6rH23ch67JdqRasDDt9vkleLcnrXnX+4W7pUJe79XUbdi+0d585v6
+0lrGwgA=
+=+If2
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/talex
+
+==================================================================
+
