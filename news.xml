@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Sep 2014</dt>
+  <dd>
+    Lots of progress on <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7558'>auto compilation</a> support in 0install. This allows 0install to compile missing dependencies from source automatically (previously, this required getting and running <a href='0compile.html'>0compile</a>).
+  </dd>
   <dt>Aug 2014</dt>
   <dd>
     There's a new <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7544'>0bootstrap-php</a> service for creating installation scripts for Windows and Unix for users who don't want to learn about 0install before installing something.
