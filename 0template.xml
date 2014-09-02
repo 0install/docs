@@ -3,6 +3,7 @@
 
 <program name='0template'
 	 author='Thomas Leonard'
+	 feed='http://0install.net/tools/0template.xml'
 	 git='https://github.com/0install/0template'
 	 license='GNU Lesser General Public License'>
 
