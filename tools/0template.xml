@@ -10,8 +10,7 @@
   </description>
   <homepage>http://0install.net/0template.html</homepage>
 
-  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
-    <!-- Update the copy of the version number in the code -->
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release"><!-- Update the copy of the version number in the code -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; 0template.py</release:action>
   </release:management>
 
@@ -40,13 +39,36 @@
     </implementation>
   </group>
 
+  <group>
+    <requires interface="http://repo.roscidus.com/python/python">
+      <version not-before="2.7"/>
+    </requires>
+    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+      <version not-before="2.2-post"/>
+    </requires>
+    <requires interface="http://0install.de/feeds/ZeroInstall_Tools.xml" os="Windows">
+      <executable-in-var command="0publish" name="0TEMPLATE_EXTERNAL_TOOL"/>
+    </requires>
+    <command name="test" path="tests/test0template.py">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+      <executable-in-path name="0template"/>
+    </command>
+    <command name="run" path="0template.py">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
+    <implementation id="sha1new=f88e42082640316608fc28be303521fc0692573e" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-09-02" version="0.2">
+      <manifest-digest sha256new="ERLRSPYBXSOGULSDGW56DUSFZ2DELXOG7JSTAZP6W2UX3NYRQOXQ"/>
+      <archive extract="0template-0.2" href="https://downloads.sourceforge.net/project/zero-install/0template/0.2/0template-0.2.tar.bz2" size="15294"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJRkLPHAAoJEAcTP5bKdNi6WlUH/2I6EY3aLiH9HacgY+0NEOh4DM2A8SyqUKr5
-LwkUsXknVHbpWVDqskOzMAk3l3ME8ujiWi1006yBHG12X/x+6saehUwIShvjcp12rwQ5MdYkrPIC
-6NNKgpSotZcSFsUm9/MCOwW5p+0ZsuzV2+HFxySFd0hPZ+pKLNeN4XmLwhVAsor1YpC77aXIo4RK
-SGZJA66Bmi9X4UtdBrL7SK7FCQENJXyuUuYF0ciRo0HjQsa9B/8Ab1mSPsRxy1W+6GO+fGosoT/d
-caY0JTCaQTqZoSzf3i73tGuMI8Ca9HdH8JJ9ZlQ33eun+bLhYV9M7ef4Vk8+1K48ssRM/Gfq3n6C
-PPw=
+iQEcBAABCgAGBQJUBY2UAAoJEAcTP5bKdNi6aRkIAIA5zAoDk/ZSknAY52+i8ydCEz0+XXCmf1Wf
+ZsH9nMP/r62RFMZ5HauqZ6XFj7n4hv1hUY64B/3bMO69G/n5RqM2iCJn4HDgU8j6IdlXIgsBhE/I
+Uqt5SngfSRpYBs9HcI0srRri2zW1r/eAwgZUz/RYZki+91OhfugJcaZuCaV+MQ3SX3CsvT6xejPi
+5NRUJtWDiIziSmu+/RS1NYOJN3ar0+1ObVWb2Q9WA9Wp0bwADoHp1r6qZ0vcJF9YKNcZCAz9FMqC
+fmoME57NSDBMIdCTnaCLRcPA1ulgSEHEno1awMaReRc2ShKxvtS5eAd2mBu7eTcMVLas/CgJbZju
++HY=
 
 -->
