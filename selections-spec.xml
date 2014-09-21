@@ -39,7 +39,8 @@
 &lt;selections
     xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
     interface="..."
-    command="..." ? >
+    command="..." ?
+    source="true|false" ? >
 
   [ selection ] +
 &lt;/selections>
@@ -51,6 +52,9 @@
 
   <dt>command</dt>
   <dd>The name of the (optional) &lt;command&gt; to run on the main program (e.g. "run").</dd>
+
+  <dt>source</dt>
+  <dd>Indicates whether the root is source or binary (since 0install 2.8). This is useful if implementations of both are present.</dd>
 </dl>
 
 <h3>Historical notes</h3>
