@@ -4,7 +4,7 @@
 <h2>The Solver</h2>
 
 <p>
-When you run a program with 0install, 0install must select a version of the program and a compatible version of each dependency it requires, recursively. Choosing the best set of versions from the billions of potential combinations is the job of <a href='https://github.com/0install/0install/blob/master/zeroinstall/injector/solver.py'>solver.py</a>.
+When you run a program with 0install, 0install must select a version of the program and a compatible version of each dependency it requires, recursively. Choosing the best set of versions from the billions of potential combinations is the job of the <a href='https://github.com/0install/0install/blob/master/ocaml/zeroinstall/solver.mli'>Solver</a> module.
 The 0install solver is an adaptation of the <a href='http://www.cjtucker.com/opium.pdf'>OPIUM</a> algorithm (Optimal Package Install/Uninstall Manager).
 </p>
 
@@ -170,5 +170,9 @@ In fact, we don't need to use a cost function at all. We can just ask whether th
 <p>
   The key to making this work is picking the most optimal next variable. Each time we need to choose, we do a depth first search of the current dependency tree: if we haven't yet picked a version of prog then we try setting the best remaining one to true (e.g. "prog-2 = true"). If we've already picked a version of prog, we look at its first dependency (always lib in this case) and try the best version of that, and so on.
 </p>
+
+<h3>The OCaml implementation</h3>
+
+<p>The blog post <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver With Functors</a> contains more information about the new OCaml implementation of the solver.</p>
 
 </html>
