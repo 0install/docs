@@ -4,6 +4,13 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Oct 2014</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7586'>0install 2.6.7 for Windows</a> was released (bugfixes and performance improvements), as well as
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7585'>0template 0.2</a> - new features include support for Windows and &lt;recipe&gt;s.
+    The solver code has been refactored (see the <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver with Functors</a> blog post for details), which should make it easier to understand and more flexible. In particular, it can now support building a compiler with a build dependency on an earlier version of the same compiler.
+    Finally, here's a video of a short <a href='http://youtu.be/dYRT6z0NGII'>Introduction to 0install</a> talk from OCaml 2014.
+  </dd>
   <dt>Sep 2014</dt>
   <dd>
     Lots of progress on <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7558'>auto compilation</a> support in 0install. This allows 0install to compile missing dependencies from source automatically (previously, this required getting and running <a href='0compile.html'>0compile</a>).
