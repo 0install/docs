@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Nov 2014</dt>
+  <dd>
+    0install gained <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7655'>support for source dependencies</a> (where one program depends on the source code to another).
+    The OPAM OCaml package manager is now available through 0install, as described in the <a href='http://opam.ocaml.org/blog/0install-intro/'>Binary distribution with 0install</a> blog post, which also explains how to publish software using <a href='0template.html'>0template</a>.
+  </dd>
   <dt>Oct 2014</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7586'>0install 2.6.7 for Windows</a> was released (bugfixes and performance improvements), as well as
