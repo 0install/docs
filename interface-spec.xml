@@ -537,6 +537,7 @@ suitable implementation, downloading one if required.
 	version='...' ?
 	os='...' ?
 	distribution='...' ?
+	source='true|false' ?
 	use='...' ? &gt;
     [ constraints ] *
     [ bindings ] *
@@ -552,7 +553,7 @@ The constraint elements (if any) limit the set of acceptable versions. The bindi
 The <b>use</b> attribute can be used to indicate that this dependency is only needed in some cases. By default, 0launch >= 0.43
 will skip any &lt;requires&gt; element with this attribute set. Earlier versions process all &lt;requires&gt; elements
 whether this attribute is present or not. <a href='0test.html'>0test</a> >= 0.2 will process dependencies where <b>use="testing"</b>, in
-addition to the program's normal dependencies.
+addition to the program's normal dependencies. This attribute is deprecated - it's usually better to use a &lt;command&gt; for this.
 </p>
 
 <p>
@@ -573,6 +574,10 @@ The <b>distribution</b> attribute (0install >= 1.15) can be used to require the 
 <p>
   The <b>os</b> attribute (0install >= 1.12) can be used to indicate that the dependency only applies to the given OS (e.g. <b>os="Windows"</b> for
   dependencies only needed on Windows systems).
+</p>
+
+<p>
+  The <b>source</b> attribute (0install >= 2.8) can be used to indicate that a source implementation is needed rather than a binary. This may be useful if you want to get e.g. header files from a source package. Note that if you select both source and binary implementations of an interface, 0install does not automatically force them to be the same version.
 </p>
 
 <p>
