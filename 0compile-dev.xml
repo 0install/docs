@@ -157,6 +157,12 @@ into 'build' before building.</dd>
 <dd>used at compile-time and at run-time (has compile:include-binary attribute).</dd>
 </dl>
 
+<p>
+  Finally, there is a <b>compile:if-0install-version</b> attribute that you can place on any element in the template.
+  0compile will convert this to a plain <b>if-0install-version</b> in the generated output
+  (you can't use <b>if-0install-version</b> directly because 0install would strip them out as appropriate for its version before 0compile saw them).
+</p>
+
 
 <h2>Tips</h2>
 
