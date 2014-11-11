@@ -16,7 +16,7 @@ the translations.
 To install these on Ubuntu, open a terminal emulator and run this command:
 </p>
 
-<pre>$ sudo apt-get install git-core gitk gettext</pre>
+<pre>$ sudo apt-get install git gitk gettext</pre>
 
 <p>(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)</p>
 
@@ -25,21 +25,14 @@ To install these on Ubuntu, open a terminal emulator and run this command:
 The link for cloning is displayed there; use it like this:</p>
 
 <pre>
-$ git clone git@github.com:0install/0install.git
+$ git clone https://github.com/0install/0install.git
 $ cd 0install
 </pre>
 
 <p>
 The directory contains the latest version, plus a single (hidden) .git
 directory with all the git-related bits.
-You can install it as usual, except that you need to create the translation (.mo)
-files first:
 </p>
-
-<pre>
-$ make translations
-$ sudo python setup.py install
-</pre>
 
 <p>To see the log:</p>
 
@@ -83,6 +76,20 @@ a patch, you can apply it with:
 
 <pre>$ git am the.patch</pre>
 
+<h2>Understanding the code</h2>
+
+<p>
+  Most modules have two files - a <tt>.ml</tt> file containing the implementation and a <tt>.mli</tt>
+  file describing the module's public interface. You should always start by reading the <tt>.mli</tt>
+  file. <a href='https://github.com/0install/0install/blob/master/ocaml/zeroinstall/sigs.mli'>sigs.mli</a> describes several abstract interfaces used in the code.
+</p>
+
+<p>
+  <a href='http://roscidus.com/blog/blog/archives/'>Thomas Leonard's blog</a>
+  has many blog posts describing various aspects of 0install.
+  For example, <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver With Functors</a> explains how 0install chooses a compatible set of libraries to run a program, while <a href='http://roscidus.com/blog/blog/2013/11/28/asynchronous-python-vs-ocaml/'>Asynchronous Python vs OCaml</a> describes the code for downloading things.
+</p>
+
 <h2>Making patches</h2>
 
 <p>
@@ -111,6 +118,10 @@ Finally, to make a patch file ready to send to the <a href='support.html'>mailin
 <pre>$ git format-patch origin/master</pre>
 
 <h2>Making a new translation</h2>
+
+<p>
+  Note: translations are not currently working - see <a href='http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml'>Gettext support in OCaml</a>.
+</p>
 
 <p>Note: if you prefer, you can also use the <a href='https://www.transifex.net/projects/p/0install/'>Transifex web interface</a> to work on translations.
 </p>
