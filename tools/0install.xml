@@ -308,6 +308,11 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
       <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
     </implementation>
+    <implementation arch="Linux-armv7l" id="armv7-2.8" released="2014-11-11" version="2.8">
+      <!-- (older 0install versions don't know that ARMv7 is backwards compatible) -->
+      <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
+      <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
+    </implementation>
     <implementation arch="Darwin-x86_64" id="sha1new=da2eaeb3d6ee0cbc78d70b3ddac342a002a003fc" released="2014-11-09" version="2.8">
       <manifest-digest sha256new="MLCIHDFMLCKI23DDSP5PG6EZR6Y5A5LLOLKJH6C2QE4ONYH6Q2GQ"/>
       <archive extract="0install-darwin-x86_64-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-darwin-x86_64-2.8.tar.bz2" size="2714176"/>
@@ -315,11 +320,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJUYeUnAAoJEAcTP5bKdNi64NAH/19ClAv5+bN5d0opGAiKy1ZByvrO11ve4wd+
-hnOOqOTzoLx4yJlY/Y/i6kYL61D1KQ+Teoay2MsZx4hFvi+u81tNTgqfqVCx+QFCbeHTE68jF5YA
-ubaHT1YzBQgo6sZzrU1XEu9AzVpUIS7tpe7KbGZI4OgqczqNFc1KiClX89Pq9UtSEh2R7GfJRDlG
-tRBc2OfE6+VV3J6WoJr6GjhXt6FI8xBKbqKhK6E9Pirw47kaW2a2aIRp4Gcvu9p0ov5+yj33GVj2
-w1+WUrpi+M3w7ysliJloZpxpgfj2+bK35veAyKq2AjPpCS5nv2w17vlLV9/vxT3FyucX/OU9NUlR
-7pw=
+iQEcBAABCgAGBQJUYeX1AAoJEAcTP5bKdNi6SG4H/RBC1Db0gqyakKdNusd/ivinEfwi9P6ljG9a
+Y7e8y9gMW/58cFIvQF6bBCelXklTNVzgpsuCa/IPKqGAWPF2KiVe1ZSrzRMyjcfj9XdvVNbx1EwZ
+ZNhZteC9CiOOG8jzeGmOLZ8dUJ5uQ0j6xqmodDKQWqZc+ZiCCvBLom3v8DU3w4bTunyEU7A9clQW
+TY00utqA3xXenpkVHQ6U9Ds+4ONs+yzKLsbfeqmxSmq9RdGkjx0rw8mWQFA/rdad50SAvTzPxaeV
+ILwHoeKwE7LIOju0jdQ/xBVC/qzR3iAC8DpeVpb9f+1W58HBptFdVHrYe46yvRvdBcySQGYb8VUg
+rp8=
 
 -->
