@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Dec 2014</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7683'>0install 2.8 released</a>, adding support for dependencies on source code (e.g. for header files), for selecting a source and binary implementation of the same interface (e.g. for a compiler that compiles itself), and for using credentials from .netrc (for protected repositories). The updates to the solver are described in the blog post <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver With Functors</a>.
+    A maintenance release of the old Python version - <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7695'>0install 2.3.4</a> - adds support for SNI certificate verification and local file references from local feeds. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7682'>0compile 1.4</a> was released, adding support for "pin-components" (makes the resulting binary depend on a similar version of the source), and "if-0install-version" (useful if you want 0compile to see an element, but generate a plain "if-0install-version" attribute in the generated binary feed).
+  </dd>
   <dt>Nov 2014</dt>
   <dd>
     0install gained <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7655'>support for source dependencies</a> (where one program depends on the source code to another).
