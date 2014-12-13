@@ -60,6 +60,9 @@
 
  <dt><a href='tools.html'>Tools</a></dt>
  <dd>An index of the tools provided by the 0install project for generating feeds.</dd>
+
+ <dt><a href='https://opam.ocaml.org/blog/0install-intro/'>Binary distribution with 0install</a></dt>
+ <dd>Blog article describing how to make packages using the <a href='0template.html'>0template</a> command-line tool.</dd>
 </dl>
 
 </html>
