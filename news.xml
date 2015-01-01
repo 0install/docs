@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jan 2015</dt>
+  <dd>
+    2014 was a busy year for 0install. We released 0install 2.6, completing <a href='http://roscidus.com/blog/blog/2014/06/06/python-to-ocaml-retrospective/'>the port from Python to OCaml</a>, added a <a href='http://0install.net/json-api.html'>JSON API</a> to allow other programs to use 0install easily, split the Debian package into separate <b>0install</b> and <b>0install-core</b> packages to make using it easy on headless servers, and <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>refactored the solver</a> (allowing support for dependencies on source code). Work is currently continuing on <a href='https://github.com/0install/0install/pull/29'>moving 0compile's autocompile feature into 0install</a> itself, which should make working with source code much easier.
+    The Windows version also saw many new features - see <a href='https://0install.de/news/'>0install.de/news</a> for details.
+  </dd>
   <dt>Dec 2014</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7683'>0install 2.8 released</a>, adding support for dependencies on source code (e.g. for header files), for selecting a source and binary implementation of the same interface (e.g. for a compiler that compiles itself), and for using credentials from .netrc (for protected repositories). The updates to the solver are described in the blog post <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver With Functors</a>.
