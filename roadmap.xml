@@ -145,10 +145,14 @@ This is a quick overview of the major features added to Zero Install. It focuses
   <li><a href='http://roscidus.com/blog/blog/2013/06/09/choosing-a-python-replacement-for-0install/'>Rewrite in OCaml</a> (fully compatible but 10x faster).</li>
 </ul>
 
-<h4>2014 (versions 2.6 onwards)</h4>
+<h4>2014 (versions 2.6 to 2.8)</h4>
 
 <ul>
-<li>OCaml port completed.</li>
+<li><a href='http://roscidus.com/blog/blog/2014/06/06/python-to-ocaml-retrospective/'>OCaml port completed</a>.</li>
+<li><a href='json-api.html'>JSON API</a> (<b>0install slave</b>)</li>
+<li>Separate <b>0install</b> and <b>0install-core</b> packages in Debian, to allow installing on headless servers without pulling in any GUI dependencies.</li>
+<li>Support for &lt;requires source='true'/&gt; dependences.</li>
+<li>Getting credentials from <b>.netrc</b>.</li>
 </ul>
 
 <h3>Current and future plans</h3>
