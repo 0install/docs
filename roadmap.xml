@@ -158,21 +158,17 @@ This is a quick overview of the major features added to Zero Install. It focuses
 <h3>Current and future plans</h3>
 
 <p>
-This is a rough roadmap. Times are just estimates, subject to people being able to
-work on things. <a href='get-involved.html'>Volunteers welcome!</a>
+This is a bunch of ideas. <a href='get-involved.html'>Volunteers welcome!</a>
 </p>
 
-<h4>Next (maybe)</h4>
-
-<ul>
-  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows).</li>
-  <li><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6276'>Alternatives for dependencies</a>.</li>
-  <li><a href='user-guide-apps.html'>App support</a> for XDG launchers.</li>
-</ul>
-
-<h4>Version 3.0</h4>
-
 <dl class='roadmap'>
+
+  <dt>Cross-compilation</dt>
+  <dd>The solver is now flexible enough to select components for multiple architectures at once. For example, it should be able to select source code and headers for a target platform, but choose versions of the build tools for the build platform.</dd>
+
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/5045'>Support for multiple ABIs</a> (for C++ on Windows)</dt>
+<dt><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/6276'>Alternatives for dependencies</a></dt>
+<dt><a href='user-guide-apps.html'>App support</a> for XDG launchers</dt>
 
 <dt>HTTP connection pooling, pipelining and DNS caching</dt>
 <dd>Rate limiting is already supported, but further performance improvements are still possible.</dd>
