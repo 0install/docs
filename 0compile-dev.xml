@@ -163,6 +163,26 @@ into 'build' before building.</dd>
   (you can't use <b>if-0install-version</b> directly because 0install would strip them out as appropriate for its version before 0compile saw them).
 </p>
 
+<h2>Pinning version ranges</h2>
+
+<p>
+  Sometimes, you have a build time dependency with a wide range of possible versions, but the generated binary will have a runtime
+  dependency on whichever version was used to compile it.
+  The <b>compile:pin-components</b> attribute on a <b>&lt;version&gt;</b> element in the template will expand into <b>before</b> and <b>after</b>
+  attributes that require the binary version to match the first <i>n</i> components of the version used to compile it. For example, if
+  this program is compiled using Python 2.7.3, then the binary will have <b>&lt;version not-before='2.7' before='2.8'/></b>:
+</p>
+
+<pre>
+&lt;compile:implementation>
+  &lt;runner interface='http://repo.roscidus.com/python/python'>
+    &lt;version compile:pin-components="2"/>
+  &lt;/runner>
+&lt;/compile:implementation>
+</pre>
+
+<p>(added in 0compile 1.4)</p>
+
 
 <h2>Tips</h2>
 
