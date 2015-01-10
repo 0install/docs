@@ -79,6 +79,7 @@
       from-feed="..." ?
       local-path="..." ?
       quick-test-file="..." ?
+      requires-compilation="true" ?
       ... >
     [ dependencies ]
     [ bindings ]
@@ -99,6 +100,11 @@
 
   <dt>quick-test-file</dt>
   <dd>A file which, if present, indicates that the selection is still valid. This is sometimes used with distribution-provided selections. If not present and the ID starts with "package:", you'll need to query the distribution's package manager to check that this version is still installed.</dd>
+
+  <dt>requires-compilation</dt>
+  <dd>
+    If present, this attribute indicates that the selection does not yet exist, but could be compiled from the source implementation with the same <b>id</b>. Such selections can be generated when using <b>0install select --may-compile</b> (0install >= 2.9).
+  </dd>
 
   <dt>Other attributes</dt>
   <dd>All attributes from the selected &lt;implementation&gt; are included on the &lt;selection&gt;, except for <b>stability</b> and
