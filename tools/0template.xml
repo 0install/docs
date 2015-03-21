@@ -57,18 +57,18 @@
     <command name="run" path="0template.py">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
-    <implementation id="sha1new=f88e42082640316608fc28be303521fc0692573e" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-09-02" version="0.2">
+    <implementation id="sha1new=f88e42082640316608fc28be303521fc0692573e" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2014-09-02" stability="stable" version="0.2">
       <manifest-digest sha256new="ERLRSPYBXSOGULSDGW56DUSFZ2DELXOG7JSTAZP6W2UX3NYRQOXQ"/>
       <archive extract="0template-0.2" href="https://downloads.sourceforge.net/project/zero-install/0template/0.2/0template-0.2.tar.bz2" size="15294"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJUBY2UAAoJEAcTP5bKdNi6aRkIAIA5zAoDk/ZSknAY52+i8ydCEz0+XXCmf1Wf
-ZsH9nMP/r62RFMZ5HauqZ6XFj7n4hv1hUY64B/3bMO69G/n5RqM2iCJn4HDgU8j6IdlXIgsBhE/I
-Uqt5SngfSRpYBs9HcI0srRri2zW1r/eAwgZUz/RYZki+91OhfugJcaZuCaV+MQ3SX3CsvT6xejPi
-5NRUJtWDiIziSmu+/RS1NYOJN3ar0+1ObVWb2Q9WA9Wp0bwADoHp1r6qZ0vcJF9YKNcZCAz9FMqC
-fmoME57NSDBMIdCTnaCLRcPA1ulgSEHEno1awMaReRc2ShKxvtS5eAd2mBu7eTcMVLas/CgJbZju
-+HY=
+iQEcBAABCAAGBQJVDY7BAAoJEAcTP5bKdNi6K7gH/0ghjHxs2JR+8GOlYHQXPnsy+7LoTq6ZpMrx
+J0HtFXhu390rVMoRMY9SMGolpb9Huj7CdE6auhik3gmwZC//bWjRrenPaVtp8ceyzifbWy96YDyA
+6/If/b9BihLxDMDgmtCrFI7Q3tPaBYvCmUcdKZ/lXNjfKDjbmhx1cxa1Socn1diBSURX8dJ3Vg3z
+xCyg2xApOGVprRErShCid+/2XmydQLDpwE6cXguvsSY864sv2BK09MFu4Tj3xFKUKHjLkx8+0906
+8wm32vEcUgMg+Yh8W40XIBom0OR4jpAYkn92ncHYr2BUHfLihXxJSsUyuoeDNMXHvtet56FIv7Uv
+f4k=
 
 -->

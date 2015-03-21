@@ -130,7 +130,7 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="A5TRWZOHORTCMDACRYONPYBWIBXRGAJKB5SI5NB3SJIPBYP3AWWQ"/>
         <archive extract="0install-2.7" href="https://downloads.sourceforge.net/project/zero-install/0install/2.7/0install-2.7.tar.bz2" size="480343"/>
       </implementation>
-      <implementation id="sha1new=ededfccfce578e37af5332e62dc95ee06a28ec24" released="2014-11-08" version="2.8">
+      <implementation id="sha1new=ededfccfce578e37af5332e62dc95ee06a28ec24" released="2014-11-08" stability="stable" version="2.8">
         <manifest-digest sha256new="2Z6N4XDLETY2LYT3CPIEUNAC3TGNAPADAUD4R2CQCAVH4G7Z2AJA"/>
         <archive extract="0install-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-2.8.tar.bz2" size="492059"/>
       </implementation>
@@ -296,35 +296,35 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="SNQ3PKLOCD7UTL32DK5T64XJ4XN4AHACMAKYMGO6OEBO2OUM6XZQ"/>
       <archive extract="0install-darwin-x86_64-2.7" href="https://downloads.sourceforge.net/project/zero-install/0install/2.7/0install-darwin-x86_64-2.7.tar.bz2" size="2790170"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=ee473c6d60a54c250f49d131d3fbb980b43eaaa6" released="2014-11-08" version="2.8">
+    <implementation arch="Linux-i486" id="sha1new=ee473c6d60a54c250f49d131d3fbb980b43eaaa6" released="2014-11-08" stability="stable" version="2.8">
       <manifest-digest sha256new="OEXPZFDITRGZPGYVXNOLCKBPZJ454ONOTR7VW4FURQCZF22XGT5Q"/>
       <archive extract="0install-linux-i486-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-i486-2.8.tar.bz2" size="3409019"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=032530e1504921131a93092e881bba705a5e0fd8" released="2014-11-08" version="2.8">
+    <implementation arch="Linux-x86_64" id="sha1new=032530e1504921131a93092e881bba705a5e0fd8" released="2014-11-08" stability="stable" version="2.8">
       <manifest-digest sha256new="YEPNC3CZ7CVC6ZJNS3PALMWAOKPHLKZP65KLLNICQ5HYFRDOKTNQ"/>
       <archive extract="0install-linux-x86_64-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-x86_64-2.8.tar.bz2" size="3688843"/>
     </implementation>
-    <implementation arch="Linux-armv6l" id="sha1new=3184260873fc5a33a297ca92d6b7f411a14dec99" released="2014-11-08" version="2.8">
+    <implementation arch="Linux-armv6l" id="sha1new=3184260873fc5a33a297ca92d6b7f411a14dec99" released="2014-11-08" stability="stable" version="2.8">
       <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
       <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
     </implementation>
-    <implementation arch="Linux-armv7l" id="armv7-2.8" released="2014-11-11" version="2.8">
+    <implementation arch="Linux-armv7l" id="armv7-2.8" released="2014-11-11" stability="stable" version="2.8">
       <!-- (older 0install versions don't know that ARMv7 is backwards compatible) -->
       <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
       <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" id="sha1new=da2eaeb3d6ee0cbc78d70b3ddac342a002a003fc" released="2014-11-09" version="2.8">
+    <implementation arch="Darwin-x86_64" id="sha1new=da2eaeb3d6ee0cbc78d70b3ddac342a002a003fc" released="2014-11-09" stability="stable" version="2.8">
       <manifest-digest sha256new="MLCIHDFMLCKI23DDSP5PG6EZR6Y5A5LLOLKJH6C2QE4ONYH6Q2GQ"/>
       <archive extract="0install-darwin-x86_64-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-darwin-x86_64-2.8.tar.bz2" size="2714176"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJUYeX1AAoJEAcTP5bKdNi6SG4H/RBC1Db0gqyakKdNusd/ivinEfwi9P6ljG9a
-Y7e8y9gMW/58cFIvQF6bBCelXklTNVzgpsuCa/IPKqGAWPF2KiVe1ZSrzRMyjcfj9XdvVNbx1EwZ
-ZNhZteC9CiOOG8jzeGmOLZ8dUJ5uQ0j6xqmodDKQWqZc+ZiCCvBLom3v8DU3w4bTunyEU7A9clQW
-TY00utqA3xXenpkVHQ6U9Ds+4ONs+yzKLsbfeqmxSmq9RdGkjx0rw8mWQFA/rdad50SAvTzPxaeV
-ILwHoeKwE7LIOju0jdQ/xBVC/qzR3iAC8DpeVpb9f+1W58HBptFdVHrYe46yvRvdBcySQGYb8VUg
-rp8=
+iQEcBAABCAAGBQJVDY7AAAoJEAcTP5bKdNi6XPgH/iLql7vOcuoYgh2Ia8hQSnp5/1vtRr6TVLCZ
+T8AQlJNsWL9lr1eYkMI9i7VdFMvsIn+6ZpNkhPQdDB8wzTkZ/29VpKXNGJceJ471OM9yXU+0eybm
+P3JiGru4QZBMHeKNP9lkWAcQ9ARaZSO0S2yPjQMb7DHqr2rKAba1neCgdmPai/B39IykaUFWaRL7
+RoWLxx4qOB+YXPdkMEsuHixIONNt8z+pqC6cYBNbeKyxyMH+ZTvdITu6ZcBqFTPaWeRdlwTMgRCQ
+buE83qMX0PvUQqmU4TX1QX5ZodC+OgzWpw8CdJ0Lg8B2qbVKtreyuRQq20V6TP+LiDo6T5O/k9Ge
+Yrw=
 
 -->

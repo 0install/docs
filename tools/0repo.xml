@@ -68,7 +68,7 @@
         <runner interface="http://repo.roscidus.com/python/python"/>
         <executable-in-path name="0repo"/>
       </command>
-      <implementation id="sha1new=3b8029c925e7e9d1543ec252065ee6f337e7987d" released="2014-01-20" version="0.3">
+      <implementation id="sha1new=3b8029c925e7e9d1543ec252065ee6f337e7987d" released="2014-01-20" stability="stable" version="0.3">
         <manifest-digest sha256new="X6EYKYV4E5GAXHMNI47Y46BYSCUUV5GEE4BR4MZFCACU4BN3U6OA"/>
         <archive extract="0repo-0.3" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.3/0repo-0.3.tar.bz2" size="54945"/>
       </implementation>
@@ -76,11 +76,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCgAGBQJS3R2GAAoJEAcTP5bKdNi6CVsH/2rBmdkoW5MckZNdSow8psPl4LHOulV63T+u
-7m7DOhy96U19JKv7124gF9JagzlwbWO7pd4JdrrRKI/YpmqtKf5CcovW9lIZ0doWdVrhZOZtOKJx
-rUEpkrl8Sqf/+zjXu9TjNGNrNRxvK5JbbmuWRBe+wygCtBDEl6//yA7O2J/5AwgIj8YeZY52QTcF
-O6wo6HAgLIuyfRAkVefoB87BVnT1NjJpfB4D2CtjDbKHMQkQ3o2ZP2oDF6DOMK7Q+jAFMoN+JJei
-ghbFyr0kvf9qp/18bV54p4rxzyEurOk/KshW+PfRUY1NlBQmmM7GZDdEi549z0N3ec8ELvrgMyLA
-hs8=
+iQEcBAABCAAGBQJVDY7AAAoJEAcTP5bKdNi6b7kH/jaQ1kvJhAZTarLb+R+LeaVBC/iw8ng4J83o
+Na7bA359Ej4Qq6rrYPdbH27ys/DIzBVeymfAuSheMSXiGH5hUTsswJRR4kf2dW19G1dY7jrGXiUZ
+AHi9saKs/o/goBmYjg0+u1ZV1ab4VmHppwN3/jC34HsvU5K0YMGzQRjpoyRC3hZalMo4iRSJvz+o
+rsQvgqVKSwPyFh/HeUOC4gJflbRc84D/gzFBgvyj8WknRxX6yppktSuy6tlqrBXag/Wh0DZvyFRb
+3fKC9mq/ITfJdNRK7JTD+n0Jw2Cd0m6Esh4S5+vUyLAN/PLsCuI+DpDJFH6HpOaGMeZMB3PVQMQP
+e+k=
 
 -->
