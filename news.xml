@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2015</dt>
+  <dd>
+    <a href='https://0install.de/news/v2-7-2-released/?lang=en'>Version 2.7.2 for Windows released</a>. This adds "auto-start" and "send-to" access points, "--add-standard" and "--add-all" options, "0install import-apps", a "--background" option to activate the tray icon, and a fix for the <tt>Could not find "implementation-dirs</tt> error.
+  </dd>
   <dt>Feb 2015</dt>
   <dd>
     The <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7722'>--may-compile</a> feature is now merged. This means that the 0install solver can now find selections that require first compiling some of the components. This should be useful for people writing build tools (such as 0compile).
