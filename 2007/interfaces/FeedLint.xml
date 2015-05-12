@@ -76,7 +76,7 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
           <version before="3"/>
         </runner>
       </command>
-      <implementation id="sha1new=b6774ab624a628e7d18c3c9218587db6c9112262" released="2015-05-03" version="0.9">
+      <implementation id="sha1new=b6774ab624a628e7d18c3c9218587db6c9112262" released="2015-05-03" stability="stable" version="0.9">
         <manifest-digest sha256new="TGEZYDFL3HZBTFMTM4LVDL4SOLYTORIYAAIIVQXUHYMLYOUL44YQ"/>
         <archive extract="feedlint-0.9" href="https://downloads.sourceforge.net/project/zero-install/FeedLint/0.9/feedlint-0.9.tar.bz2" size="11770"/>
       </implementation>
@@ -85,11 +85,11 @@ Run this on all your feeds from time-to-time to make sure they still work.</desc
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVRggtAAoJEAcTP5bKdNi6oEEH/RW7Ev+DS63pKI+9V9IyzCu6uSxNE9I5kiV4
-cgrJSgBlx/uqTSB2p1R6xcozblTbxUW/Db8i+v2p9RaUBtP8JD5sLu8kfjmxMR87Gt2ct9XH8Gxj
-4yqSp7Q2tekIHtbEXw/qPx2KQ1MQcQF7yDNYItxtbdJNqXz7EHevYf6GXsi4hlesUZN/uVFq0T+/
-uIJxa/jPouHwAVHJUj/8cVHhrJJ06zrIx/7JIoVkB9ZJBtOQpWwn24xoxnuGPrjsZPXOsLEE/bb2
-NMArOUDYukazp0dOoVOwO41ekrBWKtSNDXNhnSmFoD4wlUdQq6+06lArH+JeGfNN2iS+92Td6JF6
-ca4=
+iQEcBAABCAAGBQJVUcgyAAoJEAcTP5bKdNi6374IAKSMkZLk/qWJ5PRsDV3KEJw99ZV7JD1ru/I/
+fz6dns/h/BcxCxTCLllbJG3+AdmT1XSEovBZ5Ojojx42QjN1vtR3XEsNcZ2OmHI9oVOnbcJm3Iqo
+FKWBzhbdneBIQ6BrJBL4xP9eDpbZ4kVyawvsoD8rRHoDTiSWJmnwk/Bv8j3OVXFhmjEiJNuW1wam
+v7aM8q8ZqL8ltFkcRMcvpPEsfph09l4pBLkCscepZTgf6tT8H1EtOdBZtUs58wrmKusfc3wRZRzK
+TyZzWhkdFTJKedbZbrAYubsVhVbenqmD9YwH+9XMQt+GZcooRJ+ufmHajNeufkr45nMBDWn0nm6q
+pSA=
 
 -->
