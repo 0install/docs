@@ -62,6 +62,11 @@
 
 <dl>
 
+  <dt><a href='http://0install.de/dev/api/'>.NET API</a></dt>
+  <dd>
+    Zero Install provides a .NET API that can be used to embed Zero Install functionality in your own applications.
+  </dd>
+
  <dt><a href='http://gfxmonk.net/2011/08/02/using-zero-install-as-a-plugin-manager.html'>Using Zero-Install as a Plugin Manager</a></dt>
  <dd>
    A blog post showing how 0install can be used to manage plugins for your application.

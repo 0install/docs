@@ -30,6 +30,10 @@
 <h3>Off-site documentation</h3>
 
 <dl>
+  <dt><a href='http://0install.de/docs/publishing/dotnet-libs/'>Packaging .NET libraries</a></dt>
+  <dd>
+    This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using the Publishing Tools.
+</dd>
  <dt><a href='http://rox.sourceforge.net/desktop/node/300'>Compiling with SCons and GTK</a></dt>
  <dd>
   <p>Article showing how to use Zero Install in your build scripts to download the SCons build system and
