@@ -118,11 +118,7 @@
 
   <item base='legal' label='Legal issues'/>
 
-  <item href='http://sourceforge.net' label='SourceForge'>
-    <item href='http://sourceforge.net/projects/zero-install' label='Project page'/>
-    <item href='http://sourceforge.net/project/showfiles.php?group_id=76468' label='File releases'/>
-  </item>
-
   <item href='https://github.com/0install' label='GitHub'/>
+  <item href='http://sourceforge.net/project/showfiles.php?group_id=76468' label='SF file releases'/>
 
 </layout>
