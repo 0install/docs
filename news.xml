@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jun 2015</dt>
+  <dd>
+    <a href='https://0install.de/news/v2-8-released/?lang=en'>0install 2.8 for Windows released</a>. Changes: improve updating of stale feeds, automatically close running applications when removing them from the implementation cache, OneGet integration, more detailed <tt>--verbose</tt> console output, and many small tweaks and bugfixes.
+  </dd>
   <dt>Apr 2015</dt>
   <dd>
     <a href='https://0install.de/news/v2-7-2-released/?lang=en'>Version 2.7.2 for Windows released</a>. This adds "auto-start" and "send-to" access points, "--add-standard" and "--add-all" options, "0install import-apps", a "--background" option to activate the tray icon, and a fix for the <tt>Could not find "implementation-dirs</tt> error.
