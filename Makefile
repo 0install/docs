@@ -1,4 +1,4 @@
-HTML = index.php \
+HTML = index.html \
        0bootstrap.html \
        0compile-chroot.html \
        0compile-dev.html \
@@ -87,14 +87,10 @@ htmlfiles: ${HTML}
 %.html: %.xml to_html.xsl structure.xml
 	xsltproc -o $@ --stringparam file "$@" to_html.xsl "$<"
 
-%.php: %.xml to_html.xsl structure.xml
-	xsltproc --stringparam file index.html to_html.xsl "$<" | \
-	sed -e 's/@AUTO_DOWNLOAD_HTML@/<?php require("detect.php"); ?>/' > "$@"
-
 lists/%.xml: lists/%.lst
 	./lists/make-list.py $<
 
-index.php: index.xml news.xml
+index.html: index.xml news.xml
 
 injector-feeds.html: lists/featured.xml lists/0tools.xml
 
