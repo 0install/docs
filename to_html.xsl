@@ -121,7 +121,7 @@
 	
         <div class='footer'>
 	 <p>
-	    Web-site &#169; Copyright 2003-2013 Thomas Leonard and others<br/>
+	    Web-site &#169; Copyright 2003-2015 Thomas Leonard and others<br/>
 	  </p>
 	  <p>
 	    Permission is granted to use the site (excluding the software,
@@ -151,7 +151,6 @@
 	    	   alt="Valid XHTML 1.0!" height="31" width="88"/>
 	    </a>
 	    -->
-	    <a href="http://sourceforge.net/projects/zero-install"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=76468&amp;type=11" width="120" height="30" alt="SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
 	  </span>
 	</div>
 	  </td>
