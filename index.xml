@@ -44,9 +44,11 @@
   <link href='why.html' img='tango/book.png'>Read more</link>
   <link href='packagers.html' img='tango/applications-development.png'>Make packages</link>
   <link href='faq.html' img='tango/help-browser.png'>FAQ</link>
-  <mainlink>@AUTO_DOWNLOAD_HTML@</mainlink>
+  <a href='injector.html' id='autodownload' class='autodownload'>Get Zero Install</a>
 </quicklinks>
 </div>
+
+<script type="text/javascript" src="detect.js"></script>
 
 <div style='text-align: center; padding: 2em;'>
   <iframe width="640" height="390" src="http://www.youtube.com/embed/kxPK3Hg49g0" frameborder="0" allowfullscreen="true"></iframe>

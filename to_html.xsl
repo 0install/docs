@@ -195,8 +195,8 @@
          <xsl:apply-templates/>
 	</a>
       </xsl:for-each>
-      <xsl:for-each select='*[name() = "mainlink"]'>
-	<xsl:apply-templates select='*|text()'/>
+      <xsl:for-each select='*[name() = "a"]'>
+	<xsl:apply-templates select='.'/>
       </xsl:for-each>
      </div>
     </div>
