@@ -10,12 +10,12 @@
 </p>
 
 <p>
-To use Zero Install, you will need:
+To use Zero Install, you will need these two dependencies:
 </p>
 
 <ul>
 <li><a href='http://www.gnupg.org/'>GnuPG</a> (to check the digital signatures).</li>
-<li><a href='http://www.gtk.org/'>GObject/GTK</a> (2.12 or later needed for <acronym title="Graphic User Interface">GUI</acronym>).</li>
+<li><a href='http://www.gtk.org/'>GTK+</a> (2.12 or later needed for <acronym title="Graphic User Interface">GUI</acronym>).</li>
 </ul>
 
 <p>
@@ -58,8 +58,6 @@ PyGTK (includes glib/gtk+) and their dependencies, for Mac OS X 10.6 and later v
 <pre class='maybe'>
 $ git clone https://github.com/Homebrew/homebrew.git
 $ export PATH=$PWD/homebrew/bin:$PWD/homebrew/sbin:$PATH
-  <i># the X11 libraries are not found by homebrew:</i>
-$ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 </pre>
 
 <p>Install build dependencies:</p>
@@ -73,12 +71,11 @@ $ brew install pkg-config
 $ brew install gnupg
 </pre>
 
-<p>Optionally, install glib/gtk+</p>
+<p>Optionally, install gtk+:</p>
 
 <pre>
-  <i># optional, for GUI</i>
-$ brew install glib
 $ brew install gtk+
+$ brew install gtk-engines            # for the "Clearlooks" theme
 </pre>
 
 <p>Fix homebrew shortcomings:</p>
@@ -126,20 +123,6 @@ $ export PATH=$HOME/bin:$PATH
 <p>
   Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside.
 </p>
-
-<h3 id='bundle'>Homebrew installation</h3>
-
-<p>
-<img src='screens/0install-gui-gtk-x11.png' alt='' width='656' height='326' />
-</p>
-
-<p>
-You can install <a href="https://github.com/Homebrew/homebrew/pull/28771">0install</a> with <a href="http://brew.sh">Homebrew</a>,
-using the (source) "formula" - or a (binary) "bottle" when possible,
-with requirements like <tt>gnupg</tt> and <tt>gtk+</tt>.
-</p>
-
-<pre>$ <b>brew install 0install</b></pre>
 
 <h3 id='bundle'>Bundle installation</h3>
 
