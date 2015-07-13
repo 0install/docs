@@ -101,7 +101,7 @@ $ opam init
 <p>Install OPAM packages:</p>
 <pre>
 $ eval `opam config env`
-$ opam install yojson xmlm ounit react lwt extlib ssl ocurl
+$ opam install yojson xmlm ounit react lwt extlib ocurl sha
   <i># optional, for GUI</i>
 $ opam install lablgtk
 </pre>
