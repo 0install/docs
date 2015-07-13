@@ -24,7 +24,9 @@
   
   <item base="injector" label="Download 0install">
     <item base="install-linux" label="Linux"/>
-    <item base="install-osx" label="OS X"/>
+    <item base="install-osx" label="OS X">
+      <item base="install-mac" label="Old Mac Python version"/>
+    </item>
     <item base="install-source" label="Source code">
       <item base="install-python" label="Old Python version"/>
     </item>
