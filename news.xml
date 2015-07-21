@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jul 2015</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7791'>0install 2.8.1 and 2.8.2 for Windows</a> released with some minor bug fixes. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7808/focus=7809'>0publish 0.15</a> released, adding Windows support.</dd>
   <dt>Jun 2015</dt>
   <dd>
     <a href='https://0install.de/news/v2-8-released/?lang=en'>0install 2.8 for Windows released</a>. Changes: improve updating of stale feeds, automatically close running applications when removing them from the implementation cache, OneGet integration, more detailed <tt>--verbose</tt> console output, and many small tweaks and bugfixes.
