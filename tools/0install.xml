@@ -134,6 +134,10 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="2Z6N4XDLETY2LYT3CPIEUNAC3TGNAPADAUD4R2CQCAVH4G7Z2AJA"/>
         <archive extract="0install-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-2.8.tar.bz2" size="492059"/>
       </implementation>
+      <implementation id="sha1new=cb058be243def6dbe4621816ae0ae6dea6ee94cc" released="2015-08-02" version="2.9">
+        <manifest-digest sha256new="NEMUAZEHDAFYUH32N6F4ZNXIWB7CVZBNX2G3QI2DDB64U3SQVULA"/>
+        <archive extract="0install-2.9" href="https://downloads.sourceforge.net/project/zero-install/0install/2.9/0install-2.9.tar.bz2" size="497900"/>
+      </implementation>
     </group>
   </group>
 
@@ -308,8 +312,7 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
       <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
     </implementation>
-    <implementation arch="Linux-armv7l" id="armv7-2.8" released="2014-11-11" stability="stable" version="2.8">
-      <!-- (older 0install versions don't know that ARMv7 is backwards compatible) -->
+    <implementation arch="Linux-armv7l" id="armv7-2.8" released="2014-11-11" stability="stable" version="2.8"><!-- (older 0install versions don't know that ARMv7 is backwards compatible) -->
       <manifest-digest sha256new="U7PQL5RQYZ4EBOIGWQXMBNAKKDIIQZYCCOLAVGA5NOWGCI4S4KKA"/>
       <archive extract="0install-linux-armv6l-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-linux-armv6l-2.8.tar.bz2" size="3644230"/>
     </implementation>
@@ -317,14 +320,26 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="MLCIHDFMLCKI23DDSP5PG6EZR6Y5A5LLOLKJH6C2QE4ONYH6Q2GQ"/>
       <archive extract="0install-darwin-x86_64-2.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.8/0install-darwin-x86_64-2.8.tar.bz2" size="2714176"/>
     </implementation>
+    <implementation arch="Linux-i486" id="sha1new=4cae7d4a25c8cc02bf07e98e9d610e375781f215" released="2015-08-02" version="2.9">
+      <manifest-digest sha256new="UA7WCICQ4KF4EXIPJV2V652IQZRYGJ53727GDK65R6A3USSFTXYA"/>
+      <archive extract="0install-linux-i486-2.9" href="https://downloads.sourceforge.net/project/zero-install/0install/2.9/0install-linux-i486-2.9.tar.bz2" size="3413185"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=4d63c2d6f42d666f604698aeb7dbdf5d523557c7" released="2015-08-02" version="2.9">
+      <manifest-digest sha256new="F4BCX3DOFTV2PS4WUSBAW4665PJJ724JG6L635DKN2WSUTQTXZTA"/>
+      <archive extract="0install-linux-x86_64-2.9" href="https://downloads.sourceforge.net/project/zero-install/0install/2.9/0install-linux-x86_64-2.9.tar.bz2" size="3689478"/>
+    </implementation>
+    <implementation arch="Linux-armv6l" id="sha1new=7ece179a27ae254cd20a96b5e20a198e5c1203e1" released="2015-08-02" version="2.9">
+      <manifest-digest sha256new="RMS6NYYB3PMX42KJYEKQ4QIGQ6ZEYNWBE3IFA45DAID6HSJYP6TA"/>
+      <archive extract="0install-linux-armv6l-2.9" href="https://downloads.sourceforge.net/project/zero-install/0install/2.9/0install-linux-armv6l-2.9.tar.bz2" size="3649566"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVDY7AAAoJEAcTP5bKdNi6XPgH/iLql7vOcuoYgh2Ia8hQSnp5/1vtRr6TVLCZ
-T8AQlJNsWL9lr1eYkMI9i7VdFMvsIn+6ZpNkhPQdDB8wzTkZ/29VpKXNGJceJ471OM9yXU+0eybm
-P3JiGru4QZBMHeKNP9lkWAcQ9ARaZSO0S2yPjQMb7DHqr2rKAba1neCgdmPai/B39IykaUFWaRL7
-RoWLxx4qOB+YXPdkMEsuHixIONNt8z+pqC6cYBNbeKyxyMH+ZTvdITu6ZcBqFTPaWeRdlwTMgRCQ
-buE83qMX0PvUQqmU4TX1QX5ZodC+OgzWpw8CdJ0Lg8B2qbVKtreyuRQq20V6TP+LiDo6T5O/k9Ge
-Yrw=
+iQEcBAABCAAGBQJVvhZ/AAoJEAcTP5bKdNi6dY0H/ieqFnVuK2Bj7PhOvBSdOOE9nTdC+J7dR/Rw
+MLYkbDJGo5I4wxGLFXUaTon+9kXjB8ag2U1dtjbnkU+PbHOphyCMcGmEYZvkKgENsdGSRzfNRkXh
+IFJRY47mdFDPrZI5MTHVyG1b+ekAvSc6YYnBX2dr1qjbepAHEc88PmzuBrQJ4l/tgwmXcvMVFFR/
+nNTr4p39Pt7v9D0zfb4QRCP9zrk8M7dpJ3bz1l9wu3TvWn9+os19Ag9pTyJj3IqKv1HtoIK3Q8ig
+Iz26C5KGkiNiruAfkKg4Q7mzECeK21WtDHwHToWgLaLggYrbOXCWS0D/nn40Fm2ZWfhOcOYdsklE
+GXU=
 
 -->
