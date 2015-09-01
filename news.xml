@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Sep 2015</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7862'>0install 2.9</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7882'>2.9.1</a> released, adding a "0install select --may-compile" option and some bug fixes. Our Travis tests now also test on OS X and, as a result, our test-suite now passes there. There's also <a href='https://github.com/Homebrew/homebrew/pull/42405'>another effort to get the 0install Homebrew formula approved</a>. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7883'>0install 2.9 for Windows</a> was released, with many new features. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7878'>0template 0.3</a> was released, adding Windows support.</dd>
   <dt>Aug 2015</dt>
   <dd>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7818'>0publish 0.25 released</a>, with Windows support and an XML namespacing fix.
