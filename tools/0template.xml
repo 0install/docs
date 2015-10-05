@@ -61,18 +61,18 @@
       <manifest-digest sha256new="ERLRSPYBXSOGULSDGW56DUSFZ2DELXOG7JSTAZP6W2UX3NYRQOXQ"/>
       <archive extract="0template-0.2" href="https://downloads.sourceforge.net/project/zero-install/0template/0.2/0template-0.2.tar.bz2" size="15294"/>
     </implementation>
-    <implementation id="sha1new=3c1cf27d0c25a878cda5a47faed64c8fe5b07dc8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2015-08-13" version="0.3">
+    <implementation id="sha1new=3c1cf27d0c25a878cda5a47faed64c8fe5b07dc8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2015-08-13" stability="stable" version="0.3">
       <manifest-digest sha256new="YMMDCPWXMW3XTYDX6BIFXSBMZ5WTQV6CIKEZ3QVQ4EDV6NJ4N36A"/>
       <archive extract="0template-0.3" href="https://downloads.sourceforge.net/project/zero-install/0template/0.3/0template-0.3.tar.bz2" size="15513"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVzNCTAAoJEAcTP5bKdNi61pEH/jE/Zo/MTuQs7KwotFobgrvmMItAEbraQYpR
-AibaT2JvJaWiiC70zSiYT/yVXzWMI0YfIypv0fSKCvRZ31OAkmczQUGaHACEpFzgzhNns/gOn66X
-jWHBRUUm2AV9hADaEMomzI/vXR++h8mNQUKlNJLqwYKdEK4p42C7srBnQ5+hjINuySswM5xFoW18
-+KPLwnOl7uW2lHdCqwNRgMWCxMpboWeK/0oc+xz7A5aOoa8XOniU2RP6Wtde6CxzviPeXzs47qhQ
-pecZrHNgVgqE/BD3sPg1gkT4Rptxs1DmiMZPLEuiNErpjrJ45vu5QonjqzXXxS5nUCk9GG82lT4S
-Bc0=
+iQEcBAABCAAGBQJWEjaXAAoJEAcTP5bKdNi6nWwH/jWqbMj5GuxUvY02KdRzEqsSlPCsX8dhrSQ0
+cTgakDT9O5qQp0gYOh4nlX9eMsylCeGVQyYGUSkt9XNoUoUsvtvrb7uoZKHyJYSpyZqeg/eMPHhV
+WdOewdLv+f5yUOcoR+TGoM4iwp/8y5bIXJlqsxSPJSnexs5bLjjG3IE8HRhBDBBLwXeeAxUMVqXJ
+eT2aVbkT4ACJ6UIghAjCzyOw8N3dRmYxF++Z8s8Mu0ZZgOIvMFqlMzy6fNKISD2ncvIAALaERiRi
+o12UhNAK1Te881JS0UsqvLekGR5RmP3szQDPtixMDtVNMyxBLHRfi1POKP4H4dcpgcKTGZsjoOBV
+DU0=
 
 -->

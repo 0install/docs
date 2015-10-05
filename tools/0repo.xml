@@ -76,7 +76,7 @@
         <requires interface="http://repo.roscidus.com/git/core">
           <environment insert="." name="PATH"/>
         </requires>
-        <implementation id="sha1new=a1f0d2f4759ff228559568ea124427c4c75574eb" released="2015-07-11" version="0.4">
+        <implementation id="sha1new=a1f0d2f4759ff228559568ea124427c4c75574eb" released="2015-07-11" stability="stable" version="0.4">
           <manifest-digest sha256new="WPNAAW4FQJUM2NMWUYLUJBKEC2WMYXT4A5V753G2YFTSPNWQQNDQ"/>
           <archive extract="0repo-0.4" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.4/0repo-0.4.tar.bz2" size="55279"/>
         </implementation>
@@ -85,11 +85,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVoOqvAAoJEAcTP5bKdNi6MMkH+wdg95BLNnA2uSg0nnCOEy+yBv0Z/eOggD9e
-CmrabjCcyKb50H4KS5ftzwv9IEGGJc157CWPnGCPIocb3iXAjyrkFDSXPFHRJQ/Q8L8dwYLmsg0y
-9bd7h/RBFC87WMrpUjJDfhnqR0CIBPqAFoVVupYdHuxGd6d0LVs3ng4FP+YzCQsRY0dR+KvRDiw6
-Tq+u/KRoellYI52Qa9IYQf3vgdXMqqebasFqQq9ahR38TqBSHK7YrxRDCbBpkH5KZ0wT0q3xFomD
-XfgHogzxZx33Uko4egtlVP/xGtq7CVUT2c7FNFxI/QP4mvHotvQhKQ6i8p+qBEoDv78SyabSx1v1
-dAg=
+iQEcBAABCAAGBQJWEjaTAAoJEAcTP5bKdNi6qT4H/jKsR3XOppB6DHtC17AuEwuZtUvR9TUGD+FJ
+RzzSJTGhlYx9E0ZnmNyLdNiAKKVClV010u2FRlGRGPJjJreHL42Sc3CKnjHYNT/9mVwFZuudc9Qz
+hoL7NQE9xqLHcdwuahhXra/uPB77iOFDFrPPNi1DXqL+m7rJSVpvqnp2nFWhkflIqg2rkLn3eIBD
+Gktq1HhFlSDMFFOb40Y+cqNek3rzcJzDtFWFbGBmPSBfqb+Q8gFVVBGR+0dFa07Ey1jbDJECYXfF
+YX+85IHJFEn9GPU2yALsxiLGMoq+9NXQmF63uCjPfrg7gthsTVtkWsBZQywSMuLZT3rH7NSSr1pq
+O3I=
 
 -->
