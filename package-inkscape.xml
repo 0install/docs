@@ -36,7 +36,7 @@ relocation support turned on.
 We'll be using the <b>0publish</b> command to create the interface file. If you don't
 have it already, create an alias for <b>0publish</b> in the usual way:</p>
 <pre>
-$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
 </pre>
 
 <p>
@@ -136,7 +136,7 @@ get it like this:
 </p>
 
 <pre>
-$ <b>0alias inkscape http://inkscape.org/2006/ZeroInstall/Inkscape.xml</b>
+$ <b>0install add inkscape http://inkscape.org/2006/ZeroInstall/Inkscape.xml</b>
 </pre>
 
 <p>
@@ -144,7 +144,7 @@ They can then run it by typing <b>inkscape</b>. To choose a different version:
 </p>
 
 <pre>
-$ <b>0alias inkscape</b>
+$ <b>0install update --gui inkscape</b>
 </pre>
 
 

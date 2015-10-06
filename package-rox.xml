@@ -33,7 +33,7 @@ signature, or to change the signing key.
 
 <p>You can create an alias for <b>0publish</b> in the usual way, to save typing:</p>
 <pre>
-$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
 </pre>
 
 <h2>Creating a binary of ROX-Filer</h2>

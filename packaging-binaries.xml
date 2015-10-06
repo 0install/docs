@@ -46,7 +46,7 @@ the <a href='package-scons.html'>0publish</a> tutorial instead.
 Start by getting <b>0publish-gui</b> in the usual way:
 </p>
 
-<pre>$ <b>0alias 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml</b></pre>
+<pre>$ <b>0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml</b></pre>
 
 <p>
 This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).
@@ -224,7 +224,7 @@ It's surprising how easy it is to forget to set the right permissions, etc, so c
 </p>
 
 <pre>
-$ <b>0alias feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
+$ <b>0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
 $ <b>feedlint http://0install.net/2007/3rd-party/Blender.xml</b>
 </pre>
 

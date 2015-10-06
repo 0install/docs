@@ -102,10 +102,8 @@ but any changes made to the policy are not reversed.
         <pre>$ <b>0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit</b></pre>
       </li>
       <li>
-	<p>Run 0alias/0install with a shortcut you made as first argument</p>
-        <pre>$ <b>0alias rox-edit</b></pre>
-	<p>or (for apps)</p>
-        <pre>$ <b>0install update rox-edit</b></pre>
+	<p>Run "0install update" with a shortcut you made as first argument</p>
+        <pre>$ <b>0install update --gui rox-edit</b></pre>
       </li>
       <li>
         <p>

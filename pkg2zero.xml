@@ -26,7 +26,7 @@ and generate the feed automatically. This is what pkg2zero does.
 You can download <b>pkg2zero</b> and create a short-cut to it in the usual way:
 </p>
 
-<pre>$ 0alias pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml</pre>
+<pre>$ 0install add pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml</pre>
 
 
 <h2>Creating the feed</h2>

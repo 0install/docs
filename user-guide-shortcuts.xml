@@ -77,12 +77,12 @@ Different environments provide different ways to add shortcuts.
 <h3>Shell</h3>
 
 <p>
-  The <b>0alias</b> command can be used to create little shell scripts to start
+  The <b>0install add</b> command can be used to create little shell scripts to start
   programs easily:
 </p>
 
 <pre>
-$ <b>0alias rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
+$ <b>0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
 <p>
@@ -93,10 +93,6 @@ $ <b>0alias rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
 <pre>
 $ <b>rox-edit</b>
 </pre>
-
-<p>
-  Note: aliases are being replaced by <a href='user-guide-apps.html'>apps</a>. Since 0install 1.14, trying to create an alias will create an app instead.
-</p>
 
 <quicklinks>
   <link href='user-guide-first-launch.html' img='tango/go-prev.png'>Go back</link>

@@ -230,7 +230,7 @@ http://creativecommons.org/licenses/by-sa/2.5/
 											<pre>0launch <xsl:value-of select="/zi:interface/@uri"/></pre>
 											</p>
 											<p>
-												The <code>0alias</code> command can be used to create a short-cut to run it again later.
+												The <code>0install add</code> command can be used to create a short-cut to run it again later.
 												If you don't have the <code>0launch</code> command, download it from
 												<a href="http://0install.net/injector.html">0install.net</a>, which also contains
 												documentation about how the Zero Install system works.</p>

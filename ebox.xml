@@ -61,11 +61,11 @@ please report it to <a href='support.html'>the mailing list</a>, and I'll add yo
 <h2>Tutorial</h2>
 
 <p>
-You can create a short-cut to ebox with 0alias, like this:
+You can create a short-cut to ebox with "0install add", like this:
 </p>
 
 <pre>
-$ <b>0alias ebox http://0install.net/tests/ebox.xml</b>
+$ <b>0install add ebox http://0install.net/tests/ebox.xml</b>
 </pre>
 
 <p>

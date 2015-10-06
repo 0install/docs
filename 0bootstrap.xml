@@ -79,7 +79,7 @@ This program is not yet released.
 You can download <b>0bootstrap</b> and create a short-cut to it in the usual way:
 </p>
 
-<pre>$ 0alias 0bootstrap http://0install.net/tools/0bootstrap.xml</pre>
+<pre>$ 0install add 0bootstrap http://0install.net/tools/0bootstrap.xml</pre>
 
 
 <p>
@@ -89,7 +89,7 @@ Before the program is released, you need to run it from the source repository:
 <pre>$ git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/bootstrap
 $ cd bootstrap
 $ 0launch --feed 0bootstrap.xml
-$ 0alias 0bootstrap 0bootstrap.xml</pre>
+$ 0install add 0bootstrap 0bootstrap.xml</pre>
 
 <h2>Creating a package for your program</h2>
 

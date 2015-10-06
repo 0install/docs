@@ -62,7 +62,7 @@ print "Hello World!"
 $ <b>0launch hello.xml</b>
 Hello World!
 
-$ <b>0alias hello-dev hello.xml</b>
+$ <b>0install add hello-dev hello.xml</b>
 $ <b>hello-dev</b>
 Hello World!
 
