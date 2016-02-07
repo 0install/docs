@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Feb 2016</dt>
+  <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7953'>The Windows version of 0install can now use the new OCaml solver</a>.</dd>
   <dt>Nov 2015</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/34514650/'>0install 2.10 released</a>. This has several bug fixes and improvements for OS X, including support for finding the native make and Java 8 packages. The diagnostics now provide detailed information about why a feed was missing (didn't download, was empty, error from PackageKit, missing DBUS support, etc).</dd>
 
