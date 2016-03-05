@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Mar 2016</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7955'>0install 2.11 released</a>, with support for the latest PackageKit API, a way to specify a particular version by ID (for tools) and a change to ZEROINSTALL_PORTABLE_BASE to be compatible with the Windows version. Some bugs were fixed, including an error if the user had a <b>~/bin</b> directory in PATH but the directory didn't exist.<br/>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7962'>0install 2.10 for Windows</a> released, including new "0install store add-dir / remove-dir / export" commands and use of the OCaml solver (removing the old embedded Python solver and reducing the download size by over 50%).
+  </dd>
   <dt>Feb 2016</dt>
   <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7953'>The Windows version of 0install can now use the new OCaml solver</a>.</dd>
   <dt>Nov 2015</dt>
