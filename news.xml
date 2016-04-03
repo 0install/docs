@@ -4,6 +4,9 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2016</dt>
+  <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7967'>0install 2.11 for Windows released</a>, with a new installer, support for .tar.xz archives, and some bug fixes.
+    The OCaml code can now be <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7966'>built easily on Windows</a>, using the new OPAM support.</dd>
   <dt>Mar 2016</dt>
   <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7955'>0install 2.11 released</a>, with support for the latest PackageKit API, a way to specify a particular version by ID (for tools) and a change to ZEROINSTALL_PORTABLE_BASE to be compatible with the Windows version. Some bugs were fixed, including an error if the user had a <b>~/bin</b> directory in PATH but the directory didn't exist.<br/>
     <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7962'>0install 2.10 for Windows</a> released, including new "0install store add-dir / remove-dir / export" commands and use of the OCaml solver (removing the old embedded Python solver and reducing the download size by over 50%).
