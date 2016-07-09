@@ -6,16 +6,18 @@ I hereby claim:
 
   * I am an admin of http://0install.net
   * I am talex (https://keybase.io/talex) on keybase.
-  * I have a public key with fingerprint DA98 25AE CAD0 8975 7CDA  BD8E 0713 3F96 CA74 D8BA
+  * I have a public key with fingerprint 5DD5 8D70 899C 454A 966D  6A51 7513 3C8F 94F6 E0CC
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "da9825aecad089757cdabd8e07133f96ca74d8ba",
+            "eldest_kid": "0101d48945231e2057c9ef55f3067d781ab136935151a37849dd54bcb97ff1b3405d0a",
+            "fingerprint": "5dd58d70899c454a966d6a5175133c8f94f6e0cc",
             "host": "keybase.io",
-            "key_id": "07133f96ca74d8ba",
+            "key_id": "75133c8f94f6e0cc",
+            "kid": "0101d48945231e2057c9ef55f3067d781ab136935151a37849dd54bcb97ff1b3405d0a",
             "uid": "c169ef7f219a405638197675d0e58900",
             "username": "talex"
         },
@@ -26,34 +28,41 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1409299902,
+    "ctime": 1468070977,
     "expire_in": 157680000,
-    "prev": "11bc6cfbab90cbaac645de85bcb23e572145b15ddda999571b3fe6d13f10c6aa",
-    "seqno": 4,
+    "prev": "52d7f9ad13e061cf37f534b858889c7a049242d68cc2b02dc8d42967648572a7",
+    "seqno": 8,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2
 
-owGbwMvMwMXILmw/7VTJjV2Mpw+8T2IIYTC9Xa2UlJ9SqWRVrZSdCqbSMvPSU4sK
-ijLzSpSslFISLS2MTBNTkxNTDCwszU3Nk1MSk1IsUg3MDY2N0yzNkhPNTVIskhKV
-dJQy8otBOoDGJCUWp+pl5gPFgJz4zBSgKBb1pWCJZEMzy9Q08zQjQ8tEEwNTM2ML
-Q0tzM3PTFINUUwtLAwOQwuLUorzE3FSg6pLEnNQKpVodJaBQWWZyKsjBIHuh0gaZ
-ecVAJTl6eaklQI0FRfkl+cn5OUCZjJKSAiuQxpLKApDK8tSkeKgZ8UmZeSlATwM1
-lKUWFWfm5ylZGQJVJpdkggw1NDGwNLK0tDQw0lFKrSjILEqNzwSpMDU3szAAApA1
-qWVAIw0Nk5LNktOSEpMsDZKTEhOTzUxMU1ItTJOSk4yMU03NjQxNTJMMTVNSgGFq
-aWlqbphknJZqlmJonGZokGyWCAqS4tTCvHwlKxOgMxPTgUYWZ6bnJZaUFqUq1XJ1
-MsqwMDByMbCxMoHijYGLUwAWm5/2cjD0/VrW/TovnfWV3IM7+3V3PTt797m43dcZ
-HdWF8rv3+G+f5KgaZdJfHlqjJSv51OGF1Zu6iOuK5wRXzde3zjKe3Sr4gWdp05W7
-01d6cTlpWN6o/9bqEnNdfsfCwA+Fjg1TVW9NNDlywU+d9fU78cl6Ky5qC7Xsy5Rc
-utC4V4TFRka5TuC05lzNDXoKDlzxez1263J/Y7492UTpeMDHySLcNbfbHy093H3w
-6JUz54+8a2wL+FLJEKGy7qjW77Z4lws5yrc8P2TKpO4LLBa+Ieyz4ItHGZsuv4+T
-1dqSzZlC6zg6rH23ch67JdqRasDDt9vkleLcnrXnX+4W7pUJe79XUbdi+0d585v6
-0lrGwgA=
-=+If2
+owGtkmtQVGUYxxcyB5dRzC6E8SHPGE1c1nO/LKk0lEKOjKSyTWI75/Ke3SOwZ9lz
+Fha56NSQglqrbVYjllBC3MZgopSAaORiSE6GogUSSFZcA0wDQegcxr71sffLO+/z
+/P7/93meebzLHzIE+C19oqQtFN150O/iEGew7J/jsiFOFrIgczaUAhYvkCoARbWm
+SAJkhmAERgScZnACxRCAwgTFM0AkCBGDSUqgaITlEIxkMAIhEBajaJwRBALneI6h
+RBHhMBwmBJiFIiFRctiAy+mSHKpmS2gULVAwzTA8TuAsQ5ICyRIIRSAYxtMig4sk
+gHleE9plRVdoxXGsAkySrMW0h3WxvP/g/+e63Yt2PEJqckpEEYbVUiRGIwxFUhoD
+CJqBYR1UgMvBpgGNVtlU4IFyIyEtlCHxQJ+q3saDNCw5FA1JNTmAqgmdLlmVeTlV
+y9hV1WnWhWqWUyczAWd94GHlJIegzVATZACXIskOyIxoJK9KuimCkzRMwQxFRULA
+45RcwCrpBEFpce3o34AMffKoQIkMKyAY2AGTCC9ilEhgOEcTNE0zPMXCOIPiqEDS
+PI9yMCrwtICjDEmROE1QKEtBelvpDhky01qdrE3zVCSbg1XdLgDlGgv8Q5cY/AIM
+Sx/217fLYFy28t+Vu9AbtCCXksc7EvfOyY9ZDnlvtW3ZHTy2cNNi35zW0JtovDYS
+DB1f19Q45k7eUDdY7P20cvK5sOi4d2H0h0/sNafUtXee//nOfGaBaDPXBkY1Fb2z
+xMfHe7P56MbKR31BE8F9u0p2dT479qOPWDNFT19SDNLl2vwdvbOJId1Xx6PPtRhP
+fM3M9obcCGsJ37quXbkef7Z45On5yb8t9z7PzR/bXz5d33Y9z2a6Gdvv6yraVnbG
+vdBQDfFZ60snX99Tsi/BXmQx2cK259b/VNrM1ni2rDg98e2rh7kqkl4z3Lz5boZv
+uNse0VRPl3zojqwbNSWc9s5PRTa+HV033XE+50Bh/HKs6hElb1VEc3jAkZi4gxs2
+7Tn2gmAM6Xlm5amko/2essP7poZqN9YM5QR0F54J/a4ieXzmVnoiGNx00nWJ6kge
+nf6s8ne8OqnvpcYud0v3m2+U3c7eu9Y08/H7q7C38gdGf70xOVecdG9nwkzOb9sq
+nLNT90sHnvTNNmQ0Gwc9vDr+UfrjVzq3rg8L+vOL2q/ou3+Nhl/5cuPZiNXfjzOH
+XmsxWts7+re3RhljDvjFrZ6VB/9QCitmkB7Pxdjqlh4+dsRLvrewgh0+cf4buiop
+cOJCR8pt/wIDKPqltetF4v4H184dqywf7nw5LTDscrmUaXklrRUvmSnf3fdUbN6y
+qydjjg5EGduhon8A
+=6ff9
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -62,4 +71,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/talex
 
 ==================================================================
-
