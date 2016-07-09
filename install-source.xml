@@ -40,8 +40,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 $ <b>gpg --recv-key --keyserver pgp.mit.edu 1C325588</b>
 $ <b>gpg 0install-2.11.tar.bz2.sig</b>
 gpg: Signature made Sat 09 Jul 2016 01:04:36 PM BST using RSA key ID 1C325588
-gpg: Good signature from "Thomas Leonard &lt;XXX@gmail.com>" [ultimate]
-gpg:                 aka "Thomas Leonard &lt;XXX@docker.com>" [ultimate]
+gpg: Good signature from "Thomas Leonard &lt;XXX@gmail.com>"
+gpg:                 aka "Thomas Leonard &lt;XXX@docker.com>"
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: 5DD5 8D70 899C 454A 966D  6A51 7513 3C8F 94F6 E0CC
