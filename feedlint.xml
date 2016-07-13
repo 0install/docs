@@ -19,7 +19,7 @@ To use it, pass the URLs of the feeds to check as arguments, e.g.:
 </p>
 
 <pre>
-$ <b>0alias feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
+$ <b>0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
 $ <b>feedlint http://my/feed.xml</b>
 </pre>
 

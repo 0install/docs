@@ -64,7 +64,7 @@ typing it's full URI each time you run it, create an alias now:
 </p>
 
 <pre>
-$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
 $ <b>0publish --version</b>
 0publish (zero-install) 0.5
 </pre>
@@ -97,7 +97,7 @@ to edit interfaces using Edit:
 </p>
 
 <pre>
-$ <b>0alias sensible-editor http://rox.sourceforge.net/2005/interfaces/Edit</b>
+$ <b>0install add sensible-editor http://rox.sourceforge.net/2005/interfaces/Edit</b>
 </pre>
 
 <p>

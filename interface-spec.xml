@@ -447,16 +447,18 @@ The type of the archive is given as a MIME type in the <b>type</b> attribute
 </p>
 
 <ul>
- <li>application/x-rpm (.rpm)</li>
- <li>application/x-deb (.deb)</li>
+ <li>application/x-rpm (.rpm) - not supported by Windows version</li>
+ <li>application/x-deb (.deb) - not supported by Windows version</li>
  <li>application/x-tar (.tar)</li>
  <li>application/x-bzip-compressed-tar (.tar.bz2)</li>
  <li>application/x-lzma-compressed-tar (.tar.lzma)</li>
  <li>application/x-compressed-tar (.tar.gz or .tgz)</li>
  <li>application/zip (.zip)</li>
  <li>application/vnd.ms-cab-compressed (.cab)</li>
- <li>application/x-ruby-gem (.gem) - since version 1.0-rc1</li>
+ <li>application/x-xz-compressed-tar (.tar.xz) - since version 0.43, not supported by Windows version</li>
+ <li>application/x-ruby-gem (.gem) - since version 1.0-rc1, not supported by Windows version</li>
  <li>application/x-7z-compressed (.7z) - Windows version only</li>
+ <li>application/x-msi (.msi) - Windows version only</li>
 </ul>
 
 <p>

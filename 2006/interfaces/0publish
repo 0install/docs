@@ -138,7 +138,7 @@ packagers.html.</description>
         <requires interface="http://repo.roscidus.com/security/gnupg">
           <environment insert="." name="PATH"/>
         </requires>
-        <implementation id="sha1new=bc06f0a2023fba486929e28dfbbfe42d2a43d4b1" released="2015-07-01" version="0.25">
+        <implementation id="sha1new=bc06f0a2023fba486929e28dfbbfe42d2a43d4b1" released="2015-07-01" stability="stable" version="0.25">
           <manifest-digest sha256new="AK4BBYGWE3AIITVH3POX2BMQLK4BLDE2ZUOAFAGC5NBRHSZ2MKMA"/>
           <archive extract="0publish-0.25" href="https://downloads.sourceforge.net/project/zero-install/0publish/0.25/0publish-0.25.tar.bz2" size="26799"/>
         </implementation>
@@ -147,11 +147,11 @@ packagers.html.</description>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVk6V7AAoJEAcTP5bKdNi6a+gIAJRD5bNbt8i0p16yR5/v/zQvwYsPWds+Cx8x
-b6c6CLVib5lHMcTAyvkLJVtn34CiLOsxqiwyTLVoijpEQbiqms32oCTju6YYRqZWhGIX5WoN8uiF
-++wKPwrdp0jd/TeRRNeCZWv+8hp4J8g6w/2dMAiWrbZSiZG5zo/rXe28UkMRsuQgeDQgSTG49iw6
-S0PwdsPyy1cF9/vKub3GgDghsNGZdVYGzcRAzVAtAbRrZJyoiJMfrcIgidBVgXHffAYmhRV4OLZE
-LutJ0MUg+7aLJGd9XHATZ6Kt07Us/RshpIifEk4vuOP2UnhnJo0rWJ5VybTrlYQ7CuhkXwuzDmyA
-iCs=
+iQEcBAABCAAGBQJWEjaYAAoJEAcTP5bKdNi66r8H/2ODDjMsJLyCtVBNAi/LKbAdoy7cfkRrf9qN
+Ae7vVL0iWojIWf4Sc+VSDpNrdr6bM4GcFyLZHcfL/3Gf5ouSRRCKTJUg3dqiQSXjO31/qykNuMK8
+yfQ1ytrbHIr1x76PE4L14ZLfE/5qANpqGeHH3TE2SPRzefEUFQP1FIJYu/VENwYGedMbvWNeI+/O
+9fIOvE57yhpr1/+bjwBYvhcHrmmJOW7fiSwwsI/rZHvoIKXleo1l3aROYLBHyRY/Ve0cJwz34fDY
+qPrxP8bL8CzEQMhlHi7qzN4EZhpgWsJ9+bBjDgkIPT+guJgevuHb49o2HZgS4Tx3T9gck3s7qwN+
+UDc=
 
 -->

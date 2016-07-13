@@ -4,6 +4,25 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2016</dt>
+  <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7967'>0install 2.11 for Windows released</a>, with a new installer, support for .tar.xz archives, and some bug fixes.
+    The OCaml code can now be <a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7966'>built easily on Windows</a>, using the new OPAM support.</dd>
+  <dt>Mar 2016</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7955'>0install 2.11 released</a>, with support for the latest PackageKit API, a way to specify a particular version by ID (for tools) and a change to ZEROINSTALL_PORTABLE_BASE to be compatible with the Windows version. Some bugs were fixed, including an error if the user had a <b>~/bin</b> directory in PATH but the directory didn't exist.<br/>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7962'>0install 2.10 for Windows</a> released, including new "0install store add-dir / remove-dir / export" commands and use of the OCaml solver (removing the old embedded Python solver and reducing the download size by over 50%).
+  </dd>
+  <dt>Feb 2016</dt>
+  <dd><a href='http://article.gmane.org/gmane.comp.file-systems.zero-install.devel/7953'>The Windows version of 0install can now use the new OCaml solver</a>.</dd>
+  <dt>Nov 2015</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/34514650/'>0install 2.10 released</a>. This has several bug fixes and improvements for OS X, including support for finding the native make and Java 8 packages. The diagnostics now provide detailed information about why a feed was missing (didn't download, was empty, error from PackageKit, missing DBUS support, etc).</dd>
+
+  <dt>Sep 2015</dt>
+  <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7862'>0install 2.9</a> and <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7882'>2.9.1</a> released, adding a "0install select --may-compile" option and some bug fixes. Our Travis tests now also test on OS X and, as a result, our test-suite now passes there. There's also <a href='https://github.com/Homebrew/homebrew/pull/42405'>another effort to get the 0install Homebrew formula approved</a>. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7883'>0install 2.9 for Windows</a> was released, with many new features. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7878'>0template 0.3</a> was released, adding Windows support.</dd>
+  <dt>Aug 2015</dt>
+  <dd>
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7818'>0publish 0.25 released</a>, with Windows support and an XML namespacing fix.
+    <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7831'>0repo 0.4 released</a> - new features include searching in the catalogue, a "0repo serve" command to test locally, and Windows support.
+  </dd>
   <dt>Jul 2015</dt>
   <dd><a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7791'>0install 2.8.1 and 2.8.2 for Windows</a> released with some minor bug fixes. <a href='http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7808/focus=7809'>0publish 0.15</a> released, adding Windows support.</dd>
   <dt>Jun 2015</dt>

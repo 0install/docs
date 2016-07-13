@@ -20,7 +20,7 @@ Create a short-cut to it in the usual way:
 </p>
 
 <pre>
-$ 0alias 0test http://0install.net/2008/interfaces/0test.xml
+$ 0install add 0test http://0install.net/2008/interfaces/0test.xml
 </pre>
 
 <h2>Usage</h2>

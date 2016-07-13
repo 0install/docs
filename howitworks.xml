@@ -32,7 +32,7 @@ so that you don't need to download anything twice, and programs can still be use
 <ul>
  <li>GNOME and KDE users will drag the link to their <b>Add New Program</b> dialog, creating a launcher on their Applications menu.</li>
  <li>ROX or Finder users will drag the link to <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>, creating a launcher application that uses 0launch.</li>
- <li>Shell users will run the <b>0alias</b> command, creating a shell short-cut.</li>
+ <li>Shell users will run the <b>0install add</b> command, creating a shell short-cut.</li>
 </ul>
   </td>
  </tr>
@@ -71,7 +71,7 @@ conflict with each other.
  <tr>
   <td class='image'><img src='screens/run-clan.png' alt='' width='400' height='271'/></td>
   <td><h3>Running</h3>
-  <p>If you used <a>Add New Program</a>, you should now find the game in your menu. If you used <b>0alias</b>,
+  <p>If you used <a>Add New Program</a>, you should now find the game in your menu. If you used <b>0install add</b>,
   you'll have a new shell command, etc.</p>
   </td>
  </tr>

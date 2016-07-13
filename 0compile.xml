@@ -28,7 +28,7 @@ get <b>0compile</b> itself, use:
 </p>
 
 <pre>
-$ <b>0alias 0compile http://0install.net/2006/interfaces/0compile.xml</b>
+$ <b>0install add 0compile http://0install.net/2006/interfaces/0compile.xml</b>
 </pre>
 
 <p>

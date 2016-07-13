@@ -41,7 +41,7 @@ To get it:
 </p>
 
 <pre-scrolled>
-$ 0alias 0repo http://0install.net/tools/0repo.xml
+$ 0install add 0repo http://0install.net/tools/0repo.xml
 </pre-scrolled>
 
 <p>

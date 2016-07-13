@@ -43,6 +43,15 @@ if (strpos($body, "gpg: no writable keyring found")) {
     if (strpos($body, "http://dispcalgui.hoech.net")) {
 	$notes .= "\n\ndispcalGUI users should do 'yum install numpy wxPython'";
     }
+} else if (strpos($body, "Ubuntu 14.04")) {
+    $notes = "\n\n" .
+	"The version of apt-cache in Ubuntu 14.04 no longer supports the " .
+	"--no-all-versions option after the subcommand, which means that " .
+	"0install cannot find the candidate (uninstalled) python-pygame " .
+	"package. This was fixed in 0install 2.7.";
+    if (strpos($body, "dispcalgui.hoech.net/0install/pygame.xml")) {
+	$notes .= "\n\nA work-around is to 'apt-get install python-pygame' manually.";
+    }
 } else {
     $notes = "";
 }

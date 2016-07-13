@@ -46,16 +46,10 @@ file was signed, it will resign it when saving with the same key by default. You
 signature, or to change the signing key.
 </p>
 
-<p>You can create an alias for <b>0publish</b> in the usual way, to save typing:</p>
+<p>You can create an app for <b>0publish</b> in the usual way:</p>
 <pre>
-$ <b>0alias 0publish http://0install.net/2006/interfaces/0publish</b>
+$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
 </pre>
-
-<p>
-In build scripts, you would use the full URI or create a local function
-so that users don't need to run 0alias first in order to build your
-program (assuming you use <b>0publish</b> as part of the build process).
-</p>
 
 <p>
 The <a href='package-scons.html'>SCons packaging tutorial</a> shows many examples

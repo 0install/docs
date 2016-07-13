@@ -113,6 +113,7 @@ In the process of handling your request, 0install may send its own invoke messag
       <dt>os</dt><dd>Select implementations for the given OS (e.g. "Linux")</dd>
       <dt>cpu</dt><dd>Select implementations for the given CPU (e.g. "x86_64" or "src")</dd>
       <dt>message</dt><dd>A message to display if 0install uses its own GUI ("I need this because ...")</dd>
+      <dt>may_compile</dt><dd>(0install >= 2.9; default False) Treat source implementations as potential binaries. If a source implementation is selected, it will be tagged with <b>requires-compilation="true"</b> to indicate this.</dd>
     </dl>
     <p>
       Returns <b>["ok",{"stale":stale-flag}]</b> on success. If stale-flag is true, the selections are based on old information. Consider using <b>refresh</b> to check for updates.

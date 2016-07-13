@@ -33,7 +33,7 @@ To get it:
 </p>
 
 <pre-scrolled>
-$ 0alias 0template http://0install.net/tools/0template.xml
+$ 0install add 0template http://0install.net/tools/0template.xml
 </pre-scrolled>
 
 

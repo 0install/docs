@@ -4,7 +4,7 @@
 <program name='0release'
 	 author='Thomas Leonard'
 	 feed='http://0install.net/2007/interfaces/0release.xml'
-	 git='http://repo.or.cz/w/0release.git'
+	 git='https://github.com/0install/0release.git'
 	 license='GNU Lesser General Public License'>
 
 <p>
