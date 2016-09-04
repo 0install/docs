@@ -146,9 +146,13 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="655DE4ARIZPYYN4ONN5Q6K63GXVC7KX2YZQ6TNUG3O3A5XXOBXEQ"/>
         <archive extract="0install-2.10" href="https://downloads.sourceforge.net/project/zero-install/0install/2.10/0install-2.10.tar.bz2" size="431916"/>
       </implementation>
-      <implementation id="sha1new=28e45391c702ba3205ae8a6ac88562da51dad21e" released="2016-02-04" version="2.11">
+      <implementation id="sha1new=28e45391c702ba3205ae8a6ac88562da51dad21e" released="2016-02-04" stability="stable" version="2.11">
         <manifest-digest sha256new="T4AZ74J5X6VNCGLKTEK4IKXNM6QJJ7DVSYLODMEQ64JWAIJNYEIA"/>
         <archive extract="0install-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-2.11.tar.bz2" size="438380"/>
+      </implementation>
+      <implementation id="sha1new=22ff28f35f4505c0d1c473b3385b9aad4b6a93ff" released="2016-09-04" version="2.12">
+        <manifest-digest sha256new="PEA45SSI7PJTTATDGV2EMMKW3CWTHIBNZBKVVZ7DHCUKNRG7HPLA"/>
+        <archive extract="0install-2.12" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12/0install-2.12.tar.bz2" size="441288"/>
       </implementation>
     </group>
   </group>
@@ -368,35 +372,47 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="N6MXRGNJAYIEBODFQXI7HPRTBMABK2YPARUXHVVRY2SGFXCLLLQQ"/>
       <archive extract="0install-linux-armv6l-2.10" href="https://downloads.sourceforge.net/project/zero-install/0install/2.10/0install-linux-armv6l-2.10.tar.bz2" size="3576098"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=db0226fa706300497867c6808e1b534edb243eb1" released="2016-02-04" version="2.11">
+    <implementation arch="Linux-i486" id="sha1new=db0226fa706300497867c6808e1b534edb243eb1" released="2016-02-04" stability="stable" version="2.11">
       <manifest-digest sha256new="XGMXP2M55R2G7H5C4AUPOYPDSAWCVWLPNH2OZHWVCDGB3EBIPUYQ"/>
       <archive extract="0install-linux-i486-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-linux-i486-2.11.tar.bz2" size="3362335"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=9908dc3f2fbdaf282dfaf2ee7ff9999665c3175c" released="2016-02-04" version="2.11">
+    <implementation arch="Linux-x86_64" id="sha1new=9908dc3f2fbdaf282dfaf2ee7ff9999665c3175c" released="2016-02-04" stability="stable" version="2.11">
       <manifest-digest sha256new="XG5UNN4LXQRA6KE6B2LUPNBXVZUV6LDP2CLPEGS6A62SP5AMIAMQ"/>
       <archive extract="0install-linux-x86_64-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-linux-x86_64-2.11.tar.bz2" size="3609143"/>
     </implementation>
-    <implementation arch="Linux-armv6l" id="sha1new=5e89fddc167a324834d7dcadc639b08b08e17539" released="2016-02-04" version="2.11">
+    <implementation arch="Linux-armv6l" id="sha1new=5e89fddc167a324834d7dcadc639b08b08e17539" released="2016-02-04" stability="stable" version="2.11">
       <manifest-digest sha256new="XENETEMCPBKPDIEWY65332HIE37MTWKQRDXV5OBA4GJA2Y3TJHJA"/>
       <archive extract="0install-linux-armv6l-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-linux-armv6l-2.11.tar.bz2" size="3579867"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=b48a931562868e5675f854fdb27fe9c727bc3e89" released="2016-09-04" version="2.12">
+      <manifest-digest sha256new="WGQ6XHWMBJ4CU366CXJO3GNARFMUFSHVGKN3UK6L3XIXPFDD45QQ"/>
+      <archive extract="0install-linux-i486-2.12" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12/0install-linux-i486-2.12.tar.bz2" size="3344733"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=08565e0a2234a45adeb201d87d472d2b21e91512" released="2016-09-04" version="2.12">
+      <manifest-digest sha256new="FUNBHOKDBPQHHIZRHRP3KNFMLEK6YZ222U5MZJ3K6KEFNVUOPEYA"/>
+      <archive extract="0install-linux-x86_64-2.12" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12/0install-linux-x86_64-2.12.tar.bz2" size="3886991"/>
+    </implementation>
+    <implementation arch="Linux-armv6l" id="sha1new=cd0cd88aebed30399855c6d72a56476271d17044" released="2016-09-04" version="2.12">
+      <manifest-digest sha256new="APRCTIFUVXSHCE67BRLSZYZKECOS2GSZFACCKDMHR6XKJCVS6WWQ"/>
+      <archive extract="0install-linux-armv6l-2.12" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12/0install-linux-armv6l-2.12.tar.bz2" size="3557107"/>
     </implementation>
   </group>
   <group>
     <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
-    <implementation arch="Windows-*" id="sha1new=1320732c46df741dee96fa7851539071550d2640" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0install.exe" released="2016-02-07" version="2.11">
+    <implementation arch="Windows-*" id="sha1new=1320732c46df741dee96fa7851539071550d2640" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0install.exe" released="2016-02-07" stability="stable" version="2.11">
       <manifest-digest sha256new="KJUNUEY57KOBOZVMAU4N3MJFLOO3FK3EMU62DUK3CFQVBNCNLU5A"/>
       <archive extract="0install-Windows-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-Windows-2.11.zip" size="3545396" type="application/zip"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJWt0LOAAoJEAcTP5bKdNi60tAH/jctLEMD4FeOLchMMKDVQBgY7kGVh/dgGdRk
-a+G7FDi8/1QT7XPTNJkJwe3/ZBgjuwRL08GZe3OyKmn7GylndzwTXGgqvRa3wO/MujiCjheP2FEA
-m2jbxZslSrduNT1k0uNXrtQb8yymoKqnTMZYX7ce0kpYnhJ1RQyiuHRWglWijGDCyXcmP/Js5OZS
-9W+lGG0HNq4gkzJ0WY2PZPD1t4tAIhjW/rFItQRnWxJvFrxIGoGjm1BNCX0fbp9Wsfbjd8tFZfRU
-q6XPkfpPuMFrl3nymHFraAUG3BjMNREHwYqFx7u7kvavseIieyNAL6SeleGV+KfC1xuELLoqwjDM
-L94=
+iQEcBAABCAAGBQJXzIMqAAoJEAcTP5bKdNi6kXkH/3Lp+mLoiqnRc+0qoHsN1MahOkT+A7A7LD03
+ky1Dtlh8xDQKboBj43GV+5VgvoXzjMMYwR+Yys68O3VF847uGdQW3QBFd0SAsSeHUu1sS/UKXtaC
+8ImR4z8nniLnSbYAQlxB2DAuLJkJHzpGTg4EGGriW9+aeamSvl+NGbFPuIVyi9qXrrYSntvDf+EP
++IklgYLzJa1hI60jlFlBEjP+YOtVyddYoiYkj3pBAVg7aAPsU4pIAXzo6dVB+F8Ofq1iBSYXoOtZ
+iiBxY0HQMHKhok0+zyqmAP/nfWPeL2f2DKoDNV/AmHg/bbUgxkVSqr6g+3YOtmm8bcJjZL4M26mh
+uaY=
 
 -->
