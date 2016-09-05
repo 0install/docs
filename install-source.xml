@@ -26,8 +26,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.11/0install-2.11.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.11/0install-2.11.tar.bz2.sig</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.12/0install-2.12.tar.bz2</b>
+$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.12/0install-2.12.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -38,8 +38,8 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 
 <pre>
 $ <b>gpg --recv-key --keyserver pgp.mit.edu 1C325588</b>
-$ <b>gpg 0install-2.11.tar.bz2.sig</b>
-gpg: Signature made Sat 09 Jul 2016 01:04:36 PM BST using RSA key ID 1C325588
+$ <b>gpg 0install-2.12.tar.bz2.sig</b>
+gpg: Signature made Sun 04 Sep 2016 21:31:06 BST using RSA key ID 1C325588
 gpg: Good signature from "Thomas Leonard &lt;XXX@gmail.com>"
 gpg:                 aka "Thomas Leonard &lt;XXX@docker.com>"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -56,12 +56,12 @@ some other source of information).
 
 <p>
   You'll probably need to install some OCaml dependencies before you can build.
-  See the <a href='https://github.com/0install/0install/blob/b2.11/README.md'>README</a> for details.
+  See the <a href='https://github.com/0install/0install/blob/b2.12/README.md'>README</a> for details.
   You should then extract the archive, change directory inside it and build:
 </p>
 <pre>
-<b>tar xf 0install-2.11.tar.bz2</b>
-<b>cd 0install-2.11</b>
+<b>tar xf 0install-2.12.tar.bz2</b>
+<b>cd 0install-2.12</b>
 <b>make</b>
 </pre>
 
