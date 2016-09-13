@@ -1063,6 +1063,8 @@ Valid values for CPU include:
   <li>ppc</li>
   <li>ppc64</li>
   <li>x86_64</li>
+  <li>armv6l</li>
+  <li>armv7l</li>
 </ul>
 
 <h2 id='if-0install-version'>The if-0install-version attribute</h2>
