@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2017</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35749292/'>0install 2.12.1 released</a>. This is mainly small updates to the build to cope with various changes in upstream packages.</dd>
   <dt>Oct 2016</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35343487/'>0install 2.12 released</a>. This is mainly code cleanups and improvements to the build. A minor caching bug, which resulted in some unnecessary extra work being done, was fixed.</dd>
   <dt>Apr 2016</dt>
