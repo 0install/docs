@@ -492,7 +492,7 @@ An implementation can also be created by following a &lt;recipe&gt;:
 
 <pre>
   &lt;recipe&gt;
-    ( &lt;archive ...&gt; | &lt;file ...&gt; | &lt;rename ...&gt; | &lt;remove ...&gt; ) +
+    ( &lt;archive ...&gt; | &lt;file ...&gt; | &lt;rename ...&gt; | &lt;remove ...&gt; | &lt;copy-from ...&gt; ) +
   &lt;/recipe&gt;
 </pre>
 
@@ -516,6 +516,9 @@ If a recipe contains an unrecognised element then the whole recipe must be ignor
 
   <dt>&lt;remove path='...'&gt;</dt>
   <dd>Delete the file or directory from the implementation (0install >= 2.1). It is an error if the path is outside the implementation.</dd>
+
+  <dt>&lt;copy-from id='...' source='...' ? dest='...' ?&gt;</dt>
+  <dd>Copies files or directories from another implementation, e.g., for applying an update to a previous version (0install >= 2.13). The specified id must exactly match the id attribute of another implementation specified elsewhere in the same feed. You can specify the source and destination file or directory to be copied relative to the implementation root. Leave them unset to copy the entire implementation.</dd>
 </dl>
 
 <p>
