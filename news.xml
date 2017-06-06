@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jun 2017</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35822153/'>0install 2.13 for Windows released</a>, including support for <b>copy-from</b> and extracting from <b>.tar.xz</b> archives.</dd>
   <dt>Apr 2017</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35749292/'>0install 2.12.1 released</a>. This is mainly small updates to the build to cope with various changes in upstream packages.</dd>
   <dt>Oct 2016</dt>
