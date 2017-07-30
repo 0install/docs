@@ -65,22 +65,18 @@
       <manifest-digest sha256new="YMMDCPWXMW3XTYDX6BIFXSBMZ5WTQV6CIKEZ3QVQ4EDV6NJ4N36A"/>
       <archive extract="0template-0.3" href="https://downloads.sourceforge.net/project/zero-install/0template/0.3/0template-0.3.tar.bz2" size="15513"/>
     </implementation>
-    <implementation id="sha1new=077fb1eb8f805d72a7c8e49dde422ab4fe0a4001" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-05-14" stability="stable" version="0.4">
+    <implementation id="sha1new=077fb1eb8f805d72a7c8e49dde422ab4fe0a4001" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-05-14" version="0.4">
       <manifest-digest sha256new="XPGVWCMI33FL44HCWMQUXVX3ZSWL427RHIVY3KLCGNV3ERDYENNA"/>
       <archive extract="0template-0.4" href="https://downloads.sourceforge.net/project/zero-install/0template/0.4/0template-0.4.tar.bz2" size="17107"/>
-    </implementation>
-    <implementation id="sha1new=c86616019e3a50eae21fabaee2fb918ac563cfd5" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-07-30" version="0.5">
-      <manifest-digest sha256new="DIZLPBRILLXRFGDSU7VYDZ2VI7FPSDJ2R377K3Y5E4E53K6GFZWQ"/>
-      <archive extract="0template-0.5" href="https://downloads.sourceforge.net/project/zero-install/0template/0.5/0template-0.5.tar.bz2" size="17507"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZfbI/AAoJEAcTP5bKdNi6HaUIAKylC4ddfANK1aBWlwpIM9PRIIEhQNNVBoct
-IglBEJHpJOV1hlwVDD7pctN/sgQaNu4sTl9VMIBJSnOzStN5ggiyRj8x790Gpul60jo1T5QIPe8Z
-ijaqwXj2tlqykj0dagZlS8DFLu+F4x9X4nOLHEgTUCgvryyRi7KGdpIT24s4tRQBbb/kiWqaOnUo
-cJyVpz2vQpKq6qjvY/qMqp6n4DIGFbvJBZqD2P125xLawFQGu+kgz4hUU7nfSe/rb7pXwZhCFYeL
-r/MQPluNi/8wojFPktfC81l2NiEVZJpK0xWynVRU80EOppT+rGHKMEro0QAsRMs6wZ71BA+tg6jL
-Ip0=
+iQEcBAABCAAGBQJZfbK+AAoJEAcTP5bKdNi6o8EH/1KknNDBrj+YmqIfwF7US1j3GbARbrheLZeK
+10rlJyIukgQiK/HLtpUGfoP0phITl39yW0FGsSLexSNVnOZOShlfYOaT2Ebjo06KNLDbvOncg6/Z
+E6MSbuJBcXSLltPrvbYuMdsP0BWLh4AhEY2E5vAh5fb7fYt0PghBYGpIV7y4VzRUTu42fQVshFJp
+XLhz/YmcfLTw/ZpEwQXZm2gtsWhGMrfpwCFn4kKHqotRRrcBR1JjVUh+o+gU9NGwFK1Aor+Us2EK
+USlTSQzemBAvGPksz0pkmu8u093/VdQwECFeSlDU6BRpesqYUtuWiAXK2hHEsEXdrQevlLD+MHv9
+1O4=
 
 -->
