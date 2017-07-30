@@ -65,18 +65,22 @@
       <manifest-digest sha256new="YMMDCPWXMW3XTYDX6BIFXSBMZ5WTQV6CIKEZ3QVQ4EDV6NJ4N36A"/>
       <archive extract="0template-0.3" href="https://downloads.sourceforge.net/project/zero-install/0template/0.3/0template-0.3.tar.bz2" size="15513"/>
     </implementation>
-    <implementation id="sha1new=077fb1eb8f805d72a7c8e49dde422ab4fe0a4001" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-05-14" version="0.4">
+    <implementation id="sha1new=077fb1eb8f805d72a7c8e49dde422ab4fe0a4001" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-05-14" stability="stable" version="0.4">
       <manifest-digest sha256new="XPGVWCMI33FL44HCWMQUXVX3ZSWL427RHIVY3KLCGNV3ERDYENNA"/>
       <archive extract="0template-0.4" href="https://downloads.sourceforge.net/project/zero-install/0template/0.4/0template-0.4.tar.bz2" size="17107"/>
+    </implementation>
+    <implementation id="sha1new=01c9dfc0fc41c920b4213ff11e8a376a3236909c" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-07-30" version="0.5">
+      <manifest-digest sha256new="PN4O6HVQQ4YV7SBXFOKGJ6T3BSCJ33VTWYZAXZKDO7LD36TCTUNQ"/>
+      <archive extract="0template-0.5" href="https://downloads.sourceforge.net/project/zero-install/0template/0.5/0template-0.5.tar.bz2" size="17556"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZfbK+AAoJEAcTP5bKdNi6o8EH/1KknNDBrj+YmqIfwF7US1j3GbARbrheLZeK
-10rlJyIukgQiK/HLtpUGfoP0phITl39yW0FGsSLexSNVnOZOShlfYOaT2Ebjo06KNLDbvOncg6/Z
-E6MSbuJBcXSLltPrvbYuMdsP0BWLh4AhEY2E5vAh5fb7fYt0PghBYGpIV7y4VzRUTu42fQVshFJp
-XLhz/YmcfLTw/ZpEwQXZm2gtsWhGMrfpwCFn4kKHqotRRrcBR1JjVUh+o+gU9NGwFK1Aor+Us2EK
-USlTSQzemBAvGPksz0pkmu8u093/VdQwECFeSlDU6BRpesqYUtuWiAXK2hHEsEXdrQevlLD+MHv9
-1O4=
+iQEcBAABCAAGBQJZfbN3AAoJEAcTP5bKdNi66DQH/3Dc0dgM1KiwkQVDuic0dFW6jMQUW50DuXxt
+Mx3Brmmb6Mfvt5Hc0dwTQ9m0yl1sg2l2A19gsDbuPqlmlvGbkN8tafgTmxDEvZC89MlFGyL2n/gZ
+VffOBgFh1TaBHxOoEHzSjFMeQXx19ei6r0FVAStbsWDBBCU49XqxCH+NiQcH9Q7eBx3FBs/QlEMp
+diTkMcWGdRXgZQAKZeQrctmpHVYGbTC3fZSi+jF2Q/o4axiCJAS7d7yLDIWLgBUpYXPf6Pl93Xml
+QgxvSr0IrfnmgwGpfom6rdcMFs0DgyVMhewx+f27VUelnf5OguJip6VGgmUasduNcAHl8AOUGbn6
+cBU=
 
 -->
