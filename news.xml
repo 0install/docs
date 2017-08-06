@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Aug 2017</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35942773/'>0watch</a> released - this monitors an upstream site and adds new releases using 0template.
+  <a href='https://sourceforge.net/p/zero-install/mailman/message/35972198/'>0template 0.5</a> released. This has better support for Windows and can generate archives automatically.
+  </dd>
   <dt>Jun 2017</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35822153/'>0install 2.13 for Windows released</a>, including support for <b>copy-from</b> and extracting from <b>.tar.xz</b> archives.</dd>
   <dt>Apr 2017</dt>
