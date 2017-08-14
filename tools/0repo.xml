@@ -81,15 +81,27 @@
           <archive extract="0repo-0.4" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.4/0repo-0.4.tar.bz2" size="55279"/>
         </implementation>
       </group>
+      <group>
+        <requires interface="http://repo.roscidus.com/git/core">
+          <executable-in-path name="git"/>
+        </requires>
+        <requires interface="http://repo.roscidus.com/security/gnupg">
+          <executable-in-path name="gpg"/>
+        </requires>
+        <implementation id="sha1new=b576684699a8e727bfbe45ae449661cc29306dfa" released="2017-08-14" version="0.5">
+          <manifest-digest sha256new="63XKKNZSMUBASPULZ6Q2ERZ426S5WVIV2IRIQXOZLGXPSASHWZZA"/>
+          <archive extract="0repo-0.5" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5/0repo-0.5.tar.bz2" size="58335"/>
+        </implementation>
+      </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJWEjaTAAoJEAcTP5bKdNi6qT4H/jKsR3XOppB6DHtC17AuEwuZtUvR9TUGD+FJ
-RzzSJTGhlYx9E0ZnmNyLdNiAKKVClV010u2FRlGRGPJjJreHL42Sc3CKnjHYNT/9mVwFZuudc9Qz
-hoL7NQE9xqLHcdwuahhXra/uPB77iOFDFrPPNi1DXqL+m7rJSVpvqnp2nFWhkflIqg2rkLn3eIBD
-Gktq1HhFlSDMFFOb40Y+cqNek3rzcJzDtFWFbGBmPSBfqb+Q8gFVVBGR+0dFa07Ey1jbDJECYXfF
-YX+85IHJFEn9GPU2yALsxiLGMoq+9NXQmF63uCjPfrg7gthsTVtkWsBZQywSMuLZT3rH7NSSr1pq
-O3I=
+iQEcBAABCAAGBQJZkdHwAAoJEAcTP5bKdNi6VK8H/AoYPY8GIXljnZgs4PJY0uQWa507D8z3v8N/
+yLBhovK/5z0nAENdwOe8FA2gp8u27UTOc6kPYPUB0D8XN8rIeha9tlsHUqXHf/+CEaM03a6XVDXe
+eVN45FHI+bZwDgC3MOBbeM2BIIC+lIdjvgu1Ahz1bCL0UqnOhjkFmXqE8vzntFbCcGGuOcIynvvX
+QaieL9eMVnIHRW/YHSnStLLPgwT4XbX2Zb8DPEqq/SKRhRLUbcIo5t3Ehg3wU+77ho/yCaHwLnAT
+kv1gWcC3P3AkeYbmlW7H/z8QOkhKwVshUqEtlE7A11SrWRwc0hGtfJN7ZCvkeYfMKvQsoNktTdY6
+aIw=
 
 -->
