@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Sep 2017</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35984292/'>0install 2.12.2</a> released. This fixes a bug handling large HTTP redirect pages and updates the build to cope with various upstream changes.<br/>
+    <a href='https://sourceforge.net/p/zero-install/mailman/message/35996144/'>0repo 0.5</a> released. This provides better support for hosting on S3, has more configuration options to disable certain checks, and makes it easier to import missing archives.</dd>
+
   <dt>Aug 2017</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35942773/'>0watch</a> released - this monitors an upstream site and adds new releases using 0template.
   <a href='https://sourceforge.net/p/zero-install/mailman/message/35972198/'>0template 0.5</a> released. This has better support for Windows and can generate archives automatically.

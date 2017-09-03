@@ -9,32 +9,15 @@ bug reports, patches, suggestions, questions, etc.
 
 <p>
 Note: You cannot post without subscribing, due to the large amount of spam we
-were getting, but you can subscribe and then disable mail delivery if you
-prefer to read the list via one of the web interfaces below rather than by
-getting emails.
+were getting.
 </p>
 
 <ul>
-  <li>Read with news-reader: <a href="news://news.gmane.org/gmane.comp.file-systems.zero-install.devel">news://news.gmane.org/gmane.comp.file-systems.zero-install.devel</a></li>
-  <li>Read via web interface: <a href="http://news.gmane.org/gmane.comp.file-systems.zero-install.devel">gmane</a>, 
-		    <a href="http://sourceforge.net/mailarchive/forum.php?forum_name=zero-install-devel">SourceForce</a></li>
+  <li>Read via web interface: <a href="http://sourceforge.net/mailarchive/forum.php?forum_name=zero-install-devel">SourceForce</a></li>
   <li><a href="http://lists.sourceforge.net/lists/listinfo/zero-install-devel">Subscribe to get emails</a></li>
 </ul>
 
-<p>If clicking on the news: link above directly doesn't work:</p>
-
-<ol>
-<li>Load <b>Pan</b> (or some other news-reader) and add <b>news.gmane.org</b> as a new server (<b>Edit-&gt;Edit News Servers</b>).</li>
-<li>Type <b>zero-install</b> into the group search box (top left).</li>
-<li>You can right click over the group and choose <b>Subscribe</b> from the
-menu to make it easier to find it in future. Note that 'Subscribing' to a
-news group just marks it as interesting to your news-reader. It is
-different to subscribing to get emails.</li>
-</ol>
-
 <h2 id='bugs'>Bug tracker</h2>
-
-<p><strong>2012-08-25 : Notice : </strong>Due to a recent new sf.net upgrade, versions of 0install before 1.11 cannot submit bug reports using the built-in bug reporter - reports appear to be delivered, but they are not. Please use 0install 1.11 or later. Sorry!</p>
 
 <p>Bugs can also be filed on the bug tracker. However, it's best to post
 non-trivial bugs to the mailing list too, as more people will see them
@@ -43,10 +26,6 @@ there.</p>
 <ul>
   <li><a href='https://github.com/0install/0install/issues'>New issuer tracker on GitHub</a></li>
 </ul>
-
-<h2 id='IRC'>IRC</h2>
-
-<p>We can (occasionally) be found on IRC on Freenode, in #0install.</p>
 
 <h2 id='email'>Email</h2>
 
