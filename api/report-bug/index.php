@@ -1,5 +1,4 @@
 <?php
-require("config.php");
 
 $uri = $_POST['uri'];
 $body = $_POST['body'];
@@ -9,25 +8,6 @@ if (!isset($uri, $body)) {
   die("Missing fields in POST");
   exit(1);
 }
-
-require('Mail.php');
-
-$recipient = "zero-install-bugs@lists.sourceforge.net";
-
-$headers = array (
-    'From' => 'bugs@0install.net',
-    'To' => $recipient,
-    'Subject' => "Bug in $uri",
-);
-
-$mail_object =& Mail::factory('smtp',
-    array(
-        'host' => 'prwebmail',
-        'auth' => true,
-        'username' => 'zero-install',
-        'password' => $password,
-        //'debug' => true, # uncomment to enable debugging
-    ));
 
 if (strpos($body, "gpg: no writable keyring found")) {
     $notes = "\n\n" .
@@ -56,7 +36,14 @@ if (strpos($body, "gpg: no writable keyring found")) {
     $notes = "";
 }
 
-$result = $mail_object->send($recipient, $headers, $body . $notes);
+#$to = "talex5@gmail.com";
+$to = "zero-install-bugs@lists.sourceforge.net";
+$subject = "Bug in $uri";
+$message = $body . $notes;
+$from = 'bugs@0install.net';
+$headers = 'From: '.$from;
+$sender = '-f '.$from;
+$result = mail($to, $subject, $message, $headers, $sender);
 
 if ($result === true) {
   echo("Bug report email sent." . $notes);
