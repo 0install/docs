@@ -9,17 +9,11 @@
 </p>
 
 <pre>
-  git clone git://git.code.sf.net/p/zero-install/code htdocs
-</pre>
-
-Or, if you have write access (and you've <a href='https://sourceforge.net/account/services'>registered your SSH key</a> with sf.net):
-
-<pre>
-  git clone ssh://<b>username</b>@git.code.sf.net/p/zero-install/code htdocs
+  git clone https://github.com/0install/web-site.git
 </pre>
 
 <p>
-  Run 'make' to generate the .html files from the .xml ones. The XML syntax is basically
+  Run <b>make</b> to generate the .html files from the .xml ones. The XML syntax is basically
   HTML, but an XSLT stylesheet generates the navigation.
 </p>
 
@@ -39,16 +33,8 @@ Or, if you have write access (and you've <a href='https://sourceforge.net/accoun
 </p>
 
 <ul>
-  <li>If you don't have admin access, send a patch / pull request to the <a href='support.html'>mailing list</a>.</li>
-  <li>If you have shell and Git access:
-    <ol>
-        <li>Make sure you're using the SSH writable repository location (not git:).</li>
-        <li>Push your changes to the repository's <b>master</b> (not "live") branch:<pre>git push origin master</pre></li>
-	<li>Run /home/project-web/zero-install/update-from-git from the shell server. I use this command:
-    <pre>ssh -o PasswordAuthentication=false \
-      <b>username</b>,zero-install@shell.sourceforge.net \
-      /home/project-web/zero-install/update-from-git</pre>
-</li></ol>
+  <li>If you don't have admin access, submit a pull request to the <a href='https://github.com/0install/web-site'>GitHub "web-site" project</a>.</li>
+  <li>If you are an admin, run the <b>deploy-to-github-pages.sh</b> script. This will create a temporary subdirectory called <b>github-tmp</b>, run <b>make</b> it in, commit the generated files and push to the (auto-generated) <b>gh-pages</b> branch. The changes will appear immediately on the site.
 </li>
 </ul>
 
