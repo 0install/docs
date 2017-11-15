@@ -26,8 +26,8 @@ href="https://sourceforge.net/projects/zero-install/files/0install/">the
 SF.net download page</a> (and the corresponding .sig file if you want to verify it), or using wget:
 </p>
 <pre>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.12.2/0install-2.12.2.tar.bz2</b>
-$ <b>wget https://downloads.sf.net/project/zero-install/0install/2.12.2/0install-2.12.2.tar.bz2.sig</b>
+<b>wget https://downloads.sf.net/project/zero-install/0install/2.12.3/0install-2.12.3.tar.bz2</b>
+<b>wget https://downloads.sf.net/project/zero-install/0install/2.12.3/0install-2.12.3.tar.bz2.sig</b>
 </pre>
 
 <p>
@@ -37,9 +37,9 @@ using --recv-key (or <a href='http://rox.sourceforge.net/desktop/GPG'>manually</
 </p>
 
 <pre>
-$ <b>gpg --recv-key --keyserver pgp.mit.edu 1C325588</b>
-$ <b>gpg 0install-2.12.2.tar.bz2.sig</b>
-gpg: Signature made Sun 06 Aug 2017 19:01:16 BST using RSA key ID 1C325588
+<b>gpg --recv-key --keyserver pgp.mit.edu 1C325588</b>
+<b>gpg 0install-2.12.3.tar.bz2.sig</b>
+gpg: Signature made Wed 15 Nov 2017 13:53:57 GMT using RSA key ID 1C325588
 gpg: Good signature from "Thomas Leonard &lt;XXX@gmail.com>"
 gpg:                 aka "Thomas Leonard &lt;XXX@docker.com>"
 gpg: WARNING: This key is not certified with a trusted signature!
@@ -60,8 +60,8 @@ some other source of information).
   You should then extract the archive, change directory inside it and build:
 </p>
 <pre>
-<b>tar xf 0install-2.12.2.tar.bz2</b>
-<b>cd 0install-2.12.2</b>
+<b>tar xf 0install-2.12.3.tar.bz2</b>
+<b>cd 0install-2.12.3</b>
 <b>make</b>
 </pre>
 
@@ -74,15 +74,15 @@ some other source of information).
  <tr>
   <td>
   <p>For a normal install, either su to root, install, and exit from root, or use sudo:</p>
-<pre>$ <b>sudo make install</b>
+<pre><b>sudo make install</b>
 </pre>
  </td><td>
 <p>
 If you don't have the root password, use this command.
 You'll need to make sure that ~/bin is in $PATH in this case.
 </p>
-<pre>$ <b>make install_home</b>
-$ <b>export PATH=$HOME/bin:$PATH</b>
+<pre><b>make install_home</b>
+<b>export PATH=$HOME/bin:$PATH</b>
 </pre>
 <p>
 Logging out and back in again will ensure $PATH and the Applications menu get updated correctly,
