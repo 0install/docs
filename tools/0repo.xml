@@ -92,20 +92,24 @@
           <manifest-digest sha256new="63XKKNZSMUBASPULZ6Q2ERZ426S5WVIV2IRIQXOZLGXPSASHWZZA"/>
           <archive extract="0repo-0.5" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5/0repo-0.5.tar.bz2" size="58335"/>
         </implementation>
-        <implementation id="sha1new=0eb126c57deb114c090872448efc251670409702" released="2017-08-22" version="0.5.1">
+        <implementation id="sha1new=0eb126c57deb114c090872448efc251670409702" released="2017-08-22" stability="stable" version="0.5.1">
           <manifest-digest sha256new="66YRLRC3WXU2NUFZQERWDFY6BEVAKQKRRA7V6RNDHKUKL4GSOQLQ"/>
           <archive extract="0repo-0.5.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.1/0repo-0.5.1.tar.bz2" size="58353"/>
+        </implementation>
+        <implementation id="sha1new=53736211bf0dd28dbc899388c1b5d17decd12f00" released="2017-11-15" version="0.5.2">
+          <manifest-digest sha256new="U66D7DUIZWSAW7ONV4JMNVXACF7V6WRNCWKLPMBYCHE5W3GGQ7CA"/>
+          <archive extract="0repo-0.5.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.2/0repo-0.5.2.tar.bz2" size="58499"/>
         </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZnIhZAAoJEAcTP5bKdNi6mpEH/j8zKYZYBY0otGXP4Y5blUux36N9U9OZhQlE
-EgZYMktkYnHbSw4CHpfztd1g7EybK85WgbyDRzfcorv/7cnmYaEHS+YUUe4rYHyGhpXxG0M1RaXC
-YpvRY0zALfZ/DLGSuPJ1vxEw27p35uBB8r4udHjTzgXYNqtraMaeBZwkFUlryp8HP2w0kjdB17bz
-VviZ+i9pp85Eu5BkwkUuFIu9b6KNpRDrbwKlm99gI1bNwq6Nw1mFE6ahM2r0pK8ETMVYQHdL7DRE
-3vwLSjD+XNmof04oFjb5BuK7KedhRAy5W7xut9UvMLgMRa+/mTh6UWVvwgN/U9tvKTV/ylJrDlAX
-ljQ=
+iQEcBAABCAAGBQJaDGdPAAoJEAcTP5bKdNi6KkgH/RBTtAcfwiVhu3PioTJe6WjG6Hhz30ceaMif
+vbUBTxcFb6fWXpKiURnQrqb7D78CsiUqIbfUpu1YSWo8uNgAtNBJVQjuy1jOJ0iuVLLQxh9xgrYZ
+S5Yjnr6VYOMg03nM9VCU3QAnOoIfg8Fi48XZLsELbLZJ9r1yxIusD/URDWoW+6AzqJkYyn+5kHR2
+qM64iRWgusCmnqLPTKMSPknxF4bPEMonIgf6EYf+HHu+ZJXgg+lJrbc9XIdcPPPR8ISqpvwDAO0U
+gDKf6q4svG9uXhFGjoQXOoGpX+xu2/RZO0Aev5y+N62DM0yy1rzD8eMBjERZW64Kr7SAHInJL7kx
+At8=
 
 -->
