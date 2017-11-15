@@ -158,9 +158,13 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="IU5RJ63GYPZ752FVUZEZSFE5TBF2TBUHM6PJJBBBW72XDIXHEGMA"/>
         <archive extract="0install-2.12.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.1/0install-2.12.1.tar.bz2" size="443157"/>
       </implementation>
-      <implementation id="sha1new=ab411ed25cc0625b578d663d8c0677f0973fbd05" released="2017-08-06" version="2.12.2">
+      <implementation id="sha1new=ab411ed25cc0625b578d663d8c0677f0973fbd05" released="2017-08-06" stability="stable" version="2.12.2">
         <manifest-digest sha256new="XGL4M5HD6NZ4FQMQAHONJ4KEKDXO7FWFJLEND4NJ6XRW3ORRVXIQ"/>
         <archive extract="0install-2.12.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.2/0install-2.12.2.tar.bz2" size="443369"/>
+      </implementation>
+      <implementation id="sha1new=4f99a7ac9ac4f1227b4b206d315187c34c8cad4e" released="2017-11-15" version="2.12.3">
+        <manifest-digest sha256new="ODQE27GC7CSVCIX36B6ZVLPLOH6FPO2IZNMX3JX3NQQJEMCPUVUQ"/>
+        <archive extract="0install-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-2.12.3.tar.bz2" size="445327"/>
       </implementation>
     </group>
   </group>
@@ -416,17 +420,29 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="XXZVDAIRCMT5V2SQNJTDWALDDU2IUDZMANJ7O5XOV2ZBREVZU5FA"/>
       <archive extract="0install-linux-armv6l-2.12.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.1/0install-linux-armv6l-2.12.1.tar.bz2" size="4326067"/>
     </implementation>
-    <implementation arch="Linux-i486" id="sha1new=1236e162d0174faaaff3024d25ef411e49c1b271" released="2017-08-06" version="2.12.2">
+    <implementation arch="Linux-i486" id="sha1new=1236e162d0174faaaff3024d25ef411e49c1b271" released="2017-08-06" stability="stable" version="2.12.2">
       <manifest-digest sha256new="UATPX6ZGRAHQLR7I4HMGPFKB5JC7GV4M77UUT4DXG3NZHZOO2YRA"/>
       <archive extract="0install-linux-i486-2.12.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.2/0install-linux-i486-2.12.2.tar.bz2" size="3827740"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=272fcd44698f318bfe36f2839878d6442812f01c" released="2017-08-06" version="2.12.2">
+    <implementation arch="Linux-x86_64" id="sha1new=272fcd44698f318bfe36f2839878d6442812f01c" released="2017-08-06" stability="stable" version="2.12.2">
       <manifest-digest sha256new="SPK5UYELZMR2FIKGPYO6LYIZMJ6Q7TFRZLVPDPCUV7756UVHAUUA"/>
       <archive extract="0install-linux-x86_64-2.12.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.2/0install-linux-x86_64-2.12.2.tar.bz2" size="4038262"/>
     </implementation>
-    <implementation arch="Linux-armv6l" id="sha1new=59c2355a2833524f92d6c8c7ffb240a91133a28a" released="2017-08-06" version="2.12.2">
+    <implementation arch="Linux-armv6l" id="sha1new=59c2355a2833524f92d6c8c7ffb240a91133a28a" released="2017-08-06" stability="stable" version="2.12.2">
       <manifest-digest sha256new="I6POQPSDYS6XR3U5SSILIVPNM7LJCQASHZMJFLSPND5OUXWJKPYA"/>
       <archive extract="0install-linux-armv6l-2.12.2" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.2/0install-linux-armv6l-2.12.2.tar.bz2" size="4326764"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=6ae090bad42e2014498fef0d258eac07ec576084" released="2017-11-15" version="2.12.3">
+      <manifest-digest sha256new="UWJAMSB33WPA4TA25Q6CJEFSJHMIDJXDIW7QYCZDZQSDSXXH753A"/>
+      <archive extract="0install-linux-i486-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-linux-i486-2.12.3.tar.bz2" size="3707059"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0af6e7c4852fa7d090c0d2182153a2b5bdcce964" released="2017-11-15" version="2.12.3">
+      <manifest-digest sha256new="KMBP7THWUG6NKNIWNRRV3OLUMQZIOQCMIY4F4ST537W4ROARATVQ"/>
+      <archive extract="0install-linux-x86_64-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-linux-x86_64-2.12.3.tar.bz2" size="3925622"/>
+    </implementation>
+    <implementation arch="Linux-armv6l" id="sha1new=44aa38b0564e492a77593db327916dea5a0da4ab" released="2017-11-15" version="2.12.3">
+      <manifest-digest sha256new="VQS5PEB7GZD2NK7OCCQY4KSJF3WGRM2NINECJHGUS7HJYKWCD3TQ"/>
+      <archive extract="0install-linux-armv6l-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-linux-armv6l-2.12.3.tar.bz2" size="4192334"/>
     </implementation>
   </group>
   <group>
@@ -440,11 +456,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZh1isAAoJEAcTP5bKdNi6VHwH/R+Futl+txPTj+rtJE8dr3R3Tb+EkfuU0CWa
-jgnfioAPsrhKSc8aPybUM8vK23be2G5h42y4rs8cnvxGu6AY9MQh+8HC+1NxIlDWBqg3d2w4XyTu
-DzsPclfSjCqUvjE1rmxX8BY28dp7+53WjVYuZH3N7a2RTvKYBYdavcKs0JB0pu+NM8QMsjoUoZ1K
-5fzxTwd9Ey2FsOKN2SHAZBBtfFZXfUhqqCvvbTfRKc9aIOaDh6j6RTNzsUWn/dIGngI5xF9GTA/7
-uzad0RcJHnoXEcIUQVLB6A8ZXtsOK+OShQVWD9v+XKE1TbnG5WlS/0OuYJtpBZpfH9Nq1b0x6X2u
-gNM=
+iQEcBAABCAAGBQJaDESRAAoJEAcTP5bKdNi6SUYH/0YlTqw7ml5AmaUaKZJNVOwoi99Qrg+hYoyY
+ZtLm/nQuDhtkVXXPaVNN09sgH3Y6tQoN/O7cAkYT3Q+Cxlw0KOt0YuhK3lHghg97Sb93BYiopPD6
+Hs0oA+P49jgC0yygml4IhkHMEnXVExp2p3kO5h/c+59NGiKSgi8HD8q5Rj6x0VEkQNzj0dsRQ2kV
+XCuy+aIoO8zlBPmdwYrBL8Am5wsiadQSJLnk6MvgXxuKMOczeSWDiAMJzFIW5yT7Vo5/RlOaOeZT
+EIZpiQY8TtM/amSBGWvqI039IRTT8kVWz8nXjm9y/AoXxMy6TlZaWW2WAS0G6QmtsMxtkxQ7YJKf
+5NM=
 
 -->

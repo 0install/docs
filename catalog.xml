@@ -340,19 +340,7 @@ Zero Install.</description></interface><interface uri="http://0install.net/tests
     This library can be used by programs to display simple help text. It is part of the EBox sandbox proof-of-concept examples.
   </description></interface><interface uri="http://0install.net/tests/ebox-edit.xml"><name>edit</name><summary>E text editor</summary><description>
     This is a very simple proof-of-concept text editor that can be confined using the EBox sandbox system.
-  </description></interface><interface uri="http://0install.net/2008/3rd-party/git.xml"><name>git-core</name><summary>fast, scalable, distributed revision control system</summary><description>Git is popular version control system designed to handle very large
-projects with speed and efficiency; it is used mainly for various open
-source projects, most notably the Linux kernel.
-
-Git falls in the category of distributed source code management tools.
-Every Git working directory is a full-fledged repository with full
-revision tracking capabilities, not dependent on network access or a
-central server.
-
-This package provides the git main components with minimal dependencies.
-Additional functionality, e.g. a graphical user interface and revision
-tree visualizer, tools for interoperating with other VCS's, or a web
-interface, is provided as separate git* packages.</description><category>Development</category></interface><interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml"><name>gnome-inform7</name><summary>GNOME port of the Inform 7 IDE</summary><description>
+  </description></interface><interface uri="http://0install.net/2008/3rd-party/gnome-inform7.xml"><name>gnome-inform7</name><summary>GNOME port of the Inform 7 IDE</summary><description>
 GNOME Inform 7 is a GNOME port of the Inform 7 integrated development
 environment for Inform 7. Inform 7 is a &quot;natural&quot; programming language for
 writing interactive fiction (also known as text adventures.)</description><category>Development</category><homepage>http://sourceforge.net/projects/gnome-inform7</homepage></interface><interface uri="http://0install.net/2008/3rd-party/groundhog.xml"><name>groundhog</name><summary>A simple logic game</summary><description>The purpose of this game is to put balls in pockets of the same color
@@ -617,17 +605,15 @@ Clutter uses OpenGL (and optionally OpenGL ES for use on Mobile and embedded
 platforms) for rendering but with an API which hides the underlying GL
 complexity from the developer. The Clutter API is intended to be easy to use,
 efficient and flexible.</description><homepage>http://www.clutter-project.org/</homepage></interface><interface uri="http://0install.net/2006/autopackage/sear.xml"><name>sear</name><summary>Sear - a client for Worldforge</summary><description>
-Sear is a client for MMORPGs using the Worldforge system.</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/Solfege.xml"><name>solfege</name><summary>smarten your ears</summary><description>
-Solfege is free music education software. Use it to train your rhythm, interval,
-scale and chord skills. Solfege - Smarten your ears!</description><homepage>http://www.solfege.org</homepage><category>Audio</category></interface><interface uri="http://0install.net/2006/autopackage/vdrift.xml"><name>vdrift</name><summary>VDrift</summary><description>
+Sear is a client for MMORPGs using the Worldforge system.</description><category>Game</category></interface><interface uri="http://0install.net/2006/autopackage/vdrift.xml"><name>vdrift</name><summary>VDrift</summary><description>
 VDrift is a realistic racing simulation with drifting in mind</description><category>Game</category></interface><interface uri="http://0install.net/2010/interfaces/xzdec.xml"><name>xzdec</name><summary>XZ Decompressor</summary><description>
 xzdec is a liblzma-based decompression-only tool for .xz files.</description><homepage>http://tukaani.org/xz/</homepage><category>Utility</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZh1itAAoJEAcTP5bKdNi6CgMH/0jm0N8vJ7ATuMJHEks+ZXpOedlv6+oDlXfs
-NzQrTFKU8kGHwkMCJ/+uIn5SutQtKaMwNThz3Xu1auI5LViNPuDuDu0FGLUTDXn4lBx8vofwfigD
-CQQFYH+VQMoAZEIbuiucnTZ8w3FkEaVHF0R+HvaCfHJvuFf2p2KYfHdG1UkzIKi+uiW/9AiaWzK9
-J///n6nn57lAKAPPir3TikhkhOSDg9d+3szzoSKjEEXLVKalvBIHoyMPZzqf26FuTq2MtSuxqcvF
-ag64nXZ9YhKfwPzqDx0LLDPzkYRLkyXtmlgucazSwb69vIfWfHyYDyMD2lyWd5tqkz7k9t4ynf4a
-SmM=
+iQEcBAABCAAGBQJaDESRAAoJEAcTP5bKdNi6gmMH/0LnQoy7HPOZvBJujLHmvb10tUowAwIWxfNf
+1xioT5rUYibsTWuGsUt08NzMp/Noi0BQT0jIHJrpXPnQ8opxzB074Jaj0TeIPV+gIrwycKhuuiTw
+bKJRpevNB8MmAo5pQ7tb0kG1t2FCJ+bujnMpwAPEfHkZ/t+4y9bVTiONqYFcZP0clnBcuu55eHHP
+zHSbh9HHFd5LfA5Jo2xG5lM6b/kdElMVUCka3etE4WJJiKSx7Ud6xmXObhroAmf7vGiRR5M5sSee
+cKyVUEV2J1qFWkSbTjLITTwVJW/G7sucDJL4BJpoq3iMJyqV92tINkqNEpn1EoVi/ogyVyJIrE75
+1oQ=
 
 -->
