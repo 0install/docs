@@ -482,11 +482,13 @@ normal archive in a single file. If missing, it defaults to 0. The value in the
     &lt;file
       href='...'
       size='...'
-      dest='...' /&gt;
+      dest='...'
+      executable='true|false' /&gt;
 </pre>
 
 <p>
-  The file is downloaded from <b>href</b>, must be of the given <b>size</b>, and is placed within the implementation directory as <b>dest</b>.
+  The file is downloaded from <b>href</b>, must be of the given <b>size</b>, and is placed within the implementation directory as <b>dest</b>.<br/>
+  If <b>executable</b> is set to <b>true</b> (0install >= 2.14.2) the file is marked as executable after download.
 </p>
 
 <h3 id='recipe'>Recipes</h3>
