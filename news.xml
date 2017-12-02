@@ -4,6 +4,11 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Dec 2017</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36116351/'>0install 2.12.3</a> released. The main change is that the bug reporter now uses a new service (SourceForge no longer delivers email, so the old address had stopped working). There are also some minor improvements to the native package manager support on Debian, and code updates to work with OCaml 4.06 and Lwt 3.0.
+    The web-site is now hosted on GitHub (the bug reporter was the only thing keeping us on SF).
+    <a href='https://sourceforge.net/p/zero-install/mailman/message/36116496/'>0repo 0.5.2</a> was released, fixing some bugs.
+  </dd>
   <dt>Sep 2017</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/35984292/'>0install 2.12.2</a> released. This fixes a bug handling large HTTP redirect pages and updates the build to cope with various upstream changes.<br/>
     <a href='https://sourceforge.net/p/zero-install/mailman/message/35996144/'>0repo 0.5</a> released. This provides better support for hosting on S3, has more configuration options to disable certain checks, and makes it easier to import missing archives.</dd>
