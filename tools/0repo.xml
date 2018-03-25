@@ -96,20 +96,24 @@
           <manifest-digest sha256new="66YRLRC3WXU2NUFZQERWDFY6BEVAKQKRRA7V6RNDHKUKL4GSOQLQ"/>
           <archive extract="0repo-0.5.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.1/0repo-0.5.1.tar.bz2" size="58353"/>
         </implementation>
-        <implementation id="sha1new=53736211bf0dd28dbc899388c1b5d17decd12f00" released="2017-11-15" version="0.5.2">
+        <implementation id="sha1new=53736211bf0dd28dbc899388c1b5d17decd12f00" released="2017-11-15" stability="stable" version="0.5.2">
           <manifest-digest sha256new="U66D7DUIZWSAW7ONV4JMNVXACF7V6WRNCWKLPMBYCHE5W3GGQ7CA"/>
           <archive extract="0repo-0.5.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.2/0repo-0.5.2.tar.bz2" size="58499"/>
+        </implementation>
+        <implementation id="sha1new=16473af76756d848e4450019d6c258253109d09d" released="2018-03-25" version="0.6">
+          <manifest-digest sha256new="3EOPKU4SDDHPOODDQKAYH7XFEV5LRZ3S2QDC4PGFITKHF3KUN37Q"/>
+          <archive extract="0repo-0.6" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.6/0repo-0.6.tar.bz2" size="58909"/>
         </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJaDGdPAAoJEAcTP5bKdNi6KkgH/RBTtAcfwiVhu3PioTJe6WjG6Hhz30ceaMif
-vbUBTxcFb6fWXpKiURnQrqb7D78CsiUqIbfUpu1YSWo8uNgAtNBJVQjuy1jOJ0iuVLLQxh9xgrYZ
-S5Yjnr6VYOMg03nM9VCU3QAnOoIfg8Fi48XZLsELbLZJ9r1yxIusD/URDWoW+6AzqJkYyn+5kHR2
-qM64iRWgusCmnqLPTKMSPknxF4bPEMonIgf6EYf+HHu+ZJXgg+lJrbc9XIdcPPPR8ISqpvwDAO0U
-gDKf6q4svG9uXhFGjoQXOoGpX+xu2/RZO0Aev5y+N62DM0yy1rzD8eMBjERZW64Kr7SAHInJL7kx
-At8=
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlq3gS8ACgkQBxM/lsp02LriaAf+PF/A
+Ettr/B4a2QYy2VJQ828fTTwMu5oyEqYCVdW/mJFui2iT6BV7sKazpy50bsl8+URIXPoRFsgy6DRa
+QPQTKjNB4vg6mVBtm2obPsMqrfe/5SLk36+Zw1eszO1TI5uSaKv3GXpAL3Q6QkJzvWkuCnfLyxuR
+IcNMhoXOcfRv4Nggn1K6LFgcuu5P/1PJAxzp5j3nS/yVT94DpWV2NJ0HKbC4ZH1WLU497ajoeqMZ
+B1/Yuuq//wXQuzE+AfNty33A+QHQUxMUTQUZMZN02UzFg17hXNvMEvHSvQRkC193MQlwQU/TEEbr
+WO/shgaaGaa4LXND1tgj4wfzoRBZu1f3Jg==
 
 -->
