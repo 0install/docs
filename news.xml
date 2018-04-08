@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2018</dt>
+  <dd>
+    <a href='https://sourceforge.net/p/zero-install/mailman/zero-install-devel/?viewmonth=201803'>0repo 0.6</a> released. This adds a new "0repo modify" command, which makes it easy to promote a release to "stable", and fixes an error about multiple sub-keys when used with newer versions of gpg.
+  </dd>
   <dt>Dec 2017</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36116351/'>0install 2.12.3</a> released. The main change is that the bug reporter now uses a new service (SourceForge no longer delivers email, so the old address had stopped working). There are also some minor improvements to the native package manager support on Debian, and code updates to work with OCaml 4.06 and Lwt 3.0.
     The web-site is now hosted on GitHub (the bug reporter was the only thing keeping us on SF).
