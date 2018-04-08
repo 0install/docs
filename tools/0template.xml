@@ -9,6 +9,7 @@
     it will download the archive, fill in the size, calculate the digests, etc.
   </description>
   <homepage>http://0install.net/0template.html</homepage>
+  <needs-terminal/>
 
   <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release"><!-- Update the copy of the version number in the code -->
     <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; 0template.py</release:action>
@@ -74,13 +75,15 @@
       <archive extract="0template-0.5" href="https://downloads.sourceforge.net/project/zero-install/0template/0.5/0template-0.5.tar.bz2" size="17556"/>
     </implementation>
   </group>
+
+  <entry-point binary-name="0template" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJZfbN3AAoJEAcTP5bKdNi66DQH/3Dc0dgM1KiwkQVDuic0dFW6jMQUW50DuXxt
-Mx3Brmmb6Mfvt5Hc0dwTQ9m0yl1sg2l2A19gsDbuPqlmlvGbkN8tafgTmxDEvZC89MlFGyL2n/gZ
-VffOBgFh1TaBHxOoEHzSjFMeQXx19ei6r0FVAStbsWDBBCU49XqxCH+NiQcH9Q7eBx3FBs/QlEMp
-diTkMcWGdRXgZQAKZeQrctmpHVYGbTC3fZSi+jF2Q/o4axiCJAS7d7yLDIWLgBUpYXPf6Pl93Xml
-QgxvSr0IrfnmgwGpfom6rdcMFs0DgyVMhewx+f27VUelnf5OguJip6VGgmUasduNcAHl8AOUGbn6
-cBU=
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlrJ+M8ACgkQBxM/lsp02Lr6nAgArsnw
+DsWWGuBPLskoX/Jsrkp2IdtAzVXlsCLt40/7hMrao+442bfbkLjqq/TdfcpWmlsQPIzVsRqPHK8m
+BVpg/4Z5BKA6Yq3fyS+Vh9gNJDBFefu1/fJs7259csh5SZTewdY9/HmRvpP4R4sepsZ8iQq9HVde
+WwoUZvvvE9ISZyKreUMT45hw5dUJ6dHLiOsx2YEAb2IfNFwI/FRs8sVncrPyEk3c8aRf2H0G6D4O
+S0fE/VXmPPMDd8W6ogZXleIq3+GlGpQJGoLm3QTIIEN3XbPvC70dPubdJWxivPk008K3guJZBj1y
+7lOeQzpTEPA8AbZTZIWDgiWuiitPnq9GFA==
 
 -->

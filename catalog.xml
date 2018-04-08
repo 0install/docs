@@ -78,7 +78,7 @@ software hasn't been modified.</description><homepage>http://0install.net/0share
     0template takes a template XML file (e.g. with place-holders for the version),
     fills in the place-holders, and then fills in everything else it can. For example,
     it will download the archive, fill in the size, calculate the digests, etc.
-  </description><homepage>http://0install.net/0template.html</homepage></interface><interface uri="http://0install.net/2008/interfaces/0test.xml"><name>0test</name><summary>test Zero Install programs</summary><description>
+  </description><homepage>http://0install.net/0template.html</homepage><entry-point binary-name="0template" command="run"/></interface><interface uri="http://0install.net/2008/interfaces/0test.xml"><name>0test</name><summary>test Zero Install programs</summary><description>
 Use 0test to run the unit tests for a Zero Install program. You can use this to
 test released versions or developer snapshots. You can give a selection of
 versions to test, and you can test against different versions of dependencies to
@@ -609,11 +609,11 @@ Sear is a client for MMORPGs using the Worldforge system.</description><category
 VDrift is a realistic racing simulation with drifting in mind</description><category>Game</category></interface><interface uri="http://0install.net/2010/interfaces/xzdec.xml"><name>xzdec</name><summary>XZ Decompressor</summary><description>
 xzdec is a liblzma-based decompression-only tool for .xz files.</description><homepage>http://tukaani.org/xz/</homepage><category>Utility</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJaDESRAAoJEAcTP5bKdNi6gmMH/0LnQoy7HPOZvBJujLHmvb10tUowAwIWxfNf
-1xioT5rUYibsTWuGsUt08NzMp/Noi0BQT0jIHJrpXPnQ8opxzB074Jaj0TeIPV+gIrwycKhuuiTw
-bKJRpevNB8MmAo5pQ7tb0kG1t2FCJ+bujnMpwAPEfHkZ/t+4y9bVTiONqYFcZP0clnBcuu55eHHP
-zHSbh9HHFd5LfA5Jo2xG5lM6b/kdElMVUCka3etE4WJJiKSx7Ud6xmXObhroAmf7vGiRR5M5sSee
-cKyVUEV2J1qFWkSbTjLITTwVJW/G7sucDJL4BJpoq3iMJyqV92tINkqNEpn1EoVi/ogyVyJIrE75
-1oQ=
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlrJ+NUACgkQBxM/lsp02LouCAf5AU5Z
+5nuapLgLQnugKel+TcWUm1OTOPMy0zg7b4f2C73w6RslTt92D9NAhS0zHodp/naC2Q/FAZ307Z+v
+93l1t3iez8ilkiw2ya7DcuxUPikkGj32nlJaRs6WwxHjkQSHCn9LW9uht6ha2DGSK4vc/qHTceVI
+f5T5PaQD8O0nHvZnX3IaeWlUqsZXy1HouLehe2B9bVzlG3ZuIozhweyeRiVL05CvhSGLmu6wWt4s
+8e4UDaNkGVx6/ej7G7av9TLuoGl8RXAh0kzCMPveroR6r5Q5Jc0esRwhp+sHK5CwQM8vimMKSpmJ
+yO/NXyarJoTYmP7FwQtvSGYlM/9rjJtZdw==
 
 -->
