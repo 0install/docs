@@ -441,6 +441,11 @@ to the specified subdirectory. It is an error to specify a target outside of the
 </p>
 
 <p>
+Note that the <b>extract</b> attribute cannot contain '/' or '\' characters, so it can only be used to extract
+a top-level directory. It is intended for archives that contain their own name as the single top-level entry.
+</p>
+
+<p>
 The type of the archive is given as a MIME type in the <b>type</b> attribute
 (since <b>0launch</b> version 0.21). If missing, the type is guessed from the extension on the
 <b>href</b> attribute (all versions). Known types and extensions (case insensitive) are:
