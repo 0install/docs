@@ -51,8 +51,8 @@
 <script type="text/javascript" src="detect.js"></script>
 
 <div style='text-align: center; padding: 2em;'>
-  <iframe width="640" height="390" src="http://www.youtube.com/embed/kxPK3Hg49g0" frameborder="0" allowfullscreen="true"></iframe>
-  <p><a href='http://youtu.be/kxPK3Hg49g0'>0install introduction</a><br/>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kxPK3Hg49g0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+  <p><a href='https://youtu.be/kxPK3Hg49g0'>0install introduction</a><br/>
 (screencast with audio commentary)</p>
 </div>
 

@@ -197,16 +197,6 @@
     </div>
   </xsl:template>
 
-  <xsl:template match='*[name() = "video"]'>
-    <iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true">
-      <xsl:attribute name='src'>https://www.youtube-nocookie.com/embed/<xsl:value-of select='@vid'/>?rel=0</xsl:attribute>
-    </iframe>
-    <p class='caption'><a>
-      <xsl:attribute name='href'>https://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>
-      <span class='captionnote'>(screencast with audio commentary)</span>
-    </p>
-  </xsl:template>
-
   <xsl:template match='*[name() = "news"]'>
     <dl>
       <xsl:apply-templates select='document("news.xml")/html/div/dl/*[count(preceding::dd) &lt; 5]'/>
