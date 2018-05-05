@@ -10,10 +10,6 @@
 
   <xsl:param name="file">unknown</xsl:param>
 
-  <xsl:template match='*[name() = "download"]'>
-    <a href='http://downloads.sourceforge.net/zero-install/{@name}'><xsl:value-of select='@name'/></a>
-  </xsl:template>
-
   <xsl:template match='item'>
     <!-- Show expanded if we have children and,
          - We are selected
@@ -79,7 +75,7 @@
 	    <a href='/'><img src='logo/zeroinstall-icon.png' width='96' height='95' alt='logo'/></a>
 	  </td>
 	  <td class='header'>
-	    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="http://google.com/cse" style='float: right; padding-right: 1em;'>
+	    <form id="searchbox_010445122533180311286:4ee7gv0f1pc" action="https://google.com/cse" style='float: right; padding-right: 1em;'>
 	     <p>
 	      <input type="hidden" name="cx" value="010445122533180311286:4ee7gv0f1pc" />
 	      <input name="q" type="search" size="14" />
@@ -126,7 +122,7 @@
 	  <p>
 	    Permission is granted to use the site (excluding the software,
 	    which is licensed separately)<br/>in accordance with the terms of the
-	    <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative
+	    <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative
 	    Commons Attribution-ShareAlike 2.5 license</a>.
 	  </p>
 	  <p>
@@ -134,8 +130,8 @@
 	    <a href='http://tango.freedesktop.org/Tango_Desktop_Project'>Tango Desktop Project</a> and the <a href='http://www.openclipart.org/'>Open Clipart Library</a>.
 	  </p>
 	  <span class='logos'>
-	     <a href="http://creativecommons.org/licenses/by-sa/2.5/">
-	      <img src="http://creativecommons.org/images/public/somerights20.gif"
+	     <a href="https://creativecommons.org/licenses/by-sa/2.5/">
+	      <img src="https://creativecommons.org/images/public/somerights20.gif"
 	      	   alt='Attribution-ShareAlike' width='88' height='31'/>
 	     </a>
 	     <!--
@@ -203,14 +199,14 @@
 
   <xsl:template match='*[name() = "video"]'>
     <object width="425" height="355" type="application/x-shockwave-flash">
-      <xsl:attribute name='data'>http://www.youtube.com/v/<xsl:value-of select='@vid'/></xsl:attribute>
+      <xsl:attribute name='data'>https://www.youtube.com/v/<xsl:value-of select='@vid'/></xsl:attribute>
       <a>
-        <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute>
+        <xsl:attribute name='href'>https://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute>
         <img src='screens/no_video.png' width='425' height='355' alt='Embedded video not supported by your browser'/>
       </a>
     </object>
     <p class='caption'><a>
-      <xsl:attribute name='href'>http://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>
+      <xsl:attribute name='href'>https://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>
       <span class='captionnote'>(screencast with audio commentary)</span>
     </p>
   </xsl:template>
