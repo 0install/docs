@@ -198,13 +198,9 @@
   </xsl:template>
 
   <xsl:template match='*[name() = "video"]'>
-    <object width="425" height="355" type="application/x-shockwave-flash">
-      <xsl:attribute name='data'>https://www.youtube.com/v/<xsl:value-of select='@vid'/></xsl:attribute>
-      <a>
-        <xsl:attribute name='href'>https://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute>
-        <img src='screens/no_video.png' width='425' height='355' alt='Embedded video not supported by your browser'/>
-      </a>
-    </object>
+    <iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true">
+      <xsl:attribute name='src'>https://www.youtube-nocookie.com/embed/<xsl:value-of select='@vid'/>?rel=0</xsl:attribute>
+    </iframe>
     <p class='caption'><a>
       <xsl:attribute name='href'>https://www.youtube.com/watch?v=<xsl:value-of select='@vid'/></xsl:attribute><xsl:apply-templates/></a><br/>
       <span class='captionnote'>(screencast with audio commentary)</span>
