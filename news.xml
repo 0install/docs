@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>May 2018</dt>
+  <dd>
+    The main <a href='https://0install.net'>0install.net web-site</a> now supports https (due to GitHub adding support for it on custom domains).
+  </dd>
   <dt>Apr 2018</dt>
   <dd>
     <a href='https://sourceforge.net/p/zero-install/mailman/zero-install-devel/?viewmonth=201803'>0repo 0.6</a> released. This adds a new "0repo modify" command, which makes it easy to promote a release to "stable", and fixes an error about multiple sub-keys when used with newer versions of gpg.
