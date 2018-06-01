@@ -166,6 +166,10 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="ODQE27GC7CSVCIX36B6ZVLPLOH6FPO2IZNMX3JX3NQQJEMCPUVUQ"/>
         <archive extract="0install-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-2.12.3.tar.bz2" size="445327"/>
       </implementation>
+      <implementation id="sha1new=9a93abb43d49f5c77b6b923f13aa8bd05eb9102c" released="2018-06-01" version="2.13">
+        <manifest-digest sha256new="STTLPSQVIB6FQNVXTE7C4P6QQ75IOYZSVMQZCLFB7WBBLY6GRCXQ"/>
+        <archive extract="0install-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-2.13.tar.bz2" size="446022"/>
+      </implementation>
     </group>
   </group>
 
@@ -444,6 +448,14 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="VQS5PEB7GZD2NK7OCCQY4KSJF3WGRM2NINECJHGUS7HJYKWCD3TQ"/>
       <archive extract="0install-linux-armv6l-2.12.3" href="https://downloads.sourceforge.net/project/zero-install/0install/2.12.3/0install-linux-armv6l-2.12.3.tar.bz2" size="4192334"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ad8e5bcda1f7cdbc443fce048cbb5988dd13a06a" released="2018-06-01" version="2.13">
+      <manifest-digest sha256new="A6GT7TYSMZM7A3WFO6JC2VM527EOMXXW2KONN63CLBXIUFQEL4JQ"/>
+      <archive extract="0install-linux-x86_64-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-linux-x86_64-2.13.tar.bz2" size="3956131"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" id="sha1new=47462001dd2fe5fb448013c292e821b132ca70b2" released="2018-06-01" version="2.13">
+      <manifest-digest sha256new="S32XJBOOBYR5FYSF4EWRR2LE5AA3IP3Q6AKCEYTSJTPEL2R3VG6A"/>
+      <archive extract="0install-linux-armv7l-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-linux-armv7l-2.13.tar.bz2" size="4057742"/>
+    </implementation>
   </group>
   <group>
     <requires interface="http://repo.roscidus.com/security/gnupg">
@@ -456,11 +468,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlqtI1gACgkQBxM/lsp02LrcNwf/TiFC
-C7B891LRHbdmI4YWT15NkdVBgfTU+QUh9Eod4JZqvoDi2OdvhOVF5ZtPUKsaM1AGoBwqlnKONU+c
-nLrovhFL1TEuTiFVsMGKrL4dXDKP9ENBFjjvTYoIhvXi+WU/iB6c0UtKeJGf9OC1hb4EYZ4Ufi25
-YrpVrbbBeAXIU5xOBgwC56/d/gibFkG2EYBlhMIYopaIT+5BQyBlz1ngAkcEMdkntGtFZ97eO6Pi
-WTkCkwm1+UQl9GRU3xjKmZiyTkjiObrCiIYAS/LqBa9HqpV8vhrz3te3XIO9oWU/BAvCJDQDPgyj
-qaJYco1F90zBUas/0N1mrBK/4HuwCi1w0A==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlsRnMEACgkQBxM/lsp02LrdiAf+KXhc
+htQ6X5TnyvuwHsIvUiDgmyzKrtOy7uiD5jLBEyhJW41n3iS0EKpolLGuSQUoJeC9qIrj20AWA5Ck
+SditqL4a18iQ/yEmdOV4KvtAa0rmLj/F42KxfifrKe/x8Oa+KCieTLQdtdzlE14VGcZCRI9WWE3Q
+D/5tRLJGf+NWymtYXSq8AH1z0rm3EoUGRXi43P4/b2FEoXcw1PwxT7mCeVOTDFMOzCSiU6SgV818
++cYwKeI42/iH7JS+tbSnKn8LCsuQyRRxA42WXk70Gp/znAPlIHJhbstLuFXbZ82E4FE2aEqy65at
+gbDclSX18t6vDVPoNGpO3tjG0XH1gbBnlg==
 
 -->
