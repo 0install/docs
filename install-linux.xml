@@ -82,10 +82,10 @@ for the <a href='http://koji.fedoraproject.org/koji/packageinfo?packageID=4282'>
 
 <p>
  There are some pre-compiled <a href='http://0install.net/tools/0install.xml'>generic binaries</a> available. These
- work on Linux-x86 (32-bit Linux), Linux-x86_64 (64-bit Linux), and Linux-armv6l (Raspberry Pi with Raspbian).</p>
+ work on Linux-x86_64 (64-bit Linux), and Linux-armv6l (Raspberry Pi with Raspbian).</p>
 
 <p>
-  Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside. You'll need libcurl installed (most systems have it by default).
+  Download the appropriate archive for your system, unpack it, and run the <b>install.sh</b> script inside. You'll need libcurl3 installed (many systems have it by default). Use e.g. <pre>apt-get install libcurl3</pre> to get it on Ubuntu.
 </p>
 
 <quicklinks>
