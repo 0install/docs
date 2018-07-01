@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Jul 2018</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36332604/'>0install 2.13 released</a>, adding support for <b>&lt;file executable='true'></b>, and <a href='https://sourceforge.net/p/zero-install/mailman/message/36343891/'>0install 2.15 for Windows</a>, with various changes including support for <b>&lt;executable-in-*></b> in <b>&lt;command></b>s.</dd>
   <dt>May 2018</dt>
   <dd>
     The main <a href='https://0install.net'>0install.net web-site</a> now supports https (due to GitHub adding support for it on custom domains).
