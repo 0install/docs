@@ -1,0 +1,71 @@
+.wy-side-nav-search {
+  height: 64px;
+  font-size: 125%;
+  background-image: url('img/logo.png');
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 16px;
+}
+
+.wy-nav-side {
+  background: #DDEEFF;
+}
+
+.wy-menu-vertical span {
+  line-height: 14px;
+  font-size: 90%;
+  font-weight: bold;
+  color: black;
+}
+
+.wy-menu-vertical a {
+  line-height: 12px;
+  font-size: 85%;
+  color: #0000A5;
+}
+
+.wy-menu-vertical li.current a {
+  color: #0000A5;
+}
+
+.wy-menu-vertical li ul li a {
+  color: #0000A5;
+}
+
+.wy-menu-vertical a:hover {
+  background-color: #8888FF;
+}
+
+.wy-menu-vertical li.current a:hover {
+  background-color: #8888FF;
+}
+
+.wy-nav-side {
+  height: 100%;
+}
+
+.wy-nav-content-wrap {
+  background: white;
+}
+
+.wy-nav-content {
+  max-width: unset;
+  background: white;
+}
+
+footer {
+  font-size: 75%;
+}
+
+.rst-content dl:not(.docutils) dt {
+  color: unset;
+}
+
+.rst-versions {
+  height: 0px;
+  background: #2980B9
+}
+
+.rst-versions .rst-current-version {
+  background: #2980B9
+}
