@@ -1,116 +1,69 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: Example: SCons
 
-<program name='Hello-scons'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/tests/Hello-scons.xml'
-	 git='https://github.com/0install/hello-scons'
-	 license='Public domain'>
+**Name:** Hello-scons  
+**Maintainer:** Thomas Leonard  
+**License:** Public domain  
+**Source:** [Git repository](https://github.com/0install/hello-scons)  
+**Zero Install feed:** [http://0install.net/tests/Hello-scons.xml](http://0install.net/tests/Hello-scons.xml)
 
-<p>
-  <b>Hello-scons</b> is a simple "Hello world" program written in C. It is built using the
-  <a href='http://www.scons.org/'>SCons build tool</a>.
-</p>
+**Hello-scons** is a simple "Hello world" program written in C. It is built using the [SCons build tool](http://www.scons.org/).
 
-<p>
-Its purpose is to demonstrate the use of 0compile to fetch build dependencies;
-you do not need to install SCons manually on your system in order to build it.
-</p>
+Its purpose is to demonstrate the use of 0compile to fetch build dependencies; you do not need to install SCons manually on your system in order to build it.
 
-</program>
+This example assumes that you have already read [the main 0compile tutorial](../0compile.md).
 
-<p>
-This example assumes that you have already read
-<a href='0compile.html'>the main 0compile tutorial</a>.
-</p>
+You can try it out by using the `setup` command as usual:
 
-<p>
-You can try it out by using the <b>setup</b> command as usual:
-</p>
+```shell
+$ 0compile setup http://0install.net/tests/Hello-scons.xml Hello-scons
+```
 
-<pre>
-$ <b>0compile setup http://0install.net/tests/Hello-scons.xml Hello-scons</b>
-</pre>
+0compile will create a `Hello-scons` directory for the build. You will be prompted to choose the versions of Hello-scons and SCons:
 
-<p>
-<b>0compile</b> will create a 'Hello-scons' directory for the build.
-You will be prompted to choose the versions of Hello-scons and SCons:
-</p>
+![Choosing versions](../../img/screens/hello-scons.png)
 
-<p style='text-align: center'>
-<img width="610" height="238" src="screens/hello-scons.png"
-     alt="Choosing versions" />
-</p>
-
-<p>
 To build, change into the new directory and use the build command:
-</p>
 
-<pre>
-$ <b>cd Hello-scons</b>
-$ <b>0compile build</b>
+```shell
+$ cd Hello-scons
+$ 0compile build
 Executing: "$SCONS/scons.py" -f "$SRCDIR/SConstruct" --srcdir="$SRCDIR" "$DISTDIR"
-</pre>
+```
 
-<p>
-This creates a 'hello-scons-ARCH' directory ready for use and/or distribution,
-and a 'build' directory with some temporary files, such as 'hello.o'. This is
-used only to speed up later rebuilds.
-</p>
+This creates a `hello-scons-ARCH` directory ready for use and/or distribution, and a `build` directory with some temporary files, such as `hello.o`. This is used only to speed up later rebuilds.
 
-<p>
 To run:
-</p>
 
-<pre>
-$ <b>0launch hello-scons-linux-x86_64/0install/Hello-scons.xml</b>
+```shell
+$ 0launch hello-scons-linux-x86_64/0install/Hello-scons.xml
 Hello world!
-</pre>
+```
 
-<p>
 To see (or modify) a copy of the source:
-</p>
 
-<pre>
-$ <b>0compile copy-src</b>
+```shell
+$ 0compile copy-src
 Copied as '/home/me/Hello-scons/src'
-</pre>
+```
 
-<p>
 The main issues with using SCons with 0compile are that:
-</p>
 
-<ul>
-<li><p>SCons defaults to saving build files in the source directory. <b>0compile</b>
-requires that the source directory is not written to during the build (since the 0install cache
-is read-only). Therefore, you must use --srcdir.</p></li>
+- SCons defaults to saving build files in the source directory. 0compile requires that the source directory is not written to during the build (since the 0install cache is read-only). Therefore, you must use `--srcdir`.
+    
+- By default, SCons resets all environment variables. This means that instead of compiling against the library versions you chose, it will build against whatever happens to be the default on the system today.
 
-<li><p>By default, SCons resets all environment variables. This means that
-instead of compiling against the library versions you chose, it will
-build against whatever happens to be the default on the system today.</p></li>
-</ul>
+The `src/SConstruct` file shows how to fix these problems.
 
-<p>
-The <b>src/SConstruct</b> file shows how to fix these problems.
-</p>
+For more information (including how to publish the binary using Zero Install), see [the main 0compile tutorial](../0compile.md).
 
-<p>
-For more information (including how to publish the binary using Zero Install),
-see <a href='0compile.html'>the main 0compile tutorial</a>.
-</p>
+# Building from a Git checkout
 
-<h2>Building from a Git checkout</h2>
+To build the latest Git version of hello-scons:
 
-<p>
-  To build the latest Git version of hello-scons:
-</p>
-
-<pre>
-$ <b>git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/hello-scons</b>
-$ <b>cd hello-scons</b>
-$ <b>0compile build</b>
-$ <b>0launch hello-scons-linux-x86_64/0install/Hello-scons.xml</b>
+```shell
+$ git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/hello-scons
+$ cd hello-scons
+$ 0compile build
+$ 0launch hello-scons-linux-x86_64/0install/Hello-scons.xml
 Hello world!
-</pre>
-
-</html>
+```

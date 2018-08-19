@@ -1,161 +1,119 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: Using Git
 
-<toc level='h2'/>
+[TOC]
 
-<h2>Testing developer versions using Git</h2>
+## Testing developer versions using Git
 
-<p>
-If you want to work on the code, or test a fix that has just been made,
-you'll want to get the latest developer version. We use Git for version
-control, so make sure you have that. You'll also need '<a href='http://www.gnu.org/software/gettext/'>gettext-tools</a>' to build
-the translations.
-</p>
+If you want to work on the code, or test a fix that has just been made, you'll want to get the latest developer version. We use Git for version control, so make sure you have that. You'll also need '[gettext-tools](http://www.gnu.org/software/gettext/)' to build the translations.
 
-<p>
 To install these on Ubuntu, open a terminal emulator and run this command:
-</p>
 
-<pre>$ sudo apt-get install git gitk gettext</pre>
+```shell
+$ sudo apt-get install git gitk gettext
+```
 
-<p>(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)</p>
+(gitk is a largish visualisation tool and is not strictly necessary, but highly recommended)
 
-<p>Click on the <b>SCM</b> link on any program's page to see its Git page
-(for example, <a href='https://github.com/0install/0install'>0install.git</a> for 0install itself).
-The link for cloning is displayed there; use it like this:</p>
+Click on the **SCM** link on any program's page to see its Git page (for example, [0install.git](https://github.com/0install/0install) for 0install itself). The link for cloning is displayed there; use it like this:
 
-<pre>
+```shell
 $ git clone https://github.com/0install/0install.git
 $ cd 0install
-</pre>
+```
 
-<p>
-The directory contains the latest version, plus a single (hidden) .git
-directory with all the git-related bits.
-</p>
+The directory contains the latest version, plus a single (hidden) .git directory with all the git-related bits.
 
-<p>To see the log:</p>
+To see the log:
 
-<pre>
+```shell
 $ git log
-</pre>
+```
 
-<p>
 This doesn't require network access; your clone has the whole history.
-</p>
 
-<p>
 To view a visualisation of the history:
-</p>
 
-<pre>
+```shell
 $ gitk --all
-</pre>
+```
 
-<p>(--all shows the history of all branches and tags, not just the main trunk)</p>
+(`--all` shows the history of all branches and tags, not just the main trunk)
 
-<h2>Fetching updates</h2>
+## Fetching updates
 
-<p>To download the latest updates into your copy:</p>
+To download the latest updates into your copy:
 
-<pre>
+```shell
 $ git pull --rebase
-</pre>
+```
 
-<p>
-(The --rebase option says that if you've committed some changes locally, they should be
-reapplied on top of the latest version. Otherwise, it would create a merge commit, which
-is usually not what you want.)
-</p>
+(The `--rebase` option says that if you've committed some changes locally, they should be reapplied on top of the latest version. Otherwise, it would create a merge commit, which is usually not what you want.)
 
-<p>
-You can also pull from other places. If someone posts to the mailing list,
-they will tell you where to pull from to try the feature out. If they send
-a patch, you can apply it with:
-</p>
+You can also pull from other places. If someone posts to the mailing list, they will tell you where to pull from to try the feature out. If they send a patch, you can apply it with:
 
-<pre>$ git am the.patch</pre>
+```shell
+$ git am the.patch
+```
 
-<h2>Understanding the code</h2>
+## Understanding the OCaml code
 
-<p>
-  Most modules have two files - a <tt>.ml</tt> file containing the implementation and a <tt>.mli</tt>
-  file describing the module's public interface. You should always start by reading the <tt>.mli</tt>
-  file. <a href='https://github.com/0install/0install/blob/master/ocaml/zeroinstall/sigs.mli'>sigs.mli</a> describes several abstract interfaces used in the code.
-</p>
+Most modules have two files - a `.ml` file containing the implementation and a `.mli` file describing the module's public interface. You should always start by reading the `.mli` file. [sigs.mli](https://github.com/0install/0install/blob/master/ocaml/zeroinstall/sigs.mli) describes several abstract interfaces used in the code.
 
-<p>
-  <a href='http://roscidus.com/blog/blog/archives/'>Thomas Leonard's blog</a>
-  has many blog posts describing various aspects of 0install.
-  For example, <a href='http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/'>Simplifying the Solver With Functors</a> explains how 0install chooses a compatible set of libraries to run a program, while <a href='http://roscidus.com/blog/blog/2013/11/28/asynchronous-python-vs-ocaml/'>Asynchronous Python vs OCaml</a> describes the code for downloading things.
-</p>
+[Thomas Leonard's blog](http://roscidus.com/blog/blog/archives/) has many blog posts describing various aspects of 0install. For example, [Simplifying the Solver With Functors](http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/) explains how 0install chooses a compatible set of libraries to run a program, while [Asynchronous Python vs OCaml](http://roscidus.com/blog/blog/2013/11/28/asynchronous-python-vs-ocaml/) describes the code for downloading things.
 
-<h2>Making patches</h2>
+## Making patches
 
-<p>
-If you've changed the code in some way then you can commit the changes like
-this (this just stores them on your own computer, in the .git sub-directory).
-</p>
+If you've changed the code in some way then you can commit the changes like this (this just stores them on your own computer, in the `.git` sub-directory).
 
-<pre>$ git commit -a</pre>
+```shell
+$ git commit -a
+```
 
-<p>Enter a log message. The first line should be a short summary (like the
-subject of an email). Then leave a blank line, then write a longer description.
-</p>
+Enter a log message. The first line should be a short summary (like the subject of an email). Then leave a blank line, then write a longer description.
 
-<p>To view your patch after committing:</p>
+To view your patch after committing:
 
-<pre>$ git show</pre>
+```shell
+$ git show
+```
 
-<p>If you realised you made a mistake, correct it and then do:</p>
+If you realised you made a mistake, correct it and then do:
 
-<pre>$ git commit -a --amend</pre>
+```shell
+$ git commit -a --amend
+```
 
-<p>
-Finally, to make a patch file ready to send to the <a href='support.html'>mailing list</a>:
-</p>
+Finally, to make a patch file ready to send to the [mailing list](http://0install.net/support.html#lists):
 
-<pre>$ git format-patch origin/master</pre>
+```shell
+$ git format-patch origin/master
+```
 
-<h2>Making a new translation</h2>
+## Making a new translation
 
-<p>
-  Note: translations are not currently working - see <a href='http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml'>Gettext support in OCaml</a>.
-</p>
+Note: translations are not currently working - see [Gettext support in OCaml](http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml).
 
-<p>Note: if you prefer, you can also use the <a href='https://www.transifex.net/projects/p/0install/'>Transifex web interface</a> to work on translations.
-</p>
+Note: if you prefer, you can also use the [Transifex web interface](https://www.transifex.net/projects/p/0install/) to work on translations.
 
-<p>The steps are:</p>
+The steps are:
 
-<ol>
-  <li>Create the .pot (.po template) file.</li>
-  <li>Create a new directory <b>share/locale/<i>$locale</i>/LC_MESSAGES</b> inside the Git checkout.</li>
-  <li>Copy the .pot file inside it with a .po extension.</li>
-</ol>
+1.  Create the `.pot` (`.po` template) file.
+2.  Create a new directory `share/locale/_$locale_/LC_MESSAGES` inside the Git checkout.
+3.  Copy the `.pot` file inside it with a `.po` extension.
 
-<p>
-  e.g. to make a French translation:
-</p>
+e.g. to make a French translation:
 
-<pre>
-  $ make share/locale/zero-install.pot
-  $ mkdir -p share/locale/<b>fr</b>/LC_MESSAGES
-  $ cp share/locale/zero-install.pot share/locale/<b>fr</b>/LC_MESSAGES/zero-install.po
-</pre>
+```shell
+$ make share/locale/zero-install.pot
+$ mkdir -p share/locale/fr/LC_MESSAGES
+$ cp share/locale/zero-install.pot share/locale/fr/LC_MESSAGES/zero-install.po
+```
 
-<p>
-  Then edit the .po file to give a translation for each string. When you're done, create the .mo
-  file from the .po file and test:
-</p>
+Then edit the `.po` file to give a translation for each string. When you're done, create the `.mo` file from the `.po` file and test:
 
-<pre>
-  $ make translations
-  $ ./0launch
-</pre>
+```shell
+$ make translations
+$ ./0launch
+```
 
-<p>
-  Finally, <a href='support.html'>send us</a> the new .po file.
-</p>
-
-</html>
+Finally, [send us](http://0install.net/support.html#lists) the new `.po` file.

@@ -1,224 +1,106 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html>
+Depending on who you are, you'll be interested in different aspects of Zero Install. Choose the type below that most closely describes you:
 
-<div style='max-width: 60em'>
+[TOC]
 
-<h2>Perspectives</h2>
+# Novice user
 
-<p>
-Depending on who you are, you'll be interested in different aspects of
-Zero Install. Choose the type below that most closely describes you:
-</p>
+Linux distributions come with a lot of general purpose software, but sometimes a program you want isn't there. Maybe it's very new, or very specialised. Zero Install makes it easy for you to use extra software, but only if someone has gone to the trouble of making it available this way.
 
-<toc level='h2'/>
+-   You can get packages from anywhere, not just from your distribution.
+-   On the other hand, there's no guarantee that these packages are any good. Be careful.
+-   You don't need to enter the root password to install things.
+-   Installing programs only affects you, not other users of the computer.
 
-<h2>Novice user</h2>
+If you know the program you want is available this way, go to the [downloads page](http://0install.net/injector.html) and install the Zero Install package for your distribution.
 
-<p>
-Linux distributions come with a lot of general purpose software, but sometimes
-a program you want isn't there. Maybe it's very new, or very specialised.
-Zero Install makes it easy for you to use extra software, but only if someone
-has gone to the trouble of making it available this way.
-</p>
+If you don't have a particular package in mind and you're just browsing, then you've probably come to the wrong place. Only a small number of programs are currently available this way, and we're mainly interested in building the tools that help other people to make packages rather than in making lots of packages ourselves.
 
-<ul class='spaced'>
- <li>You can <k>get packages from anywhere</k>, not just from your
- distribution.</li>
- <li>On the other hand, there's no guarantee that these packages are
- any good. Be careful.</li>
- <li>You don't need to enter the <k>root password</k> to install things.</li>
- <li>Installing programs <k>only affects you</k>, not other users of the
- computer.</li>
-</ul>
+# Power user
 
-<p>
-If you know the program you want is available this way, go to the
-<a href='injector.html'>downloads page</a> and install the Zero Install
-package for your distribution.
-</p>
+Power users are probably the ideal audience for Zero Install. Zero Install is all about putting you in control of your computer:
 
-<p>
-If you don't have a particular package in mind and you're just browsing, then
-you've probably come to the wrong place. Only a small number of programs are
-currently available this way, and we're mainly interested in building the tools
-that help other people to make packages rather than in making lots of packages
-ourselves.
-</p>
+-   You can get packages from anywhere, not just from your distribution.
+-   When installing a package, the package can't change your configuration. Packages can't add anything to your boot sequence, for example.
+-   Of course, actually _running_ them might do bad things. But Zero Install makes it easy to share programs and libraries between sandboxes.
+-   You can upgrade to the latest testing version, or roll back to any previous version of any program or library.
+-   You can download binaries or compile from source.
 
-<h2>Power user</h2>
+**How do I ...**
 
-<p>
-Power users are probably the ideal audience for Zero Install. Zero Install is
-all about putting you in control of your computer:
-</p>
+... get started?
+: Go to the [downloads page](http://0install.net/injector.html) and install the Zero Install Injector package. Then follow the tutorial.
 
-<ul class='spaced'>
- <li>You can <k>get packages from anywhere</k>, not just from your distribution.</li>
- <li>When installing a package, the package <k>can't change your configuration</k>.
- Packages can't add anything to your boot sequence, for example.</li>
- <li>Of course, actually <i>running</i> them might do bad things. But Zero
- Install makes it easy to share programs and libraries between sandboxes.</li>
- <li>You can upgrade to the <k>latest testing version</k>, or <k>roll back</k> to any
- previous version of any program or library.</li>
- <li>You can <k>download binaries</k> or <k>compile from source</k>.</li>
-</ul>
+... change to a different version of something?
+: Different desktop environments provide different ways to do this, but you can always use the command line. `0launch --list` shows the URI of every program in your cache. `0launch -g URI` opens the GUI for selecting different versions of that program.
 
-<h3>How do I ...</h3>
+... compile from source?
+: Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](http://0install.net/0compile.html) for details.
 
-<dl>
- <dt>... get started?</dt>
- <dd>Go to the <a href='injector.html'>downloads page</a> and install
- the Zero Install Injector package. Then follow the tutorial.</dd>
+... reinstall something?
+: You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0store audit` to check it. Deleting the program's configuration files may help, though.
 
- <dt>... change to a different version of something?</dt>
- <dd>Different desktop environments provide different ways to do this, but
- you can always use the command line. <b>0launch --list</b> shows the URI of
- every program in your cache. <b>0launch -g URI</b> opens the GUI for selecting
- different versions of that program.</dd>
+# System administrator
 
- <dt>... compile from source?</dt>
- <dd>Open the GUI (see above), right click on the program or library to
- compile and choose <b>Compile...</b> from the menu. See the
- <a href='http://0install.net/0compile.html'>0compile page</a> for details.
- </dd>
+Your users want you to install all kinds of odd programs for them, but you know that installing a bad package for one user could mess up all your other users. It's a tough choice. You either risk it, or tell them to install the program in their home directory. But that's hard work for them, and it wastes your disk space and network bandwidth if several users want the same program. Also, they never remember to check for updates.
 
- <dt>... reinstall something?</dt>
- <dd>You should never need to reinstall anything. Zero Install puts each
- package in a read-only cache directory, indexed by a cryptographic digest of the
- contents. Therefore, reinstalling is guaranteed to have no effect! If you think the
- cache has got corrupted somehow, you can run <b>0store audit</b> to check it.
- Deleting the program's configuration files may help, though.</dd>
-</dl>
+Zero Install lets your users install programs in a way that's as secure as installing to their home directories, but is easier, allows sharing between users and makes it easy for them to get automatic updates.
 
-<h2>System administrator</h2>
+**How do I ...**
 
-<p>
-Your users want you to install all kinds of odd programs for them, but you
-know that installing a bad package for one user could mess up all your other
-users. It's a tough choice. You either risk it, or tell them to install
-the program in their home directory. But that's hard work for them, and it
-wastes your disk space and network bandwidth if several users want the same
-program. Also, they never remember to check for updates.
-</p>
+... get started?
+: Go to the [downloads page](http://0install.net/injector.html) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
 
-<p>
-Zero Install lets your users install programs in a way that's as secure as
-installing to their home directories, but is easier, allows sharing between
-users and makes it easy for them to get automatic updates.
-</p>
+... set up sharing of downloads?
+: Follow the [setting up sharing instructions](details/sharing.md). Now when a user installs a program, it ends up in `/var/cache/0install.net` (the sharing instructions explain why this is safe).
 
-<h3>How do I ...</h3>
+... add programs to everyone's desktop?
+: You can add launchers to $PATH using `0install add`, and you can add menu entries using `0desktop`. Put the scripts or .desktop files in a common directory, just as with any other program. You should set up sharing before doing this, or every user will have to download a separate copy of the program.
 
-<dl>
- <dt>... get started?</dt>
- <dd>Go to the <a href='injector.html'>downloads page</a> and install
- the Zero Install Injector package. Your users can now install programs to their
- home directories easily.</dd>
+... limit which programs can be installed?
+: This isn't currently supported, but modifying the `0launch` command is easy as it's all written in Python.
 
- <dt>... set up sharing of downloads?</dt>
- <dd>Follow the <a href='sharing.html'>setting up sharing instructions</a>. Now when
- a user installs a program, it ends up in <b>/var/cache/0install.net</b> (the sharing
- instructions explain why this is safe).</dd>
+# Software developer
 
- <dt>... add programs to everyone's desktop?</dt>
- <dd>You can add launchers to $PATH using <b>0install add</b>, and you can add
- menu entries using <b>0desktop</b>. Put the scripts or .desktop files in a common directory, just as with any other
- program. You should set up sharing before doing this, or every user will
- have to download a separate copy of the program.</dd>
+You don't have much free time, and you want to spend as much of it as possible writing code, not hanging around on distribution mailing lists and IRC channels trying to find someone to review the dozens of packages you've had to create. Life's too short for that.
 
- <dt>... limit which programs can be installed?</dt>
- <dd>This isn't currently supported, but modifying the <b>0launch</b>
- command is easy as it's all written in Python.</dd>
-</dl>
+Creating a Zero Install feed for your programs is easy (it's essentially the same information about download locations and dependencies you would put on your web-page anyway, but in a machine-readable form). Then anyone with Zero Install can use your program.
 
-<h2>Software developer</h2>
+-   Create one package that works everywhere, not one package per Linux distribution.
+-   No need to be approved by a distribution before people can start using your programs.
+-   Specify dependencies in a distribution-neutral format.
+-   Use dependencies which aren't available in all distributions.
+-   Provide new versions immediately. No more waiting six months for the distribution's next release before you can get a fix out.
 
-<p>
-You don't have much free time, and you want to spend as much of it as possible writing
-code, not hanging around on distribution mailing lists and IRC channels trying to find
-someone to review the dozens of packages you've had to create. Life's too short for that.
-</p>
+**How do I ...**
 
-<p>
-Creating a Zero Install feed for your programs is easy (it's essentially the
-same information about download locations and dependencies you would put on
-your web-page anyway, but in a machine-readable form). Then anyone with Zero Install
-can use your program.
-</p>
+... create a feed for my program?
+: Follow the [Packaging Guide](packaging/index.md).
 
-<ul class='spaced'>
- <li>Create <k>one package</k> that works everywhere, not one package per Linux distribution.</li>
- <li>No need to be <k>approved by a distribution</k> before people can start using your programs.</li>
- <li>Specify <k>dependencies</k> in a distribution-neutral format.</li>
- <li>Use dependencies which aren't available in all distributions.</li>
- <li>Provide <k>new versions</k> immediately. No more waiting six months for the distribution's
- next release before you can get a fix out.</li>
-</ul>
+... push updates to my users?
+: Users poll for updates (as with RSS), by default once a month. You should initially mark new releases as 'testing' so that only more advanced users (who know how to roll back to previous versions if something goes wrong) get them.
 
-<h3>How do I ...</h3>
+... check that my feed is OK?
+: Use [FeedLint](tools/feedlint.md) to test it.
 
-<dl>
- <dt>... create a feed for my program?</dt>
- <dd>Follow the <a href='injector-packagers.html'>packaging guide</a>.</dd>
- 
- <dt>... push updates to my users?</dt>
- <dd>Users poll for updates (as with RSS), by default once a month. You should initially
- mark new releases as 'testing' so that only more advanced users (who know how
- to roll back to previous versions if something goes wrong) get them.</dd>
+# Distribution maintainer
 
- <dt>... check that my feed is OK?</dt>
- <dd>Use <a href='feedlint.html'>FeedLint</a> to test it.</dd>
-</dl>
+Installing anything that's not in your distribution is too hard for most of your users, so you've had to package up thousands of programs with minimal testing. Keeping on top of security updates and new releases is taking up all your time, and release testing drags on for months as you try to find a set of versions that supports all packages simultaneously.
 
-<h2>Distribution maintainer</h2>
+-   Instead of doing everything yourself, let the upstream maintainers do most of the work for you. They'll create packages, test them, provide updates and deal with bug reports. Unless you actually want to change something, you don't need to do anything.
+-   Dependencies are resolved on a per-program basis. If two programs can use the same version of a library then that's great; they'll share it. If not, then two copies of the library will co-exist. This is all automatic.
 
-<p>
-Installing anything that's not in your distribution is too hard for most of your users, so
-you've had to package up thousands of programs with minimal testing. Keeping on top of security
-updates and new releases is taking up all your time, and release testing drags on for months as you
-try to find a set of versions that supports all packages simultaneously.
-</p>
+**How do I ...**
 
-<ul class='spaced'>
-  <li>Instead of doing everything yourself, let the upstream maintainers do
-  most of the work for you. They'll create packages, test them, provide updates
-  and deal with bug reports. Unless you actually want to change something, you
-  don't need to do anything.</li>
+... override a package's default configuration?
+: Put your defaults in `/etc` as normal and the package should pick them up (though it depends on the program, of course).
 
- <li>Dependencies are resolved on a per-program basis. If two programs can use the same version of a library then that's
- great; they'll share it. If not, then two copies of the library will co-exist. This is all automatic.</li>
-</ul>
+... override a dependency of a Zero Install package to use my custom packaged library?
+: You can register an additional feed in `/usr/share/0install.net`. See [Distribution Integration](details/distribution-integration.md) for details.
 
-<h3>How do I ...</h3>
+... suggest suitable Zero Install packages for my users?
+: See the instructions for administrators above. You just provide launchers. Each program will get installed when the first user runs it.
 
-<dl>
- <dt>... override a package's default configuration?</dt>
- <dd>Put your defaults in <b>/etc</b> as normal and the package should pick them up (though it
- depends on the program, of course).</dd>
+... sign off upstream versions I've tested?
+: This is not yet supported. Talk to us!
 
- <dt>... override a dependency of a Zero Install package to use my custom packaged library?</dt>
- <dd>You can register an additional feed in
- <b>/usr/share/0install.net</b>. See <a href='distribution-integration.html'>Distribution Integration</a> for details.</dd>
-
- <dt>... suggest suitable Zero Install packages for my users?</dt>
- <dd>See the instructions for administrators above. You just provide launchers.
- Each program will get installed when the first user runs it.</dd>
-
- <dt>... sign off upstream versions I've tested?</dt>
- <dd>This is not yet supported. Talk to us!</dd>
-</dl>
-
-<p>
-In general, we welcome better integration with distributions, so write to our
-<a href='support.html'>mailing list</a> and we'll work something out!
-</p>
-
-<h2>Further reading</h2>
-
-<ul>
-  <li><a href='doc.html'>Back to the documentation index</a></li>
-</ul>
-
-</div>
-
-</html>
+In general, we welcome better integration with distributions, so write to our [mailing list](http://0install.net/support.html#lists) and we'll work something out!

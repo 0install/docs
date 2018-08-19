@@ -1,68 +1,46 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: Overview
 
-<h2>Packaging guide</h2>
+To make software available through 0install, you need to publish a signed "feed" XML file on your web page. This file lists the available versions and their dependencies and says how to run the program. There are lots of ways to create this XML file.
 
-<p>
-  To make software available through 0install, you need to publish a signed
-  "feed" XML file on your web page. This file lists the available versions and
-  their dependencies and says how to run the program. There are lots of ways to
-  create this XML file.
-</p>
+To see an example of the XML, go to any 0install program's feed in your browser (e.g. [0export](http://0install.net/tools/0export.xml)) and _View Page Source_.
 
-<p>
-  To see an example of the XML, go to any 0install program's feed in your browser
-  (e.g. <a href='http://0install.net/tools/0export.xml'>0export</a>) and <i>View Page Source</i>.
-</p>
+Before you start, have a look at [Concepts](concepts.md) to make sure you understand some key terms and ideas.
 
-<p>
-  Before you start, have a look at <a href='packaging-concepts.html'>Understanding 0install: important concepts</a> to make
-  sure you understand some key terms and ideas.
-</p>
+**I want to...**
 
-<p><strong>I want to...</strong></p>
+## Publish an XML file for an existing binary release
 
-<dt>
-  <dt>... publish an XML file for an existing binary release</dt>
-  <dd>
-    <ul>
-      <li>Read the <a href='packaging-binaries.html'>binary packaging guide</a>. This tutorial shows how to create an XML
-	file describing the Blender 3D-animation application. The binary
-	archive is published by the upstream authors and requires no
-	modifications.
-      </li>
-    </ul>
-  </dd>
+- Read the [binary packaging guide](guide-gui.md). This tutorial shows how to create an XML file describing the Blender 3D-animation application. The binary archive is published by the upstream authors and requires no modifications.
 
-  <dt>... publish XML for a source release</dt>
-  <dd>
-    <ul>
-      <li>Start by reading the <a href='packaging-binaries.html'>binary packaging guide</a>. Most of the steps are the same.</li>
-      <li>Read the <a href='0compile.html'>0compile user guide</a> to understand how users compile 0install software.</li>
-      <li>Read the <a href='0compile-dev.html'>0compile developer guide</a> for a tutorial showing how to publish the GNU Hello example package.</li>
-    </ul>
-  </dd>
+## Publish XML for a source release
 
-  <dt>... create an XML file describing my own software</dt>
-  <dd>
-    <ul>
-      <li>Read the <a href='0release.html'>0release</a> documentation, which shows how to add a <a href='local-feeds.html'>local feed</a> to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.</li>
-      <li>Have a look at the <a href='templates.html'>template projects</a> for examples in various programming languages (Python, Java, C).</li>
-    </ul>
-  </dd>
-</dt>
+- Start by reading the [binary packaging guide](guide-gui.md). Most of the steps are the same.
+- Read the [0compile user guide](../tools/0compile.md) to understand how users compile 0install software.
+- Read the [0compile developer guide](../tools/0compile/developers.md) for a tutorial showing how to publish the GNU Hello example package.
 
-<h2>Other useful documentation</h2>
+## Create an XML file describing my own software
 
-<dl>
- <dt><a href='interface-spec.html'>Feed specification</a></dt>
- <dd>The specification of the XML format.</dd>
+- Read the [0release](../tools/0release.md) documentation, which shows how to add a [local feed](local-feeds.md) to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.
+- Have a look at the [template projects](templates.md) for examples in various programming languages (Python, Java, .NET, C).
 
- <dt><a href='tools.html'>Tools</a></dt>
- <dd>An index of the tools provided by the 0install project for generating feeds.</dd>
+# Other useful documentation
 
- <dt><a href='https://opam.ocaml.org/blog/0install-intro/'>Binary distribution with 0install</a></dt>
- <dd>Blog article describing how to make packages using the <a href='0template.html'>0template</a> command-line tool.</dd>
-</dl>
+[Feed specification](../specifications/feed.md)
+: The specification of the XML format.
 
-</html>
+[Templates](templates.md)
+: Sample code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
+
+[Tools](../tools/index.md)
+: An index of the tools provided by the 0install project for generating feeds.
+
+## Articles
+
+[Binary distribution with 0install](https://opam.ocaml.org/blog/0install-intro/)
+: Blog article describing how to make packages using the [0template](../tools/0template.md) command-line tool.
+
+[Compiling with SCons and GTK](http://rox.sourceforge.net/desktop/node/300)
+: Article showing how to use Zero Install in your build scripts to download the SCons build system and use it to compile your program.
+
+[Easy GTK binary compatibility](http://rox.sourceforge.net/desktop/node/289)
+: This blog article shows how to use Zero Install to compile your program against older versions of library headers than are the default on your system. Binaries created this way work on a wider range of systems (all systems with a GTK version newer than the headers). Also, since they download the required headers automatically, users don't need to have the headers already on their system in order to compile your program. The binaries produced this way do not depend on Zero Install, so you can use Zero Install as part of your build process even if you don't distribute the resulting binaries that way.

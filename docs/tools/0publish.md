@@ -1,110 +1,113 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0publish  
+**Maintainer:** Thomas Leonard  
+**License:** GNU Lesser General Public License  
+**Source:** [Git repository](https://github.com/0install/0publish)  
+**Zero Install feed:** [http://0install.net/2006/interfaces/0publish](http://0install.net/2006/interfaces/0publish)
 
-<program name='0publish'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2006/interfaces/0publish'
-	 git='http://github.com/0install/0publish.git'
-	 license='GNU Lesser General Public License'>
+Making a new release of your software can be time consuming and error-prone, so you'll probably want to script as much as possible of it. The **0publish** command provides a set of useful transformations for feed files which you can integrate into your release scripts.
 
-<p>
-Making a new release of your software can be time consuming and error-prone, so you'll probably want to script
-as much as possible of it. The <b>0publish</b> command provides a set of useful transformations
-for feed files which you can integrate into your release scripts.
-</p>
+However, **0publish is somewhat deprecated**:
 
-</program>
+- If you're looking for a graphical environment instead, see **0publish-gui** in [the packaging guide](../packaging/guide-gui.md).
+- To add a new version of a program to a feed, consider using [0template](0template.md) to generate the XML for the new version and [0repo](0repo.md) to add it to the master feed.
+- [0release](0release.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
 
-<p>
-  However, <strong>0publish is somewhat deprecated</strong>:
-</p>
+**Contents:**
 
-<ul>
-<li>
-If you're looking for a graphical environment instead, see <b>0publish-gui</b> in <a
-href='injector-packagers.html'>the packaging guide</a>.
-</li>
-<li>
-To add a new version of a program to a feed, consider using <a href='0template.html'>0template</a>
-to generate the XML for the new version and <a href='0repo.html'>0repo</a> to add it to the master feed.
-</li>
-<li>
-<a href='0release.html'>0release</a> provides a more complete solution
-for managing releases (0release uses 0publish or 0repo internally, but also handles many
-other aspects of making releases for you).
-</li>
-</ul>
+[TOC]
 
-<toc level='h2'/>
+## General operation
 
-<h2>General operation</h2>
+`0publish` edits feed files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key.
 
-<p>
-<b>0publish</b> edits feed files in place. It loads the file, transforms it in some way (such as
-setting the release date, or adding a new implementation) and then writes it back out again. If the input
-file was signed, it will resign it when saving with the same key by default. You can also use it to add a
-signature, or to change the signing key.
-</p>
+You can create an app for `0publish` in the usual way:
 
-<p>You can create an app for <b>0publish</b> in the usual way:</p>
-<pre>
-$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
-</pre>
+```shell
+$ 0install add 0publish http://0install.net/2006/interfaces/0publish
+```
 
-<p>
-The <a href='package-scons.html'>SCons packaging tutorial</a> shows many examples
-of using <b>0publish</b>.
-</p>
+The [SCons packaging tutorial](0compile/example-scons.md) shows many examples of using `0publish`.
 
-<h2>0publish reference</h2>
+## 0publish reference
 
-<b>Usage: 0publish [options] feed.xml</b>
+Usage: `0publish [options] feed.xml`
 
-<h3>Options</h3>
+### Options
 
-<dl>
-  <dt>-h, --help</dt><dd>Show help message and exit.</dd>
-  <dt>-a FEED, --add-from=FEED</dt><dd>Add the implementation(s) in FEED to this one, putting them in the most sensible &lt;group&gt; (so as to minimise duplication of requirements, etc).</dd>
-  <dt>--add-types</dt><dd>add missing MIME-type attributes.</dd>
-  <dt>--add-version=VERSION</dt><dd>Add a new implementation (use with <b>--archive-url</b>, etc).</dd>
-  <dt>--archive-url=URL, --archive-file=FILE, --archive-extract=DIR</dt>
-  <dd>Change a local implementation to one with a digest and an archive.
-  See the <a href='package-scons.html'>SCons tutorial</a> for an example.</dd>
-  <dt>-c, --create</dt><dd>Create a new feed file (if non-existent) without prompting.</dd>
-  <dt>-d ALG, --add-digest=ALG</dt><dd>Add extra digests using the given algorithm.</dd>
-  <dt>-e, --edit</dt><dd>Edit with $EDITOR. This is useful if the file is signed, since
-  it removes the signature at the start and resigns at the end. It also checks that the
-  new feed is valid before overwriting the old copy.</dd>
-  <dt>-g, --gpgsign</dt><dd>Add a GPG signature block. Deprecated; use --xmlsign instead.</dd>
-  <dt>-kKEY, --key=KEY</dt><dd>Key to use for signing (if you have more than one, or if you want to
-  resign with a different key).</dd>
-  <dt>-lLOCAL, --local=LOCAL</dt><dd>Deprecated; use --add-from instead.</dd>
-  <dt>--manifest-algorithm=ALG</dt><dd>Select the algorithm to use for manifest digests.</dd>
-  <dt>--set-id=DIGEST</dt><dd>Set the implementation ID.
-  Note: it's usually easier to use the <b>--archive-*</b> options, since they calculate the digest for you.</dd>
-  <dt>--set-main=EXEC</dt><dd>Set the main executable.</dd>
-  <dt>--set-arch=ARCH</dt><dd>Set the architecture.</dd>
-  <dt>--set-released=DATE</dt><dd>Set the release date.
-  Typically used as <b>0publish --set-released `date +%F` feed.xml</b>, which sets today's date.</dd>
-  <dt>--set-stability=STABILITY</dt><dd>Set the stability rating.</dd>
-  <dt>--set-version=VERSION</dt><dd>Set the version number (used when making a release from CVS).</dd>
-  <dt>-s, --stable</dt><dd>Mark the current testing version as stable.</dd>
-  <dt>--select-version=VERSION</dt><dd>Select version to use in --set-* commands.</dd>
-  <dt>-x, --xmlsign</dt><dd>Add an XML signature block. All remote feeds must be signed.</dd>
-  <dt>-u, --unsign</dt><dd>Remove any signature.</dd>
-  <dt>-v, --verbose</dt><dd>More verbose output (for debugging).</dd>
-  <dt>-V, --version</dt><dd>Display version information.</dd>
-</dl>
+`-h`, `--help`
+: Show help message and exit.
 
-<h2>FAQ</h2>
+`-a FEED`, `--add-from=FEED`
+: Add the implementation(s) in `FEED` to this one, putting them in the most sensible `<group>` (so as to minimise duplication of requirements, etc).
 
-<h3>gpg: signing failed: secret key not available</h3>
+`--add-types`
+: add missing MIME-type attributes.
 
-<p>
-  By default, 0publish tries to sign the new version of the feed using the same key that
-  signed the old version. You will get this error if you don't have this key (e.g. because
-  someone else signed the old version). In that case, use <b>-k</b> to specify they key
-  you want to use instead.
-</p>
+`--add-version=VERSION`
+: Add a new implementation (use with `--archive-url`, etc).
 
-</html>
+`--archive-url=URL`, `--archive-file=FILE`, `--archive-extract=DIR`
+: Change a local implementation to one with a digest and an archive. See the [SCons tutorial](0compile/example-scons.md) for an example.
+
+`-c`, `--create`
+: Create a new feed file (if non-existent) without prompting.
+
+`-d ALG`, `--add-digest=ALG`
+: Add extra digests using the given algorithm.
+
+`-e`, `--edit`
+: Edit with `$EDITOR`. This is useful if the file is signed, since it removes the signature at the start and resigns at the end. It also checks that the new feed is valid before overwriting the old copy.
+
+`-g`, `--gpgsign`
+: Add a GPG signature block. Deprecated; use `--xmlsign` instead.
+
+`-kKEY`, `--key=KEY`
+: Key to use for signing (if you have more than one, or if you want to resign with a different key).
+
+`-lLOCAL`, `--local=LOCAL`
+: Deprecated; use `--add-from` instead.
+
+`--manifest-algorithm=ALG`
+: Select the algorithm to use for manifest digests.
+
+`--set-id=DIGEST`
+: Set the implementation ID. Note: it's usually easier to use the `--archive-*` options, since they calculate the digest for you.
+
+`--set-main=EXEC`
+: Set the main executable.
+
+`--set-arch=ARCH`
+: Set the architecture.
+
+`--set-released=DATE`
+: Set the release date. Typically used as `0publish --set-released $(date +%F) feed.xml`, which sets today's date.
+
+`--set-stability=STABILITY`
+: Set the stability rating.
+
+`--set-version=VERSION`
+: Set the version number (used when making a release from CVS).
+
+`-s`, `--stable`
+: Mark the current testing version as stable.
+
+`--select-version=VERSION`
+: Select version to use in `--set-*` commands.
+
+`-x`, `--xmlsign`
+: Add an XML signature block. All remote feeds must be signed.
+
+`-u`, `--unsign`
+: Remove any signature.
+
+`-v`, `--verbose`
+: More verbose output (for debugging).
+
+`-V`, `--version`
+: Display version information.
+
+## FAQ
+
+### gpg: signing failed: secret key not available
+
+By default, 0publish tries to sign the new version of the feed using the same key that signed the old version. You will get this error if you don't have this key (e.g. because someone else signed the old version). In that case, use `-k` to specify they key you want to use instead.

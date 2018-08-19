@@ -1,120 +1,76 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+[0release](../0release.md) can be used to create releases of your software from a version control system. It uses sensible defaults, allowing it to create releases for simple projects with very little configuration. For more complex projects, you can specify extra commands that should be run during the release process using the syntax described here.
 
-<h2>Release customisation</h2>
+**Contents:**
 
-<p>
-<a href='0release.html'>0release</a> can be used to create releases of your software from a version control system.
-It uses sensible defaults, allowing it to create releases for simple projects with very little configuration.
-For more complex projects, you can specify extra commands that should be run during the release process using the
-syntax described here.
-</p>
+[TOC]
 
-<toc level='h2'/>
+# Example
 
-<h2>Example</h2>
+For example, imagine that our hello-world example program now prints out a banner with its version number when run. `hello.py` now looks like this:
 
-<p>
-For example, imagine that our hello-world example program now prints out a
-banner with its version number when run. <b>hello.py</b> now looks like this:
-</p>
-
-<pre>
+```shell
 #!/usr/bin/env python
 version='0.1'
 print "Welcome to Hello World version %s" % version
 print "Hello World!"
-</pre>
+```
 
-<p>
-We want to make sure that the number in the hello.py file is updated automatically when we make a new release.
-To do this, add a &lt;release:management&gt; element to your feed, like this:
-</p>
+We want to make sure that the number in the hello.py file is updated automatically when we make a new release. To do this, add a <release:management> element to your feed, like this:
 
-<pre>
-&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"&gt;
-  &lt;name&gt;HelloWorld&lt;/name&gt;
-  &lt;summary&gt;minimal demonstration package for 0release&lt;/summary&gt;
-  &lt;description&gt;
-    This program outputs the message &quot;Hello World&quot;. You can create new releases of it
+```xml
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>HelloWorld</name>
+  <summary>minimal demonstration package for 0release</summary>
+  <description>
+    This program outputs the message "Hello World". You can create new releases of it
     using 0release.
-  &lt;/description&gt;
+  </description>
 
-  <b>&lt;release:management xmlns:release='http://zero-install.sourceforge.net/2007/namespaces/0release'&gt;
-    &lt;release:action phase='commit-release'&gt;sed -i "s/^version='.*'$/version='$RELEASE_VERSION'/" hello.py&lt;/release:action&gt;
-  &lt;/release:management&gt;</b>
+  <release:management xmlns:release='http://zero-install.sourceforge.net/2007/namespaces/0release'>
+    <release:action phase='commit-release'>sed -i "s/^version='.*'$/version='$RELEASE_VERSION'/" hello.py</release:action>
+  </release:management>
   ...
-&lt;/interface&gt;
-</pre>
+</interface>
+```
 
-<p>
-This tells 0release that during the <b>commit-release</b> phase (in which it updates the version number to the number chosen for the
-release) it should execute the given command, which updates the version line in the Python code. Of course, you can perform any
-action you want.
-</p>
+This tells 0release that during the `commit-release` phase (in which it updates the version number to the number chosen for the release) it should execute the given command, which updates the version line in the Python code. Of course, you can perform any action you want.
 
-<h2>Phase: commit-release</h2>
+# Phase: commit-release
 
-<dl>
- <dt>Current directory</dt><dd>The working copy (under version control), as specified by the <b>id</b> attribute in the feed.</dd>
- <dt>$RELEASE_VERSION</dt><dd>The version chosen for the new release.</dd>
-</dl>
+Current directory
+: The working copy (under version control), as specified by the `id` attribute in the feed.
 
-<p>
-These actions are run after the user has entered the version number for the new release. After the actions are run, 0release will
-update the local feed file with the new version number and commit all changes to the version control system.
-</p>
+`$RELEASE_VERSION`
+: The version chosen for the new release.
 
-<p>
+These actions are run after the user has entered the version number for the new release. After the actions are run, 0release will update the local feed file with the new version number and commit all changes to the version control system.
+
 Any changes made to the working copy will therefore appear in both the history and also in the release archive.
-</p>
 
-<p>
-If your script fails (returns a non-zero exit status), 0release will abort but will not revert any changes made by the actions. You
-will have to manually revert any changes before 0release will allow you to restart the release process.
-</p>
+If your script fails (returns a non-zero exit status), 0release will abort but will not revert any changes made by the actions. You will have to manually revert any changes before 0release will allow you to restart the release process.
 
-<h2>Phase: generate-archive</h2>
+# Phase: generate-archive
 
-<dl>
- <dt>Current directory</dt><dd>A temporary directory created by unpacking the archive exported from the SCM.</dd>
- <dt>$RELEASE_VERSION</dt><dd>The version chosen for the new release.</dd>
-</dl>
+Current directory
+: A temporary directory created by unpacking the archive exported from the SCM.
 
-<p>
-Once the release version is committed to version control, 0release exports that revision to a temporary directory.
-After running all the actions in this phase, the release tarball is created from the final state of the directory.
-Use this phase to generate files that should be in the release archive but not in the tagged revision under version
-control. Typical actions here are:
-</p>
+`$RELEASE_VERSION`
+: The version chosen for the new release.
 
-<ul>
-<li>Running 'autoconf' to create a 'configure' script.</li>
-<li>Building translations (.mo files) from source .po files.</li>
-<li>Building documentation (e.g. HTML from DocBook sources).</li>
-</ul>
+Once the release version is committed to version control, 0release exports that revision to a temporary directory. After running all the actions in this phase, the release tarball is created from the final state of the directory. Use this phase to generate files that should be in the release archive but not in the tagged revision under version control. Typical actions here are:
 
-<p>
-Notice that all the above generate <i>platform independent</i> files.
-<i>Do not</i> compile to platform-specific binaries here (e.g. do not compile
-C source files to executables). For such programs, you need one source package
-and multiple binary packages (one for each architecture).
-See <a href='0release-binaries.html'>Releases with source and binary packages</a> for that.
-</p>
+- Running `autoconf` to create a `configure` script.
+- Building translations (`.mo` files) from source `.po` files.
+- Building documentation (e.g. HTML from DocBook sources).
 
-<h2>&lt;add-toplevel-directory&gt;</h2>
+Notice that all the above generate _platform independent_ files. _Do not_ compile to platform-specific binaries here (e.g. do not compile C source files to executables). For such programs, you need one source package and multiple binary packages (one for each architecture). See [Releases with source and binary packages](compiled-binaries.md) for that.
 
-<p>
-Adding this element causes 0release to put everything in a sub-directory, named after the
-feed. This is probably only useful for ROX applications, where the version control system
-contains e.g. just <b>AppRun</b> but the release should contain <b>archive-2.2/Archive/AppRun</b>.
-This is done using:
-</p>
+# <add-toplevel-directory\>
 
-<pre>
-  &lt;release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
-    &lt;release:add-toplevel-directory/>
-  &lt;/release:management>
-</pre>
+Adding this element causes 0release to put everything in a sub-directory, named after the feed. This is probably only useful for ROX applications, where the version control system contains e.g. just `AppRun`but the release should contain `archive-2.2/Archive/AppRun`. This is done using:
 
-</html>
+```xml
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release">
+    <release:add-toplevel-directory/>
+  </release:management>
+```

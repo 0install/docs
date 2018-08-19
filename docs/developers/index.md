@@ -1,77 +1,30 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html>
+title: Overview
 
-<h2>Developers</h2>
+This section is for people developing 0install itself, or integrating it into their own systems (for example, if you want to use 0install to manage plugins for your application).
 
-<p>
- This section is for people developing 0install itself, or integrating it
- into their own systems (for example, if you want to use 0install to manage
- plugins for your application).
-</p>
+If you want to make programs available through 0install, see the [Packagers Documentation](../packaging/index.md) instead.
 
-<p>
-  If you want to make programs available through 0install, see the <a href='packagers.html'>packaging guide</a> instead.
-</p>
+[Using Git](using-git.md)
+: How to get the very latest developer versions using Git.
 
-<dl>
- <dt><a href='get-involved.html'>Get involved</a></dt>
- <dd>
-   Suggestions on how to join the project.
- </dd>
+[Design](design.md)
+: A more detailed description of the design of Zero Install.
 
- <dt><a href='using-git.html'>Using Git</a></dt>
- <dd>
-  How to get the very latest developer versions using Git.
- </dd>
+[Solver](solver.md)
+: A description of the dependency solver in Zero Install.
 
- <dt><a href='injector-design.html'>Design</a></dt>
- <dd>
-  A more detailed description of the design of Zero Install.
- </dd>
+**API**
 
- <dt><a href='dev-site.html'>The web-site</a></dt>
- <dd>
-   How to make changes to the 0install.net web-site.
- </dd>
-</dl>
+The `0launch`/`0install` command-line interface to Zero Install is sufficient for most purposes. However, sometimes you may want to use the Python library interface. This is used by programs such as `0compile` and `0publish`, and is also a useful reference for people wanting to modify 0install itself.
 
-<h3>The Python API</h3>
+[Python API](python-api.md)
+: Use 0install's functions in your own Python applications with a native library.
 
-<p>
-  The <b>0launch</b>/<b>0install</b> command-line interface to Zero Install is sufficient for most
-  purposes. However, sometimes you may want to use the Python library interface.
-  This is used by programs such as <b>0compile</b> and <b>0publish</b>, and is
-  also a useful reference for people wanting to modify 0install itself.
-</p>
+[.NET API](http://0install.de/dev/api/)
+: Use 0install's functions in your own .NET applications with a native library.
 
-<dl>
- <dt><a href='json-api.html'>JSON API</a></dt>
- <dd>
-   How to use 0install's functions from other programs via JSON.
- </dd>
- <dt><a href='python-api/html/index.html'>Python API</a></dt>
- <dd>
-   The reference documentation, generated automatically from the source code.
- </dd>
+[JSON API](json-api.md)
+: Use 0install's functions in any language via a JSON-based stdin/stdout API.
 
- <dt><a href='api-example.html'>Using the API</a></dt>
- <dd>A simple example showing how to get started with the Python API.</dd>
-</dl>
-
-<h3>Other guides</h3>
-
-<dl>
-
-  <dt><a href='http://0install.de/dev/api/'>.NET API</a></dt>
-  <dd>
-    Zero Install provides a .NET API that can be used to embed Zero Install functionality in your own applications.
-  </dd>
-
- <dt><a href='http://gfxmonk.net/2011/08/02/using-zero-install-as-a-plugin-manager.html'>Using Zero-Install as a Plugin Manager</a></dt>
- <dd>
-   A blog post showing how 0install can be used to manage plugins for your application.
- </dd>
-
-</dl>
-
-</html>
+[Using Zero-Install as a Plugin Manager](http://gfxmonk.net/2011/08/02/using-zero-install-as-a-plugin-manager.html)
+: A blog post showing how 0install can be used to manage plugins for your application.

@@ -1,46 +1,32 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
-
-<h2>Templates</h2>
-
-<p>
 This page lists some example code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
-</p>
 
-<toc level='h2'/>
+[TOC]
 
-<h2>C</h2>
+# C
 
-<dl>
-<dt><a href='http://0install.net/tests/GNU-Hello.xml'>GNU-Hello</a></dt>
-<dd>A sample C program built using <k>autoconf</k> and <k>make</k>. Shows how to make a source package that can be used by <a href='0compile.html'>0compile</a> to create a binary release. See <a href='0release-binaries.html'>0release: binaries</a> for details.
-</dd>
+[GNU-Hello](http://0install.net/tests/GNU-Hello.xml)
+: A sample C program built using autoconf and make. Shows how to make a source package that can be used by [0compile](../tools/0compile.md) to create a binary release. See [0release: binaries](../tools/0release/compiled-binaries.md) for details.
 
-<dt><a href='https://github.com/0install/hello-scons'>hello-scons</a></dt>
-<dd>Another C program, but this time using <k>SCons</k> instead of Make as the build tool. See <a href='0compile-scons.html'>0compile: Scons</a> for details.</dd>
+[hello-scons](https://github.com/0install/hello-scons)
+: Another C program, but this time using SCons instead of Make as the build tool. See [0compile: Scons](../tools/0compile/example-scons.md) for details.
 
-<dt><a href='https://github.com/0install/hello-c-cmake'>hello-c-cmake</a></dt>
-<dd>A C program built using <k>CMake</k>.
-</dd>
-</dl>
+[hello-c-cmake](https://github.com/0install/hello-c-cmake)
+: A C program built using CMake.
 
-<h2>Java</h2>
+# Java
 
-<dl>
-<dt><a href='https://github.com/0install/hello-java'>hello-java</a></dt>
-<dd>A Java program, built using <k>SCons</k>. Gets SCons, the Java JDK and the Java JRE through 0install.</dd>
+[hello-java](https://github.com/0install/hello-java)
+: A Java program, built using SCons. Gets SCons, the Java JDK and the Java JRE through 0install.
 
-<dt><a href='https://github.com/0install/pom2feed'>Maven integration with pom2feed</a></dt>
-<dd>Build your project with Maven, creating a 0install feed for it automatically.</dd>
+[Maven integration with pom2feed](https://github.com/0install/pom2feed)
+: Build your project with Maven, creating a 0install feed for it automatically.
 
-</dl>
+# .NET
 
-<h2>Python</h2>
+[Packaging .NET libraries](http://0install.de/docs/publishing/dotnet-libs/)
+: This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using the Publishing Tools.
 
-<dl>
-  <dt><a href='https://github.com/0install/hello-python'>hello-python</a></dt>
-  <dd>A simple Python program. Depends on Python 2.x using 0install. See the <a href='0release.html'>0release tutorial</a> for more information.</dd>
-</dl>
+# Python
 
-
-</html>
+[hello-python](https://github.com/0install/hello-python)
+: A simple Python program. Depends on Python 2.x using 0install. See the [0release tutorial](../tools/0release.md) for more information.

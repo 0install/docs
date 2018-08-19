@@ -1,100 +1,50 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html>
+# Distribution integration
 
-<div style='max-width: 60em'>
+**Supported distributions:**
 
-<h2>Distribution integration</h2>
+- `Arch`: Arch Linux - since 1.6
+- `Cygwin`: Cygwin - since 1.7
+- `Darwin`: (detects native Java) - since 1.11
+- `Debian`: dpkg-based (Debian, Mint, Ubuntu, etc) - since 0.28
+- `Gentoo`: Gentoo - since 0.45
+- `MacPorts`: Mac OS X (ports) - since 1.4 (also extends "Darwin")
+- `Ports`: FreeBSD - since 0.47
+- `RPM`: RPM-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31
+- `Slack`: Slackware - since 0.48
+- `Windows`: Windows (detects native Python and Java) - in mainline since 1.5
 
-<p><strong>Supported distributions:</strong></p>
-<ul>
-  <li><b>Arch</b>: Arch Linux - since 1.6</li>
-  <li><b>Cygwin</b>: Cygwin - since 1.7</li>
-  <li><b>Darwin</b>: (detects native Java) - since 1.11</li>
-  <li><b>Debian</b>: dpkg-based (Debian, Mint, Ubuntu, etc) - since 0.28</li>
-  <li><b>Gentoo</b>: Gentoo - since 0.45</li>
-  <li><b>MacPorts</b>: Mac OS X (ports) - since 1.4 (also extends "Darwin")</li>
-  <li><b>Ports</b>: FreeBSD - since 0.47</li>
-  <li><b>RPM</b>: RPM-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31</li>
-  <li><b>Slack</b>: Slackware - since 0.48</li>
-  <li><b>Windows</b>: Windows (detects native Python and Java) - in mainline since 1.5</li>
-  <li><b>Adding a new one</b>: edit <a href='python-api/html/zeroinstall.injector.distro-module.html'>distro.py</a></li>
-</ul>
+If you have already installed a package using your distribution's installer then Zero install can use that instead of downloading a second copy using Zero Install. It can also use [PackageKit](http://www.packagekit.org/) to install them, if the user is authorised.
 
-<p>
-If you have already installed a package using your distribution's installer then Zero install can use
-that instead of downloading a second copy using Zero Install. It can also use <a href='http://www.packagekit.org/'>PackageKit</a> to install them, if the user is authorised.
-</p>
+For example, here is what happens if you ask to run AbiWord when you already have the `libenchant1` library it requires installed using `apt-get`:
 
-<p>
-For example, here is what happens if you ask to run AbiWord when you already
-have the <b>libenchant1</b> library it requires installed using <b>apt-get</b>:
-</p>
+```shell
+$ 0launch http://0install.net/2006/autopackage/Abiword.xml
+```
 
-<pre>$ <b>0launch http://0install.net/2006/autopackage/Abiword.xml</b></pre>
+![Abiword with native libenchant](../img/screens/abiword-have-enchant.png)
 
-<p style='text-align: center'>
-  <img src='screens/abiword-have-enchant.png' width='657' height='274' alt='Abiword with native libenchant'/>
-</p>
+If Abiword is itself installed as a distribution package, then the dialog is even simpler, and nothing needs to be downloaded:
 
-<p>
-If Abiword is itself installed as a distribution package, then the dialog is even simpler, and nothing needs to
-be downloaded:
-</p>
+![Native Abiword](../img/screens/abiword-native.png)
 
-<p style='text-align: center'>
-  <img src='screens/abiword-native.png' width='580' height='249' alt='Native Abiword'/>
-</p>
+Of course, you are always free to change the selected version from the native package to a Zero Install version. This will also happen automatically if your native version is incompatible with the required version. For example, if you try this on a machine with a very old copy of `libenchant1` then Zero Install will download a newer version rather than using that one.
 
-<p>
-Of course, you are always free to change the selected version from the native package to a Zero Install
-version. This will also happen automatically if your native version is incompatible with the required
-version. For example, if you try this on a machine with a very old copy of libenchant1 then Zero Install
-will download a newer version rather than using that one.
-</p>
+All software installed by Zero Install goes in the cache directory and does not conflict with files installed by the native package manager. If PackageKit is used instead, the user is prompted to confirm, since installing distribution packages can affect the system as a whole. Note that PackageKit can only be used to install packages from the distribution's repository.
 
-<p>
-All software installed by Zero Install goes in the cache directory and does not conflict with
-files installed by the native package manager. If PackageKit is used instead, the user is prompted to confirm, since installing distribution packages can affect the system as a whole. Note that PackageKit can only be used to install packages from the distribution's repository.
-</p>
+## How it works
 
-<h2>How it works</h2>
-
-<p>
 Two methods are available to integrate Zero Install packages with distribution ones:
-</p>
 
-<ul>
-  <li>
-  <p>
-  A feed author can add a &lt;package-implementation package="name"/&gt; element to their feed. Zero Install
-  will query your distribution's package manager to see if a package with this name is already installed. If so,
-  that version will be considered as another candidate, with a stability rating
-  of "packaged" (which is ranked between "stable" and "preferred").
-  </p>
+-   A feed author can add a `<package-implementation package="name"/>` element to their feed. Zero Install will query your distribution's package manager to see if a package with this name is already installed. If so, that version will be considered as another candidate, with a stability rating of "packaged" (which is ranked between "stable" and "preferred").
+    
+    Since different distributions use different names for the same package, you can specify which distribution(s) an element applies to like this (some RPM-based distributions use `pkgconfig`, while other RPM systems use `pkg-config`, which is also the name used by Debian):
 
-  <p>
-  Since different distributions use different names for the same package, you can specify which
-  distribution(s) an element applies to like this (some RPM-based distributions use "pkgconfig", while
-  other RPM systems use "pkg-config", which is also the name used by Debian):
-  </p>
+```xml
+  <package-implementation distributions="RPM" package="pkgconfig"/>
+  <package-implementation distributions="RPM Debian" package="pkg-config"/>
+  <package-implementation distributions="Gentoo" package="dev-util/pkgconfig"/>
+```
 
-  <pre>
-  &lt;package-implementation distributions="RPM" package="pkgconfig"/>
-  &lt;package-implementation distributions="RPM Debian" package="pkg-config"/>
-  &lt;package-implementation distributions="Gentoo" package="dev-util/pkgconfig"/></pre>
-  </li>
-
-  <li><p>A distribution package can install a file named <b>/usr/share/0install.net/native_feeds/INTERFACE</b>.
-  This is automatically used as an additional feed for INTERFACE (replace "/" characters in the package's
-  interface URI with "#" characters).
-  </p>
-  
-  <p>This is useful if the package installs the program as a self-contained
-  directory somewhere. i.e. the installed package has the same format as the Zero Install package. If the
-  package already contains a local feed file, you can just symlink to it directly.</p></li>
-
-</ul>
-
-</div>
-
-</html>
+-   A distribution package can install a file named `/usr/share/0install.net/native_feeds/INTERFACE`. This is automatically used as an additional feed for `INTERFACE` (replace `/` characters in the package's interface URI with `#` characters).
+    
+    This is useful if the package installs the program as a self-contained directory somewhere. i.e. the installed package has the same format as the Zero Install package. If the package already contains a local feed file, you can just symlink to it directly.

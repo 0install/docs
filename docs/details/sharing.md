@@ -1,225 +1,133 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: Sharing downloads between users
 
-  <div class='note'>A change in 0install 2.1 accidentally disabled writing to the shared cache (packages will always be installed to the user's home directory, even when sharing has been enabled). This has been fixed in Git and will be working again in 2.3.</div>
+On systems with multiple users, it would be very inefficient if each user had to download their own copy of each program. Most packaging systems require users to have root access in order to share software (either the root password, or admin access through sudo). However, this is a security risk. Zero Install allows software to be shared automatically and safely between mutually-untrusting users.
 
-<h2>Sharing downloads between users</h2>
+Note: this page is about sharing between users on a single computer. If you want to do peer-to-peer sharing on a LAN, see [0share](../tools/0share.md). If you want to share between virtual machines running on a single host, see [virtual machines](virtual-machines.md).
 
- <p>
-   On systems with multiple users, it would be very inefficient if each user had to download their own copy
-   of each program. Most packaging systems require users to have root access in order to share software
-   (either the root password, or admin access through sudo). However, this is a security risk. Zero Install
-   allows software to be shared automatically and safely between mutually-untrusting users.
- </p>
+[TOC]
 
- <p>
-   Note: this page is about sharing between users on a single computer. If you want to do peer-to-peer
-   sharing on a LAN, see <a href='0share.html'>0share</a>. If you want to share between virtual machines
-   running on a single host, see <a href='virtual.html'>virtual machines</a>.
- </p>
+## How it works
 
- <toc level='h3'/>
+A digest is a short value calculated from a (usually much bigger) file. There are various different algorithms that can be used. For example, this command calculates the SHA1 digest of the `ls` binary:
 
- <h3>How it works</h3>
-
- <p>
-  A digest is a short value calculated from a (usually much bigger) file. There
-  are various different algorithms that can be used. For example, this command
-  calculates the SHA1 digest of the <b>ls</b> binary:
- </p>
-
- <pre>
-$ <b>sha1sum /bin/ls</b>
+```shell
+$ sha1sum /bin/ls
 90b703d3d29ef20f3ef711eb38625d618c70c4f6  /bin/ls
- </pre>
+```
 
- <p>
-  A <i>cryptographic</i> digest (like SHA1) is one where it is believed to be
-  infeasibly difficult to create a different program with the same digest. So,
-  if someone gives you a binary with digest above, you can be sure that it's
-  identical to the version of <b>ls</b> that I'm using.
- </p>
+A _cryptographic_ digest (like SHA1) is one where it is believed to be infeasibly difficult to create a different program with the same digest. So, if someone gives you a binary with digest above, you can be sure that it's identical to the version of `ls` that I'm using.
 
- <p>
-  Cryptographic digests are the basis of secure sharing in Zero Install. Here's we'll see an example of how two users (Alice and Bob)
-  can share the ROX-Filer program, even if they don't trust each other.
- </p>
+Cryptographic digests are the basis of secure sharing in Zero Install. Here's we'll see an example of how two users (Alice and Bob) can share the ROX-Filer program, even if they don't trust each other.
 
- <p class='diagram'>
-   <img src='sharing.png' width='400' height='268' alt='How sharing works in Zero Install'/>
- </p>
+![How sharing works in Zero Install](../img/diagrams/sharing.png)
 
- <p>
-  First, Alice runs ROX-Filer:
- </p>
+First, Alice runs ROX-Filer:
 
- <ol>
-  <li>Alice visits <a href='http://rox.sourceforge.net'>rox.sourceforge.net</a> and downloads
-  the small <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'>ROX-Filer.xml</a> feed file.</li>
-  <li>She decides to run ROX-Filer version 2.5 from this file.</li>
-  <li>The Zero Install software gets the digest for this version (<b>sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>) from
-  the file. It also downloads the package and unpacks it.</li>
-  <li>The software passes the unpacked archive to the privileged helper, which checks the digest and copies the directory
-  to <b>/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>.</li>
-  <li>ROX-Filer runs.</li>
- </ol>
+1. Alice visits [rox.sourceforge.net](http://rox.sourceforge.net) and downloads the small [ROX-Filer.xml](http://rox.sourceforge.net/2005/interfaces/ROX-Filer) feed file.
+2. She decides to run ROX-Filer version 2.5 from this file.
+3. The Zero Install software gets the digest for this version (`sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`) from the file. It also downloads the package and unpacks it.
+4. The software passes the unpacked archive to the privileged helper, which checks the digest and copies the directory to `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`.
+5. ROX-Filer runs.
 
- <p>
-  Later, Bob decides to run it too. The system doesn't need to download a second copy:
- </p>
+Later, Bob decides to run it too. The system doesn't need to download a second copy:
 
- <ol>
-  <li>Bob visits <a href='http://rox.sourceforge.net'>rox.sourceforge.net</a> and downloads
-  the small <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'>ROX-Filer.xml</a> feed file.</li>
-  <li>He decides to run ROX-Filer version 2.5 from this file.</li>
-  <li>The Zero Install software gets the digest for this version (<b>sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>) from
-  the file.</li>
-  <li>Zero Install sees that the directory <b>/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>
-  already exists, so it doesn't download the software again.</li>
-  <li>ROX-Filer runs.</li>
- </ol>
+1. Bob visits [rox.sourceforge.net](http://rox.sourceforge.net) and downloads the small [ROX-Filer.xml](http://rox.sourceforge.net/2005/interfaces/ROX-Filer) feed file.
+2. He decides to run ROX-Filer version 2.5 from this file.
+3. The Zero Install software gets the digest for this version (`sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`) from the file.
+4. Zero Install sees that the directory `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` already exists, so it doesn't download the software again.
+5. ROX-Filer runs.
 
- <p>
-  But what if we have a malicious user, Charlie? A new machine arrives, and Charlie decides to install a malicious version
-  of ROX-Filer before anyone else installs a good copy:
- </p>
+But what if we have a malicious user, Charlie? A new machine arrives, and Charlie decides to install a malicious version of ROX-Filer before anyone else installs a good copy:
 
- <ol>
-  <li>Charlie visits <a href='http://rox.sourceforge.net'>rox.sourceforge.net</a> and downloads
-  the small <a href='http://rox.sourceforge.net/2005/interfaces/ROX-Filer'>ROX-Filer.xml</a> feed file.</li>
-  <li>He decides to use ROX-Filer version 2.5 from this file.</li>
-  <li>The Zero Install software gets the digest for this version (<b>sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>) from
-  the file. It also downloads the package and unpacks it.</li>
-  <li>Charlie modifies the download to do something nasty (or, the download has been tampered with, or Charlie's account
-  has been infected with a virus which modifies it, etc).</li>
-  <li>If Charlie tries to install the result
-  to <b>/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b>, the privileged helper
-  rejects it, because the digest of the directory's contents no longer matches that name.</li>
-  <li>Charlie is forced to install his malicious version as <b>/var/cache/0install.net/implementations/sha1=3ab21d8f410e3a5a863d3a32a152edb31ba42f75</b> instead.</li>
- </ol>
+1. Charlie visits [rox.sourceforge.net](http://rox.sourceforge.net) and downloads the small [ROX-Filer.xml](http://rox.sourceforge.net/2005/interfaces/ROX-Filer) feed file.
+2. He decides to use ROX-Filer version 2.5 from this file.
+3. The Zero Install software gets the digest for this version (`sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`) from the file. It also downloads the package and unpacks it.
+4. Charlie modifies the download to do something nasty (or, the download has been tampered with, or Charlie's account has been infected with a virus which modifies it, etc).
+5. If Charlie tries to install the result to `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`, the privileged helper rejects it, because the digest of the directory's contents no longer matches that name.
+6. Charlie is forced to install his malicious version as `/var/cache/0install.net/implementations/sha1=3ab21d8f410e3a5a863d3a32a152edb31ba42f75` instead.
 
- <p>
-  When Alice runs ROX-Filer as before, the software sees that <b>/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2</b> doesn't
-  exist and downloads a genuine copy as before. When Bob runs ROX-Filer, he will use Alice's version.
- </p>
+When Alice runs ROX-Filer as before, the software sees that `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` doesn't exist and downloads a genuine copy as before. When Bob runs ROX-Filer, he will use Alice's version.
 
- <p class='diagram'>
-   <img src='sharing-evil.png' width='549' height='268' alt='Charlie adds a modified copy to the system'/>
- </p>
+![Charlie adds a modified copy to the system](../img/diagrams/sharing-evil.png)
 
- <p>
-  You might be worried that Charlie was able to put malicious code in the shared cache. However, it doesn't matter because other users won't try to run it, since
-  it doesn't have the name they're looking for. Of course, it might not even be malicious: a program that deletes files is malicious if it's called <b>cat</b>, but
-  not if it's called <b>rm</b>. As long as users don't go around running random binaries they find in the cache, they're OK.
- </p>
+You might be worried that Charlie was able to put malicious code in the shared cache. However, it doesn't matter because other users won't try to run it, since it doesn't have the name they're looking for. Of course, it might not even be malicious: a program that deletes files is malicious if it's called `cat`, but not if it's called `rm`. As long as users don't go around running random binaries they find in the cache, they're OK.
 
- <h3>Setting up sharing</h3>
+## Setting up sharing
 
- <p>
-  These instructions require Zero Install version 0.30 or later.
- </p>
+These instructions require Zero Install version 0.30 or later.
 
- <p>
-  The actual code for doing sharing this way is currently experimental and not enabled by default. This section shows how the system administrator (someone with
-  root access) can enable it. It is probably best not to do this in security critical environments yet as we're still working on tightening the security. Feedback welcome.
- </p>
+The actual code for doing sharing this way is currently experimental and not enabled by default. This section shows how the system administrator (someone with root access) can enable it. It is probably best not to do this in security critical environments yet as we're still working on tightening the security. Feedback welcome.
 
- <p>
-  This diagram shows the four processes involved in adding a new package to the system cache. If you have a different environment, you can use a different 'helper' script
-  to integrate it with Zero Install.
- </p>
+This diagram shows the four processes involved in adding a new package to the system cache. If you have a different environment, you can use a different 'helper' script to integrate it with Zero Install.
 
- <p class='uml'>
-   <img src='UML/secure-add.violet.png' width='590' height='264' alt='Sequence of operations to add to the system cache'/>
- </p>
+![Sequence of operations to add to the system cache](../img/uml/secure-add.violet.png)
 
- <ol>
-  <li><a href='injector.html'>Install 0launch version 0.30</a> or later.</li>
-  <li>Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
-<pre>
+1. [Install 0install version 0.30](http://0install.net/injector.html) or later.
+2. Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
+
+```shell
 # useradd -d /var/cache/0install.net --system zeroinst
-</pre>
-</li>
-  <li>Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
-<pre>
+```
+
+3. Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
+
+```shell    
 # mkdir -p /var/cache/0install.net/implementations
 # chown zeroinst /var/cache/0install.net/implementations
-</pre>
-</li>
+```
 
-  <li>Create <b>/usr/local/bin/0store-secure-add-helper</b> with:
-  <pre>
+4. Create `/usr/local/bin/0store-secure-add-helper` with:
+
+```shell    
 #!/bin/sh
-exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" &lt; /dev/null
-</pre>
-(note: the path will be /usr/<b>local</b>/bin/0store-secure-add if you installed from source)
-</li>
+exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" < /dev/null
+```
 
-  <li>Make your new script readable and executable by everyone:
-<pre>
+**Note:** the path will be /usr/`local`/bin/0store-secure-add if you installed from source
+
+5. Make your new script readable and executable by everyone:
+    
+```shell
 # chmod a+rx /usr/local/bin/0store-secure-add-helper
-</pre></li>
+```
 
-  <li>Use <b>visudo</b> to add these lines to <b>/etc/sudoers</b>:
-<pre>
+6. Use `visudo` to add these lines to `/etc/sudoers`:
+
+```shell
 Defaults>zeroinst env_reset,always_set_home
 ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
-</pre>
- <p><strong>Note:</strong> the NOPASSWD line MUST go at the end of the file, otherwise it is likely to be overridden by
-   later entries. Again, use /usr/<b>local</b>/bin if you installed from source.</p>
-</li>
- </ol>
+```
 
- <p>
-  When 0launch wants to install a package, it will invoke <b>0store-secure-add-helper</b>. This
-  script uses <b>sudo</b> to run <b>0store-secure-add</b> as the <b>zeroinst</b> user, with
-  a clean environment. No password is required for this.
- </p>
+**Note:** the `NOPASSWD` line MUST go at the end of the file, otherwise it is likely to be overridden by later entries. Again, use `/usr/local/bin` if you installed from source.
+    
+When `launch` wants to install a package, it will invoke `0store-secure-add-helper`. This script uses `sudo` to run `0store-secure-add` as the `zeroinst` user, with a clean environment. No password is required for this.
 
- <h3>AppArmor policy</h3>
+## AppArmor policy
 
- <p>
-  The following AppArmor policy can be used to confine the 0store-secure-add
-  process somewhat. However, the process does need read access everywhere
-  (since it could be copying from anywhere) and write access to the entire
-  cache directory, so this doesn't restrict it much more than it already is due
-  to running as a separate user.
- </p>
+The following AppArmor policy can be used to confine the 0store-secure-add process somewhat. However, the process does need read access everywhere (since it could be copying from anywhere) and write access to the entire cache directory, so this doesn't restrict it much more than it already is due to running as a separate user.
 
- <pre>#include &lt;tunables/global&gt;
+```
+#include <tunables/global>
 /usr/bin/0store-secure-add {
-  #include &lt;abstractions/base&gt;
-  #include &lt;abstractions/python&gt;
+  #include <abstractions/base>
+  #include <abstractions/python>
 
   /** r,
   /usr/bin/0store-secure-add mr,
   /usr/bin/python* ixr,
   /var/cache/0install.net/implementations/** rw,
-}</pre>
+}
+```
 
- <h3>Questions</h3>
+## Questions
 
- <dl>
-  <dt>How do users uninstall?</dt>
-  <dd>Currently, they can't. You (the admin) can delete directories from <b>/var/cache/0install.net/implementations</b>
-  to save space (preferably not while they're being used ;-). Ideally, we should track which users have requested which
-  programs and remove them automatically when no-one wants them anymore.</dd>
+How do users uninstall?
+: Currently, they can't. You (the admin) can delete directories from `/var/cache/0install.net/implementations` to save space (preferably not while they're being used ;-). Ideally, we should track which users have requested which programs and remove them automatically when no-one wants them anymore.
 
-  <dt>What kind of things need 'tightening'?</dt>
-  <dd>Several things spring to mind:
-   <ul>
-    <li>What happens if the user changes the directory whilst it's being added? We need to audit 0store-secure-add.</li>
-    <li>Denial of service attacks, if one user stores lots of stuff (need quotas).</li>
-   </ul>
-  </dd>
+What kind of things need 'tightening'?
+: Several things spring to mind:
+: - What happens if the user changes the directory whilst it's being added? We need to audit `0store-secure-add`.
+: - Denial of service attacks, if one user stores lots of stuff (need quotas).
 
-  <dt>Why do things still get stored in <b>~/.cache</b> after setting this up?</dt>
-  <dd>
-    Things you've already installed will remain there. Only new software is added in the system cache.
-    Also, the old <b>sha1</b> algorithm isn't accepted by the helper, so software using that can't
-    go in the shared cache. If you still have problems, try running <b>0launch -vvc URI</b> (to see debug output).
-    Finally, make sure your script is executable!
-  </dd>
-  </dl>
-
-</html>
+Why do things still get stored in `~/.cache` after setting this up?
+: Things you've already installed will remain there. Only new software is added in the system cache. Also, the old `sha1` algorithm isn't accepted by the helper, so software using that can't go in the shared cache. If you still have problems, try running `0launch -vvc URI` (to see debug output). Finally, make sure your script is executable!
