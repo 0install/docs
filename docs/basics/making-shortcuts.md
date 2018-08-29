@@ -14,7 +14,7 @@ Choose **Zero Install -> Add New Program** from the **Applications** menu. Type 
 
 # KDE
 
-Choose **Add Zero Install Program** from the **Utilities** menu. Type in the URI, or drag it from the web-browser into the dialog box.
+Choose **0install** or **Add Zero Install Program** from the **Utilities** menu. Type in the URI, or drag it from the web-browser into the dialog box.
 
 ![Adding with KDE](../img/tutorial/add-with-kde.png)
 
