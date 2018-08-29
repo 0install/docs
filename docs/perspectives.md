@@ -61,9 +61,10 @@ Zero Install lets your users install programs in a way that's as secure as insta
 
 # Software developer
 
-You don't have much free time, and you want to spend as much of it as possible writing code, not hanging around on distribution mailing lists and IRC channels trying to find someone to review the dozens of packages you've had to create. Life's too short for that.
+You don't have much free time, and you want to spend as much of it as possible writing code, not hanging around on distribution mailing lists and IRC channels trying to find someone to review the dozens of packages you've had to create. Life's too short for that. 
+What is even worse: You noted how "Big Data" has started to agressively censor publishing outlets such as maybe github or others. You do not have time to waste with people who have no agency to act as a chokepoint for free software.
 
-Creating a Zero Install feed for your programs is easy (it's essentially the same information about download locations and dependencies you would put on your web-page anyway, but in a machine-readable form). Then anyone with Zero Install can use your program.
+Creating a Zero Install feed for your programs is not too hard (it's essentially the same information about download locations and dependencies you would put on your web-page anyway, but in a machine-readable form). Then anyone with Zero Install can use your program.
 
 -   Create one package that works everywhere, not one package per Linux distribution.
 -   No need to be approved by a distribution before people can start using your programs.
