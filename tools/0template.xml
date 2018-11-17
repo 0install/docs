@@ -70,20 +70,24 @@
       <manifest-digest sha256new="XPGVWCMI33FL44HCWMQUXVX3ZSWL427RHIVY3KLCGNV3ERDYENNA"/>
       <archive extract="0template-0.4" href="https://downloads.sourceforge.net/project/zero-install/0template/0.4/0template-0.4.tar.bz2" size="17107"/>
     </implementation>
-    <implementation id="sha1new=01c9dfc0fc41c920b4213ff11e8a376a3236909c" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-07-30" version="0.5">
+    <implementation id="sha1new=01c9dfc0fc41c920b4213ff11e8a376a3236909c" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2017-07-30" stability="stable" version="0.5">
       <manifest-digest sha256new="PN4O6HVQQ4YV7SBXFOKGJ6T3BSCJ33VTWYZAXZKDO7LD36TCTUNQ"/>
       <archive extract="0template-0.5" href="https://downloads.sourceforge.net/project/zero-install/0template/0.5/0template-0.5.tar.bz2" size="17556"/>
+    </implementation>
+    <implementation id="sha1new=03a80899236770b139c3c4be1d2255e4644a1a32" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2018-11-17" version="0.6">
+      <manifest-digest sha256new="GHJMUQA4THAAAG62R4R55U2CLFGHNVIRH2TTBLKYH4SKBMZF7JPQ"/>
+      <archive extract="0template-0.6" href="https://downloads.sourceforge.net/project/zero-install/0template/0.6/0template-0.6.tar.bz2" size="17585"/>
     </implementation>
   </group>
 
   <entry-point binary-name="0template" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlrJ+M8ACgkQBxM/lsp02Lr6nAgArsnw
-DsWWGuBPLskoX/Jsrkp2IdtAzVXlsCLt40/7hMrao+442bfbkLjqq/TdfcpWmlsQPIzVsRqPHK8m
-BVpg/4Z5BKA6Yq3fyS+Vh9gNJDBFefu1/fJs7259csh5SZTewdY9/HmRvpP4R4sepsZ8iQq9HVde
-WwoUZvvvE9ISZyKreUMT45hw5dUJ6dHLiOsx2YEAb2IfNFwI/FRs8sVncrPyEk3c8aRf2H0G6D4O
-S0fE/VXmPPMDd8W6ogZXleIq3+GlGpQJGoLm3QTIIEN3XbPvC70dPubdJWxivPk008K3guJZBj1y
-7lOeQzpTEPA8AbZTZIWDgiWuiitPnq9GFA==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlvwQFcACgkQBxM/lsp02LqSRAf6AnSs
+0Y9meRvVY768UFi1j+lOQv67qxxPmG39JFg6YQTfHcTTCw+ZnopkEj+7NDyGUc/sgJqhUZ1V4yKJ
+Uj8G1d3nFI/FUeSyV56MmxxYPXgta0oUFhKDxNjpwa+sII1Yc+T9txRnOnJdwm7NUgOWh/6WVZIl
+Z1eW6R8YQKFEbRq39/m/yFR/h8i5xmKEcarYKeAc/VbCLIUcbQ7HWRl4ddM2A4rZHj2ARwPvzhbt
+Gadj4sZjTVo57cTOROcyraDl4slUGUm9bN/4Swr8c3o28ncGjfOuE3tcIoAvxhKAGo+y6ZuqSaHK
+znaYM+W30oKe3edyBijIFJXr9HexhSAojg==
 
 -->
