@@ -268,7 +268,7 @@ interfere with those provided by the distribution.
         <archive extract="0install-1.14" href="http://downloads.sourceforge.net/project/zero-install/0install/1.14/0install-1.14.tar.bz2" size="412052"/>
       </implementation>
       <group>
-        <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+        <requires interface="http://repo.roscidus.com/python/python-gobject"/>
         <implementation id="sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8" released="2013-02-12" stability="stable" version="1.15">
           <manifest-digest sha256new="KRDFWRRP6QEMI2F2QGUFXWZD7AZSMZWZDAHE4LYQWGJ5I2GUYRVQ"/>
           <archive extract="0install-1.15" href="http://downloads.sourceforge.net/project/zero-install/0install/1.15/0install-1.15.tar.bz2" size="413822"/>
@@ -284,7 +284,7 @@ interfere with those provided by the distribution.
       </group>
     </group>
     <group>
-      <requires interface="http://repo.roscidus.com/python/python-gobject" os="POSIX"/>
+      <requires interface="http://repo.roscidus.com/python/python-gobject"/>
       <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
         <version not-before="2.0.2"/>
@@ -326,11 +326,11 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVFqbLAAoJEAcTP5bKdNi6PkwH/ApTbcMhVu7znuDzz30HEgVn7JqjQWN4991C
-AiHbcWw7jMrx5VEJvUdKHTqwuKarEnaSvTiFWIwQYeKpFbbxq3UdroJUe6LxAX+q8l11nWeJRdHe
-mePFwCw852YUHN9PQgwMulm+NL0thiq+hoHd5gwv5HTTXgURtCibr9LpwZqSTD71hjQPoEmJCwfZ
-4ZhS9ne5Zcp4HjRfNNMVilYnIh7U3dEEAGu69W2oZscoeeMQ8Umv20OehfjsRSUmsrNVwdLAkc+r
-p90V0Y/cMImiHc04tVMVswttswjiCK9HsbXOS4CS7HXEnRrF9QkEdY/vGGEtNnAeSxt6Lv1oPo1b
-rrg=
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwBKLEACgkQBxM/lsp02LpnOgf/XXVE
+YS/IJ7DxlomptL4B2zcsiWap+YGFH8aUBLAI7aXdEaRsaWYpYS0wgf+M8OpGoLZHo12izSfcYkcn
+Bxg7qAapg541wBMlU/v4A+LIntAiAYwH5LFIaMedS5Izi5MEOZnKMf+AVu7odiv7EuyqGT7mLLQh
+/i4+t0j3zWhI2SnhfpTA9/dKd1XucJPGFcb5JMqRryjX6jl4Lk0wQ5IgDAdQG2g15YisT3N0YZhL
+lCnwD+JIreRkF/ml9FluUxSRMDXvxYTjNmp3pOjrBWSSVm8C9HwWHYLvWjnK1DObQkEwewua4+dr
+78QQrhKUAzYKIbtJLzYga7EVQsULd+x/Dg==
 
 -->
