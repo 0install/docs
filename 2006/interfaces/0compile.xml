@@ -21,6 +21,8 @@ For a full tutorial, see 0compile's homepage.</description>
   <needs-terminal/>
 
   <group main="0compile">
+    <requires interface="http://repo.roscidus.com/python/python-gobject"/>
+
     <implementation id="sha1=dce1eddc01d7102bef639d9c77f57e5490468acf" released="2006-09-27" stability="stable" version="0.1">
       <archive extract="0compile-0.1" href="http://freefr.dl.sourceforge.net/sourceforge/zero-install/0compile/0.1/0compile-0.1.tar.bz2" size="15393"/>
       <manifest-digest sha1new="ff6dda7e319c46e4fee85ccb7bdbd09cc19937a7"/>
@@ -437,11 +439,11 @@ For a full tutorial, see 0compile's homepage.</description>
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABCAAGBQJVDY69AAoJEAcTP5bKdNi6+OsH+wenwcNlZ0mmYjAEmjkRGw+sveUcoR2PEimj
-KS5/ZUF9G7CAf1UyLsE/wmahwBlsL/isGjaeL3ZKfVl9l3zjh58ytOo3lZPuCgtI4w8NQuseLFPo
-8pFn4gKUW6LnsiI94f1CSeTHxEf8oy95WsYemuJr8dor85UKycdGbLRm7PPSeIVTs21LhuwXQ+Bf
-9ny3Bl0NW/sH5eKi5oeRLSFtrROpjXK8zWyZw5j3IH2FnQ4siPr2x7zoJm7B8O3Tzb7YQ7K1kTcJ
-RA9q6/Xv3NarDh4wovdS1cgVJ6bwCHniqAKMxxXRZOLpO+C2rSL2HfER2IAzCmSPHKyEnF1T6hgM
-0eI=
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwCj6cACgkQBxM/lsp02Lqqjwf/Zw/K
+wnP5iHxG/XOycNXIPqv08Avz7BAJFmkWsJTVQGI2BqtwGdaWIDXGyRuqLZpD+Irrsabn5j6cGXFX
+rjUaqR4VZ9hLwi6QQW7Gt+xqC5vFW2JfVHvOqNLSHg/ZIXkTtrUByOzglj0RyNbQAF0To8EAdtrQ
+f2GPxHjOPqWSqWXWfFXzorjSM7FTvK5i1hKTM44yQB0J0sxGw5Xs3j9nhoUxWODPuGXdDhnnxbKh
+PPdON4QbtfwAsipFJQKSkkiWKNME3gbdZ7KuhaJ/us+N15nOsiCUc6nRKYwE+frpDpeTa3doL01B
+yKir9K+W79z3pZHH9hrltcAm8bNN9y89mg==
 
 -->
