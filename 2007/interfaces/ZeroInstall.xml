@@ -25,6 +25,7 @@ interfere with those provided by the distribution.
   </release:management>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" self-test="tests/allpython.sh">
+    <requires interface="http://repo.roscidus.com/python/python-gobject"/>
     <implementation id="sha1new=e1ee85471047f0b800fef438c6b532914ff310ae" released="2007-11-18" stability="stable" version="0.31">
       <archive extract="zeroinstall-injector-0.31" href="http://downloads.sourceforge.net/project/zero-install/injector/0.31/zeroinstall-injector-0.31.tar.bz2" size="121422"/>
     </implementation>
@@ -125,6 +126,7 @@ interfere with those provided by the distribution.
     </implementation>
   </group>
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
+    <requires interface="http://repo.roscidus.com/python/python-gobject"/>
     <command name="test" path="tests/testall.py">
       <runner interface="http://repo.roscidus.com/python/python">
         <version before="3"/>
@@ -210,6 +212,7 @@ interfere with those provided by the distribution.
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
+    <requires interface="http://repo.roscidus.com/python/python-gobject"/>
     <restricts interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2.."/>
 
     <requires interface="http://repo.roscidus.com/security/gnupg">
@@ -245,6 +248,7 @@ interfere with those provided by the distribution.
     </implementation>
 
     <group>
+      <requires interface="http://repo.roscidus.com/python/python-gobject"/>
       <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
         <version before="1.12.1"/>
@@ -255,6 +259,7 @@ interfere with those provided by the distribution.
       </implementation>
     </group>
     <group>
+      <requires interface="http://repo.roscidus.com/python/python-gobject"/>
       <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
         <version not-before="1.12.1"/>
@@ -326,11 +331,11 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwBKLEACgkQBxM/lsp02LpnOgf/XXVE
-YS/IJ7DxlomptL4B2zcsiWap+YGFH8aUBLAI7aXdEaRsaWYpYS0wgf+M8OpGoLZHo12izSfcYkcn
-Bxg7qAapg541wBMlU/v4A+LIntAiAYwH5LFIaMedS5Izi5MEOZnKMf+AVu7odiv7EuyqGT7mLLQh
-/i4+t0j3zWhI2SnhfpTA9/dKd1XucJPGFcb5JMqRryjX6jl4Lk0wQ5IgDAdQG2g15YisT3N0YZhL
-lCnwD+JIreRkF/ml9FluUxSRMDXvxYTjNmp3pOjrBWSSVm8C9HwWHYLvWjnK1DObQkEwewua4+dr
-78QQrhKUAzYKIbtJLzYga7EVQsULd+x/Dg==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwL9DwACgkQBxM/lsp02Lp07wf/Vxrj
+9U/YKDOAs6dgegvOyMint/iwhqm+sG2fnwOV6gB1ouR0eplNR97vOsJe9D7tKa+da5bq8YpJgybg
+zVrThX+S5WZxUkmuv9e7Z8yn03kbfa6JlWA612CKrZgY3vh48KrS2aemyUOYlQBfVEYC1vxqEsw5
+YA3O8yoDaOf+ncvWcneGcAXlW2+86EoZC2ZcYjRI6toD02dW4ZVJ/4NiKmpuzRvJB37VoDCQ4X6J
+06G/EQWODuD1DZnj24nwSsz1ZADlgFmdpE+9mtnnoGDPwdAmx8ltkae2Mu1QdDjVHNmnxXjoMYeY
+aicjlcLq53OcUSk+aLw7x2MbJtxn5oXHkg==
 
 -->
