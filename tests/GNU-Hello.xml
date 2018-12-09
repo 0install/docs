@@ -23,7 +23,7 @@ compile binary packages from sources that follow the GNU automake system.</descr
     </requires>
     <implementation id="sha1=2aae32fd27d194167eac7eb611d7ce0983f83dd7" version="1.3">
       <archive extract="hello-1.3" href="http://ftp.gnu.org/gnu/hello/hello-1.3.tar.gz" size="87942"/>
-      <manifest-digest sha256new="sha256new_KVK6PC63Z7MKNSJ7GYF3Z7AJ5DSRSRKGQQXI4FEN63FG2AI7CEVA"/>
+      <manifest-digest sha256new="KVK6PC63Z7MKNSJ7GYF3Z7AJ5DSRSRKGQQXI4FEN63FG2AI7CEVA"/>
     </implementation>
     <!--
     <group>
@@ -38,7 +38,7 @@ compile binary packages from sources that follow the GNU automake system.</descr
   </group>
 </interface>
 <!-- Base64 Signature
-iF0EABECAB0WIQRhd5TXw9/g//VyBlwFKf23H7E5EAUCXA0hxAAKCRAFKf23H7E5EEf0AJ9htMvE
-Ez2OPORJytuXkzZcRHfYDACcDuFmQucIrVWmBkg61uiBp0F/FBM=
+iF0EABECAB0WIQRhd5TXw9/g//VyBlwFKf23H7E5EAUCXA0lagAKCRAFKf23H7E5EEOEAKCQ8Fbd
+4isRkA1RDXXjoR8mMFJJ+QCdHN/VjhQbmTymWD+08ykb0Mp8ZUg=
 
 -->
