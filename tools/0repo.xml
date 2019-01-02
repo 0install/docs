@@ -100,7 +100,7 @@
           <manifest-digest sha256new="U66D7DUIZWSAW7ONV4JMNVXACF7V6WRNCWKLPMBYCHE5W3GGQ7CA"/>
           <archive extract="0repo-0.5.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.2/0repo-0.5.2.tar.bz2" size="58499"/>
         </implementation>
-        <implementation id="sha1new=16473af76756d848e4450019d6c258253109d09d" released="2018-03-25" version="0.6">
+        <implementation id="sha1new=16473af76756d848e4450019d6c258253109d09d" released="2018-03-25" stability="stable" version="0.6">
           <manifest-digest sha256new="3EOPKU4SDDHPOODDQKAYH7XFEV5LRZ3S2QDC4PGFITKHF3KUN37Q"/>
           <archive extract="0repo-0.6" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.6/0repo-0.6.tar.bz2" size="58909"/>
         </implementation>
@@ -109,11 +109,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlq3gS8ACgkQBxM/lsp02LriaAf+PF/A
-Ettr/B4a2QYy2VJQ828fTTwMu5oyEqYCVdW/mJFui2iT6BV7sKazpy50bsl8+URIXPoRFsgy6DRa
-QPQTKjNB4vg6mVBtm2obPsMqrfe/5SLk36+Zw1eszO1TI5uSaKv3GXpAL3Q6QkJzvWkuCnfLyxuR
-IcNMhoXOcfRv4Nggn1K6LFgcuu5P/1PJAxzp5j3nS/yVT94DpWV2NJ0HKbC4ZH1WLU497ajoeqMZ
-B1/Yuuq//wXQuzE+AfNty33A+QHQUxMUTQUZMZN02UzFg17hXNvMEvHSvQRkC193MQlwQU/TEEbr
-WO/shgaaGaa4LXND1tgj4wfzoRBZu1f3Jg==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwsrTMACgkQBxM/lsp02LprVQf9EtGd
+1JRApBVTMELK2GrbINyCmHjg8LBG1fV8NrD96AtAoYkUqKWfR3y8lAd/UXf+H3EovA8MmYc8Pb1y
+N/QWyjPVmBfGQQads2Z2jMSpUHnPuNiostdL079djt3lk+Lw93A3k05dW8YpN63PC0KNe1rn6pWH
+j6T1rapV9AB/QpTcc7e9gexJrd/Pjc46cfRahUaq4DhHlYsLufeXCqQuGTo26WL1tD39i3d4gut7
+GsNULA8A+lvwi7BcGgU2UA1F7yYeCf3Upj70gcufTzu8Nvg0lyNnZhBes6sqP+FZwpWED6eGs9/+
+mgiIi/sSBWDl6KhSLFmP7wj4/MmZ9dr1qA==
 
 -->
