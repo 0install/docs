@@ -104,16 +104,20 @@
           <manifest-digest sha256new="3EOPKU4SDDHPOODDQKAYH7XFEV5LRZ3S2QDC4PGFITKHF3KUN37Q"/>
           <archive extract="0repo-0.6" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.6/0repo-0.6.tar.bz2" size="58909"/>
         </implementation>
+        <implementation id="sha1new=df0b8df17a63b478b1482909b4b7d6b09fdb6b5b" released="2019-03-02" version="0.7">
+          <manifest-digest sha256new="3P62CQ6EU36QZNIOBDJKYBWC7RZB7OHRYFY4L3MZFNDYWN24Z2ZQ"/>
+          <archive extract="0repo-0.7" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.7/0repo-0.7.tar.bz2" size="59067"/>
+        </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwsrTMACgkQBxM/lsp02LprVQf9EtGd
-1JRApBVTMELK2GrbINyCmHjg8LBG1fV8NrD96AtAoYkUqKWfR3y8lAd/UXf+H3EovA8MmYc8Pb1y
-N/QWyjPVmBfGQQads2Z2jMSpUHnPuNiostdL079djt3lk+Lw93A3k05dW8YpN63PC0KNe1rn6pWH
-j6T1rapV9AB/QpTcc7e9gexJrd/Pjc46cfRahUaq4DhHlYsLufeXCqQuGTo26WL1tD39i3d4gut7
-GsNULA8A+lvwi7BcGgU2UA1F7yYeCf3Upj70gcufTzu8Nvg0lyNnZhBes6sqP+FZwpWED6eGs9/+
-mgiIi/sSBWDl6KhSLFmP7wj4/MmZ9dr1qA==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlx6R/IACgkQBxM/lsp02Lqf8gf9F7FM
+VK4SCB6XOJm7Wqm0M04Ud4LgFjp0o9qiNHWf3YaykWBnwc/TLr72S2yiT6J4/Q3aH/C0oivPULX/
+Omk8Kl5qsR9GF4S4EGngRapoqlslGtPZiU/etVUHuG1kdhmFoSi0cHhtGxotDZ/t01Y45fIBCCYg
+vM0hWvwqMtSMgqKoEIMebdcUrglnDhGXWOGQajMFSa+hatDHslfQnmhuAXa3sveK+AcpJ0oBU/w0
+di4wWpURues50taL4XuXAFXakwTYGq58g2NRp8+1aX/nL8aod9ESj17S51OsJBIHk4QruA+0LQaa
+vbozdYdKYLziq5rWpJlIH9RH0JsYed0pWA==
 
 -->
