@@ -365,11 +365,17 @@ implementation of this interface. The syntax is:
   &lt;package-implementation
     package='...'
     distributions='...' ?
-    main='...' ? &gt;
+    main='...' ?
+    version='...' ? &gt;
     [command] *
     [requires] *
   &lt;/package-implementation>
 </pre>
+
+<p>
+Support for distribution packages was added in version 0.28 of 0install. Earlier versions ignore
+this element.
+</p>
 
 <p>
 If the named package is available then it will be considered as a possible implementation
@@ -403,8 +409,10 @@ are read from the native packaging system.
 </p>
 
 <p>
-Support for distribution packages was added in version 0.28 of 0install. Earlier versions ignore
-this element.
+If <b>version</b> is given then only implmentations matching this pattern are used (0install >= 2.14).
+This allows multiple &lt;packages-implmentation&gt; elements for a single distribution package, which
+is useful if different versions have different requirements. See <a href='#constraints'>Constraints</a>
+for the syntax.
 </p>
 
 <h2 id='retrieval-methods'>Retrieval methods</h2>
@@ -614,8 +622,32 @@ The <b>distribution</b> attribute (0install >= 1.15) can be used to require the 
 <h2 id='constraints'>Constraints</h2>
 
 <p>
-Constraints appear inside &lt;requires&gt;, &lt;restricts&gt; and &lt;runner&gt; elements. They restrict the set of versions from which
-0install may choose an implementation.
+Constraints appear on &lt;requires&gt;, &lt;restricts&gt;, &lt;package-implementation&gt;
+and &lt;runner&gt; elements.
+They restrict the set of versions from which 0install may choose an implementation.
+</p>
+
+<p>
+Since 0install 1.13, you can use the <b>version</b> attribute on the dependency element.
+The attribute's value is a list of ranges, separated by "|", any of which may match.
+For example:
+</p>
+
+<pre>
+&lt;restricts interface='http://repo.roscidus.com/python/python'
+           version='2.6..!3 | 3.2.2..'/>
+</pre>
+
+<p>
+This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
+</p>
+
+<p>
+Each range is in the form "START..!END". The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted. A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.
+</p>
+
+<p>
+There is also an older syntax which also works with 0install &lt; 1.13, where a child node is used instead:
 </p>
 
 <pre>
@@ -637,26 +669,7 @@ versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
 </p>
 
 <p>
-Since 0install 1.13, it is also possible to use a <b>version</b> attribute on the dependency directly. This provides a shorter and more flexible way to specify versions.
-The attribute's value is a list of ranges, separated by "|", any of which may match.
-For example:
-</p>
-
-<pre>
-&lt;restricts interface='http://repo.roscidus.com/python/python'
-           version='2.6..!3 | 3.2.2..'/>
-</pre>
-
-<p>
-This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
-</p>
-
-<p>
-Each range is in the form "START..!END". The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted. A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.
-</p>
-
-<p>
-Note: to support older versions of 0install, it is preferable to use the &lt;version&gt; element instead where possible.
+This older syntax is not supported with &lt;packager-implementation&gt;.
 </p>
 
 <h2 id='bindings'>Bindings</h2>
