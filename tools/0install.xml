@@ -171,6 +171,26 @@ interfere with those provided by the distribution.
         <archive extract="0install-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-2.13.tar.bz2" size="446022"/>
       </implementation>
     </group>
+    <group>
+      <command name="compile">
+        <runner interface="http://repo.roscidus.com/devel/make">
+          <arg>SRCDIR=${SRCDIR}</arg>
+          <arg>DISTDIR=${DISTDIR}</arg>
+        </runner>
+
+        <compile:implementation main="files/0install">
+          <command name="run" path="files/0install"/>
+
+          <requires interface="http://repo.roscidus.com/security/gnupg">
+            <executable-in-var name="ZEROINSTALL_GPG"/>
+          </requires>
+        </compile:implementation>
+      </command>
+      <implementation compile:dup-src="true" id="sha1new=3f3bedb0a084cc4c1014837dff1a73d6fd19925b" released="2019-03-23" version="2.14">
+        <manifest-digest sha256new="CRSJVXINXDYD5AO5OSDHZQRWWGQQ2U3UBZOLJFX37YA47E4CK52A"/>
+        <archive extract="0install-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-2.14.tar.bz2" size="446409"/>
+      </implementation>
+    </group>
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
@@ -456,6 +476,14 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="S32XJBOOBYR5FYSF4EWRR2LE5AA3IP3Q6AKCEYTSJTPEL2R3VG6A"/>
       <archive extract="0install-linux-armv7l-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-linux-armv7l-2.13.tar.bz2" size="4057742"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0b61af752b6128164ea40c2d8d71544c354add6b" released="2019-03-23" version="2.14">
+      <manifest-digest sha256new="TNXPWPLL7K5AG2OLRHK6G3ITWXZNSO7O7BKXKI4PMGXZB7DVIYYQ"/>
+      <archive extract="0install-linux-x86_64-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-linux-x86_64-2.14.tar.bz2" size="4095790"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" id="sha1new=9d52801b34cd1fd55025e6ba838478c432d404a1" released="2019-03-23" version="2.14">
+      <manifest-digest sha256new="2O7AIX5S2X7QTD63MRDMJDOSDH5ATOLYIHJTWE73YHU4EL4R23EA"/>
+      <archive extract="0install-linux-armv7l-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-linux-armv7l-2.14.tar.bz2" size="4156437"/>
+    </implementation>
   </group>
   <group>
     <requires interface="http://repo.roscidus.com/security/gnupg">
@@ -468,11 +496,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwsrTMACgkQBxM/lsp02Lpjrgf/WkX+
-UyOMqVA2QPD5RPYtPNPtTYu1DeMHAXcEpMc5O6NIRvJjoRPwzqEJ/2CM1pyY4XS9gqkabiOondf2
-aXE+k5uOiXvXLlzFdVrhCggueGAzpbioWnivuJW/7KzIyJYwC2N5PmWpjWe4tH6OZAxyz6ijHMK4
-chz5kDC9bN3IdjfrhSkyw3mHaSAqPV2bQfzU08/4GG65usmTUiPMzkAajgdvO8qIspf/8hbt163O
-qyMod0xyBoFkxBScyyiMK0eB5XPKLxIAZ6CT9PKX02U5Qnj4emySUu+kUK/1qOfwLzZCE6+GFkfO
-NZl3y4rd6vKsbctxDykXguRsiK4rFALyrQ==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlyWKMkACgkQBxM/lsp02LolkAf+KEqb
+jJn3fQA9Y3nLycrsfqWlLe22FUl63KQIu5sPNMCUME0j69gQbA8AbDfr4663p9reWA5gYrOO4Gx4
+eneUP4/JbpzS6zSvIjhzzOQlHFqNHuc6vYub7VOR40Rri1NlgQ+xZ5JkE7CF4M7FjlVfVRgEZERq
+uQ6bNqnkjARlcvyQHB6PqHCRH4hKl0M5mo5LSsaesUt50sOFIzkSIqSUYAKPQe5Fs8rXhGFHRMXr
+gmVpzeOg0h1nHPuH1xNs0rKCz6uMjfWUN2sF+/PQdsi15mb/qtjJLY4h2zVRVqylf/Nj5lrlZQe7
+bpNFsWNzsoLyGLOGFVbilfmc8K/5qHZL3Q==
 
 -->
