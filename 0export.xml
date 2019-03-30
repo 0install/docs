@@ -36,10 +36,27 @@ install or run the program.
 </p>
 
 <p>
-Unlike the bundles created by the related <a href='http://roscidus.com/desktop/Zero2Bundle'>Zero2Bundle</a> program, programs
-installed using setup.sh are added to the Zero Install cache and are
+Programs installed using setup.sh are added to the 0install cache and are
 therefore still <a href='sharing.html'>shared between users</a>, and
 will get updates over the web where possible.
+</p>
+
+<p>
+  0export does not work on Windows.
+  However Zero Install for Windows has roughly equivalent functionality built in.
+  Running:
+  <pre>0install export --bootstrap=run http://example.com/somefeed.xml</pre>
+  will generate a directory with archives holding all required implementations
+  and a small bootstrapping executable for importing them and setting up Zero
+  Install on systems that don't have it yet.
+</p>
+
+<p>
+  If the target machine has network access, and you just want to provide a launcher
+  script, consider instead using
+  <a href='https://github.com/0install/0bootstrap-php'>0bootstrap-php</a>,
+  a PHP script that creates bootstrapping EXEs or bash scripts for installing
+  0install and then running a feed.
 </p>
 
 <toc level='h2'/>
@@ -68,7 +85,7 @@ will get updates over the web where possible.
 
 <p>
 This program is not yet complete. In particular, adding the program to the user's menus only works if the user
-already has Zero Install itself installed.
+already has 0install itself installed.
 </p>
 
 <h2>Installing 0export</h2>
@@ -92,7 +109,7 @@ $ 0export setup.sh http://rox.sourceforge.net/2005/interfaces/Edit
 
 <p>
 The resulting setup.sh file can be copied to a CD and run on another machine. This
-machine does not need a network connection. It also does not need to have Zero Install
+machine does not need a network connection. It also does not need to have 0install
 installed on it before-hand.
 </p>
 
@@ -111,7 +128,7 @@ The bulk of the setup.sh file is an archive containing:
 <li>All feeds needed to run the program.</li>
 <li>All GPG keys signing the feeds.</li>
 <li>All selected implementations (versions).</li>
-<li>A copy of Zero Install, in case the target system doesn't have it.</li>
+<li>A copy of 0install, in case the target system doesn't have it.</li>
 <li>An installation script.</li>
 </ul>
 
@@ -189,7 +206,7 @@ should not be listed.
 <dt>What about security?</dt>
 
 <dd>Running an executable isn't a great way to install a program. The normal
-Zero Install process of dragging a feed link to a trusted installation program
+0install process of dragging a feed link to a trusted installation program
 is much better. However, distributions have been very slow to support this.
 0export is an attempt to boot-strap the adoption process. The setup.sh script is
 designed to be easy to parse, so that in future it can be used as a simple archive.
