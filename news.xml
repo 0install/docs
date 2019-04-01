@@ -4,6 +4,8 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>Apr 2019</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36620582/'>0install 2.14 released</a>, adding support for the <b>&lt;package-implementation version=...&gt;</b> attribute and converting the build system to Dune.</dd>
   <dt>Jul 2018</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36332604/'>0install 2.13 released</a>, adding support for <b>&lt;file executable='true'></b>, and <a href='https://sourceforge.net/p/zero-install/mailman/message/36343891/'>0install 2.15 for Windows</a>, with various changes including support for <b>&lt;executable-in-*></b> in <b>&lt;command></b>s.</dd>
   <dt>May 2018</dt>
