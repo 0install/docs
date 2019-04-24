@@ -186,9 +186,13 @@ interfere with those provided by the distribution.
           </requires>
         </compile:implementation>
       </command>
-      <implementation compile:dup-src="true" id="sha1new=3f3bedb0a084cc4c1014837dff1a73d6fd19925b" released="2019-03-23" version="2.14">
+      <implementation compile:dup-src="true" id="sha1new=3f3bedb0a084cc4c1014837dff1a73d6fd19925b" released="2019-03-23" stability="stable" version="2.14">
         <manifest-digest sha256new="CRSJVXINXDYD5AO5OSDHZQRWWGQQ2U3UBZOLJFX37YA47E4CK52A"/>
         <archive extract="0install-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-2.14.tar.bz2" size="446409"/>
+      </implementation>
+      <implementation compile:dup-src="true" id="sha1new=25e21699d7798d2e61deb08bd8b2f2c3770c3309" released="2019-04-24" version="2.14.1">
+        <manifest-digest sha256new="6XNUNKEYXVRUGBOL7LY65CY3BEOHT5RTLMLDHXQC6RZAPEYXFJJA"/>
+        <archive extract="0install-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-2.14.1.tar.bz2" size="446211"/>
       </implementation>
     </group>
   </group>
@@ -476,13 +480,21 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="S32XJBOOBYR5FYSF4EWRR2LE5AA3IP3Q6AKCEYTSJTPEL2R3VG6A"/>
       <archive extract="0install-linux-armv7l-2.13" href="https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-linux-armv7l-2.13.tar.bz2" size="4057742"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=0b61af752b6128164ea40c2d8d71544c354add6b" released="2019-03-23" version="2.14">
+    <implementation arch="Linux-x86_64" id="sha1new=0b61af752b6128164ea40c2d8d71544c354add6b" released="2019-03-23" stability="stable" version="2.14">
       <manifest-digest sha256new="TNXPWPLL7K5AG2OLRHK6G3ITWXZNSO7O7BKXKI4PMGXZB7DVIYYQ"/>
       <archive extract="0install-linux-x86_64-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-linux-x86_64-2.14.tar.bz2" size="4095790"/>
     </implementation>
-    <implementation arch="Linux-armv7l" id="sha1new=9d52801b34cd1fd55025e6ba838478c432d404a1" released="2019-03-23" version="2.14">
+    <implementation arch="Linux-armv7l" id="sha1new=9d52801b34cd1fd55025e6ba838478c432d404a1" released="2019-03-23" stability="stable" version="2.14">
       <manifest-digest sha256new="2O7AIX5S2X7QTD63MRDMJDOSDH5ATOLYIHJTWE73YHU4EL4R23EA"/>
       <archive extract="0install-linux-armv7l-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-linux-armv7l-2.14.tar.bz2" size="4156437"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=47cee6be4ee21cde56de2c520308c2e9afd53466" released="2019-04-24" version="2.14.1">
+      <manifest-digest sha256new="CRLB654DNPCSFIJFLOCSD5DT6OMZHK3M6BJBXRMBHGGGHL3NB4PA"/>
+      <archive extract="0install-linux-x86_64-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-linux-x86_64-2.14.1.tar.bz2" size="4095113"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" id="sha1new=d3e608acc2b9c9dc9d72eb659124eb6ac0963d41" released="2019-04-24" version="2.14.1">
+      <manifest-digest sha256new="XXKHDU7T6GMYXXSUSEJ5N5PTDA7ZTSMBIQTPITBLEWSPJDYK54RA"/>
+      <archive extract="0install-linux-armv7l-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-linux-armv7l-2.14.1.tar.bz2" size="4156509"/>
     </implementation>
   </group>
   <group>
@@ -496,11 +508,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlyWKMkACgkQBxM/lsp02LolkAf+KEqb
-jJn3fQA9Y3nLycrsfqWlLe22FUl63KQIu5sPNMCUME0j69gQbA8AbDfr4663p9reWA5gYrOO4Gx4
-eneUP4/JbpzS6zSvIjhzzOQlHFqNHuc6vYub7VOR40Rri1NlgQ+xZ5JkE7CF4M7FjlVfVRgEZERq
-uQ6bNqnkjARlcvyQHB6PqHCRH4hKl0M5mo5LSsaesUt50sOFIzkSIqSUYAKPQe5Fs8rXhGFHRMXr
-gmVpzeOg0h1nHPuH1xNs0rKCz6uMjfWUN2sF+/PQdsi15mb/qtjJLY4h2zVRVqylf/Nj5lrlZQe7
-bpNFsWNzsoLyGLOGFVbilfmc8K/5qHZL3Q==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzAgkwACgkQBxM/lsp02Lpwkwf+I6Jw
+T9+GJg6IckNSyF628mvw5ydMPy9GhWZoAnZxFmCCrjb6hQAgHiNPjfgt98eBEDaTLl+WQLpSEpdz
+zEpZoGvLcr3R57tKNQJa34fta6A8+OSwoMjwzeKIzWAeYa0UoXBKofaAHV92T/BxjULpjYtdFKJ2
+q+zynWGjlFgx4o369uSeL0BSLyz8RqoXv8mHZBcESGBuicGBYOpVLvFUBwNdeia9Ehb2NmuE8fqo
+Sn8XbkMtcmFWETrYUSQyOVm8D0ugQscK1cKOclLP9S32kv2wQFJadysoAFvNLPPZ4j5HvRxvamZa
+wk3eSqeG8ty752IdqMym808E6uefcwPJeg==
 
 -->
