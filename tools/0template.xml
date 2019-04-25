@@ -26,7 +26,7 @@
     </command>
 
     <requires interface="http://repo.roscidus.com/python/python">
-      <version before="3.7" not-before="2.7"/>
+      <version not-before="2.7"/>
     </requires>
 
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
@@ -42,7 +42,7 @@
 
   <group>
     <requires interface="http://repo.roscidus.com/python/python">
-      <version before="3.7" not-before="2.7"/>
+      <version not-before="2.7"/>
     </requires>
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
@@ -83,11 +83,11 @@
   <entry-point binary-name="0template" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzBSmIACgkQBxM/lsp02LrynQgAhXYJ
-dE0huo+cR/DyLjToNytr00ZssAFp3va4y/zNNtQ9gwpvJPtfpxMuQ8XSrp1rry58cBRAo4wFiHrX
-SwlGlGFzujgxfDxsO3fQ9XiIcNr98i0DWamvIQQOvxHekYAP//RflpCe1qMa2ZCcUuI3ek/LGZ3D
-FWxBkC1PRtnCc1wN6CV6or2rTKE2pE3NY5J5lvMiHlj4PVfOtQZeLKJftw2X2zUIQ8E4BDJsy+JV
-Uxf9fRBQYUMPuR4ZdpFF/c16vnH2DAN9Eqr04isMe5XJhS655pZOD2TI+bEf40LE2UUB7BTFVvRy
-xs/Xc+dr5JHkTgwTdfLf1ROKLb1yV/xZow==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzBU2EACgkQBxM/lsp02Lq1LggAoS1F
+hNTELHs2FMZZKbO9PS1UxaR6LDVz6LK202uyvtUSxflJWDrTNA68l0dWetDMTiUr1NL5CP9SbEXy
+HscUMZRx5sYH7GibWON6E5/QhRRnGpiPQv1QQFNYR24RCwf5qcP5q0lF5oTLOy1q3OkWaGLhMDWB
+ua/+sjcfJlV+ge6fdb44gCu0C0+IfrolXnQWMrSvA3gEkTzCuwO0gmVJo2tcvEe089hOhJGfYJfR
+IoevlUIz248Hg1tc86Z3AcoEEaHhLWIeMWU/9ZcSzW+/X6qhfT38mHstGg2YD+ZOIgCFHDZpsbnj
+rwH3RadpxCsaD9696KD5O0UQP11pPxouTQ==
 
 -->
