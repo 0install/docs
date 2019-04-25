@@ -14,9 +14,9 @@ Otherwise, <a href='install-source.html'>get the source package instead</a> or t
 
 <p>The most reliable option is to build from source:</p>
 
-<pre><b>pacman -Sy opam aspcud make m4 patch unzip gcc sed awk grep camlp4
-opam init --comp=4.04.1
-opam depext -i 0install
+<pre><b>pacman -Sy opam make m4 patch unzip gcc sed awk grep diffutils curl pkg-config which
+opam init
+opam install 0install
 eval $(opam config env)
 0install --version
 </b></pre>
@@ -24,9 +24,9 @@ eval $(opam config env)
 <p>The generic binary (see below) also works, but you need the old libcurl:</p>
 
 <pre><b>pacman -Sy wget tar libcurl-compat
-wget https://downloads.sourceforge.net/project/zero-install/0install/2.12.1/0install-linux-x86_64-2.12.1.tar.bz2
-tar xf 0install-linux-x86_64-2.12.1.tar.bz2
-cd 0install-linux-x86_64-2.12.1
+wget https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-linux-x86_64-2.14.1.tar.bz2
+tar xf 0install-linux-x86_64-2.14.1.tar.bz2
+cd 0install-linux-x86_64-2.14.1
 ./install.sh local
 LD_PRELOAD=libcurl.so.3 0install --version
 </b></pre>
