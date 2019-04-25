@@ -25,6 +25,7 @@ interfere with those provided by the distribution.
   </release:management>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch" self-test="tests/allpython.sh">
+    <requires interface="http://repo.roscidus.com/python/python" version="..!3"/>
     <requires interface="http://repo.roscidus.com/python/python-gobject"/>
     <implementation id="sha1new=e1ee85471047f0b800fef438c6b532914ff310ae" released="2007-11-18" stability="stable" version="0.31">
       <archive extract="zeroinstall-injector-0.31" href="http://downloads.sourceforge.net/project/zero-install/injector/0.31/zeroinstall-injector-0.31.tar.bz2" size="121422"/>
@@ -213,7 +214,7 @@ interfere with those provided by the distribution.
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
     <requires interface="http://repo.roscidus.com/python/python-gobject"/>
-    <restricts interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2.."/>
+    <restricts interface="http://repo.roscidus.com/python/python" version="2.6..!3 | 3.2.2..!3.7"/>
 
     <requires interface="http://repo.roscidus.com/security/gnupg">
       <executable-in-var name="ZEROINSTALL_GPG"/>
@@ -331,11 +332,11 @@ interfere with those provided by the distribution.
 
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlwL9DwACgkQBxM/lsp02Lp07wf/Vxrj
-9U/YKDOAs6dgegvOyMint/iwhqm+sG2fnwOV6gB1ouR0eplNR97vOsJe9D7tKa+da5bq8YpJgybg
-zVrThX+S5WZxUkmuv9e7Z8yn03kbfa6JlWA612CKrZgY3vh48KrS2aemyUOYlQBfVEYC1vxqEsw5
-YA3O8yoDaOf+ncvWcneGcAXlW2+86EoZC2ZcYjRI6toD02dW4ZVJ/4NiKmpuzRvJB37VoDCQ4X6J
-06G/EQWODuD1DZnj24nwSsz1ZADlgFmdpE+9mtnnoGDPwdAmx8ltkae2Mu1QdDjVHNmnxXjoMYeY
-aicjlcLq53OcUSk+aLw7x2MbJtxn5oXHkg==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzBUtUACgkQBxM/lsp02LqT6ggAgQkR
+FXbkyXLluw0Lw4wNxtWgTeL3Xf22NTu68QJDYgp0tm/it+LHiUbVdG09Vx0+Y8PWwGqBRJn2Huji
+1yZ6Ek69T57JF83bslYG+qn0OCz5khNZGrZEhFfZEJE1eofgz4WhycrkejqZjK2fLPDcv/Z+ouQp
+GPLji400W3HPgQIbiOrMeDr0QiVS95M4SL+Yf/Ais+QPE9JsHrShuN3wFjK+MC4I9NS0gg7HZsqY
+mTaxrbVVOqUKxzASMn642FXJFlV5TL3Yobq9dR3RxRnny8JrCrqagkXjJ3RVSmGoin4jLMm0Hjrr
+FnXkcv/oANx6OwvVOrixjAZgbBk60WuARA==
 
 -->
