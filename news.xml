@@ -4,6 +4,10 @@
 <div>
 <h2>News</h2>
 <dl>
+  <dt>May 2019</dt>
+  <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36648439/'>0install 2.14.1 released</a>, fixing a bug handling HTTP redirects when using HTTP/2.
+    <a href='https://sourceforge.net/p/zero-install/mailman/message/36638968/'>0compile 1.5 released</a>, fixing some minor bugs.
+  </dd>
   <dt>Apr 2019</dt>
   <dd><a href='https://sourceforge.net/p/zero-install/mailman/message/36620582/'>0install 2.14 released</a>, adding support for the <b>&lt;package-implementation version=...&gt;</b> attribute and converting the build system to Dune.</dd>
   <dt>Jul 2018</dt>
