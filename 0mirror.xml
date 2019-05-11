@@ -3,7 +3,7 @@
 
 <program name='0mirror'
 	 author='Thomas Leonard'
-	 git='http://repo.or.cz/w/0mirror.git'
+	 git='https://github.com/0install/0mirror.git'
 	 license='GNU General Public License'>
 <p>
 With Zero Install, each software author publishes a feed on their web-site
