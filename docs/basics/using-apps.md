@@ -1,82 +1,51 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html>
+# Using apps
 
-<h2>Using Apps</h2>
+Apps (introduced in 0install 1.9) work a bit like aliases, e.g.
 
-<p>
-  Apps (introduced in 0install 1.9) work a bit like aliases, e.g.
-</p>
-
-<pre>
-$ <b>0install add rox http://rox.sourceforge.net/2005/interfaces/ROX-Filer</b>
-$ <b>rox --version</b>
+```shell
+$ 0install add rox http://rox.sourceforge.net/2005/interfaces/ROX-Filer
+$ rox --version
 ROX-Filer 2.11
-</pre>
+```
 
-<p>
-  The main difference is that apps store their current selections (in
-  <i>~/.config/0install.net/apps/rox/selections.xml</i> in this case). This
-  means that they start faster, because the solver isn't needed:
-</p>
+The main difference is that apps store their current selections (in `~/.config/0install.net/apps/rox/selections.xml` in this case). This means that they start faster, because the solver isn't needed:
 
-<pre>
-$ <b>0alias rox-alias http://rox.sourceforge.net/2005/interfaces/ROX-Filer</b>
-$ <b>0install add rox-app http://rox.sourceforge.net/2005/interfaces/ROX-Filer</b>
+```shell
+$ 0alias rox-alias http://rox.sourceforge.net/2005/interfaces/ROX-Filer
+$ 0install add rox-app http://rox.sourceforge.net/2005/interfaces/ROX-Filer
 
-$ <b>time rox-alias --version > /dev/null</b>
+$ time rox-alias --version > /dev/null
 rox-alias --version > /dev/null  0.12s user 0.02s system 91% cpu 0.144 total
 
-$ <b>time rox-app --version > /dev/null</b>
+$ time rox-app --version > /dev/null
 rox-app --version > /dev/null  0.06s user 0.02s system 92% cpu 0.082 total
-</pre>
+```
 
-<p>
-When run, they still trigger a background update if they haven't been
-updated for a while, and you can also update them manually:
-</p>
+When run, they still trigger a background update if they haven't been updated for a while, and you can also update them manually:
 
-<pre>
-$ <b>0install update rox</b>
+```shell
+$ 0install update rox
 No updates found. Continuing with version 2.11.
-</pre>
+```
 
-<p>
 They also remember any restrictions (e.g. --before).
-</p>
 
-<p>Each app also stores past selections (max one set per day) so if an
-  update goes wrong you can see what changed and roll-back easily:
-</p>
+Each app also stores past selections (max one set per day) so if an update goes wrong you can see what changed and roll-back easily:
 
-<pre>
-$ <b>0install whatchanged 0publish</b>
+```shell
+$ 0install whatchanged 0publish
 Last checked    : Wed Jun 27 20:24:19 2012
 Last update     : 2012-06-27
 Previous update : 2012-06-16
 
 http://0install.net/2007/interfaces/ZeroInstall.xml: 1.8-post -> 1.9-post
 http://repo.roscidus.com/security/gnupg: new -> 1.4.12-4
+```
 
 To run using the previous selections, use:
-0install run /home/tal/.config/0install.net/apps/0publish/selections-2012-06-16.xml
-</pre>
 
-<p>
-  Starting with 0install 1.14, 0alias is deprecated, and trying to add an alias will
-  add an app instead.
-</p>
+```shell
+$ 0install run /home/tal/.config/0install.net/apps/0publish/selections-2012-06-16.xml
+```
 
-<h3>Planned features</h3>
-
-<ul>
-  <li>Allow multiple shell commands for an app.</li>
-  <li>Switch desktop integration over to using apps.</li>
-</ul>
-
-
-<quicklinks>
-  <link href='user-guide-shortcuts.html' img='tango/go-prev.png'>Go back</link>
-  <link href='user-guide-policy.html' img='tango/go-next.png'>Continue</link>
-</quicklinks>
- 
-</html>
+Starting with 0install 1.14, `0alias` is deprecated, and trying to add an alias will add an app instead.

@@ -1,185 +1,123 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: Inkscape
 
-<h2>Example: Inkscape</h2>
+[The Inkscape project](http://inkscape.org/) makes available a binary RPM which works on various platforms. However, using this RPM directly has a few limitations for users:
 
-<p>
-<a href='http://inkscape.org/'>The Inkscape project</a> makes available a
-binary RPM which works on various platforms. However, using this RPM directly
-has a few limitations for users:
-</p>
+- They must be root to install it.
+- It doesn't work on all distributions (e.g., Debian).
+- The system won't periodically check for updates.
 
-<ul>
- <li>They must be root to install it.</li>
- <li>It doesn't work on all distributions (e.g., Debian).</li>
- <li>The system won't periodically check for updates.</li>
-</ul>
+These limitations can be avoided by creating a Zero Install interface file for it. This guide goes over the steps quite quickly. For more details see [the packaging main guide](../guide-gui.md).
 
-<p>
-These limitations can be avoided by creating a Zero Install interface file for it. This guide goes over
-the steps quite quickly. For more details see <a href='injector-packagers.html'>the
-packaging main guide</a>.
-</p>
+Note: The original Inkscape binary RPM was compiled with binreloc support disabled, which prevented it from finding its icons (it used hard-coded paths). Jean-François Lemaire, the creator of the RPM, has kindly recompiled it for us with relocation support turned on.
 
-<p>
-Note: The original Inkscape binary RPM was compiled with binreloc support
-disabled, which prevented it from finding its icons (it used hard-coded paths).
-Jean-François Lemaire, the creator of the RPM, has kindly recompiled it for us with
-relocation support turned on.
-</p>
+[TOC]
 
-<toc level='h2'/>
+# Creating the interface
 
-<h2>Creating the interface</h2>
+We'll be using the `0publish` command to create the interface file. If you don't have it already, create an alias for `0publish` in the usual way:
 
-<p>
-We'll be using the <b>0publish</b> command to create the interface file. If you don't
-have it already, create an alias for <b>0publish</b> in the usual way:</p>
-<pre>
-$ <b>0install add 0publish http://0install.net/2006/interfaces/0publish</b>
-</pre>
+```shell
+$ 0install add 0publish http://0install.net/2006/interfaces/0publish
+```
 
-<p>
 To create the interface file:
-</p>
 
-<ol>
-<li>Download the static binary RPM:
-<pre>
-$ <b>wget http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm</b>
-</pre>
-</li>
+1\. Download the static binary RPM:
 
-<li>Create the interface:
-<pre>
-$ <b>0publish Inkscape.xml</b>
-</pre>
-<p>
-Fill in the <b>name</b>, <b>summary</b>, <b>description</b>, <b>icon</b> and <b>homepage</b> fields.
-Set <b>main='usr/bin/inkscape'</b> on the <b>group</b> element. Save and quit (using the default filename).
-</p>
-</li>
+```shell
+$ wget http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm
+```
 
-<li>
-Add version 0.43 with the location of the static RPM:
-<pre>
-$ <b>0publish Inkscape.xml \
-  --set-version=0.43 \
-  --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm \
-  --set-released=today \
-  --set-arch=Linux-i486</b>
-</pre>
-</li>
-</ol>
+2\. Create the interface:
 
-<h2>Testing it</h2>
+```shell    
+$ 0publish Inkscape.xml
+```
 
-<p>
-You can run the new XML file with <b>0launch</b> to download and run Inkscape:
-</p>
-<pre>
-$ <b>0launch ./Inkscape.xml</b>
-</pre>
+    Fill in the `name`, `summary`, `description`, `icon` and `homepage` fields. Set `main='usr/bin/inkscape'` on the `group` element. Save and quit (using the default filename).
+    
+3\. Add version 0.43 with the location of the static RPM:
 
-<p style='text-align: center'>
-<img width="586" height="261" src="screens/package-inkscape.png"
-     alt="Running Inkscape with Zero Install" />
-</p>
+```shell    
+$ 0publish Inkscape.xml \
+    --set-version=0.43 \
+    --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm \
+    --set-released=today \
+    --set-arch=Linux-i486
+```
 
-<h2>Signing and publishing</h2>
+# Testing it
 
-<p>
+You can run the new XML file with `0launch` to download and run Inkscape:
+
+```shell
+$ 0launch ./Inkscape.xml
+```
+
+![Running Inkscape with Zero Install](../../img/screens/package-inkscape.png)
+
+# Signing and publishing
+
 Now we need to sign the XML file using our GPG key. If you don't already have a GPG key, create one now:
-</p>
 
-<pre>
-$ <b>gpg --gen-key</b>
-</pre>
+```shell
+$ gpg --gen-key
+```
 
-<p>
-We also need to decide where the Inkscape XML file will be made available. This
-URL should not change, since other programs will link to it. We'll assume
-<b>http://inkscape.org/2006/ZeroInstall/Inkscape.xml</b> here.
-</p>
+We also need to decide where the Inkscape XML file will be made available. This URL should not change, since other programs will link to it. We'll assume `http://inkscape.org/2006/ZeroInstall/Inkscape.xml` here.
 
-<p>
 To set the URI and sign the interface:
-</p>
 
-<pre>
-$ <b>0publish Inkscape.xml \
+```shell
+$ 0publish Inkscape.xml \
   --set-interface-uri=http://inkscape.org/2006/ZeroInstall/Inkscape.xml \
-  --xmlsign</b>
+  --xmlsign
 Exported public key as 'AE07828059A53CC1.gpg'
-</pre>
+```
 
-<p>
-Upload the resulting <b>Inkscape.xml</b> and GPG files to the same directory on the web-server. The XML file
-should look something like <a href='http://0install.net/2006/3rd-party/Inkscape.xml'>the Inkscape.xml test interface</a>.
-</p>
+Upload the resulting `Inkscape.xml` and GPG files to the same directory on the web-server. The XML file should look something like [the Inkscape.xml test interface](http://0install.net/2006/3rd-party/Inkscape.xml).
 
-<h2>Using the published interface</h2>
+# Using the published interface
 
-<p>
 You can now run Inkscape like this:
-</p>
 
-<pre>
-$ <b>0launch http://inkscape.org/2006/ZeroInstall/Inkscape.xml</b>
-</pre>
+```shell
+$ 0launch http://inkscape.org/2006/ZeroInstall/Inkscape.xml
+```
 
-<p>
-Users can now install Inkscape using this URL, either using some graphical installer (like ROX's
-<a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a> or
-<a href='http://rox.sourceforge.net/desktop/node/269'>Xfce 4.4's panel</a>). Command-line users can
-get it like this:
-</p>
+Users can now install Inkscape using this URL, either using some graphical installer (like ROX's [AddApp](http://rox.sourceforge.net/desktop/AddApp) or [Xfce 4.4's panel](http://rox.sourceforge.net/desktop/node/269)). Command-line users can get it like this:
 
-<pre>
-$ <b>0install add inkscape http://inkscape.org/2006/ZeroInstall/Inkscape.xml</b>
-</pre>
+```shell
+$ 0install add inkscape http://inkscape.org/2006/ZeroInstall/Inkscape.xml
+```
 
-<p>
-They can then run it by typing <b>inkscape</b>. To choose a different version:
-</p>
+They can then run it by typing `inkscape`. To choose a different version:
 
-<pre>
-$ <b>0install update --gui inkscape</b>
-</pre>
+```shell
+$ 0install update --gui inkscape
+```
 
+# Marking as stable
 
-<h2>Marking as stable</h2>
-
-<p>
 After the release has been out for a while, mark it as stable:
-</p>
 
-<pre>
-$ <b>0publish Inkscape.xml --stable</b>
-</pre>
+```shell
+$ 0publish Inkscape.xml --stable
+```
 
-<p>
-Users can configure the injector either to prefer stable versions or to select testing versions
-by default. This gives your more advanced users the chance to provide feedback before you roll a new
-release out to all users.
-</p>
+Users can configure the injector either to prefer stable versions or to select testing versions by default. This gives your more advanced users the chance to provide feedback before you roll a new release out to all users.
 
-<h2>Making a new release</h2>
+# Making a new release
 
-<p>
 When a new static binary RPM is released, add the new version to the XML as follows:
-</p>
 
-<ol>
- <li>Download the new RPM (if you're not the person who made it).</li>
- <li>Add it to the XML (note use of <b>add-version</b> rather than <b>set-version</b> here):
- <pre>
-$ <b>0publish Inkscape.xml \
-  --add-version=0.44 \
-  --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.44-0.i386.rpm \
-  --set-released=today \
-  --set-arch=Linux-i486</b>
- </pre></li>
-</ol>
+1.  Download the new RPM (if you're not the person who made it).
+2.  Add it to the XML (note use of `add-version` rather than `set-version` here):
 
-</html>
+```shell
+$ 0publish Inkscape.xml \
+    --add-version=0.44 \
+    --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.44-0.i386.rpm \
+    --set-released=today \
+    --set-arch=Linux-i486
+```

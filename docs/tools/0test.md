@@ -1,84 +1,68 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0test  
+**Maintainer:** Thomas Leonard  
+**License:** GNU General Public License  
+**Source:** [Git repository](http://repo.or.cz/w/0test.git)  
+**Zero Install feed:** [http://0install.net/2008/interfaces/0test.xml](http://0install.net/2008/interfaces/0test.xml)
 
-<program name='0test'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2008/interfaces/0test.xml'
-	 git='http://repo.or.cz/w/0test.git'
-	 license='GNU General Public License'>
+A Zero Install [feed](../specifications/feed.md) can specify a command to run to test the program automatically using the `self-test` attribute (or the `test` command). 0test runs this command. It can also test combinations of various versions of a program and its dependencies.
 
-<p>
-A Zero Install <a href='interface-spec.html'>feed</a> can specify a command to run to test the program automatically
-using the <b>self-test</b> attribute (or the "test" command). 0test runs this command.
-It can also test combinations of various versions of a program and its dependencies.
-</p>
-
-</program>
-
-<p>
 Create a short-cut to it in the usual way:
-</p>
 
-<pre>
+```shell
 $ 0install add 0test http://0install.net/2008/interfaces/0test.xml
-</pre>
+```
 
-<h2>Usage</h2>
+**Contents:**
 
-<p>
+[TOC]
+
+# Usage
+
 Most simply, you can use it to run the tests for a program you have downloaded or checked out of version control. e.g.
-</p>
 
-<pre>
+```shell
 $ git clone some-program
 $ 0test some-program/program.xml
-</pre>
+```
 
-<p>
-You can also use it to test released programs, e.g. to test the default version of <a hef='0compile.html'>0compile</a>:
-</p>
+You can also use it to test released programs, e.g. to test the default version of 0compile:
 
-<pre>
-$ <b>0test http://0install.net/2006/interfaces/0compile.xml</b>
+```shell
+$ 0test http://0install.net/2006/interfaces/0compile.xml
 Passed
  - 0compile v0.21-post, ZeroInstall-Injector v0.51.1, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
-</pre>
+```
 
-<p>
-  0test prints out the result and the versions of all components used in the test.
-</p>
+0test prints out the result and the versions of all components used in the test.
 
-<p>
 You can specify a particular set of versions to test:
-</p>
 
-<pre>
-$ <b>0test http://0install.net/2006/interfaces/0compile.xml 0.26 0.27</b>
+```shell
+$ 0test http://0install.net/2006/interfaces/0compile.xml 0.26 0.27
 Passed
  - ZeroInstall-Injector v1.7 0compile v0.26, ROX-Lib2 v2.0.6, python v2.7.3, 0publish v0.20
  - ZeroInstall-Injector v1.7 0compile v0.27, ROX-Lib2 v2.0.6, python v2.7.3, 0publish v0.20
 None skipped
 None failed
-</pre>
+```
 
-<p>
 A summary is printed at the end showing the result of each combination:
-</p>
 
-<dl>
- <dt>Passed</dt><dd>the tests all passed successfully (the command returned an exit status of zero)</dd>
- <dt>Skipped</dt><dd>this combination of versions can't be used together (or no tests are defined)</dd>
- <dt>Failed</dt><dd>some tests failed (the self-test command returned a non-zero exit status)</dd>
-</dl>
+Passed
+: the tests all passed successfully (the command returned an exit status of zero)
 
-<p>
-You can specify versions of libraries the program depends on too. 0test will try all combinations.
-This tests three versions of 0compile against three versions of Zero Install (a total of 3 x 3 = 9 tests):
-</p>
+Skipped
+: this combination of versions can't be used together (or no tests are defined)
 
-<pre>$ <b>0test --html results.html \
+Failed
+: some tests failed (the self-test command returned a non-zero exit status)
+
+You can specify versions of libraries the program depends on too. 0test will try all combinations. This tests three versions of 0compile against three versions of Zero Install (a total of 3 x 3 = 9 tests):
+
+```shell
+$ 0test --html results.html \
   http://0install.net/2006/interfaces/0compile.xml 0.19 0.20 0.21 \
-  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.49</b>
+  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.49
 Passed
  - 0compile v0.20, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
  - 0compile v0.20, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
@@ -91,126 +75,115 @@ Failed
  - 0compile v0.19, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
  - 0compile v0.19, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
  - 0compile v0.20, ZeroInstall-Injector v0.47, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
-</pre>
+```
 
-<p>
-  The <b>--html results.html</b> option causes it to also generate this table:
-</p>
+The `--html results.html` option causes it to also generate this table:
 
-<table class="testresults"><tr><th/><th colspan="3">ZeroInstall-Injector</th></tr><tr><th>0compile</th><th>0.47</th><th>0.48</th><th>0.49</th></tr>
-<tr><th>0.19</th><td class="failed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td><td class="failed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td><td class="failed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td></tr>
-<tr><th>0.20</th><td class="failed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td></tr>
-<tr><th>0.21</th><td class="skipped">skipped</td><td class="passed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td><td class="passed">0publish 0.18-post
-ROX-Lib2 2.0.6-post</td></tr>
+<table>
+  <tr>
+     <th/>
+     <th colspan="3">ZeroInstall-Injector</th>
+  </tr>
+  <tr>
+     <th>0compile</th>
+     <th>0.47</th>
+     <th>0.48</th>
+     <th>0.49</th>
+  </tr>
+  <tr>
+     <th>0.19</th>
+     <td style="background:red">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+     <td style="background:red">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+     <td style="background:red">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+  </tr>
+  <tr>
+     <th>0.20</th>
+     <td style="background:red">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+     <td style="background:green">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+     <td style="background:green">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+  </tr>
+  <tr>
+     <th>0.21</th>
+     <td style="background:yellow">skipped</td>
+     <td style="background:green">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+     <td style="background:green">0publish 0.18-post ROX-Lib2 2.0.6-post</td>
+  </tr>
 </table>
 
-<p>
-Green = Passed, Red = Failed, Yellow = Skipped. The contents of the cells show the versions of components used in the tests where you didn't specify the version (so 0test selected
-one for you).
-</p>
+Green = Passed, Red = Failed, Yellow = Skipped. The contents of the cells show the versions of components used in the tests where you didn't specify the version (so 0test selected one for you).
 
-<p>
-  We can see in this example that the unit-tests for 0compile 0.19 no longer pass, regardless of the version of Zero Install used.
-  This problem was caused by a change to the GNU-Hello test program it uses within its own tests. Ideally, programs should depend on their
-  test data using <b>&lt;requires&gt;</b> (see below), but 0compile actually needed to test downloading of the test code itself.
-  0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.21 depends on
-  a later version explicitly, so the broken combination is skipped.
-</p>
+We can see in this example that the unit-tests for 0compile 0.19 no longer pass, regardless of the version of Zero Install used. This problem was caused by a change to the GNU-Hello test program it uses within its own tests. Ideally, programs should depend on their test data using `<requires>` (see below), but 0compile actually needed to test downloading of the test code itself. 0compile 0.20 fails with older version of Zero Install due to a bug in the way "0launch --get-selections" generated the XML. 0compile 0.21 depends on a later version explicitly, so the broken combination is skipped.
 
-<p>
 If you specify a test matrix with more than two dimensions, 0test will generate a series of tables.
-</p>
 
-<h2>Other ways to specify versions</h2>
+# Other ways to specify versions
 
-<p>
 As well as passing simple version numbers, you can also allow 0test to choose a suitable version given some constraints. This is useful in test scripts:
-</p>
 
-<dl>
-<dt>Ranges</dt>
-<dd>You can use "," to give a range of possible versions. This is useful with native packages where you don't know the exact version. For example, to test against any Python version 2.6.x (2.6 &lt;= version &lt; 2.7):
-<pre>
+## Ranges
+
+You can use `,` to give a range of possible versions. This is useful with native packages where you don't know the exact version. For example, to test against any Python version 2.6.x (2.6 <= version < 2.7):
+
+```shell
 $ 0test prog.xml http://repo.roscidus.com/python/python 2.6,2.7
 Passed
  - prog 0.1, python v2.6.8-0.2
-</pre>
-</dd>
-<dt>%nonlocal</dt>
-<dd>
+```
+
+## %nonlocal
+
 Don't select a local (i.e. unreleased) version to test against:
-<pre>
+
+```shell
 $ 0test prog.xml
 Passed
- - prog 0.1, lib <b>v1.11-post</b>
+ - prog 0.1, lib v1.11-post
 
-$ 0test prog.xml http://example.com/lib <b>%nonlocal</b>
+$ 0test prog.xml http://example.com/lib %nonlocal
 Passed
- - prog 0.1, lib <b>v1.11</b>
-</pre>
-</dd>
-</dl>
+ - prog 0.1, lib v1.11
+```
 
-<h2>Passing test arguments</h2>
+# Passing test arguments
 
-<p>
-  You can pass extra arguments to the test command, but you must put them after '--' to stop 0test interpreting them as arguments or versions. e.g. to run 0test on itself with verbose output:
-</p>
+You can pass extra arguments to the test command, but you must put them after `--` to stop 0test interpreting them as arguments or versions. e.g. to run 0test on itself with verbose output:
 
-<pre>
-  $ <b>0test alias:0test -- -v</b>
-</pre>
+```shell
+$ 0test alias:0test -- -v
+```
 
-<h2>Specifying a test command</h2>
+# Specifying a test command
 
-<p>
-  The <b>--test-command</b> option can be used to run the shell command of your choice, rather than the test
-  command given in the feed's <b>self-test</b> attribute. The command that would be executed if the implemention were run normally is available as $*.
-</p>
-    
-<p>
-  For example, to check that "rox --version" worked in versions 2.8 and 2.9 of
-  ROX-Filer:
-</p>
-    
-<pre>$ <b>0test -t '$* --version > /dev/null' \
-    http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9</b>
+The `--test-command` option can be used to run the shell command of your choice, rather than the test command given in the feed's `self-test` attribute. The command that would be executed if the implemention were run normally is available as `$*`.
+
+For example, to check that `rox --version` worked in versions 2.8 and 2.9 of ROX-Filer:
+
+```shell
+$ 0test -t '$* --version > /dev/null' \
+    http://rox.sourceforge.net/2005/interfaces/ROX-Filer 2.8 2.9
 Passed
  - ROX-Filer v2.8
  - ROX-Filer v2.9
 None skipped
 None failed
-</pre>
+```
 
-<p>
-  You can use <b>--command</b> to select a different &lt;command&gt;. By default, the command used is "test" when run normally, or "run" when using <b>-t</b>. You can also set this to the empty string to select no command (useful with libraries). In that case, $1 is the directory itself rather than the command.
-</p>
+You can use `--command` to select a different `<command>`. By default, the command used is `test` when run normally, or `run` when using `-t`. You can also set this to the empty string to select no command (useful with libraries). In that case, `$1` is the directory itself rather than the command.
 
-<h2>Test-only dependencies</h2>
+# Test-only dependencies
 
-<p>
-  Starting from 0test 0.4, you can also use the &lt;command&gt; syntax instead of the self-test attribute. This allows passing extra arguments and specifying test-specific dependencies. For example:
-</p>
+Starting from 0test 0.4, you can also use the `<command>` syntax instead of the self-test attribute. This allows passing extra arguments and specifying test-specific dependencies. For example:
 
-<pre>
-  &lt;group&gt;
-    &lt;requires interface="http://example.com/somelib.xml"&gt;
+```xml
+  <group>
+    <requires interface="http://example.com/somelib.xml">
       ...
-    &lt;/requires&gt;
-    <b>&lt;command name="test" path="tests/testall.py"&gt;</b>
-      <b>&lt;requires interface="http://testing.com/testframework.xml"&gt;</b>
-	<b>&lt;environment insert="" mode="replace" name="TEST_FRAMEWORK"/&gt;</b>
-      <b>&lt;/requires&gt;</b>
-    <b>&lt;/command&gt;</b>
-    &lt;implementation id="." version="0.1-pre"/&gt;
-  &lt;/group&gt;
-</pre>
-
-</html>
+    </requires>
+    <command name="test" path="tests/testall.py">
+      <requires interface="http://testing.com/testframework.xml">
+	<environment insert="" mode="replace" name="TEST_FRAMEWORK"/>
+      </requires>
+    </command>
+    <implementation id="." version="0.1-pre"/>
+  </group>
+```

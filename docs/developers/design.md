@@ -1,374 +1,162 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+[TOC]
 
-<toc level='h2'/>
+# Zero Install Design Details
 
-<h2>Zero Install Design Details</h2>
-
-<p>
 This page describes the design of Zero Install itself.
-</p>
 
-<p>
-Note: Zero Install is based on the principle of <a
-href='http://en.wikipedia.org/wiki/Dependency_injection'>Dependency
-Injection</a>, and is sometimes therefore referred to as <i>the injector</i>.
-</p>
+Note: Zero Install is based on the principle of [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
 
-<p>
-Everything 0launch downloads from the net by default goes in <b>~/.cache/0install.net/</b>.
-Every archive it downloads unpacks into its own directory inside this. So,
-there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact,
-there's one directory for every version of ROX-Filer, in case you want more than one
-available. Every directory is uniquely named, so you'll never get conflicts
-when trying to install two different programs.
-</p>
+Everything 0launch downloads from the net by default goes in `~/.cache/0install.net/`. Every archive it downloads unpacks into its own directory inside this. So, there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact, there's one directory for every version of ROX-Filer, in case you want more than one available. Every directory is uniquely named, so you'll never get conflicts when trying to install two different programs.
 
-<p>
-The injector doesn't store anything else, except a few configuration details
-(such as whether you want to check for updates automatically), which go in
-<b>~/.config/0install.net/</b>.
-Installation never causes any mysterious changes with other files,
-as happens with some other installation systems.
-</p>
+The injector doesn't store anything else, except a few configuration details (such as whether you want to check for updates automatically), which go in `~/.config/0install.net/`. Installation never causes any mysterious changes with other files, as happens with some other installation systems.
 
-<p>
-The idea is that you don't need to backup <b>~/.cache</b>, because you can
-always download the stuff again. For example, if you delete the whole
-<b>~/.cache/0install.net/</b> directory and then click on ROX-Filer, it will just prompt you
-to download it again. The cache is just to make things faster (and work when
-offline), but you don't really need to worry about it. You shouldn't
-modify anything in there.
-</p>
+The idea is that you don't need to backup `~/.cache`, because you can always download the stuff again. For example, if you delete the whole `~/.cache/0install.net/` directory and then click on ROX-Filer, it will just prompt you to download it again. The cache is just to make things faster (and work when offline), but you don't really need to worry about it. You shouldn't modify anything in there.
 
-<p>
-If <a href='sharing.html'>sharing</a> is enabled, then Zero Install stores
-downloaded implementations in <b>/var/cache/0install.net/</b> instead of in
-<b>~/.cache/0install.net/</b>. This allows sharing between users. The use of
-cryptographic digests (described below) makes this safe; users don't need to
-trust each other not to put malicious code in the shared cache.
-</p>
+If [sharing](../details/sharing.md) is enabled, then Zero Install stores downloaded implementations in `/var/cache/0install.net/` instead of in `~/.cache/0install.net/`. This allows sharing between users. The use of cryptographic digests (described below) makes this safe; users don't need to trust each other not to put malicious code in the shared cache.
 
+# Requirements
 
-<h2>Requirements</h2>
+- Any user can run any program they want, without it needing to be installed first.
+- Users refer to programs by globally unique names (URLs). So, a user asks to run "http://gimp.org/gimp", rather than the rather vague "The Gimp".
+- Users can run whatever version of a program they want.
+- Users don't need the root password.
+- Users don't need to trust each other.
+- The system administrator doesn't have to trust the users.
+- Any developer can make software available through the system (without needing the blessing of some distribution first).
 
-<ul>
-<li>Any user can run any program they want, without it needing to be
-installed first.</li>
-<li>Users refer to programs by globally unique names (URLs). So, a
-user asks to run "http://gimp.org/gimp", rather than the rather vague
-"The Gimp".</li>
-<li>Users can run whatever version of a program they want.</li>
-<li>Users don't need the root password.</li>
-<li>Users don't need to trust each other.</li>
-<li>The system administrator doesn't have to trust the users.</li>
-<li>Any developer can make software available through the system (without
-needing the blessing of some distribution first).</li>
-</ul>
+# Security and sharing
 
-<h2>Security and sharing</h2>
+To clarify the security requirements: the injector is designed to support this situation:
 
-<p>
-To clarify the security requirements: the injector is designed to support
-this situation:
-</p>
+- There are two users.
+- The system administrator doesn't trust either with root permission.
+- The users don't trust each other.
+- Both users want to run (the same version of) the Gimp.
+- The Gimp must only be downloaded and stored on disk once.
 
-<ul>
-<li>There are two users.</li>
-<li>The system administrator doesn't trust either with root permission.</li>
-<li>The users don't trust each other.</li>
-<li>Both users want to run (the same version of) the Gimp.</li>
-<li>The Gimp must only be downloaded and stored on disk once.</li>
-</ul>
-
-<p>
 Current systems make you choose either:
-</p>
 
-<ul>
-<li>Inefficient (two copies downloaded and installed), or</li>
-<li>Insecure (second user must trust first user to get and install a good
-  copy).</li>
-</ul>
+- Inefficient (two copies downloaded and installed), or
+- Insecure (second user must trust first user to get and install a good copy).
 
-<p>
-Although this situation obviously occurs in schools, libraries, etc,
-solving it is also useful in the home. Although you might expect family
-members to trust each other, remember that trust includes trusting them
-not to get infected with viruses, etc. If my brother gets some spyware
-and then installs the Gimp, I shouldn't get infected too. This also
-applies if you're doing sandboxing within a single user account, or
-using a dedicated 'sandbox' user for some tasks.
-</p>
+Although this situation obviously occurs in schools, libraries, etc, solving it is also useful in the home. Although you might expect family members to trust each other, remember that trust includes trusting them not to get infected with viruses, etc. If my brother gets some spyware and then installs the Gimp, I shouldn't get infected too. This also applies if you're doing sandboxing within a single user account, or using a dedicated 'sandbox' user for some tasks.
 
-<h3>The injector's solution</h3>
+## The injector's solution
 
-<p>
-First, users need some way to specify what they want to run exactly.
-"Run the Gimp" is too vague (good gimp or evil gimp?), so we use URLs.
-</p>
+First, users need some way to specify what they want to run exactly. "Run the Gimp" is too vague (good gimp or evil gimp?), so we use URLs.
 
-<p>
-If both users say "Run gimp.org/gimp" then the system is smart enough to
-only get it once. If one user says "Run evil.com/gimp" and one says "Run
-gimp.org/gimp", the system downloads both programs.
-</p>
+If both users say "Run gimp.org/gimp" then the system is smart enough to only get it once. If one user says "Run evil.com/gimp" and one says "Run gimp.org/gimp", the system downloads both programs.
 
-<p>
-Clearly, something has to actually download the software. It can either
-be one of the users, or a system daemon.
-The original Zero Install used a system daemon running as its own user, but
-the current ("injector") Zero Install has one of the users download the software. This
-is nicer, because they can do things like use a mirror or a CD to get the
-archives. The user uses a setuid (to 'zeroinstall') program to copy the
-downloaded (unpacked) directory into the shared cache in a location derived
-from a secure hash of its contents. See the <a href='sharing.html'>Sharing</a>
-page for details.
-</p>
+Clearly, something has to actually download the software. It can either be one of the users, or a system daemon. The original Zero Install used a system daemon running as its own user, but the current ("injector") Zero Install has one of the users download the software. This is nicer, because they can do things like use a mirror or a CD to get the archives. The user uses a setuid (to `zeroinstall`) program to copy the downloaded (unpacked) directory into the shared cache in a location derived from a secure hash of its contents. See the [Sharing](../details/sharing.md) page for details.
 
-<h2>Policies</h2>
+# Policies
 
-<p>
-A running process is created by combining many different libraries (and other components).
-In the Zero Install world, we have all versions of each library available at
-all times. The problem then is how to choose which versions to use.
-Some examples of ways to choose:
-</p>
-<ul>
-<li>The very latest version.</li>
-<li>The latest version in the cache (eg, when off-line).</li>
-<li>The latest stable version.</li>
-<li>The version recommended by your distribution.</li>
-<li>A version not affected by a known security flaw.</li>
-<li>The version you've always used in the past.</li>
-<li>A development version you are working on yourself.</li>
-</ul>
-<p>
-One way to organise things is to have a component link directly to particular
-versions of the components on which it depends. So, running Memo 2.0.0 might
-always use pygtk-2.0.0 and Python 2.2.0. But we often want to use the same component
-with different versions of its dependencies. For example, when Python 2.2.1
-comes out with bug-fixes, we will want Memo to use it automatically. 
-</p>
+A running process is created by combining many different libraries (and other components). In the Zero Install world, we have all versions of each library available at all times. The problem then is how to choose which versions to use. Some examples of ways to choose:
 
-<p>
-The injector solves this problem by selecting components to meet a program's requirements,
-according to rules specified by the user:
-</p>
+- The very latest version.
+- The latest version in the cache (eg, when off-line).
+- The latest stable version.
+- The version recommended by your distribution.
+- A version not affected by a known security flaw.
+- The version you've always used in the past.
+- A development version you are working on yourself.
 
-<p style='text-align: center'>
-<img width="569" height="364" src="inject.png"
-     alt="The injector selects versions according to the user's policy" />
-</p>
+One way to organise things is to have a component link directly to particular versions of the components on which it depends. So, running Memo 2.0.0 might always use pygtk-2.0.0 and Python 2.2.0. But we often want to use the same component with different versions of its dependencies. For example, when Python 2.2.1 comes out with bug-fixes, we will want Memo to use it automatically.
 
-<p>
-Zero Install uses a SAT solver with conflict-driven learning to find the optimal solution
-quickly. See <a href='solver.html'>The 0install SAT Solver</a>
-for details.
-</p>
+The injector solves this problem by selecting components to meet a program's requirements, according to rules specified by the user:
 
-<h2>Interfaces and Implementations</h2>
+![The injector selects versions according to the user's policy](../img/diagrams/inject.png)
 
-<dl>
-<dt>An interface</dt>
-<dd>describes what something does (eg, "Simple text editor").</dd>
+Zero Install uses a SAT solver with conflict-driven learning to find the optimal solution quickly. See [The 0install SAT Solver](solver.md) for details.
 
-<dt>An implementation</dt>
-<dd>is something that does it (eg, Edit-1.9.6 or Edit-1.9.7).</dd>
+# Interfaces and Implementations
 
-<dt>A feed file</dt>
-<dd>is a list of implementations of an interface.</dd>
-</dl>
-<p>
-In Zero Install, interfaces are named by globally unique URIs (like web pages). Some examples
-of interfaces are:
-</p>
+An interface
 
-<ul>
-<li><a href="http://rox.sourceforge.net/2005/interfaces/Edit">http://rox.sourceforge.net/2005/interfaces/Edit</a></li>
-<li><a href="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">http://rox.sourceforge.net/2005/interfaces/ROX-Lib</a></li>
-</ul>
+describes what something does (eg, "Simple text editor").
 
-<p>
-Each <i>implementation</i> of an interface is identified by a cryptographic digest, eg:
-</p>
-<ul>
-<li><b>sha1=235cb9dd77ef78ef2a79abe98f1fcc404bba4889</b></li>
-<li><b>sha1=c86d09f1113041f5eaaa8c3d1416fcf4dad8e2e0</b></li>
-</ul>
+An implementation
 
-<p>
-When we run a program (like Edit) we need to choose an implementation of every
-interface on which it depends. Then, we need to tell the program where to find
-them all; this process is known as <i>Dependency Injection</i> (or <i>Inversion
-of Control</i>).</p>
+is something that does it (eg, Edit-1.9.6 or Edit-1.9.7).
 
-<p>
-Both tasks are handled by the injector. This takes as input an interface and
-chooses an implementation based on the policy.
-</p>
+A feed file
 
-<p>
-By default, the list of implementations of an interface is found by using the
-interface's name as a URL and downloading the XML feed file it names (click on
-one of the interfaces above to see what a feed file looks like). Additional feeds
-(local or remote) can be added manually by the user.
-</p>
-<h2>Versions</h2>
+is a list of implementations of an interface.
 
-<p>
-An implementation (in the Zero Install sense) is always some particular
-version. We identify implementations with a cryptographic hash of their
-contents. Therefore, two releases with the same version number are still
-considered as separate implementations if they differ in any way.
-</p>
+In Zero Install, interfaces are named by globally unique URIs (like web pages). Some examples of interfaces are:
 
-<p>
-A version is a sequence of dot-separated lists of integers, each followed by an
-optional modifier. e.g. "1.2.3-pre4". It can be just a single number ("1") or a
-sequence of any number of components ("1.4-rc3.4-post"). The modifiers are
-"-pre", "-rc", "-" and "-post". Versions are ordered like this:
-</p>
+- [http://rox.sourceforge.net/2005/interfaces/Edit](http://rox.sourceforge.net/2005/interfaces/Edit)
+- [http://rox.sourceforge.net/2005/interfaces/ROX-Lib](http://rox.sourceforge.net/2005/interfaces/ROX-Lib)
 
-<ul>
-<li>1</li>
-<li>1.1-pre7</li>
-<li>1.1-rc3</li>
-<li>1.1</li>
-<li>1.1-1</li>
-<li>1.1-post</li>
-<li>1.1.1</li>
-<li>1.2</li>
-<li>1.2.1</li>
-<li>1.2.1.4</li>
-<li>1.2.2</li>
-<li>3</li>
-</ul>
+Each _implementation_ of an interface is identified by a cryptographic digest, eg:
 
-<p>
-The injector doesn't care about anything other than the sort order (i.e., whether
-one version comes before or after another). This is a little different to some
-other systems, where numbers in different places have different meanings.
-</p>
+- `sha1=235cb9dd77ef78ef2a79abe98f1fcc404bba4889`
+- `sha1=c86d09f1113041f5eaaa8c3d1416fcf4dad8e2e0`
 
-<p>
-Incompatible changes (where a newer version cannot be used in place of an older
-version) to an interface should be handled by creating a new interface. Eg:
-</p>
+When we run a program (like Edit) we need to choose an implementation of every interface on which it depends. Then, we need to tell the program where to find them all; this process is known as _Dependency Injection_ (or _Inversion of Control_).
 
-<ul>
-<li>http://gtk.org/gtk-1.2.xml  (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
-<li>http://gtk.org/gtk-2.0.xml  (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
-</ul>
+Both tasks are handled by the injector. This takes as input an interface and chooses an implementation based on the policy.
 
-<h2>Stability</h2>
+By default, the list of implementations of an interface is found by using the interface's name as a URL and downloading the XML feed file it names (click on one of the interfaces above to see what a feed file looks like). Additional feeds (local or remote) can be added manually by the user.
 
-<p>
-The feed file should also give a stability rating for each implementation. The following
-levels are allowed:
-</p>
+# Versions
 
-<ul>
-<li>Stable</li>
-<li>Testing</li>
-<li>Developer</li>
-<li>Buggy</li>
-<li>Insecure</li>
-</ul>
+An implementation (in the Zero Install sense) is always some particular version. We identify implementations with a cryptographic hash of their contents. Therefore, two releases with the same version number are still considered as separate implementations if they differ in any way.
 
-<p>
-Stability ratings are kept independently of the implementations, and are expected to change over
-time. When any new release is made, its stability should be set to <b>Testing</b>. Users who
-have selected <b>Help test new versions</b> will then start using it. Other users will continue
-with the previous stable release. After a while (days, weeks or months, depending on the project)
-with no serious problems found, the implementation's stability can be changed to <b>Stable</b>
-so that everyone will use it.
-</p>
+A version is a sequence of dot-separated lists of integers, each followed by an optional modifier. e.g. "1.2.3-pre4". It can be just a single number ("1") or a sequence of any number of components ("1.4-rc3.4-post"). The modifiers are "-pre", "-rc", "-" and "-post". Versions are ordered like this:
 
-<p>
-If problems are found, it can instead be marked as <b>Buggy</b>, or <b>Insecure</b>. The injector
-won't select either by default, but it is useful to users to see the reason (users may opt to
-continue using a buggy version if it seems to work for them, but they should never use an insecure
-one). <b>Developer</b> is like a more extreme version of <b>Testing</b>, where the program is
-expected to have bugs.
-</p>
+- 1
+- 1.1-pre7
+- 1.1-rc3
+- 1.1
+- 1.1-1
+- 1.1-post
+- 1.1.1
+- 1.2
+- 1.2.1
+- 1.2.1.4
+- 1.2.2
+- 3
 
-<p>
-You can use the <b>Preferred Stability</b> setting in the interface dialog to choose which
-versions to use. You can also change the stability rating of any implementation by clicking on it
-and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
-</p>
+The injector doesn't care about anything other than the sort order (i.e., whether one version comes before or after another). This is a little different to some other systems, where numbers in different places have different meanings.
 
-<p>
-As you make changes to the policy and ratings, the order of the implementations in the list
-will change. The version at the top is the one that the injector will actually use. In addition
-to the ratings about, you can set the rating to <b>Preferred</b>. Such versions always come first,
-unless they're not cached and you are in Off-line mode.
-</p>
+Incompatible changes (where a newer version cannot be used in place of an older version) to an interface should be handled by creating a new interface. Eg:
 
-<p>
-Note: If you want to use the second item on the list because the first is
-buggy, for example, then it is better to mark the first version as buggy than to mark the
-second as preferred. This is because when a new version is available, you will want that to
-become the version at the top of the list, whereas a preferred version will always be first.
-</p>
- 
-<h2>Dependencies</h2>
+- http://gtk.org/gtk-1.2.xml (contains 1.2.0, 1.2.1, 1.2.2, ...)
+- http://gtk.org/gtk-2.0.xml (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)
 
-<p>
-The feed file also lists the dependencies of each implementation; the
-injector locates an implementation of each dependency, recursively. All
-information about dependencies is handled at the interface level; this is
-because the same implementation may be used in different ways. Also, for
-software not specially designed for use with the injector, it allows us to keep
-the implementation in its original form.
-</p>
+# Stability
 
-<p>
+The feed file should also give a stability rating for each implementation. The following levels are allowed:
+
+- Stable
+- Testing
+- Developer
+- Buggy
+- Insecure
+
+Stability ratings are kept independently of the implementations, and are expected to change over time. When any new release is made, its stability should be set to **Testing**. Users who have selected **Help test new versions** will then start using it. Other users will continue with the previous stable release. After a while (days, weeks or months, depending on the project) with no serious problems found, the implementation's stability can be changed to **Stable** so that everyone will use it.
+
+If problems are found, it can instead be marked as **Buggy**, or **Insecure**. The injector won't select either by default, but it is useful to users to see the reason (users may opt to continue using a buggy version if it seems to work for them, but they should never use an insecure one). **Developer** is like a more extreme version of **Testing**, where the program is expected to have bugs.
+
+You can use the **Preferred Stability** setting in the interface dialog to choose which versions to use. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
+
+As you make changes to the policy and ratings, the order of the implementations in the list will change. The version at the top is the one that the injector will actually use. In addition to the ratings about, you can set the rating to **Preferred**. Such versions always come first, unless they're not cached and you are in Off-line mode.
+
+Note: If you want to use the second item on the list because the first is buggy, for example, then it is better to mark the first version as buggy than to mark the second as preferred. This is because when a new version is available, you will want that to become the version at the top of the list, whereas a preferred version will always be first.
+
+# Dependencies
+
+The feed file also lists the dependencies of each implementation; the injector locates an implementation of each dependency, recursively. All information about dependencies is handled at the interface level; this is because the same implementation may be used in different ways. Also, for software not specially designed for use with the injector, it allows us to keep the implementation in its original form.
+
 This diagram shows some dependencies for Memo (the dotted lines):
-</p>
 
-<p style='text-align: center'>
-<img width="554" height="345" src="depend.png"
-     alt='Interface files give implementations and dependencies' />
-</p>
+![Interface files give implementations and dependencies](../img/diagrams/depend.png)
 
-<p>
-The injector will also examine the dependencies of ROX-Lib and Python
-recursively.
-</p>
+The injector will also examine the dependencies of ROX-Lib and Python recursively.
 
-<h2>Object diagram</h2>
+# Object diagram
 
-<p>
-This diagram shows some of the main Python objects in the Zero Install software:
-</p>
+This diagram shows some of the main objects in the Zero Install software:
 
-<p style='text-align: center'>
- <img width="655" height="575" src="UML/injector-objects.png" alt="Object diagram"/>
-</p>
-
-<p>
-The <b>0install</b> command is implemented by the <b>cmd</b> module. This uses a <b>Driver</b> to
-select (and possibly download) a set of components (programs and libraries), which it then runs using
-the <b>run</b> module.</p>
-
-<p>
-The <b>Driver</b> uses a <b>Solver</b> to select a set of implementations suitable for the current
-<b>Architecture</b> (e.g. "Linux-i686"). It uses a <b>Fetcher</b> to download any missing or out-of-date
-feeds. Downloads are managed by a <b>Handler</b>, which interacts with the user to display progress
-and to confirm any new keys. Once a set of implementations has been chosen, the
-<b>Fetcher</b> is used again to download any missing packages.
-</p>
-
-<p>
-For more details about these classes, see the <a href='python-api/html/index.html'>Python API</a>.
-</p>
-
-<h2>Future plans</h2>
-
-<p>
-See the <a href='roadmap.html'>the roadmap</a> for our plans.
-</p>
-
-</html>
+![Object diagram](../img/uml/injector-objects.png)

@@ -1,58 +1,38 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+title: FeedLint
 
-<program name='FeedLint'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2007/interfaces/FeedLint.xml'
-	 git='http://repo.or.cz/w/FeedLint.git'
-	 license='GNU General Public License'>
+**Name:** FeedLint  
+**Maintainer:** Thomas Leonard  
+**License:** GNU General Public License  
+**Source:** [Git repository](http://repo.or.cz/w/FeedLint.git)  
+**Zero Install feed:** [http://0install.net/2007/interfaces/FeedLint.xml](http://0install.net/2007/interfaces/FeedLint.xml)
 
-<p>
-If you maintain a number of feeds, each with several versions of your programs, how do you
-know that all the download links are still OK? Run FeedLint on your feeds from time-to-time
-to check.
-</p>
-</program>
+If you maintain a number of feeds, each with several versions of your programs, how do you know that all the download links are still OK? Run FeedLint on your feeds from time-to-time to check.
 
-<p>
 To use it, pass the URLs of the feeds to check as arguments, e.g.:
-</p>
 
-<pre>
-$ <b>0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml</b>
-$ <b>feedlint http://my/feed.xml</b>
-</pre>
+```shell
+$ 0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
+$ feedlint http://my/feed.xml
+```
 
-<p>
 You can pass multiple feeds as arguments and it will check all of them. For each feed, it will:
-</p>
 
-<ul>
- <li>Download the feed and check it can be read by 0launch.</li>
- <li>Check that all signatures are correct and by keys on your keyring.</li>
- <li>Check that each signature's GPG key can be downloaded.</li>
- <li>Check that the homepage and icon URLs work.</li>
- <li>Get the size of each implementation archive and check that it matches the size in the feed.</li>
- <li>Warn about releases marked as Testing which are more than one week old.</li>
- <li>Recursively check any sub-feeds and dependencies listed in the feed (if run with <b>-d</b>)</li>
-</ul>
+- Download the feed and check it can be read by 0launch.
+- Check that all signatures are correct and by keys on your keyring.
+- Check that each signature's GPG key can be downloaded.
+- Check that the homepage and icon URLs work.
+- Get the size of each implementation archive and check that it matches the size in the feed.
+- Warn about releases marked as Testing which are more than one week old.
+- Recursively check any sub-feeds and dependencies listed in the feed (if run with `-d`)
 
-<p>Tip: to check all feeds in your domain (e.g. <b>example.com</b>):</p>
+Tip: to check all feeds in your domain (e.g. `example.com`):
 
-<pre>
-$ <b>0launch --list example.com | xargs feedlint</b>
-</pre>
+```shell
+$ 0launch --list example.com | xargs feedlint
+```
 
-<h2>Sample output</h2>
+## Sample output
 
-<p>
-Here we ask it to check Edit's feed (and it also checks ROX-Lib, on which Edit depends; note
-that this mode now requires the <b>-d</b> option to be used):
-</p>
+Here we ask it to check Edit's feed (and it also checks ROX-Lib, on which Edit depends; note that this mode now requires the `-d` option to be used):
 
-<p style='text-align: center'>
-<img width="856" height="445" src="screens/feedlint.png"
-     alt="Running FeedLint on Edit" />
-</p>
-
-</html>
+![Running FeedLint on Edit](../img/screens/feedlint.png)

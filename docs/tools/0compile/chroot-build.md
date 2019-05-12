@@ -1,63 +1,41 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+This page explains how to build in a `chroot` sandbox environment [using 0compile](../0compile.md). It offers a few advantages:
 
-<h2>0compile: Chroot Build</h2>
+-   Building doesn't affect the host environment, and the host doesn't influence the build.
+-   Builds can target a different architecture, such as building x86 packages from a x64 host.
+-   The build sandbox is smaller than a virtual machine, and the download is typically smaller.
 
-<p>
-  This page explains how to build in a "chroot" sandbox environment <a href='0compile.html'>using 0compile</a>.
-  It offers a few advantages:
-</p>
+The build system (`chroot`) comes with development tools such as gcc and make, and the `0launch` command.
 
-<ul>
-  <li>Building doesn't affect the host environment, and the host doesn't influence the build.</li>
-  <li>Builds can target a different architecture, such as building <i>x</i>86 packages from a <i>x</i>64 host.</li>
-  <li>The build sandbox is smaller than a virtual machine, and the download is typically smaller.</li>
-</ul>
+**Contents:**
 
-<p>
-  The build system ("chroot") comes with development tools such as gcc and make, and the <b>0launch</b> command.
-</p>
+[TOC]
 
-<h2>Contents</h2>
+# Chroot setup
 
-<toc level='h2'/>
+Alternatives:
 
-<h2>Chroot setup</h2>
+-   Build on a [Debian system](#debian) (including Ubuntu), using APT and .deb with `pbuilder`
+-   Build on a [Red Hat system](#red-hat) (including Fedora), using Yum and .rpm with `mock`
+-   Build on a [Linux From Scratch](#linux-from-scratch) system, using only source tarballs with `chroot`
 
-<p>Alternatives:</p>
+For all systems we use a `build` directory, that is bind-mounted inside the chroot, to hold our build results.
 
-<ol>
-  <li>Build on a <a href='#debian'>Debian system</a> (including Ubuntu), using APT and .deb with <b>pbuilder</b></li>
-  <li>Build on a <a href='#redhat'>Red Hat system</a> (including Fedora), using Yum and .rpm with <b>mock</b></li>
-  <li>Build on a <a href='#lfs'>Linux From Scratch</a> system, using only source tarballs with <b>chroot</b></li>
-</ol>
+## Debian
 
-<p>
-  For all systems we use a "build" directory, that is bind-mounted inside the chroot, to hold our build results.
-</p>
+[http://pbuilder.alioth.debian.org/](http://pbuilder.alioth.debian.org/)
 
-<dl>
-  <dt id='debian'>Debian / Ubuntu</dt>
+Install and configure the software:
 
-<dd>
-
-<p>
-<a href="http://pbuilder.alioth.debian.org/">http://pbuilder.alioth.debian.org/</a></p>
-
-<p>
-Install and configure the software:</p>
-
-<pre>
-$ <b>sudo apt-get install pbuilder</b>
+```shell
+$ sudo apt-get install pbuilder
 
 $ mkdir -p build
 $ echo "BINDMOUNTS='build'" >> /etc/pbuilderrc
-</pre>
+```
 
-<p>
-Prepare the build environment cache:</p>
+Prepare the build environment cache:
 
-<pre>
+```shell
 MIRROR=http://ftp.debian.org/debian/
 DIST=lenny
 
@@ -67,83 +45,70 @@ CPU=i486 # or x86_64
 BASEDIR=/var/cache/pbuilder
 TGZ=${BASEDIR}/${DIST}-${ARCH}.tgz
 
-$ <b>sudo pbuilder --create --basetgz $TGZ --mirror $MIRROR \
+$ sudo pbuilder --create --basetgz $TGZ --mirror $MIRROR \
                 --distribution $DIST --architecture $ARCH \
-                --extrapackages "zeroinstall-injector"</b>
-</pre>
+                --extrapackages "zeroinstall-injector"
+```
 
-<p>
-Enter the build environment chroot:</p>
+Enter the build environment chroot:
 
-<pre>
-$ <b>setarch $CPU sudo pbuilder --login --basetgz $TGZ</b>
+```shell
+$ setarch $CPU sudo pbuilder --login --basetgz $TGZ
 # cat /etc/debian_version
 5.0.8
 # 0launch --version
 0launch (zero-install) 0.34
 Copyright (C) 2007 Thomas Leonard
 ...
-</pre>
+```
 
-<p>
-Has <tt>build-essential</tt> dependencies:</p>
+Has `build-essential` dependencies:
 
-<ul style='font-size:0.75em'>
-<li>dpkg-dev
-  <ul>
-﻿  <li>dpkg</li>
-  <li>perl5</li>
-  <li>perl-modules</li>
-  <li>cpio</li>
-  <li>bzip2</li>
-  <li>lzma</li>
-  <li>patch</li>
-  <li>make</li>
-  <li>binutils</li>
-  <li>libtimedate-perl</li>
-  <li>gcc | c-compiler</li>
-  </ul></li>
-<li>g++</li>
-<li>libc6-dev | libc-dev</li>
-<li>make</li>
-</ul>
+-   `dpkg-dev`
+    -   `dpkg`
+    -   `perl5`
+    -   `perl-modules`
+    -   `cpio`
+    -   `bzip2`
+    -   `lzma`
+    -   `patch`
+    -   `make`
+    -   `binutils`
+    -   `libtimedate-perl`
+    -   `gcc | c-compiler`
+-   `g++`
+-   `libc6-dev | libc-dev`
+-   `make`
 
-</dd>
-  <dt id='redhat'>Red Hat / Fedora</dt>
+## Red Hat
 
-<dd>
+[https://fedorahosted.org/mock/](https://fedorahosted.org/mock/)
 
-<p>
-<a href="https://fedorahosted.org/mock/">https://fedorahosted.org/mock/</a></p>
+Install and configure the software:
 
-<p>
-Install and configure the software:</p>
-<pre>
-$ <b>su -c "yum install mock"</b>
-$ <b>su -c "usermod -G mock $USER"</b>
+```shell
+$ su -c "yum install mock"
+$ su -c "usermod -G mock $USER"
 
 $ mkdir -p build
-$ echo "config_opts['plugin_conf']['bind_mount_opts']['dirs']\
-.append(('./build', '/build'))" >> /etc/mock/site-defaults.cfg
-</pre>
+$ echo "config_opts['plugin_conf']['bind_mount_opts']['dirs'].append(('./build', '/build'))" >> /etc/mock/site-defaults.cfg
+```
 
-<p>
-Prepare the build environment cache:</p>
+Prepare the build environment cache:
 
-<pre>
+```shell
 ARCH=i386 # or x86_64
 
 ROOT=epel-5-$ARCH
 
-$ <b>mock --root=$ROOT --arch=$ARCH --init</b>
-$ <b>mock --root=$ROOT --arch=$ARCH --install "zeroinstall-injector"</b>
-</pre>
+$ mock --root=$ROOT --arch=$ARCH --init
+$ mock --root=$ROOT --arch=$ARCH --install "zeroinstall-injector"
+```
 
-<p>
-Enter the build environment chroot:</p>
+Enter the build environment chroot:
 
-<pre>
-$ <b>mock --root=$ROOT --arch=$ARCH --shell</b>
+```shell
+$ mock --root=$ROOT --arch=$ARCH --shell
 > cat /etc/redhat-release
 CentOS release 5.6 (Final)
 > 0launch --version
@@ -151,51 +116,43 @@ CentOS release 5.6 (Final)
 Copyright (C) 2007 Thomas Leonard
 ...
 
-$ <b>mock --root=$ROOT --arch=$ARCH --clean</b>
-</pre>
+$ mock --root=$ROOT --arch=$ARCH --clean
+```
 
-<p>
-Has <tt>buildsys-build</tt> dependencies:</p>
+Has `buildsys-build` dependencies:
 
-<ul style='font-size:0.75em'>
-<li>﻿bash</li>
-<li>buildsys-macros</li>
-<li>bzip2</li>
-<li>coreutils</li>
-<li>cpio</li>
-<li>diffutils</li>
-<li>elfutils</li>
-<li>gcc-c++</li>
-<li>gcc</li>
-<li>gzip</li>
-<li>make</li>
-<li>patch</li>
-<li>perl</li>
-<li>redhat-release</li>
-<li>redhat-rpm-config</li>
-<li>rpm-build</li>
-<li>sed</li>
-<li>tar</li>
-<li>unzip</li>
-<li>which</li>
-</ul>
+-   `bash`
+-   `buildsys-macros`
+-   `bzip2`
+-   `coreutils`
+-   `cpio`
+-   `diffutils`
+-   `elfutils`
+-   `gcc-c++`
+-   `gcc`
+-   `gzip`
+-   `make`
+-   `patch`
+-   `perl`
+-   `redhat-release`
+-   `redhat-rpm-config`
+-   `rpm-build`
+-   `sed`
+-   `tar`
+-   `unzip`
+-   `which`
 
-</dd>
+## Linux From Scratch
 
-  <dt id='lfs'>Linux From Scratch</dt>
+[http://www.linuxfromscratch.org/lfs/](http://www.linuxfromscratch.org/lfs/)
 
-<dd>
+Build LFS:
 
-<p>
-<a href="http://www.linuxfromscratch.org/lfs/">http://www.linuxfromscratch.org/lfs/</a></p>
+-   [Read the Linux From Scratch Book](http://www.linuxfromscratch.org/lfs/view/stable/)
 
-<p>Build LFS:</p>
-<ul>
-<li><a href='http://www.linuxfromscratch.org/lfs/view/stable/'>Read the Linux From Scratch Book</a></li>
-</ul>
-<p>Enter chroot:</p>
-<blockquote>
-<pre>
+Enter chroot:
+
+```shell
 export LFS=/mnt/lfs
 
 sudo mount -v --bind /dev $LFS/dev
@@ -208,107 +165,79 @@ sudo mount -vt sysfs sysfs $LFS/sys
 sudo mkdir -pv $LFS/build
 sudo mount -v --bind ./build $LFS/build
 
-$ <b>sudo chroot $LFS /usr/bin/env -i \
+$ sudo chroot $LFS /usr/bin/env -i \
     HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin \
-    /bin/bash --login</b>
+    /bin/bash --login
 # cat /etc/lfs-release
 6.8
-</pre>
-</blockquote>
-<p>BLFS packages:</p>
-<ul>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html'>OpenSSL</a> (Python dependency)</li>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/python.html'>Python</a></li>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/postlfs/gnupg.html'>GnuPG</a></li>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/pcre.html'>PCRE</a> (Glib dependency)</li>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/glib2.html'>GLib</a> (PyGObject dependency)</li>
-<li><a href='http://www.linuxfromscratch.org/blfs/view/svn/general/python-modules.html#pygobject'>PyGObject</a></li>
-</ul>
-<p>Zero Install itself:</p>
-<ul>
-<li><a href='http://0install.net/install-source.html'>ZeroInstall-Injector</a></li>
-</ul>
+```
 
-</dd>
-</dl>
+BLFS packages:
 
-<h2>0compile setup</h2>
+-   [OpenSSL](http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.md) (Python dependency)
+-   [Python](http://www.linuxfromscratch.org/blfs/view/svn/general/python.md)
+-   [GnuPG](http://www.linuxfromscratch.org/blfs/view/svn/postlfs/gnupg.md)
+-   [PCRE](http://www.linuxfromscratch.org/blfs/view/svn/general/pcre.md) (Glib dependency)
+-   [GLib](http://www.linuxfromscratch.org/blfs/view/svn/general/glib2.md) (PyGObject dependency)
+-   [PyGObject](http://www.linuxfromscratch.org/blfs/view/svn/general/python-modules.html#pygobject)
 
-<p>
-Now we have a chroot with <b>0launch</b>, and can add <b>0compile</b>:</p>
+Zero Install itself:
 
-<pre>
+-   [ZeroInstall-Injector](http://0install.net/install-source.md)
+
+# 0compile setup
+
+Now we have a chroot with `0launch`, and can add `0compile`:
+
+```shell
 CMD="0compile"
 URI="http://0install.net/2006/interfaces/0compile.xml"
 
 $ yes Y | /usr/bin/0launch -cd $URI
 $ 0alias -d /usr/bin $CMD $URI
-</pre>
+```
 
-<p>
-Note: depending on your build OS and Python version,
-you might need to use an older version of 0compile.</p>
+Note: depending on your build OS and Python version, you might need to use an older version of 0compile.
 
-<h2>0compile build</h2>
+# 0compile build
 
-<p>
-Begin with downloading the source code, in console mode:</p>
+Begin with downloading the source code, in console mode:
 
-<pre>
-$ <b>0launch -cd -s <i>http://www.example.com/interfaces/foo.xml</i></b>
-</pre>
+```shell
+$ 0launch -cd -s http://www.example.com/interfaces/foo.xml
+```
 
-<p>
-Then we setup the build sub-directory using the source feed:</p>
+Then we setup the build sub-directory using the source feed:
 
-<pre>
+```shell
 $ cd /build
-$ <b>0compile setup <i>http://www.example.com/interfaces/foo.xml</i> <i>foo</i></b>
-</pre>
+$ 0compile setup http://www.example.com/interfaces/foo.xml foo
+```
 
-<p>
-Next we proceed with building the binary from the source:</p>
+Next we proceed with building the binary from the source:
 
-<pre>
-$ cd <i>foo</i>
-$ <b>0compile build</b>
-</pre>
+```shell
+$ cd foo
+$ 0compile build
+```
 
-<p>
-Finally we tell 0compile to prepare the binary feed/archive:</p>
+Finally we tell 0compile to prepare the binary feed/archive:
 
-<pre>
-$ <b>0compile publish http://www.example.com/implementations</b>
-</pre>
+```shell
+$ 0compile publish http://www.example.com/implementations
+```
 
-<p>
-After exiting the chroot, we can find the results in build/foo.</p>
+After exiting the chroot, we can find the results in build/foo.
 
-<h2>Publish results</h2>
+# Publish results
 
-<p>
-  The new binary feed is now ready to be merged with our source feed,
-  signed (using 0publish --xmlsign), and published with the archives.
-</p>
+The new binary feed is now ready to be merged with our source feed, signed (using `0publish --xmlsign`), and published with the archives.
 
-<p>
-  Since we used a new clean chroot to build the binary, we can be
-  reasonably sure that all dependencies are included in the source feed.
-</p>
+Since we used a new clean chroot to build the binary, we can be reasonably sure that all dependencies are included in the source feed.
 
-<h2>Future directions</h2>
+# Future directions
 
-<p>
-  In the future it might be possible to use the
-  <a href='http://open-build-service.org/'>Open Build Service</a> (OBS),
-  to build Zero Install packages using a distributed development platform.
-</p>
+In the future it might be possible to use the [Open Build Service](http://open-build-service.org/) (OBS), to build Zero Install packages using a distributed development platform.
 
-<p>
-  Currently it (OBS) supports building RPM and Debian packages, those can be
-  converted to Zero Install feeds using <a href='pkg2zero.html'>pkg2zero</a>
-  (when relocatable).
-</p>
-
-</html>
+Currently it (OBS) supports building RPM and Debian packages, those can be converted to Zero Install feeds using [pkg2zero](../pkg2zero.md) (when relocatable).

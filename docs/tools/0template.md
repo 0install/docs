@@ -1,49 +1,34 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0template  
+**Maintainer:** Thomas Leonard  
+**License:** GNU Lesser General Public License  
+**Source:** [Git repository](https://github.com/0install/0template)  
+**Zero Install feed:** [http://0install.net/tools/0template.xml](http://0install.net/tools/0template.xml)
 
-<program name='0template'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/tools/0template.xml'
-	 git='https://github.com/0install/0template'
-	 license='GNU Lesser General Public License'>
+**0template** creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
 
-<p>
-<b>0template</b> creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
-</p>
-</program>
+![0template workflow](../img/diagrams/0template.png)
 
-<div class='figure'>
-<img src='diagrams/0template.png' width='492' height='341' alt='0template workflow' style='padding: .5em'/>
-</div>
+That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with [0repo](0repo.md).
 
-<p>
-  That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with <a href='0repo.html'>0repo</a>.
-</p>
+0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using [0release](0release.md) instead.
 
-<p>
-  0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using <a href='0release.html'>0release</a> instead.
-</p>
+**Contents:**
 
-<toc level='h2'/>
+[TOC]
 
-<h2>Installation</h2>
+# Installation
 
-<p>
 To get it:
-</p>
 
-<pre-scrolled>
+```shell
 $ 0install add 0template http://0install.net/tools/0template.xml
-</pre-scrolled>
+```
 
+# Creating the template
 
-<h2>Creating the template</h2>
-
-<p>
 To start, run it with a non-existent file and it will offer to create it:
-</p>
 
-<pre-scrolled>
+```shell
 $ 0template myprog.xml.template
 'myprog.xml.template' does not exist; creating new template.
 
@@ -55,104 +40,83 @@ Does your program need to be compiled before it can be used?
 > 2
 
 Writing myprog.xml.template
-</pre-scrolled>
+```
 
-<p>
-Then edit the generated <b>myprog.xml.template</b> to taste. A minimal example would be:
-</p>
+Then edit the generated `myprog.xml.template` to taste. A minimal example would be:
 
-<pre-scrolled>
-&lt;?xml version="1.0"?>
-&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  &lt;name>myprog&lt;/name>
-  &lt;summary>does useful stuff&lt;/summary>
+```xml
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>myprog</name>
+  <summary>does useful stuff</summary>
 
-  &lt;group>
-    &lt;command name="run" path="myprog"/>
+  <group>
+    <command name="run" path="myprog"/>
 
-    &lt;implementation version="{version}">
-      &lt;manifest-digest/>
-      &lt;archive href="http://example.com/downloads/myprog-{version}.zip"/>
-    &lt;/implementation>
-  &lt;/group>
-&lt;/interface>
-</pre-scrolled>
+    <implementation version="{version}">
+      <manifest-digest/>
+      <archive href="http://example.com/downloads/myprog-{version}.zip"/>
+    </implementation>
+  </group>
+</interface>
+```
 
-<p>
-  You would typically want to add any dependencies here too. See the <a href='interface-spec.html'>feed specification</a> for details.
-</p>
+You would typically want to add any dependencies here too. See the [feed specification](../specifications/feed.md) for details.
 
-<p>
-Note: You can also use 0template to create a <a href='local-feeds.html'>local feed</a> to run a Git checkout, rather than an archive on the web. In that case, just don't use the ".template" extension, and it will generate a feed rather than a template.
-</p>
+Note: You can also use 0template to create a [local feed](../packaging/local-feeds.md) to run a Git checkout, rather than an archive on the web. In that case, just don't use the `.template` extension, and it will generate a feed rather than a template.
 
-<h2>Using the template</h2>
+# Using the template
 
-<p>
-To generate the XML for a particular version, run 0template on it and provide the template parameters ("version" in this example), e.g.
-</p>
+To generate the XML for a particular version, run 0template on it and provide the template parameters (`version` in this example), e.g.
 
-<pre-scrolled>
+```shell
 $ 0template myprog.xml.template version=1.0
 Downloading http://example.com/downloads/myprog-1.0.zip to ./myprog-1.0.zip
 Writing myprog-1.0.xml
-</pre-scrolled>
+```
 
-<p>
 You now have a feed with the appropriate details filled in:
-</p>
 
-<pre-scrolled>
-&lt;?xml version="1.0"?>
-&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  &lt;name>myprog&lt;/name>
-  &lt;summary>does useful stuff&lt;/summary>
+```xml
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>myprog</name>
+  <summary>does useful stuff</summary>
 
-  &lt;group>
-    &lt;command name="run" path="myprog"/>
+  <group>
+    <command name="run" path="myprog"/>
 
-    &lt;implementation id="sha1new=67ba178ed33b292efa5ab364d01a8fc13fe9eba3" version="1.0">
-      &lt;manifest-digest sha256new="FBXDJXLMHAPCRNZ5XOQTVYQHD6VP7CZAZ2UKCCV5UYE27C752GIQ"/>
-      &lt;archive extract="myprog-1.0" href="http://example.com/downloads/myprog-1.0.zip" size="352"/>
-    &lt;/implementation>
-  &lt;/group>
-&lt;/interface>
-</pre-scrolled>
+    <implementation id="sha1new=67ba178ed33b292efa5ab364d01a8fc13fe9eba3" version="1.0">
+      <manifest-digest sha256new="FBXDJXLMHAPCRNZ5XOQTVYQHD6VP7CZAZ2UKCCV5UYE27C752GIQ"/>
+      <archive extract="myprog-1.0" href="http://example.com/downloads/myprog-1.0.zip" size="352"/>
+    </implementation>
+  </group>
+</interface>
+```
 
-<p>
-  Specifically, 0template fills in these values:
-</p>
+Specifically, 0template fills in these values:
 
-<ul>
-  <li>All "{...}" text is expanded with the values you provided on the command-line.</li>
-  <li>The archive is downloaded to the directory containing the feed, if it's not already there.</li>
-  <li>The <b>size</b> attribute is set to the size of the archive.</li>
-  <li>The <b>extract</b> attribute is set to the single top-level directory in the archive, if it has one.</li>
-  <li>The <b>id</b> is set to the sha1new digest of the archive.</li>
-  <li>Any empty attributes of <b>manifest-digest</b> are filled in with the calculated digests. If there are no attributes, a <b>sha256new</b> digest is added.</li>
-</ul>
+- All `{...}` text is expanded with the values you provided on the command-line.
+- The archive is downloaded to the directory containing the feed, if it's not already there.
+- The `size` attribute is set to the size of the archive.
+- The `extract` attribute is set to the single top-level directory in the archive, if it has one.
+- The `id` is set to the sha1new digest of the archive.
+- Any empty attributes of `manifest-digest` are filled in with the calculated digests. If there are no attributes, a `sha256new` digest is added.
 
-<p>
-  You can now test this feed using e.g.
-</p>
+You can now test this feed using e.g.
 
-<pre-scrolled>
+```shell
 $ 0launch myprog-1.0.xml
-</pre-scrolled>
+```
 
-<p>Or, for source feeds:</p>
+Or, for source feeds:
 
-<pre-scrolled>
+```shell
 $ 0compile autocompile myprog-1.0.xml
-</pre-scrolled>
+```
 
-<p>
-Once you are happy with it, you can add it to
-the master feed (which contains all versions) using <a href='0repo.html'>0repo</a>. e.g.
-</p>
+Once you are happy with it, you can add it to the master feed (which contains all versions) using [0repo](0repo.md). e.g.
 
-<pre-scrolled>
+```shell
 $ 0repo add myprog-1.2.xml
-</pre-scrolled>
-
-</html>
+```

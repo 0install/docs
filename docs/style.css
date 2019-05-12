@@ -10,14 +10,14 @@
 }
 
 .wy-menu-vertical span {
-  line-height: 14px;
+  line-height: 21px;
   font-weight: bold;
   color: black;
 }
 
 .wy-menu-vertical a {
   font-size: 85%;
-  line-height: 12px;
+  line-height: 21px;
   color: #0000A5;
 }
 
@@ -63,7 +63,7 @@ footer {
 }
 
 ul.subnav span.caption-text {
-  padding: 0.4045em 2.427em;
+  padding: 0.4em 2.4em;
 }
 
 span.expandable {
@@ -73,4 +73,14 @@ span.expandable {
 
 span.expandable:hover {
   background-color: #8888FF;
+}
+
+.green {
+  background-color: #cd5 !important;
+}
+.yellow {
+  background-color: gold !important;
+}
+.red {
+  background-color: #f99 !important;
 }

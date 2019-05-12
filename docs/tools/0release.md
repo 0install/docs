@@ -1,254 +1,160 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0release  
+**Maintainer:** Thomas Leonard  
+**License:** GNU Lesser General Public License  
+**Source:** [Git repository](https://github.com/0install/0release)  
+**Zero Install feed:** [http://0install.net/2007/interfaces/0release.xml](http://0install.net/2007/interfaces/0release.xml)
 
-<program name='0release'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2007/interfaces/0release.xml'
-	 git='https://github.com/0install/0release.git'
-	 license='GNU Lesser General Public License'>
+**0release** can be used to make new releases of your software. It handles details such as setting the version number and release date, tagging the release in your version control system and updating your Zero Install feed.
 
-<p>
-<b>0release</b> can be used to make new releases of your software. It handles details such as setting the version
-number and release date, tagging the release in your version control system and updating your Zero Install feed.
-</p>
-</program>
+The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below ([releasing a source package and multiple binary packages](0release/compiled-binaries.md) is also possible):
 
-<p>
-The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below
-(<a href='0release-binaries.html'>releasing a source package and multiple binary packages</a> is also possible):
-</p>
+![The release process](../img/uml/release-process.png)
 
-<table>
-<tr><td>
-<img src='UML/release-process.png' width='365' height='655' alt='The release process' style='padding: .5em'/>
-</td><td>
-<p>
-After doing some development (so you have something to release!) you use 0release to prepare a
-new release. It will:
-</p>
+After doing some development (so you have something to release!) you use 0release to prepare a new release. It will:
 
-<ol>
- <li>Commit a release revision in your version control system (e.g. with a version of "1.3") on a new temporary branch.</li>
- <li>Export the release revision and create a tarball for distribution.</li>
- <li>Unpack the release and run the unit tests.</li>
- <li>Update the version numbers in your version control system again (e.g. to "1.3-post").</li>
-</ol>
+1.  Commit a release revision in your version control system (e.g. with a version of `1.3`) on a new temporary branch.
+2.  Export the release revision and create a tarball for distribution.
+3.  Unpack the release and run the unit tests.
+4.  Update the version numbers in your version control system again (e.g. to `1.3-post`).
 
-<p>
-You can then run any final (manual) tests on the release. If you're happy with the result, then
-0release can publish it (e.g. upload the tarball to an FTP server, update the Zero Install feed, and
-push the new commits and tag to your public version control system). Otherwise,
-0release will discard the temporary branch so that you can fix the problems and
-try again.
-</p>
-</td></tr>
-</table>
+You can then run any final (manual) tests on the release. If you're happy with the result, then 0release can publish it (e.g. upload the tarball to an FTP server, update the Zero Install feed, and push the new commits and tag to your public version control system). Otherwise, 0release will discard the temporary branch so that you can fix the problems and try again.
 
-<p style='clear: both'>
-Note: you don't <i>need</i> to use this program to make your software available
-through Zero Install. You can just create a tarball using your normal process
-and then <a href='injector-packagers.html'>publish a feed</a> for it. However,
-0release can automate some of the steps for you. It's especially useful for new
-projects, where you don't yet have an established process. Having a program to
-handle new releases brings several advantages over doing it manually:
-</p>
+Note: you don't _need_ to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then [publish a feed](../packaging/index.md) for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:
 
-<ul>
- <li>Making a new release is quicker, since many steps are automated.</li>
- <li>You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).</li>
- <li>You get a consistent structure each time (are your archives called "myprog-V.VV-linux.tgz" or "My-Prog-Linux-V.VV.tar.gz"?).</li>
- <li>If someone else needs to make a release, they will follow the same process.</li>
-</ul>
+- Making a new release is quicker, since many steps are automated.
+- You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).
+- You get a consistent structure each time (are your archives called `myprog-V.VV-linux.tgz` or `My-Prog-Linux-V.VV.tar.gz`?).
+- If someone else needs to make a release, they will follow the same process.
 
-<dl>
- <dt>Version control systems currently supported</dt>
- <dd>Git is fully supported. It should be fairly easy to support other (distributed) version control systems.</dd>
-</dl>
+Version control systems currently supported
 
-<h3>Contents</h3>
+Git is fully supported. It should be fairly easy to support other (distributed) version control systems.
 
-<toc level='h2'/>
+**Contents:**
 
-<h2>Preparing your source repository</h2>
+[TOC]
 
-<p>
-You'll need a <a href='local-feeds.html'>local feed</a> within your source directory (under version
-control). This contains the same information as a normal published feed would
-(name, description, dependencies, etc). The only differences are:
-</p>
+## Preparing your source repository
 
-<ul>
-<li>The local feed refers to a local directory (e.g. <b>id="."</b> for the
-directory containing the local feed) rather than a secure hash.
-</li>
-<li>It has no digital signature.</li>
-<li>The version will be a development version (e.g "1.2-post" if your last released version was
-"1.2").</li>
-</ul>
+You'll need a [local feed](../packaging/local-feeds.md) within your source directory (under version control). This contains the same information as a normal published feed would (name, description, dependencies, etc). The only differences are:
 
-<p>
-Having a local feed is useful even if you don't use <b>0release</b>, because it
-lets people check out a development snapshot of your program and then register it
-(using <b>0launch --feed</b>) or run it directly with Zero Install handling its
-dependencies.
-</p>
+- The local feed refers to a local directory (e.g. `id="."` for the directory containing the local feed) rather than a secure hash.
+- It has no digital signature.
+- The version will be a development version (e.g `1.2-post` if your last released version was `1.2`).
 
-<p>
-A minimal Hello World example is available for testing. You can check it out like this, using the <a href='http://git-scm.com/'>Git</a>
-version control system:
-</p>
+Having a local feed is useful even if you don't use `0release`, because it lets people check out a development snapshot of your program and then register it (using `0launch --feed`) or run it directly with Zero Install handling its dependencies.
 
-<pre-scrolled>
-$ <b>git clone git://github.com/0install/hello-python.git</b>
-</pre-scrolled>
+A minimal Hello World example is available for testing. You can check it out like this, using the [Git](http://git-scm.com/) version control system:
 
-<p>
-To check that you can run it, use <a href='injector.html'>0launch</a> on the feed:
-</p>
+```shell
+$ git clone git://github.com/0install/hello-python.git
+```
 
-<pre-scrolled>
-$ <b>cd hello-python</b>
-$ <b>0launch HelloWorld.xml</b>
+To check that you can run it, use [0launch](http://0install.net/injector.html) on the feed:
+
+```shell
+$ cd hello-python
+$ 0launch HelloWorld.xml
 Hello World!
-</pre-scrolled>
+```
 
-<p>
-HelloWorld.xml is the local feed. Its contents look like this:
-</p>
+`HelloWorld.xml` is the local feed. Its contents look like this:
 
-<pre-scrolled>&lt;?xml version="1.0" ?>
-&lt;interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  &lt;name><b>HelloWorld</b>&lt;/name>
-  &lt;summary><b>minimal demonstration package for 0release</b>&lt;/summary>
-  &lt;description>
-    <b>This program outputs the message "Hello World". You can create new releases of it
-    using 0release.</b>
-  &lt;/description>
+```xml
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>HelloWorld</name>
+  <summary>minimal demonstration package for 0release</summary>
+  <description>
+    This program outputs the message "Hello World". You can create new releases of it
+    using 0release.
+  </description>
 
-  &lt;homepage><b>http://0install.net/0release.xml</b>&lt;/homepage>
+  <homepage>http://0install.net/0release.xml</homepage>
 
-  &lt;feed-for interface='<b>http://0install.net/tests/HelloWorld.xml</b>'/>
+  <feed-for interface='http://0install.net/tests/HelloWorld.xml'/>
 
-  &lt;implementation id="." version="<b>0.1-pre</b>">
-    &lt;command name='run' path='<b>hello.py</b>'>
-      &lt;runner interface='http://repo.roscidus.com/python/python'>
-        &lt;version before='3'/>
-      &lt;/runner>
-    &lt;/command>
-  &lt;/implementation>
-&lt;/interface>
-</pre-scrolled>
+  <implementation id="." version="0.1-pre">
+    <command name='run' path='hello.py'>
+      <runner interface='http://repo.roscidus.com/python/python'>
+        <version before='3'/>
+      </runner>
+    </command>
+  </implementation>
+</interface>
+```
 
-<p>
-Note the &lt;feed-for&gt; element. This is where the main feed is (or will be) published. If you want to follow this tutorial,
-change it to point to a location to which you can upload files (e.g. "http://localhost/~me/testing/HelloWorld.xml") and
-commit the change (<b>git commit -a</b>).
-</p>
+Note the `<feed-for>` element. This is where the main feed is (or will be) published. If you want to follow this tutorial, change it to point to a location to which you can upload files (e.g. `http://localhost/~me/testing/HelloWorld.xml`) and commit the change (`git commit -a`).
 
-<p>
-You should add any dependencies inside the &lt;implementation&gt; element (see the <a href='interface-spec.html'>feed specification</a>
-for details, or edit the feed using <a href='injector-packagers.html'>0publish-gui</a> if you want a graphical interface).
-This example program is so simple it doesn't have any dependencies beyond its interpreter: Python &lt; 3
-</p>
+You should add any dependencies inside the `<implementation>` element (see the [feed specification](../specifications/feed.md) for details, or edit the feed using [0publish-gui](../packaging/guide-gui.md) if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python < 3
 
-<h2>Creating the releases directory</h2>
+## Creating the releases directory
 
-<p>
-Each time you create a new release, the resulting files go in your 'releases'
-directory. Create the directory now and then run <b>0release</b> inside it,
-giving it the location of your local feed.
-</p>
+Each time you create a new release, the resulting files go in your `releases` directory. Create the directory now and then run `0release` inside it, giving it the location of your local feed.
 
-<pre-scrolled>
-$ <b>mkdir -p ~/releases/hello</b>
-$ <b>cd ~/releases/hello</b>
-$ <b>0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml</b>
+```shell
+$ mkdir -p ~/releases/hello
+$ cd ~/releases/hello
+$ 0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml
 Setting up releases directory for HelloWorld
 Success - created script:
  ~/releases/hello/make-release
 Now edit it with your local settings.
 Then, create new releases by running it.
-</pre-scrolled>
+```
 
-<p>
-This will create a single executable file in the directory, called <b>make-release</b>.
-Run this whenever you want to create a new release of your software.
-</p>
+This will create a single executable file in the directory, called `make-release`. Run this whenever you want to create a new release of your software.
 
-<ul>
-<li>The <b>make-release</b> file contains local configuration information (e.g.
-the location of the local feed on your computer).</li>
-<li>General information about your program goes in the source directory so it can
-be shared by other developers.</li>
-</ul>
+- The `make-release` file contains local configuration information (e.g. the location of the local feed on your computer).
+- General information about your program goes in the source directory so it can be shared by other developers.
 
-<p>
-  <strong>Warning:</strong> Do not put make-release under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake in e.g. the upload command and then fix it, 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
-</p>
+**Warning:** Do not put `make-release` under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake in e.g. the upload command and then fix it, 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
 
-<h3>Use with 0repo</h3>
+### Use with 0repo
 
-<p>0release >= 0.15 contains support for the new <a href='0repo.html'>0repo</a> repository management
-system. If you use this, most of the settings in the <b>make-release</b> file can be removed. For
-example, the complete configuration for 0release itself (0install.net uses 0repo) is:
-</p>
+0release >= 0.15 contains support for the new [0repo](0repo.md) repository management system. If you use this, most of the settings in the `make-release` file can be removed. For example, the complete configuration for 0release itself (0install.net uses 0repo) is:
 
-<pre-scrolled>
+```shell
 #!/bin/sh
 cd `dirname "$0"`
 exec 0launch http://0install.net/2007/interfaces/0release.xml \
   --release /home/tal/Projects/zero-install/0release/0release.xml \
   --public-scm-repository=origin \
   "$@"
-</pre-scrolled>
+```
 
-<h3>Use without 0repo (deprecated)</h3>
+### Use without 0repo (deprecated)
 
-<p>
-Open the file in a text editor. There are five settings, with comments explaining what is needed.
-The only one you need to set is the first (<b>ARCHIVE_DIR_PUBLIC_URL</b>), which is where people
-will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
-</p>
+Open the file in a text editor. There are five settings, with comments explaining what is needed. The only one you need to set is the first (`ARCHIVE_DIR_PUBLIC_URL`), which is where people will download the release from. In my case, I'll be uploading them to SourceForge so I set it to:
 
-<pre-scrolled>
+```shell
 ARCHIVE_DIR_PUBLIC_URL='http://downloads.sourceforge.net/project/zero-install/hello/$RELEASE_VERSION'
-</pre-scrolled>
+```
 
-<p>
-Note that $RELEASE_VERSION is used because SourceForge puts each archive in a different directory,
-whose name is the version number. If you put all your archives in a single directory, you don't
-need this. e.g. you could use:
-</p>
+Note that `$RELEASE_VERSION` is used because SourceForge puts each archive in a different directory, whose name is the version number. If you put all your archives in a single directory, you don't need this. e.g. you could use:
 
-<pre-scrolled>
+```shell
 ARCHIVE_DIR_PUBLIC_URL='http://localhost/~me/testing'
-</pre-scrolled>
+```
 
-<p>
-The other settings allow 0release to push files to the remote server automatically, but you can
-leave them as they are and do it manually if you prefer.
-</p>
+The other settings allow 0release to push files to the remote server automatically, but you can leave them as they are and do it manually if you prefer.
 
-<h2>Creating a release candidate</h2>
+## Creating a release candidate
 
-<p>
-When you want to make a new release, simply run the <b>make-release</b> script, like this:
-</p>
+When you want to make a new release, simply run the `make-release` script, like this:
 
-<pre-scrolled>
-$ <b>cd ~/releases/hello</b>
-$ <b>./make-release</b>
+```shell
+$ cd ~/releases/hello
+$ ./make-release
 Releasing HelloWorld
 Snapshot version is 0.1-pre
 Version number for new release [0.1]:
-</pre-scrolled>
+```
 
-<p>
-You are prompted to enter the version number for the new release. You can just press Return to accept the
-default of <b>0.1</b> (since the version in the local feed was <b>0.1-pre</b>). It then prints:
-</p>
+You are prompted to enter the version number for the new release. You can just press Return to accept the default of `0.1` (since the version in the local feed was `0.1-pre`). It then prints:
 
-<pre-scrolled>Releasing version 0.1
+```shell
+Releasing version 0.1
 HEAD is now at 387535a Updated feed-for to localhost for testing
 SKIPPING unit tests for ~/releases/hello/0.1/helloworld-0.1 (no 'self-test' attribute set)
 Wrote source feed as helloworld-0.1.xml
@@ -262,111 +168,56 @@ P) Publish candidate (accept)
 F) Fail candidate (delete release-status file)
 (you can also hit CTRL-C and resume this script when done)
 Publish/Fail:
-</pre-scrolled>
+```
 
-<p>
-0release has now created a candidate archive for you to examine. You might like
-to try running the program now. Note that the archive only contains files
-that are under version control.
-</p>
+0release has now created a candidate archive for you to examine. You might like to try running the program now. Note that the archive only contains files that are under version control.
 
-<p>
-You can either leave 0release running while you check it, or you can press CTRL-C
-to exit and run the make-release script again later. It will remember where it
-was (it stores the current status in a new <b>release-status</b> file).
-</p>
+You can either leave 0release running while you check it, or you can press CTRL-C to exit and run the make-release script again later. It will remember where it was (it stores the current status in a new `release-status` file).
 
-<p>
-As well as exporting the release archive, 0release also updates your Git repository
-by committing two new revisions. You can see them using <b>gitk --all</b>:
-</p>
+As well as exporting the release archive, 0release also updates your Git repository by committing two new revisions. You can see them using `gitk --all`:
 
-<p style='text-align: center'>
-<img width="470" height="89" src="screens/0release-rc.png" alt="New revisions created by 0release" />
-</p>
+![New revisions created by 0release](../img/screens/0release-rc.png)
 
-<p>
-The lowest two revisions are the history you started with. The "master" branch adds
-the commit where you changed the &lt;feed-for&gt; element. This is also the
-currently checked-out version. 0release has created a new branch called "0release-tmp" with two
-new revisions. "Release 0.1" is the version that will be released. Its local feed has the version
-"0.1" and today's date as the release date. The archive was created from this revision.
-The next revision has a version of "0.1-post" and removes the release date
-again. Note that the release hasn't been tagged yet in Git, but 0release has
-recorded the revision ID in case you decide to accept the release candidate.
-</p>
+The lowest two revisions are the history you started with. The `master` branch adds the commit where you changed the `<feed-for>` element. This is also the currently checked-out version. 0release has created a new branch called `0release-tmp` with two new revisions. `Release 0.1` is the version that will be released. Its local feed has the version `0.1` and today's date as the release date. The archive was created from this revision. The next revision has a version of `0.1-post` and removes the release date again. Note that the release hasn't been tagged yet in Git, but 0release has recorded the revision ID in case you decide to accept the release candidate.
 
-<p>
-If you discover any problems you can go ahead and commit a fix, which will appear on the master
-branch (not on the "0release-tmp" branch, which will be discarded if you fail the release).
-</p>
+If you discover any problems you can go ahead and commit a fix, which will appear on the master branch (not on the `0release-tmp` branch, which will be discarded if you fail the release).
 
-<h2>Accepting the release candidate</h2>
+## Accepting the release candidate
 
-<p>
 We'll just check that the release works:
-</p>
 
-<pre-scrolled>$ <b>0launch 0.1/helloworld-0.1/HelloWorld.xml</b>
+```shell
+$ 0launch 0.1/helloworld-0.1/HelloWorld.xml
 Hello World!
-</pre-scrolled>
+```
 
-<p>
-Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail
-prompt. Choose <b>Publish</b> (you can just type <b>p&lt;Return&gt;</b>).
-</p>
+Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail prompt. Choose `Publish` (you can just type `p<Return>`).
 
-<p>
-The temporary files (<b>release-status</b> and the extracted
-<b>helloworld-0.1</b> directory) are removed, and you will be prompted to enter
-your GPG passphrase to sign the release (use <b>--key</b> if you don't want to use the default key).
-</p>
+The temporary files (`release-status` and the extracted `helloworld-0.1` directory) are removed, and you will be prompted to enter your GPG passphrase to sign the release (use `--key` if you don't want to use the default key).
 
-<pre-scrolled>Tagged as v0.1
+```shell
+Tagged as v0.1
 HEAD is now at 07f3c9e Start development series 0.1-post
 Deleted branch 0release-tmp.
-Changing key from 'None' to '<i>YOUR-KEY</i>'
-Exported public key as '~/releases/hello/<i>YOUR-KEY</i>.gpg'
-</pre-scrolled>
+Changing key from 'None' to 'YOUR-KEY'
+Exported public key as '~/releases/hello/YOUR-KEY.gpg'
+```
 
-<p>
-A new file then appears: <b>HelloWorld.xml</b>. This is
-the master feed for the program, which you should publish on your web-site. It
-will list all versions of the program (although currently it only contains one
-version, of course). Finally, you will also find a <b>.gpg</b> file containing
-your GPG public key.
-</p>
+A new file then appears: `HelloWorld.xml`. This is the master feed for the program, which you should publish on your web-site. It will list all versions of the program (although currently it only contains one version, of course). Finally, you will also find a `.gpg` file containing your GPG public key.
 
-<p>
-If you check your Git repository, you'll see that 0release has now tagged the release,
-and updated the "master" branch to the tip of the temporary branch:
-</p>
+If you check your Git repository, you'll see that 0release has now tagged the release, and updated the "master" branch to the tip of the temporary branch:
 
-<p style='text-align: center'>
-<img width="470" height="89" src="screens/0release-tagged.png" alt="Release tagged" />
-</p>
+![Release tagged](../img/screens/0release-tagged.png)
 
-<p>
-If, instead, you had found a problem with the release you would have selected <b>Fail</b> at
-the prompt. 0release would have removed the temporary branch (leaving "master" where it was)
-and deleted the temporary files.
-</p>
+If, instead, you had found a problem with the release you would have selected `Fail` at the prompt. 0release would have removed the temporary branch (leaving `master` where it was) and deleted the temporary files.
 
-<h2>Uploading the files</h2>
+## Uploading the files
 
-<p><strong>Note: Uploading directly with 0release is deprecated:</strong> Consider using
-<a href='0repo.html'>0repo</a> instead to upload the files. That way,
-if you publish several different programs on your site you only have
-to configure things once. To use 0release with 0repo, just do "0repo register"
-so that 0release can find the repository to use.
-</p>
+**Note: Uploading directly with 0release is deprecated:** Consider using [0repo](0repo.md) instead to upload the files. That way, if you publish several different programs on your site you only have to configure things once. To use 0release with 0repo, just do `0repo register` so that 0release can find the repository to use.
 
-<p>
-If you didn't set an upload command in the make-release configuration file,
-0release will prompt you to upload the files now:
-</p>
+If you didn't set an upload command in the make-release configuration file, 0release will prompt you to upload the files now:
 
-<pre-scrolled>
+```shell
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload required
 
@@ -374,183 +225,101 @@ Upload 0.1/helloworld-0.1.tar.bz2 as
   http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2
 No upload command is set => please upload the archive manually now
 Press Return once the archive is uploaded.
-</pre-scrolled>
+```
 
-<p>
-Copy the archive (<b>helloworld-0.1.tar.bz2</b>)
-to your web-server. When you press Return, 0release will check that the archive was uploaded
-correctly:
-</p>
-<pre-scrolled>Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
+Copy the archive (`helloworld-0.1.tar.bz2`) to your web-server. When you press Return, 0release will check that the archive was uploaded correctly:
+
+```shell
+Testing URL http://downloads.sourceforge.net/project/zero-install/hello/0.1/helloworld-0.1.tar.bz2...
 
 Upload status:
 - helloworld-0.1.tar.bz2 : Upload has been checked (exists and has correct size)
-</pre-scrolled>
+```
 
-<p>
 Finally, it will prompt you to upload the feed and the new Git commits:
-</p>
 
-<pre-scrolled>
+```shell
 Upload ~/releases/hello/HelloWorld.xml into http://0install.net/tests
 NOTE: No feed upload command set => you'll have to upload them yourself!
 Push changes to public SCM repository...
 NOTE: No public repository set => you'll have to push the tag and trunk yourself.
-</pre-scrolled>
+```
 
-<p>
-After uploading <b>HelloWorld.xml</b> (to the URL you put in the feed-for) and <b>&lt;KEYID&gt;.gpg</b>
-(to the same directory), you should then be able to download and run the new release, using the URL you
-chose at the start:
-</p>
+After uploading `HelloWorld.xml` (to the URL you put in the feed-for) and `<KEYID>.gpg` (to the same directory), you should then be able to download and run the new release, using the URL you chose at the start:
 
-<pre-scrolled>
+```shell
 $ 0launch http://localhost/~me/testing/HelloWorld.xml
 Hello World!
-</pre-scrolled>
+```
 
-<p>
-You can edit <b>make-release</b> to set some commands to automatically upload the files and to
-push the branch and tag ("master" and "v0.1" in this case) to your public Git repository.
-</p>
+You can edit `make-release` to set some commands to automatically upload the files and to push the branch and tag (`master` and `v0.1` in this case) to your public Git repository.
 
-<p>
-Tip: to check that all files are present, use <a href='feedlint.html'>FeedLint</a>:
-</p>
+Tip: to check that all files are present, use [FeedLint](feedlint.md):
 
-<pre-scrolled>
+```shell
 $ 0launch http://0install.net/2007/interfaces/FeedLint.xml http://localhost/~me/testing/HelloWorld.xml
-</pre-scrolled>
+```
 
-<h2>Customising the release process</h2>
+## Customising the release process
 
-<p>
-For more information, see <a href='0release-phases.html'>release phases</a>.
-</p>
+For more information, see [release phases](0release/customisation.md).
 
-<h2>Source and binaries</h2>
+## Source and binaries
 
-<p>
-If your program needs to be compiled, see <a href='0release-binaries.html'>Releasing binaries</a>.
-</p>
+If your program needs to be compiled, see [Releasing binaries](0release/compiled-binaries.md).
 
-<h2 id='aborting'>Aborting a release</h2>
+## Aborting a release
 
-<p>
-  You can abort a release easily at any point before the Publish step. Once you select <b>Publish</b>,
-  externally-visible changes start to be made (e.g. archives are uploaded to your file-server).
+You can abort a release easily at any point before the Publish step. Once you select `Publish`, externally-visible changes start to be made (e.g. archives are uploaded to your file-server).
 
-  <dl>
-    <dt>To abort before publishing</dt>
-    <dd>Just select <b>Fail</b> from the menu. This deletes the
-      <b>release-status</b> file (which you could also do manually). To avoid
-      confusion, selecting <b>Fail</b> also removes the temporary release
-      branch from Git and renames the release directory (to <b>$version~</b>) to
-      make it clear that they're not being used.
-    </dd>
+To abort before publishing
+: Just select `Fail` from the menu. This deletes the `release-status` file (which you could also do manually). To avoid confusion, selecting `Fail` also removes the temporary release branch from Git and renames the release directory (to `$version~`) to make it clear that they're not being used.
 
-    <dt>To abort after publishing has started</dt>
-    <dd>
-      Follow the steps in <a href='#unpublishing'>Unpublishing a release</a> below to undo
-      any publicly visible changes. Then delete the <b>release-status</b> file.
-    </dd>
-  </dl>
-</p>
+To abort after publishing has started
+: Follow the steps in [Unpublishing a release](#unpublishing-a-release) below to undo any publicly visible changes. Then delete the `release-status` file.
 
-<h2 id='unpublishing'>Unpublishing a release</h2>
+## Unpublishing a release
 
-<p>
 So, you didn't test the release properly, and now you want to pull it down, eh?
-</p>
 
-<p>
-The best way to do this is to use 0publish-gui to set the stability to BUGGY, and
-then publish a new fixed release, with a new version number.
-</p>
+The best way to do this is to use 0publish-gui to set the stability to BUGGY, and then publish a new fixed release, with a new version number.
 
-<p>
-But if you <i>really</i> insist on trying to unpublish a release and pretending it never
-happened, here's what you have to do:
-</p>
+But if you _really_ insist on trying to unpublish a release and pretending it never happened, here's what you have to do:
 
-<ol>
-<li>
-<p>
-Edit the master feed (e.g. with 0publish-gui) and delete the new &lt;implementation&gt;.
-Don't just use a text editor; the signature needs updating too! Push the new version to
-your server.
-</p>
-<p>
-Note: if you keep your feed under version control then you could revert the
-change. However, if anyone got the new version before you reverted it, then
-0launch will refuse to go back to the previous version, assuming that this is a
-replay attack. So create a new signature, with a fresh time-stamp.
-</p></li>
-<li>
-<p>
-Reset HEAD to before the release (e.g. "git reset --hard v0.1^") and delete the tag
-itself (e.g. "git tag -d v0.1"). Delete the remote tag at the server (e.g.
-"git push origin :v0.1 master"). Like 0launch, if anyone saw the release in Git, their
-Git will refuse to go back to an older version. Tell them to use '-f'.
-</p>
-</li>
-<li>
-Delete the tarball from your server.
-</li>
-</ol>
+1.  Edit the master feed (e.g. with `0publish-gui`) and delete the new `<implementation>`. Don't just use a text editor; the signature needs updating too! Push the new version to your server.
+    
+    Note: if you keep your feed under version control then you could revert the change. However, if anyone got the new version before you reverted it, then `0launch` will refuse to go back to the previous version, assuming that this is a replay attack. So create a new signature, with a fresh time-stamp.
+    
+2.  Reset `HEAD` to before the release (e.g. `git reset --hard v0.1^`) and delete the tag itself (e.g. `git tag -d v0.1`). Delete the remote tag at the server (e.g. `git push origin :v0.1 master`). Like `0launch`, if anyone saw the release in Git, their Git will refuse to go back to an older version. Tell them to use `-f`.
+    
+3.  Delete the tarball from your server.
 
-<h2>Uploading to SourceForge.net</h2>
+## Uploading to SourceForge.net
 
-<p>
-  To upload to SourceForge's File Release System, you need the project name, user name, program name and release version number.
-  I use a <a href='/scripts/0release-upload-archive-sf'>script to upload archives to SourceForge</a>. To use it:
-</p>
+To upload to SourceForge's File Release System, you need the project name, user name, program name and release version number. I use a [script to upload archives to SourceForge](http://0install.net/scripts/0release-upload-archive-sf). To use it:
 
-<ol>
-  <li>Put the script in your $PATH as <b>0release-upload-archive-sf</b>.</li>
-  <li>Edit it to contain your sf.net username, not mine (the line <b>user = 'tal197'</b>)</li>
-  <li>In your <b>make-release</b> script, use these settings:<pre-scrolled>
-PROJECT=<b>zero-install</b>
-PROGRAM=<b>0release</b>
-ARCHIVE_DIR_PUBLIC_URL="http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/"'$RELEASE_VERSION'
-ARCHIVE_UPLOAD_COMMAND="0release-upload-archive-sf $PROJECT $PROGRAM "'"$@"'
-</pre-scrolled>
-The tricky quoting is because $PROJECT and $PROGRAM expand when the script is read, but $RELEASE_VERSION and "$@"
-expand when the command is later executed.
-  </li>
-  <li>Replace <b>zero-install</b> with the name of your project and <b>0release</b> with the name of your program.</li>
-</ol>
+1.  Put the script in your `$PATH` as `0release-upload-archive-sf`.
+2.  Edit it to contain your sf.net username, not mine (the line `user = 'tal197'`)
+3.  In your `make-release` script, use these settings:  
+    `PROJECT=zero-install`  
+    `PROGRAM=0release`  
+    `ARCHIVE_DIR_PUBLIC_URL="http://downloads.sourceforge.net/project/$PROJECT/$PROGRAM/"'$RELEASE_VERSION'`  
+    `ARCHIVE_UPLOAD_COMMAND="0release-upload-archive-sf $PROJECT $PROGRAM "'"$@"'`  
+    The tricky quoting is because `$PROJECT` and `$PROGRAM` expand when the script is read, but `$RELEASE_VERSION` and `$@` expand when the command is later executed.
+4.  Replace `zero-install` with the name of your project and `0release` with the name of your program.
 
-<p>
-  These instructions are correct for sf.net as of 2009-08-15.
-</p>
+These instructions are correct for sf.net as of 2009-08-15.
 
-<h2>Do I need to keep the releases directory?</h2>
+## Do I need to keep the releases directory?
 
-<p>
-  It's best to keep the releases directory:
-</p>
+It's best to keep the releases directory:
 
-<ul>
-  <li>You want to keep the make-release script so you don't have to write
-it again each time.</li>
+- You want to keep the make-release script so you don't have to write it again each time.
+- You need the master feed so that 0release can add new versions to it, rather than creating a new feed each time. However, you can get the latest version of the feed from the cache (or directly from the web) if you lose the local copy.
+- Keeping the previous archive allows diffing against it as an extra check when making a new release.
 
-<li>You need the master feed so that 0release can add new versions to it, rather than creating a new feed each time. However, you can get the latest version of the feed from the cache (or directly from the web) if you lose the local copy.
-</li>
-
-<li>Keeping the previous archive allows diffing against it as an extra check when making a new release.</li>
-</ul>
-
-<p>
 So, there's nothing too critical in the directory, but it's easiest to keep everything.
-</p>
 
-<p>
 TODO: 0release should compare the local copy of the feed with the one on the web and warn if the local one is missing or out of sync. This would also be useful for allowing several people to publish new releases for a single feed easily.
-</p>
 
-<p>
 TODO: 0release should also be able to diff against the previous version using the cache (downloading the archive if missing), rather than relying on the previous archive being in the releases directory.
-</p>
-
-</html>

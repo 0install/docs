@@ -1,66 +1,35 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0compile  
+**Maintainer:** Thomas Leonard  
+**License:** GNU Lesser General Public License  
+**Source:** [Git repository](https://github.com/0install/0compile)  
+**Zero Install feed:** [http://0install.net/2006/interfaces/0compile.xml](http://0install.net/2006/interfaces/0compile.xml)
 
-<program name='0compile'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2006/interfaces/0compile.xml'
-	 git='https://github.com/0install/0compile.git'
-	 license='GNU Lesser General Public License'>
+Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile a new binary from a source package. This is useful if:
 
-<p>
-Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile
-a new binary from a source package. This is useful if:
-</p>
+- no binary is available for your platform;
+- you wish to build using different library versions; or
+- you wish to make changes to a program or library.
 
-<ul>
- <li>no binary is available for your platform;</li>
- <li>you wish to build using different library versions; or</li>
- <li>you wish to make changes to a program or library.</li>
-</ul>
+This tutorial shows how to use `0compile` for these purposes. It is assumed that you have already installed [Zero Install](http://0install.net/injector.html) and know how to run programs using it. To get `0compile` itself, use:
 
-</program>
+```shell
+$ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml
+```
 
-<p>
-This tutorial shows how to use <b>0compile</b> for these purposes. It is
-assumed that you have already installed <a href='injector.html'>the Zero
-Install injector</a> (0launch) and know how to run programs using it. To
-get <b>0compile</b> itself, use:
-</p>
+Note: this page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the injector. The graphical interface provides similar options, but is slightly more limited. Here are [some screenshots](http://rox.sourceforge.net/desktop/node/360).
 
-<pre>
-$ <b>0install add 0compile http://0install.net/2006/interfaces/0compile.xml</b>
-</pre>
+**Contents:**
 
-<p>
-Note: this page describes the command-line interface to <b>0compile</b>. There
-is also a graphical interface, which is used when you click on the <b>Compile</b>
-button in the injector. The graphical interface provides similar options, but is
-slightly more limited. Here are
-<a href='http://rox.sourceforge.net/desktop/node/360'>some screenshots</a>.
-</p>
+[TOC]
 
-<h2>Contents</h2>
+# Autocompile
 
-<toc level='h2'/>
+If you just want to compile some existing source code (without changing it), then the `autocompile` sub-command does the job. Given the URI of a program, it will download and compile the source in a temporary directory, add the resulting binary to the Zero Install cache, and register the new binary with `0launch`. If the source depends on other programs, it will also download and compile them in the same way if no binary is currently available for the preferred version.
 
-<h2>Autocompile</h2>
+For example (GNU-Hello is a simple test program which depends only on `make`):
 
-<p>
-  If you just want to compile some existing source code (without changing it),
-  then the <b>autocompile</b> sub-command does the job. Given the URI of a
-  program, it will download and compile the source in a temporary directory,
-  add the resulting binary to the Zero Install cache, and register the new
-  binary with 0launch. If the source depends on other programs, it will also
-  download and compile them in the same way if no binary is currently available
-  for the preferred version.
-</p>
-
-<p>
-  For example (GNU-Hello is a simple test program which depends only on "make"):
-</p>
-
-<pre>
-$ <b>0compile autocompile http://0install.net/tests/GNU-Hello.xml</b>
+```shell
+$ 0compile autocompile http://0install.net/tests/GNU-Hello.xml
 ================= http://0install.net/tests/GNU-Hello.xml ==================
 
 Selecting versions for GNU Hello...
@@ -75,343 +44,204 @@ No dependencies need compiling... compile GNU Hello itself...
 Waiting for selected implementations to be downloaded...
 
 ...
-</pre>
+```
 
-<p>
-  Note that GNU-Hello does not get the C-compiler through Zero Install, so you
-  will need that already (hint: <b>apt-get install build-essential</b>). Once
-  compiled, you can run it like this:
-</p>
+Note that GNU-Hello does not get the C-compiler through Zero Install, so you will need that already (hint: `apt-get install build-essential`). Once compiled, you can run it like this:
 
-<pre>
-  $ <b>0launch http://0install.net/tests/GNU-Hello.xml</b>
-  Hello, world!
-</pre>
+```shell
+$ 0launch http://0install.net/tests/GNU-Hello.xml
+Hello, world!
+```
 
-<p>
-  You can also use <b>autocompile --gui</b> for a graphical version. This makes
-  it easier to see the overall progress, because the verbose build output is
-  shown separately in the lower pane:
-</p>
+You can also use `autocompile --gui` for a graphical version. This makes it easier to see the overall progress, because the verbose build output is shown separately in the lower pane:
 
-<p style='text-align: center; clear: both'>
-  <img width="660" height="314" src="screens/0compile-autocompile.png" alt='0compile autocompile --gui'/>
-</p>
+![0compile autocompile --gui](../img/screens/0compile-autocompile.png)
 
-<h2>Manual compilation</h2>
+# Manual compilation
 
-<p>
-  If you want to modify the source before building, keep the object files
-  around for rebuilding, or choose the versions used, you'll want to use the
-  manual commands, described in the following sections.
-</p>
+If you want to modify the source before building, keep the object files around for rebuilding, or choose the versions used, you'll want to use the manual commands, described in the following sections.
 
-<h3>Creating the build environment</h3>
+## Creating the build environment
 
-<p>
-To get started, run <b>0compile setup</b> with the URL of the program you want
-to build. In this example, we'll use <a
-href='http://www.gnu.org/software/hello/'>GNU-Hello</a>, a simple program
-written by the FSF to demonstrate use of the popular GNU build tools:
-</p>
+To get started, run `0compile setup` with the URL of the program you want to build. In this example, we'll use [GNU-Hello](http://www.gnu.org/software/hello/), a simple program written by the FSF to demonstrate use of the popular GNU build tools:
 
-<pre>
-$ <b>0compile setup http://0install.net/tests/GNU-Hello.xml GNU-Hello</b>
+```shell
+$ 0compile setup http://0install.net/tests/GNU-Hello.xml GNU-Hello
 Created directory GNU-Hello
-</pre>
+```
 
-<p>
-<b>0compile</b> will run <b>0install select --source</b> to select a
-suitable version of the source code and download it. It will also locate and
-download any dependencies (e.g. build tools or header files) the source may
-have. It will download the <b>make</b> utility in this case, or use your distribution's
-package.</p>
+`0compile` will run `0install select --source` to select a suitable version of the source code and download it. It will also locate and download any dependencies (e.g. build tools or header files) the source may have. It will download the `make` utility in this case, or use your distribution's package.
 
-<p>
-The final argument names a directory for the build environment. If omitted, it defaults
-to the last component of the URI, without the ".xml" extension (so we could
-have just left it off in this case). <b>0compile</b> will create this directory
-in the current directory.
-</p>
+The final argument names a directory for the build environment. If omitted, it defaults to the last component of the URI, without the `.xml` extension (so we could have just left it off in this case). `0compile` will create this directory in the current directory.
 
-<p>
-All further <b>0compile</b> commands are run from inside this new directory,
-which is currently empty except for a <b>0compile.properties</b> file recording
-the URI of the program. If you want to change the selected version(s) later, do:
-</p>
+All further `0compile` commands are run from inside this new directory, which is currently empty except for a `0compile.properties` file recording the URI of the program. If you want to change the selected version(s) later, do:
 
-<pre>
-$ <b>cd GNU-Hello</b>
-$ <b>0compile setup</b>
-</pre>
+```shell
+$ cd GNU-Hello
+$ 0compile setup
+```
 
-<h3>Building</h3>
+## Building
 
-<p>
-To compile the program, use the <b>build</b> command (from inside the <b>GNU-Hello</b> directory):
-</p>
+To compile the program, use the `build` command (from inside the `GNU-Hello` directory):
 
-<pre>
-$ <b>0compile build</b>
+```shell
+$ 0compile build
 TMPDIR=/tmp/0compile-T5GJBj
 BUILDDIR=/home/me/GNU-Hello/build
 DISTDIR=/home/me/GNU-Hello/gnu-hello-linux-x86_64-1.3
 SRCDIR=/home/me/.cache/0install.net/implementations/...
 cd /tmp/GNU-Hello/build
-Executing: "$SRCDIR/configure" --prefix="$DISTDIR" &amp;&amp; make install
+Executing: "$SRCDIR/configure" --prefix="$DISTDIR" && make install
 ...
-</pre>
+```
 
-<p>
-Note: GNU-Hello does not use Zero Install to get the C compiler (<b>gcc</b>) or the standard library
-header files (<b>libc-dev</b>), so you should install these yourself. They come with most distributions.
-</p>
+Note: GNU-Hello does not use Zero Install to get the C compiler (`gcc`) or the standard library header files (`libc-dev`), so you should install these yourself. They come with most distributions.
 
-<p>
-<b>0compile</b> starts by creating two sub-directories: <b>gnu-hello-linux-x86_64</b> for the
-final result (the exact name will depend on your system) and <b>build</b> for
-any temporary files. It then executes a command specified in the source feed,
-which actually builds the software (using the standard GNU build system in this
-case).
-</p>
+`0compile` starts by creating two sub-directories: `gnu-hello-linux-x86_64` for the final result (the exact name will depend on your system) and `build` for any temporary files. It then executes a command specified in the source feed, which actually builds the software (using the standard GNU build system in this case).
 
-<p>
-Note that the command installs to the
-<b>gnu-hello-linux-x86_64</b> directory rather than to the usual <b>/usr/local</b>.
-</p>
+Note that the command installs to the `gnu-hello-linux-x86_64` directory rather than to the usual `/usr/local`.
 
-<p>
-Assuming the build is successful, <b>gnu-hello-linux-x86_64</b> will contain the final result,
-including a handy <b>gnu-hello-linux-x86_64/0install/feed.xml</b> local feed file, which you can use to
-run the new binary (note: this used to be <b>gnu-hello-linux-x86_64/0install/GNU-Hello.xml</b> on older versions of 0compile):
-</p>
+Assuming the build is successful, `gnu-hello-linux-x86_64` will contain the final result, including a handy `gnu-hello-linux-x86_64/0install/feed.xml` local feed file, which you can use to run the new binary (note: this used to be `gnu-hello-linux-x86_64/0install/GNU-Hello.xml` on older versions of 0compile):
 
-<pre>
-$ <b>0launch gnu-hello-linux-x86_64/0install/feed.xml</b>
+```shell
+$ 0launch gnu-hello-linux-x86_64/0install/feed.xml
 Hello, world!
-</pre>
+```
 
-<p>
-In fact, since <b>GNU-Hello</b> doesn't list any run-time dependencies, we could have just run
-the <b>gnu-hello-linux-x86_64/bin/hello</b> binary directly in this case. For more complex programs,
-the feed file will be useful. You can also pass it to <b>0install add-feed</b>
-to register the new binary under the program's normal URI:
-</p>
+In fact, since `GNU-Hello` doesn't list any run-time dependencies, we could have just run the `gnu-hello-linux-x86_64/bin/hello` binary directly in this case. For more complex programs, the feed file will be useful. You can also pass it to `0install add-feed` to register the new binary under the program's normal URI:
 
-<pre>
-$ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
+```shell
+$ 0launch -c http://0install.net/tests/GNU-Hello.xml
 Interface 'http://0install.net/tests/GNU-Hello.xml' has no usable implementations
 
-$ <b>0install add-feed gnu-hello-linux-x86_64/0install/feed.xml</b>
+$ 0install add-feed gnu-hello-linux-x86_64/0install/feed.xml
 1) Add as feed for 'http://0install.net/tests/GNU-Hello.xml'
 
-$ <b>0launch -c http://0install.net/tests/GNU-Hello.xml</b>
+$ 0launch -c http://0install.net/tests/GNU-Hello.xml
 Hello, world!
-</pre>
+```
 
-<p>
-If everything worked, you can now delete the <b>build</b> directory to save
-space. However, if you're planning to modify the source and rebuild (described
-in the next section) then you'll want to leave it there, as it will make
-rebuilding faster.
-</p>
+If everything worked, you can now delete the `build` directory to save space. However, if you're planning to modify the source and rebuild (described in the next section) then you'll want to leave it there, as it will make rebuilding faster.
 
-<p>
-For future reference, there is also a <b>gnu-hello-linux-x86_64/0install/build-environment.xml</b> file.
-This is a selections file, as produced by <b>0install select --source --xml</b>, but with a few extra
-details of the build added, including the hostname of the machine used for the
-build, a timestamp and your username. You can use this to rebuild later with the same
-environment (e.g. using this exact version of "make"). The file is written before the build
-starts, so the build process may add to it.
-</p>
+For future reference, there is also a `gnu-hello-linux-x86_64/0install/build-environment.xml` file. This is a selections file, as produced by `0install select --source --xml`, but with a few extra details of the build added, including the hostname of the machine used for the build, a timestamp and your username. You can use this to rebuild later with the same environment (e.g. using this exact version of `make`). The file is written before the build starts, so the build process may add to it.
 
-<h3>Modifying the source</h3>
+## Modifying the source
 
-<p>
-By default, <b>0compile</b> keeps the source code in the (read-only) Zero Install cache, so if you
-want to make changes, the first step is to make a copy of it:
-</p>
+By default, `0compile` keeps the source code in the (read-only) Zero Install cache, so if you want to make changes, the first step is to make a copy of it:
 
-<pre>
-$ <b>0compile copy-src</b>
+```shell
+$ 0compile copy-src
 Copied as '/home/me/GNU-Hello/src'
-</pre>
+```
 
-<p>
-Edit the source as needed with the text editor of your choice. For example, we can change the
-message (here we're using <a href='http://www.gnu.org/fun/jokes/ed.msg.html'>ed, the standard text editor</a>):
-</p>
+Edit the source as needed with the text editor of your choice. For example, we can change the message (here we're using [ed, the standard text editor](http://www.gnu.org/fun/jokes/ed.msg.html)):
 
-<pre>
-$ <b>ed src/hello.c</b>
+```shell
+$ ed src/hello.c
 5207
-<b>%s/Hello, world!/Goodbye, world!/
-wq</b>
+%s/Hello, world!/Goodbye, world!/
+wq
 5209
-</pre>
 
-<p>Recompile with <b>0compile build</b> as before:</p>
+Recompile with `0compile build` as before:
 
-<pre>
-$ <b>0compile build</b>
-$ <b>0launch gnu-hello-linux-x86_64/0install/feed.xml</b>
+```shell
+$ 0compile build
+$ 0launch gnu-hello-linux-x86_64/0install/feed.xml
 Goodbye, world!
-</pre>
+```
 
-<p>
-If you compare the new <b>gnu-hello-linux-x86_64/0install</b> directory with the old one, you'll discover a couple of differences:
-</p>
+If you compare the new `gnu-hello-linux-x86_64/0install` directory with the old one, you'll discover a couple of differences:
 
-<ul>
- <li>A new file is present, <b>gnu-hello-linux-x86_64/0install/from-1.3.patch</b>, containing a diff between the original sources and
- your modified ones (to display this without rebuilding, use <b>0compile diff</b>).</li>
- <li>The version number in the local feed has <b>-1</b> appended, to indicate that this version has been modified.</li>
-</ul>
+- A new file is present, `gnu-hello-linux-x86_64/0install/from-1.3.patch`, containing a diff between the original sources and your modified ones (to display this without rebuilding, use `0compile diff`).
+- The version number in the local feed has `-1` appended, to indicate that this version has been modified.
 
-<p>
-These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if
-you are making larger changes to the code then you will want to use a proper version control system (such as
-<a href='http://git.or.cz/'>Git</a>).
-</p>
+These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if you are making larger changes to the code then you will want to use a proper version control system (such as [Git](http://git.or.cz/)).
 
-<h3>Publishing the binary</h3>
+## Publishing the binary
 
-<p>
-To share our new binary with other people, we just need to archive up the
-<b>gnu-hello-linux-x86_64</b> directory and upload it to an FTP or HTTP server somewhere.
-Pass the URL of the remote directory to <b>0compile</b> and upload the
-resulting binary (note: the version will be 1.3-1 if you modified the source):
-</p>
+To share our new binary with other people, we just need to archive up the `gnu-hello-linux-x86_64` directory and upload it to an FTP or HTTP server somewhere. Pass the URL of the remote directory to `0compile` and upload the resulting binary (note: the version will be 1.3-1 if you modified the source):
 
-<pre>
-$ <b>0compile publish http://mysite/downloads</b>
+```shell
+$ 0compile publish http://mysite/downloads
 Now upload 'gnu-hello-linux-x86_64-1.3.tar.bz2' as:
 http://mysite/downloads/gnu-hello-linux-x86_64-1.3.tar.bz2
-$ <b>scp gnu-hello-linux-x86_64-1.3.tar.bz2 mysite:/var/www/downloads/</b>
-</pre>
+$ scp gnu-hello-linux-x86_64-1.3.tar.bz2 mysite:/var/www/downloads/
+```
 
-<p>
-As well as the <b>.tar.bz2</b> file, you will also get a
-<b>GNU-Hello-1.3.xml</b> file in the main <b>GNU-Hello</b> directory.
-You can use this new XML file to download the archive and run the program:</p>
+As well as the `.tar.bz2` file, you will also get a `GNU-Hello-1.3.xml` file in the main `GNU-Hello` directory. You can use this new XML file to download the archive and run the program:
 
-<pre>
-$ <b>0launch GNU-Hello-1.3.xml</b>
-</pre>
+```shell
+$ 0launch GNU-Hello-1.3.xml
+```
 
-<p>
-You can either ask the maintainer of the program to add the implementation in this file to the
-master feed, or you can create your own feed (and ask them to add that).
-See the <a href='0publish.html'>0publish page</a> for full details, but as a quick summary
-you can create a new signed feed like this:
-</p>
+You can either ask the maintainer of the program to add the implementation in this file to the master feed, or you can create your own feed (and ask them to add that). See the [0publish page](0publish.md) for full details, but as a quick summary you can create a new signed feed like this:
 
-<pre>
-$ <b>0publish .../GNU-Hello.xml \
+```shell
+$ 0publish .../GNU-Hello.xml \
   --xmlsign \
   --set-interface-uri=http://mysite/interfaces/GNU-Hello.xml \
-  --local=GNU-Hello-1.3.xml</b>
-</pre>
+  --local=GNU-Hello-1.3.xml
+```
 
-<p>
-Then upload the signed <b>.../GNU-Hello.xml</b> file and the exported GPG key to your webserver.
-</p>
+Then upload the signed `.../GNU-Hello.xml` file and the exported GPG key to your webserver.
 
-<h3>Bundling dependencies</h3>
+## Bundling dependencies
 
-<p>
-  You might want to build on a machine without network access, or to archive
-  everything needed to build a particular program. To do that, use this
-  command:
-</p>
+You might want to build on a machine without network access, or to archive everything needed to build a particular program. To do that, use this command:
 
-<p>
-  $ <b>0compile include-deps</b>
-</p>
+```shell
+$ 0compile include-deps
+```
 
-<p>
-  The source code and all dependencies will be copied into a new <b>dependencies</b> sub-directory. When building,
-  this directory is added to 0launch's implementation cache search path (using <b>0launch --with-store</b>).
-</p>
+The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../details/cache.md) search path (using `0launch --with-store`).
 
-<h2>Legacy helper features</h2>
+# Legacy helper features
 
-<p>
-  0compile has some special code to detect and handle some common cases in legacy code:
-</p>
+0compile has some special code to detect and handle some common cases in legacy code:
 
-<dl>
-  <dt>Generated pkgconfig files with absolute paths</dt>
-  <dd><p>If $DISTDIR ends up containing a directory called 'pkgconfig', it checks each .pc
-      file inside for an absolute prefix. If found, it is changed to a relative path.</p>
-    <p>Note: for "pure" Zero Install libraries, just use a relative path (e.g. <b>prefix=${pcfiledir}/..</b>) in
-      the .pc file in the source, and copy it unchanged to $DISTDIR.</p>
-  </dd>
+Generated `pkgconfig` files with absolute paths
 
-  <dt>Build dependencies containing /usr/lib/lib*.so broken symlinks</dt>
-  <dd>
-    <p>
-    RPM unpacks all packages over the root, so one package can have a symlink to a
-    file provided by a different package. This is often used to set the default
-    version of a library in RPM packages. e.g.
-    </p><ul>
-      <li>-devel package: libSDL.so -> libSDL-1.2.so.0.11.2 (broken link)</li>
-      <li>runtime package: provides libSDL-1.2.so.0.11.2</li>
-    </ul><p>
-    Since Zero Install keeps every package in its own directory, this doesn't work.
-    Therefore, 0compile searches for such broken links, searches for a matching target, and creates
-    a fixed link in a temporary directory, added to LD_LIBRARY_PATH. This makes it easy to depend
-    on unmodified -devel packages which were designed for non-Zero Install systems.
-    </p>
-    <p>
-      Note: a "pure" Zero Install library wouldn't need to include the version number in
-      the library filename, so no symlink would be needed. If you did want to include the
-      number in the filename, the symlink to it would go in the runtime package, not the
-      -devel package.
-    </p>
-  </dd>
+If `$DISTDIR` ends up containing a directory called `pkgconfig`, it checks each `.pc` file inside for an absolute prefix. If found, it is changed to a relative path.
 
-  <dt>Build dependencies with lib64 directories</dt>
-  <dd><p>
-    If the feed tries to add a directory under 'lib' or 'usr/lib' to
-    $PKG_CONFIG_PATH, and the directory doesn't exist, 0compile uses the corresponding
-    'lib64' directory instead, if present. This is for existing RPMs which use a
-    different directory structure for different architectures.
-  </p></dd>
+Note: for "pure" Zero Install libraries, just use a relative path (e.g. `prefix=${pcfiledir}/..`) in the `.pc` file in the source, and copy it unchanged to `$DISTDIR`.
 
-  <dt>Libtool archive (.la) files</dt>
-  <dd><p>
-    0compile searches for <b>lib/*.la</b> files in $DISTDIR and automatically deletes them for you
-    (there is a safely check that it really is a libtool file first). These files were only needed
-    on very old systems that don't support dynamic linking. These days they just cause trouble by
-    using absolute paths which were only valid during the build.
-  </p></dd>
-</dl>
+Build dependencies containing `/usr/lib/lib*.so` broken symlinks
 
-<h2>Recreating a build environment</h2>
+RPM unpacks all packages over the root, so one package can have a symlink to a file provided by a different package. This is often used to set the default version of a library in RPM packages. e.g.
 
-<p>
-  If you want to rebuild a binary package, see if it includes the <b>0install/build-environment.xml</b> file that 0compile generates automatically. If so, you can re-create the build like this:
-</p>
+- `-devel` package: `libSDL.so` -> `libSDL-1.2.so.0.11.2` (broken link)
+- runtime package: provides `libSDL-1.2.so.0.11.2`
 
-<pre>
-  $ <b>0compile setup .../someprog-binary/0install/build-environment.xml some-prog</b>
-  $ <b>cd some-prog</b>
-  $ <b>0compile build</b>
-</pre>
+Since Zero Install keeps every package in its own directory, this doesn't work. Therefore, 0compile searches for such broken links, searches for a matching target, and creates a fixed link in a temporary directory, added to `LD_LIBRARY_PATH`. This makes it easy to depend on unmodified `-devel` packages which were designed for non-Zero Install systems.
 
-<p>
-  For example, in the GNU-Hello case this would allow you to build using the same source code and the exact same version of "make" used in the original compile.
-</p>
+Note: a "pure" Zero Install library wouldn't need to include the version number in the library filename, so no symlink would be needed. If you did want to include the number in the filename, the symlink to it would go in the runtime package, not the `-dev`el package.
 
-<h2>Making source available</h2>
+Build dependencies with lib64 directories
 
-<p>If you want to publish source code so that other people can compile it using 0compile,
-  see <a href='0compile-dev.html'>0compile: Developers</a>.</p>
+If the feed tries to add a directory under `lib` or `usr/lib` to `$PKG_CONFIG_PATH`, and the directory doesn't exist, 0compile uses the corresponding `lib64` directory instead, if present. This is for existing RPMs which use a different directory structure for different architectures.
 
-<h2>Building in a clean chroot</h2>
+Libtool archive (.la) files
 
-<p>If you want to build the source package in a clean "chroot" sandbox environment,
-  see <a href='0compile-chroot.html'>0compile: Chroot Build</a>.</p>
+0compile searches for `lib/*.la` files in `$DISTDIR` and automatically deletes them for you (there is a safely check that it really is a `libtool` file first). These files were only needed on very old systems that don't support dynamic linking. These days they just cause trouble by using absolute paths which were only valid during the build.
 
-</html>
+# Recreating a build environment
+
+If you want to rebuild a binary package, see if it includes the `0install/build-environment.xml` file that 0compile generates automatically. If so, you can re-create the build like this:
+
+```shell
+$ 0compile setup .../someprog-binary/0install/build-environment.xml some-prog
+$ cd some-prog
+$ 0compile build
+```
+
+For example, in the GNU-Hello case this would allow you to build using the same source code and the exact same version of `make` used in the original compile.
+
+# Making source available
+
+If you want to publish source code so that other people can compile it using 0compile, see [0compile: Developers](0compile/developers.md).
+
+# Building in a clean chroot
+
+If you want to build the source package in a clean `chroot` sandbox environment, see [0compile: Chroot Build](0compile/chroot-build.md).

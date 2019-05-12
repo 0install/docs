@@ -1,102 +1,45 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html>
+Shortcuts provide an easy way to run a program without entering the full URI, just like a bookmark in a web-browser provides an easy way to return to a web page without entering the full URL.
 
-<h2>Making shortcuts</h2>
+Different environments provide different ways to add shortcuts:
 
-<p>
-  Shortcuts provide an easy way to run a program without entering the full URI,
-  just like a bookmark in a web-browser provides an easy way to return to a web
-  page without entering the full URL. 
-</p>
+[TOC]
 
-<p>
-Different environments provide different ways to add shortcuts.
-</p>
+# GNOME
 
-<toc level="h3"/>
+Choose **Zero Install -> Add New Program** from the **Applications** menu. Type in the URI, or drag it from the web-browser into the dialog box.
 
+![Adding with GNOME](../img/tutorial/add-with-gnome.png)
 
-<h3>GNOME</h3>
+**Ubuntu users**: You need to open and then close the menu editor after adding a program before it will show up; see [Ubuntu bug #191958](https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958). You can also run programs directly by choosing **Manage Programs** from the menu.
 
-<p>
-  Choose <b>Zero Install -> Add New Program</b> from the <b>Applications</b>
-  menu.  Type in the URI, or drag it from the web-browser into the dialog box.
-</p>
+# KDE
 
-<p style='text-align: center'>
-  <img width="335" height="259" src="tutorial/add-with-gnome.png" alt='Adding with GNOME'/>
-</p>
+Choose **Add Zero Install Program** from the **Utilities** menu. Type in the URI, or drag it from the web-browser into the dialog box.
 
-<p>
-  <b>Ubuntu users</b>: You need to open and then close the menu editor after
-  adding a program before it will show up; see 
-  <a href='https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958'>Ubuntu
-  bug #191958</a>. You can also run programs directly by choosing <b>Manage
-  Programs</b> from the menu.
-</p>
+![Adding with KDE](../img/tutorial/add-with-kde.png)
 
+# ROX
 
-<h3>KDE</h3>
+Drag the link from your web-browser to the AddApp program, then drag the launcher from there to wherever you want it. [AddApp](http://rox.sourceforge.net/desktop/AddApp)'s page has more details.
 
-<p>
-  Choose <b>Add Zero Install Program</b> from the <b>Utilities</b> menu. Type
-  in the URI, or drag it from the web-browser into the dialog box.
-</p>
+![Adding with ROX](../img/tutorial/add-with-rox.png)
 
-<p style='text-align: center'>
-  <img width="318" height="165" src="tutorial/add-with-kde.png" alt='Adding with KDE'/>
-</p>
+# Finder
 
+Copy the link from your web-browser to the AddApp program, then save the launcher from there to wherever you want it.
 
-<h3>ROX</h3>
+![Adding with Finder](../img/tutorial/add-with-finder.png)
 
-<p>
-  Drag the link from your web-browser to the AddApp program, then drag the
-  launcher from there to wherever you want it. 
-  <a href='http://rox.sourceforge.net/desktop/AddApp'>AddApp</a>'s page has
-  more details.
-</p>
+# Shell
 
-<p style='text-align: center'>
-  <img width="546" height="184" src="tutorial/add-with-rox.png" alt='Adding with ROX'/>
-</p>
+The `0install add` command can be used to create little shell scripts to start programs easily:
 
+```shell
+$ 0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit
+```
 
-<h3>Finder</h3>
+The command puts the script in the first writable directory in your `$PATH`. You can now run Edit like this:
 
-<p>
-  Copy the link from your web-browser to the AddApp program, then save the
-  launcher from there to wherever you want it.
-</p>
-
-<p style='text-align: center'>
-  <img width="591" height="200" src="tutorial/add-with-finder.png" alt='Adding with Finder'/>
-</p>
-
-
-<h3>Shell</h3>
-
-<p>
-  The <b>0install add</b> command can be used to create little shell scripts to start
-  programs easily:
-</p>
-
-<pre>
-$ <b>0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit</b>
-</pre>
-
-<p>
-  The command puts the script in the first writable directory in your $PATH.
-  You can now run Edit like this:
-</p>
-
-<pre>
-$ <b>rox-edit</b>
-</pre>
-
-<quicklinks>
-  <link href='user-guide-first-launch.html' img='tango/go-prev.png'>Go back</link>
-  <link href='user-guide-apps.html' img='tango/go-next.png'>Continue</link>
-</quicklinks>
- 
-</html>
+```shell
+$ rox-edit
+```

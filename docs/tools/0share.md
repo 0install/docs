@@ -1,113 +1,78 @@
-<?xml version='1.0' encoding='utf-8'?>
-<html lang="en">
+**Name:** 0share  
+**Maintainer:** Thomas Leonard  
+**License:** GNU General Public License  
+**Source:** [Git repository](http://repo.or.cz/w/0share.git)  
+**Zero Install feed:** [http://0install.net/2008/interfaces/0share.xml](http://0install.net/2008/interfaces/0share.xml)
 
-<program name='0share'
-	 author='Thomas Leonard'
-	 feed='http://0install.net/2008/interfaces/0share.xml'
-	 git='http://repo.or.cz/w/0share.git'
-	 license='GNU General Public License'>
+**0share** provides for local peer-to-peer distribution of Zero Install implementations (versions of programs). This means that once one machine on your local network has downloaded something, other machines can get it directly from the first one.
 
-<p>
-0share provides for local peer-to-peer distribution of Zero Install implementations (versions of programs).
-This means that once one machine on your local network has downloaded something, other machines can get
-it directly from the first one.
-</p>
-</program>
+**This program is an experimental proof-of-concept.** It currently requires a modified version of 0install, which can be found in the [peer2peer](https://github.com/0install/0install/tree/peer2peer) branch. This branch is now very out-of-date. If you'd like to take over this project, please [get in touch](http://0install.net/support.html)!
 
-<div class='note'>
-  <strong>This program is an experimental proof-of-concept.</strong> It currently requires a modified version of 0install, which can be found in the <a href='https://github.com/0install/0install/tree/peer2peer'>peer2peer</a> branch. This branch is now very out-of-date. If you'd like to take over this project, please <a href='support.html'>get in touch</a>!
-</div>
+![Screenshot](../img/screens/p2p.png)
 
-<p class='diagram'>
-  <img src='screens/p2p.png' width='722' height='329' alt='Screenshot'/>
-</p>
+# Testing
 
-<h2>Testing</h2>
-
-<p>
 To try it out, run this command on one machine:
-</p>
 
-<pre-scrolled>machine1 $ <b>0launch http://0install.net/2008/interfaces/0share.xml</b>
+```shell
+machine1 $ 0launch http://0install.net/2008/interfaces/0share.xml
 INFO:root:0share started and listening for requests...
 INFO:root:Serving implementations from Store '/home/me/.cache/0install.net/implementations'
 INFO:root:Serving implementations from Store '/var/cache/0install.net/implementations'
-</pre-scrolled>
+```
 
-<p>
-On another machine on the same network, run this command, replacing <b>DIGEST</b> with the digest
-of a program installed on the first machine (e.g. the name of a subdirectory of
-/var/cache/0install.net/implementations/). The digest will be in the program's feed file.
-</p>
+On another machine on the same network, run this command, replacing `DIGEST` with the digest of a program installed on the first machine (e.g. the name of a subdirectory of `/var/cache/0install.net/implementations/`). The digest will be in the program's feed file.
 
-<pre-scrolled>machine2 $ <b>0launch http://0install.net/2008/interfaces/0share.xml -f DIGEST</b>
-</pre-scrolled>
+```shell
+machine2 $ 0launch http://0install.net/2008/interfaces/0share.xml -f DIGEST
+```
 
-<p>
-The second machine will broadcast a request (to UDP port 38339) to see if anyone has the
-given implementation. The first machine should respond. The second machine will then fetch it
-from the first:
-</p>
+The second machine will broadcast a request (to UDP port 38339) to see if anyone has the given implementation. The first machine should respond. The second machine will then fetch it from the first:
 
-<pre-scrolled>machine2 $ <b>./0share -f sha1new=84e37424bbb87a077e25cec87d3c668f12726817</b>
+```shell
+machine2 $ ./0share -f sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Broadcasting query for ['sha1new=84e37424bbb87a077e25cec87d3c668f12726817'] on local network...
 192.168.2.1 has sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Connecting to 192.168.2.1 to request sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Caching new implementation (digest sha1new=84e37424bbb87a077e25cec87d3c668f12726817)
-Success</pre-scrolled>
+Success
+```
 
-<p>
 The requested version should now be in machine2's cache. On the source machine, you should see something like:
-</p>
 
-<pre-scrolled>INFO:root:Request from ('192.168.2.2', 53182): '0share\nsha1new=84e37424bbb87a077e25cec87d3c668f12726817'
+```shell
+INFO:root:Request from ('192.168.2.2', 53182): '0share\nsha1new=84e37424bbb87a077e25cec87d3c668f12726817'
 INFO:root:Yes, we have sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 INFO:root:Sending reply...
 INFO:root:GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 machine2 - - [13/Dec/2008 21:52:49] "GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817 HTTP/1.1" 200 -
-</pre-scrolled>
+```
 
-<h2>Debugging</h2>
+# Debugging
 
-<p>
 If it doesn't work:
-</p>
 
-<ul>
- <li>Check that your firewall allows TCP and UDP connections to port 38339 on the first machine.</li>
- <li>Try using -H on the second machine to give the hostname of the first machine explicitly.</li>
- <li>If you get "Network is unreachable", you may be missing a default route (see "ip route").</li>
-</ul>
+- Check that your firewall allows TCP and UDP connections to port 38339 on the first machine.
+- Try using `-H` on the second machine to give the hostname of the first machine explicitly.
+- If you get "Network is unreachable", you may be missing a default route (see `ip route`).
 
-<h2>Realistic configuration</h2>
+# Realistic configuration
 
-<p>
-Before you start, you should <a href='sharing.html'>enable sharing</a> on all
-machines. This ensures that implementations all go in the single machine-wide
-shared cache (/var/cache/0install.net/implementations/).
-</p>
+Before you start, you should [enable sharing](../details/sharing.md) on all machines. This ensures that implementations all go in the single machine-wide shared cache (`/var/cache/0install.net/implementations/`).
 
-<p>
-You'll probably want to run 0share without write access anywhere (for security), so
-create a new user for that and try running it:
-</p>
+You'll probably want to run 0share without write access anywhere (for security), so create a new user for that and try running it:
 
-<pre-scrolled>$ <b>sudo adduser --system zeroshare</b>
-$ <b>sudo su zeroshare -s /usr/bin/env -- 0launch -vc http://0install.net/2008/interfaces/0share.xml</b></pre-scrolled>
+```shell
+$ sudo adduser --system zeroshare
+$ sudo su zeroshare -s /usr/bin/env -- 0launch -vc http://0install.net/2008/interfaces/0share.xml
+```
 
-<p>
 You can then add a line to your crontab file to make it start on boot:
-</p>
 
-<pre-scrolled>
-@reboot zeroshare 0launch -vc http://0install.net/2008/interfaces/0share.xml 2>&amp;1 >/dev/null
-</pre-scrolled>
+```shell
+@reboot zeroshare 0launch -vc http://0install.net/2008/interfaces/0share.xml 2>&1 >/dev/null
+```
 
-<h2>Using with 0launch</h2>
+# Using with 0launch
 
-<p>
-As this is experimental, you'll need to use the <a href='https://github.com/0install/0install/tree/peer2peer'>peer2peer branch</a> of 0install.
-In that branch, P2P support is turned on when using the GUI for downloads.
-</p>
-
-</html>
+As this is experimental, you'll need to use the [peer2peer branch](https://github.com/0install/0install/tree/peer2peer) of 0install. In that branch, P2P support is turned on when using the GUI for downloads.
