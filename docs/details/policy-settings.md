@@ -6,11 +6,7 @@ The first part shows how to set policy settings that apply to all applications o
 
 # General policy settings
 
-You can change the policy settings using the Preferences dialog. To open it:
-
-```shell
-$ 0install config
-```
+You can change the policy settings using the Preferences dialog. To open it run `0install config` (`0install-win config` on Windows).
 
 If you use the GNOME/KDE menu: choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to an application and click Preferences:
 
@@ -19,6 +15,10 @@ If you use the GNOME/KDE menu: choose **Zero Install -> Manage Applications** fr
 You can affect which versions are chosen by changing your policy. Three aspects of your policy are shown in the Preferences window: **Network use**, **Freshness** and **Help test new versions**:
 
 ![The Preferences dialog](../img/screens/preferences.png)
+
+If you use Zero Install for Windows: click on **Options** in the bottom left to get this interface:
+
+![The Configuration dialog](../img/screens/0install-win/config.png)
 
 ## Network use
 
@@ -49,13 +49,17 @@ Note that all changes to your policy are saved as soon as you make them. Clickin
 
 You can change per-application policy settings in the application information dialog. There are multiple ways to opening this dialog:
 
-1.  -   Run "0install run" with the `--gui` option and the URI of the application
+1.  -   Run "0install run" with the `--gui` (`--customize` on Windows) option and the URI of the application
         
         `$ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit`
+
+        `> 0install run --customize http://repo.roscidus.com/utils/vlc`
         
     -   Run "0install update" with a shortcut you made as first argument
         
         `$ 0install update --gui rox-edit`
+
+        `> 0install update --customize vlc`
         
     -   If you use the GNOME/KDE menu: choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to the application:
         
@@ -67,7 +71,7 @@ You can change per-application policy settings in the application information di
     
 ## Feeds
 
-In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of Edit. By default, there is just one feed, whose URL is simply Edit's URI; you can view it in a web browser if you're interested: [Edit's default feed](http://rox.sourceforge.net/2005/interfaces/Edit). This is an XML file with a GPG signature at the end. The downloaded feed files are stored locally in `~/.cache/0install.net/interfaces`.
+In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of Edit. By default, there is just one feed, whose URL is simply Edit's URI; you can view it in a web browser if you're interested: [Edit's default feed](http://rox.sourceforge.net/2005/interfaces/Edit). This is an XML file with a GPG signature at the end. The downloaded feed files are stored locally in `~/.cache/0install.net/interfaces` (see [File locations](file-locations.md)).
 
 ## Versions
 
@@ -75,9 +79,11 @@ The Versions tab shows all the versions found in all of the feeds:
 
 ![Versions of the Edit](../img/screens/edit-versions.png)
 
-You can use the **Preferred Stability** setting in the interface dialog to choose which versions to prefer. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
+![Zero Install for Windows - Versions](../img/screens/0install-win/versions.png)
 
-As you make changes to the policy and ratings, the selected implementation will change. The version shown in bold (or at the top of the list, in older versions) is the one that will actually be used. In addition to the ratings below, you can set the rating to **Preferred**. Such versions are always preferred above other versions, unless they're not cached and you are in Off-line mode.
+You can use the **Preferred Stability** setting in the interface dialog to choose which versions to prefer. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu (drop-down in the **Override** column on Windows). User-set ratings are shown in capitals.
+
+As you make changes to the policy and ratings, the selected implementation will change. The version shown in bold (or at the top of the list, in some versions) is the one that will actually be used. In addition to the ratings below, you can set the rating to **Preferred**. Such versions are always preferred above other versions, unless they're not cached and you are in Off-line mode.
 
 The following stability ratings are allowed:
 

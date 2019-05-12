@@ -30,6 +30,10 @@ Copy the link from your web-browser to the AddApp program, then save the launche
 
 ![Adding with Finder](../img/tutorial/add-with-finder.png)
 
+# Windows
+
+See [Desktop integration](windows.md) for details.
+
 # Shell
 
 The `0install add` command can be used to create little shell scripts to start programs easily:

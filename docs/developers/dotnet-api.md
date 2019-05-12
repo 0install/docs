@@ -1,6 +1,6 @@
 title: .NET API
 
-The Zero Install .NET API implements the core features of Zero Install. Zero Install for Windows is built upon this API. It also allow developers to embed Zero Install functionality in their own applications.
+The Zero Install .NET API implements the core features of Zero Install. [Zero Install for Windows](../details/windows.md) is built upon this API. It also allow developers to embed Zero Install functionality in their own applications.
 
 [TOC]
 

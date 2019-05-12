@@ -6,7 +6,7 @@ Note: this page is about sharing between users on a single computer. If you want
 
 [TOC]
 
-## How it works
+# How it works
 
 A digest is a short value calculated from a (usually much bigger) file. There are various different algorithms that can be used. For example, this command calculates the SHA1 digest of the `ls` binary:
 
@@ -26,7 +26,7 @@ First, Alice runs ROX-Filer:
 1. Alice visits [rox.sourceforge.net](http://rox.sourceforge.net) and downloads the small [ROX-Filer.xml](http://rox.sourceforge.net/2005/interfaces/ROX-Filer) feed file.
 2. She decides to run ROX-Filer version 2.5 from this file.
 3. The Zero Install software gets the digest for this version (`sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`) from the file. It also downloads the package and unpacks it.
-4. The software passes the unpacked archive to the privileged helper, which checks the digest and copies the directory to `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`.
+4. The software passes the unpacked archive to the privileged helper, which checks the digest and copies the directory to `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` on Linux or `C:\ProgramData\0install.net\implementations\sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` on Windows (see [File locations](file-locations.md)).
 5. ROX-Filer runs.
 
 Later, Bob decides to run it too. The system doesn't need to download a second copy:
@@ -34,7 +34,7 @@ Later, Bob decides to run it too. The system doesn't need to download a second c
 1. Bob visits [rox.sourceforge.net](http://rox.sourceforge.net) and downloads the small [ROX-Filer.xml](http://rox.sourceforge.net/2005/interfaces/ROX-Filer) feed file.
 2. He decides to run ROX-Filer version 2.5 from this file.
 3. The Zero Install software gets the digest for this version (`sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2`) from the file.
-4. Zero Install sees that the directory `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` already exists, so it doesn't download the software again.
+4. Zero Install sees that the directory `/var/cache/0install.net/implementations/sha1=d22a35871bad157e32aa169e3f4feaa8d902fdf2` (or `C:\ProgramData\0install.net\...`) already exists, so it doesn't download the software again.
 5. ROX-Filer runs.
 
 But what if we have a malicious user, Charlie? A new machine arrives, and Charlie decides to install a malicious version of ROX-Filer before anyone else installs a good copy:
@@ -52,7 +52,9 @@ When Alice runs ROX-Filer as before, the software sees that `/var/cache/0install
 
 You might be worried that Charlie was able to put malicious code in the shared cache. However, it doesn't matter because other users won't try to run it, since it doesn't have the name they're looking for. Of course, it might not even be malicious: a program that deletes files is malicious if it's called `cat`, but not if it's called `rm`. As long as users don't go around running random binaries they find in the cache, they're OK.
 
-## Setting up sharing
+# Setting up sharing
+
+## Linux
 
 These instructions require Zero Install version 0.30 or later.
 
@@ -102,7 +104,7 @@ ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
     
 When `launch` wants to install a package, it will invoke `0store-secure-add-helper`. This script uses `sudo` to run `0store-secure-add` as the `zeroinst` user, with a clean environment. No password is required for this.
 
-## AppArmor policy
+### AppArmor policy
 
 The following AppArmor policy can be used to confine the 0store-secure-add process somewhat. However, the process does need read access everywhere (since it could be copying from anywhere) and write access to the entire cache directory, so this doesn't restrict it much more than it already is due to running as a separate user.
 
@@ -118,6 +120,25 @@ The following AppArmor policy can be used to confine the 0store-secure-add proce
   /var/cache/0install.net/implementations/** rw,
 }
 ```
+
+## Windows
+
+On Windows the shared cache is managed by the *Zero Install Store Service*. It serves roughly the same role as `0store-secure-add` on Linux. This service ensures that no user can, intentionally or unintentionally, manipulate the contents of the shared cache. Every user can ask the service to add implementations to the shared cache on their behalf after validating the hash. This way other users only get cached implementations if they request the exact same version with the same hash.
+
+The *Zero Install Store Service* is installed automatically when Zero Install is [deployed](windows.md#bootstrapper) for all users (machine-wide). Zero Install automatically uses the service when it is available (unless in [portable mode](windows.md#portable-mode)) and falls back to the user cache if the service is unavailable.
+
+The service uses `C:\ProgramData\0install.net\implementations` (see [File locations](file-locations.md)) for storing implementations by default.
+A custom location can be specified in the file `C:\ProgramData\0install.net\injector\implementation-dirs`. When using a custom location make sure it is only writeable by `SYSTEM` and `Administrators` and readable by `Everyone`.
+
+### Technical details
+
+Zero Install communicates with the service using [named pipes](https://docs.microsoft.com/en-us/windows/desktop/ipc/named-pipes). The user process downloads an archive to a temporary directory and then passes its file path to the service with a request for extraction. The service extracts the archive, verifies the manifest digest and adds the implementation to the cache. During the entire process the service reports the progress back to the user process.
+
+Named pipes allow the service to [impersonate](https://docs.microsoft.com/en-us/windows/desktop/SecAuthZ/client-impersonation) the calling user. The archive is read and extracted using the privileges of the calling user but verified and added to the cache using the privileges of the service.
+
+The service records write access to the cache as well as any potential problems in the *Windows Event Log*.
+
+![Store Service sequence diagram](../img/diagrams/store-service.png)
 
 ## Questions
 

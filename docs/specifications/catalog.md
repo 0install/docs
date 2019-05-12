@@ -62,7 +62,7 @@ Note: A catalog generated like this points to the locations the feeds originally
 
 # Usage
 
-Catalog files are currently only used by Zero Install for Windows.
+Catalog files are currently only used by [Zero Install for Windows](../details/windows.md).
 
 You can search for feeds in catalogs like this:
 

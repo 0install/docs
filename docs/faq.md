@@ -20,7 +20,7 @@ What are "decentralised" installation systems, and why are they important?
 
 Where does it install things to?
 
-: By default, everything goes under `~/.cache/0install.net/`. If you [enable system-wide sharing](details/sharing.md), then things go under `/var/cache/0install.net/` instead.
+: By default, everything goes under `~/.cache/0install.net/`. If you [enable system-wide sharing](details/sharing.md), then things go under `/var/cache/0install.net/` instead. See [File locations](details/file-locations.md).
 
 : If you want to know where a particular program is, you can use `0install show`, e.g.
 
@@ -54,9 +54,7 @@ How do you do integration (e.g., making a Start menu show all installed software
 
 : Since there is no concept of software being 'installed' or 'not-installed', this is not required. The menu (or other launching device) simply shows applications that the user may want to run. They will be fetched on demand.
 
-: For example, the set of applications your system shows you on first install is the applications the distribution author thinks you might like. They may be already in the cache, or they may be loaded on demand (depending on the distribution's installer).
-
-: Indeed, the question is backwards. The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu (e.g. using the `0desktop` command).
+: The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu. This can be done e.g. using the `0desktop` command on Linux or the [desktop integration](basics/windows.md) feature on Windows.
 
 : The new menu entry is independent of the program data though; removing the program from the cache doesn't remove the menu item (clicking on it would simply offer to download the program again).
 
@@ -64,7 +62,7 @@ Isn't it wasteful for every program to bundle all its dependencies?
 
 : Yes, but Zero Install doesn't do that. Everything is dynamically linked, just as in a traditional Linux system: you can publish a program on your web-site that links against a library on another web-site. When updates are available for a library, they are used by all programs using that library (except for programs which are incompatible with the new library version, which will continue using the older version, without preventing other programs from upgrading).
 
-: However, see [0export](tools/0export.md) for a tool to create such all-in-one bundles for distribution on CD.
+: However, see [Export](details/export.md) for methods to create such all-in-one bundles for distribution on CD.
 
 Why was it called the "injector"?
 

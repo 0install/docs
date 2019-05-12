@@ -11,7 +11,7 @@
 - `Ports`: FreeBSD - since 0.47
 - `RPM`: RPM-based (Red Hat, Fedora, OpenSUSE, etc) - since 0.31
 - `Slack`: Slackware - since 0.48
-- `Windows`: Windows (detects native Python and Java) - in mainline since 1.5
+- `Windows`: Windows (detects native Java, .NET Framework, PowerShell and Git) - in [Windows version](windows.md)
 
 If you have already installed a package using your distribution's installer then Zero install can use that instead of downloading a second copy using Zero Install. It can also use [PackageKit](http://www.packagekit.org/) to install them, if the user is authorised.
 

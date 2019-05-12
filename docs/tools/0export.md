@@ -14,13 +14,7 @@ However, it is sometimes useful to bundle a program and its libraries together o
 
 Programs installed using `setup.sh` are added to the 0install cache and are therefore still [shared between users](../details/sharing.md), and will get updates over the web where possible.
 
-0export does not work on Windows. However Zero Install for Windows has roughly equivalent functionality built in. Running:
-
-```shell
-$ 0install export --bootstrap=run http://example.com/somefeed.xml
-```
-
-will generate a directory with archives holding all required implementations and a small bootstrapping executable for importing them and setting up Zero Install on systems that don't have it yet.
+0export does not work on Windows. However Zero Install for Windows has roughly equivalent functionality built in. See [Export](../details/export.md) for details.
 
 If the target machine has network access, and you just want to provide a launcher script, consider instead using [0bootstrap-php](https://github.com/0install/0bootstrap-php), a PHP script that creates bootstrapping EXEs or bash scripts for installing 0install and then running a feed.
 
