@@ -20,7 +20,7 @@ The `0launch`/`0install` command-line interface to Zero Install is sufficient fo
 [Python API](python-api.md)
 : Use 0install's functions in your own Python applications with a native library.
 
-[.NET API](http://0install.de/dev/api/)
+[.NET API](dotnet-api.md)
 : Use 0install's functions in your own .NET applications with a native library.
 
 [JSON API](json-api.md)

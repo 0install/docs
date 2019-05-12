@@ -1,0 +1,13 @@
+digraph {
+    commands [label="ZeroInstall.Commands"];
+    publish [label="ZeroInstall.Publish"];
+    services [label="ZeroInstall.Services"];
+    services_interfaces [label="ZeroInstall.Services.Interfaces"];
+    desktop_integration [label="ZeroInstall.DesktopIntegration"];
+    store [label="ZeroInstall.Store"];
+
+    commands -> {services desktop_integration};
+    publish -> {services desktop_integration};
+    services -> services_interfaces -> store;
+    desktop_integration -> store;
+}
