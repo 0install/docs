@@ -1,0 +1,9 @@
+site_name: Zero Install
+site_favicon: img/logo.png
+site_url: https://docs.0install.de/
+repo_url: https://github.com/0install/docs
+
+theme: readthedocs
+markdown_extensions: [def_list]
+extra_css: [style.css]
+extra_javascript: [menu.js]

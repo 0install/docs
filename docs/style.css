@@ -1,0 +1,76 @@
+.wy-side-nav-search {
+  background-image: url('img/logo.png');
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 16px 12px;
+}
+
+.wy-nav-side {
+  background: #DDEEFF;
+}
+
+.wy-menu-vertical span {
+  line-height: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+.wy-menu-vertical a {
+  font-size: 85%;
+  line-height: 12px;
+  color: #0000A5;
+}
+
+.wy-menu-vertical li.current a {
+  color: #0000A5;
+}
+
+.wy-menu-vertical li ul li a {
+  color: #0000A5;
+}
+
+.wy-menu-vertical a:hover {
+  background-color: #8888FF;
+}
+
+.wy-menu-vertical li.current a:hover {
+  background-color: #8888FF;
+}
+
+.wy-nav-side {
+  height: 100%;
+}
+
+.wy-nav-content-wrap {
+  background: white;
+}
+
+.wy-nav-content {
+  max-width: unset;
+  background: white;
+}
+
+footer {
+  font-size: 75%;
+}
+
+.rst-content dl:not(.docutils) dt {
+  color: unset;
+}
+
+.rst-versions {
+  height: 0px;
+}
+
+ul.subnav span.caption-text {
+  padding: 0.4045em 2.427em;
+}
+
+span.expandable {
+  cursor:pointer;
+  color: #0000A5;
+}
+
+span.expandable:hover {
+  background-color: #8888FF;
+}
