@@ -2,6 +2,14 @@ title: Trouble-shooting
 
 [TOC]
 
+## 0install is not running the latest version of a program
+
+Try executing the same command again but with the `--refresh` option. For example:
+
+```shel
+$ 0install run --refresh http://repo.roscidus.com/utils/vlc
+```
+
 ## 0install doesn't select any versions / the expected versions
 
 If 0install cannot find a compatible set of versions for a program, you may see an error like this:
@@ -146,6 +154,9 @@ DEBUG:0install:Staleness for <Feed http://rox.sourceforge.net/2005/interfaces/Ed
 INFO:0install:PYTHONPATH=/var/cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e/ROX-Lib2/python
 INFO:0install:Executing: [u'/usr/bin/python2.7', u'/var/cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9/Edit/AppRun']
 ```
+
+*Windows only:*  
+If you encountered an error and did not use `-v`, used the GUI or forgot to copy the console output you can still find the relevant information in log files stored in the `%TEMP%` directory. Look for files named `0install GUI USERNAME Log.txt` or `Zero Install Command WinForms GUI USERNAME Log.txt` (the specific name depends on the EXE you used to access Zero Install and your user account name).
 
 ## Download problems / proxies / HTTP errors
 
