@@ -190,7 +190,7 @@ interfere with those provided by the distribution.
         <manifest-digest sha256new="CRSJVXINXDYD5AO5OSDHZQRWWGQQ2U3UBZOLJFX37YA47E4CK52A"/>
         <archive extract="0install-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-2.14.tar.bz2" size="446409"/>
       </implementation>
-      <implementation compile:dup-src="true" id="sha1new=25e21699d7798d2e61deb08bd8b2f2c3770c3309" released="2019-04-24" version="2.14.1">
+      <implementation compile:dup-src="true" id="sha1new=25e21699d7798d2e61deb08bd8b2f2c3770c3309" released="2019-04-24" stability="stable" version="2.14.1">
         <manifest-digest sha256new="6XNUNKEYXVRUGBOL7LY65CY3BEOHT5RTLMLDHXQC6RZAPEYXFJJA"/>
         <archive extract="0install-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-2.14.1.tar.bz2" size="446211"/>
       </implementation>
@@ -488,11 +488,11 @@ interfere with those provided by the distribution.
       <manifest-digest sha256new="2O7AIX5S2X7QTD63MRDMJDOSDH5ATOLYIHJTWE73YHU4EL4R23EA"/>
       <archive extract="0install-linux-armv7l-2.14" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14/0install-linux-armv7l-2.14.tar.bz2" size="4156437"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=47cee6be4ee21cde56de2c520308c2e9afd53466" released="2019-04-24" version="2.14.1">
+    <implementation arch="Linux-x86_64" id="sha1new=47cee6be4ee21cde56de2c520308c2e9afd53466" released="2019-04-24" stability="stable" version="2.14.1">
       <manifest-digest sha256new="CRLB654DNPCSFIJFLOCSD5DT6OMZHK3M6BJBXRMBHGGGHL3NB4PA"/>
       <archive extract="0install-linux-x86_64-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-linux-x86_64-2.14.1.tar.bz2" size="4095113"/>
     </implementation>
-    <implementation arch="Linux-armv7l" id="sha1new=d3e608acc2b9c9dc9d72eb659124eb6ac0963d41" released="2019-04-24" version="2.14.1">
+    <implementation arch="Linux-armv7l" id="sha1new=d3e608acc2b9c9dc9d72eb659124eb6ac0963d41" released="2019-04-24" stability="stable" version="2.14.1">
       <manifest-digest sha256new="XXKHDU7T6GMYXXSUSEJ5N5PTDA7ZTSMBIQTPITBLEWSPJDYK54RA"/>
       <archive extract="0install-linux-armv7l-2.14.1" href="https://downloads.sourceforge.net/project/zero-install/0install/2.14.1/0install-linux-armv7l-2.14.1.tar.bz2" size="4156509"/>
     </implementation>
@@ -508,11 +508,11 @@ interfere with those provided by the distribution.
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzAgkwACgkQBxM/lsp02Lpwkwf+I6Jw
-T9+GJg6IckNSyF628mvw5ydMPy9GhWZoAnZxFmCCrjb6hQAgHiNPjfgt98eBEDaTLl+WQLpSEpdz
-zEpZoGvLcr3R57tKNQJa34fta6A8+OSwoMjwzeKIzWAeYa0UoXBKofaAHV92T/BxjULpjYtdFKJ2
-q+zynWGjlFgx4o369uSeL0BSLyz8RqoXv8mHZBcESGBuicGBYOpVLvFUBwNdeia9Ehb2NmuE8fqo
-Sn8XbkMtcmFWETrYUSQyOVm8D0ugQscK1cKOclLP9S32kv2wQFJadysoAFvNLPPZ4j5HvRxvamZa
-wk3eSqeG8ty752IdqMym808E6uefcwPJeg==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzbF3gACgkQBxM/lsp02Lrgcwf/W9WY
+eNws8go5WuTKZPyx56rr8MCySGvMbzkz6ExYYTfuTa1KMg3Qx2DwuZUCwoqh5YSRP7uk/I35orV3
+EfNrLgHpEjlWSSZGZPhFGu65wa5IuhX5FO1G7W2KsOX4BLUWHGUl59ILSgN4/lgve6APPrzSxm60
+rxu0D0RSTMInqH91dy+9SoF5IaQcyYVqLGf4rVjVkNPfg7YL9q1oMz1omwwOFLWWFcW01AnBkIBO
+fUXM3ZJGveUNSLwF8NZz7egcyu5X4V5c2ls5ov0OzHcFu76q7hM4qhchzosj0Sn8PCU+mq5uPpNJ
+ISvFEK0M1DPui3RsoweBqooicgJeY56AvA==
 
 -->
