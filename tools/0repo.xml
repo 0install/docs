@@ -104,20 +104,24 @@
           <manifest-digest sha256new="3EOPKU4SDDHPOODDQKAYH7XFEV5LRZ3S2QDC4PGFITKHF3KUN37Q"/>
           <archive extract="0repo-0.6" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.6/0repo-0.6.tar.bz2" size="58909"/>
         </implementation>
-        <implementation id="sha1new=df0b8df17a63b478b1482909b4b7d6b09fdb6b5b" released="2019-03-02" version="0.7">
+        <implementation id="sha1new=df0b8df17a63b478b1482909b4b7d6b09fdb6b5b" released="2019-03-02" stability="stable" version="0.7">
           <manifest-digest sha256new="3P62CQ6EU36QZNIOBDJKYBWC7RZB7OHRYFY4L3MZFNDYWN24Z2ZQ"/>
           <archive extract="0repo-0.7" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.7/0repo-0.7.tar.bz2" size="59067"/>
+        </implementation>
+        <implementation id="sha1new=c93cece6c5c9e053fd4c7052658597f4da316707" released="2019-05-14" version="0.8">
+          <manifest-digest sha256new="XDR7YKN7A5Q4DBIFI6MXIAF2MJN6GCNK5LGNHER2RYNSIBE656NA"/>
+          <archive extract="0repo-0.8" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.8/0repo-0.8.tar.bz2" size="59122"/>
         </implementation>
       </group>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlx6R/IACgkQBxM/lsp02Lqf8gf9F7FM
-VK4SCB6XOJm7Wqm0M04Ud4LgFjp0o9qiNHWf3YaykWBnwc/TLr72S2yiT6J4/Q3aH/C0oivPULX/
-Omk8Kl5qsR9GF4S4EGngRapoqlslGtPZiU/etVUHuG1kdhmFoSi0cHhtGxotDZ/t01Y45fIBCCYg
-vM0hWvwqMtSMgqKoEIMebdcUrglnDhGXWOGQajMFSa+hatDHslfQnmhuAXa3sveK+AcpJ0oBU/w0
-di4wWpURues50taL4XuXAFXakwTYGq58g2NRp8+1aX/nL8aod9ESj17S51OsJBIHk4QruA+0LQaa
-vbozdYdKYLziq5rWpJlIH9RH0JsYed0pWA==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzbFyoACgkQBxM/lsp02LrK5ggAk4yj
+Y/qLswPo12YSpy4dOjW0QQ8M4aKRmQW2xGRIvJzh9ym6V0M0UORHrbatXLCZttUKU9SfCDWvqnEO
+FK4zscKC4cGOHuOtRgWvHPqHZumEpyVfqpZwHR5cJ6Rso/HnmwKmOhD648icPlHXp76GTXBySQ9O
+H2FS+giEeRysBm9OTHDGjds5LLJ8QIHPGhPA9t8Rj4i+EzHLmsg0AKfgNb5LeD6bWZhzy7Ma4DGC
+ynHTJObGgLZtg/UcyWVzjuxr/s7UXu4QqE3/olMgXzWHUOwy5QD+vvvZFTnuB6wWrWV9fjU0fYX4
+AN+N0+uuvWJKuAnsEPREa1AUfa2xviOq6g==
 
 -->
