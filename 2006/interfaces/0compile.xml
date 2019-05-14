@@ -463,18 +463,18 @@ For a full tutorial, see 0compile's homepage.</description>
         <version before="3"/>
       </runner>
     </command>
-    <implementation id="sha1new=7a621366b3f2894c5aa78edbd9ddcce1194461c8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2019-04-13" version="1.5">
+    <implementation id="sha1new=7a621366b3f2894c5aa78edbd9ddcce1194461c8" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2019-04-13" stability="stable" version="1.5">
       <manifest-digest sha256new="4STRECIA4WWJMCYRR37AE5II5B2MCDE2ZQPVIZWVGEDHV3LBEYIA"/>
       <archive extract="0compile-1.5" href="https://downloads.sourceforge.net/project/zero-install/0compile/1.5/0compile-1.5.tar.bz2" size="37908"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlyxrcIACgkQBxM/lsp02Lq9wgf9Ed6F
-TYmfIgfxSaMt74W6pdkQs/Tjvorp1eqhLDp3ixbbOXe0Hlk8JwORIZ7Oc9xLQKX2kV1aTvVSOqRn
-b29oR4OXniijPyOxnjNa9ovQU932FjgH7jar1NcYOR2u1JikPyP5ocC+LNpEUWxv8W+wrdtQvRsJ
-rWebaEEegfu+gMXfr4y+rPLl1+SOvfF1+lynNJhEzqPtPlhcJKQgvehKUKvywngOHvIRyIx2O6T8
-y+HBuJvkAtWpO+84kWmSdOSLj4G1YOpS/LMsulwCI73Iqj/P2d0Nr+uhQUPfYGzYPwlAQS2C8uf0
-wx17REJftNUR+0xVSYs0gLW8c+JjHb1gnA==
+iQEzBAABCAAdFiEE2pglrsrQiXV82r2OBxM/lsp02LoFAlzbF8IACgkQBxM/lsp02Lo0jAf/d+n1
+kzkin4SbSIubntCktZDKg8fe6y/ol8XGMXxGTlmnng0k6r+ZIXEwA4Sn1TQRmbkpJAw25bZsG7ZB
+XK8Ei1KARUvpY+fdojAWbpGkqecWxxN76KFPTP/mxLqBNOLENAN60eKYONgdwYDHj8GANEtR0wG/
+SmJCa3OrcB70WFLt5Nnx2jmKc3qFPs6Bo1o0NE0xgiWbSjMmgks8u5fwtpwA6g13jexSaKnvgKWq
+DuB4XD1+ao7z6WMRdYma2LEPSILOYfBWIPY18aRvyQPDkCl7//Ae1fl62azlWQ5bLnaaLNW9s9t4
+jahvwHE45WvAG7cVOfeT6pYSzfdXsPNQcQ==
 
 -->
