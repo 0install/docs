@@ -49,9 +49,9 @@ Note that all changes to your policy are saved as soon as you make them. Clickin
 
 You can change per-application policy settings in the application information dialog. There are multiple ways to opening this dialog:
 
-1.  -   Run 0launch with the `--gui` option and the URI of the application
+1.  -   Run "0install run" with the `--gui` option and the URI of the application
         
-        `$ 0launch --gui http://rox.sourceforge.net/2005/interfaces/Edit`
+        `$ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit`
         
     -   Run "0install update" with a shortcut you made as first argument
         

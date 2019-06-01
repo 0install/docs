@@ -13,7 +13,7 @@ To get a 0install application:
 2\. Either launch it directly:
     
 ```shell
-$ 0launch http://repo.roscidus.com/games/openttd
+$ 0install run http://repo.roscidus.com/games/openttd
 ```
     
 Or [generate a shortcut](making-shortcuts.md) to launch it later:

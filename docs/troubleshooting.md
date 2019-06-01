@@ -114,8 +114,8 @@ Having identified the problem, you can now file a bug report against the SWT fee
 If 0install isn't doing what you expect, run it with logging turned up using either `-v` (verbose) or `-vv` (very verbose!). Use `-c` to prevent it switching to GUI mode too. Eg:
 
 ```shell
-$ 0launch -vvc http://rox.sourceforge.net/2005/interfaces/Edit
-INFO:root:Running 0launch 1.12 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.7.3 (default, Aug 26 2012, 11:57:48)
+$ 0install run -vvc http://rox.sourceforge.net/2005/interfaces/Edit
+INFO:root:Running 0install 1.12 ['http://rox.sourceforge.net/2005/interfaces/Edit']; Python 2.7.3 (default, Aug 26 2012, 11:57:48)
 [GCC 4.7.1]
 INFO:0install:Loading configuration from /home/me/.config/0install.net/injector/global
 DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/Edit from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
@@ -152,17 +152,17 @@ INFO:0install:Executing: [u'/usr/bin/python2.7', u'/var/cache/0install.net/imple
 If you get download errors, try fetching the failing URL using wget, e.g.:
 
 ```shell
-$ 0launch http://...
+$ 0install run http://...
 Error downloading 'http://osdn.dl.sourceforge.net/sourceforge/zero-install/injector-gui-0.16.tgz':
 HTTP Error 403: Forbidden: header 'Content-Type' value denied
 $ wget http://...
 ```
 
-If wget also fails, try opening the URL in your web browser. If one of these works, but 0launch doesn't, it may be that you are using an HTTP proxy. Your web browser is configured to use it, but your `http_proxy` environment variable is not set. Check your browser configuration and ensure that `http_proxy` is set correctly, e.g.:
+If wget also fails, try opening the URL in your web browser. If one of these works, but 0install doesn't, it may be that you are using an HTTP proxy. Your web browser is configured to use it, but your `http_proxy` environment variable is not set. Check your browser configuration and ensure that `http_proxy` is set correctly, e.g.:
 
 ```
 $ export http_proxy=http://myproxy.server:444
-$ 0launch http://...
+$ 0install run http://...
 ```
 
 ## Other problems

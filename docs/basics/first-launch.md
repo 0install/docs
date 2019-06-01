@@ -3,7 +3,7 @@
 When launching a feed for the first time, 0install will download the necessary files for you and store them in [the cache](../details/cache.md). Next time, 0install will use these stored files, so you don't need to download the program again. From time to time 0install will check for updates and offer to download them. For example:
 
 ```shell
-$ 0launch http://repo.roscidus.com/games/openttd
+$ 0install run http://repo.roscidus.com/games/openttd
 ```
 
 1\. Click Download
