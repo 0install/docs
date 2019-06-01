@@ -10,7 +10,7 @@ Each Feed lists a number of Implementations (versions). An Identity is a way to 
 
 Note on terminology: originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.
 
-[XSD schema](http://0install.de/schema/injector/interface/schema.xsd)
+[XSD schema](http://0install.de/schema/injector/interface/interface.xsd)
 
 **Contents:**
 
