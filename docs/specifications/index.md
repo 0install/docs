@@ -3,6 +3,9 @@ title: Overview
 [Feed files](feed.md)
 : This document is a formal description of the XML feed file format. An interface describes a program, library or other component. A feed provides a list of known implementations of the interface (versions of the program) and details about how to get them, how to check that they are authentic, how to run them and what other components they depend on.
 
+[Capabilities extension](capabilities.md)
+: This document is a formal description of the Capabilities extension of the feed format. Capabilities provide information for desktop integration of applications, such as supported MIME types.
+
 [Catalog files](catalog.md)
 : This document is a formal description of the XML catalog format. A catalog contains meta-data for a collection of feeds. Catalogs make it easier to find feeds for specific applications.
 
