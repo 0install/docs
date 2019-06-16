@@ -57,7 +57,7 @@ Zero Install lets your users install programs in a way that's as secure as insta
 : You can add launchers to `$PATH` using `0install add`, and you can add menu entries using `0desktop`. Put the scripts or .desktop files in a common directory, just as with any other program. You should set up sharing before doing this, or every user will have to download a separate copy of the program.
 
 ... limit which programs can be installed?
-: This isn't currently supported, but modifying the `0launch` command is easy as it's all written in Python.
+: This is not yet supported. Talk to us!
 
 # Software developer
 
