@@ -23,7 +23,7 @@ This page lists some example code packages which you can use as templates when c
 
 # .NET
 
-[Packaging .NET libraries](http://0install.de/docs/publishing/dotnet-libs/)
+[Packaging .NET libraries](examples/dotnet-lib.md)
 : This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using the Publishing Tools.
 
 # Python
