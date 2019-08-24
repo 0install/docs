@@ -1,6 +1,6 @@
 site_name: Zero Install
 site_favicon: img/logo.png
-site_url: https://docs.0install.de/
+site_url: https://docs.0install.net/
 repo_url: https://github.com/0install/docs
 
 theme: readthedocs
