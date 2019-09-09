@@ -24,23 +24,22 @@ Having a specific version of Zero Install copied to a fixed location would seem 
 
 ## Command-line
 
-The regular Bootstrapper (`zero-install.exe`) is a GUI application, but there is also a command-line version (`0install.exe`) available. If you pass command-line arguments to this executable it will first download the full version of `0install` and then pass those arguments through. This makes it great for single-use applications or scripting, for example:
+The regular Bootstrapper (`zero-install.exe`) is a GUI application, but there is also a command-line version (`0install.exe`) available. If you pass command-line arguments to this executable it will first download the full version of `0install` and then pass those arguments through. This makes it great for single-use applications or scripting:
 
 ```shell
 Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
-.\0install.exe run --batch http://example.com/somefeed.xml
+.\0install.exe run http://example.com/somefeed.xml
 ```
 
 You can also use the command-line version of the Bootstrapper to integrate Zero install into the desktop environment:
 
 ```shell
-Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
-.\0install.exe maintenance deploy --batch
+.\0install.exe maintenance deploy
 ```
 
 # Maintenance
 
-Zero Install is designed to be largely maintenance-free, e.g., checking for updates automatically. However, if you want to manually ensure everything is running optimally you can use the following [commands](cli.md):
+Zero Install is designed to be mostly maintenance-free (automatic update checks, etc.). You can use the following [commands](cli.md) for additional control where needed:
 
 Integrate Zero Install for the current user
 : `.\0install.exe maintenance deploy`
@@ -52,13 +51,15 @@ Remove Zero Install from the system
 : `0install maintenance remove`
 
 Download and install updates for Zero Install itself
-: `0install self-update --batch`
+: `0install self-update`
 
 Download and install updates for [integrated applications](../basics/windows.md) and remove outdated files
-: `0install update-all --clean --batch`
+: `0install update-all --clean`
 
 Find and merge any duplicate files in the [cache](cache.md)
-: `0install store optimise --batch`
+: `0install store optimise`
+
+If you wish to run these commands in automated scripts, add the argument `--batch` to prevent interactive prompts.
 
 # Portable mode
 
