@@ -105,7 +105,8 @@ Return a set of selections to run the given program. If `refresh` is `true`, 0in
 : A message to display if 0install uses its own GUI ("I need this because ...")
 
 `may_compile`
-: (0install >= 2.9; default `false`) Treat source implementations as potential binaries. If a source implementation is selected, it will be tagged with `requires-compilation="true"` to indicate this.
+: (0install >= 2.9; default `false`)
+: Treat source implementations as potential binaries. If a source implementation is selected, it will be tagged with `requires-compilation="true"` to indicate this.
 : Returns `["ok",{"stale":stale-flag}]` on success. If stale-flag is true, the selections are based on old information. Consider using `refresh` to check for updates.
 
 # Sample code

@@ -36,8 +36,8 @@ It's also important to separate out two aspects of installation that are easily 
 
 | Privileges granted | Only root can install things   | Anyone can install things   |
 |--------------------|--------------------------------|-----------------------------|
-| Full access        | Default apt-get                | apt-get with modified rules |
-| No access          | Zero Install with restrictions | Default Zero Install        |
+| **Full access**    | Default apt-get                | apt-get with modified rules |
+| **No access**      | Zero Install with restrictions | Default Zero Install        |
 
 A typical package manager only allows root (or an administrator) to install software by default, and grants that software full access to the machine, including access to all user accounts. You can change the rules to allow others to install software (e.g. using PolicyKit or sudoers, you might allow anyone to upgrade a package), but the software still gets complete access to the machine.
 
@@ -53,7 +53,7 @@ Some people think of security and usability as a trade-off, with systems being e
 
 - Sometimes, I forget where I saved a file. But, I never need to search `/usr` in case I accidentally saved my letter there; it can't be there, because my word processor doesn't have permission to save there.
 
-- Windows users (so I hear) often find their computers are infected with spyware and adware, which slows them down, causes crashes, and redirects them to undesirable web sites. Such a system has poor usability.
+- People often find their computers are infected with spyware and adware, which slows them down, causes crashes, and redirects them to undesirable web sites. Such a system has poor usability.
 
 - An artist may find a useful image processing filter on the web. If all this filter can do is read an input image and output a modified one then the artist is more likely to try it (and produce better work). If image filters can seriously damage the system then the artist may have to pass it over; the risk from a malicious filter is too great.
 
@@ -112,7 +112,7 @@ To perform the second attack, the attacker needs to replace a trusted feed file 
 - Break into the developer's private machine, get their private GPG key, install a keystroke logger, and get the GPG pass-phrase. Then break into the web server and install a compromised signed feed.
 - Break into the webserver and install a feed signed with their own key (a new key with a new fingerprint, but claiming to belong to the original author), and trick users into accepting it.
 
-The second option is probably easiest. Zero Install currently warns users if they run software signed with an unknown GPG key (we maintain a default database of known keys, but we do not have the resources to verify the owners of the keys). Note that even if a key is in the known keys database, users must still agree to trust that key. Again, organisations may wish to keep their own white-list of allowed keys.
+The second option is probably easiest. Zero Install currently warns users if they run software signed with an unknown GPG key (we maintain a default database of known keys, but we do not have the resources to verify the owners of the keys). Again, organisations may wish to keep their own white-list of allowed keys.
 
 The first option can be made even harder if the developer has a second (non-networked) machine with the GPG key, although not all developers will have a spare machine for this purpose.
 
