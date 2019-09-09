@@ -306,7 +306,7 @@ Update: Nix is planning to use binary hashes everywhere in future (zeroing out s
 
 Another difference between Nix and Zero Install is that Nix treats configurations as packages. Changing your configuration is like "upgrading" your configuration package to a new version. Rolling back a change is like reverting to a previous version. Zero Install doesn't generally handle configuration settings, preferring to let the user use subversion (or similar) for that, but it's an interesting idea.
 
-Building a Nix package involves creating a "Nix expression" in a (custom) functional language. The expression fills the same role as a Zero Install source feedit says where to download the source, what its digest is, what the build dependencies are, and how to build it.
+Building a Nix package involves creating a "Nix expression" in a (custom) functional language. The expression fills the same role as a Zero Install source feed: it says where to download the source, what its digest is, what the build dependencies are, and how to build it.
 
 While Zero Install is mainly targeted at adding additional packages to an existing system, Nix aims to manage the whole system (although it installs cleanly alongside your existing package manager). Nix packages have short names (like `perl`) not full URIs, and thus it appears to assume a centrally-controlled repository.
 

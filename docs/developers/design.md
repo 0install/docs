@@ -71,17 +71,11 @@ Zero Install uses a SAT solver with conflict-driven learning to find the optimal
 
 # Interfaces and Implementations
 
-An interface
+An **interface** describes what something does (eg, "Simple text editor").
 
-describes what something does (eg, "Simple text editor").
+An **implementation** is something that does it (eg, Edit-1.9.6 or Edit-1.9.7).
 
-An implementation
-
-is something that does it (eg, Edit-1.9.6 or Edit-1.9.7).
-
-A feed file
-
-is a list of implementations of an interface.
+A **feed file** is a list of implementations of an interface.
 
 In Zero Install, interfaces are named by globally unique URIs (like web pages). Some examples of interfaces are:
 
@@ -141,7 +135,7 @@ If problems are found, it can instead be marked as **Buggy**, or **Insecure**. T
 
 You can use the **Preferred Stability** setting in the interface dialog to choose which versions to use. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu. User-set ratings are shown in capitals.
 
-As you make changes to the policy and ratings, the order of the implementations in the list will change. The version at the top is the one that the injector will actually use. In addition to the ratings about, you can set the rating to **Preferred**. Such versions always come first, unless they're not cached and you are in Off-line mode.
+As you make changes to the policy and ratings, the order of the implementations in the list will change. The version in bold is the one that 0install will actually use. In addition to the ratings about, you can set the rating to **Preferred**. Such versions always come first, unless they're not cached and you are in Off-line mode.
 
 Note: If you want to use the second item on the list because the first is buggy, for example, then it is better to mark the first version as buggy than to mark the second as preferred. This is because when a new version is available, you will want that to become the version at the top of the list, whereas a preferred version will always be first.
 

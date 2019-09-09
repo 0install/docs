@@ -8,11 +8,11 @@ Frequently asked questions:
 
 What is it?
 
-: Zero Install is a way to run software without an explicit installation step. This is easier (_install and run_ becomes just _run_) and safer (installation doesn't happen as root).
+: Zero Install is a decentralised cross-distribution software installation system. Features include full support for shared libraries (with a SAT solver for dependency resolution), sharing between users, and integration with native platform package managers. It supports both binary and source packages, and works on Linux, OS X, Unix and Windows systems. It is fully Open Source.
 
 How many Zero Install packages are there?
 
-: The [public mirror site](http://roscidus.com/0mirror/) provides a list of feeds we know about. There are currently more than 500, although the quality varies.
+: The [public mirror site](http://roscidus.com/0mirror/) provides a list of feeds we know about. There are currently more than 2000, although the quality varies.
 
 What are "decentralised" installation systems, and why are they important?
 
@@ -96,7 +96,7 @@ What if something gets automatically removed from the cache while I'm up a mount
 
 : Currently, nothing is ever automatically removed from the cache. Users can choose the purging scheme that suits them. For users with broadband, that might mean removing anything that hasn't been accessed for a year. For users with dial-up and 80Gb disks, that probably means never ever removing anything.
 
-: You can click on the **Cache** button to view the cache and remove versions of programs you don't need anymore:
+: You can run `0install store manage` to view the cache and remove versions of programs you don't need anymore:
 
 : ![Uninstalling programs](img/screens/injector-cache.png)
 

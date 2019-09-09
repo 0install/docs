@@ -297,12 +297,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
@@ -388,12 +388,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
@@ -483,12 +483,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
@@ -578,12 +578,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
@@ -713,12 +713,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
@@ -1393,7 +1393,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='store_verify'></a><h1>store verify</h1>
-<p>Makes sure an implementation has not been damaged (i.e. it manifest digest has not changed).</p>
+<p>Makes sure an implementation has not been damaged (i.e. if manifest digest has not changed).</p>
 <p><b>Usage:</b> <code>0install store verify [DIRECTORY] DIGEST</code></p>
 <table>
 <tr>
@@ -2076,12 +2076,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: *, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: *, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
