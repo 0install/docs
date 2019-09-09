@@ -8,16 +8,57 @@ The Linux version and [Windows version](windows.md) of Zero Install share the sa
 
 # Bootstrapper
 
-When you [download Zero Install for Windows](https://0install.de/downloads/) from the web-site time you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It uses a regular Zero Install feed to download and run a full version of Zero Install.
+When you [download Zero Install for Windows](https://0install.de/downloads/) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: [http://0install.de/feeds/ZeroInstall.xml](http://0install.de/feeds/ZeroInstall.xml)
 
-If you wish to install Zero Install in unattended/automatically you can [download the CLI-version of the Bootstrapper](https://0install.de/files/0install.zip). With this you can run:
+## Integration
 
-- `0install.exe maintenance deploy --batch` to install for the current user.
-- `0install.exe maintenance deploy --batch --machine` to install for all users.
+When Zero Install is started by the Bootstrapper it is running from the [cache](cache.md) and is not integrated into the system. There are no start menu entries, the command-line tools are not in the `PATH`, etc.. This is by design; after all you may only need Zero Install once on that particular machine or may decide you don't like it. In that case you can simply delete the Bootstrapper EXE when you're done.
 
-Default settings can be integrated in the Bootstrap process via editing `0install.exe.config`.
+If you then decide you wish to keep using Zero Install you can "Click to setup...". This applies desktop integration for Zero Install (start menu entry, command-line tools in `PATH`). It also installs the [Store Service](sharing.md#windows) if you choose to setup Zero Install "For all users".
 
-See also: [Blog post about Bootstrapper](https://0install.de/blog/bootstrapper-part-1/?lang=en)
+![](../img/screens/windows-deploy-banner.png)
+
+This is different from the [desktop integration](../basics/windows.md) Zero Install performs for other applications. For these Zero Install will create little stub executables in the appropriate locations that point to the application's feed. However, for Zero Install itself the entire binaries need to be copied to a [permanent location](file-locations.md#windows). Otherwise each of these stubs would need to bundle all the functionality of the Bootstrapper in order to locate (or potentially download) Zero Install.
+
+Having a specific version of Zero Install copied to a fixed location would seem to undermine many of the advantages of Zero Install, such as background updates of applications and running multiple versions side-by-side. However, Zero Install can still download and run other versions of itself from the cache. When you tell your deployed instance of Zero Install to [update itself](#maintenance) it does just that: The new version is downloaded and launched from the cache and instructed to deploy itself to the same location as the existing deployment. The old files are securely replaced using the Windows Restart Manager and rollbacks in case of error.
+
+## Command-line
+
+The regular Bootstrapper (`zero-install.exe`) is a GUI application, but there is also a command-line version (`0install.exe`) available. If you pass command-line arguments to this executable it will first download the full version of `0install` and then pass those arguments through. This makes it great for single-use applications or scripting, for example:
+
+```shell
+Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
+.\0install.exe run --batch http://example.com/somefeed.xml
+```
+
+You can also use the command-line version of the Bootstrapper to integrate Zero install into the desktop environment:
+
+```shell
+Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
+.\0install.exe maintenance deploy --batch
+```
+
+# Maintenance
+
+Zero Install is designed to be largely maintenance-free, e.g., checking for updates automatically. However, if you want to manually ensure everything is running optimally you can use the following [commands](cli.md):
+
+Integrate Zero Install for the current user
+: `.\0install.exe maintenance deploy`
+
+Integrate Zero Install for all users
+: `.\0install.exe maintenance deploy --machine`
+
+Remove Zero Install from the system
+: `0install maintenance remove`
+
+Download and install updates for Zero Install itself
+: `0install self-update --batch`
+
+Download and install updates for [integrated applications](../basics/windows.md) and remove outdated files
+: `0install update-all --clean --batch`
+
+Find and merge any duplicate files in the [cache](cache.md)
+: `0install store optimise --batch`
 
 # Portable mode
 
@@ -42,16 +83,3 @@ Portable versions of Zero Install cannot perform desktop integration (e.g. creat
 FAT/FAT32-formatted drives cannot be used for Zero Install because they do not store file security settings (ACLs). They also only store time with an accuracy of two seconds while Zero Install checks the exact modification time of files.
 
 The portable creator creates a file in the destination directory called `_portable`, which instructs Zero Install to run in portable mode. When this file is detected Zero Install stores all its files in its installation directory instead of the [usual system directories](file-locations.md).
-
-# Maintenance
-
-Zero Install is designed to be largely maintenance-free, e.g., checking for updates automatically. However, if you want to manually ensure everything is running optimally you can use the following [commands](cli.md):
-
-Download and install updates for Zero Install itself
-: `0install self-update --batch`
-
-Download and install updates for [integrated applications](../basics/windows.md) and remove outdated files
-: `0install update-all --clean --batch`
-
-Find and merge any duplicate files in the [cache](cache.md)
-: `0install store optimise --batch`

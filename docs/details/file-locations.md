@@ -33,6 +33,10 @@ On Windows Zero Install uses the well-known `%AppData%`, `%LocalAppData%` and `%
 
 You can use the [potable mode](windows.md#portable-mode) to store all files in one directory (e.g. for use on a USB thumb drive) instead of using the following directories.
 
+Executables:
+: - `%AppData%\Programs\Zero Install`
+- `%ProgramFiles%\Zero Install`
+
 General settings
 : - `C:\Users\Username\AppData\Roaming\0install.net\injector`
 - `C:\ProgramData\0install.net\injector`
