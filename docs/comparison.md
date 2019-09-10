@@ -231,8 +231,8 @@ Thousands of packages available
 
 [AppImage](https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
 
-- All dependencies are bundled into a single file and can therefore not be shared between apps.
-- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for some packages. However, unlike Zero Install, it supports delta updates.
+- All dependencies that cannot reasonably be expected to come with all target systems (Linux distributions) in their default installation ("base system") are bundled into a single file and can therefore not be shared between apps.
+- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
 - Only supports Linux.
 
 For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](specifications/feed.md#retrieval-methods) with `executable='true'`.
