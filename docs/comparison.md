@@ -155,7 +155,7 @@ This matrix shows some desirable features in a packaging system, and shows which
         <td class="red">No</td>
         <td class="yellow">Manual, app+config</td>
         <td class="red">No</td>
-        <td class="yellow">Manual, app+config, manual</td>
+        <td class="yellow">Manual, app+config</td>
         <td class="yellow"><a href="/details/sync/">Automatic, app only</a> (Windows only)</td>
     </tr>
     <tr>
