@@ -16,7 +16,7 @@ This tutorial shows how to use `0compile` for these purposes. It is assumed that
 $ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml
 ```
 
-Note: this page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the injector. The graphical interface provides similar options, but is slightly more limited. Here are [some screenshots](http://rox.sourceforge.net/desktop/node/360).
+Note: this page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the 0install GUI. The graphical interface provides similar options, but is slightly more limited.
 
 **Contents:**
 
@@ -24,7 +24,7 @@ Note: this page describes the command-line interface to `0compile`. There is als
 
 # Autocompile
 
-If you just want to compile some existing source code (without changing it), then the `autocompile` sub-command does the job. Given the URI of a program, it will download and compile the source in a temporary directory, add the resulting binary to the Zero Install cache, and register the new binary with `0launch`. If the source depends on other programs, it will also download and compile them in the same way if no binary is currently available for the preferred version.
+If you just want to compile some existing source code (without changing it), then the `autocompile` sub-command does the job. Given the URI of a program, it will download and compile the source in a temporary directory, add the resulting binary to the Zero Install cache, and register the new binary. If the source depends on other programs, it will also download and compile them in the same way if no binary is currently available for the preferred version.
 
 For example (GNU-Hello is a simple test program which depends only on `make`):
 
@@ -143,6 +143,7 @@ $ ed src/hello.c
 %s/Hello, world!/Goodbye, world!/
 wq
 5209
+```
 
 Recompile with `0compile build` as before:
 
@@ -161,31 +162,26 @@ These two features make it very easy to keep track of what you changed, which ma
 
 ## Publishing the binary
 
-To share our new binary with other people, we just need to archive up the `gnu-hello-linux-x86_64` directory and upload it to an FTP or HTTP server somewhere. Pass the URL of the remote directory to `0compile` and upload the resulting binary (note: the version will be 1.3-1 if you modified the source):
+Use `0compile publish` to create the archive and feed:
 
 ```shell
-$ 0compile publish http://mysite/downloads
-Now upload 'gnu-hello-linux-x86_64-1.3.tar.bz2' as:
-http://mysite/downloads/gnu-hello-linux-x86_64-1.3.tar.bz2
-$ scp gnu-hello-linux-x86_64-1.3.tar.bz2 mysite:/var/www/downloads/
+$ 0compile publish
+Generated archive 'gnu-hello-linux-x86_64-1.3.tar.bz2' and feed 'GNU-Hello-1.3.xml'.
+Upload it to a repository with:
+0repo add GNU-Hello-1.3.xml
 ```
 
-As well as the `.tar.bz2` file, you will also get a `GNU-Hello-1.3.xml` file in the main `GNU-Hello` directory. You can use this new XML file to download the archive and run the program:
+You can test it with:
 
 ```shell
 $ 0launch GNU-Hello-1.3.xml
 ```
 
-You can either ask the maintainer of the program to add the implementation in this file to the master feed, or you can create your own feed (and ask them to add that). See the [0publish page](0publish.md) for full details, but as a quick summary you can create a new signed feed like this:
+To publish the feed and archive, use [0repo](0repo.md) (see that page for configuration details):
 
 ```shell
-$ 0publish .../GNU-Hello.xml \
-  --xmlsign \
-  --set-interface-uri=http://mysite/interfaces/GNU-Hello.xml \
-  --local=GNU-Hello-1.3.xml
+$ 0repo add GNU-Hello-1.3.xml
 ```
-
-Then upload the signed `.../GNU-Hello.xml` file and the exported GPG key to your webserver.
 
 ## Bundling dependencies
 
@@ -201,13 +197,13 @@ The source code and all dependencies will be copied into a new `dependencies` su
 
 0compile has some special code to detect and handle some common cases in legacy code:
 
-Generated `pkgconfig` files with absolute paths
+## Generated `pkgconfig` files with absolute paths
 
 If `$DISTDIR` ends up containing a directory called `pkgconfig`, it checks each `.pc` file inside for an absolute prefix. If found, it is changed to a relative path.
 
 Note: for "pure" Zero Install libraries, just use a relative path (e.g. `prefix=${pcfiledir}/..`) in the `.pc` file in the source, and copy it unchanged to `$DISTDIR`.
 
-Build dependencies containing `/usr/lib/lib*.so` broken symlinks
+## Build dependencies containing `/usr/lib/lib*.so` broken symlinks
 
 RPM unpacks all packages over the root, so one package can have a symlink to a file provided by a different package. This is often used to set the default version of a library in RPM packages. e.g.
 
@@ -218,11 +214,11 @@ Since Zero Install keeps every package in its own directory, this doesn't work. 
 
 Note: a "pure" Zero Install library wouldn't need to include the version number in the library filename, so no symlink would be needed. If you did want to include the number in the filename, the symlink to it would go in the runtime package, not the `-dev`el package.
 
-Build dependencies with lib64 directories
+## Build dependencies with lib64 directories
 
 If the feed tries to add a directory under `lib` or `usr/lib` to `$PKG_CONFIG_PATH`, and the directory doesn't exist, 0compile uses the corresponding `lib64` directory instead, if present. This is for existing RPMs which use a different directory structure for different architectures.
 
-Libtool archive (.la) files
+## Libtool archive (.la) files
 
 0compile searches for `lib/*.la` files in `$DISTDIR` and automatically deletes them for you (there is a safely check that it really is a `libtool` file first). These files were only needed on very old systems that don't support dynamic linking. These days they just cause trouble by using absolute paths which were only valid during the build.
 
