@@ -28,7 +28,7 @@ You can pass multiple feeds as arguments and it will check all of them. For each
 Tip: to check all feeds in your domain (e.g. `example.com`):
 
 ```shell
-$ 0launch --list example.com | xargs feedlint
+$ 0install list example.com | xargs feedlint
 ```
 
 ## Sample output

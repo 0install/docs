@@ -8,7 +8,7 @@ We assume here that a binary release already exists (perhaps published by someon
 
 [TOC]
 
-**Tip**: To check whether someone has already packaged a program, use the search feature at the top of this page to search all known existing feeds.
+**Tip**: To check whether someone has already packaged a program, use the search feature at the top of the <https://0install.net> page to search all known existing feeds.
 
 # Tutorial
 

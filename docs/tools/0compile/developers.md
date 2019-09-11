@@ -156,10 +156,10 @@ See [Make-headers](../make-headers.md) for information about publishing library 
 You should use the `--build-base` option to make distutils build to 0compile's build directory, not under the source code (which is read-only). Unfortunately, this option isn't available with the `install` command, so you have to do the build in two steps. A typical command is:
 
 ```shell
-$ cd "$SRCDIR" &&
-$ python setup.py build --build-base="$BUILDDIR/build" &&
-$ cd "$BUILDDIR" &&
-$ python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build
+cd "$SRCDIR" &&
+python setup.py build --build-base="$BUILDDIR/build" &&
+cd "$BUILDDIR" &&
+python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build
 ```
 
 # Examples

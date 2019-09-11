@@ -6,7 +6,7 @@
 
 **0template** creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
 
-![0template workflow](../img/diagrams/0template.png)
+![0template workflow](../img/diagrams/0template.svg)
 
 That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with [0repo](0repo.md).
 
@@ -120,3 +120,5 @@ Once you are happy with it, you can add it to the master feed (which contains al
 ```shell
 $ 0repo add myprog-1.2.xml
 ```
+
+The [packaging guide](../packaging/guide-cli.md) includes a tutorial showing how to use 0template.
