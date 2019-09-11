@@ -24,7 +24,7 @@ There are several different algorithms that can be used to generate a digest fro
 `sha256new_XXX`
 : Supported from version 1.10. This is the same as `sha256`, except that the final digest is [base32-encoded](http://en.wikipedia.org/wiki/Base32) (without padding) to make it a bit shorter, and the separator character is `_` rather than `=`, as pathnames containing `=` cause problems for some programs.
 
-When checking a new tree (e.g., that has just been downloaded from the net and unpacked), 0install generates a 'manifest' file. The manifest lists every file, directory and symlink in the tree, and gives the digest of each file's content. Here is a sample manifest file for a tree containing two files (`README` and `src/main.c`) and using the `sha1` algorithm (you can use `0store manifest` to generate this):
+When checking a new tree (e.g., that has just been downloaded from the net and unpacked), 0install generates a 'manifest' file. The manifest lists every file, directory and symlink in the tree, and gives the digest of each file's content. Here is a sample manifest file for a tree containing two files (`README` and `src/main.c`) and using the `sha1` algorithm (you can use `0install digest --manifest` to generate this):
 
 ```plain
 F 0a4d55a8d778e5022fab701977c5d840bbc486d0 1132502750 11 README

@@ -6,7 +6,7 @@ This class diagram shows how the different concepts are related. Each feed file 
 
 ![Class diagram for feed files](../img/uml/zero-install-feed-classes.png)
 
-Each Feed lists a number of Implementations (versions). An Identity is a way to recognise an Implementation (e.g. a cryptographic digest). A Retrieval method is a way to get an Implementation (e.g. by downloading from an FTP site). A Command says how to run an Implementation as a program.A Dependency indicates that one component depends on another (e.g. Gimp requires the GTK library). A Binding says how to let the program locate the Implementations when run. A Constraint limits the choice of a dependency (e.g. Gimp requires a version of GTK >= 2.6).
+Each *Feed* lists a number of *Implementations* (versions). An *Identity* is a way to recognise an *Implementation* (e.g. a cryptographic digest). A *Retrieval* method is a way to get an *Implementation* (e.g. by downloading from a web site). A *Command* says how to run an *Implementation* as a program. A *Dependency* indicates that one component depends on another (e.g. Gimp requires the GTK library). A *Binding* says how to let the program locate the *Implementations* when run. A *Constraint* limits the choice of a dependency (e.g. Gimp requires a version of GTK >= 2.6).
 
 Note on terminology: originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.
 
@@ -18,7 +18,7 @@ Note on terminology: originally the word 'interface' was used to mean both 'inte
 
 # Introduction
 
-Feed files are introduced in the [Packagers Documentation](../packaging/index.md). They have the following syntax (`?` follows optional items, `*` means zero-or-more, order of elements is not important, and extension elements can appear anywhere as long as they use a different namespace):
+Feed files are introduced in the [Packager's Documentation](../packaging/index.md). They have the following syntax (`?` follows optional items, `*` means zero-or-more, order of elements is not important, and extension elements can appear anywhere as long as they use a different namespace):
 
 ```xml
 <?xml version='1.0'?>
