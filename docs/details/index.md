@@ -162,7 +162,7 @@ Our program needs some libraries before it will run. Which ones? Again, the feed
     </requires>
 ```
 
-We need a library called `http://rox.sourceforge.net/2005/interfaces/ROX-Lib`. You might already have one somewhere, or your distribution might carry it. If all else fails, we could try to guess where a suitable feed might be... [http://rox.sourceforge.net/2005/interfaces/ROX-Lib](http://rox.sourceforge.net/2005/interfaces/ROX-Lib) seems like a good place to start...
+We need a library called `http://rox.sourceforge.net/2005/interfaces/ROX-Lib`. You might already have one somewhere, or your distribution might carry it. If all else fails, we could try to guess where a suitable feed might be... <http://rox.sourceforge.net/2005/interfaces/ROX-Lib> seems like a good place to start...
 
 Go back to step 1! You need to download ROX-Lib's feed, check the signature, pick a version, download and unpack the archive, check the contents' digest, and check whether ROX-Lib in turn depends on other libraries (it doesn't).
 

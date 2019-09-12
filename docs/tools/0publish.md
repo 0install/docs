@@ -2,7 +2,7 @@
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0publish)  
-**Zero Install feed:** [http://0install.net/2006/interfaces/0publish](http://0install.net/2006/interfaces/0publish)
+**Zero Install feed:** <http://0install.net/2006/interfaces/0publish>
 
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script as much as possible of it. The **0publish** command provides a set of useful transformations for feed files which you can integrate into your release scripts.
 

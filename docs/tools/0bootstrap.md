@@ -2,7 +2,7 @@
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](https://github.com/0install/0bootstrap)  
-**Zero Install feed:** [http://0install.net/tools/0bootstrap.xml](http://0install.net/tools/0bootstrap.xml)
+**Zero Install feed:** <http://0install.net/tools/0bootstrap.xml>
 
 **0bootstrap** generates a native package that installs a 0install launcher.
 

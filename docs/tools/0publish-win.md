@@ -4,7 +4,7 @@ title: 0publish-win
 **Maintainer:** Bastian Eicher  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0publish-win)  
-**Zero Install feed:** [http://0install.de/feeds/ZeroInstall_Tools.xml](http://0install.de/feeds/ZeroInstall_Tools.xml)
+**Zero Install feed:** <http://0install.de/feeds/ZeroInstall_Tools.xml>
 
 The Zero Install Publishing Tools allow you to create your own feeds on Windows.
 

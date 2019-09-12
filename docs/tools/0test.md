@@ -2,7 +2,7 @@
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](http://repo.or.cz/w/0test.git)  
-**Zero Install feed:** [http://0install.net/2008/interfaces/0test.xml](http://0install.net/2008/interfaces/0test.xml)
+**Zero Install feed:** <http://0install.net/2008/interfaces/0test.xml>
 
 A Zero Install [feed](../specifications/feed.md) can specify a command to run to test the program automatically using the `self-test` attribute (or the `test` command). 0test runs this command. It can also test combinations of various versions of a program and its dependencies.
 

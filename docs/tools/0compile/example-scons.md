@@ -4,7 +4,7 @@ title: Example: SCons
 **Maintainer:** Thomas Leonard  
 **License:** Public domain  
 **Source:** [Git repository](https://github.com/0install/hello-scons)  
-**Zero Install feed:** [http://0install.net/tests/Hello-scons.xml](http://0install.net/tests/Hello-scons.xml)
+**Zero Install feed:** <http://0install.net/tests/Hello-scons.xml>
 
 **Hello-scons** is a simple "Hello world" program written in C. It is built using the [SCons build tool](http://www.scons.org/).
 

@@ -12,7 +12,7 @@ Some key points about Zero Install's security model:
 
 If one user downloads a malicious program, other users aren't affected
 
-: In traditional systems, installing a program also puts files into shared directories like `/usr/bin` and `/usr/lib` under short names. So if one user installs the Gimp from `http://evil.com` then it might save the executable as `/usr/bin/gimp`. Another user might run this, thinking it was from [http://gimp.org](http://gimp.org). In a Zero Install system, users specify the full URI of the program they want to run, and the system only shares the copy if they really are the same. The short-cuts (e.g., that **"Run gimp"** means **"Run http://gimp.org/gimp"**) are per-user, but the programs themselves are shared.
+: In traditional systems, installing a program also puts files into shared directories like `/usr/bin` and `/usr/lib` under short names. So if one user installs the Gimp from `http://evil.com` then it might save the executable as `/usr/bin/gimp`. Another user might run this, thinking it was from <http://gimp.org>. In a Zero Install system, users specify the full URI of the program they want to run, and the system only shares the copy if they really are the same. The short-cuts (e.g., that **"Run gimp"** means **"Run http://gimp.org/gimp"**) are per-user, but the programs themselves are shared.
 
 Installation does not execute any downloaded code
 

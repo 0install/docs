@@ -2,7 +2,7 @@
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0template)  
-**Zero Install feed:** [http://0install.net/tools/0template.xml](http://0install.net/tools/0template.xml)
+**Zero Install feed:** <http://0install.net/tools/0template.xml>
 
 **0template** creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
 

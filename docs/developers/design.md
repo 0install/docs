@@ -79,8 +79,8 @@ A **feed file** is a list of implementations of an interface.
 
 In Zero Install, interfaces are named by globally unique URIs (like web pages). Some examples of interfaces are:
 
-- [http://rox.sourceforge.net/2005/interfaces/Edit](http://rox.sourceforge.net/2005/interfaces/Edit)
-- [http://rox.sourceforge.net/2005/interfaces/ROX-Lib](http://rox.sourceforge.net/2005/interfaces/ROX-Lib)
+- <http://rox.sourceforge.net/2005/interfaces/Edit>
+- <http://rox.sourceforge.net/2005/interfaces/ROX-Lib>
 
 Each _implementation_ of an interface is identified by a cryptographic digest, eg:
 

@@ -89,5 +89,5 @@ The main GUI of Zero Install for Windows displays a list of available applicatio
 
 # Well-known catalogs
 
-- [http://repo.roscidus.com/catalog.xml](http://repo.roscidus.com/catalog.xml) - open-source tools, libraries and runtime environments
-- [http://0install.de/catalog/](http://0install.de/catalog/) - curated list of cross-platform and Windows applications, default catalog used by Zero Install for Windows
+- <http://repo.roscidus.com/catalog.xml> - open-source tools, libraries and runtime environments
+- <http://0install.de/catalog/> - curated list of cross-platform and Windows applications, default catalog used by Zero Install for Windows

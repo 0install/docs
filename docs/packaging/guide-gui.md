@@ -82,7 +82,7 @@ The final result of all this is three files: the signed XML feed file itself, li
 
 ![Upload the files](../img/screens/0publish-gui/files-to-upload.png)
 
-Upload all three files to your web-server. I put mine in [http://0install.net/2007/3rd-party](http://0install.net/2007/3rd-party/). Now anyone can run Blender with the command:
+Upload all three files to your web-server. I put mine in <http://0install.net/2007/3rd-party/>. Now anyone can run Blender with the command:
 
 ```shell
 $ 0launch http://0install.net/2007/3rd-party/Blender.xml

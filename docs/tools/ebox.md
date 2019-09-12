@@ -4,7 +4,7 @@ title: ebox
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/ebox)  
-**Zero Install feed:** [http://0install.net/tests/ebox.xml](http://0install.net/tests/ebox.xml)
+**Zero Install feed:** <http://0install.net/tests/ebox.xml>
 
 EBox is a proof-of-concept that integrates Zero Install's safe installation with E's sandboxing features. It allows you to install programs and run them in a restricted environment. Despite this, the programs still benefit from Zero Install's dependency handling, automatic updates, sharing, etc.
 
@@ -152,8 +152,8 @@ If a networked application (e.g. ebox-chat) seems to freeze, try wiggling the mo
 
 About E: the important point here isn't how this particular sandbox works, but how sandboxing can be supported by Zero Install in general. However, here are some useful links about E and its underlying security model:
 
-- [http://wiki.erights.org/wiki/Walnut/Secure\_Distributed\_Computing](http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing)
-- [http://en.wikipedia.org/wiki/Object-capability_model](http://en.wikipedia.org/wiki/Object-capability_model)
+- <http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing>
+- <http://en.wikipedia.org/wiki/Object-capability_model>
 
 # Conclusions
 

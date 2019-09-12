@@ -4,7 +4,7 @@ title: Overview
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0compile)  
-**Zero Install feed:** [http://0install.net/2006/interfaces/0compile.xml](http://0install.net/2006/interfaces/0compile.xml)
+**Zero Install feed:** <http://0install.net/2006/interfaces/0compile.xml>
 
 Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile a new binary from a source package. This is useful if:
 

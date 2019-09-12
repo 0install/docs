@@ -22,7 +22,7 @@ For all systems we use a `build` directory, that is bind-mounted inside the chro
 
 ## Debian
 
-[http://pbuilder.alioth.debian.org/](http://pbuilder.alioth.debian.org/)
+<http://pbuilder.alioth.debian.org/>
 
 Install and configure the software:
 
@@ -82,7 +82,7 @@ Has `build-essential` dependencies:
 
 ## Red Hat
 
-[https://fedorahosted.org/mock/](https://fedorahosted.org/mock/)
+<https://fedorahosted.org/mock/>
 
 Install and configure the software:
 
@@ -144,7 +144,7 @@ Has `buildsys-build` dependencies:
 
 ## Linux From Scratch
 
-[http://www.linuxfromscratch.org/lfs/](http://www.linuxfromscratch.org/lfs/)
+<http://www.linuxfromscratch.org/lfs/>
 
 Build LFS:
 

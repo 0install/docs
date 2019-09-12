@@ -24,7 +24,7 @@ All data is encrypted locally before transmission using AES-128. Therefore the s
 
 ![](../img/diagrams/sync-details.png)
 
-The communication with the server is handled via a simple REST interface which is documented at [https://0install.de/sync/](https://0install.de/sync/).
+The communication with the server is handled via a simple REST interface which is documented at <https://0install.de/sync/>.
 
 If you want to run your own Sync server you have the following options:
 
