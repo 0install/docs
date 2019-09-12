@@ -2,7 +2,7 @@ title: Compiled binaries
 
 # Releases with source and binary packages
 
-[0release](../0release.md) can be used to create releases of your software from a version control system. The main page described how to make releases of programs which are architecture-independent (e.g. programs written in Python) where a single package is produced. This page explains what happens for programs which must be compiled for different architectures (e.g. C programs).
+[0release](../0release/index.md) can be used to create releases of your software from a version control system. The main page described how to make releases of programs which are architecture-independent (e.g. programs written in Python) where a single package is produced. This page explains what happens for programs which must be compiled for different architectures (e.g. C programs).
 
 The extended release process looks like this:
 
@@ -10,7 +10,7 @@ The extended release process looks like this:
 
 TODO: 0release doesn't currently unit-test the binaries it produces
 
-After generating an archive and a feed for the source code release candidate (where `arch='*-src'`), 0release also compiles a binary for the host system (using [0compile](../0compile.md)). It uploads both the source and binary archive and publishes both in the Zero Install feed.
+After generating an archive and a feed for the source code release candidate (where `arch='*-src'`), 0release also compiles a binary for the host system (using [0compile](../0compile/index.md)). It uploads both the source and binary archive and publishes both in the Zero Install feed.
 
 For an example of a simple binary package that works this way, have a look at the [c-prog.tgz](http://repo.or.cz/w/0release.git?a=blob;f=tests/c-prog.tgz;h=ae1f06864c70f65fdef5a00065fb82eec809d6dc;hb=a7bce06b6494407b2d80124c65f13493e3b44378) package in 0release's tests directory:
 

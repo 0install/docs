@@ -1,4 +1,4 @@
-[0release](../0release.md) can be used to create releases of your software from a version control system. It uses sensible defaults, allowing it to create releases for simple projects with very little configuration. For more complex projects, you can specify extra commands that should be run during the release process using the syntax described here.
+[0release](../0release/index.md) can be used to create releases of your software from a version control system. It uses sensible defaults, allowing it to create releases for simple projects with very little configuration. For more complex projects, you can specify extra commands that should be run during the release process using the syntax described here.
 
 **Contents:**
 

@@ -6,7 +6,7 @@
 
 **0repo** provides an easy and reliable way to maintain a repository of 0install software for others to use.
 
-Figure 1 shows a simple deployment where a single developer provides a set of packages using 0install. The developer runs 0repo to create a repository on their local machine and `rsync`s the generated files to their static web hosting. To make a new release, the developer uses [tools](index.md) such as [0template](0template.md) or [0release](0release.md) to create a new release, which 0repo then adds to the repository.
+Figure 1 shows a simple deployment where a single developer provides a set of packages using 0install. The developer runs 0repo to create a repository on their local machine and `rsync`s the generated files to their static web hosting. To make a new release, the developer uses [tools](index.md) such as [0template](0template.md) or [0release](0release/index.md) to create a new release, which 0repo then adds to the repository.
 
 ![Single-developer 0repo deployment](../img/diagrams/0repo.png)
 

@@ -4,7 +4,7 @@ This guide shows how to make software available through [Zero Install](http://0i
 
 You should already be familiar with the general operation of Zero Install. If not, start by reading the [Introduction tutorial](../basics/index.md).
 
-We assume here that a binary release already exists (perhaps published by someone else) and you want to make it available through 0install. If you want to publish your own programs, you might also be interested in [0release](../tools/0release.md), which generates a release from a Git repository.
+We assume here that a binary release already exists (perhaps published by someone else) and you want to make it available through 0install. If you want to publish your own programs, you might also be interested in [0release](../tools/0release/index.md), which generates a release from a Git repository.
 
 [TOC]
 

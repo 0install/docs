@@ -4,7 +4,7 @@ Normally, 0install downloads a feed from the web, selects a version, downloads t
 
 - 0install can select and download your program's build or runtime dependencies.
 - It provides a cross-platform way to set environment variables and start your program.
-- You can use [0release](../tools/0release.md) to generate releases automatically.
+- You can use [0release](../tools/0release/index.md) to generate releases automatically.
 
 ## A simple example
 
@@ -65,7 +65,7 @@ Some more things you can do with your new local feed:
 
 - Depend on other libraries or tools (see [the feed specification](../specifications/feed.md) for reference).
 - Compile source code using [0compile](../tools/0compile/developers.md).
-- Make a release using [0release](../tools/0release.md).
+- Make a release using [0release](../tools/0release/index.md).
 - Test against different versions of dependencies using [0test](../tools/0test.md).
 
 See the [example templates](templates.md) for projects in different languages and using various build systems.

@@ -1,8 +1,8 @@
 This page explains how to publish source code using Zero Install. Publishing source this way means that:
 
-- Users can compile it easily [using 0compile](../0compile.md).
+- Users can compile it easily [using 0compile](../0compile/index.md).
 - Build dependencies, such as header files and build tools, can be downloaded automatically.
-- [0release](../0release.md) can automatically compile binaries for your software during the release process.
+- [0release](../0release/index.md) can automatically compile binaries for your software during the release process.
 
 **Contents:**
 

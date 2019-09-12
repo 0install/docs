@@ -1,4 +1,4 @@
-This page explains how to build in a `chroot` sandbox environment [using 0compile](../0compile.md). It offers a few advantages:
+This page explains how to build in a `chroot` sandbox environment [using 0compile](../0compile/index.md). It offers a few advantages:
 
 -   Building doesn't affect the host environment, and the host doesn't influence the build.
 -   Builds can target a different architecture, such as building x86 packages from a x64 host.

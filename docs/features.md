@@ -52,7 +52,7 @@ Automatic updates
 
 Binary and source packages
 
-: 0install supports both [compiling applications from source](tools/0compile.md) and downloading binaries.
+: 0install supports both [compiling applications from source](tools/0compile/index.md) and downloading binaries.
 
 Native package manager integration
 

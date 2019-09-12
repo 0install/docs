@@ -10,7 +10,7 @@ title: Example: SCons
 
 Its purpose is to demonstrate the use of 0compile to fetch build dependencies; you do not need to install SCons manually on your system in order to build it.
 
-This example assumes that you have already read [the main 0compile tutorial](../0compile.md).
+This example assumes that you have already read [the main 0compile tutorial](../0compile/index.md).
 
 You can try it out by using the `setup` command as usual:
 
@@ -54,7 +54,7 @@ The main issues with using SCons with 0compile are that:
 
 The `src/SConstruct` file shows how to fix these problems.
 
-For more information (including how to publish the binary using Zero Install), see [the main 0compile tutorial](../0compile.md).
+For more information (including how to publish the binary using Zero Install), see [the main 0compile tutorial](../0compile/index.md).
 
 # Building from a Git checkout
 

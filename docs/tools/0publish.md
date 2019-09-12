@@ -10,7 +10,7 @@ However, **0publish is somewhat deprecated**:
 
 - If you're looking for a graphical environment instead, see **0publish-gui** in [the packaging guide](../packaging/guide-gui.md).
 - To add a new version of a program to a feed, consider using [0template](0template.md) to generate the XML for the new version and [0repo](0repo.md) to add it to the master feed.
-- [0release](0release.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
+- [0release](0release/index.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
 
 **Contents:**
 

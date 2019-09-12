@@ -202,7 +202,7 @@ The `main` attribute above provides a simple way to say how to run this implemen
 ```
 
 `name`
-: By default, 0launch executes the `run` command, but the `--command` option can be used to specify a different one. [0test](../tools/0test.md) runs the `test` command (replacing the old `self-test` attribute) and [0compile](../tools/0compile.md) runs the `compile` command (replacing the `compile:command` attribute).
+: By default, 0launch executes the `run` command, but the `--command` option can be used to specify a different one. [0test](../tools/0test.md) runs the `test` command (replacing the old `self-test` attribute) and [0compile](../tools/0compile/index.md) runs the `compile` command (replacing the `compile:command` attribute).
 
 `path`
 : The relative path of the executable within the implementation (optional if `<runner>` is used).

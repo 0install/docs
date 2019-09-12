@@ -5,7 +5,7 @@ This page lists some example code packages which you can use as templates when c
 # C
 
 [GNU-Hello](http://0install.net/tests/GNU-Hello.xml)
-: A sample C program built using autoconf and make. Shows how to make a source package that can be used by [0compile](../tools/0compile.md) to create a binary release. See [0release: binaries](../tools/0release/compiled-binaries.md) for details.
+: A sample C program built using autoconf and make. Shows how to make a source package that can be used by [0compile](../tools/0compile/index.md) to create a binary release. See [0release: binaries](../tools/0release/compiled-binaries.md) for details.
 
 [hello-scons](https://github.com/0install/hello-scons)
 : Another C program, but this time using SCons instead of Make as the build tool. See [0compile: Scons](../tools/0compile/example-scons.md) for details.
@@ -29,4 +29,4 @@ This page lists some example code packages which you can use as templates when c
 # Python
 
 [hello-python](https://github.com/0install/hello-python)
-: A simple Python program. Depends on Python 2.x using 0install. See the [0release tutorial](../tools/0release.md) for more information.
+: A simple Python program. Depends on Python 2.x using 0install. See the [0release tutorial](../tools/0release/index.md) for more information.

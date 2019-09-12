@@ -1,3 +1,5 @@
+title: Overview
+
 **Name:** 0compile  
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
@@ -55,7 +57,7 @@ Hello, world!
 
 You can also use `autocompile --gui` for a graphical version. This makes it easier to see the overall progress, because the verbose build output is shown separately in the lower pane:
 
-![0compile autocompile --gui](../img/screens/0compile-autocompile.png)
+![0compile autocompile --gui](../../img/screens/0compile-autocompile.png)
 
 # Manual compilation
 
@@ -177,7 +179,7 @@ You can test it with:
 $ 0launch GNU-Hello-1.3.xml
 ```
 
-To publish the feed and archive, use [0repo](0repo.md) (see that page for configuration details):
+To publish the feed and archive, use [0repo](../0repo.md) (see that page for configuration details):
 
 ```shell
 $ 0repo add GNU-Hello-1.3.xml
@@ -191,7 +193,7 @@ You might want to build on a machine without network access, or to archive every
 $ 0compile include-deps
 ```
 
-The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../details/cache.md) search path (using `0launch --with-store`).
+The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../../details/cache.md) search path (using `0launch --with-store`).
 
 # Legacy helper features
 
@@ -236,8 +238,8 @@ For example, in the GNU-Hello case this would allow you to build using the same 
 
 # Making source available
 
-If you want to publish source code so that other people can compile it using 0compile, see [0compile: Developers](0compile/developers.md).
+If you want to publish source code so that other people can compile it using 0compile, see [0compile: Developers](../0compile/developers.md).
 
 # Building in a clean chroot
 
-If you want to build the source package in a clean `chroot` sandbox environment, see [0compile: Chroot Build](0compile/chroot-build.md).
+If you want to build the source package in a clean `chroot` sandbox environment, see [0compile: Chroot Build](../0compile/chroot-build.md).

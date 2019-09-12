@@ -1,3 +1,5 @@
+title: Overview
+
 **Name:** 0release  
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
@@ -6,9 +8,9 @@
 
 **0release** can be used to make new releases of your software. It handles details such as setting the version number and release date, tagging the release in your version control system and updating your Zero Install feed.
 
-The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below ([releasing a source package and multiple binary packages](0release/compiled-binaries.md) is also possible):
+The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below ([releasing a source package and multiple binary packages](../0release/compiled-binaries.md) is also possible):
 
-![The release process](../img/uml/release-process.png)
+![The release process](../../img/uml/release-process.png)
 
 After doing some development (so you have something to release!) you use 0release to prepare a new release. It will:
 
@@ -19,7 +21,7 @@ After doing some development (so you have something to release!) you use 0releas
 
 You can then run any final (manual) tests on the release. If you're happy with the result, then 0release can publish it (e.g. submit the release to 0repo, and push the new commits and tag to your public version control system). Otherwise, 0release will discard the temporary branch so that you can fix the problems and try again.
 
-Note: you don't _need_ to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then [publish a feed](../packaging/index.md) for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:
+Note: you don't _need_ to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then [publish a feed](../../packaging/index.md) for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:
 
 - Making a new release is quicker, since many steps are automated.
 - You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).
@@ -34,7 +36,7 @@ Git is fully supported. It should be fairly easy to support other (distributed) 
 
 ## Preparing your source repository
 
-You'll need a [local feed](../packaging/local-feeds.md) within your source directory (under version control). This contains the same information as a normal published feed would (name, description, dependencies, etc). The only differences are:
+You'll need a [local feed](../../packaging/local-feeds.md) within your source directory (under version control). This contains the same information as a normal published feed would (name, description, dependencies, etc). The only differences are:
 
 - The local feed refers to a local directory (e.g. `id="."` for the directory containing the local feed) rather than a secure hash.
 - It has no digital signature.
@@ -84,7 +86,7 @@ Hello World!
 
 Note the `<feed-for>` element. This is where the main feed is (or will be) published. If you want to follow this tutorial, change it to point to a location to which you can upload files (e.g. `http://localhost/~me/testing/HelloWorld.xml`) and commit the change (`git commit -a`).
 
-You should add any dependencies inside the `<implementation>` element (see the [feed specification](../specifications/feed.md) for details, or edit the feed using [0publish-gui](../packaging/guide-gui.md) if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python < 3
+You should add any dependencies inside the `<implementation>` element (see the [feed specification](../../specifications/feed.md) for details, or edit the feed using [0publish-gui](../../packaging/guide-gui.md) if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python < 3
 
 ## Creating the releases directory
 
@@ -163,7 +165,7 @@ You can either leave 0release running while you check it, or you can press CTRL-
 
 As well as exporting the release archive, 0release also updates your Git repository by committing two new revisions. You can see them using `gitk --all`:
 
-![New revisions created by 0release](../img/screens/0release-rc.png)
+![New revisions created by 0release](../../img/screens/0release-rc.png)
 
 The lowest two revisions are the history you started with. The `master` branch adds the commit where you changed the `<feed-for>` element. This is also the currently checked-out version. 0release has created a new branch called `0release-tmp` with two new revisions. `Release 0.1` is the version that will be released. Its local feed has the version `0.1` and today's date as the release date. The archive was created from this revision. The next revision has a version of `0.1-post` and removes the release date again. Note that the release hasn't been tagged yet in Git, but 0release has recorded the revision ID in case you decide to accept the release candidate.
 
@@ -195,17 +197,17 @@ Handing off to 0repo:
 
 If you check your Git repository, you'll see that 0release has now tagged the release, and updated the "master" branch to the tip of the temporary branch:
 
-![Release tagged](../img/screens/0release-tagged.png)
+![Release tagged](../../img/screens/0release-tagged.png)
 
 If, instead, you had found a problem with the release you would have selected `Fail` at the prompt. 0release would have removed the temporary branch (leaving `master` where it was) and deleted the temporary files.
 
 ## Customising the release process
 
-For more information, see [release phases](0release/customisation.md).
+For more information, see [release phases](../0release/customisation.md).
 
 ## Source and binaries
 
-If your program needs to be compiled, see [Releasing binaries](0release/compiled-binaries.md).
+If your program needs to be compiled, see [Releasing binaries](../0release/compiled-binaries.md).
 
 ## Aborting a release
 

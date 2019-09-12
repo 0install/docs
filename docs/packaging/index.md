@@ -15,12 +15,12 @@ Before you start, have a look at [Concepts](concepts.md) to make sure you unders
 ## Publish XML for a source release
 
 - Start by reading the [binary packaging guide](guide-gui.md). Most of the steps are the same.
-- Read the [0compile user guide](../tools/0compile.md) to understand how users compile 0install software.
+- Read the [0compile user guide](../tools/0compile/index.md) to understand how users compile 0install software.
 - Read the [0compile developer guide](../tools/0compile/developers.md) for a tutorial showing how to publish the GNU Hello example package.
 
 ## Create an XML file describing my own software
 
-- Read the [0release](../tools/0release.md) documentation, which shows how to add a [local feed](local-feeds.md) to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.
+- Read the [0release](../tools/0release/index.md) documentation, which shows how to add a [local feed](local-feeds.md) to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.
 - Have a look at the [template projects](templates.md) for examples in various programming languages (Python, Java, .NET, C).
 
 # Other useful documentation

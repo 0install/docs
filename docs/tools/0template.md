@@ -10,7 +10,7 @@
 
 That is, each time you want to add a new release of a program to your master XML feed, you first use 0template to generate the XML for the new release. Once you're happy with it, merge it into the master feed with [0repo](0repo.md).
 
-0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using [0release](0release.md) instead.
+0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using [0release](0release/index.md) instead.
 
 **Contents:**
 

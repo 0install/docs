@@ -12,7 +12,7 @@ This section contains various utility programs that make using Zero Install easi
 [0publish](0publish.md)
 : **0publish** edits feed files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key. It is particularly useful in release scripts.
 
-[0release](0release.md)
+[0release](0release/index.md)
 : **0release** can be used to make new releases of your software. It handles details such as setting the version number and release date, tagging the release in your version control system and updating your Zero Install feed.
 
 [0repo](0repo.md)
@@ -35,7 +35,7 @@ This section contains various utility programs that make using Zero Install easi
 
 ### Compiling
 
-[0compile](0compile.md)
+[0compile](0compile/index.md)
 : **0compile** creates binaries from source code, either for your own use or ready for publishing on the web through Zero Install. It can use Zero Install to download any build dependencies (compilers, header files, build tools, etc). This is useful if there is no binary for your platform, or if you wish to modify the program in some way.
 
 [Make-headers](make-headers.md)

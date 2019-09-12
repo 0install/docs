@@ -38,7 +38,7 @@ In this example, the user requested serscis-access-modeller >= 0.10 and all such
 There are several common causes:
 
 There is no binary for your platform
-: (e.g. you are using 32-bit Windows, but there are only binaries for 64-bit Linux). In this case, you can use 0install to compile a new binary from source (if source is provided in the feed). See [0compile](tools/0compile.md) for details. If no source is provided, you will need to go to the project's web-site and compile manually.
+: (e.g. you are using 32-bit Windows, but there are only binaries for 64-bit Linux). In this case, you can use 0install to compile a new binary from source (if source is provided in the feed). See [0compile](tools/0compile/index.md) for details. If no source is provided, you will need to go to the project's web-site and compile manually.
 
 The dependency is only provided by distribution packages, and your distribution isn't listed
 : Have a look at the feed's XML (View Page Source in your browser) to see if your distribution package is listed. See [Distribution Integration](details/distribution-integration.md) for details.
