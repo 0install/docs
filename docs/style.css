@@ -1,8 +1,15 @@
-.wy-side-nav-search {
-  background-image: url('img/logo.png');
-  background-repeat: no-repeat;
-  background-size: 32px;
-  background-position: 16px 12px;
+.title {
+  margin-right: -18px;
+}
+.title:before {
+  content: '';
+  background: url('img/logo.png');
+  background-size: cover;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: -4px;
+  margin-left: -36px;
 }
 
 .wy-nav-side {

@@ -3,11 +3,14 @@ site_favicon: img/logo.png
 site_url: https://docs.0install.net/
 repo_url: https://github.com/0install/docs
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  custom_dir: custom_theme/
+
 markdown_extensions: [def_list]
 extra_css: [style.css]
 extra_javascript: [menu.js]
 
 copyright: >
-  © Copyright 2003-2019 Thomas Leonard and others<br>
+  © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
   Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
