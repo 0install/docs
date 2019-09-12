@@ -14,7 +14,7 @@ $ 0install run --refresh http://repo.roscidus.com/utils/vlc
 
 If 0install cannot find a compatible set of versions for a program, you may see an error like this:
 
-![A problem](img/screens/problem.png)
+![A problem](../img/screens/problem.png)
 
 Or, if not using the GUI, like this:
 
@@ -31,17 +31,17 @@ Can't find all required implementations:
 
 To find the cause, start by double-clicking on "(problem)" in the GUI to get the list of available versions for that component. Right-click over the version you think it should have chosen and choose "Explain this decision" from the menu:
 
-![Explain this decision](img/screens/explain.png)
+![Explain this decision](../img/screens/explain.png)
 
 In this example, the user requested serscis-access-modeller >= 0.10 and all such versions needed SWT >= 3.7 so there was no possible selection (note: this conflict was invented for the sake of this tutorial). The line "User requested implementation ..." shows the version which was selected from the list; the solver was constrained to choose this version.
 
 There are several common causes:
 
 There is no binary for your platform
-: (e.g. you are using 32-bit Windows, but there are only binaries for 64-bit Linux). In this case, you can use 0install to compile a new binary from source (if source is provided in the feed). See [0compile](tools/0compile/index.md) for details. If no source is provided, you will need to go to the project's web-site and compile manually.
+: (e.g. you are using 32-bit Windows, but there are only binaries for 64-bit Linux). In this case, you can use 0install to compile a new binary from source (if source is provided in the feed). See [0compile](../tools/0compile/index.md) for details. If no source is provided, you will need to go to the project's web-site and compile manually.
 
 The dependency is only provided by distribution packages, and your distribution isn't listed
-: Have a look at the feed's XML (View Page Source in your browser) to see if your distribution package is listed. See [Distribution Integration](details/distribution-integration.md) for details.
+: Have a look at the feed's XML (View Page Source in your browser) to see if your distribution package is listed. See [Distribution Integration](../details/distribution-integration.md) for details.
 
 Sometimes, the failure to select a version is due to complex inter-dependencies between components. If a valid set of versions exists, 0install will always find it, but if no valid set exists then it can be hard for it to explain why. Rather that showing a proof that none of the billions of possible combinations is valid, 0install tries to find the best example of a failed selection to show you. It works like this:
 
