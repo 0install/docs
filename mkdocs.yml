@@ -1,7 +1,12 @@
 site_name: Zero Install
-site_favicon: img/logo.png
 site_url: https://docs.0install.net/
 repo_url: https://github.com/0install/docs
+edit_uri: blob/master/docs/
+strict: true
+
+copyright: >
+  © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
+  Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
 
 theme:
   name: readthedocs
@@ -10,7 +15,3 @@ theme:
 markdown_extensions: [def_list]
 extra_css: [style.css]
 extra_javascript: [menu.js]
-
-copyright: >
-  © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
-  Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
