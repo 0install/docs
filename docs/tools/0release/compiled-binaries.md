@@ -29,7 +29,7 @@ The `builders.conf` file has a `[global]` section listing the builders to use, f
 
 ```ini
 [global]
-builders = host, freebsd
+builders = host, precise32
 
 [builder-host]
 build = 0launch http://0install.net/2007/interfaces/0release.xml --build-slave "$@"

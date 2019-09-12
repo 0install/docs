@@ -6,6 +6,8 @@ This page explains how to build in a `chroot` sandbox environment [using 0compil
 
 The build system (`chroot`) comes with development tools such as gcc and make, and the `0launch` command.
 
+**Note:** This page is very out-of-date. Consider using Docker to sandbox builds instead.
+
 **Contents:**
 
 [TOC]

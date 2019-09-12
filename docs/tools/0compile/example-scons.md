@@ -35,7 +35,7 @@ This creates a `hello-scons-ARCH` directory ready for use and/or distribution, a
 To run:
 
 ```shell
-$ 0launch hello-scons-linux-x86_64/0install/Hello-scons.xml
+$ 0install run hello-scons-linux-x86_64/0install/feed.xml
 Hello world!
 ```
 
@@ -64,6 +64,6 @@ To build the latest Git version of hello-scons:
 $ git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/hello-scons
 $ cd hello-scons
 $ 0compile build
-$ 0launch hello-scons-linux-x86_64/0install/Hello-scons.xml
+$ 0install run hello-scons-linux-x86_64/0install/feed.xml
 Hello world!
 ```

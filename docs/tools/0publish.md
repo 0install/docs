@@ -26,8 +26,6 @@ You can create an app for `0publish` in the usual way:
 $ 0install add 0publish http://0install.net/2006/interfaces/0publish
 ```
 
-The [SCons packaging tutorial](0compile/example-scons.md) shows many examples of using `0publish`.
-
 ## 0publish reference
 
 Usage: `0publish [options] feed.xml`
@@ -47,7 +45,7 @@ Usage: `0publish [options] feed.xml`
 : Add a new implementation (use with `--archive-url`, etc).
 
 `--archive-url=URL`, `--archive-file=FILE`, `--archive-extract=DIR`
-: Change a local implementation to one with a digest and an archive. See the [SCons tutorial](0compile/example-scons.md) for an example.
+: Change a local implementation to one with a digest and an archive.
 
 `-c`, `--create`
 : Create a new feed file (if non-existent) without prompting.

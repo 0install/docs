@@ -4,7 +4,7 @@
 **Source:** [Git repository](http://repo.or.cz/w/0test.git)  
 **Zero Install feed:** <http://0install.net/2008/interfaces/0test.xml>
 
-A Zero Install [feed](../specifications/feed.md) can specify a command to run to test the program automatically using the `self-test` attribute (or the `test` command). 0test runs this command. It can also test combinations of various versions of a program and its dependencies.
+A Zero Install [feed](../specifications/feed.md) can specify a "test" command, which can be run to test the program automatically. 0test runs this command. It can also test combinations of various versions of a program and its dependencies.
 
 Create a short-cut to it in the usual way:
 
@@ -146,15 +146,15 @@ Passed
 
 # Passing test arguments
 
-You can pass extra arguments to the test command, but you must put them after `--` to stop 0test interpreting them as arguments or versions. e.g. to run 0test on itself with verbose output:
+You can pass extra arguments to the test command, but you must put them after `--` to stop 0test interpreting them as arguments or versions. e.g. to run 0test on 0compile with verbose output:
 
 ```shell
-$ 0test alias:0test -- -v
+$ 0test http://0install.net/2006/interfaces/0compile.xml -- -v
 ```
 
 # Specifying a test command
 
-The `--test-command` option can be used to run the shell command of your choice, rather than the test command given in the feed's `self-test` attribute. The command that would be executed if the implemention were run normally is available as `$*`.
+The `--test-command` (or `-t`) option can be used to run the shell command of your choice, rather than the "test" `<command>` given in the feed. The command that would be executed if the implemention were run normally is available as `$*`.
 
 For example, to check that `rox --version` worked in versions 2.8 and 2.9 of ROX-Filer:
 
@@ -172,7 +172,7 @@ You can use `--command` to select a different `<command>`. By default, the comma
 
 # Test-only dependencies
 
-Starting from 0test 0.4, you can also use the `<command>` syntax instead of the self-test attribute. This allows passing extra arguments and specifying test-specific dependencies. For example:
+You can pass extra arguments and specify test-specific dependencies in the `<command>`, as usual. For example:
 
 ```xml
   <group>
@@ -181,7 +181,7 @@ Starting from 0test 0.4, you can also use the `<command>` syntax instead of the 
     </requires>
     <command name="test" path="tests/testall.py">
       <requires interface="http://testing.com/testframework.xml">
-	<environment insert="" mode="replace" name="TEST_FRAMEWORK"/>
+        <environment insert="" mode="replace" name="TEST_FRAMEWORK"/>
       </requires>
     </command>
     <implementation id="." version="0.1-pre"/>
