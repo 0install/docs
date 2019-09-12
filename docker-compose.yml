@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mkdocs:
+    build: .
+    command: serve -a 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "127.0.0.1:8000:8000"
