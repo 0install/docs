@@ -229,17 +229,17 @@ Thousands of packages available
 
 ## AppImage
 
-[AppImage](../https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
+[AppImage](https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
 
 - All dependencies that cannot reasonably be expected to come with all target systems (Linux distributions) in their default installation ("base system") are bundled into a single file and can therefore not be shared between apps.
-- Automatic updating is implemented by an [additional tool](../https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
+- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
 - Only supports Linux.
 
 For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
 
 ## Chocolatey
 
-[Chocolatey](../https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
+[Chocolatey](https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
 
 - Relies on packages to implement reliable install and uninstall logic themselves. Cannot guarantee conflict-free or side-by-side installation.
 - Uses a central, moderated package repository rather than decentralized files on the web.
@@ -250,7 +250,7 @@ Chocolatey could in future serve the role of the native package manager on Windo
 
 ## PortableApps.com
 
-[PortableApps.com](../https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
+[PortableApps.com](https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
 
 - All dependencies are bundled and can therefore not be shared between apps.
 - Only supports Windows.
@@ -259,7 +259,7 @@ PortableApps write their config in the same directory as the installed applicati
 
 ## Java Web Start
 
-Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](../https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
+Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
 
 ## Maven
 
@@ -314,7 +314,7 @@ In Nix, mutually untrusting users cannot share packages. The manual says A setui
 
 ## OSTree
 
-[OSTree](../https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
+[OSTree](https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
 
 ## Glick 2
 
@@ -322,7 +322,7 @@ In Nix, mutually untrusting users cannot share packages. The manual says A setui
 
 ## DOAPDescription of a Project
 
-[DOAP](../https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
+[DOAP](https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
 
 ## Environment modules
 
