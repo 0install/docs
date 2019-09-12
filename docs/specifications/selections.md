@@ -53,6 +53,7 @@ Before 0install 0.51, there were no commands at all. Instead, the `<selection>` 
       from-feed="..." ?
       local-path="..." ?
       quick-test-file="..." ?
+      quick-test-mtime="..." ?
       requires-compilation="true" ?
       ... >
     [ dependencies ]
@@ -73,6 +74,10 @@ Before 0install 0.51, there were no commands at all. Instead, the `<selection>` 
 
 `quick-test-file`
 : A file which, if present, indicates that the selection is still valid. This is sometimes used with distribution-provided selections. If not present and the ID starts with "package:", you'll need to query the distribution's package manager to check that this version is still installed.
+
+`quick-test-mtime`
+: If present, the quick test file must not only exist, but must have this `mtime` (an integer number of seconds since the Unix epoch).
+For systems which provide more accurate times, ignore the fractional part (round down towards zero).
 
 `requires-compilation`
 : If present, this attribute indicates that the selection does not yet exist, but could be compiled from the source implementation with the same `id`. Such selections can be generated when using `0install select --may-compile` (0install >= 2.9).
