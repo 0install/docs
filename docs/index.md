@@ -1,4 +1,4 @@
-title: About
+title: Home
 
 # Zero Install
 
@@ -20,16 +20,16 @@ More than one thousand packages are currently available and you can easily publi
 
 Click one of the links below to find out why you may want to use 0install.
 
-[By perspective](perspectives.md)
+[By perspective](about/perspectives.md)
 : How 0install benefits users, administrators, developers and distributions.
 
-[Compared to other systems](comparison.md)
+[Compared to other systems](about/comparison.md)
 : Why you may prefer 0install over another project.
 
-[Cool features](features.md)
+[Cool features](about/features.md)
 : Some key features: native packager integration, sharing and security.
 
-[FAQ](faq.md)
+[FAQ](about/faq.md)
 : Frequently Asked Questions
 
 ## More documentation

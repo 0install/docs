@@ -188,7 +188,7 @@ Libraries shared between programs
 
 Downloads shared between users
 : If two users install/use the same program, it is only downloaded once and stored once.  
-See [Sharing](details/sharing.md) for how to set this up with Zero Install.
+See [Sharing](../details/sharing.md) for how to set this up with Zero Install.
 
 Multiple versions coexist
 : Two versions of a program or library can be installed at the same time, and the user can choose which one to run.
@@ -214,7 +214,7 @@ Can install systems software
 
 Supports sandboxing
 : If you have a way of running an application in a sandboxed environment (e.g., a Java virtual machine), then the installation system will let you install and run the program without forcing you to run any of the downloaded code outside of the sandbox.  
-See the [EBox sandboxing demo](tools/ebox.md) for an example of using 0install in this way.
+See the [EBox sandboxing demo](../tools/ebox.md) for an example of using 0install in this way.
 
 Usable when off-line
 : Once a program has been installed, the program can be run again while disconnected.
@@ -229,28 +229,28 @@ Thousands of packages available
 
 ## AppImage
 
-[AppImage](https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
+[AppImage](../https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
 
 - All dependencies that cannot reasonably be expected to come with all target systems (Linux distributions) in their default installation ("base system") are bundled into a single file and can therefore not be shared between apps.
-- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
+- Automatic updating is implemented by an [additional tool](../https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
 - Only supports Linux.
 
-For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](specifications/feed.md#retrieval-methods) with `executable='true'`.
+For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
 
 ## Chocolatey
 
-[Chocolatey](https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
+[Chocolatey](../https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
 
 - Relies on packages to implement reliable install and uninstall logic themselves. Cannot guarantee conflict-free or side-by-side installation.
 - Uses a central, moderated package repository rather than decentralized files on the web.
 - Most packages require administrative permissions for installation.
 - Only supports Windows.
 
-Chocolatey could in future serve the role of the native package manager on Windows. See [details/distribution-integration.md](Distribution integration)
+Chocolatey could in future serve the role of the native package manager on Windows. See [details/distribution-integration.md](../Distribution integration)
 
 ## PortableApps.com
 
-[PortableApps.com](https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
+[PortableApps.com](../https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
 
 - All dependencies are bundled and can therefore not be shared between apps.
 - Only supports Windows.
@@ -259,7 +259,7 @@ PortableApps write their config in the same directory as the installed applicati
 
 ## Java Web Start
 
-Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
+Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](../https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
 
 ## Maven
 
@@ -310,11 +310,11 @@ Building a Nix package involves creating a "Nix expression" in a (custom) functi
 
 While Zero Install is mainly targeted at adding additional packages to an existing system, Nix aims to manage the whole system (although it installs cleanly alongside your existing package manager). Nix packages have short names (like `perl`) not full URIs, and thus it appears to assume a centrally-controlled repository.
 
-In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](details/sharing.md).
+In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](../details/sharing.md).
 
 ## OSTree
 
-[OSTree](https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
+[OSTree](../https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
 
 ## Glick 2
 
@@ -322,12 +322,12 @@ In Nix, mutually untrusting users cannot share packages. The manual says A setui
 
 ## DOAPDescription of a Project
 
-[DOAP](https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
+[DOAP](../https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
 
 ## Environment modules
 
 The [Environment Modules](http://modules.sourceforge.net/) package provides for the dynamic modification of a user's environment via modulefiles. Each modulefile contains the information needed to configure the shell for an application. Typically modulefiles instruct the module command to alter or set shell environment variables such as `PATH`, `MANPATH`, etc. To be able to load ("install") software, it must first be installed under the `$MODULESHOME` directory which is in `/usr/local/Modules` or a shared network filesystem. It is also possible to install it in `~/.local` without root permissions, but then the modules can't be shared (due to different `$HOME`).
 
-The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
+The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](../packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
 
 If you believe that any of the information above is inaccurate or out-of-date, please write to [mailing list](http://0install.net/support.html#lists) to let us know. Thanks!

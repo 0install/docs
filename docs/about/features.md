@@ -10,7 +10,7 @@ Decentralised; anyone can distribute software
 
 : See the "[Decentralised Installation Systems](http://osnews.com/story.php/16956/Decentralised-Installation-Systems)" essay on OSNews for a more complete introduction to the subject.
 
-: See the [Packaging Guide](packaging/index.md) for information on distributing software using 0install.
+: See the [Packaging Guide](../packaging/index.md) for information on distributing software using 0install.
 
 Security is central
 
@@ -18,7 +18,7 @@ Security is central
 
 : The problems with a centrally-controlled "app store" as the only means to get software are clear to everyone: applications that compete with the store owner's interests are banned. Innovation and competition suffer. But the same effect can be achieved without overt restrictions if getting software from outside the distribution repository is simply too risky for users to consider.
 
-: See the [security page](details/security.md) for more information about 0install's security features.
+: See the [security page](../details/security.md) for more information about 0install's security features.
 
 You control your own computer
 
@@ -34,7 +34,7 @@ Conflict free
 
 Shared binaries/cache
 
-: 0install supports sharing of binaries (the implementation cache) [between users](details/sharing.md) and [between virtual machines](details/virtual-machines.md).
+: 0install supports sharing of binaries (the implementation cache) [between users](../details/sharing.md) and [between virtual machines](../details/virtual-machines.md).
 
 : If one user installs a 200 Mb application, another user can run it without downloading it again. Most packaging systems solve this problem by only allowing root to install software. The systems which don't have this limitation typically end up downloading and storing multiple copies of a program; one for each user. 0install shares downloads (safely) between users.
 
@@ -52,7 +52,7 @@ Automatic updates
 
 Binary and source packages
 
-: 0install supports both [compiling applications from source](tools/0compile/index.md) and downloading binaries.
+: 0install supports both [compiling applications from source](../tools/0compile/index.md) and downloading binaries.
 
 Native package manager integration
 
@@ -60,7 +60,7 @@ Native package manager integration
 
 : It can also use use PackageKit to install system packages using the distribution's package manager, if no 0install package is available.
 
-: See the [distro integration page](details/distribution-integration.md) for more information.
+: See the [distro integration page](../details/distribution-integration.md) for more information.
 
 Run without granting root privileges
 
