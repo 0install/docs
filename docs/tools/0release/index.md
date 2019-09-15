@@ -95,7 +95,7 @@ Each time you create a new release, the resulting files go in your `releases` di
 ```shell
 $ mkdir -p ~/releases/hello
 $ cd ~/releases/hello
-$ 0launch http://0install.net/2007/interfaces/0release.xml ~/hello/HelloWorld.xml
+$ 0launch http://0install.net/2007/interfaces/0release.xml ~/hello-python/HelloWorld.xml
 Setting up releases directory for HelloWorld
 Success - created script:
  ~/releases/hello/make-release
@@ -145,7 +145,7 @@ You are prompted to enter the version number for the new release. You can just p
 ```shell
 Releasing version 0.1
 HEAD is now at 387535a Updated feed-for to localhost for testing
-SKIPPING unit tests for ~/releases/hello/0.1/helloworld-0.1 (no 'self-test' attribute set)
+SKIPPED unit tests for ~/releases/hello/0.1/helloworld-0.1/HelloWorld.xml (no 'test' command)
 Wrote source feed as helloworld-0.1.xml
 Wrote changelog from start to here as changelog-0.1
 
@@ -182,9 +182,11 @@ Hello World!
 
 Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail prompt. Choose `Publish` (you can just type `p<Return>`).
 
+Note: 0release will sign the release tag using your GPG key. If you don't have one, use `gpg --gen-key` to create one now. If you have multiple keys, pass `-k ID` to 0release to choose which one you want to use.
+
 The temporary files (`release-status` and the extracted `helloworld-0.1` directory) are removed, and it creates a `merged.xml` feed. In our case, that's just the same as the one we tested, but if we were releasing a program that needed compiling, it would gather together the source and all the binaries into one feed here.
 
-Finally, it hands this off to 0repo:
+Finally, it hands this off to [0repo](../0repo.md):
 
 ```shell
 Tagged as v0.1
