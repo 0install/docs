@@ -1,6 +1,6 @@
 title: OS-specific differences
 
-The Linux version and [Windows version](windows.md) of Zero Install share the same [feed format](../specifications/feed.md). For most common use-cases they behave identically on the command-line. There are however some OS-specific differences.
+The [Linux version](linux.md) and [Windows version](windows.md) of Zero Install share the same [feed format](../specifications/feed.md). For most common use-cases they behave identically on the command-line. There are however some OS-specific differences.
 
 [TOC]
 
