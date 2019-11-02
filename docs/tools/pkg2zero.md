@@ -64,7 +64,7 @@ $ pkg2zero -k Bob http://.../package.deb
 
 Note that if this version was already added then it pkg2zero won't do anything, so if you already made an unsigned feed then delete it first, or use [0publish --xmlsign](0publish.md) to resign it.
 
-See the [packaging tutorial](http://0install.net/injector-packagers.md) for more details about signing feeds.
+See the [packaging tutorial](../packaging/index.md) for more details about signing feeds.
 
 # Adding more versions
 

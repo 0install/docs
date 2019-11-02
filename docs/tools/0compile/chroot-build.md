@@ -186,7 +186,7 @@ BLFS packages:
 
 Zero Install itself:
 
--   [ZeroInstall-Injector](http://0install.net/install-source.md)
+-   [ZeroInstall-Injector](../../details/linux.md#from-source)
 
 # 0compile setup
 
