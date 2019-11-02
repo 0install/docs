@@ -1,6 +1,6 @@
 title: Packaging guide (graphical)
 
-This guide shows how to make software available through [Zero Install](http://0install.net/injector.html). We will start by packaging [Blender](http://www.blender.org), an open source 3D modelling and animation program.
+This guide shows how to make software available through [Zero Install](https://0install.net/injector.html). We will start by packaging [Blender](http://www.blender.org), an open source 3D modelling and animation program.
 
 You should already be familiar with the general operation of Zero Install. If not, start by reading the [Introduction tutorial](../basics/index.md).
 

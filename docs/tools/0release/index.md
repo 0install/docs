@@ -50,7 +50,7 @@ A minimal Hello World example is available for testing. You can check it out lik
 $ git clone git://github.com/0install/hello-python.git
 ```
 
-To check that you can run it, use [0launch](http://0install.net/injector.html) on the feed:
+To check that you can run it, use [0launch](https://0install.net/injector.html) on the feed:
 
 ```shell
 $ cd hello-python

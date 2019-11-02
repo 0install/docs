@@ -11,7 +11,7 @@ Linux distributions come with a lot of general purpose software, but sometimes a
 -   You don't need to enter the root password to install things.
 -   Installing programs only affects you, not other users of the computer.
 
-If you know the program you want is available this way, go to the [downloads page](http://0install.net/injector.html) and install the Zero Install package for your distribution.
+If you know the program you want is available this way, go to the [downloads page](https://0install.net/injector.html) and install the Zero Install package for your distribution.
 
 If you don't have a particular package in mind and you're just browsing, then you've probably come to the wrong place. Only a small number of programs are currently available this way, and we're mainly interested in building the tools that help other people to make packages rather than in making lots of packages ourselves.
 
@@ -28,13 +28,13 @@ Power users are probably the ideal audience for Zero Install. Zero Install is al
 **How do I ...**
 
 ... get started?
-: Go to the [downloads page](http://0install.net/injector.html) and install the Zero Install Injector package. Then follow the tutorial.
+: Go to the [downloads page](https://0install.net/injector.html) and install the Zero Install Injector package. Then follow the tutorial.
 
 ... change to a different version of something?
 : Different desktop environments provide different ways to do this, but you can always use the command line. `0launch --list` shows the URI of every program in your cache. `0launch -g URI` opens the GUI for selecting different versions of that program.
 
 ... compile from source?
-: Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](http://0install.net/0compile.html) for details.
+: Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](https://0install.net/0compile.html) for details.
 
 ... reinstall something?
 : You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0store audit` to check it. Deleting the program's configuration files may help, though.
@@ -48,7 +48,7 @@ Zero Install lets your users install programs in a way that's as secure as insta
 **How do I ...**
 
 ... get started?
-: Go to the [downloads page](http://0install.net/injector.html) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
+: Go to the [downloads page](https://0install.net/injector.html) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
 
 ... set up sharing of downloads?
 : Follow the [setting up sharing instructions](../details/sharing.md). Now when a user installs a program, it ends up in `/var/cache/0install.net` (the sharing instructions explain why this is safe).
@@ -103,4 +103,4 @@ Installing anything that's not in your distribution is too hard for most of your
 ... sign off upstream versions I've tested?
 : This is not yet supported. Talk to us!
 
-In general, we welcome better integration with distributions, so write to our [mailing list](http://0install.net/support.html#lists) and we'll work something out!
+In general, we welcome better integration with distributions, so write to our [mailing list](https://0install.net/support.html#lists) and we'll work something out!

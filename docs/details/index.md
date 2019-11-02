@@ -6,7 +6,7 @@ In this guide we install a program which is available through Zero Install, but 
 
 ## Pick a program
 
-Choose a program to install from the [list of feeds](http://0install.net/injector-feeds.html). A program with one dependency is ideal (the more it has, the longer it will take you to install it!). I'll be using [Edit](http://rox.sourceforge.net/2005/interfaces/Edit) for this example.
+Choose a program to install from the [list of feeds](https://0install.net/injector-feeds.html). A program with one dependency is ideal (the more it has, the longer it will take you to install it!). I'll be using [Edit](http://rox.sourceforge.net/2005/interfaces/Edit) for this example.
 
 Open the feed for Edit above in your browser. The feed is an XML file listing the available versions of Edit. Your browser should render it as a web-page:
 
@@ -199,7 +199,7 @@ So, what have we achieved? We've installed a program and its dependencies. We ha
 
 We didn't need to run any code from either Edit or ROX-Lib to perform the installation (we only ran them to test that it worked). If you have software for running programs in a restricted environment, you can install and run programs without even giving them write access to their own code.
 
-Finally, although it may have been a little tedious, everything we did could be automated. You could write a program to do all this for you (or use [ours](http://0install.net/injector.html)!).
+Finally, although it may have been a little tedious, everything we did could be automated. You could write a program to do all this for you (or use [ours](https://0install.net/injector.html)!).
 
 ## Tidying up
 

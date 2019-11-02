@@ -6,7 +6,7 @@
 
 **0share** provides for local peer-to-peer distribution of Zero Install implementations (versions of programs). This means that once one machine on your local network has downloaded something, other machines can get it directly from the first one.
 
-**This program is an experimental proof-of-concept.** It currently requires a modified version of 0install, which can be found in the [peer2peer](https://github.com/0install/0install/tree/peer2peer) branch. This branch is now very out-of-date. If you'd like to take over this project, please [get in touch](http://0install.net/support.html)!
+**This program is an experimental proof-of-concept.** It currently requires a modified version of 0install, which can be found in the [peer2peer](https://github.com/0install/0install/tree/peer2peer) branch. This branch is now very out-of-date. If you'd like to take over this project, please [get in touch](https://0install.net/support.html)!
 
 ![Screenshot](../img/screens/p2p.png)
 

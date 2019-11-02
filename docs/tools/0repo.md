@@ -12,7 +12,7 @@ Figure 1 shows a simple deployment where a single developer provides a set of pa
 
 _Figure 1: Typical single-developer deployment of 0repo_
 
-0repo is new and a little experimental, but [feedback](http://0install.net/support.html) is welcome! We hope soon to support multi-developer deployments, where 0repo runs on a server and accepts contributions from a set of developers (as shown in figure 2).
+0repo is new and a little experimental, but [feedback](https://0install.net/support.html) is welcome! We hope soon to support multi-developer deployments, where 0repo runs on a server and accepts contributions from a set of developers (as shown in figure 2).
 
 ![Multi-developer 0repo deployment](../img/diagrams/0repo-multi.png)
 

@@ -178,4 +178,4 @@ $ 0install run http://...
 
 ## Other problems
 
-If you still have problems, please [write to the mailing list](http://0install.net/support.html#lists), and send the output of the commands above.
+If you still have problems, please [write to the mailing list](https://0install.net/support.html#lists), and send the output of the commands above.

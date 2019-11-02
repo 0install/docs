@@ -83,7 +83,7 @@ If you realised you made a mistake, correct it and then do:
 $ git commit -a --amend
 ```
 
-Finally, to make a patch file ready to send to the [mailing list](http://0install.net/support.html#lists):
+Finally, to make a patch file ready to send to the [mailing list](https://0install.net/support.html#lists):
 
 ```shell
 $ git format-patch origin/master
@@ -116,4 +116,4 @@ $ make translations
 $ ./0launch
 ```
 
-Finally, [send us](http://0install.net/support.html#lists) the new `.po` file.
+Finally, [send us](https://0install.net/support.html#lists) the new `.po` file.

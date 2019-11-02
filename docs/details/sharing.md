@@ -64,7 +64,7 @@ This diagram shows the four processes involved in adding a new package to the sy
 
 ![Sequence of operations to add to the system cache](../img/uml/secure-add.violet.png)
 
-1. [Install 0install version 0.30](http://0install.net/injector.html) or later.
+1. [Install 0install version 0.30](https://0install.net/injector.html) or later.
 2. Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
 
 ```shell

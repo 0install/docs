@@ -12,7 +12,7 @@ Normally, Zero Install will select a pre-built binary for your system. However, 
 - you wish to build using different library versions; or
 - you wish to make changes to a program or library.
 
-This tutorial shows how to use `0compile` for these purposes. It is assumed that you have already installed [Zero Install](http://0install.net/injector.html) and know how to run programs using it. To get `0compile` itself, use:
+This tutorial shows how to use `0compile` for these purposes. It is assumed that you have already installed [Zero Install](https://0install.net/injector.html) and know how to run programs using it. To get `0compile` itself, use:
 
 ```shell
 $ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml

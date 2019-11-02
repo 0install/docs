@@ -6,7 +6,7 @@ The Linux version and [Windows version](windows.md) of Zero Install share the sa
 
 # Generic binaries
 
-You can download download various distribution-specific packages as well as generic binaries [here](http://0install.net/install-linux.html).
+You can download download various distribution-specific packages as well as generic binaries [here](https://0install.net/injector.html#linux).
 
 You may need to install `libcurl3` before using the generic binaries, e.g. with `apt-get install libcurl3` on Ubuntu or `pacman -Sy libcurl-compat` on Arch Linux.
 

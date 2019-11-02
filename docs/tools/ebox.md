@@ -24,7 +24,7 @@ Zero Install is designed to solve the installation part of this problem, and is 
 
 Different sandboxes provide different features. Ideally we would use an OS-level tool that could sandbox any application (e.g. Plash). However, these are not yet widely available, difficult to deploy, or only available on certain systems. Therefore, this example uses application-level sandboxing instead (relying on security features of the programming language rather than those of the operating system). The advantage is that it should work everywhere. The disadvantage is that it only works with programs written in that language.
 
-We start with a tutorial showing how to install and run a couple of sample applications. Then we present a challenge: modify the sample applications to escape from the sandbox! If you find a security flaw, please report it to [the mailing list](http://0install.net/support.html#lists), and I'll add you to the high-score table:
+We start with a tutorial showing how to install and run a couple of sample applications. Then we present a challenge: modify the sample applications to escape from the sandbox! If you find a security flaw, please report it to [the mailing list](https://0install.net/support.html#lists), and I'll add you to the high-score table:
 
 | Date | Finder            | Flaw |
 |------|-------------------|------|

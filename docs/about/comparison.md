@@ -330,4 +330,4 @@ The [Environment Modules](http://modules.sourceforge.net/) package provides for 
 
 The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](../packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
 
-If you believe that any of the information above is inaccurate or out-of-date, please write to [mailing list](http://0install.net/support.html#lists) to let us know. Thanks!
+If you believe that any of the information above is inaccurate or out-of-date, please write to [mailing list](https://0install.net/support.html#lists) to let us know. Thanks!
