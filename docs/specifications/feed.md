@@ -294,7 +294,7 @@ The type of the archive is given as a MIME type in the `type` attribute (since 0
 -   `application/x-compressed-tar` (`.tar.gz` or `.tgz`)
 -   `application/zip` (`.zip`)
 -   `application/vnd.ms-cab-compressed` (`.cab`)
--   `application/x-xz-compressed-tar` (`.tar.xz`) - since version 0.43, not supported by Windows version
+-   `application/x-xz-compressed-tar` (`.tar.xz`) - since version 0.43, since version 2.11 on Windows
 -   `application/x-ruby-gem` (`.gem`) - since version 1.0-rc1, not supported by Windows version
 -   `application/x-7z-compressed` (`.7z`) - Windows version only
 -   `application/x-msi` (`.msi`) - Windows version only
