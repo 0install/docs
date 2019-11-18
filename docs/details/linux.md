@@ -29,7 +29,7 @@ You can also just run `./files/0install` directly, but  some features won't work
 
 # From source
 
-You can download the 0install source code for releases versions from the [GitHub Releases page](https://github.com/0install/0install/releases).
+You can download the 0install source code for released versions from the [GitHub Releases page](https://github.com/0install/0install/releases).
 
 Alternatively you can get the latest development version using Git:
 
