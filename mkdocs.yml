@@ -15,5 +15,7 @@ theme:
 markdown_extensions:
   - admonition
   - def_list
+  - toc:
+      permalink: true
 extra_css: [style.css]
 extra_javascript: [menu.js]
