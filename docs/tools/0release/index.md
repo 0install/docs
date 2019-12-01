@@ -21,7 +21,8 @@ After doing some development (so you have something to release!) you use 0releas
 
 You can then run any final (manual) tests on the release. If you're happy with the result, then 0release can publish it (e.g. submit the release to 0repo, and push the new commits and tag to your public version control system). Otherwise, 0release will discard the temporary branch so that you can fix the problems and try again.
 
-Note: you don't _need_ to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then [publish a feed](../../packaging/index.md) for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:
+!!! note
+    You don't _need_ to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then [publish a feed](../../packaging/index.md) for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:
 
 - Making a new release is quicker, since many steps are automated.
 - You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).
@@ -126,7 +127,8 @@ exec 0launch http://0install.net/2007/interfaces/0release.xml \
  "$@"
 ```
 
-**Warning:** Do not put `make-release` under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake then 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
+!!! warning
+    Do not put `make-release` under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake then 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)
 
 ## Creating a release candidate
 
@@ -182,7 +184,8 @@ Hello World!
 
 Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail prompt. Choose `Publish` (you can just type `p<Return>`).
 
-Note: 0release will sign the release tag using your GPG key. If you don't have one, use `gpg --gen-key` to create one now. If you have multiple keys, pass `-k ID` to 0release to choose which one you want to use.
+!!! note
+    0release will sign the release tag using your GPG key. If you don't have one, use `gpg --gen-key` to create one now. If you have multiple keys, pass `-k ID` to 0release to choose which one you want to use.
 
 The temporary files (`release-status` and the extracted `helloworld-0.1` directory) are removed, and it creates a `merged.xml` feed. In our case, that's just the same as the one we tested, but if we were releasing a program that needed compiling, it would gather together the source and all the binaries into one feed here.
 

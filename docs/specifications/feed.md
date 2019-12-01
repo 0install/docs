@@ -341,7 +341,8 @@ In this case, each child element of the recipe represents a step. To get an impl
 `<copy-from id='...' source='...' ? dest='...' ?>`
 : Copies files or directories from another implementation, e.g., for applying an update to a previous version (0install >= 2.13). The specified id must exactly match the id attribute of another implementation specified elsewhere in the same feed. You can specify the source and destination file or directory to be copied relative to the implementation root. Leave them unset to copy the entire implementation.
 
-Note: A recipe is generally only useful for patching existing archives without having to host the complete result yourself. Normally, if your program requires files from several different packages then it is better to use the `<requires>` element instead. This allows libraries to be shared between different programs, and lets the user choose the versions and upgrade them individually.
+!!! note
+    A recipe is generally only useful for patching existing archives without having to host the complete result yourself. Normally, if your program requires files from several different packages then it is better to use the `<requires>` element instead. This allows libraries to be shared between different programs, and lets the user choose the versions and upgrade them individually.
 
 # Dependencies
 

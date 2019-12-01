@@ -58,7 +58,8 @@ You can also manually generate a catalog from a set of feeds downloaded to a loc
 $ 0install run --command=0publish http://0install.de/feeds/ZeroInstall_Tools.xml feeds/*.xml --catalog=catalog.xml --xmlsign
 ```
 
-Note: A catalog generated like this points to the locations the feeds originally came from, not the local XML files on your disk.
+!!! note
+    A catalog generated like this points to the locations the feeds originally came from, not the local XML files on your disk.
 
 # Usage
 

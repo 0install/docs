@@ -1,6 +1,7 @@
 title: Desktop integration
 
-Note: This is currently only supported in [Zero Install for Windows](../details/windows.md).
+!!! note
+    This is currently only supported in [Zero Install for Windows](../details/windows.md).
 
 Zero Install allows you to integrate applications into your desktop environment as you are accustomed to from classic setup programs: Start menu entries, file type associations, entries in context menus, etc.. All the advantages of Zero Install such as automatic updates, parallel usage of multiple application versions and easy application removal are preserved.
 

@@ -25,7 +25,8 @@ Notes:
     
 4. Because Zero Install packages are named by their digest, there are no problems with sharing a single cache between different architectures (whether virtual machines or physical machines with a network file-system). Packages that can be shared will be shared automatically, packages that can't will co-exist peacefully.
     
-Warning: Older versions of the VirtualBox guest additions have problems with symlinks in shared folders. If you allow guests to write to a shared cache on the host, you may get the error `Incorrect manifest -- archive is corrupted`, even though the archive is actually OK. Guest additions 4.0.4 is known to not work. Version 4.2.0 seems fine.
+!!! warning
+    Older versions of the VirtualBox guest additions have problems with symlinks in shared folders. If you allow guests to write to a shared cache on the host, you may get the error `Incorrect manifest -- archive is corrupted`, even though the archive is actually OK. Guest additions 4.0.4 is known to not work. Version 4.2.0 seems fine.
 
 ## Vagrant
 

@@ -32,7 +32,8 @@ In other words, it does a full compile-and-install to $DESTDIR, deletes anything
 
 This allows [0compile](0compile/index.md) to create the GLib-dev package from the upstream source automatically.
 
-Note: If your package creates script files in `bin` that are part of the `-dev` package (i.e. they are used when building programs that use the library) then use `--keep=bin` to prevent them from being deleted.
+!!! note
+    If your package creates script files in `bin` that are part of the `-dev` package (i.e. they are used when building programs that use the library) then use `--keep=bin` to prevent them from being deleted.
 
 # Major version mappings
 

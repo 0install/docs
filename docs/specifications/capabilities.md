@@ -188,7 +188,8 @@ Some capabilities allow you to specify an icon.
 <icon xmlns='http://zero-install.sourceforge.net/2004/injector/interface' type='...' href='...' ?/>
 ```
 
-Note: Since `<icon>` is defined by the regular [feed format](feed.md), you need to explicitly specify the XML namespace as shown above, when placing `<icon>`s within capabilities.
+!!! note
+    Since `<icon>` is defined by the regular [feed format](feed.md), you need to explicitly specify the XML namespace as shown above, when placing `<icon>`s within capabilities.
 
 `type`
 : The MIME type of the icon. Should be `image/vnd.microsoft.icon` (`.ico`) for Windows.

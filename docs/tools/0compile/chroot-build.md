@@ -6,7 +6,8 @@ This page explains how to build in a `chroot` sandbox environment [using 0compil
 
 The build system (`chroot`) comes with development tools such as gcc and make, and the `0launch` command.
 
-**Note:** This page is very out-of-date. Consider using Docker to sandbox builds instead.
+!!! warning
+    This page is very out-of-date. Consider using Docker to sandbox builds instead.
 
 **Contents:**
 
@@ -200,7 +201,8 @@ $ yes Y | /usr/bin/0launch -cd $URI
 $ 0alias -d /usr/bin $CMD $URI
 ```
 
-Note: depending on your build OS and Python version, you might need to use an older version of 0compile.
+!!! note
+    Depending on your build OS and Python version, you might need to use an older version of 0compile.
 
 # 0compile build
 

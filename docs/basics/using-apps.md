@@ -1,6 +1,5 @@
-# Using apps
-
-Note: This is currently not supported in Zero Install for Windows. Please see [Desktop integration](windows.md) for a functionally similar replacement.
+!!! note
+    This is currently not supported in Zero Install for Windows. Please see [Desktop integration](windows.md) for a functionally similar replacement.
 
 Apps allow you to create command-line launchers:
 

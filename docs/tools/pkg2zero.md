@@ -40,7 +40,8 @@ You will be prompted to give a URL for the program's icon, since Debian packages
 
 You will then be prompted to "Enter the URI for this feed". This is the URL from which other people will download your feed file.
 
-Note: pkg2zero guesses some things (such as which binary to run by default if the package contains several) so you should check the feed file manually and edit if required. In this case, no editing is needed.
+!!! note
+    pkg2zero guesses some things (such as which binary to run by default if the package contains several) so you should check the feed file manually and edit if required. In this case, no editing is needed.
 
 # Testing
 

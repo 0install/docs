@@ -22,7 +22,8 @@ You can also share the cache between virtual machines:
 
 ### Between machines using P2P
 
-Note: this is still experimental
+!!! note
+    This is still experimental.
 
 Using [0share](../tools/0share.md) you can locally distribute your implementations (versions of programs) via a peer-to-peer protocol.
 
@@ -38,4 +39,5 @@ On Windows open the main GUI of Zero Install and click on **Tools** and **Cache 
 
 ![Zero Install for Windows - Cache management](../img/screens/0install-win/cache-management.png)
 
-Note: you can delete the entire cache, 0install will redownload whatever it needs later.
+!!! note
+    You can delete the entire cache, 0install will redownload whatever it needs later.

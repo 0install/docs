@@ -1,4 +1,5 @@
-Note: This is currently only supported in [Zero Install for Windows](windows.md).
+!!! note
+    This is currently only supported in [Zero Install for Windows](windows.md).
 
 Zero Install Sync allows you to synchronize your list of applications, [desktop integrations](../basics/windows.md) and command-line aliases between multiple machines. You either need a [free 0install.de user account](https://0install.de/sync/register) or you can use your own server.
 

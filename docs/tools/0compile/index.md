@@ -18,7 +18,8 @@ This tutorial shows how to use `0compile` for these purposes. It is assumed that
 $ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml
 ```
 
-Note: this page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the 0install GUI. The graphical interface provides similar options, but is slightly more limited.
+!!! note
+    This page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the 0install GUI. The graphical interface provides similar options, but is slightly more limited.
 
 **Contents:**
 
@@ -98,7 +99,8 @@ Executing: "$SRCDIR/configure" --prefix="$DISTDIR" && make install
 ...
 ```
 
-Note: GNU-Hello does not use Zero Install to get the C compiler (`gcc`) or the standard library header files (`libc-dev`), so you should install these yourself. They come with most distributions.
+!!! note
+    GNU-Hello does not use Zero Install to get the C compiler (`gcc`) or the standard library header files (`libc-dev`), so you should install these yourself. They come with most distributions.
 
 `0compile` starts by creating two sub-directories: `gnu-hello-linux-x86_64` for the final result (the exact name will depend on your system) and `build` for any temporary files. It then executes a command specified in the source feed, which actually builds the software (using the standard GNU build system in this case).
 
@@ -203,7 +205,8 @@ The source code and all dependencies will be copied into a new `dependencies` su
 
 If `$DISTDIR` ends up containing a directory called `pkgconfig`, it checks each `.pc` file inside for an absolute prefix. If found, it is changed to a relative path.
 
-Note: for "pure" Zero Install libraries, just use a relative path (e.g. `prefix=${pcfiledir}/..`) in the `.pc` file in the source, and copy it unchanged to `$DISTDIR`.
+!!! note
+    For "pure" Zero Install libraries, just use a relative path (e.g. `prefix=${pcfiledir}/..`) in the `.pc` file in the source, and copy it unchanged to `$DISTDIR`.
 
 ## Build dependencies containing `/usr/lib/lib*.so` broken symlinks
 
@@ -214,7 +217,8 @@ RPM unpacks all packages over the root, so one package can have a symlink to a f
 
 Since Zero Install keeps every package in its own directory, this doesn't work. Therefore, 0compile searches for such broken links, searches for a matching target, and creates a fixed link in a temporary directory, added to `LD_LIBRARY_PATH`. This makes it easy to depend on unmodified `-devel` packages which were designed for non-Zero Install systems.
 
-Note: a "pure" Zero Install library wouldn't need to include the version number in the library filename, so no symlink would be needed. If you did want to include the number in the filename, the symlink to it would go in the runtime package, not the `-dev`el package.
+!!! note
+    A "pure" Zero Install library wouldn't need to include the version number in the library filename, so no symlink would be needed. If you did want to include the number in the filename, the symlink to it would go in the runtime package, not the `-dev`el package.
 
 ## Build dependencies with lib64 directories
 

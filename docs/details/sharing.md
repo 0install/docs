@@ -2,7 +2,8 @@ title: Sharing downloads between users
 
 On systems with multiple users, it would be very inefficient if each user had to download their own copy of each program. Most packaging systems require users to have root access in order to share software (either the root password, or admin access through sudo). However, this is a security risk. Zero Install allows software to be shared automatically and safely between mutually-untrusting users.
 
-Note: this page is about sharing between users on a single computer. If you want to do peer-to-peer sharing on a LAN, see [0share](../tools/0share.md). If you want to share between virtual machines running on a single host, see [virtual machines](virtual-machines.md).
+!!! note
+    This page is about sharing between users on a single computer. If you want to do peer-to-peer sharing on a LAN, see [0share](../tools/0share.md). If you want to share between virtual machines running on a single host, see [virtual machines](virtual-machines.md).
 
 [TOC]
 
@@ -85,7 +86,8 @@ This diagram shows the four processes involved in adding a new package to the sy
 exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" < /dev/null
 ```
 
-**Note:** the path will be /usr/`local`/bin/0store-secure-add if you installed from source
+!!! note
+    The path will be /usr/`local`/bin/0store-secure-add if you installed from source.
 
 5. Make your new script readable and executable by everyone:
     
@@ -100,7 +102,8 @@ Defaults>zeroinst env_reset,always_set_home
 ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
 ```
 
-**Note:** the `NOPASSWD` line MUST go at the end of the file, otherwise it is likely to be overridden by later entries. Again, use `/usr/local/bin` if you installed from source.
+!!! note
+    The `NOPASSWD` line MUST go at the end of the file, otherwise it is likely to be overridden by later entries. Again, use `/usr/local/bin` if you installed from source.
     
 When `launch` wants to install a package, it will invoke `0store-secure-add-helper`. This script uses `sudo` to run `0store-secure-add` as the `zeroinst` user, with a clean environment. No password is required for this.
 

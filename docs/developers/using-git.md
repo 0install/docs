@@ -91,9 +91,11 @@ $ git format-patch origin/master
 
 ## Making a new translation
 
-Note: translations are not currently working - see [Gettext support in OCaml](http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml).
+!!! note
+    Translations are not currently working - see [Gettext support in OCaml](http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml).
 
-Note: if you prefer, you can also use the [Transifex web interface](https://www.transifex.net/projects/p/0install/) to work on translations.
+!!! note
+    If you prefer, you can also use the [Transifex web interface](https://www.transifex.net/projects/p/0install/) to work on translations.
 
 The steps are:
 

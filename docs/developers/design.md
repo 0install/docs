@@ -4,7 +4,8 @@
 
 This page describes the design of Zero Install itself.
 
-Note: Zero Install is based on the principle of [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
+!!! note
+    Zero Install is based on the principle of [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
 
 Everything 0launch downloads from the net by default goes in `~/.cache/0install.net/`. Every archive it downloads unpacks into its own directory inside this. So, there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact, there's one directory for every version of ROX-Filer, in case you want more than one available. Every directory is uniquely named, so you'll never get conflicts when trying to install two different programs.
 
@@ -137,7 +138,8 @@ You can use the **Preferred Stability** setting in the interface dialog to choos
 
 As you make changes to the policy and ratings, the order of the implementations in the list will change. The version in bold is the one that 0install will actually use. In addition to the ratings about, you can set the rating to **Preferred**. Such versions always come first, unless they're not cached and you are in Off-line mode.
 
-Note: If you want to use the second item on the list because the first is buggy, for example, then it is better to mark the first version as buggy than to mark the second as preferred. This is because when a new version is available, you will want that to become the version at the top of the list, whereas a preferred version will always be first.
+!!! note
+    If you want to use the second item on the list because the first is buggy, for example, then it is better to mark the first version as buggy than to mark the second as preferred. This is because when a new version is available, you will want that to become the version at the top of the list, whereas a preferred version will always be first.
 
 # Dependencies
 

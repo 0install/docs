@@ -8,7 +8,8 @@ title: Inkscape
 
 These limitations can be avoided by creating a Zero Install interface file for it. This guide goes over the steps quite quickly. For more details see [the packaging main guide](../guide-gui.md).
 
-Note: The original Inkscape binary RPM was compiled with binreloc support disabled, which prevented it from finding its icons (it used hard-coded paths). Jean-François Lemaire, the creator of the RPM, has kindly recompiled it for us with relocation support turned on.
+!!! note
+    The original Inkscape binary RPM was compiled with binreloc support disabled, which prevented it from finding its icons (it used hard-coded paths). Jean-François Lemaire, the creator of the RPM, has kindly recompiled it for us with relocation support turned on.
 
 [TOC]
 

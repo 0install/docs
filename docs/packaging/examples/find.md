@@ -16,7 +16,8 @@ $ ./AppRun
 *** This program needs ROX-Lib2 (version 2.0.0) to run.
 ```
 
-Note: If it runs without an error, then either you've installed ROX-Lib manually (not using the injector) or your `PYTHONPATH` already points to it.
+!!! note
+    If it runs without an error, then either you've installed ROX-Lib manually (not using the injector) or your `PYTHONPATH` already points to it.
 
 # Creating the interface file
 

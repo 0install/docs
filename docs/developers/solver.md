@@ -77,7 +77,8 @@ In addition, there are some constraints we always have: we must select a version
 | only one lib          | at_most_one(lib-1, lib-2)       |
 | only one python       | at_most_one(python-2, python-3) |
 
-Note: we could express at_most_one(a, b) as "!a or !b", but that scales badly when there are lots of versions, so our SAT solver adds at_most_one as a primitive.
+!!! note
+    We could express at_most_one(a, b) as "!a or !b", but that scales badly when there are lots of versions, so our SAT solver adds at_most_one as a primitive.
 
 Now the solve proceeds as follows:
 

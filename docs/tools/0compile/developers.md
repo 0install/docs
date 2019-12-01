@@ -33,7 +33,8 @@ You can also edit the XML directly, which gives more control. A minimal source i
 </implementation>
 ```
 
-Note: you only need to use `arch='*-src'` to publish implementations for things that need to be compiled. Shell scripts, etc should not be marked as source code; use `arch="*-*"` instead (which is the default anyway if `arch` is not given). For header files (-dev packages), there will often be a source implementation that generates the header files, but the resulting headers are not source (and will often be architecture-specific, e.g. `Linux-i386`).
+!!! note
+    You only need to use `arch='*-src'` to publish implementations for things that need to be compiled. Shell scripts, etc should not be marked as source code; use `arch="*-*"` instead (which is the default anyway if `arch` is not given). For header files (-dev packages), there will often be a source implementation that generates the header files, but the resulting headers are not source (and will often be architecture-specific, e.g. `Linux-i386`).
 
 The job of the `compile` command is to call the actual build system. It is executed inside the `build` directory (`$BUILDDIR`). It must compile the source in `$SRCDIR`, putting the final result (ready for distribution) in `$DISTDIR`. The path to the generated feed for the new binary is `$BINARYFEED`, if you need it during the build.
 
