@@ -87,7 +87,7 @@ exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" < /dev/null
 ```
 
 !!! note
-    The path will be /usr/`local`/bin/0store-secure-add if you installed from source.
+    The path will be `/usr/local/bin/0store-secure-add` if you installed from source.
 
 5. Make your new script readable and executable by everyone:
     
