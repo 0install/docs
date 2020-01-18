@@ -10,7 +10,7 @@ The [Linux version](linux.md) and Windows version of Zero Install share the same
 
 When you [download Zero Install for Windows](https://0install.de/downloads/) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <http://0install.de/feeds/ZeroInstall.xml>
 
-## Integration
+## Deployment
 
 When Zero Install is started by the Bootstrapper it is running from the [cache](cache.md) and is not integrated into the system. There are no start menu entries, the command-line tools are not in the `PATH`, etc.. This is by design; after all you may only need Zero Install once on that particular machine or may decide you don't like it. In that case you can simply delete the Bootstrapper EXE when you're done.
 
@@ -41,10 +41,10 @@ You can also use the command-line version of the Bootstrapper to integrate Zero 
 
 Zero Install is designed to be mostly maintenance-free (automatic update checks, etc.). You can use the following [commands](cli.md) for additional control where needed:
 
-Integrate Zero Install for the current user
+Deploy Zero Install for the current user
 : `.\0install.exe maintenance deploy`
 
-Integrate Zero Install for all users
+Deploy Zero Install for all users
 : `.\0install.exe maintenance deploy --machine`
 
 Remove Zero Install from the system
@@ -71,7 +71,7 @@ To set up Zero Install on a USB thumb drive:
 - Select "Tools" and "Portable Creator" at the bottom of the window.
 - Follow the instructions on screen.
 
-You can now use your thumb drive to run Zero Install on any Windows Computer with the .NET Framework 2.0 (which is built-in starting with Vista). Zero Install stores downloaded applications directly on the stick so you can access the same applications everywhere. Please remember to always "eject" the thumb drive in Windows before disconnecting it from the computer.
+You can now use your thumb drive to run Zero Install on any computer running a recent version of Windows. Zero Install stores downloaded applications directly on the stick so you can access the same applications everywhere. Please remember to always "eject" the thumb drive in Windows before disconnecting it from the computer.
 
 ## Limitations
 
@@ -83,4 +83,4 @@ Portable versions of Zero Install cannot perform desktop integration (e.g. creat
 
 FAT/FAT32-formatted drives cannot be used for Zero Install because they do not store file security settings (ACLs). They also only store time with an accuracy of two seconds while Zero Install checks the exact modification time of files.
 
-The portable creator creates a file in the destination directory called `_portable`, which instructs Zero Install to run in portable mode. When this file is detected Zero Install stores all its files in its installation directory instead of the [usual system directories](file-locations.md).
+The portable creator creates a file in the destination directory called `_portable`, which instructs Zero Install to run in portable mode. When this file is detected Zero Install stores all its files in its installation directory instead of the [usual system directories](file-locations.md#windows).
