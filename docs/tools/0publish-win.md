@@ -11,7 +11,7 @@ The Zero Install Publishing Tools allow you to create your own feeds on Windows.
 You need Zero Install to run the Publishing Tools. You can either search for "Zero Install Publishing Tools" in the Catalog or type this on the command-line:
 
 ```shell
-$ http://0install.de/feeds/ZeroInstall_Tools.xml
+$ 0install run http://0install.de/feeds/ZeroInstall_Tools.xml
 ```
 
 The Zero Install Publishing Tools consist of the following components:
