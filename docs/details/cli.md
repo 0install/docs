@@ -211,15 +211,15 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Imports a set of applications and desktop integrations from an existing app-list.xml file.</td>
 </tr>
 <tr>
-  <td><a href='#maintenance_deploy'><nobr><code>maintenance deploy</code></nobr></a><br>(Windows only)</td>
+  <td><a href='#self_deploy'><nobr><code>self deploy</code></nobr></a><br>(Windows only)</td>
   <td>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</td>
 </tr>
 <tr>
-  <td><a href='#maintenance_remove'><nobr><code>maintenance remove</code></nobr></a><br>(Windows only)</td>
+  <td><a href='#self_remove'><nobr><code>self remove</code></nobr></a><br>(Windows only)</td>
   <td>Removes the current instance of Zero Install from the system.</td>
 </tr>
 <tr>
-  <td><a href='#self-update'><nobr><code>self-update</code></nobr></a><br>(Windows only)</td>
+  <td><a href='#self_update'><nobr><code>self update</code></nobr></a><br>(Windows only)</td>
   <td>Updates Zero Install itself to the most recent version.</td>
 </tr>
 </table>
@@ -1941,9 +1941,9 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
 </tr>
 </table>
-<a name='maintenance_deploy'></a><h1>maintenance deploy</h1>
+<a name='self_deploy'></a><h1>self deploy</h1>
 <p>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</p>
-<p><b>Usage:</b> <code>0install maintenance deploy [TARGET]</code></p>
+<p><b>Usage:</b> <code>0install self deploy [TARGET]</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -1978,9 +1978,9 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Restart the &#39;0install central&#39; GUI after the update.</td>
 </tr>
 </table>
-<a name='maintenance_remove'></a><h1>maintenance remove</h1>
+<a name='self_remove'></a><h1>self remove</h1>
 <p>Removes the current instance of Zero Install from the system.</p>
-<p><b>Usage:</b> <code>0install maintenance remove </code></p>
+<p><b>Usage:</b> <code>0install self remove </code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -2003,9 +2003,9 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 </table>
-<a name='self-update'></a><h1>self-update</h1>
+<a name='self_update'></a><h1>self update</h1>
 <p>Updates Zero Install itself to the most recent version.</p>
-<p><b>Usage:</b> <code>0install self-update [OPTIONS]</code></p>
+<p><b>Usage:</b> <code>0install self update [OPTIONS]</code></p>
 <table>
 <tr>
   <th>Option</th>

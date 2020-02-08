@@ -34,7 +34,7 @@ Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
 You can also use the command-line version of the Bootstrapper to integrate Zero install into the desktop environment:
 
 ```shell
-.\0install.exe maintenance deploy
+.\0install.exe self deploy
 ```
 
 # Maintenance
@@ -42,16 +42,16 @@ You can also use the command-line version of the Bootstrapper to integrate Zero 
 Zero Install is designed to be mostly maintenance-free (automatic update checks, etc.). You can use the following [commands](cli.md) for additional control where needed:
 
 Deploy Zero Install for the current user
-: `.\0install.exe maintenance deploy`
+: `.\0install.exe self deploy`
 
 Deploy Zero Install for all users
-: `.\0install.exe maintenance deploy --machine`
+: `.\0install.exe self deploy --machine`
 
 Remove Zero Install from the system
-: `0install maintenance remove`
+: `0install self remove`
 
 Download and install updates for Zero Install itself
-: `0install self-update`
+: `0install self update`
 
 Download and install updates for [integrated applications](../basics/windows.md) and remove outdated files
 : `0install update-all --clean`

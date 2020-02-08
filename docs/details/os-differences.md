@@ -29,7 +29,7 @@ The [command-line interface](cli.md) of the Linux and Windows versions are large
 `0install export` and `0install store export`
 : These [implementation exporting](export.md) commands are only available in the Windows version so far.
 
-`0install maintenance|self-update`
+`0install self deploy|remove|update`
 : These [maintenance](windows.md#maintenance) commands are only available in the Windows version.
 
 `0install run --no-wait`
