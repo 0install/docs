@@ -246,7 +246,7 @@ For projects that do not provide official cross-distribution builds, AppImages a
 - Most packages require administrative permissions for installation.
 - Only supports Windows.
 
-Chocolatey could in future serve the role of the native package manager on Windows. See [details/distribution-integration.md](../Distribution integration)
+Chocolatey could in future serve the role of the native package manager on Windows. See [Distribution integration](../details/distribution-integration.md).
 
 ## PortableApps.com
 
