@@ -26,7 +26,7 @@ Instead, we can create a _local feed_ to say how to run it. Create `hello.xml` i
 
   <implementation id="." version="0.1-pre">
     <command name='run' path='hello.py'>
-      <runner interface='http://repo.roscidus.com/python/python'>
+      <runner interface='https://apps.0install.net/python/python.xml'>
         <version before='3'/>
       </runner>
     </command>
@@ -52,7 +52,7 @@ $ 0install select hello.xml
 \- URI: /home/bob/hello/hello.xml
   Version: 0.1-pre
   Path: /home/bob/hello
-  \- URI: http://repo.roscidus.com/python/python
+  \- URI: https://apps.0install.net/python/python.xml
     Version: 2.7.3
     Path: (package:deb:python2.7:2.7.3:x86_64)
 ```

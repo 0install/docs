@@ -77,7 +77,7 @@ See the [command-line interface documentation](../details/cli.md#catalog_search)
 
 Catalogs allow you to use short names on the command-line instead of entering full feed URIs. Short names are either equal to the application `<name>` as listed in the catalog (spaces replaced with dashes) or the application's `binary-name` specified in an `<entry-point>`.
 
-For example, instead of `0install run http://repo.roscidus.com/utils/vlc` you can use:
+For example, instead of `0install run https://apps.0install.net/gui/vlc.xml` you can use:
 
 - `0install run vlc-media-player` (application name) or
 - `0install run vlc` (executable file name)
@@ -90,5 +90,4 @@ The main GUI of Zero Install for Windows displays a list of available applicatio
 
 # Well-known catalogs
 
-- <http://repo.roscidus.com/catalog.xml> - open-source tools, libraries and runtime environments
-- <http://0install.de/catalog/> - curated list of cross-platform and Windows applications, default catalog used by Zero Install for Windows
+- <https://apps.0install.net/> - repository of common tools, libraries and runtime environments

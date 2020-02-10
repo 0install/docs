@@ -26,7 +26,7 @@ You can also edit the XML directly, which gives more control. A minimal source i
 ```xml
 <implementation arch="*-src" id="." version="0.1-pre">
   <command name='compile' path='Makefile'>
-    <runner interface='http://repo.roscidus.com/devel/make'>
+    <runner interface='https://apps.0install.net/devel/make.xml'>
       <arg>-f</arg>
     </runner>
   </command>
@@ -45,7 +45,7 @@ Instead of giving a `<runner>`, you may prefer to use a shell command. This is u
   <command name='compile'
     shell-command='"$SRCDIR/configure" --prefix="$DISTDIR" && make install'/>
 
-  <requires interface='http://repo.roscidus.com/devel/make'>
+  <requires interface='https://apps.0install.net/devel/make.xml'>
     <executable-in-path name='make'/>
   </requires>
 </implementation>
@@ -74,22 +74,22 @@ You can specify a template `<implementation>` for the binary using `<compile:imp
   <implementation arch="*-src" id="." version="0.1-pre">
 
     <command name="compile" path="src/Makefile">
-      <runner interface='http://repo.roscidus.com/devel/make'>
+      <runner interface='https://apps.0install.net/devel/make.xml'>
         <arg>-f</arg>
       </runner>
 
       <compile:implementation arch='*-*'>
         <environment name='CLASSPATH' insert='.'/>
-        <requires interface="http://repo.roscidus.com/utils/graphviz"/>
+        <requires interface="https://apps.0install.net/utils/graphviz.xml"/>
         <command name='run'>
-          <runner interface='http://repo.roscidus.com/java/openjdk-jre'/>
+          <runner interface='https://apps.0install.net/java/jre.xml'/>
           <arg>com.example.MainClass</arg>
         </command>
       </compile:implementation>
     </command>
 
-    <requires interface="http://repo.roscidus.com/java/iris" compile:include-binary='true'/>
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+    <requires interface="https://apps.0install.net/java/iris.xml" compile:include-binary='true'/>
+    <requires interface="https://apps.0install.net/java/jdk.xml">
       <environment name='PATH' insert='bin'/>
     </requires>
   </implementation>
@@ -128,7 +128,7 @@ Sometimes, you have a build time dependency with a wide range of possible versio
 
 ```xml
 <compile:implementation>
-  <runner interface='http://repo.roscidus.com/python/python'>
+  <runner interface='https://apps.0install.net/python/python.xml'>
     <version compile:pin-components="2"/>
   </runner>
 </compile:implementation>

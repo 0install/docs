@@ -125,7 +125,7 @@ As well as passing simple version numbers, you can also allow 0test to choose a 
 You can use `,` to give a range of possible versions. This is useful with native packages where you don't know the exact version. For example, to test against any Python version 2.6.x (2.6 <= version < 2.7):
 
 ```shell
-$ 0test prog.xml http://repo.roscidus.com/python/python 2.6,2.7
+$ 0test prog.xml https://apps.0install.net/python/python.xml 2.6,2.7
 Passed
  - prog 0.1, python v2.6.8-0.2
 ```

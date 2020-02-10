@@ -29,7 +29,7 @@ Last update     : 2012-06-27
 Previous update : 2012-06-16
 
 http://0install.net/2007/interfaces/ZeroInstall.xml: 1.8-post -> 1.9-post
-http://repo.roscidus.com/security/gnupg: new -> 1.4.12-4
+https://apps.0install.net/utils/gnupg.xml: new -> 1.4.12-4
 ```
 
 To run using the previous selections, use:

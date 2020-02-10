@@ -77,7 +77,7 @@ Hello World!
 
   <implementation id="." version="0.1-pre">
     <command name='run' path='hello.py'>
-      <runner interface='http://repo.roscidus.com/python/python'>
+      <runner interface='https://apps.0install.net/python/python.xml'>
         <version before='3'/>
       </runner>
     </command>

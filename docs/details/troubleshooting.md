@@ -7,7 +7,7 @@ title: Trouble-shooting
 Try executing the same command again but with the `--refresh` option. For example:
 
 ```shel
-$ 0install run --refresh http://repo.roscidus.com/utils/vlc
+$ 0install run --refresh https://apps.0install.net/gui/vlc.xml
 ```
 
 ## 0install doesn't select any versions / the expected versions
@@ -20,11 +20,11 @@ Or, if not using the GUI, like this:
 
 ```shell
 Can't find all required implementations:
-- http://repo.roscidus.com/java/swt -> (problem)
+- https://apps.0install.net/java/swt.xml -> (problem)
     http://www.serscis.eu/0install/serscis-access-modeller 0.15.1 requires 3.7 <= version
-- http://repo.roscidus.com/utils/graphviz -> 2.28.0-3.2.3 (package:rpm:graphviz:2.28.0-3.2.3:i586)
-- http://repo.roscidus.com/java/openjdk-jre -> 6.18-1.8.7-2 (sha1new=6b7c9f98bd1d8bec5bbb5ddb41271c862c8e8529)
-- http://repo.roscidus.com/java/iris -> 0.6.0 (sha1new=daf7bfada93ec758baeef1c714f3239ce0a5a462)
+- https://apps.0install.net/utils/graphviz.xml -> 2.28.0-3.2.3 (package:rpm:graphviz:2.28.0-3.2.3:i586)
+- https://apps.0install.net/java/jre.xml -> 6.18-1.8.7-2 (sha1new=6b7c9f98bd1d8bec5bbb5ddb41271c862c8e8529)
+- https://apps.0install.net/java/iris.xml -> 0.6.0 (sha1new=daf7bfada93ec758baeef1c714f3239ce0a5a462)
 - http://www.serscis.eu/0install/serscis-access-modeller -> 0.15.1 (sha1new=7899dbe75c1c332c4e70f272b2d76026714392a6)
     User requested 0.10 <= version
 ```
@@ -74,7 +74,7 @@ Can't find all required implementations:
       sha1new=cc7a0dcf44d42714bcf1efd27e8ec1f1810ce7da (1.16): Incompatible with user-specified requirements
       sha1new=ab6ca6165cd57a1bb95ddf5af9c51cdf325e1db8 (1.15): Incompatible with user-specified requirements
       ...
-- http://repo.roscidus.com/python/python -> 2.7.3-4 (package:arch:python2:2.7.3-4:x86_64)
+- https://apps.0install.net/python/python.xml -> 2.7.3-4 (package:arch:python2:2.7.3-4:x86_64)
 ```
 
 Here, we can see that 0publish 0.20 requires an old version of 0install, while 0compile 1.1 requires a newer one.
@@ -102,7 +102,7 @@ In this case, we find the `selections.xml` document contains:
 
 ```xml
   <selection arch="MacOSX-x86_64" version="3.6.1"
-             interface="http://repo.roscidus.com/java/swt" ...>
+             interface="https://apps.0install.net/java/swt.xml" ...>
     ...
     <environment mode="prepend" name="_JAVA_OPTIONS"
                  separator=" " value="-XstartOnFirstThread"/>
@@ -140,16 +140,16 @@ DEBUG:0install:Initialising new interface object for http://rox.sourceforge.net/
 DEBUG:0install:Loading cached information for http://rox.sourceforge.net/2005/interfaces/ROX-Lib from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
 INFO:0install:Note: @main on document element is deprecated in <Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib>
 DEBUG:0install:Processing feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-DEBUG:0install:Initialising new interface object for http://repo.roscidus.com/python/python
-DEBUG:0install:Loading cached information for http://repo.roscidus.com/python/python from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython
-DEBUG:0install:Processing feed http://repo.roscidus.com/python/python
+DEBUG:0install:Initialising new interface object for https://apps.0install.net/python/python.xml
+DEBUG:0install:Loading cached information for https://apps.0install.net/python/python.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython
+DEBUG:0install:Processing feed https://apps.0install.net/python/python.xml
 DEBUG:0install:Skipping '<Feed from http://0install.de/feeds/Python.xml>'; unsupported architecture Windows-None
-DEBUG:0install:Processing feed http://repo.roscidus.com/python/python/upstream.xml
-DEBUG:0install:Loading cached information for http://repo.roscidus.com/python/python/upstream.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython%2fupstream.xml
-DEBUG:0install:Is feed-for http://repo.roscidus.com/python/python
+DEBUG:0install:Processing feed https://apps.0install.net/python/python.xml/upstream.xml
+DEBUG:0install:Loading cached information for https://apps.0install.net/python/python.xml/upstream.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython%2fupstream.xml
+DEBUG:0install:Is feed-for https://apps.0install.net/python/python.xml
 DEBUG:0install:Staleness for <Feed http://rox.sourceforge.net/2005/interfaces/ROX-Lib> is 273.80 hours
-DEBUG:0install:Staleness for <Feed http://repo.roscidus.com/python/python> is 273.80 hours
-DEBUG:0install:Staleness for <Feed http://repo.roscidus.com/python/python/upstream.xml> is 273.80 hours
+DEBUG:0install:Staleness for <Feed https://apps.0install.net/python/python.xml> is 273.80 hours
+DEBUG:0install:Staleness for <Feed https://apps.0install.net/python/python.xml/upstream.xml> is 273.80 hours
 DEBUG:0install:Staleness for <Feed http://rox.sourceforge.net/2005/interfaces/Edit> is 273.80 hours
 INFO:0install:PYTHONPATH=/var/cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e/ROX-Lib2/python
 INFO:0install:Executing: [u'/usr/bin/python2.7', u'/var/cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9/Edit/AppRun']

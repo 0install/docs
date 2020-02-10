@@ -53,7 +53,7 @@ You can change per-application policy settings in the application information di
         
         `$ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit`
 
-        `> 0install run --customize http://repo.roscidus.com/utils/vlc`
+        `> 0install run --customize https://apps.0install.net/gui/vlc.xml`
         
     -   Run "0install update" with a shortcut you made as first argument
         

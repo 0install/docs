@@ -20,7 +20,7 @@ To invoke an operation, send the message `["invoke", myref, op, args]`, where `m
 
 ```plain
 0x5d
-["invoke", "1", "select", [{"interface": "http://repo.roscidus.com/security/gnupg"}, false]]
+["invoke", "1", "select", [{"interface": "https://apps.0install.net/utils/gnupg.xml"}, false]]
 ```
 
 All responses have the form `["return", myref, status, return-value]`, where `myref` lets you correlate this reply with the request you sent. The possible responses are `["ok", return-value]`, `["ok+xml", return-value]` and `["fail", error-message]`. In the case of `"ok+xml"`, the message is immediately followed by another length line and some XML. The above request might generate this response, which says to use the distribution's native version of GnuPG (2.0.22-2):
@@ -30,7 +30,7 @@ All responses have the form `["return", myref, status, return-value]`, where `my
 ["return","1","ok+xml",["ok",{"stale":false}]]
 0x000001f5
 <?xml version="1.0" encoding="UTF-8"?>
-<selections interface="http://repo.roscidus.com/security/gnupg" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><selection distributions="Arch Slack Debian RPM Gentoo Cygwin" from-feed="distribution:http://repo.roscidus.com/security/gnupg" id="package:arch:gnupg:2.0.22-2:x86_64" interface="http://repo.roscidus.com/security/gnupg" package="gnupg" quick-test-file="/var/lib/pacman/local/gnupg-2.0.22-2/desc" version="2.0.22-2"/></selections>
+<selections interface="https://apps.0install.net/utils/gnupg.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><selection distributions="Arch Slack Debian RPM Gentoo Cygwin" from-feed="distribution:https://apps.0install.net/utils/gnupg.xml" id="package:arch:gnupg:2.0.22-2:x86_64" interface="https://apps.0install.net/utils/gnupg.xml" package="gnupg" quick-test-file="/var/lib/pacman/local/gnupg-2.0.22-2/desc" version="2.0.22-2"/></selections>
 ```
 
 # Callbacks
@@ -48,7 +48,7 @@ In the process of handling your request, 0install may send its own invoke messag
 
 ```plain
 ["invoke","1","confirm-keys",[
-  "http://repo.roscidus.com/lib/readline6",{
+  "https://apps.0install.net/lib/readline6.xml",{
     "DA9825AECAD089757CDABD8E07133F96CA74D8BA":[
       ["good","Thomas Leonard created Zero Install and ROX.
       This key is used to sign updates to the injector; you should accept it.
@@ -60,7 +60,7 @@ If the server is slow to respond, you will get a `"pending"` message instead, fo
 
 ```plain
 ["invoke","1","confirm-keys",[
-  "http://repo.roscidus.com/lib/readline6",{
+  "https://apps.0install.net/lib/readline6.xml",{
     "DA9825AECAD089757CDABD8E07133F96CA74D8BA":["pending"]}]]
 ```
 
@@ -93,7 +93,7 @@ Return a set of selections to run the given program. If `refresh` is `true`, 0in
 : Whether to select source code (and build dependencies) rather than a binary.
 
 `extra_restrictions`
-: An object mapping interface URIs to version expressions, e.g. `{"http://repo.roscidus.com/python/python": "..!3"}` to require a version of Python less than 3.
+: An object mapping interface URIs to version expressions, e.g. `{"https://apps.0install.net/python/python.xml": "..!3"}` to require a version of Python less than 3.
 
 `os`
 : Select implementations for the given OS (e.g. `Linux`)

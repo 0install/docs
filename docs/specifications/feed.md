@@ -397,7 +397,7 @@ Constraints appear on `<requires>`, `<restricts>`, `<package-implementation>` an
 Since 0install 1.13, you can use the `version` attribute on the dependency element. The attribute's value is a list of ranges, separated by `|`, any of which may match. For example:
 
 ```xml
-<restricts interface='http://repo.roscidus.com/python/python'
+<restricts interface='https://apps.0install.net/python/python.xml'
            version='2.6..!3 | 3.2.2..'/>
 ```
 
@@ -477,7 +477,7 @@ These are used when the program needs to run another program. `command` says whi
 `<executable-in-var>` stores the path of the selected executable in the named environment variable. For example, if a program uses `$MAKE` to run make, you can provide the required command like this:
 
 ```xml
-  <requires interface="http://repo.roscidus.com/devel/make">
+  <requires interface="https://apps.0install.net/devel/make.xml">
     <executable-in-var name='MAKE'/>
   </requires>
 ```
@@ -485,7 +485,7 @@ These are used when the program needs to run another program. `command` says whi
 `<executable-in-path>` works in a similar way, except that it adds a directory containing the executable to `$PATH`. For example, if the program instead just runs the `make` command, you would use:
 
 ```xml
-  <requires interface="http://repo.roscidus.com/devel/make">
+  <requires interface="https://apps.0install.net/devel/make.xml">
     <executable-in-path name='make'/>
   </requires>
 ```

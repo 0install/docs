@@ -26,7 +26,7 @@ By clicking on **Advanced settings**, you can control exactly how Zero Install i
 You can perform desktop integration from the command-line as well. For example, to add VLC to your start menu and add register its supported file types:
 
 ```shell
-$ 0install integrate --add-standard http://repo.roscidus.com/utils/vlc
+$ 0install integrate --add-standard https://apps.0install.net/gui/vlc.xml
 ```
 
 See the [command-line documentation](../details/cli.md#integrate) for details.

@@ -92,7 +92,7 @@ builder and scanner objects.
 
   <group license="OSI Approved :: MIT/X Consortium License">
     <command name="run" path="scons.py">
-      <runner interface="http://repo.roscidus.com/python/python">
+      <runner interface="https://apps.0install.net/python/python.xml">
         <version not-before="3"/>
       </runner>
     </command>

@@ -11,7 +11,7 @@ On Windows you can use the command [0install export](cli.md#export) to generate 
 For example:
 
 ```shell
-$ 0install export --include-zero-install http://repo.roscidus.com/utils/vlc somedir
+$ 0install export --include-zero-install https://apps.0install.net/gui/vlc.xml somedir
 ```
 
 The resulting directory structure will look something like this:

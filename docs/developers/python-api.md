@@ -52,7 +52,7 @@ Just running the example above using e.g. `python example.py` would get the `zer
 
   <group>
     <command name="run" path="example.py">
-      <runner interface="http://repo.roscidus.com/python/python">
+      <runner interface="https://apps.0install.net/python/python.xml">
 	<version before="3"/>
       </runner>
     </command>
