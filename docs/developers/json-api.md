@@ -23,7 +23,7 @@ To invoke an operation, send the message `["invoke", myref, op, args]`, where `m
 ["invoke", "1", "select", [{"interface": "http://repo.roscidus.com/security/gnupg"}, false]]
 ```
 
-All responses have the form `["return", myref, status, return-value]`, where `myref` lets you correlate this reply with the request you sent. The possible responses are `["ok", return-value]`, `["ok+xml", return-value]` and `["fail", error-message]`. In the case of `ok+xml`, the message is immediately followed by another length line and some XML. The above request might generate this response, which says to use the distribution's native version of GnuPG (2.0.22-2):
+All responses have the form `["return", myref, status, return-value]`, where `myref` lets you correlate this reply with the request you sent. The possible responses are `["ok", return-value]`, `["ok+xml", return-value]` and `["fail", error-message]`. In the case of `"ok+xml"`, the message is immediately followed by another length line and some XML. The above request might generate this response, which says to use the distribution's native version of GnuPG (2.0.22-2):
 
 ```plain
 0x0000002f
@@ -38,13 +38,13 @@ All responses have the form `["return", myref, status, return-value]`, where `my
 In the process of handling your request, 0install may send its own invoke messages to you. You should be prepared to handle these messages:
 
 `set-api-version(version)`
-: This is sent immediately at the start, indicating the protocol version to be used. The "myref" field is "null", indicating that no reply is expected. The version may be earlier than the version you requested, in which case you can either fall back to the earlier version or tell the user to upgrade.
+: This is sent immediately at the start, indicating the protocol version to be used. The `myref` field is `null`, indicating that no reply is expected. The version may be earlier than the version you requested, in which case you can either fall back to the earlier version or tell the user to upgrade.
 
 `confirm(message)`
-: If 0install needs to ask the user to confirm something, it sends this message. This is used to confirm installation of distribution-provided packages, if any. Respond with success ("ok") and a return value of "ok" or "cancel". This is currently not used, because "select" does not require it.
+: If 0install needs to ask the user to confirm something, it sends this message. This is used to confirm installation of distribution-provided packages, if any. Respond with success (`"ok"`) and a return value of `"ok"` or `"cancel"`. This is currently not used, because `select` does not require it.
 
 `confirm-keys(feed_url, keys)`
-: A feed has been downloaded but has no trusted signature. Prompt the user to accept the keys. `keys` is a list of `(fingerprint, hints)` pairs, where `hints` is a list of `(vote, message)` hints from the key information server. Each vote is "good" or "bad". You should respond with a list of fingerprints which 0install should trust to sign updates for this domain. 0install will only ask you to confirm one feed at a time. Example:
+: A feed has been downloaded but has no trusted signature. Prompt the user to accept the keys. `keys` is a list of `(fingerprint, hints)` pairs, where `hints` is a list of `(vote, message)` hints from the key information server. Each vote is `"good"` or `"bad"`. You should respond with a list of fingerprints which 0install should trust to sign updates for this domain. 0install will only ask you to confirm one feed at a time. Example:
 
 ```plain
 ["invoke","1","confirm-keys",[
@@ -56,7 +56,7 @@ In the process of handling your request, 0install may send its own invoke messag
     }]]
 ```
 
-If the server is slow to respond, you will get a "pending" message instead, followed by a call to "update-key-info" later:
+If the server is slow to respond, you will get a `"pending"` message instead, followed by a call to `update-key-info` later:
 
 ```plain
 ["invoke","1","confirm-keys",[
@@ -96,10 +96,10 @@ Return a set of selections to run the given program. If `refresh` is `true`, 0in
 : An object mapping interface URIs to version expressions, e.g. `{"http://repo.roscidus.com/python/python": "..!3"}` to require a version of Python less than 3.
 
 `os`
-: Select implementations for the given OS (e.g. "Linux")
+: Select implementations for the given OS (e.g. `Linux`)
 
 `cpu`
-: Select implementations for the given CPU (e.g. "x86_64" or "src")
+: Select implementations for the given CPU (e.g. `x86_64` or `src`)
 
 `message`
 : A message to display if 0install uses its own GUI ("I need this because ...")
