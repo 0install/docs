@@ -298,6 +298,7 @@ The type of the archive is given as a MIME type in the `type` attribute (since 0
 -   `application/x-ruby-gem` (`.gem`) - since version 1.0-rc1, not supported by Windows version
 -   `application/x-7z-compressed` (`.7z`) - Windows version only
 -   `application/x-msi` (`.msi`) - Windows version only
+-   `application/x-apple-diskimage` (`.dmg`) - not supported by Windows version
 
 The `start-offset` attribute (since version 0.21) gives the number of bytes at the beginning of the file which should be ignored. This is useful for some self-extracting archives which are made up of a shell script followed by a normal archive in a single file. If missing, it defaults to 0. The value in the `size` attribute does not include the skipped bytes.
 
