@@ -29,9 +29,9 @@ somedir\run VLC media player.exe
 ```plain
 somedir\content\22EA111A7E4242A4.gpg
 somedir\content\85A0F0DAB46EE668.gpg
-somedir\content\http%3a##0install.de#feeds#ZeroInstall.xml
-somedir\content\http%3a##repo.roscidus.com#dotnet#framework.xml
-somedir\content\http%3a##repo.roscidus.com#utils#vlc.xml
+somedir\content\https%3a##apps.0install.net#0install#0install-win.xml
+somedir\content\https%3a##apps.0install.net#dotnet#framework.xml
+somedir\content\https%3a##apps.0install.ne#/gui#vlc.xml
 ```
 : The downloaded [feeds](../specifications/feed.md) and the GnuPG keys used to sign them.
 

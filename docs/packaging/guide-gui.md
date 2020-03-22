@@ -22,7 +22,7 @@ $ 0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml
 
 This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).
 
-Windows users: the [Zero Install Publishing tools](http://0install.de/feeds/ZeroInstall_Tools.xml) is a .NET equivalent of 0publish-GUI.
+Windows users: the [Zero Install Publishing tools](https://apps.0install.net/0install/0publish-win.xml) is a .NET equivalent of 0publish-GUI.
 
 Run the program, giving it the name of the feed file you want to create, which should be named after the program:
 

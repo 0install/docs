@@ -7,7 +7,7 @@ This tutorial explains how to create feeds for a .NET application with a depende
 When using the "New Feed Wizard" for creating the feed for the EXE make sure to set "External dependencies" to `True` on the "Fill in missing details" page. This will automatically add the following line to your feed:
 
 ```xml
-<runner interface="http://0install.de/feeds/cli/cli-monopath.xml" command="run-gui"/>
+<runner interface="https://apps.0install.net/dotnet/clr-monopath.xml" command="run-gui"/>
 ```
 
 This enables Zero Install to inject DLLs provided by feeds into .NET applications. This is required because, unlike regular DLLs, .NET DLLs are not located via the `PATH` environment variable.

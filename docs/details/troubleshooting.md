@@ -143,7 +143,7 @@ DEBUG:0install:Processing feed http://rox.sourceforge.net/2005/interfaces/ROX-Li
 DEBUG:0install:Initialising new interface object for https://apps.0install.net/python/python.xml
 DEBUG:0install:Loading cached information for https://apps.0install.net/python/python.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython
 DEBUG:0install:Processing feed https://apps.0install.net/python/python.xml
-DEBUG:0install:Skipping '<Feed from http://0install.de/feeds/Python.xml>'; unsupported architecture Windows-None
+DEBUG:0install:Skipping '<Feed from https://apps.0install.net/python/windows.xml>'; unsupported architecture Windows-None
 DEBUG:0install:Processing feed https://apps.0install.net/python/python.xml/upstream.xml
 DEBUG:0install:Loading cached information for https://apps.0install.net/python/python.xml/upstream.xml from /home/me/.cache/0install.net/interfaces/http%3a%2f%2frepo.roscidus.com%2fpython%2fpython%2fupstream.xml
 DEBUG:0install:Is feed-for https://apps.0install.net/python/python.xml
