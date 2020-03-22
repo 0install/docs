@@ -43,7 +43,7 @@ The following graph shows the dependencies between the NuGet packages:
 
 # Documentation and samples
 
-See the [API documentation](http://dotnet.0install.de/) for information how to use the Zero Install .NET API.
+See the [API documentation](https://dotnet.0install.net/) for information how to use the Zero Install .NET API.
 
 You can also take a look at minimal sample projects in various languages:
 

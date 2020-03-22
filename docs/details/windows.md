@@ -8,7 +8,7 @@ The [Linux version](linux.md) and Windows version of Zero Install share the same
 
 # Bootstrapper
 
-When you [download Zero Install for Windows](https://0install.de/downloads/) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <http://0install.de/feeds/ZeroInstall.xml>
+When you [download Zero Install for Windows](https://0install.net/injector.html#windows-current) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <https://apps.0install.net/0install/0install-win.xml>
 
 ## Deployment
 

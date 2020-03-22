@@ -30,7 +30,7 @@ This section contains various utility programs that make using Zero Install easi
 [pom2feed](https://github.com/0install/pom2feed)
 : The Zero Install Maven Integration connects the world of Zero Install with Apache Maven. With this project Zero Install gets access to the huge number of Java projects available at Maven Central. This is made possible by two components: the pom2feed-service and the pom2feed-maven-plugin.
 
-[Zero Install Publishing tools (.NET)](http://0install.de/docs/publishing/tools/)
+[Zero Install Publishing tools (.NET)](0publish-win.md)
 : A .NET equivalent of 0publish-GUI (e.g. for Windows).
 
 ### Compiling
