@@ -1,1 +1,3 @@
 mkdocs==1.0.4
+mkdocs-awesome-pages-plugin
+mkdocs-redirects

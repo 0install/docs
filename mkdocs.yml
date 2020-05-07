@@ -11,11 +11,19 @@ copyright: >
 theme:
   name: readthedocs
   custom_dir: custom_theme/
+extra_css: [style.css]
+extra_javascript: [menu.js]
 
 markdown_extensions:
   - admonition
   - def_list
   - toc:
       permalink: true
-extra_css: [style.css]
-extra_javascript: [menu.js]
+
+plugins:
+  - search
+  - awesome-pages
+  # - redirects:
+  #    redirect_maps:
+  #      old/file.md: new/file.md
+  #      some_file.md: http://example.com
