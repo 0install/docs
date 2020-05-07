@@ -1,0 +1,8 @@
+arrange:
+  - index.md
+  - using-git.md
+  - design.md
+  - solver.md
+  - python-api.md
+  - dotnet-api.md
+  - json-api.md

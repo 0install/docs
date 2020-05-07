@@ -1,0 +1,17 @@
+arrange:
+  - index.md
+  - policy-settings.md
+  - sync.md
+  - security.md
+  - servers.md
+  - cache.md
+  - sharing.md
+  - virtual-machines.md
+  - ...
+  - cli.md
+  - file-locations.md
+  - troubleshooting.md
+  - os-differences.md
+  - linux.md
+  - macos.md
+  - windows.md
