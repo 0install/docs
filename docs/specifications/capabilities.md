@@ -93,7 +93,9 @@ Entries in the file manager's context menu for all file types.
 
 ```xml
 <context-menu id='...' target='...' ? explicit-only='true' ?>
+  <description xml:lang='...' ?>...</description> *
   [verb] *
+  [icon] *
 </context-menu>
 ```
 
@@ -107,7 +109,12 @@ Also serves as a programmatic identifier within the desktop environment. In case
 `explicit-only`
 : When set to `true` this context menu entry is not added without explicit confirmation from the user.
 
-See: [Verbs](#verbs)
+See: [Verbs](#verbs), [Icons](#icons)
+
+- a single `<verb>`: creates a simple context menu, named using the `<description>` inside `<verb>`
+- multiple `<verb>`s (since version 2.18): creates a cascading context menu, named using the `<description>` inside `<context-menu>`, with sub-entries named using the `<description>` inside `<verb>`
+
+See: [Verbs](#verbs), [Icons](#icons)
 
 ## AutoPlay handlers
 
@@ -162,6 +169,7 @@ Some capabilities require you to map verbs/actions to specific [commands](feed.m
 ```xml
 <verb name='...' command='...' ? args='...' extended='true' ?>
   <description xml:lang='...' ?>...</description> *
+  <arg> ... </arg> *
 </verb>
 ```
 
@@ -172,13 +180,18 @@ Some capabilities require you to map verbs/actions to specific [commands](feed.m
 : The name of the command to use when launching via this capability. Defaults to `run` if not set.
 
 `args`
-: A custom arguments list to be passed to the command. `%1` will be replaced with the path of the file being opened.
+: Command-line arguments to be passed to the command in escaped form. `%V` gets replaced with the path of the file being opened.
+  This is ignored if any `<arg>` elements are specified.
 
 `extended`
 : Set this to `true` to hide the verb in the Windows context menu unless the Shift key is pressed when opening the menu.
 
 `<description>`
 : A (localized) description of the verb.
+
+`<arg>` - since version 2.18
+: Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
+  `${item}` gets replaced with the path of the file being opened.
 
 # Icons
 
