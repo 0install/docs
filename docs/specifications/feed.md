@@ -286,19 +286,22 @@ Note that the `extract` attribute cannot contain `/` or `\` characters, so it ca
 
 The type of the archive is given as a MIME type in the `type` attribute (since 0install version 0.21). If missing, the type is guessed from the extension on the `href` attribute (all versions). Known types and extensions (case insensitive) are:
 
--   `application/x-rpm` (`.rpm`) - not supported by Windows version
--   `application/x-deb` (`.deb`) - not supported by Windows version
--   `application/x-tar` (`.tar`)
--   `application/x-bzip-compressed-tar` (`.tar.bz2`)
--   `application/x-lzma-compressed-tar` (`.tar.lzma`)
--   `application/x-compressed-tar` (`.tar.gz` or `.tgz`)
--   `application/zip` (`.zip`)
--   `application/vnd.ms-cab-compressed` (`.cab`)
--   `application/x-xz-compressed-tar` (`.tar.xz`) - since version 0.43, since version 2.11 on Windows
--   `application/x-ruby-gem` (`.gem`) - since version 1.0-rc1, not supported by Windows version
--   `application/x-7z-compressed` (`.7z`) - Windows version only
--   `application/x-msi` (`.msi`) - Windows version only
--   `application/x-apple-diskimage` (`.dmg`) - not supported by Windows version
+- `application/zip` (`.zip`)
+- `application/x-tar` (`.tar`)
+- `application/x-compressed-tar` (`.tar.gz` or `.tgz`)
+- `application/x-bzip-compressed-tar` (`.tar.bz2` or `.tbz2`)
+- `application/x-xz-compressed-tar` (`.tar.xz` or `.txz`) - since version 0.43, since version 2.11 on Windows
+- `application/x-lzma-compressed-tar` (`.tar.lzma` or `.tlzma`)
+- `application/x-lzip-compressed-tar` (`.tar.lz` or `.tlz`) - since version 2.18, Windows only
+- `application/x-zstd-compressed-tar` (`.tar.zst`) - since version 2.18, Windows only
+- `application/x-ruby-gem` (`.gem`) - since version 1.0-rc1
+- `application/x-7z-compressed` (`.7z`) - Windows only
+- `application/vnd.rar` (`.rar`) - since version 2.18, Windows only
+- `application/vnd.ms-cab-compressed` (`.cab`)
+- `application/x-msi` (`.msi`) - Windows only
+- `application/x-deb` (`.deb`) - not supported on Windows
+- `application/x-rpm` (`.rpm`) - not supported on Windows
+- `application/x-apple-diskimage` (`.dmg`) - not supported on Windows
 
 The `start-offset` attribute (since version 0.21) gives the number of bytes at the beginning of the file which should be ignored. This is useful for some self-extracting archives which are made up of a shell script followed by a normal archive in a single file. If missing, it defaults to 0. The value in the `size` attribute does not include the skipped bytes.
 
