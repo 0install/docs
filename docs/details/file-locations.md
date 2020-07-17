@@ -50,6 +50,9 @@ Feed-specific settings
 Feed cache
 : - `C:\Users\Username\AppData\Local\0install.net\interfaces`
 
+Icon cache
+: - `C:\Users\Username\AppData\Local\0install.net\icons`
+
 [Implementation cache](cache.md)
 : - `C:\Users\Username\AppData\Local\0install.net\implementations`
 - Custom locations specified in `C:\Users\Username\AppData\Roaming\0install.net\injector\implementation-dirs`
