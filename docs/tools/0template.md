@@ -107,7 +107,7 @@ Specifically, 0template fills in these values:
 You can now test this feed using e.g.
 
 ```shell
-$ 0launch myprog-1.0.xml
+$ 0install run myprog-1.0.xml
 ```
 
 Or, for source feeds:

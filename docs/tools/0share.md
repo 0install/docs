@@ -15,7 +15,7 @@
 To try it out, run this command on one machine:
 
 ```shell
-machine1 $ 0launch http://0install.net/2008/interfaces/0share.xml
+machine1 $ 0install run http://0install.net/2008/interfaces/0share.xml
 INFO:root:0share started and listening for requests...
 INFO:root:Serving implementations from Store '/home/me/.cache/0install.net/implementations'
 INFO:root:Serving implementations from Store '/var/cache/0install.net/implementations'
@@ -24,7 +24,7 @@ INFO:root:Serving implementations from Store '/var/cache/0install.net/implementa
 On another machine on the same network, run this command, replacing `DIGEST` with the digest of a program installed on the first machine (e.g. the name of a subdirectory of `/var/cache/0install.net/implementations/`). The digest will be in the program's feed file.
 
 ```shell
-machine2 $ 0launch http://0install.net/2008/interfaces/0share.xml -f DIGEST
+machine2 $ 0install run http://0install.net/2008/interfaces/0share.xml -f DIGEST
 ```
 
 The second machine will broadcast a request (to UDP port 38339) to see if anyone has the given implementation. The first machine should respond. The second machine will then fetch it from the first:

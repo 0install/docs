@@ -12,7 +12,7 @@ In Zero Install, interfaces are named by globally unique URIs (like web pages). 
 When a user asks to run a program, they give the interface URI:
 
 ```shell
-$ 0launch http://rox.sourceforge.net/2005/interfaces/Edit
+$ 0install run http://rox.sourceforge.net/2005/interfaces/Edit
 ```
 
 When a program depends on a library, it gives library's interface URI:

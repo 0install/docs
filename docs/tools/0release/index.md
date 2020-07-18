@@ -51,11 +51,11 @@ A minimal Hello World example is available for testing. You can check it out lik
 $ git clone git://github.com/0install/hello-python.git
 ```
 
-To check that you can run it, use [0launch](https://0install.net/injector.html) on the feed:
+To check that you can run it, use [0install](https://0install.net/injector.html) on the feed:
 
 ```shell
 $ cd hello-python
-$ 0launch HelloWorld.xml
+$ 0install run HelloWorld.xml
 Hello World!
 ```
 
@@ -96,7 +96,7 @@ Each time you create a new release, the resulting files go in your `releases` di
 ```shell
 $ mkdir -p ~/releases/hello
 $ cd ~/releases/hello
-$ 0launch http://0install.net/2007/interfaces/0release.xml ~/hello-python/HelloWorld.xml
+$ 0install run http://0install.net/2007/interfaces/0release.xml ~/hello-python/HelloWorld.xml
 Setting up releases directory for HelloWorld
 Success - created script:
  ~/releases/hello/make-release
@@ -121,7 +121,7 @@ The final script might look like this:
 PUBLIC_SCM_REPOSITORY=origin
 
 cd `dirname "$0"`
-exec 0launch http://0install.net/2007/interfaces/0release.xml \
+exec 0install run http://0install.net/2007/interfaces/0release.xml \
  --release ~/hello/HelloWorld.xml \
  --public-scm-repository="$PUBLIC_SCM_REPOSITORY" \
  "$@"
@@ -178,7 +178,7 @@ If you discover any problems you can go ahead and commit a fix, which will appea
 We'll just check that the release works:
 
 ```shell
-$ 0launch 0.1/helloworld-0.1/HelloWorld.xml
+$ 0install run 0.1/helloworld-0.1/HelloWorld.xml
 Hello World!
 ```
 
@@ -234,9 +234,9 @@ But if you _really_ insist on trying to unpublish a release and pretending it ne
 
 1.  Edit the master feed (in 0repo's `feeds` directory) and delete the new `<implementation>`. Run `0repo` to sign and publish the updated feed.
     
-    Note: if you keep your feed under version control then you could revert the change. However, if anyone got the new version before you reverted it, then `0launch` will refuse to go back to the previous version, assuming that this is a replay attack. So create a new signature, with a fresh time-stamp.
+    Note: if you keep your feed under version control then you could revert the change. However, if anyone got the new version before you reverted it, then `0install` will refuse to go back to the previous version, assuming that this is a replay attack. So create a new signature, with a fresh time-stamp.
     
-2.  Reset `HEAD` to before the release (e.g. `git reset --hard v0.1^`) and delete the tag itself (e.g. `git tag -d v0.1`). Delete the remote tag at the server (e.g. `git push origin :v0.1 master`). Like `0launch`, if anyone saw the release in Git, their Git will refuse to go back to an older version. Tell them to use `-f`.
+2.  Reset `HEAD` to before the release (e.g. `git reset --hard v0.1^`) and delete the tag itself (e.g. `git tag -d v0.1`). Delete the remote tag at the server (e.g. `git push origin :v0.1 master`). Like `0install`, if anyone saw the release in Git, their Git will refuse to go back to an older version. Tell them to use `-f`.
     
 3.  Delete the tarball from your server.
 

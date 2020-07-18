@@ -41,7 +41,7 @@ There are two other differences to note: there is no digital signature at the en
 You can now use this feed with the usual 0install commands. For example:
 
 ```
-$ 0launch hello.xml
+$ 0install run hello.xml
 Hello World!
 
 $ 0install add hello-dev hello.xml

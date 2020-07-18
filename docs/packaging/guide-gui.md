@@ -62,7 +62,7 @@ You'll now see your new version shown in the list of versions, along with the si
 
 ![The newly added version](../img/screens/0publish-gui/one-version.png)
 
-This runs `0launch` on our XML file, in the usual way. Note that version 2.42 is already cached; it was added when we clicked **OK** in the **Add Archive** box. Click on **Execute** and check that it runs.
+This runs `0install run` on our XML file, in the usual way. Note that version 2.42 is already cached; it was added when we clicked **OK** in the **Add Archive** box. Click on **Execute** and check that it runs.
 
 ![Try it out](../img/screens/0publish-gui/test-run.png)
 
@@ -85,7 +85,7 @@ The final result of all this is three files: the signed XML feed file itself, li
 Upload all three files to your web-server. I put mine in <http://0install.net/2007/3rd-party/>. Now anyone can run Blender with the command:
 
 ```shell
-$ 0launch http://0install.net/2007/3rd-party/Blender.xml
+$ 0install run http://0install.net/2007/3rd-party/Blender.xml
 ```
 
 # Check your feed!
@@ -117,7 +117,7 @@ I can't find a generic binary for the program I want to package!
 
 My program assumes it's running from `/usr/games`
 
-: Games have an annoying habit of trying to `cd` to a hard-coded directory in their start-up script. You could try asking the author to fix it (`cd "$(dirname $0)"` would work just as well). It's also possible to patch the download using a `<recipe>` element, but the GUI doesn't provide an interface for this. The trick here is getting the ID right; you need the digest of the directory structure _after_ the patch has been applied. `0store manifest` can help here.
+: Games have an annoying habit of trying to `cd` to a hard-coded directory in their start-up script. You could try asking the author to fix it (`cd "$(dirname $0)"` would work just as well). It's also possible to patch the download using a `<recipe>` element, but the GUI doesn't provide an interface for this. The trick here is getting the ID right; you need the digest of the directory structure _after_ the patch has been applied. `0install digest` can help here.
 
 # Further reading
 

@@ -110,10 +110,10 @@ How do we know the archive hasn't been tampered with? The author of the XML feed
     </implementation>
 ```
 
-We can calculate the value ourselves from the directory and compare (we already verified the signature on the feed, so we know that one's OK). Calculating the value is a little tricky; you have to create a _manifest_ file listing all the files and directories in the archive, along with _their_ digests too, by following [these instructions](../specifications/manifest.md). We'll cheat, by using `0store` to generate it for us:
+We can calculate the value ourselves from the directory and compare (we already verified the signature on the feed, so we know that one's OK). Calculating the value is a little tricky; you have to create a _manifest_ file listing all the files and directories in the archive, along with _their_ digests too, by following [these instructions](../specifications/manifest.md). We'll cheat, by using `0install` to generate it for us:
 
 ```shell
-$ 0store manifest edit-2.0 sha1
+$ 0install digest edit-2.0 --algorithm=sha1 --manifest --digest
 D 1127294333 /Edit
 F 0cfc0b0c42b4f4c077f005f31ea1801a8e43bde0 1053080001 3409 .DirIcon
 ...
@@ -124,7 +124,7 @@ sha1=329e6c0191f65ef2996b49837d04c4cfe6934758
 This says we have a directory called `Edit` containing a file called `.DirIcon`, and so on. The last line isn't part of the manifest; it's the digest of the manifest itself. It is this value that must match the _id_ in the feed. It's useful to save the manifest output (minus the last line) in case we want to do an audit later:
 
 ```shell
-$ 0store manifest edit-2.0 sha1 | head -n -1 > edit-2.0/.manifest
+$ 0install digest edit-2.0 --algorithm=sha1 --manifest > edit-2.0/.manifest
 ```
 
 This file will have the digest we require:
@@ -228,10 +228,10 @@ $ mv edit-2.0 ~/.cache/0install.net/implementations/sha1=329e6c0191f65ef2996b498
 $ mv rox-lib2-2.0.3 ~/.cache/0install.net/implementations/sha1=6a2e548a80368bd8c2b5b3abedccf9a0a6cb4333
 ```
 
-This is exactly the scheme that `0launch` uses. We can test this quite easily:
+This is exactly the scheme that `0install` uses. We can test this quite easily:
 
 ```shell
-$ 0launch --offline http://rox.sourceforge.net/2005/interfaces/Edit
+$ 0install run --offline http://rox.sourceforge.net/2005/interfaces/Edit
 ```
 
 Zero Install runs Edit without downloading anything. It is able to use the files we downloaded and placed in its cache manually.

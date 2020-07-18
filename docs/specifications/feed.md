@@ -137,7 +137,7 @@ An implementation has this syntax (an unspecified argument is inherited from the
 : The version number. See the version numbers section below for more details.
 
 `main` (deprecated)
-: The relative path of an executable inside the implementation that should be executed by default when the interface is run. If an implementation has no `main` setting, then it cannot be executed without specifying one manually (with `0launch --main=MAIN`). This typically means that the interface is for a library. Note: `main` is being replaced by the `<command>` element.
+: The relative path of an executable inside the implementation that should be executed by default when the interface is run. If an implementation has no `main` setting, then it cannot be executed without specifying one manually (with `0install run --main=MAIN`). This typically means that the interface is for a library. Note: `main` is being replaced by the `<command>` element.
 
 `self-test` (deprecated)
 : The relative path of an executable inside the implementation that can be executed to test the program. The program must be non-interactive (e.g. it can't open any windows or prompt for input). It should return with an exit status of zero if the tests pass. Any other status indicates failure. Note: `self-test` is being replaced by the `<command>` element.
@@ -174,11 +174,11 @@ Unrecognised elements inside an implementation are ignored.
 
 ## Historical note about id
 
-0launch >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the local-path attribute and the digests from the `<manifest-digest>`.
+0install >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the local-path attribute and the digests from the `<manifest-digest>`.
 
-0launch < 0.45 ignores the local-path attribute and the `<manifest-digest>` element. If the ID starts with `.` or `/` then the ID is also the local path; otherwise, it is the single manifest digest.
+0install < 0.45 ignores the local-path attribute and the `<manifest-digest>` element. If the ID starts with `.` or `/` then the ID is also the local path; otherwise, it is the single manifest digest.
 
-For backwards compatibility, 0launch >= 0.45 will treat an ID starting with `.` or `/` as a local path if no `local-path` attribute is present, and it will treat it as an additional digest if it contains an `=` character.
+For backwards compatibility, 0install >= 0.45 will treat an ID starting with `.` or `/` as a local path if no `local-path` attribute is present, and it will treat it as an additional digest if it contains an `=` character.
 
 Therefore, if you want to generate feeds compatible with past and future versions:
 
@@ -202,7 +202,7 @@ The `main` attribute above provides a simple way to say how to run this implemen
 ```
 
 `name`
-: By default, 0launch executes the `run` command, but the `--command` option can be used to specify a different one. [0test](../tools/0test.md) runs the `test` command (replacing the old `self-test` attribute) and [0compile](../tools/0compile/index.md) runs the `compile` command (replacing the `compile:command` attribute).
+: By default, 0install executes the `run` command, but the `--command` option can be used to specify a different one. [0test](../tools/0test.md) runs the `test` command (replacing the old `self-test` attribute) and [0compile](../tools/0compile/index.md) runs the `compile` command (replacing the `compile:command` attribute).
 
 `path`
 : The relative path of the executable within the implementation (optional if `<runner>` is used).
@@ -213,7 +213,7 @@ If an environment variable should be expanded to multiple arguments, use `<for-e
 
 Command-specific dependencies can be specified for a command by nesting `<requires>` elements. For example, an interpreter might only depend on libreadline when used interactively, but not when used as a library, or the `test` command might depend on a test framework.
 
-Command-specific bindings (0launch >= 1.3) create a binding from the implementation to itself. For example, the `test` command may want to make the `run` command available in `$PATH` using `<executable-in-path>`.
+Command-specific bindings (0install >= 1.3) create a binding from the implementation to itself. For example, the `test` command may want to make the `run` command available in `$PATH` using `<executable-in-path>`.
 
 The `<runner>` element introduces a special kind of dependency: the program that is used to run this one. For example, a Python program might specify Python as its runner. `<runner>` is a subclass of `<requires>` and accepts the same attributes and child elements. In addition, you can specify arguments to pass to the runner by nesting them inside the `<runner>` element. These arguments are passed before the path of the executable given by the `path` attribute.
 
@@ -252,9 +252,9 @@ Support for distribution packages was added in version 0.28 of 0install. Earlier
 
 If the named package is available then it will be considered as a possible implementation of the interface. If `main` is given then it must be an absolute path.
 
-If the `distributions` attribute is present then it is a space-separated list of distribution names where this element applies. 0launch >= 0.45 ranks the `<package-implementation>` elements according to how well they match the host distribution and then only uses the best match (or matches, if several get the same score). See [Distribution integration](../details/distribution-integration.md) for a list of supported distributions.
+If the `distributions` attribute is present then it is a space-separated list of distribution names where this element applies. 0install >= 0.45 ranks the `<package-implementation>` elements according to how well they match the host distribution and then only uses the best match (or matches, if several get the same score). See [Distribution integration](../details/distribution-integration.md) for a list of supported distributions.
 
-Earlier versions of 0launch ignore the `distributions` attribute and process all of the elements.
+Earlier versions of 0install ignore the `distributions` attribute and process all of the elements.
 
 Note that, unlike a normal implementation, a distribution package does not resolve to a directory. Any bindings inside `<requires>` elements for the interface will be ignored; it is assumed that the requiring component knows how to use the packaged version without further help. Therefore, adding distribution packages to your interface considerably weakens the guarantees you are making about what the requester may get.
 
@@ -365,7 +365,7 @@ A `<requires>` element means that every implementation within the same group (in
 
 The constraint elements (if any) limit the set of acceptable versions. The bindings specify how 0install should make its choice known (typically, by setting environment variables).
 
-The `use` attribute can be used to indicate that this dependency is only needed in some cases. By default, 0launch >= 0.43 will skip any `<requires>` element with this attribute set. Earlier versions process all `<requires>` elements whether this attribute is present or not. [0test](../tools/0test.md) >= 0.2 will process dependencies where `use="testing"`, in addition to the program's normal dependencies. This attribute is deprecated - it's usually better to use a `<command>` for this.
+The `use` attribute can be used to indicate that this dependency is only needed in some cases. By default, 0install >= 0.43 will skip any `<requires>` element with this attribute set. Earlier versions process all `<requires>` elements whether this attribute is present or not. [0test](../tools/0test.md) >= 0.2 will process dependencies where `use="testing"`, in addition to the program's normal dependencies. This attribute is deprecated - it's usually better to use a `<command>` for this.
 
 The `importance` attribute (0install >= 1.1) can be either `essential` (the default; a version of this dependency must be selected) or `recommended` (no version is also an option, although selecting a version is preferable to not selecting one).
 
@@ -445,7 +445,7 @@ Details of the chosen implementation are passed to the program by setting enviro
 
 Usually, the (badly-named) `insert` attribute is used, which adds a path to a file or directory inside the implementation to the environment variable. For example, `<environment name='PATH' insert='bin'/>` would perform something similar to the bash shell statement `export PATH=/path/to/impl/bin:$PATH`.
 
-Alternatively, you can use the `value` attribute to use a literal string. For example, `<environment name='GRAPHICAL_MODE' value='TRUE' mode='replace'/>`. This requires 0launch >= 0.52.
+Alternatively, you can use the `value` attribute to use a literal string. For example, `<environment name='GRAPHICAL_MODE' value='TRUE' mode='replace'/>`. This requires 0install >= 0.52.
 
 If `mode` is `prepend` (or not set), then the absolute path of the item is prepended to the current value of the variable. The default separator character is the colon character on POSIX systems, and semi-colon on Windows. This can be overridden using `separator` (0install >= 1.1). If the environment variable is not currently set then the path is prepended to the value of the default attribute. If no default value is given either then the default for that environment variable is used, or the environment variable's value is set to the absolute path directly if there is no default.
 

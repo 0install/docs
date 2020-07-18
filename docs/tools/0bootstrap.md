@@ -55,7 +55,7 @@ Before the program is released, you need to run it from the source repository:
 ```shell
 $ git clone git://zero-install.git.sourceforge.net/gitroot/zero-install/bootstrap
 $ cd bootstrap
-$ 0launch --feed 0bootstrap.xml
+$ 0install add-feed 0bootstrap.xml
 $ 0install add 0bootstrap 0bootstrap.xml
 ```
 

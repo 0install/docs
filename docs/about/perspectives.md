@@ -31,13 +31,13 @@ Power users are probably the ideal audience for Zero Install. Zero Install is al
 : Go to the [downloads page](https://0install.net/injector.html) and install the Zero Install Injector package. Then follow the tutorial.
 
 ... change to a different version of something?
-: Different desktop environments provide different ways to do this, but you can always use the command line. `0launch --list` shows the URI of every program in your cache. `0launch -g URI` opens the GUI for selecting different versions of that program.
+: Different desktop environments provide different ways to do this, but you can always use the command line. `0install list` shows the URI of every program in your cache. `0install run -g URI` opens the GUI for selecting different versions of that program.
 
 ... compile from source?
 : Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](https://0install.net/0compile.html) for details.
 
 ... reinstall something?
-: You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0store audit` to check it. Deleting the program's configuration files may help, though.
+: You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0install store audit` to check it. Deleting the program's configuration files may help, though.
 
 # System administrator
 

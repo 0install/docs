@@ -18,7 +18,7 @@ If you have already installed a package using your distribution's installer then
 For example, here is what happens if you ask to run AbiWord when you already have the `libenchant1` library it requires installed using `apt-get`:
 
 ```shell
-$ 0launch http://0install.net/2006/autopackage/Abiword.xml
+$ 0install run http://0install.net/2006/autopackage/Abiword.xml
 ```
 
 ![Abiword with native libenchant](../img/screens/abiword-have-enchant.png)

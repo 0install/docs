@@ -115,7 +115,7 @@ Then edit the `.po` file to give a translation for each string. When you're done
 
 ```shell
 $ make translations
-$ ./0launch
+$ ./0install
 ```
 
 Finally, [send us](https://0install.net/support.html#lists) the new `.po` file.

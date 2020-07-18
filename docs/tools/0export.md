@@ -6,7 +6,7 @@
 
 **0export** creates self-installing bundles for distribution on CD, etc
 
-Normally, a program is run by passing its name (a URI) to the 0launch command. This downloads the appropriate feeds, chooses a set of implementations (a version of the program, along with any libraries it needs) and downloads them too.
+Normally, a program is run by passing its name (a URI) to the `0install run` command. This downloads the appropriate feeds, chooses a set of implementations (a version of the program, along with any libraries it needs) and downloads them too.
 
 However, it is sometimes useful to bundle a program and its libraries together on a CD (for example) so that it can be used on machines without a network connection, or where the network is very slow. It is also useful for archival purposes, in case the original web-sites supplying required libraries become unavailable.
 
@@ -90,12 +90,12 @@ $ sh setup.sh
 The script currently (0export 0.1) does the following:
 
 1. Runs `gpg --import` on each GPG key in the archive, adding the keys that signed the feeds to your key-ring.
-2. Runs `0launch --import` on each feed in the archive. Every signing GPG key is added to the trusted list for the feed's domain. This allows checking for updates in future without confirming the keys. If the user already has a newer version of the feed, the import has no effect.
+2. Runs `0install import` on each feed in the archive. Every signing GPG key is added to the trusted list for the feed's domain. This allows checking for updates in future without confirming the keys. If the user already has a newer version of the feed, the import has no effect.
 3. Chooses a set of implementations (`0install select --xml URI`) in minimal network use mode and with the implementations in the `setup.sh` available.
 4. Copies any selected implementations into the system or user's cache (`~/.cache/0install.net/implementations`).
-5. Runs the program (`0launch --offline URI`).
+5. Runs the program (`0install run --offline URI`).
 
-All steps use the bundled version of 0launch.
+All steps use the bundled version of 0install.
 
 # Support for multiple architectures or multiple applications in one bundle
 

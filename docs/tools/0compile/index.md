@@ -52,7 +52,7 @@ Waiting for selected implementations to be downloaded...
 Note that GNU-Hello does not get the C-compiler through Zero Install, so you will need that already (hint: `apt-get install build-essential`). Once compiled, you can run it like this:
 
 ```shell
-$ 0launch http://0install.net/tests/GNU-Hello.xml
+$ 0install run http://0install.net/tests/GNU-Hello.xml
 Hello, world!
 ```
 
@@ -109,20 +109,20 @@ Note that the command installs to the `gnu-hello-linux-x86_64` directory rather 
 Assuming the build is successful, `gnu-hello-linux-x86_64` will contain the final result, including a handy `gnu-hello-linux-x86_64/0install/feed.xml` local feed file, which you can use to run the new binary (note: this used to be `gnu-hello-linux-x86_64/0install/GNU-Hello.xml` on older versions of 0compile):
 
 ```shell
-$ 0launch gnu-hello-linux-x86_64/0install/feed.xml
+$ 0install run gnu-hello-linux-x86_64/0install/feed.xml
 Hello, world!
 ```
 
 In fact, since `GNU-Hello` doesn't list any run-time dependencies, we could have just run the `gnu-hello-linux-x86_64/bin/hello` binary directly in this case. For more complex programs, the feed file will be useful. You can also pass it to `0install add-feed` to register the new binary under the program's normal URI:
 
 ```shell
-$ 0launch -c http://0install.net/tests/GNU-Hello.xml
+$ 0install run -c http://0install.net/tests/GNU-Hello.xml
 Interface 'http://0install.net/tests/GNU-Hello.xml' has no usable implementations
 
 $ 0install add-feed gnu-hello-linux-x86_64/0install/feed.xml
 1) Add as feed for 'http://0install.net/tests/GNU-Hello.xml'
 
-$ 0launch -c http://0install.net/tests/GNU-Hello.xml
+$ 0install run -c http://0install.net/tests/GNU-Hello.xml
 Hello, world!
 ```
 
@@ -153,7 +153,7 @@ Recompile with `0compile build` as before:
 
 ```shell
 $ 0compile build
-$ 0launch gnu-hello-linux-x86_64/0install/feed.xml
+$ 0install run gnu-hello-linux-x86_64/0install/feed.xml
 Goodbye, world!
 ```
 
@@ -178,7 +178,7 @@ Upload it to a repository with:
 You can test it with:
 
 ```shell
-$ 0launch GNU-Hello-1.3.xml
+$ 0install run GNU-Hello-1.3.xml
 ```
 
 To publish the feed and archive, use [0repo](../0repo.md) (see that page for configuration details):
@@ -195,7 +195,7 @@ You might want to build on a machine without network access, or to archive every
 $ 0compile include-deps
 ```
 
-The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../../details/cache.md) search path (using `0launch --with-store`).
+The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../../details/cache.md) search path (using `0install run --with-store`).
 
 # Legacy helper features
 

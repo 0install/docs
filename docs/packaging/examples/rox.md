@@ -48,7 +48,7 @@ $ ./ROX-Filer/AppRun --compile
 $ rm -r ROX-Filer/{ROX-Filer.dbg,build,src}
 ```
 
-4\. The ROX-Filer source download includes a _local interface_ file called `ROX-Filer.xml`. This allows people to register local versions using `0launch --feed`. Set the release date and architecture in it:
+4\. The ROX-Filer source download includes a _local interface_ file called `ROX-Filer.xml`. This allows people to register local versions using `0install add-feed`. Set the release date and architecture in it:
 
 ```shell
 $ 0publish --set-released 2006-02-26 ROX-Filer.xml
@@ -113,7 +113,7 @@ If you now view the `ROX-Filer-ppc64` file, you should see that `0publish` has c
 You should be able to download and test your binary with this command:
 
 ```shell
-$ 0launch ./ROX-Filer-ppc64
+$ 0install run ./ROX-Filer-ppc64
 ```
 
 # Publishing the interface with Zero Install
@@ -138,7 +138,7 @@ $ mv ROX-Filer-ppc64 /var/www/...
 Other users of ppc64 machines can now either run this directly, or add it as a feed (so it will be used by other programs trying to run ROX-Filer):
 
 ```shell
-$ 0launch --feed http://example.com/2006/0launch/ROX-Filer-ppc
+$ 0install add-feed http://example.com/2006/0launch/ROX-Filer-ppc
 ```
 
 You should now tell the maintainer of the master feed about this one, so that they can add a `<feed>` element to the master copy to save users from having to add the feed manually. For an example of a master interface with feeds for different architectures, take a look at the `<feed>` elements in [the real ROX-Filer interface](http://rox.sourceforge.net/2005/interfaces/ROX-Filer).

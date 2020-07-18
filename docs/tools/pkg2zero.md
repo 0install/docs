@@ -50,7 +50,7 @@ When testing, you should make sure that the program isn't already installed (e.g
 To test the feed:
 
 ```shell
-$ 0launch -g ./GQView.xml
+$ 0install run -g ./GQView.xml
 ```
 
 Note that pkg2zero added the downloaded package's contents to the Zero Install cache, so it will show up as being already cached.

@@ -17,4 +17,4 @@ Note that it does not export the actual programs themselves, although that would
 
 ## Status
 
-0mirror is not yet officially released, although the GIT version works well enough to create the roscidus.com mirror. 0launch 0.33 has built-in support for using the mirror service. On older versions, the GPG keys and feeds can be added manually (e.g. using `0launch --import feed.xml`).
+0mirror is not yet officially released, although the GIT version works well enough to create the roscidus.com mirror. 0install 0.33 has built-in support for using the mirror service. On older versions, the GPG keys and feeds can be added manually (e.g. using `0install import feed.xml`).

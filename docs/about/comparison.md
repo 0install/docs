@@ -296,7 +296,7 @@ The EDOS] (_Environment for the development and Distribution of Open Source soft
 
 [Nix](http://nixos.org/) is a purely functional package manager. Each version of a package has its own directory. As with Zero Install, "upgrading" creates a new directory for the new version, rather than modifying the existing one. Unlike Zero Install, however, whether a package is installed affects the behaviour of the system. For example, running "firefox" when Firefox isn't installed produces an error in Nix, whereas in Zero Install it will install Firefox first if missing and then continue. In other words, installation has side-effects in Nix.
 
-Additional feeds (e.g. for pre-built binaries) can be registered using `nix-channel --add`, which appears to work much like `0launch --feed`, although each channel can contain binaries for multiple packages. The channel `MANIFEST` file doesn't appear to have a digital signature. Presumably this will be added at some point.
+Additional feeds (e.g. for pre-built binaries) can be registered using `nix-channel --add`, which appears to work much like `0install add-feed`, although each channel can contain binaries for multiple packages. The channel `MANIFEST` file doesn't appear to have a digital signature. Presumably this will be added at some point.
 
 Each version of a package has a digest (hash), which includes all build dependencies (e.g. the version of the compiler used), just as it does in Zero Install (for packages built using 0compile, at least).
 

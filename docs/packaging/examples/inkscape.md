@@ -49,10 +49,10 @@ $ 0publish Inkscape.xml \
 
 # Testing it
 
-You can run the new XML file with `0launch` to download and run Inkscape:
+You can run the new XML file with `0install` to download and run Inkscape:
 
 ```shell
-$ 0launch ./Inkscape.xml
+$ 0install run ./Inkscape.xml
 ```
 
 ![Running Inkscape with Zero Install](../../img/screens/package-inkscape.png)
@@ -83,7 +83,7 @@ Upload the resulting `Inkscape.xml` and GPG files to the same directory on the w
 You can now run Inkscape like this:
 
 ```shell
-$ 0launch http://inkscape.org/2006/ZeroInstall/Inkscape.xml
+$ 0install run http://inkscape.org/2006/ZeroInstall/Inkscape.xml
 ```
 
 Users can now install Inkscape using this URL, either using some graphical installer (like ROX's [AddApp](http://rox.sourceforge.net/desktop/AddApp) or [Xfce 4.4's panel](http://rox.sourceforge.net/desktop/node/269)). Command-line users can get it like this:

@@ -154,4 +154,4 @@ What kind of things need 'tightening'?
 : - Denial of service attacks, if one user stores lots of stuff (need quotas).
 
 Why do things still get stored in `~/.cache` after setting this up?
-: Things you've already installed will remain there. Only new software is added in the system cache. Also, the old `sha1` algorithm isn't accepted by the helper, so software using that can't go in the shared cache. If you still have problems, try running `0launch -vvc URI` (to see debug output). Finally, make sure your script is executable!
+: Things you've already installed will remain there. Only new software is added in the system cache. Also, the old `sha1` algorithm isn't accepted by the helper, so software using that can't go in the shared cache. If you still have problems, try running `0install run -vvc URI` (to see debug output). Finally, make sure your script is executable!

@@ -17,7 +17,7 @@ $ feedlint http://my/feed.xml
 
 You can pass multiple feeds as arguments and it will check all of them. For each feed, it will:
 
-- Download the feed and check it can be read by 0launch.
+- Download the feed and check it can be read by 0install.
 - Check that all signatures are correct and by keys on your keyring.
 - Check that each signature's GPG key can be downloaded.
 - Check that the homepage and icon URLs work.
