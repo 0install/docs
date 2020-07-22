@@ -27,8 +27,18 @@ All data is encrypted locally before transmission using AES-128. Therefore the s
 
 The communication with the server is handled via a simple REST interface which is documented at <https://0install.de/sync/>.
 
+## Custom server
+
 If you want to run your own Sync server you have the following options:
 
 - Use [our PHP script](https://0install.de/sync/template.zip) on your web server.
 - Use an empty directory on a WebDAV server.
 - Use a Windows file share.
+
+## Local/network filesystem
+
+You can also use a directory on a local or network filesystem instead of an HTTP server. Simply specify a local or UNC path instead of a URL as the Sync Server in the configuration.
+
+```shell
+> 0install config \\SomeServer\0install-sync
+```
