@@ -199,7 +199,7 @@ So, what have we achieved? We've installed a program and its dependencies. We ha
 
 We didn't need to run any code from either Edit or ROX-Lib to perform the installation (we only ran them to test that it worked). If you have software for running programs in a restricted environment, you can install and run programs without even giving them write access to their own code.
 
-Finally, although it may have been a little tedious, everything we did could be automated. You could write a program to do all this for you (or use [ours](https://0install.net/injector.html)!).
+Finally, although it may have been a little tedious, everything we did could be automated. You could write a program to do all this for you (or use [ours](https://get.0install.net/)!).
 
 ## Tidying up
 

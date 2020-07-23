@@ -1,6 +1,6 @@
 title: Packaging guide (command-line)
 
-This guide shows how to make software available through [Zero Install](https://0install.net/injector.html), using the command-line [0template](../tools/0template.md) program. New users may prefer to start with the [graphical interface](guide-gui.md) instead, but this version is useful when writing scripts to automatically publish new versions, or if you can't run the graphical version for some reason.
+This guide shows how to make software available through [Zero Install](https://get.0install.net/), using the command-line [0template](../tools/0template.md) program. New users may prefer to start with the [graphical interface](guide-gui.md) instead, but this version is useful when writing scripts to automatically publish new versions, or if you can't run the graphical version for some reason.
 
 We will start by packaging SCons, a build system (a little like Make).
 

@@ -8,7 +8,7 @@ The [Linux version](linux.md) and macOS version of Zero Install share the same s
 
 The easiest way of installing Zero Install and its requirements is by using a package manager, to handle building both it and the dependencies for you. 
 
-You can download a package for macOS [here](https://0install.net/injector.html#mac).
+You can download a package for macOS [here](https://get.0install.net/#mac).
 
 # From source
 

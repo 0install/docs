@@ -11,7 +11,7 @@ Linux distributions come with a lot of general purpose software, but sometimes a
 -   You don't need to enter the root password to install things.
 -   Installing programs only affects you, not other users of the computer.
 
-If you know the program you want is available this way, go to the [downloads page](https://0install.net/injector.html) and install the Zero Install package for your distribution.
+If you know the program you want is available this way, go to the [downloads page](https://get.0install.net/) and install the Zero Install package for your distribution.
 
 If you don't have a particular package in mind and you're just browsing, then you've probably come to the wrong place. Only a small number of programs are currently available this way, and we're mainly interested in building the tools that help other people to make packages rather than in making lots of packages ourselves.
 
@@ -28,7 +28,7 @@ Power users are probably the ideal audience for Zero Install. Zero Install is al
 **How do I ...**
 
 ... get started?
-: Go to the [downloads page](https://0install.net/injector.html) and install the Zero Install Injector package. Then follow the tutorial.
+: Go to the [downloads page](https://get.0install.net/) and install the Zero Install Injector package. Then follow the tutorial.
 
 ... change to a different version of something?
 : Different desktop environments provide different ways to do this, but you can always use the command line. `0install list` shows the URI of every program in your cache. `0install run -g URI` opens the GUI for selecting different versions of that program.
@@ -48,7 +48,7 @@ Zero Install lets your users install programs in a way that's as secure as insta
 **How do I ...**
 
 ... get started?
-: Go to the [downloads page](https://0install.net/injector.html) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
+: Go to the [downloads page](https://get.0install.net/) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
 
 ... set up sharing of downloads?
 : Follow the [setting up sharing instructions](../details/sharing.md). Now when a user installs a program, it ends up in `/var/cache/0install.net` (the sharing instructions explain why this is safe).

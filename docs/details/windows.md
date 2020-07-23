@@ -8,7 +8,7 @@ The [Linux version](linux.md) and Windows version of Zero Install share the same
 
 # Bootstrapper
 
-When you [download Zero Install for Windows](https://0install.net/injector.html#windows-current) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <https://apps.0install.net/0install/0install-win.xml>
+When you [download Zero Install for Windows](https://get.0install.net/#windows) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <https://apps.0install.net/0install/0install-win.xml>
 
 ## Deployment
 
@@ -27,7 +27,7 @@ Having a specific version of Zero Install copied to a fixed location would seem 
 The regular Bootstrapper (`zero-install.exe`) is a GUI application, but there is also a command-line version (`0install.exe`) available. If you pass command-line arguments to this executable it will first download the full version of `0install` and then pass those arguments through. This makes it great for single-use applications or scripting:
 
 ```shell
-Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
+Invoke-WebRequest https://get.0install.net/0install.exe -OutFile 0install.exe
 .\0install.exe run http://example.com/somefeed.xml
 ```
 

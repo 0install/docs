@@ -14,7 +14,7 @@ Started in 2003, 0install is developed by volunteers from around the world; cont
 
 More than one thousand packages are currently available and you can easily publish your own programs. Zero Install itself is available from the official repositories of most Linux distributions (including Arch, Debian, Fedora, Gentoo, Mint, openSUSE and Ubuntu).
 
-[Get Zero Install now](https://0install.net/injector.html)
+[Get Zero Install now](https://get.0install.net/)
 
 ## Why?
 
