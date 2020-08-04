@@ -11,22 +11,22 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><a href='#select'><nobr><code>select</code></nobr></a></td>
   <td>Selects a version of the program identified by URI, and compatible versions of all of its dependencies.
-<br/>Returns an exit status of zero if it selected a set of versions, and a status of 1 if it could not find a consistent set.</td>
+<br/>Returns an exit status of <code>0</code> if it selected a set of versions, and a status of <code>1</code> if it could not find a consistent set.</td>
 </tr>
 <tr>
   <td><a href='#download'><nobr><code>download</code></nobr></a></td>
-  <td>Behaves similarly to &#39;0install select&#39;, except that it also downloads the selected versions if they are not already cached.
-<br/>Returns an exit status of 0 if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of 1 otherwise.</td>
+  <td>Behaves similarly to <code>0install select</code>, except that it also downloads the selected versions if they are not already cached.
+<br/>Returns an exit status of <code>0</code> if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of <code>1</code> otherwise.</td>
 </tr>
 <tr>
   <td><a href='#update'><nobr><code>update</code></nobr></a></td>
   <td>Checks for updates to the program and download them if found.
-<br/>This is similar to &#39;0install download --refresh&#39;, except that it prints information about whether any changes were found.</td>
+<br/>This is similar to <code>0install download --refresh</code>, except that it prints information about whether any changes were found.</td>
 </tr>
 <tr>
   <td><a href='#run'><nobr><code>run</code></nobr></a></td>
-  <td>Behaves similarly to &#39;0install download&#39;, except that it also runs the program after ensuring it is in the cache.
-<br/>Returns an exit status of 1 if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</td>
+  <td>Behaves similarly to <code>0install download</code>, except that it also runs the program after ensuring it is in the cache.
+<br/>Returns an exit status of <code>1</code> if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</td>
 </tr>
 <tr>
   <td><a href='#import'><nobr><code>import</code></nobr></a></td>
@@ -35,7 +35,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><a href='#export'><nobr><code>export</code></nobr></a><br>(Windows only)</td>
-  <td>Exports all feeds and implementations required to launch the program specified by a URI to a DIRECTORY.</td>
+  <td>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</td>
 </tr>
 <tr>
   <td><a href='#search'><nobr><code>search</code></nobr></a></td>
@@ -72,7 +72,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><a href='#config'><nobr><code>config</code></nobr></a></td>
   <td>View or change configuration settings.
-<br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value &quot;default&quot; is given.</td>
+<br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</td>
 </tr>
 <tr>
   <td><a href='#add-feed'><nobr><code>add-feed</code></nobr></a></td>
@@ -80,11 +80,11 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><a href='#remove-feed'><nobr><code>remove-feed</code></nobr></a></td>
-  <td>Un-registers a feed, reversing the effect of &#39;0install add-feed&#39;.</td>
+  <td>Un-registers a feed, reversing the effect of <code>0install add-feed</code>.</td>
 </tr>
 <tr>
   <td><a href='#list-feeds'><nobr><code>list-feeds</code></nobr></a></td>
-  <td>Lists all extra feeds added to URI using &#39;0install add-feed&#39;.</td>
+  <td>Lists all extra feeds added to URI using <code>0install add-feed</code>.</td>
 </tr>
 <tr>
   <td><a href='#digest'><nobr><code>digest</code></nobr></a></td>
@@ -101,12 +101,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><a href='#store_copy'><nobr><code>store copy</code></nobr></a></td>
-  <td>Copies an implementation into the cache. Similar to &#39;0install store add&#39;, but the digest is extracted from the directory name.
+  <td>Copies an implementation into the cache. Similar to <code>0install store add</code>, but the digest is extracted from the directory name.
 <br/>An additional arguments specifies a custom target cache location.</td>
 </tr>
 <tr>
   <td><a href='#store_export'><nobr><code>store export</code></nobr></a><br>(Windows only)</td>
-  <td>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using &#39;0install store add&#39;.</td>
+  <td>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <code>0install store add</code>.</td>
 </tr>
 <tr>
   <td><a href='#store_find'><nobr><code>store find</code></nobr></a></td>
@@ -225,7 +225,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='select'></a><h1>select</h1>
 <p>Selects a version of the program identified by URI, and compatible versions of all of its dependencies.
-<br/>Returns an exit status of zero if it selected a set of versions, and a status of 1 if it could not find a consistent set.</p>
+<br/>Returns an exit status of <code>0</code> if it selected a set of versions, and a status of <code>1</code> if it could not find a consistent set.</p>
 <p><b>Usage:</b> <code>0install select [OPTIONS] URI</code></p>
 <table>
 <tr>
@@ -255,7 +255,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -268,8 +268,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -277,36 +277,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -315,8 +315,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='download'></a><h1>download</h1>
-<p>Behaves similarly to &#39;0install select&#39;, except that it also downloads the selected versions if they are not already cached.
-<br/>Returns an exit status of 0 if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of 1 otherwise.</p>
+<p>Behaves similarly to <a href='#select'><code>0install select</code></a>, except that it also downloads the selected versions if they are not already cached.
+<br/>Returns an exit status of <code>0</code> if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of <code>1</code> otherwise.</p>
 <p><b>Usage:</b> <code>0install download [OPTIONS] URI</code></p>
 <table>
 <tr>
@@ -346,7 +346,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -359,8 +359,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -368,36 +368,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -411,7 +411,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='update'></a><h1>update</h1>
 <p>Checks for updates to the program and download them if found.
-<br/>This is similar to &#39;0install download --refresh&#39;, except that it prints information about whether any changes were found.</p>
+<br/>This is similar to <a href='#download'><code>0install download --refresh</code></a>, except that it prints information about whether any changes were found.</p>
 <p><b>Usage:</b> <code>0install update [OPTIONS] URI</code></p>
 <table>
 <tr>
@@ -441,7 +441,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -454,8 +454,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -463,36 +463,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -505,8 +505,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='run'></a><h1>run</h1>
-<p>Behaves similarly to &#39;0install download&#39;, except that it also runs the program after ensuring it is in the cache.
-<br/>Returns an exit status of 1 if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</p>
+<p>Behaves similarly to <a href='#download'><code>0install download</code></a>, except that it also runs the program after ensuring it is in the cache.
+<br/>Returns an exit status of <code>1</code> if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</p>
 <p><b>Usage:</b> <code>0install run [OPTIONS] URI [ARGS]</code></p>
 <table>
 <tr>
@@ -536,7 +536,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -549,8 +549,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -558,36 +558,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -600,12 +600,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
-  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with &#39;/&#39; or &#39;\&#39; then the path is relative to the implementation&#39;s top-level directory, whereas otherwise it is relative to the directory containing the default main program.
+  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with <code>/</code> or <code>\</code> then the path is relative to the implementation's top-level directory, whereas otherwise it is relative to the directory containing the default main program.
 <br/>May not contain command-line arguments! Whitespaces do not need to be escaped.</td>
 </tr>
 <tr>
   <td><nobr><code>-w <code>COMMAND</code></code></nobr><br/><nobr><code>--wrapper <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> PROGRAM ARGS. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
+  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> <code>PROGRAM</code> <code>ARGS</code>. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
 <br/>Note that the wrapper is executed in the environment selected by the program; hence, this mechanism cannot be used for sandboxing.
 <br/>May contain command-line arguments. Whitespaces must be escaped!</td>
 </tr>
@@ -641,7 +641,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='export'></a><h1>export</h1>
-<p>Exports all feeds and implementations required to launch the program specified by a URI to a DIRECTORY.</p>
+<p>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</p>
 <p><b>Usage:</b> <code>0install export [OPTIONS] URI DIRECTORY</code></p>
 <table>
 <tr>
@@ -671,7 +671,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -684,8 +684,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -693,36 +693,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -742,9 +742,9 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Include Zero Install itself in the export alongside the application.</td>
 </tr>
 <tr>
-  <td><nobr><code>--bootstrap</code></nobr></td>
+  <td><nobr><code>--bootstrap <code>VALUE</code></code></nobr></td>
   <td>Choose the type of Bootstrapper to place alongside the export.
-<br/>Supported values: None, Run, Integrate</td>
+<br/>Supported values: <code>None</code>, <code>Run</code>, <code>Integrate</code></td>
 </tr>
 </table>
 <a name='search'></a><h1>search</h1>
@@ -824,7 +824,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='catalog_refresh'></a><h1>catalog refresh</h1>
 <p>Refreshes (downloads) all registered catalogs.</p>
-<p><b>Usage:</b> <code>0install catalog refresh </code></p>
+<p><b>Usage:</b> <code>0install catalog refresh</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -903,7 +903,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='catalog_reset'></a><h1>catalog reset</h1>
 <p>Resets the list of catalogs to the default source.</p>
-<p><b>Usage:</b> <code>0install catalog reset </code></p>
+<p><b>Usage:</b> <code>0install catalog reset</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -928,7 +928,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='catalog_list'></a><h1>catalog list</h1>
 <p>Lists all registered catalogs.</p>
-<p><b>Usage:</b> <code>0install catalog list </code></p>
+<p><b>Usage:</b> <code>0install catalog list</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -953,7 +953,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='config'></a><h1>config</h1>
 <p>View or change configuration settings.
-<br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value &quot;default&quot; is given.</p>
+<br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</p>
 <p><b>Usage:</b> <code>0install config [NAME [VALUE|default]]</code></p>
 <table>
 <tr>
@@ -978,7 +978,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--tab <code>TAB</code></code></nobr></td>
-  <td>Switch to a specific tab in the configuration GUI. Possible <code>TAB</code>s are &#39;updates&#39;, &#39;storage&#39;, &#39;catalog&#39;, &#39;trust&#39;, &#39;sync&#39;, &#39;language&#39;, &#39;language&#39; and &#39;advanced&#39;.
+  <td>Switch to a specific tab in the configuration GUI. Possible <code>TAB</code>s are <code>updates</code>, <code>storage</code>, <code>catalog</code>, <code>trust</code>, <code>sync</code>, <code>language</code>, <code>language</code> and <code>advanced</code>.
 <br/>Has no effect in text-mode.</td>
 </tr>
 </table>
@@ -1009,7 +1009,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -1017,7 +1017,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='remove-feed'></a><h1>remove-feed</h1>
-<p>Un-registers a feed, reversing the effect of &#39;0install add-feed&#39;.</p>
+<p>Un-registers a feed, reversing the effect of <a href='#add-feed'><code>0install add-feed</code></a>.</p>
 <p><b>Usage:</b> <code>0install remove-feed [OPTIONS] [INTERFACE] FEED</code></p>
 <table>
 <tr>
@@ -1043,7 +1043,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -1051,7 +1051,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='list-feeds'></a><h1>list-feeds</h1>
-<p>Lists all extra feeds added to URI using &#39;0install add-feed&#39;.</p>
+<p>Lists all extra feeds added to URI using <a href='#add-feed'><code>0install add-feed</code></a>.</p>
 <p><b>Usage:</b> <code>0install list-feeds [OPTIONS] URI</code></p>
 <table>
 <tr>
@@ -1105,12 +1105,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--digest</code></nobr></td>
-  <td>Display the manifest&#39;s digest (enabled by default if --manifest is not set).</td>
+  <td>Display the manifest's digest (enabled by default if --manifest is not set).</td>
 </tr>
 <tr>
   <td><nobr><code>--algorithm <code>HASH</code></code></nobr></td>
   <td>The <code>HASH</code> algorithm to use for the digest.
-<br/>Supported values: sha256new, sha256, sha1new</td>
+<br/>Supported values: <code>sha256new</code>, <code>sha256</code>, <code>sha1new</code></td>
 </tr>
 </table>
 <a name='store_add'></a><h1>store add</h1>
@@ -1165,7 +1165,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='store_copy'></a><h1>store copy</h1>
-<p>Copies an implementation into the cache. Similar to &#39;0install store add&#39;, but the digest is extracted from the directory name.
+<p>Copies an implementation into the cache. Similar to <a href='#store_add'><code>0install store add</code></a>, but the digest is extracted from the directory name.
 <br/>An additional arguments specifies a custom target cache location.</p>
 <p><b>Usage:</b> <code>0install store copy DIRECTORY [CACHE]</code></p>
 <table>
@@ -1191,7 +1191,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 </table>
 <a name='store_export'></a><h1>store export</h1>
-<p>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using &#39;0install store add&#39;.</p>
+<p>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <a href='#store add'><code>0install store add</code></a>.</p>
 <p><b>Usage:</b> <code>0install store export DIGEST OUTPUT-ARCHIVE [MIME-TYPE]</code></p>
 <table>
 <tr>
@@ -1242,7 +1242,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='store_list'></a><h1>store list</h1>
 <p>Lists all implementation cache directories.</p>
-<p><b>Usage:</b> <code>0install store list </code></p>
+<p><b>Usage:</b> <code>0install store list</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -1292,7 +1292,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </table>
 <a name='store_manage'></a><h1>store manage</h1>
 <p>Displays a graphical user interface for managing implementations in the cache. Shows associations with cached feeds.</p>
-<p><b>Usage:</b> <code>0install store manage </code></p>
+<p><b>Usage:</b> <code>0install store manage</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -1442,7 +1442,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1471,7 +1471,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1500,7 +1500,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1508,7 +1508,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <p>Add an application to the application list.</p>
 <p>
   <b>Usage Linux:</b> <code>0install add [OPTIONS] NAME URI</code><br>
-  <b>Usage Windows:</b> <code>0install add [OPTIONS] URI</code>
+  <b>Usage Windows:</b> <code>0install add [OPTIONS] [NAME] URI</code>
 </p>
 <table>
 <tr>
@@ -1534,18 +1534,18 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
-  <td><nobr><code>--no-download</code></nobr></td>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
   <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
 </tr>
 </table>
@@ -1576,14 +1576,14 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1614,14 +1614,14 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1652,18 +1652,18 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
-  <td><nobr><code>--no-download</code></nobr></td>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
   <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
 </tr>
 <tr>
@@ -1677,7 +1677,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--add <code>CATEGORY</code></code></nobr></td>
   <td>Add all access points of a specific <code>CATEGORY</code>.
-<br/>Supported values: capabilities, menu, desktop, send-to, aliases, auto-start, default-app</td>
+<br/>Supported values: <code>capabilities</code>, <code>menu</code>, <code>desktop</code>, <code>send-to</code>, <code>aliases</code>, <code>auto-start</code>, <code>default-app</code></td>
 </tr>
 <tr>
   <td><nobr><code>--remove-all</code></nobr></td>
@@ -1686,7 +1686,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>--remove <code>CATEGORY</code></code></nobr></td>
   <td>Remove all access points of a specific <code>CATEGORY</code>.
-<br/>Supported values: capabilities, menu, desktop, send-to, aliases, auto-start, default-app</td>
+<br/>Supported values: <code>capabilities</code>, <code>menu</code>, <code>desktop</code>, <code>send-to</code>, <code>aliases</code>, <code>auto-start</code>, <code>default-app</code></td>
 </tr>
 </table>
 <a name='alias'></a><h1>alias</h1>
@@ -1716,18 +1716,18 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
-  <td><nobr><code>--no-download</code></nobr></td>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
   <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
 </tr>
 <tr>
@@ -1766,14 +1766,14 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1804,14 +1804,14 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
@@ -1846,14 +1846,14 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
@@ -1884,19 +1884,20 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
   <td><nobr><code>--reset <code>MODE</code></code></nobr></td>
-  <td>Reset the synchronization data. Possible <code>MODE</code>s are &#39;none&#39; (merge data from client and server normally), &#39;client&#39; (replace all data on client with data from server) and &#39;server&#39; (replace all data on server with data from client).</td>
+  <td>Reset the synchronization data.
+<br/>Supported values: <code>none</code> (merge data from client and server normally), <code>client</code> (replace all data on client with data from server) and <code>server</code> (replace all data on server with data from client).</td>
 </tr>
 </table>
 <a name='import-apps'></a><h1>import-apps</h1>
@@ -1926,18 +1927,18 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
   <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
-  <td><nobr><code>--no-download</code></nobr></td>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
   <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
 </tr>
 </table>
@@ -1966,7 +1967,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 <tr>
-  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr></td>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 <tr>
@@ -1975,12 +1976,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--restart-central</code></nobr></td>
-  <td>Restart the &#39;0install central&#39; GUI after the update.</td>
+  <td>Restart the <a href='#central'><code>0install central</code></a> GUI after the update.</td>
 </tr>
 </table>
 <a name='self_remove'></a><h1>self remove</h1>
 <p>Removes the current instance of Zero Install from the system.</p>
-<p><b>Usage:</b> <code>0install self remove </code></p>
+<p><b>Usage:</b> <code>0install self remove</code></p>
 <table>
 <tr>
   <th>Option</th>
@@ -2034,7 +2035,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won&#39;t be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
 </tr>
 <tr>
   <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
@@ -2047,8 +2048,8 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program&#39;s interface.
-<br/>Set to empty (&quot;&quot;) to ignore the command during selection.</td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -2056,36 +2057,36 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
-  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use --not-before=2.0.</td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
 </tr>
 <tr>
   <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
   <td>Require a version of the main program within the given <code>RANGE</code>.
-<br/>Ranges are separated by pipes (|).
-<br/>Each range is in the form &quot;START..!END&quot;. The range matches versions where START &lt;= VERSION &lt; END. The start or end may be omitted.
-<br/>A single version number may be used instead of a range to match only that version, or !VERSION to match everything except that version.</td>
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
 </tr>
 <tr>
   <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
-  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for --version).</td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
   <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by &#39;0compile&#39;.</td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
 </tr>
 <tr>
   <td><nobr><code>--os <code>OS</code></code></nobr></td>
   <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: \*, POSIX, Linux, Solaris, FreeBSD, Darwin, MacOSX, Cygwin, Windows, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
 </tr>
 <tr>
   <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
   <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: \*, i386, i486, i586, i686, x86_64, ppc, ppc64, armv6l, armv7l, src, unknown</td>
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
 </tr>
 <tr>
   <td><nobr><code>--language</code></nobr></td>
-  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. en or en-US).
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
@@ -2098,12 +2099,12 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
-  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with &#39;/&#39; or &#39;\&#39; then the path is relative to the implementation&#39;s top-level directory, whereas otherwise it is relative to the directory containing the default main program.
+  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with <code>/</code> or <code>\</code> then the path is relative to the implementation's top-level directory, whereas otherwise it is relative to the directory containing the default main program.
 <br/>May not contain command-line arguments! Whitespaces do not need to be escaped.</td>
 </tr>
 <tr>
   <td><nobr><code>-w <code>COMMAND</code></code></nobr><br/><nobr><code>--wrapper <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> PROGRAM ARGS. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
+  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> <code>PROGRAM</code> <code>ARGS</code>. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
 <br/>Note that the wrapper is executed in the environment selected by the program; hence, this mechanism cannot be used for sandboxing.
 <br/>May contain command-line arguments. Whitespaces must be escaped!</td>
 </tr>
@@ -2117,6 +2118,6 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 </tr>
 <tr>
   <td><nobr><code>--restart-central</code></nobr></td>
-  <td>Restart the &#39;0install central&#39; GUI after the update.</td>
+  <td>Restart the <a href='#central'><code>0install central</code></a> GUI after the update.</td>
 </tr>
 </table>
