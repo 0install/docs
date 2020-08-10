@@ -4,7 +4,7 @@ In this guide we install a program which is available through Zero Install, but 
 
 ## Pick a program
 
-Choose a program to install from the [list of feeds](https://0install.net/injector-feeds.html). A program with one dependency is ideal (the more it has, the longer it will take you to install it!). I'll be using [Edit](http://rox.sourceforge.net/2005/interfaces/Edit) for this example.
+Choose a program to install from the [list of feeds](https://apps.0install.net/). A program with one dependency is ideal (the more it has, the longer it will take you to install it!). I'll be using [Edit](http://rox.sourceforge.net/2005/interfaces/Edit) for this example.
 
 Open the feed for Edit above in your browser. The feed is an XML file listing the available versions of Edit. Your browser should render it as a web-page:
 

@@ -34,7 +34,7 @@ Power users are probably the ideal audience for Zero Install. Zero Install is al
 : Different desktop environments provide different ways to do this, but you can always use the command line. `0install list` shows the URI of every program in your cache. `0install run -g URI` opens the GUI for selecting different versions of that program.
 
 ... compile from source?
-: Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](https://0install.net/0compile.html) for details.
+: Open the GUI (see above), right click on the program or library to compile and choose **Compile...** from the menu. See the [0compile page](https://docs.0install.net/tools/0compile/) for details.
 
 ... reinstall something?
 : You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0install store audit` to check it. Deleting the program's configuration files may help, though.
