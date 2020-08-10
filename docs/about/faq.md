@@ -1,10 +1,8 @@
 title: FAQ
 
-Frequently asked questions:
+# Frequently Asked Questions
 
-[TOC]
-
-# General questions
+## General questions
 
 What is it?
 
@@ -134,7 +132,7 @@ What's the relationship between the `0install` and `0launch` commands?
 
 : 0install provides a cleaner, newer interface using sub-commands. `0launch URI` is equivalent to `0install run URI`. In general, using `0launch` as anything other than a short form of `0install run` is deprecated and you should use `0install` instead.
 
-# Network questions
+## Network questions
 
 Isn't fetching stuff over the web really slow?
 
@@ -156,7 +154,7 @@ What about when resources move?
 
 : The `0install import` command lets you import the feed from the new location, and `0install store add` allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
 
-# Security questions
+## Security questions
 
 How secure is this?
 
@@ -192,7 +190,7 @@ But what about kernel bugs? Zero Install is still vulnerable then!
 
 : Well, yes. But, as with the question above, they could do it just as easily without Zero Install (using wget, or just by typing the program in themselves). If your kernel is insecure, you have a problem with or without Zero Install.
 
-# Developers
+## Developers
 
 How do I provide software using Zero Install?
 

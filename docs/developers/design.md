@@ -1,7 +1,3 @@
-[TOC]
-
-# Zero Install Design Details
-
 This page describes the design of Zero Install itself.
 
 !!! note
@@ -15,7 +11,7 @@ The idea is that you don't need to backup `~/.cache`, because you can always dow
 
 If [sharing](../details/sharing.md) is enabled, then Zero Install stores downloaded implementations in `/var/cache/0install.net/` instead of in `~/.cache/0install.net/`. This allows sharing between users. The use of cryptographic digests (described below) makes this safe; users don't need to trust each other not to put malicious code in the shared cache.
 
-# Requirements
+## Requirements
 
 - Any user can run any program they want, without it needing to be installed first.
 - Users refer to programs by globally unique names (URLs). So, a user asks to run "http://gimp.org/gimp", rather than the rather vague "The Gimp".
@@ -25,7 +21,7 @@ If [sharing](../details/sharing.md) is enabled, then Zero Install stores downloa
 - The system administrator doesn't have to trust the users.
 - Any developer can make software available through the system (without needing the blessing of some distribution first).
 
-# Security and sharing
+## Security and sharing
 
 To clarify the security requirements: the injector is designed to support this situation:
 
@@ -42,7 +38,7 @@ Current systems make you choose either:
 
 Although this situation obviously occurs in schools, libraries, etc, solving it is also useful in the home. Although you might expect family members to trust each other, remember that trust includes trusting them not to get infected with viruses, etc. If my brother gets some spyware and then installs the Gimp, I shouldn't get infected too. This also applies if you're doing sandboxing within a single user account, or using a dedicated 'sandbox' user for some tasks.
 
-## The injector's solution
+### The injector's solution
 
 First, users need some way to specify what they want to run exactly. "Run the Gimp" is too vague (good gimp or evil gimp?), so we use URLs.
 
@@ -50,7 +46,7 @@ If both users say "Run gimp.org/gimp" then the system is smart enough to only ge
 
 Clearly, something has to actually download the software. It can either be one of the users, or a system daemon. The original Zero Install used a system daemon running as its own user, but the current ("injector") Zero Install has one of the users download the software. This is nicer, because they can do things like use a mirror or a CD to get the archives. The user uses a setuid (to `zeroinstall`) program to copy the downloaded (unpacked) directory into the shared cache in a location derived from a secure hash of its contents. See the [Sharing](../details/sharing.md) page for details.
 
-# Policies
+## Policies
 
 A running process is created by combining many different libraries (and other components). In the Zero Install world, we have all versions of each library available at all times. The problem then is how to choose which versions to use. Some examples of ways to choose:
 
@@ -70,7 +66,7 @@ The injector solves this problem by selecting components to meet a program's req
 
 Zero Install uses a SAT solver with conflict-driven learning to find the optimal solution quickly. See [The 0install SAT Solver](solver.md) for details.
 
-# Interfaces and Implementations
+## Interfaces and Implementations
 
 An **interface** describes what something does (eg, "Simple text editor").
 
@@ -94,7 +90,7 @@ Both tasks are handled by the injector. This takes as input an interface and cho
 
 By default, the list of implementations of an interface is found by using the interface's name as a URL and downloading the XML feed file it names (click on one of the interfaces above to see what a feed file looks like). Additional feeds (local or remote) can be added manually by the user.
 
-# Versions
+## Versions
 
 An implementation (in the Zero Install sense) is always some particular version. We identify implementations with a cryptographic hash of their contents. Therefore, two releases with the same version number are still considered as separate implementations if they differ in any way.
 
@@ -120,7 +116,7 @@ Incompatible changes (where a newer version cannot be used in place of an older 
 - http://gtk.org/gtk-1.2.xml (contains 1.2.0, 1.2.1, 1.2.2, ...)
 - http://gtk.org/gtk-2.0.xml (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)
 
-# Stability
+## Stability
 
 The feed file should also give a stability rating for each implementation. The following levels are allowed:
 
@@ -141,7 +137,7 @@ As you make changes to the policy and ratings, the order of the implementations 
 !!! note
     If you want to use the second item on the list because the first is buggy, for example, then it is better to mark the first version as buggy than to mark the second as preferred. This is because when a new version is available, you will want that to become the version at the top of the list, whereas a preferred version will always be first.
 
-# Dependencies
+## Dependencies
 
 The feed file also lists the dependencies of each implementation; the injector locates an implementation of each dependency, recursively. All information about dependencies is handled at the interface level; this is because the same implementation may be used in different ways. Also, for software not specially designed for use with the injector, it allows us to keep the implementation in its original form.
 
@@ -151,7 +147,7 @@ This diagram shows some dependencies for Memo (the dotted lines):
 
 The injector will also examine the dependencies of ROX-Lib and Python recursively.
 
-# Object diagram
+## Object diagram
 
 This diagram shows some of the main objects in the Zero Install software:
 

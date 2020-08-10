@@ -4,7 +4,7 @@ Different environments provide different ways to add shortcuts:
 
 [TOC]
 
-# GNOME
+## GNOME
 
 Choose **Zero Install -> Add New Program** from the **Applications** menu. Type in the URI, or drag it from the web-browser into the dialog box.
 
@@ -12,29 +12,29 @@ Choose **Zero Install -> Add New Program** from the **Applications** menu. Type 
 
 **Ubuntu users**: You need to open and then close the menu editor after adding a program before it will show up; see [Ubuntu bug #191958](https://bugs.launchpad.net/ubuntu/+source/xdg-utils/+bug/191958). You can also run programs directly by choosing **Manage Programs** from the menu.
 
-# KDE
+## KDE
 
 Choose **Add Zero Install Program** from the **Utilities** menu. Type in the URI, or drag it from the web-browser into the dialog box.
 
 ![Adding with KDE](../img/tutorial/add-with-kde.png)
 
-# ROX
+## ROX
 
 Drag the link from your web-browser to the AddApp program, then drag the launcher from there to wherever you want it. [AddApp](http://rox.sourceforge.net/desktop/AddApp)'s page has more details.
 
 ![Adding with ROX](../img/tutorial/add-with-rox.png)
 
-# Finder
+## Finder
 
 Copy the link from your web-browser to the AddApp program, then save the launcher from there to wherever you want it.
 
 ![Adding with Finder](../img/tutorial/add-with-finder.png)
 
-# Windows
+## Windows
 
 See [Desktop integration](windows.md) for details.
 
-# Shell
+## Shell
 
 The `0install add` command can be used to create little shell scripts to start programs easily:
 

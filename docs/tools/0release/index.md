@@ -1,4 +1,4 @@
-title: Overview
+# 0release
 
 **Name:** 0release  
 **Maintainer:** Thomas Leonard  
@@ -30,10 +30,6 @@ You can then run any final (manual) tests on the release. If you're happy with t
 - If someone else needs to make a release, they will follow the same process.
 
 Git is fully supported. It should be fairly easy to support other (distributed) version control systems.
-
-**Contents:**
-
-[TOC]
 
 ## Preparing your source repository
 

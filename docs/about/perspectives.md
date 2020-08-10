@@ -2,7 +2,7 @@ Depending on who you are, you'll be interested in different aspects of Zero Inst
 
 [TOC]
 
-# Novice user
+## Novice user
 
 Linux distributions come with a lot of general purpose software, but sometimes a program you want isn't there. Maybe it's very new, or very specialised. Zero Install makes it easy for you to use extra software, but only if someone has gone to the trouble of making it available this way.
 
@@ -15,7 +15,7 @@ If you know the program you want is available this way, go to the [downloads pag
 
 If you don't have a particular package in mind and you're just browsing, then you've probably come to the wrong place. Only a small number of programs are currently available this way, and we're mainly interested in building the tools that help other people to make packages rather than in making lots of packages ourselves.
 
-# Power user
+## Power user
 
 Power users are probably the ideal audience for Zero Install. Zero Install is all about putting you in control of your computer:
 
@@ -39,7 +39,7 @@ Power users are probably the ideal audience for Zero Install. Zero Install is al
 ... reinstall something?
 : You should never need to reinstall anything. Zero Install puts each package in a read-only cache directory, indexed by a cryptographic digest of the contents. Therefore, reinstalling is guaranteed to have no effect! If you think the cache has got corrupted somehow, you can run `0install store audit` to check it. Deleting the program's configuration files may help, though.
 
-# System administrator
+## System administrator
 
 Your users want you to install all kinds of odd programs for them, but you know that installing a bad package for one user could mess up all your other users. It's a tough choice. You either risk it, or tell them to install the program in their home directory. But that's hard work for them, and it wastes your disk space and network bandwidth if several users want the same program. Also, they never remember to check for updates.
 
@@ -59,7 +59,7 @@ Zero Install lets your users install programs in a way that's as secure as insta
 ... limit which programs can be installed?
 : This is not yet supported. Talk to us!
 
-# Software developer
+## Software developer
 
 You don't have much free time, and you want to spend as much of it as possible writing code, not hanging around on distribution mailing lists and IRC channels trying to find someone to review the dozens of packages you've had to create. Life's too short for that.
 
@@ -82,7 +82,7 @@ Creating a Zero Install feed for your programs is easy (it's essentially the sam
 ... check that my feed is OK?
 : Use [FeedLint](../tools/feedlint.md) to test it.
 
-# Distribution maintainer
+## Distribution maintainer
 
 Installing anything that's not in your distribution is too hard for most of your users, so you've had to package up thousands of programs with minimal testing. Keeping on top of security updates and new releases is taking up all your time, and release testing drags on for months as you try to find a set of versions that supports all packages simultaneously.
 

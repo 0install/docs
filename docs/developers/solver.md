@@ -1,10 +1,8 @@
-title: The Solver
+# The Solver
 
 When you run a program with 0install, 0install must select a version of the program and a compatible version of each dependency it requires, recursively. Choosing the best set of versions from the billions of potential combinations is the job of the [Solver](https://github.com/0install/0install/blob/master/ocaml/zeroinstall/solver.mli) module. The 0install solver is an adaptation of the [OPIUM](http://www.cjtucker.com/opium.pdf) algorithm (Optimal Package Install/Uninstall Manager).
 
-[TOC]
-
-# Background
+## Background
 
 OPIUM was designed as a replacement solver for Debian's apt-get. With apt-get, if two programs depend on different versions of the same library, they can't both be installed at once. When you try to install one, apt-get will first uninstall the other. Sometimes this is unavoidable, but in other cases there is a choice of dependency. The choices apt-get makes determine which other packages must be uninstalled, but it doesn't always find the best solution (or even any solution at all). OPIUM solved this problem by ensuring that the best available choice was always made.
 
@@ -24,7 +22,7 @@ Native packages
 
 These kinds of problems can't be solved using older versions of 0install. The solver would choose the Python 2.6 version of the main program (for example) and then try to select a version of Python 2.6 to go with it. If the distribution only had Python 2.5, this would fail. Aleksey Lim from the Sugar project worked around this problem by [adding backtracking to the solver](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2966). However, this becomes very slow when there are many possible combinations of versions to consider.
 
-# Adapting the OPIUM algorithm
+## Adapting the OPIUM algorithm
 
 Initially, I tried following the OPIUM paper closely. There, they represent each possible version of each package as a variable which is 1 if the package is to be installed and 0 if not. They make a list of constraints (expressions that must be true). For example, if we want to select a version of Firefox (either 3.5 or 3.6, but not both at once) we would write:
 
@@ -48,7 +46,7 @@ The solution was to optimise one component at a time:
 
 In fact, we don't need to use a cost function at all. We can just ask whether there is any valid combination involving the best version of Firefox. If not, we ask again for the second best version, etc. The problem can then be simplified to plain old [Boolean satisfiability](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) and implemented efficiently. A DPLL-based algorithm with conflict-driven learning turned out to be very fast, even [implemented in pure Python](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3082).
 
-# Worked example
+## Worked example
 
 Consider the following case (we're trying to run "prog", of which there are two versions available):
 
@@ -120,6 +118,6 @@ In the above case, we were able to solve the problem simply by simplifying. Some
 
 The key to making this work is picking the most optimal next variable. Each time we need to choose, we do a depth first search of the current dependency tree: if we haven't yet picked a version of prog then we try setting the best remaining one to true (e.g. "prog-2 = true"). If we've already picked a version of prog, we look at its first dependency (always lib in this case) and try the best version of that, and so on.
 
-# The OCaml implementation
+## The OCaml implementation
 
 The blog post [Simplifying the Solver With Functors](http://roscidus.com/blog/blog/2014/09/17/simplifying-the-solver-with-functors/) contains more information about the new OCaml implementation of the solver.

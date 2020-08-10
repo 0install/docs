@@ -1,10 +1,8 @@
-title: Zero Install for Linux
+# Zero Install for Linux
 
 The Linux version and [Windows version](windows.md) of Zero Install share the same [feed format](../specifications/feed.md). For most common use-cases they behave identically on the command-line. There are however some [OS-specific differences](os-differences.md).
 
-[TOC]
-
-# Generic binaries
+## Generic binaries
 
 You can download download various distribution-specific packages as well as generic binaries [here](https://get.0install.net/#linux).
 
@@ -27,7 +25,7 @@ $ export PATH=$HOME/bin:$PATH
 
 You can also just run `./files/0install` directly, but  some features won't work unless `0install` is in `PATH`.
 
-# From source
+## From source
 
 You can download the 0install source code for released versions from the [GitHub Releases page](https://github.com/0install/0install/releases).
 

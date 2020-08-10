@@ -1,4 +1,4 @@
-title: Python API
+# Python API
 
 The API is quite large and can be a little daunting at first. Here is a simple example, showing how to download a feed and import it into the cache (including downloading any missing GPG keys and confirming them with the user):
 

@@ -1,8 +1,6 @@
-title: Manual walk-through
+# Manual walk-through
 
 In this guide we install a program which is available through Zero Install, but _without using the Zero Install software itself_. Instead, we will perform each step manually, as an educational experience.
-
-[TOC]
 
 ## Pick a program
 

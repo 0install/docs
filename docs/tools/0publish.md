@@ -12,10 +12,6 @@ However, **0publish is somewhat deprecated**:
 - To add a new version of a program to a feed, consider using [0template](0template.md) to generate the XML for the new version and [0repo](0repo.md) to add it to the master feed.
 - [0release](0release/index.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
 
-**Contents:**
-
-[TOC]
-
 ## General operation
 
 `0publish` edits feed files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key.

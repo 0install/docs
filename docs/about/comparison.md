@@ -1,6 +1,4 @@
-[TOC]
-
-# Matrix
+## Matrix
 
 This matrix shows some desirable features in a packaging system, and shows which systems provide them. Obviously, these things tend to be a bit biased (both in terms of what features are chosen for comparison, and of what is considered to be a 'pass') but it should give the general idea.
 
@@ -24,7 +22,7 @@ This matrix shows some desirable features in a packaging system, and shows which
 | Roam applications across machines  | :material-close:{.red} No           | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-check:{.yellow} Automatic, app only |
 | Thousands of packages available    | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check:{.yellow} ~1500               |
 
-# Explanation of features
+## Explanation of features
 
 Users can install software
 : A normal user without special privileges can install software using this system (without unreasonable extra effort).
@@ -80,9 +78,9 @@ Roam applications between machines
 Thousands of packages available
 : The system is widely adopted.
 
-# By project
+## By project
 
-## AppImage
+### AppImage
 
 [AppImage](https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
 
@@ -92,7 +90,7 @@ Thousands of packages available
 
 For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
 
-## Chocolatey
+### Chocolatey
 
 [Chocolatey](https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
 
@@ -103,7 +101,7 @@ For projects that do not provide official cross-distribution builds, AppImages a
 
 Chocolatey could in future serve the role of the native package manager on Windows. See [Distribution integration](../details/distribution-integration.md).
 
-## PortableApps.com
+### PortableApps.com
 
 [PortableApps.com](https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
 
@@ -112,11 +110,11 @@ Chocolatey could in future serve the role of the native package manager on Windo
 
 PortableApps write their config in the same directory as the installed applications. This makes them inherently incompatible with Zero Install, since it requires (and enforces) cached implementations to be read-only.
 
-## Java Web Start
+### Java Web Start
 
 Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
 
-## Maven
+### Maven
 
 [Maven](http://maven.apache.org/) is a build tool (like make or ant) for Java programs. Although not an installation system, it is similar to 0install in that each product has a `pom.xml` file with a list of dependencies. When building a product, Maven downloads the specified version of each dependency and stores it in a cache directory. Some differences between Maven 2.0 and 0install:
 
@@ -127,7 +125,7 @@ Sun have developed a similar system to Zero Install, Java Web Start, although th
 
 Note that you can use Zero Install in a maven-like way for compiling programs. See [Easy GTK binary compatibility](http://rox.sourceforge.net/desktop/node/289) for an example of using Zero Install to compile a C program against an older version of a library's header files to ensure greater compatibility.
 
-## Autopackage / Listaller
+### Autopackage / Listaller
 
 Like Zero Install, [Autopackage](http://autopackage.org/) aims to let users install software and to make software distribution decentralised. The work done by the Autopackage developers to make packages relocatable is necessary for Zero Install too. Some differences between this and Zero Install:
 
@@ -141,13 +139,13 @@ Note that it is quite possible to list autopackages in a Zero Install feed, as d
 
 Autopackage is no longer maintained, but has merged with the [Listaller project](http://listaller.tenstral.net/). The Listaller project has also taken over the [tools for making relocatable applications](http://listaller.tenstral.net/docs/doc/app-development.html), which may be useful for making 0install packages too.
 
-## EDOS / Mancoosi
+### EDOS / Mancoosi
 
 The EDOS] (_Environment for the development and Distribution of Open Source software_) project was a research project looking at dependency management, QA, and efficient distribution of large software systems.
 
 [Mancoosi](http://www.mancoosi.org/) is a follow-on project ("Managing the Complexity of the Open Source Infrastructure"). The group invited me to give a talk (March 2009); here are [my notes](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2322) from the event.
 
-## Nix
+### Nix
 
 [Nix](http://nixos.org/) is a purely functional package manager. Each version of a package has its own directory. As with Zero Install, "upgrading" creates a new directory for the new version, rather than modifying the existing one. Unlike Zero Install, however, whether a package is installed affects the behaviour of the system. For example, running "firefox" when Firefox isn't installed produces an error in Nix, whereas in Zero Install it will install Firefox first if missing and then continue. In other words, installation has side-effects in Nix.
 
@@ -167,19 +165,19 @@ While Zero Install is mainly targeted at adding additional packages to an existi
 
 In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](../details/sharing.md).
 
-## OSTree
+### OSTree
 
 [OSTree](https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
 
-## Glick 2
+### Glick 2
 
 [Glick 2](http://people.gnome.org/~alexl/glick2/) has essentially the same goals as 0install, but includes all dependencies in a single bundle rather than linking libraries dynamically at run-time (for example, when a library is updated, every program using that library must be updated individually). It has support for non-relocatable applications, using some Linux-specific tricks. It might be worth using these in 0install to implement the `<mount-point>` binding, but few applications are non-relocatable these days.
 
-## DOAPDescription of a Project
+### DOAPDescription of a Project
 
 [DOAP](https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
 
-## Environment modules
+### Environment modules
 
 The [Environment Modules](http://modules.sourceforge.net/) package provides for the dynamic modification of a user's environment via modulefiles. Each modulefile contains the information needed to configure the shell for an application. Typically modulefiles instruct the module command to alter or set shell environment variables such as `PATH`, `MANPATH`, etc. To be able to load ("install") software, it must first be installed under the `$MODULESHOME` directory which is in `/usr/local/Modules` or a shared network filesystem. It is also possible to install it in `~/.local` without root permissions, but then the modules can't be shared (due to different `$HOME`).
 

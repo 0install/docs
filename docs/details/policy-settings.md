@@ -2,9 +2,7 @@ You can change policy settings to affect when 0install looks for updates and whi
 
 The first part shows how to set policy settings that apply to all applications of the current user. The last section shows how to change per-application settings. Policy affects which versions 0install chooses (do you want test versions, ...).
 
-[TOC]
-
-# General policy settings
+## General policy settings
 
 You can change the policy settings using the Preferences dialog. To open it run `0install config` (`0install-win config` on Windows).
 
@@ -20,7 +18,7 @@ If you use Zero Install for Windows: click on **Options** in the bottom left to 
 
 ![The Configuration dialog](../img/screens/0install-win/config.png)
 
-## Network use
+### Network use
 
 Affects how much 0install will rely on the network. Possible values are:
 
@@ -33,19 +31,19 @@ Minimal
 Off-line
 : 0install will not use the network.
 
-## Freshness
+### Freshness
 
 0install caches its feeds as well. It checks for updates to the feeds from time to time. The freshness indicates how old a feed may get before 0install automatically checks for updates to it. Note that 0install only checks for updates when you actually run a program; so if you never run something, it won't waste time checking for updates.
 
 If you notice a feed is out of date, you can force 0install to look for updates by clicking the **Refresh all now** button
 
-## Help test new versions
+### Help test new versions
 
 By default, 0install tries not to select new versions while they're still in the "testing" phase. If checked, 0install will instead always select the newest version, even if it's marked as "testing".
 
 Note that all changes to your policy are saved as soon as you make them. Clicking on **Cancel** will close the window without running the program, but any changes made to the policy are not reversed.
 
-# Per-application policy settings
+## Per-application policy settings
 
 You can change per-application policy settings in the application information dialog. There are multiple ways to opening this dialog:
 
@@ -69,11 +67,11 @@ You can change per-application policy settings in the application information di
     
     ![Properties of the Edit interface](../img/screens/edit-properties.png)
     
-## Feeds
+### Feeds
 
 In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of Edit. By default, there is just one feed, whose URL is simply Edit's URI; you can view it in a web browser if you're interested: [Edit's default feed](http://rox.sourceforge.net/2005/interfaces/Edit). This is an XML file with a GPG signature at the end. The downloaded feed files are stored locally in `~/.cache/0install.net/interfaces` (see [File locations](file-locations.md)).
 
-## Versions
+### Versions
 
 The Versions tab shows all the versions found in all of the feeds:
 

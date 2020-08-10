@@ -1,6 +1,4 @@
-title: Using Git
-
-[TOC]
+# Using Git
 
 ## Testing developer versions using Git
 

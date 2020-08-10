@@ -1,4 +1,4 @@
-title: Overview
+# Developer overview
 
 This section is for people developing 0install itself, or integrating it into their own systems (for example, if you want to use 0install to manage plugins for your application).
 

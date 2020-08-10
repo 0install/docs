@@ -1,4 +1,4 @@
-title: Example: SCons
+# Example: SCons
 
 **Name:** Hello-scons  
 **Maintainer:** Thomas Leonard  
@@ -56,7 +56,7 @@ The `src/SConstruct` file shows how to fix these problems.
 
 For more information (including how to publish the binary using Zero Install), see [the main 0compile tutorial](../0compile/index.md).
 
-# Building from a Git checkout
+## Building from a Git checkout
 
 To build the latest Git version of hello-scons:
 

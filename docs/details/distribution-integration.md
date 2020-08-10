@@ -1,5 +1,3 @@
-# Distribution integration
-
 **Supported distributions:**
 
 - `Arch`: Arch Linux - since 1.6

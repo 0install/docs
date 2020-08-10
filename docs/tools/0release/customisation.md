@@ -1,10 +1,6 @@
 [0release](../0release/index.md) can be used to create releases of your software from a version control system. It uses sensible defaults, allowing it to create releases for simple projects with very little configuration. For more complex projects, you can specify extra commands that should be run during the release process using the syntax described here.
 
-**Contents:**
-
-[TOC]
-
-# Example
+## Example
 
 For example, imagine that our hello-world example program now prints out a banner with its version number when run. `hello.py` now looks like this:
 
@@ -35,7 +31,7 @@ We want to make sure that the number in the hello.py file is updated automatical
 
 This tells 0release that during the `commit-release` phase (in which it updates the version number to the number chosen for the release) it should execute the given command, which updates the version line in the Python code. Of course, you can perform any action you want.
 
-# Phase: commit-release
+## Phase: commit-release
 
 Current directory
 : The working copy (under version control), as specified by the `id` attribute in the feed.
@@ -49,7 +45,7 @@ Any changes made to the working copy will therefore appear in both the history a
 
 If your script fails (returns a non-zero exit status), 0release will abort but will not revert any changes made by the actions. You will have to manually revert any changes before 0release will allow you to restart the release process.
 
-# Phase: generate-archive
+## Phase: generate-archive
 
 Current directory
 : A temporary directory created by unpacking the archive exported from the SCM.
@@ -65,7 +61,7 @@ Once the release version is committed to version control, 0release exports that 
 
 Notice that all the above generate _platform independent_ files. _Do not_ compile to platform-specific binaries here (e.g. do not compile C source files to executables). For such programs, you need one source package and multiple binary packages (one for each architecture). See [Releases with source and binary packages](compiled-binaries.md) for that.
 
-# <add-toplevel-directory\>
+## <add-toplevel-directory\>
 
 Adding this element causes 0release to put everything in a sub-directory, named after the feed. This is probably only useful for ROX applications, where the version control system contains e.g. just `AppRun`but the release should contain `archive-2.2/Archive/AppRun`. This is done using:
 

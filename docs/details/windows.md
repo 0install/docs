@@ -1,16 +1,14 @@
-title: Zero Install for Windows
+# Zero Install for Windows
 
 The Windows version of Zero Install extends the cross-platform core [Zero Install .NET](../developers/dotnet-api.md) with a GUI and various OS-specific integrations.
 
 The [Linux version](linux.md) and Windows version of Zero Install share the same [feed format](../specifications/feed.md). For most common use-cases they behave identically on the command-line. There are however some [OS-specific differences](os-differences.md).
 
-[TOC]
-
-# Bootstrapper
+## Bootstrapper
 
 When you [download Zero Install for Windows](https://get.0install.net/#windows) from the web-site you get a so called Bootstrapper. This is a stripped down version of Zero Install bundled into a single executable file. It contains just enough functionality to download and run a full version of Zero Install, which is distributed as regular feed: <https://apps.0install.net/0install/0install-win.xml>
 
-## Deployment
+### Deployment
 
 When Zero Install is started by the Bootstrapper it is running from the [cache](cache.md) and is not integrated into the system. There are no start menu entries, the command-line tools are not in the `PATH`, etc.. This is by design; after all you may only need Zero Install once on that particular machine or may decide you don't like it. In that case you can simply delete the Bootstrapper EXE when you're done.
 
@@ -22,7 +20,7 @@ This is different from the [desktop integration](../basics/windows.md) Zero Inst
 
 Having a specific version of Zero Install copied to a fixed location would seem to undermine many of the advantages of Zero Install, such as background updates of applications and running multiple versions side-by-side. However, Zero Install can still download and run other versions of itself from the cache. When you tell your deployed instance of Zero Install to [update itself](#maintenance) it does just that: The new version is downloaded and launched from the cache and instructed to deploy itself to the same location as the existing deployment. The old files are securely replaced using the Windows Restart Manager and rollbacks in case of error.
 
-## Command-line
+### Command-line
 
 The regular Bootstrapper (`zero-install.exe`) is a GUI application, but there is also a command-line version (`0install.exe`) available. If you pass command-line arguments to this executable it will first download the full version of `0install` and then pass those arguments through. This makes it great for single-use applications or scripting:
 
@@ -37,7 +35,7 @@ You can also use the command-line version of the Bootstrapper to integrate Zero 
 .\0install.exe self deploy
 ```
 
-# Maintenance
+## Maintenance
 
 Zero Install is designed to be mostly maintenance-free (automatic update checks, etc.). You can use the following [commands](cli.md) for additional control where needed:
 
@@ -61,7 +59,7 @@ Find and merge any duplicate files in the [cache](cache.md)
 
 If you wish to run these commands in automated scripts, add the argument `--batch` to prevent interactive prompts.
 
-# Portable mode
+## Portable mode
 
 To set up Zero Install on a USB thumb drive:
 
@@ -73,13 +71,13 @@ To set up Zero Install on a USB thumb drive:
 
 You can now use your thumb drive to run Zero Install on any computer running a recent version of Windows. Zero Install stores downloaded applications directly on the stick so you can access the same applications everywhere. Please remember to always "eject" the thumb drive in Windows before disconnecting it from the computer.
 
-## Limitations
+### Limitations
 
 The applications launched by Zero Install are not automatically made portable by this. They still store their settings in the usual locations. Please make sure to move these files to the thumb drive as necessary.
 
 Portable versions of Zero Install cannot perform desktop integration (e.g. create start menu entries). Consider using regular Zero Install on multiple computers with [Zero Install Sync](sync.md) instead.
 
-## Technical details
+### Technical details
 
 FAT/FAT32-formatted drives cannot be used for Zero Install because they do not store file security settings (ACLs). They also only store time with an accuracy of two seconds while Zero Install checks the exact modification time of files.
 

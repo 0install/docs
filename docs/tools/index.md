@@ -1,10 +1,8 @@
-title: Overview
+# Tools overview
 
 This section contains various utility programs that make using Zero Install easier.
 
-[TOC]
-
-### Publishing and updating feeds
+## Publishing and updating feeds
 
 [0downstream](http://gfxmonk.net/dist/0install/0downstream.xml)
 : **0downstream** can be used to automatically create and update feed files for an existing open source project page on a site like github, pypi or rubygems.org.
@@ -33,7 +31,7 @@ This section contains various utility programs that make using Zero Install easi
 [Zero Install Publishing tools (.NET)](0publish-win.md)
 : A .NET equivalent of 0publish-GUI (e.g. for Windows).
 
-### Compiling
+## Compiling
 
 [0compile](0compile/index.md)
 : **0compile** creates binaries from source code, either for your own use or ready for publishing on the web through Zero Install. It can use Zero Install to download any build dependencies (compilers, header files, build tools, etc). This is useful if there is no binary for your platform, or if you wish to modify the program in some way.
@@ -41,7 +39,7 @@ This section contains various utility programs that make using Zero Install easi
 [Make-headers](make-headers.md)
 : **Make-headers** is an extremely simple script for creating `-dev` packages (packages containing only header files) from ordinary source releases.
 
-### Testing
+## Testing
 
 [0test](0test.md)
 : **0test** runs the self-tests for a given program with various version combinations.
@@ -49,7 +47,7 @@ This section contains various utility programs that make using Zero Install easi
 [FeedLint](feedlint.md)
 : If you maintain a number of feeds, each with several versions of your programs, how do you know that all the download links are still OK? Run **FeedLint** on your feeds from time-to-time to check.
 
-### Sharing
+## Sharing
 
 [0export](0export.md)
 : **0export** creates a self-extracting installer for a given program, for distribution on CDs, etc.
@@ -60,7 +58,7 @@ This section contains various utility programs that make using Zero Install easi
 [0share](0share.md)
 : **0share** allows peer-to-peer sharing of Zero Install packages.
 
-### Security
+## Security
 
 [ebox](ebox.md)
 : **ebox** proof-of-concept sandboxing system.

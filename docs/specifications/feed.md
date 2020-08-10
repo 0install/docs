@@ -1,4 +1,4 @@
-title: Feed files
+# Feed files
 
 This document is a formal description of the XML feed file format. An interface describes a program, library or other component. A feed provides a list of known implementations of the interface (versions of the program) and details about how to get them, how to check that they are authentic, how to run them and what other components they depend on.
 
@@ -12,11 +12,7 @@ Note on terminology: originally the word 'interface' was used to mean both 'inte
 
 [XSD schema](http://0install.de/schema/injector/interface/interface.xsd)
 
-**Contents:**
-
-[TOC]
-
-# Introduction
+## Introduction
 
 Feed files are introduced in the [Packager's Documentation](../packaging/index.md). They have the following syntax (`?` follows optional items, `*` means zero-or-more, order of elements is not important, and extension elements can appear anywhere as long as they use a different namespace):
 
@@ -81,7 +77,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 `<replaced-by>`
 : this feed's interface (the one in the root element's `uri` attribute) has been replaced by the given interface. Any references to the old URI should be updated to use the new one.
 
-# Groups
+## Groups
 
 A group has this syntax:
 
@@ -108,7 +104,7 @@ A group has this syntax:
 
 All attributes of the group are inherited by any child groups and implementations as defaults, but can be overridden there. All dependencies (`requires`), bindings and commands are inherited (sub-groups may add more dependencies and bindings to the list, but cannot remove anything).
 
-# Implementations
+## Implementations
 
 An implementation has this syntax (an unspecified argument is inherited from the closest ancestor `<group>` which defines it):
 
@@ -172,7 +168,7 @@ Currently, 0install always chooses the first of the methods it understands, but 
 
 Unrecognised elements inside an implementation are ignored.
 
-## Historical note about id
+### Historical note about id
 
 0install >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the local-path attribute and the digests from the `<manifest-digest>`.
 
@@ -185,7 +181,7 @@ Therefore, if you want to generate feeds compatible with past and future version
 -   If you have a digest, set the ID to `sha1new=...` and put the sha256 digest in the `<manifest-digest>`.
 -   If you have a local implementation then set both id and local-path to the pathname.
 
-# Commands
+## Commands
 
 The `main` attribute above provides a simple way to say how to run this implementation. The `<command>` element (supported since 0.51, released Dec 2010) provides a more flexible alternative.
 
@@ -233,7 +229,7 @@ For example:
 
 In this case, 0install will run the equivalent of `/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt`.
 
-# Package implementations
+## Package implementations
 
 This element names a distribution-provided package which, if present, is a valid implementation of this interface. The syntax is:
 
@@ -262,7 +258,7 @@ Package implementations still inherit attributes and dependencies from their par
 
 If `version` is given then only implmentations matching this pattern are used (0install >= 2.14). This allows multiple `<packages-implmentation>` elements for a single distribution package, which is useful if different versions have different requirements. See [Constraints](#constraints) for the syntax.
 
-# Retrieval methods
+## Retrieval methods
 
 A retrieval method is a way of getting an implementation.
 
@@ -318,7 +314,7 @@ You can also fetch individual files (0install >= 2.1). This is useful for e.g. j
 The file is downloaded from `href`, must be of the given `size`, and is placed within the implementation directory as `dest`.  
 If `executable` is set to `true` (0install >= 2.14.2) the file is marked as executable after download.
 
-## Recipes
+### Recipes
 
 An implementation can also be created by following a `<recipe>`:
 
@@ -348,7 +344,7 @@ In this case, each child element of the recipe represents a step. To get an impl
 !!! note
     A recipe is generally only useful for patching existing archives without having to host the complete result yourself. Normally, if your program requires files from several different packages then it is better to use the `<requires>` element instead. This allows libraries to be shared between different programs, and lets the user choose the versions and upgrade them individually.
 
-# Dependencies
+## Dependencies
 
 A `<requires>` element means that every implementation within the same group (including nested sub-groups) requires an implementation of the specified interface when run. 0install will choose a suitable implementation, downloading one if required.
 
@@ -394,7 +390,7 @@ A `<restricts>` element (0install >= 1.10) can be used to apply constraints with
 
 Internally, `<restricts>` behaves much like `<requires importance='recommended'>`, except that it doesn't try to cause the interface to be selected at all.
 
-# Constraints
+## Constraints
 
 Constraints appear on `<requires>`, `<restricts>`, `<package-implementation>` and `<runner>` elements. They restrict the set of versions from which 0install may choose an implementation.
 
@@ -427,13 +423,13 @@ For example, `<version not-before='2.4' before='2.6'>` allows any of these versi
 
 This older syntax is not supported with `<packager-implementation>`.
 
-# Bindings
+## Bindings
 
 Bindings specify how the chosen implementation is made known to the running program. Bindings can appear in a `<requires>` element, in which case they tell a component how to find its dependency, or in an `<implementation>` (or group), where they tell a component how to find itself.
 
 ![Binding classes](../img/uml/zero-install-binding.png)
 
-## Environment bindings
+### Environment bindings
 
 ```xml
     <environment
@@ -462,7 +458,7 @@ The following environment variables have known defaults and therefore the `defau
 | `XDG_CONFIG_DIRS` | `/etc/xdg`                    |
 | `XDG_DATA_DIRS`   | `/usr/local/share:/usr/share` |
 
-## Executable bindings
+### Executable bindings
 
 These both require 0install >= 1.2.
 
@@ -498,7 +494,7 @@ It is preferable to use `<executable-in-var>` where possible, to avoid making `$
 
 Implementation note: On POSIX systems, 0install will create a shell script under `~/.cache/0install.net/injector/executables` and pass the path of this script.
 
-## Generic bindings
+### Generic bindings
 
 Custom bindings can be specified using the `<binding>` element (0install >= 2.1). 0install will not know how to run a program using custom bindings itself, but it will include them in any selections documents it creates, which can then be executed by your custom code. The syntax is:
 
@@ -523,7 +519,7 @@ For example, the [EBox](../tools/ebox.md) application launcher allows each code 
 </requires>
 ```
 
-# Versions
+## Versions
 
 A version number string has the following form:
 
@@ -566,7 +562,7 @@ Note that version numbers containing dash characters were not supported before v
 
 The integers in version numbers must be representable as 64-bit signed integers.
 
-# Stability
+## Stability
 
 The feed file also gives a stability rating for each implementation. The following levels are allowed (must be lowercase in the feed files):
 
@@ -580,11 +576,11 @@ Stability ratings are expected to change over time. When any new release is made
 
 If problems are found, it can instead be marked as `buggy`, or `insecure`. 0install won't select either by default, but it is useful to users to see the reason (users may opt to continue using a buggy version if it seems to work for them, but they should never use an insecure one). `developer` is like a more extreme version of `testing`, where the program is expected to have bugs.
 
-### When to use 'buggy'
+#### When to use 'buggy'
 
 Don't mark old releases as `buggy` every time you do a new release, just because a few bugs have been fixed. People who have selected `Network use: Full` will automatically upgrade to the new version anyway, so marking an older version as buggy only affects people who have explicitly stated that they **don't** want to use the latest version, but would prefer to use an older release to save network use.
 
-# Entry points
+## Entry points
 
 (only used on the Windows version currently)
 
@@ -625,7 +621,7 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 `<icon>`
 : an icon to represent the command; this is used when creating menu entries. You should provide an icon of the type `image/png` (`.png`) for Linux apps and `image/vnd.microsoft.icon` (`.ico`) for Windows apps.
 
-# Metadata
+## Metadata
 
 All elements can contain extension elements, provided they are not in the Zero Install namespace used by the elements defined here. 0install does not currently make use of these elements itself, but other programs may find them useful. In future, some of these may be used (for example, the GUI may display the license terms).
 
@@ -643,7 +639,7 @@ These terms are not required as they are duplicated by the core Zero Install ter
 
 The source element may be used in future to record the source used to build this implementation.
 
-# Digital signatures
+## Digital signatures
 
 When a feed is downloaded from the web, it must contain a digital signature. A feed is signed by appending an XML comment block of the form:
 
@@ -659,7 +655,7 @@ This block **must** go at the end of the file, and contains a Base64-encoded ver
 
 Local interfaces are plain XML, although having an XML signature block is no problem as it will be ignored as a normal XML comment.
 
-# Valid architecture names
+## Valid architecture names
 
 The `arch` attribute is a value in the form `OS-CPU`. The values come from the `uname` system call, but there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:
 
@@ -685,7 +681,7 @@ Valid values for CPU include:
 -   armv6l
 -   armv7l
 
-# The if-0install-version attribute
+## The if-0install-version attribute
 
 To make it possible to use newer features in a feed without breaking older versions of 0install, the `if-0install-version` attribute may be placed on any element to indicate that the element should only be processed by the specified versions of 0install. For example:
 
@@ -700,13 +696,13 @@ In this example, 0install 1.14 and later will see `<new-element>`, while older v
 
 However, 0install versions before 1.13 ignore this attribute and process all elements.
 
-# Well-known extensions
+## Well-known extensions
 
 The following are well-known extensions to the Zero Install format:
 
 - [Capabilities](capabilities.md) (provides information for desktop integration of applications)
 
-# Future plans
+## Future plans
 
 -   The extra meta-data elements need to be better specified.
 -   As well as before and not-before, we should support after and not-after.

@@ -1,4 +1,4 @@
-title: ebox
+# ebox
 
 **Name:** ebox  
 **Maintainer:** Thomas Leonard  
@@ -8,11 +8,7 @@ title: ebox
 
 EBox is a proof-of-concept that integrates Zero Install's safe installation with E's sandboxing features. It allows you to install programs and run them in a restricted environment. Despite this, the programs still benefit from Zero Install's dependency handling, automatic updates, sharing, etc.
 
-**Contents:**
-
-[TOC]
-
-# Overview
+## Overview
 
 A secure system should allow the user to install and run software with limited privileges, so that the damage that can be caused by malicious software is limited. The sandboxing should be simple enough that it can be used by all users as a matter of course.
 
@@ -32,7 +28,7 @@ We start with a tutorial showing how to install and run a couple of sample appli
 
 (challenge open since Aug 2010)
 
-# Tutorial
+## Tutorial
 
 You can create a short-cut to ebox with `0install add`, like this:
 
@@ -58,7 +54,7 @@ If you run the `~/edit/AppRun` script, a fairly normal-looking text editor shoul
 
 However, the program is running in a restricted environment. It can only access files that you select using a file selector dialog box. It's hard to demonstrate this security, because permission is granted automatically by your actions, so you should [try attacking it](#the-challenge) to convince yourself.
 
-## What a boxed program can and can't do
+### What a boxed program can and can't do
 
 - Every window it opens is prefixed with the name you gave it (e.g. `edit: <untitled>`).
 - It can't access a file unless you explicitly select it, or pass it as a command-line argument.
@@ -67,7 +63,7 @@ However, the program is running in a restricted environment. It can only access 
 - If you grant it access to something (e.g. read access to a file), it could persist this in `~/edit/auths/*` so it still has it next time you run the program, although ebox-edit itself doesn't do this.
 - It can open any number of windows, use up lots of CPU time, etc.
 
-## Networking
+### Networking
 
 Next, we'll try a program that uses the network:
 
@@ -103,7 +99,7 @@ Once paired, either party can call the other:
 
 ![calling](../img/screens/ebox-chat4.png)
 
-# The challenge!
+## The challenge!
 
 I have a file, `/home/tal/precious.txt`, containing some important information. Your challenge is to either discover the contents of this file or to change it. You do this by creating a malicious application (e.g. by modifying ebox-edit or ebox-chat). I will install your program and try using it for a bit.
 
@@ -123,7 +119,7 @@ $ ./test-instance/AppRun
 
 You can try to modify the files in the checkout to escape from the sandbox. The syntax is explained in the [Walnut guide to E](http://wiki.erights.org/wiki/Walnut).
 
-## Bonus challenge!
+### Bonus challenge!
 
 Alternatively, you could clone the ebox-help Git repository and modify the library. Register your modified library with 0install (using `0install add-feed ebox-help/help.xml`) and run a program that depends on it. You should find that the library runs in an even more restricted environment; it doesn't even get access to the application data!
 
@@ -142,7 +138,7 @@ It then creates a help window by calling `<help:makeHelp>(shell, <this:manual>)`
 
 This means that libraries can't conflict even within a process. elib-help can't override a function defined in ebox-edit, for example, so the ebox-edit author doesn't need to fully trust the help library!
 
-# Notes
+## Notes
 
 To make this useful, we need to integrate with a general purpose sandbox, such as Plash, so we can sandbox any application, not just those written in E.
 
@@ -155,7 +151,7 @@ About E: the important point here isn't how this particular sandbox works, but h
 - <http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing>
 - <http://en.wikipedia.org/wiki/Object-capability_model>
 
-# Conclusions
+## Conclusions
 
 Zero Install can be used to install and run sandboxed software. It does not execute any of the downloaded code outside of the sandbox and installation of malicious code does not affect other programs on the computer, even those running as the same user. Despite this, libraries are shared automatically between programs (sandboxed or not), update notifications work as normal, etc.
 

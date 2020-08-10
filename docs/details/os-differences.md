@@ -1,13 +1,11 @@
-title: OS-specific differences
+# OS-specific differences
 
 The [Linux version](linux.md) and [Windows version](windows.md) of Zero Install share the same [feed format](../specifications/feed.md). For most common use-cases they behave identically on the command-line. There are however some OS-specific differences.
 
-[TOC]
-
-# Version number
+## Version number
 The version numbers of the Linux and Windows versions of Zero Install are loosely coupled. If the first two components of the version number are the same (e.g. 2.1 and 2.1.3) they generally support the same features.
 
-# Command-line interface
+## Command-line interface
 
 The [command-line interface](cli.md) of the Linux and Windows versions are largely identical, with the following exceptions:
 
@@ -47,7 +45,7 @@ The [command-line interface](cli.md) of the Linux and Windows versions are large
 `0install select|download|run --customize`
 : This command-line argument is only available in the Windows version.
 
-# Configuration files and caches
+## Configuration files and caches
 
 The Linux and Windows versions mostly use the same formats for configuration files and caches. However, due to some limitations of the Windows filesystem they are not directly interchangeable.
 
@@ -59,7 +57,7 @@ On Windows Administrator privileges are required to create symlinks. Therefore Z
 
 See also: [File locations](file-locations.md)
 
-# Other differences
+## Other differences
 
 The Windows version:
 
@@ -68,7 +66,7 @@ The Windows version:
 - transparently handles Unix-style `$ENVIRONMENT_VARIABLES` rather than expecting them in the platform-specific `%WINDOWS%` style.
 - creates binaries instead of shell scripts for command-line aliases and `<executable-in-*>` bindings.
 
-# Cross-platform use
+## Cross-platform use
 
 The Windows version of Zero Install is written in in C#. It is primarily intended to be be used on Windows NT-based operating systems. However, the [Zero Install .NET API](../developers/dotnet-api.md) it is based on is written with cross-platform support in mind and works on Linux using .NET Core.
 
@@ -76,7 +74,7 @@ The Linux version of Zero Install is writtin in OCaml. It is primarily intended 
 
 The Windows version of Zero Install internally uses parts of the Linux version via the [JSON API](../developers/json-api.md).
 
-# Feature comparison
+## Feature comparison
 
 |                                                                  | Windows Version                                          | Linux Version                                         |
 | ---------------------------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------- |

@@ -1,5 +1,3 @@
-# Local feeds
-
 Normally, 0install downloads a feed from the web, selects a version, downloads the archive for that version, and runs it. However, 0install can also be used locally (e.g. to run a program you are currently writing, which hasn't been released yet). There are several reasons why you might want to do this:
 
 - 0install can select and download your program's build or runtime dependencies.

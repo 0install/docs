@@ -1,5 +1,3 @@
-# Features
-
 Decentralised; anyone can distribute software
 
 : The traditional Linux distribution system, using centralised repositories, creates an interesting chicken-and-egg situation: distributions won't package software until it becomes popular, but software won't become popular until it's easy to install.

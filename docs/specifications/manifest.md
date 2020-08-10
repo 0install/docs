@@ -1,14 +1,10 @@
-title: Manifest files
+# Manifest files
 
 Zero Install _implementations_ are directory trees identified by an algorithm name (e.g., "sha256"), and digest of their contents calculated using that algorithm. Adding, deleting, renaming or modifying any file in a tree will change its digest. It should be infeasibly difficult to generate a new tree with the same digest as a given tree. Thus, if you know the digest of the implementation you want, and someone gives you a tree with that digest, you can trust that it is the implementation you want.
 
 This document describes how a digest is calculated from a directory tree.
 
-**Contents:**
-
-[TOC]
-
-## Algorithms
+### Algorithms
 
 There are several different algorithms that can be used to generate a digest from a directory tree, so an implementation's identifier includes the algorithm. This allows new algorithms to be added easily if weaknesses are discovered in older ones. The currently supported algorithms are:
 
@@ -47,7 +43,7 @@ When 0install adds a new archive to the cache, the top-level directory is rename
 
 Because only the digest of the manifest is needed, it is not strictly necessary to store the `.manifest` file at all. However, if the tree is modified later somehow it can show you exactly which files were changed (rather than just letting you know that the tree has changed in some unknown way).
 
-# Manifest file format
+## Manifest file format
 
 This description of the manifest file is based on Joachim's 12 Oct 2005 post to the zero-install-devel list:
 
@@ -55,7 +51,7 @@ The manifest file lists, line by line, all nodes in a directory identified as `/
 
 The file itself is encoded as UTF-8, with Unix line-endings (`\n`) and no [BOM](http://en.wikipedia.org/wiki/Byte-order_mark). Note that some operating systems treat filenames as sequences of bytes (rather than as sequences of characters), and thus may be able to handle filenames which cannot be represented as strings. A Zero Install implementation cannot contain such filenames.
 
-## Directories
+### Directories
 
 `D` nodes correspond to directories, and their line format is:
 
@@ -67,7 +63,7 @@ So, top level directories, for example, would have a "full path name" that match
 
 The modification time is only included when using the original `sha1` algorithm, as it was not found to be useful and caused problems with many archives.
 
-## Files
+### Files
 
 `F` and `X` nodes correspond to files and executable files, respectively, and their line formats are:
 
@@ -78,7 +74,7 @@ The modification time is only included when using the original `sha1` algorithm,
 
 As opposed to directories, no full path names are given. Hence, file names match `^[^/\n]+$` . The hash is the hexadecimal representation of the digest of the contents of the respective file, using the same digest algorithm as the manifest file itself. Hexadecimal digits a through f are used (rather than A through F).
 
-## Symlinks
+### Symlinks
 
 `S` nodes correspond to symbolic links, and their line format is:
 
@@ -88,11 +84,11 @@ As opposed to directories, no full path names are given. Hence, file names match
 
 The symlink name is given analogously to file names in `F` and `X` nodes. The size of a symlink is the number of bytes in its target (name). The hash sum, similarly to that of files, is the digest of the target (name) of the respective symlink.
 
-## Other files types
+### Other files types
 
 It is an error for a tree to contain other types of object (such as device files). Such trees are rejected.
 
-## Ordering
+### Ordering
 
 These lines appear in the order of a depth-first search. Within a directory, regular files and symlinks come first (ordered lexicographically by their name, i.e., they appear in the order that `LC_ALL=C sort` would produce), and then each subdirectory (again sorted in the same way).
 

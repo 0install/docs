@@ -1,14 +1,10 @@
-title: Capabilities extension
+# Capabilities extension
 
 This document is a formal description of the Capabilities extension of the [feeds format](feed.md). A capability tells the desktop environment what an application can do (e.g., suported file types) and in which fashion this can be represented to the user. This is used for [desktop integration](../basics/windows.md) (currently only supported on Windows).
 
 [XSD schema](http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd)
 
-**Contents:**
-
-[TOC]
-
-# Syntax
+## Syntax
 
 Capability extensions for feeds have following syntax (`?` follows optional items, `*` means zero-or-more, order of elements is not important):
 
@@ -26,9 +22,9 @@ Capability extensions for feeds have following syntax (`?` follows optional item
 `os`
 : Specifies for which operating system the capabilities are applicable (e.g., `os="Windows"` for Windows systems).
 
-# Capability types
+## Capability types
 
-## File types
+### File types
 
 An application's ability to open certain file types. 
 
@@ -59,7 +55,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 
 See: [Verbs](#verbs), [Icons](#icons)
 
-## URL protocols
+### URL protocols
 
 An application's ability to handle certain URL protocols/schemas such as HTTP. 
 
@@ -87,7 +83,7 @@ If you are registering support for a well-known protocol such as HTTP, this valu
 
 See: [Verbs](#verbs), [Icons](#icons)
 
-## Context menu entries
+### Context menu entries
 
 Entries in the file manager's context menu for all file types. 
 
@@ -116,7 +112,7 @@ See: [Verbs](#verbs), [Icons](#icons)
 
 See: [Verbs](#verbs), [Icons](#icons)
 
-## AutoPlay handlers
+### AutoPlay handlers
 
 An application's ability to handle AutoPlay events. 
 
@@ -144,7 +140,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 
 See: [Verbs](#verbs), [Icons](#icons)
 
-## Default programs
+### Default programs
 
 Ability to act as default programs for well-known services such web-browser or e-mail client.
 
@@ -162,7 +158,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 `explicit-only`
 : When set to `true` the app is not registered as a default program without explicit confirmation from the user.
 
-# Verbs
+## Verbs
 
 Some capabilities require you to map verbs/actions to specific [commands](feed.md#commands) in the feed.
 
@@ -193,7 +189,7 @@ Some capabilities require you to map verbs/actions to specific [commands](feed.m
 : Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
   `${item}` gets replaced with the path of the file being opened.
 
-# Icons
+## Icons
 
 Some capabilities allow you to specify an icon.
 
@@ -210,6 +206,6 @@ Some capabilities allow you to specify an icon.
 `href`
 : The URL where the icon can be downloaded.
 
-# Further reading
+## Further reading
 
 - Paper: [Desktop Integration Management for Portable, Zero-Install and Virtualized Applications](https://0install.de/files/papers/desktop_integration.pdf)

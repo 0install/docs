@@ -1,10 +1,8 @@
-title: Find
+# Find
 
 In the [main packaging guide](../guide-gui.md) (which should be read before this one) we saw how to make a simple Python program available. When the user asked to run the program, the injector downloaded it for them and cached it. However, most programs depend on other programs, libraries and resources and these can also be fetched using the injector. Our example package will be [Find](http://www.hayber.us/rox/Find), a little utility for searching for files which depends on the ROX-Lib Python library.
 
-[TOC]
-
-# Running Find directly
+## Running Find directly
 
 Start by downloading [Find-006](http://www.hayber.us/rox/find/Find-006.tgz). This is just a normal application, not specially designed for the injector. If you try to run it, you should get an error:
 
@@ -19,7 +17,7 @@ $ ./AppRun
 !!! note
     If it runs without an error, then either you've installed ROX-Lib manually (not using the injector) or your `PYTHONPATH` already points to it.
 
-# Creating the interface file
+## Creating the interface file
 
 Start by creating an XML interface file (`Find.xml`) as we did before:
 
@@ -74,7 +72,7 @@ If you don't already have ROX-Lib, you will be prompted to download it as usual.
 
 As usual, you can run `0install run -g ./Find.xml` to force the 0install GUI to appear. You will see that there is a single version of Find available, but that you can choose any version of ROX-Lib to use with it.
 
-# Adding the archive
+## Adding the archive
 
 We will now change the implementation as we did before so that the injector will download **Find** for us instead of requiring it to be on the machine already:
 
@@ -112,13 +110,13 @@ The attributes of `<archive>` are:
 
 If you run the new `Find.xml`, the injector should download and unpack the archive into the cache, and run Find from it.
 
-## Note on weaknesses in SHA-1
+### Note on weaknesses in SHA-1
 
 Some weaknesses in the SHA-1 algorithm have been discovered. At present, it is still strong enough for our use, but you may wish to use some other algorithm, with the `--manifest-algorithm` option. See the [specification](../../specifications/manifest.md#algorithms) for a list of available secure hashing algorithms and which versions of the injector support them.
 
 See the [HASH COLLISION Q&A](http://www.cryptography.com/cnews/hash.html) for more details.
 
-# Publishing the interface
+## Publishing the interface
 
 The `Find.xml` interface file can now be signed and published as described before:
 
@@ -127,7 +125,7 @@ $ 0publish Find.xml --set-interface-uri=http://www.hayber.us/0install/Find
 $ 0publish Find.xml --xmlsign
 ```
 
-# Registering the local feed
+## Registering the local feed
 
 We have already seen how to use a local `Find.xml` file inside the **Find** directory to run the local version with a chosen version of **ROX-Lib** (i.e., by setting the `id` attribute to `.`). It is quite useful to add this file to your CVS (or similar system) to let developers test new versions easily, since it will get the libraries for them.
 
@@ -147,7 +145,7 @@ $ 0install add-feed Find.xml
 
 When another program runs **Find** using its official URI, this local version will be included in the list of available versions that can be selected. It is traditional to add `.0` to the end of the version number for CVS versions, so that the CVS version will be preferred to the previous release.
 
-# Problems with manifest digests
+## Problems with manifest digests
 
 There is one possible problem with the digests, where the 'actual' manifest changes each time the archive is extracted! This happens when you include only some deep subdirectories in the archive, but not the top-level directory. Eg:
 

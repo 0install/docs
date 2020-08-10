@@ -1,4 +1,4 @@
-title: FeedLint
+# FeedLint
 
 **Name:** FeedLint  
 **Maintainer:** Thomas Leonard  

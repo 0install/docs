@@ -1,4 +1,4 @@
-title: Overview
+# Specifications overview
 
 [Feed files](feed.md)
 : This document is a formal description of the XML feed file format. An interface describes a program, library or other component. A feed provides a list of known implementations of the interface (versions of the program) and details about how to get them, how to check that they are authentic, how to run them and what other components they depend on.

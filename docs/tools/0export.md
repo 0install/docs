@@ -18,11 +18,7 @@ Programs installed using `setup.sh` are added to the 0install cache and are ther
 
 If the target machine has network access, and you just want to provide a launcher script, consider instead using [0bootstrap-php](https://github.com/0install/0bootstrap-php), a PHP script that creates bootstrapping EXEs or bash scripts for installing 0install and then running a feed.
 
-**Contents:**
-
-[TOC]
-
-# Using a 0export package
+## Using a 0export package
 
 Open the file with your file manager, or run `sh setup.sh` in a terminal:
 
@@ -36,11 +32,11 @@ You can add the program to your menus or run it directly.
 
 ![Optional actions](../img/screens/0export-actions.png)
 
-# Current status
+## Current status
 
 This program is not yet complete. In particular, adding the program to the user's menus only works if the user already has 0install itself installed.
 
-# Installing 0export
+## Installing 0export
 
 You can download `0export` and create a short-cut to it in the usual way:
 
@@ -48,7 +44,7 @@ You can download `0export` and create a short-cut to it in the usual way:
 $ 0install add 0export http://0install.net/tools/0export.xml
 ```
 
-# Creating a setup.sh for your program
+## Creating a setup.sh for your program
 
 Run 0export, passing in the name of the installer file to create and the name (URI) of the main program. For example, to create an installer for Edit:
 
@@ -60,7 +56,7 @@ The resulting `setup.sh` file can be copied to a CD and run on another machine. 
 
 However, if the machine does have a network connection then the user will be notified of updates in the usual way.
 
-# Format of the setup.sh
+## Format of the setup.sh
 
 The bulk of the `setup.sh` file is an archive containing:
 
@@ -74,12 +70,12 @@ To make the archive self-extracting, a short shell script is prepended to the ar
 
 ```shell
 #!/bin/sh
-# 0export 0.1
+## 0export 0.1
 archive_offset=00831
 archive_format=application/x-bzip-compressed-tar
 ```
 
-# Testing
+## Testing
 
 To test the installer:
 
@@ -97,7 +93,7 @@ The script currently (0export 0.1) does the following:
 
 All steps use the bundled version of 0install.
 
-# Support for multiple architectures or multiple applications in one bundle
+## Support for multiple architectures or multiple applications in one bundle
 
 You can use the `--arch` option to set the target architecture(s). For example, this command will select two binaries for each component, one that will run on an `i586` machine and one that will run on an `x86_64` machine:
 
@@ -109,7 +105,7 @@ If a single binary is the best option for both then it will only be included in 
 
 You can include multiple applications by listing multiple URIs. All applications will be added to the user's menu, but only the first will be run if the user selects the run option in the dialog. Note that dependencies are included automatically and should not be listed.
 
-# FAQ
+## FAQ
 
 What about security?
 : Running an executable isn't a great way to install a program. The normal 0install process of dragging a feed link to a trusted installation program is much better. However, distributions have been very slow to support this. 0export is an attempt to boot-strap the adoption process. The `setup.sh` script is designed to be easy to parse, so that in future it can be used as a simple archive.

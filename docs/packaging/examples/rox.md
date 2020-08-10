@@ -1,4 +1,4 @@
-title: ROX-Filer
+# ROX-Filer
 
 This guide shows some more advanced features of Zero Install:
 
@@ -8,9 +8,7 @@ This guide shows some more advanced features of Zero Install:
 
 This guide assumes you've already read [the packaging guide](../guide-gui.md), which explains how to create and publish interface files. We won't explain all the concepts in detail again, we'll just show how to script the steps.
 
-[TOC]
-
-# General operation
+## General operation
 
 `0publish` edits interface files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key.
 
@@ -20,7 +18,7 @@ You can create an alias for `0publish` in the usual way, to save typing:
 $ 0install add 0publish http://0install.net/2006/interfaces/0publish
 ```
 
-# Creating a binary of ROX-Filer
+## Creating a binary of ROX-Filer
 
 For this example we'll compile a binary of ROX-Filer for our platform (we'll assume there isn't one already) and make a feed for other people with the same platform (I'll use ppc64 for the examples). Start by creating an archive as normal:
 
@@ -84,7 +82,7 @@ $ tar czf rox-linux-ppc64-2.4.1{.tgz,}
 
 6\. Upload it somewhere. I'll assume `http://example.org/rox-linux-ppc64-2.4.1.tgz` in the following examples.
 
-# Adding the archive to the interface
+## Adding the archive to the interface
 
 To make our new binary available through Zero Install:
 
@@ -116,7 +114,7 @@ You should be able to download and test your binary with this command:
 $ 0install run ./ROX-Filer-ppc64
 ```
 
-# Publishing the interface with Zero Install
+## Publishing the interface with Zero Install
 
 1\. Set the uri at the top of the file to where-ever you're going to upload it:
 

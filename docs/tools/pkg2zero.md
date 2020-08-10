@@ -1,4 +1,4 @@
-title: pkg2zero
+# pkg2zero
 
 **Name:** pkg2zero  
 **Maintainer:** Thomas Leonard  
@@ -10,17 +10,13 @@ title: pkg2zero
 
 You can always use [0publish](0publish.md) to publish any tarball, RPM, Deb, Zip or Autopackage file, but you have to enter the meta-data (name, summary, description, etc) manually. Since Debian and RPM packages already contain this information, it's easier to extract it and generate the feed automatically. This is what pkg2zero does.
 
-**Contents:**
-
-[TOC]
-
 You can download **pkg2zero** and create a short-cut to it in the usual way:
 
 ```shell
 $ 0install add pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml
 ```
 
-# Creating the feed
+## Creating the feed
 
 Select the Debian or RPM package you want to publish. You need the full URL. Since packages sometimes move, you should probably make a copy of it on your own server and use that URL, but for this demo we'll link directly to Debian's copy of the program (GQView for this tutorial):
 
@@ -43,7 +39,7 @@ You will then be prompted to "Enter the URI for this feed". This is the URL from
 !!! note
     pkg2zero guesses some things (such as which binary to run by default if the package contains several) so you should check the feed file manually and edit if required. In this case, no editing is needed.
 
-# Testing
+## Testing
 
 When testing, you should make sure that the program isn't already installed (e.g. by `apt-get`). Some programs contain hard-coded paths, and will therefore appear to work correctly... but only on a system which already has the program! Also, Zero Install may select the natively-installed version, depending on your policy settings.
 
@@ -55,7 +51,7 @@ $ 0install run -g ./GQView.xml
 
 Note that pkg2zero added the downloaded package's contents to the Zero Install cache, so it will show up as being already cached.
 
-# Publishing
+## Publishing
 
 If you want to publish the feed so that others can use it, you'll also need to sign it, which can be done by giving the GPG key to use with the `--key` option:
 
@@ -67,7 +63,7 @@ Note that if this version was already added then it pkg2zero won't do anything, 
 
 See the [packaging tutorial](../packaging/index.md) for more details about signing feeds.
 
-# Adding more versions
+## Adding more versions
 
 To add a new version to your feed later, just run the command again with the new URL:
 
@@ -75,7 +71,7 @@ To add a new version to your feed later, just run the command again with the new
 $ pkg2zero http://.../new-version.deb GQView.xml
 ```
 
-# Using a Debian Packages file
+## Using a Debian Packages file
 
 As an alternative to specifying the URL of the Debian package directly, you can download an index file to the current directory and then just give the package name. e.g. to use the current Debian/stable package for the amd64 (`x86_64`) architecture:
 
@@ -84,7 +80,7 @@ $ wget ftp://ftp.debian.org/debian/dists/stable/main/binary-amd64/Packages.bz2
 $ pkg2zero --packages-file=Packages.bz2 gqview GQView.xml
 ```
 
-# Using RPM Repository Metadata
+## Using RPM Repository Metadata
 
 As an alternative to specifying the URL of the RPM package directly, you can download the repodata to the current directory and then just give the package name. e.g.
 
@@ -95,7 +91,7 @@ $ wget -N -P repodata http://download.fedoraproject.org/pub/epel/5/i386/repodata
 $ pkg2zero --repomd-file=repodata/repomd.xml -m http://download.fedoraproject.org/pub/epel --path 5/i386 gqview GQView.xml
 ```
 
-# Dependencies
+## Dependencies
 
 pkg2zero can process the `Depends` field in a Debian package and generate a corresponding `<requires>` element in the feed. For this to work, you need to create a file called `~/.config/0install.net/pkg2zero/mappings` (see the [freedesktop.org basedir specification](http://www.freedesktop.org/wiki/Specifications/basedir-spec) for details about configuration file locations). Each line of the file gives a mapping from a Debian package name to the corresponding Zero Install feed URI. For example, if you specify:
 
@@ -121,7 +117,7 @@ Note that setting `LD_LIBRARY_PATH` is just a guess. It may be that the package 
 
 When you create a new feed, pkg2zero automatically appends the new mapping to the mappings file for you. The last line of the file is also used to suggest a default when naming new feeds.
 
-# Security notes
+## Security notes
 
 pkg2zero does not verify anything about the archive it downloads when you use a URL. However, if a file with the same name already exists in the current directory, it uses that instead. Therefore, if you have a secure way of getting the .deb file (e.g. because you created it), use that.
 

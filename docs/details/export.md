@@ -1,10 +1,10 @@
 Zero Install automatically takes care of downloading applications and their dependencies when you run them on your computer. However, it is sometimes useful to download everything required to run an application and export it, e.g., for use on machine without an internet connection, or where the connection is very slow.
 
-# Linux
+## Linux
 
 On Linux you can use the tool [0export](../tools/0export.md) to create self-installing bundles.
 
-# Windows
+## Windows
 
 On Windows you can use the command [0install export](cli.md#export) to generate a directory with archives holding all required implementations and a small bootstrapping executable for importing them and setting up Zero Install on systems that don't have it yet.
 
@@ -41,7 +41,7 @@ somedir\content\sha256new_Z7MMJYZMBDNZMQKRUNOA3IEWGB7AXITJWCLK7RRXFIQ2EVBUX5JQ.t
 ```
 : The implementations selected for VLC and Zero Install compressed as TAR BZ2 archives and named by their digests.
 
-## Individual implementations
+### Individual implementations
 
 You can also export individual implementations from the [cache](cache.md) using the command [0install store export](cli.md#store_export).
 

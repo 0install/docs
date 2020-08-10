@@ -4,11 +4,7 @@ This page explains how to publish source code using Zero Install. Publishing sou
 - Build dependencies, such as header files and build tools, can be downloaded automatically.
 - [0release](../0release/index.md) can automatically compile binaries for your software during the release process.
 
-**Contents:**
-
-[TOC]
-
-# Making source available
+## Making source available
 
 There are two common situations:
 
@@ -64,7 +60,7 @@ There are also some extra attributes you can add to the `implementation` element
 `compile:binary-lib-mappings` (binary library major mappings)
 : This is needed if you want to use 0install to compile a `-dev` package (containing header files) that works with a distribution-provided runtime package; see [MakeHeaders](../make-headers.md) for details.
 
-# Customising the binary implementation
+## Customising the binary implementation
 
 You can specify a template `<implementation>` for the binary using `<compile:implementation>`. You can use this, for example, to add `<command>` elements to it. Here's a more complex example for a Java program:
 
@@ -122,7 +118,7 @@ The dependencies are:
 
 Finally, there is a `compile:if-0install-version` attribute that you can place on any element in the template. 0compile will convert this to a plain `if-0install-version` in the generated output (you can't use `if-0install-version` directly because 0install would strip them out as appropriate for its version before 0compile saw them).
 
-# Pinning version ranges
+## Pinning version ranges
 
 Sometimes, you have a build time dependency with a wide range of possible versions, but the generated binary will have a runtime dependency on whichever version was used to compile it. The `compile:pin-components` attribute on a `<version>` element in the template will expand into `before` and `after` attributes that require the binary version to match the first _n_ components of the version used to compile it. For example, if this program is compiled using Python 2.7.3, then the binary will have `<version not-before='2.7' before='2.8'/>`:
 
@@ -136,9 +132,9 @@ Sometimes, you have a build time dependency with a wide range of possible versio
 
 (added in 0compile 1.4)
 
-# Tips
+## Tips
 
-## Using a separate source feed
+### Using a separate source feed
 
 You can keep the source implementations in a separate file (`MyProg-src.xml`) and add a feed from the main feed, e.g.:
 
@@ -148,11 +144,11 @@ You can keep the source implementations in a separate file (`MyProg-src.xml`) an
 
 The `arch` attribute lets the injector know that it doesn't need to fetch this file unless it's looking for source code.
 
-## Making library headers available (-dev packages)
+### Making library headers available (-dev packages)
 
 See [Make-headers](../make-headers.md) for information about publishing library source and `-dev` packages.
 
-##  Python distutils
+###  Python distutils
 
 You should use the `--build-base` option to make distutils build to 0compile's build directory, not under the source code (which is read-only). Unfortunately, this option isn't available with the `install` command, so you have to do the build in two steps. A typical command is:
 
@@ -163,11 +159,11 @@ cd "$BUILDDIR" &&
 python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build
 ```
 
-# Examples
+## Examples
 
 There are some [template projects](../../packaging/templates.md) which can be used as a starting point for publishing your own software for various languages and build systems.
 
-# Further reading
+## Further reading
 
 [Example: SCons](example-scons.md)
 : This example shows how to compile a simple "Hello world" program using the SCons build system. Both the source and SCons are fetched using Zero Install.

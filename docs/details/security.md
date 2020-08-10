@@ -2,8 +2,6 @@ This page describes Zero Install's security model.
 
 I've noticed that if you describe a security model with digital signatures and GPG keys, people start worrying about all kinds of unlikely theoretical exploits. Whereas if you just stick software on the web with no security what-so-ever, everyone seems completely happy to use it. But for those few people who do care about security, this document explains how Zero Install tries to improve the situation.
 
-[TOC]
-
 ## Overview
 
 No-one has the time to verify every line of code in every program they use. Yet, we need to use these programs to process our data, and we must guard against the possibility that the code we use is malicious. We need methods to help ensure that we don't allow malicious code to run, to limit the damage it can do if we do run it, and to discover and recover from compromises when they do happen.

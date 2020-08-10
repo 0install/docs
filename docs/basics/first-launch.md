@@ -1,8 +1,6 @@
 When launching a feed for the first time, 0install will download the necessary files for you and store them in [the cache](../details/cache.md). Next time, 0install will use these stored files, so you don't need to download the program again. From time to time 0install will check for updates and offer to download them.
 
-[TOC]
-
-## Linux example
+### Linux example
 
 ```shell
 $ 0install run http://repo.roscidus.com/games/openttd
@@ -20,7 +18,7 @@ The downloaded file says that **OpenTTD** requires various libraries (Freetype2,
 
 0install now downloads all the required archives (supported formats include tar.gz, tar.bz2, zip, rpm and deb). It unpacks each one into its own directory and checks its contents against the _cryptographic digest_ given in the (signed) feed file. If the archive has been changed since the feed was signed, the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory (see [sharing](../details/sharing.md) for more information) in its own subdirectory, named after the digest. This ensures that no two downloads can conflict with each other.
 
-## Windows example
+### Windows example
 
 1\. Pick an application
 

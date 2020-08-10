@@ -1,4 +1,4 @@
-title: 0publish-win
+# 0publish-win
 
 **Name:** 0publish-win / Zero Install Publishing Tools  
 **Maintainer:** Bastian Eicher  
@@ -14,9 +14,7 @@ You need Zero Install to run the Publishing Tools. You can either search for "Ze
 $ 0install run https://apps.0install.net/0install/0publish-win.xml
 ```
 
-The Zero Install Publishing Tools consist of the following components:
-
-[TOC]
+The Zero Install Publishing Tools provide [a graphical feed editor](#feed-editor) and a [new feed wizard](#new-feed-wizard).
 
 ## Feed Editor
 

@@ -1,4 +1,4 @@
-title: .NET API
+# .NET API
 
 The Zero Install .NET API provides the basis for [Zero Install for Windows](../details/windows.md).
 

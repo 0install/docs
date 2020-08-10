@@ -1,4 +1,4 @@
-title: Command-line interface
+# Command-line interface
 
 Zero Install command-lines begin with `0install`.  
 On Windows you can also use <code>0install-win</code> instead. This will display outputs using windows instead of the console.

@@ -1,4 +1,4 @@
-title: Overview
+# 0compile
 
 **Name:** 0compile  
 **Maintainer:** Thomas Leonard  
@@ -21,11 +21,7 @@ $ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml
 !!! note
     This page describes the command-line interface to `0compile`. There is also a graphical interface, which is used when you click on the **Compile** button in the 0install GUI. The graphical interface provides similar options, but is slightly more limited.
 
-**Contents:**
-
-[TOC]
-
-# Autocompile
+## Autocompile
 
 If you just want to compile some existing source code (without changing it), then the `autocompile` sub-command does the job. Given the URI of a program, it will download and compile the source in a temporary directory, add the resulting binary to the Zero Install cache, and register the new binary. If the source depends on other programs, it will also download and compile them in the same way if no binary is currently available for the preferred version.
 
@@ -60,11 +56,11 @@ You can also use `autocompile --gui` for a graphical version. This makes it easi
 
 ![0compile autocompile --gui](../../img/screens/0compile-autocompile.png)
 
-# Manual compilation
+## Manual compilation
 
 If you want to modify the source before building, keep the object files around for rebuilding, or choose the versions used, you'll want to use the manual commands, described in the following sections.
 
-## Creating the build environment
+### Creating the build environment
 
 To get started, run `0compile setup` with the URL of the program you want to build. In this example, we'll use [GNU-Hello](http://www.gnu.org/software/hello/), a simple program written by the FSF to demonstrate use of the popular GNU build tools:
 
@@ -84,7 +80,7 @@ $ cd GNU-Hello
 $ 0compile setup
 ```
 
-## Building
+### Building
 
 To compile the program, use the `build` command (from inside the `GNU-Hello` directory):
 
@@ -130,7 +126,7 @@ If everything worked, you can now delete the `build` directory to save space. Ho
 
 For future reference, there is also a `gnu-hello-linux-x86_64/0install/build-environment.xml` file. This is a selections file, as produced by `0install select --source --xml`, but with a few extra details of the build added, including the hostname of the machine used for the build, a timestamp and your username. You can use this to rebuild later with the same environment (e.g. using this exact version of `make`). The file is written before the build starts, so the build process may add to it.
 
-## Modifying the source
+### Modifying the source
 
 By default, `0compile` keeps the source code in the (read-only) Zero Install cache, so if you want to make changes, the first step is to make a copy of it:
 
@@ -164,7 +160,7 @@ If you compare the new `gnu-hello-linux-x86_64/0install` directory with the old 
 
 These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if you are making larger changes to the code then you will want to use a proper version control system (such as [Git](http://git.or.cz/)).
 
-## Publishing the binary
+### Publishing the binary
 
 Use `0compile publish` to create the archive and feed:
 
@@ -187,7 +183,7 @@ To publish the feed and archive, use [0repo](../0repo.md) (see that page for con
 $ 0repo add GNU-Hello-1.3.xml
 ```
 
-## Bundling dependencies
+### Bundling dependencies
 
 You might want to build on a machine without network access, or to archive everything needed to build a particular program. To do that, use this command:
 
@@ -197,18 +193,18 @@ $ 0compile include-deps
 
 The source code and all dependencies will be copied into a new `dependencies` sub-directory. When building, this directory is added to [the implementation cache](../../details/cache.md) search path (using `0install run --with-store`).
 
-# Legacy helper features
+## Legacy helper features
 
 0compile has some special code to detect and handle some common cases in legacy code:
 
-## Generated `pkgconfig` files with absolute paths
+### Generated `pkgconfig` files with absolute paths
 
 If `$DISTDIR` ends up containing a directory called `pkgconfig`, it checks each `.pc` file inside for an absolute prefix. If found, it is changed to a relative path.
 
 !!! note
     For "pure" Zero Install libraries, just use a relative path (e.g. `prefix=${pcfiledir}/..`) in the `.pc` file in the source, and copy it unchanged to `$DISTDIR`.
 
-## Build dependencies containing `/usr/lib/lib*.so` broken symlinks
+### Build dependencies containing `/usr/lib/lib*.so` broken symlinks
 
 RPM unpacks all packages over the root, so one package can have a symlink to a file provided by a different package. This is often used to set the default version of a library in RPM packages. e.g.
 
@@ -220,15 +216,15 @@ Since Zero Install keeps every package in its own directory, this doesn't work. 
 !!! note
     A "pure" Zero Install library wouldn't need to include the version number in the library filename, so no symlink would be needed. If you did want to include the number in the filename, the symlink to it would go in the runtime package, not the `-dev`el package.
 
-## Build dependencies with lib64 directories
+### Build dependencies with lib64 directories
 
 If the feed tries to add a directory under `lib` or `usr/lib` to `$PKG_CONFIG_PATH`, and the directory doesn't exist, 0compile uses the corresponding `lib64` directory instead, if present. This is for existing RPMs which use a different directory structure for different architectures.
 
-## Libtool archive (.la) files
+### Libtool archive (.la) files
 
 0compile searches for `lib/*.la` files in `$DISTDIR` and automatically deletes them for you (there is a safely check that it really is a `libtool` file first). These files were only needed on very old systems that don't support dynamic linking. These days they just cause trouble by using absolute paths which were only valid during the build.
 
-# Recreating a build environment
+## Recreating a build environment
 
 If you want to rebuild a binary package, see if it includes the `0install/build-environment.xml` file that 0compile generates automatically. If so, you can re-create the build like this:
 
@@ -240,10 +236,10 @@ $ 0compile build
 
 For example, in the GNU-Hello case this would allow you to build using the same source code and the exact same version of `make` used in the original compile.
 
-# Making source available
+## Making source available
 
 If you want to publish source code so that other people can compile it using 0compile, see [0compile: Developers](../0compile/developers.md).
 
-# Building in a clean chroot
+## Building in a clean chroot
 
 If you want to build the source package in a clean `chroot` sandbox environment, see [0compile: Chroot Build](../0compile/chroot-build.md).

@@ -1,4 +1,4 @@
-title: Inkscape
+# Inkscape
 
 [The Inkscape project](http://inkscape.org/) makes available a binary RPM which works on various platforms. However, using this RPM directly has a few limitations for users:
 
@@ -11,9 +11,7 @@ These limitations can be avoided by creating a Zero Install interface file for i
 !!! note
     The original Inkscape binary RPM was compiled with binreloc support disabled, which prevented it from finding its icons (it used hard-coded paths). Jean-François Lemaire, the creator of the RPM, has kindly recompiled it for us with relocation support turned on.
 
-[TOC]
-
-# Creating the interface
+## Creating the interface
 
 We'll be using the `0publish` command to create the interface file. If you don't have it already, create an alias for `0publish` in the usual way:
 
@@ -47,7 +45,7 @@ $ 0publish Inkscape.xml \
     --set-arch=Linux-i486
 ```
 
-# Testing it
+## Testing it
 
 You can run the new XML file with `0install` to download and run Inkscape:
 
@@ -57,7 +55,7 @@ $ 0install run ./Inkscape.xml
 
 ![Running Inkscape with Zero Install](../../img/screens/package-inkscape.png)
 
-# Signing and publishing
+## Signing and publishing
 
 Now we need to sign the XML file using our GPG key. If you don't already have a GPG key, create one now:
 
@@ -78,7 +76,7 @@ Exported public key as 'AE07828059A53CC1.gpg'
 
 Upload the resulting `Inkscape.xml` and GPG files to the same directory on the web-server. The XML file should look something like [the Inkscape.xml test interface](http://0install.net/2006/3rd-party/Inkscape.xml).
 
-# Using the published interface
+## Using the published interface
 
 You can now run Inkscape like this:
 
@@ -98,7 +96,7 @@ They can then run it by typing `inkscape`. To choose a different version:
 $ 0install update --gui inkscape
 ```
 
-# Marking as stable
+## Marking as stable
 
 After the release has been out for a while, mark it as stable:
 
@@ -108,7 +106,7 @@ $ 0publish Inkscape.xml --stable
 
 Users can configure the injector either to prefer stable versions or to select testing versions by default. This gives your more advanced users the chance to provide feedback before you roll a new release out to all users.
 
-# Making a new release
+## Making a new release
 
 When a new static binary RPM is released, add the new version to the XML as follows:
 

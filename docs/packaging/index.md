@@ -1,4 +1,4 @@
-title: Overview
+# Packaging overview
 
 To make software available through 0install, you need to publish a signed "feed" XML file on your web page. This file lists the available versions and their dependencies and says how to run the program. There are lots of ways to create this XML file.
 

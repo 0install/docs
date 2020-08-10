@@ -10,7 +10,7 @@
 
 ![Screenshot](../img/screens/p2p.png)
 
-# Testing
+## Testing
 
 To try it out, run this command on one machine:
 
@@ -48,7 +48,7 @@ INFO:root:GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817
 machine2 - - [13/Dec/2008 21:52:49] "GET /implementation/sha1new=84e37424bbb87a077e25cec87d3c668f12726817 HTTP/1.1" 200 -
 ```
 
-# Debugging
+## Debugging
 
 If it doesn't work:
 
@@ -56,7 +56,7 @@ If it doesn't work:
 - Try using `-H` on the second machine to give the hostname of the first machine explicitly.
 - If you get "Network is unreachable", you may be missing a default route (see `ip route`).
 
-# Realistic configuration
+## Realistic configuration
 
 Before you start, you should [enable sharing](../details/sharing.md) on all machines. This ensures that implementations all go in the single machine-wide shared cache (`/var/cache/0install.net/implementations/`).
 
@@ -73,6 +73,6 @@ You can then add a line to your crontab file to make it start on boot:
 @reboot zeroshare 0launch -vc http://0install.net/2008/interfaces/0share.xml 2>&1 >/dev/null
 ```
 
-# Using with 0launch
+## Using with 0launch
 
 As this is experimental, you'll need to use the [peer2peer branch](https://github.com/0install/0install/tree/peer2peer) of 0install. In that branch, P2P support is turned on when using the GUI for downloads.

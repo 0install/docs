@@ -1,4 +1,4 @@
-title: Cache
+# Cache
 
 Everything 0install downloads from the net by default goes in `~/.cache/0install.net/` on Linux or `%localappdata%\0install.net` on Windows (see [File locations](file-locations.md)). Every application/library unpacks into a directory in that cache. So, there's one directory for ROX-Filer, and another for ClanBomber, etc. In fact, there's one directory for every version of ROX-Filer, in case you want more than one available. Every directory is uniquely named, so you'll never get conflicts when trying to install two different programs.
 

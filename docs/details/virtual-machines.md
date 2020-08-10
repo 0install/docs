@@ -1,7 +1,5 @@
 As well as allowing sharing between users, you can also use Zero Install to share packages between virtual machines. That is, the package is downloaded and stored once, but all virtual machines can run it.
 
-[TOC]
-
 ## VirtualBox
 
 [VirtualBox](http://www.virtualbox.org/) is a popular free (GPL) virtualisation system. To share your host's cache with a guest:

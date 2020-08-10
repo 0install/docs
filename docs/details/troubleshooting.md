@@ -1,6 +1,4 @@
-title: Trouble-shooting
-
-[TOC]
+# Trouble-shooting
 
 ## 0install is not running the latest version of a program
 

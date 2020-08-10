@@ -1,4 +1,4 @@
-title: Make-headers
+# Make-headers
 
 **Name:** Make-headers  
 **Maintainer:** Thomas Leonard  
@@ -35,11 +35,11 @@ This allows [0compile](0compile/index.md) to create the GLib-dev package from th
 !!! note
     If your package creates script files in `bin` that are part of the `-dev` package (i.e. they are used when building programs that use the library) then use `--keep=bin` to prevent them from being deleted.
 
-# Major version mappings
+## Major version mappings
 
 There is a particular issue that comes up if you want to provide the header files (`*.h`) through Zero Install, but have the user get the run-time files (*.so) through their distribution. First, some background:
 
-## Library versioning on Linux/Unix systems
+### Library versioning on Linux/Unix systems
 
 The obvious way to store a shared library object in a package is to give it a simple name like `libfoo.so`. The packaging system selects which version of this file to use and the program loads it. Easy. This is how a pure Zero Install system would work.
 
@@ -62,7 +62,7 @@ Obviously, this scheme doesn't work in Zero Install, since installing a package 
 
 In a pure Zero Install system, you can always use the simple scheme above and everything works correctly. In fact, to avoid changing existing libraries, we usually do include the version number in the library name, and we include both symlinks in the runtime package. This doesn't do any harm, because Zero Install keeps files from different packages in different places.
 
-## Using Zero Install -dev packages with distribution runtime packages
+### Using Zero Install -dev packages with distribution runtime packages
 
 However, what if you want to combine both systems? That is, what if you want to get the header files through Zero Install but get the runtime shared object through your distribution's packaging system? Then there is a small problem. In Zero Install, we have:
 

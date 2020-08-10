@@ -12,11 +12,7 @@ That is, each time you want to add a new release of a program to your master XML
 
 0template is mostly useful for publishing existing binary or source archives. If you are making releases of your own software from Git, consider using [0release](0release/index.md) instead.
 
-**Contents:**
-
-[TOC]
-
-# Installation
+## Installation
 
 To get it:
 
@@ -24,7 +20,7 @@ To get it:
 $ 0install add 0template http://0install.net/tools/0template.xml
 ```
 
-# Creating the template
+## Creating the template
 
 To start, run it with a non-existent file and it will offer to create it:
 
@@ -66,7 +62,7 @@ You would typically want to add any dependencies here too. See the [feed specifi
 !!! note
     You can also use 0template to create a [local feed](../packaging/local-feeds.md) to run a Git checkout, rather than an archive on the web. In that case, just don't use the `.template` extension, and it will generate a feed rather than a template.
 
-# Using the template
+## Using the template
 
 To generate the XML for a particular version, run 0template on it and provide the template parameters (`version` in this example), e.g.
 

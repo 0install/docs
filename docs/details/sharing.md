@@ -1,13 +1,11 @@
-title: Sharing downloads between users
+# Sharing downloads between users
 
 On systems with multiple users, it would be very inefficient if each user had to download their own copy of each program. Most packaging systems require users to have root access in order to share software (either the root password, or admin access through sudo). However, this is a security risk. Zero Install allows software to be shared automatically and safely between mutually-untrusting users.
 
 !!! note
     This page is about sharing between users on a single computer. If you want to do peer-to-peer sharing on a LAN, see [0share](../tools/0share.md). If you want to share between virtual machines running on a single host, see [virtual machines](virtual-machines.md).
 
-[TOC]
-
-# How it works
+## How it works
 
 A digest is a short value calculated from a (usually much bigger) file. There are various different algorithms that can be used. For example, this command calculates the SHA1 digest of the `ls` binary:
 
@@ -53,9 +51,9 @@ When Alice runs ROX-Filer as before, the software sees that `/var/cache/0install
 
 You might be worried that Charlie was able to put malicious code in the shared cache. However, it doesn't matter because other users won't try to run it, since it doesn't have the name they're looking for. Of course, it might not even be malicious: a program that deletes files is malicious if it's called `cat`, but not if it's called `rm`. As long as users don't go around running random binaries they find in the cache, they're OK.
 
-# Setting up sharing
+## Setting up sharing
 
-## Linux
+### Linux
 
 These instructions require Zero Install version 0.30 or later.
 
@@ -69,14 +67,14 @@ This diagram shows the four processes involved in adding a new package to the sy
 2. Create a new system user called 'zeroinst' (the Ubuntu package will have done this for you automatically).
 
 ```shell
-# useradd -d /var/cache/0install.net --system zeroinst
+## useradd -d /var/cache/0install.net --system zeroinst
 ```
 
 3. Create the shared directory, owned by this new user (also done automatically by the Ubuntu package):
 
 ```shell    
-# mkdir -p /var/cache/0install.net/implementations
-# chown zeroinst /var/cache/0install.net/implementations
+## mkdir -p /var/cache/0install.net/implementations
+## chown zeroinst /var/cache/0install.net/implementations
 ```
 
 4. Create `/usr/local/bin/0store-secure-add-helper` with:
@@ -92,7 +90,7 @@ exec sudo -S -u zeroinst /usr/bin/0store-secure-add "$@" < /dev/null
 5. Make your new script readable and executable by everyone:
     
 ```shell
-# chmod a+rx /usr/local/bin/0store-secure-add-helper
+## chmod a+rx /usr/local/bin/0store-secure-add-helper
 ```
 
 6. Use `visudo` to add these lines to `/etc/sudoers`:
@@ -107,7 +105,7 @@ ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
     
 When `launch` wants to install a package, it will invoke `0store-secure-add-helper`. This script uses `sudo` to run `0store-secure-add` as the `zeroinst` user, with a clean environment. No password is required for this.
 
-### AppArmor policy
+#### AppArmor policy
 
 The following AppArmor policy can be used to confine the 0store-secure-add process somewhat. However, the process does need read access everywhere (since it could be copying from anywhere) and write access to the entire cache directory, so this doesn't restrict it much more than it already is due to running as a separate user.
 
@@ -124,7 +122,7 @@ The following AppArmor policy can be used to confine the 0store-secure-add proce
 }
 ```
 
-## Windows
+### Windows
 
 On Windows the shared cache is managed by the *Zero Install Store Service*. It serves roughly the same role as `0store-secure-add` on Linux. This service ensures that no user can, intentionally or unintentionally, manipulate the contents of the shared cache. Every user can ask the service to add implementations to the shared cache on their behalf after validating the hash. This way other users only get cached implementations if they request the exact same version with the same hash.
 
@@ -133,7 +131,7 @@ The *Zero Install Store Service* is installed automatically when Zero Install is
 The service uses `C:\ProgramData\0install.net\implementations` (see [File locations](file-locations.md)) for storing implementations by default.
 A custom location can be specified in the file `C:\ProgramData\0install.net\injector\implementation-dirs`. When using a custom location make sure it is only writeable by `SYSTEM` and `Administrators` and readable by `Everyone`.
 
-### Technical details
+#### Technical details
 
 Zero Install communicates with the service using [named pipes](https://docs.microsoft.com/en-us/windows/desktop/ipc/named-pipes). The user process downloads an archive to a temporary directory and then passes its file path to the service with a request for extraction. The service extracts the archive, verifies the manifest digest and adds the implementation to the cache. During the entire process the service reports the progress back to the user process.
 
@@ -143,7 +141,7 @@ The service records write access to the cache as well as any potential problems 
 
 ![Store Service sequence diagram](../img/diagrams/store-service.png)
 
-## Questions
+### Questions
 
 How do users uninstall?
 : Currently, they can't. You (the admin) can delete directories from `/var/cache/0install.net/implementations` to save space (preferably not while they're being used ;-). Ideally, we should track which users have requested which programs and remove them automatically when no-one wants them anymore.

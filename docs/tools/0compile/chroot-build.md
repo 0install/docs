@@ -9,11 +9,7 @@ The build system (`chroot`) comes with development tools such as gcc and make, a
 !!! warning
     This page is very out-of-date. Consider using Docker to sandbox builds instead.
 
-**Contents:**
-
-[TOC]
-
-# Chroot setup
+## Chroot setup
 
 Alternatives:
 
@@ -23,7 +19,7 @@ Alternatives:
 
 For all systems we use a `build` directory, that is bind-mounted inside the chroot, to hold our build results.
 
-## Debian
+### Debian
 
 <http://pbuilder.alioth.debian.org/>
 
@@ -42,8 +38,8 @@ Prepare the build environment cache:
 MIRROR=http://ftp.debian.org/debian/
 DIST=lenny
 
-ARCH=i386 # or amd64
-CPU=i486 # or x86_64
+ARCH=i386 ## or amd64
+CPU=i486 ## or x86_64
 
 BASEDIR=/var/cache/pbuilder
 TGZ=${BASEDIR}/${DIST}-${ARCH}.tgz
@@ -57,9 +53,9 @@ Enter the build environment chroot:
 
 ```shell
 $ setarch $CPU sudo pbuilder --login --basetgz $TGZ
-# cat /etc/debian_version
+## cat /etc/debian_version
 5.0.8
-# 0launch --version
+## 0launch --version
 0launch (zero-install) 0.34
 Copyright (C) 2007 Thomas Leonard
 ...
@@ -83,7 +79,7 @@ Has `build-essential` dependencies:
 -   `libc6-dev | libc-dev`
 -   `make`
 
-## Red Hat
+### Red Hat
 
 <https://fedorahosted.org/mock/>
 
@@ -100,7 +96,7 @@ $ echo "config_opts['plugin_conf']['bind_mount_opts']['dirs'].append(('./build',
 Prepare the build environment cache:
 
 ```shell
-ARCH=i386 # or x86_64
+ARCH=i386 ## or x86_64
 
 ROOT=epel-5-$ARCH
 
@@ -145,7 +141,7 @@ Has `buildsys-build` dependencies:
 -   `unzip`
 -   `which`
 
-## Linux From Scratch
+### Linux From Scratch
 
 <http://www.linuxfromscratch.org/lfs/>
 
@@ -172,7 +168,7 @@ $ sudo chroot $LFS /usr/bin/env -i \
     HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin \
     /bin/bash --login
-# cat /etc/lfs-release
+## cat /etc/lfs-release
 6.8
 ```
 
@@ -189,7 +185,7 @@ Zero Install itself:
 
 -   [ZeroInstall-Injector](../../details/linux.md#from-source)
 
-# 0compile setup
+## 0compile setup
 
 Now we have a chroot with `0launch`, and can add `0compile`:
 
@@ -204,7 +200,7 @@ $ 0alias -d /usr/bin $CMD $URI
 !!! note
     Depending on your build OS and Python version, you might need to use an older version of 0compile.
 
-# 0compile build
+## 0compile build
 
 Begin with downloading the source code, in console mode:
 
@@ -234,13 +230,13 @@ $ 0compile publish http://www.example.com/implementations
 
 After exiting the chroot, we can find the results in build/foo.
 
-# Publish results
+## Publish results
 
 The new binary feed is now ready to be merged with our source feed, signed (using `0publish --xmlsign`), and published with the archives.
 
 Since we used a new clean chroot to build the binary, we can be reasonably sure that all dependencies are included in the source feed.
 
-# Future directions
+## Future directions
 
 In the future it might be possible to use the [Open Build Service](http://open-build-service.org/) (OBS), to build Zero Install packages using a distributed development platform.
 

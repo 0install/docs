@@ -1,16 +1,14 @@
-title: Zero Install for macOS
+# Zero Install for macOS
 
 The [Linux version](linux.md) and macOS version of Zero Install share the same source code but the installation works slightly differently.
 
-[TOC]
-
-# Installation
+## Installation
 
 The easiest way of installing Zero Install and its requirements is by using a package manager, to handle building both it and the dependencies for you. 
 
 You can download a package for macOS [here](https://get.0install.net/#mac).
 
-# From source
+## From source
 
 Install the Developer Tools, if needed:
 
@@ -44,15 +42,15 @@ Optionally, install gtk+ (2.12 or later needed for GUI).:
 
 ```shell
 $ brew install gtk+
-$ brew install gtk-engines            # for the "Clearlooks" theme
+$ brew install gtk-engines            ## for the "Clearlooks" theme
 ```
 
 Fix homebrew shortcomings:
 
 ```shell
-  # the gettext-tools are not linked with homebrew:
+  ## the gettext-tools are not linked with homebrew:
 $ export PATH="`brew --prefix gettext`/bin:$PATH"
-  # the libpng library is not found by homebrew:
+  ## the libpng library is not found by homebrew:
 $ export PKG_CONFIG_PATH="`brew --prefix libpng`/lib/pkgconfig:$PKG_CONFIG_PATH"
 ```
 
@@ -68,9 +66,9 @@ Install OCaml and OPAM:
 
 ```shell
 $ brew install ocaml
-$ brew install opam                   # OS X Mavericks or later
+$ brew install opam                   ## OS X Mavericks or later
 or
-$ brew install opam --without-aspcud  # OS X Mountain Lion or lower
+$ brew install opam --without-aspcud  ## OS X Mountain Lion or lower
 ```
 
 Initialize the OPAM root, if needed:
@@ -85,7 +83,7 @@ Install OPAM packages:
 ```shell
 $ eval `opam config env`
 $ opam install yojson xmlm ounit react lwt extlib ocurl sha
-  # optional, for GUI
+  ## optional, for GUI
 $ opam install lablgtk
 ```
 

@@ -1,10 +1,8 @@
-title: JSON API
+# JSON API
 
 Starting with 0install 2.6, you can connect your programs to 0install via a JSON API. This is useful for writing 0install-based tools in other languages.
 
-[TOC]
-
-# Introduction
+## Introduction
 
 To use the JSON API, run `0install slave API-VERSION` (where `API-VERSION` is the latest protocol version you support), like this:
 
@@ -33,7 +31,7 @@ All responses have the form `["return", myref, status, return-value]`, where `my
 <selections interface="https://apps.0install.net/utils/gnupg.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><selection distributions="Arch Slack Debian RPM Gentoo Cygwin" from-feed="distribution:https://apps.0install.net/utils/gnupg.xml" id="package:arch:gnupg:2.0.22-2:x86_64" interface="https://apps.0install.net/utils/gnupg.xml" package="gnupg" quick-test-file="/var/lib/pacman/local/gnupg-2.0.22-2/desc" version="2.0.22-2"/></selections>
 ```
 
-# Callbacks
+## Callbacks
 
 In the process of handling your request, 0install may send its own invoke messages to you. You should be prepared to handle these messages:
 
@@ -75,7 +73,7 @@ If the server is slow to respond, you will get a `"pending"` message instead, fo
 
 If 0install is able to use its own GUI, it will use that rather than these callbacks. Start it with `--console` if you want to use your own GUI in all cases.
 
-# Operations
+## Operations
 
 Currently, only the `select` operation is supported (let us know if you want more; they're easy to add):
 
@@ -109,11 +107,11 @@ Return a set of selections to run the given program. If `refresh` is `true`, 0in
 : Treat source implementations as potential binaries. If a source implementation is selected, it will be tagged with `requires-compilation="true"` to indicate this.
 : Returns `["ok",{"stale":stale-flag}]` on success. If stale-flag is true, the selections are based on old information. Consider using `refresh` to check for updates.
 
-# Sample code
+## Sample code
 
 There is some [sample Python client code](https://github.com/0install/0install/blob/master/ocaml/sample_client.py) available.
 
-# Backwards compatibility
+## Backwards compatibility
 
 The text above documents the latest version of the protocol. The differences are:
 

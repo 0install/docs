@@ -1,4 +1,4 @@
-title: .NET library
+# .NET library
 
 This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using the [Zero Install Publishing Tools](../../tools/0publish-win.md).
 

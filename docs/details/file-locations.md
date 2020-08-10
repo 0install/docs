@@ -2,7 +2,7 @@ Zero Install reads and writes config files and caches during operation. This pag
 
 [TOC]
 
-# Linux
+## Linux
 
 On Linux Zero Install follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 
@@ -27,7 +27,7 @@ Feed cache
 [0install apps](../basics/using-apps.md)
 : - `~/.config/0install.net/apps`
 
-# Windows
+## Windows
 
 On Windows Zero Install uses the well-known `%AppData%`, `%LocalAppData%` and `%ProgramData%` directories.
 

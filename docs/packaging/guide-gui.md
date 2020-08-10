@@ -1,4 +1,4 @@
-title: Packaging guide (graphical)
+# Packaging guide (graphical)
 
 This guide shows how to make software available through [Zero Install](https://get.0install.net/). We will start by packaging [Blender](http://www.blender.org), an open source 3D modelling and animation program.
 
@@ -6,11 +6,9 @@ You should already be familiar with the general operation of Zero Install. If no
 
 We assume here that a binary release already exists (perhaps published by someone else) and you want to make it available through 0install. If you want to publish your own programs, you might also be interested in [0release](../tools/0release/index.md), which generates a release from a Git repository.
 
-[TOC]
-
 **Tip**: To check whether someone has already packaged a program, use the search feature at the top of the <https://0install.net> page to search all known existing feeds.
 
-# Tutorial
+## Tutorial
 
 To make a program available via Zero Install you need to create an XML 'feed' file, describing which versions are available, where they can be downloaded, and what other software they require. In this tutorial, we'll use the graphical **0publish-gui** application to create this file. If you don't want to use a graphical interface (for example, because you want to publish new versions using a script) then you should read the [command-line tutorial](guide-cli.md) instead.
 
@@ -88,7 +86,7 @@ Upload all three files to your web-server. I put mine in <http://0install.net/20
 $ 0install run http://0install.net/2007/3rd-party/Blender.xml
 ```
 
-# Check your feed!
+## Check your feed!
 
 It's surprising how easy it is to forget to set the right permissions, etc, so check your new feed! [FeedLint](../tools/feedlint.md) is an easy first step:
 
@@ -97,7 +95,7 @@ $ 0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
 $ feedlint http://0install.net/2007/3rd-party/Blender.xml
 ```
 
-# Groups and dependencies
+## Groups and dependencies
 
 If the software depends on something else (e.g. a library) then use the **Add Requires** button to specify this. For example, **0publish-gui** depends on **ROX-Lib**, which I specified like this:
 
@@ -107,7 +105,7 @@ This ensures that `.../ROX-Lib2/python` is in `PYTHONPATH`. When **0publish-gui*
 
 When you want to add more versions, you should use the **Add Group** button to create a group. Make sure both versions are inside the new group (use drag-and-drop to move them). Then you only need to set the license, main, OS and CPU settings in one place. You can also share dependencies using groups.
 
-# Trouble-shooting
+## Trouble-shooting
 
 I can't find a generic binary for the program I want to package!
 
@@ -119,7 +117,7 @@ My program assumes it's running from `/usr/games`
 
 : Games have an annoying habit of trying to `cd` to a hard-coded directory in their start-up script. You could try asking the author to fix it (`cd "$(dirname $0)"` would work just as well). It's also possible to patch the download using a `<recipe>` element, but the GUI doesn't provide an interface for this. The trick here is getting the ID right; you need the digest of the directory structure _after_ the patch has been applied. `0install digest` can help here.
 
-# Further reading
+## Further reading
 
 [Example: Find](examples/find.md)
 : Find is a Python program with a dependency on a Python library. This example shows how to depend on other components.

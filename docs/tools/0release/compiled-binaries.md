@@ -1,6 +1,6 @@
-title: Compiled binaries
+# Compiled binaries
 
-# Releases with source and binary packages
+## Releases with source and binary packages
 
 [0release](../0release/index.md) can be used to create releases of your software from a version control system. The main page described how to make releases of programs which are architecture-independent (e.g. programs written in Python) where a single package is produced. This page explains what happens for programs which must be compiled for different architectures (e.g. C programs).
 
@@ -21,7 +21,7 @@ $ cd release-c-prog
 $ 0install run http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.xml
 ```
 
-# Compiling on multiple systems
+## Compiling on multiple systems
 
 To build binaries for multiple architectures, you'll need to create a configuration file listing the available _builders_. 0release uses the [Base Directory Specification](http://www.freedesktop.org/wiki/Specifications/basedir-spec) to find its configuration files; with the default settings, you need to create the file `~/.config/0install.net/0release/builders.conf`.
 
@@ -40,7 +40,7 @@ build = build-on-vm precise32-build-slave
 
 This defines two builders named `host` and `precise32`. `host` simply runs 0release in build-slave mode on the local machine (in fact, you don't need to specify this section because it exists by default). The `precise32` builder run a script (see [below](#setting-up-a-vagrant-build-slave)) to bring up a VirtualBox virtual machine, submit the build to it, and then shut it down again.
 
-## The build command
+### The build command
 
 The build command is called with four arguments:
 
@@ -55,7 +55,7 @@ The three names are of files in the current directory without the directory part
 2.  Invoke `0release --build-slave` to do the build.
 3.  Copy the results (the binary feed and archive) back to the local system.
 
-# Setting up a Vagrant build slave
+## Setting up a Vagrant build slave
 
 First, we'll need to create a "box" with the build system. [Create a Vagrantfile](http://docs.vagrantup.com/) for the new box, e.g.
 

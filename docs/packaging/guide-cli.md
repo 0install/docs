@@ -1,4 +1,4 @@
-title: Packaging guide (command-line)
+# Packaging guide (command-line)
 
 This guide shows how to make software available through [Zero Install](https://get.0install.net/), using the command-line [0template](../tools/0template.md) program. New users may prefer to start with the [graphical interface](guide-gui.md) instead, but this version is useful when writing scripts to automatically publish new versions, or if you can't run the graphical version for some reason.
 
@@ -6,9 +6,7 @@ We will start by packaging SCons, a build system (a little like Make).
 
 You should already be familiar with the general operation of 0install. In not, start by reading the [Introduction tutorial](../basics/index.md).
 
-[TOC]
-
-# Introduction
+## Introduction
 
 SCons is particularly easy to package, because it is designed to be bundled with other applications and used in their build process, and can therefore be executed in place right after unpacking. Programs that can be run in this way are the easiest to make available through Zero Install. To do this we need to create a small XML file stating:
 
@@ -32,7 +30,7 @@ See also:
 - [0template](../tools/0template.md)
 - [SCons homepage](http://www.scons.org)
 
-# Creating the template
+## Creating the template
 
 Run `0template` now to create a new file called `SCons.xml.template`:
 
@@ -107,7 +105,7 @@ builder and scanner objects.
 
 This is a template, from which we can create instances for particular versions.
 
-# Creating a feed for a new version
+## Creating a feed for a new version
 
 We can apply the template to a specific version of SCons by supplying a value for the `version` placeholder, like this:
 
@@ -141,7 +139,7 @@ See also:
 - [Feed file format specification](../specifications/feed.md)
 - [Archives](../specifications/feed.md#retrieval-methods)
 
-# Publishing the interface
+## Publishing the interface
 
 If you want to add the interface to an existing repository, you can just submit it to the repository owner.
 If you want to host it yourself, the easiest way is to use the [0repo](../tools/0repo.md) tool.
@@ -215,7 +213,7 @@ Once published, you can announce your new feed on the [mailing list](https://0in
 and get your key added to the key-server's list of known keys.
 
 
-# Adding more versions
+## Adding more versions
 
 You can now add more versions of SCons to your feed with two commands:
 
@@ -225,7 +223,7 @@ $ 0repo add SCons-$VERSION.xml
 ```
 
 
-# Further reading
+## Further reading
 
 [0template](../tools/0template.md)
 : More information about templates.

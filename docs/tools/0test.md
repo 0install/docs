@@ -12,11 +12,7 @@ Create a short-cut to it in the usual way:
 $ 0install add 0test http://0install.net/2008/interfaces/0test.xml
 ```
 
-**Contents:**
-
-[TOC]
-
-# Usage
+## Usage
 
 Most simply, you can use it to run the tests for a program you have downloaded or checked out of version control. e.g.
 
@@ -116,11 +112,11 @@ We can see in this example that the unit-tests for 0compile 0.19 no longer pass,
 
 If you specify a test matrix with more than two dimensions, 0test will generate a series of tables.
 
-# Other ways to specify versions
+## Other ways to specify versions
 
 As well as passing simple version numbers, you can also allow 0test to choose a suitable version given some constraints. This is useful in test scripts:
 
-## Ranges
+### Ranges
 
 You can use `,` to give a range of possible versions. This is useful with native packages where you don't know the exact version. For example, to test against any Python version 2.6.x (2.6 <= version < 2.7):
 
@@ -130,7 +126,7 @@ Passed
  - prog 0.1, python v2.6.8-0.2
 ```
 
-## %nonlocal
+### %nonlocal
 
 Don't select a local (i.e. unreleased) version to test against:
 
@@ -144,7 +140,7 @@ Passed
  - prog 0.1, lib v1.11
 ```
 
-# Passing test arguments
+## Passing test arguments
 
 You can pass extra arguments to the test command, but you must put them after `--` to stop 0test interpreting them as arguments or versions. e.g. to run 0test on 0compile with verbose output:
 
@@ -152,7 +148,7 @@ You can pass extra arguments to the test command, but you must put them after `-
 $ 0test http://0install.net/2006/interfaces/0compile.xml -- -v
 ```
 
-# Specifying a test command
+## Specifying a test command
 
 The `--test-command` (or `-t`) option can be used to run the shell command of your choice, rather than the "test" `<command>` given in the feed. The command that would be executed if the implemention were run normally is available as `$*`.
 
@@ -170,7 +166,7 @@ None failed
 
 You can use `--command` to select a different `<command>`. By default, the command used is `test` when run normally, or `run` when using `-t`. You can also set this to the empty string to select no command (useful with libraries). In that case, `$1` is the directory itself rather than the command.
 
-# Test-only dependencies
+## Test-only dependencies
 
 You can pass extra arguments and specify test-specific dependencies in the `<command>`, as usual. For example:
 
