@@ -4,170 +4,25 @@
 
 This matrix shows some desirable features in a packaging system, and shows which systems provide them. Obviously, these things tend to be a bit biased (both in terms of what features are chosen for comparison, and of what is considered to be a 'pass') but it should give the general idea.
 
-<table>
-    <tr>
-        <th>Feature</th>
-        <th>Source tarball</th>
-        <th><a href="https://wiki.debian.org/Apt">APT</a></th>
-        <th><a href="https://appimage.org/">AppImage</a></th>
-        <th><a href="https://chocolatey.org/">Chocolatey</a></th>
-        <th><a href="https://PortableApps.com/">PortableApps.com</a></th>
-        <th>Zero Install</th>
-    </tr>
-    <tr>
-        <td>Users can install software</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="yellow">Some packages</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Supports multiple platforms</td>
-        <td class="green">Yes</td>
-        <td class="red">No (Linux only)</td>
-        <td class="red">No (Linux only)</td>
-        <td class="red">No (Windows only)</td>
-        <td class="red">No (Windows only)</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Dependencies handled automatically</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="yellow">Bundled</td>
-        <td class="green">Yes</td>
-        <td class="yellow">Bundled</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Automatic upgrading</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="yellow">Some packages</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Libraries shared between programs</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="yellow">Partial</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Downloads shared between users</td>
-        <td class="red">No</td>
-        <td class="red">No user downloads</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="green"><a href="/details/sharing/">Yes</a></td>
-    </tr>
-    <tr>
-        <td>Multiple versions coexist</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Uninstall</td>
-        <td class="yellow">Sometimes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="yellow">Some packages</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes (cache)</td>
-    </tr>
-    <tr>
-        <td>Digital signatures</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Conflict-free</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Decentralised</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Non-root install of system</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Can install systems software</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-    </tr>
-    <tr>
-        <td>Supports sandboxing</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Usable when off-line</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-    </tr>
-    <tr>
-        <td>Roam applications across machines</td>
-        <td class="red">No</td>
-        <td class="red">No</td>
-        <td class="yellow">Manual, app+config</td>
-        <td class="red">No</td>
-        <td class="yellow">Manual, app+config</td>
-        <td class="yellow"><a href="/details/sync/">Automatic, app only</a> (Windows only)</td>
-    </tr>
-    <tr>
-        <td>Thousands of packages available</td>
-        <td class="green">Yes</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="green">Yes</td>
-        <td class="red">No</td>
-        <td class="red">No (~1500)</td>
-    </tr>
-</table>
+| Feature                            | Source tarball                      | APT                                      | AppImage                                     | Chocolatey                               | PortableApps.com                             | Zero Install                                  |
+| ---------------------------------- | ----------------------------------- | ---------------------------------------- | -------------------------------------------- | ---------------------------------------- | -------------------------------------------- | --------------------------------------------- |
+| Users can install software         | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Supports multiple platforms        | :material-check-all:{.green} Yes    | :material-close:{.red} No (Linux only)   | :material-close:{.red} No (Linux only)       | :material-close:{.red} No (Windows only) | :material-close:{.red} No (Windows only)     | :material-check-all:{.green} Yes              |
+| Dependencies handled automatically | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes              |
+| Automatic upgrading                | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Some packages      | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Libraries shared between programs  | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check:{.yellow} Partial        | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
+| Downloads shared between users     | :material-close:{.red} No           | :material-close:{.red} No user downloads | :material-close:{.red} No                    | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
+| Multiple versions coexist          | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Uninstall                          | :material-check:{.yellow} Sometimes | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes (cache)      |
+| Digital signatures                 | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
+| Conflict-free                      | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Decentralised                      | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
+| Non-root install of system         | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Can install systems software       | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-close:{.red} No                     |
+| Supports sandboxing                | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
+| Usable when off-line               | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Roam applications across machines  | :material-close:{.red} No           | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-check:{.yellow} Automatic, app only |
+| Thousands of packages available    | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check:{.yellow} ~1500               |
 
 # Explanation of features
 

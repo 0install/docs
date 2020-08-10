@@ -1,24 +1,34 @@
-site_name: Zero Install
-site_url: https://docs.0install.net/
+site_name: Zero Install Docs
+site_url: https://0install.net/
 repo_url: https://github.com/0install/docs
 edit_uri: blob/master/docs/
-strict: true
 
 copyright: >
-  © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
+  © Copyright 2003-2020 Thomas Leonard, Bastian Eicher and others<br>
   Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
 
 theme:
-  name: readthedocs
-  custom_dir: custom_theme/
+  name: material
+  logo: img/logo.png
+  favicon: favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+
 extra_css: [style.css]
-extra_javascript: [menu.js]
 
 markdown_extensions:
-  - admonition
-  - def_list
+  - meta
   - toc:
       permalink: true
+  - attr_list
+  - def_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
   - search

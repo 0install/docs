@@ -1,93 +1,15 @@
-.title {
-  margin-right: -18px;
-}
-.title:before {
-  content: '';
-  background: url('img/logo.png');
-  background-size: cover;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  margin-top: -4px;
-  margin-left: -36px;
-}
-
-.wy-nav-side {
-  background: #DDEEFF;
-}
-
-.wy-menu-vertical span {
-  line-height: 21px;
-  font-weight: bold;
-  color: black;
-}
-
-.wy-menu-vertical a {
-  font-size: 85%;
-  line-height: 21px;
-  color: #0000A5;
-}
-
-.wy-menu-vertical li.current a {
-  color: #0000A5;
-}
-
-.wy-menu-vertical li ul li a {
-  color: #0000A5;
-}
-
-.wy-menu-vertical a:hover {
-  background-color: #8888FF;
-}
-
-.wy-menu-vertical li.current a:hover {
-  background-color: #8888FF;
-}
-
-.wy-nav-side {
-  height: 100%;
-}
-
-.wy-nav-content-wrap {
-  background: white;
-}
-
-.wy-nav-content {
-  max-width: unset;
-  background: white;
-}
-
-footer {
-  font-size: 75%;
-}
-
-.rst-content dl:not(.docutils) dt {
-  color: unset;
-}
-
-.rst-versions {
-  height: 0px;
-}
-
-ul.subnav span.caption-text {
-  padding: 0.4em 2.4em;
-}
-
-span.expandable {
-  cursor:pointer;
-  color: #0000A5;
-}
-
-span.expandable:hover {
-  background-color: #8888FF;
+:root {
+  --md-primary-fg-color:        #2980B9;
+  --md-primary-fg-color--light: #DDEEFF;
+  --md-primary-fg-color--dark:  #8888FF;
 }
 
 .green {
-  background-color: #cd5 !important;
+  color: green;
 }
 .yellow {
-  background-color: gold !important;
+  color: orange;
 }
 .red {
-  background-color: #f99 !important;
+  color: red;
 }

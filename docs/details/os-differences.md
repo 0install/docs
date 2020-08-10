@@ -78,65 +78,16 @@ The Windows version of Zero Install internally uses parts of the Linux version v
 
 # Feature comparison
 
-<table>
-	<tr>
-		<td/>
-		<th><strong>Windows Version</strong></th>
-		<th><strong>Linux Version</strong></th>
-	</tr>
-	<tr>
-		<td><strong><a href="/specifications/feed/">Feed format</a></strong></td>
-		<td class="green">Full support</td>
-		<td class="green">Full support</td>
-	</tr>
-	<tr>
-		<td><strong>Shared cache</strong></td>
-		<td class="green">Yes (using <a href="/details/sharing/#windows">Windows service</a>)</td>
-		<td class="green">Yes (using <a href="/details/sharing/#linux">store helper</a>)</td>
-	</tr>
-	<tr>
-		<td><strong>Native package manager integration</strong></td>
-		<td class="red">No</td>
-		<td class="green">Yes</td>
-	</tr>
-	<tr>
-		<td><strong><a href="/basics/using-apps/">Apps with cached selection</a></strong></td>
-		<td class="red">No</td>
-		<td class="green">Yes</td>
-	</tr>
-	<tr>
-		<td><strong><a href="/specifications/catalog/">Catalog</a> (recommended feeds and short names)</strong></td>
-		<td class="green">Yes</td>
-		<td class="red">No</td>
-	</tr>
-	<tr>
-		<td><strong><a href="/basics/windows/">Desktop integration</a> (menu entries, file type associations, etc.)</strong></td>
-		<td class="green">Yes</td>
-		<td class="yellow">Limited</td>
-	</tr>
-	<tr>
-		<td><strong>App list <a href="/details/sync/">synchronization</a></strong></td>
-		<td class="green">Yes</td>
-		<td class="red">No</td>
-	</tr>
-	<tr>
-		<td><strong><a href="/details/windows/#portable-mode">Portable mode</a></strong></td>
-		<td class="green">Yes</td>
-		<td class="red">No</td>
-	</tr>
-	<tr>
-		<td><strong>Runs on Windows</strong></td>
-		<td class="green">Yes</td>
-		<td class="yellow">Limited</td>
-	</tr>
-	<tr>
-		<td><strong>Runs on Linux</strong></td>
-		<td class="yellow">Limited</td>
-		<td class="green">Yes</td>
-	</tr>
-	<tr>
-		<td><strong>Runs on MacOS X</strong></td>
-		<td class="yellow">Limited</td>
-		<td class="green">Yes</td>
-	</tr>
-</table>
+|                                                                  | Windows Version                                          | Linux Version                                         |
+| ---------------------------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------- |
+| Feed format                                                      | :material-check-all:{.green} Full support                | :material-check-all:{.green} Full support             |
+| Shared cache                                                     | :material-check-all:{.green} Yes (using Windows service) | :material-check-all:{.green} Yes (using store helper) |
+| Native package manager integration                               | :material-close:{.red} No                                | :material-check-all:{.green} Yes                      |
+| Apps with cached selection                                       | :material-close:{.red} No                                | :material-check-all:{.green} Yes                      |
+| Catalog (recommended feeds and short names)                      | :material-check-all:{.green} Yes                         | :material-close:{.red} No                             |
+| Desktop integration (menu entries, file type associations, etc.) | :material-check-all:{.green} Yes                         | :material-check:{.yellow} Limited                     |
+| App list synchronization                                         | :material-check-all:{.green} Yes                         | :material-close:{.red} No                             |
+| Portable mode                                                    | :material-check-all:{.green} Yes                         | :material-close:{.red} No                             |
+| Runs on Windows                                                  | :material-check-all:{.green} Yes                         | :material-check:{.yellow} Limited                     |
+| Runs on Linux                                                    | :material-check:{.yellow} Limited                        | :material-check-all:{.green} Yes                      |
+| Runs on MacOS X                                                  | :material-check:{.yellow} Limited                        | :material-check-all:{.green} Yes                      |
