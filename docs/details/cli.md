@@ -9,161 +9,161 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <th>Description</th>
 </tr>
 <tr>
-  <td><a href='#select'><nobr><code>select</code></nobr></a></td>
+  <td><nobr><a href='#select'><code>select</code></a></nobr></td>
   <td>Selects a version of the program identified by URI, and compatible versions of all of its dependencies.
 <br/>Returns an exit status of <code>0</code> if it selected a set of versions, and a status of <code>1</code> if it could not find a consistent set.</td>
 </tr>
 <tr>
-  <td><a href='#download'><nobr><code>download</code></nobr></a></td>
+  <td><nobr><a href='#download'><code>download</code></a></nobr></td>
   <td>Behaves similarly to <code>0install select</code>, except that it also downloads the selected versions if they are not already cached.
 <br/>Returns an exit status of <code>0</code> if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of <code>1</code> otherwise.</td>
 </tr>
 <tr>
-  <td><a href='#update'><nobr><code>update</code></nobr></a></td>
+  <td><nobr><a href='#update'><code>update</code></a></nobr></td>
   <td>Checks for updates to the program and download them if found.
 <br/>This is similar to <code>0install download --refresh</code>, except that it prints information about whether any changes were found.</td>
 </tr>
 <tr>
-  <td><a href='#run'><nobr><code>run</code></nobr></a></td>
+  <td><nobr><a href='#run'><code>run</code></a></nobr></td>
   <td>Behaves similarly to <code>0install download</code>, except that it also runs the program after ensuring it is in the cache.
 <br/>Returns an exit status of <code>1</code> if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</td>
 </tr>
 <tr>
-  <td><a href='#import'><nobr><code>import</code></nobr></a></td>
+  <td><nobr><a href='#import'><code>import</code></a></nobr></td>
   <td>Imports a feed from a local file, as if it had been downloaded from the network. This is useful when testing a feed file, to avoid uploading it to a remote server in order to download it again.
 <br/>The file must have a trusted digital signature, as when fetching from the network.</td>
 </tr>
 <tr>
-  <td><a href='#export'><nobr><code>export</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#export'><code>export</code></nobr></a><br>(Windows only)</td>
   <td>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</td>
 </tr>
 <tr>
-  <td><a href='#search'><nobr><code>search</code></nobr></a></td>
+  <td><nobr><a href='#search'><code>search</code></a></nobr></td>
   <td>Searches for feeds indexed by the mirror server that match specified keywords. Note that the default mirror server indexes all known feeds, regardless of quality; you must decide whether to trust the programs before running them.</td>
 </tr>
 <tr>
-  <td><a href='#list'><nobr><code>list</code></nobr></a></td>
+  <td><nobr><a href='#list'><code>list</code></a></nobr></td>
   <td>Lists all locally known feed URIs. If a search term is given, only URIs containing that string are shown (case insensitive).</td>
 </tr>
 <tr>
-  <td><a href='#catalog-search'><nobr><code>catalog search</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-search'><code>catalog search</code></nobr></a><br>(Windows only)</td>
   <td>Searches registered catalogs for applications that match the specified query. If no query is given all applications in the catalogs are listed.</td>
 </tr>
 <tr>
-  <td><a href='#catalog-refresh'><nobr><code>catalog refresh</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-refresh'><code>catalog refresh</code></nobr></a><br>(Windows only)</td>
   <td>Refreshes (downloads) all registered catalogs.</td>
 </tr>
 <tr>
-  <td><a href='#catalog-add'><nobr><code>catalog add</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-add'><code>catalog add</code></nobr></a><br>(Windows only)</td>
   <td>Adds an URI to the list of catalogs.</td>
 </tr>
 <tr>
-  <td><a href='#catalog-remove'><nobr><code>catalog remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-remove'><code>catalog remove</code></nobr></a><br>(Windows only)</td>
   <td>Removes an URI from the list of catalogs.</td>
 </tr>
 <tr>
-  <td><a href='#catalog-reset'><nobr><code>catalog reset</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-reset'><code>catalog reset</code></nobr></a><br>(Windows only)</td>
   <td>Resets the list of catalogs to the default source.</td>
 </tr>
 <tr>
-  <td><a href='#catalog-list'><nobr><code>catalog list</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-list'><code>catalog list</code></nobr></a><br>(Windows only)</td>
   <td>Lists all registered catalogs.</td>
 </tr>
 <tr>
-  <td><a href='#config'><nobr><code>config</code></nobr></a></td>
+  <td><nobr><a href='#config'><code>config</code></a></nobr></td>
   <td>View or change configuration settings.
 <br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</td>
 </tr>
 <tr>
-  <td><a href='#add-feed'><nobr><code>add-feed</code></nobr></a></td>
+  <td><nobr><a href='#add-feed'><code>add-feed</code></a></nobr></td>
   <td>Register an additional source of implementations (versions) of a program.</td>
 </tr>
 <tr>
-  <td><a href='#remove-feed'><nobr><code>remove-feed</code></nobr></a></td>
+  <td><nobr><a href='#remove-feed'><code>remove-feed</code></a></nobr></td>
   <td>Un-registers a feed, reversing the effect of <code>0install add-feed</code>.</td>
 </tr>
 <tr>
-  <td><a href='#list-feeds'><nobr><code>list-feeds</code></nobr></a></td>
+  <td><nobr><a href='#list-feeds'><code>list-feeds</code></a></nobr></td>
   <td>Lists all extra feeds added to URI using <code>0install add-feed</code>.</td>
 </tr>
 <tr>
-  <td><a href='#digest'><nobr><code>digest</code></nobr></a></td>
+  <td><nobr><a href='#digest'><code>digest</code></a></nobr></td>
   <td>Calculates the manifest digest of a directory or archive.</td>
 </tr>
 <tr>
-  <td><a href='#store-add'><nobr><code>store add</code></nobr></a></td>
+  <td><nobr><a href='#store-add'><code>store add</code></a></nobr></td>
   <td>Adds the contents of a directory or archive to the cache.</td>
 </tr>
 <tr>
-  <td><a href='#store-audit'><nobr><code>store audit</code></nobr></a></td>
+  <td><nobr><a href='#store-audit'><code>store audit</code></a></nobr></td>
   <td>Checks that all implementations in the cache are undamaged.
 <br/>Additional arguments specify custom cache locations.</td>
 </tr>
 <tr>
-  <td><a href='#store-copy'><nobr><code>store copy</code></nobr></a></td>
+  <td><nobr><a href='#store-copy'><code>store copy</code></a></nobr></td>
   <td>Copies an implementation into the cache. Similar to <code>0install store add</code>, but the digest is extracted from the directory name.
 <br/>An additional arguments specifies a custom target cache location.</td>
 </tr>
 <tr>
-  <td><a href='#store-export'><nobr><code>store export</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-export'><code>store export</code></nobr></a><br>(Windows only)</td>
   <td>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <code>0install store add</code>.</td>
 </tr>
 <tr>
-  <td><a href='#store-find'><nobr><code>store find</code></nobr></a></td>
+  <td><nobr><a href='#store-find'><code>store find</code></a></nobr></td>
   <td>Determines the local path of a cached implementation.</td>
 </tr>
 <tr>
-  <td><a href='#store-list'><nobr><code>store list</code></nobr></a></td>
+  <td><nobr><a href='#store-list'><code>store list</code></a></nobr></td>
   <td>Lists all implementation cache directories.</td>
 </tr>
 <tr>
-  <td><a href='#store-list-implementations'><nobr><code>store list-implementations</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-list-implementations'><code>store list-implementations</code></nobr></a><br>(Windows only)</td>
   <td>Lists all cached implementations. If a feed URI is specified only implementations for that particular feed are listed.</td>
 </tr>
 <tr>
-  <td><a href='#store-manage'><nobr><code>store manage</code></nobr></a></td>
+  <td><nobr><a href='#store-manage'><code>store manage</code></a></nobr></td>
   <td>Displays a graphical user interface for managing implementations in the cache. Shows associations with cached feeds.</td>
 </tr>
 <tr>
-  <td><a href='#store-optimise'><nobr><code>store optimise</code></nobr></a></td>
+  <td><nobr><a href='#store-optimise'><code>store optimise</code></a></nobr></td>
   <td>Saves disk space by merging identical files with hardlinks.
 <br/>Additional arguments specify custom cache locations.</td>
 </tr>
 <tr>
-  <td><a href='#store-purge'><nobr><code>store purge</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-purge'><code>store purge</code></nobr></a><br>(Windows only)</td>
   <td>Removes all implementations from the cache. Use this command to clean up the system before removing Zero Install. Deleting cache directories manually may be difficult due to the NTFS ACLs employed to protect implementations against modification.
 <br/>Additional arguments specify custom cache locations.</td>
 </tr>
 <tr>
-  <td><a href='#store-remove'><nobr><code>store remove</code></nobr></a></td>
+  <td><nobr><a href='#store-remove'><code>store remove</code></a></nobr></td>
   <td>Removes an implementation from the cache.</td>
 </tr>
 <tr>
-  <td><a href='#store-verify'><nobr><code>store verify</code></nobr></a></td>
+  <td><nobr><a href='#store-verify'><code>store verify</code></a></nobr></td>
   <td>Makes sure an implementation has not been damaged (i.e. it manifest digest has not changed).</td>
 </tr>
 <tr>
-  <td><a href='#store-add-dir'><nobr><code>store add-dir</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-add-dir'><code>store add-dir</code></nobr></a><br>(Windows only)</td>
   <td>Adds a directory to the list of custom implementation caches.</td>
 </tr>
 <tr>
-  <td><a href='#store-remove-dir'><nobr><code>store remove-dir</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-remove-dir'><code>store remove-dir</code></nobr></a><br>(Windows only)</td>
   <td>Removes a directory from the list of custom implementation caches.</td>
 </tr>
 <tr>
-  <td><a href='#central'><nobr><code>central</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#central'><code>central</code></nobr></a><br>(Windows only)</td>
   <td>Opens the central graphical user interface for launching and managing applications.</td>
 </tr>
 <tr>
-  <td><a href='#add'><nobr><code>add</code></nobr></a></td>
+  <td><nobr><a href='#add'><code>add</code></a></nobr></td>
   <td>Add an application to the application list.</td>
 </tr>
 <tr>
-  <td><a href='#remove'><nobr><code>remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#remove'><code>remove</code></nobr></a><br>(Windows only)</td>
   <td>Removes an application from the application list and undoes any desktop environment integration.</td>
 </tr>
 <tr>
-  <td><a href='#remove-all'><nobr><code>remove-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#remove-all'><code>remove-all</code></nobr></a><br>(Windows only)</td>
   <td>Removes all applications from the application list and undoes any desktop environment integration. Use this command to clean up the system before removing Zero Install.</td>
 </tr>
 <tr>
@@ -183,43 +183,43 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Shows the man-page of a given command.</td>
 </tr>
 <tr>
-  <td><a href='#integrate'><nobr><code>integrate</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#integrate'><code>integrate</code></nobr></a><br>(Windows only)</td>
   <td>Adds an application to the application list (if missing) and integrate it into the desktop environment.</td>
 </tr>
 <tr>
-  <td><a href='#alias'><nobr><code>alias</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#alias'><code>alias</code></nobr></a><br>(Windows only)</td>
   <td>Create an alias for launching an application via 0install without always having to enter the full URI.</td>
 </tr>
 <tr>
-  <td><a href='#list-apps'><nobr><code>list-apps</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#list-apps'><code>list-apps</code></nobr></a><br>(Windows only)</td>
   <td>Lists all applications currently in your application list. If a search term is given, only application names containing that string are shown (case insensitive).</td>
 </tr>
 <tr>
-  <td><a href='#update-all'><nobr><code>update-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#update-all'><code>update-all</code></nobr></a><br>(Windows only)</td>
   <td>Updates all applications in the application list.</td>
 </tr>
 <tr>
-  <td><a href='#repair-all'><nobr><code>repair-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#repair-all'><code>repair-all</code></nobr></a><br>(Windows only)</td>
   <td>Reapplies all desktop integrations of applications in the application list.</td>
 </tr>
 <tr>
-  <td><a href='#sync'><nobr><code>sync</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#sync'><code>sync</code></nobr></a><br>(Windows only)</td>
   <td>Synchronizes the application list with the server.</td>
 </tr>
 <tr>
-  <td><a href='#import-apps'><nobr><code>import-apps</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#import-apps'><code>import-apps</code></nobr></a><br>(Windows only)</td>
   <td>Imports a set of applications and desktop integrations from an existing app-list.xml file.</td>
 </tr>
 <tr>
-  <td><a href='#self-deploy'><nobr><code>self deploy</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-deploy'><code>self deploy</code></nobr></a><br>(Windows only)</td>
   <td>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</td>
 </tr>
 <tr>
-  <td><a href='#self-remove'><nobr><code>self remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-remove'><code>self remove</code></nobr></a><br>(Windows only)</td>
   <td>Removes the current instance of Zero Install from the system.</td>
 </tr>
 <tr>
-  <td><a href='#self-update'><nobr><code>self update</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-update'><code>self update</code></nobr></a><br>(Windows only)</td>
   <td>Updates Zero Install itself to the most recent version.</td>
 </tr>
 </table>

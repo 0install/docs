@@ -162,7 +162,7 @@ The `manifest-digest` element is used to give digests of the .manifest file usin
 <manifest-digest sha256="4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a"/>
 ```
 
-For non-local implementations (those without a local-path attribute), the `<implementation>` element contains a set of _retrieval methods_, each of which gives a different way of getting the implementation (i.e. of getting a directory structure whose digest matches the ones given).
+For non-local implementations (those without a `local-path` attribute), the `<implementation>` element contains a set of _retrieval methods_, each of which gives a different way of getting the implementation (i.e. of getting a directory structure whose digest matches the ones given).
 
 Currently, 0install always chooses the first of the methods it understands, but in future it may use other strategies (such as choosing the closest mirror, or letting the user select one manually). It may also use other methods which aren't listed, such as searching for the implementation on a peer-to-peer network.
 
@@ -170,16 +170,16 @@ Unrecognised elements inside an implementation are ignored.
 
 ### Historical note about id
 
-0install >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the local-path attribute and the digests from the `<manifest-digest>`.
+0install >= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the `local-path` attribute and the digests from the `<manifest-digest>`.
 
-0install < 0.45 ignores the local-path attribute and the `<manifest-digest>` element. If the ID starts with `.` or `/` then the ID is also the local path; otherwise, it is the single manifest digest.
+0install < 0.45 ignores the `local-path` attribute and the `<manifest-digest>` element. If the ID starts with `.` or `/` then the ID is also the local path; otherwise, it is the single manifest digest.
 
 For backwards compatibility, 0install >= 0.45 will treat an ID starting with `.` or `/` as a local path if no `local-path` attribute is present, and it will treat it as an additional digest if it contains an `=` character.
 
 Therefore, if you want to generate feeds compatible with past and future versions:
 
 -   If you have a digest, set the ID to `sha1new=...` and put the sha256 digest in the `<manifest-digest>`.
--   If you have a local implementation then set both id and local-path to the pathname.
+-   If you have a local implementation then set both `id` and `local-path` to the pathname.
 
 ## Commands
 
