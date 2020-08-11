@@ -9,3 +9,5 @@ Finally, it chooses an appropriate set of versions and downloads those packages.
 The [Mirror server](http://roscidus.com/0mirror/) is used as a backup if the project servers don't respond or return an error.
 
 ![Running a program](../img/diagrams/0launch.png)
+
+See also: [Zero Install Sync](sync.md)
