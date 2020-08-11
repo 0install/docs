@@ -1,3 +1,5 @@
+# Perspectives
+
 Depending on who you are, you'll be interested in different aspects of Zero Install. Choose the type below that most closely describes you:
 
 [TOC]

@@ -1,3 +1,5 @@
+# File locations
+
 Zero Install reads and writes config files and caches during operation. This page documents the filesystem paths used on various operating systems:
 
 [TOC]

@@ -1,3 +1,5 @@
+# Security
+
 This page describes Zero Install's security model.
 
 I've noticed that if you describe a security model with digital signatures and GPG keys, people start worrying about all kinds of unlikely theoretical exploits. Whereas if you just stick software on the web with no security what-so-ever, everyone seems completely happy to use it. But for those few people who do care about security, this document explains how Zero Install tries to improve the situation.

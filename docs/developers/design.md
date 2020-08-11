@@ -1,3 +1,5 @@
+# Design
+
 This page describes the design of Zero Install itself.
 
 !!! note

@@ -1,6 +1,5 @@
 # 0publish-win
 
-**Name:** 0publish-win / Zero Install Publishing Tools  
 **Maintainer:** Bastian Eicher  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0publish-win)  

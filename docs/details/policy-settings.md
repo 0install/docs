@@ -1,3 +1,5 @@
+# Policy settings
+
 You can change policy settings to affect when 0install looks for updates and which versions it prefers.
 
 The first part shows how to set policy settings that apply to all applications of the current user. The last section shows how to change per-application settings. Policy affects which versions 0install chooses (do you want test versions, ...).

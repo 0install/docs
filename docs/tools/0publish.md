@@ -1,4 +1,5 @@
-**Name:** 0publish  
+# 0publish
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0publish)  

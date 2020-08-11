@@ -1,3 +1,5 @@
+# Comparison
+
 ## Matrix
 
 This matrix shows some desirable features in a packaging system, and shows which systems provide them. Obviously, these things tend to be a bit biased (both in terms of what features are chosen for comparison, and of what is considered to be a 'pass') but it should give the general idea.

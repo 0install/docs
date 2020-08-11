@@ -1,3 +1,5 @@
+# Concepts
+
 ## Interfaces
 
 An interface describes what something does (e.g. "Edit - a simple text editor").

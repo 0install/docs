@@ -1,4 +1,5 @@
-**Name:** 0test  
+# 0test
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](https://github.com/0install/0test)  

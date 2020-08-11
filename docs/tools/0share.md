@@ -1,4 +1,5 @@
-**Name:** 0share  
+# 0share
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](http://repo.or.cz/w/0share.git)  

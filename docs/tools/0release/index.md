@@ -1,6 +1,5 @@
 # 0release
 
-**Name:** 0release  
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0release)  

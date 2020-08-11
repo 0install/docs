@@ -1,3 +1,5 @@
+# Virtual machines
+
 As well as allowing sharing between users, you can also use Zero Install to share packages between virtual machines. That is, the package is downloaded and stored once, but all virtual machines can run it.
 
 ## VirtualBox

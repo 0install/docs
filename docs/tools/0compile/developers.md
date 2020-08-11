@@ -1,3 +1,5 @@
+# 0compile: Developers
+
 This page explains how to publish source code using Zero Install. Publishing source this way means that:
 
 - Users can compile it easily [using 0compile](../0compile/index.md).

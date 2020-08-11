@@ -1,4 +1,5 @@
-**Name:** 0mirror  
+# 0mirror
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](https://github.com/0install/0mirror.git)

@@ -1,4 +1,5 @@
-**Name:** 0bootstrap  
+# 0bootstrap
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](https://github.com/0install/0bootstrap)  

@@ -1,4 +1,4 @@
-# Example: SCons
+# 0compile: SCons example
 
 **Name:** Hello-scons  
 **Maintainer:** Thomas Leonard  

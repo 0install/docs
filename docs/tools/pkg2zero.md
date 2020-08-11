@@ -1,6 +1,5 @@
 # pkg2zero
 
-**Name:** pkg2zero  
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](http://repo.or.cz/w/deb2zero.git)  

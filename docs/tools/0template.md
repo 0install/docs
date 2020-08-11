@@ -1,4 +1,5 @@
-**Name:** 0template  
+# 0template
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0template)  

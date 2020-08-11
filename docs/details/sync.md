@@ -1,3 +1,5 @@
+# Sync
+
 !!! note
     This is currently only supported in [Zero Install for Windows](windows.md).
 

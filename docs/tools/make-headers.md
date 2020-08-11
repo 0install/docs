@@ -1,6 +1,5 @@
 # Make-headers
 
-**Name:** Make-headers  
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](http://repo.or.cz/w/make-headers.git)  

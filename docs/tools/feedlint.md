@@ -1,6 +1,5 @@
 # FeedLint
 
-**Name:** FeedLint  
 **Maintainer:** Thomas Leonard  
 **License:** GNU General Public License  
 **Source:** [Git repository](http://repo.or.cz/w/FeedLint.git)  

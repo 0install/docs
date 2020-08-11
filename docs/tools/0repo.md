@@ -1,4 +1,5 @@
-**Name:** 0repo  
+# 0repo
+
 **Maintainer:** Thomas Leonard  
 **License:** GNU Lesser General Public License  
 **Source:** [Git repository](https://github.com/0install/0repo)  
