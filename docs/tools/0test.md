@@ -1,9 +1,10 @@
 # 0test
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](https://github.com/0install/0test)  
-**Zero Install feed:** <http://0install.net/2008/interfaces/0test.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <https://github.com/0install/0test>  
+    **Zero Install feed:** <http://0install.net/2008/interfaces/0test.xml>
 
 A Zero Install [feed](../specifications/feed.md) can specify a "test" command, which can be run to test the program automatically. 0test runs this command. It can also test combinations of various versions of a program and its dependencies.
 

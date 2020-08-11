@@ -1,9 +1,10 @@
 # 0export
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](http://repo.or.cz/w/0export.git)  
-**Zero Install feed:** <http://0install.net/tools/0export.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <http://repo.or.cz/w/0export.git>  
+    **Zero Install feed:** <http://0install.net/tools/0export.xml>
 
 **0export** creates self-installing bundles for distribution on CD, etc
 

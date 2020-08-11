@@ -1,9 +1,10 @@
 # 0publish-win
 
-**Maintainer:** Bastian Eicher  
-**License:** GNU Lesser General Public License  
-**Source:** [Git repository](https://github.com/0install/0publish-win)  
-**Zero Install feed:** <https://apps.0install.net/0install/0publish-win.xml>
+!!! info ""
+    **Maintainer:** Bastian Eicher  
+    **License:** GNU Lesser General Public License  
+    **Source:** <https://github.com/0install/0publish-win>  
+    **Zero Install feed:** <https://apps.0install.net/0install/0publish-win.xml>
 
 The Zero Install Publishing Tools allow you to create your own feeds on Windows.
 

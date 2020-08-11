@@ -1,9 +1,10 @@
 # 0share
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](http://repo.or.cz/w/0share.git)  
-**Zero Install feed:** <http://0install.net/2008/interfaces/0share.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <http://repo.or.cz/w/0share.git>  
+    **Zero Install feed:** <http://0install.net/2008/interfaces/0share.xml>
 
 **0share** provides for local peer-to-peer distribution of Zero Install implementations (versions of programs). This means that once one machine on your local network has downloaded something, other machines can get it directly from the first one.
 

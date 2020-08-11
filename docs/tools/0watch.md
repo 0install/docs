@@ -1,9 +1,10 @@
 # 0watch
 
-**Maintainer:** Bastian Eicher  
-**License:** GNU Lesser General Public License  
-**Source:** [Git repository](https://github.com/0install/0watch)  
-**Zero Install feed:** <https://apps.0install.net/0install/0watch.xml>
+!!! info ""
+    **Maintainer:** Bastian Eicher  
+    **License:** GNU Lesser General Public License  
+    **Source:** <https://github.com/0install/0watch>  
+    **Zero Install feed:** <https://apps.0install.net/0install/0watch.xml>
 
 0watch scans websites for new releases using arbitrary Python code snippets.
 When new releases are detected [0template](0template.md) is used to create/update a Zero Install feed.

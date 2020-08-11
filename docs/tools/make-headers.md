@@ -1,9 +1,10 @@
 # Make-headers
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](http://repo.or.cz/w/make-headers.git)  
-**Zero Install feed:** <http://0install.net/2007/interfaces/Make-headers.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <http://repo.or.cz/w/make-headers.git>  
+    **Zero Install feed:** <http://0install.net/2007/interfaces/Make-headers.xml>
 
 **Make-headers** is an extremely simple script for creating `-dev` packages (packages containing only header files) from ordinary source releases. It performs the following steps:
 

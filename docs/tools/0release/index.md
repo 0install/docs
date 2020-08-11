@@ -1,9 +1,10 @@
 # 0release
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU Lesser General Public License  
-**Source:** [Git repository](https://github.com/0install/0release)  
-**Zero Install feed:** <http://0install.net/2007/interfaces/0release.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU Lesser General Public License  
+    **Source:** <https://github.com/0install/0release>  
+    **Zero Install feed:** <http://0install.net/2007/interfaces/0release.xml>
 
 **0release** can be used to make new releases of your software. It handles details such as setting the version number and release date, tagging the release in your version control system and updating your Zero Install feed.
 

@@ -1,9 +1,10 @@
 # 0repo
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU Lesser General Public License  
-**Source:** [Git repository](https://github.com/0install/0repo)  
-**Zero Install feed:** <http://0install.net/tools/0repo.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU Lesser General Public License  
+    **Source:** <https://github.com/0install/0repo>  
+    **Zero Install feed:** <http://0install.net/tools/0repo.xml>
 
 **0repo** provides an easy and reliable way to maintain a repository of 0install software for others to use.
 

@@ -1,8 +1,9 @@
 # 0mirror
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](https://github.com/0install/0mirror.git)
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <https://github.com/0install/0mirror.git>
 
 With Zero Install, each software author publishes a feed on their web-site giving details about their software. Users can use these feeds to download the software and to receive notification of new versions. However, the author's site may become unavailable, either temporarily (e.g. due to network problems) or permanently (e.g. if the software is abandoned). Therefore, mirror sites are used to keep an up-to-date copy of the original feeds.
 

@@ -1,9 +1,10 @@
 # ebox
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU Lesser General Public License  
-**Source:** [Git repository](https://github.com/0install/ebox)  
-**Zero Install feed:** <http://0install.net/tests/ebox.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU Lesser General Public License  
+    **Source:** <https://github.com/0install/ebox>  
+    **Zero Install feed:** <http://0install.net/tests/ebox.xml>
 
 EBox is a proof-of-concept that integrates Zero Install's safe installation with E's sandboxing features. It allows you to install programs and run them in a restricted environment. Despite this, the programs still benefit from Zero Install's dependency handling, automatic updates, sharing, etc.
 

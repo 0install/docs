@@ -1,9 +1,10 @@
 # pkg2zero
 
-**Maintainer:** Thomas Leonard  
-**License:** GNU General Public License  
-**Source:** [Git repository](http://repo.or.cz/w/deb2zero.git)  
-**Zero Install feed:** <http://0install.net/2009/interfaces/pkg2zero.xml>
+!!! info ""
+    **Maintainer:** Thomas Leonard  
+    **License:** GNU General Public License  
+    **Source:** <http://repo.or.cz/w/deb2zero.git>  
+    **Zero Install feed:** <http://0install.net/2009/interfaces/pkg2zero.xml>
 
 **pkg2zero** takes a Debian or RPM package and publishes it in a Zero Install feed.
 
