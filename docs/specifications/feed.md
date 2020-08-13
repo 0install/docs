@@ -8,9 +8,10 @@ This class diagram shows how the different concepts are related. Each feed file 
 
 Each *Feed* lists a number of *Implementations* (versions). An *Identity* is a way to recognise an *Implementation* (e.g. a cryptographic digest). A *Retrieval* method is a way to get an *Implementation* (e.g. by downloading from a web site). A *Command* says how to run an *Implementation* as a program. A *Dependency* indicates that one component depends on another (e.g. Gimp requires the GTK library). A *Binding* says how to let the program locate the *Implementations* when run. A *Constraint* limits the choice of a dependency (e.g. Gimp requires a version of GTK >= 2.6).
 
-Note on terminology: originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.
+!!! abstract "Terminology"
+    Originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.
 
-[XSD schema](http://0install.de/schema/injector/interface/interface.xsd)
+[XSD schema](http://0install.de/schema/injector/interface/interface.xsd){: .md-button .md-button--primary }
 
 ## Introduction
 
@@ -19,8 +20,8 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 ```xml
 <?xml version='1.0'?>
 <interface xmlns='http://zero-install.sourceforge.net/2004/injector/interface'
-	   min-injector-version='...' ?
-	   uri='...' ? >
+           min-injector-version='...' ?
+           uri='...' ? >
   <name>...</name>
   <summary>...</summary>
   <description>...</description> ?
@@ -37,7 +38,6 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
   [group] *
   [implementation] *
   [entry-point] *
-
 </interface>
 ```
 
@@ -82,24 +82,23 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 A group has this syntax:
 
 ```xml
-  <group
-	version='...' ?
-	released='...' ?
-	main='...' ?
-	self-test='...' ?
-	doc-dir='...' ?
-	license='...' ?
-	released='...' ?
-	stability='...' ?
-	langs='...' ?
-        arch='...' ? >
-    [requires] *
-    [group] *
-    [command] *
-    [binding] *
-    [implementation] *
-    [package-implementation] *
-  </group>
+<group version='...' ?
+       released='...' ?
+       main='...' ?
+       self-test='...' ?
+       doc-dir='...' ?
+       license='...' ?
+       released='...' ?
+       stability='...' ?
+       langs='...' ?
+       arch='...' ? >
+  [requires] *
+  [group] *
+  [command] *
+  [binding] *
+  [implementation] *
+  [package-implementation] *
+</group>
 ```
 
 All attributes of the group are inherited by any child groups and implementations as defaults, but can be overridden there. All dependencies (`requires`), bindings and commands are inherited (sub-groups may add more dependencies and bindings to the list, but cannot remove anything).
@@ -109,22 +108,21 @@ All attributes of the group are inherited by any child groups and implementation
 An implementation has this syntax (an unspecified argument is inherited from the closest ancestor `<group>` which defines it):
 
 ```xml
-  <implementation
-	[all <group> attributes]
-	id='...'
-	local-path='...' ? >
-    <manifest-digest [digest] * /> *
-    [command] *
-    [retrieval-method] *
-    [binding] *
-    [requires] *
-  </implementation>
+<implementation id='...'
+                local-path='...' ? 
+                [all <group> attributes] >
+  <manifest-digest [digest] * /> *
+  [command] *
+  [retrieval-method] *
+  [binding] *
+  [requires] *
+</implementation>
 ```
 
 ![Identity classes](../img/uml/zero-install-id.png)
 
 `id`
-: A unique identifier for this implementation. For example, when the user marks a particular version as buggy this identifier is used to keep track of it, and saving and restoring selections uses it. However, see the important historical note below.
+: A unique identifier for this implementation. For example, when the user marks a particular version as buggy this identifier is used to keep track of it, and saving and restoring selections uses it. However, see the [important historical note below](#historical-note-about-id).
 
 `local-path`
 : If the feed file is a local file (the interface `uri` starts with `/`) then the `local-path` attribute _may_ contain the pathname of a local directory (either an absolute path or a path relative to the directory containing the feed file). See the historical note below.
@@ -156,11 +154,12 @@ An implementation has this syntax (an unspecified argument is inherited from the
 `license`
 : License terms. This is typically a [Trove](http://catb.org/~esr/trove/) category. See [the PyPI list](http://pypi.python.org/pypi?%3Aaction=list_classifiers) for some examples (the leading `License :: ` is not included).
 
-The `manifest-digest` element is used to give digests of the .manifest file using various hashing algorithms (but see the historical note below). Having multiple algorithms allows a smooth upgrade to newer digest algorithms without breaking old clients. Each non-namespaced attribute gives a digest, with the attribute name being the algorithm. For example:
+The `manifest-digest` element is used to give digests of the .manifest file using various hashing algorithms (but see the historical note below). Having multiple algorithms allows a smooth upgrade to newer digest algorithms without breaking old clients. Each non-namespaced attribute gives a digest, with the attribute name being the algorithm.
 
-```xml
-<manifest-digest sha256="4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a"/>
-```
+!!! example
+    ```xml
+    <manifest-digest sha256="4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a"/>
+    ```
 
 For non-local implementations (those without a `local-path` attribute), the `<implementation>` element contains a set of _retrieval methods_, each of which gives a different way of getting the implementation (i.e. of getting a directory structure whose digest matches the ones given).
 
@@ -178,23 +177,22 @@ For backwards compatibility, 0install >= 0.45 will treat an ID starting with `.`
 
 Therefore, if you want to generate feeds compatible with past and future versions:
 
--   If you have a digest, set the ID to `sha1new=...` and put the sha256 digest in the `<manifest-digest>`.
--   If you have a local implementation then set both `id` and `local-path` to the pathname.
+- If you have a digest, set the ID to `sha1new=...` and put the sha256 digest in the `<manifest-digest>`.
+- If you have a local implementation then set both `id` and `local-path` to the pathname.
 
 ## Commands
 
 The `main` attribute above provides a simple way to say how to run this implementation. The `<command>` element (supported since 0.51, released Dec 2010) provides a more flexible alternative.
 
 ```xml
-  <command
-    name='...'
-    path='...' ? >
-    [binding] *
-    [requires] *
-    [runner] ?
-    <arg> ... </arg> *
-    <for-each item-from='...' separator='...'? > ... </for-each> *
-  </command>
+<command name='...'
+         path='...' ? >
+  [binding] *
+  [requires] *
+  [runner] ?
+  <arg> ... </arg> *
+  <for-each item-from='...' separator='...'? > ... </for-each> *
+</command>
 ```
 
 `name`
@@ -213,9 +211,8 @@ Command-specific bindings (0install >= 1.3) create a binding from the implementa
 
 The `<runner>` element introduces a special kind of dependency: the program that is used to run this one. For example, a Python program might specify Python as its runner. `<runner>` is a subclass of `<requires>` and accepts the same attributes and child elements. In addition, you can specify arguments to pass to the runner by nesting them inside the `<runner>` element. These arguments are passed before the path of the executable given by the `path` attribute.
 
-For example:
-
-```xml
+!!! example
+    ```xml
     <command name='run' path="causeway.e-swt">
       <runner interface='http://repo.roscidus.com/e/e-core'>
         <arg>-cpa</arg>
@@ -225,7 +222,7 @@ For example:
         </for-each>
       </runner>
     </command>
-```
+    ```
 
 In this case, 0install will run the equivalent of `/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt`.
 
@@ -234,14 +231,13 @@ In this case, 0install will run the equivalent of `/path/to/e-interpreter -cpa /
 This element names a distribution-provided package which, if present, is a valid implementation of this interface. The syntax is:
 
 ```xml
-  <package-implementation
-    package='...'
-    distributions='...' ?
-    main='...' ? 
-    version='...' ? >
-    [command] *
-    [requires] *
-  </package-implementation>
+<package-implementation package='...'
+                        distributions='...' ?
+                        main='...' ? 
+                        version='...' ? >
+  [command] *
+  [requires] *
+</package-implementation>
 ```
 
 Support for distribution packages was added in version 0.28 of 0install. Earlier versions ignore this element.
@@ -267,13 +263,12 @@ A retrieval method is a way of getting an implementation.
 The most common retrieval method is the `<archive>` element:
 
 ```xml
-    <archive
-      href='...'
-      size='...'
-      extract='...' ?
-      dest='...' ?
-      type='...' ?
-      start-offset='...' ? />
+<archive href='...'
+         size='...'
+         extract='...' ?
+         dest='...' ?
+         type='...' ?
+         start-offset='...' ? />
 ```
 
 This states that an archive may be downloaded from the address given in the `href` attribute. The archive must have the given `size` or it will be rejected. When unpacked (either the subdirectory named in the `extract` attribute, or the whole archive if it is not present), the resulting tree will generate a manifest with the secure hash value given as the implementation's `id`. If `dest` is given (0install >= 2.1), then the archive is unpacked to the specified subdirectory. It is an error to specify a target outside of the implementation directory (e.g. `../foo` or attempting to follow a symlink that points out of the implementation).
@@ -304,11 +299,10 @@ The `start-offset` attribute (since version 0.21) gives the number of bytes at t
 You can also fetch individual files (0install >= 2.1). This is useful for e.g. jar files, which are typically not unpacked:
 
 ```xml
-    <file
-      href='...'
+<file href='...'
       size='...'
       dest='...'
-      executable='true|false' />
+      executable='true|false' ? />
 ```
 
 The file is downloaded from `href`, must be of the given `size`, and is placed within the implementation directory as `dest`.  
@@ -319,9 +313,9 @@ If `executable` is set to `true` (0install >= 2.14.2) the file is marked as exec
 An implementation can also be created by following a `<recipe>`:
 
 ```xml
-  <recipe>
-    ( <archive ...> | <file ...> | <rename ...> | <remove ...> | <copy-from ...> ) +
-  </recipe>
+<recipe>
+  ( <archive ...> | <file ...> | <rename ...> | <remove ...> | <copy-from ...> ) +
+</recipe>
 ```
 
 In this case, each child element of the recipe represents a step. To get an implementation by following a recipe, a new empty directory is created and then all of the steps are performed in sequence. The resulting directory must have the digest given in the implementation's `<manifest-digest>`. A recipe containing only a single archive is equivalent to just specifying the archive on its own. If a recipe contains an unrecognised element then the whole recipe must be ignored.
@@ -341,7 +335,7 @@ In this case, each child element of the recipe represents a step. To get an impl
 `<copy-from id='...' source='...' ? dest='...' ?>`
 : Copies files or directories from another implementation, e.g., for applying an update to a previous version (0install >= 2.13). The specified id must exactly match the id attribute of another implementation specified elsewhere in the same feed. You can specify the source and destination file or directory to be copied relative to the implementation root. Leave them unset to copy the entire implementation.
 
-!!! note
+!!! tip
     A recipe is generally only useful for patching existing archives without having to host the complete result yourself. Normally, if your program requires files from several different packages then it is better to use the `<requires>` element instead. This allows libraries to be shared between different programs, and lets the user choose the versions and upgrade them individually.
 
 ## Dependencies
@@ -349,17 +343,16 @@ In this case, each child element of the recipe represents a step. To get an impl
 A `<requires>` element means that every implementation within the same group (including nested sub-groups) requires an implementation of the specified interface when run. 0install will choose a suitable implementation, downloading one if required.
 
 ```xml
-  <requires
-	interface='...'
-	importance='...' ?
-	version='...' ?
-	os='...' ?
-	distribution='...' ?
-	source='true|false' ?
-	use='...' ? >
-    [ constraints ] *
-    [ bindings ] *
-  </requires>
+<requires interface='...'
+          importance='...' ?
+          version='...' ?
+          os='...' ?
+          distribution='...' ?
+          source='true|false' ?
+          use='...' ? >
+  [ constraints ] *
+  [ bindings ] *
+</requires>
 ```
 
 The constraint elements (if any) limit the set of acceptable versions. The bindings specify how 0install should make its choice known (typically, by setting environment variables).
@@ -379,13 +372,12 @@ The `source` attribute (0install >= 2.8) can be used to indicate that a source i
 A `<restricts>` element (0install >= 1.10) can be used to apply constraints without creating a dependency:
 
 ```xml
-  <restricts
-	interface='...'
-	version='...' ?
-	os='...' ?
-	distribution='...' ? >
-    [ constraints ] *
-  </restricts>
+<restricts interface='...'
+           version='...' ?
+           os='...' ?
+           distribution='...' ? >
+  [ constraints ] *
+</restricts>
 ```
 
 Internally, `<restricts>` behaves much like `<requires importance='recommended'>`, except that it doesn't try to cause the interface to be selected at all.
@@ -394,12 +386,13 @@ Internally, `<restricts>` behaves much like `<requires importance='recommended'>
 
 Constraints appear on `<requires>`, `<restricts>`, `<package-implementation>` and `<runner>` elements. They restrict the set of versions from which 0install may choose an implementation.
 
-Since 0install 1.13, you can use the `version` attribute on the dependency element. The attribute's value is a list of ranges, separated by `|`, any of which may match. For example:
+Since 0install 1.13, you can use the `version` attribute on the dependency element. The attribute's value is a list of ranges, separated by `|`, any of which may match.
 
-```xml
-<restricts interface='https://apps.0install.net/python/python.xml'
-           version='2.6..!3 | 3.2.2..'/>
-```
+!!! example
+    ```xml
+    <restricts interface='https://apps.0install.net/python/python.xml'
+               version='2.6..!3 | 3.2.2..'/>
+    ```
 
 This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
 
@@ -408,9 +401,8 @@ Each range is in the form `START..!END`. The range matches versions where `START
 There is also an older syntax which also works with 0install &lt; 1.13, where a child node is used instead:
 
 ```xml
-    <version
-	not-before='...' ?
-	before='...' ? >
+<version not-before='...' ?
+         before='...' ? >
 ```
 
 `not-before`
@@ -432,12 +424,11 @@ Bindings specify how the chosen implementation is made known to the running prog
 ### Environment bindings
 
 ```xml
-    <environment
-	  name='...'
-	  (insert='...' | value='...')
-	  mode='prepend|append|replace' ?
-	  separator='...' ?
-	  default='...' ? /> *
+<environment name='...'
+             (insert='...' | value='...')
+             mode='prepend|append|replace' ?
+             separator='...' ?
+             default='...' ? /> *
 ```
 
 Details of the chosen implementation are passed to the program by setting environment variables, as specified by the `<environment>` elements (typically, there will be exactly one of these in each `<requires>` element). Each environment element gives the name of the variable and the relative path of the item within the implementation to insert into the variable's value.
@@ -463,46 +454,48 @@ The following environment variables have known defaults and therefore the `defau
 These both require 0install >= 1.2.
 
 ```xml
-    <executable-in-var
-	  name='...'
-	  command='...' ? />
+<executable-in-var name='...'
+                   command='...' ? />
 
-    <executable-in-path
-	  name='...'
-	  command='...' ? />
+<executable-in-path name='...'
+                    command='...' ? />
 ```
 
 These are used when the program needs to run another program. `command` says which of the program's commands to use; the default is `run`.
 
-`<executable-in-var>` stores the path of the selected executable in the named environment variable. For example, if a program uses `$MAKE` to run make, you can provide the required command like this:
+`<executable-in-var>` stores the path of the selected executable in the named environment variable.
 
-```xml
-  <requires interface="https://apps.0install.net/devel/make.xml">
-    <executable-in-var name='MAKE'/>
-  </requires>
-```
+!!! example
+    If a program uses `$MAKE` to run make, you can provide the required command like this:
+    ```xml
+    <requires interface="https://apps.0install.net/devel/make.xml">
+      <executable-in-var name='MAKE'/>
+    </requires>
+    ```
 
-`<executable-in-path>` works in a similar way, except that it adds a directory containing the executable to `$PATH`. For example, if the program instead just runs the `make` command, you would use:
+`<executable-in-path>` works in a similar way, except that it adds a directory containing the executable to `$PATH`.
 
-```xml
-  <requires interface="https://apps.0install.net/devel/make.xml">
-    <executable-in-path name='make'/>
-  </requires>
-```
+!!! example
+    If the program instead just runs the `make` command, you would use:
+    ```xml
+    <requires interface="https://apps.0install.net/devel/make.xml">
+      <executable-in-path name='make'/>
+    </requires>
+    ```
 
 It is preferable to use `<executable-in-var>` where possible, to avoid making `$PATH` very long.
 
-Implementation note: On POSIX systems, 0install will create a shell script under `~/.cache/0install.net/injector/executables` and pass the path of this script.
+!!! note "Implementation note"
+    On POSIX systems, 0install will create a shell script under `~/.cache/0install.net/injector/executables` and pass the path of this script.
 
 ### Generic bindings
 
 Custom bindings can be specified using the `<binding>` element (0install >= 2.1). 0install will not know how to run a program using custom bindings itself, but it will include them in any selections documents it creates, which can then be executed by your custom code. The syntax is:
 
 ```xml
-<binding
-    path='...' ?
-    command='...' ?
-    ... >
+<binding path='...' ?
+         command='...' ?
+         ... >
   ...
 </binding>
 ```
@@ -531,23 +524,23 @@ Modifier := "pre" | "rc" | "post"
 
 Numerically, the modifiers come in the order `-pre` (pre-release), `-rc` (release candidate), `-` (no modifier name), `-post` (post-release or patch level). Versions are ordered like this:
 
--   0.1
--   1
--   1.0
--   1.1
--   1.2-pre
--   1.2-pre1
--   1.2-rc1
--   1.2
--   1.2-0
--   1.2-post
--   1.2-post1-pre
--   1.2-post1
--   1.2.1-pre
--   1.2.1.4
--   1.2.2
--   1.2.10
--   3
+- 0.1
+- 1
+- 1.0
+- 1.1
+- 1.2-pre
+- 1.2-pre1
+- 1.2-rc1
+- 1.2
+- 1.2-0
+- 1.2-post
+- 1.2-post1-pre
+- 1.2-post1
+- 1.2.1-pre
+- 1.2.1.4
+- 1.2.2
+- 1.2.10
+- 3
 
 0install doesn't care about anything other than the sort order (i.e., whether one version comes before or after another). It is expected that an implementation can be safely replaced by one with a later version number, but not necessarily with an earlier one. So, if an application works with version `1.2.1` of a library then it should also work with version `1.2.2` or `1.3` or even `5.7`, but not `1.2.0`. This is a little different to some other systems, where numbers in different places have different meanings.
 
@@ -555,22 +548,23 @@ For example, if the latest version of a library you use is version 5.1, then you
 
 Incompatible changes (where a newer version cannot be used in place of an older version) to an interface should be handled by creating a new interface URI. Eg:
 
--   http://gtk.org/2005/interfaces/GTK-1.2.x (contains 1.2.0, 1.2.1, 1.2.2, ...)
--   http://gtk.org/2005/interfaces/GTK-2.x (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)
-
-Note that version numbers containing dash characters were not supported before version 0.24 of 0install and so a `version-modifier` attribute was added to allow new-style versions to be added without breaking older versions. This should no longer be used.
+- `http://gtk.org/2005/interfaces/GTK-1.2.x` (contains 1.2.0, 1.2.1, 1.2.2, ...)
+- `http://gtk.org/2005/interfaces/GTK-2.x` (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)
 
 The integers in version numbers must be representable as 64-bit signed integers.
+
+!!! note
+    Version numbers containing dash characters were not supported before version 0.24 of 0install and so a `version-modifier` attribute was added to allow new-style versions to be added without breaking older versions. This should no longer be used.
 
 ## Stability
 
 The feed file also gives a stability rating for each implementation. The following levels are allowed (must be lowercase in the feed files):
 
--   `stable`
--   `testing`
--   `developer`
--   `buggy`
--   `insecure`
+- `stable`
+- `testing`
+- `developer`
+- `buggy`
+- `insecure`
 
 Stability ratings are expected to change over time. When any new release is made, its stability should be set to `testing`. Users who have selected **Help test new versions** will then start using it. Other users will continue with the previous stable release. After a while (days, weeks or months, depending on the project) with no serious problems found, the implementation's stability can be changed to `stable` so that everyone will use it.
 
@@ -589,9 +583,8 @@ Entry points allow you to associate additional information with `<command>` name
 Entry points are top-level elements and, unlike commands, are not associated with any specific implementation or group. One entry point represents all commands in all implementations that carry the same name. An entry point has this syntax:
 
 ```xml
-  <entry-point
-	      command='...'
-	      binary-name='...' ? >
+  <entry-point command='...'
+               binary-name='...' ? >
     <needs-terminal/> ?
     <name>...</name> ?
     <summary>...</summary> ?
@@ -659,42 +652,44 @@ Local interfaces are plain XML, although having an XML signature block is no pro
 
 The `arch` attribute is a value in the form `OS-CPU`. The values come from the `uname` system call, but there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:
 
--   *
--   Cygwin (a Unix-compatibility layer for Windows)
--   Darwin (MacOSX, without the proprietary bits)
--   FreeBSD
--   Linux
--   MacOSX
--   Windows
+- `*`
+- `Cygwin` (a Unix-compatibility layer for Windows)
+- `Darwin` (MacOSX, without the proprietary bits)
+- `FreeBSD`
+- `Linux`
+- `MacOSX`
+- `Windows`
 
 Valid values for CPU include:
 
--   *
--   src
--   i386
--   i486
--   i586
--   i686
--   ppc
--   ppc64
--   x86_64
--   armv6l
--   armv7l
+- `*`
+- `src`
+- `i386`
+- `i486`
+- `i586`
+- `i686`
+- `ppc`
+- `ppc64`
+- `x86_64`
+- `armv6l`
+- `armv7l`
 
-## The if-0install-version attribute
+## The `if-0install-version` attribute
 
-To make it possible to use newer features in a feed without breaking older versions of 0install, the `if-0install-version` attribute may be placed on any element to indicate that the element should only be processed by the specified versions of 0install. For example:
+To make it possible to use newer features in a feed without breaking older versions of 0install, the `if-0install-version` attribute may be placed on any element to indicate that the element should only be processed by the specified versions of 0install.
 
-```xml
-  <group>
-    <new-element if-0install-version='1.14..'/>
-    <fallback if-0install-version='..!1.14'/>
-  </group>
-```
+!!! example
+    ```xml
+    <group>
+      <new-element if-0install-version='1.14..'/>
+      <fallback if-0install-version='..!1.14'/>
+    </group>
+    ```
 
 In this example, 0install 1.14 and later will see `<new-element>`, while older versions see `<fallback>`. The syntax is as described in [Constraints](#constraints).
 
-However, 0install versions before 1.13 ignore this attribute and process all elements.
+!!! attention
+    0install versions before 1.13 ignore this attribute and process all elements.
 
 ## Well-known extensions
 
@@ -704,7 +699,7 @@ The following are well-known extensions to the Zero Install format:
 
 ## Future plans
 
--   The extra meta-data elements need to be better specified.
--   As well as before and not-before, we should support after and not-after.
--   It should be possible to give a delta (binary patch) against a previous version, to make upgrading quicker.
--   It should be possible to scope bindings. For example, when a DTP package requires a clipart package, the clipart package should not be allowed to affect the DTP package's environment.
+- The extra meta-data elements need to be better specified.
+- As well as before and not-before, we should support after and not-after.
+- It should be possible to give a delta (binary patch) against a previous version, to make upgrading quicker.
+- It should be possible to scope bindings. For example, when a DTP package requires a clipart package, the clipart package should not be allowed to affect the DTP package's environment.
