@@ -6,7 +6,8 @@ You should already be familiar with the general operation of Zero Install. If no
 
 We assume here that a binary release already exists (perhaps published by someone else) and you want to make it available through 0install. If you want to publish your own programs, you might also be interested in [0release](../tools/0release/index.md), which generates a release from a Git repository.
 
-**Tip**: To check whether someone has already packaged a program, use the search feature at the top of the <https://0install.net> page to search all known existing feeds.
+!!! tip
+    To check whether someone has already packaged a program, use the [`0install search`](../details/cli.md#search) command to search all known existing feeds.
 
 ## Tutorial
 
@@ -20,7 +21,8 @@ $ 0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml
 
 This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).
 
-Windows users: the [Zero Install Publishing tools](https://apps.0install.net/0install/0publish-win.xml) is a .NET equivalent of 0publish-GUI.
+!!! note
+    On Windows use [0publish-win](../tools/0publish-win.md) instead.
 
 Run the program, giving it the name of the feed file you want to create, which should be named after the program:
 

@@ -89,7 +89,7 @@ $ git format-patch origin/master
 
 ## Making a new translation
 
-!!! note
+!!! attention
     Translations are not currently working - see [Gettext support in OCaml](http://stackoverflow.com/questions/26192129/gettext-support-in-ocaml).
 
 !!! note

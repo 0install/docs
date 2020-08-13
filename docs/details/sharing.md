@@ -100,8 +100,8 @@ Defaults>zeroinst env_reset,always_set_home
 ALL ALL=(zeroinst) NOPASSWD: /usr/bin/0store-secure-add
 ```
 
-!!! note
-    The `NOPASSWD` line MUST go at the end of the file, otherwise it is likely to be overridden by later entries. Again, use `/usr/local/bin` if you installed from source.
+!!! attention
+    The `NOPASSWD` line **must** go at the end of the file, otherwise it is likely to be overridden by later entries. Again, use `/usr/local/bin` if you installed from source.
     
 When `launch` wants to install a package, it will invoke `0store-secure-add-helper`. This script uses `sudo` to run `0store-secure-add` as the `zeroinst` user, with a clean environment. No password is required for this.
 

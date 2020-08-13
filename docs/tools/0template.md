@@ -61,7 +61,7 @@ Then edit the generated `myprog.xml.template` to taste. A minimal example would 
 
 You would typically want to add any dependencies here too. See the [feed specification](../specifications/feed.md) for details.
 
-!!! note
+!!! tip
     You can also use 0template to create a [local feed](../packaging/local-feeds.md) to run a Git checkout, rather than an archive on the web. In that case, just don't use the `.template` extension, and it will generate a feed rather than a template.
 
 ## Using the template

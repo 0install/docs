@@ -2,7 +2,7 @@
 
 This page describes the design of Zero Install itself.
 
-!!! note
+!!! abstract "Terminology"
     Zero Install is based on the principle of [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
 
 Everything 0install downloads from the net by default goes in `~/.cache/0install.net/`. Every archive it downloads unpacks into its own directory inside this. So, there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact, there's one directory for every version of ROX-Filer, in case you want more than one available. Every directory is uniquely named, so you'll never get conflicts when trying to install two different programs.
