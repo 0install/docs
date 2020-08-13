@@ -152,7 +152,7 @@ $ 0test http://0install.net/2006/interfaces/0compile.xml -- -v
 
 ## Specifying a test command
 
-The `--test-command` (or `-t`) option can be used to run the shell command of your choice, rather than the "test" `<command>` given in the feed. The command that would be executed if the implemention were run normally is available as `$*`.
+The `--test-command` (or `-t`) option can be used to run the shell command of your choice, rather than the "test" `<command>` given in the feed. The command that would be executed if the implementation were run normally is available as `$*`.
 
 For example, to check that `rox --version` worked in versions 2.8 and 2.9 of ROX-Filer:
 

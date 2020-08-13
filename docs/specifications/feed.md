@@ -509,7 +509,7 @@ Custom bindings can be specified using the `<binding>` element (0install >= 2.1)
 
 If `command` is given, then 0install will select the given `<command>` within the implementation (which may cause additional dependencies and bindings to be selected). Otherwise, no command is selected.
 
-Any additional attributes and child elements are not processed, but are just passed through. If your binding needs a path within the selected implemention, it is suggested that the `path` attribute be used for this. Other attributes and child elements should be namespaced to avoid collisions.
+Any additional attributes and child elements are not processed, but are just passed through. If your binding needs a path within the selected implementation, it is suggested that the `path` attribute be used for this. Other attributes and child elements should be namespaced to avoid collisions.
 
 For example, the [EBox](../tools/ebox.md) application launcher allows each code module to specify its dependencies, which are then available in the module's scope as _getters_. The ebox-edit application depends on the help library like this:
 
