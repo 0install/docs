@@ -2,8 +2,6 @@
 
 Zero Install reads and writes config files and caches during operation. This page documents the filesystem paths used on various operating systems:
 
-[TOC]
-
 ## Linux
 
 On Linux Zero Install follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).

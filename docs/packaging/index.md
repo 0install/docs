@@ -1,4 +1,4 @@
-# Packaging overview
+title: Packaging overview
 
 To make software available through 0install, you need to publish a signed "feed" XML file on your web page. This file lists the available versions and their dependencies and says how to run the program. There are lots of ways to create this XML file.
 
@@ -6,7 +6,9 @@ To see an example of the XML, go to any 0install program's feed in your browser 
 
 Before you start, have a look at [Concepts](concepts.md) to make sure you understand some key terms and ideas.
 
-**I want to...**
+I want to...
+
+[TOC]
 
 ## Publish an XML file for an existing binary release
 
@@ -23,7 +25,9 @@ Before you start, have a look at [Concepts](concepts.md) to make sure you unders
 - Read the [0release](../tools/0release/index.md) documentation, which shows how to add a [local feed](local-feeds.md) to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.
 - Have a look at the [template projects](templates.md) for examples in various programming languages (Python, Java, .NET, C).
 
-# Other useful documentation
+## Learn more
+
+**Other useful documentation**
 
 [Feed specification](../specifications/feed.md)
 : The specification of the XML format.
@@ -34,7 +38,7 @@ Before you start, have a look at [Concepts](concepts.md) to make sure you unders
 [Tools](../tools/index.md)
 : An index of the tools provided by the 0install project for generating feeds.
 
-## Articles
+**Articles**
 
 [Binary distribution with 0install](https://opam.ocaml.org/blog/0install-intro/)
 : Blog article describing how to make packages using the [0template](../tools/0template.md) command-line tool.

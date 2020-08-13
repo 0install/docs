@@ -1,5 +1,3 @@
-# Making shortcuts
-
 Shortcuts provide an easy way to run a program without entering the full URI, just like a bookmark in a web-browser provides an easy way to return to a web page without entering the full URL.
 
 Different environments provide different ways to add shortcuts:
