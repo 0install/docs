@@ -215,10 +215,10 @@ If your program needs to be compiled, see [Releasing binaries](../0release/compi
 You can abort a release easily at any point before the Publish step. Once you select `Publish`, externally-visible changes start to be made (e.g. archives are uploaded to your file-server).
 
 To abort before publishing
-: Just select `Fail` from the menu. This deletes the `release-status` file (which you could also do manually). To avoid confusion, selecting `Fail` also removes the temporary release branch from Git and renames the release directory (to `$version~`) to make it clear that they're not being used.
+:   Just select `Fail` from the menu. This deletes the `release-status` file (which you could also do manually). To avoid confusion, selecting `Fail` also removes the temporary release branch from Git and renames the release directory (to `$version~`) to make it clear that they're not being used.
 
 To abort after publishing has started
-: Follow the steps in [Unpublishing a release](#unpublishing-a-release) below to undo any publicly visible changes. Then delete the `release-status` file.
+:   Follow the steps in [Unpublishing a release](#unpublishing-a-release) below to undo any publicly visible changes. Then delete the `release-status` file.
 
 ## Unpublishing a release
 

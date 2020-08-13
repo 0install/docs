@@ -69,4 +69,4 @@ The resulting edit.deb package can now be installed on a Ubuntu machine.
 ## FAQ
 
 What about security?
-: Installing a package isn't a great way to make a shortcut. The normal Zero Install process of dragging a feed link to a trusted installation program is much better. However, distributions have been very slow to support this. 0bootstrap is an attempt to boot-strap the adoption process. The native package is required to work with the operating system's package installation tools, and can be automatically created by a web service given the feed's URI.
+:   Installing a package isn't a great way to make a shortcut. The normal Zero Install process of dragging a feed link to a trusted installation program is much better. However, distributions have been very slow to support this. 0bootstrap is an attempt to boot-strap the adoption process. The native package is required to work with the operating system's package installation tools, and can be automatically created by a web service given the feed's URI.

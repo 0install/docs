@@ -11,19 +11,15 @@ No-one has the time to verify every line of code in every program they use. Yet,
 Some key points about Zero Install's security model:
 
 If one user downloads a malicious program, other users aren't affected
-
 : In traditional systems, installing a program also puts files into shared directories like `/usr/bin` and `/usr/lib` under short names. So if one user installs the Gimp from `http://evil.com` then it might save the executable as `/usr/bin/gimp`. Another user might run this, thinking it was from <http://gimp.org>. In a Zero Install system, users specify the full URI of the program they want to run, and the system only shares the copy if they really are the same. The short-cuts (e.g., that **"Run gimp"** means **"Run http://gimp.org/gimp"**) are per-user, but the programs themselves are shared.
 
 Installation does not execute any downloaded code
-
 : Most installation systems run code in the downloaded package as part of the installation process. Typically, these scripts are run as root and can do anything they like to the machine. Zero Install merely fetches files into the cache during installation; nothing downloaded is executed and files from different packages cannot conflict (because they each go in their own directory).
 
 Digital signatures are always checked before software is run
-
 : To protect against the possibility of attackers breaking into a web-server and replacing the real software with modified versions, or redirecting network traffic to the real web-server to their own, Zero Install only runs code that is signed by a GPG key you trust to provide software from that web-site. By default, it will automatically approve keys known to the key information server; this can be disabled from the preferences dialog.
 
 Security when _running_ programs is your problem
-
 : Zero Install goes to great lengths to get software on to your machine without letting it do anything dangerous, but what happens next is up to you. On a normal Linux system this still brings some benefits (e.g. users can share programs without also sharing viruses), but the real advantages come when you combine this with some sandboxing technology to restrict what programs can do when running.
 
 ## Demo!

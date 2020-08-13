@@ -110,7 +110,7 @@ You can include multiple applications by listing multiple URIs. All applications
 ## FAQ
 
 What about security?
-: Running an executable isn't a great way to install a program. The normal 0install process of dragging a feed link to a trusted installation program is much better. However, distributions have been very slow to support this. 0export is an attempt to boot-strap the adoption process. The `setup.sh` script is designed to be easy to parse, so that in future it can be used as a simple archive.
+:   Running an executable isn't a great way to install a program. The normal 0install process of dragging a feed link to a trusted installation program is much better. However, distributions have been very slow to support this. 0export is an attempt to boot-strap the adoption process. The `setup.sh` script is designed to be easy to parse, so that in future it can be used as a simple archive.
 
 Why doesn't it confirm before trusting the keys?
-: If the `setup.sh` is genuine then this is what you want. If it isn't, it's already too late. Even if the normal install script asked for confirmation, a malicious version could be modified to skip the check. One of many reasons why install scripts are a bad idea.
+:   If the `setup.sh` is genuine then this is what you want. If it isn't, it's already too late. Even if the normal install script asked for confirmation, a malicious version could be modified to skip the check. One of many reasons why install scripts are a bad idea.

@@ -111,13 +111,13 @@ When you want to add more versions, you should use the **Add Group** button to c
 
 I can't find a generic binary for the program I want to package!
 
-: Popular projects usually provide a "generic" binary tarball, which works on most Linux distributions. This is the best archive to put in the feed. If there isn't one, it might mean that the developers couldn't get a single binary to work on multiple distributions, or it might just mean they haven't tried.
+:   Popular projects usually provide a "generic" binary tarball, which works on most Linux distributions. This is the best archive to put in the feed. If there isn't one, it might mean that the developers couldn't get a single binary to work on multiple distributions, or it might just mean they haven't tried.
 
-: Often, a Red Hat RPM will work just fine on Debian (e.g. [the LyX feed](http://0install.net/2007/3rd-party/LyX.xml)), or a .deb will work on Red Hat, etc. If there are several options, pick the one for the distribution which is furthest behind (e.g. Red Hat rather than Fedora). Packages for old systems often still work with newer ones, but not the other way around.
+    Often, a Red Hat RPM will work just fine on Debian (e.g. [the LyX feed](http://0install.net/2007/3rd-party/LyX.xml)), or a .deb will work on Red Hat, etc. If there are several options, pick the one for the distribution which is furthest behind (e.g. Red Hat rather than Fedora). Packages for old systems often still work with newer ones, but not the other way around.
 
-My program assumes it's running from `/usr/games`
+My program assumes it's running from `/usr/games`.
 
-: Games have an annoying habit of trying to `cd` to a hard-coded directory in their start-up script. You could try asking the author to fix it (`cd "$(dirname $0)"` would work just as well). It's also possible to patch the download using a `<recipe>` element, but the GUI doesn't provide an interface for this. The trick here is getting the ID right; you need the digest of the directory structure _after_ the patch has been applied. `0install digest` can help here.
+:   Games have an annoying habit of trying to `cd` to a hard-coded directory in their start-up script. You could try asking the author to fix it (`cd "$(dirname $0)"` would work just as well). It's also possible to patch the download using a `<recipe>` element, but the GUI doesn't provide an interface for this. The trick here is getting the ID right; you need the digest of the directory structure _after_ the patch has been applied. `0install digest` can help here.
 
 ## Further reading
 

@@ -144,12 +144,16 @@ The service records write access to the cache as well as any potential problems 
 ### Questions
 
 How do users uninstall?
-: Currently, they can't. You (the admin) can delete directories from `/var/cache/0install.net/implementations` to save space (preferably not while they're being used ;-). Ideally, we should track which users have requested which programs and remove them automatically when no-one wants them anymore.
+
+:   Currently, they can't. You (the admin) can delete directories from `/var/cache/0install.net/implementations` to save space (preferably not while they're being used ;-). Ideally, we should track which users have requested which programs and remove them automatically when no-one wants them anymore.
 
 What kind of things need 'tightening'?
-: Several things spring to mind:
-: - What happens if the user changes the directory whilst it's being added? We need to audit `0store-secure-add`.
-: - Denial of service attacks, if one user stores lots of stuff (need quotas).
+
+:   Several things spring to mind:
+
+    - What happens if the user changes the directory whilst it's being added? We need to audit `0store-secure-add`.
+    - Denial of service attacks, if one user stores lots of stuff (need quotas).
 
 Why do things still get stored in `~/.cache` after setting this up?
-: Things you've already installed will remain there. Only new software is added in the system cache. Also, the old `sha1` algorithm isn't accepted by the helper, so software using that can't go in the shared cache. If you still have problems, try running `0install run -vvc URI` (to see debug output). Finally, make sure your script is executable!
+
+:   Things you've already installed will remain there. Only new software is added in the system cache. Also, the old `sha1` algorithm isn't accepted by the helper, so software using that can't go in the shared cache. If you still have problems, try running `0install run -vvc URI` (to see debug output). Finally, make sure your script is executable!

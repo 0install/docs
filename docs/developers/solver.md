@@ -13,11 +13,9 @@ While apt-get has to look for conflicts across a very large number of packages (
 Before 2010, 0install used a simple non-backtracking solver, which was possible because most packages had only a few dependencies. Because exactly the same set of versions was available to everyone, if a program was installable by its author then it would be installable everywhere, and even if some dependencies did conflict it was easy enough to list them in some order so that 0install always got a solution. But a couple of things made life more complicated...
 
 Multi-arch support
-
 : A typical modern 64-bit system is also capable of running 32-bit code. However a single program must be either entirely 64-bit or entirely 32-bit. We can't, for example, select a 64-bit version of libgtk and a 32-bit version of Python for a single application. In other words, every 64-bit binary conflicts with every 32-bit binary, which means we have to deal with a lot more conflicts these days.
 
 Native packages
-
 : The Sugar developers wanted their 0install packages to depend on existing distribution packages in many cases. The normal way to do this is to provide a 0install download of the dependency (e.g Python 2.6) yourself, but tell 0install it can use a distribution package instead if available. However, the Sugar developers (quite reasonably) wanted to avoid packaging Python at all and depend only on the distribution package. Because Python isn't binary-compatible across versions, they publish separate builds of their software for each version of Python and relied on 0install to choose the one that will work with their users' distributions.
 
 These kinds of problems can't be solved using older versions of 0install. The solver would choose the Python 2.6 version of the main program (for example) and then try to select a version of Python 2.6 to go with it. If the distribution only had Python 2.5, this would fail. Aleksey Lim from the Sugar project worked around this problem by [adding backtracking to the solver](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2966). However, this becomes very slow when there are many possible combinations of versions to consider.
