@@ -6,82 +6,82 @@ The first part shows how to set policy settings that apply to all applications o
 
 ## General policy settings
 
-You can change the policy settings using the Preferences dialog. To open it run `0install config` (`0install-win config` on Windows).
+=== "Linux"
 
-If you use the GNOME/KDE menu: choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to an application and click Preferences:
+    You can change the policy settings using the Preferences dialog.
 
-![0desktop --manage](../img/screens/manage-apps.png)
+    To open it run `0install config` or choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to an application and click Preferences.
 
-You can affect which versions are chosen by changing your policy. Three aspects of your policy are shown in the Preferences window: **Network use**, **Freshness** and **Help test new versions**:
+    ![The Preferences dialog](../img/screens/preferences.png)
 
-![The Preferences dialog](../img/screens/preferences.png)
+=== "Windows"
 
-If you use Zero Install for Windows: click on **Options** in the bottom left to get this interface:
+    You can change the policy settings using the Configuration dialog.
 
-![The Configuration dialog](../img/screens/0install-win/config.png)
+    To open it run `0install-win config` or click on the **Options** in the bottom left of the main GUI.
+
+    ![The Configuration dialog](../img/screens/0install-win/config.png)
 
 ### Network use
 
 Affects how much 0install will rely on the network. Possible values are:
 
-Full
-: Normal network use.
-
-Minimal
-: 0install will prefer cached versions over non-cached ones.
-
-Off-line
-: 0install will not use the network.
+| Value    | Effect                                                     |
+| -------- | ---------------------------------------------------------- |
+| Full     | Normal network use.                                        |
+| Minimal  | 0install will prefer cached versions over non-cached ones. |
+| Off-line | 0install will not use the network.                         |
 
 ### Freshness
 
-0install caches its feeds as well. It checks for updates to the feeds from time to time. The freshness indicates how old a feed may get before 0install automatically checks for updates to it. Note that 0install only checks for updates when you actually run a program; so if you never run something, it won't waste time checking for updates.
-
-If you notice a feed is out of date, you can force 0install to look for updates by clicking the **Refresh all now** button
+0install caches feeds and checks for updates from time to time. The freshness indicates how old a feed may get before 0install automatically checks for updates to it. Note that 0install only checks for updates when you actually run a program; so if you never run something, it won't waste time checking for updates.
 
 ### Help test new versions
 
 By default, 0install tries not to select new versions while they're still in the "testing" phase. If checked, 0install will instead always select the newest version, even if it's marked as "testing".
 
-Note that all changes to your policy are saved as soon as you make them. Clicking on **Cancel** will close the window without running the program, but any changes made to the policy are not reversed.
-
 ## Per-application policy settings
 
-You can change per-application policy settings in the application information dialog. There are multiple ways to opening this dialog:
+You can change per-application policy settings in the application information dialog. To open this dialog:
 
-1.  -   Run "0install run" with the `--gui` (`--customize` on Windows) option and the URI of the application
-        
-        `$ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit`
+=== "Linux"
 
-        `> 0install run --customize https://apps.0install.net/gui/vlc.xml`
-        
-    -   Run "0install update" with a shortcut you made as first argument
-        
-        `$ 0install update --gui rox-edit`
+    1.  Run `0install run` with the `--gui` option and the URI of the application:
+        ```shell
+        $ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit
+        ```
 
-        `> 0install update --customize vlc`
-        
-    -   If you use the GNOME/KDE menu: choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to the application:
-        
+        -or-
+
+        Choose **Zero Install -> Manage Applications** from the **Applications** menu, click on the edit properties icon next to the application.  
         ![0desktop --manage](../img/screens/manage-apps.png)
-        
-2.  Double-click the application in the list. For example, double-clicking on **Edit** displays this dialog box:
-    
-    ![Properties of the Edit interface](../img/screens/edit-properties.png)
-    
+
+    2.  Double-click the application in the list. For example, double-clicking on **Edit** displays this dialog box:  
+        ![Properties of Edit](../img/screens/edit-properties.png)  
+        ![Versions of Edit](../img/screens/edit-versions.png)
+
+=== "Windows"
+
+    1.  Run `0install run` with the `--customize` option and the URI of the application:
+        ```shell
+        > 0install run --customize https://apps.0install.net/gui/vlc.xml
+        ```
+
+        -or-
+
+        In the main GUI open the dropdown menu next to an App's **Run** button, select **Run with options**, set the **Customize version** checkbox and click **OK**.  
+        ![Run options](../img/screens/0install-win/run-options.png)
+
+    2.  Click on the **Change** link next to the application. This displays this dialog box:  
+        ![Versions](../img/screens/0install-win/versions.png)
+
 ### Feeds
 
-In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of Edit. By default, there is just one feed, whose URL is simply Edit's URI; you can view it in a web browser if you're interested: [Edit's default feed](http://rox.sourceforge.net/2005/interfaces/Edit). This is an XML file with a GPG signature at the end. The downloaded feed files are stored locally in `~/.cache/0install.net/interfaces` (see [File locations](file-locations.md)).
+In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of the app. By default, there is just one feed with the URL you just entered. You can register additional feeds to be considered (e.g., a [local feed](../packaging/local-feeds.md) with custom builds or an alternate remote feed). This can be done either using the GUI or with the [`0install add-feed`](../details/cli.md#add-feed) command.
 
 ### Versions
 
-The Versions tab shows all the versions found in all of the feeds:
-
-![Versions of the Edit](../img/screens/edit-versions.png)
-
-![Zero Install for Windows - Versions](../img/screens/0install-win/versions.png)
-
-You can use the **Preferred Stability** setting in the interface dialog to choose which versions to prefer. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu (drop-down in the **Override** column on Windows). User-set ratings are shown in capitals.
+In the Versions tab, you can use the **Preferred Stability** setting in the interface dialog to choose which versions to prefer. You can also change the stability rating of any implementation by clicking on it and choosing a new rating from the popup menu (drop-down in the **Override** column on Windows). User-set ratings are shown in capitals.
 
 As you make changes to the policy and ratings, the selected implementation will change. The version shown in bold (or at the top of the list, in some versions) is the one that will actually be used. In addition to the ratings below, you can set the rating to **Preferred**. Such versions are always preferred above other versions, unless they're not cached and you are in Off-line mode.
 
