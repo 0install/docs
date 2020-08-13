@@ -129,7 +129,7 @@ Return a set of selections to run the given program. If `refresh` is `true`, 0in
 
 ## Sample code
 
-There is some [sample Python client code](https://github.com/0install/0install/blob/master/ocaml/sample_client.py) available.
+There is some [sample Python client code](https://github.com/0install/0install/blob/master/src/sample_client.py) available.
 
 ## Backwards compatibility
 
