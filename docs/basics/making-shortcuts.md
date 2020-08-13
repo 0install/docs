@@ -36,7 +36,7 @@ See [Desktop integration](windows.md) for details.
 
 ## Shell
 
-The `0install add` command can be used to create little shell scripts to start programs easily:
+The [`0install add`](../details/cli.md#add) command can be used to create little shell scripts to start programs easily:
 
 ```shell
 $ 0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit

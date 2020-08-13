@@ -39,7 +39,7 @@ You'll need a [local feed](../../packaging/local-feeds.md) within your source di
 - It has no digital signature.
 - The version will be a development version (e.g `1.2-post` if your last released version was `1.2`).
 
-Having a local feed is useful even if you don't use `0release`, because it lets people check out a development snapshot of your program and then register it (using `0install add-feed`) or run it directly with Zero Install handling its dependencies.
+Having a local feed is useful even if you don't use `0release`, because it lets people check out a development snapshot of your program and then register it (using [`0install add-feed`](../../details/cli.md#add-feed)) or run it directly with Zero Install handling its dependencies.
 
 A minimal Hello World example is available for testing. You can check it out like this, using the [Git](http://git-scm.com/) version control system:
 

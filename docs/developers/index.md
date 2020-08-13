@@ -15,7 +15,7 @@ If you want to make programs available through 0install, see the [Packagers Docu
 
 **API**
 
-The `0install` command-line interface to Zero Install is sufficient for most purposes. However, sometimes you may want to use the Python library interface. This is used by programs such as `0compile` and `0publish`, and is also a useful reference for people wanting to modify 0install itself.
+The `0install` command-line interface to Zero Install is sufficient for most purposes. However, sometimes you may want to use the Python library interface. This is used by programs such as [0compile](../tools/0compile/index.md) and [0publish](../tools/0publish.md), and is also a useful reference for people wanting to modify 0install itself.
 
 [Python API](python-api.md)
 : Use 0install's functions in your own Python applications with a native library.

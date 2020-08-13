@@ -44,7 +44,7 @@ Isn't is really hard to run applications if you always have to type URIs for the
 
 :   Yes. As with the web, that works but it's not the intended way to do it. Like the web, you have links to the URIs, and you use the links normally.
 
-    For example, you can run `0install add` to let you run programs quickly from the shell, or [AddApp](http://rox.sourceforge.net/desktop/AddApp) to create graphical launchers, for example.
+    For example, you can run [`0install add`](../details/cli.md#add) to let you run programs quickly from the shell, or [AddApp](http://rox.sourceforge.net/desktop/AddApp) to create graphical launchers, for example.
 
     You could put a launcher on the desktop background, set a keyboard shortcut, or add it to your Start menu. A 'distribution' could be nothing more than a web page listing links to high quality software for a particular audience.
 
@@ -95,7 +95,7 @@ What if something gets automatically removed from the cache while I'm up a mount
 
 :   Currently, nothing is ever automatically removed from the cache. Users can choose the purging scheme that suits them. For users with broadband, that might mean removing anything that hasn't been accessed for a year. For users with dial-up and 80Gb disks, that probably means never ever removing anything.
 
-    You can run `0install store manage` to view the cache and remove versions of programs you don't need anymore:
+    You can run [`0install store manage`](../details/cli.md#store-manage) to view the cache and remove versions of programs you don't need anymore:
 
     ![Uninstalling programs](../img/screens/injector-cache.png)
 
@@ -158,7 +158,7 @@ What about when resources move?
 
     Also, if a feed can't be fetched from its main site, Zero Install will automatically try using a [mirror service.](../tools/0mirror.md) Mirror services continue hosting feeds that are no longer available from their original sites.
 
-    The `0install import` command lets you import the feed from the new location, and `0install store add` allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
+    The [`0install import`](../details/cli.md#import) command lets you import the feed from the new location, and [`0install store add`](../details/cli.md#store-add) allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
 
 ## Security questions
 
@@ -246,7 +246,7 @@ How can I run my own version of something, instead of downloading a released ver
 
 How can I register my own version under the original's URI?
 
-:   The answer to the last question showed how to run a local version of a program directly, using 0install to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use `0install add-feed`:
+:   The answer to the last question showed how to run a local version of a program directly, using 0install to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use [`0install add-feed`](../details/cli.md#add-feed):
 
     ```shell
     $ cd Edit
