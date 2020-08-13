@@ -1,63 +1,24 @@
 # File locations
 
-Zero Install reads and writes config files and caches during operation. This page documents the filesystem paths used on various operating systems:
+This page documents the filesystem paths Zero Install reads from and writes to during normal operation.
 
-## Linux
+!!! hint
+    On Windows you can use [Portable mode](windows.md#portable-mode) to store all files in a single directory (e.g., for use on a USB thumb drive).
 
-On Linux Zero Install follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+!!! note
+    On Linux Zero Install follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 
-General settings
-:   - `~/.config/0install.net/injector`
-    - `/etc/xdg/0install.net/injector`
-
-Interface-specific settings
-:   - `~/.config/0install.net/injector/interfaces`
-
-Feed-specific settings
-:   - `~/.config/0install.net/injector/feeds`
-
-Feed cache
-:   - `~/.cache/0install.net/interfaces`
-
-[Implementation cache](cache.md)
-:   - `~/.cache/0install.net/implementations`
-    - Custom locations specified in `~/.config/0install.net/injector/implementation-dirs`
-    - `/var/cache/0install.net/implementations` ([shared between users](sharing.md#linux))
-
-[0install apps](../basics/using-apps.md)
-:   - `~/.config/0install.net/apps`
-
-## Windows
-
-On Windows Zero Install uses the well-known `%AppData%`, `%LocalAppData%` and `%ProgramData%` directories.
-
-You can use the [potable mode](windows.md#portable-mode) to store all files in one directory (e.g. for use on a USB thumb drive) instead of using the following directories.
-
-Executables:
-:   - `%AppData%\Programs\Zero Install`
-    - `%ProgramFiles%\Zero Install`
-
-General settings
-:   - `C:\Users\Username\AppData\Roaming\0install.net\injector`
-    - `C:\ProgramData\0install.net\injector`
-
-Interface-specific settings
-:   - `C:\Users\Username\AppData\Roaming\0install.net\injector\interfaces`
-
-Feed-specific settings
-:   - `C:\Users\Username\AppData\Roaming\0install.net\injector\feeds`
-
-Feed cache
-:   - `C:\Users\Username\AppData\Local\0install.net\interfaces`
-
-Icon cache
-:   - `C:\Users\Username\AppData\Local\0install.net\icons`
-
-[Implementation cache](cache.md)
-:   - `C:\Users\Username\AppData\Local\0install.net\implementations`
-    - Custom locations specified in `C:\Users\Username\AppData\Roaming\0install.net\injector\implementation-dirs`
-    - `C:\ProgramData\0install.net\implementations`  ([shared between users](sharing.md#windows))
-
-[Desktop integration](../basics/windows.md)
-:   - `C:\Users\Username\AppData\Roaming\0install.net\desktop-integration`
-    - `C:\ProgramData\0install.net\desktop-integration`
+|                                             | Linux, MacOS                                                                   | Windows                                                                        |
+| ------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| [General settings](policy-settings.md)      | `~/.config/0install.net/injector`                                              | `%APPDATA%\0install.net\injector`                                              |
+|                                             | `/etc/xdg/0install.net/injector`                                               | `%PROGRAMDATA%\0install.net\injector`                                          |
+| Interface-specific settings                 | `~/.config/0install.net/injector/interfaces`                                   | `%APPDATA%\0install.net\injector\interfaces`                                   |
+| Feed-specific settings                      | `~/.config/0install.net/injector/feeds`                                        | `%APPDATA%\0install.net\injector\feeds`                                        |
+| Feed cache                                  | `~/.cache/0install.net/interfaces`                                             | `%LOCALAPPDATA%\0install.net\interfaces`                                       |
+| [Implementation cache](cache.md)            | `~/.cache/0install.net/implementations`                                        | `%LOCALAPPDATA%\0install.net\implementations`                                  |
+|                                             | Custom dirs specified in `~/.config/0install.net/injector/implementation-dirs` | Custom dirs specified in `%APPDATA%\0install.net\injector\implementation-dirs` |
+|                                             | `/var/cache/0install.net/implementations`                                      | `%PROGRAMDATA%\0install.net\implementations`                                   |
+| [0install apps](../basics/using-apps.md)    | `~/.config/0install.net/apps`                                                  | -                                                                              |
+| Icon cache                                  | -                                                                              | `%LOCALAPPDATA%\0install.net\icons`                                            |
+| [Desktop integration](../basics/windows.md) | -                                                                              | `%APPDATA%\0install.net\desktop-integration`                                   |
+|                                             |                                                                                | `%PROGRAMDATA%\0install.net\desktop-integration`                               |
