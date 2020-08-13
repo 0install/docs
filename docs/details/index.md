@@ -12,7 +12,7 @@ Open the feed for Edit above in your browser. The feed is an XML file listing th
 
 Use **View Source** to see the XML. We'll use this information to download and run Edit.
 
-**Security note:**
+### Security note
 
 Why should we trust this XML document? Who made it? Could someone have tampered with it?
 
@@ -96,7 +96,7 @@ $ ls edit-2.0
 Edit
 ```
 
-**Security note:**
+### Security note
 
 How do we know the archive hasn't been tampered with? The author of the XML feed calculated a _cryptographic digest_ of the archive's contents and stored it in the feed:
 
