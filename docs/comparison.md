@@ -43,7 +43,7 @@ Libraries shared between programs
 
 Downloads shared between users
 : If two users install/use the same program, it is only downloaded once and stored once.  
-See [Sharing](../details/sharing.md) for how to set this up with Zero Install.
+See [Sharing](details/sharing.md) for how to set this up with Zero Install.
 
 Multiple versions coexist
 : Two versions of a program or library can be installed at the same time, and the user can choose which one to run.
@@ -69,7 +69,7 @@ Can install systems software
 
 Supports sandboxing
 : If you have a way of running an application in a sandboxed environment (e.g., a Java virtual machine), then the installation system will let you install and run the program without forcing you to run any of the downloaded code outside of the sandbox.  
-See the [EBox sandboxing demo](../tools/ebox.md) for an example of using 0install in this way.
+See the [EBox sandboxing demo](tools/ebox.md) for an example of using 0install in this way.
 
 Usable when off-line
 : Once a program has been installed, the program can be run again while disconnected.
@@ -90,7 +90,7 @@ Thousands of packages available
 - Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
 - Only supports Linux.
 
-For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
+For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](specifications/feed.md#retrieval-methods) with `executable='true'`.
 
 ### Chocolatey
 
@@ -101,7 +101,7 @@ For projects that do not provide official cross-distribution builds, AppImages a
 - Most packages require administrative permissions for installation.
 - Only supports Windows.
 
-Chocolatey could in future serve the role of the native package manager on Windows. See [Distribution integration](../details/distribution-integration.md).
+Chocolatey could in future serve the role of the native package manager on Windows. See [Distribution integration](details/distribution-integration.md).
 
 ### PortableApps.com
 
@@ -151,7 +151,7 @@ The EDOS] (_Environment for the development and Distribution of Open Source soft
 
 [Nix](http://nixos.org/) is a purely functional package manager. Each version of a package has its own directory. As with Zero Install, "upgrading" creates a new directory for the new version, rather than modifying the existing one. Unlike Zero Install, however, whether a package is installed affects the behaviour of the system. For example, running "firefox" when Firefox isn't installed produces an error in Nix, whereas in Zero Install it will install Firefox first if missing and then continue. In other words, installation has side-effects in Nix.
 
-Additional feeds (e.g. for pre-built binaries) can be registered using `nix-channel --add`, which appears to work much like [`0install add-feed`](../details/cli.md#add-feed), although each channel can contain binaries for multiple packages. The channel `MANIFEST` file doesn't appear to have a digital signature. Presumably this will be added at some point.
+Additional feeds (e.g. for pre-built binaries) can be registered using `nix-channel --add`, which appears to work much like [`0install add-feed`](details/cli.md#add-feed), although each channel can contain binaries for multiple packages. The channel `MANIFEST` file doesn't appear to have a digital signature. Presumably this will be added at some point.
 
 Each version of a package has a digest (hash), which includes all build dependencies (e.g. the version of the compiler used), just as it does in Zero Install (for packages built using 0compile, at least).
 
@@ -165,7 +165,7 @@ Building a Nix package involves creating a "Nix expression" in a (custom) functi
 
 While Zero Install is mainly targeted at adding additional packages to an existing system, Nix aims to manage the whole system (although it installs cleanly alongside your existing package manager). Nix packages have short names (like `perl`) not full URIs, and thus it appears to assume a centrally-controlled repository.
 
-In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](../details/sharing.md).
+In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](details/sharing.md).
 
 ### OSTree
 
@@ -183,6 +183,6 @@ In Nix, mutually untrusting users cannot share packages. The manual says A setui
 
 The [Environment Modules](http://modules.sourceforge.net/) package provides for the dynamic modification of a user's environment via modulefiles. Each modulefile contains the information needed to configure the shell for an application. Typically modulefiles instruct the module command to alter or set shell environment variables such as `PATH`, `MANPATH`, etc. To be able to load ("install") software, it must first be installed under the `$MODULESHOME` directory which is in `/usr/local/Modules` or a shared network filesystem. It is also possible to install it in `~/.local` without root permissions, but then the modules can't be shared (due to different `$HOME`).
 
-The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](../packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
+The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
 
 If you believe that any of the information above is inaccurate or out-of-date, please write to [mailing list](https://0install.net/support.html#lists) to let us know. Thanks!

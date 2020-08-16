@@ -20,16 +20,16 @@ More than one thousand packages are currently available and you can easily publi
 
 Click one of the links below to find out why you may want to use 0install.
 
-[By perspective](about/perspectives.md)
+[By perspective](perspectives.md)
 : How 0install benefits users, administrators, developers and distributions.
 
-[Compared to other systems](about/comparison.md)
+[Compared to other systems](comparison.md)
 : Why you may prefer 0install over another project.
 
-[Cool features](about/features.md)
+[Cool features](features.md)
 : Some key features: native packager integration, sharing and security.
 
-[FAQ](about/faq.md)
+[FAQ](faq.md)
 : Frequently Asked Questions
 
 ## More documentation
@@ -43,7 +43,7 @@ Click one of the links below to find out why you may want to use 0install.
 [Developers](developers/index.md)
 : How to contribute to 0install itself, or integrate it with your own software.
 
-[Packagers](packaging/index.md)
+[Packaging](packaging/index.md)
 : How to make software available through 0install.
 
 [Specifications](specifications/index.md)

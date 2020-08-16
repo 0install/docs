@@ -51,7 +51,7 @@ Zero Install lets your users install programs in a way that's as secure as insta
 : Go to the [downloads page](https://get.0install.net/) and install the Zero Install Injector package. Your users can now install programs to their home directories easily.
 
 ... set up sharing of downloads?
-: Follow the [setting up sharing instructions](../details/sharing.md). Now when a user installs a program, it ends up in `/var/cache/0install.net` (the sharing instructions explain why this is safe).
+: Follow the [setting up sharing instructions](details/sharing.md). Now when a user installs a program, it ends up in `/var/cache/0install.net` (the sharing instructions explain why this is safe).
 
 ... add programs to everyone's desktop?
 : You can add launchers to `$PATH` using `0install add`, and you can add menu entries using `0desktop`. Put the scripts or .desktop files in a common directory, just as with any other program. You should set up sharing before doing this, or every user will have to download a separate copy of the program.
@@ -74,13 +74,13 @@ Creating a Zero Install feed for your programs is easy (it's essentially the sam
 **How do I ...**
 
 ... create a feed for my program?
-: Follow the [Packaging Guide](../packaging/index.md).
+: Follow the [Packaging Guide](packaging/index.md).
 
 ... push updates to my users?
 : Users poll for updates (as with RSS), by default once a month. You should initially mark new releases as 'testing' so that only more advanced users (who know how to roll back to previous versions if something goes wrong) get them.
 
 ... check that my feed is OK?
-: Use [FeedLint](../tools/feedlint.md) to test it.
+: Use [FeedLint](tools/feedlint.md) to test it.
 
 ## Distribution maintainer
 
@@ -95,7 +95,7 @@ Installing anything that's not in your distribution is too hard for most of your
 : Put your defaults in `/etc` as normal and the package should pick them up (though it depends on the program, of course).
 
 ... override a dependency of a Zero Install package to use my custom packaged library?
-: You can register an additional feed in `/usr/share/0install.net`. See [Distribution Integration](../details/distribution-integration.md) for details.
+: You can register an additional feed in `/usr/share/0install.net`. See [Distribution Integration](details/distribution-integration.md) for details.
 
 ... suggest suitable Zero Install packages for my users?
 : See the instructions for administrators above. You just provide launchers. Each program will get installed when the first user runs it.

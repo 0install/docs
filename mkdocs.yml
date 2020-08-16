@@ -13,6 +13,8 @@ theme:
   favicon: favicon.ico
   icon:
     repo: fontawesome/brands/github
+  features:
+    - tabs
 
 extra_css: [style.css]
 
@@ -33,7 +35,9 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
-  # - redirects:
-  #    redirect_maps:
-  #      old/file.md: new/file.md
-  #      some_file.md: http://example.com
+  - redirects:
+      redirect_maps:
+        about/perspectives.md: perspectives.md
+        about/comparison.md: comparison.md
+        about/features.md: features.md
+        about/faq.md: faq.md
