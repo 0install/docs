@@ -43,7 +43,7 @@ This program is not yet complete. In particular, adding the program to the user'
 You can download `0export` and create a short-cut to it in the usual way:
 
 ```shell
-$ 0install add 0export http://0install.net/tools/0export.xml
+0install add 0export http://0install.net/tools/0export.xml
 ```
 
 ## Creating a setup.sh for your program

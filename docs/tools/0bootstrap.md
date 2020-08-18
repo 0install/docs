@@ -44,7 +44,7 @@ This program is not yet released.
 You can download `0bootstrap` and create a short-cut to it in the usual way:
 
 ```shell
-$ 0install add 0bootstrap http://0install.net/tools/0bootstrap.xml
+0install add 0bootstrap http://0install.net/tools/0bootstrap.xml
 ```
 
 Before the program is released, you need to run it from the source repository:

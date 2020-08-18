@@ -33,7 +33,7 @@ We start with a tutorial showing how to install and run a couple of sample appli
 You can create a short-cut to ebox with [`0install add`](../details/cli.md#add), like this:
 
 ```shell
-$ 0install add ebox http://0install.net/tests/ebox.xml
+0install add ebox http://0install.net/tests/ebox.xml
 ```
 
 You can then install a program like this:

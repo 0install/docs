@@ -63,7 +63,7 @@ Let's go over the group part in detail:
 Save the interface using the default file name (a temporary file chosen by `0publish`) and try running it:
 
 ```shell
-$ 0install run ./Find.xml
+0install run ./Find.xml
 ```
 
 If you don't already have ROX-Lib, you will be prompted to download it as usual. Once ROX-Lib is available, Find runs:
@@ -140,7 +140,7 @@ In fact, we'd often like to see both downloadable implementations (e.g., officia
 You can now register the local feed in the normal way:
 
 ```shell
-$ 0install add-feed Find.xml
+0install add-feed Find.xml
 ```
 
 When another program runs **Find** using its official URI, this local version will be included in the list of available versions that can be selected. It is traditional to add `.0` to the end of the version number for CVS versions, so that the CVS version will be preferred to the previous release.

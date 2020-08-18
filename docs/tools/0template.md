@@ -19,7 +19,7 @@ That is, each time you want to add a new release of a program to your master XML
 To get it:
 
 ```shell
-$ 0install add 0template http://0install.net/tools/0template.xml
+0install add 0template http://0install.net/tools/0template.xml
 ```
 
 ## Creating the template

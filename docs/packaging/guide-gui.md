@@ -16,7 +16,7 @@ To make a program available via Zero Install you need to create an XML 'feed' fi
 Start by getting **0publish-gui** in the usual way:
 
 ```shell
-$ 0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml
+0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml
 ```
 
 This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).
@@ -27,7 +27,7 @@ This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using 
 Run the program, giving it the name of the feed file you want to create, which should be named after the program:
 
 ```shell
-$ 0publish-gui Blender.xml
+0publish-gui Blender.xml
 ```
 
 A window appears prompting you to enter some details about the program. Here, I've copied the details from the project's [freshmeat.net](http://freshmeat.net) page. The **Icon** field is optional, but I've added one anyway:
@@ -93,8 +93,8 @@ $ 0install run http://0install.net/2007/3rd-party/Blender.xml
 It's surprising how easy it is to forget to set the right permissions, etc, so check your new feed! [FeedLint](../tools/feedlint.md) is an easy first step:
 
 ```shell
-$ 0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
-$ feedlint http://0install.net/2007/3rd-party/Blender.xml
+0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
+feedlint http://0install.net/2007/3rd-party/Blender.xml
 ```
 
 ## Groups and dependencies

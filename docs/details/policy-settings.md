@@ -48,7 +48,7 @@ You can change per-application policy settings in the application information di
 
     1.  Run `0install run` with the `--gui` option and the URI of the application:
         ```shell
-        $ 0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit
+        0install run --gui http://rox.sourceforge.net/2005/interfaces/Edit
         ```
 
         -or-
@@ -64,7 +64,7 @@ You can change per-application policy settings in the application information di
 
     1.  Run `0install run` with the `--customize` option and the URI of the application:
         ```shell
-        > 0install run --customize https://apps.0install.net/gui/vlc.xml
+        0install run --customize https://apps.0install.net/gui/vlc.xml
         ```
 
         -or-

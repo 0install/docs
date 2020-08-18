@@ -5,7 +5,7 @@
 Try executing the same command again but with the `--refresh` option. For example:
 
 ```shel
-$ 0install run --refresh https://apps.0install.net/gui/vlc.xml
+0install run --refresh https://apps.0install.net/gui/vlc.xml
 ```
 
 ## 0install doesn't select any versions / the expected versions

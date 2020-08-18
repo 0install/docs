@@ -23,7 +23,7 @@ _Figure 2: Multi-developer deployment_
 To get it:
 
 ```shell
-$ 0install add 0repo http://0install.net/tools/0repo.xml
+0install add 0repo http://0install.net/tools/0repo.xml
 ```
 
 Full instructions can be found in [0repo's README](https://github.com/0install/0repo/blob/master/README.md).

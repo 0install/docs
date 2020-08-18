@@ -11,7 +11,7 @@ A Zero Install [feed](../specifications/feed.md) can specify a "test" command, w
 Create a short-cut to it in the usual way:
 
 ```shell
-$ 0install add 0test http://0install.net/2008/interfaces/0test.xml
+0install add 0test http://0install.net/2008/interfaces/0test.xml
 ```
 
 ## Usage

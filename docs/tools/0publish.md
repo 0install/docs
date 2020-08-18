@@ -21,7 +21,7 @@ However, **0publish is somewhat deprecated**:
 You can create an app for `0publish` in the usual way:
 
 ```shell
-$ 0install add 0publish http://0install.net/2006/interfaces/0publish
+0install add 0publish http://0install.net/2006/interfaces/0publish
 ```
 
 ## 0publish reference

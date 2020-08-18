@@ -15,7 +15,7 @@ Normally, Zero Install will select a pre-built binary for your system. However, 
 This tutorial shows how to use `0compile` for these purposes. It is assumed that you have already installed [Zero Install](https://get.0install.net/) and know how to run programs using it. To get `0compile` itself, use:
 
 ```shell
-$ 0install add 0compile http://0install.net/2006/interfaces/0compile.xml
+0install add 0compile http://0install.net/2006/interfaces/0compile.xml
 ```
 
 !!! note

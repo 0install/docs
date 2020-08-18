@@ -42,5 +42,5 @@ If you want to run your own Sync server you have the following options:
 You can also use a directory on a local or network filesystem instead of an HTTP server. Simply specify a local or UNC path instead of a URL as the Sync Server in the configuration.
 
 ```shell
-> 0install config \\SomeServer\0install-sync
+0install config \\SomeServer\0install-sync
 ```

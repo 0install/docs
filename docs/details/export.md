@@ -8,7 +8,7 @@ Zero Install automatically takes care of downloading applications and their depe
 
     !!! example
         ```shell
-        > 0install export --include-zero-install https://apps.0install.net/gui/vlc.xml somedir
+        0install export --include-zero-install https://apps.0install.net/gui/vlc.xml somedir
         ```
 
         The resulting directory structure would look like this:
@@ -41,7 +41,7 @@ Zero Install automatically takes care of downloading applications and their depe
 
     !!! example
         ```shell
-        > 0install store export sha256new_K44G7XQ4SOWRHVVFSXDW737RFQAKICZE6MAX35OJ7DJHABZKSLVQ vlc-win64-3.0.6.tbz2
+        0install store export sha256new_K44G7XQ4SOWRHVVFSXDW737RFQAKICZE6MAX35OJ7DJHABZKSLVQ vlc-win64-3.0.6.tbz2
         ```
 
 === "Linux / macOS"

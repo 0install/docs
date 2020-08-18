@@ -13,7 +13,7 @@ You can always use [0publish](0publish.md) to publish any tarball, RPM, Deb, Zip
 You can download **pkg2zero** and create a short-cut to it in the usual way:
 
 ```shell
-$ 0install add pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml
+0install add pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml
 ```
 
 ## Creating the feed
@@ -21,7 +21,7 @@ $ 0install add pkg2zero http://0install.net/2009/interfaces/pkg2zero.xml
 Select the Debian or RPM package you want to publish. You need the full URL. Since packages sometimes move, you should probably make a copy of it on your own server and use that URL, but for this demo we'll link directly to Debian's copy of the program (GQView for this tutorial):
 
 ```shell
-$ pkg2zero http://ftp.uk.debian.org/debian/pool/main/g/gqview/gqview_2.0.1-1_i386.deb GQView.xml
+pkg2zero http://ftp.uk.debian.org/debian/pool/main/g/gqview/gqview_2.0.1-1_i386.deb GQView.xml
 ```
 
 This downloads the Debian package to the current directory and creates a feed called `GQView.xml`.
@@ -29,7 +29,7 @@ This downloads the Debian package to the current directory and creates a feed ca
 Alternatively, to create the feed from an RPM:
 
 ```shell
-$ pkg2zero http://dag.wieers.com/rpm/packages/gqview/gqview-1.4.5-1.el5.rf.i386.rpm GQView.xml
+pkg2zero http://dag.wieers.com/rpm/packages/gqview/gqview-1.4.5-1.el5.rf.i386.rpm GQView.xml
 ```
 
 You will be prompted to give a URL for the program's icon, since Debian packages don't have them.
