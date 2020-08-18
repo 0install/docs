@@ -21,29 +21,29 @@ $ 0install add 0publish http://0install.net/2006/interfaces/0publish
 
 To create the interface file:
 
-1\. Download the static binary RPM:
+1.  Download the static binary RPM:
 
-```shell
-$ wget http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm
-```
+    ```shell
+    $ wget http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm
+    ```
 
-2\. Create the interface:
+2.  Create the interface:
 
-```shell    
-$ 0publish Inkscape.xml
-```
+    ```shell    
+    $ 0publish Inkscape.xml
+    ```
 
     Fill in the `name`, `summary`, `description`, `icon` and `homepage` fields. Set `main='usr/bin/inkscape'` on the `group` element. Save and quit (using the default filename).
     
-3\. Add version 0.43 with the location of the static RPM:
+3. Add version 0.43 with the location of the static RPM:
 
-```shell    
-$ 0publish Inkscape.xml \
-    --set-version=0.43 \
-    --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm \
-    --set-released=today \
-    --set-arch=Linux-i486
-```
+    ```shell    
+    $ 0publish Inkscape.xml \
+        --set-version=0.43 \
+        --archive-url=http://users.skynet.be/jflemaire/files/inkscape-0.43-0.i386.rpm \
+        --set-released=today \
+        --set-arch=Linux-i486
+    ```
 
 ## Testing it
 

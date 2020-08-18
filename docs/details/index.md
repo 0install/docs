@@ -101,11 +101,11 @@ Edit
 How do we know the archive hasn't been tampered with? The author of the XML feed calculated a _cryptographic digest_ of the archive's contents and stored it in the feed:
 
 ```xml
-    <implementation id="sha1=329e6c0191f65ef2996b49837d04c4cfe6934758"
-                    released="2005-09-21" stability="stable" version="2.0">
-      <archive extract="edit-2.0"
-               href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/>
-    </implementation>
+<implementation id="sha1=329e6c0191f65ef2996b49837d04c4cfe6934758"
+                released="2005-09-21" stability="stable" version="2.0">
+  <archive extract="edit-2.0"
+           href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz" size="61195"/>
+</implementation>
 ```
 
 We can calculate the value ourselves from the directory and compare (we already verified the signature on the feed, so we know that one's OK). Calculating the value is a little tricky; you have to create a _manifest_ file listing all the files and directories in the archive, along with _their_ digests too, by following [these instructions](../specifications/manifest.md). We'll cheat, by using `0install` to generate it for us:
