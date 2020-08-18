@@ -77,7 +77,7 @@ You can change per-application policy settings in the application information di
 
 ### Feeds
 
-In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of the app. By default, there is just one feed with the URL you just entered. You can register additional feeds to be considered (e.g., a [local feed](../packaging/local-feeds.md) with custom builds or an alternate remote feed). This can be done either using the GUI or with the [`0install add-feed`](../details/cli.md#add-feed) command.
+In the Feeds tab, a list of feeds shows all the places where Zero Install looks for versions of the app. By default, there is just one feed with the URL you just entered. You can register additional feeds to be considered (e.g., a [local feed](../packaging/local-feeds.md) with custom builds or an alternate remote feed). This can be done either using the GUI or with the [`0install add-feed`](cli.md#add-feed) command.
 
 ### Versions
 
