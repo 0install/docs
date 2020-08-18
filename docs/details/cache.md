@@ -29,13 +29,17 @@ Using [0share](../tools/0share.md) you can locally distribute your implementatio
 
 If for some reason you would like to remove implementations from the cache (it does not make your system any 'cleaner', but it does free some disk space), you can do so using the Zero Install Cache dialog.
 
-On Linux, click on the **Show Cache** button in the **Manage Programs** box to get the cache explorer (or run `0install store manage`). Select the versions you don't need anymore and click on **Delete**.
+=== "Linux / macOS"
+    Click on the **Show Cache** button in the **Manage Programs** box to get the cache explorer (or run `0install store manage`). Select the versions you don't need anymore and click on **Delete**.
 
-![Uninstalling programs](../img/screens/injector-cache.png)
+    ![Uninstalling programs](../img/screens/injector-cache.png)
 
-On Windows open the main GUI of Zero Install and click on **Tools** and **Cache management** (or run `0install store manage`). Select the versions you don't need anymore and click on **Remove**.
+=== "Windows"
+    Open the main GUI of Zero Install and click on **Tools** and **Cache management** (or run `0install store manage`). Select the versions you don't need anymore and click on **Remove**.
 
-![Zero Install for Windows - Cache management](../img/screens/0install-win/cache-management.png)
+    ![Zero Install for Windows - Cache management](../img/screens/0install-win/cache-management.png)
+
+    You can also run [`0install update-all --clean`](cli.md#update-all) to update all apps registered with [desktop integration](../basics/windows.md) and remove any old versions from the cache afterwards.
 
 !!! tip
     You can delete the entire cache, 0install will redownload whatever it needs later.
