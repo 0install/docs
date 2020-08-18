@@ -2,7 +2,7 @@
 
 This document is a formal description of the Capabilities extension of the [feeds format](feed.md). A capability tells the desktop environment what an application can do (e.g., suported file types) and in which fashion this can be represented to the user. This is used for [desktop integration](../basics/windows.md) (currently only supported on Windows).
 
-[XSD schema](http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd)
+[:fontawesome-regular-file-code: XML Schema Definition](capabilities.xsd)
 
 ## Syntax
 

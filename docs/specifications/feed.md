@@ -2,6 +2,8 @@
 
 This document is a formal description of the XML feed file format. An interface describes a program, library or other component. A feed provides a list of known implementations of the interface (versions of the program) and details about how to get them, how to check that they are authentic, how to run them and what other components they depend on.
 
+[:fontawesome-regular-file-code: XML Schema Definition](feed.xsd)
+
 This class diagram shows how the different concepts are related. Each feed file contributes information to this model:
 
 ![Class diagram for feed files](../img/uml/zero-install-feed-classes.png)
@@ -10,8 +12,6 @@ Each *Feed* lists a number of *Implementations* (versions). An *Identity* is a w
 
 !!! abstract "Terminology"
     Originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.
-
-[XSD schema](http://0install.de/schema/injector/interface/interface.xsd){: .md-button .md-button--primary }
 
 ## Introduction
 

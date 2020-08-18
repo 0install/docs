@@ -2,7 +2,7 @@
 
 This document is a formal description of the XML catalog format. A catalog contains meta-data for a collection of [feeds](feed.md). Catalogs make it easier to find feeds for specific applications.
 
-[XSD schema](http://0install.de/schema/injector/catalog/catalog.xsd)
+[:fontawesome-regular-file-code: XML Schema Definition](catalog.xsd)
 
 ## Syntax
 
