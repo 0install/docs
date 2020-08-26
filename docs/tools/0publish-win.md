@@ -22,14 +22,11 @@ The Zero Install Publishing Tools provide [a graphical feed editor](#feed-editor
 - changes in the graphical view are reflected in the XML view immediately and vice-versa
 - syntax-highlighting and error-underlining in the XML view
 
-### Screenshots
+![Feed Editor screenshot - Main](../img/screens/0publish-win/main.png)
 
-![](../img/screens/0publish-win/main.png)
+![Feed Editor screenshot - Archive](../img/screens/0publish-win/archive.png)
 
-![](../img/screens/0publish-win/archive.png)
-
-![](../img/screens/0publish-win/xml-error.png)
-
+![Feed Editor screenshot - XML Editor](../img/screens/0publish-win/xml-error.png)
 
 ## New Feed Wizard
 
@@ -37,3 +34,5 @@ The Zero Install Publishing Tools provide [a graphical feed editor](#feed-editor
 - detects entry points (executables) in archives
 - automatically creates appropriate `<runner>`s for Java, .NET and Python executables
 - extracts metadata (name, version number, etc.) where possible
+
+![Feed Wizard screenshots](../img/screens/0publish-win/wizard.gif)
