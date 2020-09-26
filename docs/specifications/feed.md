@@ -23,8 +23,8 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
            min-injector-version='...' ?
            uri='...' ? >
   <name>...</name>
-  <summary>...</summary>
-  <description>...</description> ?
+  <summary xml:lang='...' ?>...</summary> +
+  <description xml:lang='...' ?>...</description> *
   <homepage>...</homepage> ?
   <category type='...' ? >...</category> *
   <needs-terminal/> ?
@@ -51,10 +51,10 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 : a short name to identify the interface (e.g. "Foo")
 
 `<summary>`
-: a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills")
+: a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills"). Supports [localization](#localization).
 
 `<description>`
-: a full description, which can be several paragraphs long (optional since 0.32, but recommended)
+: a full description, which can be several paragraphs long (optional since 0.32, but recommended). Supports [localization](#localization).
 
 `<homepage>`
 : the URL of a web-page describing this interface in more detail
@@ -589,9 +589,9 @@ Entry points are top-level elements and, unlike commands, are not associated wit
     <needs-terminal/> ?
     <suggest-auto-start/> ?
     <suggest-send-to/> ?
-    <name>...</name> ?
-    <summary>...</summary> ?
-    <description>...</description> ?
+    <name xml:lang='...' ?>...</name> *
+    <summary xml:lang='...' ?>...</summary> *
+    <description xml:lang='...' ?>...</description> *
     <icon type='...' href='...'/> *
   </group>
 ```
@@ -615,16 +615,33 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 : if present, this element indicates that this entry point should be offered as a candidate for the "Send To" context menu to the user.
 
 `<name>`
-: user-friendly name for the command. If not present, the value of the `command` attribute is used instead.
+: user-friendly name for the command. If not present, the value of the `command` attribute is used instead. Supports [localization](#localization).
 
 `<summary>`
-: a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills")
+: a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills"). Supports [localization](#localization).
 
 `<description>`
-: a full description, which can be several paragraphs long
+: a full description, which can be several paragraphs long. Supports [localization](#localization).
 
 `<icon>`
 : an icon to represent the command; this is used when creating menu entries. You should provide an icon of the type `image/png` (`.png`) for Linux apps and `image/vnd.microsoft.icon` (`.ico`) for Windows apps.
+
+## Localization
+
+Some elements can be localized using the `xml:lang` attribute.
+
+!!! example
+    ```xml
+    <summary xml:lang="en">cures all ills</summary>
+    <summary xml:lang="de">heilt alle Krankheiten</summary>
+    ```
+
+When choosing a localized element Zero Install will prefer `xml:lang` values in the following order:
+
+- Exactly matching the users language (e.g., `de-DE`)
+- Matching the users with a neutral culture (e.g., `de`)
+- `en`
+- `en-US`
 
 ## Metadata
 
