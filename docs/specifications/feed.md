@@ -584,7 +584,8 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 
 ```xml
   <entry-point command='...'
-               binary-name='...' ? >
+               binary-name='...' ?
+               app-id='...' ? >
     <needs-terminal/> ?
     <name>...</name> ?
     <summary>...</summary> ?
@@ -598,6 +599,9 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 
 `binary-name`
 : the canonical name of the binary supplying the command (without file extensions); this is used to suggest suitable alias names.
+
+`app-id`
+: the [Application User Model ID](https://docs.microsoft.com/en-us/windows/win32/shell/appids); used by Windows to associate shortcuts and pinned taskbar entries with running processes.
 
 `<needs-terminal>`
 : if present, this element indicates that the command represented by this entry point requires a terminal in order to run.

@@ -276,6 +276,13 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:attribute name="app-id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+              The Application User Model ID; used by Windows to associate shortcuts and pinned taskbar entries with running processes.
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
