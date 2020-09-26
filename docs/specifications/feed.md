@@ -587,6 +587,8 @@ Entry points are top-level elements and, unlike commands, are not associated wit
                binary-name='...' ?
                app-id='...' ? >
     <needs-terminal/> ?
+    <suggest-auto-start/> ?
+    <suggest-send-to/> ?
     <name>...</name> ?
     <summary>...</summary> ?
     <description>...</description> ?
@@ -605,6 +607,12 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 
 `<needs-terminal>`
 : if present, this element indicates that the command represented by this entry point requires a terminal in order to run.
+
+`<suggest-auto-start>`
+: if present, this element indicates that this entry point should be offered as an auto-start candidate to the user.
+
+`<suggest-send-to>`
+: if present, this element indicates that this entry point should be offered as a candidate for the "Send To" context menu to the user.
 
 `<name>`
 : user-friendly name for the command. If not present, the value of the `command` attribute is used instead.
