@@ -702,6 +702,7 @@ Valid values for CPU include:
 - `x86_64`
 - `armv6l`
 - `armv7l`
+- `aarch64`
 
 ## The `if-0install-version` attribute
 
