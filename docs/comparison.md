@@ -6,7 +6,7 @@ This matrix shows some desirable features in a packaging system, and shows which
 
 | Feature                            | Source tarball                      | APT                                      | AppImage                                     | Chocolatey                               | PortableApps.com                             | Zero Install                                  |
 | ---------------------------------- | ----------------------------------- | ---------------------------------------- | -------------------------------------------- | ---------------------------------------- | -------------------------------------------- | --------------------------------------------- |
-| Users can install software         | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Non-admins can install software    | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
 | Supports multiple platforms        | :material-check-all:{.green} Yes    | :material-close:{.red} No (Linux only)   | :material-close:{.red} No (Linux only)       | :material-close:{.red} No (Windows only) | :material-close:{.red} No (Windows only)     | :material-check-all:{.green} Yes              |
 | Dependencies handled automatically | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes              |
 | Automatic upgrading                | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Some packages      | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
@@ -17,7 +17,7 @@ This matrix shows some desirable features in a packaging system, and shows which
 | Digital signatures                 | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
 | Conflict-free                      | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
 | Decentralised                      | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Non-root install of system         | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
+| Non-admin install of system        | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
 | Can install systems software       | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-close:{.red} No                     |
 | Supports sandboxing                | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
 | Usable when off-line               | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
@@ -26,8 +26,8 @@ This matrix shows some desirable features in a packaging system, and shows which
 
 ## Explanation of features
 
-Users can install software
-: A normal user without special privileges can install software using this system (without unreasonable extra effort).
+Non-admins can install software
+: A normal user without administrator/root privileges can install software using this system (without unreasonable extra effort).
 
 Supports multiple platforms
 : The same package format and command-line works across multiple operating systems, such as Linux and Windows.  
@@ -61,8 +61,8 @@ Decentralised
 : A program packaged for this system can be installed easily, without having to be in some special centralised repository.  
 Notes: Debian allows extra repositories to be added, but this is a manual step, requires root access, and is a considerable security risk.
 
-Non-root install of system
-: The packaging system itself can be easily installed without administrator privileges, and the normal selection of software will be available.
+Non-admin install of system
+: The packaging system itself can be easily installed without administrator/root privileges, and the normal selection of software will be available.
 
 Can install systems software
 : The packaging system can be used to install low-level systems software such as device drivers.
