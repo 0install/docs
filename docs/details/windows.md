@@ -16,7 +16,7 @@ If you then decide you wish to keep using Zero Install you can "Click to setup..
 
 ![](../img/screens/windows-deploy-banner.png)
 
-This is different from the [desktop integration](../basics/windows.md) Zero Install performs for other applications. For these Zero Install will create little stub executables in the appropriate locations that point to the application's feed. However, for Zero Install itself the entire binaries need to be copied to a permanent location. Otherwise each of these stubs would need to bundle all the functionality of the Bootstrapper in order to locate (or potentially download) Zero Install.
+This is different from the [desktop integration](desktop-integration.md) Zero Install performs for other applications. For these Zero Install will create little stub executables in the appropriate locations that point to the application's feed. However, for Zero Install itself the entire binaries need to be copied to a permanent location. Otherwise each of these stubs would need to bundle all the functionality of the Bootstrapper in order to locate (or potentially download) Zero Install.
 
 Having a specific version of Zero Install copied to a fixed location would seem to undermine many of the advantages of Zero Install, such as background updates of applications and running multiple versions side-by-side. However, Zero Install can still download and run other versions of itself from the cache. When you tell your deployed instance of Zero Install to [update itself](#maintenance) it does just that: The new version is downloaded and launched from the cache and instructed to deploy itself to the same location as the existing deployment. The old files are securely replaced using the Windows Restart Manager and rollbacks in case of error.
 
@@ -51,7 +51,7 @@ Remove Zero Install from the system
 Download and install updates for Zero Install itself
 : `0install self update`
 
-Download and install updates for [integrated applications](../basics/windows.md) and remove outdated files
+Download and install updates for [integrated applications](desktop-integration.md) and remove outdated files
 : `0install update-all --clean`
 
 Find and merge any duplicate files in the [cache](cache.md)

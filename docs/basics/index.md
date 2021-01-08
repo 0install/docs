@@ -6,18 +6,14 @@ For example, OpenTTD is available via 0install, it has [this feed file](http://r
 
 To get a 0install application:
 
-1\. Find a program you want to run on the web:
+1.  Find a program you want to run on the web:
+
+    ![](../img/screens/find-url.png)
+
+2.  Either [launch it](first-launch.md) directly:
     
-![](../img/screens/find-url.png)
-    
-2\. Either launch it directly:
-    
-```shell
-$ 0install run http://repo.roscidus.com/games/openttd
-```
-    
-Or [generate a shortcut](making-shortcuts.md) to launch it later:
-    
-![](../img/screens/add-url.png)
-    
-Upon first launch of a feed, 0install may ask you to accept keys and be allowed to download files.
+    ```shell
+    0install run http://repo.roscidus.com/games/openttd
+    ```
+
+    Or create a [menu entry](menu.md) or [command-line alias](alias.md) to launch it later.

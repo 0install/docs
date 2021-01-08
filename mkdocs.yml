@@ -43,3 +43,6 @@ plugins:
         comparison.md: about/comparison.md
         features.md: about/features.md
         faq.md: about/faq.md
+        basics/making-shortcuts.md: basics/menu.md
+        basics/using-apps.md: details/apps.md
+        basics/windows.md: details/desktop-integration.md

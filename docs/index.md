@@ -32,9 +32,9 @@ Click one of the links below to find out why you may want to use 0install.
 [FAQ](about/faq.md)
 : Frequently Asked Questions
 
-## More documentation
+## Documentation
 
-[Basics](basics/index.md)
+[Getting Started](basics/index.md)
 : How to use 0install to download and run programs.
 
 [Details](details/index.md)

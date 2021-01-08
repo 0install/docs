@@ -10,7 +10,7 @@ The version numbers of the Linux and Windows versions of Zero Install are loosel
 The [command-line interface](cli.md) of the Linux and Windows versions are largely identical, with the following exceptions:
 
 `0install add|destroy|show|whatchanged`
-: These [app](../basics/using-apps.md) commands are only available in the Linux version so far.
+: These [app](apps.md) commands are only available in the Linux version so far.
 
 `0install man`
 : This man-page integration command is only available in the Linux version.
@@ -19,7 +19,7 @@ The [command-line interface](cli.md) of the Linux and Windows versions are large
 : These [catalog](../specifications/catalog.md) commands are only available in the Windows version so far.
 
 `0install add|remove|alias|integrate|update-all|repair-apps|sync`
-: These [desktop integration](../basics/windows.md) commands are only available in the Windows version so far.
+: These [desktop integration](desktop-integration.md) commands are only available in the Windows version so far.
 
 `0install store list-implementations|purge`
 : These [cache](cache.md) management commands are only available in the Windows version so far.

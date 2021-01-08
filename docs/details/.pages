@@ -1,6 +1,8 @@
 nav:
   - index.md
   - policy-settings.md
+  - apps.md
+  - desktop-integration.md
   - sync.md
   - security.md
   - servers.md

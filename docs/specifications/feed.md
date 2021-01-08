@@ -66,7 +66,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 : if present, this element indicates that the program requires a terminal in order to run. Graphical launchers should therefore run this program in a suitable terminal emulator.
 
 `<icon>`
-: an icon to use for the program; this is used by programs such as [AddApp](http://rox.sourceforge.net/desktop/AddApp) and [desktop integration](../basics/windows.md). You should provide an icon of the type `image/png` (`.png`) for display in browsers and launchers on Linux. For Windows apps you should additionally provide an icon of the type `image/vnd.microsoft.icon` (`.ico`).
+: an icon to use for the program; this is used by programs such as [AddApp](http://rox.sourceforge.net/desktop/AddApp) and [desktop integration](../details/desktop-integration.md). You should provide an icon of the type `image/png` (`.png`) for display in browsers and launchers on Linux. For Windows apps you should additionally provide an icon of the type `image/vnd.microsoft.icon` (`.ico`).
 
 `<feed>`
 : the linked feed contains more implementations of this feed's interface. The `langs` and `arch` attributes, if present, indicate that all implementations will fall within these limits (e.g. `arch='*-src'` means that there is no point fetching this feed unless you are looking for source code). See the `<implementation>` element for a description of the values of these attributes.

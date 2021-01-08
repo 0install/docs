@@ -52,7 +52,7 @@ How do you do integration (e.g., making a Start menu show all installed software
 
 :   Since there is no concept of software being 'installed' or 'not-installed', this is not required. The menu (or other launching device) simply shows applications that the user may want to run. They will be fetched on demand.
 
-    The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu. This can be done e.g. using the `0desktop` command on Linux or the [desktop integration](../basics/windows.md) feature on Windows.
+    The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu. This can be done e.g. using the `0desktop` command on Linux or the [desktop integration](../details/desktop-integration.md) feature on Windows.
 
     The new menu entry is independent of the program data though; removing the program from the cache doesn't remove the menu item (clicking on it would simply offer to download the program again).
 

@@ -39,7 +39,7 @@ If for some reason you would like to remove implementations from the cache (it d
 
     ![Zero Install for Windows - Cache management](../img/screens/0install-win/cache-management.png)
 
-    You can also run [`0install update-all --clean`](cli.md#update-all) to update all apps registered with [desktop integration](../basics/windows.md) and remove any old versions from the cache afterwards.
+    You can also run [`0install update-all --clean`](cli.md#update-all) to update all apps registered with [desktop integration](desktop-integration.md) and remove any old versions from the cache afterwards.
 
 !!! tip
     You can delete the entire cache, 0install will redownload whatever it needs later.
