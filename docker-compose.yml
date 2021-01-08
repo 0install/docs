@@ -3,6 +3,7 @@ version: '3'
 services:
   mkdocs:
     image: squidfunk/mkdocs-material
+    entrypoint: /bin/sh -c "pip install --user -r requirements.txt && mkdocs serve -a 0.0.0.0:8000"
     volumes:
       - .:/docs
     ports:
