@@ -245,4 +245,5 @@ It's best to keep the releases directory:
 
 So, there's nothing too critical in the directory, but it's easiest to keep everything.
 
-TODO: 0release should also be able to diff against the previous version using the cache (downloading the archive if missing), rather than relying on the previous archive being in the releases directory.
+    !!! todo
+        0release should also be able to diff against the previous version using the cache (downloading the archive if missing), rather than relying on the previous archive being in the releases directory.

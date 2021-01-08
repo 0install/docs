@@ -8,7 +8,8 @@ The extended release process looks like this:
 
 ![The release process with binary packages](../../img/uml/release-process-binaries.png)
 
-TODO: 0release doesn't currently unit-test the binaries it produces
+    !!! todo
+    0release doesn't currently unit-test the binaries it produces
 
 After generating an archive and a feed for the source code release candidate (where `arch='*-src'`), 0release also compiles a binary for the host system (using [0compile](../0compile/index.md)). It uploads both the source and binary archive and publishes both in the Zero Install feed.
 
