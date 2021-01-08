@@ -18,7 +18,7 @@ What are "decentralised" installation systems, and why are they important?
 
 Where does it install things to?
 
-:   By default, everything goes under `~/.cache/0install.net/`. If you [enable system-wide sharing](details/sharing.md), then things go under `/var/cache/0install.net/` instead. See [File locations](details/file-locations.md).
+:   By default, everything goes under `~/.cache/0install.net/`. If you [enable system-wide sharing](../details/sharing.md), then things go under `/var/cache/0install.net/` instead. See [File locations](../details/file-locations.md).
 
     If you want to know where a particular program is, you can use `0install show`, e.g.
 
@@ -44,7 +44,7 @@ Isn't is really hard to run applications if you always have to type URIs for the
 
 :   Yes. As with the web, that works but it's not the intended way to do it. Like the web, you have links to the URIs, and you use the links normally.
 
-    For example, you can run [`0install add`](details/cli.md#add) to let you run programs quickly from the shell, or [AddApp](http://rox.sourceforge.net/desktop/AddApp) to create graphical launchers, for example.
+    For example, you can run [`0install add`](../details/cli.md#add) to let you run programs quickly from the shell, or [AddApp](http://rox.sourceforge.net/desktop/AddApp) to create graphical launchers, for example.
 
     You could put a launcher on the desktop background, set a keyboard shortcut, or add it to your Start menu. A 'distribution' could be nothing more than a web page listing links to high quality software for a particular audience.
 
@@ -52,7 +52,7 @@ How do you do integration (e.g., making a Start menu show all installed software
 
 :   Since there is no concept of software being 'installed' or 'not-installed', this is not required. The menu (or other launching device) simply shows applications that the user may want to run. They will be fetched on demand.
 
-    The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu. This can be done e.g. using the `0desktop` command on Linux or the [desktop integration](basics/windows.md) feature on Windows.
+    The menu doesn't show installed software; rather, the 'installed' software is what the user has put on the menu. This can be done e.g. using the `0desktop` command on Linux or the [desktop integration](../basics/windows.md) feature on Windows.
 
     The new menu entry is independent of the program data though; removing the program from the cache doesn't remove the menu item (clicking on it would simply offer to download the program again).
 
@@ -60,7 +60,7 @@ Isn't it wasteful for every program to bundle all its dependencies?
 
 :   Yes, but Zero Install doesn't do that. Everything is dynamically linked, just as in a traditional Linux system: you can publish a program on your web-site that links against a library on another web-site. When updates are available for a library, they are used by all programs using that library (except for programs which are incompatible with the new library version, which will continue using the older version, without preventing other programs from upgrading).
 
-    However, see [Export](details/export.md) for methods to create such all-in-one bundles for distribution on CD.
+    However, see [Export](../details/export.md) for methods to create such all-in-one bundles for distribution on CD.
 
 Why was it called the "injector"?
 
@@ -82,7 +82,7 @@ Will Zero Install conflict with my existing package manager?
 
 :   No. Zero Install only writes to its own cache directory. It is completely independent of your existing packaging system. If you install the same program using both systems, you'll get two copies on your system, but they will be kept separate. You can use this to test a newer version of a program without messing up your existing installation.
 
-    Zero Install can use distribution packages to satisfy some dependencies (rather than downloading a new copy itself). This doesn't affect programs installed using the native packaging system at all. See [Distribution Integration](details/distribution-integration.md) for details.
+    Zero Install can use distribution packages to satisfy some dependencies (rather than downloading a new copy itself). This doesn't affect programs installed using the native packaging system at all. See [Distribution Integration](../details/distribution-integration.md) for details.
 
     !!! note
         While installation won't cause problems, actually running a program might change something (for example, a newer version may automatically upgrade a configuration file to a format that the older version can't read). This is essentially the same situation as when you downgrade a package to a previous version using your normal package manager.
@@ -95,9 +95,9 @@ What if something gets automatically removed from the cache while I'm up a mount
 
 :   Currently, nothing is ever automatically removed from the cache. Users can choose the purging scheme that suits them. For users with broadband, that might mean removing anything that hasn't been accessed for a year. For users with dial-up and 80Gb disks, that probably means never ever removing anything.
 
-    You can run [`0install store manage`](details/cli.md#store-manage) to view the cache and remove versions of programs you don't need anymore:
+    You can run [`0install store manage`](../details/cli.md#store-manage) to view the cache and remove versions of programs you don't need anymore:
 
-    ![Uninstalling programs](img/screens/injector-cache.png)
+    ![Uninstalling programs](../img/screens/injector-cache.png)
 
     You can also just delete things from the `~/.cache/0install.net` directory directly, but it's easier using the GUI.
 
@@ -150,15 +150,15 @@ Doesn't it require a fast Internet connection?
 
 What about people without Internet connections?
 
-:   You can use [0export](tools/0export.md) to create a setup.sh self-extracting installation script for distribution on CDs.
+:   You can use [0export](../tools/0export.md) to create a setup.sh self-extracting installation script for distribution on CDs.
 
 What about when resources move?
 
 :   Everything you've already accessed at least once will continue to work. Users trying software for the first time will find that it doesn't work due to broken links. This is not new, either. The download instructions for ROX-Filer tell users that they need to get GTK from www.gtk.org and libxml from www.xmlsoft.org. If those sites change their names, the download instructions will be broken. It really doesn't make any difference. As with the regular web, people can leave redirections to the new site.
 
-    Also, if a feed can't be fetched from its main site, Zero Install will automatically try using a [mirror service.](tools/0mirror.md) Mirror services continue hosting feeds that are no longer available from their original sites.
+    Also, if a feed can't be fetched from its main site, Zero Install will automatically try using a [mirror service.](../tools/0mirror.md) Mirror services continue hosting feeds that are no longer available from their original sites.
 
-    The [`0install import`](details/cli.md#import) command lets you import the feed from the new location, and [`0install store add`](details/cli.md#store-add) allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
+    The [`0install import`](../details/cli.md#import) command lets you import the feed from the new location, and [`0install store add`](../details/cli.md#store-add) allows adding any archive to the cache (provided its message digest matches). Because Zero Install simply unpacks an archive when installing a package, anyone with that program cached can re-export it (e.g. using [0export](../tools/0export.md)). Because Zero Install digests are over the package archive's contents (not the archive itself), the original GPG signature is still valid (and is also exported by 0export). The digest can also be checked against the one from the mirror server.
 
 ## Security questions
 
@@ -166,11 +166,11 @@ How secure is this?
 
 :   About as secure as any system which ultimately involves running software written by people you don't know who live in far away countries. However, since the downloading is automatic, there are more chances for automatic checking (eg, verifying GPG signatures, etc):
 
-    ![Confirming Thomas Leonard's GPG key](img/screens/confirm-tal-rox.png)
+    ![Confirming Thomas Leonard's GPG key](../img/screens/confirm-tal-rox.png)
 
     To be more precise, it has all the advantages of application directories (no install step, so no chance for anything to run as root). In addition, if two users try to run the same application, they both automatically get the same cached copy, whereas without this each would have to install a separate copy to their home directory, or one user has to trust the other user not to have modified his copy, and use that.
 
-    See the [security issues](details/security.md) document for more information.
+    See the [security issues](../details/security.md) document for more information.
 
 Doesn't Zero Install make it easier to send users malicious software?
 
@@ -204,7 +204,7 @@ How do I provide software using Zero Install?
 
     Finally, you need to write a short XML file describing your program, the versions of it that are available, how to get them, and what libraries they require.
 
-    See the _[Packaging Guide](packaging/index.md)_ for details.
+    See the _[Packaging Guide](../packaging/index.md)_ for details.
 
 How do I install a library?
 
@@ -246,7 +246,7 @@ How can I run my own version of something, instead of downloading a released ver
 
 How can I register my own version under the original's URI?
 
-:   The answer to the last question showed how to run a local version of a program directly, using 0install to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use [`0install add-feed`](details/cli.md#add-feed):
+:   The answer to the last question showed how to run a local version of a program directly, using 0install to fetch the libraries it needed. However, if you (or some other program) run Edit using the normal URI (`http://rox.sourceforge.net/2005/interfaces/Edit`), your version won't show up. To add it, use [`0install add-feed`](../details/cli.md#add-feed):
 
     ```shell
     $ cd Edit
@@ -263,11 +263,11 @@ How can I register my own version under the original's URI?
 
     When the GUI opens, you should see your local feed listed:
 
-    ![The GUI showing the local feed for Edit](img/screens/edit-cvs.png)
+    ![The GUI showing the local feed for Edit](../img/screens/edit-cvs.png)
 
     The new version will appear in the list of available versions, and will be selected if it's the newest one (which a fresh subversion checkout should be - the version normally ends in `-post` to indicate that it is not a released version):
 
-    ![The GUI showing Edit 2.0-post version selected](img/screens/edit-local.png)
+    ![The GUI showing Edit 2.0-post version selected](../img/screens/edit-local.png)
 
     This is particularly useful for libraries, since they are always used by other programs rather than run directly.
 

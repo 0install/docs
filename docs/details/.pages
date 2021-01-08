@@ -10,7 +10,6 @@ nav:
   - ...
   - cli.md
   - file-locations.md
-  - troubleshooting.md
   - os-differences.md
   - linux.md
   - macos.md

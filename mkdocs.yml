@@ -39,7 +39,7 @@ plugins:
   - awesome-pages
   - redirects:
       redirect_maps:
-        about/perspectives.md: perspectives.md
-        about/comparison.md: comparison.md
-        about/features.md: features.md
-        about/faq.md: faq.md
+        perspectives.md: about/perspectives.md
+        comparison.md: about/comparison.md
+        features.md: about/features.md
+        faq.md: about/faq.md
