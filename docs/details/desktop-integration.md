@@ -7,9 +7,7 @@ Zero Install allows you to integrate applications into your desktop environment 
 
 ## Basics
 
-Open Zero Install and search for an app in the "Catalog" and click **Run**. If you like the app, add it to "My applications" by clicking on the star icon. Click the star icon again to put the app in the start menu or on the desktop.
-
-![Zero Install for Windows - Intro](../img/screens/0install-win/intro.gif)
+Open Zero Install and search for an app in the **Catalog**. Click on the :fontawesome-regular-star: button to add it to "My Apps". Then click on **Integrate** in the pop-up box to add it to the start menu.
 
 ![Zero Install for Windows - Desktop Integration basic](../img/screens/0install-win/desktop-integration-basic.png)
 
