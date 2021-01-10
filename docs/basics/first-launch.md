@@ -5,14 +5,14 @@ When launching a feed for the first time, 0install will download the necessary f
 === "Linux / macOS"
 
     ```shell
-    0install run http://repo.roscidus.com/games/openttd
+    0install run https://apps.0install.net/gui/vs-code.xml
     ```
 
     1.  Click Download
 
         ![](../img/screens/find-libraries.png)
 
-        The downloaded file says that **OpenTTD** requires various libraries (Freetype2, SDL, libgcc1, etc). Each library is identified by a web address (URL) in the same way that the main **OpenTTD** program was. 0install downloads information about them in the same way and selects a compatible set of versions. The window displays a dialog box showing the program and all required libraries. Click **Download**.
+        The feed says which dependencies the select program needs. Each dependency is identified by a web address (URL) in the same way that the main program was. 0install downloads information about them in the same way and selects a compatible set of versions. The window displays a dialog box showing the program and all required libraries. Click **Download**.
 
     2.  Wait for the download to finish
 
@@ -26,15 +26,15 @@ When launching a feed for the first time, 0install will download the necessary f
 
         ![](../img/screens/0install-win/catalog.png)
 
-        Launch Zero Install and choose an application in the Catalog, e.g., PDF Split and Merge. Click **Run**.
+        Launch Zero Install and choose an application in the Catalog, e.g., Visual Studio Code. Click **Run**.
 
     2.  Wait for the download to finish
 
         ![](../img/screens/0install-win/download.png)
 
-        Zero Install now downloads application as well as dependencies needed to run it, e.g., PDF Split and Merge and the Java Runtime. It unpacks each into its own directory and checks its contents against the _cryptographic digest_ given in the (signed) feed file. If the archive has been changed since the feed was signed, the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory in its own subdirectory, named after the digest. This ensures that no two downloads can conflict with each other.
+        Zero Install now downloads application as well as dependencies needed to run it, e.g., Visual Studio Code and Git. It unpacks each into its own directory and checks its contents against the _cryptographic digest_ given in the (signed) feed file. If the archive has been changed since the feed was signed, the download will be rejected. If the archive hasn't been tampered with, it is stored in a cache directory in its own subdirectory, named after the digest. This ensures that no two downloads can conflict with each other.
 
-    You can also use the command-line to launch applications with 0install:
+    You can also use the command-line to launch applications with 0install. For example, to download and start Python:
 
     ```shell
     > 0install run https://apps.0install.net/python/python.xml

@@ -20,22 +20,17 @@ Where does it install things to?
 
 :   By default, everything goes under `~/.cache/0install.net/`. If you [enable system-wide sharing](../details/sharing.md), then things go under `/var/cache/0install.net/` instead. See [File locations](../details/file-locations.md).
 
-    If you want to know where a particular program is, you can use `0install show`, e.g.
+    If you want to know where a particular program is, you can use [`0install select`](../details/cli.md#select), e.g.
 
     ```shell
-    $ 0install add rox-edit http://rox.sourceforge.net/2005/interfaces/Edit
-    $ 0install show rox-edit
-    - URI: http://rox.sourceforge.net/2005/interfaces/Edit
-    Version: 2.2
-    Path: /home/me/.cache/0install.net/implementations/sha256=ba3b495324192bb6c3fc1a2d9af3db2ced997fc8ce3177f08c926bebafcf16b9
+    $ 0install select https://apps.0install.net/gui/vs-code.xml
+    - URI: https://apps.0install.net/gui/vs-code.xml
+      Version: 1.52.1
+      Path: /home/me/.cache/0install.net/implementations/sha256new_DRR7SHA2XZ6YP2TLZX2HQF4LX3SGREXXJGCTOSGCV6G74QTU366A    
 
-    - URI: http://rox.sourceforge.net/2005/interfaces/ROX-Lib
-        Version: 2.0.6
-        Path: /home/me/.cache/0install.net/implementations/sha256=ccefa7b1873926de15430341b912466929fbff8116b6d0ad67c4df6d0c06243e
-
-    - URI: http://repo.roscidus.com/python/python
-        Version: 2.7.8-3
-        Path: (package:deb:python2.7:2.7.8-3:x86_64)
+      - URI: https://apps.0install.net/devel/git.xml
+        Version: 2.27.0-1-1
+        Path: (package:deb:git:2.27.0-1-1:x86_64)
     ```
 
     That said, you shouldn't ever need to know where things are cached. If you're relying on this for some reason, you're probably doing it wrong ;-)

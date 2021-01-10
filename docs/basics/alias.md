@@ -3,9 +3,8 @@
 The [`0install add`](../details/cli.md#add) command allows you to create command-line aliases:
 
 ```shell
-$ 0install add rox http://rox.sourceforge.net/2005/interfaces/ROX-Filer
-$ rox --version
-ROX-Filer 2.11
+$ 0install add code https://apps.0install.net/gui/vs-code.xml
+$ code
 ```
 
 === "Linux / macOS"

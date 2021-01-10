@@ -3,9 +3,8 @@
 Zero Install allows you to create command-line launchers called "apps" using the [`0install add`](cli.md#add) command:
 
 ```shell
-$ 0install add rox http://rox.sourceforge.net/2005/interfaces/ROX-Filer
-$ rox --version
-ROX-Filer 2.11
+$ 0install add code https://apps.0install.net/gui/vs-code.xml
+$ code
 ```
 
 When run, they trigger a background update if they haven't been updated for a while. You can also update them manually:
