@@ -241,8 +241,8 @@ Returns an exit status of <code>0</code> if it selected a set of versions, and a
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -336,8 +336,8 @@ Returns an exit status of <code>0</code> if it selected a suitable set of versio
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -435,8 +435,8 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -449,15 +449,6 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
 <tr>
   <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
-</tr>
-<tr>
-  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
-  <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
-</tr>
-<tr>
-  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
-  <td>Fetch fresh copies of all used feeds.</td>
 </tr>
 <tr>
   <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
@@ -506,14 +497,6 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
-</tr>
-<tr>
-  <td><nobr><code>--xml</code></nobr></td>
-  <td>Write selected versions to console as machine-readable XML.</td>
-</tr>
-<tr>
-  <td><nobr><code>--show</code></nobr></td>
-  <td>Show where the selected components are stored on the disk.</td>
 </tr>
 </table>
 
@@ -534,8 +517,8 @@ Returns an exit status of <code>1</code> if the download step failed. Otherwise,
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -605,14 +588,6 @@ Returns an exit status of <code>1</code> if the download step failed. Otherwise,
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
-</tr>
-<tr>
-  <td><nobr><code>--xml</code></nobr></td>
-  <td>Write selected versions to console as machine-readable XML.</td>
-</tr>
-<tr>
-  <td><nobr><code>--show</code></nobr></td>
-  <td>Show where the selected components are stored on the disk.</td>
 </tr>
 <tr>
   <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
@@ -648,8 +623,8 @@ The file must have a trusted digital signature, as when fetching from the networ
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -677,8 +652,8 @@ Exports all feeds and implementations required to launch the program specified b
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -750,14 +725,6 @@ Exports all feeds and implementations required to launch the program specified b
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
-  <td><nobr><code>--xml</code></nobr></td>
-  <td>Write selected versions to console as machine-readable XML.</td>
-</tr>
-<tr>
-  <td><nobr><code>--show</code></nobr></td>
-  <td>Show where the selected components are stored on the disk.</td>
-</tr>
-<tr>
   <td><nobr><code>--no-implementations</code></nobr></td>
   <td>Do not include implementation archives in the export. Only export feeds.</td>
 </tr>
@@ -788,8 +755,8 @@ Searches for feeds indexed by the mirror server that match specified keywords. N
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -817,8 +784,8 @@ Lists all locally known feed URIs. If a search term is given, only URIs containi
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -846,8 +813,8 @@ Searches registered catalogs for applications that match the specified query. If
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -875,8 +842,8 @@ Refreshes (downloads) all registered catalogs.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -904,8 +871,8 @@ Adds an URI to the list of catalogs.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -937,8 +904,8 @@ Removes an URI from the list of catalogs.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -966,8 +933,8 @@ Resets the list of catalogs to the default source.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -995,8 +962,8 @@ Lists all registered catalogs.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1025,8 +992,8 @@ With no arguments, it displays all settings and their current values. With one a
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1059,8 +1026,8 @@ Register an additional source of implementations (versions) of a program.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1097,8 +1064,8 @@ Un-registers a feed, reversing the effect of <a href='#add-feed'><code>0install 
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1135,8 +1102,8 @@ Lists all extra feeds added to URI using <a href='#add-feed'><code>0install add-
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1164,8 +1131,8 @@ Calculates the manifest digest of a directory or archive.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1206,8 +1173,8 @@ Adds the contents of a directory or archive to the cache.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1236,8 +1203,8 @@ Additional arguments specify custom cache locations.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1266,8 +1233,8 @@ An additional arguments specifies a custom target cache location.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1295,8 +1262,8 @@ Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can b
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1324,8 +1291,8 @@ Determines the local path of a cached implementation.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1353,8 +1320,8 @@ Lists all implementation cache directories.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1382,8 +1349,8 @@ Lists all cached implementations. If a feed URI is specified only implementation
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1411,8 +1378,8 @@ Displays a graphical user interface for managing implementations in the cache. S
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1441,8 +1408,8 @@ Additional arguments specify custom cache locations.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1471,8 +1438,8 @@ Removes all implementations from the cache. Use this command to clean up the sys
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1500,8 +1467,8 @@ Removes an implementation from the cache.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1529,8 +1496,8 @@ Makes sure an implementation has not been damaged (i.e. if manifest digest has n
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1558,8 +1525,8 @@ Adds a directory to the list of custom implementation caches.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1591,8 +1558,8 @@ Removes a directory from the list of custom implementation caches.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1624,8 +1591,8 @@ Opens the central graphical user interface for launching and managing applicatio
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1657,8 +1624,8 @@ Add an application to the application list.</p>
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1703,8 +1670,8 @@ Removes an application from the application list and undoes any desktop environm
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1745,8 +1712,8 @@ Removes all applications from the application list and undoes any desktop enviro
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1787,8 +1754,8 @@ Adds an application to the application list (if missing) and integrate it into t
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1855,8 +1822,8 @@ Create an alias for launching an application via 0install without always having 
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1909,8 +1876,8 @@ Lists all applications currently in your application list. If a search term is g
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1951,8 +1918,8 @@ Updates all applications in the application list.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -1997,8 +1964,8 @@ Reapplies all desktop integrations of applications in the application list.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2039,8 +2006,8 @@ Synchronizes the application list with the server.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2086,8 +2053,8 @@ Imports a set of applications and desktop integrations from an existing app-list
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2132,8 +2099,8 @@ Deploys Zero Install to the specified <code>TARGET</code> directory or the defau
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2173,8 +2140,8 @@ Removes the current instance of Zero Install from the system.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2202,8 +2169,8 @@ Updates Zero Install itself to the most recent version.
   <td>Show the built-in help text.</td>
 </tr>
 <tr>
-  <td><nobr><code>--background</code></nobr><br>(Windows only)</td>
-  <td>Hide the graphical user interface and use something like a tray icon instead. Has no effect in command-line mode.</td>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
@@ -2214,27 +2181,9 @@ Updates Zero Install itself to the most recent version.
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 <tr>
-  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
-  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
-</tr>
-<tr>
-  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
-  <td>Run in off-line mode, overriding the default setting.
-<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
-</tr>
-<tr>
-  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
-  <td>Fetch fresh copies of all used feeds.</td>
-</tr>
-<tr>
   <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
   <td>Add <code>DIR</code> to the list of implementation caches to search.
 <br/>However, new downloads will not be written to this directory.</td>
-</tr>
-<tr>
-  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
-<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
 </tr>
 <tr>
   <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
@@ -2256,46 +2205,9 @@ Updates Zero Install itself to the most recent version.
   <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
 </tr>
 <tr>
-  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
-  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
-</tr>
-<tr>
-  <td><nobr><code>--os <code>OS</code></code></nobr></td>
-  <td>Forces the solver to target the operating system <code>OS</code>.
-<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
-</tr>
-<tr>
-  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
-  <td>Forces the solver to target a specific <code>CPU</code>.
-<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
-</tr>
-<tr>
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
-</tr>
-<tr>
-  <td><nobr><code>--xml</code></nobr></td>
-  <td>Write selected versions to console as machine-readable XML.</td>
-</tr>
-<tr>
-  <td><nobr><code>--show</code></nobr></td>
-  <td>Show where the selected components are stored on the disk.</td>
-</tr>
-<tr>
-  <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
-  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with <code>/</code> or <code>\</code> then the path is relative to the implementation's top-level directory, whereas otherwise it is relative to the directory containing the default main program.
-<br/>May not contain command-line arguments! Whitespaces do not need to be escaped.</td>
-</tr>
-<tr>
-  <td><nobr><code>-w <code>COMMAND</code></code></nobr><br/><nobr><code>--wrapper <code>COMMAND</code></code></nobr></td>
-  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> <code>PROGRAM</code> <code>ARGS</code>. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
-<br/>Note that the wrapper is executed in the environment selected by the program; hence, this mechanism cannot be used for sandboxing.
-<br/>May contain command-line arguments. Whitespaces must be escaped!</td>
-</tr>
-<tr>
-  <td><nobr><code>--no-wait</code></nobr></td>
-  <td>Immediately returns once the chosen program has been launched instead of waiting for it to finish executing. On Windows the exit code is the process ID of the launched program.</td>
 </tr>
 <tr>
   <td><nobr><code>--force</code></nobr></td>
