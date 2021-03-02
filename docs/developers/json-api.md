@@ -20,7 +20,7 @@ To invoke an operation, send the message `["invoke", myref, op, args]`, where `m
     To ask 0install to select a set of components to run GnuPG:
 
     ```plain
-    0x5d
+    0x5f
     ["invoke", "1", "select", [{"interface": "https://apps.0install.net/utils/gnupg.xml"}, false]]
     ```
 
