@@ -4,7 +4,7 @@
     **Maintainer:** Thomas Leonard  
     **License:** GNU Lesser General Public License  
     **Source:** <https://github.com/0install/0template>  
-    **Zero Install feed:** <http://0install.net/tools/0template.xml>
+    **Zero Install feed:** <https://apps.0install.net/0install/0template.xml>
 
 **0template** creates the XML for one version of a program from a template. The diagram below shows how it fits into the overall publishing process:
 
@@ -19,7 +19,7 @@ That is, each time you want to add a new release of a program to your master XML
 To get it:
 
 ```shell
-0install add 0template http://0install.net/tools/0template.xml
+0install add 0template https://apps.0install.net/0install/0template.xml
 ```
 
 ## Creating the template

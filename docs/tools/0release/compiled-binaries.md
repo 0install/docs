@@ -19,7 +19,7 @@ For an example of a simple binary package that works this way, have a look at th
 $ tar xzf c-prog.tgz
 $ mkdir release-c-prog
 $ cd release-c-prog
-$ 0install run http://0install.net/2007/interfaces/0release.xml ../c-prog/c-prog.xml
+$ 0install run https://apps.0install.net/0install/0release.xml ../c-prog/c-prog.xml
 ```
 
 ## Compiling on multiple systems
@@ -33,7 +33,7 @@ The `builders.conf` file has a `[global]` section listing the builders to use, f
 builders = host, precise32
 
 [builder-host]
-build = 0install run http://0install.net/2007/interfaces/0release.xml --build-slave "$@"
+build = 0install run https://apps.0install.net/0install/0release.xml --build-slave "$@"
 
 [builder-precise32]
 build = build-on-vm precise32-build-slave
@@ -99,7 +99,7 @@ vagrant up
 vagrant ssh-config > .ssh-config
 ssh -F .ssh-config default \
   'cd /vagrant && 0install run --not-before 0.10 \
-     http://0install.net/2007/interfaces/0release.xml \
+     https://apps.0install.net/0install/0release.xml \
      --build-slave "$@"' "$@" && \
   vagrant destroy -f && rm Vagrantfile
 ```

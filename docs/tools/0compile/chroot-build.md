@@ -193,7 +193,7 @@ Now we have a chroot with `0launch`, and can add `0compile`:
 
 ```shell
 CMD="0compile"
-URI="http://0install.net/2006/interfaces/0compile.xml"
+URI="https://apps.0install.net/0install/0compile.xml"
 
 $ yes Y | /usr/bin/0launch -cd $URI
 $ 0alias -d /usr/bin $CMD $URI

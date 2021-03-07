@@ -4,7 +4,7 @@
     **Maintainer:** Thomas Leonard  
     **License:** GNU Lesser General Public License  
     **Source:** <https://github.com/0install/0repo>  
-    **Zero Install feed:** <http://0install.net/tools/0repo.xml>
+    **Zero Install feed:** <https://apps.0install.net/0install/0repo.xml>
 
 **0repo** provides an easy and reliable way to maintain a repository of 0install software for others to use.
 
@@ -23,7 +23,7 @@ _Figure 2: Multi-developer deployment_
 To get it:
 
 ```shell
-0install add 0repo http://0install.net/tools/0repo.xml
+0install add 0repo https://apps.0install.net/0install/0repo.xml
 ```
 
 Full instructions can be found in [0repo's README](https://github.com/0install/0repo/blob/master/README.md).
