@@ -4,14 +4,14 @@
     **Maintainer:** Thomas Leonard  
     **License:** GNU General Public License  
     **Source:** <http://repo.or.cz/w/FeedLint.git>  
-    **Zero Install feed:** <http://0install.net/2007/interfaces/FeedLint.xml>
+    **Zero Install feed:** <https://apps.0install.net/0install/feedlint.xml>
 
 If you maintain a number of feeds, each with several versions of your programs, how do you know that all the download links are still OK? Run FeedLint on your feeds from time-to-time to check.
 
 To use it, pass the URLs of the feeds to check as arguments, e.g.:
 
 ```shell
-0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
+0install add feedlint https://apps.0install.net/0install/feedlint.xml
 feedlint http://my/feed.xml
 ```
 

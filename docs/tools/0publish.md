@@ -4,7 +4,7 @@
     **Maintainer:** Thomas Leonard  
     **License:** GNU Lesser General Public License  
     **Source:** <https://github.com/0install/0publish>  
-    **Zero Install feed:** <http://0install.net/2006/interfaces/0publish>
+    **Zero Install feed:** <https://apps.0install.net/0install/0publish.xml>
 
 Making a new release of your software can be time consuming and error-prone, so you'll probably want to script as much as possible of it. The **0publish** command provides a set of useful transformations for feed files which you can integrate into your release scripts.
 
@@ -21,7 +21,7 @@ However, **0publish is somewhat deprecated**:
 You can create an app for `0publish` in the usual way:
 
 ```shell
-0install add 0publish http://0install.net/2006/interfaces/0publish
+0install add 0publish https://apps.0install.net/0install/0publish.xml
 ```
 
 ## 0publish reference

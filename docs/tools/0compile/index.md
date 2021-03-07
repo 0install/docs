@@ -4,7 +4,7 @@
     **Maintainer:** Thomas Leonard  
     **License:** GNU Lesser General Public License  
     **Source:** <https://github.com/0install/0compile>  
-    **Zero Install feed:** <http://0install.net/2006/interfaces/0compile.xml>
+    **Zero Install feed:** <https://apps.0install.net/0install/0compile.xml>
 
 Normally, Zero Install will select a pre-built binary for your system. However, it can also be used to compile a new binary from a source package. This is useful if:
 
@@ -15,7 +15,7 @@ Normally, Zero Install will select a pre-built binary for your system. However, 
 This tutorial shows how to use `0compile` for these purposes. It is assumed that you have already installed [Zero Install](https://get.0install.net/) and know how to run programs using it. To get `0compile` itself, use:
 
 ```shell
-0install add 0compile http://0install.net/2006/interfaces/0compile.xml
+0install add 0compile https://apps.0install.net/0install/0compile.xml
 ```
 
 !!! note
