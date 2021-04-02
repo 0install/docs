@@ -246,7 +246,7 @@ Returns an exit status of <code>0</code> if it selected a set of versions, and a
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -341,7 +341,7 @@ Returns an exit status of <code>0</code> if it selected a suitable set of versio
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -440,7 +440,7 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -522,7 +522,7 @@ Returns an exit status of <code>1</code> if the download step failed. Otherwise,
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -628,7 +628,7 @@ The file must have a trusted digital signature, as when fetching from the networ
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -657,7 +657,7 @@ Exports all feeds and implementations required to launch the program specified b
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -760,7 +760,7 @@ Searches for feeds indexed by the mirror server that match specified keywords. N
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -789,7 +789,7 @@ Lists all locally known feed URIs. If a search term is given, only URIs containi
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -818,7 +818,7 @@ Searches registered catalogs for applications that match the specified query. If
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -847,7 +847,7 @@ Refreshes (downloads) all registered catalogs.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -876,7 +876,7 @@ Adds an URI to the list of catalogs.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -909,7 +909,7 @@ Removes an URI from the list of catalogs.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -938,7 +938,7 @@ Resets the list of catalogs to the default source.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -967,7 +967,7 @@ Lists all registered catalogs.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -997,7 +997,7 @@ With no arguments, it displays all settings and their current values. With one a
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1031,7 +1031,7 @@ Register an additional source of implementations (versions) of a program.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1069,7 +1069,7 @@ Un-registers a feed, reversing the effect of <a href='#add-feed'><code>0install 
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1107,7 +1107,7 @@ Lists all extra feeds added to URI using <a href='#add-feed'><code>0install add-
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1136,7 +1136,7 @@ Calculates the manifest digest of a directory or archive.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1178,7 +1178,7 @@ Adds the contents of a directory or archive to the cache.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1208,7 +1208,7 @@ Additional arguments specify custom cache locations.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1238,7 +1238,7 @@ An additional arguments specifies a custom target cache location.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1267,7 +1267,7 @@ Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can b
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1296,7 +1296,7 @@ Determines the local path of a cached implementation.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1325,7 +1325,7 @@ Lists all implementation cache directories.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1354,7 +1354,7 @@ Lists all cached implementations. If a feed URI is specified only implementation
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1383,7 +1383,7 @@ Displays a graphical user interface for managing implementations in the cache. S
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1413,7 +1413,7 @@ Additional arguments specify custom cache locations.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1443,7 +1443,7 @@ Removes all implementations from the cache. Use this command to clean up the sys
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1472,7 +1472,7 @@ Removes an implementation from the cache.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1501,7 +1501,7 @@ Makes sure an implementation has not been damaged (i.e. if manifest digest has n
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1530,7 +1530,7 @@ Adds a directory to the list of custom implementation caches.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1563,7 +1563,7 @@ Removes a directory from the list of custom implementation caches.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1596,7 +1596,7 @@ Opens the central graphical user interface for launching and managing applicatio
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1629,7 +1629,7 @@ Add an application to the application list.</p>
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1675,7 +1675,7 @@ Removes an application from the application list and undoes any desktop environm
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1717,7 +1717,7 @@ Removes all applications from the application list and undoes any desktop enviro
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1759,7 +1759,7 @@ Adds an application to the application list (if missing) and integrate it into t
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1827,7 +1827,7 @@ Create an alias for launching an application via 0install without always having 
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1881,7 +1881,7 @@ Lists all applications currently in your application list. If a search term is g
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1923,7 +1923,7 @@ Updates all applications in the application list.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -1969,7 +1969,7 @@ Reapplies all desktop integrations of applications in the application list.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -2011,7 +2011,7 @@ Synchronizes the application list with the server.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -2058,7 +2058,7 @@ Imports a set of applications and desktop integrations from an existing app-list
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -2104,7 +2104,7 @@ Deploys Zero Install to the specified <code>TARGET</code> directory or the defau
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -2145,7 +2145,7 @@ Removes the current instance of Zero Install from the system.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
@@ -2174,7 +2174,7 @@ Updates Zero Install itself to the most recent version.
 </tr>
 <tr>
   <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
-  <td>Automatically answer questions with defaults when possible. Avoid unnecessary console output (e.g. progress bars).</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
 </tr>
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
