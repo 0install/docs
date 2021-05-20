@@ -977,14 +977,14 @@
         <xsd:attribute name="extract" type="xsd:string">
           <xsd:annotation>
             <xsd:documentation>
-              The name of the subdirectory in the archive to extract; empty or unset for entire archive.
+              The subdirectory inside the archive to extract; unset or empty for entire archive.
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="dest" type="xsd:string">
           <xsd:annotation>
             <xsd:documentation>
-              The subdirectory within the implementation directory to extract this archive to; empty unset for top-level.
+              The directory to extract into relative to the implementation root as a Unix-style path; unset or empty for top-level.
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
@@ -1101,14 +1101,14 @@
         <xsd:attribute name="source" type="xsd:string" use="optional">
           <xsd:annotation>
             <xsd:documentation>
-              The source file or directory relative to the source implementation root as a Unix-style path. Leave unset to copy the entire implementation.
+              The source file or directory relative to the source implementation root as a Unix-style path; unset or empty for entire implementation.
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="dest" type="xsd:string" use="optional">
           <xsd:annotation>
             <xsd:documentation>
-              The destination file or directory relative to the destination implementation root as a Unix-style path. Leave unset to copy to the root of the new implementation. Must be set if 'source' points to a file rather than a directory.
+              The destination file or directory relative to the implementation root as a Unix-style path; unset or empty for top-level. Must be set if 'source' points to a file.
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
