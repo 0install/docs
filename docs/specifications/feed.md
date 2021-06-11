@@ -224,7 +224,7 @@ The `<runner>` element introduces a special kind of dependency: the program that
     </command>
     ```
 
-In this case, 0install will run the equivalent of `/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt`.
+    In this case, 0install will run the equivalent of `/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt`.
 
 ## Package implementations
 
@@ -394,7 +394,7 @@ Since 0install 1.13, you can use the `version` attribute on the dependency eleme
                version='2.6..!3 | 3.2.2..'/>
     ```
 
-This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
+    This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.
 
 Each range is in the form `START..!END`. The range matches versions where `START` <= `VERSION` < `END`. The start or end may be omitted. A single version number may be used instead of a range to match only that version, or `!VERSION` to match everything except that version.
 
@@ -411,7 +411,12 @@ There is also an older syntax which also works with 0install &lt; 1.13, where a 
 `before`
 : This version and all later versions are unsuitable.
 
-For example, `<version not-before='2.4' before='2.6'>` allows any of these versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
+!!! example
+    ```xml
+    <version not-before='2.4' before='2.6'>
+    ```
+
+    allows any of these versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.
 
 This older syntax is not supported with `<packager-implementation>`.
 
@@ -504,13 +509,14 @@ If `command` is given, then 0install will select the given `<command>` within th
 
 Any additional attributes and child elements are not processed, but are just passed through. If your binding needs a path within the selected implementation, it is suggested that the `path` attribute be used for this. Other attributes and child elements should be namespaced to avoid collisions.
 
-For example, the [EBox](../tools/ebox.md) application launcher allows each code module to specify its dependencies, which are then available in the module's scope as _getters_. The ebox-edit application depends on the help library like this:
+!!! example
+    The [EBox](../tools/ebox.md) application launcher allows each code module to specify its dependencies, which are then available in the module's scope as _getters_. The ebox-edit application depends on the help library like this:
 
-```xml
-<requires interface="http://0install.net/tests/ebox-help.xml">
-  <binding e:getter='help'/>
-</requires>
-```
+    ```xml
+    <requires interface="http://0install.net/tests/ebox-help.xml">
+      <binding e:getter='help'/>
+    </requires>
+    ```
 
 ## Versions
 
