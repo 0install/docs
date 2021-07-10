@@ -1,0 +1,1804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://0install.net/packaging/examples/find/">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Find - Zero Install Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#find" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Zero Install Docs" class="md-header__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero Install Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Find
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/0install/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/perspectives/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../basics/" class="md-tabs__link">
+        Getting started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../details/" class="md-tabs__link">
+        Details
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../developers/" class="md-tabs__link">
+        Developers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Packaging
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../specifications/" class="md-tabs__link">
+        Specifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/" class="md-tabs__link">
+        Tools
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero Install Docs" class="md-nav__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Zero Install Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/0install/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/perspectives/" class="md-nav__link">
+        Perspectives
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Getting started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/first-launch/" class="md-nav__link">
+        First launch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/menu/" class="md-nav__link">
+        Create a menu entry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/alias/" class="md-nav__link">
+        Create a command-line alias
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Details
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Details" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Details
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/" class="md-nav__link">
+        Manual walk-through
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/policy-settings/" class="md-nav__link">
+        Policy settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/apps/" class="md-nav__link">
+        Apps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/desktop-integration/" class="md-nav__link">
+        Desktop integration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/sync/" class="md-nav__link">
+        Sync
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/servers/" class="md-nav__link">
+        Servers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/cache/" class="md-nav__link">
+        Cache
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/sharing/" class="md-nav__link">
+        Sharing downloads between users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/virtual-machines/" class="md-nav__link">
+        Virtual machines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/distribution-integration/" class="md-nav__link">
+        Distribution integration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/export/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/troubleshooting/" class="md-nav__link">
+        Trouble-shooting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/cli/" class="md-nav__link">
+        Command-line interface
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/file-locations/" class="md-nav__link">
+        File locations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/os-differences/" class="md-nav__link">
+        OS-specific differences
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/linux/" class="md-nav__link">
+        Zero Install for Linux
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/macos/" class="md-nav__link">
+        Zero Install for macOS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../details/windows/" class="md-nav__link">
+        Zero Install for Windows
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/" class="md-nav__link">
+        Developer overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/using-git/" class="md-nav__link">
+        Using Git
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/solver/" class="md-nav__link">
+        The Solver
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/python-api/" class="md-nav__link">
+        Python API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/dotnet-api/" class="md-nav__link">
+        .NET API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/json-api/" class="md-nav__link">
+        JSON API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Packaging
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Packaging" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Packaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Packaging overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide-cli/" class="md-nav__link">
+        Packaging guide (command-line)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide-gui/" class="md-nav__link">
+        Packaging guide (graphical)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-feeds/" class="md-nav__link">
+        Local feeds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/" class="md-nav__link">
+        Tempaltes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" checked>
+      
+      <label class="md-nav__link" for="__nav_6_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-lib/" class="md-nav__link">
+        .NET library
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Find
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Find
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-find-directly" class="md-nav__link">
+    Running Find directly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-interface-file" class="md-nav__link">
+    Creating the interface file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-archive" class="md-nav__link">
+    Adding the archive
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding the archive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-on-weaknesses-in-sha-1" class="md-nav__link">
+    Note on weaknesses in SHA-1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-the-interface" class="md-nav__link">
+    Publishing the interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-the-local-feed" class="md-nav__link">
+    Registering the local feed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems-with-manifest-digests" class="md-nav__link">
+    Problems with manifest digests
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inkscape/" class="md-nav__link">
+        Inkscape
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rox/" class="md-nav__link">
+        ROX-Filer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Specifications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Specifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Specifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/" class="md-nav__link">
+        Specifications overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/feed/" class="md-nav__link">
+        Feed files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/capabilities/" class="md-nav__link">
+        Capabilities extension
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/catalog/" class="md-nav__link">
+        Catalog files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/selections/" class="md-nav__link">
+        Selections files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/manifest/" class="md-nav__link">
+        Manifest files
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/" class="md-nav__link">
+        Tools overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0bootstrap/" class="md-nav__link">
+        0bootstrap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0export/" class="md-nav__link">
+        0export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0mirror/" class="md-nav__link">
+        0mirror
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0publish-win/" class="md-nav__link">
+        0publish-win
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0publish/" class="md-nav__link">
+        0publish
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0repo/" class="md-nav__link">
+        0repo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0share/" class="md-nav__link">
+        0share
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0template/" class="md-nav__link">
+        0template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0test/" class="md-nav__link">
+        0test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0watch/" class="md-nav__link">
+        0watch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/ebox/" class="md-nav__link">
+        ebox
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/feedlint/" class="md-nav__link">
+        FeedLint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/make-headers/" class="md-nav__link">
+        Make-headers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/pkg2zero/" class="md-nav__link">
+        pkg2zero
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_16" type="checkbox" id="__nav_8_16" >
+      
+      <label class="md-nav__link" for="__nav_8_16">
+        0compile
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="0compile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_16">
+          <span class="md-nav__icon md-icon"></span>
+          0compile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0compile/" class="md-nav__link">
+        0compile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0compile/chroot-build/" class="md-nav__link">
+        0compile: Chroot Build
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0compile/developers/" class="md-nav__link">
+        0compile: Developers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0compile/example-scons/" class="md-nav__link">
+        0compile: SCons example
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_17" type="checkbox" id="__nav_8_17" >
+      
+      <label class="md-nav__link" for="__nav_8_17">
+        0release
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="0release" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_17">
+          <span class="md-nav__icon md-icon"></span>
+          0release
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0release/" class="md-nav__link">
+        0release
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0release/compiled-binaries/" class="md-nav__link">
+        0release: Compiled binaries
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/0release/customisation/" class="md-nav__link">
+        0release: Customisation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/0install/docs/blob/master/docs/packaging/examples/find.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="find">Find<a class="headerlink" href="#find" title="Permanent link">&para;</a></h1>
+<p>In the <a href="../../guide-gui/">main packaging guide</a> (which should be read before this one) we saw how to make a simple Python program available. When the user asked to run the program, the injector downloaded it for them and cached it. However, most programs depend on other programs, libraries and resources and these can also be fetched using the injector. Our example package will be <a href="http://www.hayber.us/rox/Find">Find</a>, a little utility for searching for files which depends on the ROX-Lib Python library.</p>
+<h2 id="running-find-directly">Running Find directly<a class="headerlink" href="#running-find-directly" title="Permanent link">&para;</a></h2>
+<p>Start by downloading <a href="http://www.hayber.us/rox/find/Find-006.tgz">Find-006</a>. This is just a normal application, not specially designed for the injector. If you try to run it, you should get an error:</p>
+<div class="highlight"><pre><span></span><code>$ wget http://www.hayber.us/rox/find/Find-006.tgz
+$ tar xzf Find-006.tgz
+$ <span class="nb">cd</span> Find
+$ ./AppRun
+*** This program needs ROX-Lib2 <span class="o">(</span>version <span class="m">2</span>.0.0<span class="o">)</span> to run.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If it runs without an error, then either you've installed ROX-Lib manually (not using the injector) or your <code>PYTHONPATH</code> already points to it.</p>
+</div>
+<h2 id="creating-the-interface-file">Creating the interface file<a class="headerlink" href="#creating-the-interface-file" title="Permanent link">&para;</a></h2>
+<p>Start by creating an XML interface file (<code>Find.xml</code>) as we did before:</p>
+<div class="highlight"><pre><span></span><code>$ 0publish Find.xml
+</code></pre></div>
+<p>Fill in the fields as before. The only difference is the addition of the <code>requires</code> element, which states that this program requires <strong>ROX-Lib</strong>, and the <code>main</code> attribute which is now <code>AppRun</code>. The final result should look something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="cp">&lt;?xml-stylesheet type=&#39;text/xsl&#39;</span>
+<span class="cp">     href=&#39;http://0install.net/2006/stylesheets/interface.xsl&#39;?&gt;</span>
+
+<span class="nt">&lt;interface</span> <span class="na">xmlns=</span><span class="s">&quot;http://zero-install.sourceforge.net/2004/injector/interface&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;name&gt;</span>Find<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;summary&gt;</span>a find-in-files utility<span class="nt">&lt;/summary&gt;</span>
+  <span class="nt">&lt;description&gt;</span>
+Searches files for specific text, displaying the results in a window. Double click
+on the result line(s) to open the file at that point.
+
+Configuration options are available to customize the search command and the editor with which to
+open the files.
+  <span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;homepage&gt;</span>http://www.hayber.us/rox/Find<span class="nt">&lt;/homepage&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">type=</span><span class="s">&#39;image/png&#39;</span> <span class="na">href=</span><span class="s">&#39;http://www.hayber.us/0install/Find.png&#39;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;group</span> <span class="na">main=</span><span class="s">&#39;AppRun&#39;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;requires</span> <span class="na">interface=</span><span class="s">&quot;http://rox.sourceforge.net/2005/interfaces/ROX-Lib&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;environment</span> <span class="na">insert=</span><span class="s">&quot;ROX-Lib2/python&quot;</span> <span class="na">name=</span><span class="s">&quot;PYTHONPATH&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/requires&gt;</span>
+    <span class="nt">&lt;implementation</span> <span class="na">id=</span><span class="s">&#39;.&#39;</span> <span class="na">version=</span><span class="s">&#39;6&#39;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/group&gt;</span>
+</code></pre></div>
+<p>Let's go over the group part in detail:</p>
+<ul>
+<li>The <code>&lt;group&gt;</code> element contains a set of implementations of the interface (versions of <strong>Find</strong>) and their requirements. The group saves us having to repeat the requirements for each implementation (since they often don't change). We have also given the <code>main</code> attribute here, since all versions of <strong>Find</strong> are run using a script with this name.</li>
+<li>We have a single requirement, ROX-Lib, which is identified by the URI of its interface. The URI is chosen by the publisher of the ROX-Lib interface, just as we chose the URI for our SCons interface in the previous tutorial.</li>
+<li>The <code>&lt;environment&gt;</code> element inside tells the injector how to make its choice known to <strong>Find</strong>. In this case, it is by inserting <code>/path/of/cache/DIGEST/ROX-Lib2/python</code> to the beginning of the <code>PYTHONPATH</code> environment variable. When Find (a Python program) does <code>import rox</code>, it will then get the chosen version of <strong>ROX-Lib</strong>.</li>
+<li>Also inside the group we have a single (local) implementation, as before. The <strong>id</strong> gives the location of the implementation directory relative to the interface file. In this case, we are assuming that the <code>Find.xml</code> file is in the same directory as the <code>AppRun</code> script.</li>
+</ul>
+<p>Save the interface using the default file name (a temporary file chosen by <code>0publish</code>) and try running it:</p>
+<div class="highlight"><pre><span></span><code>0install run ./Find.xml
+</code></pre></div>
+<p>If you don't already have ROX-Lib, you will be prompted to download it as usual. Once ROX-Lib is available, Find runs:</p>
+<p><img alt="Find running" src="../../../img/screens/find.png" /></p>
+<p>As usual, you can run <code>0install run -g ./Find.xml</code> to force the 0install GUI to appear. You will see that there is a single version of Find available, but that you can choose any version of ROX-Lib to use with it.</p>
+<h2 id="adding-the-archive">Adding the archive<a class="headerlink" href="#adding-the-archive" title="Permanent link">&para;</a></h2>
+<p>We will now change the implementation as we did before so that the injector will download <strong>Find</strong> for us instead of requiring it to be on the machine already:</p>
+<div class="highlight"><pre><span></span><code>$ 0publish Find.xml <span class="se">\</span>
+  --set-version<span class="o">=</span><span class="m">6</span> <span class="se">\</span>
+  --set-released<span class="o">=</span>today <span class="se">\</span>
+  --archive-url<span class="o">=</span>http://www.hayber.us/rox/find/Find-006.tgz <span class="se">\</span>
+  --archive-file<span class="o">=</span>../Find-006.tgz <span class="se">\</span>
+  --archive-extract<span class="o">=</span>Find
+</code></pre></div>
+<p>As the archive file isn't in the current directory, we give its location with <code>--archive-file</code>. <code>0publish</code> needs this to get the digest, but it doesn't download the archive from the network because it wouldn't be able to check that it hasn't been tampered with (although if the program's author doesn't provide a signature then there may be no way to check anyway).</p>
+<p>We also use the <code>--archive-extract</code> attribute. This is because each <strong>Find</strong> archive contains a single top-level directory, which we don't need (and the name might change in different versions, e.g. if the author decides to include the version number). Extracting just the contents means the every version will have the same structure, which makes it easier for other programs to depend on it. This is mostly useful for libraries like ROX-Lib, where we need to know that the path will always be <code>lib</code>, not <code>libfoo-1.1/lib</code> with version 1.1 and <code>libfoo-1.2/lib</code> with version 1.2, since a fixed path has to go in the <code>environment</code> element above.</p>
+<p>The resulting file will contain this:</p>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;implementation</span> <span class="na">id=</span><span class="s">&#39;sha1=ff9d9e11fde0a146c7e1781511fd9afb17752e34&#39;</span> <span class="na">released=</span><span class="s">&quot;2006-05-19&quot;</span> <span class="na">version=</span><span class="s">&#39;6&#39;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;archive</span> <span class="na">href=</span><span class="s">&quot;http://www.hayber.us/rox/find/Find-006.tgz&quot;</span> <span class="na">size=</span><span class="s">&quot;23161&quot;</span> <span class="na">extract=</span><span class="s">&#39;Find&#39;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/implementation&gt;</span>
+</code></pre></div>
+<p>The attributes of <code>&lt;archive&gt;</code> are:</p>
+<dl>
+<dt><code>href</code></dt>
+<dd>a URL from which the archive can be downloaded (in escaped form, so a space is written as %20, etc).</dd>
+<dt><code>size</code></dt>
+<dd>the size of the archive (for progress bars).</dd>
+<dt><code>extract</code></dt>
+<dd>(optional) a subdirectory of the archive to use. We could have omitted this and changed the implementation's <code>main</code> to <code>Find/AppRun</code> instead, but it's better to keep the main attribute the same, if possible.</dd>
+</dl>
+<p>If you run the new <code>Find.xml</code>, the injector should download and unpack the archive into the cache, and run Find from it.</p>
+<h3 id="note-on-weaknesses-in-sha-1">Note on weaknesses in SHA-1<a class="headerlink" href="#note-on-weaknesses-in-sha-1" title="Permanent link">&para;</a></h3>
+<p>Some weaknesses in the SHA-1 algorithm have been discovered. At present, it is still strong enough for our use, but you may wish to use some other algorithm, with the <code>--manifest-algorithm</code> option. See the <a href="../../../specifications/manifest/#algorithms">specification</a> for a list of available secure hashing algorithms and which versions of the injector support them.</p>
+<p>See the <a href="http://www.cryptography.com/cnews/hash.html">HASH COLLISION Q&amp;A</a> for more details.</p>
+<h2 id="publishing-the-interface">Publishing the interface<a class="headerlink" href="#publishing-the-interface" title="Permanent link">&para;</a></h2>
+<p>The <code>Find.xml</code> interface file can now be signed and published as described before:</p>
+<div class="highlight"><pre><span></span><code>$ 0publish Find.xml --set-interface-uri<span class="o">=</span>http://www.hayber.us/0install/Find
+$ 0publish Find.xml --xmlsign
+</code></pre></div>
+<h2 id="registering-the-local-feed">Registering the local feed<a class="headerlink" href="#registering-the-local-feed" title="Permanent link">&para;</a></h2>
+<p>We have already seen how to use a local <code>Find.xml</code> file inside the <strong>Find</strong> directory to run the local version with a chosen version of <strong>ROX-Lib</strong> (i.e., by setting the <code>id</code> attribute to <code>.</code>). It is quite useful to add this file to your CVS (or similar system) to let developers test new versions easily, since it will get the libraries for them.</p>
+<p>In fact, we'd often like to see both downloadable implementations (e.g., official releases) and local versions (e.g., developer CVS checkouts) of Find together. To do this, all we need is to add a <code>feed-for</code> line in the local <code>Find/Find.xml</code> file (the one where the implementation <code>id</code> is <code>.</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">xmlns=</span><span class="s">&quot;http://zero-install.sourceforge.net/2004/injector/interface&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;feed-for</span> <span class="na">interface=</span><span class="s">&#39;http://www.hayber.us/0install/Find&#39;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>You can now register the local feed in the normal way:</p>
+<div class="highlight"><pre><span></span><code>0install add-feed Find.xml
+</code></pre></div>
+<p>When another program runs <strong>Find</strong> using its official URI, this local version will be included in the list of available versions that can be selected. It is traditional to add <code>.0</code> to the end of the version number for CVS versions, so that the CVS version will be preferred to the previous release.</p>
+<h2 id="problems-with-manifest-digests">Problems with manifest digests<a class="headerlink" href="#problems-with-manifest-digests" title="Permanent link">&para;</a></h2>
+<p>There is one possible problem with the digests, where the 'actual' manifest changes each time the archive is extracted! This happens when you include only some deep subdirectories in the archive, but not the top-level directory. Eg:</p>
+<div class="highlight"><pre><span></span><code>$ tar czf archive.tgz deeply/nested/path
+</code></pre></div>
+<p>When tar extracts the archive, it restores the original mtime of 'path', but creates 'deeply' and 'nested' with the current time. This is what causes the digest to change. There are two possible solutions:</p>
+<ul>
+<li>Always list all top-level directories when creating archives.</li>
+<li>Use any algorithm except <code>sha1</code>, as this is the only one that includes directory mtimes in the digest (for backwards compatibility).</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../dotnet-lib/" class="md-footer__link md-footer__link--prev" aria-label="Previous: .NET library" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              .NET library
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../inkscape/" class="md-footer__link md-footer__link--next" aria-label="Next: Inkscape" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Inkscape
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2003-2020 Thomas Leonard, Bastian Eicher and others<br> Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>

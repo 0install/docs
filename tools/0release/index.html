@@ -1,0 +1,1897 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://0install.net/tools/0release/">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>0release - Zero Install Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0release" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zero Install Docs" class="md-header__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero Install Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              0release
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/0install/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/perspectives/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../basics/" class="md-tabs__link">
+        Getting started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../details/" class="md-tabs__link">
+        Details
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../developers/" class="md-tabs__link">
+        Developers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../packaging/" class="md-tabs__link">
+        Packaging
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specifications/" class="md-tabs__link">
+        Specifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Tools
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zero Install Docs" class="md-nav__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Zero Install Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/0install/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/perspectives/" class="md-nav__link">
+        Perspectives
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Getting started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/first-launch/" class="md-nav__link">
+        First launch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/menu/" class="md-nav__link">
+        Create a menu entry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/alias/" class="md-nav__link">
+        Create a command-line alias
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Details
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Details" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Details
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/" class="md-nav__link">
+        Manual walk-through
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/policy-settings/" class="md-nav__link">
+        Policy settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/apps/" class="md-nav__link">
+        Apps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/desktop-integration/" class="md-nav__link">
+        Desktop integration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/sync/" class="md-nav__link">
+        Sync
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/servers/" class="md-nav__link">
+        Servers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/cache/" class="md-nav__link">
+        Cache
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/sharing/" class="md-nav__link">
+        Sharing downloads between users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/virtual-machines/" class="md-nav__link">
+        Virtual machines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/distribution-integration/" class="md-nav__link">
+        Distribution integration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/export/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/troubleshooting/" class="md-nav__link">
+        Trouble-shooting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/cli/" class="md-nav__link">
+        Command-line interface
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/file-locations/" class="md-nav__link">
+        File locations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/os-differences/" class="md-nav__link">
+        OS-specific differences
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/linux/" class="md-nav__link">
+        Zero Install for Linux
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/macos/" class="md-nav__link">
+        Zero Install for macOS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/windows/" class="md-nav__link">
+        Zero Install for Windows
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/" class="md-nav__link">
+        Developer overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/using-git/" class="md-nav__link">
+        Using Git
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/solver/" class="md-nav__link">
+        The Solver
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/python-api/" class="md-nav__link">
+        Python API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/dotnet-api/" class="md-nav__link">
+        .NET API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/json-api/" class="md-nav__link">
+        JSON API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Packaging
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Packaging" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Packaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/" class="md-nav__link">
+        Packaging overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-cli/" class="md-nav__link">
+        Packaging guide (command-line)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-gui/" class="md-nav__link">
+        Packaging guide (graphical)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/local-feeds/" class="md-nav__link">
+        Local feeds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/templates/" class="md-nav__link">
+        Tempaltes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+      
+      <label class="md-nav__link" for="__nav_6_7">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/dotnet-lib/" class="md-nav__link">
+        .NET library
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/inkscape/" class="md-nav__link">
+        Inkscape
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/rox/" class="md-nav__link">
+        ROX-Filer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Specifications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Specifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Specifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/" class="md-nav__link">
+        Specifications overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/feed/" class="md-nav__link">
+        Feed files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/capabilities/" class="md-nav__link">
+        Capabilities extension
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/catalog/" class="md-nav__link">
+        Catalog files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/selections/" class="md-nav__link">
+        Selections files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/manifest/" class="md-nav__link">
+        Manifest files
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tools overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0bootstrap/" class="md-nav__link">
+        0bootstrap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0export/" class="md-nav__link">
+        0export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0mirror/" class="md-nav__link">
+        0mirror
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0publish-win/" class="md-nav__link">
+        0publish-win
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0publish/" class="md-nav__link">
+        0publish
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0repo/" class="md-nav__link">
+        0repo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0share/" class="md-nav__link">
+        0share
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0template/" class="md-nav__link">
+        0template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0test/" class="md-nav__link">
+        0test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0watch/" class="md-nav__link">
+        0watch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ebox/" class="md-nav__link">
+        ebox
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedlint/" class="md-nav__link">
+        FeedLint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../make-headers/" class="md-nav__link">
+        Make-headers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg2zero/" class="md-nav__link">
+        pkg2zero
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_16" type="checkbox" id="__nav_8_16" >
+      
+      <label class="md-nav__link" for="__nav_8_16">
+        0compile
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="0compile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_16">
+          <span class="md-nav__icon md-icon"></span>
+          0compile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0compile/" class="md-nav__link">
+        0compile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0compile/chroot-build/" class="md-nav__link">
+        0compile: Chroot Build
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0compile/developers/" class="md-nav__link">
+        0compile: Developers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0compile/example-scons/" class="md-nav__link">
+        0compile: SCons example
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_17" type="checkbox" id="__nav_8_17" checked>
+      
+      <label class="md-nav__link" for="__nav_8_17">
+        0release
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="0release" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_17">
+          <span class="md-nav__icon md-icon"></span>
+          0release
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          0release
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        0release
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-your-source-repository" class="md-nav__link">
+    Preparing your source repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-releases-directory" class="md-nav__link">
+    Creating the releases directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-release-candidate" class="md-nav__link">
+    Creating a release candidate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accepting-the-release-candidate" class="md-nav__link">
+    Accepting the release candidate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customising-the-release-process" class="md-nav__link">
+    Customising the release process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-and-binaries" class="md-nav__link">
+    Source and binaries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aborting-a-release" class="md-nav__link">
+    Aborting a release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unpublishing-a-release" class="md-nav__link">
+    Unpublishing a release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-i-need-to-keep-the-releases-directory" class="md-nav__link">
+    Do I need to keep the releases directory?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="compiled-binaries/" class="md-nav__link">
+        0release: Compiled binaries
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="customisation/" class="md-nav__link">
+        0release: Customisation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/0install/docs/blob/master/docs/tools/0release/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="0release">0release<a class="headerlink" href="#0release" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p><strong>Maintainer:</strong> Thomas Leonard<br />
+<strong>License:</strong> GNU Lesser General Public License<br />
+<strong>Source:</strong> <a href="https://github.com/0install/0release">https://github.com/0install/0release</a><br />
+<strong>Zero Install feed:</strong> <a href="https://apps.0install.net/0install/0release.xml">https://apps.0install.net/0install/0release.xml</a></p>
+</div>
+<p><strong>0release</strong> can be used to make new releases of your software. It handles details such as setting the version number and release date, tagging the release in your version control system and updating your Zero Install feed.</p>
+<p>The general process for an architecture-independent package (e.g. a Python program) is shown in the diagram below (<a href="compiled-binaries/">releasing a source package and multiple binary packages</a> is also possible):</p>
+<p><img alt="The release process" src="../../img/uml/release-process.png" /></p>
+<p>After doing some development (so you have something to release!) you use 0release to prepare a new release. It will:</p>
+<ol>
+<li>Commit a release revision in your version control system (e.g. with a version of <code>1.3</code>) on a new temporary branch.</li>
+<li>Export the release revision and create a tarball for distribution.</li>
+<li>Unpack the release and run the unit tests.</li>
+<li>Update the version numbers in your version control system again (e.g. to <code>1.3-post</code>).</li>
+</ol>
+<p>You can then run any final (manual) tests on the release. If you're happy with the result, then 0release can publish it (e.g. submit the release to 0repo, and push the new commits and tag to your public version control system). Otherwise, 0release will discard the temporary branch so that you can fix the problems and try again.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don't <em>need</em> to use this program to make your software available through Zero Install. You can just create a tarball using your normal process and then <a href="../../packaging/">publish a feed</a> for it. However, 0release can automate some of the steps for you. It's especially useful for new projects, where you don't yet have an established process. Having a program to handle new releases brings several advantages over doing it manually:</p>
+</div>
+<ul>
+<li>Making a new release is quicker, since many steps are automated.</li>
+<li>You can't forget some steps (did you forget to tag version 1.2? did you remember to compile the translations in 1.4? etc).</li>
+<li>You get a consistent structure each time (are your archives called <code>myprog-V.VV-linux.tgz</code> or <code>My-Prog-Linux-V.VV.tar.gz</code>?).</li>
+<li>If someone else needs to make a release, they will follow the same process.</li>
+</ul>
+<p>Git is fully supported. It should be fairly easy to support other (distributed) version control systems.</p>
+<h2 id="preparing-your-source-repository">Preparing your source repository<a class="headerlink" href="#preparing-your-source-repository" title="Permanent link">&para;</a></h2>
+<p>You'll need a <a href="../../packaging/local-feeds/">local feed</a> within your source directory (under version control). This contains the same information as a normal published feed would (name, description, dependencies, etc). The only differences are:</p>
+<ul>
+<li>The local feed refers to a local directory (e.g. <code>id="."</code> for the directory containing the local feed) rather than a secure hash.</li>
+<li>It has no digital signature.</li>
+<li>The version will be a development version (e.g <code>1.2-post</code> if your last released version was <code>1.2</code>).</li>
+</ul>
+<p>Having a local feed is useful even if you don't use <code>0release</code>, because it lets people check out a development snapshot of your program and then register it (using <a href="../../details/cli/#add-feed"><code>0install add-feed</code></a>) or run it directly with Zero Install handling its dependencies.</p>
+<p>A minimal Hello World example is available for testing. You can check it out like this, using the <a href="http://git-scm.com/">Git</a> version control system:</p>
+<div class="highlight"><pre><span></span><code>$ git clone git://github.com/0install/hello-python.git
+</code></pre></div>
+<p>To check that you can run it, use <a href="https://get.0install.net/">0install</a> on the feed:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> hello-python
+$ 0install run HelloWorld.xml
+Hello World!
+</code></pre></div>
+<p><code>HelloWorld.xml</code> is the local feed. Its contents look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="nt">&lt;interface</span> <span class="na">xmlns=</span><span class="s">&quot;http://zero-install.sourceforge.net/2004/injector/interface&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;name&gt;</span>HelloWorld<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;summary&gt;</span>minimal demonstration package for 0release<span class="nt">&lt;/summary&gt;</span>
+  <span class="nt">&lt;description&gt;</span>
+    This program outputs the message &quot;Hello World&quot;. You can create new releases of it
+    using 0release.
+  <span class="nt">&lt;/description&gt;</span>
+
+  <span class="nt">&lt;homepage&gt;</span>http://0install.net/0release.xml<span class="nt">&lt;/homepage&gt;</span>
+
+  <span class="nt">&lt;feed-for</span> <span class="na">interface=</span><span class="s">&#39;http://0install.net/tests/HelloWorld.xml&#39;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;implementation</span> <span class="na">id=</span><span class="s">&quot;.&quot;</span> <span class="na">version=</span><span class="s">&quot;0.1-pre&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;command</span> <span class="na">name=</span><span class="s">&#39;run&#39;</span> <span class="na">path=</span><span class="s">&#39;hello.py&#39;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;runner</span> <span class="na">interface=</span><span class="s">&#39;https://apps.0install.net/python/python.xml&#39;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;version</span> <span class="na">before=</span><span class="s">&#39;3&#39;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/runner&gt;</span>
+    <span class="nt">&lt;/command&gt;</span>
+  <span class="nt">&lt;/implementation&gt;</span>
+<span class="nt">&lt;/interface&gt;</span>
+</code></pre></div>
+<p>Note the <code>&lt;feed-for&gt;</code> element. This is where the main feed is (or will be) published. If you want to follow this tutorial, change it to point to a location to which you can upload files (e.g. <code>http://localhost/~me/testing/HelloWorld.xml</code>) and commit the change (<code>git commit -a</code>).</p>
+<p>You should add any dependencies inside the <code>&lt;implementation&gt;</code> element (see the <a href="../../specifications/feed/">feed specification</a> for details, or edit the feed using <a href="../../packaging/guide-gui/">0publish-gui</a> if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python &lt; 3</p>
+<h2 id="creating-the-releases-directory">Creating the releases directory<a class="headerlink" href="#creating-the-releases-directory" title="Permanent link">&para;</a></h2>
+<p>Each time you create a new release, the resulting files go in your <code>releases</code> directory. Create the directory now and then run <code>0release</code> inside it, giving it the location of your local feed.</p>
+<div class="highlight"><pre><span></span><code>$ mkdir -p ~/releases/hello
+$ <span class="nb">cd</span> ~/releases/hello
+$ 0install run https://apps.0install.net/0install/0release.xml ~/hello-python/HelloWorld.xml
+Setting up releases directory <span class="k">for</span> HelloWorld
+Success - created script:
+ ~/releases/hello/make-release
+Now edit it with your <span class="nb">local</span> settings.
+Then, create new releases by running it.
+</code></pre></div>
+<p>This will create a single executable file in the directory, called <code>make-release</code>. Run this whenever you want to create a new release of your software.</p>
+<ul>
+<li>The <code>make-release</code> file contains local configuration information (e.g. the location of the local feed on your computer).</li>
+<li>General information about your program goes in the source directory so it can be shared by other developers.</li>
+</ul>
+<p>The final script might look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+<span class="c1"># Your public version control repository. When publishing, the new</span>
+<span class="c1"># HEAD and the release tag will be pushed to this using a command</span>
+<span class="c1"># such as &quot;git push origin master v0.1&quot;</span>
+<span class="c1"># If unset, you&#39;ll have to update it yourself.</span>
+<span class="nv">PUBLIC_SCM_REPOSITORY</span><span class="o">=</span>origin
+
+<span class="nb">cd</span> <span class="sb">`</span>dirname <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="sb">`</span>
+<span class="nb">exec</span> 0install run https://apps.0install.net/0install/0release.xml <span class="se">\</span>
+ --release ~/hello/HelloWorld.xml <span class="se">\</span>
+ --public-scm-repository<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PUBLIC_SCM_REPOSITORY</span><span class="s2">&quot;</span> <span class="se">\</span>
+ <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not put <code>make-release</code> under the project's version control! First, because it contains user-specific information, and secondly because if you make a mistake then 0release will make you retract the release and restart the whole release process from the beginning because you changed a file that's part of the release... this is not fun ;-)</p>
+</div>
+<h2 id="creating-a-release-candidate">Creating a release candidate<a class="headerlink" href="#creating-a-release-candidate" title="Permanent link">&para;</a></h2>
+<p>When you want to make a new release, simply run the <code>make-release</code> script, like this:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> ~/releases/hello
+$ ./make-release
+Releasing HelloWorld
+Snapshot version is <span class="m">0</span>.1-pre
+Version number <span class="k">for</span> new release <span class="o">[</span><span class="m">0</span>.1<span class="o">]</span>:
+</code></pre></div>
+<p>You are prompted to enter the version number for the new release. You can just press Return to accept the default of <code>0.1</code> (since the version in the local feed was <code>0.1-pre</code>). It then prints:</p>
+<div class="highlight"><pre><span></span><code>Releasing version <span class="m">0</span>.1
+HEAD is now at 387535a Updated feed-for to localhost <span class="k">for</span> testing
+SKIPPED unit tests <span class="k">for</span> ~/releases/hello/0.1/helloworld-0.1/HelloWorld.xml <span class="o">(</span>no <span class="s1">&#39;test&#39;</span> <span class="nb">command</span><span class="o">)</span>
+Wrote <span class="nb">source</span> feed as helloworld-0.1.xml
+Wrote changelog from start to here as changelog-0.1
+
+Candidate release archive: helloworld-0.1.tar.bz2
+<span class="o">(</span>extracted to ~/releases/hello/0.1/helloworld-0.1 <span class="k">for</span> inspection<span class="o">)</span>
+
+Please check candidate and <span class="k">select</span> an action:
+P<span class="o">)</span> Publish candidate <span class="o">(</span>accept<span class="o">)</span>
+F<span class="o">)</span> Fail candidate <span class="o">(</span>delete release-status file<span class="o">)</span>
+<span class="o">(</span>you can also hit CTRL-C and resume this script when <span class="k">done</span><span class="o">)</span>
+Publish/Fail:
+</code></pre></div>
+<p>0release has now created a candidate archive for you to examine. You might like to try running the program now. Note that the archive only contains files that are under version control.</p>
+<p>You can either leave 0release running while you check it, or you can press CTRL-C to exit and run the make-release script again later. It will remember where it was (it stores the current status in a new <code>release-status</code> file).</p>
+<p>As well as exporting the release archive, 0release also updates your Git repository by committing two new revisions. You can see them using <code>gitk --all</code>:</p>
+<p><img alt="New revisions created by 0release" src="../../img/screens/0release-rc.png" /></p>
+<p>The lowest two revisions are the history you started with. The <code>master</code> branch adds the commit where you changed the <code>&lt;feed-for&gt;</code> element. This is also the currently checked-out version. 0release has created a new branch called <code>0release-tmp</code> with two new revisions. <code>Release 0.1</code> is the version that will be released. Its local feed has the version <code>0.1</code> and today's date as the release date. The archive was created from this revision. The next revision has a version of <code>0.1-post</code> and removes the release date again. Note that the release hasn't been tagged yet in Git, but 0release has recorded the revision ID in case you decide to accept the release candidate.</p>
+<p>If you discover any problems you can go ahead and commit a fix, which will appear on the master branch (not on the <code>0release-tmp</code> branch, which will be discarded if you fail the release).</p>
+<h2 id="accepting-the-release-candidate">Accepting the release candidate<a class="headerlink" href="#accepting-the-release-candidate" title="Permanent link">&para;</a></h2>
+<p>We'll just check that the release works:</p>
+<div class="highlight"><pre><span></span><code>$ 0install run <span class="m">0</span>.1/helloworld-0.1/HelloWorld.xml
+Hello World!
+</code></pre></div>
+<p>Looks good. If you killed the release script (with CTRL-C), run it again now to return to the Publish/Fail prompt. Choose <code>Publish</code> (you can just type <code>p&lt;Return&gt;</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>0release will sign the release tag using your GPG key. If you don't have one, use <code>gpg --gen-key</code> to create one now. If you have multiple keys, pass <code>-k ID</code> to 0release to choose which one you want to use.</p>
+</div>
+<p>The temporary files (<code>release-status</code> and the extracted <code>helloworld-0.1</code> directory) are removed, and it creates a <code>merged.xml</code> feed. In our case, that's just the same as the one we tested, but if we were releasing a program that needed compiling, it would gather together the source and all the binaries into one feed here.</p>
+<p>Finally, it hands this off to <a href="../0repo/">0repo</a>:</p>
+<div class="highlight"><pre><span></span><code>Tagged as v0.1
+HEAD is now at 07f3c9e Start development series <span class="m">0</span>.1-post
+Deleted branch 0release-tmp <span class="o">(</span>was f9fb36a<span class="o">)</span>.
+Handing off to 0repo:
+0repo add -- merged.xml
+<span class="o">[</span>...<span class="o">]</span>
+</code></pre></div>
+<p>If you check your Git repository, you'll see that 0release has now tagged the release, and updated the "master" branch to the tip of the temporary branch:</p>
+<p><img alt="Release tagged" src="../../img/screens/0release-tagged.png" /></p>
+<p>If, instead, you had found a problem with the release you would have selected <code>Fail</code> at the prompt. 0release would have removed the temporary branch (leaving <code>master</code> where it was) and deleted the temporary files.</p>
+<h2 id="customising-the-release-process">Customising the release process<a class="headerlink" href="#customising-the-release-process" title="Permanent link">&para;</a></h2>
+<p>For more information, see <a href="customisation/">release phases</a>.</p>
+<h2 id="source-and-binaries">Source and binaries<a class="headerlink" href="#source-and-binaries" title="Permanent link">&para;</a></h2>
+<p>If your program needs to be compiled, see <a href="compiled-binaries/">Releasing binaries</a>.</p>
+<h2 id="aborting-a-release">Aborting a release<a class="headerlink" href="#aborting-a-release" title="Permanent link">&para;</a></h2>
+<p>You can abort a release easily at any point before the Publish step. Once you select <code>Publish</code>, externally-visible changes start to be made (e.g. archives are uploaded to your file-server).</p>
+<dl>
+<dt>To abort before publishing</dt>
+<dd>Just select <code>Fail</code> from the menu. This deletes the <code>release-status</code> file (which you could also do manually). To avoid confusion, selecting <code>Fail</code> also removes the temporary release branch from Git and renames the release directory (to <code>$version~</code>) to make it clear that they're not being used.</dd>
+<dt>To abort after publishing has started</dt>
+<dd>Follow the steps in <a href="#unpublishing-a-release">Unpublishing a release</a> below to undo any publicly visible changes. Then delete the <code>release-status</code> file.</dd>
+</dl>
+<h2 id="unpublishing-a-release">Unpublishing a release<a class="headerlink" href="#unpublishing-a-release" title="Permanent link">&para;</a></h2>
+<p>So, you didn't test the release properly, and now you want to pull it down, eh?</p>
+<p>The best way to do this is to set the stability to BUGGY in the public feed (and re-run 0repo to regenerate the signature), and then publish a new fixed release, with a new version number.</p>
+<p>But if you <em>really</em> insist on trying to unpublish a release and pretending it never happened, here's what you have to do:</p>
+<ol>
+<li>
+<p>Edit the master feed (in 0repo's <code>feeds</code> directory) and delete the new <code>&lt;implementation&gt;</code>. Run <code>0repo</code> to sign and publish the updated feed.</p>
+<p>Note: if you keep your feed under version control then you could revert the change. However, if anyone got the new version before you reverted it, then <code>0install</code> will refuse to go back to the previous version, assuming that this is a replay attack. So create a new signature, with a fresh time-stamp.</p>
+</li>
+<li>
+<p>Reset <code>HEAD</code> to before the release (e.g. <code>git reset --hard v0.1^</code>) and delete the tag itself (e.g. <code>git tag -d v0.1</code>). Delete the remote tag at the server (e.g. <code>git push origin :v0.1 master</code>). Like <code>0install</code>, if anyone saw the release in Git, their Git will refuse to go back to an older version. Tell them to use <code>-f</code>.</p>
+</li>
+<li>
+<p>Delete the tarball from your server.</p>
+</li>
+</ol>
+<h2 id="do-i-need-to-keep-the-releases-directory">Do I need to keep the releases directory?<a class="headerlink" href="#do-i-need-to-keep-the-releases-directory" title="Permanent link">&para;</a></h2>
+<p>It's best to keep the releases directory:</p>
+<ul>
+<li>You want to keep the make-release script so you don't have to write it again each time.</li>
+<li>Keeping the previous archive allows diffing against it as an extra check when making a new release.</li>
+</ul>
+<p>So, there's nothing too critical in the directory, but it's easiest to keep everything.</p>
+<div class="highlight"><pre><span></span><code>!!! todo
+    0release should also be able to diff against the previous version using the cache (downloading the archive if missing), rather than relying on the previous archive being in the releases directory.
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../0compile/example-scons/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 0compile: SCons example" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              0compile: SCons example
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="compiled-binaries/" class="md-footer__link md-footer__link--next" aria-label="Next: 0release: Compiled binaries" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              0release: Compiled binaries
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2003-2020 Thomas Leonard, Bastian Eicher and others<br> Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>
