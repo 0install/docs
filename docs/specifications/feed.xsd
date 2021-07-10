@@ -966,7 +966,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="start-offset" type="xsd:long">
+        <xsd:attribute name="start-offset" type="xsd:integer">
           <xsd:annotation>
             <xsd:documentation>
               The number of bytes at the beginning of the file which should be ignored. The value in the size attribute does not include the skipped bytes.
