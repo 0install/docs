@@ -1,4 +1,4 @@
-# Tempaltes
+# Templates
 
 This page lists some example code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
 
