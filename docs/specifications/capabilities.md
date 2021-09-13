@@ -38,17 +38,16 @@ An application's ability to open certain file types.
 ```
 
 `id`
-: An ID that uniquely identifies this file type within the feed.  
-Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first file type listed with a specific ID will take precedence.
+: An ID that uniquely identifies this file type within the feed. Must be a [safe ID](#safe-id).
 
 `explicit-only`
 : When set to `true` the app is not set as the default handler for this file type without explicit confirmation from the user.
 
 `<extension>`
 : A file extension used to identify a file type.  
-`value` is the file extension including the leading dot (e.g., `.png`).  
+`value` is the file extension including the leading dot (e.g., `.jng`).  
 `mime-type` is the (optional) MIME type associated with the file extension.  
-`perceived-type` specifies the broad category of file types (e.g., `text`, `image`, `audio`) this file type falls into.
+`perceived-type` specifies the broad category of file types this file type falls into. Well-known values on Windows are: `folder`, `text`, `image`, `audio`, `video`, `compressed`, `document`, `system`, `application`
 
 `<description>`
 : A (localized) description of the file type.
@@ -96,8 +95,7 @@ Entries in the file manager's context menu for all file types.
 ```
 
 `id`
-: An ID that uniquely identifies this context menu entry within the feed.  
-Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first context menu entry listed with a specific ID will take precedence.
+: An ID that uniquely identifies this context menu entry within the feed. Must be a [safe ID](#safe-id).
 
 `target`
 : Controls whether the context menu entry is display for all files (`files`), only executable files (`executable-files`), all directories (`directories`) or all filesystem objects (`all`). Defaults to `files` if not set.
@@ -109,8 +107,6 @@ See: [Verbs](#verbs), [Icons](#icons)
 
 - a single `<verb>`: creates a simple context menu, named using the `<description>` inside `<verb>`
 - multiple `<verb>`s (since version 2.18): creates a cascading context menu, named using the `<description>` inside `<context-menu>`, with sub-entries named using the `<description>` inside `<verb>`
-
-See: [Verbs](#verbs), [Icons](#icons)
 
 ### AutoPlay handlers
 
@@ -126,8 +122,7 @@ An application's ability to handle AutoPlay events.
 ```
 
 `id`
-: An ID that uniquely identifies this AutoPlay handler within the feed.  
-Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first AutoPlay handler listed with a specific ID will take precedence.
+: An ID that uniquely identifies this AutoPlay handler within the feed. Must be a [safe ID](#safe-id).
 
 `provider`
 : The name of the application as shown in the AutoPlay selection list.
@@ -149,11 +144,12 @@ Ability to act as default programs for well-known services such web-browser or e
 ```
 
 `id`
-: An ID that uniquely identifies this default program registration within the feed.  
+: An ID that uniquely identifies this default program registration within the feed. Must be a [safe ID](#safe-id).  
 Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first default program registration listed with a specific ID will take precedence.
 
 `service`
-: The name of the service the application provides. Well-known values on Windows are: `Mail`, `Media`, `IM`, `JVM`, `Calender`, `Contacts`, `Internet Call`
+: The name of the service the application provides.  
+  Well-known values on Windows are: `Mail`, `Media`, `IM`, `JVM`, `Calender`, `Contacts`, `Internet Call`
 
 `explicit-only`
 : When set to `true` the app is not registered as a default program without explicit confirmation from the user.
@@ -170,7 +166,8 @@ Some capabilities require you to map verbs/actions to specific [commands](feed.m
 ```
 
 `name`
-: The name of the verb. Use canonical names (`open`, `opennew`, `edit`, `play`, `print`, `Preview`) to get automatic localization; specify `<description>`s otherwise.
+: The name of the verb. Must be a [safe ID](#safe-id).  
+  Use canonical names (`open`, `opennew`, `edit`, `play`, `print`, `Preview`) to get automatic localization; specify `<description>`s otherwise.
 
 `command`
 : The name of the command to use when launching via this capability. Defaults to `run` if not set.
@@ -205,6 +202,11 @@ Some capabilities allow you to specify an icon.
 
 `href`
 : The URL where the icon can be downloaded.
+
+## Safe ID
+
+A safe ID may only contain alphanumeric characters, spaces (` `), dots (`.`), underscores (`_`), hyphens (`-`) and plus signs (`+`).  
+It also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first element listed with a specific ID will take precedence.
 
 ## Further reading
 

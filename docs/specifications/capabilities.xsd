@@ -45,7 +45,7 @@
     <xsd:attribute name="id" type="xsd:string" use="required">
       <xsd:annotation>
         <xsd:documentation>
-          An ID that differentiates this capability from other capabilities of the same type within the feed.
+          An ID that differentiates this capability from other capabilities of the same type within the feed. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
           Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first capability listed with a specific ID will take precedence.
         </xsd:documentation>
       </xsd:annotation>
@@ -162,7 +162,8 @@
     <xsd:attribute name="name" type="xsd:string" use="required">
       <xsd:annotation>
         <xsd:documentation>
-          The name of the verb. Use canonical names to get automatic localization; specify &lt;description&gt; otherwise.
+          The name of the verb. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
+          Use canonical names to get automatic localization; specify &lt;description&gt; otherwise.
         </xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
@@ -212,7 +213,7 @@
     <xsd:attribute name="value" type="xsd:string" use="required">
       <xsd:annotation>
         <xsd:documentation>
-          The file extension including the leading dot (e.g. ".png").
+          The file extension including the leading dot (e.g. &quote;.jpg&quote;).
         </xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
@@ -226,7 +227,8 @@
     <xsd:attribute name="perceived-type" type="xsd:string">
       <xsd:annotation>
         <xsd:documentation>
-          Defines the broad category of file types (e.g. text, image, audio) this extension falls into. Should always be a canonical type.
+          Defines the broad category of file types this extension falls into.
+          Well-known values on Windows are: folder, text, image, audio, video, compressed, document, system, application
         </xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
@@ -273,7 +275,8 @@
         <xsd:attribute name="service" type="xsd:string" use="required">
           <xsd:annotation>
             <xsd:documentation>
-              The name of the service (e.g. "StartMenuInternet", "Mail", "Media"). Always use a canonical name when possible.
+              The name of the service the application provides.
+              Well-known values on Windows are: Mail, Media, IM, JVM, Calender, Contacts, Internet Call
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
