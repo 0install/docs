@@ -90,6 +90,7 @@ A group has this syntax:
        license='...' ?
        released='...' ?
        stability='...' ?
+       rollout-percentage='...' ?
        langs='...' ?
        arch='...' ? >
   [requires] *
@@ -144,6 +145,9 @@ An implementation has this syntax (an unspecified argument is inherited from the
 
 `stability`
 : The default stability rating for this implementation. If not present, `testing` is used. See [Stability](#stability) for more details.
+
+`rollout-percentage` - since version 2.21, Windows only
+: The percentage (0-100) of users that should treat this as `stability="stable"`. May only be set if `stability` is unset or `testing`. This can be used to perform [staged rollouts](#staged-rollouts).
 
 `langs`
 : The natural language(s) which this package supports, as a space-separated list of languages codes (in the same format as used by the `$LANG` environment variable). For example, the value `en_GB fr` would be used for a package supporting British English and French. Supported since 0.48. Note that versions before 0.54 require the region separator to be `_` (underscore), while later versions also allow the use of `-` for consistency with the `xml:lang` format.
@@ -579,6 +583,15 @@ If problems are found, it can instead be marked as `buggy`, or `insecure`. 0inst
 ### When to use 'buggy'
 
 Don't mark old releases as `buggy` every time you do a new release, just because a few bugs have been fixed. People who have selected `Network use: Full` will automatically upgrade to the new version anyway, so marking an older version as buggy only affects people who have explicitly stated that they **don't** want to use the latest version, but would prefer to use an older release to save network use.
+
+## Staged rollouts
+
+!!! note
+    This is currently only supported by [Zero Install for Windows](../details/windows.md).
+
+Staged rollouts allow you to distribute new versions of a program to a subset of users that you can increase over time. Set the `rollout-percentage` attribute on an `<implementation>` to control the percentage of users that should treat it as if `stability="stable"`.
+
+The rollout probability is applied locally by randomly choosing and persisting a number between `1` and `100` per feed and implementation.
 
 ## Entry points
 

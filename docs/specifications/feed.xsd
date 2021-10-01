@@ -332,6 +332,14 @@
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="rollout-percentage" type="feed:percent">
+          <xs:annotation>
+            <xs:documentation>
+              The percentage of users that should treat this as stability=stable. May only be set if stability is unset or testing.
+               This can be used to perform staged rollouts.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="license" type="xs:string">
           <xs:annotation>
             <xs:documentation>
@@ -1107,6 +1115,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+
+  <!-- Numbers -->
+  <xs:simpleType name="percent">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <!-- Enumerations -->
   <xs:simpleType name="importance">
