@@ -143,7 +143,7 @@ An implementation has this syntax (an unspecified argument is inherited from the
 : The date this implementation was made available, in the format `YYYY-MM-DD`. For development versions checked out from version control this attribute should not be present.
 
 `stability`
-: The default stability rating for this implementation. If not present, `testing` is used. See the stability section below for more details.
+: The default stability rating for this implementation. If not present, `testing` is used. See [Stability](#stability) for more details.
 
 `langs`
 : The natural language(s) which this package supports, as a space-separated list of languages codes (in the same format as used by the `$LANG` environment variable). For example, the value `en_GB fr` would be used for a package supporting British English and French. Supported since 0.48. Note that versions before 0.54 require the region separator to be `_` (underscore), while later versions also allow the use of `-` for consistency with the `xml:lang` format.
@@ -290,9 +290,9 @@ The type of the archive is given as a MIME type in the `type` attribute (since 0
 - `application/vnd.rar` (`.rar`) - since version 2.18, Windows only
 - `application/vnd.ms-cab-compressed` (`.cab`)
 - `application/x-msi` (`.msi`) - Windows only
-- `application/x-deb` (`.deb`) - not supported on Windows
-- `application/x-rpm` (`.rpm`) - not supported on Windows
-- `application/x-apple-diskimage` (`.dmg`) - not supported on Windows
+- `application/x-deb` (`.deb`) - Linux only
+- `application/x-rpm` (`.rpm`) - Linux only
+- `application/x-apple-diskimage` (`.dmg`) - macOS only
 
 The `start-offset` attribute (since version 0.21) gives the number of bytes at the beginning of the file which should be ignored. This is useful for some self-extracting archives which are made up of a shell script followed by a normal archive in a single file. If missing, it defaults to 0. The value in the `size` attribute does not include the skipped bytes.
 
@@ -576,13 +576,14 @@ Stability ratings are expected to change over time. When any new release is made
 
 If problems are found, it can instead be marked as `buggy`, or `insecure`. 0install won't select either by default, but it is useful to users to see the reason (users may opt to continue using a buggy version if it seems to work for them, but they should never use an insecure one). `developer` is like a more extreme version of `testing`, where the program is expected to have bugs.
 
-#### When to use 'buggy'
+### When to use 'buggy'
 
 Don't mark old releases as `buggy` every time you do a new release, just because a few bugs have been fixed. People who have selected `Network use: Full` will automatically upgrade to the new version anyway, so marking an older version as buggy only affects people who have explicitly stated that they **don't** want to use the latest version, but would prefer to use an older release to save network use.
 
 ## Entry points
 
-(only used on the Windows version currently)
+!!! note
+    This is currently only used by [Zero Install for Windows](../details/windows.md).
 
 Entry points allow you to associate additional information with `<command>` names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the desktop integration system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.
 

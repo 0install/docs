@@ -116,7 +116,7 @@ An application's ability to handle AutoPlay events.
 <auto-play id='...' provider='...' ?>
   <event name='...'/> *
   <description xml:lang='...' ?>...</description> *
-  [verb] *
+  [verb]
   [icon] *
 </auto-play>
 ```
