@@ -315,7 +315,7 @@ Returns an exit status of <code>0</code> if it selected a set of versions, and a
 </tr>
 <tr>
   <td><nobr><code>--xml</code></nobr></td>
-  <td>Write selected versions to console as machine-readable XML.</td>
+  <td>Write output to console as machine-readable XML.</td>
 </tr>
 </table>
 
@@ -1862,9 +1862,9 @@ Create an alias for launching an application via 0install without always having 
 
 ## list-apps
 
-Lists all applications currently in your application list. If a search term is given, only application names containing that string are shown (case insensitive).
+Lists all applications currently in your application list. If an `URI` is given, only the application with that feed URI is shown. If a `PATTERN` is given, only applications containing that string in their name are shown (case insensitive).
 
-**Usage:** `0install list-apps [PATTERN]`
+**Usage:** `0install list-apps [URI|PATTERN]`
 
 <table>
 <tr>
@@ -1899,6 +1899,10 @@ Lists all applications currently in your application list. If a search term is g
 <tr>
   <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
   <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--xml</code></nobr></td>
+  <td>Write output to console as machine-readable XML.</td>
 </tr>
 </table>
 
