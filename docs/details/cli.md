@@ -75,6 +75,18 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</td>
 </tr>
 <tr>
+  <td><nobr><a href='#trust-add'><code>trust add</code></nobr></a><br>(Windows only)</td>
+  <td>Trusts feeds from a specific `DOMAIN` when [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#trust-remove'><code>trust remove</code></nobr></a><br>(Windows only)</td>
+  <td>Stops trusting feeds [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`. Only stops trusting for a specific `DOMAIN`, if specified.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#trust-list'><code>trust list</code></nobr></a><br>(Windows only)</td>
+  <td>List keys trusted for [signing](../specifications/feed.md#digital-signatures) feeds. Only list domains for which a specific `FINGERPRINT` is trusted, if specified.</td>
+</tr>
+<tr>
   <td><nobr><a href='#add-feed'><code>add-feed</code></a></nobr></td>
   <td>Register an additional source of implementations (versions) of a program.</td>
 </tr>
@@ -1007,6 +1019,85 @@ With no arguments, it displays all settings and their current values. With one a
   <td><nobr><code>--tab <code>TAB</code></code></nobr></td>
   <td>Switch to a specific tab in the configuration GUI. Possible <code>TAB</code>s are <code>updates</code>, <code>storage</code>, <code>catalog</code>, <code>trust</code>, <code>sync</code>, <code>language</code>, <code>language</code> and <code>advanced</code>.
 <br/>Has no effect in text-mode.</td>
+</tr>
+</table>
+
+## trust add
+
+Trusts feeds from a specific `DOMAIN` when [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`.
+
+**Usage:** `0install trust add FINGERPRINT DOMAIN`
+
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+## trust remove
+
+Stops trusting feeds [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`. Only stops trusting for a specific `DOMAIN`, if specified.
+
+**Usage:** `0install trust remove FINGERPRINT [DOMAIN]`
+
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+## trust list
+
+List keys trusted for [signing](../specifications/feed.md#digital-signatures) feeds. Only list domains for which a specific `FINGERPRINT` is trusted, if specified.
+
+**Usage:** `0install trust list [FINGERPRINT]`
+
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
 </table>
 
