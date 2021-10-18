@@ -1793,7 +1793,7 @@ Adds an application to the application list (if missing) and integrate it into t
 <tr>
   <td><nobr><code>--add <code>CATEGORY</code></code></nobr></td>
   <td>Add all access points of a specific <code>CATEGORY</code>.
-<br/>Supported values: <code>capabilities</code>, <code>menu</code>, <code>desktop</code>, <code>send-to</code>, <code>aliases</code>, <code>auto-start</code>, <code>default-app</code></td>
+<br/>Supported values: <code>capability-registration</code>, <code>menu-entry</code>, <code>desktop-icon</code>, <code>send-to</code>, <code>alias</code>, <code>auto-start</code>, <code>default-access-point</code></td>
 </tr>
 <tr>
   <td><nobr><code>--remove-all</code></nobr></td>
@@ -1802,7 +1802,7 @@ Adds an application to the application list (if missing) and integrate it into t
 <tr>
   <td><nobr><code>--remove <code>CATEGORY</code></code></nobr></td>
   <td>Remove all access points of a specific <code>CATEGORY</code>.
-<br/>Supported values: <code>capabilities</code>, <code>menu</code>, <code>desktop</code>, <code>send-to</code>, <code>aliases</code>, <code>auto-start</code>, <code>default-app</code></td>
+<br/>Supported values: <code>capability-registration</code>, <code>menu-entry</code>, <code>desktop-icon</code>, <code>send-to</code>, <code>alias</code>, <code>auto-start</code>, <code>default-access-point</code></td>
 </tr>
 </table>
 
