@@ -41,7 +41,8 @@ An application's ability to open certain file types.
 : An ID that uniquely identifies this file type within the feed. Must be a [safe ID](#safe-id).
 
 `explicit-only`
-: When set to `true` the app is not set as the default handler for this file type without explicit confirmation from the user.
+: When set to `true` the app is not set as the default handler for this file type without explicit confirmation from the user.  
+  Use this to exclude exotic capabilities from default integration categories.
 
 `<extension>`
 : A file extension used to identify a file type.  
@@ -159,7 +160,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 Some capabilities require you to map verbs/actions to specific [commands](feed.md#commands) in the feed.
 
 ```xml
-<verb name='...' command='...' ? args='...' extended='true' ?>
+<verb name='...' command='...' ? args='...' ? extended='true' ?>
   <description xml:lang='...' ?>...</description> *
   <arg> ... </arg> *
 </verb>
