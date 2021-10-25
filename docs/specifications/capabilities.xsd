@@ -182,6 +182,13 @@
         </xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
+    <xsd:attribute name="single-element-only" type="xsd:boolean">
+      <xsd:annotation>
+        <xsd:documentation>
+         Set this to true to hide the verb if more than one element is selected.
+         Use this to help avoid running out of resources if the user opens too many files.
+        </xsd:documentation>
+      </xsd:annotation>
     <xsd:attribute name="extended" type="xsd:boolean">
       <xsd:annotation>
         <xsd:documentation>

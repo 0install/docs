@@ -165,7 +165,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 Some capabilities require you to map verbs/actions to specific [commands](feed.md#commands) in the feed.
 
 ```xml
-<verb name='...' command='...' ? args='...' ? extended='true' ?>
+<verb name='...' command='...' ? args='...' ? single-element-only='true' ? extended='true' ?>
   <description xml:lang='...' ?>...</description> *
   <arg> ... </arg> *
 </verb>
@@ -181,6 +181,10 @@ Some capabilities require you to map verbs/actions to specific [commands](feed.m
 `args`
 : Command-line arguments to be passed to the command in escaped form. `%V` gets replaced with the path of the file being opened.
   This is ignored if any `<arg>` elements are specified.
+
+`single-element-only` - since version 2.21
+: Set this to true to hide the verb if more than one element is selected.  
+  Use this to help avoid running out of resources if the user opens too many files.
 
 `extended`
 : Set this to `true` to hide the verb in the Windows context menu unless the Shift key is pressed when opening the menu.
