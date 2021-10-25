@@ -90,6 +90,7 @@ Entries in the file manager's context menu for all file types.
 ```xml
 <context-menu id='...' target='...' ? explicit-only='true' ?>
   <description xml:lang='...' ?>...</description> *
+  <extension value='...'/> *
   [verb] *
   [icon] *
 </context-menu>
@@ -103,6 +104,10 @@ Entries in the file manager's context menu for all file types.
 
 `explicit-only`
 : When set to `true` this context menu entry is not added without explicit confirmation from the user.
+
+`<extension>` - since version 2.21
+: File extension this context menu entry is displayed for. Only applicable when `target` is `files` or unset.  
+  The context menu is shown for all file types when no extensions are specified.
 
 See: [Verbs](#verbs), [Icons](#icons)
 

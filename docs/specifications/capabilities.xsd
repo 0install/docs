@@ -391,6 +391,9 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="extension" type="caps:extension" />
+        </xsd:choice>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
