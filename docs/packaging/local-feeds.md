@@ -57,7 +57,7 @@ $ 0install select hello.xml
     Path: (package:deb:python2.7:2.7.3:x86_64)
 ```
 
-This will work on Linux, MacOS X, Windows, etc.
+This will work on Linux, macOS, Windows, etc.
 
 ## Next steps
 

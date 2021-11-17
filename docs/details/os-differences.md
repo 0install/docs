@@ -88,4 +88,4 @@ The Windows version of Zero Install internally uses parts of the Linux version v
 | Portable mode                                                    | :material-check-all:{.green} Yes                         | :material-close:{.red} No                             |
 | Runs on Windows                                                  | :material-check-all:{.green} Yes                         | :material-check:{.yellow} Limited                     |
 | Runs on Linux                                                    | :material-check:{.yellow} Limited                        | :material-check-all:{.green} Yes                      |
-| Runs on MacOS X                                                  | :material-check:{.yellow} Limited                        | :material-check-all:{.green} Yes                      |
+| Runs on macOS                                                    | :material-check:{.yellow} Limited                        | :material-check-all:{.green} Yes                      |
