@@ -30,6 +30,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
   <needs-terminal/> ?
 
   <icon type='...' href='...'/> *
+  <splash-screen type='...' href='...'/> *
 
   <feed src='...' langs='...' ? arch='...' ?/> *
   <feed-for interface='...'/> *
@@ -67,6 +68,9 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 
 `<icon>`
 : an icon to use for the program; this is used by programs such as [AddApp](http://rox.sourceforge.net/desktop/AddApp) and [desktop integration](../details/desktop-integration.md). You should provide an icon of the type `image/png` (`.png`) for display in browsers and launchers on Linux. For Windows apps you should additionally provide an icon of the type `image/vnd.microsoft.icon` (`.ico`). For macOS apps you should additionally provide an icon of the type `image/x-icns` (`.icns`).
+
+`<splash-screen>`
+: a splash screen Zero Install can display during downloads, etc. for better branding. On Windows splash screens of the type `image/png` (`.png`) are supported. This is currently only used by [Zero Install for Windows](../details/windows.md) and when [desktop integration](../details/desktop-integration.md) is applied.
 
 `<feed>`
 : the linked feed contains more implementations of this feed's interface. The `langs` and `arch` attributes, if present, indicate that all implementations will fall within these limits (e.g. `arch='*-src'` means that there is no point fetching this feed unless you are looking for source code). See the `<implementation>` element for a description of the values of these attributes.
@@ -598,7 +602,7 @@ The rollout probability is applied locally by randomly choosing and persisting a
 !!! note
     This is currently only used by [Zero Install for Windows](../details/windows.md).
 
-Entry points allow you to associate additional information with `<command>` names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the desktop integration system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.
+Entry points allow you to associate additional information with `<command>` names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the [desktop integration](../details/desktop-integration.md) system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.
 
 Entry points are top-level elements and, unlike commands, are not associated with any specific implementation or group. One entry point represents all commands in all implementations that carry the same name. An entry point has this syntax:
 

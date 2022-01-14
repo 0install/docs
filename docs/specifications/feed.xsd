@@ -259,6 +259,13 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element name="icon" type="feed:icon">
+            <xs:annotation>
+              <xs:documentation>
+                A splash screens Zero Install can display during downloads, etc. for better branding.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:any namespace="##other" />
         </xs:choice>
         <xs:attribute name="command" type="xs:string" use="required">
