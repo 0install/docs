@@ -255,7 +255,7 @@
           <xs:element name="icon" type="feed:icon">
             <xs:annotation>
               <xs:documentation>
-                An icon representing the command. Used for desktop icons, menu entries, etc..
+                An icon representing the application. Used in the Catalog GUI as well as for desktop icons, menu entries, etc..
               </xs:documentation>
             </xs:annotation>
           </xs:element>
