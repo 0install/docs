@@ -18,7 +18,7 @@ SCons is particularly easy to package, because it is designed to be bundled with
 You can write this _feed file_ with a text editor just by reading the [file format specification](../specifications/feed.md), but it's easier to use the `0template` command. `0template` will create an initial template for you, check that the file is valid, and makes many operations easier. The command is, of course, available through Zero Install. To save typing its full URI each time you run it, create an app now:
 
 ```shell
-$ 0install add 0template http://0install.net/tools/0template.xml
+$ 0install add 0template https://apps.0install.net/0install/0template.xml
 $ 0template --help
 usage: 0template.py [-h] [-o OUTPUT] [--from-feed FROM_FEED]
                     template [name=value [name=value ...]]
