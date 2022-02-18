@@ -259,7 +259,7 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="icon" type="feed:icon">
+          <xs:element name="splash-screen" type="feed:icon">
             <xs:annotation>
               <xs:documentation>
                 A splash screens Zero Install can display during downloads, etc. for better branding.
@@ -1079,7 +1079,6 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="feed:recipe-step">
-        <xs:attribute name="source" type="xs:string" use="required" />
         <xs:attribute name="path" type="xs:string" use="required">
           <xs:annotation>
             <xs:documentation>
