@@ -174,6 +174,27 @@ Also serves as a programmatic identifier within the desktop environment. In case
 `explicit-only`
 : When set to `true` the app is not registered as a default program without explicit confirmation from the user.
 
+### Remove hook
+
+A hook/callback into the application to be called during [`0install remove`](../details/cli.md#remove). If the process returns a non-zero exit code the removal process is cancelled. Supported since version 2.23.
+
+The hook will not be called if the application is not in the [cache](../details/cache.md) or if `--batch` is specified.
+
+```xml
+<remove-hook id='...' command='...' ?>
+  <arg> ... </arg> *
+</remove-hook>
+```
+
+`id`
+: An ID that uniquely identifies this hook within the feed. Must be a [safe ID](#safe-id).
+
+`command`
+: The name of the command in the feed to use when a removal of the app is requested. Defaults to `run` if not set.
+
+`<arg>`
+: Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
+
 ## Verbs
 
 Some capabilities require you to map verbs/actions to specific [commands](feed.md#commands) in the feed.
