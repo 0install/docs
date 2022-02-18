@@ -25,6 +25,7 @@
       <xs:element name="com-server" type="caps:com-server" />
       <xs:element name="registration" type="caps:registration" />
       <xs:element name="default-program" type="caps:default-program" />
+      <xs:element name="remove-hook" type="caps:remove-hook" />
     </xs:choice>
     <xs:attribute name="os" type="xs:string">
       <xs:annotation>
@@ -453,6 +454,34 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="remove-hook">
+    <xs:annotation>
+      <xs:documentation>
+        A hook/callback into the application to be called during '0install remove'.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="arg" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+        <xs:attribute name="command" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              The name of the command in the feed to use when a removal of the app is requested; leave empty for 'run'.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 
   <!-- Localizable string -->
