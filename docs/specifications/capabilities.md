@@ -141,6 +141,20 @@ An application's ability to handle AutoPlay events.
 
 See: [Verbs](#verbs), [Icons](#icons)
 
+### Registration
+
+Indicates that an application should be listed in the "Set your Default Programs" UI (Windows Vista and later).
+
+```xml
+<registration id='...' capability-reg-path='...' />
+```
+
+`id`
+: An ID that uniquely identifies this hook within the feed. Must be a [safe ID](#safe-id).
+
+`capability-reg-path`
+: The registry path relative to `HKEY_CURRENT_USER` or `HKEY_LOCAL_MACHINE` which should be used to store the application's capability registration information.
+
 ### Default programs
 
 Ability to act as default programs for well-known services such web-browser or e-mail client.

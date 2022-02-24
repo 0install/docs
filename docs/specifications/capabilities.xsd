@@ -18,12 +18,12 @@
       </xs:documentation>
     </xs:annotation>
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:element name="registration" type="caps:registration" />
       <xs:element name="file-type" type="caps:file-type" />
       <xs:element name="url-protocol" type="caps:url-protocol" />
       <xs:element name="context-menu" type="caps:context-menu" />
       <xs:element name="auto-play" type="caps:auto-play" />
       <xs:element name="com-server" type="caps:com-server" />
+      <xs:element name="registration" type="caps:registration" />
       <xs:element name="default-program" type="caps:default-program" />
     </xs:choice>
     <xs:attribute name="os" type="xs:string">
@@ -93,32 +93,6 @@
             </xs:annotation>
           </xs:element>
         </xs:choice>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="registration">
-    <xs:annotation>
-      <xs:documentation>
-        Indicates that an application should be listed in the "Set your Default Programs" UI (Windows Vista and later).
-      </xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="caps:capability">
-        <xs:attribute name="capability-reg-path" type="xs:string" use="required">
-          <xs:annotation>
-            <xs:appinfo>
-              The registry path relative to HKEY_CURRENT_USER or HKEY_LOCAL_MACHINE which should be used to store the application's capability registration information.
-            </xs:appinfo>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="x64" type="xs:boolean">
-          <xs:annotation>
-            <xs:appinfo>
-              Set to true for real 64-bit applications whose registry entries do not get redirected by WOW.
-            </xs:appinfo>
-          </xs:annotation>
-        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -379,6 +353,32 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="caps:capability" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="registration">
+    <xs:annotation>
+      <xs:documentation>
+        Indicates that an application should be listed in the "Set your Default Programs" UI (Windows Vista and later).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:capability">
+        <xs:attribute name="capability-reg-path" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:appinfo>
+              The registry path relative to HKEY_CURRENT_USER or HKEY_LOCAL_MACHINE which should be used to store the application's capability registration information.
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="x64" type="xs:boolean">
+          <xs:annotation>
+            <xs:appinfo>
+              Set to true for real 64-bit applications whose registry entries do not get redirected by WOW.
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
