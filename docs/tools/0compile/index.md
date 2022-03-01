@@ -135,7 +135,7 @@ $ 0compile copy-src
 Copied as '/home/me/GNU-Hello/src'
 ```
 
-Edit the source as needed with the text editor of your choice. For example, we can change the message (here we're using [ed, the standard text editor](http://www.gnu.org/fun/jokes/ed.msg.html)):
+Edit the source as needed with the text editor of your choice. For example, we can change the message (here we're using [ed, the standard text editor](https://www.gnu.org/fun/jokes/ed.msg.html)):
 
 ```shell
 $ ed src/hello.c
@@ -158,7 +158,7 @@ If you compare the new `gnu-hello-linux-x86_64/0install` directory with the old 
 - A new file is present, `gnu-hello-linux-x86_64/0install/from-1.3.patch`, containing a diff between the original sources and your modified ones (to display this without rebuilding, use `0compile diff`).
 - The version number in the local feed has `-1` appended, to indicate that this version has been modified.
 
-These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if you are making larger changes to the code then you will want to use a proper version control system (such as [Git](http://git.or.cz/)).
+These two features make it very easy to keep track of what you changed, which may well come in handy later! However, if you are making larger changes to the code then you will want to use a proper version control system (such as [Git](https://git-scm.com/)).
 
 ### Publishing the binary
 

@@ -18,7 +18,7 @@ There are several different algorithms that can be used to generate a digest fro
 : Supported from version 0.20 and also requires the `hashlib` Python module to be installed.
 
 `sha256new_XXX`
-: Supported from version 1.10. This is the same as `sha256`, except that the final digest is [base32-encoded](http://en.wikipedia.org/wiki/Base32) (without padding) to make it a bit shorter, and the separator character is `_` rather than `=`, as pathnames containing `=` cause problems for some programs.
+: Supported from version 1.10. This is the same as `sha256`, except that the final digest is [base32-encoded](https://en.wikipedia.org/wiki/Base32) (without padding) to make it a bit shorter, and the separator character is `_` rather than `=`, as pathnames containing `=` cause problems for some programs.
 
 When checking a new tree (e.g., that has just been downloaded from the net and unpacked), 0install generates a 'manifest' file. The manifest lists every file, directory and symlink in the tree, and gives the digest of each file's content. Here is a sample manifest file for a tree containing two files (`README` and `src/main.c`) and using the `sha1` algorithm (you can use `0install digest --manifest` to generate this):
 
@@ -49,7 +49,7 @@ This description of the manifest file is based on Joachim's 12 Oct 2005 post to 
 
 The manifest file lists, line by line, all nodes in a directory identified as `/`, without `/` itself. All relevant numbers are coded as decimal numbers without leading zeros (unless 0 is to be coded, which is coded as `0`). Times are represented as the number of seconds since the epoch. Nodes are of one of their possible types: `D`, `F`, `X`, and `S`. Names must not contain newline characters (the tree will be rejected if they do).
 
-The file itself is encoded as UTF-8, with Unix line-endings (`\n`) and no [BOM](http://en.wikipedia.org/wiki/Byte-order_mark). Note that some operating systems treat filenames as sequences of bytes (rather than as sequences of characters), and thus may be able to handle filenames which cannot be represented as strings. A Zero Install implementation cannot contain such filenames.
+The file itself is encoded as UTF-8, with Unix line-endings (`\n`) and no [BOM](https://en.wikipedia.org/wiki/Byte-order_mark). Note that some operating systems treat filenames as sequences of bytes (rather than as sequences of characters), and thus may be able to handle filenames which cannot be represented as strings. A Zero Install implementation cannot contain such filenames.
 
 ### Directories
 

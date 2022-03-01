@@ -118,7 +118,7 @@ Sun have developed a similar system to Zero Install, Java Web Start, although th
 
 ### Maven
 
-[Maven](http://maven.apache.org/) is a build tool (like make or ant) for Java programs. Although not an installation system, it is similar to 0install in that each product has a `pom.xml` file with a list of dependencies. When building a product, Maven downloads the specified version of each dependency and stores it in a cache directory. Some differences between Maven 2.0 and 0install:
+[Maven](https://maven.apache.org/) is a build tool (like make or ant) for Java programs. Although not an installation system, it is similar to 0install in that each product has a `pom.xml` file with a list of dependencies. When building a product, Maven downloads the specified version of each dependency and stores it in a cache directory. Some differences between Maven 2.0 and 0install:
 
 - The `pom.xml` files are not signed. An attacker can therefore cause modified POM files to be downloaded.
 - There is no digest of the downloads in the POM file, so no security checks are performed to confirm that the download is OK, and downloads cannot be shared safely between users.

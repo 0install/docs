@@ -42,7 +42,7 @@ The solution was to optimise one component at a time:
 2.  Then solve again, for the "best" version of GTK that can be part of a valid combination with the previously selected version of Firefox.
 3.  ... and so on recursively until we have selected a version of every component we need.
 
-In fact, we don't need to use a cost function at all. We can just ask whether there is any valid combination involving the best version of Firefox. If not, we ask again for the second best version, etc. The problem can then be simplified to plain old [Boolean satisfiability](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) and implemented efficiently. A DPLL-based algorithm with conflict-driven learning turned out to be very fast, even [implemented in pure Python](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3082).
+In fact, we don't need to use a cost function at all. We can just ask whether there is any valid combination involving the best version of Firefox. If not, we ask again for the second best version, etc. The problem can then be simplified to plain old [Boolean satisfiability](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) and implemented efficiently. A DPLL-based algorithm with conflict-driven learning turned out to be very fast, even [implemented in pure Python](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/3082).
 
 ## Worked example
 

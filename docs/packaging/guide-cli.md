@@ -28,7 +28,7 @@ usage: 0template.py [-h] [-o OUTPUT] [--from-feed FROM_FEED]
 See also:
 
 - [0template](../tools/0template.md)
-- [SCons homepage](http://www.scons.org)
+- [SCons homepage](https://www.scons.org)
 
 ## Creating the template
 

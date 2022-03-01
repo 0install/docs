@@ -28,7 +28,7 @@ U3Vrz97gJk8=
 -->
 ```
 
-This is a [GnuPG](http://gnupg.org/) signature, but [Base64](http://en.wikipedia.org/wiki/Base64)-encoded so that it can go in an XML document. To check it, we need to reverse the encoding, which is easily done with a little Python. Save the two lines of random-looking characters to a file (`encoded-signature`) and decode it:
+This is a [GnuPG](https://gnupg.org/) signature, but [Base64](https://en.wikipedia.org/wiki/Base64)-encoded so that it can go in an XML document. To check it, we need to reverse the encoding, which is easily done with a little Python. Save the two lines of random-looking characters to a file (`encoded-signature`) and decode it:
 
 ```shell
 $ base64 --decode < encoded-signature > signature

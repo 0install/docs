@@ -3,7 +3,7 @@
 This page describes the design of Zero Install itself.
 
 !!! abstract "Terminology"
-    Zero Install is based on the principle of [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
+    Zero Install is based on the principle of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection), and is sometimes therefore referred to as _the injector_.
 
 Everything 0install downloads from the net by default goes in `~/.cache/0install.net/`. Every archive it downloads unpacks into its own directory inside this. So, there's one directory for ROX-Filer, and another for ROX-Session, etc. In fact, there's one directory for every version of ROX-Filer, in case you want more than one available. Every directory is uniquely named, so you'll never get conflicts when trying to install two different programs.
 
@@ -16,7 +16,7 @@ If [sharing](../details/sharing.md) is enabled, then Zero Install stores downloa
 ## Requirements
 
 - Any user can run any program they want, without it needing to be installed first.
-- Users refer to programs by globally unique names (URLs). So, a user asks to run "http://gimp.org/gimp", rather than the rather vague "The Gimp".
+- Users refer to programs by globally unique names (URLs). So, a user asks to run "https://gimp.org/gimp", rather than the rather vague "The Gimp".
 - Users can run whatever version of a program they want.
 - Users don't need the root password.
 - Users don't need to trust each other.

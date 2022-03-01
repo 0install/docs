@@ -149,7 +149,7 @@ If a networked application (e.g. ebox-chat) seems to freeze, try wiggling the mo
 About E: the important point here isn't how this particular sandbox works, but how sandboxing can be supported by Zero Install in general. However, here are some useful links about E and its underlying security model:
 
 - <http://wiki.erights.org/wiki/Walnut/Secure_Distributed_Computing>
-- <http://en.wikipedia.org/wiki/Object-capability_model>
+- <https://en.wikipedia.org/wiki/Object-capability_model>
 
 ## Conclusions
 

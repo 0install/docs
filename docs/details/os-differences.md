@@ -53,7 +53,7 @@ The Linux and Windows versions mostly use the same formats for configuration fil
 
 When extracting implementations Zero Install preserves executable-bits and symlinks and considers them when calculating [manifest digests](../specifications/manifest.md).  
 Windows does not have a concept of executable bits. Instead, Zero Install for Windows stores this information in a file called `.xbit` in the top-level directory of each implementation.  
-On Windows Administrator privileges are required to create symlinks. Therefore Zero Install creates [Cygwin-style symlinks](http://cygwin.com/cygwin-ug-net/using.html#pathnames-symlinks) instead of "real" NTFS symlinks.
+On Windows Administrator privileges are required to create symlinks. Therefore Zero Install creates [Cygwin-style symlinks](https://cygwin.com/cygwin-ug-net/using.html#pathnames-symlinks) instead of "real" NTFS symlinks.
 
 See also: [File locations](file-locations.md)
 

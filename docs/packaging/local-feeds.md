@@ -14,7 +14,7 @@ Let's say you have a simple Python 2 program, `hello.py`:
 print "Hello World!"
 ```
 
-You could make this runnable by specifying a [shebang line](http://en.wikipedia.org/wiki/Shebang_%28Unix%29). But that wouldn't work on Windows (which doesn't support them). Also, different versions of Linux need different lines (e.g. `#!/usr/bin/python` on Debian, but `#!/usr/bin/python2` on Arch).
+You could make this runnable by specifying a [shebang line](https://en.wikipedia.org/wiki/Shebang_%28Unix%29). But that wouldn't work on Windows (which doesn't support them). Also, different versions of Linux need different lines (e.g. `#!/usr/bin/python` on Debian, but `#!/usr/bin/python2` on Arch).
 
 Instead, we can create a _local feed_ to say how to run it. Create `hello.xml` in the same directory:
 

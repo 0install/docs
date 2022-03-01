@@ -7,7 +7,7 @@
 
 With Zero Install, each software author publishes a feed on their web-site giving details about their software. Users can use these feeds to download the software and to receive notification of new versions. However, the author's site may become unavailable, either temporarily (e.g. due to network problems) or permanently (e.g. if the software is abandoned). Therefore, mirror sites are used to keep an up-to-date copy of the original feeds.
 
-Mirror sites can be public (such as the [roscidus.com mirror](http://roscidus.com/0mirror/)), or internal to your organisation.
+Mirror sites can be public (such as the [roscidus.com mirror](https://roscidus.com/0mirror/)), or internal to your organisation.
 
 0mirror takes a list of feed URLs and exports each one from your local Zero Install cache ready for publishing on a web-server (such as Apache). The published site contains:
 

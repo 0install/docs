@@ -240,6 +240,6 @@ Since we used a new clean chroot to build the binary, we can be reasonably sure 
 
 ## Future directions
 
-In the future it might be possible to use the [Open Build Service](http://open-build-service.org/) (OBS), to build Zero Install packages using a distributed development platform.
+In the future it might be possible to use the [Open Build Service](https://open-build-service.org/) (OBS), to build Zero Install packages using a distributed development platform.
 
 Currently it (OBS) supports building RPM and Debian packages, those can be converted to Zero Install feeds using [pkg2zero](../pkg2zero.md) (when relocatable).

@@ -8,7 +8,7 @@ Decentralised; anyone can distribute software
 
     It's easier too: you can make a single archive that works on all platforms (for platform-independent applications such as Python or Java programs), or have 0install download the correct archive automatically (for platform-specific binaries).
 
-    See the "[Decentralised Installation Systems](http://osnews.com/story.php/16956/Decentralised-Installation-Systems)" essay on OSNews for a more complete introduction to the subject.
+    See the "[Decentralised Installation Systems](https://osnews.com/story.php/16956/Decentralised-Installation-Systems)" essay on OSNews for a more complete introduction to the subject.
 
     See the [Packaging Guide](../packaging/index.md) for information on distributing software using 0install.
 

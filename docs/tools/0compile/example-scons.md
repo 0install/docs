@@ -6,7 +6,7 @@
 **Source:** [Git repository](https://github.com/0install/hello-scons)  
 **Zero Install feed:** <http://0install.net/tests/Hello-scons.xml>
 
-**Hello-scons** is a simple "Hello world" program written in C. It is built using the [SCons build tool](http://www.scons.org/).
+**Hello-scons** is a simple "Hello world" program written in C. It is built using the [SCons build tool](https://www.scons.org/).
 
 Its purpose is to demonstrate the use of 0compile to fetch build dependencies; you do not need to install SCons manually on your system in order to build it.
 

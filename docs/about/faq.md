@@ -10,11 +10,11 @@ What is it?
 
 How many Zero Install packages are there?
 
-:   The [public mirror site](http://roscidus.com/0mirror/) provides a list of feeds we know about. There are currently more than 2000, although the quality varies.
+:   The [public mirror site](https://roscidus.com/0mirror/) provides a list of feeds we know about. There are currently more than 2000, although the quality varies.
 
 What are "decentralised" installation systems, and why are they important?
 
-:   See my [essay on OSNews](http://osnews.com/story.php/16956/Decentralised-Installation-Systems) or, if you're in a hurry, just read [the summary](http://osnews.com/story.php/16956/Decentralised-Installation-Systems/page7/).
+:   See my [essay on OSNews](https://osnews.com/story.php/16956/Decentralised-Installation-Systems) or, if you're in a hurry, just read [the summary](https://osnews.com/story.php/16956/Decentralised-Installation-Systems/page7/).
 
 Where does it install things to?
 
@@ -126,7 +126,7 @@ Does this replace `/etc`, `/var`, `/tmp`, etc.?
 
 What was the inspiration for Zero Install?
 
-:   Several things. [CODA](http://www.coda.cs.cmu.edu/) and [wwwoffle](http://www.gedanken.demon.co.uk/wwwoffle/) for showing that caching network filesystems can still work when off-line. [The W3C](http://w3.org) for using URIs for namespaces. Not [Java Web Start](http://java.sun.com/products/javawebstart/), Konvalo, [D. J. Bernstein's slashpackage](http://cr.yp.to/slashpackage.html) or [The Open Software Description Format (OSD)](http://www.w3.org/TR/NOTE-OSD) though, because I had never heard of them when I started the project.
+:   Several things. [CODA](http://www.coda.cs.cmu.edu/) and [wwwoffle](http://www.gedanken.demon.co.uk/wwwoffle/) for showing that caching network filesystems can still work when off-line. [The W3C](https://w3.org) for using URIs for namespaces. Not [Java Web Start](https://docs.oracle.com/javase/8/docs/technotes/guides/javaws/), Konvalo, [D. J. Bernstein's slashpackage](https://cr.yp.to/slashpackage.html) or [The Open Software Description Format (OSD)](https://www.w3.org/TR/NOTE-OSD) though, because I had never heard of them when I started the project.
 
 What's the relationship between the `0install` and `0launch` commands?
 :   `0launch` is older. It was originally intended to be used just for running things, but we ended up adding a load of other options to it (e.g. `0launch --import`) and it got a bit messy.

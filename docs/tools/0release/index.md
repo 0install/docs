@@ -41,7 +41,7 @@ You'll need a [local feed](../../packaging/local-feeds.md) within your source di
 
 Having a local feed is useful even if you don't use `0release`, because it lets people check out a development snapshot of your program and then register it (using [`0install add-feed`](../../details/cli.md#add-feed)) or run it directly with Zero Install handling its dependencies.
 
-A minimal Hello World example is available for testing. You can check it out like this, using the [Git](http://git-scm.com/) version control system:
+A minimal Hello World example is available for testing. You can check it out like this, using the [Git](https://git-scm.com/) version control system:
 
 ```shell
 $ git clone git://github.com/0install/hello-python.git

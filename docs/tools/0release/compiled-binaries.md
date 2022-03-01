@@ -58,7 +58,7 @@ The three names are of files in the current directory without the directory part
 
 ## Setting up a Vagrant build slave
 
-First, we'll need to create a "box" with the build system. [Create a Vagrantfile](http://docs.vagrantup.com/) for the new box, e.g.
+First, we'll need to create a "box" with the build system. [Create a Vagrantfile](https://docs.vagrantup.com/) for the new box, e.g.
 
 ```vagrant
 Vagrant::Config.run do |config|

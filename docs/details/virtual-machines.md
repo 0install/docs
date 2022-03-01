@@ -4,7 +4,7 @@ As well as allowing sharing between users, you can also use Zero Install to shar
 
 ## VirtualBox
 
-[VirtualBox](http://www.virtualbox.org/) is a popular free (GPL) virtualisation system. To share your host's cache with a guest:
+[VirtualBox](https://www.virtualbox.org/) is a popular free (GPL) virtualisation system. To share your host's cache with a guest:
 
 - Create a new guest and install an operating system as usual. The guest OS does not need to be the same as the host OS.
 - Install the guest tools (choose **Install Guest Additions...** from the **Devices** menu).
@@ -30,7 +30,7 @@ Notes:
 
 ## Vagrant
 
-[Vagrant](http://www.vagrantup.com/) is a tool for managing virtual development environments using VirtualBox.
+[Vagrant](https://www.vagrantup.com/) is a tool for managing virtual development environments using VirtualBox.
 
 In your Vagrantfile, use something like this:
 
