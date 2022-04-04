@@ -124,7 +124,7 @@ The following AppArmor policy can be used to confine the 0store-secure-add proce
 
 ### Windows
 
-On Windows the shared cache is managed by the *Zero Install Store Service*. It serves roughly the same role as `0store-secure-add` on Linux. This service ensures that no user can, intentionally or unintentionally, manipulate the contents of the shared cache. Every user can ask the service to add implementations to the shared cache on their behalf after validating the hash. This way other users only get cached implementations if they request the exact same version with the same hash.
+On Windows the shared cache is managed by the *Zero Install Store Service*. It serves roughly the same role as `0store-secure-add` on Linux. This service ensures that no user can, intentionally or unintentionally, manipulate the contents of the shared cache. Every user can ask the service to add implementations to the shared cache on their behalf while validating the hash. This way other users only get cached implementations if they request the exact same version with the same hash.
 
 The *Zero Install Store Service* is installed automatically when Zero Install is [deployed](windows.md#bootstrapper) for all users (machine-wide). Zero Install automatically uses the service when it is available (unless in [portable mode](windows.md#portable-mode)) and falls back to the user cache if the service is unavailable.
 
@@ -133,13 +133,9 @@ A custom location can be specified in the file `C:\ProgramData\0install.net\inje
 
 #### Technical details
 
-Zero Install communicates with the service using [named pipes](https://docs.microsoft.com/en-us/windows/desktop/ipc/named-pipes). The user process downloads an archive to a temporary directory and then passes its file path to the service with a request for extraction. The service extracts the archive, verifies the manifest digest and adds the implementation to the cache. During the entire process the service reports the progress back to the user process.
+The normal Zero Install user process communicates with the service using [named pipes](https://docs.microsoft.com/en-us/windows/desktop/ipc/named-pipes). The user process is responsible for downloading and extracting archives. It streams the extracted file metadata and contents to the service. The services verifies the manifest digest and writes the files to the disk. See the [API docs](https://dotnet.0install.net/file-system.html) for more information on this protocol.
 
-Named pipes allow the service to [impersonate](https://docs.microsoft.com/en-us/windows/desktop/SecAuthZ/client-impersonation) the calling user. The archive is read and extracted using the privileges of the calling user but verified and added to the cache using the privileges of the service.
-
-The service records write access to the cache as well as any potential problems in the *Windows Event Log*.
-
-![Store Service sequence diagram](../img/diagrams/store-service.png)
+The service records all write operations and errors in the *Windows Event Log*.
 
 ### Questions
 
