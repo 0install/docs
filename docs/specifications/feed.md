@@ -195,11 +195,12 @@ The `main` attribute above provides a simple way to say how to run this implemen
 ```xml
 <command name='...'
          path='...' ? >
-  [binding] *
-  [requires] *
-  [runner] ?
   <arg> ... </arg> *
   <for-each item-from='...' separator='...'? > ... </for-each> *
+  <working-dir src='...'? /> ?
+  [requires] *
+  [binding] *
+  [runner] ?
 </command>
 ```
 
@@ -212,6 +213,9 @@ The `main` attribute above provides a simple way to say how to run this implemen
 Additional arguments can be passed using the `<arg>` element. Within an argument, `${name}` is expanded to the value of the corresponding environment variable. These arguments are passed to the program before any arguments specified by the user.
 
 If an environment variable should be expanded to multiple arguments, use `<for-each>`. The variable in the `item-from` attribute is split using the given separator (which defaults to the OS path separator, `:` on POSIX and `;` on Windows) and the arguments inside the element are added for each item. The current item is available as `${item}`. If the variable given in `item-from` is not set or is empty, no arguments are added. See below for an example. Versions of 0install before 1.15 ignore `<for-each>` elements and their contents.
+
+The `<working-dir>` element (Windows only) switches the working directory of the process to a relative path within the implementation specified by `src` (defaults to `.`).  
+This is useful for supporting legacy Windows applications which do not properly locate their installation directory.
 
 Command-specific dependencies can be specified for a command by nesting `<requires>` elements. For example, an interpreter might only depend on libreadline when used interactively, but not when used as a library, or the `test` command might depend on a test framework.
 
