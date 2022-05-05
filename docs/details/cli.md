@@ -34,7 +34,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <br/>The file must have a trusted digital signature, as when fetching from the network.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#export'><code>export</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#export'><code>export</code></a></nobr><br>(Windows only)</td>
   <td>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</td>
 </tr>
 <tr>
@@ -46,27 +46,27 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Lists all locally known feed URIs. If a search term is given, only URIs containing that string are shown (case insensitive).</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-search'><code>catalog search</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-search'><code>catalog search</code></a></nobr><br>(Windows only)</td>
   <td>Searches registered catalogs for applications that match the specified query. If no query is given all applications in the catalogs are listed.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-refresh'><code>catalog refresh</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-refresh'><code>catalog refresh</code></a></nobr><br>(Windows only)</td>
   <td>Refreshes (downloads) all registered catalogs.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-add'><code>catalog add</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-add'><code>catalog add</code></a></nobr><br>(Windows only)</td>
   <td>Adds an URI to the list of catalogs.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-remove'><code>catalog remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-remove'><code>catalog remove</code></a></nobr><br>(Windows only)</td>
   <td>Removes an URI from the list of catalogs.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-reset'><code>catalog reset</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-reset'><code>catalog reset</code></a></nobr><br>(Windows only)</td>
   <td>Resets the list of catalogs to the default source.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#catalog-list'><code>catalog list</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#catalog-list'><code>catalog list</code></a></nobr><br>(Windows only)</td>
   <td>Lists all registered catalogs.</td>
 </tr>
 <tr>
@@ -75,15 +75,15 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#trust-add'><code>trust add</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#trust-add'><code>trust add</code></a></nobr><br>(Windows only)</td>
   <td>Trusts feeds from a specific `DOMAIN` when [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#trust-remove'><code>trust remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#trust-remove'><code>trust remove</code></a></nobr><br>(Windows only)</td>
   <td>Stops trusting feeds [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`. Only stops trusting for a specific `DOMAIN`, if specified.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#trust-list'><code>trust list</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#trust-list'><code>trust list</code></a></nobr><br>(Windows only)</td>
   <td>List keys trusted for [signing](../specifications/feed.md#digital-signatures) feeds. Only list domains for which a specific `FINGERPRINT` is trusted, if specified.</td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <br/>An additional arguments specifies a custom target cache location.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#store-export'><code>store export</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-export'><code>store export</code></a></nobr><br>(Windows only)</td>
   <td>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <code>0install store add</code>.</td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Lists all implementation cache directories.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#store-list-implementations'><code>store list-implementations</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-list-implementations'><code>store list-implementations</code></a></nobr><br>(Windows only)</td>
   <td>Lists all cached implementations. If a feed URI is specified only implementations for that particular feed are listed.</td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ On Windows you can also use <code>0install-win</code> instead. This will display
 <br/>Additional arguments specify custom cache locations.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#store-purge'><code>store purge</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-purge'><code>store purge</code></a></nobr><br>(Windows only)</td>
   <td>Removes all implementations from the cache. Use this command to clean up the system before removing Zero Install. Deleting cache directories manually may be difficult due to the NTFS ACLs employed to protect implementations against modification.
 <br/>Additional arguments specify custom cache locations.</td>
 </tr>
@@ -155,15 +155,15 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Makes sure an implementation has not been damaged (i.e. it manifest digest has not changed).</td>
 </tr>
 <tr>
-  <td><nobr><a href='#store-add-dir'><code>store add-dir</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-add-dir'><code>store add-dir</code></a></nobr><br>(Windows only)</td>
   <td>Adds a directory to the list of custom implementation caches.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#store-remove-dir'><code>store remove-dir</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#store-remove-dir'><code>store remove-dir</code></a></nobr><br>(Windows only)</td>
   <td>Removes a directory from the list of custom implementation caches.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#central'><code>central</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#central'><code>central</code></a></nobr><br>(Windows only)</td>
   <td>Opens the central graphical user interface for launching and managing applications.</td>
 </tr>
 <tr>
@@ -171,11 +171,11 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Add an application to the application list.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#remove'><code>remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#remove'><code>remove</code></a></nobr><br>(Windows only)</td>
   <td>Removes an application from the application list and undoes any desktop environment integration.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#remove-all'><code>remove-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#remove-all'><code>remove-all</code></a></nobr><br>(Windows only)</td>
   <td>Removes all applications from the application list and undoes any desktop environment integration. Use this command to clean up the system before removing Zero Install.</td>
 </tr>
 <tr>
@@ -195,43 +195,43 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Shows the man-page of a given command.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#integrate'><code>integrate</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#integrate'><code>integrate</code></a></nobr><br>(Windows only)</td>
   <td>Adds an application to the application list (if missing) and integrate it into the desktop environment.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#alias'><code>alias</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#alias'><code>alias</code></a></nobr><br>(Windows only)</td>
   <td>Create an alias for launching an application via 0install without always having to enter the full URI.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#list-apps'><code>list-apps</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#list-apps'><code>list-apps</code></a></nobr><br>(Windows only)</td>
   <td>Lists all applications currently in your application list. If a search term is given, only application names containing that string are shown (case insensitive).</td>
 </tr>
 <tr>
-  <td><nobr><a href='#update-all'><code>update-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#update-all'><code>update-all</code></a></nobr><br>(Windows only)</td>
   <td>Updates all applications in the application list.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#repair-all'><code>repair-all</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#repair-all'><code>repair-all</code></a></nobr><br>(Windows only)</td>
   <td>Reapplies all desktop integrations of applications in the application list.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#sync'><code>sync</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#sync'><code>sync</code></a></nobr><br>(Windows only)</td>
   <td>Synchronizes the application list with the server.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#import-apps'><code>import-apps</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#import-apps'><code>import-apps</code></a></nobr><br>(Windows only)</td>
   <td>Imports a set of applications and desktop integrations from an existing app-list.xml file.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#self-deploy'><code>self deploy</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-deploy'><code>self deploy</code></a></nobr><br>(Windows only)</td>
   <td>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#self-remove'><code>self remove</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-remove'><code>self remove</code></a></nobr><br>(Windows only)</td>
   <td>Removes the current instance of Zero Install from the system.</td>
 </tr>
 <tr>
-  <td><nobr><a href='#self-update'><code>self update</code></nobr></a><br>(Windows only)</td>
+  <td><nobr><a href='#self-update'><code>self update</code></a></nobr><br>(Windows only)</td>
   <td>Updates Zero Install itself to the most recent version.</td>
 </tr>
 </table>
