@@ -60,7 +60,7 @@ You can specify versions of libraries the program depends on too. 0test will try
 ```shell
 $ 0test --html results.html \
   https://apps.0install.net/0install/0compile.xml 0.19 0.20 0.21 \
-  http://0install.net/2007/interfaces/ZeroInstall.xml 0.47 0.48 0.49
+  https://apps.0install.net/0install/0install-python.xml 0.47 0.48 0.49
 Passed
  - 0compile v0.20, ZeroInstall-Injector v0.48, 0publish v0.18-post, ROX-Lib2 v2.0.6-post
  - 0compile v0.20, ZeroInstall-Injector v0.49, 0publish v0.18-post, ROX-Lib2 v2.0.6-post

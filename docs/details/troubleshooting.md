@@ -55,13 +55,13 @@ To investigate further, you can use the `--version-for` option to fix the versio
 $ 0install select -c http://0install.net/2006/interfaces/0compile.xml
   --version 1.1 \
   --version-for http://0install.net/2006/interfaces/0publish 0.20 \
-  --version-for http://0install.net/2007/interfaces/ZeroInstall.xml 2.1
+  --version-for https://apps.0install.net/0install/0install-python.xml 2.1
 Can't find all required implementations:
 - http://0install.net/2006/interfaces/0compile.xml -> 1.1 (sha1new=5d11d6a774f261b408f3c57dce8819481d842f90)
     User requested version 1.1
 - http://0install.net/2006/interfaces/0publish -> 0.20 (sha1new=3a62c59321720a1736899dec9ef7deb0b29b7b43)
     User requested version 0.20
-- http://0install.net/2007/interfaces/ZeroInstall.xml -> (problem)
+- https://apps.0install.net/0install/0install-python.xml -> (problem)
     http://0install.net/2006/interfaces/0compile.xml 1.1 requires 2.1 <= version
     http://0install.net/2006/interfaces/0publish 0.20 requires version < 1.11-post
     User requested version 2.1

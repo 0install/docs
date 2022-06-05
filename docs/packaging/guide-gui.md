@@ -16,7 +16,7 @@ To make a program available via Zero Install you need to create an XML 'feed' fi
 Start by getting **0publish-gui** in the usual way:
 
 ```shell
-0install add 0publish-gui http://0install.net/2007/interfaces/0publish-gui.xml
+0install add 0publish-gui https://apps.0install.net/0install/0publish-gui.xml
 ```
 
 This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).

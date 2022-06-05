@@ -29,7 +29,7 @@ Last checked    : Wed Jun 27 20:24:19 2012
 Last update     : 2012-06-27
 Previous update : 2012-06-16
 
-http://0install.net/2007/interfaces/ZeroInstall.xml: 1.8-post -> 1.9-post
+https://apps.0install.net/0install/0install-python.xml: 1.8-post -> 1.9-post
 https://apps.0install.net/utils/gnupg.xml: new -> 1.4.12-4
 ```
 

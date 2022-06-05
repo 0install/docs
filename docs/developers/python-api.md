@@ -56,7 +56,7 @@ Just running the example above using e.g. `python example.py` would get the `zer
 	<version before="3"/>
       </runner>
     </command>
-    <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+    <requires interface="https://apps.0install.net/0install/0install-python.xml">
       <version not-before="1.0"/>
       <environment insert="" name="PYTHONPATH"/>
     </requires>
