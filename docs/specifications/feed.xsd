@@ -286,6 +286,7 @@
           <xs:annotation>
             <xs:documentation>
               The Application User Model ID; used by Windows to associate shortcuts and pinned taskbar entries with running processes.
+              May not be longer than 128 characters and may not contain whitespace.
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>

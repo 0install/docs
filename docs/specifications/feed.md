@@ -631,7 +631,7 @@ Entry points are top-level elements and, unlike commands, are not associated wit
 : the canonical name of the binary supplying the command (without file extensions); this is used to suggest suitable alias names.
 
 `app-id`
-: the [Application User Model ID](https://docs.microsoft.com/en-us/windows/win32/shell/appids); used by Windows to associate shortcuts and pinned taskbar entries with running processes.
+: the [Application User Model ID](https://docs.microsoft.com/en-us/windows/win32/shell/appids); used by Windows to associate shortcuts and pinned taskbar entries with running processes. May not be longer than 128 characters and may not contain whitespace.
 
 `<needs-terminal>`
 : if present, this element indicates that the command represented by this entry point requires a terminal in order to run.
