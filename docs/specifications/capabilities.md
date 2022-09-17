@@ -176,7 +176,7 @@ Also serves as a programmatic identifier within the desktop environment. In case
 
 ### Remove hook
 
-A hook/callback into the application to be called during [`0install remove`](../details/cli.md#remove). If the process returns a non-zero exit code the removal process is cancelled. Supported since version 2.23.
+A hook/callback into the application to be called during [`0install remove`](../details/cli.md#remove). Supported since version 2.23.
 
 The hook will not be called if the application is not in the [cache](../details/cache.md) or if `--batch` is specified.
 
