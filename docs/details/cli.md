@@ -155,6 +155,10 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Makes sure an implementation has not been damaged (i.e. it manifest digest has not changed).</td>
 </tr>
 <tr>
+  <td><nobr><a href='#store-serve'><code>store serve</code></a></nobr></td>
+  <tdServes implementations from the cache as archives via HTTP</td>
+</tr>
+<tr>
   <td><nobr><a href='#store-add-dir'><code>store add-dir</code></a></nobr><br>(Windows only)</td>
   <td>Adds a directory to the list of custom implementation caches.</td>
 </tr>
@@ -1576,6 +1580,35 @@ Removes an implementation from the cache.
 Makes sure an implementation has not been damaged (i.e. if manifest digest has not changed).
 
 **Usage:** `0install store verify [DIRECTORY] DIGEST`
+
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+## store serve
+
+Serves implementations from the cache as archives via HTTP
+
+**Usage:** `0install store serve [PORT]`
 
 <table>
 <tr>
