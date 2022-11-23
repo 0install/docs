@@ -49,7 +49,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 : This attribute is only needed for remote feeds (fetched via HTTP). The value must exactly match the expected URL, to prevent an attacker replacing one correctly-signed feed with another (e.g., returning a feed for the `shred` program when the user asked for the `backup` program).
 
 `<name>`
-: a short name to identify the interface (e.g. "Foo")
+: a short name to identify the feed or program (e.g. "Foo")
 
 `<summary>`
 : a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills"). Supports [localization](#localization).
@@ -58,7 +58,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 : a full description, which can be several paragraphs long (optional since 0.32, but recommended). Supports [localization](#localization).
 
 `<homepage>`
-: the URL of a web-page describing this interface in more detail
+: the URL of a web-page describing feed or program in more detail.
 
 `<category>`
 : a classification for the interface. If no type is given, then the category is one of the 'Main' categories defined by the [freedesktop.org menu specification](http://standards.freedesktop.org/menu-spec/latest/apa.html). Otherwise, it is a URI giving the namespace for the category.

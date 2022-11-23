@@ -34,7 +34,7 @@
           <xs:element name="name" type="xs:string" maxOccurs="1">
             <xs:annotation>
               <xs:documentation>
-                A short name to identify the interface (e.g. "Foo"). Required!
+                A short name to identify the feed or program (e.g. "Foo"). Required!
               </xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -55,7 +55,7 @@
           <xs:element name="homepage" type="xs:string" maxOccurs="1">
             <xs:annotation>
               <xs:documentation>
-                The URL of a web-page describing this interface in more detail.
+                The URL of a web-page describing feed or program in more detail.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
