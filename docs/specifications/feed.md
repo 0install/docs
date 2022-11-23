@@ -25,6 +25,7 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
   <name>...</name>
   <summary xml:lang='...' ?>...</summary> +
   <description xml:lang='...' ?>...</description> *
+  <publisher>...</publisher> ?
   <homepage>...</homepage> ?
   <category type='...' ? >...</category> *
   <needs-terminal/> ?
@@ -56,6 +57,9 @@ Feed files are introduced in the [Packager's Documentation](../packaging/index.m
 
 `<description>`
 : a full description, which can be several paragraphs long (optional since 0.32, but recommended). Supports [localization](#localization).
+
+`<publisher>`
+: the publisher (company or organization) of the program.
 
 `<homepage>`
 : the URL of a web-page describing feed or program in more detail.

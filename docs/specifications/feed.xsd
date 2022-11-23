@@ -52,6 +52,13 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element name="publisher" type="xs:string" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                The publisher (company or organization) of the program.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:element name="homepage" type="xs:string" maxOccurs="1">
             <xs:annotation>
               <xs:documentation>
