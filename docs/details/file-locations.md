@@ -21,4 +21,6 @@ This page documents the filesystem paths Zero Install reads from and writes to d
 | [0install apps](apps.md)                   | `~/.config/0install.net/apps`                                                  | -                                                                              |
 | Icon cache                                 | -                                                                              | `%LOCALAPPDATA%\0install.net\icons`                                            |
 | [Desktop integration](desktop-integration) | -                                                                              | `%APPDATA%\0install.net\desktop-integration`                                   |
-|                                            |                                                                                | `%PROGRAMDATA%\0install.net\desktop-integration`                               |
+|                                            | -                                                                              | `%PROGRAMDATA%\0install.net\desktop-integration`                               |
+| Log files                                  | -                                                                              | `%TEMP%\0install %USERNAME% Log.txt`                                            |
+|                                            | -                                                                              | `%TEMP%\0install-win %USERNAME% Log.txt`                                        |

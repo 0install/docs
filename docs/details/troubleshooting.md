@@ -154,7 +154,7 @@ INFO:0install:Executing: [u'/usr/bin/python2.7', u'/var/cache/0install.net/imple
 ```
 
 *Windows only:*  
-If you encountered an error and did not use `-v`, used the GUI or forgot to copy the console output you can still find the relevant information in log files stored in the `%TEMP%` directory. Look for files named `0install GUI USERNAME Log.txt` or `Zero Install Command WinForms GUI USERNAME Log.txt` (the specific name depends on the EXE you used to access Zero Install and your user account name).
+If you encountered an error and did not use `-v`, used the GUI or forgot to copy the console output you can still find the relevant information in log files stored in the `%TEMP%` directory. Look for files named `0install %USERNAME% Log.txt` or `0install-win %USERNAME% Log.txt` (the specific name depends on the EXE you used to access Zero Install and your user account name).
 
 ## Download problems / proxies / HTTP errors
 
