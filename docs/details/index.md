@@ -57,7 +57,7 @@ This all tells you that the XML file was created by the owner of the key and has
 ```shell
 $ gpg --with-colons --fingerprint AE07828059A53CC1 | grep fpr
 fpr:::::::::92429807C9853C0744A68B9AAE07828059A53CC1:
-$ wget -qO - https://keylookup.appspot.com/key/92429807C9853C0744A68B9AAE07828059A53CC1
+$ wget -qO - https://keylookup.0install.net/key/92429807C9853C0744A68B9AAE07828059A53CC1
 <?xml version="1.0" encoding="utf-8"?>
 <key-lookup>
   <item vote="good">Thomas Leonard created Zero Install and ROX.
