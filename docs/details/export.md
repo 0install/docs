@@ -37,7 +37,7 @@ Zero Install automatically takes care of downloading applications and their depe
               Implementations selected for VLC and Zero Install compressed as archives named by digest.
         ```
 
-    You can also export individual implementations from the [cache](cache.md) using the command [`0install store export`](cli.md#store_export).
+    You can also export individual implementations from the [cache](cache.md) using the command [`0install store export`](cli.md#store-export).
 
     !!! example
         ```shell
