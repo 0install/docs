@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:xml="http://www.w3.org/XML/1998/namespace"
+            xmlns:caps="http://0install.de/schema/desktop-integration/capabilities"
+            xmlns:feed="http://zero-install.sourceforge.net/2004/injector/interface"
+            targetNamespace="http://0install.de/schema/desktop-integration/capabilities"
+            id="capabilities" elementFormDefault="qualified">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xs:import namespace="http://zero-install.sourceforge.net/2004/injector/interface" schemaLocation="https://docs.0install.net/specifications/feed.xsd" />
+
+  <!-- Root element -->
+  <!-- Note: This namespace is intended to be embedded within 0install feeds and not for stand-alone use! -->
+  <xs:element name="capabilities" type="caps:capabilities" />
+  <xs:complexType name="capabilities">
+    <xs:annotation>
+      <xs:documentation>
+        Groups a number of application capabilities (for a specific operating system) that can be registered in a desktop environment.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="file-type" type="caps:file-type" />
+      <xs:element name="url-protocol" type="caps:url-protocol" />
+      <xs:element name="context-menu" type="caps:context-menu" />
+      <xs:element name="auto-play" type="caps:auto-play" />
+      <xs:element name="com-server" type="caps:com-server" />
+      <xs:element name="registration" type="caps:registration" />
+      <xs:element name="default-program" type="caps:default-program" />
+      <xs:element name="remove-hook" type="caps:remove-hook" />
+    </xs:choice>
+    <xs:attribute name="os" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Determines for which operating system the capabilities are applicable.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="capability" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        A capability tells the desktop environment what an application can do and in which fashion this can be represented to the user.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="id" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          An ID that differentiates this capability from other capabilities of the same type within the feed. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
+          Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first capability listed with a specific ID will take precedence.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="default-capability" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        A capability that can be applied as a default handler for something at the user's request.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:capability">
+        <xs:attribute name="explicit-only" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>
+              When set to true do not apply this capability is not applied as a default handler without explicit confirmation from the user.
+              Use this to exclude exotic capabilities from default integration categories.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="icon-capability" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        A capability that that can have multiple icons and descriptions.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:default-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="description" type="caps:localizable-string">
+            <xs:annotation>
+              <xs:documentation>
+                Human-readable descriptions of the AutoPlay operation.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element ref="feed:icon">
+            <xs:annotation>
+              <xs:documentation>
+                An icon to represent the capability. Used for things like file icons.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="verb-capability" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        A capability that that can have multiple verbs.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:icon-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="verb" type="caps:verb" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="verb">
+    <xs:annotation>
+      <xs:documentation>
+        The mapping of an action/verb (e.g. open, edit) to a command.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="description" type="caps:localizable-string">
+        <xs:annotation>
+          <xs:documentation>
+            Human-readable description of the verb as an alternative to 'name'.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="arg" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
+            &quot;${item}&quot; gets replaced with the path of the file being opened.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The name of the verb. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
+          Use canonical names to get automatic localization; specify &lt;description&gt; otherwise.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="command" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          The name of the command in the feed to use when launching via this capability; leave unset or empty for 'run'.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="args" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Command-line arguments to be passed to the command in escaped form. &quot;%V&quot; gets replaced with the path of the file being opened.
+          This is ignored if any &lt;arg&gt; elements are specified.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="single-element-only" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>
+         Set this to true to hide the verb if more than one element is selected.
+         Use this to help avoid running out of resources if the user opens too many files.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="extended" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>
+          Set this to true to hide the verb in the Windows context menu unless the Shift key is pressed when opening the menu.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="file-type">
+    <xs:annotation>
+      <xs:documentation>
+        An application's ability to open a certain file type.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="extension" type="caps:extension" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="extension">
+    <xs:annotation>
+      <xs:documentation>
+        A specific file extension used to identify a file type.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="value" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The file extension including the leading dot (e.g. &quot;.jpg&quot;).
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="mime-type" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          The MIME type associated with the file extension.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="perceived-type" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Defines the broad category of file types this extension falls into.
+          Well-known values on Windows are: folder, text, image, audio, video, compressed, document, system, application
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="url-protocol">
+    <xs:annotation>
+      <xs:documentation>
+        An application's ability to handle a certain URL protocol such as HTTP.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="known-prefix" type="caps:known-prefix" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="known-prefix">
+    <xs:annotation>
+      <xs:documentation>
+        Names a well-known protocol prefix. Used for protocols that are shared across many applications (e.g. HTTP, FTP) but not for application-specific protocols.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="value" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The value of the prefix (e.g. "http").
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="context-menu">
+    <xs:annotation>
+      <xs:documentation>
+        An entry in the file manager's context menu for all file types.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="extension" type="caps:extension" />
+        </xs:choice>
+        <xs:attribute name="target" type="caps:context-menu-target" default="files">
+          <xs:annotation>
+            <xs:documentation>
+              Controls which file system object types this context menu entry is displayed for.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="context-menu-target">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="files">
+        <xs:annotation>
+          <xs:documentation>
+            The context menu entry is displayed for all files.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="executable-files">
+        <xs:annotation>
+          <xs:documentation>
+            The context menu entry is displayed for executable files.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="directories">
+        <xs:annotation>
+          <xs:documentation>
+            The context menu entry is displayed for all directories.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="all">
+        <xs:annotation>
+          <xs:documentation>
+            The context menu entry is displayed for all filesystem objects (files and directories).
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="auto-play">
+    <xs:annotation>
+      <xs:documentation>
+        An application's ability to handle one or more AutoPlay events.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:icon-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="verb" type="caps:verb" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                The command to execute when the handler gets called. Required!
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="event" type="caps:event">
+            <xs:annotation>
+              <xs:documentation>
+                A specific <see cref="AutoPlay"/> event such as "Audio CD inserted". Required!
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+        <xs:attribute name="provider" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              The name of the application as shown in the AutoPlay selection list.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="event">
+    <xs:attribute name="name" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The name of the event.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="com-server">
+    <xs:annotation>
+      <xs:documentation>
+        An application's ability to act as a COM server.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:capability" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="registration">
+    <xs:annotation>
+      <xs:documentation>
+        Indicates that an application should be listed in the "Set your Default Programs" UI (Windows Vista and later).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:capability">
+        <xs:attribute name="capability-reg-path" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:appinfo>
+              The registry path relative to HKEY_CURRENT_USER or HKEY_LOCAL_MACHINE which should be used to store the application's capability registration information.
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="x64" type="xs:boolean">
+          <xs:annotation>
+            <xs:appinfo>
+              Set to true for real 64-bit applications whose registry entries do not get redirected by WOW.
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="default-program">
+    <xs:annotation>
+      <xs:documentation>
+        Can act as the default provider for a well-known service such web-browser, e-mail client.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="install-commands" type="caps:install-commands" maxOccurs="1" />
+        </xs:choice>
+        <xs:attribute name="service" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              The name of the service the application provides.
+              Well-known values on Windows are: Mail, Media, IM, JVM, Calender, Contacts, Internet Call
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="install-commands">
+    <xs:annotation>
+      <xs:documentation>
+        Lists the commands the application normally registers for use by Windows' "Set Program Access and Defaults".
+        Used by registry virtualization to stand in for the actual Zero Install commands at runtime.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="reinstall" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          The path (relative to the installation directory) to the executable used to set an application as the default program without any arguments.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="reinstall-args" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Additional arguments for the executable specified in 'reinstall'.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="show-icons" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          The path (relative to the installation directory) to the executable used to create icons/shortcuts to the application without any arguments.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="show-icons-args" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Additional arguments for the executable specified in 'show-icons'.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="hide-icons" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          The path (relative to the installation directory) to the executable used to remove icons/shortcuts to the application without any arguments.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="hide-icons-args" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>
+          Additional arguments for the executable specified in 'hide-icons'.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="remove-hook">
+    <xs:annotation>
+      <xs:documentation>
+        A hook/callback into the application to be called during '0install remove'.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caps:verb-capability">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="arg" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                Command-line argument to be passed to the command. Will be automatically escaped to allow proper concatenation of multiple arguments containing spaces.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+        <xs:attribute name="command" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              The name of the command in the feed to use when a removal of the app is requested; leave empty for 'run'.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Localizable string -->
+  <xs:complexType name="localizable-string" mixed="true">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="xml:lang" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
