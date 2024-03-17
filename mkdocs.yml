@@ -4,7 +4,7 @@ repo_url: https://github.com/0install/docs
 edit_uri: blob/master/docs/
 
 copyright: >
-  © Copyright 2003-2022 Thomas Leonard, Bastian Eicher and others<br>
+  © Copyright 2003-2024 Thomas Leonard, Bastian Eicher and others<br>
   Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
 
 theme:
