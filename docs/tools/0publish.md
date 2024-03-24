@@ -1,109 +1,126 @@
 # 0publish
 
-!!! info ""
-    **Maintainer:** Thomas Leonard  
-    **License:** GNU Lesser General Public License  
-    **Source:** <https://github.com/0install/0publish>  
-    **Zero Install feed:** <https://apps.0install.net/0install/0publish.xml>
-
-Making a new release of your software can be time consuming and error-prone, so you'll probably want to script as much as possible of it. The **0publish** command provides a set of useful transformations for feed files which you can integrate into your release scripts.
-
-However, **0publish is somewhat deprecated**:
-
-- If you're looking for a graphical environment instead, see **0publish-gui** in [the packaging guide](../packaging/guide-gui.md).
-- To add a new version of a program to a feed, consider using [0template](0template.md) to generate the XML for the new version and [0repo](0repo.md) to add it to the master feed.
-- [0release](0release/index.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
-
-## General operation
-
 `0publish` edits feed files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key.
 
-You can create an app for `0publish` in the usual way:
+You can setup `0publish` like this:
 
 ```shell
 0install add 0publish https://apps.0install.net/0install/0publish.xml
 ```
 
-## 0publish reference
+## Alternatives
 
-Usage: `0publish [options] feed.xml`
+- If you're looking for a graphical environment instead, see [0publish-gui](0publish-gui.md).
+- To add a new version of a program to a feed, consider using [0template](0template.md) to generate the XML for the new version and [0repo](0repo.md) to add it to the master feed.
+- [0release](0release/index.md) provides a more complete solution for managing releases (0release uses 0publish or 0repo internally, but also handles many other aspects of making releases for you).
 
-### Options
+=== "Linux / macOS"
+    !!! info ""
+        **Maintainer:** Thomas Leonard  
+        **License:** GNU Lesser General Public License  
+        **Source:** <https://github.com/0install/0publish>  
+        **Zero Install feed:** <https://apps.0install.net/0install/0publish.xml>
 
-`-h`, `--help`
-: Show help message and exit.
+    ## Options
 
-`-a FEED`, `--add-from=FEED`
-: Add the implementation(s) in `FEED` to this one, putting them in the most sensible `<group>` (so as to minimise duplication of requirements, etc).
+    `-h`, `--help`
+    : Show help message and exit.
 
-`--add-types`
-: add missing MIME-type attributes.
+    `-a FEED`, `--add-from=FEED`
+    : Add the implementation(s) in `FEED` to this one, putting them in the most sensible `<group>` (so as to minimise duplication of requirements, etc).
 
-`--add-version=VERSION`
-: Add a new implementation (use with `--archive-url`, etc).
+    `--add-types`
+    : add missing MIME-type attributes.
 
-`--archive-url=URL`, `--archive-file=FILE`, `--archive-extract=DIR`
-: Change a local implementation to one with a digest and an archive.
+    `--add-version=VERSION`
+    : Add a new implementation (use with `--archive-url`, etc).
 
-`-c`, `--create`
-: Create a new feed file (if non-existent) without prompting.
+    `--archive-url=URL`, `--archive-file=FILE`, `--archive-extract=DIR`
+    : Change a local implementation to one with a digest and an archive.
 
-`-d ALG`, `--add-digest=ALG`
-: Add extra digests using the given algorithm.
+    `-c`, `--create`
+    : Create a new feed file (if non-existent) without prompting.
 
-`-e`, `--edit`
-: Edit with `$EDITOR`. This is useful if the file is signed, since it removes the signature at the start and resigns at the end. It also checks that the new feed is valid before overwriting the old copy.
+    `-d ALG`, `--add-digest=ALG`
+    : Add extra digests using the given algorithm.
 
-`-g`, `--gpgsign`
-: Add a GPG signature block. Deprecated; use `--xmlsign` instead.
+    `-e`, `--edit`
+    : Edit with `$EDITOR`. This is useful if the file is signed, since it removes the signature at the start and resigns at the end. It also checks that the new feed is valid before overwriting the old copy.
 
-`-kKEY`, `--key=KEY`
-: Key to use for signing (if you have more than one, or if you want to resign with a different key).
+    `-g`, `--gpgsign`
+    : Add a GPG signature block. Deprecated; use `--xmlsign` instead.
 
-`-lLOCAL`, `--local=LOCAL`
-: Deprecated; use `--add-from` instead.
+    `-kKEY`, `--key=KEY`
+    : Key to use for signing (if you have more than one, or if you want to resign with a different key).
 
-`--manifest-algorithm=ALG`
-: Select the algorithm to use for manifest digests.
+    `-lLOCAL`, `--local=LOCAL`
+    : Deprecated; use `--add-from` instead.
 
-`--set-id=DIGEST`
-: Set the implementation ID. Note: it's usually easier to use the `--archive-*` options, since they calculate the digest for you.
+    `--manifest-algorithm=ALG`
+    : Select the algorithm to use for manifest digests.
 
-`--set-main=EXEC`
-: Set the main executable.
+    `--set-id=DIGEST`
+    : Set the implementation ID. Note: it's usually easier to use the `--archive-*` options, since they calculate the digest for you.
 
-`--set-arch=ARCH`
-: Set the architecture.
+    `--set-main=EXEC`
+    : Set the main executable.
 
-`--set-released=DATE`
-: Set the release date. Typically used as `0publish --set-released $(date +%F) feed.xml`, which sets today's date.
+    `--set-arch=ARCH`
+    : Set the architecture.
 
-`--set-stability=STABILITY`
-: Set the stability rating.
+    `--set-released=DATE`
+    : Set the release date. Typically used as `0publish --set-released $(date +%F) feed.xml`, which sets today's date.
 
-`--set-version=VERSION`
-: Set the version number (used when making a release from CVS).
+    `--set-stability=STABILITY`
+    : Set the stability rating.
 
-`-s`, `--stable`
-: Mark the current testing version as stable.
+    `--set-version=VERSION`
+    : Set the version number (used when making a release from CVS).
 
-`--select-version=VERSION`
-: Select version to use in `--set-*` commands.
+    `-s`, `--stable`
+    : Mark the current testing version as stable.
 
-`-x`, `--xmlsign`
-: Add an XML signature block. All remote feeds must be signed.
+    `--select-version=VERSION`
+    : Select version to use in `--set-*` commands.
 
-`-u`, `--unsign`
-: Remove any signature.
+    `-x`, `--xmlsign`
+    : Add an XML signature block. All remote feeds must be signed.
 
-`-v`, `--verbose`
-: More verbose output (for debugging).
+    `-u`, `--unsign`
+    : Remove any signature.
 
-`-V`, `--version`
-: Display version information.
+    `-v`, `--verbose`
+    : More verbose output (for debugging).
 
-## FAQ
+    `-V`, `--version`
+    : Display version information.
 
-### gpg: signing failed: secret key not available
+    ## FAQ
 
-By default, 0publish tries to sign the new version of the feed using the same key that signed the old version. You will get this error if you don't have this key (e.g. because someone else signed the old version). In that case, use `-k` to specify they key you want to use instead.
+    **gpg: signing failed: secret key not available**
+
+    By default, 0publish tries to sign the new version of the feed using the same key that signed the old version. You will get this error if you don't have this key (e.g. because someone else signed the old version). In that case, use `-k` to specify they key you want to use instead.
+
+=== "Windows"
+    !!! info ""
+        **Maintainer:** Bastian Eicher  
+        **License:** GNU Lesser General Public License  
+        **Source:** <https://github.com/0install/0publish-dotnet>  
+        **Zero Install feed:** <https://apps.0install.net/0install/0publish.xml>
+
+    ## Options
+
+    `-h`, `--help`
+    : Show help message and exit.
+
+    `--add-missing`
+    :  Download missing archives, calculate manifest digests, etc..
+
+    `-x`, `--xmlsign`
+    : Add an XML signature block. All remote feeds must be signed.
+
+    `-u`, `--unsign`
+    : Remove any signature.
+
+    `-V`, `--version`
+    : Display version information.

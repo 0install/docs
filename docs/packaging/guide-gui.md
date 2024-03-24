@@ -11,7 +11,7 @@ We assume here that a binary release already exists (perhaps published by someon
 
 ## Tutorial
 
-To make a program available via Zero Install you need to create an XML 'feed' file, describing which versions are available, where they can be downloaded, and what other software they require. In this tutorial, we'll use the graphical **0publish-gui** application to create this file. If you don't want to use a graphical interface (for example, because you want to publish new versions using a script) then you should read the [command-line tutorial](guide-cli.md) instead.
+To make a program available via Zero Install you need to create an XML 'feed' file, describing which versions are available, where they can be downloaded, and what other software they require. In this tutorial, we'll use the graphical [0publish-gui](../tools/0publish-gui.md) application to create this file. If you don't want to use a graphical interface (for example, because you want to publish new versions using a script) then you should read the [command-line tutorial](guide-cli.md) instead.
 
 Start by getting **0publish-gui** in the usual way:
 
@@ -19,10 +19,8 @@ Start by getting **0publish-gui** in the usual way:
 0install add 0publish-gui https://apps.0install.net/0install/0publish-gui.xml
 ```
 
-This program requires GTK >= 2.6 and Python >= 2.4 (these are not fetched using Zero Install at present).
-
 !!! note
-    On Windows use [0publish-win](../tools/0publish-win.md) instead.
+    The following text currently on describes the steps on Linux. Documentation for Windows coming soon.
 
 Run the program, giving it the name of the feed file you want to create, which should be named after the program:
 
@@ -93,7 +91,7 @@ $ 0install run http://0install.net/2007/3rd-party/Blender.xml
 It's surprising how easy it is to forget to set the right permissions, etc, so check your new feed! [FeedLint](../tools/feedlint.md) is an easy first step:
 
 ```shell
-0install add feedlint http://0install.net/2007/interfaces/FeedLint.xml
+0install add feedlint https://apps.0install.net/0install/feedlint.xml
 feedlint http://0install.net/2007/3rd-party/Blender.xml
 ```
 

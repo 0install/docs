@@ -48,3 +48,4 @@ plugins:
         basics/making-shortcuts.md: basics/menu.md
         basics/using-apps.md: details/apps.md
         basics/windows.md: details/desktop-integration.md
+        tools/0publish-win.md: tools/0publish-gui.md

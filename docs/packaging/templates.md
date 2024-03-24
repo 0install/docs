@@ -24,7 +24,7 @@ This page lists some example code packages which you can use as templates when c
 ## .NET
 
 [Packaging .NET libraries](examples/dotnet-lib.md)
-: This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using the Publishing Tools.
+: This tutorial explains how to create feeds for a .NET application with a dependency on a .NET library using 0publish-gui.
 
 ## Python
 
