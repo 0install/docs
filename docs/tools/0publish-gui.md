@@ -1,8 +1,6 @@
 # 0publish-gui
 
-Publishing a program using Zero Install requires you to create an XML file listing the available versions, where to get them, and what other software they depend on.
-  
-This program provides a simple graphical interface for creating and editing these feeds.
+Publishing a program using Zero Install requires you to create an XML file listing the available versions, where to get them, and what other software they depend on. This program provides a simple graphical interface for creating and editing these feeds.
 
 === "Linux / macOS"
     !!! info ""
@@ -20,15 +18,13 @@ This program provides a simple graphical interface for creating and editing thes
         **Source:** <https://github.com/0install/0publish-gui-dotnet>  
         **Zero Install feed:** <https://apps.0install.net/0install/0publish-gui.xml>
 
-    0publish-gui (formerly known as Zero Install Publishing Tools) allow you to create your own feeds on Windows.
+    0publish-gui for Windows (previously known as Zero Install Publishing Tools) provides [a graphical feed editor](#feed-editor) and a [new feed wizard](#new-feed-wizard).
 
-    You need Zero Install to run 0publish-gui. You can either search for 0publish-gui in the Catalog or type this on the command-line:
+    You can add 0publish-gui to your start menu like this:
 
     ```shell
-    0install run https://apps.0install.net/0install/0publish-gui.xml
+    0install integrate https://apps.0install.net/0install/0publish-gui.xml
     ```
-
-    0publish-gui provides [a graphical feed editor](#feed-editor) and a [new feed wizard](#new-feed-wizard).
 
     ## Feed Editor
 
