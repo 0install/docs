@@ -1,6 +1,6 @@
 # 0bootstrap
 
-**0bootstrap** generates a native package that installs 0install itself along with a launcher for a 0install app.
+**0bootstrap** generates a native package or installer that installs 0install itself along with a an app launched via 0install.
 
 === "Linux / macOS"
     !!! info ""
@@ -65,6 +65,40 @@
         **License:** GNU Lesser General Public License  
         **Source:** <https://github.com/0install/0bootstrap-dotnet>  
         **Zero Install feed:** <https://apps.0install.net/0install/0bootstrap.xml>
+
+    To setup 0bootstrap on your system you can run:
+
+    ```
+    0install add 0bootstrap https://apps.0install.net/0install/0bootstrap.xml
+    ```
+
+    You can then pass it a feed for which you'd like to create a bootstrapper as a command-line argument.
+
+    !!! example
+        ```shell
+        0bootstrap https://apps.0install.net/gui/vlc.xml
+        ```
+
+        This will create a new file named `VLC media player.exe`, name taken from the `<name>` tag in the feed, in the current working directory. The file will have the VLC icon, taken from `<icon>` tag in the feed.
+
+    By default, this bootstrapper will simply download 0install (if it is not already present) and then use it to run the feed. You can also configure the bootstrapper to perform [desktop integration](../details/desktop-integration.md). You can use `--integrate-args=` to specify which arguments should be passed to [`0install integrate`](../details/cli.md#integrate).
+
+    !!! example
+        ```shell
+        0bootstrap https://apps.0install.net/gui/vlc.xml --integrate-args="--add-standard"
+        ```
+
+        This causes the bootstrapper to run `0install integrate https://apps.0install.net/gui/vlc.xml --add-standard`, adding the app to the start menu and registering its supported file types.
+
+    You can bundle the output of [`0install export`](../details/export.md) into a bootstrapper to create a self-contained "offline installer" using `--content=`.
+
+    !!! example
+        ```shell
+        0install export https://apps.0install.net/gui/vlc.xml vlc-export
+        0bootstrap https://apps.0install.net/gui/vlc.xml --content=vlc-export\content
+        ```
+
+    For further command-line arguments, see the output of `0bootstrap --help`.
 
 ## FAQ
 
