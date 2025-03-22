@@ -4,17 +4,19 @@ When launching a feed for the first time, 0install will download the necessary f
 
 === "Linux / macOS"
 
-    ```shell
-    0install run https://apps.0install.net/gui/vs-code.xml
-    ```
+    1.  Use the command-line start a feed
 
-    1.  Click Download
+        ```shell
+        0install run https://apps.0install.net/gui/vs-code.xml
+        ```
+
+    2.  Click Download
 
         ![](../img/screens/find-libraries.png)
 
         The feed says which dependencies the select program needs. Each dependency is identified by a web address (URL) in the same way that the main program was. 0install downloads information about them in the same way and selects a compatible set of versions. The window displays a dialog box showing the program and all required libraries. Click **Download**.
 
-    2.  Wait for the download to finish
+    3.  Wait for the download to finish
 
         ![](../img/screens/download-foo.png)
 
