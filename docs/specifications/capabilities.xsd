@@ -36,16 +36,22 @@
     </xs:attribute>
   </xs:complexType>
 
+  <xs:simpleType name="safe-id">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9 ._+\-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:complexType name="capability" abstract="true">
     <xs:annotation>
       <xs:documentation>
         A capability tells the desktop environment what an application can do and in which fashion this can be represented to the user.
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="id" type="xs:string" use="required">
+    <xs:attribute name="id" type="caps:safe-id" use="required">
       <xs:annotation>
         <xs:documentation>
-          An ID that differentiates this capability from other capabilities of the same type within the feed. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
+          An ID that differentiates this capability from other capabilities of the same type within the feed.
           Also serves as a programmatic identifier within the desktop environment. In case of conflicts, the first capability listed with a specific ID will take precedence.
         </xs:documentation>
       </xs:annotation>
@@ -135,10 +141,10 @@
         </xs:annotation>
       </xs:element>
     </xs:choice>
-    <xs:attribute name="name" type="xs:string" use="required">
+    <xs:attribute name="name" type="caps:safe-id" use="required">
       <xs:annotation>
         <xs:documentation>
-          The name of the verb. May only contain alphanumeric characters, spaces ( ), dots (.), underscores (_), hyphens (-) and plus signs (+).
+          The name of the verb.
           Use canonical names to get automatic localization; specify &lt;description&gt; otherwise.
         </xs:documentation>
       </xs:annotation>
