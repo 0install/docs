@@ -174,6 +174,36 @@ Also serves as a programmatic identifier within the desktop environment. In case
 `explicit-only`
 : When set to `true` the app is not registered as a default program without explicit confirmation from the user.
 
+### Browser native messaging
+
+An application's ability to act as a [browser native messaging host](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging). Supported since version 2.28.
+
+```xml
+<native-messaging id='...' name='...' browser='...' command='...' ? explicit-only='true' ?>
+  <browser-extension id='...'/> *
+</native-messaging>
+```
+
+`id`
+: An ID that uniquely identifies this native messaging entry within the feed. Must be a [safe ID](#safe-id).
+
+`name`
+: The name used to call the native messaging host from browser extensions.  
+  Can only contain lowercase alphanumeric characters, underscores (`_`) and dots (`.`). Can't start or end with a dot, and a dot can't be followed by another dot.
+
+`browser`
+: Space-separated list of browsers the native messaging host can be registered in.  
+  Well-known values currently are:`Firefox`,  `Chrome`, `Chromium`, `Edge`, `Opera`, `Brave`, `Vivaldi`
+
+`command`
+: The name of the command in the feed to use. Defaults to `run` if not set.
+
+`explicit-only`
+: When set to `true` this context menu entry is not added without explicit confirmation from the user.
+
+`<browser-extension>`
+: Browser extension that should have access to the native messaging host. `id` contains the ID of the browser extension, without prefixes like `chrome-extension://`.
+
 ### Remove hook
 
 A hook/callback into the application to be called during [`0install remove`](../details/cli.md#remove). Supported since version 2.23.
