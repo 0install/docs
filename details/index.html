@@ -1,0 +1,2933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://0install.net/details/">
+      
+      
+        <link rel="prev" href="../basics/alias/">
+      
+      
+        <link rel="next" href="policy-settings/">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Manual walk-through - Zero Install Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manual-walk-through" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Zero Install Docs" class="md-header__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero Install Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manual walk-through
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/perspectives/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../basics/" class="md-tabs__link">
+          
+  
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Details
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../developers/" class="md-tabs__link">
+          
+  
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../packaging/" class="md-tabs__link">
+          
+  
+  
+  Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../specifications/" class="md-tabs__link">
+          
+  
+  
+  Specifications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tools/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Zero Install Docs" class="md-nav__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Zero Install Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/perspectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Perspectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/first-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First launch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a menu entry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/alias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a command-line alias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Manual walk-through
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual walk-through
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pick-a-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pick a program
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pick a program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pick-a-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pick a version
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pick a version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-note_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run it!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-with-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running with dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tidying-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tidying up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="policy-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Policy settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="desktop-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desktop integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sharing downloads between users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="virtual-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="distribution-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distribution integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trouble-shooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command-line interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File locations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="os-differences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OS-specific differences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for macOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/using-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/solver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Solver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/dotnet-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/json-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Packaging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/guide-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (command-line)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/guide-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (graphical)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/local-feeds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local feeds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/examples/dotnet-lib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/examples/find/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/examples/inkscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inkscape
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/examples/rox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROX-Filer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Specifications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specifications overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/feed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feed files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/capabilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Capabilities extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Catalog files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/selections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selections files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/manifest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manifest files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0mirror/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0mirror
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0publish-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish-gui
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0publish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0repo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0share/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0share
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0watch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0watch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/ebox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ebox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/feedlint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FeedLint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/make-headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make-headers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/pkg2zero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pkg2zero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_17" id="__nav_8_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_17">
+            <span class="md-nav__icon md-icon"></span>
+            0compile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0compile/chroot-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Chroot Build
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0compile/developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0compile/example-scons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: SCons example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_18" id="__nav_8_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_18">
+            <span class="md-nav__icon md-icon"></span>
+            0release
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0release/compiled-binaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Compiled binaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/0release/customisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Customisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="manual-walk-through">Manual walk-through<a class="headerlink" href="#manual-walk-through" title="Permanent link">&para;</a></h1>
+<p>In this guide we install a program which is available through Zero Install, but <em>without using the Zero Install software itself</em>. Instead, we will perform each step manually, as an educational experience.</p>
+<h2 id="pick-a-program">Pick a program<a class="headerlink" href="#pick-a-program" title="Permanent link">&para;</a></h2>
+<p>Choose a program to install from the <a href="https://apps.0install.net/">list of feeds</a>. A program with one dependency is ideal (the more it has, the longer it will take you to install it!). I'll be using <a href="http://rox.sourceforge.net/2005/interfaces/Edit">Edit</a> for this example.</p>
+<p>Open the feed for Edit above in your browser. The feed is an XML file listing the available versions of Edit. Your browser should render it as a web-page:</p>
+<p><a href="http://rox.sourceforge.net/2005/interfaces/Edit"><img alt="Edit's web page" src="../img/screens/edit-xslt.png" /></a></p>
+<p>Use <strong>View Source</strong> to see the XML. We'll use this information to download and run Edit.</p>
+<h3 id="security-note">Security note<a class="headerlink" href="#security-note" title="Permanent link">&para;</a></h3>
+<p>Why should we trust this XML document? Who made it? Could someone have tampered with it?</p>
+<p>Each Zero Install feed has a <em>digital signature</em>. You can find it at the end of the feed. It looks something like this:</p>
+<div class="highlight"><pre><span></span><code>...
+<span class="nt">&lt;/interface&gt;</span>
+<span class="cm">&lt;!-- Base64 Signature</span>
+<span class="cm">iD8DBQBGBkYcrgeCgFmlPMERAuP4AJ45BlLx1w3ocxuLIFHzM4RfIAg4hgCfWRQ/0JOjU7tIjErm</span>
+<span class="cm">U3Vrz97gJk8=</span>
+
+<span class="cm">--&gt;</span>
+</code></pre></div>
+<p>This is a <a href="https://gnupg.org/">GnuPG</a> signature, but <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>-encoded so that it can go in an XML document. To check it, we need to reverse the encoding, which is easily done with a little Python. Save the two lines of random-looking characters to a file (<code>encoded-signature</code>) and decode it:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span>&lt;<span class="w"> </span>encoded-signature<span class="w"> </span>&gt;<span class="w"> </span>signature
+</code></pre></div>
+<p>Now remove the whole signature block from the XML (every line from <code>&lt;!-- Base64 Signature</code> onwards), save it as <code>Edit.xml</code>, and check it with GPG:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gpg<span class="w"> </span>--keyid-format<span class="o">=</span>long<span class="w"> </span>signature<span class="w"> </span>
+Detached<span class="w"> </span>signature.
+Please<span class="w"> </span>enter<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>data<span class="w"> </span>file:<span class="w"> </span>Edit.xml
+gpg:<span class="w"> </span>Signature<span class="w"> </span>made<span class="w"> </span>Sun<span class="w"> </span><span class="m">25</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">2007</span><span class="w"> </span><span class="m">10</span>:51:24<span class="w"> </span>BST
+gpg:<span class="w">                </span>using<span class="w"> </span>DSA<span class="w"> </span>key<span class="w"> </span>AE07828059A53CC1
+gpg:<span class="w"> </span>Good<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;Thomas Leonard ...</span>
+</code></pre></div>
+<p>If you don't have the feed author's key, you can get it from various places (in the normal way), or by fetching it from the same directory as the feed, e.g.:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>http://rox.sourceforge.net/2005/interfaces/AE07828059A53CC1.gpg
+$<span class="w"> </span>gpg<span class="w"> </span>--import<span class="w"> </span>AE07828059A53CC1.gpg<span class="w"> </span>
+</code></pre></div>
+<p>This all tells you that the XML file was created by the owner of the key and hasn't been tampered with. How you decide to trust the key itself is up to you, but one way is to check it using the default key information server:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gpg<span class="w"> </span>--with-colons<span class="w"> </span>--fingerprint<span class="w"> </span>AE07828059A53CC1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>fpr
+fpr:::::::::92429807C9853C0744A68B9AAE07828059A53CC1:
+$<span class="w"> </span>wget<span class="w"> </span>-qO<span class="w"> </span>-<span class="w"> </span>https://keylookup.0install.net/key/92429807C9853C0744A68B9AAE07828059A53CC1
+&lt;?xml<span class="w"> </span><span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span><span class="w"> </span><span class="nv">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span>?&gt;
+&lt;key-lookup&gt;
+<span class="w">  </span>&lt;item<span class="w"> </span><span class="nv">vote</span><span class="o">=</span><span class="s2">&quot;good&quot;</span>&gt;Thomas<span class="w"> </span>Leonard<span class="w"> </span>created<span class="w"> </span>Zero<span class="w"> </span>Install<span class="w"> </span>and<span class="w"> </span>ROX.
+<span class="w">    </span>This<span class="w"> </span>key<span class="w"> </span>is<span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>sign<span class="w"> </span>updates<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>injector<span class="p">;</span><span class="w"> </span>you<span class="w"> </span>should<span class="w"> </span>accept<span class="w"> </span>it.
+<span class="w">  </span>&lt;/item&gt;
+<span class="w">  </span>&lt;item<span class="w"> </span><span class="nv">vote</span><span class="o">=</span><span class="s2">&quot;good&quot;</span>&gt;This<span class="w"> </span>key<span class="w"> </span>belongs<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>Debian<span class="w"> </span>Maintainer.&lt;/item&gt;
+&lt;/key-lookup&gt;
+</code></pre></div>
+<p>In any case, you should make a note of which key was used so you can ensure it's the same later, when you check for updates.</p>
+<h2 id="pick-a-version">Pick a version<a class="headerlink" href="#pick-a-version" title="Permanent link">&para;</a></h2>
+<p>Edit's feed lists several versions. I'll pick the latest one: version 2.0. If you find that version to be buggy, you might make a note of that and try a different version. Some may have been released recently and be marked as "testing". Whether you skip such versions is up to you. The relevant section of the XML file is this bit:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">main=</span><span class="s">&quot;Edit/AppRun&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;http://rox.sourceforge.net/2005/interfaces/ROX-Lib&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;environment</span><span class="w"> </span><span class="na">insert=</span><span class="s">&quot;ROX-Lib2/python&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PYTHONPATH&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/requires&gt;</span>
+...
+<span class="w">    </span><span class="nt">&lt;implementation</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sha1=329e6c0191f65ef2996b49837d04c4cfe6934758&quot;</span>
+<span class="w">                    </span><span class="na">released=</span><span class="s">&quot;2005-09-21&quot;</span><span class="w"> </span><span class="na">stability=</span><span class="s">&quot;stable&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;archive</span><span class="w"> </span><span class="na">extract=</span><span class="s">&quot;edit-2.0&quot;</span>
+<span class="w">               </span><span class="na">href=</span><span class="s">&quot;http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;61195&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/implementation&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/group&gt;</span>
+</code></pre></div>
+<p>This tells us that we can get Edit version 2.0 by downloading <a href="http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz">edit-2.0.tgz</a> and extracting the <code>edit-2.0</code> directory inside it:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz
+$<span class="w"> </span>tar<span class="w"> </span>xzf<span class="w"> </span>edit-2.0.tgz<span class="w"> </span>edit-2.0
+$<span class="w"> </span>ls<span class="w"> </span>edit-2.0
+Edit
+</code></pre></div>
+<h3 id="security-note_1">Security note<a class="headerlink" href="#security-note_1" title="Permanent link">&para;</a></h3>
+<p>How do we know the archive hasn't been tampered with? The author of the XML feed calculated a <em>cryptographic digest</em> of the archive's contents and stored it in the feed:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;implementation</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sha1=329e6c0191f65ef2996b49837d04c4cfe6934758&quot;</span>
+<span class="w">                </span><span class="na">released=</span><span class="s">&quot;2005-09-21&quot;</span><span class="w"> </span><span class="na">stability=</span><span class="s">&quot;stable&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;archive</span><span class="w"> </span><span class="na">extract=</span><span class="s">&quot;edit-2.0&quot;</span>
+<span class="w">           </span><span class="na">href=</span><span class="s">&quot;http://kent.dl.sourceforge.net/sourceforge/rox/edit-2.0.tgz&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;61195&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/implementation&gt;</span>
+</code></pre></div>
+<p>We can calculate the value ourselves from the directory and compare (we already verified the signature on the feed, so we know that one's OK). Calculating the value is a little tricky; you have to create a <em>manifest</em> file listing all the files and directories in the archive, along with <em>their</em> digests too, by following <a href="../specifications/manifest/">these instructions</a>. We'll cheat, by using <code>0install</code> to generate it for us:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>0install<span class="w"> </span>digest<span class="w"> </span>edit-2.0<span class="w"> </span>--algorithm<span class="o">=</span>sha1<span class="w"> </span>--manifest<span class="w"> </span>--digest
+D<span class="w"> </span><span class="m">1127294333</span><span class="w"> </span>/Edit
+F<span class="w"> </span>0cfc0b0c42b4f4c077f005f31ea1801a8e43bde0<span class="w"> </span><span class="m">1053080001</span><span class="w"> </span><span class="m">3409</span><span class="w"> </span>.DirIcon
+...
+X<span class="w"> </span>d6f4507353737e35ce7af5ab10a589e5a644bec5<span class="w"> </span><span class="m">1106998691</span><span class="w"> </span><span class="m">1472</span><span class="w"> </span>testreplace.py
+<span class="nv">sha1</span><span class="o">=</span>329e6c0191f65ef2996b49837d04c4cfe6934758
+</code></pre></div>
+<p>This says we have a directory called <code>Edit</code> containing a file called <code>.DirIcon</code>, and so on. The last line isn't part of the manifest; it's the digest of the manifest itself. It is this value that must match the <em>id</em> in the feed. It's useful to save the manifest output (minus the last line) in case we want to do an audit later:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>0install<span class="w"> </span>digest<span class="w"> </span>edit-2.0<span class="w"> </span>--algorithm<span class="o">=</span>sha1<span class="w"> </span>--manifest<span class="w"> </span>&gt;<span class="w"> </span>edit-2.0/.manifest
+</code></pre></div>
+<p>This file will have the digest we require:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sha1sum<span class="w"> </span>edit-2.0/.manifest<span class="w"> </span>
+329e6c0191f65ef2996b49837d04c4cfe6934758<span class="w">  </span>edit-2.0/.manifest<span class="w"> </span>
+</code></pre></div>
+<h2 id="run-it">Run it!<a class="headerlink" href="#run-it" title="Permanent link">&para;</a></h2>
+<p>We've downloaded and unpacked Edit. How do we run it? We don't have to guess; the answer is in the XML feed file:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">main=</span><span class="s">&quot;Edit/AppRun&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>There was no <code>main</code> attribute on the <code>implementation</code> element, so we look in the containing group and find one. This tells us that we can run the program by executing the file <code>Edit/AppRun</code> inside the unpacked directory.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./edit-2.0/Edit/AppRun
+***<span class="w"> </span>This<span class="w"> </span>program<span class="w"> </span>needs<span class="w"> </span>ROX-Lib2<span class="w"> </span><span class="o">(</span>version<span class="w"> </span><span class="m">1</span>.19.14<span class="o">)</span><span class="w"> </span>to<span class="w"> </span>run.
+</code></pre></div>
+<p>If the program you picked didn't have any dependencies then it should now run (lucky you!). But, like many programs, Edit needs libraries to work.</p>
+<h2 id="resolving-dependencies">Resolving dependencies<a class="headerlink" href="#resolving-dependencies" title="Permanent link">&para;</a></h2>
+<p>Our program needs some libraries before it will run. Which ones? Again, the feed XML tells us:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">main=</span><span class="s">&quot;Edit/AppRun&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;http://rox.sourceforge.net/2005/interfaces/ROX-Lib&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;environment</span><span class="w"> </span><span class="na">insert=</span><span class="s">&quot;ROX-Lib2/python&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PYTHONPATH&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/requires&gt;</span>
+</code></pre></div>
+<p>We need a library called <code>http://rox.sourceforge.net/2005/interfaces/ROX-Lib</code>. You might already have one somewhere, or your distribution might carry it. If all else fails, we could try to guess where a suitable feed might be... <a href="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">http://rox.sourceforge.net/2005/interfaces/ROX-Lib</a> seems like a good place to start...</p>
+<p>Go back to step 1! You need to download ROX-Lib's feed, check the signature, pick a version, download and unpack the archive, check the contents' digest, and check whether ROX-Lib in turn depends on other libraries (it doesn't).</p>
+<h2 id="running-with-dependencies">Running with dependencies<a class="headerlink" href="#running-with-dependencies" title="Permanent link">&para;</a></h2>
+<p>OK, so you've got ROX-Lib too now. Things should look like this:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls
+edit-2.0<span class="w">  </span>Edit.xml<span class="w">  </span>rox-lib2-2.0.3<span class="w">  </span>ROX-Lib.xml
+</code></pre></div>
+<p>How can we tell Edit where we put ROX-Lib? Again, the answer is in Edit's XML file:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">main=</span><span class="s">&quot;Edit/AppRun&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;http://rox.sourceforge.net/2005/interfaces/ROX-Lib&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;environment</span><span class="w"> </span><span class="na">insert=</span><span class="s">&quot;ROX-Lib2/python&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PYTHONPATH&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/requires&gt;</span>
+</code></pre></div>
+<p>We need to add a directory inside our unpacked ROX-Lib to the <code>$PYTHONPATH</code> environment variable, and then try running Edit again:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span>rox-lib2-2.0.3/ROX-Lib2/python
+$<span class="w"> </span>./edit-2.0/Edit/AppRun
+</code></pre></div>
+<p>Finally Edit runs!</p>
+<h2 id="review">Review<a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>So, what have we achieved? We've installed a program and its dependencies. We haven't touched anything outside of our test directory; no other programs on the system have been affected by this installation. We didn't need root access. We can undo the installation just by deleting our two XML files and the two unpacked archives.</p>
+<p>We didn't need to run any code from either Edit or ROX-Lib to perform the installation (we only ran them to test that it worked). If you have software for running programs in a restricted environment, you can install and run programs without even giving them write access to their own code.</p>
+<p>Finally, although it may have been a little tedious, everything we did could be automated. You could write a program to do all this for you (or use <a href="https://get.0install.net/">ours</a>!).</p>
+<h2 id="tidying-up">Tidying up<a class="headerlink" href="#tidying-up" title="Permanent link">&para;</a></h2>
+<p>Our home directory will become a big mess if we just install things in random directories. When we want to run another program that uses ROX-Lib, we'll want to be able to find the copy we already installed rather than downloading another copy.</p>
+<p>These files don't really need to be backed up. If we lost them, we could just download them again from the web. So, we'll put them in the <code>~/.cache</code> directory which is designed for just this purpose. In fact, to avoid conflicts with other things using this directory, we'll keep everything under <code>~/.cache/0install.net</code>, because it's all related to Zero Install.</p>
+<p>We have two XML files and two directories. What should we call them? It's not impossible to imagine there being two programs in the world both called <em>Edit</em>, so that's not a good name; we wouldn't know what to do if we wanted both on our system at once! A good choice is to use the full URL of Edit's feed for the XML file (replacing <code>/</code> characters with %2f in the traditional web way):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mv<span class="w"> </span>Edit.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fEdit
+</code></pre></div>
+<p>It's a bit ugly, but at least it's unique and we can find it again. We'll store ROX-Lib's XML in the same way:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mv<span class="w"> </span>ROX-Lib.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>~/.cache/0install.net/interfaces/http%3a%2f%2frox.sourceforge.net%2f2005%2finterfaces%2fROX-Lib
+</code></pre></div>
+<p>What about the directories with the actual program files? We could use the same strategy, naming it from the URL where we got it, but this has some problems. For example, there might be lots of places where you can get the archive (mirrors, peer-to-peer, CD-ROM, etc). We don't care how we got it, all we care about is that it has the right digest. So, we'll name it after that!</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mv<span class="w"> </span>edit-2.0<span class="w"> </span>~/.cache/0install.net/implementations/sha1<span class="o">=</span>329e6c0191f65ef2996b49837d04c4cfe6934758
+$<span class="w"> </span>mv<span class="w"> </span>rox-lib2-2.0.3<span class="w"> </span>~/.cache/0install.net/implementations/sha1<span class="o">=</span>6a2e548a80368bd8c2b5b3abedccf9a0a6cb4333
+</code></pre></div>
+<p>This is exactly the scheme that <code>0install</code> uses. We can test this quite easily:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>0install<span class="w"> </span>run<span class="w"> </span>--offline<span class="w"> </span>http://rox.sourceforge.net/2005/interfaces/Edit
+</code></pre></div>
+<p>Zero Install runs Edit without downloading anything. It is able to use the files we downloaded and placed in its cache manually.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2003-2024 Thomas Leonard, Bastian Eicher and others<br> Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

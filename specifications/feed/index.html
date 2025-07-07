@@ -1,0 +1,3551 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://0install.net/specifications/feed/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../capabilities/">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Feed files - Zero Install Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feed-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zero Install Docs" class="md-header__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero Install Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feed files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/perspectives/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/" class="md-tabs__link">
+          
+  
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../details/" class="md-tabs__link">
+          
+  
+  
+  Details
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/" class="md-tabs__link">
+          
+  
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../packaging/" class="md-tabs__link">
+          
+  
+  
+  Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Specifications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tools/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zero Install Docs" class="md-nav__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Zero Install Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/perspectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Perspectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/first-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First launch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a menu entry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/alias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a command-line alias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual walk-through
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/policy-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Policy settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/desktop-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desktop integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sharing downloads between users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/virtual-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/distribution-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distribution integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trouble-shooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command-line interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/file-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File locations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/os-differences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OS-specific differences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for macOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/using-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/solver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Solver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/dotnet-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/json-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Packaging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (command-line)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (graphical)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/local-feeds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local feeds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/dotnet-lib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/find/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/inkscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inkscape
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/rox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROX-Filer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Specifications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specifications overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Feed files
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feed files
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historical-note-about-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical note about id
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package implementations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieval methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recipes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bindings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bindings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment bindings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executable-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executable bindings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic bindings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-buggy" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to use 'buggy'
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staged-rollouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staged rollouts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entry points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital signatures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valid-architecture-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valid architecture names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-if-0install-version-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if-0install-version attribute
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#well-known-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Well-known extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future plans
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capabilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Capabilities extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Catalog files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../selections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selections files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manifest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manifest files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0mirror/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0mirror
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0publish-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish-gui
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0publish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0repo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0share/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0share
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0watch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0watch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ebox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ebox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/feedlint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FeedLint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/make-headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make-headers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/pkg2zero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pkg2zero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_17" id="__nav_8_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_17">
+            <span class="md-nav__icon md-icon"></span>
+            0compile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/chroot-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Chroot Build
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/example-scons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: SCons example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_18" id="__nav_8_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_18">
+            <span class="md-nav__icon md-icon"></span>
+            0release
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/compiled-binaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Compiled binaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/customisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Customisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="feed-files">Feed files<a class="headerlink" href="#feed-files" title="Permanent link">&para;</a></h1>
+<p>This document is a formal description of the XML feed file format. An interface describes a program, library or other component. A feed provides a list of known implementations of the interface (versions of the program) and details about how to get them, how to check that they are authentic, how to run them and what other components they depend on.</p>
+<p><a href="../feed.xsd"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h160v80c0 17.7 14.3 32 32 32h80v288c0 8.8-7.2 16-16 16zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3l-90.6-90.5C262.7 6.7 246.5 0 229.5 0zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm96-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg></span> XML Schema Definition</a></p>
+<p>This class diagram shows how the different concepts are related. Each feed file contributes information to this model:</p>
+<p><img alt="Class diagram for feed files" src="../../img/uml/zero-install-feed-classes.png" /></p>
+<p>Each <em>Feed</em> lists a number of <em>Implementations</em> (versions). An <em>Identity</em> is a way to recognise an <em>Implementation</em> (e.g. a cryptographic digest). A <em>Retrieval</em> method is a way to get an <em>Implementation</em> (e.g. by downloading from a web site). A <em>Command</em> says how to run an <em>Implementation</em> as a program. A <em>Dependency</em> indicates that one component depends on another (e.g. Gimp requires the GTK library). A <em>Binding</em> says how to let the program locate the <em>Implementations</em> when run. A <em>Constraint</em> limits the choice of a dependency (e.g. Gimp requires a version of GTK &gt;= 2.6).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Terminology</p>
+<p>Originally the word 'interface' was used to mean both 'interface' and 'feed', so don't be confused if you see it used this way.</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Feed files are introduced in the <a href="../../packaging/">Packager's Documentation</a>. They have the following syntax (<code>?</code> follows optional items, <code>*</code> means zero-or-more, order of elements is not important, and extension elements can appear anywhere as long as they use a different namespace):</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&#39;1.0&#39;?&gt;</span>
+<span class="nt">&lt;interface</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&#39;http://zero-install.sourceforge.net/2004/injector/interface&#39;</span>
+<span class="w">           </span><span class="na">min-injector-version=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">           </span><span class="na">uri=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>...<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;summary</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">&gt;</span>...<span class="nt">&lt;/summary&gt;</span><span class="w"> </span>+
+<span class="w">  </span><span class="nt">&lt;description</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">&gt;</span>...<span class="nt">&lt;/description&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;publisher&gt;</span>...<span class="nt">&lt;/publisher&gt;</span><span class="w"> </span>?
+<span class="w">  </span><span class="nt">&lt;homepage&gt;</span>...<span class="nt">&lt;/homepage&gt;</span><span class="w"> </span>?
+<span class="w">  </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>...<span class="nt">&lt;/category&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;needs-terminal/&gt;</span><span class="w"> </span>?
+
+<span class="w">  </span><span class="nt">&lt;icon</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="na">href=</span><span class="s">&#39;...&#39;</span><span class="nt">/&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;splash-screen</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="na">href=</span><span class="s">&#39;...&#39;</span><span class="nt">/&gt;</span><span class="w"> </span>*
+
+<span class="w">  </span><span class="nt">&lt;feed</span><span class="w"> </span><span class="na">src=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="na">langs=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="na">arch=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">/&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;feed-for</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;...&#39;</span><span class="nt">/&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;replaced-by</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;...&#39;</span><span class="nt">/&gt;</span><span class="w"> </span>?
+
+<span class="w">  </span>[group]<span class="w"> </span>*
+<span class="w">  </span>[implementation]<span class="w"> </span>*
+<span class="w">  </span>[entry-point]<span class="w"> </span>*
+<span class="nt">&lt;/interface&gt;</span>
+</code></pre></div>
+<dl>
+<dt><code>min-injector-version</code></dt>
+<dd>This attribute gives the oldest version of 0install that can read this file. Older versions will tell the user to upgrade if they are asked to read the file. Versions prior to 0.20 do not perform this check, however. If the attribute is not present, the file can be read by all versions.</dd>
+<dt><code>uri</code></dt>
+<dd>This attribute is only needed for remote feeds (fetched via HTTP). The value must exactly match the expected URL, to prevent an attacker replacing one correctly-signed feed with another (e.g., returning a feed for the <code>shred</code> program when the user asked for the <code>backup</code> program).</dd>
+<dt><code>&lt;name&gt;</code></dt>
+<dd>a short name to identify the feed or program (e.g. "Foo")</dd>
+<dt><code>&lt;summary&gt;</code></dt>
+<dd>a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills"). Supports <a href="#localization">localization</a>.</dd>
+<dt><code>&lt;description&gt;</code></dt>
+<dd>a full description, which can be several paragraphs long (optional since 0.32, but recommended). Supports <a href="#localization">localization</a>.</dd>
+<dt><code>&lt;publisher&gt;</code></dt>
+<dd>the publisher (company or organization) of the program.</dd>
+<dt><code>&lt;homepage&gt;</code></dt>
+<dd>the URL of a web-page describing feed or program in more detail.</dd>
+<dt><code>&lt;category&gt;</code></dt>
+<dd>a classification for the interface. If no type is given, then the category is one of the 'Main' categories defined by the <a href="http://standards.freedesktop.org/menu-spec/latest/apa.html">freedesktop.org menu specification</a>. Otherwise, it is a URI giving the namespace for the category.</dd>
+<dt><code>&lt;needs-terminal&gt;</code></dt>
+<dd>if present, this element indicates that the program requires a terminal in order to run. Graphical launchers should therefore run this program in a suitable terminal emulator.</dd>
+<dt><code>&lt;icon&gt;</code></dt>
+<dd>an icon to use for the program; this is used by programs such as <a href="http://rox.sourceforge.net/desktop/AddApp">AddApp</a> and <a href="../../details/desktop-integration/">desktop integration</a>. You should provide an icon of the type <code>image/png</code> (<code>.png</code>) for display in browsers and launchers on Linux. For Windows apps you should additionally provide an icon of the type <code>image/vnd.microsoft.icon</code> (<code>.ico</code>). For macOS apps you should additionally provide an icon of the type <code>image/x-icns</code> (<code>.icns</code>).</dd>
+<dt><code>&lt;splash-screen&gt;</code></dt>
+<dd>a splash screen Zero Install can display during downloads, etc. for better branding. On Windows splash screens of the type <code>image/png</code> (<code>.png</code>) are supported. This is currently only used by <a href="../../details/windows/">Zero Install for Windows</a> and when <a href="../../details/desktop-integration/">desktop integration</a> is applied.</dd>
+<dt><code>&lt;feed&gt;</code></dt>
+<dd>the linked feed contains more implementations of this feed's interface. The <code>langs</code> and <code>arch</code> attributes, if present, indicate that all implementations will fall within these limits (e.g. <code>arch='*-src'</code> means that there is no point fetching this feed unless you are looking for source code). See the <code>&lt;implementation&gt;</code> element for a description of the values of these attributes.</dd>
+<dt><code>&lt;feed-for&gt;</code></dt>
+<dd>the implementations in this feed are implementations of the given interface. This is used when adding an optional extra feed to an interface with <code>0install add-feed</code> (e.g. a <a href="../../packaging/local-feeds/">local feed</a> for a development version).</dd>
+<dt><code>&lt;replaced-by&gt;</code></dt>
+<dd>this feed's interface (the one in the root element's <code>uri</code> attribute) has been replaced by the given interface. Any references to the old URI should be updated to use the new one.</dd>
+</dl>
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h2>
+<p>A group has this syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;group</span><span class="w"> </span><span class="na">version=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">released=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">main=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">self-test=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">doc-dir=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">license=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">released=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">stability=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">rollout-percentage=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">langs=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">       </span><span class="na">arch=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span>[requires]<span class="w"> </span>*
+<span class="w">  </span>[group]<span class="w"> </span>*
+<span class="w">  </span>[command]<span class="w"> </span>*
+<span class="w">  </span>[binding]<span class="w"> </span>*
+<span class="w">  </span>[implementation]<span class="w"> </span>*
+<span class="w">  </span>[package-implementation]<span class="w"> </span>*
+<span class="nt">&lt;/group&gt;</span>
+</code></pre></div>
+<p>All attributes of the group are inherited by any child groups and implementations as defaults, but can be overridden there. All dependencies (<code>requires</code>), bindings and commands are inherited (sub-groups may add more dependencies and bindings to the list, but cannot remove anything).</p>
+<h2 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">&para;</a></h2>
+<p>An implementation has this syntax (an unspecified argument is inherited from the closest ancestor <code>&lt;group&gt;</code> which defines it):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;implementation</span><span class="w"> </span><span class="na">id=</span><span class="s">&#39;...&#39;</span>
+<span class="w">                </span><span class="na">local-path=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span>
+<span class="w">                </span><span class="err">[all</span><span class="w"> </span><span class="err">&lt;group</span><span class="nt">&gt;</span><span class="w"> </span>attributes]<span class="w"> </span>&gt;
+<span class="w">  </span><span class="nt">&lt;manifest-digest</span><span class="w"> </span><span class="err">[digest]</span><span class="w"> </span><span class="err">*</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span>*
+<span class="w">  </span>[command]<span class="w"> </span>*
+<span class="w">  </span>[retrieval-method]<span class="w"> </span>*
+<span class="w">  </span>[binding]<span class="w"> </span>*
+<span class="w">  </span>[requires]<span class="w"> </span>*
+<span class="nt">&lt;/implementation&gt;</span>
+</code></pre></div>
+<p><img alt="Identity classes" src="../../img/uml/zero-install-id.png" /></p>
+<dl>
+<dt><code>id</code></dt>
+<dd>A unique identifier for this implementation. For example, when the user marks a particular version as buggy this identifier is used to keep track of it, and saving and restoring selections uses it. However, see the <a href="#historical-note-about-id">important historical note below</a>.</dd>
+<dt><code>local-path</code></dt>
+<dd>If the feed file is a local file (the interface <code>uri</code> starts with <code>/</code>) then the <code>local-path</code> attribute <em>may</em> contain the pathname of a local directory (either an absolute path or a path relative to the directory containing the feed file). See the historical note below.</dd>
+<dt><code>version</code></dt>
+<dd>The version number. See the version numbers section below for more details.</dd>
+<dt><code>main</code> (deprecated)</dt>
+<dd>The relative path of an executable inside the implementation that should be executed by default when the interface is run. If an implementation has no <code>main</code> setting, then it cannot be executed without specifying one manually (with <code>0install run --main=MAIN</code>). This typically means that the interface is for a library. Note: <code>main</code> is being replaced by the <code>&lt;command&gt;</code> element.</dd>
+<dt><code>self-test</code> (deprecated)</dt>
+<dd>The relative path of an executable inside the implementation that can be executed to test the program. The program must be non-interactive (e.g. it can't open any windows or prompt for input). It should return with an exit status of zero if the tests pass. Any other status indicates failure. Note: <code>self-test</code> is being replaced by the <code>&lt;command&gt;</code> element.</dd>
+<dt><code>doc-dir</code></dt>
+<dd>The relative path of a directory inside the implementation that contains the package's documentation. This is the directory that would end up inside <code>/usr/share/doc</code> on a traditional Linux system.</dd>
+<dt><code>released</code></dt>
+<dd>The date this implementation was made available, in the format <code>YYYY-MM-DD</code>. For development versions checked out from version control this attribute should not be present.</dd>
+<dt><code>stability</code></dt>
+<dd>The default stability rating for this implementation. If not present, <code>testing</code> is used. See <a href="#stability">Stability</a> for more details.</dd>
+<dt><code>rollout-percentage</code> - since version 2.21, Windows only</dt>
+<dd>The percentage (0-100) of users that should treat this as <code>stability="stable"</code>. May only be set if <code>stability</code> is unset or <code>testing</code>. This can be used to perform <a href="#staged-rollouts">staged rollouts</a>.</dd>
+<dt><code>langs</code></dt>
+<dd>The natural language(s) which this package supports, as a space-separated list of languages codes (in the same format as used by the <code>$LANG</code> environment variable). For example, the value <code>en_GB fr</code> would be used for a package supporting British English and French. Supported since 0.48. Note that versions before 0.54 require the region separator to be <code>_</code> (underscore), while later versions also allow the use of <code>-</code> for consistency with the <code>xml:lang</code> format.</dd>
+<dt><code>arch</code></dt>
+<dd>For platform-specific binaries, the platform for which this implementation was compiled, in the form <code>os-cpu</code>. 0install knows that certain platforms are backwards-compatible with others, so binaries with <code>arch="Linux-i486"</code> will still be available on <code>Linux-i686</code> machines, for example. Either the <code>os</code> or <code>cpu</code> part may be <code>*</code>, which will make it available on any OS or CPU. If missing, the default is <code>*-*</code>. See also: <a href="#valid-architecture-names">Valid architecture names</a>.</dd>
+<dt><code>license</code></dt>
+<dd>License terms. This is typically a <a href="http://catb.org/~esr/trove/">Trove</a> category. See <a href="http://pypi.python.org/pypi?%3Aaction=list_classifiers">the PyPI list</a> for some examples (the leading <code>License ::</code> is not included).</dd>
+</dl>
+<p>The <code>manifest-digest</code> element is used to give digests of the .manifest file using various hashing algorithms (but see the historical note below). Having multiple algorithms allows a smooth upgrade to newer digest algorithms without breaking old clients. Each non-namespaced attribute gives a digest, with the attribute name being the algorithm.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;manifest-digest</span><span class="w"> </span><span class="na">sha256=</span><span class="s">&quot;4f078f9080bd9b3b87e8360f014268886ec653ed077bb3cb6725185c0a07473a&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+</div>
+<p>For non-local implementations (those without a <code>local-path</code> attribute), the <code>&lt;implementation&gt;</code> element contains a set of <em>retrieval methods</em>, each of which gives a different way of getting the implementation (i.e. of getting a directory structure whose digest matches the ones given).</p>
+<p>Currently, 0install always chooses the first of the methods it understands, but in future it may use other strategies (such as choosing the closest mirror, or letting the user select one manually). It may also use other methods which aren't listed, such as searching for the implementation on a peer-to-peer network.</p>
+<p>Unrecognised elements inside an implementation are ignored.</p>
+<h3 id="historical-note-about-id">Historical note about id<a class="headerlink" href="#historical-note-about-id" title="Permanent link">&para;</a></h3>
+<p>0install &gt;= 0.45 generally treats the ID as a simple identifier, and gets the local path (if any) from the <code>local-path</code> attribute and the digests from the <code>&lt;manifest-digest&gt;</code>.</p>
+<p>0install &lt; 0.45 ignores the <code>local-path</code> attribute and the <code>&lt;manifest-digest&gt;</code> element. If the ID starts with <code>.</code> or <code>/</code> then the ID is also the local path; otherwise, it is the single manifest digest.</p>
+<p>For backwards compatibility, 0install &gt;= 0.45 will treat an ID starting with <code>.</code> or <code>/</code> as a local path if no <code>local-path</code> attribute is present, and it will treat it as an additional digest if it contains an <code>=</code> character.</p>
+<p>Therefore, if you want to generate feeds compatible with past and future versions:</p>
+<ul>
+<li>If you have a digest, set the ID to <code>sha1new=...</code> and put the sha256 digest in the <code>&lt;manifest-digest&gt;</code>.</li>
+<li>If you have a local implementation then set both <code>id</code> and <code>local-path</code> to the pathname.</li>
+</ul>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>The <code>main</code> attribute above provides a simple way to say how to run this implementation. The <code>&lt;command&gt;</code> element (supported since 0.51, released Dec 2010) provides a more flexible alternative.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;command</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;...&#39;</span>
+<span class="w">         </span><span class="na">path=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;arg&gt;</span><span class="w"> </span>...<span class="w"> </span><span class="nt">&lt;/arg&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;for-each</span><span class="w"> </span><span class="na">item-from=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="na">separator=</span><span class="s">&#39;...&#39;</span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span><span class="w"> </span>...<span class="w"> </span><span class="nt">&lt;/for-each&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;working-dir</span><span class="w"> </span><span class="na">src=</span><span class="s">&#39;...&#39;</span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span>?
+<span class="w">  </span>[requires]<span class="w"> </span>*
+<span class="w">  </span>[binding]<span class="w"> </span>*
+<span class="w">  </span>[runner]<span class="w"> </span>?
+<span class="nt">&lt;/command&gt;</span>
+</code></pre></div>
+<dl>
+<dt><code>name</code></dt>
+<dd>By default, 0install executes the <code>run</code> command, but the <code>--command</code> option can be used to specify a different one. <a href="../../tools/0test/">0test</a> runs the <code>test</code> command (replacing the old <code>self-test</code> attribute) and <a href="../../tools/0compile/">0compile</a> runs the <code>compile</code> command (replacing the <code>compile:command</code> attribute).</dd>
+<dt><code>path</code></dt>
+<dd>The relative path of the executable within the implementation (optional if <code>&lt;runner&gt;</code> is used).</dd>
+</dl>
+<p>Additional arguments can be passed using the <code>&lt;arg&gt;</code> element. Within an argument, <code>${name}</code> is expanded to the value of the corresponding environment variable. These arguments are passed to the program before any arguments specified by the user.</p>
+<p>If an environment variable should be expanded to multiple arguments, use <code>&lt;for-each&gt;</code>. The variable in the <code>item-from</code> attribute is split using the given separator (which defaults to the OS path separator, <code>:</code> on POSIX and <code>;</code> on Windows) and the arguments inside the element are added for each item. The current item is available as <code>${item}</code>. If the variable given in <code>item-from</code> is not set or is empty, no arguments are added. See below for an example. Versions of 0install before 1.15 ignore <code>&lt;for-each&gt;</code> elements and their contents.</p>
+<p>The <code>&lt;working-dir&gt;</code> element (Windows only) switches the working directory of the process to a relative path within the implementation specified by <code>src</code> (defaults to <code>.</code>).<br />
+This is useful for supporting legacy Windows applications which do not properly locate their installation directory.</p>
+<p>Command-specific dependencies can be specified for a command by nesting <code>&lt;requires&gt;</code> elements. For example, an interpreter might only depend on libreadline when used interactively, but not when used as a library, or the <code>test</code> command might depend on a test framework.</p>
+<p>Command-specific bindings (0install &gt;= 1.3) create a binding from the implementation to itself. For example, the <code>test</code> command may want to make the <code>run</code> command available in <code>$PATH</code> using <code>&lt;executable-in-path&gt;</code>.</p>
+<p>The <code>&lt;runner&gt;</code> element introduces a special kind of dependency: the program that is used to run this one. For example, a Python program might specify Python as its runner. <code>&lt;runner&gt;</code> is a subclass of <code>&lt;requires&gt;</code> and accepts the same attributes and child elements. In addition, you can specify arguments to pass to the runner by nesting them inside the <code>&lt;runner&gt;</code> element. These arguments are passed before the path of the executable given by the <code>path</code> attribute.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;command</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;run&#39;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;causeway.e-swt&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;runner</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;http://repo.roscidus.com/e/e-core&#39;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;arg&gt;</span>-cpa<span class="nt">&lt;/arg&gt;</span>
+<span class="w">    </span><span class="nt">&lt;arg&gt;</span>$SWT_JAR<span class="nt">&lt;/arg&gt;</span>
+<span class="w">    </span><span class="nt">&lt;for-each</span><span class="w"> </span><span class="na">item-from=</span><span class="s">&quot;EXTRA_E_OPTIONS&quot;</span><span class="w"> </span><span class="na">separator=</span><span class="s">&quot; &quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;arg&gt;</span>${item}<span class="nt">&lt;/arg&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/for-each&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/runner&gt;</span>
+<span class="nt">&lt;/command&gt;</span>
+</code></pre></div>
+<p>In this case, 0install will run the equivalent of <code>/path/to/e-interpreter -cpa /path/to/swt.jar $EXTRA_E_OPTIONS /path/to/causeway.e-swt</code>.</p>
+</div>
+<h2 id="package-implementations">Package implementations<a class="headerlink" href="#package-implementations" title="Permanent link">&para;</a></h2>
+<p>This element names a distribution-provided package which, if present, is a valid implementation of this interface. The syntax is:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;package-implementation</span><span class="w"> </span><span class="na">package=</span><span class="s">&#39;...&#39;</span>
+<span class="w">                        </span><span class="na">distributions=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">                        </span><span class="na">main=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span>
+<span class="w">                        </span><span class="na">version=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span>[command]<span class="w"> </span>*
+<span class="w">  </span>[requires]<span class="w"> </span>*
+<span class="nt">&lt;/package-implementation&gt;</span>
+</code></pre></div>
+<p>Support for distribution packages was added in version 0.28 of 0install. Earlier versions ignore this element.</p>
+<p>If the named package is available then it will be considered as a possible implementation of the interface. If <code>main</code> is given then it must be an absolute path.</p>
+<p>If the <code>distributions</code> attribute is present then it is a space-separated list of distribution names where this element applies. 0install &gt;= 0.45 ranks the <code>&lt;package-implementation&gt;</code> elements according to how well they match the host distribution and then only uses the best match (or matches, if several get the same score). See <a href="../../details/distribution-integration/">Distribution integration</a> for a list of supported distributions.</p>
+<p>Earlier versions of 0install ignore the <code>distributions</code> attribute and process all of the elements.</p>
+<p>Note that, unlike a normal implementation, a distribution package does not resolve to a directory. Any bindings inside <code>&lt;requires&gt;</code> elements for the interface will be ignored; it is assumed that the requiring component knows how to use the packaged version without further help. Therefore, adding distribution packages to your interface considerably weakens the guarantees you are making about what the requester may get.</p>
+<p>Package implementations still inherit attributes and dependencies from their parent group. The <code>doc-dir</code> and <code>license</code> attributes may be given, but <code>version</code> and <code>released</code> are read from the native packaging system.</p>
+<p>If <code>version</code> is given then only implmentations matching this pattern are used (0install &gt;= 2.14). This allows multiple <code>&lt;packages-implmentation&gt;</code> elements for a single distribution package, which is useful if different versions have different requirements. See <a href="#constraints">Constraints</a> for the syntax.</p>
+<h2 id="retrieval-methods">Retrieval methods<a class="headerlink" href="#retrieval-methods" title="Permanent link">&para;</a></h2>
+<p>A retrieval method is a way of getting an implementation.</p>
+<p><img alt="Retrieval method classes" src="../../img/uml/zero-install-retr.png" /></p>
+<p>The most common retrieval method is the <code>&lt;archive&gt;</code> element:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;archive</span><span class="w"> </span><span class="na">href=</span><span class="s">&#39;...&#39;</span>
+<span class="w">         </span><span class="na">size=</span><span class="s">&#39;...&#39;</span>
+<span class="w">         </span><span class="na">extract=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="na">dest=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="na">type=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="na">start-offset=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>This states that an archive may be downloaded from the address given in the <code>href</code> attribute. The archive must have the given <code>size</code> or it will be rejected. When unpacked (either the subdirectory named in the <code>extract</code> attribute, or the whole archive if it is not present), the resulting tree will generate a manifest with the secure hash value given as the implementation's <code>id</code>. If <code>dest</code> is given (0install &gt;= 2.1), then the archive is unpacked to the specified subdirectory. It is an error to specify a target outside of the implementation directory (e.g. <code>../foo</code> or attempting to follow a symlink that points out of the implementation).</p>
+<p>Note that the <code>extract</code> attribute cannot contain <code>/</code> or <code>\</code> characters, so it can only be used to extract a top-level directory. It is intended for archives that contain their own name as the single top-level entry.</p>
+<p>The type of the archive is given as a MIME type in the <code>type</code> attribute (since 0install version 0.21). If missing, the type is guessed from the extension on the <code>href</code> attribute (all versions). Known types and extensions (case insensitive) are:</p>
+<ul>
+<li><code>application/zip</code> (<code>.zip</code>)</li>
+<li><code>application/x-tar</code> (<code>.tar</code>)</li>
+<li><code>application/x-compressed-tar</code> (<code>.tar.gz</code> or <code>.tgz</code>)</li>
+<li><code>application/x-bzip-compressed-tar</code> (<code>.tar.bz2</code> or <code>.tbz2</code>)</li>
+<li><code>application/x-xz-compressed-tar</code> (<code>.tar.xz</code> or <code>.txz</code>) - since version 0.43, since version 2.11 on Windows</li>
+<li><code>application/x-lzma-compressed-tar</code> (<code>.tar.lzma</code> or <code>.tlzma</code>)</li>
+<li><code>application/x-lzip-compressed-tar</code> (<code>.tar.lz</code> or <code>.tlz</code>) - since version 2.18, Windows only</li>
+<li><code>application/x-zstd-compressed-tar</code> (<code>.tar.zst</code>) - since version 2.18, Windows only</li>
+<li><code>application/x-ruby-gem</code> (<code>.gem</code>) - since version 1.0-rc1</li>
+<li><code>application/x-7z-compressed</code> (<code>.7z</code>) - Windows only</li>
+<li><code>application/vnd.rar</code> (<code>.rar</code>) - since version 2.18, Windows only</li>
+<li><code>application/vnd.ms-cab-compressed</code> (<code>.cab</code>)</li>
+<li><code>application/x-msi</code> (<code>.msi</code>) - Windows only</li>
+<li><code>application/x-deb</code> (<code>.deb</code>) - Linux only</li>
+<li><code>application/x-rpm</code> (<code>.rpm</code>) - Linux only</li>
+<li><code>application/x-apple-diskimage</code> (<code>.dmg</code>) - macOS only</li>
+</ul>
+<p>The <code>start-offset</code> attribute (since version 0.21) gives the number of bytes at the beginning of the file which should be ignored. This is useful for some self-extracting archives which are made up of a shell script followed by a normal archive in a single file. If missing, it defaults to 0. The value in the <code>size</code> attribute does not include the skipped bytes.</p>
+<p>You can also fetch individual files (0install &gt;= 2.1). This is useful for e.g. jar files, which are typically not unpacked:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;file</span><span class="w"> </span><span class="na">href=</span><span class="s">&#39;...&#39;</span>
+<span class="w">      </span><span class="na">size=</span><span class="s">&#39;...&#39;</span>
+<span class="w">      </span><span class="na">dest=</span><span class="s">&#39;...&#39;</span>
+<span class="w">      </span><span class="na">executable=</span><span class="s">&#39;true|false&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>The file is downloaded from <code>href</code>, must be of the given <code>size</code>, and is placed within the implementation directory as <code>dest</code>.<br />
+If <code>executable</code> is set to <code>true</code> (0install &gt;= 2.14.2) the file is marked as executable after download.</p>
+<h3 id="recipes">Recipes<a class="headerlink" href="#recipes" title="Permanent link">&para;</a></h3>
+<p>An implementation can also be created by following a <code>&lt;recipe&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;recipe&gt;</span>
+<span class="w">  </span>(<span class="w"> </span><span class="nt">&lt;archive</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>|<span class="w"> </span><span class="nt">&lt;file</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>|<span class="w"> </span><span class="nt">&lt;rename</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>|<span class="w"> </span><span class="nt">&lt;remove</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>|<span class="w"> </span><span class="nt">&lt;copy-from</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>)<span class="w"> </span>+
+<span class="nt">&lt;/recipe&gt;</span>
+</code></pre></div>
+<p>In this case, each child element of the recipe represents a step. To get an implementation by following a recipe, a new empty directory is created and then all of the steps are performed in sequence. The resulting directory must have the digest given in the implementation's <code>&lt;manifest-digest&gt;</code>. A recipe containing only a single archive is equivalent to just specifying the archive on its own. If a recipe contains an unrecognised element then the whole recipe must be ignored.</p>
+<dl>
+<dt><code>&lt;archive ...&gt;</code></dt>
+<dd>Causes the named archive to be fetched and unpacked over the top of whatever is currently in the temporary directory. It supports the same attributes as when used outside of a recipe.</dd>
+<dt><code>&lt;file ...&gt;</code></dt>
+<dd>Causes the named file to be fetched and saved over the top of whatever is currently in the temporary directory (0install &gt;= 2.1). It supports the same attributes as when used outside of a recipe.</dd>
+<dt><code>&lt;rename source='...' dest='...'&gt;</code></dt>
+<dd>Renames or moves a file or directory (0install &gt;= 1.10). It is an error if the source or destination are outside the implementation.</dd>
+<dt><code>&lt;remove path='...'&gt;</code></dt>
+<dd>Delete the file or directory from the implementation (0install &gt;= 2.1). It is an error if the path is outside the implementation.</dd>
+<dt><code>&lt;copy-from id='...' source='...' ? dest='...' ?&gt;</code></dt>
+<dd>Copies files or directories from another implementation, e.g., for applying an update to a previous version (0install &gt;= 2.13). The specified id must exactly match the id attribute of another implementation specified elsewhere in the same feed. You can specify the source and destination file or directory to be copied relative to the implementation root. Leave them unset to copy the entire implementation.</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A recipe is generally only useful for patching existing archives without having to host the complete result yourself. Normally, if your program requires files from several different packages then it is better to use the <code>&lt;requires&gt;</code> element instead. This allows libraries to be shared between different programs, and lets the user choose the versions and upgrade them individually.</p>
+</div>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<p>A <code>&lt;requires&gt;</code> element means that every implementation within the same group (including nested sub-groups) requires an implementation of the specified interface when run. 0install will choose a suitable implementation, downloading one if required.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;...&#39;</span>
+<span class="w">          </span><span class="na">importance=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">          </span><span class="na">version=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">          </span><span class="na">os=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">          </span><span class="na">distribution=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">          </span><span class="na">source=</span><span class="s">&#39;true|false&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">          </span><span class="na">use=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span>[<span class="w"> </span>constraints<span class="w"> </span>]<span class="w"> </span>*
+<span class="w">  </span>[<span class="w"> </span>bindings<span class="w"> </span>]<span class="w"> </span>*
+<span class="nt">&lt;/requires&gt;</span>
+</code></pre></div>
+<p>The constraint elements (if any) limit the set of acceptable versions. The bindings specify how 0install should make its choice known (typically, by setting environment variables).</p>
+<p>The <code>use</code> attribute can be used to indicate that this dependency is only needed in some cases. By default, 0install &gt;= 0.43 will skip any <code>&lt;requires&gt;</code> element with this attribute set. Earlier versions process all <code>&lt;requires&gt;</code> elements whether this attribute is present or not. <a href="../../tools/0test/">0test</a> &gt;= 0.2 will process dependencies where <code>use="testing"</code>, in addition to the program's normal dependencies. This attribute is deprecated - it's usually better to use a <code>&lt;command&gt;</code> for this.</p>
+<p>The <code>importance</code> attribute (0install &gt;= 1.1) can be either <code>essential</code> (the default; a version of this dependency must be selected) or <code>recommended</code> (no version is also an option, although selecting a version is preferable to not selecting one).</p>
+<p>The <code>version</code> attribute (0install &gt;= 1.13) provides a quick way to specify the permitted versions. See the <a href="#constraints">Constraints</a> section below.</p>
+<p>The <code>distribution</code> attribute (0install &gt;= 1.15) can be used to require the selected implementation to be from the given distribution. For example, a Python library available through MacPorts can only be used with a version of Python which is also from MacPorts. The value of this attribute is a space-separated list of distribution names. In addition to the <a href="../../details/distribution-integration/">official list of distribution names</a>, the special value <code>0install</code> may be used to require an implementation provided by 0instal (i.e. one not provided by a <code>&lt;package-implementation&gt;</code>).</p>
+<p>The <code>os</code> attribute (0install &gt;= 1.12) can be used to indicate that the dependency only applies to the given OS (e.g. <code>os="Windows"</code> for dependencies only needed on Windows systems).</p>
+<p>The <code>source</code> attribute (0install &gt;= 2.8) can be used to indicate that a source implementation is needed rather than a binary. This may be useful if you want to get e.g. header files from a source package. Note that if you select both source and binary implementations of an interface, 0install does not automatically force them to be the same version.</p>
+<p>A <code>&lt;restricts&gt;</code> element (0install &gt;= 1.10) can be used to apply constraints without creating a dependency:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;restricts</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;...&#39;</span>
+<span class="w">           </span><span class="na">version=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">           </span><span class="na">os=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">           </span><span class="na">distribution=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span>[<span class="w"> </span>constraints<span class="w"> </span>]<span class="w"> </span>*
+<span class="nt">&lt;/restricts&gt;</span>
+</code></pre></div>
+<p>Internally, <code>&lt;restricts&gt;</code> behaves much like <code>&lt;requires importance='recommended'&gt;</code>, except that it doesn't try to cause the interface to be selected at all.</p>
+<h2 id="constraints">Constraints<a class="headerlink" href="#constraints" title="Permanent link">&para;</a></h2>
+<p>Constraints appear on <code>&lt;requires&gt;</code>, <code>&lt;restricts&gt;</code>, <code>&lt;package-implementation&gt;</code> and <code>&lt;runner&gt;</code> elements. They restrict the set of versions from which 0install may choose an implementation.</p>
+<p>Since 0install 1.13, you can use the <code>version</code> attribute on the dependency element. The attribute's value is a list of ranges, separated by <code>|</code>, any of which may match.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;restricts</span><span class="w"> </span><span class="na">interface=</span><span class="s">&#39;https://apps.0install.net/python/python.xml&#39;</span>
+<span class="w">           </span><span class="na">version=</span><span class="s">&#39;2.6..!3 | 3.2.2..&#39;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>This allows Python versions 2.6, 2.7 and 3.3, but not 2.5 or 3.</p>
+</div>
+<p>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted. A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</p>
+<p>There is also an older syntax which also works with 0install &lt; 1.13, where a child node is used instead:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;version</span><span class="w"> </span><span class="na">not-before=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="na">before=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+</code></pre></div>
+<dl>
+<dt><code>not-before</code></dt>
+<dd>This is the lowest-numbered version that can be chosen.</dd>
+<dt><code>before</code></dt>
+<dd>This version and all later versions are unsuitable.</dd>
+</dl>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;version</span><span class="w"> </span><span class="na">not-before=</span><span class="s">&#39;2.4&#39;</span><span class="w"> </span><span class="na">before=</span><span class="s">&#39;2.6&#39;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>allows any of these versions: 2.4, 2.4.0, and 2.4.8. It will not select 2.3.9 or 2.6.</p>
+</div>
+<p>This older syntax is not supported with <code>&lt;packager-implementation&gt;</code>.</p>
+<h2 id="bindings">Bindings<a class="headerlink" href="#bindings" title="Permanent link">&para;</a></h2>
+<p>Bindings specify how the chosen implementation is made known to the running program. Bindings can appear in a <code>&lt;requires&gt;</code> element, in which case they tell a component how to find its dependency, or in an <code>&lt;implementation&gt;</code> (or group), where they tell a component how to find itself.</p>
+<p><img alt="Binding classes" src="../../img/uml/zero-install-binding.png" /></p>
+<h3 id="environment-bindings">Environment bindings<a class="headerlink" href="#environment-bindings" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;environment</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;...&#39;</span>
+<span class="w">             </span><span class="err">(</span><span class="na">insert=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="na">value=</span><span class="s">&#39;...&#39;</span><span class="err">)</span>
+<span class="w">             </span><span class="na">mode=</span><span class="s">&#39;prepend|append|replace&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">             </span><span class="na">separator=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">             </span><span class="na">default=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span>*
+</code></pre></div>
+<p>Details of the chosen implementation are passed to the program by setting environment variables, as specified by the <code>&lt;environment&gt;</code> elements (typically, there will be exactly one of these in each <code>&lt;requires&gt;</code> element). Each environment element gives the name of the variable and the relative path of the item within the implementation to insert into the variable's value.</p>
+<p>Usually, the (badly-named) <code>insert</code> attribute is used, which adds a path to a file or directory inside the implementation to the environment variable. For example, <code>&lt;environment name='PATH' insert='bin'/&gt;</code> would perform something similar to the bash shell statement <code>export PATH=/path/to/impl/bin:$PATH</code>.</p>
+<p>Alternatively, you can use the <code>value</code> attribute to use a literal string. For example, <code>&lt;environment name='GRAPHICAL_MODE' value='TRUE' mode='replace'/&gt;</code>. This requires 0install &gt;= 0.52.</p>
+<p>If <code>mode</code> is <code>prepend</code> (or not set), then the absolute path of the item is prepended to the current value of the variable. The default separator character is the colon character on POSIX systems, and semi-colon on Windows. This can be overridden using <code>separator</code> (0install &gt;= 1.1). If the environment variable is not currently set then the path is prepended to the value of the default attribute. If no default value is given either then the default for that environment variable is used, or the environment variable's value is set to the absolute path directly if there is no default.</p>
+<p>If <code>mode</code> is <code>append</code> then the same thing happens, except that the new value is added at the end instead of the beginning. If the mode is <code>replace</code> then the old value is overwritten, and the <code>default</code> attribute is ignored.</p>
+<p>The following environment variables have known defaults and therefore the <code>default</code> attribute is not needed with them:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATH</code></td>
+<td><code>/bin:/usr/bin</code></td>
+</tr>
+<tr>
+<td><code>XDG_CONFIG_DIRS</code></td>
+<td><code>/etc/xdg</code></td>
+</tr>
+<tr>
+<td><code>XDG_DATA_DIRS</code></td>
+<td><code>/usr/local/share:/usr/share</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="executable-bindings">Executable bindings<a class="headerlink" href="#executable-bindings" title="Permanent link">&para;</a></h3>
+<p>These both require 0install &gt;= 1.2.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;executable-in-var</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;...&#39;</span>
+<span class="w">                   </span><span class="na">command=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;executable-in-path</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;...&#39;</span>
+<span class="w">                    </span><span class="na">command=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>These are used when the program needs to run another program. <code>command</code> says which of the program's commands to use; the default is <code>run</code>.</p>
+<p><code>&lt;executable-in-var&gt;</code> stores the path of the selected executable in the named environment variable.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If a program uses <code>$MAKE</code> to run make, you can provide the required command like this:
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;https://apps.0install.net/devel/make.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;executable-in-var</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;MAKE&#39;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/requires&gt;</span>
+</code></pre></div></p>
+</div>
+<p><code>&lt;executable-in-path&gt;</code> works in a similar way, except that it adds a directory containing the executable to <code>$PATH</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If the program instead just runs the <code>make</code> command, you would use:
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;https://apps.0install.net/devel/make.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;executable-in-path</span><span class="w"> </span><span class="na">name=</span><span class="s">&#39;make&#39;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/requires&gt;</span>
+</code></pre></div></p>
+</div>
+<p>It is preferable to use <code>&lt;executable-in-var&gt;</code> where possible, to avoid making <code>$PATH</code> very long.</p>
+<div class="admonition note">
+<p class="admonition-title">Implementation note</p>
+<p>On POSIX systems, 0install will create a shell script under <code>~/.cache/0install.net/injector/executables</code> and pass the path of this script.</p>
+</div>
+<h3 id="generic-bindings">Generic bindings<a class="headerlink" href="#generic-bindings" title="Permanent link">&para;</a></h3>
+<p>Custom bindings can be specified using the <code>&lt;binding&gt;</code> element (0install &gt;= 2.1). 0install will not know how to run a program using custom bindings itself, but it will include them in any selections documents it creates, which can then be executed by your custom code. The syntax is:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;binding</span><span class="w"> </span><span class="na">path=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="na">command=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">         </span><span class="err">...</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span>...
+<span class="nt">&lt;/binding&gt;</span>
+</code></pre></div>
+<p>If <code>command</code> is given, then 0install will select the given <code>&lt;command&gt;</code> within the implementation (which may cause additional dependencies and bindings to be selected). Otherwise, no command is selected.</p>
+<p>Any additional attributes and child elements are not processed, but are just passed through. If your binding needs a path within the selected implementation, it is suggested that the <code>path</code> attribute be used for this. Other attributes and child elements should be namespaced to avoid collisions.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The <a href="../../tools/ebox/">EBox</a> application launcher allows each code module to specify its dependencies, which are then available in the module's scope as <em>getters</em>. The ebox-edit application depends on the help library like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;requires</span><span class="w"> </span><span class="na">interface=</span><span class="s">&quot;http://0install.net/tests/ebox-help.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;binding</span><span class="w"> </span><span class="na">e:getter=</span><span class="s">&#39;help&#39;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/requires&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h2>
+<p>A version number string has the following form:</p>
+<div class="highlight"><pre><span></span><code>Version := DottedList (&quot;-&quot; Modifier? DottedList?)*
+DottedList := (Integer (&quot;.&quot; Integer)*)
+Modifier := &quot;pre&quot; | &quot;rc&quot; | &quot;post&quot;
+</code></pre></div>
+<p>Numerically, the modifiers come in the order <code>-pre</code> (pre-release), <code>-rc</code> (release candidate), <code>-</code> (no modifier name), <code>-post</code> (post-release or patch level). Versions are ordered like this:</p>
+<ul>
+<li>0.1</li>
+<li>1</li>
+<li>1.0</li>
+<li>1.1</li>
+<li>1.2-pre</li>
+<li>1.2-pre1</li>
+<li>1.2-rc1</li>
+<li>1.2</li>
+<li>1.2-0</li>
+<li>1.2-post</li>
+<li>1.2-post1-pre</li>
+<li>1.2-post1</li>
+<li>1.2.1-pre</li>
+<li>1.2.1.4</li>
+<li>1.2.2</li>
+<li>1.2.10</li>
+<li>3</li>
+</ul>
+<p>0install doesn't care about anything other than the sort order (i.e., whether one version comes before or after another). It is expected that an implementation can be safely replaced by one with a later version number, but not necessarily with an earlier one. So, if an application works with version <code>1.2.1</code> of a library then it should also work with version <code>1.2.2</code> or <code>1.3</code> or even <code>5.7</code>, but not <code>1.2.0</code>. This is a little different to some other systems, where numbers in different places have different meanings.</p>
+<p>For example, if the latest version of a library you use is version 5.1, then you shouldn't add the restriction <code>before='5.2'</code>, because when 5.2 comes out it should still work with your program. Of course, this might not always work, and hopefully the problem will be reported while the new library version is marked as testing (before most users hit the problem). Once you know that 5.2 is a problem, you can add the <code>before='5.2'</code> restriction to the implementation then.</p>
+<p>Incompatible changes (where a newer version cannot be used in place of an older version) to an interface should be handled by creating a new interface URI. Eg:</p>
+<ul>
+<li><code>http://gtk.org/2005/interfaces/GTK-1.2.x</code> (contains 1.2.0, 1.2.1, 1.2.2, ...)</li>
+<li><code>http://gtk.org/2005/interfaces/GTK-2.x</code> (contains 2.0.0, 2.0.1, 2.2.0, 2.4.0, 2.4.1, ...)</li>
+</ul>
+<p>The integers in version numbers must be representable as 64-bit signed integers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Version numbers containing dash characters were not supported before version 0.24 of 0install and so a <code>version-modifier</code> attribute was added to allow new-style versions to be added without breaking older versions. This should no longer be used.</p>
+</div>
+<h2 id="stability">Stability<a class="headerlink" href="#stability" title="Permanent link">&para;</a></h2>
+<p>The feed file also gives a stability rating for each implementation. The following levels are allowed (must be lowercase in the feed files):</p>
+<ul>
+<li><code>stable</code></li>
+<li><code>testing</code></li>
+<li><code>developer</code></li>
+<li><code>buggy</code></li>
+<li><code>insecure</code></li>
+</ul>
+<p>Stability ratings are expected to change over time. When any new release is made, its stability should be set to <code>testing</code>. Users who have selected <strong>Help test new versions</strong> will then start using it. Other users will continue with the previous stable release. After a while (days, weeks or months, depending on the project) with no serious problems found, the implementation's stability can be changed to <code>stable</code> so that everyone will use it.</p>
+<p>If problems are found, it can instead be marked as <code>buggy</code>, or <code>insecure</code>. 0install won't select either by default, but it is useful to users to see the reason (users may opt to continue using a buggy version if it seems to work for them, but they should never use an insecure one). <code>developer</code> is like a more extreme version of <code>testing</code>, where the program is expected to have bugs.</p>
+<h3 id="when-to-use-buggy">When to use 'buggy'<a class="headerlink" href="#when-to-use-buggy" title="Permanent link">&para;</a></h3>
+<p>Don't mark old releases as <code>buggy</code> every time you do a new release, just because a few bugs have been fixed. People who have selected <code>Network use: Full</code> will automatically upgrade to the new version anyway, so marking an older version as buggy only affects people who have explicitly stated that they <strong>don't</strong> want to use the latest version, but would prefer to use an older release to save network use.</p>
+<h2 id="staged-rollouts">Staged rollouts<a class="headerlink" href="#staged-rollouts" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is currently only supported by <a href="../../details/windows/">Zero Install for Windows</a>.</p>
+</div>
+<p>Staged rollouts allow you to distribute new versions of a program to a subset of users that you can increase over time. Set the <code>rollout-percentage</code> attribute on an <code>&lt;implementation&gt;</code> to control the percentage of users that should treat it as if <code>stability="stable"</code>.</p>
+<p>The rollout probability is applied locally by randomly choosing and persisting a number between <code>1</code> and <code>100</code> per feed and implementation.</p>
+<h2 id="entry-points">Entry points<a class="headerlink" href="#entry-points" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is currently only used by <a href="../../details/windows/">Zero Install for Windows</a>.</p>
+</div>
+<p>Entry points allow you to associate additional information with <code>&lt;command&gt;</code> names, such as user-friendly names and descriptions. Entry points are used by the Zero Install GUI to help the user choose a command and by the <a href="../../details/desktop-integration/">desktop integration</a> system to generate appropriate menu entries for commands. An entry point is not necessary for a command to work but it makes it more discoverable to end-users.</p>
+<p>Entry points are top-level elements and, unlike commands, are not associated with any specific implementation or group. One entry point represents all commands in all implementations that carry the same name. An entry point has this syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;entry-point</span><span class="w"> </span><span class="na">command=</span><span class="s">&#39;...&#39;</span>
+<span class="w">               </span><span class="na">binary-name=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span>
+<span class="w">               </span><span class="na">app-id=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;needs-terminal/&gt;</span><span class="w"> </span>?
+<span class="w">    </span><span class="nt">&lt;suggest-auto-start/&gt;</span><span class="w"> </span>?
+<span class="w">    </span><span class="nt">&lt;suggest-send-to/&gt;</span><span class="w"> </span>?
+<span class="w">    </span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">&gt;</span>...<span class="nt">&lt;/name&gt;</span><span class="w"> </span>*
+<span class="w">    </span><span class="nt">&lt;summary</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">&gt;</span>...<span class="nt">&lt;/summary&gt;</span><span class="w"> </span>*
+<span class="w">    </span><span class="nt">&lt;description</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="err">?</span><span class="nt">&gt;</span>...<span class="nt">&lt;/description&gt;</span><span class="w"> </span>*
+<span class="w">    </span><span class="nt">&lt;icon</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;...&#39;</span><span class="w"> </span><span class="na">href=</span><span class="s">&#39;...&#39;</span><span class="nt">/&gt;</span><span class="w"> </span>*
+<span class="w">  </span><span class="nt">&lt;/group&gt;</span>
+</code></pre></div>
+<dl>
+<dt><code>command</code></dt>
+<dd>the name of the command this entry point represents</dd>
+<dt><code>binary-name</code></dt>
+<dd>the canonical name of the binary supplying the command (without file extensions); this is used to suggest suitable alias names.</dd>
+<dt><code>app-id</code></dt>
+<dd>the <a href="https://docs.microsoft.com/en-us/windows/win32/shell/appids">Application User Model ID</a>; used by Windows to associate shortcuts and pinned taskbar entries with running processes. May not be longer than 128 characters and may not contain whitespace.</dd>
+<dt><code>&lt;needs-terminal&gt;</code></dt>
+<dd>if present, this element indicates that the command represented by this entry point requires a terminal in order to run.</dd>
+<dt><code>&lt;suggest-auto-start&gt;</code></dt>
+<dd>if present, this element indicates that this entry point should be offered as an auto-start candidate to the user.</dd>
+<dt><code>&lt;suggest-send-to&gt;</code></dt>
+<dd>if present, this element indicates that this entry point should be offered as a candidate for the "Send To" context menu to the user.</dd>
+<dt><code>&lt;name&gt;</code></dt>
+<dd>user-friendly name for the command. If not present, the value of the <code>command</code> attribute is used instead. Supports <a href="#localization">localization</a>.</dd>
+<dt><code>&lt;summary&gt;</code></dt>
+<dd>a short one-line description; the first word should not be upper-case unless it is a proper noun (e.g. "cures all ills"). Supports <a href="#localization">localization</a>.</dd>
+<dt><code>&lt;description&gt;</code></dt>
+<dd>a full description, which can be several paragraphs long. Supports <a href="#localization">localization</a>.</dd>
+<dt><code>&lt;icon&gt;</code></dt>
+<dd>an icon to represent the command; this is used when creating menu entries. You should provide an icon of the type <code>image/png</code> (<code>.png</code>) for Linux apps and <code>image/vnd.microsoft.icon</code> (<code>.ico</code>) for Windows apps.</dd>
+</dl>
+<h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permanent link">&para;</a></h2>
+<p>Some elements can be localized using the <code>xml:lang</code> attribute.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;summary</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>cures<span class="w"> </span>all<span class="w"> </span>ills<span class="nt">&lt;/summary&gt;</span>
+<span class="nt">&lt;summary</span><span class="w"> </span><span class="na">xml:lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>heilt<span class="w"> </span>alle<span class="w"> </span>Krankheiten<span class="nt">&lt;/summary&gt;</span>
+</code></pre></div>
+</div>
+<p>When choosing a localized element Zero Install will prefer <code>xml:lang</code> values in the following order:</p>
+<ul>
+<li>Exactly matching the users language (e.g., <code>de-DE</code>)</li>
+<li>Matching the users with a neutral culture (e.g., <code>de</code>)</li>
+<li><code>en</code></li>
+<li><code>en-US</code></li>
+</ul>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<p>All elements can contain extension elements, provided they are not in the Zero Install namespace used by the elements defined here. 0install does not currently make use of these elements itself, but other programs may find them useful. In future, some of these may be used (for example, the GUI may display the license terms).</p>
+<p>The use of <a href="http://dublincore.org">Dublin Core</a> is suggested for the following concepts, which have the following meanings when found as a direct child of a <code>&lt;group&gt;</code> or <code>&lt;implementation&gt;</code> element:</p>
+<dl>
+<dt><code>dc:creator</code></dt>
+<dd>The primary author of the program.</dd>
+<dt><code>dc:publisher</code></dt>
+<dd>The person who created this implementation. For a binary, this is the person who compiled it.</dd>
+</dl>
+<p>Other Dublin Core terms that may be useful include <code>contributor</code>, <code>dateCopyrighted</code>, <code>language</code>, <code>rights</code> and <code>rightsHolder</code>.</p>
+<p>These terms are not required as they are duplicated by the core Zero Install terms: <code>identifier</code> (<code>id</code>), <code>available</code> (<code>released</code>) and <code>requires</code> (<code>requires</code>).</p>
+<p>The source element may be used in future to record the source used to build this implementation.</p>
+<h2 id="digital-signatures">Digital signatures<a class="headerlink" href="#digital-signatures" title="Permanent link">&para;</a></h2>
+<p>When a feed is downloaded from the web, it must contain a digital signature. A feed is signed by appending an XML comment block of the form:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Base64 Signature</span>
+<span class="cm">iD8DBQBEXM/qrgeCgFmlPMERArNSAKDBuNz5SQMZ8rwJmW2fhNHJwor6KwCgwx7XEfY+6gUC90rJ</span>
+<span class="cm">b5eCY+I8HNA=</span>
+
+<span class="cm">--&gt;</span>
+</code></pre></div>
+<p>This block <strong>must</strong> go at the end of the file, and contains a Base64-encoded version of the file that would be created by using <code>gpg --detach-sign</code> on the original feed. The signature block must start on a new line, may not contain anything except valid base64 characters, and nothing may follow the signature block. XML signature blocks are supported from version 0.18 of 0install and may be generated easily using the <a href="../../tools/0publish/">0publish</a> command.</p>
+<p>Local interfaces are plain XML, although having an XML signature block is no problem as it will be ignored as a normal XML comment.</p>
+<h2 id="valid-architecture-names">Valid architecture names<a class="headerlink" href="#valid-architecture-names" title="Permanent link">&para;</a></h2>
+<p>The <code>arch</code> attribute is a value in the form <code>OS-CPU</code>. The values come from the <code>uname</code> system call, but there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:</p>
+<ul>
+<li><code>*</code></li>
+<li><code>Cygwin</code> (a Unix-compatibility layer for Windows)</li>
+<li><code>Darwin</code> (MacOSX, without the proprietary bits)</li>
+<li><code>FreeBSD</code></li>
+<li><code>Linux</code></li>
+<li><code>MacOSX</code></li>
+<li><code>Windows</code></li>
+</ul>
+<p>Valid values for CPU include:</p>
+<ul>
+<li><code>*</code></li>
+<li><code>src</code></li>
+<li><code>i386</code></li>
+<li><code>i486</code></li>
+<li><code>i586</code></li>
+<li><code>i686</code></li>
+<li><code>ppc</code></li>
+<li><code>ppc64</code></li>
+<li><code>x86_64</code></li>
+<li><code>armv6l</code></li>
+<li><code>armv7l</code></li>
+<li><code>aarch64</code></li>
+</ul>
+<h2 id="the-if-0install-version-attribute">The <code>if-0install-version</code> attribute<a class="headerlink" href="#the-if-0install-version-attribute" title="Permanent link">&para;</a></h2>
+<p>To make it possible to use newer features in a feed without breaking older versions of 0install, the <code>if-0install-version</code> attribute may be placed on any element to indicate that the element should only be processed by the specified versions of 0install.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;group&gt;</span>
+<span class="w">  </span><span class="nt">&lt;new-element</span><span class="w"> </span><span class="na">if-0install-version=</span><span class="s">&#39;1.14..&#39;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;fallback</span><span class="w"> </span><span class="na">if-0install-version=</span><span class="s">&#39;..!1.14&#39;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/group&gt;</span>
+</code></pre></div>
+</div>
+<p>In this example, 0install 1.14 and later will see <code>&lt;new-element&gt;</code>, while older versions see <code>&lt;fallback&gt;</code>. The syntax is as described in <a href="#constraints">Constraints</a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>0install versions before 1.13 ignore this attribute and process all elements.</p>
+</div>
+<h2 id="well-known-extensions">Well-known extensions<a class="headerlink" href="#well-known-extensions" title="Permanent link">&para;</a></h2>
+<p>The following are well-known extensions to the Zero Install format:</p>
+<ul>
+<li><a href="../capabilities/">Capabilities</a> (provides information for desktop integration of applications)</li>
+</ul>
+<h2 id="future-plans">Future plans<a class="headerlink" href="#future-plans" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The extra meta-data elements need to be better specified.</li>
+<li>As well as before and not-before, we should support after and not-after.</li>
+<li>It should be possible to give a delta (binary patch) against a previous version, to make upgrading quicker.</li>
+<li>It should be possible to scope bindings. For example, when a DTP package requires a clipart package, the clipart package should not be allowed to affect the DTP package's environment.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2003-2024 Thomas Leonard, Bastian Eicher and others<br> Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

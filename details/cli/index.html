@@ -1,0 +1,5348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://0install.net/details/cli/">
+      
+      
+        <link rel="prev" href="../troubleshooting/">
+      
+      
+        <link rel="next" href="../file-locations/">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Command-line interface - Zero Install Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#command-line-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zero Install Docs" class="md-header__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero Install Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Command-line interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/perspectives/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/" class="md-tabs__link">
+          
+  
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Details
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/" class="md-tabs__link">
+          
+  
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../packaging/" class="md-tabs__link">
+          
+  
+  
+  Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../specifications/" class="md-tabs__link">
+          
+  
+  
+  Specifications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tools/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zero Install Docs" class="md-nav__button md-logo" aria-label="Zero Install Docs" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Zero Install Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/0install/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/perspectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Perspectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/first-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First launch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a menu entry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/alias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a command-line alias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual walk-through
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Policy settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desktop-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desktop integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sharing downloads between users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribution-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distribution integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trouble-shooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Command-line interface
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command-line interface
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      select
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    <span class="md-ellipsis">
+      run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog refresh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog reset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      catalog list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trust-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      trust add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trust-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      trust remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trust-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      trust list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      add-feed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove-feed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-feeds" class="md-nav__link">
+    <span class="md-ellipsis">
+      list-feeds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      digest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      store add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      store audit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      store copy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      store export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      store find
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      store list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-list-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      store list-implementations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-manage" class="md-nav__link">
+    <span class="md-ellipsis">
+      store manage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-optimise" class="md-nav__link">
+    <span class="md-ellipsis">
+      store optimise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-purge" class="md-nav__link">
+    <span class="md-ellipsis">
+      store purge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      store remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      store verify
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      store serve
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-add-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      store add-dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-remove-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      store remove-dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central" class="md-nav__link">
+    <span class="md-ellipsis">
+      central
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove-all
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      integrate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      list-apps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      update-all
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repair-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      repair-all
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      import-apps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      self deploy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      self remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      self update
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File locations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os-differences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OS-specific differences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for macOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zero Install for Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/using-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/solver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Solver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/dotnet-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/json-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Packaging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (command-line)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/guide-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging guide (graphical)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/local-feeds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local feeds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/dotnet-lib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/find/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/inkscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inkscape
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/examples/rox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROX-Filer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Specifications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specifications overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/feed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feed files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/capabilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Capabilities extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Catalog files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/selections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selections files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/manifest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manifest files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0export
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0mirror/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0mirror
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0publish-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish-gui
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0publish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0publish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0repo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0share/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0share
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0watch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0watch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/ebox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ebox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/feedlint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FeedLint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/make-headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make-headers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/pkg2zero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pkg2zero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_17" id="__nav_8_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_17">
+            <span class="md-nav__icon md-icon"></span>
+            0compile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/chroot-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Chroot Build
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0compile/example-scons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0compile: SCons example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_18" id="__nav_8_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_18">
+            <span class="md-nav__icon md-icon"></span>
+            0release
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/compiled-binaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Compiled binaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/0release/customisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0release: Customisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="command-line-interface">Command-line interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h1>
+<p>Zero Install command-lines begin with <code>0install</code>.<br />
+On Windows you can also use <code>0install-win</code> instead. This will display outputs using windows instead of the console.</p>
+<table>
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><a href='#select'><code>select</code></a></nobr></td>
+  <td>Selects a version of the program identified by URI, and compatible versions of all of its dependencies.
+<br/>Returns an exit status of <code>0</code> if it selected a set of versions, and a status of <code>1</code> if it could not find a consistent set.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#download'><code>download</code></a></nobr></td>
+  <td>Behaves similarly to <code>0install select</code>, except that it also downloads the selected versions if they are not already cached.
+<br/>Returns an exit status of <code>0</code> if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of <code>1</code> otherwise.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#update'><code>update</code></a></nobr></td>
+  <td>Checks for updates to the program and download them if found.
+<br/>This is similar to <code>0install download --refresh</code>, except that it prints information about whether any changes were found.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#run'><code>run</code></a></nobr></td>
+  <td>Behaves similarly to <code>0install download</code>, except that it also runs the program after ensuring it is in the cache.
+<br/>Returns an exit status of <code>1</code> if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#import'><code>import</code></a></nobr></td>
+  <td>Imports a feed from a local file, as if it had been downloaded from the network. This is useful when testing a feed file, to avoid uploading it to a remote server in order to download it again.
+<br/>The file must have a trusted digital signature, as when fetching from the network.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#export'><code>export</code></a></nobr><br>(Windows only)</td>
+  <td>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#search'><code>search</code></a></nobr></td>
+  <td>Searches for feeds indexed by the mirror server that match specified keywords. Note that the default mirror server indexes all known feeds, regardless of quality; you must decide whether to trust the programs before running them.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#list'><code>list</code></a></nobr></td>
+  <td>Lists all locally known feed URIs. If a search term is given, only URIs containing that string are shown (case insensitive).</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-search'><code>catalog search</code></a></nobr><br>(Windows only)</td>
+  <td>Searches registered catalogs for applications that match the specified query. If no query is given all applications in the catalogs are listed.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-refresh'><code>catalog refresh</code></a></nobr><br>(Windows only)</td>
+  <td>Refreshes (downloads) all registered catalogs.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-add'><code>catalog add</code></a></nobr><br>(Windows only)</td>
+  <td>Adds an URI to the list of catalogs.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-remove'><code>catalog remove</code></a></nobr><br>(Windows only)</td>
+  <td>Removes an URI from the list of catalogs.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-reset'><code>catalog reset</code></a></nobr><br>(Windows only)</td>
+  <td>Resets the list of catalogs to the default source.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#catalog-list'><code>catalog list</code></a></nobr><br>(Windows only)</td>
+  <td>Lists all registered catalogs.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#config'><code>config</code></a></nobr></td>
+  <td>View or change configuration settings.
+<br/>With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#trust-add'><code>trust add</code></a></nobr><br>(Windows only)</td>
+  <td>Trusts feeds from a specific `DOMAIN` when [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#trust-remove'><code>trust remove</code></a></nobr><br>(Windows only)</td>
+  <td>Stops trusting feeds [signed](../specifications/feed.md#digital-signatures) with a specific `FINGERPRINT`. Only stops trusting for a specific `DOMAIN`, if specified.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#trust-list'><code>trust list</code></a></nobr><br>(Windows only)</td>
+  <td>List keys trusted for [signing](../specifications/feed.md#digital-signatures) feeds. Only list domains for which a specific `FINGERPRINT` is trusted, if specified.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#add-feed'><code>add-feed</code></a></nobr></td>
+  <td>Register an additional source of implementations (versions) of a program.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#remove-feed'><code>remove-feed</code></a></nobr></td>
+  <td>Un-registers a feed, reversing the effect of <code>0install add-feed</code>.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#list-feeds'><code>list-feeds</code></a></nobr></td>
+  <td>Lists all extra feeds added to URI using <code>0install add-feed</code>.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#digest'><code>digest</code></a></nobr></td>
+  <td>Calculates the manifest digest of a directory or archive.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-add'><code>store add</code></a></nobr></td>
+  <td>Adds the contents of a directory or archive to the cache.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-audit'><code>store audit</code></a></nobr></td>
+  <td>Checks that all implementations in the cache are undamaged.
+<br/>Additional arguments specify custom cache locations.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-copy'><code>store copy</code></a></nobr></td>
+  <td>Copies an implementation into the cache. Similar to <code>0install store add</code>, but the digest is extracted from the directory name.
+<br/>An additional arguments specifies a custom target cache location.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-export'><code>store export</code></a></nobr><br>(Windows only)</td>
+  <td>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <code>0install store add</code>.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-find'><code>store find</code></a></nobr></td>
+  <td>Determines the local path of a cached implementation.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-list'><code>store list</code></a></nobr></td>
+  <td>Lists all implementation cache directories.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-list-implementations'><code>store list-implementations</code></a></nobr><br>(Windows only)</td>
+  <td>Lists all cached implementations. If a feed URI is specified only implementations for that particular feed are listed.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-manage'><code>store manage</code></a></nobr></td>
+  <td>Displays a graphical user interface for managing implementations in the cache. Shows associations with cached feeds.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-optimise'><code>store optimise</code></a></nobr></td>
+  <td>Saves disk space by merging identical files with hardlinks.
+<br/>Additional arguments specify custom cache locations.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-purge'><code>store purge</code></a></nobr><br>(Windows only)</td>
+  <td>Removes all implementations from the cache. Use this command to clean up the system before removing Zero Install. Deleting cache directories manually may be difficult due to the NTFS ACLs employed to protect implementations against modification.
+<br/>Additional arguments specify custom cache locations.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-remove'><code>store remove</code></a></nobr></td>
+  <td>Removes an implementation from the cache.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-verify'><code>store verify</code></a></nobr></td>
+  <td>Makes sure an implementation has not been damaged (i.e. it manifest digest has not changed).</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-serve'><code>store serve</code></a></nobr></td>
+  <tdServes implementations from the cache as archives via HTTP</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-add-dir'><code>store add-dir</code></a></nobr><br>(Windows only)</td>
+  <td>Adds a directory to the list of custom implementation caches.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#store-remove-dir'><code>store remove-dir</code></a></nobr><br>(Windows only)</td>
+  <td>Removes a directory from the list of custom implementation caches.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#central'><code>central</code></a></nobr><br>(Windows only)</td>
+  <td>Opens the central graphical user interface for launching and managing applications.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#add'><code>add</code></a></nobr></td>
+  <td>Add an application to the application list.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#remove'><code>remove</code></a></nobr><br>(Windows only)</td>
+  <td>Removes an application from the application list and undoes any desktop environment integration.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#remove-all'><code>remove-all</code></a></nobr><br>(Windows only)</td>
+  <td>Removes all applications from the application list and undoes any desktop environment integration. Use this command to clean up the system before removing Zero Install.</td>
+</tr>
+<tr>
+  <td><nobr><code>destroy</code></nobr><br>(Linux only)</td>
+  <td>Removes an application.</td>
+</tr>
+<tr>
+  <td><nobr><code>show</code></nobr><br>(Linux only)</td>
+  <td>Shows the current selections for an application</td>
+</tr>
+<tr>
+  <td><nobr><code>whatchanged</code></nobr><br>(Linux only)</td>
+  <td>Shows the differences between the current and previous selections for an application.</td>
+</tr>
+<tr>
+  <td><nobr><code>man</code></nobr><br>(Linux only)</td>
+  <td>Shows the man-page of a given command.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#integrate'><code>integrate</code></a></nobr><br>(Windows only)</td>
+  <td>Adds an application to the application list (if missing) and integrate it into the desktop environment.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#alias'><code>alias</code></a></nobr><br>(Windows only)</td>
+  <td>Create an alias for launching an application via 0install without always having to enter the full URI.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#list-apps'><code>list-apps</code></a></nobr><br>(Windows only)</td>
+  <td>Lists all applications currently in your application list. If a search term is given, only application names containing that string are shown (case insensitive).</td>
+</tr>
+<tr>
+  <td><nobr><a href='#update-all'><code>update-all</code></a></nobr><br>(Windows only)</td>
+  <td>Updates all applications in the application list.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#repair-all'><code>repair-all</code></a></nobr><br>(Windows only)</td>
+  <td>Reapplies all desktop integrations of applications in the application list.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#sync'><code>sync</code></a></nobr><br>(Windows only)</td>
+  <td>Synchronizes the application list with the server.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#import-apps'><code>import-apps</code></a></nobr><br>(Windows only)</td>
+  <td>Imports a set of applications and desktop integrations from an existing app-list.xml file.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#self-deploy'><code>self deploy</code></a></nobr><br>(Windows only)</td>
+  <td>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#self-remove'><code>self remove</code></a></nobr><br>(Windows only)</td>
+  <td>Removes the current instance of Zero Install from the system.</td>
+</tr>
+<tr>
+  <td><nobr><a href='#self-update'><code>self update</code></a></nobr><br>(Windows only)</td>
+  <td>Updates Zero Install itself to the most recent version.</td>
+</tr>
+</table>
+
+<h2 id="select">select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h2>
+<p>Selects a version of the program identified by URI, and compatible versions of all of its dependencies.<br />
+Returns an exit status of <code>0</code> if it selected a set of versions, and a status of <code>1</code> if it could not find a consistent set.</p>
+<p><strong>Usage:</strong> <code>0install select [OPTIONS] URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--xml</code></nobr></td>
+  <td>Write output to console as machine-readable XML.</td>
+</tr>
+</table>
+
+<h2 id="download">download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
+<p>Behaves similarly to <a href='#select'><code>0install select</code></a>, except that it also downloads the selected versions if they are not already cached.<br />
+Returns an exit status of <code>0</code> if it selected a suitable set of versions and they are now all downloaded and in the cache; returns a status of <code>1</code> otherwise.</p>
+<p><strong>Usage:</strong> <code>0install download [OPTIONS] URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--xml</code></nobr></td>
+  <td>Write selected versions to console as machine-readable XML.</td>
+</tr>
+<tr>
+  <td><nobr><code>--show</code></nobr></td>
+  <td>Show where the selected components are stored on the disk.</td>
+</tr>
+</table>
+
+<h2 id="update">update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<p>Checks for updates to the program and download them if found.<br />
+This is similar to <a href='#download'><code>0install download --refresh</code></a>, except that it prints information about whether any changes were found.</p>
+<p><strong>Usage:</strong> <code>0install update [OPTIONS] URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+</table>
+
+<h2 id="run">run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
+<p>Behaves similarly to <a href='#download'><code>0install download</code></a>, except that it also runs the program after ensuring it is in the cache.<br />
+Returns an exit status of <code>1</code> if the download step failed. Otherwise, the exit status will be the exit status of the program being run.</p>
+<p><strong>Usage:</strong> <code>0install run [OPTIONS] URI [ARGS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
+  <td>Run the specified executable <code>MAIN</code> instead of the default. If it starts with <code>/</code> or <code>\</code> then the path is relative to the implementation's top-level directory, whereas otherwise it is relative to the directory containing the default main program.
+<br/>May not contain command-line arguments! Whitespaces do not need to be escaped.</td>
+</tr>
+<tr>
+  <td><nobr><code>-w <code>COMMAND</code></code></nobr><br/><nobr><code>--wrapper <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the chosen program directly, run <code>COMMAND</code> <code>PROGRAM</code> <code>ARGS</code>. This is useful for running debuggers and tracing tools on the program (rather than on Zero Install!).
+<br/>Note that the wrapper is executed in the environment selected by the program; hence, this mechanism cannot be used for sandboxing.
+<br/>May contain command-line arguments. Whitespaces must be escaped!</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-wait</code></nobr><br>(Windows only)</td>
+  <td>Immediately returns once the chosen program has been launched instead of waiting for it to finish executing. On Windows the exit code is the process ID of the launched program.</td>
+</tr>
+</table>
+
+<h2 id="import">import<a class="headerlink" href="#import" title="Permanent link">&para;</a></h2>
+<p>Imports a feed from a local file, as if it had been downloaded from the network. This is useful when testing a feed file, to avoid uploading it to a remote server in order to download it again.<br />
+The file must have a trusted digital signature, as when fetching from the network.</p>
+<p><strong>Usage:</strong> <code>0install import FEED-FILE [...]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="export">export<a class="headerlink" href="#export" title="Permanent link">&para;</a></h2>
+<p>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</p>
+<p><strong>Usage:</strong> <code>0install export [OPTIONS] URI DIRECTORY</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-implementations</code></nobr></td>
+  <td>Do not include implementation archives in the export. Only export feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--include-zero-install</code></nobr></td>
+  <td>Include Zero Install itself in the export alongside the application.</td>
+</tr>
+<tr>
+  <td><nobr><code>--bootstrap <code>VALUE</code></code></nobr></td>
+  <td>Choose the type of Bootstrapper to place alongside the export.
+<br/>Supported values: <code>None</code>, <code>Run</code>, <code>Integrate</code></td>
+</tr>
+</table>
+
+<h2 id="search">search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
+<p>Searches for feeds indexed by the mirror server that match specified keywords. Note that the default mirror server indexes all known feeds, regardless of quality; you must decide whether to    the programs before running them.</p>
+<p><strong>Usage:</strong> <code>0install search QUERY</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="list">list<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
+<p>Lists all locally known feed URIs. If a search term is given, only URIs containing that string are shown (case insensitive).</p>
+<p><strong>Usage:</strong> <code>0install list [PATTERN]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="catalog-search">catalog search<a class="headerlink" href="#catalog-search" title="Permanent link">&para;</a></h2>
+<p>Searches registered catalogs for applications that match the specified query. If no query is given all applications in the catalogs are listed.</p>
+<p><strong>Usage:</strong> <code>0install catalog search [QUERY]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="catalog-refresh">catalog refresh<a class="headerlink" href="#catalog-refresh" title="Permanent link">&para;</a></h2>
+<p>Refreshes (downloads) all registered catalogs.</p>
+<p><strong>Usage:</strong> <code>0install catalog refresh</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="catalog-add">catalog add<a class="headerlink" href="#catalog-add" title="Permanent link">&para;</a></h2>
+<p>Adds an URI to the list of catalogs.</p>
+<p><strong>Usage:</strong> <code>0install catalog add URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--skip-verify</code></nobr></td>
+  <td>Skip downloading the catalog to verify it is valid before adding it to the list.</td>
+</tr>
+</table>
+
+<h2 id="catalog-remove">catalog remove<a class="headerlink" href="#catalog-remove" title="Permanent link">&para;</a></h2>
+<p>Removes an URI from the list of catalogs.</p>
+<p><strong>Usage:</strong> <code>0install catalog remove URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="catalog-reset">catalog reset<a class="headerlink" href="#catalog-reset" title="Permanent link">&para;</a></h2>
+<p>Resets the list of catalogs to the default source.</p>
+<p><strong>Usage:</strong> <code>0install catalog reset</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="catalog-list">catalog list<a class="headerlink" href="#catalog-list" title="Permanent link">&para;</a></h2>
+<p>Lists all registered catalogs.</p>
+<p><strong>Usage:</strong> <code>0install catalog list</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<p>View or change configuration settings.<br />
+With no arguments, it displays all settings and their current values. With one argument, it displays the current value of the named setting. With two arguments, it sets the setting to the given value or resets it to the default value if the value <code>default</code> is given.</p>
+<p><strong>Usage:</strong> <code>0install config [NAME [VALUE|default]]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--tab <code>TAB</code></code></nobr></td>
+  <td>Switch to a specific tab in the configuration GUI. Possible <code>TAB</code>s are <code>updates</code>, <code>storage</code>, <code>catalog</code>, <code>trust</code>, <code>sync</code>, <code>language</code>, <code>language</code> and <code>advanced</code>.
+<br/>Has no effect in text-mode.</td>
+</tr>
+</table>
+
+<h2 id="trust-add">trust add<a class="headerlink" href="#trust-add" title="Permanent link">&para;</a></h2>
+<p>Trusts feeds from a specific <code>DOMAIN</code> when <a href="../../specifications/feed/#digital-signatures">signed</a> with a specific <code>FINGERPRINT</code>.</p>
+<p><strong>Usage:</strong> <code>0install trust add FINGERPRINT DOMAIN</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="trust-remove">trust remove<a class="headerlink" href="#trust-remove" title="Permanent link">&para;</a></h2>
+<p>Stops trusting feeds <a href="../../specifications/feed/#digital-signatures">signed</a> with a specific <code>FINGERPRINT</code>. Only stops trusting for a specific <code>DOMAIN</code>, if specified.</p>
+<p><strong>Usage:</strong> <code>0install trust remove FINGERPRINT [DOMAIN]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="trust-list">trust list<a class="headerlink" href="#trust-list" title="Permanent link">&para;</a></h2>
+<p>List keys trusted for <a href="../../specifications/feed/#digital-signatures">signing</a> feeds. Only list domains for which a specific <code>FINGERPRINT</code> is trusted, if specified.</p>
+<p><strong>Usage:</strong> <code>0install trust list [FINGERPRINT]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="add-feed">add-feed<a class="headerlink" href="#add-feed" title="Permanent link">&para;</a></h2>
+<p>Register an additional source of implementations (versions) of a program.</p>
+<p><strong>Usage:</strong> <code>0install add-feed [OPTIONS] [INTERFACE] FEED</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+</table>
+
+<h2 id="remove-feed">remove-feed<a class="headerlink" href="#remove-feed" title="Permanent link">&para;</a></h2>
+<p>Un-registers a feed, reversing the effect of <a href='#add-feed'><code>0install add-feed</code></a>.</p>
+<p><strong>Usage:</strong> <code>0install remove-feed [OPTIONS] [INTERFACE] FEED</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+</table>
+
+<h2 id="list-feeds">list-feeds<a class="headerlink" href="#list-feeds" title="Permanent link">&para;</a></h2>
+<p>Lists all extra feeds added to URI using <a href='#add-feed'><code>0install add-feed</code></a>.</p>
+<p><strong>Usage:</strong> <code>0install list-feeds [OPTIONS] URI</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="digest">digest<a class="headerlink" href="#digest" title="Permanent link">&para;</a></h2>
+<p>Calculates the manifest digest of a directory or archive.</p>
+<p><strong>Usage:</strong> <code>0install digest (DIRECTORY | ARCHIVE [SUBDIR])</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--manifest</code></nobr></td>
+  <td>Display the manifest itself (one line for each file or directory).</td>
+</tr>
+<tr>
+  <td><nobr><code>--digest</code></nobr></td>
+  <td>Display the manifest's digest (enabled by default if --manifest is not set).</td>
+</tr>
+<tr>
+  <td><nobr><code>--algorithm <code>HASH</code></code></nobr></td>
+  <td>The <code>HASH</code> algorithm to use for the digest.
+<br/>Supported values: <code>sha256new</code>, <code>sha256</code>, <code>sha1new</code></td>
+</tr>
+</table>
+
+<h2 id="store-add">store add<a class="headerlink" href="#store-add" title="Permanent link">&para;</a></h2>
+<p>Adds the contents of a directory or archive to the cache.</p>
+<p><strong>Usage:</strong> <code>0install store add DIGEST (DIRECTORY | (ARCHIVE [EXTRACT [MIME-TYPE [...]]))</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-audit">store audit<a class="headerlink" href="#store-audit" title="Permanent link">&para;</a></h2>
+<p>Checks that all implementations in the cache are undamaged.<br />
+Additional arguments specify custom cache locations.</p>
+<p><strong>Usage:</strong> <code>0install store audit [CACHE-DIR+]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-copy">store copy<a class="headerlink" href="#store-copy" title="Permanent link">&para;</a></h2>
+<p>Copies an implementation into the cache. Similar to <a href='#store-add'><code>0install store add</code></a>, but the digest is extracted from the directory name.<br />
+An additional arguments specifies a custom target cache location.</p>
+<p><strong>Usage:</strong> <code>0install store copy DIRECTORY [CACHE]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-export">store export<a class="headerlink" href="#store-export" title="Permanent link">&para;</a></h2>
+<p>Exports a cached implementation as an archive (ZIP, TAR, etc.). The result can be imported on another machine using <a href='#store-add'><code>0install store add</code></a>.</p>
+<p><strong>Usage:</strong> <code>0install store export DIGEST OUTPUT-ARCHIVE [MIME-TYPE]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-find">store find<a class="headerlink" href="#store-find" title="Permanent link">&para;</a></h2>
+<p>Determines the local path of a cached implementation.</p>
+<p><strong>Usage:</strong> <code>0install store find DIGEST</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-list">store list<a class="headerlink" href="#store-list" title="Permanent link">&para;</a></h2>
+<p>Lists all implementation cache directories.</p>
+<p><strong>Usage:</strong> <code>0install store list</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-list-implementations">store list-implementations<a class="headerlink" href="#store-list-implementations" title="Permanent link">&para;</a></h2>
+<p>Lists all cached implementations. If a feed URI is specified only implementations for that particular feed are listed.</p>
+<p><strong>Usage:</strong> <code>0install store list-implementations [FEED-URI]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-manage">store manage<a class="headerlink" href="#store-manage" title="Permanent link">&para;</a></h2>
+<p>Displays a graphical user interface for managing implementations in the cache. Shows associations with cached feeds.</p>
+<p><strong>Usage:</strong> <code>0install store manage</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-optimise">store optimise<a class="headerlink" href="#store-optimise" title="Permanent link">&para;</a></h2>
+<p>Saves disk space by merging identical files with hardlinks.<br />
+Additional arguments specify custom cache locations.</p>
+<p><strong>Usage:</strong> <code>0install store optimise [CACHE-DIR+]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-purge">store purge<a class="headerlink" href="#store-purge" title="Permanent link">&para;</a></h2>
+<p>Removes all implementations from the cache. Use this command to clean up the system before removing Zero Install. Deleting cache directories manually may be difficult due to the NTFS ACLs   yed to protect implementations against modification.
+<br/>Additional arguments specify custom cache locations.</p>
+<p><strong>Usage:</strong> <code>0install store purge [CACHE-DIR+]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-remove">store remove<a class="headerlink" href="#store-remove" title="Permanent link">&para;</a></h2>
+<p>Removes an implementation from the cache.</p>
+<p><strong>Usage:</strong> <code>0install store remove DIGEST+</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-verify">store verify<a class="headerlink" href="#store-verify" title="Permanent link">&para;</a></h2>
+<p>Makes sure an implementation has not been damaged (i.e. if manifest digest has not changed).</p>
+<p><strong>Usage:</strong> <code>0install store verify [DIRECTORY] DIGEST</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-serve">store serve<a class="headerlink" href="#store-serve" title="Permanent link">&para;</a></h2>
+<p>Serves implementations from the cache as archives via HTTP</p>
+<p><strong>Usage:</strong> <code>0install store serve [PORT]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="store-add-dir">store add-dir<a class="headerlink" href="#store-add-dir" title="Permanent link">&para;</a></h2>
+<p>Adds a directory to the list of custom implementation caches.</p>
+<p><strong>Usage:</strong> <code>0install store add-dir PATH</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="store-remove-dir">store remove-dir<a class="headerlink" href="#store-remove-dir" title="Permanent link">&para;</a></h2>
+<p>Removes a directory from the list of custom implementation caches.</p>
+<p><strong>Usage:</strong> <code>0install store remove-dir PATH</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="central">central<a class="headerlink" href="#central" title="Permanent link">&para;</a></h2>
+<p>Opens the central graphical user interface for launching and managing applications.</p>
+<p><strong>Usage:</strong> <code>0install central [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="add">add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h2>
+<p>Add an application to the application list.</p><br />
+ <b>Usage Linux:</b> <code>0install add [OPTIONS] NAME URI</code><br>
+  <b>Usage Windows:</b> <code>0install add [OPTIONS] [NAME] URI</code>
+</p></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
+  <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
+</tr>
+</table>
+
+<h2 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h2>
+<p>Removes an application from the application list and undoes any desktop environment integration.</p>
+<p><strong>Usage:</strong> <code>0install remove [OPTIONS] (ALIAS|INTERFACE)</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="remove-all">remove-all<a class="headerlink" href="#remove-all" title="Permanent link">&para;</a></h2>
+<p>Removes all applications from the application list and undoes any desktop environment integration. Use this command to clean up the system before removing Zero Install.</p>
+<p><strong>Usage:</strong> <code>0install remove-all [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="integrate">integrate<a class="headerlink" href="#integrate" title="Permanent link">&para;</a></h2>
+<p>Adds an application to the application list (if missing) and integrate it into the desktop environment.</p>
+<p><strong>Usage:</strong> <code>0install integrate [OPTIONS] (ALIAS|INTERFACE)</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
+  <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--add-standard</code></nobr></td>
+  <td>Add the recommended standard access points.</td>
+</tr>
+<tr>
+  <td><nobr><code>--add-all</code></nobr></td>
+  <td>Add all available access points.</td>
+</tr>
+<tr>
+  <td><nobr><code>--add <code>CATEGORY</code></code></nobr></td>
+  <td>Add all access points of a specific <code>CATEGORY</code>.
+<br/>Supported values: <code>capability-registration</code>, <code>menu-entry</code>, <code>desktop-icon</code>, <code>send-to</code>, <code>alias</code>, <code>auto-start</code>, <code>default-access-point</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--remove-all</code></nobr></td>
+  <td>Remove all access points.</td>
+</tr>
+<tr>
+  <td><nobr><code>--remove <code>CATEGORY</code></code></nobr></td>
+  <td>Remove all access points of a specific <code>CATEGORY</code>.
+<br/>Supported values: <code>capability-registration</code>, <code>menu-entry</code>, <code>desktop-icon</code>, <code>send-to</code>, <code>alias</code>, <code>auto-start</code>, <code>default-access-point</code></td>
+</tr>
+</table>
+
+<h2 id="alias">alias<a class="headerlink" href="#alias" title="Permanent link">&para;</a></h2>
+<p>Create an alias for launching an application via 0install without always having to enter the full URI.</p>
+<p><strong>Usage:</strong> <code>0install alias ALIAS [INTERFACE [COMMAND]]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
+  <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--resolve</code></nobr></td>
+  <td>Print the interface URI for the given alias.</td>
+</tr>
+<tr>
+  <td><nobr><code>--remove</code></nobr></td>
+  <td>Remove an existing alias.</td>
+</tr>
+</table>
+
+<h2 id="list-apps">list-apps<a class="headerlink" href="#list-apps" title="Permanent link">&para;</a></h2>
+<p>Lists all applications currently in your application list. If an <code>URI</code> is given, only the application with that feed URI is shown. If a <code>PATTERN</code> is given, only applications containing that string in their name are shown (case insensitive).</p>
+<p><strong>Usage:</strong> <code>0install list-apps [URI|PATTERN]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--xml</code></nobr></td>
+  <td>Write output to console as machine-readable XML.</td>
+</tr>
+</table>
+
+<h2 id="update-all">update-all<a class="headerlink" href="#update-all" title="Permanent link">&para;</a></h2>
+<p>Updates all applications in the application list.</p>
+<p><strong>Usage:</strong> <code>0install update-all [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>-c</code></nobr><br/><nobr><code>--clean</code></nobr></td>
+  <td>Remove implementations no longer required after the update.</td>
+</tr>
+</table>
+
+<h2 id="repair-all">repair-all<a class="headerlink" href="#repair-all" title="Permanent link">&para;</a></h2>
+<p>Reapplies all desktop integrations of applications in the application list.</p>
+<p><strong>Usage:</strong> <code>0install repair-all [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+</table>
+
+<h2 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h2>
+<p>Synchronizes the application list with the server.</p>
+<p><strong>Usage:</strong> <code>0install sync [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--reset <code>MODE</code></code></nobr></td>
+  <td>Reset the synchronization data.
+<br/>Supported values: <code>none</code> (merge data from client and server normally), <code>client</code> (replace all data on client with data from server) and <code>server</code> (replace all data on server with data from client).</td>
+</tr>
+</table>
+
+<h2 id="import-apps">import-apps<a class="headerlink" href="#import-apps" title="Permanent link">&para;</a></h2>
+<p>Imports a set of applications and desktop integrations from an existing app-list.xml file.</p>
+<p><strong>Usage:</strong> <code>0install import-apps APP-LIST-FILE [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-download</code></nobr><br>(Windows only)</td>
+  <td>Do not download the application itself yet. Will be automatically downloaded on first use instead.</td>
+</tr>
+</table>
+
+<h2 id="self-deploy">self deploy<a class="headerlink" href="#self-deploy" title="Permanent link">&para;</a></h2>
+<p>Deploys Zero Install to the specified <code>TARGET</code> directory or the default directory for programs and integrates it in the system.</p>
+<p><strong>Usage:</strong> <code>0install self deploy [TARGET]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
+<tr>
+  <td><nobr><code>-p</code></nobr><br/><nobr><code>--portable</code></nobr></td>
+  <td>Create a portable installation that can be moved around (e.g., on a thumb drive).</td>
+</tr>
+<tr>
+  <td><nobr><code>--restart-central</code></nobr></td>
+  <td>Restart the <a href='#central'><code>0install central</code></a> GUI after the update.</td>
+</tr>
+</table>
+
+<h2 id="self-remove">self remove<a class="headerlink" href="#self-remove" title="Permanent link">&para;</a></h2>
+<p>Removes the current instance of Zero Install from the system.</p>
+<p><strong>Usage:</strong> <code>0install self remove</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+</table>
+
+<h2 id="self-update">self update<a class="headerlink" href="#self-update" title="Permanent link">&para;</a></h2>
+<p>Updates Zero Install itself to the most recent version.</p>
+<p><strong>Usage:</strong> <code>0install self update [OPTIONS]</code></p>
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--force</code></nobr></td>
+  <td>Perform the update even if the currently installed version is the same or newer.</td>
+</tr>
+<tr>
+  <td><nobr><code>--restart-central</code></nobr></td>
+  <td>Restart the <a href='#central'><code>0install central</code></a> GUI after the update.</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2003-2024 Thomas Leonard, Bastian Eicher and others<br> Permission is granted to use the documentation in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
