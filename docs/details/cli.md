@@ -273,6 +273,14 @@ Returns an exit status of <code>0</code> if it selected a set of versions, and a
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
 </tr>
 <tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
+</tr>
+<tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
   <td>Run in off-line mode, overriding the default setting.
 <br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
@@ -366,6 +374,14 @@ Returns an exit status of <code>0</code> if it selected a suitable set of versio
 <tr>
   <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
 </tr>
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
@@ -467,6 +483,14 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
 </tr>
 <tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
+</tr>
+<tr>
   <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
   <td>Add <code>DIR</code> to the list of implementation caches to search.
 <br/>However, new downloads will not be written to this directory.</td>
@@ -547,6 +571,14 @@ Returns an exit status of <code>1</code> if the download step failed. Otherwise,
 <tr>
   <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
 </tr>
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
@@ -682,6 +714,14 @@ Exports all feeds and implementations required to launch the program specified b
 <tr>
   <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
   <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
 </tr>
 <tr>
   <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
