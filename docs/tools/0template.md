@@ -121,3 +121,33 @@ $ 0repo add myprog-1.2.xml
 ```
 
 The [packaging guide](../packaging/guide-cli.md) includes a tutorial showing how to use 0template.
+
+## Generating archives
+
+Instead of referencing existing archives, you can also use 0template to generate archives alongside the feed. This offers a lightweight alternative to [0release](0release/index.md).
+
+To instruct 0template to generate an archive:
+
+- add a `local-path` attribute to the `<implementation>` pointing to the directory containing the files that should be added to the archive
+- use a relative path in the `<archive>`'s `href` attribute
+- optionally use the `type` attribute to set the MIME type of the kind of archive to create
+  - If unset, the archive type is inferred from the file extension.
+
+```xml
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>myprog</name>
+  <summary>does useful stuff</summary>
+
+  <group>
+    <command name="run" path="myprog"/>
+
+    <implementation version="{version}" local-path="directory/to/pack">
+      <manifest-digest/>
+      <archive href="myprog-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+```
+
+Running `0template myprog.xml.template version=1.0` will then generate both `myprog-1.0.xml` and `myprog-1.0.zip`.
