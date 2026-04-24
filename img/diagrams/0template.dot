@@ -1,0 +1,8 @@
+digraph template {
+	node [shape=box;style=filled;fillcolor="#ffff80"];
+	template [label="myprog.xml.template\n<implementation version={version}>"];
+	template -> single_feed [label=" 0template myprog.xml.template version=1.2"];
+	single_feed [label="myprog-1.2.xml\n<implementation version=1.2>"];
+	single_feed -> master_feed [label=" 0repo add myprog-1.2.xml"];
+	master_feed [label="myprog.xml\n<implementation version=1.0>\n<implementation version=1.1>\n<implementation version=1.2>"];
+}
