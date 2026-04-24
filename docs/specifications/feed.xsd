@@ -1185,7 +1185,7 @@
       <xs:enumeration value="Cygwin">
         <xs:annotation>
           <xs:documentation>
-            POSIX compatability layer on Windows
+            POSIX compatibility layer on Windows
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>

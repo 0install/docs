@@ -29,7 +29,7 @@ Invoke-WebRequest https://get.0install.net/0install.exe -OutFile 0install.exe
 .\0install.exe run http://example.com/somefeed.xml
 ```
 
-You can also use the command-line version of the Bootstrapper to integrate Zero install into the desktop environment:
+You can also use the command-line version of the Bootstrapper to integrate Zero Install into the desktop environment:
 
 ```shell
 .\0install.exe self deploy

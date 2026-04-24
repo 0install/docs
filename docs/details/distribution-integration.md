@@ -13,7 +13,7 @@
 - `Slack`: Slackware - since 0.48
 - `Windows`: Windows (detects native Java, .NET Framework, .NET, PowerShell and Git) - in [Windows version](windows.md)
 
-If you have already installed a package using your distribution's installer then Zero install can use that instead of downloading a second copy using Zero Install. It can also use [PackageKit](http://www.packagekit.org/) to install them, if the user is authorised.
+If you have already installed a package using your distribution's installer then Zero Install can use that instead of downloading a second copy. It can also use [PackageKit](http://www.packagekit.org/) to install them, if the user is authorised.
 
 For example, here is what happens if you ask to run AbiWord when you already have the `libenchant1` library it requires installed using `apt-get`:
 

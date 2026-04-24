@@ -1,6 +1,6 @@
 # 0bootstrap
 
-**0bootstrap** generates a native package or installer that installs 0install itself along with a an app launched via 0install.
+**0bootstrap** generates a native package or installer that installs 0install itself along with an app launched via 0install.
 
 === "Linux / macOS"
     !!! info ""

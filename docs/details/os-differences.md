@@ -68,9 +68,9 @@ The Windows version:
 
 ## Cross-platform use
 
-The Windows version of Zero Install is written in in C#. It is primarily intended to be be used on Windows NT-based operating systems. However, the [Zero Install .NET API](../developers/dotnet-api.md) it is based on is written with cross-platform support in mind and works on Linux using .NET Core.
+The Windows version of Zero Install is written in C#. It is primarily intended to be used on Windows NT-based operating systems. However, the [Zero Install .NET API](../developers/dotnet-api.md) it is based on is written with cross-platform support in mind and works on Linux using .NET Core.
 
-The Linux version of Zero Install is writtin in OCaml. It is primarily intended to be be used on Unixoid operating systems such as Linux and OS X. It can also be compiled for Windows, however, it lacks a number of Windows-specific features such as support for NTFS ACLs.
+The Linux version of Zero Install is written in OCaml. It is primarily intended to be used on Unixoid operating systems such as Linux and OS X. It can also be compiled for Windows, however, it lacks a number of Windows-specific features such as support for NTFS ACLs.
 
 The Windows version of Zero Install internally uses parts of the Linux version via the [JSON API](../developers/json-api.md).
 

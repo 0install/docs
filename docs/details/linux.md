@@ -4,7 +4,7 @@ The Linux version and [Windows version](windows.md) of Zero Install share the sa
 
 ## Generic binaries
 
-You can download download various distribution-specific packages as well as generic binaries [here](https://get.0install.net/#linux).
+You can download various distribution-specific packages as well as generic binaries [here](https://get.0install.net/#linux).
 
 Once you have downloaded an archive with pre-compiled binaries, unpack it and `cd` into the newly created directory.
 
@@ -21,7 +21,7 @@ $ ./install.sh home
 $ export PATH=$HOME/bin:$PATH
 ```
 
-You can also just run `./files/0install` directly, but  some features won't work unless `0install` is in `PATH`.
+You can also just run `./files/0install` directly, but some features won't work unless `0install` is in `PATH`.
 
 ## From source
 

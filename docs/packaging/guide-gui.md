@@ -20,7 +20,7 @@ Start by getting **0publish-gui** in the usual way:
 ```
 
 !!! note
-    The following text currently on describes the steps on Linux. Documentation for Windows coming soon.
+    The following text currently only describes the steps on Linux. Documentation for Windows coming soon.
 
 Run the program, giving it the name of the feed file you want to create, which should be named after the program:
 
