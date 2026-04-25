@@ -1,50 +1,43 @@
 title: Packaging overview
 
-To make software available through 0install, you need to publish a signed "feed" XML file on your web page. This file lists the available versions and their dependencies and says how to run the program. There are lots of ways to create this XML file.
+# Packaging overview
 
-To see an example of the XML, go to any 0install program's feed in your browser (e.g. [0export](http://0install.net/tools/0export.xml)) and _View Page Source_.
+To make software available through Zero Install, you publish a signed XML _feed_ that lists the available versions, where to download them, how to run them, and what they depend on. Anyone with a web server (or a static host like GitHub Pages) can publish feeds; there is no central registry.
 
-Before you start, have a look at [Concepts](concepts.md) to make sure you understand some key terms and ideas.
+A feed looks roughly like this:
 
-I want to...
+```xml
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>MyApp</name>
+  <summary>does something useful</summary>
+  <homepage>https://example.com/myapp</homepage>
 
-[TOC]
+  <group license="MIT License">
+    <command name="run" path="myapp"/>
 
-## Publish an XML file for an existing binary release
+    <implementation arch="Linux-x86_64" version="1.0" released="2026-04-01" stability="stable">
+      <manifest-digest sha256new="..."/>
+      <archive href="https://example.com/myapp-1.0-linux-x64.tar.gz"/>
+    </implementation>
+  </group>
+</interface>
+```
 
-- Read the [binary packaging guide](guide-gui.md). This tutorial shows how to create an XML file describing the Blender 3D-animation application. The binary archive is published by the upstream authors and requires no modifications.
+You don't usually write this from scratch. The [tools](../tools/index.md) generate and update feeds for you.
 
-## Publish XML for a source release
+## Where to start
 
-- Start by reading the [binary packaging guide](guide-gui.md). Most of the steps are the same.
-- Read the [0compile user guide](../tools/0compile/index.md) to understand how users compile 0install software.
-- Read the [0compile developer guide](../tools/0compile/developers.md) for a tutorial showing how to publish the GNU Hello example package.
+Before reading the guides below, skim [Concepts](concepts.md) to make sure you're familiar with the terms _interface_, _feed_, _implementation_ and _command_.
 
-## Create an XML file describing my own software
+[Tutorials](tutorial/index.md) walk through end-to-end workflows.
 
-- Read the [0release](../tools/0release/index.md) documentation, which shows how to add a [local feed](local-feeds.md) to your source repository. Users can use this to run your program from a Git checkout, and you can use it to generate new releases automatically.
-- Have a look at the [template projects](templates.md) for examples in various programming languages (Python, Java, .NET, C).
+[Guides](guides/index.md) are reference recipes for packaging specific kinds of software.
 
-## Learn more
+If you only want to run a program from a Git checkout, you may not need to publish anything at all. See [Local feeds](local-feeds.md).
 
-**Other useful documentation**
+## Reference
 
-[Feed specification](../specifications/feed.md)
-: The specification of the XML format.
-
-[Templates](templates.md)
-: Sample code packages which you can use as templates when creating a new program that will be distributed using 0install, or as examples for your own programs.
-
-[Tools](../tools/index.md)
-: An index of the tools provided by the 0install project for generating feeds.
-
-**Articles**
-
-[Binary distribution with 0install](https://opam.ocaml.org/blog/0install-intro/)
-: Blog article describing how to make packages using the [0template](../tools/0template.md) command-line tool.
-
-[Compiling with SCons and GTK](http://rox.sourceforge.net/desktop/node/300)
-: Article showing how to use Zero Install in your build scripts to download the SCons build system and use it to compile your program.
-
-[Easy GTK binary compatibility](http://rox.sourceforge.net/desktop/node/289)
-: This blog article shows how to use Zero Install to compile your program against older versions of library headers than are the default on your system. Binaries created this way work on a wider range of systems (all systems with a GTK version newer than the headers). Also, since they download the required headers automatically, users don't need to have the headers already on their system in order to compile your program. The binaries produced this way do not depend on Zero Install, so you can use Zero Install as part of your build process even if you don't distribute the resulting binaries that way.
+- [Feed file specification](../specifications/feed.md) &ndash; the formal XML format.
+- [Tools](../tools/index.md) &ndash; the publishing tools (0template, 0publish, 0publish-gui, 0repo, 0release, 0watch, 0compile, 0test, feedlint).
+- [apps.0install.net](https://github.com/0install/apps) &ndash; a large public repository of feeds, useful as a reference.

@@ -68,4 +68,4 @@ Some more things you can do with your new local feed:
 - Make a release using [0release](../tools/0release/index.md).
 - Test against different versions of dependencies using [0test](../tools/0test.md).
 
-See the [example templates](templates.md) for projects in different languages and using various build systems.
+See the [packaging guides](guides/index.md) for recipes for different languages and build systems.

@@ -28,4 +28,4 @@ To get it:
 
 Full instructions can be found in [0repo's README](https://github.com/0install/0repo/blob/master/README.md).
 
-The [packaging guide](../packaging/guide-cli.md) includes a short tutorial.
+The [Managing multiple feeds with 0repo](../packaging/tutorial/multi-feed.md) tutorial walks through a typical setup.

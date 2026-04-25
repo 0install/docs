@@ -1,0 +1,120 @@
+# A catalog of third-party feeds
+
+The previous tutorials covered publishing feeds for software you maintain yourself. This one covers the harder case: keeping a curated catalog of feeds for **third-party** software up to date. This is the workflow [apps.0install.net](https://apps.0install.net/) uses to track around three hundred upstreams.
+
+The trick is that you don't actually maintain the feeds; you maintain a small Python script per feed (the _watch script_) that knows how to query upstream for new releases. [0watch](../../tools/0watch.md) runs the scripts on a schedule, calls [0template](../../tools/0template.md) for each new release, and [0repo](../../tools/0repo.md) merges the results into a signed catalog.
+
+This tutorial assumes you already have a 0repo-managed repository running on GitHub Pages. If not, work through [Managing multiple feeds with 0repo](multi-feed.md) first.
+
+## How a watch script works
+
+For each feed you want to track, you provide two files in the same directory:
+
+- `<name>.xml.template`: a 0template template with `{version}` and `{released}` placeholders
+- `<name>.watch.py`: a Python script that sets a `releases` attribute to a list of dicts, one per release
+
+The watch script can pull data from anywhere: an HTML page, a GitHub Releases API call, an RSS feed. A typical script for a project that publishes to GitHub Releases:
+
+```python
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import github  # shared helper, see below
+
+releases = [{
+    'version': release['tag_name'].lstrip('v'),
+    'released': release['published_at'][:10],
+} for release in github.releases('UPSTREAM/REPO') if not release['prerelease']]
+```
+
+Each dict's keys must match the placeholders in the template. The minimum is `version`; most templates also use `released` and sometimes `stability` or platform-specific values like `arch`.
+
+The shared `github.py` helper at the root of [apps.0install.net](https://github.com/0install/apps/blob/master/github.py). Copy it into your repo and you can reuse it from every watch script.
+
+## Running 0watch locally
+
+Install it:
+
+```shell
+0install add 0watch https://apps.0install.net/0install/0watch.xml
+```
+
+For each watch script, 0watch:
+
+1. Runs the script and reads `releases`.
+2. For each release, checks whether `<name>-<version>.xml` already exists or whether `<name>.xml` already contains an `<implementation>` with that version.
+3. If the version is new, calls `0template <name>.xml.template version=... released=...` and writes the result alongside the script.
+
+Example:
+
+```shell
+0watch myapp.watch.py --output ../incoming
+```
+
+The generated feed appears in `../incoming/myapp-1.2.3.xml`, ready to be picked up by `0repo add`.
+
+To process every watch script in a tree, the convention used by apps.0install.net is a small driver script:
+
+```bash
+#!/usr/bin/env bash
+set -e
+mkdir -p ../incoming
+
+for FILE in $(ls */*.watch.py); do
+    0install run https://apps.0install.net/0install/0watch.xml --output ../incoming "$FILE"
+done
+```
+
+A Windows equivalent (`watch.ps1`) is in the [apps repository](https://github.com/0install/apps/blob/master/watch.ps1).
+
+## OS-specific watch scripts
+
+Some upstreams publish per-platform releases that are only discoverable on a matching host (e.g. macOS DMGs that need to be hashed locally, or Windows installers behind a User-Agent check). Tag a watch script with an `#os=` marker on the first line:
+
+```python
+#os=Windows
+# ... rest of the script ...
+```
+
+The driver script then runs each script only on the OS its marker matches:
+
+```bash
+header=$(head -n 1 "$FILE")
+if [[ $header == "#os=$(uname)" ]] || [[ $header != \#os=* ]]; then
+    run_watch_script "$FILE"
+fi
+```
+
+This is what the apps.0install.net `update.yml` workflow does: one job per OS, generating per-platform feeds and merging them in a final job.
+
+## Wiring it all up with GitHub Actions
+
+The full pipeline has three workflows:
+
+`update.yml`: Nightly cron (or manual trigger) that runs every watch script on a matrix of `windows-latest`, `macos-latest` and `ubuntu-latest`, gathers the resulting feeds, runs `0repo add` on them, and opens a pull request titled "Automatic updates".
+
+`verify.yml`: Runs on every pull request. Re-runs `0repo` in dry-run mode (no GPG key) to confirm the feeds in the PR are valid before merging.
+
+`publish.yml`: Runs on every push to `main`. Re-signs the feeds with the production GPG key and pushes the signed results to `gh-pages`.
+
+The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a good template. They are intentionally small and copy-pasteable. The composite actions under `.github/actions/setup` and `.github/actions/0repo` factor out the boilerplate so each workflow stays short.
+
+## Anatomy of a typical entry
+
+For a third-party tool, you add three files under, say, `utils/`:
+
+```
+utils/coolthing.xml           # master feed (auto-generated by 0repo)
+utils/coolthing.xml.template  # template you maintain
+utils/coolthing.watch.py      # release detector you maintain
+```
+
+After that, every new upstream release flows through the pipeline automatically: 0watch detects it overnight, 0template stamps out a per-version feed, 0repo merges and signs, GitHub Pages serves the result.
+
+When upstream renames a binary, drops a platform, or changes their archive layout, you update the template and watch script, not the master feed, which is regenerated.
+
+## Tips
+
+- Keep watch scripts deterministic. They run on every `update.yml` run and any flakiness causes false PRs.
+- Filter out pre-releases / release candidates (`if not release['prerelease']`) unless you actually want to publish them as `stability="testing"`.
+
+The fastest way to learn the patterns is to read [a handful of templates and watch scripts](https://github.com/0install/apps) in the apps repo. They cover almost every situation you'll run into.
