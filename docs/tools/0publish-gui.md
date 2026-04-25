@@ -9,7 +9,7 @@ Publishing a program using Zero Install requires you to create an XML file listi
         **Source:** <https://github.com/0install/0publish-gui>  
         **Zero Install feed:** <https://apps.0install.net/0install/0publish-gui.xml>
 
-    See [the packaging guide](../packaging/guide-gui.md).
+    See the [packaging tutorials](../packaging/tutorial/index.md).
 
 === "Windows"
     !!! info ""

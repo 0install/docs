@@ -120,7 +120,7 @@ Once you are happy with it, you can add it to the master feed (which contains al
 $ 0repo add myprog-1.2.xml
 ```
 
-The [packaging guide](../packaging/guide-cli.md) includes a tutorial showing how to use 0template.
+The [packaging tutorials](../packaging/tutorial/index.md) walk through using 0template end-to-end.
 
 ## Generating archives
 

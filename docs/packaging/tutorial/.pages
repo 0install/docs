@@ -1,0 +1,8 @@
+title: Tutorials
+
+nav:
+  - index.md
+  - publish-app.md
+  - automate-ci.md
+  - multi-feed.md
+  - catalog.md
