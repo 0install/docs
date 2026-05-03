@@ -67,7 +67,7 @@ You can search for feeds in catalogs like this:
 0install catalog search KEYWORD
 ```
 
-See the [command-line interface documentation](../details/cli.md#catalog_search) for more commands.
+See the [command-line interface documentation](../details/cli.md#catalog-search) for more commands.
 
 ### Short names
 
