@@ -4,9 +4,6 @@ This section contains various utility programs that make using Zero Install easi
 
 ## Publishing and updating feeds
 
-[0downstream](http://gfxmonk.net/dist/0install/0downstream.xml)
-: **0downstream** can be used to automatically create and update feed files for an existing open source project page on a site like github, pypi or rubygems.org.
-
 [0publish](0publish.md)
 : **0publish** edits feed files in place. It loads the file, transforms it in some way (such as setting the release date, or adding a new implementation) and then writes it back out again. If the input file was signed, it will resign it when saving with the same key by default. You can also use it to add a signature, or to change the signing key. It is particularly useful in release scripts.
 
@@ -23,7 +20,7 @@ This section contains various utility programs that make using Zero Install easi
 : **mkzero** is a light-weight alternative to 0release. It doesn't support version control integration, tagging, or local feeds. It is useful for quickly publishing simple packages.
 
 [0template](0template.md)
-: **0template** generates the XML for one version of a program from a template. It is a useful replacement for **0downstream** for more complex programs (e.g. source code that must be compiled or programs with dependencies).
+: **0template** generates the XML for one version of a program from a template. It fills in placeholders such as `{version}` and computes manifest digests for the referenced archives.
 
 [0capture](0capture.md)
 : **0capture** captures snapshots of system state and diffs them to generate Zero Install [desktop integration](../details/desktop-integration.md).
