@@ -17,6 +17,8 @@ jobs:
       - name: Install mkdocs
         run: pip install -r requirements.txt
       - name: Build documentation
+        env:
+          DISABLE_MKDOCS_2_WARNING: 'true'
         run: mkdocs build --strict
       - name: Publish documentation
         if: github.event.ref == 'refs/heads/master'
