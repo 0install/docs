@@ -723,18 +723,19 @@ The `arch` attribute is a value in the form `OS-CPU`. The values come from the `
 
 Valid values for CPU include:
 
-- `*`
-- `src`
+- `*` (CPU-agnostic)
+- `src` (source code)
 - `i386`
 - `i486`
 - `i586`
 - `i686`
 - `ppc`
 - `ppc64`
-- `x86_64`
+- `x86_64` (x64/AMD64)
 - `armv6l`
 - `armv7l`
-- `aarch64`
+- `aarch64` (ARM64)
+- `arm64ec` (runs on Windows on ARM64, but can link with x64 libraries)
 
 ## The `if-0install-version` attribute
 
