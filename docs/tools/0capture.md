@@ -37,7 +37,7 @@ This will create a file named `myapp.snapshot` storing information such as the c
 
 Now you can install the app you wish to capture using its regular installer (e.g. `setup.exe` or an `.msi`). Choose any options you want preserved in the feed (shortcuts, file associations).
 
-Avoid running unrelated software in between. Esverything that changes will end up in the diff.
+Avoid running unrelated software in between. Everything that changes will end up in the diff.
 
 ### Second snapshot
 
