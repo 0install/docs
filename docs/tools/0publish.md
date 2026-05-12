@@ -62,6 +62,9 @@ You can setup `0publish` like this:
     `--set-id=DIGEST`
     : Set the implementation ID. Note: it's usually easier to use the `--archive-*` options, since they calculate the digest for you.
 
+    `--set-interface-uri=URI`
+    : Set the canonical feed URL (the `uri` attribute on the root `<interface>` element).
+
     `--set-main=EXEC`
     : Set the main executable.
 
@@ -84,7 +87,7 @@ You can setup `0publish` like this:
     : Select version to use in `--set-*` commands.
 
     `-x`, `--xmlsign`
-    : Add an XML signature block. All remote feeds must be signed.
+    : Add an XML signature block. All remote feeds must be signed. As a side-effect, the corresponding public key is exported next to the feed as `<KEYID>.gpg`, so users' 0install clients can fetch it from the same directory to verify the signature.
 
     `-u`, `--unsign`
     : Remove any signature.
@@ -107,6 +110,9 @@ You can setup `0publish` like this:
         **License:** GNU Lesser General Public License  
         **Source:** <https://github.com/0install/0publish-dotnet>  
         **Zero Install feed:** <https://apps.0install.net/0install/0publish.xml>
+
+    !!! warning
+        The Windows version does not yet implement all of the options available on Linux / macOS (`--add-from`, `--set-interface-uri`, `--set-released`, the other `--set-*` flags, etc.). For workflows that need them, run the Linux / macOS version of `0publish` (e.g. on a CI runner) or invoke it under WSL.
 
     ## Options
 
