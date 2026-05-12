@@ -45,7 +45,7 @@ Each implementation of an interface is identified by a cryptographic digest, eg:
 For platform independent binaries (e.g. Python code) there will be one implementation for each version. For compiled code, there will be one implementation per architecture per version.
 
 !!! note
-    The digest covers the full content of the implementation directory. Any change to the upstream archive (even a re-zip with different timestamps) produces a different digest, and the feed must be regenerated.
+    The digest is computed over the extracted directory tree (file names, contents, modes and timestamps), not the archive bytes. Re-archiving is digest-stable only if all of those are preserved.
 
 ## Launching
 
