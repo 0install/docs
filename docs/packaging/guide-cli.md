@@ -88,7 +88,7 @@ builder and scanner objects.
 
   <feed-for interface="http://example.com/scons.xml"/>
 
-  <group license="OSI Approved :: MIT/X Consortium License">
+  <group license="MIT">
     <command name="run" path="scons.py">
       <runner interface="https://apps.0install.net/python/python.xml">
         <version not-before="3"/>

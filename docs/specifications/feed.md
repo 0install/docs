@@ -164,7 +164,7 @@ An implementation has this syntax (an unspecified argument is inherited from the
 : For platform-specific binaries, the platform for which this implementation was compiled, in the form `os-cpu`. 0install knows that certain platforms are backwards-compatible with others, so binaries with `arch="Linux-i486"` will still be available on `Linux-i686` machines, for example. Either the `os` or `cpu` part may be `*`, which will make it available on any OS or CPU. If missing, the default is `*-*`. See also: [Valid architecture names](#valid-architecture-names).
 
 `license`
-: License terms. This is typically a [Trove](http://catb.org/~esr/trove/) category. See [the PyPI list](http://pypi.python.org/pypi?%3Aaction=list_classifiers) for some examples (the leading `License :: ` is not included).
+: License terms. This is typically an [SPDX license identifier or expression](https://spdx.org/licenses/), such as `MIT`, `Apache-2.0`, `GPL-3.0-or-later` or `GPL-2.0-only WITH Classpath-exception-2.0`.
 
 The `manifest-digest` element is used to give digests of the .manifest file using various hashing algorithms (but see the historical note below). Having multiple algorithms allows a smooth upgrade to newer digest algorithms without breaking old clients. Each non-namespaced attribute gives a digest, with the attribute name being the algorithm.
 

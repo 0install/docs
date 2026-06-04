@@ -358,7 +358,7 @@
         <xs:attribute name="license" type="xs:string">
           <xs:annotation>
             <xs:documentation>
-              License terms (typically a Trove category, as used on freshmeat.net).
+              License terms (typically an SPDX license identifier or expression, e.g. 'MIT', 'Apache-2.0' or 'GPL-3.0-or-later'; see https://spdx.org/licenses/).
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
