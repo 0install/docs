@@ -1167,6 +1167,7 @@
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Linux" />
+      <xs:enumeration value="FreeBSD" />
       <xs:enumeration value="Solaris" />
       <xs:enumeration value="MacOSX">
         <xs:annotation>

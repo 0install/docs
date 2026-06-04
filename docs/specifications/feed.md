@@ -714,11 +714,13 @@ Local interfaces are plain XML, although having an XML signature block is no pro
 The `arch` attribute is a value in the form `OS-CPU`. The values come from the `uname` system call, but there is some normalisation (e.g. because Windows doesn't report the same CPU names as Linux). Valid values for OS include:
 
 - `*`
+- `POSIX` (any POSIX-compatible system, e.g. Linux, Solaris, macOS or Cygwin)
 - `Cygwin` (a Unix-compatibility layer for Windows)
 - `Darwin` (MacOSX, without the proprietary bits)
 - `FreeBSD`
 - `Linux`
 - `MacOSX`
+- `Solaris`
 - `Windows`
 
 Valid values for CPU include:
