@@ -47,6 +47,16 @@ For platform independent binaries (e.g. Python code) there will be one implement
 !!! note
     The digest is computed over the extracted directory tree (file names, contents, modes and timestamps), not the archive bytes. Re-archiving is digest-stable only if all of those are preserved.
 
+## Commands
+
+A _command_ says how to run an implementation. A feed can define several: the default `run` command, a `test` command used by [0test](../tools/0test.md), a `compile` command used by [0compile](../tools/0compile/index.md), and any others you name (e.g. `run-gui`). Each command points at an executable inside the implementation (its `path`) and may pull in a `<runner>` such as a Python interpreter or a .NET runtime.
+
+```xml
+<command name="run" path="bin/myprog"/>
+```
+
+Users select a non-default command with `0install run --command=NAME`.
+
 ## Launching
 
 When you launch a program (like VLC) 0install looks up the feed files of the interface and chooses an implementation of the interface and the interfaces it depends on according to the policy settings (e.g. preferring "stable" or "testing" implementations). 0install then downloads the implementations if they are missing from the cache. Lastly, 0install uses environment variables (bindings) to tell the program where to find its dependencies; this process is known as _Dependency Injection_ (or _Inversion of Control_).

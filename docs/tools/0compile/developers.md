@@ -10,7 +10,7 @@ This page explains how to publish source code using Zero Install. Publishing sou
 
 There are two common situations:
 
-- You already have a source tarball somewhere and you want to publish an XML feed saying how to download and compile it (ideally, no changes should be needed to support 0install). For this, you should first read the [Guide to packaging binaries](../../packaging/guide-gui.md).
+- You already have a source tarball somewhere and you want to publish an XML feed saying how to download and compile it (ideally, no changes should be needed to support 0install). For this, you should first read the [packaging guides](../../packaging/guides/index.md).
 - You have a development checkout (e.g. a Git clone or similar) and you want to say how to compile it. For this, you should first read the page about [local feeds](../../packaging/local-feeds.md).
 
 To make source code available for others to use you need to add source implementations to the program's feed file. This is almost exactly the same as adding binaries, except that you give `src` as the machine (CPU) type:
@@ -163,7 +163,7 @@ python "$SRCDIR"/setup.py install --home="$DISTDIR" --skip-build
 
 ## Examples
 
-There are some [template projects](../../packaging/templates.md) which can be used as a starting point for publishing your own software for various languages and build systems.
+The [packaging guides](../../packaging/guides/index.md) cover starting points for publishing software for various languages and build systems.
 
 ## Further reading
 

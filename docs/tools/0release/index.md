@@ -83,7 +83,7 @@ Hello World!
 
 Note the `<feed-for>` element. This is where the main feed is (or will be) published. If you want to follow this tutorial, change it to point to a location to which you can upload files (e.g. `http://localhost/~me/testing/HelloWorld.xml`) and commit the change (`git commit -a`).
 
-You should add any dependencies inside the `<implementation>` element (see the [feed specification](../../specifications/feed.md) for details, or edit the feed using [0publish-gui](../../packaging/guide-gui.md) if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python < 3
+You should add any dependencies inside the `<implementation>` element (see the [feed specification](../../specifications/feed.md) for details, or edit the feed using [0publish-gui](../0publish-gui.md) if you want a graphical interface). This example program is so simple it doesn't have any dependencies beyond its interpreter: Python < 3
 
 ## Creating the releases directory
 

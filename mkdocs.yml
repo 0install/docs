@@ -71,3 +71,10 @@ plugins:
         basics/using-apps.md: details/apps.md
         basics/windows.md: details/desktop-integration.md
         tools/0publish-win.md: tools/0publish-gui.md
+        packaging/templates.md: packaging/guides/index.md
+        packaging/guide-cli.md: packaging/tutorials/index.md
+        packaging/guide-gui.md: packaging/tutorials/index.md
+        packaging/examples/find.md: packaging/guides/linux-native.md
+        packaging/examples/rox.md: packaging/guides/linux-native.md
+        packaging/examples/inkscape.md: packaging/guides/linux-native.md
+        packaging/examples/dotnet-lib.md: packaging/guides/libraries.md
