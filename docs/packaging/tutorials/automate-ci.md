@@ -58,7 +58,7 @@ In **Settings → Secrets and variables → Actions**, create a new repository s
 
 ## 4. Write the workflow
 
-Create `.github/workflows/publish.yml`:
+The [Zero Install GitHub Actions](https://github.com/0install/github-actions) wrap the tools, so the workflow does not have to bootstrap 0install or shell out to it. Create `.github/workflows/publish.yml`:
 
 ```yaml
 name: Publish
@@ -72,53 +72,86 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-        with: { path: source }
-      - uses: actions/checkout@v4
-        with: { path: public, ref: gh-pages }
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Determine version
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
 
       - name: Build release archive
-        working-directory: source
-        run: ./build.sh ${GITHUB_REF_NAME#v}
-
-      - name: Import GPG key
-        run: echo "${{ secrets.GPG_KEY }}" | gpg --batch --import -
-
-      - name: Download 0install bootstrap script
-        run: curl -sSfLO https://get.0install.net/0install.sh && chmod +x 0install.sh
+        run: ./build.sh ${{ steps.version.outputs.version }}
 
       - name: Generate per-version feed
-        working-directory: source
-        run: |
-          version=${GITHUB_REF_NAME#v}
-          ../0install.sh run https://apps.0install.net/0install/0template.xml \
-            myapp.xml.template version=$version
+        id: feed
+        uses: 0install/github-actions/0template@v1
+        with:
+          template: myapp.xml.template
+          version: ${{ steps.version.outputs.version }}
 
       - name: Merge into master feed
-        run: |
-          version=${GITHUB_REF_NAME#v}
-          cd public
-          ../0install.sh run https://apps.0install.net/0install/0publish.xml \
-            myapp.xml --add-from=../source/myapp-$version.xml
+        uses: 0install/github-actions/0publish@v1
+        with:
+          feed: gh-pages/myapp.xml
+          add-from: ${{ steps.feed.outputs.feed }}
+          gpg-key: ${{ secrets.GPG_KEY }}
 
       - name: Push gh-pages
-        working-directory: public
+        working-directory: gh-pages
         run: |
           git config user.name 'CI'
           git config user.email 'ci@example.com'
-          git add myapp.xml
-          git commit -m "Publish ${GITHUB_REF_NAME#v}"
+          git add -A
+          git commit -m "Publish ${{ steps.version.outputs.version }}"
           git push
 ```
 
 The workflow:
 
 1. Checks out the source on `main` and the published feed on `gh-pages` into separate directories.
-2. Builds the release archive at the tag's version. Replace `./build.sh` with whatever produces the archive your template expects (and uploads it to wherever the `<archive href>` points to; typically a GitHub Release attached to the same tag).
-3. Imports the GPG key into the runner's keyring. `gpg --batch` skips the passphrase prompt; the key must be exported without a passphrase, or you must also store and feed in the passphrase via a separate secret.
-4. Runs `0template` to compute the manifest digest and stamp out `myapp-$version.xml`.
-5. Runs `0publish --add-from` to merge the per-version feed into the master `myapp.xml`.
+2. Derives the version number from the tag name. The actions take the version as an input rather than deriving it themselves, so you can compute it however you like — from the tag, from a file in the repo, or with a tool such as [GitVersion](https://gitversion.net/).
+3. Builds the release archive at that version. Replace `./build.sh` with whatever produces the archive your template expects (and uploads it to wherever the `<archive href>` points to; typically a GitHub Release attached to the same tag).
+4. Runs `0template` to compute the manifest digest and stamp out `myapp-$version.xml`. The `feed` output holds the path of the generated file, and `archive` the path of any archive generated alongside it.
+5. Runs `0publish --add-from` to merge the per-version feed into the master `myapp.xml`, importing the GPG key beforehand and resigning the result with it.
 6. Commits and pushes `gh-pages`.
+
+!!! tip
+    If your template generates the archive itself (see [Generating archives](../../tools/0template.md#generating-archives)), tell the 0template action where it will end up and it rewrites the relative `href` for you. Setting `github-release` is shorthand for the GitHub Release of the current tag; use `archive-url` for anywhere else:
+
+    ```yaml
+      - name: Generate per-version feed
+        id: feed
+        uses: 0install/github-actions/0template@v1
+        with:
+          template: source/myapp.xml.template
+          version: ${{ steps.version.outputs.version }}
+          github-release: true
+    ```
+
+    You can then attach `${{ steps.feed.outputs.feed }}` and `${{ steps.feed.outputs.archive }}` to a GitHub Release for that tag.
+
+### Sharing `gh-pages` with a generated site
+
+Many projects already publish something to `gh-pages` — API documentation, a project website — using an action such as [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages). Such actions usually replace the entire branch on every run (`force_orphan: true`), which would delete a feed that CI had committed there separately.
+
+Rather than fighting over the branch, hand the feed to the same publishing step. The `public` checkout and the `0publish --add-from` merge stay exactly as they are; only the final "Push gh-pages" step changes. Copy the updated master feed and the public key into the directory the site generator produced, and let the publishing action commit the branch:
+
+```yaml
+      - name: Copy feed into the site
+        run: cp public/myapp.xml public/*.gpg source/site/
+
+      - name: Publish site
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ github.token }}
+          force_orphan: true
+          publish_dir: source/site
+```
+
+The `public` checkout is now only used to read the previous master feed and merge the new version into it. The generated site keeps being rebuilt from scratch on every release, while the feed and the public key are carried forward from one release to the next. [TypedRest CodeGeneration](https://github.com/TypedRest/CodeGeneration/blob/master/.github/workflows/build.yml) publishes its API documentation and its feed this way.
 
 ## 5. Tag a release
 

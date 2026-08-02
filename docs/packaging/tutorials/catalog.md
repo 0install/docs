@@ -76,7 +76,7 @@ The full pipeline has three workflows:
 
 `publish.yml`: Runs on every push to `main`. Re-signs the feeds with the production GPG key and pushes the signed results to `gh-pages`.
 
-The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a good template. They are intentionally small and copy-pasteable. The composite actions under `.github/actions/setup` and `.github/actions/0repo` factor out the boilerplate so each workflow stays short.
+The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a good template. They are intentionally small and copy-pasteable, because the boilerplate lives in the [Zero Install GitHub Actions](https://github.com/0install/github-actions). See [Managing multiple feeds with 0repo](multi-feed.md#4-add-publish-incoming-workflows) for the workflows themselves.
 
 ## Anatomy of a typical entry
 

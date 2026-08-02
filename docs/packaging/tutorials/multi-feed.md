@@ -70,7 +70,21 @@ In the **feeds** repo's **Settings → Secrets and variables → Actions**, crea
 Two workflows on the **feeds** repo do the heavy lifting:
 
 - `publish.yml` runs whenever `0repo-config.py` changes on `main` (so policy edits take effect without a feed change).
-- `incoming.yml` is a manually triggered workflow that pulls a fresh feed from a URL, runs `0repo` to merge and sign it, and pushes `gh-pages`. App repos kick this off via `gh workflow run`.
+- `incoming.yml` is a manually triggered workflow that pulls a fresh feed from a URL, runs `0repo` to merge and sign it, and pushes `gh-pages`. App repos kick this off with the `0repo-submit` action.
+
+Both use the [Zero Install GitHub Actions](https://github.com/0install/github-actions): `0repo-setup` prepares the working directory and `0repo` runs the tool.
+
+Note that neither workflow starts with `actions/checkout`. 0repo needs `main` and `gh-pages` checked out side by side rather than at the workspace root, so `0repo-setup` performs both checkouts itself and creates the surrounding structure:
+
+```
+feeds/           # main: 0repo-config.py, the unsigned feeds and templates
+public/          # gh-pages: the published (signed) feeds and archives.db
+incoming/        # empty, holds feeds waiting to be merged
+0repo-config.py  # symlink to feeds/0repo-config.py
+archives.db      # symlink to public/archives.db
+```
+
+This mirrors the layout you set up by hand for local runs in [step 6](#6-local-previewing). 0repo commits its results into both checkouts, and the GitHub Action optionally pushes them back when it is done.
 
 `.github/workflows/publish.yml`:
 
@@ -87,25 +101,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { path: feeds, fetch-depth: 0 }
-      - uses: actions/checkout@v4
-        with: { path: public, ref: gh-pages }
-      - name: Set up directory structure
-        run: |
-          mkdir incoming
-          ln -s feeds/0repo-config.py .
-          ln -s public/archives.db .
-          git config --global user.name 'CI'
-          git config --global user.email 'ci@example.com'
-      - name: Import GPG key
-        run: echo "${{ secrets.GPG_KEY }}" | gpg --import -
-      - name: Run 0repo
-        run: |
-          curl -sSfLO https://get.0install.net/0install.sh && chmod +x 0install.sh
-          ./0install.sh run https://apps.0install.net/0install/0repo.xml
-      - name: Push public
-        run: cd public && git push
+      - uses: 0install/github-actions/0repo-setup@v1
+      - uses: 0install/github-actions/0repo@v1
+        with:
+          gpg-key: ${{ secrets.GPG_KEY }}
+          push-public: true
 ```
 
 `.github/workflows/incoming.yml`:
@@ -127,42 +127,35 @@ jobs:
   incoming:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { path: feeds, fetch-depth: 0 }
-      - uses: actions/checkout@v4
-        with: { path: public, ref: gh-pages }
-      - name: Set up directory structure
-        run: |
-          mkdir incoming
-          ln -s feeds/0repo-config.py .
-          ln -s public/archives.db .
-          git config --global user.name 'CI'
-          git config --global user.email 'ci@example.com'
-
-      - name: Download incoming feed
-        run: curl -sSfL ${{ inputs.feed_url }} -o incoming/feed.xml
-      - name: Register archive
-        if: inputs.archive_url
-        run: |
-          name=$(basename ${{ inputs.archive_url }})
-          curl -sSfL ${{ inputs.archive_url }} -o incoming/$name
-          hash=($(sha1sum incoming/$name))
-          cd public
-          echo "$name $hash ${{ inputs.archive_url }}" >> archives.db
-          git add archives.db
-          git commit -m "Register $name"
-
-      - name: Import GPG key
-        run: echo "${{ secrets.GPG_KEY }}" | gpg --import -
-      - name: Run 0repo
-        run: |
-          curl -sSfLO https://get.0install.net/0install.sh && chmod +x 0install.sh
-          ./0install.sh run https://apps.0install.net/0install/0repo.xml
-      - name: Push
-        run: cd public && git push
+      - uses: 0install/github-actions/0repo-setup@v1
+      - uses: 0install/github-actions/0repo@v1
+        with:
+          gpg-key: ${{ secrets.GPG_KEY }}
+          incoming-feed-url: ${{ inputs.feed_url }}
+          incoming-archive-url: ${{ inputs.archive_url }}
+          push-feeds: true
+          push-public: true
 ```
 
-The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a more thoroughly factored version of the same idea (composite actions under `.github/actions/`), and worth reading when you scale up.
+Given an `incoming-feed-url`, the `0repo` action downloads the feed into `incoming/` before running the tool, and if the archive is hosted outside the repository it registers its name, hash and URL in `archives.db`. 0repo then validates the feed, merges it into the master feed, signs everything and regenerates the catalog.
+
+Leaving out `gpg-key` makes the `0repo` action set the `NO_SIGN` environment variable, which is why `0repo-config.py` reads it. Leave out the `push-*` inputs as well and you have a third workflow that validates pull requests without access to the production key and without changing anything:
+
+```yaml
+name: Verify
+on: pull_request
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: 0install/github-actions/0repo-setup@v1
+      - uses: 0install/github-actions/0repo@v1
+```
+
+As an extra safeguard, `public/` is never pushed when `gpg-key` is unset, even if `push-public` is `true`: an unsigned run must not replace the signed feeds.
+
+The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a real-world deployment of exactly these three workflows, and worth reading when you scale up.
 
 ## 5. Wire up an app's source repo
 
@@ -197,37 +190,45 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Determine version
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
 
       - name: Build release archive
-        run: ./build.sh ${GITHUB_REF_NAME#v}
+        run: ./build.sh ${{ steps.version.outputs.version }}
 
       - name: Generate per-version feed
-        run: |
-          version=${GITHUB_REF_NAME#v}
-          curl -sSfLO https://get.0install.net/0install.sh && chmod +x 0install.sh
-          ./0install.sh run https://apps.0install.net/0install/0template.xml \
-            myapp.xml.template version=$version
+        id: feed
+        uses: 0install/github-actions/0template@v1
+        with:
+          template: myapp.xml.template
+          version: ${{ steps.version.outputs.version }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           files: |
-            myapp-*.xml
-            myapp-*.tar.gz
+            ${{ steps.feed.outputs.feed }}
+            ${{ steps.feed.outputs.archive }}
 
       - name: Submit feed to central repository
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: |
-          version=${GITHUB_REF_NAME#v}
-          gh workflow run --repo=YOURNAME/feeds Incoming \
-            -f feed_url=https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/myapp-$version.xml \
-            -f archive_url=https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/myapp-$version.tar.gz
+        uses: 0install/github-actions/0repo-submit@v1
+        with:
+          repository: YOURNAME/feeds
+          feed-url: ${{ steps.feed.outputs.feed }}
+          archive-url: ${{ steps.feed.outputs.archive }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
 ```
 
-`PERSONAL_TOKEN` is a fine-grained personal access token with **Actions: write** on the `feeds` repo. The default `GITHUB_TOKEN` only has permissions on the current repo, so it can't trigger workflows elsewhere.
+The paths that `0template` produced are attached to the GitHub Release and then handed to `0repo-submit` as-is: a relative path is resolved against the Release for the current tag, so you don't have to spell the download URL out twice.
+
+Note that the feed itself keeps the relative `href` from the template; it is `archive-url` that tells the central repository where the archive actually lives. 0repo records that in `archives.db` and rewrites the `href` when it generates the published feed.
+
+`PERSONAL_TOKEN` is a fine-grained personal access token with **Actions: write** on the `feeds` repo. The default `GITHUB_TOKEN` only has permissions on the current repo, so it can't trigger workflows elsewhere. Store it as a secret in the app's repo.
 
 The flow is:
 
