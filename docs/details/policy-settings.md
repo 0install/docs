@@ -42,6 +42,10 @@ Affects how much 0install will rely on the network. Possible values are:
 
 By default, 0install tries not to select new versions while they're still in the "testing" phase. If checked, 0install will instead always select the newest version, even if it's marked as "testing".
 
+### Kiosk mode
+
+Restricts 0install to the applications listed in the registered [catalogs](../specifications/catalog.md), so that users of a managed machine cannot run arbitrary feeds of their own. Off by default. See [Kiosk mode](kiosk-mode.md) for how to enable and enforce it.
+
 ### Windows Group Policy
 
 On Windows, 0install reads settings from two registry keys in addition to its [config files](file-locations.md):

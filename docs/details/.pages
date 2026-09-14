@@ -4,6 +4,7 @@ nav:
   - apps.md
   - desktop-integration.md
   - library-mode.md
+  - kiosk-mode.md
   - sync.md
   - security.md
   - servers.md

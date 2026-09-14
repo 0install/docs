@@ -14,6 +14,7 @@ By the end you will have:
 - An intranet feed repository at `https://feeds.corp.example/` (or any URL you control).
 - An organization GPG key trusted automatically on every workstation.
 - A custom Zero Install [catalog](../../specifications/catalog.md) listing your in-house apps.
+- Optionally, [kiosk mode](../../details/kiosk-mode.md) restricting workstations to that catalog.
 - A bootstrapper that installs Zero Install with all of the above pre-configured.
 
 ## 1. Host feeds on an intranet server
@@ -56,7 +57,7 @@ Drop the exported public key into the repository root so workstations can fetch 
 
 ## 3. Pre-trust the organization key on every workstation
 
-Without configuration, the first user to open an in-house feed gets a "Confirm key" dialog. If you're going to roll Zero Install out via the bootstrapper from [step 5](#5-bundle-everything-into-a-bootstrapper), you can skip this step: the bootstrapper imports the signing key embedded in its bundled content into `trustdb.xml` automatically on first run. The rest of this section is for workstations that already have Zero Install installed by other means.
+Without configuration, the first user to open an in-house feed gets a "Confirm key" dialog. If you're going to roll Zero Install out via the bootstrapper from [step 6](#6-bundle-everything-into-a-bootstrapper), you can skip this step: the bootstrapper imports the signing key embedded in its bundled content into `trustdb.xml` automatically on first run. The rest of this section is for workstations that already have Zero Install installed by other means.
 
 To pre-trust the key by hand, ship a `trustdb.xml` file with the organization key fingerprint already trusted for `feeds.corp.example`:
 
@@ -96,7 +97,7 @@ The `<domain>` entry is what limits trust: the key only grants permission to sig
 Ship a [catalog](../../specifications/catalog.md) so users see the in-house apps in the Zero Install GUI without having to know URLs by heart. `0repo` produces a signed `catalog.xml` automatically. Register it on each workstation:
 
 !!! attention
-    The `0install catalog` subcommands shown below are Windows only. On Linux / macOS the catalog is the GUI's app list; point users at the feed URLs directly or distribute the bootstrapper from [step 5](#5-bundle-everything-into-a-bootstrapper) instead.
+    The `0install catalog` subcommands shown below are Windows only. On Linux / macOS the catalog is the GUI's app list; point users at the feed URLs directly or distribute the bootstrapper from [step 6](#6-bundle-everything-into-a-bootstrapper) instead.
 
 ```shell
 0install catalog add https://feeds.corp.example/catalog.xml
@@ -113,7 +114,19 @@ After that, the main GUI's app list and `0install catalog search` will include y
 
 See [`0install catalog`](../../details/cli.md#catalog-add) for the full set of subcommands.
 
-## 5. Bundle everything into a bootstrapper
+## 5. Restrict workstations to the catalog (optional)
+
+Registering your catalog makes the in-house apps easy to find, but it does not stop a user from running any other feed they come across. If the machines should only ever run what you publish, turn on [kiosk mode](../../details/kiosk-mode.md):
+
+```shell
+0install config kiosk_mode true
+```
+
+Zero Install then refuses any feed URI that is not listed in a registered catalog. Combine it with the machine-wide catalog registration from [step 4](#4-provide-a-custom-catalog): in kiosk mode the machine-wide `catalog-sources` file takes precedence over the per-user one, so a user cannot add a catalog of their own to widen the selection.
+
+To make the setting stick, deploy it as a group policy rather than a config file — a `kiosk_mode` value of `True` under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Zero Install`. Options set there cannot be changed by the user.
+
+## 6. Bundle everything into a bootstrapper
 
 Rolling out a fresh laptop should be one click, not "follow these five steps". Use [0bootstrap](../../tools/0bootstrap.md) on top of [`0install export`](../../details/export.md) to produce a single executable that installs Zero Install offline along with an in-house app:
 
@@ -124,7 +137,21 @@ Rolling out a fresh laptop should be one click, not "follow these five steps". U
 
 Distribute the resulting `my-app-setup.exe` via your normal software-deployment channel (Group Policy, MDM, file share). Running it on a fresh workstation installs Zero Install for the current user, imports the bundled feeds and signing keys (including adding the organization key to `trustdb.xml`), and registers the app's Start menu entries and file associations. No separate `trustdb.xml` provisioning is needed when the bootstrapper handles the install. Pass `--machine` to install Zero Install and the app for all users instead.
 
-## 6. Updating
+The bootstrapper can also carry the configuration from the previous steps, so a fresh machine comes up already pointed at your catalog and already restricted:
+
+```shell
+0bootstrap https://feeds.corp.example/my-app.xml \
+  --content=export/content --integrate-args="--add-standard" --output=my-app-setup.exe \
+  --catalog-uri=https://feeds.corp.example/catalog.xml \
+  --config kiosk_mode=true
+```
+
+Bundled settings are only applied if Zero Install is not already deployed on the machine, so they will not override the configuration of a workstation somebody has already set up.
+
+!!! tip
+    If the workstations should get your app rather than Zero Install — no "Zero Install" entry in **Apps & features**, no Zero Install shortcut in the start menu, and automatic background maintenance because nobody will open the GUI — deploy Zero Install in [library mode](../../details/library-mode.md).
+
+## 7. Updating
 
 The day-to-day workflow is unchanged from [Managing multiple feeds with 0repo](multi-feed.md): app teams push a tag, CI runs `0template`, the central repo's `Incoming` workflow merges and signs, and the `gh-pages` equivalent (your intranet host's docroot) gets the new version.
 
