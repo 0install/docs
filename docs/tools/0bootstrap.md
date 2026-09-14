@@ -90,6 +90,8 @@
 
         This causes the bootstrapper to run `0install integrate https://apps.0install.net/gui/vlc.xml --add-standard`, adding the app to the start menu and registering its supported file types.
 
+    Desktop integration requires a permanently deployed instance of Zero Install. If the target machine does not have one yet, the bootstrapper's `0install integrate` call causes Zero Install to deploy itself in [library mode](../details/library-mode.md).
+
     You can bundle the output of [`0install export`](../details/export.md) into a bootstrapper to create a self-contained "offline installer" using `--content=`.
 
     !!! example

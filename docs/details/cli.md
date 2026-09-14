@@ -2287,6 +2287,11 @@ Deploys Zero Install to the specified <code>TARGET</code> directory or the defau
   <td>Create a portable installation that can be moved around (e.g., on a thumb drive).</td>
 </tr>
 <tr>
+  <td><nobr><code>-l</code></nobr><br/><nobr><code>--library</code></nobr></td>
+  <td>Deploy Zero Install as a library for use by other applications without its own desktop integration.
+<br/>Cannot be combined with <code>--portable</code>.</td>
+</tr>
+<tr>
   <td><nobr><code>--restart-central</code></nobr></td>
   <td>Restart the <a href='#central'><code>0install central</code></a> GUI after the update.</td>
 </tr>

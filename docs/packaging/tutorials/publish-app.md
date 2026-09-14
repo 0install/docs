@@ -154,6 +154,8 @@ End-users who don't yet have Zero Install installed can't `0install run` your fe
     0bootstrap https://YOURNAME.github.io/myapp/myapp.xml --integrate-args="--add-standard"
     ```
 
+    On a machine that doesn't already have Zero Install, this makes the installer deploy it in [library mode](../../details/library-mode.md).
+
     For a fully offline installer, combine `0bootstrap` with [`0install export`](../../details/export.md) so the bootstrapper bundles the implementation alongside Zero Install:
 
     ```shell

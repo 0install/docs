@@ -45,6 +45,9 @@ Deploy Zero Install for the current user
 Deploy Zero Install for all users
 : `.\0install.exe self deploy --machine`
 
+Deploy Zero Install in [library mode](library-mode.md), as a component of another application
+: `.\0install.exe self deploy --library`
+
 Remove Zero Install from the system
 : `0install self remove`
 
