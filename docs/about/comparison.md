@@ -1,42 +1,45 @@
 # Comparison
 
+There are many ways to get software onto a computer: `apt install`, `winget install`, the Microsoft Store, Flatpak, `npm install`, etc. Zero Install looks superficially similar, but works differently from all of them.
+
+In every one of those systems, **installing is an event that changes your machine**: files land in shared system directories, a database records what is present, and afterwards the program is either "installed" or "not installed".
+
+In Zero Install there is no required install step. [`0install run URI`](../details/cli.md#run) resolves the program's dependencies, downloads whatever is missing into a read-only [cache](../details/cache.md) and runs it, without touching anything outside the cache, running any code from the package, or needing administrator rights. Shortcuts, file associations and `PATH` aliases are available separately, at any time (see [Desktop integration](../details/desktop-integration.md)).
+
+Programs are named by URL rather than by a name in a repository, so there is no central namespace to be admitted to (see [Packaging](../packaging/index.md)). Versions are chosen per program rather than per machine, so there is no such thing as "the installed version" of anything.
+
 ## Matrix
 
-This matrix shows some desirable features in a packaging system, and shows which systems provide them. Obviously, these things tend to be a bit biased (both in terms of what features are chosen for comparison, and of what is considered to be a 'pass') but it should give the general idea.
+This matrix shows some desirable features in a packaging system, and which systems provide them.
 
-| Feature                            | Source tarball                      | APT                                      | AppImage                                     | Chocolatey                               | PortableApps.com                             | Zero Install                                  |
-| ---------------------------------- | ----------------------------------- | ---------------------------------------- | -------------------------------------------- | ---------------------------------------- | -------------------------------------------- | --------------------------------------------- |
-| Non-admins can install software    | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Supports multiple platforms        | :material-check-all:{.green} Yes    | :material-close:{.red} No (Linux only)   | :material-close:{.red} No (Linux only)       | :material-close:{.red} No (Windows only) | :material-close:{.red} No (Windows only)     | :material-check-all:{.green} Yes              |
-| Dependencies handled automatically | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes         | :material-check:{.yellow} Bundled            | :material-check-all:{.green} Yes              |
-| Automatic upgrading                | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check:{.yellow} Some packages      | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Libraries shared between programs  | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check:{.yellow} Partial        | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Downloads shared between users     | :material-close:{.red} No           | :material-close:{.red} No user downloads | :material-close:{.red} No                    | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Multiple versions coexist          | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Uninstall                          | :material-check:{.yellow} Sometimes | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check:{.yellow} Some packages  | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes (cache)      |
-| Digital signatures                 | :material-close:{.red} No           | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Conflict-free                      | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Decentralised                      | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Non-admin install of system        | :material-check-all:{.green} Yes    | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Can install systems software       | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-close:{.red} No                     |
-| Supports sandboxing                | :material-close:{.red} No           | :material-close:{.red} No                | :material-check-all:{.green} Yes             | :material-close:{.red} No                | :material-close:{.red} No                    | :material-check-all:{.green} Yes              |
-| Usable when off-line               | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes         | :material-check-all:{.green} Yes             | :material-check-all:{.green} Yes              |
-| Roam applications across machines  | :material-close:{.red} No           | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-close:{.red} No                | :material-check:{.yellow} Manual, app+config | :material-check:{.yellow} Automatic, app only |
-| Thousands of packages available    | :material-check-all:{.green} Yes    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check-all:{.green} Yes         | :material-close:{.red} No                    | :material-check:{.yellow} ~1500               |
+:material-check-all:{.green} yes · :material-check:{.yellow} partial or conditional · :material-close:{.red} no
 
-## Explanation of features
+| Feature                            | APT / DNF                                | Flatpak                                   | Snap                              | AppImage                          | winget                                  | Scoop                                | Microsoft Store                       | Homebrew                                  | Zero Install                                  |
+| ---------------------------------- | ---------------------------------------- | ----------------------------------------- | --------------------------------- | --------------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| Non-admins can install software    | :material-close:{.red}                   | :material-check-all:{.green}              | :material-close:{.red}            | :material-check-all:{.green}      | :material-check:{.yellow} Some          | :material-check-all:{.green}         | :material-check-all:{.green}          | :material-check-all:{.green}              | :material-check-all:{.green}                  |
+| Supports multiple platforms        | :material-close:{.red} Linux             | :material-close:{.red} Linux              | :material-close:{.red} Linux      | :material-close:{.red} Linux      | :material-close:{.red} Windows          | :material-close:{.red} Windows       | :material-close:{.red} Windows        | :material-check:{.yellow} macOS and Linux | :material-check-all:{.green}                  |
+| Dependencies handled automatically | :material-check-all:{.green}             | :material-check:{.yellow} Runtimes        | :material-check:{.yellow} Bundled | :material-check:{.yellow} Bundled | :material-check:{.yellow} Bundled       | :material-check-all:{.green}         | :material-check:{.yellow} Frameworks  | :material-check-all:{.green}              | :material-check-all:{.green}                  |
+| Automatic upgrading                | :material-check-all:{.green}             | :material-check-all:{.green}              | :material-check-all:{.green}      | :material-check:{.yellow} Some    | :material-check:{.yellow} On request    | :material-check:{.yellow} On request | :material-check-all:{.green}          | :material-check:{.yellow} On request      | :material-check-all:{.green}                  |
+| Libraries shared between programs  | :material-check-all:{.green}             | :material-check:{.yellow} Runtimes        | :material-check:{.yellow} Bases   | :material-close:{.red}            | :material-close:{.red}                  | :material-check:{.yellow}            | :material-check:{.yellow} Frameworks  | :material-check-all:{.green}              | :material-check-all:{.green}                  |
+| Downloads shared between users     | :material-check-all:{.green} System-wide | :material-check:{.yellow} System installs | :material-check-all:{.green}      | :material-close:{.red}            | :material-close:{.red}                  | :material-close:{.red}               | :material-check-all:{.green}          | :material-close:{.red}                    | :material-check-all:{.green}                  |
+| Multiple versions coexist          | :material-close:{.red}                   | :material-check:{.yellow} Runtimes        | :material-close:{.red}            | :material-check-all:{.green}      | :material-close:{.red}                  | :material-check:{.yellow} Switchable | :material-close:{.red}                | :material-check:{.yellow} Some            | :material-check-all:{.green}                  |
+| Digital signatures                 | :material-check-all:{.green}             | :material-check-all:{.green}              | :material-check-all:{.green}      | :material-check-all:{.green}      | :material-check:{.yellow} Hashes        | :material-check:{.yellow} Hashes     | :material-check-all:{.green}          | :material-check:{.yellow} Hashes          | :material-check-all:{.green}                  |
+| Decentralised                      | :material-close:{.red}                   | :material-check-all:{.green}              | :material-close:{.red}            | :material-check-all:{.green}      | :material-check:{.yellow} Extra sources | :material-check-all:{.green} Buckets | :material-close:{.red}                | :material-check-all:{.green} Taps         | :material-check-all:{.green}                  |
+| Can install systems software       | :material-check-all:{.green}             | :material-close:{.red}                    | :material-close:{.red}            | :material-close:{.red}            | :material-check-all:{.green}            | :material-close:{.red}               | :material-close:{.red}                | :material-close:{.red}                    | :material-close:{.red}                        |
+| Roam applications across machines  | :material-close:{.red}                   | :material-close:{.red}                    | :material-close:{.red}            | :material-check:{.yellow} Manual  | :material-close:{.red}                  | :material-close:{.red}               | :material-check:{.yellow} Re-download | :material-close:{.red}                    | :material-check:{.yellow} Automatic, app only |
+| Large package ecosystem            | :material-check-all:{.green}             | :material-check-all:{.green}              | :material-check-all:{.green}      | :material-check:{.yellow} ~2000   | :material-check-all:{.green}            | :material-check-all:{.green}         | :material-check-all:{.green}          | :material-check-all:{.green}              | :material-check:{.yellow} ~2000               |
+
+### Explanation of features
 
 Non-admins can install software
-: A normal user without administrator/root privileges can install software using this system (without unreasonable extra effort).
+: A normal user without administrator/root privileges can install software using this system (without unreasonable extra effort).  
+AppImage, Scoop, Homebrew and Zero Install also don't require administrator privileges to set up *themselves*; the other systems require administrator rights to install, or come with the operating system.
 
 Supports multiple platforms
-: The same package format and command-line works across multiple operating systems, such as Linux and Windows.  
+: The same package format and command-line works across multiple operating systems, such as Linux and Windows.
 
 Dependencies handled automatically
-: If a program requires some library to function, the system will locate, download and install the library too.
-
-Automatic upgrading
-: The system can check for and install upgrades automatically or at the operator's request. User does not have to perform a full install operation manually on each package.
+: If a program requires some library to function, the system will locate, download and install the library too. "Bundled" means the dependency problem is solved by shipping a copy inside each package instead.
 
 Libraries shared between programs
 : If two programs use the same library, the library is only downloaded and stored once. Upgrading a library will benefit all programs that use it.
@@ -46,143 +49,116 @@ Downloads shared between users
 See [Sharing](../details/sharing.md) for how to set this up with Zero Install.
 
 Multiple versions coexist
-: Two versions of a program or library can be installed at the same time, and the user can choose which one to run.
+: Several versions of the same program or library can be present and in use at the same time. This is also what makes a system conflict-free: if program A requires an old version of a library and program B a new one, both can be installed and used at once, and the system will never refuse to install one program because some other program is installed. Systems that bundle their dependencies (see above) avoid such conflicts too, but at the cost of a separate copy per program.
 
-Uninstall
-: Programs can be cleanly removed from the system easily (reversing the effects of the install).
-
-Signatures
-: Software comes with a digital signature, which is checked automatically by the system.
-
-Conflict-free
-: If program A requires an old version of a library, and program B requires a new version, A and B can both be installed and used at the same time. The system will never refuse to install one program because some other program is installed.
+Digital signatures
+: Software comes with a digital signature, which is checked automatically by the system. "Hashes" means integrity is verified against a checksum, but the origin of that checksum is not cryptographically established.
 
 Decentralised
 : A program packaged for this system can be installed easily, without having to be in some special centralised repository.  
-Notes: Debian allows extra repositories to be added, but this is a manual step, requires root access, and is a considerable security risk.
+Debian and Fedora allow extra repositories to be added, but this is a manual step, requires root access, and is a considerable security risk. winget supports additional sources, but the default repository is central and moderated.
 
-Non-admin install of system
-: The packaging system itself can be easily installed without administrator/root privileges, and the normal selection of software will be available.
+Roam applications across machines
+: The packaging system makes it easy to roam applications across machines. This may or may not include the application's configuration files, and may or may not require manual effort by the user.  
+See [Sync](../details/sync.md) for Zero Install's approach.
 
-Can install systems software
-: The packaging system can be used to install low-level systems software such as device drivers.
+Large package ecosystem
+: The system is widely adopted.  
+Zero Install's feed count is an estimate based on the [public mirror](https://roscidus.com/0mirror/).
 
-Supports sandboxing
-: If you have a way of running an application in a sandboxed environment (e.g., a Java virtual machine), then the installation system will let you install and run the program without forcing you to run any of the downloaded code outside of the sandbox.  
-See the [EBox sandboxing demo](../tools/ebox.md) for an example of using 0install in this way.
+## By system
 
-Usable when off-line
-: Once a program has been installed, the program can be run again while disconnected.
+### APT, DNF and other distribution package managers
 
-Roam applications between machines
-: The packaging system makes it easy to roam applications across machines. This may or may not include the application's configuration files. This may or may not require manual effort by the user, such as setting up an external service like Dropbox.
+This is Zero Install's closest relative; the differences are mostly about who is in charge.
 
-Thousands of packages available
-: The system is widely adopted.
+A distribution package manager owns `/usr`, draws on a set of configured repositories, and keeps one version of each library for the whole machine. Adding a repository is a privileged, all-or-nothing trust decision. The new source can replace any package on the system, and what arrives from it has been packaged and patched by a distribution maintainer rather than by the software's author.
 
-## By project
+Zero Install inverts each of these. `sudo` is never required, because installing affects only your own cache and there is nothing to protect. Packages come from any URL, so adding a source confers no authority over anything else you have. Upstream publishes directly, for better (fast releases, and one fix benefits everyone) and for worse (no distribution QA, see [Perspectives](perspectives.md)). Any number of versions of a library coexist, so an upgrade never breaks another program. And Zero Install writes only to its cache: it replaces `/usr` and `/opt` for the programs you run through it, and leaves `/etc`, `/var` and your distribution's own files alone.
 
-### AppImage
+The two are not mutually exclusive, and Zero Install deliberately does not try to replace yours: if a dependency is already installed as a distribution package, Zero Install will use it rather than downloading a second copy; see [Distribution integration](../details/distribution-integration.md).
 
-[AppImage](https://appimage.org/) is a system for packaging Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
+What you give up: Zero Install cannot install kernels, drivers or system services, and its ecosystem is a few thousand programs rather than tens of thousands. It is for adding applications to a system your distribution already manages.
 
-- All dependencies that cannot reasonably be expected to come with all target systems (Linux distributions) in their default installation ("base system") are bundled into a single file and can therefore not be shared between apps.
-- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
-- Only supports Linux.
+### winget
 
-For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
+[winget](https://learn.microsoft.com/windows/package-manager/) is Microsoft's package manager for Windows. Some differences between this and Zero Install:
+
+- winget is a front-end for the vendor's existing installer. It downloads an MSI, EXE or MSIX and runs it. Whether that installer needs elevation, uninstalls cleanly, or modifies anything else is the vendor's responsibility. Zero Install unpacks an archive into a read-only cache and runs nothing until you launch the program.
+- Uninstalling means deleting a cache directory, rather than relying on the vendor having written correct uninstall logic.
+
+See also [Windows-specific behaviour](../details/windows.md).
 
 ### Chocolatey
 
-[Chocolatey](https://chocolatey.org/) is a package manager for Windows. Some differences between this and Zero Install:
-
-- Relies on packages to implement reliable install and uninstall logic themselves. Cannot guarantee conflict-free or side-by-side installation.
-- Uses a central, moderated package repository rather than decentralized files on the web.
-- Most packages require administrative permissions for installation.
-- Only supports Windows.
+[Chocolatey](https://chocolatey.org/) is a package manager for Windows, built around PowerShell install scripts. It relies on each package to implement reliable install and uninstall logic itself; Zero Install unpacks an archive into a read-only cache and runs no code from a package until you launch the program.
 
 Chocolatey could in future serve the role of the native package manager on Windows. See [Distribution integration](../details/distribution-integration.md).
 
-### PortableApps.com
+### Scoop
 
-[PortableApps.com](https://portableapps.com/) is a collection of portable applications for Windows. Some differences between this and Zero Install:
+[Scoop](https://scoop.sh/) unpacks portable Windows applications into a per-user directory (`~\scoop\apps\<app>\<version>`) and puts small shim executables on `PATH`. Of the Windows systems here it is the closest to Zero Install: no administrator rights, no vendor installers, declared dependencies that are fetched automatically, and third-party buckets that make it genuinely decentralised. Some differences:
 
-- All dependencies are bundled and can therefore not be shared between apps.
-- Only supports Windows.
+- Applications are named by bucket and short name, so names have to be unique within a bucket and the same name means different things in different buckets. Zero Install names programs by URL, which is globally unique without anyone curating a namespace.
+- Old versions stay on disk, but only one is active at a time via the `current` junction; switching is a machine-wide action (`scoop reset`). With Zero Install different programs can use different versions of the same dependency simultaneously, and a version is chosen per launch rather than per machine.
+- Manifests carry a checksum, but buckets are unsigned git repositories, so what the checksum attests to is whoever could push to the bucket. Zero Install feeds are GPG-signed and the digest covers the unpacked contents, which is what allows the cache to be [shared](../details/sharing.md) between users; Scoop's install directory and download cache are per-user.
+- Many manifests include `installer`, `pre_install` or `post_install` PowerShell that runs while installing. Zero Install runs no code from a package until you launch the program.
 
-PortableApps write their config in the same directory as the installed applications. This makes them inherently incompatible with Zero Install, since it requires (and enforces) cached implementations to be read-only.
+### Microsoft Store
 
-### Java Web Start
+The [Microsoft Store](https://apps.microsoft.com/) distributes MSIX-packaged applications on Windows. The store model and the Zero Install model disagree above all about **who decides what you may run**:
 
-Sun have developed a similar system to Zero Install, Java Web Start, although this only works for Java applications and has been deprecated. Microsoft have an equivalent called [ClickOnce](https://docs.microsoft.com/en-us/visualstudio/deployment/clickonce-security-and-deployment).
+- A store is a single gatekeeper: publishing requires acceptance, and removal cuts off existing users. Zero Install has no party in that position: a feed is a signed XML file on a web server, and anyone can host one. See [Features](features.md).
+- Applications are identified by a publisher certificate and store identity, rather than by a URL the author controls.
+- Roaming means signing in on another machine and reinstalling. Zero Install's equivalent is [Sync](../details/sync.md), which roams your list of applications (not their data).
 
-### Maven
+Per-user installation without administrator rights is one thing the two approaches genuinely have in common. Where a store relies on its sandbox, Zero Install relies on GPG signatures over feeds and cryptographic digests over contents; see [Security](../details/security.md).
 
-[Maven](https://maven.apache.org/) is a build tool (like make or ant) for Java programs. Although not an installation system, it is similar to 0install in that each product has a `pom.xml` file with a list of dependencies. When building a product, Maven downloads the specified version of each dependency and stores it in a cache directory. Some differences between Maven 2.0 and 0install:
+### Flatpak
 
-- The `pom.xml` files are not signed. An attacker can therefore cause modified POM files to be downloaded.
-- There is no digest of the downloads in the POM file, so no security checks are performed to confirm that the download is OK, and downloads cannot be shared safely between users.
-- Only Java is supported (everything is added to `CLASSPATH`, nowhere else).
-- Dependencies are named using a simple two-layer system (e.g., axis/axis-jaxrpc). Therefore, a central repository is required to avoid naming conflicts.
+[Flatpak](https://flatpak.org/) distributes sandboxed desktop applications for Linux, built against shared runtimes and delivered as OSTree repositories. Some differences between this and Zero Install:
 
-Note that you can use Zero Install in a maven-like way for compiling programs. See [Easy GTK binary compatibility](http://rox.sourceforge.net/desktop/node/289) for an example of using Zero Install to compile a C program against an older version of a library's header files to ensure greater compatibility.
+- Dependencies below the runtime boundary are shared; everything above it is bundled into the application. Zero Install has no such boundary: every dependency is an independent feed, downloaded once and shared by every program that can use it.
+- A runtime is selected by name and branch. Zero Install resolves version constraints across the whole dependency graph with a [SAT solver](../developers/solver.md).
+- Flatpak is decentralised in principle, but Flathub is in practice where software comes from. Zero Install has no equivalent; the closest thing, the [mirror](../tools/0mirror.md), is an optional fallback rather than a source of truth.
 
-### Autopackage / Listaller
+### Snap
 
-Like Zero Install, [Autopackage](http://autopackage.org/) aims to let users install software and to make software distribution decentralised. The work done by the Autopackage developers to make packages relocatable is necessary for Zero Install too. Some differences between this and Zero Install:
+[Snap](https://snapcraft.io/) packages applications as compressed images mounted at run time, managed by the `snapd` daemon. Some differences between this and Zero Install:
 
-- A script inside each package installs the files, making sandboxing difficult. It also [makes conversion to other packaging formats troublesome](http://www.kitenet.net/~joey/blog/entry/autopackage_designed_by_monkeys-2005-03-28-14-20.html).
-- Security features such as GPG signatures have not been implemented. Given that packages are executable files, the design doesn't seem to allow this to be fixed.
-- Downloads cannot be safely shared between users.
-- No checking for updates or support for multiple versions.
-- Being closer to traditional installation, it's easier to package existing applications with Autopackage.
+- The Snap Store is the only source; `snapd` has no supported mechanism for third-party stores at all, not merely an unused one. Zero Install has no central source.
+- Updates are applied automatically and are difficult to decline. Zero Install lets you [pin versions and control update frequency](../details/policy-settings.md), and always lets you go back to an older version.
 
-Note that it is quite possible to list autopackages in a Zero Install feed, as described in [this post on the Autopackage mailing list](http://thread.gmane.org/gmane.comp.autopackage.devel/5733/focus=5733). In this case, no scripts are run during installation (the package is treated as a normal archive), so not all packages will work, but many do.
+### AppImage
 
-Autopackage is no longer maintained, but has merged with the [Listaller project](http://listaller.tenstral.net/). The Listaller project has also taken over the [tools for making relocatable applications](http://listaller.tenstral.net/docs/doc/app-development.html), which may be useful for making 0install packages too.
+[AppImage](https://appimage.org/) packages Linux applications into self-contained, single-file executables. Some differences between this and Zero Install:
 
-### EDOS / Mancoosi
+- Signature checking, update checking and sharing between users are properties of each individual app rather than of the system.
+- Automatic updating is implemented by an [additional tool](https://github.com/AppImage/AppImageUpdate) and only supported for AppImages that contain the required metadata. However, unlike Zero Install, it supports delta updates.
 
-The EDOS] (_Environment for the development and Distribution of Open Source software_) project was a research project looking at dependency management, QA, and efficient distribution of large software systems.
+For projects that do not provide official cross-distribution builds, AppImages are actually good candidates for being published via Zero Install. They can easily be referenced using the `<file>` [retrieval method](../specifications/feed.md#retrieval-methods) with `executable='true'`.
 
-[Mancoosi](http://www.mancoosi.org/) is a follow-on project ("Managing the Complexity of the Open Source Infrastructure"). The group invited me to give a talk (March 2009); here are [my notes](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/2322) from the event.
+### Homebrew
+
+[Homebrew](https://brew.sh/) installs software into a prefix owned by the user, on macOS and Linux. Of all the systems here it overlaps with Zero Install the most: user-level installs, no admin rights, a cache, real dependency resolution, and third-party taps that make it genuinely decentralised. Some differences:
+
+- All packages share one prefix, with symlinks into `bin`, `lib` and so on. This means packages can conflict, and only one version of a formula is normally active (`keg-only` and versioned formulae are the exceptions).
+- Because the prefix is owned by one user, downloads cannot be safely shared between mutually untrusting users. Zero Install's cache is keyed by a digest of the contents, which makes [sharing](../details/sharing.md) safe.
+- Formulae are Ruby scripts that execute during installation. Zero Install runs no code from a package while caching it.
+
+### Language package managers (npm, pip, Maven, NuGet)
+
+These resolve dependencies from a central registry into a cache or a per-project directory. Zero Install can fill the same role as a build-time dependency fetcher (see [Library mode](../details/library-mode.md) and [0compile](../tools/0compile/index.md)) with some differences:
+
+- They are tied to one language and one mechanism for exposing dependencies (the `CLASSPATH`, `sys.path`, `node_modules`). Zero Install feeds can depend on programs and libraries of any kind, exposed through [bindings](../specifications/feed.md#bindings).
+- Coordinates are names in a flat, centrally-operated namespace, which is why a central registry is required to avoid conflicts. Zero Install coordinates are URLs, so they are globally unique without anyone operating a registry.
+- Project files such as `pom.xml` or `package.json` are not signed, and the coordinates in them do not pin a digest. Registries publish checksums and, in Maven Central's case, signatures alongside artefacts, but checking them is opt-in tooling rather than a property of the dependency declaration. A Zero Install feed is GPG-signed and carries the expected digest of each implementation, which is what allows downloads to be shared safely between users.
+- The cache is per-project or per-user rather than a verified, machine-wide store.
 
 ### Nix
 
-[Nix](http://nixos.org/) is a purely functional package manager. Each version of a package has its own directory. As with Zero Install, "upgrading" creates a new directory for the new version, rather than modifying the existing one. Unlike Zero Install, however, whether a package is installed affects the behaviour of the system. For example, running "firefox" when Firefox isn't installed produces an error in Nix, whereas in Zero Install it will install Firefox first if missing and then continue. In other words, installation has side-effects in Nix.
+[Nix](https://nixos.org/) is a purely functional package manager. Each version of a package has its own directory, and "upgrading" creates a new directory rather than modifying the existing one. Unlike Zero Install, however, whether a package is installed affects the behaviour of the system: running `firefox` when Firefox isn't installed produces an error in Nix, whereas Zero Install fetches it first and then continues. In other words, installation has side-effects in Nix.
 
-Additional feeds (e.g. for pre-built binaries) can be registered using `nix-channel --add`, which appears to work much like [`0install add-feed`](../details/cli.md#add-feed), although each channel can contain binaries for multiple packages. The channel `MANIFEST` file doesn't appear to have a digital signature. Presumably this will be added at some point.
+The most important difference is what the digest covers. The Nix hash is a hash of the _inputs_ used to build the package; the Zero Install hash is a hash of the _resulting binary_. Nix does this to support binaries that hard-code their own paths, since the final hash needs to be known at compile time; Zero Install doesn't allow binaries to include hard-coded paths. The consequence is that Nix cannot verify that a binary in the store is what it claims to be without rebuilding it, so a shared store requires its users to trust each other, whereas Zero Install can always verify and so supports [sharing](../details/sharing.md) between mutually untrusting users.
 
-Each version of a package has a digest (hash), which includes all build dependencies (e.g. the version of the compiler used), just as it does in Zero Install (for packages built using 0compile, at least).
-
-An important difference between the two is that the Nix hash is a hash of the _inputs_ used to build the package, whereas the Zero Install hash is a hash of the _resulting binary_. Nix does this to support binaries that hard code their own paths, since the final hash needs to be known at compile time. For source (non-compiled) packages, the Nix hash is a hash of the contents, as with Zero Install. The Zero Install hash often happens to include the inputs, since it covers the `build-environment.xml` file which 0compile places in each binary package. Zero Install doesn't allow binaries to include hard-coded paths.
-
-Update: Nix is planning to use binary hashes everywhere in future (zeroing out self-references for the purposes of calculating the hashes). The same thing was proposed a few years ago for Zero Install (the [relocation table](http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/882/focus=882)). It relies on the cache directory being at a fixed location, whereas people often have Zero Install set up to use their home directory, but it's basically a good idea.
-
-Another difference between Nix and Zero Install is that Nix treats configurations as packages. Changing your configuration is like "upgrading" your configuration package to a new version. Rolling back a change is like reverting to a previous version. Zero Install doesn't generally handle configuration settings, preferring to let the user use subversion (or similar) for that, but it's an interesting idea.
-
-Building a Nix package involves creating a "Nix expression" in a (custom) functional language. The expression fills the same role as a Zero Install source feed: it says where to download the source, what its digest is, what the build dependencies are, and how to build it.
-
-While Zero Install is mainly targeted at adding additional packages to an existing system, Nix aims to manage the whole system (although it installs cleanly alongside your existing package manager). Nix packages have short names (like `perl`) not full URIs, and thus it appears to assume a centrally-controlled repository.
-
-In Nix, mutually untrusting users cannot share packages. The manual says A setuid installation should only by used if the users in the Nix group are mutually trusted, since any user in that group has the ability to change anything in the Nix store. Because the Nix hash is a hash of the inputs, it is not possible for the system to verify that a package is valid (it would have to download the sources and compile the program itself; Nix can share binaries in this case). Because Zero Install hashes are always hashes of the package contents, it does support [sharing](../details/sharing.md).
-
-### OSTree
-
-[OSTree](https://ostree.readthedocs.io/) describes itself as "git for operating system binaries". It shares many goals with 0install (multiple versions of libraries can coexist on one system and you can roll-back easily). While 0install focuses on applications and their libraries, OSTree focuses on the OS itself. However, there is quite a bit of overlap. For example, OSTree considers GTK+ to be an OS library, while 0install might consider it to be an application dependency (which can optionally, of course, be provided by the OS).
-
-### Glick 2
-
-[Glick 2](http://people.gnome.org/~alexl/glick2/) has essentially the same goals as 0install, but includes all dependencies in a single bundle rather than linking libraries dynamically at run-time (for example, when a library is updated, every program using that library must be updated individually). It has support for non-relocatable applications, using some Linux-specific tricks. It might be worth using these in 0install to implement the `<mount-point>` binding, but few applications are non-relocatable these days.
-
-### DOAPDescription of a Project
-
-[DOAP](https://github.com/ewilderj/doap/wiki) is a project to create an XML/RDF vocabulary to describe open source projects. We should investigate whether any of these elements would be useful in Zero Install feed files.
-
-### Environment modules
-
-The [Environment Modules](http://modules.sourceforge.net/) package provides for the dynamic modification of a user's environment via modulefiles. Each modulefile contains the information needed to configure the shell for an application. Typically modulefiles instruct the module command to alter or set shell environment variables such as `PATH`, `MANPATH`, etc. To be able to load ("install") software, it must first be installed under the `$MODULESHOME` directory which is in `/usr/local/Modules` or a shared network filesystem. It is also possible to install it in `~/.local` without root permissions, but then the modules can't be shared (due to different `$HOME`).
-
-The module(1) command doesn't provide a method to share or distribute the applications, so modulefiles typically take advantage of transparent remote network filesystem access such as NFS and AFS. 0install can also be used in this way, with [local feeds](../packaging/local-feeds.md) taking the place of the modulefiles and giving the path of the software on the network file-system rather than a URL from which it can be downloaded.
-
-If you believe that any of the information above is inaccurate or out-of-date, please write to [mailing list](https://0install.net/support.html#lists) to let us know. Thanks!
+Building a Nix package involves creating a "Nix expression" in a custom functional language, filling the same role as a Zero Install source feed. Nix also treats configurations as packages, which Zero Install does not attempt at all. And while Zero Install is aimed at adding applications to an existing system, Nix aims to manage the whole system; its packages have short names (like `perl`) rather than URIs, and thus assume a centrally-curated set of package definitions.
