@@ -59,6 +59,8 @@ Find and merge any duplicate files in the [cache](cache.md)
 
 If you wish to run these commands in automated scripts, add the argument `--batch` to prevent interactive prompts.
 
+On managed machines, administrators can pre-set Zero Install's configuration centrally and prevent users from changing it using [Windows Group Policy](policy-settings.md#windows-group-policy).
+
 ## Portable mode
 
 To set up Zero Install on a USB thumb drive:

@@ -22,6 +22,8 @@ The first part shows how to set policy settings that apply to all applications o
 
     ![The Configuration dialog](../img/screens/0install-win/config.png)
 
+    Administrators can pre-set and lock any of these settings using [Windows Group Policy](#windows-group-policy).
+
 ### Network use
 
 Affects how much 0install will rely on the network. Possible values are:
@@ -39,6 +41,54 @@ Affects how much 0install will rely on the network. Possible values are:
 ### Help test new versions
 
 By default, 0install tries not to select new versions while they're still in the "testing" phase. If checked, 0install will instead always select the newest version, even if it's marked as "testing".
+
+### Windows Group Policy
+
+On Windows, 0install reads settings from two registry keys in addition to its [config files](file-locations.md):
+
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Zero Install
+HKEY_CURRENT_USER\SOFTWARE\Policies\Zero Install
+```
+
+A machine policy takes precedence over a user policy, and both take precedence over any config file. A setting that is present in either key is also **locked**: `0install config` and the Configuration dialog refuse to change it.
+
+0install ships an ADMX template so the settings appear in the Group Policy editor. Get [`0install.admx` and `*\0install.adml`](https://github.com/0install/0install-win/tree/master/group-policies) and copy them into either
+
+- `%WINDIR%\PolicyDefinitions` on a single machine, or
+- `\\<domain>\SYSVOL\<domain>\Policies\PolicyDefinitions` for the domain Central Store
+
+The settings then show up under **Computer Configuration → Administrative Templates → Zero Install** and under **User Configuration** for the per-user variant.
+
+#### Setting values directly
+
+If you provision the registry yourself, write the values under the policy key using the same names 0install uses in its config file:
+
+| Value name               | Type        | Notes                                                |
+| ------------------------ | ----------- | ---------------------------------------------------- |
+| `network_use`            | `REG_SZ`    | `full`, `minimal` or `off-line`                      |
+| `freshness`              | `REG_DWORD` | In seconds. `604800` is one week.                    |
+| `help_with_testing`      | `REG_DWORD` | `1` or `0`                                           |
+| `auto_approve_keys`      | `REG_DWORD` | `1` or `0`                                           |
+| `max_parallel_downloads` | `REG_DWORD` | 1 to 128                                             |
+| `feed_mirror`            | `REG_SZ`    | Empty string disables the [feed mirror](servers.md). |
+| `key_info_server`        | `REG_SZ`    | Empty string disables the key information server.    |
+| `self_update_uri`        | `REG_SZ`    | Empty string disables self-update.                   |
+| `prefer_sat_solver`      | `REG_DWORD` | `1` or `0`                                           |
+| `sync_server`            | `REG_SZ`    | See [Sync](sync.md).                                 |
+| `sync_server_user`       | `REG_SZ`    |                                                      |
+| `sync_server_pw`         | `REG_SZ`    | Stored as plain text; see the warning below.         |
+| `sync_server_kerberos`   | `REG_DWORD` | `1` or `0`                                           |
+| `sync_crypto_key`        | `REG_SZ`    | Stored as plain text; see the warning below.         |
+| `kiosk_mode`             | `REG_DWORD` | `1` or `0`. See [Kiosk mode](kiosk-mode.md).         |
+
+Booleans accept either a `REG_DWORD` of `1` / `0` or a `REG_SZ` of `True` / `False`.
+
+!!! attention
+    `sync_server_pw` and `sync_crypto_key` are read from the registry verbatim. In the config file these are stored base64-encoded (as `sync_server_pw_base64` and `sync_crypto_key_base64`), but that is obfuscation rather than encryption and does not apply here at all. Anyone who can read the policy key can read these values. Prefer `sync_server_kerberos` for authentication, and deploy per-user secrets by another route.
+
+!!! tip
+    To check what a machine actually ended up with, run `0install config` with no arguments. It prints the effective value of every setting, including the ones coming from group policy.
 
 ## Per-application policy settings
 
