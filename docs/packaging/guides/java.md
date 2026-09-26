@@ -1,19 +1,27 @@
 # Java apps
 
-This guide covers packaging Java apps that run on a JRE or JDK pulled in via Zero Install.
+This guide covers packaging Java apps that run on a JDK pulled in via Zero Install.
 
 ## Runtime feeds
 
-[`https://apps.0install.net/java/jre.xml`](https://apps.0install.net/java/jre.xml)
-: The Java Runtime Environment. Minimum needed to run a Java app.
-
-[`https://apps.0install.net/java/openjdk.xml`](https://apps.0install.net/java/openjdk.xml)
-: The OpenJDK Development Kit (compiler + tools). Use this as a build dependency.
+[`https://apps.0install.net/java/jdk.xml`](https://apps.0install.net/java/jdk.xml)
+: The Java Development Kit. Use this both to run Java apps and as a build dependency.
 
 [`https://apps.0install.net/java/jar-launcher.xml`](https://apps.0install.net/java/jar-launcher.xml)
 : A small helper that launches the `Main-Class` declared in a JAR manifest while preserving `CLASSPATH`. Use this when your app loads other JARs from `CLASSPATH`. `java -jar` ignores `CLASSPATH`, which prevents Zero Install from injecting library JARs.
 
-Versions match the JRE/JDK feature release (`1.8`, `11`, `17`, `21`, ...).
+Versions match the JDK feature release (`1.8`, `11`, `17`, `21`, ...).
+
+!!! note
+    Starting with Java 11, Java no longer offers a separate Java Runtime Environment (JRE) redistributable. Instead, apps are expected to either run on the full JDK or bundle a trimmed-down runtime built with `jlink`. Therefore, depend on `jdk.xml` even if your app only needs to run Java code.
+
+    The legacy [`https://apps.0install.net/java/jre.xml`](https://apps.0install.net/java/jre.xml) feed is still available for legacy apps that require Java 8.
+
+### Picking the right JDK version
+
+Specify the minimum Java version your app was compiled for as the lower bound of the `version` range, e.g. `version="17.."`.
+
+Newer JDKs occasionally remove APIs and features (e.g., Java EE modules such as JAXB in Java 11, the Nashorn JavaScript engine in Java 15 or the Security Manager in Java 24). If your app is known to break on newer releases, add an upper bound to the range, e.g. `version="11..!17"` to select Java 11 up to (but not including) Java 17.
 
 ## Running a self-contained JAR
 
@@ -30,7 +38,7 @@ If your JAR has a `Main-Class` and bundles all dependencies, the simplest feed t
 
   <group license="Apache-2.0">
     <command name="run" path="MyApp.jar">
-      <runner interface="https://apps.0install.net/java/jre.xml" version="17..">
+      <runner interface="https://apps.0install.net/java/jdk.xml" version="17..">
         <arg>-jar</arg>
       </runner>
     </command>

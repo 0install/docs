@@ -80,7 +80,7 @@ You can specify a template `<implementation>` for the binary using `<compile:imp
         <environment name='CLASSPATH' insert='.'/>
         <requires interface="https://apps.0install.net/utils/graphviz.xml"/>
         <command name='run'>
-          <runner interface='https://apps.0install.net/java/jre.xml'/>
+          <runner interface='https://apps.0install.net/java/jdk.xml'/>
           <arg>com.example.MainClass</arg>
         </command>
       </compile:implementation>
