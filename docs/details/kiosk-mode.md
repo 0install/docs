@@ -59,7 +59,7 @@ The cached copy of the catalog is consulted first; only if the URI is not found 
 
 ### Machine-wide catalog sources take precedence
 
-Zero Install reads its list of catalog sources from a `injector\catalog-sources` file, and normally a per-user file under `%APPDATA%` overrides the machine-wide one under `%PROGRAMDATA%`. In kiosk mode the precedence is reversed: if a machine-wide `catalog-sources` file exists, it is the one that counts, and a user cannot widen the set of available applications by registering an extra catalog of their own with [`0install catalog add`](cli.md#catalog-add).
+Zero Install reads its list of catalog sources from a `0install.net\catalog-sources` file, and normally a per-user file under `%APPDATA%` overrides the machine-wide one under `%PROGRAMDATA%`. In kiosk mode the precedence is reversed: if a machine-wide `catalog-sources` file exists, it is the one that counts, and a user cannot widen the set of available applications by registering an extra catalog of their own with [`0install catalog add`](cli.md#catalog-add).
 
 If there is no machine-wide `catalog-sources` file, the per-user one is still used — so write the machine-wide file as part of the same step that turns kiosk mode on:
 
