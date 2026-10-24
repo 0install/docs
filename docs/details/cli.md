@@ -1089,6 +1089,10 @@ Trusts feeds from a specific `DOMAIN` when [signed](../specifications/feed.md#di
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
   <td>More verbose output. Use twice for even more verbose output.</td>
 </tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
+</tr>
 </table>
 
 ## trust remove
@@ -1113,6 +1117,10 @@ Stops trusting feeds [signed](../specifications/feed.md#digital-signatures) with
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
   <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
 
@@ -1142,6 +1150,10 @@ List keys trusted for [signing](../specifications/feed.md#digital-signatures) fe
 <tr>
   <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
   <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>-m</code></nobr><br/><nobr><code>--machine</code></nobr><br>(Windows only)</td>
+  <td>Apply the configuration machine-wide (for the entire computer) instead of just for the current user.</td>
 </tr>
 </table>
 
