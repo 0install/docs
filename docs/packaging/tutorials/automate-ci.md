@@ -12,9 +12,9 @@ By the end you will have:
 - A `gh-pages` branch holding the signed master feed and the public key.
 - A GitHub Actions workflow that publishes a new version every time you push a `v*` tag.
 
-## 1. Move the template into the source repo
+## 1. Keep the template next to the source
 
-Up to now the template lived in a dedicated `myapp` repo whose only job was hosting the feed. From here on, keep it next to the source code, the way [0capture](https://github.com/0install/0capture/blob/master/0capture.xml.template) and [0template](https://github.com/0install/0template/blob/master/0template.xml.template) do. Move `myapp.xml.template` into the source repository alongside the build script:
+CI builds the release and runs `0template` in the same job, so the template belongs in your app's source repository alongside the build script, the way [0capture](https://github.com/0install/0capture/blob/master/0capture.xml.template) and [0template](https://github.com/0install/0template/blob/master/0template.xml.template) do. Make sure `myapp.xml.template` is committed there:
 
 ```
 myapp/
@@ -31,20 +31,18 @@ The template still references the public feed URL on GitHub Pages, e.g. `https:/
 
 ## 2. Create an orphan `gh-pages` branch
 
-The signed master feed and the public key are served from a `gh-pages` branch. CI checks it out, updates it, and pushes back. Initialise it once:
+The signed master feed and the public key are served from a `gh-pages` branch. CI checks it out, updates it, and pushes back. Initialise it once, carrying over the files you published from `main` in the previous tutorial:
 
 ```shell
 git checkout --orphan gh-pages
 git rm -rf .
-cp ../myapp.xml .       # the master feed from the previous tutorial
-cp ../*.gpg .           # the public key from the previous tutorial
-git add myapp.xml *.gpg
+git checkout main -- myapp.xml '*.gpg' myapp.png
 git commit -m "Initial gh-pages"
 git push -u origin gh-pages
 git checkout main
 ```
 
-In **Settings → Pages**, set the source to **Deploy from a branch / gh-pages / root**. Confirm the feed is still reachable at `https://YOURNAME.github.io/myapp/myapp.xml`.
+In **Settings → Pages**, set the source to **Deploy from a branch / gh-pages / root**. Confirm the feed is still reachable at `https://YOURNAME.github.io/myapp/myapp.xml`. You can then delete `myapp.xml`, the key and the icon from `main`.
 
 ## 3. Add the GPG key as a repository secret
 
@@ -113,7 +111,7 @@ The workflow:
 
 1. Checks out the source on `main` and the published feed on `gh-pages` into separate directories.
 2. Derives the version number from the tag name. The actions take the version as an input rather than deriving it themselves, so you can compute it however you like — from the tag, from a file in the repo, or with a tool such as [GitVersion](https://gitversion.net/).
-3. Builds the release archive at that version. Replace `./build.sh` with whatever produces the archive your template expects (and uploads it to wherever the `<archive href>` points to; typically a GitHub Release attached to the same tag).
+3. Builds the release archives at that version. Replace `./build.sh` with whatever produces the archives your template expects. Have it write each archive next to the template, under the file name its `<archive href>` ends with: 0template then uses that local copy instead of downloading it. Users still download from the `href`, so the script also needs to upload the archives there (typically to a GitHub Release attached to the same tag).
 4. Runs `0template` to compute the manifest digest and stamp out `myapp-$version.xml`. The `feed` output holds the path of the generated file, and `archive` the path of any archive generated alongside it.
 5. Runs `0publish --add-from` to merge the per-version feed into the master `myapp.xml`, importing the GPG key beforehand and resigning the result with it.
 6. Commits and pushes `gh-pages`.
@@ -126,7 +124,7 @@ The workflow:
         id: feed
         uses: 0install/github-actions/0template@v1
         with:
-          template: source/myapp.xml.template
+          template: myapp.xml.template
           version: ${{ steps.version.outputs.version }}
           github-release: true
     ```
@@ -137,21 +135,21 @@ The workflow:
 
 Many projects already publish something to `gh-pages` — API documentation, a project website — using an action such as [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages). Such actions usually replace the entire branch on every run (`force_orphan: true`), which would delete a feed that CI had committed there separately.
 
-Rather than fighting over the branch, hand the feed to the same publishing step. The `public` checkout and the `0publish --add-from` merge stay exactly as they are; only the final "Push gh-pages" step changes. Copy the updated master feed and the public key into the directory the site generator produced, and let the publishing action commit the branch:
+Rather than fighting over the branch, hand the feed to the same publishing step. The `gh-pages` checkout and the `0publish --add-from` merge stay exactly as they are; only the final "Push gh-pages" step changes. Copy the updated master feed and the public key into the directory the site generator produced (`site/` here), and let the publishing action commit the branch:
 
 ```yaml
       - name: Copy feed into the site
-        run: cp public/myapp.xml public/*.gpg source/site/
+        run: cp gh-pages/myapp.xml gh-pages/*.gpg site/
 
       - name: Publish site
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ github.token }}
           force_orphan: true
-          publish_dir: source/site
+          publish_dir: site
 ```
 
-The `public` checkout is now only used to read the previous master feed and merge the new version into it. The generated site keeps being rebuilt from scratch on every release, while the feed and the public key are carried forward from one release to the next. [TypedRest CodeGeneration](https://github.com/TypedRest/CodeGeneration/blob/master/.github/workflows/build.yml) publishes its API documentation and its feed this way.
+The `gh-pages` checkout is now only used to read the previous master feed and merge the new version into it. The generated site keeps being rebuilt from scratch on every release, while the feed and the public key are carried forward from one release to the next. [TypedRest CodeGeneration](https://github.com/TypedRest/CodeGeneration/blob/master/.github/workflows/build.yml) publishes its API documentation and its feed this way.
 
 ## 5. Tag a release
 
@@ -182,4 +180,4 @@ At that point, switch to [0repo](../../tools/0repo.md). The [next tutorial](mult
 : The default `GITHUB_TOKEN` can push to the same repo but only if the workflow has `permissions: contents: write`, as above. Without it the push to `gh-pages` is rejected.
 
 `Manifest digest sha256new=... does not match expected ...`
-: The build produced a different archive than the one referenced in the template, usually because the build is non-reproducible or the upload is racing with the workflow. Pin tool versions and upload before running `0template`.
+: The archive users download differs from the one `0template` computed the digest from. Usually the upload replaced an archive that was already there, or `0template` downloaded an older upload because the build wrote its archive under a different file name than the `href` ends with. Make the file names match, and never overwrite a released archive.

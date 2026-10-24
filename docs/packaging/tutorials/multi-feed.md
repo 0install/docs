@@ -41,17 +41,31 @@ In **Settings → Pages**, set the source to **Deploy from a branch / gh-pages /
 
 ```shell
 0install add 0repo https://apps.0install.net/0install/0repo.xml
-0repo create ~/repos/feeds 'Your Name'
+0repo create ~/repos/feeds YOURKEY
 ```
 
-`0repo create` writes a `0repo-config.py`. Move it into your Git checkout and edit `REPOSITORY_BASE_URL` and `GPG_SIGNING_KEY`:
+`0repo create` sets up a scratch repository whose only part you need is its `0repo-config.py`. It already contains the fingerprint of your key:
 
 ```python
-REPOSITORY_BASE_URL = "https://YOURNAME.github.io/feeds/"
 GPG_SIGNING_KEY = None if os.getenv('NO_SIGN') else "0xYOURKEYFINGERPRINT"
 ```
 
 The `NO_SIGN` escape hatch lets CI run `0repo` in dry-run mode for pull-request validation without exposing the production key.
+
+Move `0repo-config.py` into your Git checkout and set the base URL:
+
+```python
+REPOSITORY_BASE_URL = "https://YOURNAME.github.io/feeds/"
+```
+
+Out of the box, `upload_public_dir()` asks you to upload the `public` directory by hand and waits for you to press Return, which would make CI fail. Replace it with a version that commits the generated files to the `gh-pages` checkout, so the GitHub Actions below can push them:
+
+```python
+def upload_public_dir(files, message):
+	subprocess.check_call(['git', 'add', '--', 'archives.db'] + files)
+	if subprocess.call(['git', 'diff', '--cached', '--quiet']):
+		subprocess.check_call(['git', 'commit', '-m', message])
+```
 
 Commit `0repo-config.py` to `main` and push.
 
@@ -69,7 +83,7 @@ In the **feeds** repo's **Settings → Secrets and variables → Actions**, crea
 
 Two workflows on the **feeds** repo do the heavy lifting:
 
-- `publish.yml` runs whenever `0repo-config.py` changes on `main` (so policy edits take effect without a feed change).
+- `publish.yml` runs whenever `0repo-config.py` or a feed changes on `main` (so policy edits and hand-edited feeds get published too).
 - `incoming.yml` is a manually triggered workflow that pulls a fresh feed from a URL, runs `0repo` to merge and sign it, and pushes `gh-pages`. App repos kick this off with the `0repo-submit` action.
 
 Both use the [Zero Install GitHub Actions](https://github.com/0install/github-actions): `0repo-setup` prepares the working directory and `0repo` runs the tool.
@@ -94,7 +108,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ['0repo-config.py']
+    paths: ['0repo-config.py', '**/*.xml']
 concurrency: { group: publish }
 
 jobs:
@@ -178,6 +192,17 @@ The template's `<feed-for>` points at the central repo, **not** at the app's own
 <feed-for interface="https://YOURNAME.github.io/feeds/myapp.xml"/>
 ```
 
+The archive is attached to the GitHub Release only after `0template` has run, so the template can't download it from its final URL. Instead, let `0template` [generate the archive](../../tools/0template.md#generating-archives) from your build output, the way [0template's own template](https://github.com/0install/0template/blob/master/0template.xml.template) does. Give the implementation a `local-path` pointing at the directory your build writes to, and the archive a bare file name as its `href`:
+
+```xml
+<implementation version="{version}" local-path="dist">
+  <manifest-digest/>
+  <archive href="myapp-{version}.tar.gz"/>
+</implementation>
+```
+
+`0template` packs `dist/` into `myapp-{version}.tar.gz` next to the template, computes the digest from it and leaves the `href` relative. The `Incoming` workflow registers one archive per release, so this setup works for a single archive, e.g. a platform-independent build.
+
 The build workflow at `myapp/.github/workflows/build.yml`:
 
 ```yaml
@@ -189,16 +214,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
 
       - name: Determine version
         id: version
         run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
 
-      - name: Build release archive
+      - name: Build
         run: ./build.sh ${{ steps.version.outputs.version }}
 
       - name: Generate per-version feed
@@ -228,12 +254,12 @@ The paths that `0template` produced are attached to the GitHub Release and then 
 
 Note that the feed itself keeps the relative `href` from the template; it is `archive-url` that tells the central repository where the archive actually lives. 0repo records that in `archives.db` and rewrites the `href` when it generates the published feed.
 
-`PERSONAL_TOKEN` is a fine-grained personal access token with **Actions: write** on the `feeds` repo. The default `GITHUB_TOKEN` only has permissions on the current repo, so it can't trigger workflows elsewhere. Store it as a secret in the app's repo.
+`permissions: contents: write` lets the default `GITHUB_TOKEN` create the GitHub Release. `PERSONAL_TOKEN` is a fine-grained personal access token with **Actions: write** on the `feeds` repo. The default `GITHUB_TOKEN` only has permissions on the current repo, so it can't trigger workflows elsewhere. Store it as a secret in the app's repo.
 
 The flow is:
 
 1. You push tag `v1.2` on the `myapp` repo.
-2. CI builds the archive and runs `0template myapp.xml.template version=1.2`, producing `myapp-1.2.xml`.
+2. CI builds the app and runs `0template myapp.xml.template version=1.2`, producing `myapp-1.2.xml` and `myapp-1.2.tar.gz`.
 3. CI uploads both the feed and the archive as release assets.
 4. CI calls `gh workflow run` on the `feeds` repo, passing the URLs of both.
 5. The `Incoming` workflow on `feeds` downloads them, runs `0repo`, signs, and pushes `gh-pages`.
@@ -244,15 +270,20 @@ This is exactly the pattern [0capture](https://github.com/0install/0capture/blob
 
 ## 6. Local previewing
 
-For changes to `0repo-config.py` itself, or for hand-staged feeds, you can still run 0repo on your laptop. Tell 0repo where the working copy lives:
+For changes to `0repo-config.py` itself, or for hand-staged feeds, you can still run 0repo on your laptop. Recreate the layout that `0repo-setup` builds in CI, with both branches checked out side by side in a working directory of their own:
 
 ```shell
-cd ~/Code/feeds
+mkdir ~/Code/feeds-work
+cd ~/Code/feeds-work
+git clone https://github.com/YOURNAME/feeds.git feeds
+git clone --branch gh-pages https://github.com/YOURNAME/feeds.git public
 ln -s feeds/0repo-config.py .
 ln -s public/archives.db .
 mkdir incoming
 0repo register
 ```
+
+`0repo register` records where this working directory lives, so that `0repo add` can find it when you run it from elsewhere.
 
 Then drop a per-version feed into `incoming/` and run:
 

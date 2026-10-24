@@ -42,7 +42,7 @@ For each watch script, 0watch:
 
 1. Runs the script and reads `releases`.
 2. For each release, checks whether `<name>-<version>.xml` already exists or whether `<name>.xml` already contains an `<implementation>` with that version.
-3. If the version is new, calls `0template <name>.xml.template version=... released=...` and writes the result alongside the script.
+3. If the version is new, calls `0template <name>.xml.template version=... released=...` and writes the result to the `--output` directory (or next to the script if there is none).
 
 Example:
 
@@ -50,31 +50,29 @@ Example:
 0watch myapp.watch.py --output ../incoming
 ```
 
-The generated feed appears in `../incoming/myapp-1.2.3.xml`, ready to be picked up by `0repo add`.
+The generated feed appears in `../incoming/myapp-1.2.3.xml`, ready to be merged by the next `0repo` run, which processes everything in `incoming/`.
 
-To process every watch script in a tree, the convention used by apps.0install.net is a small driver script:
+To process every watch script in a tree, use a small driver script:
 
 ```bash
 #!/usr/bin/env bash
 set -e
 mkdir -p ../incoming
 
-for FILE in $(ls */*.watch.py); do
+for FILE in */*.watch.py; do
     0install run https://apps.0install.net/0install/0watch.xml --output ../incoming "$FILE"
 done
 ```
-
-A Windows equivalent (`watch.ps1`) is in the [apps repository](https://github.com/0install/apps/blob/master/watch.ps1).
 
 ## Wiring it all up with GitHub Actions
 
 The full pipeline has three workflows:
 
-`update.yml`: Nightly cron (or manual trigger) that runs every watch script on a matrix of `windows-latest`, `macos-latest` and `ubuntu-latest`, gathers the resulting feeds, runs `0repo add` on them, and opens a pull request titled "Automatic updates".
+`update.yml`: Nightly cron (or manual trigger) that runs the driver script, collects the resulting feeds in `incoming/`, runs `0repo` on them, and opens a pull request titled "Automatic updates".
 
 `verify.yml`: Runs on every pull request. Re-runs `0repo` in dry-run mode (no GPG key) to confirm the feeds in the PR are valid before merging.
 
-`publish.yml`: Runs on every push to `main`. Re-signs the feeds with the production GPG key and pushes the signed results to `gh-pages`.
+`publish.yml`: Runs on every push to `main` that changes a feed or `0repo-config.py`, e.g. when you merge the "Automatic updates" pull request. Re-signs the feeds with the production GPG key and pushes the signed results to `gh-pages`.
 
 The [apps.0install.net workflows](https://github.com/0install/apps/tree/master/.github/workflows) are a good template. They are intentionally small and copy-pasteable, because the boilerplate lives in the [Zero Install GitHub Actions](https://github.com/0install/github-actions). See [Managing multiple feeds with 0repo](multi-feed.md#4-add-publish-incoming-workflows) for the workflows themselves.
 

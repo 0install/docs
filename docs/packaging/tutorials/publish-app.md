@@ -20,9 +20,9 @@ By the end you will have:
 0install add feedlint https://apps.0install.net/0install/feedlint.xml
 ```
 
-## 1. Create the GitHub repository
+## 1. Set up the GitHub repository
 
-Create a new GitHub repo named `myapp` (or whatever your app is called). Enable GitHub Pages in **Settings → Pages**, with the source set to **Deploy from a branch / main branch / root**.
+Use your app's GitHub repo, say `myapp`, or create one. Enable GitHub Pages in **Settings → Pages**, with the source set to **Deploy from a branch / main branch / root**.
 
 Once enabled, GitHub gives you a URL of the form `https://YOURNAME.github.io/myapp/`. This is the URL your feed will live under. Pick a permanent file name now; let's say `myapp.xml`. The full feed URL is then:
 
@@ -35,7 +35,7 @@ https://YOURNAME.github.io/myapp/myapp.xml
 
 ## 2. Create a template
 
-Clone the repo and create a template:
+Clone the repo (if you haven't already) and create a template:
 
 ```shell
 git clone https://github.com/YOURNAME/myapp.git
@@ -103,11 +103,11 @@ cp myapp-1.0.xml myapp.xml
 
 You'll be prompted for your GPG passphrase. The signed feed contains a Base64 signature block at the end as an XML comment.
 
-`0publish` also writes a public key file (e.g. `1234ABCD.gpg`) alongside the feed. This is what users' 0install installs need to verify the signature.
+`0publish` also writes a public key file alongside the feed, named after the 16-digit ID of your key (e.g. `0123456789ABCDEF.gpg`). This is what users' 0install installs need to verify the signature.
 
 ## 5. Publish to GitHub Pages
 
-Commit and push:
+Commit and push the feed, the public key and the icon your template's `<icon>` points to:
 
 ```shell
 git add myapp.xml *.gpg myapp.png
