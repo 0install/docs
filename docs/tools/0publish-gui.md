@@ -116,7 +116,7 @@ Publishing a program using Zero Install requires you to create an XML file listi
 
     ![Feed Editor screenshot - Archive](../img/screens/0publish-win/archive.png)
 
-    ![Feed Editor screenshot - XML Editor](../img/screens/0publish-win/xml-error.png)
+    ![Feed Editor: changing a version in the graphical view updates the XML view; a typo in the XML view is underlined and reported in the status bar](../img/screens/0publish-win/xml-sync.gif)
 
     ## New Feed Wizard
 
@@ -125,4 +125,4 @@ Publishing a program using Zero Install requires you to create an XML file listi
     - automatically creates appropriate `<runner>`s for Java, .NET and Python executables
     - extracts metadata (name, version number, etc.) where possible
 
-    ![Feed Wizard screenshots](../img/screens/0publish-win/wizard.gif)
+    ![New Feed Wizard: from an archive URL to a feed in the editor](../img/screens/0publish-win/wizard.gif)
