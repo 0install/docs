@@ -32,6 +32,6 @@ Different environments provide different ways to add menu entries:
 
     Open Zero Install and search for an app in the **Catalog**. Click on the :fontawesome-regular-star: button to add it to "My Apps". Then click on **Integrate** in the pop-up box to add it to the start menu.
 
-    ![Zero Install for Windows - Desktop Integration basic](../img/screens/0install-win/desktop-integration-basic.png)
+    ![Zero Install for Windows - Desktop Integration basic](../img/screens/0install-win/desktop-integration.gif)
 
     See [Desktop integration](../details/desktop-integration.md) for details.

@@ -9,7 +9,7 @@ Zero Install allows you to integrate applications into your desktop environment 
 
 Open Zero Install and search for an app in the **Catalog**. Click on the :fontawesome-regular-star: button to add it to "My Apps". Then click on **Integrate** in the pop-up box to add it to the start menu.
 
-![Zero Install for Windows - Desktop Integration basic](../img/screens/0install-win/desktop-integration-basic.png)
+![Zero Install for Windows - Desktop Integration basic](../img/screens/0install-win/desktop-integration.gif)
 
 !!! tip
     [Zero Install Sync](sync.md) allows you to synchronize your application list and desktop integration between multiple computers.

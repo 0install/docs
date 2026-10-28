@@ -14,7 +14,7 @@ When Zero Install is started by the Bootstrapper it is running from the [cache](
 
 If you then decide you wish to keep using Zero Install you can "Click to setup...". This applies desktop integration for Zero Install (start menu entry, command-line tools in `PATH`). It also installs the [Store Service](sharing.md#windows) if you choose to setup Zero Install "For all users".
 
-![Setting up Zero Install for the current user or for all users](../img/screens/0install-win/deploy.png)
+![The Bootstrapper downloads Zero Install, which then sets itself up for the current user](../img/screens/0install-win/bootstrap.gif)
 
 This is different from the [desktop integration](desktop-integration.md) Zero Install performs for other applications. For these Zero Install will create little stub executables in the appropriate locations that point to the application's feed. However, for Zero Install itself the entire binaries need to be copied to a permanent location. Otherwise each of these stubs would need to bundle all the functionality of the Bootstrapper in order to locate (or potentially download) Zero Install.
 
