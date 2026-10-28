@@ -23,6 +23,8 @@ Kiosk mode is a [configuration setting](policy-settings.md) named `kiosk_mode`. 
 
     Open the Configuration dialog (`0install-win config` or **Options** in the main GUI), switch to the **Advanced** tab, confirm the warning, and set **Kiosk mode** under **Restrictions**.
 
+    ![Kiosk mode in the Configuration dialog](../img/screens/0install-win/kiosk-mode-config.png)
+
 === "Bootstrapper"
 
     A [0bootstrap](../tools/0bootstrap.md)-generated installer can set the option and the catalog at the same time, so a fresh machine comes up already restricted:
@@ -52,6 +54,10 @@ Before acting on a feed URI, Zero Install checks that it appears in a registered
 $ 0install run https://apps.0install.net/gui/vlc.xml
 Kiosk mode is enabled and https://apps.0install.net/gui/vlc.xml is not listed in the catalog.
 ```
+
+The GUI shows the same message:
+
+![A feed blocked by kiosk mode](../img/screens/0install-win/kiosk-mode-blocked.png)
 
 The check applies to the URI you pass to [`select`](cli.md#select), [`download`](cli.md#download), [`update`](cli.md#update), [`run`](cli.md#run), [`add`](cli.md#add), [`integrate`](cli.md#integrate), [`add-feed`](cli.md#add-feed) and [`remove-feed`](cli.md#remove-feed) — the entry points through which a user names software. The [self-update feed](cli.md#self-update) is always exempt, so Zero Install can keep updating itself even if it is not in the catalog.
 

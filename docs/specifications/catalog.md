@@ -84,6 +84,8 @@ The main GUI of Zero Install for Windows displays a list of available applicatio
 
 ![Zero Install for Windows - Catalog](../img/screens/0install-win/catalog.png)
 
+![Zero Install for Windows - Catalog sources](../img/screens/0install-win/config-catalog.png)
+
 ## Well-known catalogs
 
 - <https://apps.0install.net/> - repository of common tools, libraries and runtime environments

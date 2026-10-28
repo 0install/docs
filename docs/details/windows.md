@@ -14,7 +14,7 @@ When Zero Install is started by the Bootstrapper it is running from the [cache](
 
 If you then decide you wish to keep using Zero Install you can "Click to setup...". This applies desktop integration for Zero Install (start menu entry, command-line tools in `PATH`). It also installs the [Store Service](sharing.md#windows) if you choose to setup Zero Install "For all users".
 
-![](../img/screens/windows-deploy-banner.png)
+![Setting up Zero Install for the current user or for all users](../img/screens/0install-win/deploy.png)
 
 This is different from the [desktop integration](desktop-integration.md) Zero Install performs for other applications. For these Zero Install will create little stub executables in the appropriate locations that point to the application's feed. However, for Zero Install itself the entire binaries need to be copied to a permanent location. Otherwise each of these stubs would need to bundle all the functionality of the Bootstrapper in order to locate (or potentially download) Zero Install.
 
@@ -73,6 +73,8 @@ To set up Zero Install on a USB thumb drive:
 - Download and run Zero Install for Windows.
 - Select "Tools" and "Portable Creator" at the bottom of the window.
 - Follow the instructions on screen.
+
+![The Portable Creator](../img/screens/0install-win/portable-creator.png)
 
 You can now use your thumb drive to run Zero Install on any computer running a recent version of Windows. Zero Install stores downloaded applications directly on the stick so you can access the same applications everywhere. Please remember to always "eject" the thumb drive in Windows before disconnecting it from the computer.
 

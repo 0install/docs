@@ -86,7 +86,11 @@ When deciding whether to trust a particular programmer, the user will have to co
 
 A trusted programmer is identified by their GPG key's fingerprint. When the user runs a program, Zero Install downloads the feed and checks that it is signed by someone the user trusts. If not, the user is asked to confirm that they trust the holder of the key to provide software to them:
 
-![You are asked to confirm each new key](../img/screens/confirm-tal-rox.png)
+=== "Linux"
+    ![You are asked to confirm each new key](../img/screens/confirm-tal-rox.png)
+
+=== "Windows"
+    ![You are asked to confirm each new key](../img/screens/0install-win/confirm-key.png)
 
 Once trusted, Zero Install will accept any feed from the same domain signed by that key.
 

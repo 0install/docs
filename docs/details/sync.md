@@ -13,6 +13,14 @@ Zero Install Sync allows you to synchronize your list of applications, [desktop 
 
 ![](../img/diagrams/sync-animation.gif)
 
+## Setup
+
+Open Zero Install, switch to the **My apps** tab and click **Sync**. The first time you do this, a wizard guides you through choosing a server, entering your account credentials and setting up the encryption key.
+
+![The Sync Setup wizard](../img/screens/0install-win/sync-setup.png)
+
+If you set up Sync on additional computers later, choose **No, I have already set up other computers** and enter the same credentials and encryption key there.
+
 ## Technical details
 
 The synchronization algorithm works as follows:
@@ -36,6 +44,10 @@ If you want to run your own Sync server you have the following options:
 - Use [our PHP script](https://0install.de/sync/template.zip) on your web server.
 - Use an empty directory on a WebDAV server.
 - Use a Windows file share.
+
+Choose the server type in the Sync Setup wizard:
+
+![Choosing a Sync server](../img/screens/0install-win/sync-server.png)
 
 ## Local/network filesystem
 

@@ -12,7 +12,11 @@ Try executing the same command again but with the `--refresh` option. For exampl
 
 If 0install cannot find a compatible set of versions for a program, you may see an error like this:
 
-![A problem](../img/screens/problem.png)
+=== "Linux"
+    ![A problem](../img/screens/problem.png)
+
+=== "Windows"
+    ![A problem](../img/screens/0install-win/problem.png)
 
 Or, if not using the GUI, like this:
 
