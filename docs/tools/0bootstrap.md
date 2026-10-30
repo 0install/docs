@@ -79,7 +79,7 @@
         0bootstrap https://apps.0install.net/gui/vlc.xml
         ```
 
-        This will create a new file named `VLC media player.exe`, name taken from the `<name>` tag in the feed, in the current working directory. The file will have the VLC icon, taken from `<icon>` tag in the feed.
+        This will create a new file named `run VLC media player.exe`, name taken from the `<name>` tag in the feed, in the current working directory. The file will have the VLC icon, taken from `<icon>` tag in the feed.
 
     By default, this bootstrapper will simply download 0install (if it is not already present) and then use it to run the feed. You can also configure the bootstrapper to perform [desktop integration](../details/desktop-integration.md). You can use `--integrate-args=` to specify which arguments should be passed to [`0install integrate`](../details/cli.md#integrate).
 
@@ -88,7 +88,7 @@
         0bootstrap https://apps.0install.net/gui/vlc.xml --integrate-args="--add-standard"
         ```
 
-        This causes the bootstrapper to run `0install integrate https://apps.0install.net/gui/vlc.xml --add-standard`, adding the app to the start menu and registering its supported file types.
+        This causes the bootstrapper to run `0install integrate https://apps.0install.net/gui/vlc.xml --add-standard`, adding the app to the start menu and registering its supported file types. The file will be named `integrate VLC media player.exe`.
 
     Desktop integration requires a permanently deployed instance of Zero Install. If the target machine does not have one yet, the bootstrapper's `0install integrate` call causes Zero Install to deploy itself in [library mode](../details/library-mode.md).
 
