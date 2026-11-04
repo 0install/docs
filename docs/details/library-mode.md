@@ -73,7 +73,7 @@ Repairing the cache
 
 A [bootstrapper](windows.md#bootstrapper) normally refuses to overwrite the configuration of an existing Zero Install deployment — it assumes the user configured it deliberately. A library-mode deployment is treated as unconfigured: a bootstrapper for a second application will apply its own embedded [configuration](policy-settings.md) and [catalog](../specifications/catalog.md) on top of it.
 
-This lets several applications that each bundle Zero Install be installed in any order without the first one's settings winning permanently. Keep it in mind if you rely on a specific configuration surviving: pin it with a machine-wide config file instead.
+This lets several applications that each bundle Zero Install be installed in any order without the first one's settings winning permanently. Keep it in mind if you rely on a specific configuration surviving. A machine-wide config file is not enough: a bootstrapper run for a single user writes to that user's config file, which takes precedence over the machine-wide one. To pin a setting, use [Windows Group Policy](policy-settings.md#windows-group-policy), which takes precedence over all config files.
 
 ## Interaction with normal deployments
 
