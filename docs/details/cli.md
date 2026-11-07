@@ -338,6 +338,10 @@ Returns an exit status of <code>0</code> if it selected a set of versions, and a
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
+</tr>
+<tr>
   <td><nobr><code>--xml</code></nobr></td>
   <td>Write output to console as machine-readable XML.</td>
 </tr>
@@ -441,6 +445,10 @@ Returns an exit status of <code>0</code> if it selected a suitable set of versio
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
 </tr>
 <tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
+</tr>
+<tr>
   <td><nobr><code>--xml</code></nobr></td>
   <td>Write selected versions to console as machine-readable XML.</td>
 </tr>
@@ -537,6 +545,10 @@ This is similar to <a href='#download'><code>0install download --refresh</code><
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
 </tr>
 </table>
 
@@ -636,6 +648,10 @@ Returns an exit status of <code>1</code> if the download step failed. Otherwise,
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
 </tr>
 <tr>
   <td><nobr><code>-m <code>MAIN</code></code></nobr><br/><nobr><code>--main <code>MAIN</code></code></nobr></td>
@@ -779,6 +795,10 @@ Exports all feeds and implementations required to launch the program specified b
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
 </tr>
 <tr>
   <td><nobr><code>--no-implementations</code></nobr></td>
@@ -2393,6 +2413,10 @@ Updates Zero Install itself to the most recent version.
   <td><nobr><code>--language</code></nobr></td>
   <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
 <br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
 </tr>
 <tr>
   <td><nobr><code>--force</code></nobr></td>
