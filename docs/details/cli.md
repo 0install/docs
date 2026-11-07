@@ -38,6 +38,11 @@ On Windows you can also use <code>0install-win</code> instead. This will display
   <td>Exports all feeds and implementations required to launch the program specified by a <code>URI</code> to a <code>DIRECTORY</code>.</td>
 </tr>
 <tr>
+  <td><nobr><a href='#materialize'><code>materialize</code></a></nobr><br>(Windows only)</td>
+  <td>Copies the program specified by a <code>URI</code> and all its dependencies into a <code>DIRECTORY</code>, along with a launcher script that starts the program without Zero Install.
+<br/>Running this command again with the same <code>DIRECTORY</code> updates its contents.</td>
+</tr>
+<tr>
   <td><nobr><a href='#search'><code>search</code></a></nobr></td>
   <td>Searches for feeds indexed by the mirror server that match specified keywords. Note that the default mirror server indexes all known feeds, regardless of quality; you must decide whether to trust the programs before running them.</td>
 </tr>
@@ -812,6 +817,120 @@ Exports all feeds and implementations required to launch the program specified b
   <td><nobr><code>--bootstrap <code>VALUE</code></code></nobr></td>
   <td>Choose the type of Bootstrapper to place alongside the export.
 <br/>Supported values: <code>None</code>, <code>Run</code>, <code>Integrate</code></td>
+</tr>
+</table>
+
+## materialize
+
+Copies the program specified by a <code>URI</code> and all its dependencies into a <code>DIRECTORY</code>, along with a launcher script that starts the program without Zero Install.
+<br/>Running this command again with the same <code>DIRECTORY</code> updates its contents.
+
+The launcher script is named after the file name in the feed URI, e.g. `hello` for `https://apps.0install.net/gnu/hello.xml`. The directory can be moved to a different location after it has been created.
+
+**Usage:** `0install materialize [OPTIONS] URI DIRECTORY`
+
+<table>
+<tr>
+  <th>Option</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td><nobr><code>-?</code></nobr><br/><nobr><code>-h</code></nobr><br/><nobr><code>--help</code></nobr></td>
+  <td>Show the built-in help text.</td>
+</tr>
+<tr>
+  <td><nobr><code>--background</code></nobr><br>(Windows only, GUI only)</td>
+  <td>Hide the graphical user interface and use something like a tray icon instead.</td>
+</tr>
+<tr>
+  <td><nobr><code>--batch</code></nobr><br>(Windows only)</td>
+  <td>Automatically answer questions with defaults when possible and simplify console output (no tables or progress bars).</td>
+</tr>
+<tr>
+  <td><nobr><code>-v</code></nobr><br/><nobr><code>--verbose</code></nobr></td>
+  <td>More verbose output. Use twice for even more verbose output.</td>
+</tr>
+<tr>
+  <td><nobr><code>--customize</code></nobr><br>(Windows only)</td>
+  <td>Show the graphical policy editor. This allows you to customize which version of a program or library to use.</td>
+</tr>
+<tr>
+  <td><nobr><code>--pin</code></nobr><br>(Windows only)</td>
+  <td>Marks the selected version as preferred for future runs.</td>
+</tr>
+<tr>
+  <td><nobr><code>--unpin</code></nobr><br>(Windows only)</td>
+  <td>Releases versions previously marked as preferred.</td>
+</tr>
+<tr>
+  <td><nobr><code>-o</code></nobr><br/><nobr><code>--offline</code></nobr></td>
+  <td>Run in off-line mode, overriding the default setting.
+<br/>In off-line mode, no interfaces are refreshed even if they are out-of-date, and newer versions of programs won't be downloaded even if the injector already knows about them (e.g. from a previous refresh).</td>
+</tr>
+<tr>
+  <td><nobr><code>-r</code></nobr><br/><nobr><code>--refresh</code></nobr></td>
+  <td>Fetch fresh copies of all used feeds.</td>
+</tr>
+<tr>
+  <td><nobr><code>--with-store <code>DIR</code></code></nobr></td>
+  <td>Add <code>DIR</code> to the list of implementation caches to search.
+<br/>However, new downloads will not be written to this directory.</td>
+</tr>
+<tr>
+  <td><nobr><code>--command <code>COMMAND</code></code></nobr></td>
+  <td>Instead of executing the default command, use <code>COMMAND</code> instead. Possible command names are defined in the program's interface.
+<br/>Set to empty (<code>&quot;&quot;</code>) to ignore the command during selection.</td>
+</tr>
+<tr>
+  <td><nobr><code>--before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program earlier than <code>VERSION</code>. i.e., force the use of an old version the program.</td>
+</tr>
+<tr>
+  <td><nobr><code>--not-before <code>VERSION</code></code></nobr></td>
+  <td>Require a version of the main program not earlier than <code>VERSION</code>. E.g., if you want to run version 2.0 or later, use <code>--not-before=2.0</code>.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version <code>RANGE</code></code></nobr></td>
+  <td>Require a version of the main program within the given <code>RANGE</code>.
+<br/>Ranges are separated by pipes (<code>|</code>).
+<br/>Each range is in the form <code>START..!END</code>. The range matches versions where <code>START</code> &lt;= <code>VERSION</code> &lt; <code>END</code>. The start or end may be omitted.
+<br/>A single version number may be used instead of a range to match only that version, or <code>!VERSION</code> to match everything except that version.</td>
+</tr>
+<tr>
+  <td><nobr><code>--version-for <code>URI</code> <code>RANGE</code></code></nobr></td>
+  <td>For any library or sub-component with the given <code>URI</code> specifies the version <code>RANGE</code> (as for <code>--version</code>).</td>
+</tr>
+<tr>
+  <td><nobr><code>-s</code></nobr><br/><nobr><code>--source</code></nobr></td>
+  <td>Select source code rather than a binary. This is used internally by 0compile.</td>
+</tr>
+<tr>
+  <td><nobr><code>--os <code>OS</code></code></nobr></td>
+  <td>Forces the solver to target the operating system <code>OS</code>.
+<br/>Supported values: <code>\*</code>, <code>POSIX</code>, <code>Linux</code>, <code>Solaris</code>, <code>FreeBSD</code>, <code>Darwin</code>, <code>MacOSX</code>, <code>Cygwin</code>, <code>Windows</code>, <code>unknown</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--cpu <code>CPU</code></code></nobr></td>
+  <td>Forces the solver to target a specific <code>CPU</code>.
+<br/>Supported values: <code>\*</code>, <code>i386</code>, <code>i486</code>, <code>i586</code>, <code>i686</code>, <code>x86_64</code>, <code>ppc</code>, <code>ppc64</code>, <code>armv6l</code>, <code>armv7l</code>, <code>src</code></td>
+</tr>
+<tr>
+  <td><nobr><code>--language</code></nobr></td>
+  <td>Specifies the preferred language for the implementation. Use ISO short language codes (e.g. <code>en</code> or <code>en-US</code>).
+<br/>You can use this option multiple times to specify multiple acceptable languages.</td>
+</tr>
+<tr>
+  <td><nobr><code>--no-packages</code></nobr></td>
+  <td>Do not select any native packages (implementations provided by the operating system's package manager).</td>
+</tr>
+<tr>
+  <td><nobr><code>--link</code></nobr></td>
+  <td>Create links to the components in the implementation cache instead of copying them.
+<br/>This is faster and saves disk space, but the program stops working when the components are removed from the cache.</td>
+</tr>
+<tr>
+  <td><nobr><code>--clean</code></nobr></td>
+  <td>Remove implementations from earlier runs that are no longer required.</td>
 </tr>
 </table>
 
