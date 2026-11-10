@@ -5,7 +5,7 @@ Once you have more than one feed, the per-repo `0template` + `0publish` workflow
 [0repo](../../tools/0repo.md) replaces the per-repo plumbing with a single, central feed repository. It:
 
 - Validates each incoming feed against your repository's policies (license required, release date set, signed by an authorized key, ...).
-- Merges new implementations into the right main feed.
+- Merges new implementations into the right master feed.
 - Signs the result with the repository's GPG key.
 - Generates a top-level catalog and a directory listing.
 
@@ -21,14 +21,14 @@ By the end you will have:
 
 ## 1. Create the central feed repository
 
-Create a new repo `feeds` (any name works). Initialise an empty `gh-pages` orphan branch and push it:
+Create a new repo `feeds` (any name works) and let GitHub add a README, so that `main` already has a commit to return to. Initialize an empty `gh-pages` orphan branch and push it:
 
 ```shell
 git clone https://github.com/YOURNAME/feeds.git
 cd feeds
 git checkout --orphan gh-pages
 git rm -rf .
-echo "" > archives.db
+touch archives.db
 git add archives.db
 git commit -m "Initial gh-pages"
 git push -u origin gh-pages
@@ -37,7 +37,7 @@ git checkout main
 
 In **Settings → Pages**, set the source to **Deploy from a branch / gh-pages / root**. Note the URL; let's say `https://YOURNAME.github.io/feeds/`. This is your repository base URL.
 
-## 2. Initialise 0repo
+## 2. Initialize 0repo
 
 ```shell
 0install add 0repo https://apps.0install.net/0install/0repo.xml
@@ -50,7 +50,7 @@ In **Settings → Pages**, set the source to **Deploy from a branch / gh-pages /
 GPG_SIGNING_KEY = None if os.getenv('NO_SIGN') else "0xYOURKEYFINGERPRINT"
 ```
 
-The `NO_SIGN` escape hatch lets CI run `0repo` in dry-run mode for pull-request validation without exposing the production key.
+The `NO_SIGN` escape hatch lets CI run `0repo` without signing anything, so pull requests can be validated without exposing the production key.
 
 Move `0repo-config.py` into your Git checkout and set the base URL:
 
@@ -98,7 +98,7 @@ incoming/        # empty, holds feeds waiting to be merged
 archives.db      # symlink to public/archives.db
 ```
 
-This mirrors the layout you set up by hand for local runs in [step 6](#6-local-previewing). 0repo commits its results into both checkouts, and the GitHub Action optionally pushes them back when it is done.
+This mirrors the layout you set up by hand for local runs in [step 6](#6-running-0repo-locally). 0repo commits its results into both checkouts, and the GitHub Action optionally pushes them back when it is done.
 
 `.github/workflows/publish.yml`:
 
@@ -114,6 +114,8 @@ concurrency: { group: publish }
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: 0install/github-actions/0repo-setup@v1
       - uses: 0install/github-actions/0repo@v1
@@ -140,6 +142,8 @@ concurrency: { group: publish }
 jobs:
   incoming:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: 0install/github-actions/0repo-setup@v1
       - uses: 0install/github-actions/0repo@v1
@@ -152,6 +156,8 @@ jobs:
 ```
 
 Given an `incoming-feed-url`, the `0repo` action downloads the feed into `incoming/` before running the tool, and if the archive is hosted outside the repository it registers its name, hash and URL in `archives.db`. 0repo then validates the feed, merges it into the master feed, signs everything and regenerates the catalog.
+
+`permissions: contents: write` lets the default `GITHUB_TOKEN` push the results back to `main` and `gh-pages`.
 
 Leaving out `gpg-key` makes the `0repo` action set the `NO_SIGN` environment variable, which is why `0repo-config.py` reads it. Leave out the `push-*` inputs as well and you have a third workflow that validates pull requests without access to the production key and without changing anything:
 
@@ -252,7 +258,7 @@ jobs:
 
 The paths that `0template` produced are attached to the GitHub Release and then handed to `0repo-submit` as-is: a relative path is resolved against the Release for the current tag, so you don't have to spell the download URL out twice.
 
-Note that the feed itself keeps the relative `href` from the template; it is `archive-url` that tells the central repository where the archive actually lives. 0repo records that in `archives.db` and rewrites the `href` when it generates the published feed.
+Note that the feed itself keeps the relative `href` from the template; it is `archive-url` that tells the central repository where the archive actually lives. The `Incoming` workflow records that in `archives.db`, and 0repo rewrites the `href` accordingly when it generates the published feed.
 
 `permissions: contents: write` lets the default `GITHUB_TOKEN` create the GitHub Release. `PERSONAL_TOKEN` is a fine-grained personal access token with **Actions: write** on the `feeds` repo. The default `GITHUB_TOKEN` only has permissions on the current repo, so it can't trigger workflows elsewhere. Store it as a secret in the app's repo.
 
@@ -266,9 +272,9 @@ The flow is:
 
 A few minutes later, `https://YOURNAME.github.io/feeds/myapp.xml` carries the new version. Existing users pick it up the next time their cache becomes stale.
 
-This is exactly the pattern [0capture](https://github.com/0install/0capture/blob/master/.github/workflows/build.yml) and [0template](https://github.com/0install/0template) use to publish into [apps.0install.net](https://apps.0install.net/).
+This is exactly the pattern [0capture](https://github.com/0install/0capture/blob/master/.github/workflows/build.yml) and [0template](https://github.com/0install/0template/blob/master/.github/workflows/build.yml) use to publish into [apps.0install.net](https://apps.0install.net/).
 
-## 6. Local previewing
+## 6. Running 0repo locally
 
 For changes to `0repo-config.py` itself, or for hand-staged feeds, you can still run 0repo on your laptop. Recreate the layout that `0repo-setup` builds in CI, with both branches checked out side by side in a working directory of their own:
 
@@ -291,13 +297,7 @@ Then drop a per-version feed into `incoming/` and run:
 0repo
 ```
 
-To preview the result without pushing:
-
-```shell
-0repo proxy
-# in another terminal:
-http_proxy=http://localhost:8080/ 0install run https://YOURNAME.github.io/feeds/myapp.xml
-```
+0repo commits the merged feed to `feeds/` and the signed result to `public/`, but pushes neither. Review the commits (e.g. with `git -C public show`) and `git push` both checkouts once you are happy with them.
 
 ## What's next
 

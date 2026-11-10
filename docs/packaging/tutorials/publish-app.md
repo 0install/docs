@@ -58,13 +58,13 @@ Open `myapp.xml.template` in an editor and fill in the metadata. A minimal templ
   <feed-for interface="https://YOURNAME.github.io/myapp/myapp.xml"/>
 
   <group license="MIT">
-    <command name="run" path="myapp"/>
-
     <implementation arch="Linux-x86_64" version="{version}" stability="stable">
+      <command name="run" path="myapp"/>
       <manifest-digest/>
       <archive href="https://github.com/YOURNAME/myapp/releases/download/v{version}/myapp-{version}-linux-x64.tar.gz"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="{version}" stability="stable">
+      <command name="run" path="myapp.exe"/>
       <manifest-digest/>
       <archive href="https://github.com/YOURNAME/myapp/releases/download/v{version}/myapp-{version}-windows-x64.zip"/>
     </implementation>
@@ -72,7 +72,9 @@ Open `myapp.xml.template` in an editor and fill in the metadata. A minimal templ
 </interface>
 ```
 
-Match the runner, `<command>` and bindings to your runtime (see the relevant [guide](../guides/index.md)). The `{version}` placeholder is filled in by 0template.
+Adjust the `<command>` elements and add whatever runner, dependencies and bindings your runtime needs (see the relevant [guide](../guides/index.md)). The `{version}` placeholder is filled in by 0template.
+
+The `<icon>` points at a `myapp.png` that you will publish next to the feed in [step 5](#5-publish-to-github-pages). Add that file to the repo now, or leave the `<icon>` element out.
 
 ## 3. Generate a feed for the first version
 
@@ -82,7 +84,7 @@ Tag a release in your project (e.g. `v1.0`), upload the binary archives to the G
 0template myapp.xml.template version=1.0
 ```
 
-This downloads each archive, computes its manifest digest, and writes `myapp-1.0.xml`. Test it locally:
+This downloads each archive into the directory of the template, computes its manifest digest, and writes `myapp-1.0.xml`. Neither the downloaded archives nor the per-version feeds belong in the repo, so add them to `.gitignore`. Test the feed locally:
 
 ```shell
 0install run myapp-1.0.xml
@@ -94,12 +96,13 @@ feedlint myapp-1.0.xml
 
 ## 4. Create and sign the master feed
 
-The per-version file produced by `0template` is an intermediate artifact; users will fetch the master feed at the permanent URL, so that is the one that needs to be signed. Copy the per-version feed to its permanent name, set the canonical URL on it and add an XML signature:
+The per-version file produced by `0template` is an intermediate artifact; users will fetch the master feed at the permanent URL, so that is the one that needs to be signed. Create it from the per-version feed and add an XML signature:
 
 ```shell
-cp myapp-1.0.xml myapp.xml
-0publish myapp.xml --set-interface-uri=https://YOURNAME.github.io/myapp/myapp.xml --xmlsign
+0publish myapp.xml --add-from=myapp-1.0.xml --xmlsign
 ```
+
+Because `myapp.xml` does not exist yet, `0publish` turns the per-version feed into the master feed: it sets the canonical URL to the one in the template's `<feed-for>` and removes that element, which only belongs in per-version feeds.
 
 You'll be prompted for your GPG passphrase. The signed feed contains a Base64 signature block at the end as an XML comment.
 
@@ -146,7 +149,7 @@ End-users who don't yet have Zero Install installed can't `0install run` your fe
     0bootstrap https://YOURNAME.github.io/myapp/myapp.xml
     ```
 
-    This produces a single `MyApp.exe` (named after the feed's `<name>`, with the feed's icon) that downloads Zero Install on first launch if necessary and then runs your app. You can host the resulting `.exe` next to the feed on GitHub Pages or attach it to your release.
+    This produces a single `run MyApp.exe` (named after the feed's `<name>`, with the feed's icon; pass `--output=` to choose another name) that downloads Zero Install on first launch if necessary and then runs your app. You can host the resulting `.exe` next to the feed on GitHub Pages or attach it to your release.
 
     To make the generated executable register the app in the Start menu and file associations, pass the desired [integration arguments](../../details/cli.md#integrate) like this:
 
@@ -154,7 +157,7 @@ End-users who don't yet have Zero Install installed can't `0install run` your fe
     0bootstrap https://YOURNAME.github.io/myapp/myapp.xml --integrate-args="--add-standard"
     ```
 
-    On a machine that doesn't already have Zero Install, this makes the installer deploy it in [library mode](../../details/library-mode.md).
+    The file is then named `integrate MyApp.exe`. On a machine that doesn't already have Zero Install, this makes the installer deploy it in [library mode](../../details/library-mode.md).
 
     For a fully offline installer, combine `0bootstrap` with [`0install export`](../../details/export.md) so the bootstrapper bundles the implementation alongside Zero Install:
 
@@ -171,5 +174,5 @@ End-users who don't yet have Zero Install installed can't `0install run` your fe
 `gpg: signing failed: secret key not available`
 : The feed was last signed with a key you don't have. Pass `-k YOURKEY` to `0publish` to switch keys.
 
-`Manifest digest sha256new=... does not match expected ...`
+`Incorrect manifest -- archive is corrupted` or `An implementation's manifest hash does not match the expected value`
 : The archive at the upstream URL changed after you generated the feed. Re-run `0template` and re-sign.

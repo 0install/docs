@@ -2,7 +2,7 @@
 
 The previous tutorials assumed your feeds are public. This one covers the opposite case: an in-house catalog of feeds for software that should only be available to employees and that runs on machines without unrestricted internet access.
 
-The mechanics are the same as for public feeds - signed XML served over HTTP - but a few details change:
+The mechanics are the same as for public feeds (signed XML served by a web server), but a few details change:
 
 - Feeds and archives live on an intranet host, not GitHub Pages.
 - The signing key is your organization's, and you want every workstation to trust it automatically without each user confirming a fingerprint.
@@ -34,15 +34,21 @@ feeds.corp.example/
     └── invoice-tool-1.0.tar.gz
 ```
 
-Use [0repo](../../tools/0repo.md) to maintain this directory the same way you would for a public catalog (see [Managing multiple feeds with 0repo](multi-feed.md)). The only change is `REPOSITORY_BASE_URL` in `0repo-config.py`:
+Use [0repo](../../tools/0repo.md) to maintain this directory the same way you would for a public catalog (see [Managing multiple feeds with 0repo](multi-feed.md)). Two things change in `0repo-config.py`: the base URL, and `upload_public_dir()`, which now also has to copy the generated files to the web server's document root:
 
 ```python
 REPOSITORY_BASE_URL = "https://feeds.corp.example/"
+
+def upload_public_dir(files, message):
+	subprocess.check_call(['git', 'add', '--', 'archives.db'] + files)
+	if subprocess.call(['git', 'diff', '--cached', '--quiet']):
+		subprocess.check_call(['git', 'commit', '-m', message])
+	subprocess.check_call(['rsync', '-rL', '--exclude=.git', './', 'deploy@feeds.corp.example:/var/www/feeds/'])
 ```
 
 If 0repo should host the archives on the intranet server too (in `archives/`, as shown above), also implement `upload_archives()` in `0repo-config.py`.
 
-0repo exports the public key to `keys/` and places a symlink to it next to the catalog and in every directory that contains feeds, because Zero Install looks for the key next to the file it verifies. If your web server or upload mechanism does not follow symlinks (e.g. IIS or S3), copy them as regular files when deploying (e.g. with `cp -L` or `rsync -L`).
+0repo exports the public key to `keys/` and places a symlink to it next to the catalog and in every directory that contains feeds, because Zero Install looks for the key next to the file it verifies. Many web servers and upload mechanisms do not follow symlinks (e.g. IIS or S3), so copy them as regular files when deploying. The `-L` in the `rsync` call above does that, as does `cp -L`.
 
 !!! tip
     Use HTTPS, not HTTP, even on an intranet. Signatures and manifest digests already protect feeds and archives against tampering, but HTTPS also keeps the list of software your staff use private and stops an attacker from replaying an older, validly signed feed to hold back updates.
@@ -149,18 +155,18 @@ Workstations then run the app from what was imported, without needing the upstre
 Rolling out a fresh laptop should be one click, not "follow these six steps". Use [0bootstrap](../../tools/0bootstrap.md) on top of [`0install export`](../../details/export.md) to produce a single executable that installs Zero Install offline along with an in-house app:
 
 ```shell
-0install export --include-zero-install https://feeds.corp.example/my-app.xml export
-0bootstrap https://feeds.corp.example/my-app.xml --content=export/content --integrate-args="--add-standard" --output=my-app-setup.exe
+0install export --include-zero-install https://feeds.corp.example/apps/invoice-tool.xml export
+0bootstrap https://feeds.corp.example/apps/invoice-tool.xml --content=export\content --integrate-args="--add-standard" --output=invoice-tool-setup.exe
 ```
 
-Distribute the resulting `my-app-setup.exe` via your normal software-deployment channel (Group Policy, MDM, file share). Running it on a fresh workstation installs Zero Install for the current user, imports the bundled feeds and keys, trusts the organization key for `feeds.corp.example` (0bootstrap recorded which key signed `my-app.xml` when it built the bootstrapper), and registers the app's Start menu entries and file associations. No separate `trustdb.xml` provisioning is needed when the bootstrapper handles the install. To install Zero Install and the app for all users instead, run `my-app-setup.exe --machine` as an administrator.
+Distribute the resulting `invoice-tool-setup.exe` via your normal software-deployment channel (Group Policy, MDM, file share). Running it on a fresh workstation installs Zero Install for the current user, imports the bundled feeds and keys, trusts the organization key for `feeds.corp.example` (0bootstrap recorded which key signed `invoice-tool.xml` when it built the bootstrapper), and registers the app's Start menu entries and file associations. No separate `trustdb.xml` provisioning is needed when the bootstrapper handles the install. To install Zero Install and the app for all users instead, run `invoice-tool-setup.exe --machine` as an administrator.
 
 The bootstrapper can also carry the configuration from the previous steps, so a fresh machine comes up already pointed at your catalog and already restricted:
 
-```shell
-0bootstrap https://feeds.corp.example/my-app.xml \
-  --content=export/content --integrate-args="--add-standard" --output=my-app-setup.exe \
-  --catalog-uri=https://feeds.corp.example/catalog.xml \
+```powershell
+0bootstrap https://feeds.corp.example/apps/invoice-tool.xml `
+  --content=export\content --integrate-args="--add-standard" --output=invoice-tool-setup.exe `
+  --catalog-uri=https://feeds.corp.example/catalog.xml `
   --config kiosk_mode=true
 ```
 

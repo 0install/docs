@@ -2,7 +2,7 @@
 
 The [previous tutorial](publish-app.md) had you running `0template` and `0publish` on your machine and pushing the signed feed by hand. That works, but it means the GPG private key has to live on every machine you publish from, and "publish a release" is a checklist of commands you might occasionally get wrong.
 
-This tutorial moves the work to GitHub Actions. When you push a tag, CI builds the archive, generates the per-version feed, signs it with a key stored as a repository secret, and updates the master feed on GitHub Pages. You keep using [0template](../../tools/0template.md) and [0publish](../../tools/0publish.md).
+This tutorial moves the work to GitHub Actions. When you push a tag, CI builds the archives, generates the per-version feed, merges it into the master feed on GitHub Pages, and signs the result with a key stored as a repository secret. You keep using [0template](../../tools/0template.md) and [0publish](../../tools/0publish.md).
 
 This tutorial assumes you've worked through [Publishing your own app](publish-app.md): you have a `myapp.xml.template`, a feed URL, and a GPG key.
 
@@ -31,7 +31,7 @@ The template still references the public feed URL on GitHub Pages, e.g. `https:/
 
 ## 2. Create an orphan `gh-pages` branch
 
-The signed master feed and the public key are served from a `gh-pages` branch. CI checks it out, updates it, and pushes back. Initialise it once, carrying over the files you published from `main` in the previous tutorial:
+The signed master feed and the public key are served from a `gh-pages` branch. CI checks it out, updates it, and pushes back. Initialize it once, carrying over the files you published from `main` in the previous tutorial:
 
 ```shell
 git checkout --orphan gh-pages
@@ -83,6 +83,13 @@ jobs:
       - name: Build release archive
         run: ./build.sh ${{ steps.version.outputs.version }}
 
+      - name: Upload archives to GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            myapp-*.tar.gz
+            myapp-*.zip
+
       - name: Generate per-version feed
         id: feed
         uses: 0install/github-actions/0template@v1
@@ -110,11 +117,12 @@ jobs:
 The workflow:
 
 1. Checks out the source on `main` and the published feed on `gh-pages` into separate directories.
-2. Derives the version number from the tag name. The actions take the version as an input rather than deriving it themselves, so you can compute it however you like — from the tag, from a file in the repo, or with a tool such as [GitVersion](https://gitversion.net/).
-3. Builds the release archives at that version. Replace `./build.sh` with whatever produces the archives your template expects. Have it write each archive next to the template, under the file name its `<archive href>` ends with: 0template then uses that local copy instead of downloading it. Users still download from the `href`, so the script also needs to upload the archives there (typically to a GitHub Release attached to the same tag).
-4. Runs `0template` to compute the manifest digest and stamp out `myapp-$version.xml`. The `feed` output holds the path of the generated file, and `archive` the path of any archive generated alongside it.
-5. Runs `0publish --add-from` to merge the per-version feed into the master `myapp.xml`, importing the GPG key beforehand and resigning the result with it.
-6. Commits and pushes `gh-pages`.
+2. Derives the version number from the tag name. The actions take the version as an input rather than deriving it themselves, so you can compute it however you like: from the tag, from a file in the repo, or with a tool such as [GitVersion](https://gitversion.net/).
+3. Builds the release archives at that version. Replace `./build.sh` with whatever produces the archives your template expects. Have it write each archive next to the template, under the file name its `<archive href>` ends with: 0template then uses that local copy instead of downloading it.
+4. Creates the GitHub Release for the tag and attaches the archives to it, because that is where the `href`s in the template tell users to download them from.
+5. Runs `0template` to compute the manifest digest and stamp out `myapp-$version.xml`. The `feed` output holds the path of the generated file, and `archive` the path of any archive generated alongside it.
+6. Runs `0publish --add-from` to merge the per-version feed into the master `myapp.xml`, importing the GPG key beforehand and resigning the result with it.
+7. Commits and pushes `gh-pages`.
 
 !!! tip
     If your template generates the archive itself (see [Generating archives](../../tools/0template.md#generating-archives)), tell the 0template action where it will end up and it rewrites the relative `href` for you. Setting `github-release` is shorthand for the GitHub Release of the current tag; use `archive-url` for anywhere else:
@@ -129,17 +137,17 @@ The workflow:
           github-release: true
     ```
 
-    You can then attach `${{ steps.feed.outputs.feed }}` and `${{ steps.feed.outputs.archive }}` to a GitHub Release for that tag.
+    Move the "Upload archives to GitHub Release" step after this one and have it attach `${{ steps.feed.outputs.archive }}` (and, if you like, `${{ steps.feed.outputs.feed }}`) instead.
 
 ### Sharing `gh-pages` with a generated site
 
-Many projects already publish something to `gh-pages` — API documentation, a project website — using an action such as [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages). Such actions usually replace the entire branch on every run (`force_orphan: true`), which would delete a feed that CI had committed there separately.
+Many projects already publish something to `gh-pages` (API documentation, a project website) using an action such as [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages). Such actions usually replace the entire branch on every run (`force_orphan: true`), which would delete a feed that CI had committed there separately.
 
-Rather than fighting over the branch, hand the feed to the same publishing step. The `gh-pages` checkout and the `0publish --add-from` merge stay exactly as they are; only the final "Push gh-pages" step changes. Copy the updated master feed and the public key into the directory the site generator produced (`site/` here), and let the publishing action commit the branch:
+Rather than fighting over the branch, hand the feed to the same publishing step. The `gh-pages` checkout and the `0publish --add-from` merge stay exactly as they are; only the final "Push gh-pages" step changes. Copy the updated master feed, the public key and the icon into the directory the site generator produced (`site/` here), and let the publishing action commit the branch:
 
 ```yaml
       - name: Copy feed into the site
-        run: cp gh-pages/myapp.xml gh-pages/*.gpg site/
+        run: cp gh-pages/myapp.xml gh-pages/*.gpg gh-pages/myapp.png site/
 
       - name: Publish site
         uses: peaceiris/actions-gh-pages@v4
@@ -149,7 +157,7 @@ Rather than fighting over the branch, hand the feed to the same publishing step.
           publish_dir: site
 ```
 
-The `gh-pages` checkout is now only used to read the previous master feed and merge the new version into it. The generated site keeps being rebuilt from scratch on every release, while the feed and the public key are carried forward from one release to the next. [TypedRest CodeGeneration](https://github.com/TypedRest/CodeGeneration/blob/master/.github/workflows/build.yml) publishes its API documentation and its feed this way.
+The `gh-pages` checkout is now only used to read the previous master feed and merge the new version into it. The generated site keeps being rebuilt from scratch on every release, while the feed, the public key and the icon are carried forward from one release to the next.
 
 ## 5. Tag a release
 
@@ -164,7 +172,7 @@ Watch the workflow run in the **Actions** tab. When it finishes, the new version
 
 This setup is fine for one feed and one developer. It starts to creak when:
 
-- You publish more than one feed and want them validated against the same policies (license set, release date present, signed by an authorised key).
+- You publish more than one feed and want them validated against the same policies (license set, release date present, signed by an authorized key).
 - You want a public key with a stable URL independent of any single feed.
 - You want a browsable directory listing or catalog at the repo root.
 - Multiple people are pushing tags and you need the merge of the master feed to be a single transactional operation.
@@ -174,10 +182,10 @@ At that point, switch to [0repo](../../tools/0repo.md). The [next tutorial](mult
 ## Troubleshooting
 
 `gpg: skipped "YOURKEY": Inappropriate ioctl for device`
-: The key is encrypted with a passphrase. Either strip the passphrase first (`gpg --passwd YOURKEY`, then leave the new passphrase empty) and re-export, or pipe the passphrase in via `--passphrase-fd` together with `--pinentry-mode loopback`.
+: The key is protected by a passphrase, which CI has no way to enter. Strip the passphrase (`gpg --passwd YOURKEY`, then leave the new passphrase empty), export the key again and update the `GPG_KEY` secret.
 
 `fatal: Authentication failed for 'https://github.com/...'`
 : The default `GITHUB_TOKEN` can push to the same repo but only if the workflow has `permissions: contents: write`, as above. Without it the push to `gh-pages` is rejected.
 
-`Manifest digest sha256new=... does not match expected ...`
+`Incorrect manifest -- archive is corrupted` (on Windows: `An implementation's manifest hash does not match the expected value`)
 : The archive users download differs from the one `0template` computed the digest from. Usually the upload replaced an archive that was already there, or `0template` downloaded an older upload because the build wrote its archive under a different file name than the `href` ends with. Make the file names match, and never overwrite a released archive.
