@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docbase="/home/talex/Projects/zero-install/htdocs"
+   sodipodi:docname="sharing-evil.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path7240"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="304.05779"
+     inkscape:cy="537.61381"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:grid-points="true"
+     inkscape:window-width="1598"
+     inkscape:window-height="1115"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:0.73553162;fill-rule:nonzero;stroke:none;stroke-width:3.66199994;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       id="rect8330"
+       width="733.28577"
+       height="357.56128"
+       x="7.1428552"
+       y="318.07648"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/talex/Projects/zero-install/htdocs/sharing-evil.png"
+       inkscape:export-xdpi="67.379684"
+       inkscape:export-ydpi="67.379684" />
+    <rect
+       style="opacity:1;color:#000000;fill:#b9b3ff;fill-opacity:0.73553162;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       id="rect2160"
+       width="696.07111"
+       height="140"
+       x="28.571428"
+       y="518.07648"
+       rx="35.799553"
+       ry="35.799553" />
+    <rect
+       style="color:#000000;fill:#b9b3ff;fill-opacity:0.73553162;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       id="rect3142"
+       width="225.71426"
+       height="158.57141"
+       x="32.857166"
+       y="339.38858"
+       rx="35.799553"
+       ry="35.799553" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="49.999996"
+       y="613.79083"
+       id="text3150"><tspan
+         sodipodi:role="line"
+         id="tspan3152"
+         x="49.999996"
+         y="613.79083">System store</tspan><tspan
+         sodipodi:role="line"
+         x="49.999996"
+         y="638.79083"
+         id="tspan3154">(/var/cache/...)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="70.043961"
+       y="373.27179"
+       id="text3156"><tspan
+         sodipodi:role="line"
+         id="tspan3158"
+         x="70.043961"
+         y="373.27179">Alice's home</tspan><tspan
+         sodipodi:role="line"
+         x="70.043961"
+         y="398.27179"
+         id="tspan3160">(~alice/.cache)</tspan></text>
+    <g
+       id="g4156"
+       transform="translate(67.14285,411.42857)">
+      <rect
+         ry="0"
+         rx="0"
+         y="133.79076"
+         x="140"
+         height="75.714287"
+         width="180"
+         id="rect4158"
+         style="opacity:1;color:#000000;fill:#add3ff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" />
+      <text
+         id="text4160"
+         y="166.60396"
+         x="150.60059"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="166.60396"
+           x="150.60059"
+           id="tspan4162"
+           sodipodi:role="line">ROX-Filer-2.5</tspan><tspan
+           y="191.60396"
+           x="150.60059"
+           sodipodi:role="line"
+           id="tspan2262">sha1=d22a35...</tspan></text>
+    </g>
+    <rect
+       style="color:#000000;fill:#b9b3ff;fill-opacity:0.73553162;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       id="rect6135"
+       width="225.71426"
+       height="158.57141"
+       x="268.63382"
+       y="339.38858"
+       rx="35.799553"
+       ry="35.799553" />
+    <path
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:0.25714285;fill-rule:evenodd;stroke:#000000;stroke-width:3.66199994;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:url(#TriangleOutM);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       d="M 368.57143,468.07647 L 298.57143,538.07647"
+       id="path7334" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path6145"
+       d="M 296.49094,422.64788 L 446.49094,422.64788 L 446.49094,442.64788 L 466.49094,442.64788 L 446.49094,422.64788 L 466.49094,442.64788 L 466.49094,472.64788 L 296.49094,472.64788 L 296.49094,422.64788 z "
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="315.71945"
+       y="454.38965"
+       id="text6147"><tspan
+         sodipodi:role="line"
+         id="tspan6149"
+         x="315.71945"
+         y="454.38965">ROX-Filer.xml</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="310.28488"
+       y="371.01117"
+       id="text3162"><tspan
+         sodipodi:role="line"
+         id="tspan3164"
+         x="310.28488"
+         y="371.01117">Bob's home</tspan><tspan
+         sodipodi:role="line"
+         x="310.28488"
+         y="396.01117"
+         id="tspan3166">(~bob/.cache)</tspan></text>
+    <path
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:0.25714285;fill-rule:evenodd;stroke:#000000;stroke-width:3.66199994;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:url(#TriangleOutM);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       d="M 148.57143,468.07647 L 218.57143,538.07647"
+       id="path6165" />
+    <g
+       id="g4143"
+       transform="translate(-79.99999,290.42858)">
+      <path
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+         d="M 140,131.64789 L 290,131.64789 L 290,151.64789 L 310,151.64789 L 290,131.64789 L 310,151.64789 L 310,181.64789 L 140,181.64789 L 140,131.64789 z "
+         id="rect3168"
+         sodipodi:nodetypes="ccccccccc" />
+      <text
+         id="text4139"
+         y="163.38966"
+         x="157.79996"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="163.38966"
+           x="157.79996"
+           id="tspan4141"
+           sodipodi:role="line">ROX-Filer.xml</tspan></text>
+    </g>
+    <rect
+       style="color:#000000;fill:#b9b3ff;fill-opacity:0.73553162;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       id="rect2266"
+       width="225.71426"
+       height="158.57141"
+       x="504.34607"
+       y="339.38858"
+       rx="35.799553"
+       ry="35.799553" />
+    <path
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:0.25714285;fill-rule:evenodd;stroke:#000000;stroke-width:3.66199994;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:url(#TriangleOutM);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       d="M 610.28694,469.34936 L 540.28694,539.34936"
+       id="path2304" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path2268"
+       d="M 532.20319,421.27208 L 682.20319,421.27208 L 682.20319,441.27208 L 702.20319,441.27208 L 682.20319,421.27208 L 702.20319,441.27208 L 702.20319,471.27208 L 532.20319,471.27208 L 532.20319,421.27208 z "
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="551.4317"
+       y="453.01385"
+       id="text2270"><tspan
+         sodipodi:role="line"
+         id="tspan2272"
+         x="551.4317"
+         y="453.01385">ROX-Filer.xml</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="545.99713"
+       y="369.63538"
+       id="text2274"><tspan
+         sodipodi:role="line"
+         id="tspan2276"
+         x="545.99713"
+         y="369.63538">Charlie's home</tspan><tspan
+         sodipodi:role="line"
+         x="545.99713"
+         y="394.63538"
+         id="tspan2278">(~charlie/.cache)</tspan></text>
+    <g
+       id="g2294"
+       transform="translate(323.56359,412.00351)">
+      <rect
+         ry="0"
+         rx="0"
+         y="133.79076"
+         x="140"
+         height="75.714287"
+         width="180"
+         id="rect2296"
+         style="opacity:1;color:#000000;fill:#add3ff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" />
+      <text
+         id="text2298"
+         y="166.60396"
+         x="150.60059"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"
+         inkscape:export-xdpi="67.379684"
+         inkscape:export-ydpi="67.379684"><tspan
+           y="166.60396"
+           x="150.60059"
+           id="tspan2300"
+           sodipodi:role="line">ROX-Filer-2.5</tspan><tspan
+           y="191.60396"
+           x="150.60059"
+           sodipodi:role="line"
+           id="tspan2302">sha1=3ab21d...</tspan></text>
+    </g>
+  </g>
+</svg>
