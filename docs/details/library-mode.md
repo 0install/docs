@@ -56,6 +56,8 @@ Zero Install's progress windows and notifications normally identify themselves a
 
 This only applies if the feed actually declares an `app-id`; without one, Zero Install falls back to its generic windows.
 
+Zero Install can also show your application's name, icon and splash screen in its progress windows. See [Branding](windows.md#branding) for what the feed needs to provide. Together with an `app-id`, this makes downloads and updates look like part of your application.
+
 ### Maintenance happens on its own
 
 A normal deployment relies on the user opening the GUI to check for updates, clean out old versions or run an integrity check. In library mode there is no GUI to open, so Zero Install does that work by itself:

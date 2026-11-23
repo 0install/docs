@@ -76,6 +76,26 @@ Adjust the `<command>` elements and add whatever runner, dependencies and bindin
 
 The `<icon>` points at a `myapp.png` that you will publish next to the feed in [step 5](#5-publish-to-github-pages). Add that file to the repo now, or leave the `<icon>` element out.
 
+### Branding
+
+Zero Install can show your app's name, icon and a splash screen in its download and update windows instead of its own, a feature called [branding](../../details/windows.md#branding). Your users then see your app updating rather than some other tool they may not know. The `<name>` is always used. For the rest, add these elements below the `<icon>`:
+
+```xml
+  <icon href="https://YOURNAME.github.io/myapp/myapp.ico" type="image/vnd.microsoft.icon"/>
+  <splash-screen href="https://YOURNAME.github.io/myapp/myapp-splash.png" type="image/png"/>
+```
+
+- `myapp.ico` is used as the window icon. It also becomes the icon of start menu entries and of the installer from [step 7](#7-provide-a-native-installer-optional). Include several resolutions in the `.ico` file, at least 16×16, 32×32, 48×48 and 256×256.
+- `myapp-splash.png` is shown at the top of the progress window. Make it 1120×500 pixels (a 560×250 area at 200% display scaling). Keep important content out of the bottom quarter, which the list of downloads may cover.
+
+Zero Install only shows branding once it has the feed and these images stored locally, which happens when the user [integrates](../../details/desktop-integration.md) your app (e.g., adds it to the start menu). The very first `0install run` of your feed therefore still shows the generic Zero Install window. An installer from [step 7](#7-provide-a-native-installer-optional) shows your splash screen from the start.
+
+You can also declare an `app-id` on the `run` [entry point](../../specifications/feed.md#entry-points), so that Windows groups Zero Install's windows for your app under your app's taskbar button:
+
+```xml
+  <entry-point command="run" app-id="YourCompany.MyApp"/>
+```
+
 ## 3. Generate a feed for the first version
 
 Tag a release in your project (e.g. `v1.0`), upload the binary archives to the GitHub release, and run:
@@ -110,10 +130,10 @@ You'll be prompted for your GPG passphrase. The signed feed contains a Base64 si
 
 ## 5. Publish to GitHub Pages
 
-Commit and push the feed, the public key and the icon your template's `<icon>` points to:
+Commit and push the feed, the public key and the images your template's `<icon>` and `<splash-screen>` elements point to (leave out any you didn't create):
 
 ```shell
-git add myapp.xml *.gpg myapp.png
+git add myapp.xml *.gpg myapp.png myapp.ico myapp-splash.png
 git commit -m "Publish 1.0"
 git push
 ```

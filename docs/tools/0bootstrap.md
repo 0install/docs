@@ -100,7 +100,17 @@
         0bootstrap https://apps.0install.net/gui/vlc.xml --content=vlc-export\content
         ```
 
-    For further command-line arguments, see the output of `0bootstrap --help`.
+    ### Branding
+
+    The bootstrapper takes its appearance from the feed:
+
+    - The EXE gets the feed's `<icon>` of the type `image/vnd.microsoft.icon` (`.ico`). Without one, it keeps the Zero Install icon.
+    - The bootstrapper window uses the feed's `<name>` as its title.
+    - If the feed has a `<splash-screen>` of the type `image/png`, it is embedded in the EXE and shown at the top of the bootstrapper window. Otherwise, the window shows the Zero Install logo with the feed's `<name>` below it.
+
+    Once the bootstrapper has handed over to Zero Install, Zero Install's own progress windows show the same [branding](../details/windows.md#branding) whenever it is available locally. If you use `--integrate-args`, the integration downloads the icon and splash screen, so all later updates of the app are branded too.
+
+    If the feed contains `<needs-terminal/>`, 0bootstrap generates a command-line bootstrapper, which has no window and so shows no splash screen. This does not apply when you use `--integrate-args` or `--customizable-store-path`.
 
 ## FAQ
 

@@ -35,6 +35,40 @@ You can also use the command-line version of the Bootstrapper to integrate Zero 
 .\0install.exe self deploy
 ```
 
+## Branding
+
+Zero Install for Windows can present its progress windows as part of the application being downloaded rather than as Zero Install itself. This is called **branding**. It uses metadata from the feed of the application:
+
+| Feed element                                                                       | Used for                                                                                                            |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| [`<name>`](../specifications/feed.md#introduction)                                 | Window title, tray icon tooltip and notification title (instead of "Zero Install")                                  |
+| [`<icon type="image/vnd.microsoft.icon">`](../specifications/feed.md#introduction) | Window icon, tray icon and notifications                                                                            |
+| [`<splash-screen type="image/png">`](../specifications/feed.md#introduction)       | Image shown at the top of the progress window                                                                       |
+| [`app-id`](../specifications/feed.md#entry-points) on the `run` entry point        | Taskbar grouping, only in [library mode](library-mode.md#windows-treats-zero-installs-windows-as-your-applications) |
+
+Branding is applied by every command that works on a single application, such as `0install run`, `0install download`, `0install update`, `0install add` and `0install integrate`.
+
+### When branding is available
+
+Zero Install only looks for branding in places it has already stored locally. It does not download anything just to show branding, because that would delay the actual work. Branding therefore appears only if:
+
+- the feed is already in the [cache](cache.md), and
+- the icon and splash screen have already been downloaded for [desktop integration](desktop-integration.md).
+
+The icon and splash screen are downloaded when the application is [integrated](cli.md#integrate) (`0install add`, `0install integrate` or the GUI). They are also included in [exports](export.md).
+
+In practice, this means:
+
+- The first `0install run` of a feed that has never been used on the machine shows the generic Zero Install window.
+- Once the application has been integrated into the desktop, all later downloads and updates for it (e.g., when launching it from the start menu) show the branding.
+- A [0bootstrap](../tools/0bootstrap.md) installer embeds the splash screen in the EXE and shows it in its own window right away. With `--integrate-args`, Zero Install integrates the application, so the branding is also available for all later updates.
+
+### Designing a splash screen
+
+The splash screen area of the progress window is 560×250 pixels at 100% display scaling. Images with a different size are scaled to fit, keeping their aspect ratio. Provide a PNG file with a 560:250 aspect ratio, ideally 1120×500 pixels, so that the image stays sharp on high-DPI displays.
+
+Progress bars and the list of downloaded components are shown below the image. When more than one component is being downloaded, the list overlaps the bottom quarter of the image, so avoid putting important content there.
+
 ## Maintenance
 
 Zero Install is designed to be mostly maintenance-free (automatic update checks, etc.). You can use the following [commands](cli.md) for additional control where needed:
